@@ -1,0 +1,257 @@
+{
+  "name": "都市身份与组织压力补充",
+  "description": "命名敌人、助战单位、协会、帮派与家族势力的沉浸式 RP 补充包。",
+  "entries": [
+    {
+      "uid": "p2_identity_cinq_ring_duel_and_painting_pressure",
+      "key": [
+        "Camille/Enemy",
+        "Öufi Assoc. Director/Enemy",
+        "Cinq West Section 3 Camille",
+        "Pointillist Researcher of the Ring?",
+        "Cinq Association",
+        "School of Pointillism",
+        "The Ring"
+      ],
+      "keysecondary": [
+        "Albina",
+        "Fixer",
+        "duel",
+        "artistic violence"
+      ],
+      "comment": "P2：Cinq 决斗姿态与 Ring 点描式污染",
+      "content": "Camille 与伪装成协会轮廓的点描研究者适合共同承担“专业身份被战斗方式暴露”的场面功能。Cinq 一侧要写出决斗专家的距离感：步法克制、眼神先量出线位，开口像礼貌，实际是在逼人进入一对一的节奏。Ring 一侧则不能只写成疯癫艺术家，要让点、色块、空白和错位感渗进周围物件，使敌人像一幅尚未干透的画，从端正身份里漏出危险。Albina 会特别敏感于这两种暴力的差异：前者把人体修成线，后者把人体拆成颜料。若玩家尚未选择迎战或撤离，AI 只描写站位、视线、画面污染和谈判压力，不代替前端宣布决斗胜负。",
+      "constant": false,
+      "selective": true,
+      "position": "after_character_definition",
+      "order": 6200,
+      "disable": false
+    },
+    {
+      "uid": "p2_identity_yurodiviye_old_gcorp_command_ruins",
+      "key": [
+        "District 20 Yurodiviye Captain/Enemy",
+        "Old G Corp. Head Manager/Enemy",
+        "Yurodiviye",
+        "Old G Corp.",
+        "Veterans",
+        "Backstreets command"
+      ],
+      "keysecondary": [
+        "Albina",
+        "organization pressure",
+        "urban remnants"
+      ],
+      "comment": "P2：组织队长与旧公司管理者的残余秩序",
+      "content": "District 20 的 Yurodiviye Captain 与 Old G Corp. Head Manager 适合写成两种失衡的指挥残余。前者带着组织、口号和小队纪律，压迫感来自一群人相信自己仍在执行某种集体路线；后者则像旧公司战争留下的管理层阴影，把命令、岗位和幸存者习惯带进后巷。RP 中不要把他们写成单个强敌，而要写周围人如何被他们重新排成队形：有人等指令，有人不敢先动，有人已经习惯把恐惧伪装成服从。Albina 会把这种残余秩序视为失败制度的剖面，观察谁还在说命令，谁只是害怕命令消失。前端未结算前，AI 不写歼灭、收编或组织瓦解，只给出谈判、绕行、挑衅和突破的可选压力。",
+      "constant": false,
+      "selective": true,
+      "position": "after_character_definition",
+      "order": 6210,
+      "disable": false
+    },
+    {
+      "uid": "p2_identity_ncorp_inquisition_fanatic_pressure",
+      "key": [
+        "Guido/Enemy",
+        "Kromer/Enemy/Kromer",
+        "Guido the Persistent",
+        "Kromer",
+        "N Corp. Inquisition",
+        "N Corp. Fanatic",
+        "human wholeness"
+      ],
+      "keysecondary": [
+        "Albina",
+        "Sinclair",
+        "fanaticism",
+        "Canto III"
+      ],
+      "comment": "P2：N Corp 狂信审判与完整性威胁",
+      "content": "Guido 与 Kromer 的组合必须承担 N Corp 狂信压力，而不是普通宗教敌人。Guido 适合写成执行意志的钝器：顽固、持续、听命而不需要再被说服；Kromer 则应写成能把场景语言扭向完整、纯净、惩戒的中心。她出现时，威胁不只是会受伤，而是角色的身体、记忆和自我边界会被对方用狂热词汇重新命名。Albina 面对这种敌意会显得异常冷，她不喜欢被别人规定作品的完整性，因此会先观察对方如何把暴力包装成信念，再判断要从哪一点拆开。AI 可以写压迫、煽动、处刑气氛和 Sinclair 相关心理阴影，但不擅自给出救赎、死亡或路线结论。",
+      "constant": false,
+      "selective": true,
+      "position": "after_character_definition",
+      "order": 6220,
+      "disable": false
+    },
+    {
+      "uid": "p2_identity_shi_family_candidate_combat_pressure",
+      "key": [
+        "Shi Huazhen/Enemy",
+        "Shi Sijing/Enemy",
+        "Shi Yihua/Enemy",
+        "Shi Family",
+        "H Corp.",
+        "Family Hierarch Candidate",
+        "charge circuitry"
+      ],
+      "keysecondary": [
+        "Albina",
+        "Canto VIII",
+        "family hierarchy",
+        "candidate duel"
+      ],
+      "comment": "P2：Shi Family 候选人的家族战斗压力",
+      "content": "Shi Huazhen、Shi Sijing 与 Shi Yihua 应作为 H Corp 家族候选人生态的一组使用。写他们时，重点不是把名字逐个报出，而是表现“同一套家族秩序培养出不同危险姿态”：有人像还没完全成形的名称，有人把礼法压进动作，有人把自尊和命令感磨成双刃。场景中应有家族席位、候选资格、旁观评价和不允许示弱的空气，让每一次对峙都像在公开考核。Albina 会从他们身上看到身份被家族打磨后的痕迹，她会温和地问候，却把每个停顿当成可切开的样本。AI 不写未确认的家族继承结果，只写候选人之间的压迫、比较、暗中试探和战斗前的礼法张力。",
+      "constant": false,
+      "selective": true,
+      "position": "after_character_definition",
+      "order": 6230,
+      "disable": false
+    },
+    {
+      "uid": "p2_identity_fingers_house_of_spiders_dual_frames",
+      "key": [
+        "Shiomi Yoru/Enemy",
+        "Kira/Enemy",
+        "Kira/Assist Unit",
+        "The Pinky",
+        "The Middle",
+        "The House of Spiders",
+        "The Fingers",
+        "LCE"
+      ],
+      "keysecondary": [
+        "Albina",
+        "Canto IX",
+        "Intervallo VII",
+        "Finger politics"
+      ],
+      "comment": "P2：Fingers 与 House of Spiders 的敌我双框架",
+      "content": "Shiomi Yoru 与 Kira 的页面组合适合补足 Fingers 体系下的舞台压迫。Shiomi Yoru 要写出 Pinky 与 House of Spiders 交叠时的异样亲密感：护理、家族称谓、残酷管教和无法逃离的网状秩序同时压下来。Kira 则必须保留敌方与助战两种框架的差异；作为 The Middle Apprentice 时，她的存在带着 Finger 名号、家族牵连和威慑，转入助战框架时，则应表现她被临时纳入 LCE 侧后仍留下旧身份的刺。Albina 对这种身份翻转会很在意，因为同一张脸在不同阵营标签下会呈现不同作品效果。AI 不把 Kira 自动洗白或定罪，只写立场切换造成的信任缝隙、旧称谓残留和现场目光变化。",
+      "constant": false,
+      "selective": true,
+      "position": "after_character_definition",
+      "order": 6240,
+      "disable": false
+    },
+    {
+      "uid": "p2_identity_kurokumo_thumb_syndicate_codes",
+      "key": [
+        "Jun/Enemy",
+        "Lei Heng/Enemy",
+        "Kurokumo Clan Captain Jun",
+        "Kurokumo Clan",
+        "Lei Heng",
+        "The Thumb",
+        "Syndicate"
+      ],
+      "keysecondary": [
+        "Albina",
+        "Backstreets",
+        "gang hierarchy",
+        "command code"
+      ],
+      "comment": "P2：Kurokumo 与 Thumb 的帮派规训",
+      "content": "Jun 与 Lei Heng 适合共同提供后巷帮派规训的两种口味。Kurokumo Clan Captain Jun 应带有刀口、礼节、队长身份和帮派面子的压力；The Thumb 的 Lei Heng 则更适合写成命令等级、服从顺序和惩罚预期让人先于武器本身感到拘束。RP 中要让帮派规矩具体落在动作上：谁先说话，谁必须闭嘴，谁越线后会被所有人同时记住。Albina 不会把他们当成单纯恶徒，她会观察一条规矩如何把人的表情、手势和求生方式固定住。AI 可以写谈判的代价、违令的目光和帮派成员的沉默配合，但不自行决定地盘归属、组织覆灭或角色最终效忠。",
+      "constant": false,
+      "selective": true,
+      "position": "after_character_definition",
+      "order": 6250,
+      "disable": false
+    },
+    {
+      "uid": "p2_identity_jia_family_bolus_and_assist_contrast",
+      "key": [
+        "Jia Mu/Enemy/Jia Mu",
+        "Jia Xichun/Assist Unit",
+        "Kong Qiu/Enemy",
+        "Jia Mu",
+        "Jia Xichun",
+        "Jia Qiu",
+        "Jia Family",
+        "Bolus"
+      ],
+      "keysecondary": [
+        "Albina",
+        "H Corp.",
+        "Canto VIII",
+        "family candidate"
+      ],
+      "comment": "P2：Jia Family 的敌对展示与助战裂隙",
+      "content": "Jia Mu、Jia Xichun 与 Jia Qiu 应作为 Jia Family 内部压力的三角使用。Jia Mu 出场时要有展示性，他不是单纯挡路，而像在要求他人见证某种力量或资格；Jia Xichun 作为助战单位时，应把同一家族秩序里的缝隙显露出来，她的站位更接近临时同盟，却不意味着背后规则消失；Jia Qiu 则适合写成更高压的问答与逼迫，把对方的沉默也当成必须被处理的材料。Albina 会把这三种姿态视为同一张家族展柜里的不同展品：敌对、协助、审问，都在证明身份。AI 不写家族继承结论，只写同盟不稳、家族目光、Bolus 相关威慑和选择前的心理压力。",
+      "constant": false,
+      "selective": true,
+      "position": "after_character_definition",
+      "order": 6260,
+      "disable": false
+    },
+    {
+      "uid": "p2_identity_hcorp_candidate_rival_roster",
+      "key": [
+        "Wang Qingshan/Enemy",
+        "Wei/Enemy",
+        "Xue Pan/Enemy",
+        "Wang Family",
+        "Xue Family",
+        "Heishou Pack - Wu Branch",
+        "H Corp.",
+        "Family Hierarch Candidate"
+      ],
+      "keysecondary": [
+        "Albina",
+        "Canto VIII",
+        "candidate pressure",
+        "family rivalry"
+      ],
+      "comment": "P2：H Corp 候选家族与分支敌对名册",
+      "content": "Wang Qingshan、Wei 与 Xue Pan 适合扩写 H Corp 候选体系中的横向对抗。Wang Family、Xue Family 与 Heishou Pack - Wu Branch 不应只作为名牌，而要变成场景里的势力手感：衣着、随从、称呼、命令语气、被家族背书的傲慢，以及每个人都知道失败会被如何记录的紧绷。Wei 的兽性压力、Xue Pan 的命令感、Wang Qingshan 的焦躁或不安，都可以作为同一竞争结构下的不同裂纹。Albina 会在这些裂纹里寻找真正的个人，而不是只看家族徽记。AI 可以用他们触发宴席、伏击、试探和公开羞辱等 RP 场面，但不能直接决定候选排名或家族命运。",
+      "constant": false,
+      "selective": true,
+      "position": "after_character_definition",
+      "order": 6270,
+      "disable": false
+    },
+    {
+      "uid": "p2_identity_lce_distortion_ego_lamp_investigation",
+      "key": [
+        "Hohenheim/Enemy",
+        "Hohenheim/Assist Unit",
+        "Moses/Assist Unit",
+        "Distorted Hohenheim",
+        "Lobotomy E.G.O::Lamp Hohenheim",
+        "Moses",
+        "LCE",
+        "LCD"
+      ],
+      "keysecondary": [
+        "Albina",
+        "Distortion",
+        "E.G.O Gear",
+        "investigation"
+      ],
+      "comment": "P2：Hohenheim 的扭曲/助战双面与 Moses 调查位",
+      "content": "Hohenheim 的敌方页与助战页必须保持双面张力：Distorted Hohenheim 适合承载失控、痛苦、扭曲和 LCE 相关事故的现场压力；Lobotomy E.G.O::Lamp Hohenheim 则把同一人物放回协助框架，让光源、装备、冷静与残留阴影并存。Moses 作为 LCD 侧助战单位，应承担调查者的切入角：她不需要抢夺舞台中心，而是在信息缺口、异常痕迹和危险判断上给 RP 场景提供更硬的地面。Albina 会被这种“同一身份在事故与协助之间来回摆动”的结构吸引，但她不会替前端修正事实。AI 可以写异常现场、灯光、调查笔记感和协助时的不稳定信任，不写未确认的治愈、归队或彻底崩坏。",
+      "constant": false,
+      "selective": true,
+      "position": "after_character_definition",
+      "order": 6280,
+      "disable": false
+    },
+    {
+      "uid": "p2_identity_red_gaze_support_authority_boundary",
+      "key": [
+        "Vergilius/Assist Unit",
+        "The Red Gaze Vergilius",
+        "Vergilius",
+        "Color Fixer",
+        "Limbus Company",
+        "guide authority"
+      ],
+      "keysecondary": [
+        "Albina",
+        "Dante",
+        "support unit",
+        "front-end authority"
+      ],
+      "comment": "P2：Vergilius 助战权威与前端边界",
+      "content": "Vergilius 作为 The Red Gaze 的助战锚点，不能被普通化为“很强的队友”。他出场时应改变现场权威结构：敌人会重新估算距离，队伍会下意识压低无意义的争执，Dante 与罪人一侧也会意识到有些判断不再能用临时兴奋掩盖。Albina 对他会保持礼貌而克制，因为 Color Fixer 的存在像一条清晰红线，提醒她有些作品不能随意触碰。AI 可以写他带来的压场、警告、短促指令和危险被提前切断的感觉，但必须尊重独立前端的状态权威：他不会被背景包自动召唤，也不会替玩家赢下战斗；只有当前端、剧情或用户明确允许，他才进入可行动场景。",
+      "constant": false,
+      "selective": true,
+      "position": "after_character_definition",
+      "order": 6290,
+      "disable": false
+    }
+  ]
+}
