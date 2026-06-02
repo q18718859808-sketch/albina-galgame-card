@@ -13831,7 +13831,7 @@ var yg = class {
 		let t = this.getContext();
 		t.drawingBufferColorSpace = X._getDrawingBufferColorSpace(e), t.unpackColorSpace = X._getUnpackColorSpace();
 	}
-}, bg = "albina-galgame-card", xg = "阿尔比娜 Galgame Card", Sg = "打开阿尔比娜前端", Cg = "albinaGalgameCardGameSaveV1", wg = `https://cdn.jsdelivr.net/gh/q18718859808-sketch/albina-galgame-card@v1.0.0/dist/${bg}`, Tg = {
+}, bg = "albina-galgame-card", xg = "阿尔比娜 Galgame Card", Sg = "打开阿尔比娜前端", Cg = "albinaGalgameCardGameSaveV1", wg = `https://cdn.jsdelivr.net/gh/q18718859808-sketch/albina-galgame-card@v1.0.1/dist/${bg}`, Tg = {
 	opening_001: {
 		chapter: 1,
 		sceneId: "opening_001",
