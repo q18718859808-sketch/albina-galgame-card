@@ -1,0 +1,16 @@
+{
+  "profiles": [
+    {
+      "id": "narration",
+      "name": "阿尔比娜叙事",
+      "temperature": 0.85,
+      "instructions": "输出自然中文 RP，尊重前端权威结果和成人自愿边界。"
+    },
+    {
+      "id": "summary",
+      "name": "长期记忆摘要",
+      "temperature": 0.45,
+      "instructions": "只总结已确认事实，不添加新设定。"
+    }
+  ]
+}
