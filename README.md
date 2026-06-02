@@ -3,7 +3,7 @@
 SillyTavern Route A 独立前端卡。角色卡通过酒馆助手加载固定 CDN 脚本，脚本在父页面挂载 iframe 前端，前端负责 GameSave、路线、数值、CG、场景和动态背景记忆；叙事模型只负责对白、旁白、心理、氛围和角色反应。
 
 ```js
-import 'https://cdn.jsdelivr.net/gh/q18718859808-sketch/albina-galgame-card@v1.0.6/dist/albina-galgame-card/console/index.js'
+import 'https://cdn.jsdelivr.net/gh/q18718859808-sketch/albina-galgame-card@v1.0.7/dist/albina-galgame-card/console/index.js'
 ```
 
 纯净导入包位于 `release/pure-import/`。建议导入：
