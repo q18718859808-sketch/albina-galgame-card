@@ -6,7 +6,7 @@
 4. 酒馆助手脚本已嵌入角色卡；如需手动执行，使用：
 
 ```js
-import 'https://cdn.jsdelivr.net/gh/q18718859808-sketch/albina-galgame-card@dafa9e4748c6a99e3d35265ae369efb6b35ffc29/dist/albina-galgame-card/console/index.js'
+import 'https://cdn.jsdelivr.net/gh/q18718859808-sketch/albina-galgame-card@3acfa4de8ac93d0e4f17372507d8658ccbdaf432/dist/albina-galgame-card/console/index.js'
 ```
 
 前端会写入聊天变量 `albinaGalgameCardGameSaveV1`，并维护动态背景记忆。叙事模型只写对白、旁白、心理、氛围和角色反应，不直接改数值、路线、CG 解锁或长期事实。
