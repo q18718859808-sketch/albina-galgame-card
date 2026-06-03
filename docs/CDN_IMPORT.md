@@ -3,11 +3,11 @@
 正式：
 
 ```js
-import 'https://cdn.jsdelivr.net/gh/q18718859808-sketch/albina-galgame-card@v1.0.9/dist/albina-galgame-card/console/index.js'
+import 'https://cdn.jsdelivr.net/gh/q18718859808-sketch/albina-galgame-card@v1.0.10/dist/albina-galgame-card/console/index.js'
 ```
 
 测试：
 
 ```js
-import 'https://testingcf.jsdelivr.net/gh/q18718859808-sketch/albina-galgame-card@v1.0.9/dist/albina-galgame-card/console/index.js'
+import 'https://testingcf.jsdelivr.net/gh/q18718859808-sketch/albina-galgame-card@v1.0.10/dist/albina-galgame-card/console/index.js'
 ```
