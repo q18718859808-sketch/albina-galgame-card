@@ -10,7 +10,7 @@
       "Albina costume/equipment calibrated from reference research, not packed from official art"
     ]
   },
-  "backgrounds": {
+  "bg": {
     "backstreets_rain": "bg/backstreets_rain.jpg",
     "spider_gallery": "bg/spider_gallery.jpg",
     "lce_lab": "bg/lce_lab.jpg",
@@ -24,7 +24,7 @@
     "rain_room": "bg/rain_room.jpg",
     "white_canvas": "bg/white_canvas.jpg"
   },
-  "bg": {
+  "backgrounds": {
     "backstreets_rain": "bg/backstreets_rain.jpg",
     "spider_gallery": "bg/spider_gallery.jpg",
     "lce_lab": "bg/lce_lab.jpg",
@@ -111,7 +111,6 @@
     }
   },
   "cg": {
-    "albina_key_visual": "cg/albina_key_visual.jpg",
     "opening_rain": "cg/opening_rain.jpg",
     "first_gallery": "cg/first_gallery.jpg",
     "fascia_heartbeat": "cg/fascia_heartbeat.jpg",

@@ -1,123 +1,146 @@
 {
+  "style_lock": {
+    "name": "CG battle narrative illustration",
+    "notes": [
+      "cold lethal battlefield-ruin mood",
+      "hard cinematic contrast",
+      "sharp combat dynamics",
+      "dark cold palette",
+      "film storyboard framing",
+      "Albina costume/equipment calibrated from reference research, not packed from official art"
+    ]
+  },
   "bg": {
-    "backstreets_rain": "bg/backstreets_rain.svg",
-    "spider_gallery": "bg/spider_gallery.svg",
-    "lce_lab": "bg/lce_lab.svg",
-    "golden_bough": "bg/golden_bough.svg",
-    "limbus_bus": "bg/limbus_bus.svg",
-    "ring_atelier": "bg/ring_atelier.svg",
-    "city_rooftop": "bg/city_rooftop.svg",
-    "mirror_corridor": "bg/mirror_corridor.svg",
-    "outskirts_dawn": "bg/outskirts_dawn.svg",
-    "nest_station": "bg/nest_station.svg",
-    "rain_room": "bg/rain_room.svg",
-    "white_canvas": "bg/white_canvas.svg"
+    "backstreets_rain": "bg/backstreets_rain.jpg",
+    "spider_gallery": "bg/spider_gallery.jpg",
+    "lce_lab": "bg/lce_lab.jpg",
+    "golden_bough": "bg/golden_bough.jpg",
+    "limbus_bus": "bg/limbus_bus.jpg",
+    "ring_atelier": "bg/ring_atelier.jpg",
+    "city_rooftop": "bg/city_rooftop.jpg",
+    "mirror_corridor": "bg/mirror_corridor.jpg",
+    "outskirts_dawn": "bg/outskirts_dawn.jpg",
+    "nest_station": "bg/nest_station.jpg",
+    "rain_room": "bg/rain_room.jpg",
+    "white_canvas": "bg/white_canvas.jpg"
   },
   "backgrounds": {
-    "backstreets_rain": "bg/backstreets_rain.svg",
-    "spider_gallery": "bg/spider_gallery.svg",
-    "lce_lab": "bg/lce_lab.svg",
-    "golden_bough": "bg/golden_bough.svg",
-    "limbus_bus": "bg/limbus_bus.svg",
-    "ring_atelier": "bg/ring_atelier.svg",
-    "city_rooftop": "bg/city_rooftop.svg",
-    "mirror_corridor": "bg/mirror_corridor.svg",
-    "outskirts_dawn": "bg/outskirts_dawn.svg",
-    "nest_station": "bg/nest_station.svg",
-    "rain_room": "bg/rain_room.svg",
-    "white_canvas": "bg/white_canvas.svg"
+    "backstreets_rain": "bg/backstreets_rain.jpg",
+    "spider_gallery": "bg/spider_gallery.jpg",
+    "lce_lab": "bg/lce_lab.jpg",
+    "golden_bough": "bg/golden_bough.jpg",
+    "limbus_bus": "bg/limbus_bus.jpg",
+    "ring_atelier": "bg/ring_atelier.jpg",
+    "city_rooftop": "bg/city_rooftop.jpg",
+    "mirror_corridor": "bg/mirror_corridor.jpg",
+    "outskirts_dawn": "bg/outskirts_dawn.jpg",
+    "nest_station": "bg/nest_station.jpg",
+    "rain_room": "bg/rain_room.jpg",
+    "white_canvas": "bg/white_canvas.jpg"
   },
   "characters": {
     "albina": {
-      "normal": "characters/albina/normal.svg",
-      "smile": "characters/albina/smile.svg",
-      "surgical": "characters/albina/surgical.svg",
-      "combat": "characters/albina/combat.svg",
-      "armored": "characters/albina/armored.svg",
-      "unarmored": "characters/albina/unarmored.svg",
-      "shy": "characters/albina/shy.svg",
-      "amused": "characters/albina/amused.svg",
-      "focused": "characters/albina/focused.svg",
-      "wounded": "characters/albina/wounded.svg",
-      "furious": "characters/albina/furious.svg",
-      "fascia-open": "characters/albina/fascia-open.svg",
-      "maestro": "characters/albina/maestro.svg",
-      "white-canvas": "characters/albina/white-canvas.svg",
-      "golden-bough": "characters/albina/golden-bough.svg",
-      "ring-conspiracy": "characters/albina/ring-conspiracy.svg",
-      "endgame": "characters/albina/endgame.svg",
-      "rain": "characters/albina/rain.svg"
+      "normal": "characters/albina/normal.png",
+      "smile": "characters/albina/smile.png",
+      "surgical": "characters/albina/surgical.png",
+      "combat": "characters/albina/combat.png",
+      "armored": "characters/albina/armored.png",
+      "unarmored": "characters/albina/unarmored.png",
+      "shy": "characters/albina/shy.png",
+      "amused": "characters/albina/amused.png",
+      "focused": "characters/albina/focused.png",
+      "wounded": "characters/albina/wounded.png",
+      "furious": "characters/albina/furious.png",
+      "fascia-open": "characters/albina/fascia-open.png",
+      "maestro": "characters/albina/maestro.png",
+      "white-canvas": "characters/albina/white-canvas.png",
+      "golden-bough": "characters/albina/golden-bough.png",
+      "ring-conspiracy": "characters/albina/ring-conspiracy.png",
+      "endgame": "characters/albina/endgame.png",
+      "rain": "characters/albina/rain.png"
     },
     "protagonist": {
-      "normal": "characters/protagonist/normal.svg",
-      "smile": "characters/protagonist/smile.svg",
-      "serious": "characters/protagonist/serious.svg",
-      "injured": "characters/protagonist/injured.svg",
-      "coat": "characters/protagonist/coat.svg",
-      "formal": "characters/protagonist/formal.svg",
-      "battle": "characters/protagonist/battle.svg",
-      "tender": "characters/protagonist/tender.svg",
-      "shadow": "characters/protagonist/shadow.svg",
-      "profile": "characters/protagonist/profile.svg",
-      "resolve": "characters/protagonist/resolve.svg",
-      "wet-hair": "characters/protagonist/wet-hair.svg"
-    },
-    "callisto": {
-      "normal": "characters/callisto/normal.svg"
-    },
-    "ren": {
-      "normal": "characters/ren/normal.svg"
-    },
-    "lucio": {
-      "normal": "characters/lucio/normal.svg"
-    },
-    "kira": {
-      "normal": "characters/kira/normal.svg"
-    },
-    "sora": {
-      "normal": "characters/sora/normal.svg"
-    },
-    "araya": {
-      "normal": "characters/araya/normal.svg"
-    },
-    "sinclair": {
-      "normal": "characters/sinclair/normal.svg"
-    },
-    "ryoshu": {
-      "normal": "characters/ryoshu/normal.svg"
+      "normal": "characters/protagonist/normal.png",
+      "smile": "characters/protagonist/smile.png",
+      "serious": "characters/protagonist/serious.png",
+      "injured": "characters/protagonist/injured.png",
+      "coat": "characters/protagonist/coat.png",
+      "formal": "characters/protagonist/formal.png",
+      "battle": "characters/protagonist/battle.png",
+      "tender": "characters/protagonist/tender.png",
+      "shadow": "characters/protagonist/shadow.png",
+      "profile": "characters/protagonist/profile.png",
+      "resolve": "characters/protagonist/resolve.png",
+      "wet-hair": "characters/protagonist/wet-hair.png"
     },
     "dante": {
-      "normal": "characters/dante/normal.svg"
+      "normal": "characters/dante/normal.png"
     },
     "vergilius": {
-      "normal": "characters/vergilius/normal.svg"
+      "normal": "characters/vergilius/normal.png"
+    },
+    "charon": {
+      "normal": "characters/charon/normal.png"
+    },
+    "faust": {
+      "normal": "characters/faust/normal.png"
+    },
+    "yi_sang": {
+      "normal": "characters/yi_sang/normal.png"
+    },
+    "lcd_captain": {
+      "normal": "characters/lcd_captain/normal.png"
+    },
+    "callisto": {
+      "normal": "characters/callisto/normal.png"
+    },
+    "ren": {
+      "normal": "characters/ren/normal.png"
+    },
+    "lce_doctor": {
+      "normal": "characters/lce_doctor/normal.png"
+    },
+    "fixer_informant": {
+      "normal": "characters/fixer_informant/normal.png"
+    },
+    "golden_apparition": {
+      "normal": "characters/golden_apparition/normal.png"
+    },
+    "ring_agent": {
+      "normal": "characters/ring_agent/normal.png"
     }
   },
   "cg": {
-    "opening_rain": "cg/opening_rain.svg",
-    "first_gallery": "cg/first_gallery.svg",
-    "fascia_heartbeat": "cg/fascia_heartbeat.svg",
-    "white_canvas_choice": "cg/white_canvas_choice.svg",
-    "backstreet_pursuit": "cg/backstreet_pursuit.svg",
-    "lce_raid": "cg/lce_raid.svg",
-    "golden_bough_rebuild": "cg/golden_bough_rebuild.svg",
-    "ring_invitation": "cg/ring_invitation.svg",
-    "trust_threshold": "cg/trust_threshold.svg",
-    "danger_threshold": "cg/danger_threshold.svg",
-    "art_resonance": "cg/art_resonance.svg",
-    "maestro_shadow": "cg/maestro_shadow.svg",
-    "ren_interruption": "cg/ren_interruption.svg",
-    "araya_rooftop": "cg/araya_rooftop.svg",
-    "sinclair_flash": "cg/sinclair_flash.svg",
-    "limbus_bus_night": "cg/limbus_bus_night.svg",
-    "surgery_of_memory": "cg/surgery_of_memory.svg",
-    "hollow_torso_reveal": "cg/hollow_torso_reveal.svg",
-    "rain_confession": "cg/rain_confession.svg",
-    "conspiracy_contract": "cg/conspiracy_contract.svg",
-    "rebuild_awakening": "cg/rebuild_awakening.svg",
-    "white_canvas_ending": "cg/white_canvas_ending.svg",
-    "golden_bough_ending": "cg/golden_bough_ending.svg",
-    "ring_conspiracy_ending": "cg/ring_conspiracy_ending.svg"
+    "opening_rain": "cg/opening_rain.jpg",
+    "first_gallery": "cg/first_gallery.jpg",
+    "fascia_heartbeat": "cg/fascia_heartbeat.jpg",
+    "white_canvas_choice": "cg/white_canvas_choice.jpg",
+    "backstreet_pursuit": "cg/backstreet_pursuit.jpg",
+    "lce_raid": "cg/lce_raid.jpg",
+    "golden_bough_rebuild": "cg/golden_bough_rebuild.jpg",
+    "ring_invitation": "cg/ring_invitation.jpg",
+    "trust_threshold": "cg/trust_threshold.jpg",
+    "danger_threshold": "cg/danger_threshold.jpg",
+    "art_resonance": "cg/art_resonance.jpg",
+    "maestro_shadow": "cg/maestro_shadow.jpg",
+    "ren_interruption": "cg/ren_interruption.jpg",
+    "araya_rooftop": "cg/araya_rooftop.jpg",
+    "sinclair_flash": "cg/sinclair_flash.jpg",
+    "limbus_bus_night": "cg/limbus_bus_night.jpg",
+    "surgery_of_memory": "cg/surgery_of_memory.jpg",
+    "hollow_torso_reveal": "cg/hollow_torso_reveal.jpg",
+    "rain_confession": "cg/rain_confession.jpg",
+    "conspiracy_contract": "cg/conspiracy_contract.jpg",
+    "rebuild_awakening": "cg/rebuild_awakening.jpg",
+    "white_canvas_ending": "cg/white_canvas_ending.jpg",
+    "golden_bough_ending": "cg/golden_bough_ending.jpg",
+    "ring_conspiracy_ending": "cg/ring_conspiracy_ending.jpg",
+    "combat_transition_01": "cg/combat_transition_01.jpg",
+    "combat_transition_02": "cg/combat_transition_02.jpg",
+    "combat_transition_03": "cg/combat_transition_03.jpg",
+    "combat_transition_04": "cg/combat_transition_04.jpg",
+    "combat_transition_05": "cg/combat_transition_05.jpg",
+    "combat_transition_06": "cg/combat_transition_06.jpg"
   },
   "ui": {
     "textbox": "ui/textbox.svg",

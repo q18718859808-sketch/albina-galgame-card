@@ -4856,12 +4856,173 @@ var Mc = "albina-galgame-card", Nc = "阿尔比娜 Galgame Card", Pc = "打开�
 		speaker: "阿尔比娜",
 		text: "她把黑色手掌停在离你心口一寸的位置，没有继续向前。法西娅安静得像也在等待你的许可。",
 		choices: [{
+			id: "white_follow_to_lab",
+			text: "陪她把画布带进 LCE 临时手术室",
+			nextSceneId: "white_canvas_003",
+			effects: {
+				trust: 3,
+				affection: 2,
+				artResonance: 2,
+				unlockCg: "hollow_torso_reveal",
+				flag: "white_lab_boundary_seen"
+			}
+		}, {
 			id: "return_opening_from_white",
 			text: "回到路线选择",
 			nextSceneId: "opening_001",
 			effects: {
 				trust: 1,
 				flag: "white_canvas_looped"
+			}
+		}]
+	},
+	white_canvas_003: {
+		chapter: 3,
+		sceneId: "white_canvas_003",
+		route: "white_canvas",
+		locationId: "lce_lab",
+		background: "bg/lce_lab.jpg",
+		cg: "cg/hollow_torso_reveal.jpg",
+		tone: "quiet",
+		characters: [
+			{
+				id: "lce_doctor",
+				sprite: "normal",
+				position: "left",
+				active: !1,
+				scale: .86
+			},
+			{
+				id: "albina",
+				sprite: "surgical",
+				position: "center",
+				active: !0,
+				scale: 1
+			},
+			{
+				id: "protagonist",
+				sprite: "serious",
+				position: "right",
+				active: !1,
+				scale: .9
+			}
+		],
+		speaker: "LCE 医师",
+		text: "灯光没有温度。记录员要求你签下旁观协议，阿尔比娜却先把笔推给自己：这一次，谁也不能替她同意被拆解。",
+		choices: [{
+			id: "white_sign_witness_protocol",
+			text: "只签见证，不签处置权",
+			nextSceneId: "white_canvas_004",
+			effects: {
+				trust: 4,
+				affection: 1,
+				artResonance: 2,
+				unlockCg: "lce_raid",
+				flag: "witness_not_ownership"
+			}
+		}, {
+			id: "white_interrupt_lab_terms",
+			text: "要求医师删去所有所有权措辞",
+			nextSceneId: "white_canvas_004",
+			effects: {
+				trust: 3,
+				danger: 1,
+				artResonance: 3,
+				unlockCg: "fascia_heartbeat",
+				flag: "lab_terms_rewritten"
+			}
+		}]
+	},
+	white_canvas_004: {
+		chapter: 4,
+		sceneId: "white_canvas_004",
+		route: "white_canvas",
+		locationId: "limbus_bus",
+		background: "bg/limbus_bus.jpg",
+		cg: "cg/limbus_bus_night.jpg",
+		tone: "rain",
+		characters: [
+			{
+				id: "dante",
+				sprite: "normal",
+				position: "left",
+				active: !1,
+				scale: .82
+			},
+			{
+				id: "albina",
+				sprite: "rain",
+				position: "center",
+				active: !0,
+				scale: 1
+			},
+			{
+				id: "protagonist",
+				sprite: "wet-hair",
+				position: "right",
+				active: !1,
+				scale: .9
+			}
+		],
+		speaker: "阿尔比娜",
+		text: "巴士窗上映出她的白色义体，也映出你故意留下的空座。她说完整不是没有裂缝，而是裂缝终于有了不被展览的权利。",
+		choices: [{
+			id: "white_keep_empty_seat",
+			text: "替她保留那张无人审判的座位",
+			nextSceneId: "white_canvas_005",
+			effects: {
+				affection: 4,
+				trust: 3,
+				artResonance: 1,
+				unlockCg: "white_canvas_ending",
+				flag: "white_canvas_empty_seat"
+			}
+		}, {
+			id: "white_share_rain_window",
+			text: "把雨夜倒影交给她自己命名",
+			nextSceneId: "white_canvas_005",
+			effects: {
+				affection: 3,
+				trust: 2,
+				artResonance: 3,
+				unlockCg: "rain_confession",
+				flag: "rain_reflection_named"
+			}
+		}]
+	},
+	white_canvas_005: {
+		chapter: 5,
+		sceneId: "white_canvas_005",
+		route: "white_canvas",
+		locationId: "outskirts_dawn",
+		background: "bg/outskirts_dawn.jpg",
+		cg: "cg/white_canvas_ending.jpg",
+		tone: "quiet",
+		characters: [{
+			id: "protagonist",
+			sprite: "resolve",
+			position: "left",
+			active: !1,
+			scale: .92
+		}, {
+			id: "albina",
+			sprite: "endgame",
+			position: "center",
+			active: !0,
+			scale: 1
+		}],
+		speaker: "阿尔比娜",
+		text: "黎明像一层还没有落款的底色。她把法西娅插在你们之间，不是阻隔，而是提醒：任何亲密都必须能被双方随时收回。",
+		choices: [{
+			id: "white_canvas_route_complete",
+			text: "记录白色画布路线的暂定结局",
+			nextSceneId: "opening_001",
+			effects: {
+				affection: 2,
+				trust: 2,
+				danger: -1,
+				artResonance: 2,
+				flag: "white_canvas_route_complete"
 			}
 		}]
 	},
@@ -4936,12 +5097,183 @@ var Mc = "albina-galgame-card", Nc = "阿尔比娜 Galgame Card", Pc = "打开�
 		speaker: "旁白",
 		text: "镜面里的阿尔比娜有无数个切口，但每一道切口都避开了你替她守住的名字。",
 		choices: [{
+			id: "rebuild_push_into_raid",
+			text: "带着记忆锚点突入金枝异常现场",
+			nextSceneId: "golden_bough_003",
+			effects: {
+				trust: 3,
+				danger: 2,
+				artResonance: 3,
+				unlockCg: "lce_raid",
+				flag: "rebuild_raid_committed"
+			}
+		}, {
 			id: "return_opening_from_rebuild",
 			text: "回到路线选择",
 			nextSceneId: "opening_001",
 			effects: {
 				trust: 1,
 				flag: "rebuild_looped"
+			}
+		}]
+	},
+	golden_bough_003: {
+		chapter: 3,
+		sceneId: "golden_bough_003",
+		route: "golden_bough_rebuild",
+		locationId: "lce_lab",
+		background: "bg/lce_lab.jpg",
+		cg: "cg/lce_raid.jpg",
+		tone: "threat",
+		characters: [
+			{
+				id: "faust",
+				sprite: "normal",
+				position: "left",
+				active: !1,
+				scale: .82
+			},
+			{
+				id: "albina",
+				sprite: "fascia-open",
+				position: "center",
+				active: !0,
+				scale: 1
+			},
+			{
+				id: "protagonist",
+				sprite: "battle",
+				position: "right",
+				active: !1,
+				scale: .92
+			}
+		],
+		speaker: "浮士德",
+		text: "金枝残响把病床、画架和战场叠成一张薄膜。浮士德只给出结论：如果锚点断裂，阿尔比娜会把自己误认为一件已经完成的作品。",
+		choices: [{
+			id: "rebuild_cut_false_completion",
+			text: "切断“完成品”的错误定义",
+			nextSceneId: "golden_bough_004",
+			effects: {
+				trust: 4,
+				danger: 1,
+				artResonance: 4,
+				unlockCg: "surgery_of_memory",
+				flag: "false_completion_cut"
+			}
+		}, {
+			id: "rebuild_guard_fascia_pulse",
+			text: "守住法西娅的心跳频率",
+			nextSceneId: "golden_bough_004",
+			effects: {
+				trust: 3,
+				affection: 1,
+				artResonance: 3,
+				unlockCg: "fascia_heartbeat",
+				flag: "fascia_pulse_guarded"
+			}
+		}]
+	},
+	golden_bough_004: {
+		chapter: 4,
+		sceneId: "golden_bough_004",
+		route: "golden_bough_rebuild",
+		locationId: "city_rooftop",
+		background: "bg/city_rooftop.jpg",
+		cg: "cg/araya_rooftop.jpg",
+		tone: "golden",
+		characters: [
+			{
+				id: "vergilius",
+				sprite: "normal",
+				position: "left",
+				active: !1,
+				scale: .84
+			},
+			{
+				id: "albina",
+				sprite: "golden-bough",
+				position: "center",
+				active: !0,
+				scale: 1
+			},
+			{
+				id: "protagonist",
+				sprite: "resolve",
+				position: "right",
+				active: !1,
+				scale: .92
+			}
+		],
+		speaker: "维吉利乌斯",
+		text: "楼顶的风把金色光尘吹成刀刃。维吉利乌斯没有劝阻，只提醒你：重构不是修好她，而是承认她有权决定哪些缺口继续存在。",
+		choices: [{
+			id: "rebuild_accept_missing_pieces",
+			text: "承认缺口也是她的结构",
+			nextSceneId: "golden_bough_005",
+			effects: {
+				affection: 2,
+				trust: 4,
+				artResonance: 2,
+				unlockCg: "golden_bough_ending",
+				flag: "missing_pieces_accepted"
+			}
+		}, {
+			id: "rebuild_use_rooftop_signal",
+			text: "用楼顶信号重排记忆顺序",
+			nextSceneId: "golden_bough_005",
+			effects: {
+				trust: 3,
+				danger: -1,
+				artResonance: 4,
+				unlockCg: "araya_rooftop",
+				flag: "rooftop_signal_reordered"
+			}
+		}]
+	},
+	golden_bough_005: {
+		chapter: 5,
+		sceneId: "golden_bough_005",
+		route: "golden_bough_rebuild",
+		locationId: "mirror_corridor",
+		background: "bg/mirror_corridor.jpg",
+		cg: "cg/golden_bough_ending.jpg",
+		tone: "golden",
+		characters: [
+			{
+				id: "golden_apparition",
+				sprite: "normal",
+				position: "left",
+				active: !1,
+				scale: .82
+			},
+			{
+				id: "albina",
+				sprite: "endgame",
+				position: "center",
+				active: !0,
+				scale: 1
+			},
+			{
+				id: "protagonist",
+				sprite: "resolve",
+				position: "right",
+				active: !1,
+				scale: .92
+			}
+		],
+		speaker: "阿尔比娜",
+		text: "最后一面镜子没有给她完整倒影，只给出一条可以返回的路。她握住你的手腕，确认那不是束缚，而是一次被允许的回航。",
+		choices: [{
+			id: "golden_bough_route_complete",
+			text: "记录金枝重构路线的暂定结局",
+			nextSceneId: "opening_001",
+			effects: {
+				trust: 2,
+				affection: 1,
+				danger: -1,
+				artResonance: 3,
+				flag: "golden_bough_route_complete"
 			}
 		}]
 	},
@@ -5026,6 +5358,17 @@ var Mc = "albina-galgame-card", Nc = "阿尔比娜 Galgame Card", Pc = "打开�
 		speaker: "阿尔比娜",
 		text: "她第一次没有把怒意伪装成礼貌。那不是要毁掉你的眼神，更像是不允许任何人替她决定你的用途。",
 		choices: [{
+			id: "conspiracy_escape_to_backstreets",
+			text: "带着未签名委托冲出画廊",
+			nextSceneId: "ring_conspiracy_003",
+			effects: {
+				danger: 3,
+				trust: 2,
+				artResonance: 2,
+				unlockCg: "backstreet_pursuit",
+				flag: "ring_escape_committed"
+			}
+		}, {
 			id: "return_opening_from_ring",
 			text: "回到路线选择",
 			nextSceneId: "opening_001",
@@ -5033,6 +5376,110 @@ var Mc = "albina-galgame-card", Nc = "阿尔比娜 Galgame Card", Pc = "打开�
 				danger: -1,
 				trust: 1,
 				flag: "conspiracy_looped"
+			}
+		}]
+	},
+	ring_conspiracy_003: {
+		chapter: 3,
+		sceneId: "ring_conspiracy_003",
+		route: "ring_conspiracy",
+		locationId: "backstreets_rain",
+		background: "bg/backstreets_rain.jpg",
+		cg: "cg/backstreet_pursuit.jpg",
+		tone: "threat",
+		characters: [
+			{
+				id: "ring_agent",
+				sprite: "normal",
+				position: "left",
+				active: !1,
+				scale: .84
+			},
+			{
+				id: "albina",
+				sprite: "combat",
+				position: "center",
+				active: !0,
+				scale: 1
+			},
+			{
+				id: "protagonist",
+				sprite: "battle",
+				position: "right",
+				active: !1,
+				scale: .92
+			}
+		],
+		speaker: "环指代理人",
+		text: "追兵把雨巷切成一个个展格，仿佛你们已经是可出售的连环画。阿尔比娜没有回头，只把法西娅横在你和委托书之间。",
+		choices: [{
+			id: "conspiracy_break_pursuit_frame",
+			text: "打碎追兵布下的取景框",
+			nextSceneId: "ring_conspiracy_004",
+			effects: {
+				danger: 2,
+				trust: 3,
+				artResonance: 3,
+				unlockCg: "combat_transition_01",
+				flag: "pursuit_frame_broken"
+			}
+		}, {
+			id: "conspiracy_feed_false_signature",
+			text: "交出伪造签名引开视线",
+			nextSceneId: "ring_conspiracy_004",
+			effects: {
+				danger: -1,
+				trust: 2,
+				artResonance: 4,
+				unlockCg: "ren_interruption",
+				flag: "false_signature_planted"
+			}
+		}]
+	},
+	ring_conspiracy_004: {
+		chapter: 4,
+		sceneId: "ring_conspiracy_004",
+		route: "ring_conspiracy",
+		locationId: "spider_gallery",
+		background: "bg/spider_gallery.jpg",
+		cg: "cg/maestro_shadow.jpg",
+		tone: "gallery",
+		characters: [
+			{
+				id: "ren",
+				sprite: "normal",
+				position: "left",
+				active: !1,
+				scale: .82
+			},
+			{
+				id: "albina",
+				sprite: "maestro",
+				position: "center",
+				active: !0,
+				scale: 1
+			},
+			{
+				id: "protagonist",
+				sprite: "shadow",
+				position: "right",
+				active: !1,
+				scale: .9
+			}
+		],
+		speaker: "阿尔比娜",
+		text: "回到蜘蛛画廊时，所有灯都向她弯下去。她把那份委托钉在空框里，语气平静：如果他们要收藏背叛，就先学会被背叛凝视。",
+		choices: [{
+			id: "ring_conspiracy_route_complete",
+			text: "记录环指共谋路线的暂定结局",
+			nextSceneId: "opening_001",
+			effects: {
+				danger: -2,
+				trust: 2,
+				affection: 1,
+				artResonance: 3,
+				unlockCg: "ring_conspiracy_ending",
+				flag: "ring_conspiracy_route_complete"
 			}
 		}]
 	}
@@ -5051,7 +5498,7 @@ function Vc() {
 }
 //#endregion
 //#region src/core/progressionEngine.ts
-var Hc = 2142, Uc = 260, Wc = 1882, Gc = 408, Kc = 15, qc = [
+var Hc = 2142, Uc = 260, Wc = 1882, Gc = 768, Kc = 15, qc = [
 	0,
 	12,
 	30,
@@ -5594,7 +6041,7 @@ function dl(e) {
 			scope: "高影响 P4 提示改写为更密集的 RP 锚点",
 			coverage: Gc,
 			total: Wc,
-			detail: "408 个 P4 条目已从标题分类和 manifest 元数据扩写为更可用的桥接提示；它们提升路线可用性，但仍不是源文章级复述或完整剧情复原。",
+			detail: "768 个 P4 条目已从标题分类和 manifest 元数据扩写为更可用的桥接提示；它们提升路线可用性，但仍不是源文章级复述或完整剧情复原。",
 			anchorIds: ["p4_expanded_bridge_report"],
 			linkedSceneIds: [],
 			updatedAt: t
@@ -19110,7 +19557,7 @@ var Vb = { class: "textbox" }, Hb = { class: "speaker-row" }, Ub = { class: "spe
 				W("article", null, [y[7] ||= W("span", null, "任务节点", -1), W("strong", null, P(n.value.routeQuestNodes), 1)]),
 				W("article", null, [y[8] ||= W("span", null, "完整复原", -1), W("strong", null, P(n.value.fullPlotRestored ? "是" : "否"), 1)])
 			]),
-			W("section", rS, [y[9] ||= W("div", { class: "route-board-title" }, [W("strong", null, "当前剧情系统判断"), W("span", null, "可校验状态")], -1), W("p", null, P(n.value.status), 1)]),
+			W("section", rS, [y[9] ||= W("div", { class: "route-board-title" }, [W("strong", null, "当前剧情系统判断"), W("span", null, "可验证状态")], -1), W("p", null, P(n.value.status), 1)]),
 			W("div", iS, [
 				W("section", aS, [y[10] ||= W("h3", null, "剧情索引", -1), (H(!0), U(V, null, B(s.value, (e) => (H(), U("article", {
 					key: e.id,
