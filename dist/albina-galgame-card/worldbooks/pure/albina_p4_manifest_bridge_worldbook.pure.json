@@ -73,20 +73,28 @@
         "A Certain Library's General Invitation I",
         "canon term",
         "route support",
-        "setting"
+        "setting",
+        "expanded bridge",
+        "story log anchor",
+        "route pressure"
       ],
       "keysecondary": [
         "Albina",
         "Limbus Company",
         "The City"
       ],
-      "comment": "P4 canon bridge: A Certain Library's General Invitation I",
-      "content": "A Certain Library's General Invitation I can enter the Albina route as a compact setting, character, or mechanic anchor. Use it to ground the scene in the Limbus Company tone while keeping the focus on player choice, Albina's controlled courtesy, her body-art aesthetics, and the risks created by proximity to her. Do not turn the term into an automatic victory, a trivia lecture, or a detached explanation. When it appears, tie it to sensory pressure, group reaction, route boundaries, tactical cost, or an observable change in the current scene.",
+      "comment": "P4 expanded bridge: A Certain Library's General Invitation I",
+      "content": "A Certain Library's General Invitation I is an expanded P4 bridge anchor for the Albina route.\nUse it as an invitation/archive pressure frame. The scene should feel like a formal threshold: entry terms, reading rights, borrowed voices, and the danger of becoming material for someone else's catalog.\nWhite Canvas can turn the invitation into a consent form; Golden Bough Rebuild can turn it into a memory index; Ring Conspiracy can turn it into a forged guest-list or a counterfeit artistic summons.\nTrigger it around doors, tickets, books, displays, invitations, or any moment where a polite request might actually be a binding structure.\nCharacter pressure: if no named Sinner is onstage, let nearby witnesses react through practical caution, rumor, or tactical shorthand.\nFaction/identity frame: treat the title as a route-facing constraint, not as a detached glossary term.\nScene beats: present the invitation, clarify what entry would cost, and let the player decide whether Albina may treat the record as art.\nSafety boundary: this entry is original route support built from title taxonomy and page index facts only. Do not present it as full canon retelling, do not quote external text, and do not claim full plot restoration from this trigger alone.",
       "constant": false,
       "selective": true,
       "position": "after_character_definition",
       "order": 9003,
-      "disable": false
+      "disable": false,
+      "extensions": {
+        "expansion_version": "v1.0.11",
+        "expanded_at": "2026-06-03T11:48:46Z",
+        "expansion_basis": "title_taxonomy_manifest_no_article_text"
+      }
     },
     {
       "uid": "p4_canon_term_a_certain_sinclair_fe60f38356",
@@ -94,20 +102,28 @@
         "A Certain Sinclair",
         "canon term",
         "route support",
-        "setting"
+        "setting",
+        "expanded bridge",
+        "story log anchor",
+        "route pressure"
       ],
       "keysecondary": [
         "Albina",
         "Limbus Company",
         "The City"
       ],
-      "comment": "P4 canon bridge: A Certain Sinclair",
-      "content": "A Certain Sinclair can enter the Albina route as a compact setting, character, or mechanic anchor. Use it to ground the scene in the Limbus Company tone while keeping the focus on player choice, Albina's controlled courtesy, her body-art aesthetics, and the risks created by proximity to her. Do not turn the term into an automatic victory, a trivia lecture, or a detached explanation. When it appears, tie it to sensory pressure, group reaction, route boundaries, tactical cost, or an observable change in the current scene.",
+      "comment": "P4 expanded bridge: A Certain Sinclair",
+      "content": "A Certain Sinclair is an expanded P4 bridge anchor for the Albina route.\nUse it as a focused canon-term anchor. It should add scene texture, stakes, and character reaction without pretending to summarize a full article.\nWhite Canvas can stress consent and self-definition; Golden Bough Rebuild can stress memory continuity; Ring Conspiracy can stress authorship, forgery, and control.\nTrigger it only when the term naturally appears in dialogue, investigation, combat, or route bookkeeping.\nCharacter pressure: when Sinclair is present or referenced, keep the focus on observable behavior, speech rhythm, hesitation, and how Albina's attention changes the room.\nFaction/identity frame: treat the title as a route-facing constraint, not as a detached glossary term.\nScene beats: attach the term to a sensory detail, a social reaction, and a route consequence.\nSafety boundary: this entry is original route support built from title taxonomy and page index facts only. Do not present it as full canon retelling, do not quote external text, and do not claim full plot restoration from this trigger alone.",
       "constant": false,
       "selective": true,
       "position": "after_character_definition",
       "order": 9004,
-      "disable": false
+      "disable": false,
+      "extensions": {
+        "expansion_version": "v1.0.11",
+        "expanded_at": "2026-06-03T11:48:46Z",
+        "expansion_basis": "title_taxonomy_manifest_no_article_text"
+      }
     },
     {
       "uid": "p4_visual_a_certain_sinclair_sprites_873db0631f",
@@ -137,20 +153,28 @@
         "A Midspring Night's Dream",
         "canon term",
         "route support",
-        "setting"
+        "setting",
+        "expanded bridge",
+        "story log anchor",
+        "route pressure"
       ],
       "keysecondary": [
         "Albina",
         "Limbus Company",
         "The City"
       ],
-      "comment": "P4 canon bridge: A Midspring Night's Dream",
-      "content": "A Midspring Night's Dream can enter the Albina route as a compact setting, character, or mechanic anchor. Use it to ground the scene in the Limbus Company tone while keeping the focus on player choice, Albina's controlled courtesy, her body-art aesthetics, and the risks created by proximity to her. Do not turn the term into an automatic victory, a trivia lecture, or a detached explanation. When it appears, tie it to sensory pressure, group reaction, route boundaries, tactical cost, or an observable change in the current scene.",
+      "comment": "P4 expanded bridge: A Midspring Night's Dream",
+      "content": "A Midspring Night's Dream is an expanded P4 bridge anchor for the Albina route.\nUse it as an organizational pressure frame. Let ranks, uniforms, contracts, section numbers, and reputations shape what characters can risk in public.\nWhite Canvas can stress negotiated boundaries; Golden Bough Rebuild can stress records, witnesses, and professional memory; Ring Conspiracy can stress hostile contracts, counterfeits, and leverage.\nTrigger it when an identity, office, association, faction order, or named professional style gives the scene a tactical rule the player can exploit or violate.\nCharacter pressure: if no named Sinner is onstage, let nearby witnesses react through practical caution, rumor, or tactical shorthand.\nFaction/identity frame: an art-crime frame that fits forgery, consent boundaries, and hostile aesthetic control\nScene beats: show the professional rule, show the social penalty for breaking it, then offer a player-facing exploit or refusal.\nSafety boundary: this entry is original route support built from title taxonomy and page index facts only. Do not present it as full canon retelling, do not quote external text, and do not claim full plot restoration from this trigger alone.",
       "constant": false,
       "selective": true,
       "position": "after_character_definition",
       "order": 9006,
-      "disable": false
+      "disable": false,
+      "extensions": {
+        "expansion_version": "v1.0.11",
+        "expanded_at": "2026-06-03T11:48:46Z",
+        "expansion_basis": "title_taxonomy_manifest_no_article_text"
+      }
     },
     {
       "uid": "p4_canon_term_a_midspring_night_s_dream_2_444670f9f6",
@@ -1113,20 +1137,28 @@
         "Blade Lineage Mentor Meursault",
         "canon term",
         "route support",
-        "setting"
+        "setting",
+        "expanded bridge",
+        "story log anchor",
+        "route pressure"
       ],
       "keysecondary": [
         "Albina",
         "Limbus Company",
         "The City"
       ],
-      "comment": "P4 canon bridge: Blade Lineage Mentor Meursault",
-      "content": "Blade Lineage Mentor Meursault can enter the Albina route as a compact setting, character, or mechanic anchor. Use it to ground the scene in the Limbus Company tone while keeping the focus on player choice, Albina's controlled courtesy, her body-art aesthetics, and the risks created by proximity to her. Do not turn the term into an automatic victory, a trivia lecture, or a detached explanation. When it appears, tie it to sensory pressure, group reaction, route boundaries, tactical cost, or an observable change in the current scene.",
+      "comment": "P4 expanded bridge: Blade Lineage Mentor Meursault",
+      "content": "Blade Lineage Mentor Meursault is an expanded P4 bridge anchor for the Albina route.\nUse it as an organizational pressure frame. Let ranks, uniforms, contracts, section numbers, and reputations shape what characters can risk in public.\nWhite Canvas can stress negotiated boundaries; Golden Bough Rebuild can stress records, witnesses, and professional memory; Ring Conspiracy can stress hostile contracts, counterfeits, and leverage.\nTrigger it when an identity, office, association, faction order, or named professional style gives the scene a tactical rule the player can exploit or violate.\nCharacter pressure: when Meursault is present or referenced, keep the focus on observable behavior, speech rhythm, hesitation, and how Albina's attention changes the room.\nFaction/identity frame: a disciplined violence lineage where etiquette, skill, and grudges can all become route pressure\nScene beats: show the professional rule, show the social penalty for breaking it, then offer a player-facing exploit or refusal.\nSafety boundary: this entry is original route support built from title taxonomy and page index facts only. Do not present it as full canon retelling, do not quote external text, and do not claim full plot restoration from this trigger alone.",
       "constant": false,
       "selective": true,
       "position": "after_character_definition",
       "order": 9052,
-      "disable": false
+      "disable": false,
+      "extensions": {
+        "expansion_version": "v1.0.11",
+        "expanded_at": "2026-06-03T11:48:46Z",
+        "expansion_basis": "title_taxonomy_manifest_no_article_text"
+      }
     },
     {
       "uid": "p4_identity_story_blade_lineage_mentor_meursault_identity_story_16bbd73ba8",
@@ -1178,20 +1210,28 @@
         "Blade Lineage Salsu Don Quixote",
         "canon term",
         "route support",
-        "setting"
+        "setting",
+        "expanded bridge",
+        "story log anchor",
+        "route pressure"
       ],
       "keysecondary": [
         "Albina",
         "Limbus Company",
         "The City"
       ],
-      "comment": "P4 canon bridge: Blade Lineage Salsu Don Quixote",
-      "content": "Blade Lineage Salsu Don Quixote can enter the Albina route as a compact setting, character, or mechanic anchor. Use it to ground the scene in the Limbus Company tone while keeping the focus on player choice, Albina's controlled courtesy, her body-art aesthetics, and the risks created by proximity to her. Do not turn the term into an automatic victory, a trivia lecture, or a detached explanation. When it appears, tie it to sensory pressure, group reaction, route boundaries, tactical cost, or an observable change in the current scene.",
+      "comment": "P4 expanded bridge: Blade Lineage Salsu Don Quixote",
+      "content": "Blade Lineage Salsu Don Quixote is an expanded P4 bridge anchor for the Albina route.\nUse it as an organizational pressure frame. Let ranks, uniforms, contracts, section numbers, and reputations shape what characters can risk in public.\nWhite Canvas can stress negotiated boundaries; Golden Bough Rebuild can stress records, witnesses, and professional memory; Ring Conspiracy can stress hostile contracts, counterfeits, and leverage.\nTrigger it when an identity, office, association, faction order, or named professional style gives the scene a tactical rule the player can exploit or violate.\nCharacter pressure: when Don Quixote is present or referenced, keep the focus on observable behavior, speech rhythm, hesitation, and how Albina's attention changes the room.\nFaction/identity frame: a disciplined violence lineage where etiquette, skill, and grudges can all become route pressure\nScene beats: show the professional rule, show the social penalty for breaking it, then offer a player-facing exploit or refusal.\nSafety boundary: this entry is original route support built from title taxonomy and page index facts only. Do not present it as full canon retelling, do not quote external text, and do not claim full plot restoration from this trigger alone.",
       "constant": false,
       "selective": true,
       "position": "after_character_definition",
       "order": 9055,
-      "disable": false
+      "disable": false,
+      "extensions": {
+        "expansion_version": "v1.0.11",
+        "expanded_at": "2026-06-03T11:48:46Z",
+        "expansion_basis": "title_taxonomy_manifest_no_article_text"
+      }
     },
     {
       "uid": "p4_identity_story_blade_lineage_salsu_don_quixote_identity_story_e234fbd01a",
@@ -1243,20 +1283,28 @@
         "Blade Lineage Salsu Faust",
         "canon term",
         "route support",
-        "setting"
+        "setting",
+        "expanded bridge",
+        "story log anchor",
+        "route pressure"
       ],
       "keysecondary": [
         "Albina",
         "Limbus Company",
         "The City"
       ],
-      "comment": "P4 canon bridge: Blade Lineage Salsu Faust",
-      "content": "Blade Lineage Salsu Faust can enter the Albina route as a compact setting, character, or mechanic anchor. Use it to ground the scene in the Limbus Company tone while keeping the focus on player choice, Albina's controlled courtesy, her body-art aesthetics, and the risks created by proximity to her. Do not turn the term into an automatic victory, a trivia lecture, or a detached explanation. When it appears, tie it to sensory pressure, group reaction, route boundaries, tactical cost, or an observable change in the current scene.",
+      "comment": "P4 expanded bridge: Blade Lineage Salsu Faust",
+      "content": "Blade Lineage Salsu Faust is an expanded P4 bridge anchor for the Albina route.\nUse it as an organizational pressure frame. Let ranks, uniforms, contracts, section numbers, and reputations shape what characters can risk in public.\nWhite Canvas can stress negotiated boundaries; Golden Bough Rebuild can stress records, witnesses, and professional memory; Ring Conspiracy can stress hostile contracts, counterfeits, and leverage.\nTrigger it when an identity, office, association, faction order, or named professional style gives the scene a tactical rule the player can exploit or violate.\nCharacter pressure: when Faust is present or referenced, keep the focus on observable behavior, speech rhythm, hesitation, and how Albina's attention changes the room.\nFaction/identity frame: a disciplined violence lineage where etiquette, skill, and grudges can all become route pressure\nScene beats: show the professional rule, show the social penalty for breaking it, then offer a player-facing exploit or refusal.\nSafety boundary: this entry is original route support built from title taxonomy and page index facts only. Do not present it as full canon retelling, do not quote external text, and do not claim full plot restoration from this trigger alone.",
       "constant": false,
       "selective": true,
       "position": "after_character_definition",
       "order": 9058,
-      "disable": false
+      "disable": false,
+      "extensions": {
+        "expansion_version": "v1.0.11",
+        "expanded_at": "2026-06-03T11:48:46Z",
+        "expansion_basis": "title_taxonomy_manifest_no_article_text"
+      }
     },
     {
       "uid": "p4_identity_story_blade_lineage_salsu_faust_identity_story_74ac6f1cae",
@@ -1308,20 +1356,28 @@
         "Blade Lineage Salsu Outis",
         "canon term",
         "route support",
-        "setting"
+        "setting",
+        "expanded bridge",
+        "story log anchor",
+        "route pressure"
       ],
       "keysecondary": [
         "Albina",
         "Limbus Company",
         "The City"
       ],
-      "comment": "P4 canon bridge: Blade Lineage Salsu Outis",
-      "content": "Blade Lineage Salsu Outis can enter the Albina route as a compact setting, character, or mechanic anchor. Use it to ground the scene in the Limbus Company tone while keeping the focus on player choice, Albina's controlled courtesy, her body-art aesthetics, and the risks created by proximity to her. Do not turn the term into an automatic victory, a trivia lecture, or a detached explanation. When it appears, tie it to sensory pressure, group reaction, route boundaries, tactical cost, or an observable change in the current scene.",
+      "comment": "P4 expanded bridge: Blade Lineage Salsu Outis",
+      "content": "Blade Lineage Salsu Outis is an expanded P4 bridge anchor for the Albina route.\nUse it as an organizational pressure frame. Let ranks, uniforms, contracts, section numbers, and reputations shape what characters can risk in public.\nWhite Canvas can stress negotiated boundaries; Golden Bough Rebuild can stress records, witnesses, and professional memory; Ring Conspiracy can stress hostile contracts, counterfeits, and leverage.\nTrigger it when an identity, office, association, faction order, or named professional style gives the scene a tactical rule the player can exploit or violate.\nCharacter pressure: when Outis is present or referenced, keep the focus on observable behavior, speech rhythm, hesitation, and how Albina's attention changes the room.\nFaction/identity frame: a disciplined violence lineage where etiquette, skill, and grudges can all become route pressure\nScene beats: show the professional rule, show the social penalty for breaking it, then offer a player-facing exploit or refusal.\nSafety boundary: this entry is original route support built from title taxonomy and page index facts only. Do not present it as full canon retelling, do not quote external text, and do not claim full plot restoration from this trigger alone.",
       "constant": false,
       "selective": true,
       "position": "after_character_definition",
       "order": 9061,
-      "disable": false
+      "disable": false,
+      "extensions": {
+        "expansion_version": "v1.0.11",
+        "expanded_at": "2026-06-03T11:48:46Z",
+        "expansion_basis": "title_taxonomy_manifest_no_article_text"
+      }
     },
     {
       "uid": "p4_identity_story_blade_lineage_salsu_outis_identity_story_2ab0a0e536",
@@ -1373,20 +1429,28 @@
         "Blade Lineage Salsu Sinclair",
         "canon term",
         "route support",
-        "setting"
+        "setting",
+        "expanded bridge",
+        "story log anchor",
+        "route pressure"
       ],
       "keysecondary": [
         "Albina",
         "Limbus Company",
         "The City"
       ],
-      "comment": "P4 canon bridge: Blade Lineage Salsu Sinclair",
-      "content": "Blade Lineage Salsu Sinclair can enter the Albina route as a compact setting, character, or mechanic anchor. Use it to ground the scene in the Limbus Company tone while keeping the focus on player choice, Albina's controlled courtesy, her body-art aesthetics, and the risks created by proximity to her. Do not turn the term into an automatic victory, a trivia lecture, or a detached explanation. When it appears, tie it to sensory pressure, group reaction, route boundaries, tactical cost, or an observable change in the current scene.",
+      "comment": "P4 expanded bridge: Blade Lineage Salsu Sinclair",
+      "content": "Blade Lineage Salsu Sinclair is an expanded P4 bridge anchor for the Albina route.\nUse it as an organizational pressure frame. Let ranks, uniforms, contracts, section numbers, and reputations shape what characters can risk in public.\nWhite Canvas can stress negotiated boundaries; Golden Bough Rebuild can stress records, witnesses, and professional memory; Ring Conspiracy can stress hostile contracts, counterfeits, and leverage.\nTrigger it when an identity, office, association, faction order, or named professional style gives the scene a tactical rule the player can exploit or violate.\nCharacter pressure: when Sinclair is present or referenced, keep the focus on observable behavior, speech rhythm, hesitation, and how Albina's attention changes the room.\nFaction/identity frame: a disciplined violence lineage where etiquette, skill, and grudges can all become route pressure\nScene beats: show the professional rule, show the social penalty for breaking it, then offer a player-facing exploit or refusal.\nSafety boundary: this entry is original route support built from title taxonomy and page index facts only. Do not present it as full canon retelling, do not quote external text, and do not claim full plot restoration from this trigger alone.",
       "constant": false,
       "selective": true,
       "position": "after_character_definition",
       "order": 9064,
-      "disable": false
+      "disable": false,
+      "extensions": {
+        "expansion_version": "v1.0.11",
+        "expanded_at": "2026-06-03T11:48:46Z",
+        "expansion_basis": "title_taxonomy_manifest_no_article_text"
+      }
     },
     {
       "uid": "p4_identity_story_blade_lineage_salsu_sinclair_identity_story_ba359810a2",
@@ -1438,20 +1502,28 @@
         "Blade Lineage Salsu Yi Sang",
         "canon term",
         "route support",
-        "setting"
+        "setting",
+        "expanded bridge",
+        "story log anchor",
+        "route pressure"
       ],
       "keysecondary": [
         "Albina",
         "Limbus Company",
         "The City"
       ],
-      "comment": "P4 canon bridge: Blade Lineage Salsu Yi Sang",
-      "content": "Blade Lineage Salsu Yi Sang can enter the Albina route as a compact setting, character, or mechanic anchor. Use it to ground the scene in the Limbus Company tone while keeping the focus on player choice, Albina's controlled courtesy, her body-art aesthetics, and the risks created by proximity to her. Do not turn the term into an automatic victory, a trivia lecture, or a detached explanation. When it appears, tie it to sensory pressure, group reaction, route boundaries, tactical cost, or an observable change in the current scene.",
+      "comment": "P4 expanded bridge: Blade Lineage Salsu Yi Sang",
+      "content": "Blade Lineage Salsu Yi Sang is an expanded P4 bridge anchor for the Albina route.\nUse it as an organizational pressure frame. Let ranks, uniforms, contracts, section numbers, and reputations shape what characters can risk in public.\nWhite Canvas can stress negotiated boundaries; Golden Bough Rebuild can stress records, witnesses, and professional memory; Ring Conspiracy can stress hostile contracts, counterfeits, and leverage.\nTrigger it when an identity, office, association, faction order, or named professional style gives the scene a tactical rule the player can exploit or violate.\nCharacter pressure: when Yi Sang is present or referenced, keep the focus on observable behavior, speech rhythm, hesitation, and how Albina's attention changes the room.\nFaction/identity frame: a disciplined violence lineage where etiquette, skill, and grudges can all become route pressure\nScene beats: show the professional rule, show the social penalty for breaking it, then offer a player-facing exploit or refusal.\nSafety boundary: this entry is original route support built from title taxonomy and page index facts only. Do not present it as full canon retelling, do not quote external text, and do not claim full plot restoration from this trigger alone.",
       "constant": false,
       "selective": true,
       "position": "after_character_definition",
       "order": 9067,
-      "disable": false
+      "disable": false,
+      "extensions": {
+        "expansion_version": "v1.0.11",
+        "expanded_at": "2026-06-03T11:48:46Z",
+        "expansion_basis": "title_taxonomy_manifest_no_article_text"
+      }
     },
     {
       "uid": "p4_identity_story_blade_lineage_salsu_yi_sang_identity_story_a123688137",
@@ -1631,20 +1703,28 @@
         "Bloodbag Prosthetic Fixer",
         "enemy",
         "encounter",
-        "combat pressure"
+        "combat pressure",
+        "expanded bridge",
+        "story log anchor",
+        "route pressure"
       ],
       "keysecondary": [
         "Albina",
         "battlefield",
         "risk"
       ],
-      "comment": "P4 canon bridge: Bloodbag Prosthetic Fixer",
-      "content": "Bloodbag Prosthetic Fixer can enter the Albina route as an encounter threat or hostile presence. Use it to ground the scene in the Limbus Company tone while keeping the focus on player choice, Albina's controlled courtesy, her body-art aesthetics, and the risks created by proximity to her. Do not turn the term into an automatic victory, a trivia lecture, or a detached explanation. When it appears, tie it to sensory pressure, group reaction, route boundaries, tactical cost, or an observable change in the current scene.",
+      "comment": "P4 expanded bridge: Bloodbag Prosthetic Fixer",
+      "content": "Bloodbag Prosthetic Fixer is an expanded P4 bridge anchor for the Albina route.\nUse it as a bloodfiend/body-horror pressure frame. Keep the horror grounded in hunger, prosthetics, dependence, shame, and social containment instead of gore for its own sake.\nWhite Canvas can stress consent around touch and feeding; Golden Bough Rebuild can stress body continuity after repair; Ring Conspiracy can stress the way monstrous imagery can be curated, sold, or weaponized.\nTrigger it when blood, prosthetics, thirst, panic, aristocratic etiquette, or public fear changes how the scene treats Albina's art and the player's safety.\nCharacter pressure: if no named Sinner is onstage, let nearby witnesses react through practical caution, rumor, or tactical shorthand.\nFaction/identity frame: treat the title as a route-facing constraint, not as a detached glossary term.\nScene beats: introduce bodily need or public fear, give the player a boundary-preserving response, and let Albina's art register the cost.\nSafety boundary: this entry is original route support built from title taxonomy and page index facts only. Do not present it as full canon retelling, do not quote external text, and do not claim full plot restoration from this trigger alone.",
       "constant": false,
       "selective": true,
       "position": "after_character_definition",
       "order": 9076,
-      "disable": false
+      "disable": false,
+      "extensions": {
+        "expansion_version": "v1.0.11",
+        "expanded_at": "2026-06-03T11:48:46Z",
+        "expansion_basis": "title_taxonomy_manifest_no_article_text"
+      }
     },
     {
       "uid": "p4_canon_term_blooming_failure_2594e1519d",
@@ -1884,20 +1964,28 @@
         "Branch D-02",
         "floor",
         "branch",
-        "exploration"
+        "exploration",
+        "expanded bridge",
+        "story log anchor",
+        "route pressure"
       ],
       "keysecondary": [
         "Albina",
         "navigation",
         "hazard"
       ],
-      "comment": "P4 canon bridge: Branch D-02",
-      "content": "Branch D-02 can enter the Albina route as an exploration layer with location and pacing constraints. Use it to ground the scene in the Limbus Company tone while keeping the focus on player choice, Albina's controlled courtesy, her body-art aesthetics, and the risks created by proximity to her. Do not turn the term into an automatic victory, a trivia lecture, or a detached explanation. When it appears, tie it to sensory pressure, group reaction, route boundaries, tactical cost, or an observable change in the current scene.",
+      "comment": "P4 expanded bridge: Branch D-02",
+      "content": "Branch D-02 is an expanded P4 bridge anchor for the Albina route.\nUse it as an exploration topology frame. Do not explain the dungeon as trivia; make it visible through navigation pressure, branching corridors, supply attrition, locked choices, and the way Albina marks safe return paths.\nWhite Canvas can emphasize protected rooms and non-invasive mapping; Golden Bough Rebuild can emphasize unstable memory geometry; Ring Conspiracy can emphasize staged routes, surveillance, and traps disguised as exhibits.\nTrigger it when the player chooses a path, loses certainty about the route, spends supplies, or asks Albina to draw a map that may change after being observed.\nCharacter pressure: if no named Sinner is onstage, let nearby witnesses react through practical caution, rumor, or tactical shorthand.\nFaction/identity frame: treat the title as a route-facing constraint, not as a detached glossary term.\nScene beats: mark the route, spend or save a supply, and record what changed after the party crossed the threshold.\nSafety boundary: this entry is original route support built from title taxonomy and page index facts only. Do not present it as full canon retelling, do not quote external text, and do not claim full plot restoration from this trigger alone.",
       "constant": false,
       "selective": true,
       "position": "after_character_definition",
       "order": 9088,
-      "disable": false
+      "disable": false,
+      "extensions": {
+        "expansion_version": "v1.0.11",
+        "expanded_at": "2026-06-03T11:48:46Z",
+        "expansion_basis": "title_taxonomy_manifest_no_article_text"
+      }
     },
     {
       "uid": "p4_dungeon_branch_d_02_floor_1_9ddc7cf6f3",
@@ -1971,20 +2059,28 @@
         "Branch J-03",
         "floor",
         "branch",
-        "exploration"
+        "exploration",
+        "expanded bridge",
+        "story log anchor",
+        "route pressure"
       ],
       "keysecondary": [
         "Albina",
         "navigation",
         "hazard"
       ],
-      "comment": "P4 canon bridge: Branch J-03",
-      "content": "Branch J-03 can enter the Albina route as an exploration layer with location and pacing constraints. Use it to ground the scene in the Limbus Company tone while keeping the focus on player choice, Albina's controlled courtesy, her body-art aesthetics, and the risks created by proximity to her. Do not turn the term into an automatic victory, a trivia lecture, or a detached explanation. When it appears, tie it to sensory pressure, group reaction, route boundaries, tactical cost, or an observable change in the current scene.",
+      "comment": "P4 expanded bridge: Branch J-03",
+      "content": "Branch J-03 is an expanded P4 bridge anchor for the Albina route.\nUse it as an exploration topology frame. Do not explain the dungeon as trivia; make it visible through navigation pressure, branching corridors, supply attrition, locked choices, and the way Albina marks safe return paths.\nWhite Canvas can emphasize protected rooms and non-invasive mapping; Golden Bough Rebuild can emphasize unstable memory geometry; Ring Conspiracy can emphasize staged routes, surveillance, and traps disguised as exhibits.\nTrigger it when the player chooses a path, loses certainty about the route, spends supplies, or asks Albina to draw a map that may change after being observed.\nCharacter pressure: if no named Sinner is onstage, let nearby witnesses react through practical caution, rumor, or tactical shorthand.\nFaction/identity frame: treat the title as a route-facing constraint, not as a detached glossary term.\nScene beats: mark the route, spend or save a supply, and record what changed after the party crossed the threshold.\nSafety boundary: this entry is original route support built from title taxonomy and page index facts only. Do not present it as full canon retelling, do not quote external text, and do not claim full plot restoration from this trigger alone.",
       "constant": false,
       "selective": true,
       "position": "after_character_definition",
       "order": 9092,
-      "disable": false
+      "disable": false,
+      "extensions": {
+        "expansion_version": "v1.0.11",
+        "expanded_at": "2026-06-03T11:48:46Z",
+        "expansion_basis": "title_taxonomy_manifest_no_article_text"
+      }
     },
     {
       "uid": "p4_dungeon_branch_j_03_floor_1_165fffaab2",
@@ -2058,20 +2154,28 @@
         "Branch K-02",
         "floor",
         "branch",
-        "exploration"
+        "exploration",
+        "expanded bridge",
+        "story log anchor",
+        "route pressure"
       ],
       "keysecondary": [
         "Albina",
         "navigation",
         "hazard"
       ],
-      "comment": "P4 canon bridge: Branch K-02",
-      "content": "Branch K-02 can enter the Albina route as an exploration layer with location and pacing constraints. Use it to ground the scene in the Limbus Company tone while keeping the focus on player choice, Albina's controlled courtesy, her body-art aesthetics, and the risks created by proximity to her. Do not turn the term into an automatic victory, a trivia lecture, or a detached explanation. When it appears, tie it to sensory pressure, group reaction, route boundaries, tactical cost, or an observable change in the current scene.",
+      "comment": "P4 expanded bridge: Branch K-02",
+      "content": "Branch K-02 is an expanded P4 bridge anchor for the Albina route.\nUse it as an exploration topology frame. Do not explain the dungeon as trivia; make it visible through navigation pressure, branching corridors, supply attrition, locked choices, and the way Albina marks safe return paths.\nWhite Canvas can emphasize protected rooms and non-invasive mapping; Golden Bough Rebuild can emphasize unstable memory geometry; Ring Conspiracy can emphasize staged routes, surveillance, and traps disguised as exhibits.\nTrigger it when the player chooses a path, loses certainty about the route, spends supplies, or asks Albina to draw a map that may change after being observed.\nCharacter pressure: if no named Sinner is onstage, let nearby witnesses react through practical caution, rumor, or tactical shorthand.\nFaction/identity frame: treat the title as a route-facing constraint, not as a detached glossary term.\nScene beats: mark the route, spend or save a supply, and record what changed after the party crossed the threshold.\nSafety boundary: this entry is original route support built from title taxonomy and page index facts only. Do not present it as full canon retelling, do not quote external text, and do not claim full plot restoration from this trigger alone.",
       "constant": false,
       "selective": true,
       "position": "after_character_definition",
       "order": 9096,
-      "disable": false
+      "disable": false,
+      "extensions": {
+        "expansion_version": "v1.0.11",
+        "expanded_at": "2026-06-03T11:48:46Z",
+        "expansion_basis": "title_taxonomy_manifest_no_article_text"
+      }
     },
     {
       "uid": "p4_dungeon_branch_k_02_floor_1_2fa03f54a9",
@@ -2545,20 +2649,28 @@
         "Canto I: The Outcast",
         "canto",
         "battle chapter",
-        "route stage"
+        "route stage",
+        "expanded bridge",
+        "story log anchor",
+        "route pressure"
       ],
       "keysecondary": [
         "Albina",
         "Sinners",
         "The City"
       ],
-      "comment": "P4 canon bridge: Canto I: The Outcast",
-      "content": "Canto I: The Outcast can enter the Albina route as a main-route chapter pressure point. Use it to ground the scene in the Limbus Company tone while keeping the focus on player choice, Albina's controlled courtesy, her body-art aesthetics, and the risks created by proximity to her. Do not turn the term into an automatic victory, a trivia lecture, or a detached explanation. When it appears, tie it to sensory pressure, group reaction, route boundaries, tactical cost, or an observable change in the current scene.",
+      "comment": "P4 expanded bridge: Canto I: The Outcast",
+      "content": "Canto I: The Outcast is an expanded P4 bridge anchor for the Albina route.\nUse it as a chapter-pressure lens rather than a recap. Let the title mood decide what the current route is testing: exile, withheld affection, refusal to face facts, frozen change, self-justifying evil, heartbreak, dream collapse, or surrendered testimony.\nWhite Canvas can translate the pressure into consent and selfhood checks; Golden Bough Rebuild can translate it into memory repair costs; Ring Conspiracy can translate it into hostile authorship and contract traps.\nTrigger it when a route scene needs a main-story echo, a party reaction, or a reminder that Albina's intimacy must coexist with the larger City machinery.\nCharacter pressure: if no named Sinner is onstage, let nearby witnesses react through practical caution, rumor, or tactical shorthand.\nFaction/identity frame: treat the title as a route-facing constraint, not as a detached glossary term.\nScene beats: echo the chapter title through one concrete choice, one emotional cost, and one consequence that can be logged by the story journal.\nSafety boundary: this entry is original route support built from title taxonomy and page index facts only. Do not present it as full canon retelling, do not quote external text, and do not claim full plot restoration from this trigger alone.",
       "constant": false,
       "selective": true,
       "position": "after_character_definition",
       "order": 9119,
-      "disable": false
+      "disable": false,
+      "extensions": {
+        "expansion_version": "v1.0.11",
+        "expanded_at": "2026-06-03T11:48:46Z",
+        "expansion_basis": "title_taxonomy_manifest_no_article_text"
+      }
     },
     {
       "uid": "p4_canto_canto_i_the_outcast_battle_chapters_9e0b2cce9c",
@@ -2610,20 +2722,28 @@
         "Canto II: The Unloving",
         "canto",
         "battle chapter",
-        "route stage"
+        "route stage",
+        "expanded bridge",
+        "story log anchor",
+        "route pressure"
       ],
       "keysecondary": [
         "Albina",
         "Sinners",
         "The City"
       ],
-      "comment": "P4 canon bridge: Canto II: The Unloving",
-      "content": "Canto II: The Unloving can enter the Albina route as a main-route chapter pressure point. Use it to ground the scene in the Limbus Company tone while keeping the focus on player choice, Albina's controlled courtesy, her body-art aesthetics, and the risks created by proximity to her. Do not turn the term into an automatic victory, a trivia lecture, or a detached explanation. When it appears, tie it to sensory pressure, group reaction, route boundaries, tactical cost, or an observable change in the current scene.",
+      "comment": "P4 expanded bridge: Canto II: The Unloving",
+      "content": "Canto II: The Unloving is an expanded P4 bridge anchor for the Albina route.\nUse it as a chapter-pressure lens rather than a recap. Let the title mood decide what the current route is testing: exile, withheld affection, refusal to face facts, frozen change, self-justifying evil, heartbreak, dream collapse, or surrendered testimony.\nWhite Canvas can translate the pressure into consent and selfhood checks; Golden Bough Rebuild can translate it into memory repair costs; Ring Conspiracy can translate it into hostile authorship and contract traps.\nTrigger it when a route scene needs a main-story echo, a party reaction, or a reminder that Albina's intimacy must coexist with the larger City machinery.\nCharacter pressure: if no named Sinner is onstage, let nearby witnesses react through practical caution, rumor, or tactical shorthand.\nFaction/identity frame: treat the title as a route-facing constraint, not as a detached glossary term.\nScene beats: echo the chapter title through one concrete choice, one emotional cost, and one consequence that can be logged by the story journal.\nSafety boundary: this entry is original route support built from title taxonomy and page index facts only. Do not present it as full canon retelling, do not quote external text, and do not claim full plot restoration from this trigger alone.",
       "constant": false,
       "selective": true,
       "position": "after_character_definition",
       "order": 9122,
-      "disable": false
+      "disable": false,
+      "extensions": {
+        "expansion_version": "v1.0.11",
+        "expanded_at": "2026-06-03T11:48:46Z",
+        "expansion_basis": "title_taxonomy_manifest_no_article_text"
+      }
     },
     {
       "uid": "p4_canto_canto_ii_the_unloving_battle_chapters_d507c40147",
@@ -2675,20 +2795,28 @@
         "Canto III: The Unconfronting",
         "canto",
         "battle chapter",
-        "route stage"
+        "route stage",
+        "expanded bridge",
+        "story log anchor",
+        "route pressure"
       ],
       "keysecondary": [
         "Albina",
         "Sinners",
         "The City"
       ],
-      "comment": "P4 canon bridge: Canto III: The Unconfronting",
-      "content": "Canto III: The Unconfronting can enter the Albina route as a main-route chapter pressure point. Use it to ground the scene in the Limbus Company tone while keeping the focus on player choice, Albina's controlled courtesy, her body-art aesthetics, and the risks created by proximity to her. Do not turn the term into an automatic victory, a trivia lecture, or a detached explanation. When it appears, tie it to sensory pressure, group reaction, route boundaries, tactical cost, or an observable change in the current scene.",
+      "comment": "P4 expanded bridge: Canto III: The Unconfronting",
+      "content": "Canto III: The Unconfronting is an expanded P4 bridge anchor for the Albina route.\nUse it as a chapter-pressure lens rather than a recap. Let the title mood decide what the current route is testing: exile, withheld affection, refusal to face facts, frozen change, self-justifying evil, heartbreak, dream collapse, or surrendered testimony.\nWhite Canvas can translate the pressure into consent and selfhood checks; Golden Bough Rebuild can translate it into memory repair costs; Ring Conspiracy can translate it into hostile authorship and contract traps.\nTrigger it when a route scene needs a main-story echo, a party reaction, or a reminder that Albina's intimacy must coexist with the larger City machinery.\nCharacter pressure: if no named Sinner is onstage, let nearby witnesses react through practical caution, rumor, or tactical shorthand.\nFaction/identity frame: treat the title as a route-facing constraint, not as a detached glossary term.\nScene beats: echo the chapter title through one concrete choice, one emotional cost, and one consequence that can be logged by the story journal.\nSafety boundary: this entry is original route support built from title taxonomy and page index facts only. Do not present it as full canon retelling, do not quote external text, and do not claim full plot restoration from this trigger alone.",
       "constant": false,
       "selective": true,
       "position": "after_character_definition",
       "order": 9125,
-      "disable": false
+      "disable": false,
+      "extensions": {
+        "expansion_version": "v1.0.11",
+        "expanded_at": "2026-06-03T11:48:46Z",
+        "expansion_basis": "title_taxonomy_manifest_no_article_text"
+      }
     },
     {
       "uid": "p4_canto_canto_iii_the_unconfronting_battle_chapters_c910033310",
@@ -2740,20 +2868,28 @@
         "Canto IV: The Unchanging",
         "canto",
         "battle chapter",
-        "route stage"
+        "route stage",
+        "expanded bridge",
+        "story log anchor",
+        "route pressure"
       ],
       "keysecondary": [
         "Albina",
         "Sinners",
         "The City"
       ],
-      "comment": "P4 canon bridge: Canto IV: The Unchanging",
-      "content": "Canto IV: The Unchanging can enter the Albina route as a main-route chapter pressure point. Use it to ground the scene in the Limbus Company tone while keeping the focus on player choice, Albina's controlled courtesy, her body-art aesthetics, and the risks created by proximity to her. Do not turn the term into an automatic victory, a trivia lecture, or a detached explanation. When it appears, tie it to sensory pressure, group reaction, route boundaries, tactical cost, or an observable change in the current scene.",
+      "comment": "P4 expanded bridge: Canto IV: The Unchanging",
+      "content": "Canto IV: The Unchanging is an expanded P4 bridge anchor for the Albina route.\nUse it as a chapter-pressure lens rather than a recap. Let the title mood decide what the current route is testing: exile, withheld affection, refusal to face facts, frozen change, self-justifying evil, heartbreak, dream collapse, or surrendered testimony.\nWhite Canvas can translate the pressure into consent and selfhood checks; Golden Bough Rebuild can translate it into memory repair costs; Ring Conspiracy can translate it into hostile authorship and contract traps.\nTrigger it when a route scene needs a main-story echo, a party reaction, or a reminder that Albina's intimacy must coexist with the larger City machinery.\nCharacter pressure: if no named Sinner is onstage, let nearby witnesses react through practical caution, rumor, or tactical shorthand.\nFaction/identity frame: treat the title as a route-facing constraint, not as a detached glossary term.\nScene beats: echo the chapter title through one concrete choice, one emotional cost, and one consequence that can be logged by the story journal.\nSafety boundary: this entry is original route support built from title taxonomy and page index facts only. Do not present it as full canon retelling, do not quote external text, and do not claim full plot restoration from this trigger alone.",
       "constant": false,
       "selective": true,
       "position": "after_character_definition",
       "order": 9128,
-      "disable": false
+      "disable": false,
+      "extensions": {
+        "expansion_version": "v1.0.11",
+        "expanded_at": "2026-06-03T11:48:46Z",
+        "expansion_basis": "title_taxonomy_manifest_no_article_text"
+      }
     },
     {
       "uid": "p4_canto_canto_iv_the_unchanging_battle_chapters_d17fd2937b",
@@ -2805,20 +2941,28 @@
         "Canto V: The Evil Defining",
         "canto",
         "battle chapter",
-        "route stage"
+        "route stage",
+        "expanded bridge",
+        "story log anchor",
+        "route pressure"
       ],
       "keysecondary": [
         "Albina",
         "Sinners",
         "The City"
       ],
-      "comment": "P4 canon bridge: Canto V: The Evil Defining",
-      "content": "Canto V: The Evil Defining can enter the Albina route as a main-route chapter pressure point. Use it to ground the scene in the Limbus Company tone while keeping the focus on player choice, Albina's controlled courtesy, her body-art aesthetics, and the risks created by proximity to her. Do not turn the term into an automatic victory, a trivia lecture, or a detached explanation. When it appears, tie it to sensory pressure, group reaction, route boundaries, tactical cost, or an observable change in the current scene.",
+      "comment": "P4 expanded bridge: Canto V: The Evil Defining",
+      "content": "Canto V: The Evil Defining is an expanded P4 bridge anchor for the Albina route.\nUse it as a chapter-pressure lens rather than a recap. Let the title mood decide what the current route is testing: exile, withheld affection, refusal to face facts, frozen change, self-justifying evil, heartbreak, dream collapse, or surrendered testimony.\nWhite Canvas can translate the pressure into consent and selfhood checks; Golden Bough Rebuild can translate it into memory repair costs; Ring Conspiracy can translate it into hostile authorship and contract traps.\nTrigger it when a route scene needs a main-story echo, a party reaction, or a reminder that Albina's intimacy must coexist with the larger City machinery.\nCharacter pressure: if no named Sinner is onstage, let nearby witnesses react through practical caution, rumor, or tactical shorthand.\nFaction/identity frame: treat the title as a route-facing constraint, not as a detached glossary term.\nScene beats: echo the chapter title through one concrete choice, one emotional cost, and one consequence that can be logged by the story journal.\nSafety boundary: this entry is original route support built from title taxonomy and page index facts only. Do not present it as full canon retelling, do not quote external text, and do not claim full plot restoration from this trigger alone.",
       "constant": false,
       "selective": true,
       "position": "after_character_definition",
       "order": 9131,
-      "disable": false
+      "disable": false,
+      "extensions": {
+        "expansion_version": "v1.0.11",
+        "expanded_at": "2026-06-03T11:48:46Z",
+        "expansion_basis": "title_taxonomy_manifest_no_article_text"
+      }
     },
     {
       "uid": "p4_canto_canto_v_the_evil_defining_battle_chapters_acedef368f",
@@ -2870,20 +3014,28 @@
         "Canto VI: The Heartbreaking",
         "canto",
         "battle chapter",
-        "route stage"
+        "route stage",
+        "expanded bridge",
+        "story log anchor",
+        "route pressure"
       ],
       "keysecondary": [
         "Albina",
         "Sinners",
         "The City"
       ],
-      "comment": "P4 canon bridge: Canto VI: The Heartbreaking",
-      "content": "Canto VI: The Heartbreaking can enter the Albina route as a main-route chapter pressure point. Use it to ground the scene in the Limbus Company tone while keeping the focus on player choice, Albina's controlled courtesy, her body-art aesthetics, and the risks created by proximity to her. Do not turn the term into an automatic victory, a trivia lecture, or a detached explanation. When it appears, tie it to sensory pressure, group reaction, route boundaries, tactical cost, or an observable change in the current scene.",
+      "comment": "P4 expanded bridge: Canto VI: The Heartbreaking",
+      "content": "Canto VI: The Heartbreaking is an expanded P4 bridge anchor for the Albina route.\nUse it as a chapter-pressure lens rather than a recap. Let the title mood decide what the current route is testing: exile, withheld affection, refusal to face facts, frozen change, self-justifying evil, heartbreak, dream collapse, or surrendered testimony.\nWhite Canvas can translate the pressure into consent and selfhood checks; Golden Bough Rebuild can translate it into memory repair costs; Ring Conspiracy can translate it into hostile authorship and contract traps.\nTrigger it when a route scene needs a main-story echo, a party reaction, or a reminder that Albina's intimacy must coexist with the larger City machinery.\nCharacter pressure: if no named Sinner is onstage, let nearby witnesses react through practical caution, rumor, or tactical shorthand.\nFaction/identity frame: treat the title as a route-facing constraint, not as a detached glossary term.\nScene beats: echo the chapter title through one concrete choice, one emotional cost, and one consequence that can be logged by the story journal.\nSafety boundary: this entry is original route support built from title taxonomy and page index facts only. Do not present it as full canon retelling, do not quote external text, and do not claim full plot restoration from this trigger alone.",
       "constant": false,
       "selective": true,
       "position": "after_character_definition",
       "order": 9134,
-      "disable": false
+      "disable": false,
+      "extensions": {
+        "expansion_version": "v1.0.11",
+        "expanded_at": "2026-06-03T11:48:46Z",
+        "expansion_basis": "title_taxonomy_manifest_no_article_text"
+      }
     },
     {
       "uid": "p4_canto_canto_vi_the_heartbreaking_battle_chapters_74180613b6",
@@ -2935,20 +3087,28 @@
         "Canto VII: The Dream Ending",
         "canto",
         "battle chapter",
-        "route stage"
+        "route stage",
+        "expanded bridge",
+        "story log anchor",
+        "route pressure"
       ],
       "keysecondary": [
         "Albina",
         "Sinners",
         "The City"
       ],
-      "comment": "P4 canon bridge: Canto VII: The Dream Ending",
-      "content": "Canto VII: The Dream Ending can enter the Albina route as a main-route chapter pressure point. Use it to ground the scene in the Limbus Company tone while keeping the focus on player choice, Albina's controlled courtesy, her body-art aesthetics, and the risks created by proximity to her. Do not turn the term into an automatic victory, a trivia lecture, or a detached explanation. When it appears, tie it to sensory pressure, group reaction, route boundaries, tactical cost, or an observable change in the current scene.",
+      "comment": "P4 expanded bridge: Canto VII: The Dream Ending",
+      "content": "Canto VII: The Dream Ending is an expanded P4 bridge anchor for the Albina route.\nUse it as a chapter-pressure lens rather than a recap. Let the title mood decide what the current route is testing: exile, withheld affection, refusal to face facts, frozen change, self-justifying evil, heartbreak, dream collapse, or surrendered testimony.\nWhite Canvas can translate the pressure into consent and selfhood checks; Golden Bough Rebuild can translate it into memory repair costs; Ring Conspiracy can translate it into hostile authorship and contract traps.\nTrigger it when a route scene needs a main-story echo, a party reaction, or a reminder that Albina's intimacy must coexist with the larger City machinery.\nCharacter pressure: if no named Sinner is onstage, let nearby witnesses react through practical caution, rumor, or tactical shorthand.\nFaction/identity frame: treat the title as a route-facing constraint, not as a detached glossary term.\nScene beats: echo the chapter title through one concrete choice, one emotional cost, and one consequence that can be logged by the story journal.\nSafety boundary: this entry is original route support built from title taxonomy and page index facts only. Do not present it as full canon retelling, do not quote external text, and do not claim full plot restoration from this trigger alone.",
       "constant": false,
       "selective": true,
       "position": "after_character_definition",
       "order": 9137,
-      "disable": false
+      "disable": false,
+      "extensions": {
+        "expansion_version": "v1.0.11",
+        "expanded_at": "2026-06-03T11:48:46Z",
+        "expansion_basis": "title_taxonomy_manifest_no_article_text"
+      }
     },
     {
       "uid": "p4_canto_canto_vii_the_dream_ending_battle_chapters_553729c4ae",
@@ -3000,20 +3160,28 @@
         "Canto VIII: The Surrendered Witnessing",
         "canto",
         "battle chapter",
-        "route stage"
+        "route stage",
+        "expanded bridge",
+        "story log anchor",
+        "route pressure"
       ],
       "keysecondary": [
         "Albina",
         "Sinners",
         "The City"
       ],
-      "comment": "P4 canon bridge: Canto VIII: The Surrendered Witnessing",
-      "content": "Canto VIII: The Surrendered Witnessing can enter the Albina route as a main-route chapter pressure point. Use it to ground the scene in the Limbus Company tone while keeping the focus on player choice, Albina's controlled courtesy, her body-art aesthetics, and the risks created by proximity to her. Do not turn the term into an automatic victory, a trivia lecture, or a detached explanation. When it appears, tie it to sensory pressure, group reaction, route boundaries, tactical cost, or an observable change in the current scene.",
+      "comment": "P4 expanded bridge: Canto VIII: The Surrendered Witnessing",
+      "content": "Canto VIII: The Surrendered Witnessing is an expanded P4 bridge anchor for the Albina route.\nUse it as a chapter-pressure lens rather than a recap. Let the title mood decide what the current route is testing: exile, withheld affection, refusal to face facts, frozen change, self-justifying evil, heartbreak, dream collapse, or surrendered testimony.\nWhite Canvas can translate the pressure into consent and selfhood checks; Golden Bough Rebuild can translate it into memory repair costs; Ring Conspiracy can translate it into hostile authorship and contract traps.\nTrigger it when a route scene needs a main-story echo, a party reaction, or a reminder that Albina's intimacy must coexist with the larger City machinery.\nCharacter pressure: if no named Sinner is onstage, let nearby witnesses react through practical caution, rumor, or tactical shorthand.\nFaction/identity frame: treat the title as a route-facing constraint, not as a detached glossary term.\nScene beats: echo the chapter title through one concrete choice, one emotional cost, and one consequence that can be logged by the story journal.\nSafety boundary: this entry is original route support built from title taxonomy and page index facts only. Do not present it as full canon retelling, do not quote external text, and do not claim full plot restoration from this trigger alone.",
       "constant": false,
       "selective": true,
       "position": "after_character_definition",
       "order": 9140,
-      "disable": false
+      "disable": false,
+      "extensions": {
+        "expansion_version": "v1.0.11",
+        "expanded_at": "2026-06-03T11:48:46Z",
+        "expansion_basis": "title_taxonomy_manifest_no_article_text"
+      }
     },
     {
       "uid": "p4_canto_canto_viii_the_surrendered_witnessing_battle_chapters_1ad4130752",
@@ -3234,20 +3402,28 @@
         "Category:E.G.O with HP Healing",
         "E.G.O",
         "psychic pressure",
-        "corrosion"
+        "corrosion",
+        "expanded bridge",
+        "story log anchor",
+        "route pressure"
       ],
       "keysecondary": [
         "Albina",
         "Abnormality",
         "risk"
       ],
-      "comment": "P4 canon bridge: Category:E.G.O with HP Healing",
-      "content": "Category:E.G.O with HP Healing can enter the Albina route as a psychological force, gear motif, or abnormal pressure. Use it to ground the scene in the Limbus Company tone while keeping the focus on player choice, Albina's controlled courtesy, her body-art aesthetics, and the risks created by proximity to her. Do not turn the term into an automatic victory, a trivia lecture, or a detached explanation. When it appears, tie it to sensory pressure, group reaction, route boundaries, tactical cost, or an observable change in the current scene.",
+      "comment": "P4 expanded bridge: Category:E.G.O with HP Healing",
+      "content": "Category:E.G.O with HP Healing is an expanded P4 bridge anchor for the Albina route.\nUse it as an E.G.O pressure frame: resonance, corrosion risk, symbolic gear, abnormal emotion, and battle utility should all remain costs instead of free spectacle.\nWhite Canvas can focus on whether power expression preserves bodily integrity; Golden Bough Rebuild can focus on self-recognition after resonance; Ring Conspiracy can focus on stolen aesthetics and counterfeit identity performance.\nTrigger it during combat preparation, panic, identity switching, gift choice, healing, meltdown language, or any scene where the party tries to make a dangerous symbol obey a human boundary.\nCharacter pressure: if no named Sinner is onstage, let nearby witnesses react through practical caution, rumor, or tactical shorthand.\nFaction/identity frame: treat the title as a route-facing constraint, not as a detached glossary term.\nScene beats: show a visible resonance cue, name the tactical temptation, then require a stabilizing choice before the power helps.\nSafety boundary: this entry is original route support built from title taxonomy and page index facts only. Do not present it as full canon retelling, do not quote external text, and do not claim full plot restoration from this trigger alone.",
       "constant": false,
       "selective": true,
       "position": "after_character_definition",
       "order": 9151,
-      "disable": false
+      "disable": false,
+      "extensions": {
+        "expansion_version": "v1.0.11",
+        "expanded_at": "2026-06-03T11:48:46Z",
+        "expansion_basis": "title_taxonomy_manifest_no_article_text"
+      }
     },
     {
       "uid": "p4_ego_category_he_level_e_g_o_bc8fd2d5cb",
@@ -3255,20 +3431,28 @@
         "Category:HE Level E.G.O",
         "E.G.O",
         "psychic pressure",
-        "corrosion"
+        "corrosion",
+        "expanded bridge",
+        "story log anchor",
+        "route pressure"
       ],
       "keysecondary": [
         "Albina",
         "Abnormality",
         "risk"
       ],
-      "comment": "P4 canon bridge: Category:HE Level E.G.O",
-      "content": "Category:HE Level E.G.O can enter the Albina route as a psychological force, gear motif, or abnormal pressure. Use it to ground the scene in the Limbus Company tone while keeping the focus on player choice, Albina's controlled courtesy, her body-art aesthetics, and the risks created by proximity to her. Do not turn the term into an automatic victory, a trivia lecture, or a detached explanation. When it appears, tie it to sensory pressure, group reaction, route boundaries, tactical cost, or an observable change in the current scene.",
+      "comment": "P4 expanded bridge: Category:HE Level E.G.O",
+      "content": "Category:HE Level E.G.O is an expanded P4 bridge anchor for the Albina route.\nUse it as an E.G.O pressure frame: resonance, corrosion risk, symbolic gear, abnormal emotion, and battle utility should all remain costs instead of free spectacle.\nWhite Canvas can focus on whether power expression preserves bodily integrity; Golden Bough Rebuild can focus on self-recognition after resonance; Ring Conspiracy can focus on stolen aesthetics and counterfeit identity performance.\nTrigger it during combat preparation, panic, identity switching, gift choice, healing, meltdown language, or any scene where the party tries to make a dangerous symbol obey a human boundary.\nCharacter pressure: if no named Sinner is onstage, let nearby witnesses react through practical caution, rumor, or tactical shorthand.\nFaction/identity frame: treat the title as a route-facing constraint, not as a detached glossary term.\nScene beats: show a visible resonance cue, name the tactical temptation, then require a stabilizing choice before the power helps.\nSafety boundary: this entry is original route support built from title taxonomy and page index facts only. Do not present it as full canon retelling, do not quote external text, and do not claim full plot restoration from this trigger alone.",
       "constant": false,
       "selective": true,
       "position": "after_character_definition",
       "order": 9152,
-      "disable": false
+      "disable": false,
+      "extensions": {
+        "expansion_version": "v1.0.11",
+        "expanded_at": "2026-06-03T11:48:46Z",
+        "expansion_basis": "title_taxonomy_manifest_no_article_text"
+      }
     },
     {
       "uid": "p4_ego_category_teth_level_e_g_o_456b3d2b24",
@@ -3276,20 +3460,28 @@
         "Category:TETH Level E.G.O",
         "E.G.O",
         "psychic pressure",
-        "corrosion"
+        "corrosion",
+        "expanded bridge",
+        "story log anchor",
+        "route pressure"
       ],
       "keysecondary": [
         "Albina",
         "Abnormality",
         "risk"
       ],
-      "comment": "P4 canon bridge: Category:TETH Level E.G.O",
-      "content": "Category:TETH Level E.G.O can enter the Albina route as a psychological force, gear motif, or abnormal pressure. Use it to ground the scene in the Limbus Company tone while keeping the focus on player choice, Albina's controlled courtesy, her body-art aesthetics, and the risks created by proximity to her. Do not turn the term into an automatic victory, a trivia lecture, or a detached explanation. When it appears, tie it to sensory pressure, group reaction, route boundaries, tactical cost, or an observable change in the current scene.",
+      "comment": "P4 expanded bridge: Category:TETH Level E.G.O",
+      "content": "Category:TETH Level E.G.O is an expanded P4 bridge anchor for the Albina route.\nUse it as an E.G.O pressure frame: resonance, corrosion risk, symbolic gear, abnormal emotion, and battle utility should all remain costs instead of free spectacle.\nWhite Canvas can focus on whether power expression preserves bodily integrity; Golden Bough Rebuild can focus on self-recognition after resonance; Ring Conspiracy can focus on stolen aesthetics and counterfeit identity performance.\nTrigger it during combat preparation, panic, identity switching, gift choice, healing, meltdown language, or any scene where the party tries to make a dangerous symbol obey a human boundary.\nCharacter pressure: if no named Sinner is onstage, let nearby witnesses react through practical caution, rumor, or tactical shorthand.\nFaction/identity frame: treat the title as a route-facing constraint, not as a detached glossary term.\nScene beats: show a visible resonance cue, name the tactical temptation, then require a stabilizing choice before the power helps.\nSafety boundary: this entry is original route support built from title taxonomy and page index facts only. Do not present it as full canon retelling, do not quote external text, and do not claim full plot restoration from this trigger alone.",
       "constant": false,
       "selective": true,
       "position": "after_character_definition",
       "order": 9153,
-      "disable": false
+      "disable": false,
+      "extensions": {
+        "expansion_version": "v1.0.11",
+        "expanded_at": "2026-06-03T11:48:46Z",
+        "expansion_basis": "title_taxonomy_manifest_no_article_text"
+      }
     },
     {
       "uid": "p4_ego_category_waw_level_e_g_o_cfb0bc20e7",
@@ -3297,20 +3489,28 @@
         "Category:WAW Level E.G.O",
         "E.G.O",
         "psychic pressure",
-        "corrosion"
+        "corrosion",
+        "expanded bridge",
+        "story log anchor",
+        "route pressure"
       ],
       "keysecondary": [
         "Albina",
         "Abnormality",
         "risk"
       ],
-      "comment": "P4 canon bridge: Category:WAW Level E.G.O",
-      "content": "Category:WAW Level E.G.O can enter the Albina route as a psychological force, gear motif, or abnormal pressure. Use it to ground the scene in the Limbus Company tone while keeping the focus on player choice, Albina's controlled courtesy, her body-art aesthetics, and the risks created by proximity to her. Do not turn the term into an automatic victory, a trivia lecture, or a detached explanation. When it appears, tie it to sensory pressure, group reaction, route boundaries, tactical cost, or an observable change in the current scene.",
+      "comment": "P4 expanded bridge: Category:WAW Level E.G.O",
+      "content": "Category:WAW Level E.G.O is an expanded P4 bridge anchor for the Albina route.\nUse it as an E.G.O pressure frame: resonance, corrosion risk, symbolic gear, abnormal emotion, and battle utility should all remain costs instead of free spectacle.\nWhite Canvas can focus on whether power expression preserves bodily integrity; Golden Bough Rebuild can focus on self-recognition after resonance; Ring Conspiracy can focus on stolen aesthetics and counterfeit identity performance.\nTrigger it during combat preparation, panic, identity switching, gift choice, healing, meltdown language, or any scene where the party tries to make a dangerous symbol obey a human boundary.\nCharacter pressure: if no named Sinner is onstage, let nearby witnesses react through practical caution, rumor, or tactical shorthand.\nFaction/identity frame: treat the title as a route-facing constraint, not as a detached glossary term.\nScene beats: show a visible resonance cue, name the tactical temptation, then require a stabilizing choice before the power helps.\nSafety boundary: this entry is original route support built from title taxonomy and page index facts only. Do not present it as full canon retelling, do not quote external text, and do not claim full plot restoration from this trigger alone.",
       "constant": false,
       "selective": true,
       "position": "after_character_definition",
       "order": 9154,
-      "disable": false
+      "disable": false,
+      "extensions": {
+        "expansion_version": "v1.0.11",
+        "expanded_at": "2026-06-03T11:48:46Z",
+        "expansion_basis": "title_taxonomy_manifest_no_article_text"
+      }
     },
     {
       "uid": "p4_ego_category_zayin_level_e_g_o_70b1e7e9b6",
@@ -3318,20 +3518,28 @@
         "Category:ZAYIN Level E.G.O",
         "E.G.O",
         "psychic pressure",
-        "corrosion"
+        "corrosion",
+        "expanded bridge",
+        "story log anchor",
+        "route pressure"
       ],
       "keysecondary": [
         "Albina",
         "Abnormality",
         "risk"
       ],
-      "comment": "P4 canon bridge: Category:ZAYIN Level E.G.O",
-      "content": "Category:ZAYIN Level E.G.O can enter the Albina route as a psychological force, gear motif, or abnormal pressure. Use it to ground the scene in the Limbus Company tone while keeping the focus on player choice, Albina's controlled courtesy, her body-art aesthetics, and the risks created by proximity to her. Do not turn the term into an automatic victory, a trivia lecture, or a detached explanation. When it appears, tie it to sensory pressure, group reaction, route boundaries, tactical cost, or an observable change in the current scene.",
+      "comment": "P4 expanded bridge: Category:ZAYIN Level E.G.O",
+      "content": "Category:ZAYIN Level E.G.O is an expanded P4 bridge anchor for the Albina route.\nUse it as an E.G.O pressure frame: resonance, corrosion risk, symbolic gear, abnormal emotion, and battle utility should all remain costs instead of free spectacle.\nWhite Canvas can focus on whether power expression preserves bodily integrity; Golden Bough Rebuild can focus on self-recognition after resonance; Ring Conspiracy can focus on stolen aesthetics and counterfeit identity performance.\nTrigger it during combat preparation, panic, identity switching, gift choice, healing, meltdown language, or any scene where the party tries to make a dangerous symbol obey a human boundary.\nCharacter pressure: if no named Sinner is onstage, let nearby witnesses react through practical caution, rumor, or tactical shorthand.\nFaction/identity frame: treat the title as a route-facing constraint, not as a detached glossary term.\nScene beats: show a visible resonance cue, name the tactical temptation, then require a stabilizing choice before the power helps.\nSafety boundary: this entry is original route support built from title taxonomy and page index facts only. Do not present it as full canon retelling, do not quote external text, and do not claim full plot restoration from this trigger alone.",
       "constant": false,
       "selective": true,
       "position": "after_character_definition",
       "order": 9155,
-      "disable": false
+      "disable": false,
+      "extensions": {
+        "expansion_version": "v1.0.11",
+        "expanded_at": "2026-06-03T11:48:46Z",
+        "expansion_basis": "title_taxonomy_manifest_no_article_text"
+      }
     },
     {
       "uid": "p4_canon_term_catherine_ee3ba772b9",
@@ -3847,20 +4055,28 @@
         "Cinq Assoc. East Section 3 Don Quixote",
         "faction",
         "contract",
-        "City order"
+        "City order",
+        "expanded bridge",
+        "story log anchor",
+        "route pressure"
       ],
       "keysecondary": [
         "Albina",
         "The City",
         "Backstreets"
       ],
-      "comment": "P4 canon bridge: Cinq Assoc. East Section 3 Don Quixote",
-      "content": "Cinq Assoc. East Section 3 Don Quixote can enter the Albina route as a social-power or contract pressure point in the City. Use it to ground the scene in the Limbus Company tone while keeping the focus on player choice, Albina's controlled courtesy, her body-art aesthetics, and the risks created by proximity to her. Do not turn the term into an automatic victory, a trivia lecture, or a detached explanation. When it appears, tie it to sensory pressure, group reaction, route boundaries, tactical cost, or an observable change in the current scene.",
+      "comment": "P4 expanded bridge: Cinq Assoc. East Section 3 Don Quixote",
+      "content": "Cinq Assoc. East Section 3 Don Quixote is an expanded P4 bridge anchor for the Albina route.\nUse it as an organizational pressure frame. Let ranks, uniforms, contracts, section numbers, and reputations shape what characters can risk in public.\nWhite Canvas can stress negotiated boundaries; Golden Bough Rebuild can stress records, witnesses, and professional memory; Ring Conspiracy can stress hostile contracts, counterfeits, and leverage.\nTrigger it when an identity, office, association, faction order, or named professional style gives the scene a tactical rule the player can exploit or violate.\nCharacter pressure: when Don Quixote is present or referenced, keep the focus on observable behavior, speech rhythm, hesitation, and how Albina's attention changes the room.\nFaction/identity frame: a dueling-contract frame that fits negotiation, tempo control, and public reputation\nScene beats: show the professional rule, show the social penalty for breaking it, then offer a player-facing exploit or refusal.\nSafety boundary: this entry is original route support built from title taxonomy and page index facts only. Do not present it as full canon retelling, do not quote external text, and do not claim full plot restoration from this trigger alone.",
       "constant": false,
       "selective": true,
       "position": "after_character_definition",
       "order": 9180,
-      "disable": false
+      "disable": false,
+      "extensions": {
+        "expansion_version": "v1.0.11",
+        "expanded_at": "2026-06-03T11:48:46Z",
+        "expansion_basis": "title_taxonomy_manifest_no_article_text"
+      }
     },
     {
       "uid": "p4_identity_story_cinq_assoc_east_section_3_don_quixote_identity_story_63a66b320d",
@@ -4319,20 +4535,28 @@
         "Command : Meltdown Faust",
         "canon term",
         "route support",
-        "setting"
+        "setting",
+        "expanded bridge",
+        "story log anchor",
+        "route pressure"
       ],
       "keysecondary": [
         "Albina",
         "Limbus Company",
         "The City"
       ],
-      "comment": "P4 canon bridge: Command : Meltdown Faust",
-      "content": "Command : Meltdown Faust can enter the Albina route as a compact setting, character, or mechanic anchor. Use it to ground the scene in the Limbus Company tone while keeping the focus on player choice, Albina's controlled courtesy, her body-art aesthetics, and the risks created by proximity to her. Do not turn the term into an automatic victory, a trivia lecture, or a detached explanation. When it appears, tie it to sensory pressure, group reaction, route boundaries, tactical cost, or an observable change in the current scene.",
+      "comment": "P4 expanded bridge: Command : Meltdown Faust",
+      "content": "Command : Meltdown Faust is an expanded P4 bridge anchor for the Albina route.\nUse it as an E.G.O pressure frame: resonance, corrosion risk, symbolic gear, abnormal emotion, and battle utility should all remain costs instead of free spectacle.\nWhite Canvas can focus on whether power expression preserves bodily integrity; Golden Bough Rebuild can focus on self-recognition after resonance; Ring Conspiracy can focus on stolen aesthetics and counterfeit identity performance.\nTrigger it during combat preparation, panic, identity switching, gift choice, healing, meltdown language, or any scene where the party tries to make a dangerous symbol obey a human boundary.\nCharacter pressure: when Faust is present or referenced, keep the focus on observable behavior, speech rhythm, hesitation, and how Albina's attention changes the room.\nFaction/identity frame: treat the title as a route-facing constraint, not as a detached glossary term.\nScene beats: show a visible resonance cue, name the tactical temptation, then require a stabilizing choice before the power helps.\nSafety boundary: this entry is original route support built from title taxonomy and page index facts only. Do not present it as full canon retelling, do not quote external text, and do not claim full plot restoration from this trigger alone.",
       "constant": false,
       "selective": true,
       "position": "after_character_definition",
       "order": 9202,
-      "disable": false
+      "disable": false,
+      "extensions": {
+        "expansion_version": "v1.0.11",
+        "expanded_at": "2026-06-03T11:48:46Z",
+        "expansion_basis": "title_taxonomy_manifest_no_article_text"
+      }
     },
     {
       "uid": "p4_canon_term_compass_9d5c8e519d",
@@ -5036,20 +5260,28 @@
         "Dawn Office Fixer Sinclair",
         "faction",
         "contract",
-        "City order"
+        "City order",
+        "expanded bridge",
+        "story log anchor",
+        "route pressure"
       ],
       "keysecondary": [
         "Albina",
         "The City",
         "Backstreets"
       ],
-      "comment": "P4 canon bridge: Dawn Office Fixer Sinclair",
-      "content": "Dawn Office Fixer Sinclair can enter the Albina route as a social-power or contract pressure point in the City. Use it to ground the scene in the Limbus Company tone while keeping the focus on player choice, Albina's controlled courtesy, her body-art aesthetics, and the risks created by proximity to her. Do not turn the term into an automatic victory, a trivia lecture, or a detached explanation. When it appears, tie it to sensory pressure, group reaction, route boundaries, tactical cost, or an observable change in the current scene.",
+      "comment": "P4 expanded bridge: Dawn Office Fixer Sinclair",
+      "content": "Dawn Office Fixer Sinclair is an expanded P4 bridge anchor for the Albina route.\nUse it as an organizational pressure frame. Let ranks, uniforms, contracts, section numbers, and reputations shape what characters can risk in public.\nWhite Canvas can stress negotiated boundaries; Golden Bough Rebuild can stress records, witnesses, and professional memory; Ring Conspiracy can stress hostile contracts, counterfeits, and leverage.\nTrigger it when an identity, office, association, faction order, or named professional style gives the scene a tactical rule the player can exploit or violate.\nCharacter pressure: when Sinclair is present or referenced, keep the focus on observable behavior, speech rhythm, hesitation, and how Albina's attention changes the room.\nFaction/identity frame: a fixer-office frame that fits professional duty, symbolic fire, and public sacrifice\nScene beats: show the professional rule, show the social penalty for breaking it, then offer a player-facing exploit or refusal.\nSafety boundary: this entry is original route support built from title taxonomy and page index facts only. Do not present it as full canon retelling, do not quote external text, and do not claim full plot restoration from this trigger alone.",
       "constant": false,
       "selective": true,
       "position": "after_character_definition",
       "order": 9236,
-      "disable": false
+      "disable": false,
+      "extensions": {
+        "expansion_version": "v1.0.11",
+        "expanded_at": "2026-06-03T11:48:46Z",
+        "expansion_basis": "title_taxonomy_manifest_no_article_text"
+      }
     },
     {
       "uid": "p4_identity_story_dawn_office_fixer_sinclair_identity_story_c4e7498914",
@@ -5378,20 +5610,28 @@
         "Despairing Bloodbag",
         "enemy",
         "encounter",
-        "combat pressure"
+        "combat pressure",
+        "expanded bridge",
+        "story log anchor",
+        "route pressure"
       ],
       "keysecondary": [
         "Albina",
         "battlefield",
         "risk"
       ],
-      "comment": "P4 canon bridge: Despairing Bloodbag",
-      "content": "Despairing Bloodbag can enter the Albina route as an encounter threat or hostile presence. Use it to ground the scene in the Limbus Company tone while keeping the focus on player choice, Albina's controlled courtesy, her body-art aesthetics, and the risks created by proximity to her. Do not turn the term into an automatic victory, a trivia lecture, or a detached explanation. When it appears, tie it to sensory pressure, group reaction, route boundaries, tactical cost, or an observable change in the current scene.",
+      "comment": "P4 expanded bridge: Despairing Bloodbag",
+      "content": "Despairing Bloodbag is an expanded P4 bridge anchor for the Albina route.\nUse it as a bloodfiend/body-horror pressure frame. Keep the horror grounded in hunger, prosthetics, dependence, shame, and social containment instead of gore for its own sake.\nWhite Canvas can stress consent around touch and feeding; Golden Bough Rebuild can stress body continuity after repair; Ring Conspiracy can stress the way monstrous imagery can be curated, sold, or weaponized.\nTrigger it when blood, prosthetics, thirst, panic, aristocratic etiquette, or public fear changes how the scene treats Albina's art and the player's safety.\nCharacter pressure: if no named Sinner is onstage, let nearby witnesses react through practical caution, rumor, or tactical shorthand.\nFaction/identity frame: an art-crime frame that fits forgery, consent boundaries, and hostile aesthetic control\nScene beats: introduce bodily need or public fear, give the player a boundary-preserving response, and let Albina's art register the cost.\nSafety boundary: this entry is original route support built from title taxonomy and page index facts only. Do not present it as full canon retelling, do not quote external text, and do not claim full plot restoration from this trigger alone.",
       "constant": false,
       "selective": true,
       "position": "after_character_definition",
       "order": 9252,
-      "disable": false
+      "disable": false,
+      "extensions": {
+        "expansion_version": "v1.0.11",
+        "expanded_at": "2026-06-03T11:48:46Z",
+        "expansion_basis": "title_taxonomy_manifest_no_article_text"
+      }
     },
     {
       "uid": "p4_canon_term_determined_kurokumo_henchman_1548d784ba",
@@ -6293,20 +6533,28 @@
         "District 20 Yurodivy Hong Lu",
         "canon term",
         "route support",
-        "setting"
+        "setting",
+        "expanded bridge",
+        "story log anchor",
+        "route pressure"
       ],
       "keysecondary": [
         "Albina",
         "Limbus Company",
         "The City"
       ],
-      "comment": "P4 canon bridge: District 20 Yurodivy Hong Lu",
-      "content": "District 20 Yurodivy Hong Lu can enter the Albina route as a compact setting, character, or mechanic anchor. Use it to ground the scene in the Limbus Company tone while keeping the focus on player choice, Albina's controlled courtesy, her body-art aesthetics, and the risks created by proximity to her. Do not turn the term into an automatic victory, a trivia lecture, or a detached explanation. When it appears, tie it to sensory pressure, group reaction, route boundaries, tactical cost, or an observable change in the current scene.",
+      "comment": "P4 expanded bridge: District 20 Yurodivy Hong Lu",
+      "content": "District 20 Yurodivy Hong Lu is an expanded P4 bridge anchor for the Albina route.\nUse it as an organizational pressure frame. Let ranks, uniforms, contracts, section numbers, and reputations shape what characters can risk in public.\nWhite Canvas can stress negotiated boundaries; Golden Bough Rebuild can stress records, witnesses, and professional memory; Ring Conspiracy can stress hostile contracts, counterfeits, and leverage.\nTrigger it when an identity, office, association, faction order, or named professional style gives the scene a tactical rule the player can exploit or violate.\nCharacter pressure: when Hong Lu is present or referenced, keep the focus on observable behavior, speech rhythm, hesitation, and how Albina's attention changes the room.\nFaction/identity frame: a radical street-politics frame that fits public speech, surveillance, and unstable solidarity\nScene beats: show the professional rule, show the social penalty for breaking it, then offer a player-facing exploit or refusal.\nSafety boundary: this entry is original route support built from title taxonomy and page index facts only. Do not present it as full canon retelling, do not quote external text, and do not claim full plot restoration from this trigger alone.",
       "constant": false,
       "selective": true,
       "position": "after_character_definition",
       "order": 9295,
-      "disable": false
+      "disable": false,
+      "extensions": {
+        "expansion_version": "v1.0.11",
+        "expanded_at": "2026-06-03T11:48:46Z",
+        "expansion_basis": "title_taxonomy_manifest_no_article_text"
+      }
     },
     {
       "uid": "p4_identity_story_district_20_yurodivy_hong_lu_identity_story_88c70e8ccf",
@@ -6636,20 +6884,28 @@
         "District 8 (Hongyuan Bioengineering Group)",
         "canon term",
         "route support",
-        "setting"
+        "setting",
+        "expanded bridge",
+        "story log anchor",
+        "route pressure"
       ],
       "keysecondary": [
         "Albina",
         "Limbus Company",
         "The City"
       ],
-      "comment": "P4 canon bridge: District 8 (Hongyuan Bioengineering Group)",
-      "content": "District 8 (Hongyuan Bioengineering Group) can enter the Albina route as a compact setting, character, or mechanic anchor. Use it to ground the scene in the Limbus Company tone while keeping the focus on player choice, Albina's controlled courtesy, her body-art aesthetics, and the risks created by proximity to her. Do not turn the term into an automatic victory, a trivia lecture, or a detached explanation. When it appears, tie it to sensory pressure, group reaction, route boundaries, tactical cost, or an observable change in the current scene.",
+      "comment": "P4 expanded bridge: District 8 (Hongyuan Bioengineering Group)",
+      "content": "District 8 (Hongyuan Bioengineering Group) is an expanded P4 bridge anchor for the Albina route.\nUse it as an organizational pressure frame. Let ranks, uniforms, contracts, section numbers, and reputations shape what characters can risk in public.\nWhite Canvas can stress negotiated boundaries; Golden Bough Rebuild can stress records, witnesses, and professional memory; Ring Conspiracy can stress hostile contracts, counterfeits, and leverage.\nTrigger it when an identity, office, association, faction order, or named professional style gives the scene a tactical rule the player can exploit or violate.\nCharacter pressure: if no named Sinner is onstage, let nearby witnesses react through practical caution, rumor, or tactical shorthand.\nFaction/identity frame: an art-crime frame that fits forgery, consent boundaries, and hostile aesthetic control a corporate-biotech frame that fits body modification, privacy, and manufactured dependency\nScene beats: show the professional rule, show the social penalty for breaking it, then offer a player-facing exploit or refusal.\nSafety boundary: this entry is original route support built from title taxonomy and page index facts only. Do not present it as full canon retelling, do not quote external text, and do not claim full plot restoration from this trigger alone.",
       "constant": false,
       "selective": true,
       "position": "after_character_definition",
       "order": 9311,
-      "disable": false
+      "disable": false,
+      "extensions": {
+        "expansion_version": "v1.0.11",
+        "expanded_at": "2026-06-03T11:48:46Z",
+        "expansion_basis": "title_taxonomy_manifest_no_article_text"
+      }
     },
     {
       "uid": "p4_canon_term_district_9_i_corp_3f264637ed",
@@ -6763,20 +7019,28 @@
         "Don Quixote",
         "canon term",
         "route support",
-        "setting"
+        "setting",
+        "expanded bridge",
+        "story log anchor",
+        "route pressure"
       ],
       "keysecondary": [
         "Albina",
         "Limbus Company",
         "The City"
       ],
-      "comment": "P4 canon bridge: Don Quixote",
-      "content": "Don Quixote can enter the Albina route as a compact setting, character, or mechanic anchor. Use it to ground the scene in the Limbus Company tone while keeping the focus on player choice, Albina's controlled courtesy, her body-art aesthetics, and the risks created by proximity to her. Do not turn the term into an automatic victory, a trivia lecture, or a detached explanation. When it appears, tie it to sensory pressure, group reaction, route boundaries, tactical cost, or an observable change in the current scene.",
+      "comment": "P4 expanded bridge: Don Quixote",
+      "content": "Don Quixote is an expanded P4 bridge anchor for the Albina route.\nUse it as a focused canon-term anchor. It should add scene texture, stakes, and character reaction without pretending to summarize a full article.\nWhite Canvas can stress consent and self-definition; Golden Bough Rebuild can stress memory continuity; Ring Conspiracy can stress authorship, forgery, and control.\nTrigger it only when the term naturally appears in dialogue, investigation, combat, or route bookkeeping.\nCharacter pressure: when Don Quixote is present or referenced, keep the focus on observable behavior, speech rhythm, hesitation, and how Albina's attention changes the room.\nFaction/identity frame: treat the title as a route-facing constraint, not as a detached glossary term.\nScene beats: attach the term to a sensory detail, a social reaction, and a route consequence.\nSafety boundary: this entry is original route support built from title taxonomy and page index facts only. Do not present it as full canon retelling, do not quote external text, and do not claim full plot restoration from this trigger alone.",
       "constant": false,
       "selective": true,
       "position": "after_character_definition",
       "order": 9317,
-      "disable": false
+      "disable": false,
+      "extensions": {
+        "expansion_version": "v1.0.11",
+        "expanded_at": "2026-06-03T11:48:46Z",
+        "expansion_basis": "title_taxonomy_manifest_no_article_text"
+      }
     },
     {
       "uid": "p4_visual_don_quixote_gallery_4ca038d817",
@@ -7410,20 +7674,28 @@
         "Dungeons",
         "canon term",
         "route support",
-        "setting"
+        "setting",
+        "expanded bridge",
+        "story log anchor",
+        "route pressure"
       ],
       "keysecondary": [
         "Albina",
         "Limbus Company",
         "The City"
       ],
-      "comment": "P4 canon bridge: Dungeons",
-      "content": "Dungeons can enter the Albina route as a compact setting, character, or mechanic anchor. Use it to ground the scene in the Limbus Company tone while keeping the focus on player choice, Albina's controlled courtesy, her body-art aesthetics, and the risks created by proximity to her. Do not turn the term into an automatic victory, a trivia lecture, or a detached explanation. When it appears, tie it to sensory pressure, group reaction, route boundaries, tactical cost, or an observable change in the current scene.",
+      "comment": "P4 expanded bridge: Dungeons",
+      "content": "Dungeons is an expanded P4 bridge anchor for the Albina route.\nUse it as an exploration topology frame. Do not explain the dungeon as trivia; make it visible through navigation pressure, branching corridors, supply attrition, locked choices, and the way Albina marks safe return paths.\nWhite Canvas can emphasize protected rooms and non-invasive mapping; Golden Bough Rebuild can emphasize unstable memory geometry; Ring Conspiracy can emphasize staged routes, surveillance, and traps disguised as exhibits.\nTrigger it when the player chooses a path, loses certainty about the route, spends supplies, or asks Albina to draw a map that may change after being observed.\nCharacter pressure: if no named Sinner is onstage, let nearby witnesses react through practical caution, rumor, or tactical shorthand.\nFaction/identity frame: treat the title as a route-facing constraint, not as a detached glossary term.\nScene beats: mark the route, spend or save a supply, and record what changed after the party crossed the threshold.\nSafety boundary: this entry is original route support built from title taxonomy and page index facts only. Do not present it as full canon retelling, do not quote external text, and do not claim full plot restoration from this trigger alone.",
       "constant": false,
       "selective": true,
       "position": "after_character_definition",
       "order": 9347,
-      "disable": false
+      "disable": false,
+      "extensions": {
+        "expansion_version": "v1.0.11",
+        "expanded_at": "2026-06-03T11:48:46Z",
+        "expansion_basis": "title_taxonomy_manifest_no_article_text"
+      }
     },
     {
       "uid": "p4_canon_term_early_elephants_class_captain_faust_6c3f32834c",
@@ -8134,20 +8406,28 @@
         "Enamored Researcher of the Ring?",
         "canon term",
         "route support",
-        "setting"
+        "setting",
+        "expanded bridge",
+        "story log anchor",
+        "route pressure"
       ],
       "keysecondary": [
         "Albina",
         "Limbus Company",
         "The City"
       ],
-      "comment": "P4 canon bridge: Enamored Researcher of the Ring?",
-      "content": "Enamored Researcher of the Ring? can enter the Albina route as a compact setting, character, or mechanic anchor. Use it to ground the scene in the Limbus Company tone while keeping the focus on player choice, Albina's controlled courtesy, her body-art aesthetics, and the risks created by proximity to her. Do not turn the term into an automatic victory, a trivia lecture, or a detached explanation. When it appears, tie it to sensory pressure, group reaction, route boundaries, tactical cost, or an observable change in the current scene.",
+      "comment": "P4 expanded bridge: Enamored Researcher of the Ring?",
+      "content": "Enamored Researcher of the Ring? is an expanded P4 bridge anchor for the Albina route.\nUse it as an organizational pressure frame. Let ranks, uniforms, contracts, section numbers, and reputations shape what characters can risk in public.\nWhite Canvas can stress negotiated boundaries; Golden Bough Rebuild can stress records, witnesses, and professional memory; Ring Conspiracy can stress hostile contracts, counterfeits, and leverage.\nTrigger it when an identity, office, association, faction order, or named professional style gives the scene a tactical rule the player can exploit or violate.\nCharacter pressure: if no named Sinner is onstage, let nearby witnesses react through practical caution, rumor, or tactical shorthand.\nFaction/identity frame: an art-crime frame that fits forgery, consent boundaries, and hostile aesthetic control\nScene beats: show the professional rule, show the social penalty for breaking it, then offer a player-facing exploit or refusal.\nSafety boundary: this entry is original route support built from title taxonomy and page index facts only. Do not present it as full canon retelling, do not quote external text, and do not claim full plot restoration from this trigger alone.",
       "constant": false,
       "selective": true,
       "position": "after_character_definition",
       "order": 9381,
-      "disable": false
+      "disable": false,
+      "extensions": {
+        "expansion_version": "v1.0.11",
+        "expanded_at": "2026-06-03T11:48:46Z",
+        "expansion_basis": "title_taxonomy_manifest_no_article_text"
+      }
     },
     {
       "uid": "p4_canon_term_enkephalin_b9c74e63b1",
@@ -14515,20 +14795,28 @@
         "Into a Certain Library's Book Theme Pack",
         "theme pack",
         "atmosphere",
-        "floor"
+        "floor",
+        "expanded bridge",
+        "story log anchor",
+        "route pressure"
       ],
       "keysecondary": [
         "Albina",
         "Mirror Dungeon",
         "sensory pressure"
       ],
-      "comment": "P4 canon bridge: Into a Certain Library's Book Theme Pack",
-      "content": "Into a Certain Library's Book Theme Pack can enter the Albina route as an atmosphere palette for a dangerous floor or scene. Use it to ground the scene in the Limbus Company tone while keeping the focus on player choice, Albina's controlled courtesy, her body-art aesthetics, and the risks created by proximity to her. Do not turn the term into an automatic victory, a trivia lecture, or a detached explanation. When it appears, tie it to sensory pressure, group reaction, route boundaries, tactical cost, or an observable change in the current scene.",
+      "comment": "P4 expanded bridge: Into a Certain Library's Book Theme Pack",
+      "content": "Into a Certain Library's Book Theme Pack is an expanded P4 bridge anchor for the Albina route.\nUse it as an invitation/archive pressure frame. The scene should feel like a formal threshold: entry terms, reading rights, borrowed voices, and the danger of becoming material for someone else's catalog.\nWhite Canvas can turn the invitation into a consent form; Golden Bough Rebuild can turn it into a memory index; Ring Conspiracy can turn it into a forged guest-list or a counterfeit artistic summons.\nTrigger it around doors, tickets, books, displays, invitations, or any moment where a polite request might actually be a binding structure.\nCharacter pressure: if no named Sinner is onstage, let nearby witnesses react through practical caution, rumor, or tactical shorthand.\nFaction/identity frame: treat the title as a route-facing constraint, not as a detached glossary term.\nScene beats: present the invitation, clarify what entry would cost, and let the player decide whether Albina may treat the record as art.\nSafety boundary: this entry is original route support built from title taxonomy and page index facts only. Do not present it as full canon retelling, do not quote external text, and do not claim full plot restoration from this trigger alone.",
       "constant": false,
       "selective": true,
       "position": "after_character_definition",
       "order": 9680,
-      "disable": false
+      "disable": false,
+      "extensions": {
+        "expansion_version": "v1.0.11",
+        "expanded_at": "2026-06-03T11:48:46Z",
+        "expansion_basis": "title_taxonomy_manifest_no_article_text"
+      }
     },
     {
       "uid": "p4_canon_term_into_the_dark_30b20145f8",
@@ -18052,20 +18340,28 @@
         "List of E.G.O",
         "E.G.O",
         "psychic pressure",
-        "corrosion"
+        "corrosion",
+        "expanded bridge",
+        "story log anchor",
+        "route pressure"
       ],
       "keysecondary": [
         "Albina",
         "Abnormality",
         "risk"
       ],
-      "comment": "P4 canon bridge: List of E.G.O",
-      "content": "List of E.G.O can enter the Albina route as a psychological force, gear motif, or abnormal pressure. Use it to ground the scene in the Limbus Company tone while keeping the focus on player choice, Albina's controlled courtesy, her body-art aesthetics, and the risks created by proximity to her. Do not turn the term into an automatic victory, a trivia lecture, or a detached explanation. When it appears, tie it to sensory pressure, group reaction, route boundaries, tactical cost, or an observable change in the current scene.",
+      "comment": "P4 expanded bridge: List of E.G.O",
+      "content": "List of E.G.O is an expanded P4 bridge anchor for the Albina route.\nUse it as an E.G.O pressure frame: resonance, corrosion risk, symbolic gear, abnormal emotion, and battle utility should all remain costs instead of free spectacle.\nWhite Canvas can focus on whether power expression preserves bodily integrity; Golden Bough Rebuild can focus on self-recognition after resonance; Ring Conspiracy can focus on stolen aesthetics and counterfeit identity performance.\nTrigger it during combat preparation, panic, identity switching, gift choice, healing, meltdown language, or any scene where the party tries to make a dangerous symbol obey a human boundary.\nCharacter pressure: if no named Sinner is onstage, let nearby witnesses react through practical caution, rumor, or tactical shorthand.\nFaction/identity frame: treat the title as a route-facing constraint, not as a detached glossary term.\nScene beats: show a visible resonance cue, name the tactical temptation, then require a stabilizing choice before the power helps.\nSafety boundary: this entry is original route support built from title taxonomy and page index facts only. Do not present it as full canon retelling, do not quote external text, and do not claim full plot restoration from this trigger alone.",
       "constant": false,
       "selective": true,
       "position": "after_character_definition",
       "order": 9845,
-      "disable": false
+      "disable": false,
+      "extensions": {
+        "expansion_version": "v1.0.11",
+        "expanded_at": "2026-06-03T11:48:46Z",
+        "expansion_basis": "title_taxonomy_manifest_no_article_text"
+      }
     },
     {
       "uid": "p4_ego_list_of_e_g_o_gifts_8cd15237c9",
@@ -18073,20 +18369,28 @@
         "List of E.G.O Gifts",
         "E.G.O",
         "psychic pressure",
-        "corrosion"
+        "corrosion",
+        "expanded bridge",
+        "story log anchor",
+        "route pressure"
       ],
       "keysecondary": [
         "Albina",
         "Abnormality",
         "risk"
       ],
-      "comment": "P4 canon bridge: List of E.G.O Gifts",
-      "content": "List of E.G.O Gifts can enter the Albina route as a psychological force, gear motif, or abnormal pressure. Use it to ground the scene in the Limbus Company tone while keeping the focus on player choice, Albina's controlled courtesy, her body-art aesthetics, and the risks created by proximity to her. Do not turn the term into an automatic victory, a trivia lecture, or a detached explanation. When it appears, tie it to sensory pressure, group reaction, route boundaries, tactical cost, or an observable change in the current scene.",
+      "comment": "P4 expanded bridge: List of E.G.O Gifts",
+      "content": "List of E.G.O Gifts is an expanded P4 bridge anchor for the Albina route.\nUse it as an E.G.O pressure frame: resonance, corrosion risk, symbolic gear, abnormal emotion, and battle utility should all remain costs instead of free spectacle.\nWhite Canvas can focus on whether power expression preserves bodily integrity; Golden Bough Rebuild can focus on self-recognition after resonance; Ring Conspiracy can focus on stolen aesthetics and counterfeit identity performance.\nTrigger it during combat preparation, panic, identity switching, gift choice, healing, meltdown language, or any scene where the party tries to make a dangerous symbol obey a human boundary.\nCharacter pressure: if no named Sinner is onstage, let nearby witnesses react through practical caution, rumor, or tactical shorthand.\nFaction/identity frame: treat the title as a route-facing constraint, not as a detached glossary term.\nScene beats: show a visible resonance cue, name the tactical temptation, then require a stabilizing choice before the power helps.\nSafety boundary: this entry is original route support built from title taxonomy and page index facts only. Do not present it as full canon retelling, do not quote external text, and do not claim full plot restoration from this trigger alone.",
       "constant": false,
       "selective": true,
       "position": "after_character_definition",
       "order": 9846,
-      "disable": false
+      "disable": false,
+      "extensions": {
+        "expansion_version": "v1.0.11",
+        "expanded_at": "2026-06-03T11:48:46Z",
+        "expansion_basis": "title_taxonomy_manifest_no_article_text"
+      }
     },
     {
       "uid": "p4_ego_list_of_e_g_o_gifts_enhance_d37444d19c",
@@ -19265,20 +19569,28 @@
         "Lobotomy E.G.O::In the Name of Love and Hate Don Quixote",
         "E.G.O",
         "psychic pressure",
-        "corrosion"
+        "corrosion",
+        "expanded bridge",
+        "story log anchor",
+        "route pressure"
       ],
       "keysecondary": [
         "Albina",
         "Abnormality",
         "risk"
       ],
-      "comment": "P4 canon bridge: Lobotomy E.G.O::In the Name of Love and Hate Don Quixote",
-      "content": "Lobotomy E.G.O::In the Name of Love and Hate Don Quixote can enter the Albina route as a psychological force, gear motif, or abnormal pressure. Use it to ground the scene in the Limbus Company tone while keeping the focus on player choice, Albina's controlled courtesy, her body-art aesthetics, and the risks created by proximity to her. Do not turn the term into an automatic victory, a trivia lecture, or a detached explanation. When it appears, tie it to sensory pressure, group reaction, route boundaries, tactical cost, or an observable change in the current scene.",
+      "comment": "P4 expanded bridge: Lobotomy E.G.O::In the Name of Love and Hate Don Quixote",
+      "content": "Lobotomy E.G.O::In the Name of Love and Hate Don Quixote is an expanded P4 bridge anchor for the Albina route.\nUse it as an E.G.O pressure frame: resonance, corrosion risk, symbolic gear, abnormal emotion, and battle utility should all remain costs instead of free spectacle.\nWhite Canvas can focus on whether power expression preserves bodily integrity; Golden Bough Rebuild can focus on self-recognition after resonance; Ring Conspiracy can focus on stolen aesthetics and counterfeit identity performance.\nTrigger it during combat preparation, panic, identity switching, gift choice, healing, meltdown language, or any scene where the party tries to make a dangerous symbol obey a human boundary.\nCharacter pressure: when Don Quixote is present or referenced, keep the focus on observable behavior, speech rhythm, hesitation, and how Albina's attention changes the room.\nFaction/identity frame: treat the title as a route-facing constraint, not as a detached glossary term.\nScene beats: show a visible resonance cue, name the tactical temptation, then require a stabilizing choice before the power helps.\nSafety boundary: this entry is original route support built from title taxonomy and page index facts only. Do not present it as full canon retelling, do not quote external text, and do not claim full plot restoration from this trigger alone.",
       "constant": false,
       "selective": true,
       "position": "after_character_definition",
       "order": 9901,
-      "disable": false
+      "disable": false,
+      "extensions": {
+        "expansion_version": "v1.0.11",
+        "expanded_at": "2026-06-03T11:48:46Z",
+        "expansion_basis": "title_taxonomy_manifest_no_article_text"
+      }
     },
     {
       "uid": "p4_identity_story_lobotomy_e_g_o_in_the_name_of_love_and_hate_don_quixot_42925cd9ae",
@@ -19460,20 +19772,28 @@
         "Lobotomy E.G.O::Magic Bullet Outis",
         "E.G.O",
         "psychic pressure",
-        "corrosion"
+        "corrosion",
+        "expanded bridge",
+        "story log anchor",
+        "route pressure"
       ],
       "keysecondary": [
         "Albina",
         "Abnormality",
         "risk"
       ],
-      "comment": "P4 canon bridge: Lobotomy E.G.O::Magic Bullet Outis",
-      "content": "Lobotomy E.G.O::Magic Bullet Outis can enter the Albina route as a psychological force, gear motif, or abnormal pressure. Use it to ground the scene in the Limbus Company tone while keeping the focus on player choice, Albina's controlled courtesy, her body-art aesthetics, and the risks created by proximity to her. Do not turn the term into an automatic victory, a trivia lecture, or a detached explanation. When it appears, tie it to sensory pressure, group reaction, route boundaries, tactical cost, or an observable change in the current scene.",
+      "comment": "P4 expanded bridge: Lobotomy E.G.O::Magic Bullet Outis",
+      "content": "Lobotomy E.G.O::Magic Bullet Outis is an expanded P4 bridge anchor for the Albina route.\nUse it as an E.G.O pressure frame: resonance, corrosion risk, symbolic gear, abnormal emotion, and battle utility should all remain costs instead of free spectacle.\nWhite Canvas can focus on whether power expression preserves bodily integrity; Golden Bough Rebuild can focus on self-recognition after resonance; Ring Conspiracy can focus on stolen aesthetics and counterfeit identity performance.\nTrigger it during combat preparation, panic, identity switching, gift choice, healing, meltdown language, or any scene where the party tries to make a dangerous symbol obey a human boundary.\nCharacter pressure: when Outis is present or referenced, keep the focus on observable behavior, speech rhythm, hesitation, and how Albina's attention changes the room.\nFaction/identity frame: treat the title as a route-facing constraint, not as a detached glossary term.\nScene beats: show a visible resonance cue, name the tactical temptation, then require a stabilizing choice before the power helps.\nSafety boundary: this entry is original route support built from title taxonomy and page index facts only. Do not present it as full canon retelling, do not quote external text, and do not claim full plot restoration from this trigger alone.",
       "constant": false,
       "selective": true,
       "position": "after_character_definition",
       "order": 9910,
-      "disable": false
+      "disable": false,
+      "extensions": {
+        "expansion_version": "v1.0.11",
+        "expanded_at": "2026-06-03T11:48:46Z",
+        "expansion_basis": "title_taxonomy_manifest_no_article_text"
+      }
     },
     {
       "uid": "p4_identity_story_lobotomy_e_g_o_magic_bullet_outis_identity_story_bab8d1d680",
@@ -19525,20 +19845,28 @@
         "Lobotomy E.G.O::Red Eyes & Penitence Ryoshu",
         "E.G.O",
         "psychic pressure",
-        "corrosion"
+        "corrosion",
+        "expanded bridge",
+        "story log anchor",
+        "route pressure"
       ],
       "keysecondary": [
         "Albina",
         "Abnormality",
         "risk"
       ],
-      "comment": "P4 canon bridge: Lobotomy E.G.O::Red Eyes & Penitence Ryoshu",
-      "content": "Lobotomy E.G.O::Red Eyes & Penitence Ryoshu can enter the Albina route as a psychological force, gear motif, or abnormal pressure. Use it to ground the scene in the Limbus Company tone while keeping the focus on player choice, Albina's controlled courtesy, her body-art aesthetics, and the risks created by proximity to her. Do not turn the term into an automatic victory, a trivia lecture, or a detached explanation. When it appears, tie it to sensory pressure, group reaction, route boundaries, tactical cost, or an observable change in the current scene.",
+      "comment": "P4 expanded bridge: Lobotomy E.G.O::Red Eyes & Penitence Ryōshū",
+      "content": "Lobotomy E.G.O::Red Eyes & Penitence Ryōshū is an expanded P4 bridge anchor for the Albina route.\nUse it as an E.G.O pressure frame: resonance, corrosion risk, symbolic gear, abnormal emotion, and battle utility should all remain costs instead of free spectacle.\nWhite Canvas can focus on whether power expression preserves bodily integrity; Golden Bough Rebuild can focus on self-recognition after resonance; Ring Conspiracy can focus on stolen aesthetics and counterfeit identity performance.\nTrigger it during combat preparation, panic, identity switching, gift choice, healing, meltdown language, or any scene where the party tries to make a dangerous symbol obey a human boundary.\nCharacter pressure: when Ryoshu is present or referenced, keep the focus on observable behavior, speech rhythm, hesitation, and how Albina's attention changes the room.\nFaction/identity frame: treat the title as a route-facing constraint, not as a detached glossary term.\nScene beats: show a visible resonance cue, name the tactical temptation, then require a stabilizing choice before the power helps.\nSafety boundary: this entry is original route support built from title taxonomy and page index facts only. Do not present it as full canon retelling, do not quote external text, and do not claim full plot restoration from this trigger alone.",
       "constant": false,
       "selective": true,
       "position": "after_character_definition",
       "order": 9913,
-      "disable": false
+      "disable": false,
+      "extensions": {
+        "expansion_version": "v1.0.11",
+        "expanded_at": "2026-06-03T11:48:46Z",
+        "expansion_basis": "title_taxonomy_manifest_no_article_text"
+      }
     },
     {
       "uid": "p4_identity_story_lobotomy_e_g_o_red_eyes_penitence_ryoshu_identity_stor_b8b7cba3e4",
@@ -19611,20 +19939,28 @@
         "Lobotomy E.G.O::Red Sheet Sinclair",
         "E.G.O",
         "psychic pressure",
-        "corrosion"
+        "corrosion",
+        "expanded bridge",
+        "story log anchor",
+        "route pressure"
       ],
       "keysecondary": [
         "Albina",
         "Abnormality",
         "risk"
       ],
-      "comment": "P4 canon bridge: Lobotomy E.G.O::Red Sheet Sinclair",
-      "content": "Lobotomy E.G.O::Red Sheet Sinclair can enter the Albina route as a psychological force, gear motif, or abnormal pressure. Use it to ground the scene in the Limbus Company tone while keeping the focus on player choice, Albina's controlled courtesy, her body-art aesthetics, and the risks created by proximity to her. Do not turn the term into an automatic victory, a trivia lecture, or a detached explanation. When it appears, tie it to sensory pressure, group reaction, route boundaries, tactical cost, or an observable change in the current scene.",
+      "comment": "P4 expanded bridge: Lobotomy E.G.O::Red Sheet Sinclair",
+      "content": "Lobotomy E.G.O::Red Sheet Sinclair is an expanded P4 bridge anchor for the Albina route.\nUse it as an E.G.O pressure frame: resonance, corrosion risk, symbolic gear, abnormal emotion, and battle utility should all remain costs instead of free spectacle.\nWhite Canvas can focus on whether power expression preserves bodily integrity; Golden Bough Rebuild can focus on self-recognition after resonance; Ring Conspiracy can focus on stolen aesthetics and counterfeit identity performance.\nTrigger it during combat preparation, panic, identity switching, gift choice, healing, meltdown language, or any scene where the party tries to make a dangerous symbol obey a human boundary.\nCharacter pressure: when Sinclair is present or referenced, keep the focus on observable behavior, speech rhythm, hesitation, and how Albina's attention changes the room.\nFaction/identity frame: treat the title as a route-facing constraint, not as a detached glossary term.\nScene beats: show a visible resonance cue, name the tactical temptation, then require a stabilizing choice before the power helps.\nSafety boundary: this entry is original route support built from title taxonomy and page index facts only. Do not present it as full canon retelling, do not quote external text, and do not claim full plot restoration from this trigger alone.",
       "constant": false,
       "selective": true,
       "position": "after_character_definition",
       "order": 9917,
-      "disable": false
+      "disable": false,
+      "extensions": {
+        "expansion_version": "v1.0.11",
+        "expanded_at": "2026-06-03T11:48:46Z",
+        "expansion_basis": "title_taxonomy_manifest_no_article_text"
+      }
     },
     {
       "uid": "p4_identity_story_lobotomy_e_g_o_red_sheet_sinclair_identity_story_23553fba3e",
@@ -19676,20 +20012,28 @@
         "Lobotomy E.G.O::Regret Faust",
         "E.G.O",
         "psychic pressure",
-        "corrosion"
+        "corrosion",
+        "expanded bridge",
+        "story log anchor",
+        "route pressure"
       ],
       "keysecondary": [
         "Albina",
         "Abnormality",
         "risk"
       ],
-      "comment": "P4 canon bridge: Lobotomy E.G.O::Regret Faust",
-      "content": "Lobotomy E.G.O::Regret Faust can enter the Albina route as a psychological force, gear motif, or abnormal pressure. Use it to ground the scene in the Limbus Company tone while keeping the focus on player choice, Albina's controlled courtesy, her body-art aesthetics, and the risks created by proximity to her. Do not turn the term into an automatic victory, a trivia lecture, or a detached explanation. When it appears, tie it to sensory pressure, group reaction, route boundaries, tactical cost, or an observable change in the current scene.",
+      "comment": "P4 expanded bridge: Lobotomy E.G.O::Regret Faust",
+      "content": "Lobotomy E.G.O::Regret Faust is an expanded P4 bridge anchor for the Albina route.\nUse it as an E.G.O pressure frame: resonance, corrosion risk, symbolic gear, abnormal emotion, and battle utility should all remain costs instead of free spectacle.\nWhite Canvas can focus on whether power expression preserves bodily integrity; Golden Bough Rebuild can focus on self-recognition after resonance; Ring Conspiracy can focus on stolen aesthetics and counterfeit identity performance.\nTrigger it during combat preparation, panic, identity switching, gift choice, healing, meltdown language, or any scene where the party tries to make a dangerous symbol obey a human boundary.\nCharacter pressure: when Faust is present or referenced, keep the focus on observable behavior, speech rhythm, hesitation, and how Albina's attention changes the room.\nFaction/identity frame: treat the title as a route-facing constraint, not as a detached glossary term.\nScene beats: show a visible resonance cue, name the tactical temptation, then require a stabilizing choice before the power helps.\nSafety boundary: this entry is original route support built from title taxonomy and page index facts only. Do not present it as full canon retelling, do not quote external text, and do not claim full plot restoration from this trigger alone.",
       "constant": false,
       "selective": true,
       "position": "after_character_definition",
       "order": 9920,
-      "disable": false
+      "disable": false,
+      "extensions": {
+        "expansion_version": "v1.0.11",
+        "expanded_at": "2026-06-03T11:48:46Z",
+        "expansion_basis": "title_taxonomy_manifest_no_article_text"
+      }
     },
     {
       "uid": "p4_identity_story_lobotomy_e_g_o_regret_faust_identity_story_00704ba319",
@@ -19827,20 +20171,28 @@
         "Lobotomy E.G.O::Solemn Lament Yi Sang",
         "E.G.O",
         "psychic pressure",
-        "corrosion"
+        "corrosion",
+        "expanded bridge",
+        "story log anchor",
+        "route pressure"
       ],
       "keysecondary": [
         "Albina",
         "Abnormality",
         "risk"
       ],
-      "comment": "P4 canon bridge: Lobotomy E.G.O::Solemn Lament Yi Sang",
-      "content": "Lobotomy E.G.O::Solemn Lament Yi Sang can enter the Albina route as a psychological force, gear motif, or abnormal pressure. Use it to ground the scene in the Limbus Company tone while keeping the focus on player choice, Albina's controlled courtesy, her body-art aesthetics, and the risks created by proximity to her. Do not turn the term into an automatic victory, a trivia lecture, or a detached explanation. When it appears, tie it to sensory pressure, group reaction, route boundaries, tactical cost, or an observable change in the current scene.",
+      "comment": "P4 expanded bridge: Lobotomy E.G.O::Solemn Lament Yi Sang",
+      "content": "Lobotomy E.G.O::Solemn Lament Yi Sang is an expanded P4 bridge anchor for the Albina route.\nUse it as an E.G.O pressure frame: resonance, corrosion risk, symbolic gear, abnormal emotion, and battle utility should all remain costs instead of free spectacle.\nWhite Canvas can focus on whether power expression preserves bodily integrity; Golden Bough Rebuild can focus on self-recognition after resonance; Ring Conspiracy can focus on stolen aesthetics and counterfeit identity performance.\nTrigger it during combat preparation, panic, identity switching, gift choice, healing, meltdown language, or any scene where the party tries to make a dangerous symbol obey a human boundary.\nCharacter pressure: when Yi Sang is present or referenced, keep the focus on observable behavior, speech rhythm, hesitation, and how Albina's attention changes the room.\nFaction/identity frame: treat the title as a route-facing constraint, not as a detached glossary term.\nScene beats: show a visible resonance cue, name the tactical temptation, then require a stabilizing choice before the power helps.\nSafety boundary: this entry is original route support built from title taxonomy and page index facts only. Do not present it as full canon retelling, do not quote external text, and do not claim full plot restoration from this trigger alone.",
       "constant": false,
       "selective": true,
       "position": "after_character_definition",
       "order": 9927,
-      "disable": false
+      "disable": false,
+      "extensions": {
+        "expansion_version": "v1.0.11",
+        "expanded_at": "2026-06-03T11:48:46Z",
+        "expansion_basis": "title_taxonomy_manifest_no_article_text"
+      }
     },
     {
       "uid": "p4_identity_story_lobotomy_e_g_o_solemn_lament_yi_sang_identity_story_e4fb77e016",
@@ -19892,20 +20244,28 @@
         "Lobotomy E.G.O::Sunshower Heathcliff",
         "E.G.O",
         "psychic pressure",
-        "corrosion"
+        "corrosion",
+        "expanded bridge",
+        "story log anchor",
+        "route pressure"
       ],
       "keysecondary": [
         "Albina",
         "Abnormality",
         "risk"
       ],
-      "comment": "P4 canon bridge: Lobotomy E.G.O::Sunshower Heathcliff",
-      "content": "Lobotomy E.G.O::Sunshower Heathcliff can enter the Albina route as a psychological force, gear motif, or abnormal pressure. Use it to ground the scene in the Limbus Company tone while keeping the focus on player choice, Albina's controlled courtesy, her body-art aesthetics, and the risks created by proximity to her. Do not turn the term into an automatic victory, a trivia lecture, or a detached explanation. When it appears, tie it to sensory pressure, group reaction, route boundaries, tactical cost, or an observable change in the current scene.",
+      "comment": "P4 expanded bridge: Lobotomy E.G.O::Sunshower Heathcliff",
+      "content": "Lobotomy E.G.O::Sunshower Heathcliff is an expanded P4 bridge anchor for the Albina route.\nUse it as an E.G.O pressure frame: resonance, corrosion risk, symbolic gear, abnormal emotion, and battle utility should all remain costs instead of free spectacle.\nWhite Canvas can focus on whether power expression preserves bodily integrity; Golden Bough Rebuild can focus on self-recognition after resonance; Ring Conspiracy can focus on stolen aesthetics and counterfeit identity performance.\nTrigger it during combat preparation, panic, identity switching, gift choice, healing, meltdown language, or any scene where the party tries to make a dangerous symbol obey a human boundary.\nCharacter pressure: when Heathcliff is present or referenced, keep the focus on observable behavior, speech rhythm, hesitation, and how Albina's attention changes the room.\nFaction/identity frame: treat the title as a route-facing constraint, not as a detached glossary term.\nScene beats: show a visible resonance cue, name the tactical temptation, then require a stabilizing choice before the power helps.\nSafety boundary: this entry is original route support built from title taxonomy and page index facts only. Do not present it as full canon retelling, do not quote external text, and do not claim full plot restoration from this trigger alone.",
       "constant": false,
       "selective": true,
       "position": "after_character_definition",
       "order": 9930,
-      "disable": false
+      "disable": false,
+      "extensions": {
+        "expansion_version": "v1.0.11",
+        "expanded_at": "2026-06-03T11:48:46Z",
+        "expansion_basis": "title_taxonomy_manifest_no_article_text"
+      }
     },
     {
       "uid": "p4_identity_story_lobotomy_e_g_o_sunshower_heathcliff_identity_story_b3c0f3812f",
@@ -19957,20 +20317,28 @@
         "Lobotomy E.G.O::The Sword Sharpened with Tears Rodion",
         "E.G.O",
         "psychic pressure",
-        "corrosion"
+        "corrosion",
+        "expanded bridge",
+        "story log anchor",
+        "route pressure"
       ],
       "keysecondary": [
         "Albina",
         "Abnormality",
         "risk"
       ],
-      "comment": "P4 canon bridge: Lobotomy E.G.O::The Sword Sharpened with Tears Rodion",
-      "content": "Lobotomy E.G.O::The Sword Sharpened with Tears Rodion can enter the Albina route as a psychological force, gear motif, or abnormal pressure. Use it to ground the scene in the Limbus Company tone while keeping the focus on player choice, Albina's controlled courtesy, her body-art aesthetics, and the risks created by proximity to her. Do not turn the term into an automatic victory, a trivia lecture, or a detached explanation. When it appears, tie it to sensory pressure, group reaction, route boundaries, tactical cost, or an observable change in the current scene.",
+      "comment": "P4 expanded bridge: Lobotomy E.G.O::The Sword Sharpened with Tears Rodion",
+      "content": "Lobotomy E.G.O::The Sword Sharpened with Tears Rodion is an expanded P4 bridge anchor for the Albina route.\nUse it as an E.G.O pressure frame: resonance, corrosion risk, symbolic gear, abnormal emotion, and battle utility should all remain costs instead of free spectacle.\nWhite Canvas can focus on whether power expression preserves bodily integrity; Golden Bough Rebuild can focus on self-recognition after resonance; Ring Conspiracy can focus on stolen aesthetics and counterfeit identity performance.\nTrigger it during combat preparation, panic, identity switching, gift choice, healing, meltdown language, or any scene where the party tries to make a dangerous symbol obey a human boundary.\nCharacter pressure: when Rodion is present or referenced, keep the focus on observable behavior, speech rhythm, hesitation, and how Albina's attention changes the room.\nFaction/identity frame: treat the title as a route-facing constraint, not as a detached glossary term.\nScene beats: show a visible resonance cue, name the tactical temptation, then require a stabilizing choice before the power helps.\nSafety boundary: this entry is original route support built from title taxonomy and page index facts only. Do not present it as full canon retelling, do not quote external text, and do not claim full plot restoration from this trigger alone.",
       "constant": false,
       "selective": true,
       "position": "after_character_definition",
       "order": 9933,
-      "disable": false
+      "disable": false,
+      "extensions": {
+        "expansion_version": "v1.0.11",
+        "expanded_at": "2026-06-03T11:48:46Z",
+        "expansion_basis": "title_taxonomy_manifest_no_article_text"
+      }
     },
     {
       "uid": "p4_identity_story_lobotomy_e_g_o_the_sword_sharpened_with_tears_rodion_i_67e0c0244a",
@@ -33489,20 +33857,28 @@
         "The Index Proxy - Effloresced E.G.O::Procuration Don Quixote",
         "E.G.O",
         "psychic pressure",
-        "corrosion"
+        "corrosion",
+        "expanded bridge",
+        "story log anchor",
+        "route pressure"
       ],
       "keysecondary": [
         "Albina",
         "Abnormality",
         "risk"
       ],
-      "comment": "P4 canon bridge: The Index Proxy - Effloresced E.G.O::Procuration Don Quixote",
-      "content": "The Index Proxy - Effloresced E.G.O::Procuration Don Quixote can enter the Albina route as a psychological force, gear motif, or abnormal pressure. Use it to ground the scene in the Limbus Company tone while keeping the focus on player choice, Albina's controlled courtesy, her body-art aesthetics, and the risks created by proximity to her. Do not turn the term into an automatic victory, a trivia lecture, or a detached explanation. When it appears, tie it to sensory pressure, group reaction, route boundaries, tactical cost, or an observable change in the current scene.",
+      "comment": "P4 expanded bridge: The Index Proxy - Effloresced E.G.O::Procuration Don Quixote",
+      "content": "The Index Proxy - Effloresced E.G.O::Procuration Don Quixote is an expanded P4 bridge anchor for the Albina route.\nUse it as an E.G.O pressure frame: resonance, corrosion risk, symbolic gear, abnormal emotion, and battle utility should all remain costs instead of free spectacle.\nWhite Canvas can focus on whether power expression preserves bodily integrity; Golden Bough Rebuild can focus on self-recognition after resonance; Ring Conspiracy can focus on stolen aesthetics and counterfeit identity performance.\nTrigger it during combat preparation, panic, identity switching, gift choice, healing, meltdown language, or any scene where the party tries to make a dangerous symbol obey a human boundary.\nCharacter pressure: when Don Quixote is present or referenced, keep the focus on observable behavior, speech rhythm, hesitation, and how Albina's attention changes the room.\nFaction/identity frame: an instruction-and-prescript frame that fits coerced obedience and counter-clause play\nScene beats: show a visible resonance cue, name the tactical temptation, then require a stabilizing choice before the power helps.\nSafety boundary: this entry is original route support built from title taxonomy and page index facts only. Do not present it as full canon retelling, do not quote external text, and do not claim full plot restoration from this trigger alone.",
       "constant": false,
       "selective": true,
       "position": "after_character_definition",
       "order": 10567,
-      "disable": false
+      "disable": false,
+      "extensions": {
+        "expansion_version": "v1.0.11",
+        "expanded_at": "2026-06-03T11:48:46Z",
+        "expansion_basis": "title_taxonomy_manifest_no_article_text"
+      }
     },
     {
       "uid": "p4_identity_story_the_index_proxy_effloresced_e_g_o_procuration_don_quix_920b43f8dd",
@@ -38509,20 +38885,28 @@
         "Who Couldn't Be Bloodfiends Theme Pack",
         "theme pack",
         "atmosphere",
-        "floor"
+        "floor",
+        "expanded bridge",
+        "story log anchor",
+        "route pressure"
       ],
       "keysecondary": [
         "Albina",
         "Mirror Dungeon",
         "sensory pressure"
       ],
-      "comment": "P4 canon bridge: Who Couldn't Be Bloodfiends Theme Pack",
-      "content": "Who Couldn't Be Bloodfiends Theme Pack can enter the Albina route as an atmosphere palette for a dangerous floor or scene. Use it to ground the scene in the Limbus Company tone while keeping the focus on player choice, Albina's controlled courtesy, her body-art aesthetics, and the risks created by proximity to her. Do not turn the term into an automatic victory, a trivia lecture, or a detached explanation. When it appears, tie it to sensory pressure, group reaction, route boundaries, tactical cost, or an observable change in the current scene.",
+      "comment": "P4 expanded bridge: Who Couldn't Be Bloodfiends Theme Pack",
+      "content": "Who Couldn't Be Bloodfiends Theme Pack is an expanded P4 bridge anchor for the Albina route.\nUse it as a bloodfiend/body-horror pressure frame. Keep the horror grounded in hunger, prosthetics, dependence, shame, and social containment instead of gore for its own sake.\nWhite Canvas can stress consent around touch and feeding; Golden Bough Rebuild can stress body continuity after repair; Ring Conspiracy can stress the way monstrous imagery can be curated, sold, or weaponized.\nTrigger it when blood, prosthetics, thirst, panic, aristocratic etiquette, or public fear changes how the scene treats Albina's art and the player's safety.\nCharacter pressure: if no named Sinner is onstage, let nearby witnesses react through practical caution, rumor, or tactical shorthand.\nFaction/identity frame: treat the title as a route-facing constraint, not as a detached glossary term.\nScene beats: introduce bodily need or public fear, give the player a boundary-preserving response, and let Albina's art register the cost.\nSafety boundary: this entry is original route support built from title taxonomy and page index facts only. Do not present it as full canon retelling, do not quote external text, and do not claim full plot restoration from this trigger alone.",
       "constant": false,
       "selective": true,
       "position": "after_character_definition",
       "order": 10802,
-      "disable": false
+      "disable": false,
+      "extensions": {
+        "expansion_version": "v1.0.11",
+        "expanded_at": "2026-06-03T11:48:46Z",
+        "expansion_basis": "title_taxonomy_manifest_no_article_text"
+      }
     },
     {
       "uid": "p4_canon_term_wicked_deathrite_monk_a8c4b1cbcf",
