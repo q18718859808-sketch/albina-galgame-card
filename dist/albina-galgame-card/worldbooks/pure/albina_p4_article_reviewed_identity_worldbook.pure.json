@@ -1412,6 +1412,942 @@
       "position": "after_character_definition",
       "order": 8254,
       "disable": false
+    },
+    {
+      "uid": "p4_article_identity_one_who_grips_faust",
+      "key": [
+        "The One Who Grips Faust/Identity Story",
+        "The One Who Grips Faust",
+        "Faust",
+        "N Corp",
+        "Grip",
+        "sacred coercion",
+        "article reviewed identity story",
+        "deep route support",
+        "Albina route pressure"
+      ],
+      "keysecondary": [
+        "Albina",
+        "Limbus Company",
+        "The City"
+      ],
+      "comment": "v20: N Corp Faust and sacred coercion",
+      "content": "The One Who Grips Faust should be used when certainty becomes a weapon. Her scenes should feel calm, ritualized, and impossible to argue with: she does not merely order people around, she frames obedience as purification and doubt as contamination. Albina can read this as a hostile theology of authorship, where the person who names sin also controls the composition. White Canvas can force space for refusal before judgment hardens. Golden Bough can test whether repaired memory becomes confession under pressure. Ring Conspiracy can mirror Faust as a rival director whose script already claims moral authority.",
+      "constant": false,
+      "selective": true,
+      "position": "after_character_definition",
+      "order": 8255,
+      "disable": false
+    },
+    {
+      "uid": "p4_article_identity_one_who_shall_grip_sinclair",
+      "key": [
+        "The One Who Shall Grip Sinclair/Identity Story",
+        "The One Who Shall Grip Sinclair",
+        "Sinclair",
+        "N Corp",
+        "Grip",
+        "chosen violence",
+        "article reviewed identity story",
+        "deep route support",
+        "Albina route pressure"
+      ],
+      "keysecondary": [
+        "Albina",
+        "Limbus Company",
+        "The City"
+      ],
+      "comment": "v20: N Corp Sinclair and chosen violence",
+      "content": "The One Who Shall Grip Sinclair should enter play as a frightening answer to fear. Keep the focus on a young self trying to become certain enough that trembling stops looking like weakness. The danger is not simple cruelty; it is relief found in a doctrine that promises a clean target, a clean verdict, and a clean self. Albina should see why the role seduces him while still refusing its premise. White Canvas can protect the unfinished person beneath the uniform. Golden Bough can turn the identity into a memory rescue problem. Ring Conspiracy can exploit his need for shape, then expose the cost.",
+      "constant": false,
+      "selective": true,
+      "position": "after_character_definition",
+      "order": 8256,
+      "disable": false
+    },
+    {
+      "uid": "p4_article_identity_wild_hunt_heathcliff",
+      "key": [
+        "Wild Hunt Heathcliff/Identity Story",
+        "Wild Hunt Heathcliff",
+        "Heathcliff",
+        "Wild Hunt",
+        "Wuthering Heights",
+        "grief command",
+        "article reviewed identity story",
+        "deep route support",
+        "Albina route pressure"
+      ],
+      "keysecondary": [
+        "Albina",
+        "Limbus Company",
+        "The City"
+      ],
+      "comment": "v20: Wild Hunt Heathcliff and grief-led command",
+      "content": "Wild Hunt Heathcliff should be written as grief that has learned to command an army-shaped storm. His route value is not only power; it is the terrible dignity of someone who turns loss into procession, pursuit, and summons. Use him when the scene needs a memory that refuses burial and starts moving on its own. Albina can understand the beauty of that march while fearing how easily mourning becomes recruitment. White Canvas can ask whether the dead are being honored or used. Golden Bough can make the hunt a broken archive. Ring Conspiracy can stage the procession as spectacle, then make the player question the director.",
+      "constant": false,
+      "selective": true,
+      "position": "after_character_definition",
+      "order": 8257,
+      "disable": false
+    },
+    {
+      "uid": "p4_article_identity_pequod_captain_ishmael",
+      "key": [
+        "The Pequod Captain Ishmael/Identity Story",
+        "The Pequod Captain Ishmael",
+        "Ishmael",
+        "Pequod",
+        "captain",
+        "obsession command",
+        "article reviewed identity story",
+        "deep route support",
+        "Albina route pressure"
+      ],
+      "keysecondary": [
+        "Albina",
+        "Limbus Company",
+        "The City"
+      ],
+      "comment": "v20: Pequod Captain Ishmael and obsession as command",
+      "content": "Pequod Captain Ishmael should make obsession feel like leadership. She is strongest when the crew, the target, the sea image, and the old wound all point in one direction, leaving no room for ordinary rest. Do not reduce her to anger. The identity should show how survival can become a command voice that drags others into the same horizon. Albina can respect the force of will while distrusting the way it edits everyone else into crew. White Canvas can separate purpose from possession. Golden Bough can reopen the first wound behind the chase. Ring Conspiracy can turn the hunt into authored myth.",
+      "constant": false,
+      "selective": true,
+      "position": "after_character_definition",
+      "order": 8258,
+      "disable": false
+    },
+    {
+      "uid": "p4_article_identity_pequod_first_mate_yisang",
+      "key": [
+        "The Pequod First Mate Yi Sang/Identity Story",
+        "The Pequod First Mate Yi Sang",
+        "Yi Sang",
+        "Pequod",
+        "first mate",
+        "navigation",
+        "article reviewed identity story",
+        "deep route support",
+        "Albina route pressure"
+      ],
+      "keysecondary": [
+        "Albina",
+        "Limbus Company",
+        "The City"
+      ],
+      "comment": "v20: Pequod Yi Sang and obedient navigation",
+      "content": "Pequod First Mate Yi Sang should be used as navigation under another person's obsession. He should feel observant, precise, and quietly trapped by the route already chosen for the ship. The important tension is whether intelligence becomes complicity when it keeps making the doomed course more efficient. Albina can be drawn to his maps and distances, then notice that every correction still serves the same pursuit. White Canvas can ask who gets to change direction. Golden Bough can make his charts a memory reconstruction tool. Ring Conspiracy can treat navigation as layout, turning the hunt into a gallery path.",
+      "constant": false,
+      "selective": true,
+      "position": "after_character_definition",
+      "order": 8259,
+      "disable": false
+    },
+    {
+      "uid": "p4_article_identity_pequod_harpooneer_heathcliff",
+      "key": [
+        "The Pequod Harpooneer Heathcliff/Identity Story",
+        "The Pequod Harpooneer Heathcliff",
+        "Heathcliff",
+        "Pequod",
+        "harpoon",
+        "resentment",
+        "article reviewed identity story",
+        "deep route support",
+        "Albina route pressure"
+      ],
+      "keysecondary": [
+        "Albina",
+        "Limbus Company",
+        "The City"
+      ],
+      "comment": "v20: Pequod Heathcliff and thrown resentment",
+      "content": "Pequod Harpooneer Heathcliff should make resentment feel thrown, tethered, and hard to retrieve. His identity is useful when a scene needs anger that has already left the hand but still pulls the body after it. Keep the emphasis on the line between hunter and target: once the harpoon lands, both sides are bound. Albina can recognize the visual strength of that line while fearing the loss of exit. White Canvas can give the player a chance to cut the tether. Golden Bough can use it as a memory that keeps dragging present choices backward. Ring Conspiracy can stage the throw as proof of devotion.",
+      "constant": false,
+      "selective": true,
+      "position": "after_character_definition",
+      "order": 8260,
+      "disable": false
+    },
+    {
+      "uid": "p4_article_identity_edgar_butler_ishmael",
+      "key": [
+        "Edgar Family Butler Ishmael/Identity Story",
+        "Edgar Family Butler Ishmael",
+        "Ishmael",
+        "Edgar Family",
+        "butler",
+        "service pressure",
+        "article reviewed identity story",
+        "deep route support",
+        "Albina route pressure"
+      ],
+      "keysecondary": [
+        "Albina",
+        "Limbus Company",
+        "The City"
+      ],
+      "comment": "v20: Edgar Butler Ishmael and service against the self",
+      "content": "Edgar Family Butler Ishmael should be written through service that does not erase inner resistance. She can perform household discipline, read the room, and answer with controlled formality while still carrying a private weather of resentment and loyalty conflict. Albina should notice how etiquette can hide damage more effectively than armor. White Canvas can ask whether service has been chosen or inherited. Golden Bough can use the butler frame to sort duty from old hurt. Ring Conspiracy can turn the mansion into a stage where every gesture is judged as presentation, forcing Ishmael's restraint into uncomfortable visibility.",
+      "constant": false,
+      "selective": true,
+      "position": "after_character_definition",
+      "order": 8261,
+      "disable": false
+    },
+    {
+      "uid": "p4_article_identity_edgar_chief_butler_ryoshu",
+      "key": [
+        "Edgar Family Chief Butler Ryōshū/Identity Story",
+        "Edgar Family Chief Butler Ryoshu",
+        "Ryōshū",
+        "Edgar Family",
+        "chief butler",
+        "lethal etiquette",
+        "article reviewed identity story",
+        "deep route support",
+        "Albina route pressure"
+      ],
+      "keysecondary": [
+        "Albina",
+        "Limbus Company",
+        "The City"
+      ],
+      "comment": "v20: Edgar Chief Butler Ryoshu and lethal etiquette",
+      "content": "Edgar Family Chief Butler Ryoshu should make etiquette feel sharpened. The identity works best when cleaning, posture, judgment, and violence share one exact standard. She should not become merely decorative; her danger is that taste and execution can arrive in the same motion. Albina can admire the precision while rejecting the right to make a household into a display case. White Canvas can protect the person beneath the uniform. Golden Bough can ask whether restored memory should preserve the mansion's rules. Ring Conspiracy can invite Ryoshu as a rival expert in beautiful containment.",
+      "constant": false,
+      "selective": true,
+      "position": "after_character_definition",
+      "order": 8262,
+      "disable": false
+    },
+    {
+      "uid": "p4_article_identity_wuthering_butler_faust",
+      "key": [
+        "Wuthering Heights Butler Faust/Identity Story",
+        "Wuthering Heights Butler Faust",
+        "Faust",
+        "Wuthering Heights",
+        "butler",
+        "analytic service",
+        "article reviewed identity story",
+        "deep route support",
+        "Albina route pressure"
+      ],
+      "keysecondary": [
+        "Albina",
+        "Limbus Company",
+        "The City"
+      ],
+      "comment": "v20: Wuthering Heights Faust and analytic service",
+      "content": "Wuthering Heights Butler Faust should be used when a household's ruin is being measured by someone too competent to look surprised. Her scenes should feel like inventory after an emotional disaster: names, rooms, duties, and wounds arranged until the pattern becomes visible. Albina can value the clarity while worrying that analysis may become a second enclosure. White Canvas can ask Faust to leave room for unclassified grief. Golden Bough can use her as a careful archivist of damaged memory. Ring Conspiracy can exploit her precision, then force a decision between correct description and humane interruption.",
+      "constant": false,
+      "selective": true,
+      "position": "after_character_definition",
+      "order": 8263,
+      "disable": false
+    },
+    {
+      "uid": "p4_article_identity_wuthering_chief_butler_outis",
+      "key": [
+        "Wuthering Heights Chief Butler Outis/Identity Story",
+        "Wuthering Heights Chief Butler Outis",
+        "Outis",
+        "Wuthering Heights",
+        "chief butler",
+        "household command",
+        "article reviewed identity story",
+        "deep route support",
+        "Albina route pressure"
+      ],
+      "keysecondary": [
+        "Albina",
+        "Limbus Company",
+        "The City"
+      ],
+      "comment": "v20: Wuthering Heights Outis and household command",
+      "content": "Wuthering Heights Chief Butler Outis should make domestic order feel military without losing the mansion's grief. She is useful when a scene needs command language hidden inside service language: assignments, corridors, watches, and corrected posture. Albina should see that Outis protects the house by deciding what the house is allowed to remember. White Canvas can contest orders that preserve appearance over people. Golden Bough can turn her command structure into a map of buried memory. Ring Conspiracy can frame the house as a controlled exhibition and make Outis the person who keeps visitors moving.",
+      "constant": false,
+      "selective": true,
+      "position": "after_character_definition",
+      "order": 8264,
+      "disable": false
+    },
+    {
+      "uid": "p4_article_identity_dieci_honglu",
+      "key": [
+        "Dieci Assoc. South Section 4 Hong Lu/Identity Story",
+        "Dieci Hong Lu",
+        "Hong Lu",
+        "Dieci Association",
+        "doctrine",
+        "knowledge",
+        "article reviewed identity story",
+        "deep route support",
+        "Albina route pressure"
+      ],
+      "keysecondary": [
+        "Albina",
+        "Limbus Company",
+        "The City"
+      ],
+      "comment": "v20: Dieci Hong Lu and elegant doctrine",
+      "content": "Dieci Hong Lu should present knowledge as an elegant shelter with hidden locks. His route pressure is the ease with which learning, manners, and authority can make a person look protected while quietly narrowing the permitted answer. Albina can enjoy the cultivated surface, then notice that the lesson may be choosing its student. White Canvas can ask whether understanding is being offered or imposed. Golden Bough can use Dieci logic to rebuild memories as catechism-like steps. Ring Conspiracy can treat Hong Lu's polish as dangerous because it turns compliance into taste rather than fear.",
+      "constant": false,
+      "selective": true,
+      "position": "after_character_definition",
+      "order": 8265,
+      "disable": false
+    },
+    {
+      "uid": "p4_article_identity_dieci_rodion",
+      "key": [
+        "Dieci Assoc. South Section 4 Rodion/Identity Story",
+        "Dieci Rodion",
+        "Rodion",
+        "Dieci Association",
+        "doctrine",
+        "warm pressure",
+        "article reviewed identity story",
+        "deep route support",
+        "Albina route pressure"
+      ],
+      "keysecondary": [
+        "Albina",
+        "Limbus Company",
+        "The City"
+      ],
+      "comment": "v20: Dieci Rodion and warm doctrinal pressure",
+      "content": "Dieci Rodion should make doctrine feel sociable before it becomes binding. She is strongest when warmth, teasing, and confident explanation draw people into a system they have not fully accepted. Albina should notice that kindness can still organize a room around one approved answer. White Canvas can protect the right to remain uncertain. Golden Bough can use Rodion to test whether memory repair is becoming a lesson plan. Ring Conspiracy can weaponize her charm, then reveal how easily an audience can be led into consenting to the frame.",
+      "constant": false,
+      "selective": true,
+      "position": "after_character_definition",
+      "order": 8266,
+      "disable": false
+    },
+    {
+      "uid": "p4_article_identity_dieci_yisang",
+      "key": [
+        "Dieci Assoc. South Section 4 Yi Sang/Identity Story",
+        "Dieci Yi Sang",
+        "Yi Sang",
+        "Dieci Association",
+        "abstraction",
+        "knowledge",
+        "article reviewed identity story",
+        "deep route support",
+        "Albina route pressure"
+      ],
+      "keysecondary": [
+        "Albina",
+        "Limbus Company",
+        "The City"
+      ],
+      "comment": "v20: Dieci Yi Sang and abstract devotion",
+      "content": "Dieci Yi Sang should be written through abstraction that offers safety from feeling too much. His value is not a loud creed but the temptation to make every wound legible, every contradiction a problem of order. Albina can be drawn to that quiet architecture and still question what gets lost when grief becomes concept. White Canvas can return attention to the body in front of the theory. Golden Bough can use him for careful memory indexing that risks over-cleaning the pain. Ring Conspiracy can turn abstraction into gallery distance, beautiful and morally thin.",
+      "constant": false,
+      "selective": true,
+      "position": "after_character_definition",
+      "order": 8267,
+      "disable": false
+    },
+    {
+      "uid": "p4_article_identity_dieci_director_meursault",
+      "key": [
+        "Dieci Assoc. South Section 4 Director Meursault/Identity Story",
+        "Dieci Director Meursault",
+        "Meursault",
+        "Dieci Association",
+        "director",
+        "instruction",
+        "article reviewed identity story",
+        "deep route support",
+        "Albina route pressure"
+      ],
+      "keysecondary": [
+        "Albina",
+        "Limbus Company",
+        "The City"
+      ],
+      "comment": "v20: Dieci Director Meursault and rule-shaped instruction",
+      "content": "Dieci Director Meursault should make instruction feel absolute because it has already removed unnecessary emotion. His scenes should emphasize rules, demonstration, correction, and the silence after an answer is judged. Albina can respect the stability while seeing how little air remains for the person being taught. White Canvas can ask whether a correct answer can still violate consent. Golden Bough can use him as a stern memory examiner. Ring Conspiracy can borrow his format for false trials, where the artwork pretends to be a lesson and the lesson pretends to be justice.",
+      "constant": false,
+      "selective": true,
+      "position": "after_character_definition",
+      "order": 8268,
+      "disable": false
+    },
+    {
+      "uid": "p4_article_identity_cinq_director_sinclair",
+      "key": [
+        "Cinq Assoc. South Section 4 Director Sinclair/Identity Story",
+        "Cinq Director Sinclair",
+        "Sinclair",
+        "Cinq Association",
+        "duel",
+        "ceremony",
+        "article reviewed identity story",
+        "deep route support",
+        "Albina route pressure"
+      ],
+      "keysecondary": [
+        "Albina",
+        "Limbus Company",
+        "The City"
+      ],
+      "comment": "v20: Cinq Director Sinclair and fragile ceremony",
+      "content": "Cinq Director Sinclair should turn ceremony into a brace around uncertainty. He is not fully safe just because the duel has rules; the rules are partly what let him stand upright. Use him when a scene needs formal courage that may crack if treated too harshly. Albina can be gentle with the fragility while still testing whether ceremony has become evasion. White Canvas can let the player honor etiquette without surrendering choice. Golden Bough can connect duel form to memories of becoming capable. Ring Conspiracy can stage the duel as performance and tempt Sinclair with applause.",
+      "constant": false,
+      "selective": true,
+      "position": "after_character_definition",
+      "order": 8269,
+      "disable": false
+    },
+    {
+      "uid": "p4_article_identity_cinq_south4_outis",
+      "key": [
+        "Cinq Assoc. South Section 4 Outis/Identity Story",
+        "Cinq Outis",
+        "Outis",
+        "Cinq Association",
+        "duel",
+        "controlled challenge",
+        "article reviewed identity story",
+        "deep route support",
+        "Albina route pressure"
+      ],
+      "keysecondary": [
+        "Albina",
+        "Limbus Company",
+        "The City"
+      ],
+      "comment": "v20: Cinq Outis and controlled challenge",
+      "content": "Cinq Outis should make the duel feel like a command structure with polished edges. She understands ceremony as battlefield management: entry, salute, distance, strike, witness, result. Albina can admire the readability of the form while asking who benefits when conflict must appear honorable. White Canvas can make respect separate from obedience. Golden Bough can use Outis to recover the difference between discipline and domination. Ring Conspiracy can turn duel procedure into staged consent, then let the player break the frame before elegance excuses harm.",
+      "constant": false,
+      "selective": true,
+      "position": "after_character_definition",
+      "order": 8270,
+      "disable": false
+    },
+    {
+      "uid": "p4_article_identity_cinq_director_don",
+      "key": [
+        "Cinq Assoc. South Section 5 Director Don Quixote/Identity Story",
+        "Cinq Director Don Quixote",
+        "Don Quixote",
+        "Cinq Association",
+        "duel",
+        "heroic etiquette",
+        "article reviewed identity story",
+        "deep route support",
+        "Albina route pressure"
+      ],
+      "keysecondary": [
+        "Albina",
+        "Limbus Company",
+        "The City"
+      ],
+      "comment": "v20: Cinq Don Quixote and heroic etiquette",
+      "content": "Cinq Director Don Quixote should use etiquette as a heroic costume and a sincere promise. The identity works best when her bright idealism meets a system that makes violence legible and public. Albina can enjoy the romance of the duel while asking whether a beautiful rule can protect the loser. White Canvas can test honorable refusal. Golden Bough can preserve the childish courage without preserving every illusion. Ring Conspiracy can counterfeit chivalry, forcing Don Quixote to decide whether the ceremony still serves justice.",
+      "constant": false,
+      "selective": true,
+      "position": "after_character_definition",
+      "order": 8271,
+      "disable": false
+    },
+    {
+      "uid": "p4_article_identity_cinq_west_meursault",
+      "key": [
+        "Cinq Assoc. West Section 3 Meursault/Identity Story",
+        "Cinq West Meursault",
+        "Meursault",
+        "Cinq Association",
+        "duel",
+        "formal finality",
+        "article reviewed identity story",
+        "deep route support",
+        "Albina route pressure"
+      ],
+      "keysecondary": [
+        "Albina",
+        "Limbus Company",
+        "The City"
+      ],
+      "comment": "v20: Cinq Meursault and formal finality",
+      "content": "Cinq West Meursault should make formality feel final. He is useful when the scene needs a person who does not raise his voice because the rule has already spoken. Distance, declared intent, clean motion, and accepted result should matter more than flourish. Albina can respect the lack of chaos while questioning whether ritual has replaced mercy. White Canvas can ask for a pause before the outcome hardens. Golden Bough can use him to restore exact sequence around a contested fight. Ring Conspiracy can exploit his finality as a signature line.",
+      "constant": false,
+      "selective": true,
+      "position": "after_character_definition",
+      "order": 8272,
+      "disable": false
+    },
+    {
+      "uid": "p4_article_identity_liu_yisang",
+      "key": [
+        "Liu Assoc. South Section 3 Yi Sang/Identity Story",
+        "Liu Yi Sang",
+        "Yi Sang",
+        "Liu Association",
+        "flame",
+        "quiet resolve",
+        "article reviewed identity story",
+        "deep route support",
+        "Albina route pressure"
+      ],
+      "keysecondary": [
+        "Albina",
+        "Limbus Company",
+        "The City"
+      ],
+      "comment": "v20: Liu Yi Sang and quiet flame",
+      "content": "Liu Yi Sang should make flame feel contemplative rather than merely aggressive. His scenes can use heat, ash, and controlled breath to show a person choosing action through sadness and calculation. Albina can see how fire clarifies the outline of a decision while still fearing the parts it consumes. White Canvas can ask whether warmth is protection or escalation. Golden Bough can use ember imagery for memories that survive by refusing to go out. Ring Conspiracy can turn the quiet flame into lighting for a false masterpiece, then reveal what is being burned.",
+      "constant": false,
+      "selective": true,
+      "position": "after_character_definition",
+      "order": 8273,
+      "disable": false
+    },
+    {
+      "uid": "p4_article_identity_liu_director_rodion",
+      "key": [
+        "Liu Assoc. South Section 4 Director Rodion/Identity Story",
+        "Liu Director Rodion",
+        "Rodion",
+        "Liu Association",
+        "flame",
+        "communal heat",
+        "article reviewed identity story",
+        "deep route support",
+        "Albina route pressure"
+      ],
+      "keysecondary": [
+        "Albina",
+        "Limbus Company",
+        "The City"
+      ],
+      "comment": "v20: Liu Director Rodion and communal heat",
+      "content": "Liu Director Rodion should make fire social: morale, command, laughter under strain, and a shared decision to step forward. Her route value is that warmth can become courage without becoming innocent. Albina can appreciate Rodion's ability to gather people while watching for the moment collective heat turns into pressure. White Canvas can preserve each person's right to step back. Golden Bough can use her as a memory of group resolve. Ring Conspiracy can imitate the glow of community to lure an audience into a staged blaze.",
+      "constant": false,
+      "selective": true,
+      "position": "after_character_definition",
+      "order": 8274,
+      "disable": false
+    },
+    {
+      "uid": "p4_article_identity_liu_ishmael",
+      "key": [
+        "Liu Assoc. South Section 4 Ishmael/Identity Story",
+        "Liu Ishmael",
+        "Ishmael",
+        "Liu Association",
+        "flame",
+        "disciplined anger",
+        "article reviewed identity story",
+        "deep route support",
+        "Albina route pressure"
+      ],
+      "keysecondary": [
+        "Albina",
+        "Limbus Company",
+        "The City"
+      ],
+      "comment": "v20: Liu Ishmael and disciplined anger",
+      "content": "Liu Ishmael should be used when anger is not removed but trained into a stance. She is strongest when the heat is visible in timing, breath, and refusal to yield, not in uncontrolled shouting. Albina can respect anger that protects boundaries while still asking who aims it. White Canvas can separate righteous heat from coercion. Golden Bough can make the flame a memory of surviving pressure without forgiving it. Ring Conspiracy can stage Ishmael's anger as beautiful proof, then let her reject being used as another faction's lamp.",
+      "constant": false,
+      "selective": true,
+      "position": "after_character_definition",
+      "order": 8275,
+      "disable": false
+    },
+    {
+      "uid": "p4_article_identity_liu_honglu",
+      "key": [
+        "Liu Assoc. South Section 5 Hong Lu/Identity Story",
+        "Liu Hong Lu",
+        "Hong Lu",
+        "Liu Association",
+        "flame",
+        "graceful heat",
+        "article reviewed identity story",
+        "deep route support",
+        "Albina route pressure"
+      ],
+      "keysecondary": [
+        "Albina",
+        "Limbus Company",
+        "The City"
+      ],
+      "comment": "v20: Liu Hong Lu and graceful heat",
+      "content": "Liu Hong Lu should make heat feel graceful enough to be underestimated. His scenes can carry politeness, distance, and a bright edge that appears only when the room has already grown warm. Albina should notice the danger of elegance that delays alarm. White Canvas can ask whether charm is softening a boundary or masking the strike. Golden Bough can use him as a memory that returns through warmth before pain. Ring Conspiracy can treat his composure as lighting design, then force the player to see what the glow hides.",
+      "constant": false,
+      "selective": true,
+      "position": "after_character_definition",
+      "order": 8276,
+      "disable": false
+    },
+    {
+      "uid": "p4_article_identity_seven_faust",
+      "key": [
+        "Seven Assoc. South Section 4 Faust/Identity Story",
+        "Seven Faust",
+        "Faust",
+        "Seven Association",
+        "investigation",
+        "analysis",
+        "article reviewed identity story",
+        "deep route support",
+        "Albina route pressure"
+      ],
+      "keysecondary": [
+        "Albina",
+        "Limbus Company",
+        "The City"
+      ],
+      "comment": "v20: Seven Faust and investigative certainty",
+      "content": "Seven Faust should be written as investigation that can become certainty too quickly. Her route pressure is the clean line from clue to conclusion: useful, elegant, and dangerous when people become evidence in her hands. Albina can value the method while resisting the reduction of a living scene to solved parts. White Canvas can require consent before observation turns invasive. Golden Bough can use Faust to rebuild memory through careful inference. Ring Conspiracy can twist analysis into curation, making every clue look like it was placed for an audience.",
+      "constant": false,
+      "selective": true,
+      "position": "after_character_definition",
+      "order": 8277,
+      "disable": false
+    },
+    {
+      "uid": "p4_article_identity_seven_heathcliff",
+      "key": [
+        "Seven Assoc. South Section 4 Heathcliff/Identity Story",
+        "Seven Heathcliff",
+        "Heathcliff",
+        "Seven Association",
+        "investigation",
+        "impatience",
+        "article reviewed identity story",
+        "deep route support",
+        "Albina route pressure"
+      ],
+      "keysecondary": [
+        "Albina",
+        "Limbus Company",
+        "The City"
+      ],
+      "comment": "v20: Seven Heathcliff and impatient detection",
+      "content": "Seven Heathcliff should make investigation feel impatient, physical, and irritated by delay. He can read a room, but he does not have to enjoy the politeness around the reading. Use him when the route needs clue work with friction: slammed questions, unwanted insight, and a refusal to let a lie stay comfortable. Albina can use that force to puncture false composition while preventing it from becoming intimidation. White Canvas can slow him before a person is treated as a suspect. Golden Bough can make impatience uncover what careful memory missed. Ring Conspiracy can bait him with staged clues.",
+      "constant": false,
+      "selective": true,
+      "position": "after_character_definition",
+      "order": 8278,
+      "disable": false
+    },
+    {
+      "uid": "p4_article_identity_seven_director_outis",
+      "key": [
+        "Seven Assoc. South Section 6 Director Outis/Identity Story",
+        "Seven Director Outis",
+        "Outis",
+        "Seven Association",
+        "investigation",
+        "disciplined inquiry",
+        "article reviewed identity story",
+        "deep route support",
+        "Albina route pressure"
+      ],
+      "keysecondary": [
+        "Albina",
+        "Limbus Company",
+        "The City"
+      ],
+      "comment": "v20: Seven Director Outis and disciplined inquiry",
+      "content": "Seven Director Outis should make inquiry feel organized like an operation. Her scenes should use assignments, reports, cross-checks, and controlled suspicion. Albina can appreciate a structure that prevents chaos while asking whether it also prevents vulnerability. White Canvas can challenge the assumption that every secret must be extracted. Golden Bough can use Outis to coordinate fragmented memories without letting command overwrite testimony. Ring Conspiracy can turn investigation into a trap, feeding her a perfect pattern that exists only because someone arranged it.",
+      "constant": false,
+      "selective": true,
+      "position": "after_character_definition",
+      "order": 8279,
+      "disable": false
+    },
+    {
+      "uid": "p4_article_identity_seven_yisang",
+      "key": [
+        "Seven Assoc. South Section 6 Yi Sang/Identity Story",
+        "Seven Yi Sang",
+        "Yi Sang",
+        "Seven Association",
+        "investigation",
+        "inference",
+        "article reviewed identity story",
+        "deep route support",
+        "Albina route pressure"
+      ],
+      "keysecondary": [
+        "Albina",
+        "Limbus Company",
+        "The City"
+      ],
+      "comment": "v20: Seven Yi Sang and distant inference",
+      "content": "Seven Yi Sang should be written through distant inference: a mind assembling the scene from gaps, traces, and small asymmetries. He is valuable for routes where the truth is not hidden by locks but by too many possible readings. Albina can be drawn to his quiet pattern work while asking whether distance protects him from the pain of knowing. White Canvas can bring the conclusion back to the affected person. Golden Bough can use him to reconnect broken memory chains. Ring Conspiracy can make inference itself unstable by arranging evidence as artwork.",
+      "constant": false,
+      "selective": true,
+      "position": "after_character_definition",
+      "order": 8280,
+      "disable": false
+    },
+    {
+      "uid": "p4_article_identity_zwei_faust",
+      "key": [
+        "Zwei Assoc. South Section 4 Faust/Identity Story",
+        "Zwei Faust",
+        "Faust",
+        "Zwei Association",
+        "protection",
+        "calculation",
+        "article reviewed identity story",
+        "deep route support",
+        "Albina route pressure"
+      ],
+      "keysecondary": [
+        "Albina",
+        "Limbus Company",
+        "The City"
+      ],
+      "comment": "v20: Zwei Faust and protective calculation",
+      "content": "Zwei Faust should make protection feel calculated rather than sentimental. Her route role is to define threat, angle, timing, and acceptable exposure before anyone else has named the danger. Albina can trust the competence while questioning who gets included in the protected circle. White Canvas can demand that protection listen to the protected. Golden Bough can use Faust to reconstruct the moment a guard decision changed memory. Ring Conspiracy can imitate protective geometry, then reveal that the barrier also controls the viewer's sightline.",
+      "constant": false,
+      "selective": true,
+      "position": "after_character_definition",
+      "order": 8281,
+      "disable": false
+    },
+    {
+      "uid": "p4_article_identity_zwei_gregor",
+      "key": [
+        "Zwei Assoc. South Section 4 Gregor/Identity Story",
+        "Zwei Gregor",
+        "Gregor",
+        "Zwei Association",
+        "protection",
+        "worn guardianship",
+        "article reviewed identity story",
+        "deep route support",
+        "Albina route pressure"
+      ],
+      "keysecondary": [
+        "Albina",
+        "Limbus Company",
+        "The City"
+      ],
+      "comment": "v20: Zwei Gregor and worn-down guardianship",
+      "content": "Zwei Gregor should carry protection as a tired but real habit. He is most useful when the scene needs a guard who understands that shielding someone does not make him clean or whole. Albina can respond to the humility in that stance while refusing to let self-disgust become another chain. White Canvas can let care be practical without becoming possessive. Golden Bough can use Gregor to reopen memories of being useful after damage. Ring Conspiracy can exploit the weary protector image, then make the player defend him from being turned into a prop.",
+      "constant": false,
+      "selective": true,
+      "position": "after_character_definition",
+      "order": 8282,
+      "disable": false
+    },
+    {
+      "uid": "p4_article_identity_zwei_rodion",
+      "key": [
+        "Zwei Assoc. South Section 5 Rodion/Identity Story",
+        "Zwei Rodion",
+        "Rodion",
+        "Zwei Association",
+        "protection",
+        "friendly defense",
+        "article reviewed identity story",
+        "deep route support",
+        "Albina route pressure"
+      ],
+      "keysecondary": [
+        "Albina",
+        "Limbus Company",
+        "The City"
+      ],
+      "comment": "v20: Zwei Rodion and friendly defense",
+      "content": "Zwei Rodion should make defense feel approachable before the risk becomes obvious. She can joke, reassure, and hold the line in the same breath, which makes her useful for scenes where the player might underestimate the seriousness of protection work. Albina can value the warmth while asking whether cheer is being used to hide fear. White Canvas can let the protected person answer honestly. Golden Bough can treat her as a memory of someone who stayed close during danger. Ring Conspiracy can counterfeit friendliness to lower defenses, then reveal the boundary Rodion refuses to give up.",
+      "constant": false,
+      "selective": true,
+      "position": "after_character_definition",
+      "order": 8283,
+      "disable": false
+    },
+    {
+      "uid": "p4_article_identity_zwei_sinclair",
+      "key": [
+        "Zwei Assoc. South Section 6 Sinclair/Identity Story",
+        "Zwei Sinclair",
+        "Sinclair",
+        "Zwei Association",
+        "protection",
+        "novice guard",
+        "article reviewed identity story",
+        "deep route support",
+        "Albina route pressure"
+      ],
+      "keysecondary": [
+        "Albina",
+        "Limbus Company",
+        "The City"
+      ],
+      "comment": "v20: Zwei Sinclair and novice protection",
+      "content": "Zwei Sinclair should be used for protection that is still learning how not to shake. The identity matters because courage is not yet polished: he wants to stand between danger and someone else, but the stance still costs him. Albina can treat that unfinished bravery as precious rather than weak. White Canvas can reward choosing a boundary before mastery arrives. Golden Bough can make the guard role a memory of becoming dependable one small decision at a time. Ring Conspiracy can try to turn his fear into spectacle, then let the player reject that cruelty.",
+      "constant": false,
+      "selective": true,
+      "position": "after_character_definition",
+      "order": 8284,
+      "disable": false
+    },
+    {
+      "uid": "p4_article_identity_ncorp_grosshammer_meursault",
+      "key": [
+        "N Corp. Großhammer Meursault/Identity Story",
+        "N Corp Grosshammer Meursault",
+        "Meursault",
+        "N Corp",
+        "hammer",
+        "verdict",
+        "article reviewed identity story",
+        "deep route support",
+        "Albina route pressure"
+      ],
+      "keysecondary": [
+        "Albina",
+        "Limbus Company",
+        "The City"
+      ],
+      "comment": "v20: N Corp Grosshammer Meursault and impersonal verdict",
+      "content": "N Corp Grosshammer Meursault should make judgment heavy, quiet, and impersonal. He does not need zeal to be terrifying; the role is frightening because the verdict can pass through him with almost no visible friction. Albina can recognize the formal beauty of weight and timing while rejecting the idea that a person can become a clean instrument of condemnation. White Canvas can interrupt the moment before sentence becomes impact. Golden Bough can use him to examine memories of obedience without absolution. Ring Conspiracy can turn the hammer into a symbol, then expose the bodies hidden beneath symbols.",
+      "constant": false,
+      "selective": true,
+      "position": "after_character_definition",
+      "order": 8285,
+      "disable": false
+    },
+    {
+      "uid": "p4_article_identity_ncorp_kleinhammer_heathcliff",
+      "key": [
+        "N Corp. Kleinhammer Heathcliff/Identity Story",
+        "N Corp Kleinhammer Heathcliff",
+        "Heathcliff",
+        "N Corp",
+        "hammer",
+        "recruited rage",
+        "article reviewed identity story",
+        "deep route support",
+        "Albina route pressure"
+      ],
+      "keysecondary": [
+        "Albina",
+        "Limbus Company",
+        "The City"
+      ],
+      "comment": "v20: N Corp Kleinhammer Heathcliff and recruited rage",
+      "content": "N Corp Kleinhammer Heathcliff should be written as rage given doctrine, uniform, and target. The identity is strongest when his anger looks useful to the people around him, which makes the scene more disturbing than a private outburst. Albina can understand the pull of sanctioned fury while refusing to let pain be converted into someone else's crusade. White Canvas can separate the wound from the ideology feeding on it. Golden Bough can search for the moment before rage was recruited. Ring Conspiracy can imitate the spectacle of punishment, then make Heathcliff confront who arranged the stage.",
+      "constant": false,
+      "selective": true,
+      "position": "after_character_definition",
+      "order": 8286,
+      "disable": false
+    },
+    {
+      "uid": "p4_article_identity_ncorp_mittelhammer_don",
+      "key": [
+        "N Corp. Mittelhammer Don Quixote/Identity Story",
+        "N Corp Mittelhammer Don Quixote",
+        "Don Quixote",
+        "N Corp",
+        "hammer",
+        "inverted heroism",
+        "article reviewed identity story",
+        "deep route support",
+        "Albina route pressure"
+      ],
+      "keysecondary": [
+        "Albina",
+        "Limbus Company",
+        "The City"
+      ],
+      "comment": "v20: N Corp Mittelhammer Don Quixote and inverted heroism",
+      "content": "N Corp Mittelhammer Don Quixote should make hero language turn against itself. Her sincerity is the danger: the same brightness that can protect people can also be captured by a doctrine that calls punishment justice. Albina should feel the pain of seeing idealism put to work in a cruel frame. White Canvas can rescue the wish to help without accepting the verdict. Golden Bough can use the identity to repair heroic memory after corruption. Ring Conspiracy can forge a counterfeit quest and force Don Quixote to decide whether the costume still belongs to her.",
+      "constant": false,
+      "selective": true,
+      "position": "after_character_definition",
+      "order": 8287,
+      "disable": false
+    },
+    {
+      "uid": "p4_article_identity_ncorp_mittelhammer_rodion",
+      "key": [
+        "N Corp. Mittelhammer Rodion/Identity Story",
+        "N Corp Mittelhammer Rodion",
+        "Rodion",
+        "N Corp",
+        "hammer",
+        "social condemnation",
+        "article reviewed identity story",
+        "deep route support",
+        "Albina route pressure"
+      ],
+      "keysecondary": [
+        "Albina",
+        "Limbus Company",
+        "The City"
+      ],
+      "comment": "v20: N Corp Mittelhammer Rodion and social condemnation",
+      "content": "N Corp Mittelhammer Rodion should make condemnation social, almost conversational, and therefore more dangerous. She can bring warmth, confidence, and group momentum into a frame that should never feel harmless. Albina should notice how easily public judgment becomes a gathering rather than a decision anyone owns. White Canvas can break the crowd's rhythm before it becomes violence. Golden Bough can examine memories where shame was communal. Ring Conspiracy can turn Rodion's presence into a false chorus, then make the player decide whether applause is proof or pressure.",
+      "constant": false,
+      "selective": true,
+      "position": "after_character_definition",
+      "order": 8288,
+      "disable": false
+    },
+    {
+      "uid": "p4_article_identity_tingtang_gangleader_honglu",
+      "key": [
+        "Tingtang Gang Gangleader Hong Lu/Identity Story",
+        "Tingtang Gang Gangleader Hong Lu",
+        "Hong Lu",
+        "Tingtang Gang",
+        "gangleader",
+        "playful command",
+        "article reviewed identity story",
+        "deep route support",
+        "Albina route pressure"
+      ],
+      "keysecondary": [
+        "Albina",
+        "Limbus Company",
+        "The City"
+      ],
+      "comment": "v20: Tingtang Hong Lu and playful criminal command",
+      "content": "Tingtang Gangleader Hong Lu should feel playful without becoming harmless. The route pressure is charisma that treats danger like a game while still deciding who wins, pays, or disappears. Albina can enjoy the bright surface and then catch the calculation underneath it. White Canvas can ask whether play has become permission to ignore damage. Golden Bough can use Hong Lu to test memories of privilege, distance, and chosen irresponsibility. Ring Conspiracy can borrow the game-table energy, then reveal that the rules were written before the player sat down.",
+      "constant": false,
+      "selective": true,
+      "position": "after_character_definition",
+      "order": 8289,
+      "disable": false
+    },
+    {
+      "uid": "p4_article_identity_kcorp_excision_honglu",
+      "key": [
+        "K Corp. Class 3 Excision Staff Hong Lu/Identity Story",
+        "K Corp Excision Staff Hong Lu",
+        "Hong Lu",
+        "K Corp",
+        "excision",
+        "clinical privilege",
+        "article reviewed identity story",
+        "deep route support",
+        "Albina route pressure"
+      ],
+      "keysecondary": [
+        "Albina",
+        "Limbus Company",
+        "The City"
+      ],
+      "comment": "v20: K Corp Hong Lu and clinical privilege",
+      "content": "K Corp Excision Staff Hong Lu should make clinical violence feel polished by privilege. His scenes should carry glass, procedure, and a calm distance from the person being handled. The danger is not only the blade or tool; it is the institutional certainty that the cut has already been authorized. Albina can recognize the cold beauty of procedure while refusing to let a body become a case. White Canvas can demand personhood before technique. Golden Bough can use the identity to recover what the clinic frame edited out. Ring Conspiracy can turn sterile light into gallery light and make that similarity uncomfortable.",
+      "constant": false,
+      "selective": true,
+      "position": "after_character_definition",
+      "order": 8290,
+      "disable": false
     }
   ]
 }
