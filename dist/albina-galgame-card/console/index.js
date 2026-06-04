@@ -5498,7 +5498,7 @@ function Vc() {
 }
 //#endregion
 //#region src/core/progressionEngine.ts
-var Hc = 2142, Uc = 260, Wc = 1882, Gc = 768, Kc = 15, qc = [
+var Hc = 2142, Uc = 260, Wc = 1882, Gc = 1882, Kc = 15, qc = [
 	0,
 	12,
 	30,
@@ -6038,10 +6038,10 @@ function dl(e) {
 			tier: "bridge_lore",
 			status: "expanded",
 			title: "P4 扩写桥接层",
-			scope: "高影响 P4 提示改写为更密集的 RP 锚点",
+			scope: "全量 P4 提示改写为更密集的 RP 锚点",
 			coverage: Gc,
 			total: Wc,
-			detail: "768 个 P4 条目已从标题分类和 manifest 元数据扩写为更可用的桥接提示；它们提升路线可用性，但仍不是源文章级复述或完整剧情复原。",
+			detail: "1882 个 P4 条目已全部从标题分类和 manifest 元数据扩写为更可用的桥接提示；它们提升路线可用性，但仍不是源文章级复述或完整剧情复原。",
 			anchorIds: ["p4_expanded_bridge_report"],
 			linkedSceneIds: [],
 			updatedAt: t

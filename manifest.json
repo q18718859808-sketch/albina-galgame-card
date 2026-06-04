@@ -2,7 +2,7 @@
   "name": "albina-galgame-card-pure-import",
   "version": "1.0.0",
   "project_id": "albina-galgame-card",
-  "generated_at": "2026-06-03T16:49:38.893280+00:00",
+  "generated_at": "2026-06-04T00:00:49.297173+00:00",
   "entry_card": "card/albina.card.png",
   "frontend_entry": "dist/albina-galgame-card/console/index.js",
   "background_packs": [
