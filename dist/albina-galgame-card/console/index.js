@@ -4727,7 +4727,7 @@ function jc(e) {
 }
 //#endregion
 //#region src/config.ts
-var Mc = "albina-galgame-card", Nc = "阿尔比娜 Galgame Card", Pc = "打开阿尔比娜前端", Fc = "albinaGalgameCardGameSaveV1", Ic = `https://cdn.jsdelivr.net/gh/q18718859808-sketch/albina-galgame-card@v1.0.18/dist/${Mc}`, Lc = {
+var Mc = "albina-galgame-card", Nc = "阿尔比娜 Galgame Card", Pc = "打开阿尔比娜前端", Fc = "albinaGalgameCardGameSaveV1", Ic = `https://cdn.jsdelivr.net/gh/q18718859808-sketch/albina-galgame-card@v1.0.19/dist/${Mc}`, Lc = {
 	opening_001: {
 		chapter: 1,
 		sceneId: "opening_001",

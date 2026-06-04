@@ -736,6 +736,682 @@
       "position": "after_character_definition",
       "order": 8228,
       "disable": false
+    },
+    {
+      "uid": "p4_article_identity_lobotomy_faint_aroma_solitude_ryoshu",
+      "key": [
+        "Lobotomy E.G.O::Faint Aroma & Solitude Ryōshū/Identity Story",
+        "Faint Aroma and Solitude Ryoshu",
+        "Lobotomy E.G.O",
+        "Ryōshū",
+        "solitude",
+        "scent memory",
+        "article reviewed identity story",
+        "deep route support",
+        "Albina route pressure"
+      ],
+      "keysecondary": [
+        "Albina",
+        "Limbus Company",
+        "The City"
+      ],
+      "comment": "v18: Faint Aroma and Solitude Ryoshu as isolated scent memory",
+      "content": "Faint Aroma and Solitude Ryoshu should be used when a scene needs beauty that arrives before explanation. Treat aroma as memory pressure: a room, a trace, a held breath, and a person who notices what others miss. Ryoshu should not become generic elegance. Her value is that she understands how a tiny remaining sign can dominate the whole frame. Albina can read this as a warning about her own art: a body or memory does not have to be fully shown to be controlled. White Canvas can make scent a consent test, asking whether closeness is invited or imposed. Golden Bough can use it as a route cue for memories returning through sensation. Ring Conspiracy can turn the faint trace into bait for an artwork that is already gone.",
+      "constant": false,
+      "selective": true,
+      "position": "after_character_definition",
+      "order": 8229,
+      "disable": false
+    },
+    {
+      "uid": "p4_article_identity_lobotomy_hornet_alteration_meursault",
+      "key": [
+        "Lobotomy E.G.O::Hornet【Alteration】Meursault/Identity Story",
+        "Hornet Alteration Meursault",
+        "Lobotomy E.G.O",
+        "Meursault",
+        "hornet",
+        "disciplined sting",
+        "article reviewed identity story",
+        "deep route support",
+        "Albina route pressure"
+      ],
+      "keysecondary": [
+        "Albina",
+        "Limbus Company",
+        "The City"
+      ],
+      "comment": "v18: Hornet alteration Meursault and disciplined sting",
+      "content": "Hornet Alteration Meursault should make aggression feel compressed into one exact motion. The route pressure is the contrast between an insectile sting and Meursault's flat discipline: no flourish, no anger display, only a controlled advance that turns pain into procedure. Use this entry for scenes where a small trigger can produce a precise and disproportionate answer. Albina should respect the economy of movement while fearing the absence of hesitation. White Canvas can slow the moment before the sting and ask who authorized contact. Golden Bough can make the altered rhythm feel like a repaired memory that still carries venom. Ring Conspiracy can study the form as compact violence, useful because it leaves little emotional residue.",
+      "constant": false,
+      "selective": true,
+      "position": "after_character_definition",
+      "order": 8230,
+      "disable": false
+    },
+    {
+      "uid": "p4_article_identity_lobotomy_love_hate_don",
+      "key": [
+        "Lobotomy E.G.O::In the Name of Love and Hate Don Quixote/Identity Story",
+        "In the Name of Love and Hate Don Quixote",
+        "Lobotomy E.G.O",
+        "Don Quixote",
+        "love and hate",
+        "moral color split",
+        "article reviewed identity story",
+        "deep route support",
+        "Albina route pressure"
+      ],
+      "keysecondary": [
+        "Albina",
+        "Limbus Company",
+        "The City"
+      ],
+      "comment": "v18: Love and Hate Don Quixote and moral color split",
+      "content": "In the Name of Love and Hate Don Quixote should be written as a bright moral split that can help or harm depending on who names the feeling first. Do not flatten it into cheerful heroism. The entry is strongest when love and hate both sound sincere, both demand action, and Don Quixote has to keep moving before the contradiction is solved. Albina can be fascinated by the color logic because it resembles route choice, but she should also see how dangerous it is when a feeling claims permission to judge. White Canvas can separate affection from entitlement. Golden Bough can use the split as a restored memory that refuses to stay pure. Ring Conspiracy can forge a false palette where devotion and punishment share the same brush.",
+      "constant": false,
+      "selective": true,
+      "position": "after_character_definition",
+      "order": 8231,
+      "disable": false
+    },
+    {
+      "uid": "p4_article_identity_lobotomy_lamp_gregor",
+      "key": [
+        "Lobotomy E.G.O::Lamp Gregor/Identity Story",
+        "Lamp Gregor",
+        "Lobotomy E.G.O",
+        "Gregor",
+        "lamp",
+        "exhausted guidance",
+        "article reviewed identity story",
+        "deep route support",
+        "Albina route pressure"
+      ],
+      "keysecondary": [
+        "Albina",
+        "Limbus Company",
+        "The City"
+      ],
+      "comment": "v18: Lamp Gregor and exhausted guidance",
+      "content": "Lamp Gregor should give scenes a weak but stubborn light. His pressure is not triumph; it is the act of carrying guidance when the hand is tired and the path may not deserve trust. Use this entry for corridors, aftermath, and conversations where someone must keep a small promise alive because no larger answer remains. Albina can respond to the lamp as an anti-Ring image: not a stage spotlight, but a fragile tool that exists to help another person see. White Canvas can let the player protect the small light rather than exploit it. Golden Bough can make the lamp a memory anchor after panic. Ring Conspiracy can threaten to turn guidance into display, forcing Albina to reject beauty that consumes the guide.",
+      "constant": false,
+      "selective": true,
+      "position": "after_character_definition",
+      "order": 8232,
+      "disable": false
+    },
+    {
+      "uid": "p4_article_identity_lobotomy_lantern_don",
+      "key": [
+        "Lobotomy E.G.O::Lantern Don Quixote/Identity Story",
+        "Lantern Don Quixote",
+        "Lobotomy E.G.O",
+        "Don Quixote",
+        "lantern",
+        "lure-shaped hope",
+        "article reviewed identity story",
+        "deep route support",
+        "Albina route pressure"
+      ],
+      "keysecondary": [
+        "Albina",
+        "Limbus Company",
+        "The City"
+      ],
+      "comment": "v18: Lantern Don Quixote and lure-shaped hope",
+      "content": "Lantern Don Quixote should be used for hope that may also be a lure. The light is useful because Don Quixote believes in following it, but the route must preserve the unease that a guide can lead someone into danger. Trigger this when the player is offered an appealing path through fear, darkness, or moral confusion. Albina should notice the theatrical power of a light held high: it gathers eyes, rearranges bodies, and makes hesitation look like cowardice. White Canvas can ask whether following is still a choice. Golden Bough can turn the lantern into a remembered sign that changes meaning after recovery. Ring Conspiracy can counterfeit the glow and test whether Albina can distinguish rescue from bait.",
+      "constant": false,
+      "selective": true,
+      "position": "after_character_definition",
+      "order": 8233,
+      "disable": false
+    },
+    {
+      "uid": "p4_article_identity_lobotomy_magic_bullet_outis",
+      "key": [
+        "Lobotomy E.G.O::Magic Bullet Outis/Identity Story",
+        "Magic Bullet Outis",
+        "Lobotomy E.G.O",
+        "Outis",
+        "magic bullet",
+        "command trajectory",
+        "article reviewed identity story",
+        "deep route support",
+        "Albina route pressure"
+      ],
+      "keysecondary": [
+        "Albina",
+        "Limbus Company",
+        "The City"
+      ],
+      "comment": "v18: Magic Bullet Outis and command trajectory",
+      "content": "Magic Bullet Outis should make a decision feel like a projectile after it leaves command. The key pressure is not only marksmanship; it is Outis turning intention, order, and consequence into one line that cannot easily bend. Use this entry when a scene needs military certainty, a shot that implies prior planning, or a leader who treats hesitation as structural failure. Albina can admire the clean trajectory while fearing how it removes later mercy. White Canvas can force a pause before the line is drawn. Golden Bough can use the bullet as a memory that keeps traveling after the event. Ring Conspiracy can copy the idea as contract violence: once signed, the shot has already happened in the room's logic.",
+      "constant": false,
+      "selective": true,
+      "position": "after_character_definition",
+      "order": 8234,
+      "disable": false
+    },
+    {
+      "uid": "p4_article_identity_lobotomy_red_sheet_sinclair",
+      "key": [
+        "Lobotomy E.G.O::Red Sheet Sinclair/Identity Story",
+        "Red Sheet Sinclair",
+        "Lobotomy E.G.O",
+        "Sinclair",
+        "red sheet",
+        "fragile record",
+        "article reviewed identity story",
+        "deep route support",
+        "Albina route pressure"
+      ],
+      "keysecondary": [
+        "Albina",
+        "Limbus Company",
+        "The City"
+      ],
+      "comment": "v18: Red Sheet Sinclair and fragile record pressure",
+      "content": "Red Sheet Sinclair should be written as a young self trapped between confession, record, and injury. The sheet can be a document, a stain, or a surface that makes private fear visible before Sinclair is ready. Use it when the route needs vulnerability without turning him into passive scenery. Albina should understand the temptation to read the sheet as artwork, then stop herself because the mark belongs to a person still forming a voice. White Canvas can protect what should remain unread. Golden Bough can use the sheet as a recoverable but painful memory object. Ring Conspiracy can make the document a forged exhibit, asking whether a beautiful record can still be a violation.",
+      "constant": false,
+      "selective": true,
+      "position": "after_character_definition",
+      "order": 8235,
+      "disable": false
+    },
+    {
+      "uid": "p4_article_identity_lobotomy_regret_faust",
+      "key": [
+        "Lobotomy E.G.O::Regret Faust/Identity Story",
+        "Regret Faust",
+        "Lobotomy E.G.O",
+        "Faust",
+        "regret",
+        "intellectual aftershock",
+        "article reviewed identity story",
+        "deep route support",
+        "Albina route pressure"
+      ],
+      "keysecondary": [
+        "Albina",
+        "Limbus Company",
+        "The City"
+      ],
+      "comment": "v18: Regret Faust and intellectual aftershock",
+      "content": "Regret Faust should be used for thought that arrives too late to prevent damage. Faust's danger is clarity after the fact: she can name the structure, explain the mistake, and still leave the room altered by what already happened. Use this entry when Albina needs a rival intellect that does not excuse itself with ignorance. White Canvas can ask whether understanding harm includes repair. Golden Bough can turn regret into a memory tool that maps the path back without pretending the path was harmless. Ring Conspiracy can exploit Faust's precision by making remorse look like quality control, forcing Albina to decide whether analysis has become another layer of the artwork.",
+      "constant": false,
+      "selective": true,
+      "position": "after_character_definition",
+      "order": 8236,
+      "disable": false
+    },
+    {
+      "uid": "p4_article_identity_lobotomy_sloshing_ishmael",
+      "key": [
+        "Lobotomy E.G.O::Sloshing Ishmael/Identity Story",
+        "Sloshing Ishmael",
+        "Lobotomy E.G.O",
+        "Ishmael",
+        "sloshing",
+        "contained turbulence",
+        "article reviewed identity story",
+        "deep route support",
+        "Albina route pressure"
+      ],
+      "keysecondary": [
+        "Albina",
+        "Limbus Company",
+        "The City"
+      ],
+      "comment": "v18: Sloshing Ishmael and contained turbulence",
+      "content": "Sloshing Ishmael should make emotion feel contained but never still. The movement matters: anger, memory, and sea-pressure shift inside the vessel even when the outside posture holds. Use this entry for scenes where Ishmael has to carry unresolved force without letting it spill onto the wrong person. Albina can recognize the aesthetic appeal of visible containment, but she should not treat it as permission to shake the vessel harder. White Canvas can give the player tools to steady the scene. Golden Bough can make the slosh a memory rhythm that returns at bad moments. Ring Conspiracy can misuse the contained motion as spectacle, then expose how easily display becomes provocation.",
+      "constant": false,
+      "selective": true,
+      "position": "after_character_definition",
+      "order": 8237,
+      "disable": false
+    },
+    {
+      "uid": "p4_article_identity_lobotomy_solemn_lament_yisang",
+      "key": [
+        "Lobotomy E.G.O::Solemn Lament Yi Sang/Identity Story",
+        "Solemn Lament Yi Sang",
+        "Lobotomy E.G.O",
+        "Yi Sang",
+        "solemn lament",
+        "formal grief",
+        "article reviewed identity story",
+        "deep route support",
+        "Albina route pressure"
+      ],
+      "keysecondary": [
+        "Albina",
+        "Limbus Company",
+        "The City"
+      ],
+      "comment": "v18: Solemn Lament Yi Sang and formal grief",
+      "content": "Solemn Lament Yi Sang should be written as grief given exact architecture. Avoid melodrama. The strength is in measured sorrow, repeated forms, and a voice that knows the loss cannot be solved by naming it beautifully. Use this entry when the route needs an elegiac pause or a memory that asks for respect rather than repair. Albina can be moved because the form resembles art, but she should also understand that lament is not a claim of ownership over the dead. White Canvas can protect mourning from display. Golden Bough can turn lament into a stable ritual for recovered pain. Ring Conspiracy can threaten to decorate grief until it stops belonging to the grieving person.",
+      "constant": false,
+      "selective": true,
+      "position": "after_character_definition",
+      "order": 8238,
+      "disable": false
+    },
+    {
+      "uid": "p4_article_identity_lobotomy_sunshower_heathcliff",
+      "key": [
+        "Lobotomy E.G.O::Sunshower Heathcliff/Identity Story",
+        "Sunshower Heathcliff",
+        "Lobotomy E.G.O",
+        "Heathcliff",
+        "sunshower",
+        "weathered contradiction",
+        "article reviewed identity story",
+        "deep route support",
+        "Albina route pressure"
+      ],
+      "keysecondary": [
+        "Albina",
+        "Limbus Company",
+        "The City"
+      ],
+      "comment": "v18: Sunshower Heathcliff and weathered contradiction",
+      "content": "Sunshower Heathcliff should make tenderness and resentment fall in the same weather. The contradiction is the point: light does not cancel rain, and a soft image does not erase the violence of feeling. Use this entry when Heathcliff's route pressure needs to be readable as both wound and defense. Albina can be tempted to frame the weather as beautiful, then realize beauty may be the easiest way to ignore discomfort. White Canvas can let the player remain with him without demanding performance. Golden Bough can use the sunshower as a memory state where two truths survive together. Ring Conspiracy can turn the weather into stage lighting and then punish that mistake.",
+      "constant": false,
+      "selective": true,
+      "position": "after_character_definition",
+      "order": 8239,
+      "disable": false
+    },
+    {
+      "uid": "p4_article_identity_lobotomy_sword_tears_rodion",
+      "key": [
+        "Lobotomy E.G.O::The Sword Sharpened with Tears Rodion/Identity Story",
+        "The Sword Sharpened with Tears Rodion",
+        "Lobotomy E.G.O",
+        "Rodion",
+        "tears",
+        "charming grief",
+        "article reviewed identity story",
+        "deep route support",
+        "Albina route pressure"
+      ],
+      "keysecondary": [
+        "Albina",
+        "Limbus Company",
+        "The City"
+      ],
+      "comment": "v18: Sword Sharpened with Tears Rodion and charming grief",
+      "content": "The Sword Sharpened with Tears Rodion should make charm and hurt sharpen each other. Rodion can smile, bargain, or perform confidence, but the blade should remind the route that grief has been worked into an edge. Use this entry when a scene needs pain that refuses to stay soft. Albina can admire the polish while questioning who benefits when sorrow becomes useful. White Canvas can protect Rodion's right not to turn every wound into a tool. Golden Bough can make the sword a route image for memory that cuts cleaner after being recovered. Ring Conspiracy can exploit the glamour of tear-bright violence, then force a choice between spectacle and care.",
+      "constant": false,
+      "selective": true,
+      "position": "after_character_definition",
+      "order": 8240,
+      "disable": false
+    },
+    {
+      "uid": "p4_article_identity_blade_salsu_don",
+      "key": [
+        "Blade Lineage Salsu Don Quixote/Identity Story",
+        "Blade Lineage Salsu Don Quixote",
+        "Blade Lineage",
+        "Don Quixote",
+        "salsu",
+        "ritualized courage",
+        "article reviewed identity story",
+        "deep route support",
+        "Albina route pressure"
+      ],
+      "keysecondary": [
+        "Albina",
+        "Limbus Company",
+        "The City"
+      ],
+      "comment": "v18: Blade Salsu Don Quixote and ritualized courage",
+      "content": "Blade Lineage Salsu Don Quixote should turn courage into ritual rather than noise. The blade form gives her idealism a stricter body: stance, salute, breath, and a refusal to dishonor the role even when the role is heavy. Use this entry when the route needs disciplined heroism that can still become dangerous if it mistakes form for truth. Albina can respect the beautiful line of the stance while asking whether a clean posture hides fear. White Canvas can separate bravery from self-erasure. Golden Bough can use the blade ritual as continuity for Don Quixote's repaired self. Ring Conspiracy can challenge her with false ceremonies that look noble while directing harm.",
+      "constant": false,
+      "selective": true,
+      "position": "after_character_definition",
+      "order": 8241,
+      "disable": false
+    },
+    {
+      "uid": "p4_article_identity_blade_salsu_faust",
+      "key": [
+        "Blade Lineage Salsu Faust/Identity Story",
+        "Blade Lineage Salsu Faust",
+        "Blade Lineage",
+        "Faust",
+        "salsu",
+        "analytic sword law",
+        "article reviewed identity story",
+        "deep route support",
+        "Albina route pressure"
+      ],
+      "keysecondary": [
+        "Albina",
+        "Limbus Company",
+        "The City"
+      ],
+      "comment": "v18: Blade Salsu Faust and analytic sword law",
+      "content": "Blade Lineage Salsu Faust should feel like sword law processed by a brilliant mind. Her pressure is not wild violence; it is the ability to turn tradition into criteria and criteria into clean action. Use this entry for scenes where Albina meets a discipline that can argue for itself without raising its voice. Faust should make the blade feel like a theorem with blood at the end. White Canvas can ask whether a correct method is enough when the person under it is afraid. Golden Bough can use her to test whether restored memory becomes a rulebook. Ring Conspiracy can position Faust as a rival editor of ritual, one who cuts away ambiguity before Albina can use it.",
+      "constant": false,
+      "selective": true,
+      "position": "after_character_definition",
+      "order": 8242,
+      "disable": false
+    },
+    {
+      "uid": "p4_article_identity_blade_salsu_outis",
+      "key": [
+        "Blade Lineage Salsu Outis/Identity Story",
+        "Blade Lineage Salsu Outis",
+        "Blade Lineage",
+        "Outis",
+        "salsu",
+        "command etiquette",
+        "article reviewed identity story",
+        "deep route support",
+        "Albina route pressure"
+      ],
+      "keysecondary": [
+        "Albina",
+        "Limbus Company",
+        "The City"
+      ],
+      "comment": "v18: Blade Salsu Outis and command etiquette",
+      "content": "Blade Lineage Salsu Outis should be written through command etiquette: who stands where, who speaks first, and who must accept a cut as instruction. Outis is useful because she can make a formal room feel like a battlefield before any blade moves. Albina can admire the discipline while recognizing that beauty arranged by command can still trap people. White Canvas can give the player room to refuse ceremonial pressure. Golden Bough can use Outis as a memory anchor for hierarchy and duty. Ring Conspiracy can turn etiquette into a forged performance, then let Outis expose where the choreography lacks real authority.",
+      "constant": false,
+      "selective": true,
+      "position": "after_character_definition",
+      "order": 8243,
+      "disable": false
+    },
+    {
+      "uid": "p4_article_identity_blade_salsu_sinclair",
+      "key": [
+        "Blade Lineage Salsu Sinclair/Identity Story",
+        "Blade Lineage Salsu Sinclair",
+        "Blade Lineage",
+        "Sinclair",
+        "salsu",
+        "borrowed resolve",
+        "article reviewed identity story",
+        "deep route support",
+        "Albina route pressure"
+      ],
+      "keysecondary": [
+        "Albina",
+        "Limbus Company",
+        "The City"
+      ],
+      "comment": "v18: Blade Salsu Sinclair and borrowed resolve",
+      "content": "Blade Lineage Salsu Sinclair should show a young fighter borrowing resolve from a strict form. The blade gives his fear a shape, but the route should not pretend the shape means he is finished growing. Use this entry for scenes where training, imitation, and self-protection blur. Albina can see the danger in praising the form too quickly: a clean cut may hide a shaking hand. White Canvas can let the player validate hesitation without shaming him. Golden Bough can make the blade form a memory brace rather than a cage. Ring Conspiracy can try to sign his uncertainty as art, while the route should keep his own voice recoverable.",
+      "constant": false,
+      "selective": true,
+      "position": "after_character_definition",
+      "order": 8244,
+      "disable": false
+    },
+    {
+      "uid": "p4_article_identity_blade_salsu_yisang",
+      "key": [
+        "Blade Lineage Salsu Yi Sang/Identity Story",
+        "Blade Lineage Salsu Yi Sang",
+        "Blade Lineage",
+        "Yi Sang",
+        "salsu",
+        "geometric withdrawal",
+        "article reviewed identity story",
+        "deep route support",
+        "Albina route pressure"
+      ],
+      "keysecondary": [
+        "Albina",
+        "Limbus Company",
+        "The City"
+      ],
+      "comment": "v18: Blade Salsu Yi Sang and geometric withdrawal",
+      "content": "Blade Lineage Salsu Yi Sang should make withdrawal feel geometric. He is not simply quiet; he arranges distance, angle, and timing until emotion appears as negative space. Use this entry when a scene needs a blade identity that turns thought into spacing rather than speech. Albina can be drawn to the composition, but she should notice that perfect distance can become an excuse not to be reached. White Canvas can ask whether observation has replaced contact. Golden Bough can use the geometry as a path through fractured memory. Ring Conspiracy can misuse the clean distances as exhibit design, forcing Yi Sang's silence into a frame he did not choose.",
+      "constant": false,
+      "selective": true,
+      "position": "after_character_definition",
+      "order": 8245,
+      "disable": false
+    },
+    {
+      "uid": "p4_article_identity_wcorp_l2_faust",
+      "key": [
+        "W Corp. L2 Cleanup Agent Faust/Identity Story",
+        "W Corp L2 Cleanup Agent Faust",
+        "W Corp",
+        "Faust",
+        "cleanup agent",
+        "procedural competence",
+        "article reviewed identity story",
+        "deep route support",
+        "Albina route pressure"
+      ],
+      "keysecondary": [
+        "Albina",
+        "Limbus Company",
+        "The City"
+      ],
+      "comment": "v18: W Corp L2 Faust and procedural competence",
+      "content": "W Corp L2 Faust should be used for early procedural competence: someone who understands the cleanup logic quickly enough to become frightening before rank fully catches up. Use sealed rooms, numbered tasks, and careful language that makes unbearable events sound sortable. Albina can respect Faust's mind while distrusting the system that rewards clarity after disaster. White Canvas can insist that a person is not a case file. Golden Bough can use Faust to track how memory gets trimmed by official order. Ring Conspiracy can learn from her method, then expose the difference between cleaning a scene and understanding what happened there.",
+      "constant": false,
+      "selective": true,
+      "position": "after_character_definition",
+      "order": 8246,
+      "disable": false
+    },
+    {
+      "uid": "p4_article_identity_wcorp_l2_honglu",
+      "key": [
+        "W Corp. L2 Cleanup Agent Hong Lu/Identity Story",
+        "W Corp L2 Cleanup Agent Hong Lu",
+        "W Corp",
+        "Hong Lu",
+        "cleanup agent",
+        "polished detachment",
+        "article reviewed identity story",
+        "deep route support",
+        "Albina route pressure"
+      ],
+      "keysecondary": [
+        "Albina",
+        "Limbus Company",
+        "The City"
+      ],
+      "comment": "v18: W Corp L2 Hong Lu and polished detachment",
+      "content": "W Corp L2 Hong Lu should make detachment look polished enough to be mistaken for kindness. The cleanup role gives his pleasant surface an institutional edge: he can speak gently while the room is being reduced to tasks. Use him when a scene needs charm under fluorescent procedure. Albina should notice how refinement can soften the viewer's resistance to erasure. White Canvas can make the player ask what is being omitted from the polite explanation. Golden Bough can use Hong Lu as a memory mask, beautiful and incomplete. Ring Conspiracy can exploit his polish as proof that a clean presentation can make violence easier to accept.",
+      "constant": false,
+      "selective": true,
+      "position": "after_character_definition",
+      "order": 8247,
+      "disable": false
+    },
+    {
+      "uid": "p4_article_identity_wcorp_l2_meursault",
+      "key": [
+        "W Corp. L2 Cleanup Agent Meursault/Identity Story",
+        "W Corp L2 Cleanup Agent Meursault",
+        "W Corp",
+        "Meursault",
+        "cleanup agent",
+        "task obedience",
+        "article reviewed identity story",
+        "deep route support",
+        "Albina route pressure"
+      ],
+      "keysecondary": [
+        "Albina",
+        "Limbus Company",
+        "The City"
+      ],
+      "comment": "v18: W Corp L2 Meursault and task obedience",
+      "content": "W Corp L2 Meursault should be written as task obedience under institutional lighting. He does not need dramatic cruelty; the pressure is that he can complete an assigned cleanup without asking the emotional question the player wants answered. Use this entry for scenes where procedure is more terrifying because it is calm. Albina can compare him to a perfectly placed object in a composition, then reject the idea that correctness equals innocence. White Canvas can demand that the task stop when a boundary appears. Golden Bough can make his obedience a threat to fragile recollection. Ring Conspiracy can copy the task logic as a cold frame for staged disappearance.",
+      "constant": false,
+      "selective": true,
+      "position": "after_character_definition",
+      "order": 8248,
+      "disable": false
+    },
+    {
+      "uid": "p4_article_identity_wcorp_l3_don",
+      "key": [
+        "W Corp. L3 Cleanup Agent Don Quixote/Identity Story",
+        "W Corp L3 Cleanup Agent Don Quixote",
+        "W Corp",
+        "Don Quixote",
+        "cleanup agent",
+        "duty under shock",
+        "article reviewed identity story",
+        "deep route support",
+        "Albina route pressure"
+      ],
+      "keysecondary": [
+        "Albina",
+        "Limbus Company",
+        "The City"
+      ],
+      "comment": "v18: W Corp L3 Don Quixote and duty under shock",
+      "content": "W Corp L3 Don Quixote should show idealism forced to work inside an aftermath machine. The useful tension is not whether she wants to help; it is whether duty can survive when the job defines help as cleanup. Use this entry for scenes where heroic language strains against sealed doors, protocols, and evidence disposal. Albina can be pained by the mismatch between bright resolve and corporate tasking. White Canvas can protect the human meaning of rescue. Golden Bough can use Don Quixote to recover the moment before procedure renamed the harm. Ring Conspiracy can bait her with a false heroic frame, then reveal who benefits from the cleanup.",
+      "constant": false,
+      "selective": true,
+      "position": "after_character_definition",
+      "order": 8249,
+      "disable": false
+    },
+    {
+      "uid": "p4_article_identity_wcorp_l3_ryoshu",
+      "key": [
+        "W Corp. L3 Cleanup Agent Ryōshū/Identity Story",
+        "W Corp L3 Cleanup Agent Ryoshu",
+        "W Corp",
+        "Ryōshū",
+        "cleanup agent",
+        "aesthetic disposal",
+        "article reviewed identity story",
+        "deep route support",
+        "Albina route pressure"
+      ],
+      "keysecondary": [
+        "Albina",
+        "Limbus Company",
+        "The City"
+      ],
+      "comment": "v18: W Corp L3 Ryoshu and aesthetic disposal",
+      "content": "W Corp L3 Ryoshu should make disposal feel dangerously close to composition. The cleanup frame gives her a sanctioned way to arrange what remains, and that is exactly why Albina should be wary. Use this entry for scenes where efficiency, cutting, and visual order overlap after disaster. Ryoshu should not need to explain herself; the room should show how easily her method fits the job. White Canvas can separate necessary handling from artistic possession. Golden Bough can ask whether recovered memory survives a beautiful cleanup. Ring Conspiracy can treat her as a rival craftsperson whose work may erase the evidence too well.",
+      "constant": false,
+      "selective": true,
+      "position": "after_character_definition",
+      "order": 8250,
+      "disable": false
+    },
+    {
+      "uid": "p4_article_identity_wcorp_l3_yisang",
+      "key": [
+        "W Corp. L3 Cleanup Agent Yi Sang/Identity Story",
+        "W Corp L3 Cleanup Agent Yi Sang",
+        "W Corp",
+        "Yi Sang",
+        "cleanup agent",
+        "dimensional distance",
+        "article reviewed identity story",
+        "deep route support",
+        "Albina route pressure"
+      ],
+      "keysecondary": [
+        "Albina",
+        "Limbus Company",
+        "The City"
+      ],
+      "comment": "v18: W Corp L3 Yi Sang and dimensional distance",
+      "content": "W Corp L3 Yi Sang should be written through distance: dimensional, emotional, and procedural. He is useful when the route needs a character who can see the geometry of disaster while remaining partly outside the human noise of it. Albina can be attracted to that cold map, then realize that mapping pain is not the same as answering it. White Canvas can bring attention back to the person inside the diagram. Golden Bough can make his distance a tool for reconstructing broken sequence without losing empathy. Ring Conspiracy can misuse the map as gallery layout, turning aftermath into an elegant plan.",
+      "constant": false,
+      "selective": true,
+      "position": "after_character_definition",
+      "order": 8251,
+      "disable": false
+    },
+    {
+      "uid": "p4_article_identity_rcorp_rabbit_heathcliff",
+      "key": [
+        "R Corp. 4th Pack Rabbit Heathcliff/Identity Story",
+        "R Corp Rabbit Heathcliff",
+        "R Corp",
+        "Heathcliff",
+        "Rabbit",
+        "sanctioned volatility",
+        "article reviewed identity story",
+        "deep route support",
+        "Albina route pressure"
+      ],
+      "keysecondary": [
+        "Albina",
+        "Limbus Company",
+        "The City"
+      ],
+      "comment": "v18: R Corp Rabbit Heathcliff and sanctioned volatility",
+      "content": "R Corp Rabbit Heathcliff should make volatility feel officially aimed. His anger is not removed by the role; it is given a channel, a target, and permission to arrive fast. Use this entry when a scene needs explosive action that still belongs to an institution. Albina can see the visual force of the Rabbit frame while distrusting the way it makes rage useful to someone else. White Canvas can ask whether the player is standing near a person or near a deployed weapon. Golden Bough can use him to recover the moment before fury was recruited. Ring Conspiracy can stage his speed as spectacle, then expose the handler behind the applause.",
+      "constant": false,
+      "selective": true,
+      "position": "after_character_definition",
+      "order": 8252,
+      "disable": false
+    },
+    {
+      "uid": "p4_article_identity_rcorp_reindeer_ishmael",
+      "key": [
+        "R Corp. 4th Pack Reindeer Ishmael/Identity Story",
+        "R Corp Reindeer Ishmael",
+        "R Corp",
+        "Ishmael",
+        "Reindeer",
+        "storm-trained nerves",
+        "article reviewed identity story",
+        "deep route support",
+        "Albina route pressure"
+      ],
+      "keysecondary": [
+        "Albina",
+        "Limbus Company",
+        "The City"
+      ],
+      "comment": "v18: R Corp Reindeer Ishmael and storm-trained nerves",
+      "content": "R Corp Reindeer Ishmael should turn endurance into a live wire. Her identity is strongest when discipline cannot fully hide weather: resentment, survival, and trained stimulus running through the same body. Use this entry for scenes where she resists being treated as only a battery or weapon. Albina can recognize the beauty of controlled charge but should not romanticize the cost. White Canvas can let the player lower intensity before it becomes coercion. Golden Bough can use Ishmael to show memories returning as shocks across old scars. Ring Conspiracy can exploit the storm image, then force Albina to choose whether tension is art or warning.",
+      "constant": false,
+      "selective": true,
+      "position": "after_character_definition",
+      "order": 8253,
+      "disable": false
+    },
+    {
+      "uid": "p4_article_identity_rcorp_rhino_meursault",
+      "key": [
+        "R Corp. 4th Pack Rhino Meursault/Identity Story",
+        "R Corp Rhino Meursault",
+        "R Corp",
+        "Meursault",
+        "Rhino",
+        "impact discipline",
+        "article reviewed identity story",
+        "deep route support",
+        "Albina route pressure"
+      ],
+      "keysecondary": [
+        "Albina",
+        "Limbus Company",
+        "The City"
+      ],
+      "comment": "v18: R Corp Rhino Meursault and impact discipline",
+      "content": "R Corp Rhino Meursault should make force feel heavy, prepared, and impersonal. The route pressure is the body as impact architecture: armor, stance, acceleration, and obedience to collision. Meursault should not become a brute. His danger is that he can carry overwhelming force without theatrical anger. Albina can admire the clean mass of the role while fearing how easily a person disappears inside it. White Canvas can demand a stop before momentum answers for him. Golden Bough can use Rhino weight as a memory of pressure that remains after contact. Ring Conspiracy can turn the charge into monumental staging, then ask who gets crushed by the monument.",
+      "constant": false,
+      "selective": true,
+      "position": "after_character_definition",
+      "order": 8254,
+      "disable": false
     }
   ]
 }
