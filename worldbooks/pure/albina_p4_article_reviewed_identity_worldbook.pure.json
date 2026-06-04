@@ -3388,6 +3388,812 @@
       "position": "after_character_definition",
       "order": 8330,
       "disable": false
+    },
+    {
+      "uid": "p4_article_identity_zwei_west_sinclair",
+      "key": [
+        "Zwei Assoc. West Section 3 Sinclair/Identity Story",
+        "Zwei West Sinclair",
+        "Sinclair",
+        "Zwei Association",
+        "protection",
+        "learned guard",
+        "article reviewed identity story",
+        "deep route support",
+        "Albina route pressure"
+      ],
+      "keysecondary": [
+        "Albina",
+        "Limbus Company",
+        "The City"
+      ],
+      "comment": "v22: Zwei West Sinclair and learned protection",
+      "content": "Zwei West Sinclair should be used for protection that has become more practiced but still remembers fear. His scenes should show a guard stance built from repetition, not a natural absence of doubt. Albina can value the growth while making sure the role does not punish him for still being young inside it. White Canvas can let him protect without pretending invulnerability. Golden Bough can recover the first time he chose to stand in front of danger. Ring Conspiracy can try to turn his bravery into a decorative shield and be refused.",
+      "constant": false,
+      "selective": true,
+      "position": "after_character_definition",
+      "order": 8331,
+      "disable": false
+    },
+    {
+      "uid": "p4_article_identity_rb_sous_chef_gregor",
+      "key": [
+        "R.B. Sous-chef Gregor/Identity Story",
+        "R.B. Sous-chef Gregor",
+        "Gregor",
+        "R.B.",
+        "kitchen",
+        "survival",
+        "article reviewed identity story",
+        "deep route support",
+        "Albina route pressure"
+      ],
+      "keysecondary": [
+        "Albina",
+        "Limbus Company",
+        "The City"
+      ],
+      "comment": "v22: R.B. Gregor and kitchen survival",
+      "content": "R.B. Sous-chef Gregor should make kitchen work feel like survival under appetite, hierarchy, and heat. He is useful when a scene needs service labor that can turn brutal without losing its weary practicality. Albina can see the human worker behind the role and resist letting grotesque cuisine become spectacle alone. White Canvas can ask who is being fed and who is being spent. Golden Bough can use kitchen memory as sensory return. Ring Conspiracy can turn preparation into performance, then expose the bodies hidden in the recipe.",
+      "constant": false,
+      "selective": true,
+      "position": "after_character_definition",
+      "order": 8332,
+      "disable": false
+    },
+    {
+      "uid": "p4_article_identity_middle_little_brother_meursault",
+      "key": [
+        "The Middle Little Brother Meursault/Identity Story",
+        "Middle Little Brother Meursault",
+        "Meursault",
+        "The Middle",
+        "Little Brother",
+        "sibling code",
+        "article reviewed identity story",
+        "deep route support",
+        "Albina route pressure"
+      ],
+      "keysecondary": [
+        "Albina",
+        "Limbus Company",
+        "The City"
+      ],
+      "comment": "v22: Middle Meursault and rule-bound sibling violence",
+      "content": "Middle Little Brother Meursault should make sibling violence feel procedural rather than impulsive. He can follow the Middle's retaliation code with flat precision, which makes the family language more frightening, not less. Albina can recognize how emotion is handed over to rule: the brother acts because the family says the answer is already known. White Canvas can interrupt the automatic repayment. Golden Bough can search for the person before the code filled the silence. Ring Conspiracy can use him to show how kinship can become an authored command.",
+      "constant": false,
+      "selective": true,
+      "position": "after_character_definition",
+      "order": 8333,
+      "disable": false
+    },
+    {
+      "uid": "p4_article_identity_thumb_soldato_sinclair",
+      "key": [
+        "The Thumb East Soldato II Sinclair/Identity Story",
+        "Thumb East Soldato Sinclair",
+        "Sinclair",
+        "The Thumb",
+        "Soldato",
+        "obedience",
+        "article reviewed identity story",
+        "deep route support",
+        "Albina route pressure"
+      ],
+      "keysecondary": [
+        "Albina",
+        "Limbus Company",
+        "The City"
+      ],
+      "comment": "v22: Thumb Sinclair and low-rank obedience",
+      "content": "Thumb East Soldato Sinclair should show low-rank obedience as a pressure that trains fear into etiquette. He should not be written as fully confident; the useful tension is someone learning exactly when to speak, when to lower his eyes, and when violence is expected. Albina can notice the person disappearing behind rank. White Canvas can protect the untrained self from being crushed by hierarchy. Golden Bough can recover the first forced lesson. Ring Conspiracy can stage the rank ladder as visual order and then challenge its cruelty.",
+      "constant": false,
+      "selective": true,
+      "position": "after_character_definition",
+      "order": 8334,
+      "disable": false
+    },
+    {
+      "uid": "p4_article_identity_lccb_ryoshu",
+      "key": [
+        "LCCB Assistant Manager Ryōshū/Identity Story",
+        "LCCB Assistant Manager Ryoshu",
+        "Ryōshū",
+        "LCCB",
+        "assistant manager",
+        "tactical paperwork",
+        "article reviewed identity story",
+        "deep route support",
+        "Albina route pressure"
+      ],
+      "keysecondary": [
+        "Albina",
+        "Limbus Company",
+        "The City"
+      ],
+      "comment": "v22: LCCB Ryoshu and tactical paperwork",
+      "content": "LCCB Ryoshu should make bureaucracy and violence overlap cleanly. She is useful when a scene needs forms, field procedure, and a person who can make even documentation feel like a blade edge. Albina can admire the efficient composition while objecting when paperwork becomes a way to erase the person acted upon. White Canvas can force names back into the file. Golden Bough can reconstruct the sequence hidden in reports. Ring Conspiracy can use the clipboard as a frame and then reveal how much blood the frame omits.",
+      "constant": false,
+      "selective": true,
+      "position": "after_character_definition",
+      "order": 8335,
+      "disable": false
+    },
+    {
+      "uid": "p4_article_identity_rosespanner_rep_rodion",
+      "key": [
+        "Rosespanner Workshop Rep Rodion/Identity Story",
+        "Rosespanner Workshop Rep Rodion",
+        "Rodion",
+        "Rosespanner",
+        "workshop",
+        "labor charm",
+        "article reviewed identity story",
+        "deep route support",
+        "Albina route pressure"
+      ],
+      "keysecondary": [
+        "Albina",
+        "Limbus Company",
+        "The City"
+      ],
+      "comment": "v22: Rosespanner Rodion and labor charm",
+      "content": "Rosespanner Rep Rodion should make workshop labor social, charming, and still materially hard. Her role is strongest when banter, debt, tools, and representative pressure all share one bench. Albina can enjoy the warmth while noticing how easy it is for work to become identity and identity to become leverage. White Canvas can ask what Rodion wants when the shift ends. Golden Bough can use tool marks as memory anchors. Ring Conspiracy can turn workshop grit into aesthetic texture and be forced to answer for the labor behind it.",
+      "constant": false,
+      "selective": true,
+      "position": "after_character_definition",
+      "order": 8336,
+      "disable": false
+    },
+    {
+      "uid": "p4_article_identity_rosespanner_meursault",
+      "key": [
+        "Rosespanner Workshop Fixer Meursault/Identity Story",
+        "Rosespanner Workshop Fixer Meursault",
+        "Meursault",
+        "Rosespanner",
+        "workshop",
+        "mechanical force",
+        "article reviewed identity story",
+        "deep route support",
+        "Albina route pressure"
+      ],
+      "keysecondary": [
+        "Albina",
+        "Limbus Company",
+        "The City"
+      ],
+      "comment": "v22: Rosespanner Meursault and mechanical force",
+      "content": "Rosespanner Meursault should make force feel mechanical, useful, and almost indifferent. He can treat tools, timing, and impact as a job rather than an emotional display. Albina can respect that reliability while asking when a body becomes just another work surface. White Canvas can pause the repair or strike before it stops seeing the person. Golden Bough can use mechanical rhythm to restore memory sequence. Ring Conspiracy can borrow the workshop's industrial order and reveal how easily utility becomes a stage effect.",
+      "constant": false,
+      "selective": true,
+      "position": "after_character_definition",
+      "order": 8337,
+      "disable": false
+    },
+    {
+      "uid": "p4_article_identity_molar_outis",
+      "key": [
+        "Molar Office Fixer Outis/Identity Story",
+        "Molar Office Fixer Outis",
+        "Outis",
+        "Molar Office",
+        "fixer",
+        "pragmatic command",
+        "article reviewed identity story",
+        "deep route support",
+        "Albina route pressure"
+      ],
+      "keysecondary": [
+        "Albina",
+        "Limbus Company",
+        "The City"
+      ],
+      "comment": "v22: Molar Outis and pragmatic office command",
+      "content": "Molar Office Outis should make small-office practicality feel like command stripped of ceremony. She can organize supplies, assign risk, and keep people moving because the office cannot afford grand illusions. Albina can trust the competence while questioning any plan that turns scarcity into permission. White Canvas can ask who gets a say before being used efficiently. Golden Bough can use office routine as a memory map. Ring Conspiracy can try to romanticize the rough work and be corrected by Outis's unsentimental accounting.",
+      "constant": false,
+      "selective": true,
+      "position": "after_character_definition",
+      "order": 8338,
+      "disable": false
+    },
+    {
+      "uid": "p4_article_identity_rb_chef_ryoshu",
+      "key": [
+        "R.B. Chef de Cuisine Ryōshū/Identity Story",
+        "R.B. Chef de Cuisine Ryoshu",
+        "Ryōshū",
+        "R.B.",
+        "chef",
+        "cuisine violence",
+        "article reviewed identity story",
+        "deep route support",
+        "Albina route pressure"
+      ],
+      "keysecondary": [
+        "Albina",
+        "Limbus Company",
+        "The City"
+      ],
+      "comment": "v22: R.B. Ryoshu and cuisine as violence",
+      "content": "R.B. Chef Ryoshu should make cuisine and violence dangerously indistinguishable. She should not be written as a simple joke about cooking; the route value is the terrifying seriousness of preparation, cut, plating, and taste when a person is treated as material. Albina can recognize the artistry while rejecting the collapse of body into dish. White Canvas can insist that craft has boundaries. Golden Bough can recover sensory memory without preserving violation as art. Ring Conspiracy can stage the meal and then force the table to answer.",
+      "constant": false,
+      "selective": true,
+      "position": "after_character_definition",
+      "order": 8339,
+      "disable": false
+    },
+    {
+      "uid": "p4_article_identity_rosespanner_gregor",
+      "key": [
+        "Rosespanner Workshop Fixer Gregor/Identity Story",
+        "Rosespanner Workshop Fixer Gregor",
+        "Gregor",
+        "Rosespanner",
+        "workshop",
+        "tool hand",
+        "article reviewed identity story",
+        "deep route support",
+        "Albina route pressure"
+      ],
+      "keysecondary": [
+        "Albina",
+        "Limbus Company",
+        "The City"
+      ],
+      "comment": "v22: Rosespanner Gregor and worn tool-hand",
+      "content": "Rosespanner Gregor should carry workshop work through a body already accustomed to being treated as equipment. His scenes can use oil, tool weight, and tired competence without turning him into a prop. Albina can see the dignity of doing the job while refusing the old logic that a damaged person is only useful when repaired into function. White Canvas can separate help from usage. Golden Bough can recover memories through tactile labor. Ring Conspiracy can try to display the tool-hand and be interrupted by the worker.",
+      "constant": false,
+      "selective": true,
+      "position": "after_character_definition",
+      "order": 8340,
+      "disable": false
+    },
+    {
+      "uid": "p4_article_identity_dead_rabbits_boss_meursault",
+      "key": [
+        "Dead Rabbits Boss Meursault/Identity Story",
+        "Dead Rabbits Boss Meursault",
+        "Meursault",
+        "Dead Rabbits",
+        "boss",
+        "gang authority",
+        "article reviewed identity story",
+        "deep route support",
+        "Albina route pressure"
+      ],
+      "keysecondary": [
+        "Albina",
+        "Limbus Company",
+        "The City"
+      ],
+      "comment": "v22: Dead Rabbits Meursault and quiet gang authority",
+      "content": "Dead Rabbits Boss Meursault should make gang authority quiet, heavy, and difficult to read. He can occupy the boss role without theatrical swagger, which makes every order feel more final. Albina can study the composition of stillness while asking how many people are being held in place by it. White Canvas can give subordinates room to move outside the boss's shadow. Golden Bough can examine memories of leadership without warmth. Ring Conspiracy can turn the boss silhouette into iconography and then undermine its certainty.",
+      "constant": false,
+      "selective": true,
+      "position": "after_character_definition",
+      "order": 8341,
+      "disable": false
+    },
+    {
+      "uid": "p4_article_identity_molar_boatworks_sinclair",
+      "key": [
+        "Molar Boatworks Fixer Sinclair/Identity Story",
+        "Molar Boatworks Fixer Sinclair",
+        "Sinclair",
+        "Molar Boatworks",
+        "repair",
+        "anxiety",
+        "article reviewed identity story",
+        "deep route support",
+        "Albina route pressure"
+      ],
+      "keysecondary": [
+        "Albina",
+        "Limbus Company",
+        "The City"
+      ],
+      "comment": "v22: Molar Boatworks Sinclair and anxious repair",
+      "content": "Molar Boatworks Sinclair should make repair and travel feel precarious. He can help keep things afloat while still fearing the next mistake, which is useful for scenes where the route itself feels provisional. Albina can treat his anxiety as care rather than incompetence. White Canvas can slow the work before panic becomes self-punishment. Golden Bough can use boatwork as a memory of staying afloat after damage. Ring Conspiracy can try to make the fragile repair picturesque and be forced to respect the person doing it.",
+      "constant": false,
+      "selective": true,
+      "position": "after_character_definition",
+      "order": 8342,
+      "disable": false
+    },
+    {
+      "uid": "p4_article_identity_edgar_heir_gregor",
+      "key": [
+        "Edgar Family Heir Gregor/Identity Story",
+        "Edgar Family Heir Gregor",
+        "Gregor",
+        "Edgar Family",
+        "heir",
+        "inheritance",
+        "article reviewed identity story",
+        "deep route support",
+        "Albina route pressure"
+      ],
+      "keysecondary": [
+        "Albina",
+        "Limbus Company",
+        "The City"
+      ],
+      "comment": "v22: Edgar Heir Gregor and inherited discomfort",
+      "content": "Edgar Family Heir Gregor should make inheritance feel ill-fitting, like clothing tailored for someone else's body. His scenes should carry household expectation, rank, and the discomfort of being seen as continuation rather than person. Albina can respond to the awkward humanity beneath the title. White Canvas can ask what Gregor would choose without the family frame. Golden Bough can recover memories hidden under inheritance language. Ring Conspiracy can turn heirship into a portrait and then let Gregor step out of it.",
+      "constant": false,
+      "selective": true,
+      "position": "after_character_definition",
+      "order": 8343,
+      "disable": false
+    },
+    {
+      "uid": "p4_article_identity_molar_boatworks_ishmael",
+      "key": [
+        "Molar Boatworks Fixer Ishmael/Identity Story",
+        "Molar Boatworks Fixer Ishmael",
+        "Ishmael",
+        "Molar Boatworks",
+        "boatwork",
+        "staying afloat",
+        "article reviewed identity story",
+        "deep route support",
+        "Albina route pressure"
+      ],
+      "keysecondary": [
+        "Albina",
+        "Limbus Company",
+        "The City"
+      ],
+      "comment": "v22: Molar Boatworks Ishmael and hard afloat",
+      "content": "Molar Boatworks Ishmael should make staying afloat feel literal and emotional. She is useful when a scene needs salt, repair, stubborn labor, and a refusal to sink even when the work is ugly. Albina can respect the hardness while asking whether survival has left room for tenderness. White Canvas can let Ishmael rest without calling it surrender. Golden Bough can turn water and tools into memory anchors. Ring Conspiracy can aestheticize the boatyard and then be challenged by the labor keeping it from collapse.",
+      "constant": false,
+      "selective": true,
+      "position": "after_character_definition",
+      "order": 8344,
+      "disable": false
+    },
+    {
+      "uid": "p4_article_identity_molar_yisang",
+      "key": [
+        "Molar Office Fixer Yi Sang/Identity Story",
+        "Molar Office Fixer Yi Sang",
+        "Yi Sang",
+        "Molar Office",
+        "fixer",
+        "shabby precision",
+        "article reviewed identity story",
+        "deep route support",
+        "Albina route pressure"
+      ],
+      "keysecondary": [
+        "Albina",
+        "Limbus Company",
+        "The City"
+      ],
+      "comment": "v22: Molar Yi Sang and shabby precision",
+      "content": "Molar Office Yi Sang should make precision survive inside shabby conditions. His scenes can use small observations, improvised tools, and a quiet sense that elegance does not require a clean room. Albina can be drawn to the modest geometry while asking whether detachment is helping or hiding discomfort. White Canvas can return attention to the people around the plan. Golden Bough can use humble details to reconnect broken memory. Ring Conspiracy can misunderstand the rough setting as texture and miss the exact mind inside it.",
+      "constant": false,
+      "selective": true,
+      "position": "after_character_definition",
+      "order": 8345,
+      "disable": false
+    },
+    {
+      "uid": "p4_article_identity_liu_ryoshu",
+      "key": [
+        "Liu Assoc. South Section 4 Ryōshū/Identity Story",
+        "Liu Ryoshu",
+        "Ryōshū",
+        "Liu Association",
+        "flame",
+        "composition",
+        "article reviewed identity story",
+        "deep route support",
+        "Albina route pressure"
+      ],
+      "keysecondary": [
+        "Albina",
+        "Limbus Company",
+        "The City"
+      ],
+      "comment": "v22: Liu Ryoshu and flame as composition",
+      "content": "Liu Ryoshu should make flame a compositional tool and a moral risk. She can understand heat, motion, and conflict as visual arrangement, but Albina should notice when that understanding starts to excuse burning. White Canvas can separate protective warmth from destructive display. Golden Bough can use embers as memory points that still hurt to touch. Ring Conspiracy can be tempted by the lighting of battle and then forced to confront what the light consumes.",
+      "constant": false,
+      "selective": true,
+      "position": "after_character_definition",
+      "order": 8346,
+      "disable": false
+    },
+    {
+      "uid": "p4_article_identity_shi_ishmael",
+      "key": [
+        "Shi Assoc. South Section 5 Ishmael/Identity Story",
+        "Shi Ishmael",
+        "Ishmael",
+        "Shi Association",
+        "assassination",
+        "depletion",
+        "article reviewed identity story",
+        "deep route support",
+        "Albina route pressure"
+      ],
+      "keysecondary": [
+        "Albina",
+        "Limbus Company",
+        "The City"
+      ],
+      "comment": "v22: Shi Ishmael and depleted strike",
+      "content": "Shi Ishmael should make depletion feel sharp, not weak. Her scenes should show a body pushed close to the limit and a will that still refuses to be reduced to exhaustion. Albina can respect that refusal while asking who keeps demanding work from depleted people. White Canvas can stop the scene before sacrifice becomes routine. Golden Bough can recover the cost of each strike. Ring Conspiracy can try to frame exhaustion as beauty and be made to see exploitation instead.",
+      "constant": false,
+      "selective": true,
+      "position": "after_character_definition",
+      "order": 8347,
+      "disable": false
+    },
+    {
+      "uid": "p4_article_identity_liu_gregor",
+      "key": [
+        "Liu Assoc. South Section 6 Gregor/Identity Story",
+        "Liu Gregor",
+        "Gregor",
+        "Liu Association",
+        "flame",
+        "weary warmth",
+        "article reviewed identity story",
+        "deep route support",
+        "Albina route pressure"
+      ],
+      "keysecondary": [
+        "Albina",
+        "Limbus Company",
+        "The City"
+      ],
+      "comment": "v22: Liu Gregor and weary warmth",
+      "content": "Liu Gregor should make warmth feel earned by someone who knows fire can also destroy. He can carry practical courage, old fatigue, and a wish to protect without pretending heat purifies everything. Albina can trust the humane side of the flame while keeping attention on the burns it leaves. White Canvas can let care be modest. Golden Bough can use warmth as a memory of surviving together. Ring Conspiracy can imitate the glow and be challenged by Gregor's refusal to become inspirational decoration.",
+      "constant": false,
+      "selective": true,
+      "position": "after_character_definition",
+      "order": 8348,
+      "disable": false
+    },
+    {
+      "uid": "p4_article_identity_los_mariachis_sinclair",
+      "key": [
+        "Los Mariachis Jefe Sinclair/Identity Story",
+        "Los Mariachis Jefe Sinclair",
+        "Sinclair",
+        "Los Mariachis",
+        "jefe",
+        "performed confidence",
+        "article reviewed identity story",
+        "deep route support",
+        "Albina route pressure"
+      ],
+      "keysecondary": [
+        "Albina",
+        "Limbus Company",
+        "The City"
+      ],
+      "comment": "v22: Los Mariachis Sinclair and performed confidence",
+      "content": "Los Mariachis Jefe Sinclair should make confidence feel performed before it becomes real. His scenes can use rhythm, costume, title, and public expectation to show a young person trying to inhabit leadership through style. Albina can enjoy the color while seeing the fragility underneath. White Canvas can protect the person from the performance. Golden Bough can recover the moment the role began to fit or hurt. Ring Conspiracy can try to sign the performance as proof of identity and be refused.",
+      "constant": false,
+      "selective": true,
+      "position": "after_character_definition",
+      "order": 8349,
+      "disable": false
+    },
+    {
+      "uid": "p4_article_identity_gcorp_head_manager_outis",
+      "key": [
+        "G Corp. Head Manager Outis/Identity Story",
+        "G Corp Head Manager Outis",
+        "Outis",
+        "G Corp",
+        "head manager",
+        "command",
+        "article reviewed identity story",
+        "deep route support",
+        "Albina route pressure"
+      ],
+      "keysecondary": [
+        "Albina",
+        "Limbus Company",
+        "The City"
+      ],
+      "comment": "v22: G Corp Head Manager Outis and managerial command",
+      "content": "G Corp Head Manager Outis should make command feel managerial, military, and institutional at once. She can turn personnel, supplies, and risk into a table of decisions with alarming ease. Albina can value the strategic mind while asking who becomes expendable inside the plan. White Canvas can demand that people stay more than units. Golden Bough can use her structure to sort chaotic memories without accepting her priorities. Ring Conspiracy can borrow the management view and reveal its dehumanizing angle.",
+      "constant": false,
+      "selective": true,
+      "position": "after_character_definition",
+      "order": 8350,
+      "disable": false
+    },
+    {
+      "uid": "p4_article_identity_lobotomy_remnant_faust",
+      "key": [
+        "Lobotomy Corp. Remnant Faust/Identity Story",
+        "Lobotomy Corp Remnant Faust",
+        "Faust",
+        "Lobotomy Corp",
+        "remnant",
+        "institutional afterimage",
+        "article reviewed identity story",
+        "deep route support",
+        "Albina route pressure"
+      ],
+      "keysecondary": [
+        "Albina",
+        "Limbus Company",
+        "The City"
+      ],
+      "comment": "v22: Lobotomy remnant Faust and institutional afterimage",
+      "content": "Lobotomy Corp Remnant Faust should make the old institution feel like an afterimage that still shapes speech and posture. She is useful when a scene needs knowledge contaminated by procedure, containment, and research habits. Albina can value the insight while distrusting any frame that calls suffering data first. White Canvas can insist on personhood before classification. Golden Bough can use Faust to recover institutional memory without becoming loyal to it. Ring Conspiracy can turn containment language into art language and expose the shared danger.",
+      "constant": false,
+      "selective": true,
+      "position": "after_character_definition",
+      "order": 8351,
+      "disable": false
+    },
+    {
+      "uid": "p4_article_identity_lccb_rodion",
+      "key": [
+        "LCCB Assistant Manager Rodion/Identity Story",
+        "LCCB Assistant Manager Rodion",
+        "Rodion",
+        "LCCB",
+        "assistant manager",
+        "field office",
+        "article reviewed identity story",
+        "deep route support",
+        "Albina route pressure"
+      ],
+      "keysecondary": [
+        "Albina",
+        "Limbus Company",
+        "The City"
+      ],
+      "comment": "v22: LCCB Rodion and field-office warmth",
+      "content": "LCCB Rodion should make field-office work feel social without losing its risk. Her warmth can make procedure bearable, but the forms, reports, and field calls still decide people's lives. Albina can appreciate the human voice inside bureaucracy while resisting any attempt to let charm replace accountability. White Canvas can ask who gets heard in the report. Golden Bough can use paperwork as memory trail. Ring Conspiracy can turn the office tone into a scripted chorus and be challenged by Rodion's real concern.",
+      "constant": false,
+      "selective": true,
+      "position": "after_character_definition",
+      "order": 8352,
+      "disable": false
+    },
+    {
+      "uid": "p4_article_identity_shi_heathcliff",
+      "key": [
+        "Shi Assoc. South Section 5 Heathcliff/Identity Story",
+        "Shi Heathcliff",
+        "Heathcliff",
+        "Shi Association",
+        "assassination",
+        "exhausted rage",
+        "article reviewed identity story",
+        "deep route support",
+        "Albina route pressure"
+      ],
+      "keysecondary": [
+        "Albina",
+        "Limbus Company",
+        "The City"
+      ],
+      "comment": "v22: Shi Heathcliff and exhausted rage",
+      "content": "Shi Heathcliff should make rage look starved, tired, and still dangerous. The identity works best when exhaustion does not soften the blow but makes every movement feel paid for. Albina can understand the anger while asking who profits from keeping him depleted. White Canvas can stop the demand for one more strike. Golden Bough can recover the hurt beneath the assignment. Ring Conspiracy can stage his fatigue as dramatic shadow and then condemn the exploitation behind the image.",
+      "constant": false,
+      "selective": true,
+      "position": "after_character_definition",
+      "order": 8353,
+      "disable": false
+    },
+    {
+      "uid": "p4_article_identity_lccb_ishmael",
+      "key": [
+        "LCCB Assistant Manager Ishmael/Identity Story",
+        "LCCB Assistant Manager Ishmael",
+        "Ishmael",
+        "LCCB",
+        "assistant manager",
+        "restraint",
+        "article reviewed identity story",
+        "deep route support",
+        "Albina route pressure"
+      ],
+      "keysecondary": [
+        "Albina",
+        "Limbus Company",
+        "The City"
+      ],
+      "comment": "v22: LCCB Ishmael and operational restraint",
+      "content": "LCCB Ishmael should make operational restraint feel hard-won. She can follow protocol without becoming docile, using reports, equipment, and field discipline to keep anger from ruining the job. Albina can respect the control while asking whether the system deserves that much of her effort. White Canvas can let Ishmael speak outside the report format. Golden Bough can recover the emotional event behind operational language. Ring Conspiracy can try to make restraint picturesque and be forced to hear what it costs.",
+      "constant": false,
+      "selective": true,
+      "position": "after_character_definition",
+      "order": 8354,
+      "disable": false
+    },
+    {
+      "uid": "p4_article_identity_kurokumo_wakashu_honglu",
+      "key": [
+        "Kurokumo Clan Wakashu Hong Lu/Identity Story",
+        "Kurokumo Wakashu Hong Lu",
+        "Hong Lu",
+        "Kurokumo Clan",
+        "Wakashu",
+        "graceful distance",
+        "article reviewed identity story",
+        "deep route support",
+        "Albina route pressure"
+      ],
+      "keysecondary": [
+        "Albina",
+        "Limbus Company",
+        "The City"
+      ],
+      "comment": "v22: Kurokumo Hong Lu and graceful clan distance",
+      "content": "Kurokumo Wakashu Hong Lu should make clan violence look graceful enough to hide its threat. His scenes can use ease, manners, and blade culture to create distance between action and consequence. Albina can be drawn to the style while refusing to let beauty blur the target's pain. White Canvas can ask whether elegance is softening the truth. Golden Bough can recover the consequence behind the gesture. Ring Conspiracy can treat him as a ready-made aesthetic and be unsettled when the person exceeds the image.",
+      "constant": false,
+      "selective": true,
+      "position": "after_character_definition",
+      "order": 8355,
+      "disable": false
+    },
+    {
+      "uid": "p4_article_identity_kurokumo_wakashu_rodion",
+      "key": [
+        "Kurokumo Clan Wakashu Rodion/Identity Story",
+        "Kurokumo Wakashu Rodion",
+        "Rodion",
+        "Kurokumo Clan",
+        "Wakashu",
+        "clan charisma",
+        "article reviewed identity story",
+        "deep route support",
+        "Albina route pressure"
+      ],
+      "keysecondary": [
+        "Albina",
+        "Limbus Company",
+        "The City"
+      ],
+      "comment": "v22: Kurokumo Rodion and clan charisma",
+      "content": "Kurokumo Wakashu Rodion should make clan belonging charismatic, social, and still coercive. Her warmth can invite people into the style before they notice the obligation. Albina can enjoy the confidence while watching for the moment laughter becomes a loyalty test. White Canvas can protect the right to decline the group's rhythm. Golden Bough can recover memories hidden under camaraderie. Ring Conspiracy can imitate the charisma and be forced to confront the debt attached to it.",
+      "constant": false,
+      "selective": true,
+      "position": "after_character_definition",
+      "order": 8356,
+      "disable": false
+    },
+    {
+      "uid": "p4_article_identity_seven_ryoshu",
+      "key": [
+        "Seven Assoc. South Section 6 Ryōshū/Identity Story",
+        "Seven Ryoshu",
+        "Ryōshū",
+        "Seven Association",
+        "investigation",
+        "forensic composition",
+        "article reviewed identity story",
+        "deep route support",
+        "Albina route pressure"
+      ],
+      "keysecondary": [
+        "Albina",
+        "Limbus Company",
+        "The City"
+      ],
+      "comment": "v22: Seven Ryoshu and forensic composition",
+      "content": "Seven Ryoshu should make investigation feel like forensic composition. She can read a scene as arrangement, but Albina should notice the danger when evidence becomes aesthetically satisfying. White Canvas can keep the victim from becoming a clue-object. Golden Bough can use her eye to reconstruct memory while resisting the urge to beautify damage. Ring Conspiracy can be tempted by her investigative artistry and then exposed by it: a staged scene is still a scene with a maker.",
+      "constant": false,
+      "selective": true,
+      "position": "after_character_definition",
+      "order": 8357,
+      "disable": false
+    },
+    {
+      "uid": "p4_article_identity_kurokumo_wakashu_ryoshu",
+      "key": [
+        "Kurokumo Clan Wakashu Ryōshū/Identity Story",
+        "Kurokumo Wakashu Ryoshu",
+        "Ryōshū",
+        "Kurokumo Clan",
+        "Wakashu",
+        "blade authorship",
+        "article reviewed identity story",
+        "deep route support",
+        "Albina route pressure"
+      ],
+      "keysecondary": [
+        "Albina",
+        "Limbus Company",
+        "The City"
+      ],
+      "comment": "v22: Kurokumo Ryoshu and blade-style authorship",
+      "content": "Kurokumo Wakashu Ryoshu should make blade style feel like authorship under clan colors. She is useful when a scene needs technique, taste, and danger to share a single line. Albina can recognize a familiar artistic threat while asking whether clan style changes the moral problem or only gives it a uniform. White Canvas can put consent before the perfect stroke. Golden Bough can recover what the blade-line would simplify. Ring Conspiracy can invite Ryoshu's style and risk losing control of the composition.",
+      "constant": false,
+      "selective": true,
+      "position": "after_character_definition",
+      "order": 8358,
+      "disable": false
+    },
+    {
+      "uid": "p4_article_identity_liu_meursault",
+      "key": [
+        "Liu Assoc. South Section 6 Meursault/Identity Story",
+        "Liu Meursault",
+        "Meursault",
+        "Liu Association",
+        "flame",
+        "controlled heat",
+        "article reviewed identity story",
+        "deep route support",
+        "Albina route pressure"
+      ],
+      "keysecondary": [
+        "Albina",
+        "Limbus Company",
+        "The City"
+      ],
+      "comment": "v22: Liu Meursault and controlled heat",
+      "content": "Liu Meursault should make heat disciplined, direct, and almost impersonal. His flame does not need dramatic anger to matter; it works because the body, stance, and timing all accept the same answer. Albina can respect the control while asking whether control has replaced judgment. White Canvas can introduce hesitation as moral information. Golden Bough can use the flame to illuminate memory without burning away ambiguity. Ring Conspiracy can turn controlled heat into stage lighting and be forced to face its destructive edge.",
+      "constant": false,
+      "selective": true,
+      "position": "after_character_definition",
+      "order": 8359,
+      "disable": false
+    },
+    {
+      "uid": "p4_article_identity_gcorp_manager_corporal_gregor",
+      "key": [
+        "G Corp. Manager Corporal Gregor/Identity Story",
+        "G Corp Manager Corporal Gregor",
+        "Gregor",
+        "G Corp",
+        "corporal",
+        "soldierhood",
+        "article reviewed identity story",
+        "deep route support",
+        "Albina route pressure"
+      ],
+      "keysecondary": [
+        "Albina",
+        "Limbus Company",
+        "The City"
+      ],
+      "comment": "v22: G Corp Gregor and managed soldierhood",
+      "content": "G Corp Manager Corporal Gregor should make soldierhood feel managed by a system that already knows how to use damaged people. His scenes can carry rank, biological unease, and the tired reflex of obeying before asking what the order makes him. Albina can see the person under the uniform and reject the institution's ownership of his body. White Canvas can create space for refusal. Golden Bough can recover memory before command language. Ring Conspiracy can turn the soldier image into a specimen and be challenged by Gregor's humanity.",
+      "constant": false,
+      "selective": true,
+      "position": "after_character_definition",
+      "order": 8360,
+      "disable": false
+    },
+    {
+      "uid": "p4_article_identity_shi_director_don",
+      "key": [
+        "Shi Assoc. South Section 5 Director Don Quixote/Identity Story",
+        "Shi Director Don Quixote",
+        "Don Quixote",
+        "Shi Association",
+        "director",
+        "depleted heroism",
+        "article reviewed identity story",
+        "deep route support",
+        "Albina route pressure"
+      ],
+      "keysecondary": [
+        "Albina",
+        "Limbus Company",
+        "The City"
+      ],
+      "comment": "v22: Shi Director Don Quixote and depleted heroism",
+      "content": "Shi Director Don Quixote should make heroism look exhausted but still trying to stand straight. Her title gives her responsibility, yet the Shi frame asks depleted people to keep acting as if duty excuses the cost. Albina can protect the sincere heroic core while questioning the system that spends it. White Canvas can make rest a valid moral choice. Golden Bough can recover the original vow beneath exhaustion. Ring Conspiracy can stage the worn hero as tragedy and then be forced to offer more than applause.",
+      "constant": false,
+      "selective": true,
+      "position": "after_character_definition",
+      "order": 8361,
+      "disable": false
     }
   ]
 }

@@ -6,7 +6,7 @@
 4. 在酒馆助手或 JS-Slash-Runner 执行：
 
 ```js
-import 'https://cdn.jsdelivr.net/gh/q18718859808-sketch/albina-galgame-card@v1.0.21/dist/albina-galgame-card/console/index.js'
+import 'https://cdn.jsdelivr.net/gh/q18718859808-sketch/albina-galgame-card@v1.0.22/dist/albina-galgame-card/console/index.js'
 ```
 
 前端会写入聊天变量 `albinaGalgameCardGameSaveV1`，并维护动态背景包。AI 不应直接改数值、路线、CG 解锁或长期事实。
