@@ -2,7 +2,7 @@
   "name": "albina-galgame-card-pure-import",
   "version": "1.0.0",
   "project_id": "albina-galgame-card",
-  "generated_at": "2026-06-04T03:22:42.686376+00:00",
+  "generated_at": "2026-06-04T04:04:56.735108+00:00",
   "entry_card": "card/albina.card.png",
   "frontend_entry": "dist/albina-galgame-card/console/index.js",
   "background_packs": [
@@ -29,6 +29,7 @@
     "worldbooks/pure/albina_verified_seed_worldbook.pure.json"
   ],
   "files": [
+    "README.md",
     "assets/audio/bgm/.gitkeep",
     "assets/audio/se/.gitkeep",
     "assets/avatar/albina-avatar.png",
@@ -417,6 +418,7 @@
     "dist/albina-galgame-card/worldbooks/static-worldbook.template.json",
     "docs/CDN_IMPORT.md",
     "docs/import-notes.md",
+    "docs/install.md",
     "presets/generation_profiles.json",
     "regex/regex-scripts.json",
     "scenes/opening.example.json",
