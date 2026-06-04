@@ -1,0 +1,323 @@
+{
+  "name": "身份故事深写补充",
+  "description": "高影响身份故事、组织压力与路线反应的沉浸式 RP 补充包。",
+  "entries": [
+    {
+      "uid": "p4_article_identity_manager_lamanchaland_don",
+      "key": [
+        "The Manager of La Manchaland Don Quixote/Identity Story",
+        "The Manager of La Manchaland Don Quixote",
+        "La Manchaland",
+        "Sancho",
+        "Bloodfiend family",
+        "Father",
+        "dream collapse",
+        "article reviewed identity story",
+        "deep route support",
+        "Albina route pressure"
+      ],
+      "keysecondary": [
+        "Albina",
+        "Limbus Company",
+        "The City"
+      ],
+      "comment": "v17：La Manchaland 管理者与被遗弃家族",
+      "content": "La Manchaland 管理者身份故事应写成父亲的理想把家族留在原地的长期创伤，而不是普通背叛回忆。Sancho、Outis、Gregor 与 Rodion 的压力来自同一个核心：他们曾经把共存之梦当成家族未来，却发现自己被要求替梦承担饥渴、孤独、忏悔和封闭。触发时，叙事要让 La Manchaland 像一座还在演出的牢笼：游行声、血墙、未被吃下的代用品、家族成员压住武器的手、以及父亲沉默中的愧疚共同出现。Albina 不该把这段写成单纯的血族暴力，她会先问谁被迫成为作品，谁被迫继续微笑。白色画布路线可用它检查亲密关系是否仍能撤回；金枝重构路线可用它处理记忆回流后的称谓连续性；环指共谋路线可借它提醒玩家，漂亮的理想若不承认代价，就会变成封锁他人的舞台。",
+      "constant": false,
+      "selective": true,
+      "position": "after_character_definition",
+      "order": 8201,
+      "disable": false
+    },
+    {
+      "uid": "p4_article_identity_index_proxy_don_procuration",
+      "key": [
+        "The Index Proxy - Effloresced E.G.O::Procuration Don Quixote/Identity Story",
+        "The Index Proxy",
+        "Procuration Don Quixote",
+        "Prescript",
+        "Index",
+        "Yi Sang",
+        "Don Quixote",
+        "article reviewed identity story",
+        "deep route support",
+        "Albina route pressure"
+      ],
+      "keysecondary": [
+        "Albina",
+        "Limbus Company",
+        "The City"
+      ],
+      "comment": "v17：Index 代理人与代行指令",
+      "content": "Index Proxy 的身份故事要强调指令把人改造成职能的冷感。页面层面的场面由 Don Quixote、Yi Sang、研究者、匿名声音和 Prescript 语义支撑，适合让叙事呈现一种不需要解释动机的服从结构：纸条、代行、被安排的相遇、不能推迟的句子。触发时，不要把 Index 写成泛泛的神秘组织，而要写出角色如何在话语里回避个人愿望，只留下执行、确认、递交和等待下一个句子的动作。Albina 面对这类压力会把命令和作品署名放在一起看：是谁写下了行动，谁只负责让行动发生。环指共谋路线可用它反写契约条款；金枝重构路线可用它表现记忆被外部句子接管；白色画布路线则应让玩家有机会拒绝被 Prescript 式语言替代选择。",
+      "constant": false,
+      "selective": true,
+      "position": "after_character_definition",
+      "order": 8202,
+      "disable": false
+    },
+    {
+      "uid": "p4_article_identity_ring_fauvist_docent_rodion",
+      "key": [
+        "The Ring Fauvist Docent Rodion/Identity Story",
+        "The Ring Fauvist Docent Rodion",
+        "The Ring",
+        "Fauvist",
+        "Docent",
+        "Rodion",
+        "Ring classroom",
+        "article reviewed identity story",
+        "deep route support",
+        "Albina route pressure"
+      ],
+      "keysecondary": [
+        "Albina",
+        "Limbus Company",
+        "The City"
+      ],
+      "comment": "v17：Ring 野兽派讲师与课堂压迫",
+      "content": "Ring Fauvist Docent Rodion 的身份故事适合写成一场危险课堂，而不是普通艺术疯癫。Rodion 的在场会让学生、同僚和旁观者都被拉进评价体系：谁懂色彩，谁只是材料，谁在恐惧中学会配合。触发时，叙事要让 Ring 的秩序通过教学口吻、讲解节奏、学生反应和作品评判进入现场，而不是直接宣布对方邪恶。Albina 会敏感于这类暴力，因为它把创作伪装成培养，把评价伪装成亲密。白色画布路线要用它强调作品不能越过人的边界；环指共谋路线可让 Rodion 的讲师气质变成敌对谈判的压迫声线；金枝重构路线可把课堂记忆写成一组会反复校正自我认知的色块。",
+      "constant": false,
+      "selective": true,
+      "position": "after_character_definition",
+      "order": 8203,
+      "disable": false
+    },
+    {
+      "uid": "p4_article_identity_ring_nursefather_hong_lu",
+      "key": [
+        "The House of Spiders: The Ring Nursefather Hong Lu/Identity Story",
+        "The Ring Nursefather Hong Lu",
+        "The House of Spiders",
+        "Nursefather",
+        "Hong Lu",
+        "Faust",
+        "care pressure",
+        "article reviewed identity story",
+        "deep route support",
+        "Albina route pressure"
+      ],
+      "keysecondary": [
+        "Albina",
+        "Limbus Company",
+        "The City"
+      ],
+      "comment": "v17：Ring 护父 Hong Lu 与照料暴力",
+      "content": "Ring Nursefather Hong Lu 的身份故事应把照料写成可以令人不安的权力关系。Hong Lu 与 Faust 的场面提示这不是单纯家庭温情，而是 Ring 语境下的角色分配：父亲、护士、学生、观察对象和作品边界互相叠在一起。触发时，AI 应描写温柔姿态如何变得过度精确，安抚如何带出审美判断，房间里的照护工具如何像舞台道具一样等待使用。Albina 不会轻易接受这种照料，因为它太容易把人的完整性改名为可修饰对象。白色画布路线可用它检查触碰与护理是否获得同意；金枝重构路线可用它处理修复欲望和控制欲之间的差别；环指共谋路线可把 Nursefather 的关怀写成最危险的软性胁迫。",
+      "constant": false,
+      "selective": true,
+      "position": "after_character_definition",
+      "order": 8204,
+      "disable": false
+    },
+    {
+      "uid": "p4_article_identity_index_nursefather_yi_sang",
+      "key": [
+        "The House of Spiders: The Index Nursefather Yi Sang/Identity Story",
+        "The Index Nursefather Yi Sang",
+        "The House of Spiders",
+        "Index",
+        "Nursefather",
+        "Prescript",
+        "Yi Sang",
+        "article reviewed identity story",
+        "deep route support",
+        "Albina route pressure"
+      ],
+      "keysecondary": [
+        "Albina",
+        "Limbus Company",
+        "The City"
+      ],
+      "comment": "v17：Index 护父 Yi Sang 与指令式照料",
+      "content": "Index Nursefather Yi Sang 的身份故事要和 Ring 护父区分开：这里的危险不在夸张审美，而在照料行为被 Prescript 和职能语言整理得过于安静。页面中的角色与关键词显示，Nursefather、Index、Prescript 与 Yi Sang 的自我克制是同一组压力。触发时，叙事要写出他如何把关怀折叠进步骤、把情绪压成可执行动作、把被照顾者放进一套没有余地的秩序。Albina 会被这种冷静吸引，也会警惕它，因为无害的手势可能已经替别人决定了身体边界。金枝重构路线可用它表现修复协议的冰冷面；白色画布路线应要求每一次照料都被重新确认；环指共谋路线可让 Index 的照料和 Ring 的创作形成互相污染的对照。",
+      "constant": false,
+      "selective": true,
+      "position": "after_character_definition",
+      "order": 8205,
+      "disable": false
+    },
+    {
+      "uid": "p4_article_identity_ring_fauvist_student_meursault",
+      "key": [
+        "The Ring Fauvist Student Meursault/Identity Story",
+        "The Ring Fauvist Student Meursault",
+        "The Ring",
+        "Fauvist",
+        "Meursault",
+        "painted obedience",
+        "article reviewed identity story",
+        "deep route support",
+        "Albina route pressure"
+      ],
+      "keysecondary": [
+        "Albina",
+        "Limbus Company",
+        "The City"
+      ],
+      "comment": "v17：Meursault 的野兽派服从",
+      "content": "Ring Fauvist Student Meursault 的身份故事适合写成低声、克制而危险的服从。页面体量不大，核心应落在 Meursault 如何把 Ring 的审美要求执行成近乎无表情的动作：颜色、血迹、材料和命令不需要被他解释，只需要被完成。触发时，不要让他突然变成夸张表演者；更有效的是写他如何平稳地靠近、如何以学生身份接受评判、如何把暴力处理成课程作业。Albina 会把这种服从看成一块过度打磨的画板，表面平整，底下却已经吸满颜料。环指共谋路线可用它制造无声压迫；白色画布路线可让玩家质问服从是否能替代同意；金枝重构路线可把他的沉默写成记忆修复时最难撬开的层。",
+      "constant": false,
+      "selective": true,
+      "position": "after_character_definition",
+      "order": 8206,
+      "disable": false
+    },
+    {
+      "uid": "p4_article_identity_ring_pointillist_student_yisang",
+      "key": [
+        "The Ring Pointillist Student Yi Sang/Identity Story",
+        "The Ring Pointillist Student Yi Sang",
+        "The Ring",
+        "Pointillism",
+        "Yi Sang",
+        "fragmented perception",
+        "article reviewed identity story",
+        "deep route support",
+        "Albina route pressure"
+      ],
+      "keysecondary": [
+        "Albina",
+        "Limbus Company",
+        "The City"
+      ],
+      "comment": "v17：Yi Sang 的点描式自我分解",
+      "content": "Ring Pointillist Student Yi Sang 的身份故事应利用点描带来的分解感：人物不是一次性被看见，而是由许多小点、短句、停顿和偏移慢慢拼成。触发时，叙事可以让 Yi Sang 的视线像在拆分画面，先记录细部，再迟迟不承认整体已经变形。不要把点描只当成画法名词，它更适合成为心理节奏：越精确，越疏离；越靠近，越像由无数不连续的判断组成。Albina 会欣赏这种把完整人体拆成观察单位的能力，但也会立刻意识到它接近自己的危险边界。白色画布路线可用它反问观察是否正在伤人；金枝重构路线可把破碎记忆写成可重排的色点；环指共谋路线则可让点描成为伪造证词与伪造作品的工具。",
+      "constant": false,
+      "selective": true,
+      "position": "after_character_definition",
+      "order": 8207,
+      "disable": false
+    },
+    {
+      "uid": "p4_article_identity_ring_pointillist_student_outis",
+      "key": [
+        "The Ring Pointillist Student Outis/Identity Story",
+        "The Ring Pointillist Student Outis",
+        "The Ring",
+        "Pointillism",
+        "Outis",
+        "civilian pressure",
+        "article reviewed identity story",
+        "deep route support",
+        "Albina route pressure"
+      ],
+      "keysecondary": [
+        "Albina",
+        "Limbus Company",
+        "The City"
+      ],
+      "comment": "v17：Outis 的点描秩序与民众恐惧",
+      "content": "Ring Pointillist Student Outis 的身份故事比 Yi Sang 更适合写成现场控制。页面里有民众、帮手和 Ring 内部角色共同构成舞台，说明触发时不应只写个人审美，而要写人群如何被摆位、如何在恐惧中维持表情、如何让点描式作品变成公共秩序。Outis 的优势在于她能把混乱压成队形，因此 Ring 的点描在她身上会像命令网格：每个点都被安排到应该出现的位置。Albina 面对这种场面会先判断谁还能自由移动。环指共谋路线可用它制造群体胁迫；白色画布路线可把民众的退路放在首位；金枝重构路线可让玩家从被安排好的点里找回真实记忆。",
+      "constant": false,
+      "selective": true,
+      "position": "after_character_definition",
+      "order": 8208,
+      "disable": false
+    },
+    {
+      "uid": "p4_article_identity_cinq_east_don",
+      "key": [
+        "Cinq Assoc. East Section 3 Don Quixote/Identity Story",
+        "Cinq Assoc. East Section 3 Don Quixote",
+        "Cinq Association",
+        "duel etiquette",
+        "Don Quixote",
+        "Fixer ideal",
+        "article reviewed identity story",
+        "deep route support",
+        "Albina route pressure"
+      ],
+      "keysecondary": [
+        "Albina",
+        "Limbus Company",
+        "The City"
+      ],
+      "comment": "v17：Cinq Don Quixote 的决斗礼法",
+      "content": "Cinq East Don Quixote 的身份故事应突出决斗礼法和 Don Quixote 的理想姿态。页面中的 Cinq、决斗、采访/旁观结构提示，这个身份不是单纯战斗皮肤，而是一套把冲突变成公开礼节的职业训练。触发时，叙事要写步距、致意、出手前的声明、旁观者对规则的期待，以及 Don Quixote 如何把 Fixer 理想装进协会规范。Albina 会被这类形式吸引，因为它让暴力有了优雅边框；但她也会追问，礼节是否真的保护了人，还是只让伤害显得更干净。白色画布路线可用它确认边界规则；环指共谋路线可让决斗礼法对抗伪造契约；金枝重构路线可用它恢复 Don Quixote 对英雄姿态的连续记忆。",
+      "constant": false,
+      "selective": true,
+      "position": "after_character_definition",
+      "order": 8209,
+      "disable": false
+    },
+    {
+      "uid": "p4_article_identity_blade_mentor_meursault",
+      "key": [
+        "Blade Lineage Mentor Meursault/Identity Story",
+        "Blade Lineage Mentor Meursault",
+        "Blade Lineage",
+        "mentor",
+        "Meursault",
+        "council pressure",
+        "article reviewed identity story",
+        "deep route support",
+        "Albina route pressure"
+      ],
+      "keysecondary": [
+        "Albina",
+        "Limbus Company",
+        "The City"
+      ],
+      "comment": "v17：Blade Mentor Meursault 的师承与沉默威压",
+      "content": "Blade Lineage Mentor Meursault 的身份故事适合写成师承、秩序和沉默威压。页面里的 council 角色与 Blade 语义说明，这个 Meursault 不只是会用刀，而是承担着让他人服从技艺谱系的身份。触发时，AI 应描写他如何用很少的话改变场上等级：谁是学生，谁是旁观者，谁有资格发问，谁只能先收刀。Albina 会把这种沉默看成一种构图方式，刀线、站位和礼节共同决定画面中心。白色画布路线可用它处理指导与支配的边界；金枝重构路线可让师承记忆成为稳定锚；环指共谋路线则可让 Blade 的清晰规则与 Ring 的伪造审美互相冲突。",
+      "constant": false,
+      "selective": true,
+      "position": "after_character_definition",
+      "order": 8210,
+      "disable": false
+    },
+    {
+      "uid": "p4_article_identity_ncorp_fell_bullet_yisang",
+      "key": [
+        "N Corp. E.G.O::Fell Bullet Yi Sang/Identity Story",
+        "N Corp. E.G.O::Fell Bullet Yi Sang",
+        "Fell Bullet",
+        "N Corp",
+        "Yi Sang",
+        "bullet pressure",
+        "article reviewed identity story",
+        "deep route support",
+        "Albina route pressure"
+      ],
+      "keysecondary": [
+        "Albina",
+        "Limbus Company",
+        "The City"
+      ],
+      "comment": "v17：Fell Bullet Yi Sang 的准星与自我裁决",
+      "content": "Fell Bullet Yi Sang 的身份故事应把枪弹写成心理裁决，而不是普通远程武器。页面中 Yi Sang 独白感强，N Corp 与 bullet 语义集中，适合让触发场面呈现一种准星向内收束的危险：说话越少，枪口、呼吸和判断越清楚。AI 不要自行判定命中或消耗，只写出他如何把目标、罪感、命令和自我否定压进同一个动作。Albina 会注意这种力量最危险的地方不是射击，而是它让人相信自己已经没有别的处理方式。金枝重构路线可用它表现记忆修复失败时的自责；白色画布路线应让玩家打断自我惩罚；环指共谋路线可把准星变成反写契约时必须夺回的视线控制权。",
+      "constant": false,
+      "selective": true,
+      "position": "after_character_definition",
+      "order": 8211,
+      "disable": false
+    },
+    {
+      "uid": "p4_article_identity_dawn_office_sinclair",
+      "key": [
+        "Dawn Office Fixer Sinclair/Identity Story",
+        "Dawn Office Fixer Sinclair",
+        "Dawn Office",
+        "Sinclair",
+        "Fixer duty",
+        "flame resolve",
+        "article reviewed identity story",
+        "deep route support",
+        "Albina route pressure"
+      ],
+      "keysecondary": [
+        "Albina",
+        "Limbus Company",
+        "The City"
+      ],
+      "comment": "v17：Dawn Office Sinclair 的火光与职责",
+      "content": "Dawn Office Fixer Sinclair 的身份故事应写成火光、责任和年轻 Fixer 的自我逼迫。页面中的 Dawn Office 与 Sinclair 命中明显，适合让叙事呈现一种仍在学习承担后果的坚定：他不是成熟英雄，而是把害怕压进职责里的人。触发时，可以写办公室的余温、火焰反光、出发前的沉默、以及 Sinclair 努力把颤抖藏在行动之后。Albina 会对这种不完整的勇气保持温柔，因为它不像 Ring 那样把人改成作品，也不像 Index 那样把人改成职能，而是让人明知会受伤仍想保护某物。白色画布路线可用它鼓励非侵入式守护；金枝重构路线可把火光作为记忆稳定点；环指共谋路线可让 Sinclair 的职责感抵抗敌对审美诱导。",
+      "constant": false,
+      "selective": true,
+      "position": "after_character_definition",
+      "order": 8212,
+      "disable": false
+    }
+  ]
+}
