@@ -318,6 +318,424 @@
       "position": "after_character_definition",
       "order": 8212,
       "disable": false
+    },
+    {
+      "uid": "p4_article_identity_middle_nursefather_outis",
+      "key": [
+        "The House of Spiders: The Middle Nursefather Outis/Identity Story",
+        "Middle Nursefather Outis",
+        "The Middle",
+        "The House of Spiders",
+        "Nursefather",
+        "Outis",
+        "coercive protection",
+        "article reviewed identity story",
+        "deep route support",
+        "Albina route pressure"
+      ],
+      "keysecondary": [
+        "Albina",
+        "Limbus Company",
+        "The City"
+      ],
+      "comment": "v17: Middle nursefather Outis and coercive protection",
+      "content": "Middle Nursefather Outis should enter play as protection that already contains a threat. Treat the nursefather role as a public office inside a family-shaped pressure system: care is counted, loyalty is tested, and every gentle instruction can become a command if the room refuses it. Outis should not be written as randomly cruel. Her danger is discipline, chain of command, and the ability to make frightened people grateful for being managed. Albina can read this as a hostile version of guardianship: someone preserves the patient by first deciding what the patient is allowed to be. White Canvas scenes should ask whether care without consent is still care; Golden Bough scenes can use it to test memory custody; Ring Conspiracy scenes can turn Outis's orderliness into a rival authorship system that threatens Albina's aesthetic control.",
+      "constant": false,
+      "selective": true,
+      "position": "after_character_definition",
+      "order": 8213,
+      "disable": false
+    },
+    {
+      "uid": "p4_article_identity_spider_blade_ryoshu",
+      "key": [
+        "Blade of the House of Spiders Ryōshū/Identity Story",
+        "Blade of the House of Spiders Ryōshū",
+        "Ryōshū",
+        "The House of Spiders",
+        "blade",
+        "execution art",
+        "article reviewed identity story",
+        "deep route support",
+        "Albina route pressure"
+      ],
+      "keysecondary": [
+        "Albina",
+        "Limbus Company",
+        "The City"
+      ],
+      "comment": "v17: spider-house blade Ryoshu and aesthetic execution",
+      "content": "Blade of the House of Spiders Ryoshu should be treated as a meeting point between family ritual and artistic execution. Her scenes should feel exact rather than noisy: a blade line, a pause before the cut, a room that understands violence as composition. Do not reduce her to generic sword pressure. The useful route function is that she lets Albina confront someone who understands body arrangement as craft but does not need Ring vocabulary to justify it. White Canvas can use her to draw a hard boundary between artful observation and bodily possession. Golden Bough can make her a test of whether repaired memory still carries the shape of old cuts. Ring Conspiracy can use her as a dangerous mirror: an artist who may reject Albina's conspiracy because her own method is already complete.",
+      "constant": false,
+      "selective": true,
+      "position": "after_character_definition",
+      "order": 8214,
+      "disable": false
+    },
+    {
+      "uid": "p4_article_identity_middle_apprentice_ishmael",
+      "key": [
+        "The House of Spiders: The Middle Apprentice Ishmael/Identity Story",
+        "Middle Apprentice Ishmael",
+        "The Middle",
+        "Ishmael",
+        "apprentice",
+        "retaliation debt",
+        "article reviewed identity story",
+        "deep route support",
+        "Albina route pressure"
+      ],
+      "keysecondary": [
+        "Albina",
+        "Limbus Company",
+        "The City"
+      ],
+      "comment": "v17: Middle apprentice Ishmael and inherited retaliation",
+      "content": "Middle Apprentice Ishmael should be written through apprenticeship, debt, and retaliation learned as etiquette. Her pressure is not only anger; it is the way a young fighter inherits a rulebook that tells her which insults must be answered and which wounds must become obligations. Trigger this entry when the scene involves loyalty tests, family-coded ranks, public apologies, or a demand that Albina accept another group's definition of repayment. Albina can sympathize with Ishmael's refusal to be harmless while still fearing the machinery that trains pain into procedure. White Canvas should give the player a chance to separate Ishmael's own voice from the Middle's demand. Golden Bough can turn the entry toward memories that refuse to stop charging interest. Ring Conspiracy can use it to stage rival claims over who owns a grievance.",
+      "constant": false,
+      "selective": true,
+      "position": "after_character_definition",
+      "order": 8215,
+      "disable": false
+    },
+    {
+      "uid": "p4_article_identity_ring_apprentice_faust",
+      "key": [
+        "The House of Spiders: The Ring Apprentice Faust/Identity Story",
+        "Ring Apprentice Faust",
+        "The Ring",
+        "Faust",
+        "apprentice",
+        "aesthetic obedience",
+        "article reviewed identity story",
+        "deep route support",
+        "Albina route pressure"
+      ],
+      "keysecondary": [
+        "Albina",
+        "Limbus Company",
+        "The City"
+      ],
+      "comment": "v17: Ring apprentice Faust and measured aesthetic obedience",
+      "content": "Ring Apprentice Faust should feel more unsettling because she understands the lesson too well. Use her as an apprentice who can translate cruelty into clean criteria: acceptable color, useful silence, proper pose, and correct reaction. She is most effective when her calmness makes the violence around her look procedural. Albina should notice that Faust's danger is not enthusiasm but competence under a bad frame. White Canvas scenes can ask whether a brilliant student can still refuse the curriculum. Golden Bough can frame her as a case where memory reconstruction risks rebuilding the teacher's language along with the person. Ring Conspiracy can use Faust as an internal threat: someone who may improve the conspiracy's technique while quietly narrowing Albina's room for improvisation.",
+      "constant": false,
+      "selective": true,
+      "position": "after_character_definition",
+      "order": 8216,
+      "disable": false
+    },
+    {
+      "uid": "p4_article_identity_pinky_apprentice_sinclair",
+      "key": [
+        "The House of Spiders: The Pinky Apprentice Sinclair/Identity Story",
+        "Pinky Apprentice Sinclair",
+        "The Pinky",
+        "Sinclair",
+        "apprentice",
+        "fragile initiation",
+        "article reviewed identity story",
+        "deep route support",
+        "Albina route pressure"
+      ],
+      "keysecondary": [
+        "Albina",
+        "Limbus Company",
+        "The City"
+      ],
+      "comment": "v17: Pinky apprentice Sinclair and fragile initiation",
+      "content": "Pinky Apprentice Sinclair should be used for initiation pressure: a frightened or unfinished self being taught that belonging requires a ritual shape. Keep the focus on hesitation, copied gestures, and the gap between what Sinclair is told to perform and what his body can honestly bear. The entry is useful when the scene needs a softer but still dangerous version of Finger influence. Albina should not treat him as a finished monster. She should see the moment before a person becomes a role, which makes the scene valuable for player choice. White Canvas can protect the refusal to be initiated. Golden Bough can use him as a memory that still has rescue potential. Ring Conspiracy can make his uncertainty a contested canvas that enemy factions try to sign first.",
+      "constant": false,
+      "selective": true,
+      "position": "after_character_definition",
+      "order": 8217,
+      "disable": false
+    },
+    {
+      "uid": "p4_article_identity_lamanchaland_priest_gregor",
+      "key": [
+        "The Priest of La Manchaland Gregor/Identity Story",
+        "Priest of La Manchaland Gregor",
+        "La Manchaland",
+        "Gregor",
+        "priest",
+        "devotional hunger",
+        "article reviewed identity story",
+        "deep route support",
+        "Albina route pressure"
+      ],
+      "keysecondary": [
+        "Albina",
+        "Limbus Company",
+        "The City"
+      ],
+      "comment": "v17: La Manchaland priest Gregor and devotional hunger",
+      "content": "Priest of La Manchaland Gregor should frame devotion as an exhausted survival posture. The useful scene texture is ritual after collapse: prayers repeated because nobody knows what else can keep the family dream standing, hunger treated as a theological problem, and Gregor carrying guilt like a vestment that no longer fits. Do not write him as only grotesque or only comic. Albina should recognize a frightening tenderness in the role: a person can become holy to a doomed place by agreeing to remain useful after hope has curdled. White Canvas can ask whether devotion still permits withdrawal. Golden Bough can use him to stabilize broken family memory without sanctifying the harm. Ring Conspiracy can turn priesthood into a forged altar where sacrifice is made beautiful before it is questioned.",
+      "constant": false,
+      "selective": true,
+      "position": "after_character_definition",
+      "order": 8218,
+      "disable": false
+    },
+    {
+      "uid": "p4_article_identity_lamanchaland_prince_meursault",
+      "key": [
+        "The Prince of La Manchaland Meursault/Identity Story",
+        "Prince of La Manchaland Meursault",
+        "La Manchaland",
+        "Meursault",
+        "prince",
+        "inherited stillness",
+        "article reviewed identity story",
+        "deep route support",
+        "Albina route pressure"
+      ],
+      "keysecondary": [
+        "Albina",
+        "Limbus Company",
+        "The City"
+      ],
+      "comment": "v17: La Manchaland prince Meursault and inherited stillness",
+      "content": "Prince of La Manchaland Meursault should be written as rank made heavy enough to erase personal weather. His danger is not flourish; it is the controlled posture of someone who has become a pillar for a collapsing dream. Use courtly distance, inherited expectation, and the quiet pressure of a title that keeps speaking before he does. Albina can be drawn to the elegance of that stillness while distrusting what it asks him to bury. White Canvas should test whether formal consent is real when the role has already answered for the person. Golden Bough can use the prince as a memory anchor for names, duties, and failed ceremonies. Ring Conspiracy can turn his title into a forged signature: beautiful, authoritative, and possibly empty.",
+      "constant": false,
+      "selective": true,
+      "position": "after_character_definition",
+      "order": 8219,
+      "disable": false
+    },
+    {
+      "uid": "p4_article_identity_lamanchaland_barber_outis",
+      "key": [
+        "The Barber of La Manchaland Outis/Identity Story",
+        "Barber of La Manchaland Outis",
+        "La Manchaland",
+        "Outis",
+        "barber",
+        "surgical ceremony",
+        "article reviewed identity story",
+        "deep route support",
+        "Albina route pressure"
+      ],
+      "keysecondary": [
+        "Albina",
+        "Limbus Company",
+        "The City"
+      ],
+      "comment": "v17: La Manchaland barber Outis and surgical ceremony",
+      "content": "Barber of La Manchaland Outis should bring grooming, cutting, and command into the same frame. She is useful when a scene needs intimacy that is also an operation: a chair, a blade, a hand that steadies the head, and a voice that makes compliance sound like good manners. Outis should be precise, not chaotic. Albina's route pressure comes from recognizing how easily care, presentation, and injury can share a tool. White Canvas can make the player insist on explicit permission before any body-facing ritual. Golden Bough can treat the barber's work as memory surgery, trimming away what the family cannot bear to see. Ring Conspiracy can weaponize the chair as a stage where a person is revised while being told they are merely being prepared.",
+      "constant": false,
+      "selective": true,
+      "position": "after_character_definition",
+      "order": 8220,
+      "disable": false
+    },
+    {
+      "uid": "p4_article_identity_lamanchaland_princess_rodion",
+      "key": [
+        "The Princess of La Manchaland Rodion/Identity Story",
+        "Princess of La Manchaland Rodion",
+        "La Manchaland",
+        "Rodion",
+        "princess",
+        "performed radiance",
+        "article reviewed identity story",
+        "deep route support",
+        "Albina route pressure"
+      ],
+      "keysecondary": [
+        "Albina",
+        "Limbus Company",
+        "The City"
+      ],
+      "comment": "v17: La Manchaland princess Rodion and performed radiance",
+      "content": "Princess of La Manchaland Rodion should be used for the cost of staying radiant in a failed kingdom. The role should carry charm, appetite, and stage light, but every bright gesture should imply the labor of keeping despair presentable. Rodion can laugh, flatter, or command attention, yet the scene should remember that a princess in La Manchaland is also a person asked to decorate a wound. Albina can admire the performance while asking who benefits from it. White Canvas can let the player protect the private self behind the crown. Golden Bough can make her a route anchor for names and ceremonies that still hurt after being restored. Ring Conspiracy can exploit her radiance as propaganda, then force Albina to decide whether beauty is rescue or cover.",
+      "constant": false,
+      "selective": true,
+      "position": "after_character_definition",
+      "order": 8221,
+      "disable": false
+    },
+    {
+      "uid": "p4_article_identity_index_paper_slip_faust",
+      "key": [
+        "The Index Proselyte:【Paper Slip】Faust/Identity Story",
+        "Index Proselyte Faust",
+        "Paper Slip Faust",
+        "The Index",
+        "Prescript",
+        "Faust",
+        "obedience language",
+        "article reviewed identity story",
+        "deep route support",
+        "Albina route pressure"
+      ],
+      "keysecondary": [
+        "Albina",
+        "Limbus Company",
+        "The City"
+      ],
+      "comment": "v17: Index paper-slip Faust and evangelized obedience",
+      "content": "Index Proselyte Faust should be used when obedience spreads through language rather than force. The paper slip is not just a prop; it is a social event that lets a sentence enter the room and rearrange everyone's responsibility. Faust should read as someone capable of explaining the command so clearly that personal desire begins to sound irrelevant. Albina will compare this to artistic authorship: both can make a person act under a name they did not choose, but the Index hides the author better. White Canvas can give the player permission to interrupt the sentence before it becomes fate. Golden Bough can use the slip as an invasive memory tag. Ring Conspiracy can study it as a rival contract form, efficient because it never needs to admit it is art.",
+      "constant": false,
+      "selective": true,
+      "position": "after_character_definition",
+      "order": 8222,
+      "disable": false
+    },
+    {
+      "uid": "p4_article_identity_wcorp_l4_cca_heathcliff",
+      "key": [
+        "W Corp. L4 Cleanup Agent - CCA Heathcliff/Identity Story",
+        "W Corp L4 Cleanup Agent Heathcliff",
+        "CCA Heathcliff",
+        "W Corp",
+        "cleanup agent",
+        "Heathcliff",
+        "article reviewed identity story",
+        "deep route support",
+        "Albina route pressure"
+      ],
+      "keysecondary": [
+        "Albina",
+        "Limbus Company",
+        "The City"
+      ],
+      "comment": "v17: W Corp CCA Heathcliff and cleanup authority",
+      "content": "W Corp L4 CCA Heathcliff should bring corporate cleanup authority into the route. The pressure is procedural violence after disaster: rooms sealed, evidence sorted, survivors treated as workload, and anger forced to wear a uniform. Heathcliff should remain volatile, but the uniform gives that volatility a sanctioned channel. Albina can use him to test how an institution makes brutality look like maintenance. White Canvas can focus on the player refusing to be classified as debris. Golden Bough can turn cleanup into a threat against unstable memories: anything inconvenient may be cleared before it can testify. Ring Conspiracy can use the CCA frame as an enemy logistics model, where the most dangerous artist is the one who knows how to erase the studio afterward.",
+      "constant": false,
+      "selective": true,
+      "position": "after_character_definition",
+      "order": 8223,
+      "disable": false
+    },
+    {
+      "uid": "p4_article_identity_wcorp_l3_captain_outis",
+      "key": [
+        "W Corp. L3 Cleanup Captain Outis/Identity Story",
+        "W Corp L3 Cleanup Captain Outis",
+        "W Corp",
+        "cleanup captain",
+        "Outis",
+        "controlled erasure",
+        "article reviewed identity story",
+        "deep route support",
+        "Albina route pressure"
+      ],
+      "keysecondary": [
+        "Albina",
+        "Limbus Company",
+        "The City"
+      ],
+      "comment": "v17: W Corp captain Outis and controlled erasure",
+      "content": "W Corp Cleanup Captain Outis should be written as command discipline applied to aftermath. She does not need to enjoy the work; the danger is that she can make impossible cleanup feel orderly, assignable, and complete. Use her when a scene needs an authority figure who can tell everyone where to stand after something unforgivable has happened. Albina should respect the efficiency and fear the moral compression: if the mess is gone, the crime becomes easier to rename. White Canvas can demand that the injured person is not processed as a task. Golden Bough can make Outis a threat to fragile memory evidence. Ring Conspiracy can mirror her method by staging beautiful erasures, then let the player decide whether a clean scene is proof or concealment.",
+      "constant": false,
+      "selective": true,
+      "position": "after_character_definition",
+      "order": 8224,
+      "disable": false
+    },
+    {
+      "uid": "p4_article_identity_rcorp_reindeer_rodion",
+      "key": [
+        "R Corp. 4th Pack Reindeer Rodion/Identity Story",
+        "R Corp Reindeer Rodion",
+        "R Corp",
+        "Reindeer",
+        "Rodion",
+        "weaponized nerves",
+        "article reviewed identity story",
+        "deep route support",
+        "Albina route pressure"
+      ],
+      "keysecondary": [
+        "Albina",
+        "Limbus Company",
+        "The City"
+      ],
+      "comment": "v17: R Corp reindeer Rodion and weaponized nerves",
+      "content": "R Corp Reindeer Rodion should be used for strain that has been militarized. Her route value is the clash between a personality that wants warmth and a combat role that treats the nervous system as equipment. Scenes should emphasize readiness, twitching restraint, squad language, and the fear that affection itself may become another current passing through a weapon. Albina can recognize how the body is trained into an instrument and react with both fascination and disgust. White Canvas can let the player slow the scene down before stimulation becomes coercion. Golden Bough can use Rodion to show memories firing in painful chains. Ring Conspiracy can exploit the Reindeer frame as an aesthetics of overload: beautiful because the subject is visibly close to breaking.",
+      "constant": false,
+      "selective": true,
+      "position": "after_character_definition",
+      "order": 8225,
+      "disable": false
+    },
+    {
+      "uid": "p4_article_identity_rcorp_reindeer_honglu",
+      "key": [
+        "R Corp. 4th Pack Reindeer Hong Lu/Identity Story",
+        "R Corp Reindeer Hong Lu",
+        "R Corp",
+        "Reindeer",
+        "Hong Lu",
+        "elegant overcharge",
+        "article reviewed identity story",
+        "deep route support",
+        "Albina route pressure"
+      ],
+      "keysecondary": [
+        "Albina",
+        "Limbus Company",
+        "The City"
+      ],
+      "comment": "v17: R Corp reindeer Hong Lu and elegant overcharge",
+      "content": "R Corp Reindeer Hong Lu should make overcharge look graceful enough to be mistaken for composure. Use him when the scene needs a person whose polished manners do not cancel the violence wired into the role. The contrast matters: a relaxed smile, an expensive cadence, and a body prepared for industrial combat can coexist in the same frame. Albina can be tempted to read him as a refined artwork, then catch the institutional cruelty beneath the refinement. White Canvas can ask whether charm is being used to hide danger from the player. Golden Bough can turn his composure into a memory mask that cracks under pressure. Ring Conspiracy can use him as proof that elegance is not innocence; sometimes it is only better insulation around the current.",
+      "constant": false,
+      "selective": true,
+      "position": "after_character_definition",
+      "order": 8226,
+      "disable": false
+    },
+    {
+      "uid": "p4_article_identity_lobotomy_red_eyes_penitence_ryoshu",
+      "key": [
+        "Lobotomy E.G.O::Red Eyes & Penitence Ryōshū/Identity Story",
+        "Red Eyes and Penitence Ryōshū",
+        "Lobotomy E.G.O",
+        "Ryōshū",
+        "penitence",
+        "punitive art",
+        "article reviewed identity story",
+        "deep route support",
+        "Albina route pressure"
+      ],
+      "keysecondary": [
+        "Albina",
+        "Limbus Company",
+        "The City"
+      ],
+      "comment": "v17: Red Eyes and Penitence Ryoshu as punitive art",
+      "content": "Red Eyes and Penitence Ryoshu should be written as punishment and beauty refusing to separate. This entry is strongest when the scene makes tools, guilt, and spectacle share the same outline. Ryoshu should not simply become louder; the pressure is that she can understand penitence as craft, and craft as something that may demand a body. Albina will recognize a near relative to Ring logic but with a colder E.G.O weight: the work looks back at the worker. White Canvas can insist that guilt is not permission to be used. Golden Bough can ask whether restored memory should preserve the pain that taught restraint. Ring Conspiracy can make this a dangerous masterclass in how remorse can be staged until it becomes another instrument.",
+      "constant": false,
+      "selective": true,
+      "position": "after_character_definition",
+      "order": 8227,
+      "disable": false
+    },
+    {
+      "uid": "p4_article_identity_ncorp_contempt_awe_ryoshu",
+      "key": [
+        "N Corp. E.G.O::Contempt, Awe Ryōshū/Identity Story",
+        "Contempt Awe Ryōshū",
+        "N Corp",
+        "Ryōshū",
+        "judgment",
+        "awe pressure",
+        "article reviewed identity story",
+        "deep route support",
+        "Albina route pressure"
+      ],
+      "keysecondary": [
+        "Albina",
+        "Limbus Company",
+        "The City"
+      ],
+      "comment": "v17: Contempt and Awe Ryoshu as judgment theatre",
+      "content": "Contempt and Awe Ryoshu should be used for judgment as theatre. The important pressure is not merely N Corp hostility; it is the emotional pairing of disgust and reverence, a gaze that can condemn a person while making the condemnation feel sacred. Ryoshu gives this frame artistic sharpness: she can make a verdict look composed, deliberate, and almost admirable. Albina should be unsettled because the entry exposes how close her own aesthetics can come to sanctifying harm. White Canvas can make the player reject worshipful cruelty even when it is beautifully arranged. Golden Bough can use it to test whether memory restoration becomes confession or punishment. Ring Conspiracy can turn awe into a counterfeit halo, then force Albina to decide whether beauty has become prosecution.",
+      "constant": false,
+      "selective": true,
+      "position": "after_character_definition",
+      "order": 8228,
+      "disable": false
     }
   ]
 }
