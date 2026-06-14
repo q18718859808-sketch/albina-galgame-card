@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1920" height="1080" viewBox="0 0 1920 1080">
+
+  <defs>
+    <linearGradient id="city" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#08080d"/>
+      <stop offset="0.42" stop-color="#17202a"/>
+      <stop offset="1" stop-color="#3a1119"/>
+    </linearGradient>
+    <linearGradient id="gold" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#fff7c9"/>
+      <stop offset="0.48" stop-color="#d5a83d"/>
+      <stop offset="1" stop-color="#8b5d18"/>
+    </linearGradient>
+    <linearGradient id="porcelain" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#f7fbff"/>
+      <stop offset="0.52" stop-color="#b9c6ce"/>
+      <stop offset="1" stop-color="#59636a"/>
+    </linearGradient>
+    <filter id="softGlow"><feGaussianBlur stdDeviation="6" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+    <filter id="grain"><feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="3" stitchTiles="stitch"/><feColorMatrix type="saturate" values="0"/><feComponentTransfer><feFuncA type="table" tableValues="0 0.13"/></feComponentTransfer></filter>
+  </defs>
+
+<rect width="1920" height="1080" fill="url(#city)"/>
+<rect width="1920" height="1080" filter="url(#grain)" opacity=".45"/>
+<path d="M0 780 C420 660 620 880 930 740 C1240 600 1500 700 1920 610 L1920 1080 L0 1080 Z" fill="#05070b" opacity=".88"/>
+<g filter="url(#softGlow)"><path d="M1891 180 C1981 100 2081 300 2201 200" stroke="#89d6c8" stroke-opacity=".22" stroke-width="2" fill="none"/><path d="M68 227 C158 147 258 347 378 247" stroke="#89d6c8" stroke-opacity=".22" stroke-width="3" fill="none"/><path d="M165 274 C255 194 355 394 475 294" stroke="#89d6c8" stroke-opacity=".22" stroke-width="4" fill="none"/><path d="M262 321 C352 241 452 441 572 341" stroke="#89d6c8" stroke-opacity=".22" stroke-width="5" fill="none"/><path d="M359 368 C449 288 549 488 669 388" stroke="#89d6c8" stroke-opacity=".22" stroke-width="2" fill="none"/><path d="M456 415 C546 335 646 535 766 435" stroke="#89d6c8" stroke-opacity=".22" stroke-width="3" fill="none"/><path d="M553 462 C643 382 743 582 863 482" stroke="#89d6c8" stroke-opacity=".22" stroke-width="4" fill="none"/><path d="M650 509 C740 429 840 629 960 529" stroke="#89d6c8" stroke-opacity=".22" stroke-width="5" fill="none"/><path d="M747 556 C837 476 937 676 1057 576" stroke="#89d6c8" stroke-opacity=".22" stroke-width="2" fill="none"/><path d="M844 603 C934 523 1034 723 1154 623" stroke="#89d6c8" stroke-opacity=".22" stroke-width="3" fill="none"/><path d="M941 650 C1031 570 1131 770 1251 670" stroke="#89d6c8" stroke-opacity=".22" stroke-width="4" fill="none"/><path d="M1038 697 C1128 617 1228 817 1348 717" stroke="#89d6c8" stroke-opacity=".22" stroke-width="5" fill="none"/><path d="M1135 744 C1225 664 1325 864 1445 764" stroke="#89d6c8" stroke-opacity=".22" stroke-width="2" fill="none"/><path d="M1232 791 C1322 711 1422 911 1542 811" stroke="#89d6c8" stroke-opacity=".22" stroke-width="3" fill="none"/><path d="M1329 838 C1419 758 1519 958 1639 858" stroke="#89d6c8" stroke-opacity=".22" stroke-width="4" fill="none"/><path d="M1426 885 C1516 805 1616 1005 1736 905" stroke="#89d6c8" stroke-opacity=".22" stroke-width="5" fill="none"/><path d="M1523 932 C1613 852 1713 1052 1833 952" stroke="#89d6c8" stroke-opacity=".22" stroke-width="2" fill="none"/><path d="M1620 219 C1710 139 1810 339 1930 239" stroke="#89d6c8" stroke-opacity=".22" stroke-width="3" fill="none"/><path d="M1717 266 C1807 186 1907 386 2027 286" stroke="#89d6c8" stroke-opacity=".22" stroke-width="4" fill="none"/><path d="M1814 313 C1904 233 2004 433 2124 333" stroke="#89d6c8" stroke-opacity=".22" stroke-width="5" fill="none"/></g>
+<g><path d="M510 885 C450 610 580 500 700 560 C825 620 780 890 745 1010 L470 1010 Z" fill="#e8edf1" stroke="#89d6c8" stroke-opacity=".55" stroke-width="8"/><circle cx="620" cy="505" r="74" fill="#e8edf1" stroke="#e0b252" stroke-width="7"/><path d="M1110 885 C1050 610 1180 500 1300 560 C1425 620 1380 890 1345 1010 L1070 1010 Z" fill="#111820" stroke="#89d6c8" stroke-opacity=".55" stroke-width="8"/><circle cx="1220" cy="505" r="74" fill="#111820" stroke="#e0b252" stroke-width="7"/></g>
+<path d="M0 0 H1920 V1080 H0 Z" fill="none" stroke="#89d6c8" stroke-opacity=".35" stroke-width="28"/>
+<text x="96" y="120" fill="#f8edc6" opacity=".42" font-size="42" font-family="serif">White Canvas Ending</text>
+<text x="96" y="174" fill="#c7d7e8" opacity=".24" font-size="24" font-family="serif">nest_station</text>
+</svg>
