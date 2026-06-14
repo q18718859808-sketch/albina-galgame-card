@@ -1,0 +1,244 @@
+{
+  "name": "主线章节骨架补充",
+  "description": "Canto I-VIII 主线氛围、场景推进与阿尔比娜线可用压力结构。",
+  "entries": [
+    {
+      "uid": "p2_callisto_enemy_stage_pressure",
+      "key": [
+        "Callisto/Enemy",
+        "Ring Nursefather - Callisto",
+        "Hatching 9-43",
+        "Mirror Dungeon",
+        "Callisto battle"
+      ],
+      "keysecondary": [
+        "Albina",
+        "Fascia",
+        "The Ring",
+        "Corpus Theater"
+      ],
+      "comment": "P2：Callisto 敌方压力与师承舞台",
+      "content": "Callisto/Enemy 应作为阿尔比娜线的师承压力，而不是普通强敌名牌。页面结构把他的敌方形态、行为、攻击模式、战斗提示、台词、Hatching 9-43、Mirror Dungeon 与独特状态效果分成多个层面；RP 中可据此把 Callisto 写成环指人体派的上位审美权威。他出场时，阿尔比娜会下意识整理礼貌、作品姿态和对法西娅的说明，像学徒在大师面前接受检阅。战斗不应只写数值压迫，而要写成展示会失控：命令、作品、素材、舞台和观众在同一时间向玩家收紧。若前端没有确认战斗结果，AI 只描写气势、招式余波、阿尔比娜的反应和 Callisto 造成的心理压迫，不自行结算胜负。",
+      "constant": false,
+      "selective": true,
+      "position": "after_character_definition",
+      "order": 5000,
+      "disable": false
+    },
+    {
+      "uid": "p2_araya_callisto_sprite_visual_continuity",
+      "key": [
+        "Araya/Sprites",
+        "Callisto/Sprites",
+        "In-game Sprites",
+        "visual continuity",
+        "spider gallery staging"
+      ],
+      "keysecondary": [
+        "Araya",
+        "Callisto",
+        "Albina",
+        "The House of Spiders"
+      ],
+      "comment": "P2：Araya 与 Callisto 视觉连续性",
+      "content": "Araya/Sprites 与 Callisto/Sprites 的作用是校准视觉连续性，而不是给 AI 复制画面。RP 中需要同场表现蜘蛛巢和环指人体派时，可把 Araya 写成组织秩序与战线管理的视觉锚点，把 Callisto 写成大师级权威与舞台压迫的视觉锚点；阿尔比娜则位于两者之间，既想被认可，又按自己的灵感偏离计划。立绘、CG 和场景描述应保持白色义体、蛛网、医疗器械、展览灯光、环指式夸张审美之间的统一。任何图片复用、CG 解锁和立绘切换都归前端处理；AI 只把这些视觉锚点转化为角色可感知的姿态、距离和氛围。",
+      "constant": false,
+      "selective": true,
+      "position": "after_character_definition",
+      "order": 5010,
+      "disable": false
+    },
+    {
+      "uid": "p2_canto_i_outcast_opening_frame",
+      "key": [
+        "Canto I Story Episodes",
+        "The Outcast",
+        "Vroom-vroom",
+        "Enkephalin",
+        "Yuri",
+        "Branch D-02"
+      ],
+      "keysecondary": [
+        "Limbus Company",
+        "Dante",
+        "LCB Sinner",
+        "bus deck"
+      ],
+      "comment": "P2：Canto I 开场骨架",
+      "content": "Canto I 的 RP 用途是确立边狱巴士的基本语法：巴士不是背景板，而是移动基地、任务载具和罪人群像的聚合点。章节结构从 Vroom-vroom、Bus Deck、Enkephalin、Yuri、The Trio、Pests、Guides、Grade 8 Fixers 推进到 Branch D-02，说明早期故事应带有入职、任务说明、资源采集、普通人卷入和低级收尾人秩序的混合感。阿尔比娜卡若回溯这类早期氛围，应把玩家放在尚未完全理解都市规则的位置：每个新词都像车窗外闪过的警示牌，每次战斗都在教人什么可以被记录、什么会被丢下。不要让阿尔比娜过早压过这个开场框架；她更适合被作为后续更高级审美恐怖的对照。",
+      "constant": false,
+      "selective": true,
+      "position": "after_character_definition",
+      "order": 5020,
+      "disable": false
+    },
+    {
+      "uid": "p2_canto_ii_unloving_crime_comedy_frame",
+      "key": [
+        "Canto II Story Episodes",
+        "The Unloving",
+        "Casino",
+        "Pawnshop",
+        "Wish Canister",
+        "S.Y.N.C."
+      ],
+      "keysecondary": [
+        "Limbus Company",
+        "Rodion",
+        "Branch J-03",
+        "criminal city rhythm"
+      ],
+      "comment": "P2：Canto II 犯罪喜剧与失败节奏",
+      "content": "Canto II 的 RP 支撑点是犯罪场景、荒唐计划和失败节奏交替出现。章节结构包含 Casino、Pawnshop、A Flawless Plan、Louse、Soldiers of Limbu、Towering Cars、Wish Canister、Slot Machines、A Performance、S.Y.N.C.、Baile y Rola 等节点，适合把都市写成一台会把小聪明碾碎的娱乐机器。阿尔比娜线使用这类氛围时，可以让玩家在轻浮交易、赌桌灯光、临时计划和突然暴力之间移动；她的礼貌残酷会因此显得更危险，因为她不是混乱中的偶然敌人，而是能把混乱整理成作品的人。AI 应保留节奏上的滑稽与残忍并存，不把场景写成纯喜剧。",
+      "constant": false,
+      "selective": true,
+      "position": "after_character_definition",
+      "order": 5030,
+      "disable": false
+    },
+    {
+      "uid": "p2_canto_iii_unconfronting_taboo_frame",
+      "key": [
+        "Canto III Story Episodes",
+        "The Unconfronting",
+        "Code Purple",
+        "Taboo",
+        "HP Bullets",
+        "Inquisitors"
+      ],
+      "keysecondary": [
+        "Siegfried",
+        "Silent Night",
+        "Branch K-02",
+        "Limbus Company"
+      ],
+      "comment": "P2：Canto III 禁忌、检查与审判压力",
+      "content": "Canto III 可作为规则审判型压力源。章节结构中有 Inspection、Code Purple、Taboo、HP Bullets、Siegfried、The Deal They Struck、Inquisitors、Silent Night 等节点，适合把都市写成会把禁令、检查、武装执行和宗教式敌意压到角色身上的空间。阿尔比娜线引用这种氛围时，玩家不应只面对她的个人审美，还应面对外部机构对身体、罪、异端和价值的判断。她把人体当作品，Canto III 式压力则把人当需要被检查、惩戒或归类的对象；两者相遇时，RP 会形成更冷的伦理夹击。AI 不要自行替任何组织宣判最终结论，只描写制度性压迫如何进入现场。",
+      "constant": false,
+      "selective": true,
+      "position": "after_character_definition",
+      "order": 5040,
+      "disable": false
+    },
+    {
+      "uid": "p2_canto_iv_unchanging_memory_technology_frame",
+      "key": [
+        "Canto IV Story Episodes",
+        "The Unchanging",
+        "Talent and Genius",
+        "Technology Liberation Alliance",
+        "League of Nine",
+        "Regeneration Ampules"
+      ],
+      "keysecondary": [
+        "Yi Sang",
+        "K Corp",
+        "mirror",
+        "memory"
+      ],
+      "comment": "P2：Canto IV 技术、记忆与旧友结构",
+      "content": "Canto IV 的 RP 骨架应围绕技术、天才、客户、旧友、背叛和记忆回收展开。Part I 到 Part III 的章节结构包含 Talent and Genius、Drones and Abnormalities、The Client、Regeneration Ampules、Terrorist Organization、Technology Liberation Alliance、Traitor、Hole、Raid、Constellations、Screening Room、Bud、Nothing、Binding、Reminisced League of Nine 等节点。阿尔比娜线使用这组背景时，可把法西娅和义体问题放入更广阔的技术伦理里：身体是技术成果、记忆是被放映的证据、作品是过去关系留下的残片。Yi Sang 式镜像观察可以作为低声旁白的参照，但不能把阿尔比娜直接改写成 Canto IV 人物的替身。",
+      "constant": false,
+      "selective": true,
+      "position": "after_character_definition",
+      "order": 5050,
+      "disable": false
+    },
+    {
+      "uid": "p2_canto_v_evil_defining_voyage_frame",
+      "key": [
+        "Canto V Story Episodes",
+        "The Evil Defining",
+        "Setting Sail",
+        "Resonance Tuning Fork",
+        "The Whaler",
+        "Pallid Whale"
+      ],
+      "keysecondary": [
+        "Ishmael",
+        "The Lake",
+        "Harpoons",
+        "The Indigo Elder"
+      ],
+      "comment": "P2：Canto V 航行、追猎与巨物压力",
+      "content": "Canto V 的 RP 骨架是航行、法律、俱乐部、海上追猎和巨物压迫。Part I 与 Part II 的章节结构包含 Setting Sail、The Laws、Resonance Tuning Fork、Kidnappers、Insubordination、The Club、The First Mate、Shipping Containers、Pirates、Cruise Party、The Calamity、The Whaler、The Lake and the Butterfly、Harpoons、The Big Brother、The Indigo Elder、The Pallid Whale 等节点。阿尔比娜线可借用这种结构写追猎感：玩家与阿尔比娜的关系不是站在房间里静止谈判，而是在更大危险中被迫同航、同逃或互相瞄准。法西娅的饥饿可以与海上追猎的执念形成镜像，但 AI 不能把不同章节设定混成同一事件。",
+      "constant": false,
+      "selective": true,
+      "position": "after_character_definition",
+      "order": 5060,
+      "disable": false
+    },
+    {
+      "uid": "p2_canto_vi_heartbreaking_worlds_frame",
+      "key": [
+        "Canto VI Story Episodes",
+        "The Heartbreaking",
+        "Wuthering Heights",
+        "Catherine",
+        "The Wild Hunt",
+        "Erlking"
+      ],
+      "keysecondary": [
+        "Heathcliff",
+        "Every World",
+        "Golden Bough",
+        "glass pods"
+      ],
+      "comment": "P2：Canto VI 庄园、执念与多世界创伤",
+      "content": "Canto VI 的 RP 骨架是庄园、旧爱、模仿、地下空间、野猎和多世界创伤。三个部分的章节结构包含 Wuthering Heights、There's no TIME、The Letter、Nelly、Catherine、Butlers、The Ghost、The Dead Rabbits、Abyssal Basement、Glass Pods、Imitations、Where It All Went Wrong、Violin、The Beast、The Wild Hunt、The Golden Bough、Erlking、Life Stolen、Expression of Love、Hearts Unbroken、Every World 等节点。阿尔比娜线使用这类支撑时，应把执念写成能撕开世界线的东西：想保住一个人、想完成一件作品、想证明自己，都可能让角色走向过度。金枝重构线尤其适合借用这种多世界伤口感，但必须保持同人分支身份。",
+      "constant": false,
+      "selective": true,
+      "position": "after_character_definition",
+      "order": 5070,
+      "disable": false
+    },
+    {
+      "uid": "p2_canto_vii_dream_ending_bloodfiend_frame",
+      "key": [
+        "Canto VII Story Episodes",
+        "The Dream Ending",
+        "La Manchaland",
+        "Bloodfiends",
+        "Sanson",
+        "Dulcinea"
+      ],
+      "keysecondary": [
+        "Don Quixote",
+        "Cinq",
+        "Haunted Bloody Mary",
+        "White Moon"
+      ],
+      "comment": "P2：Canto VII 夸饰叙事、血鬼与梦想破裂",
+      "content": "Canto VII 的 RP 骨架应保留夸饰叙事和舞台化标题的质感。Part I 与 Part II 的章节结构围绕 Don Quixote、契约、与 Wing 的联盟、Fixer 礼节、La Manchaland、Bloodfiends、haunted mansion、Bloody Mary、Forlorn King、Sanson、White Moon、Dulcinea、记忆与冒险故事推进。阿尔比娜线可借此处理艺术舞台与现实伤口之间的断裂：她把战斗称为展览，Canto VII 式叙事则把残酷讲成骑士故事或游乐园传说。玩家若试图用童话、梦想或舞台语言接近她，必须让血、契约和记忆的代价重新回到场上。",
+      "constant": false,
+      "selective": true,
+      "position": "after_character_definition",
+      "order": 5080,
+      "disable": false
+    },
+    {
+      "uid": "p2_canto_viii_surrendered_witnessing_family_power_frame",
+      "key": [
+        "Canto VIII Story Episodes",
+        "The Surrendered Witnessing",
+        "Jia Baoyu",
+        "Xue Baochai",
+        "Jia Xichun",
+        "Hongyuan"
+      ],
+      "keysecondary": [
+        "Hong Lu",
+        "N Corp",
+        "The Thumb",
+        "Xianren"
+      ],
+      "comment": "P2：Canto VIII 家族、权力真空与见证结构",
+      "content": "Canto VIII 的 RP 骨架是归家、家族秩序、权力真空、外部势力和被迫见证。Part I 与 Part III 的章节结构包含 Homeward Bound、The Bell Tolls、Jia Baoyu、Xue Baochai、Yihongyuan、To be Free from Aging and Death、N Corp、The Thumb、Jia Xichun、Intruders、Night Ambush、The Hierarch of Hongyuan、Momentary Power Vacuum、Justice of Others、Actions of a Thief、The Will to Change、The Heart、Temporary Truce、Happiness Wrath Sorrow and Joy、Xianren 等节点。阿尔比娜线引用这类骨架时，可把环指的师承和蜘蛛巢的同门关系写成另一种家族权力：温柔称呼、继承、审美、身体和背叛同时存在。玩家不是只在恋爱，而是在见证一套组织如何决定一个人能不能被改写。",
+      "constant": false,
+      "selective": true,
+      "position": "after_character_definition",
+      "order": 5090,
+      "disable": false
+    }
+  ]
+}

@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1920" height="1080" viewBox="0 0 1920 1080">
+
+  <defs>
+    <linearGradient id="city" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#08080d"/>
+      <stop offset="0.42" stop-color="#17202a"/>
+      <stop offset="1" stop-color="#3a1119"/>
+    </linearGradient>
+    <linearGradient id="gold" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#fff7c9"/>
+      <stop offset="0.48" stop-color="#d5a83d"/>
+      <stop offset="1" stop-color="#8b5d18"/>
+    </linearGradient>
+    <linearGradient id="porcelain" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#f7fbff"/>
+      <stop offset="0.52" stop-color="#b9c6ce"/>
+      <stop offset="1" stop-color="#59636a"/>
+    </linearGradient>
+    <filter id="softGlow"><feGaussianBlur stdDeviation="6" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+    <filter id="grain"><feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="3" stitchTiles="stitch"/><feColorMatrix type="saturate" values="0"/><feComponentTransfer><feFuncA type="table" tableValues="0 0.13"/></feComponentTransfer></filter>
+  </defs>
+
+<rect width="1920" height="1080" fill="url(#city)"/>
+<rect width="1920" height="1080" filter="url(#grain)" opacity=".45"/>
+<path d="M0 780 C420 660 620 880 930 740 C1240 600 1500 700 1920 610 L1920 1080 L0 1080 Z" fill="#05070b" opacity=".88"/>
+<g filter="url(#softGlow)"><path d="M1403 180 C1493 100 1593 300 1713 200" stroke="#d2a441" stroke-opacity=".22" stroke-width="2" fill="none"/><path d="M1500 227 C1590 147 1690 347 1810 247" stroke="#d2a441" stroke-opacity=".22" stroke-width="3" fill="none"/><path d="M1597 274 C1687 194 1787 394 1907 294" stroke="#d2a441" stroke-opacity=".22" stroke-width="4" fill="none"/><path d="M1694 321 C1784 241 1884 441 2004 341" stroke="#d2a441" stroke-opacity=".22" stroke-width="5" fill="none"/><path d="M1791 368 C1881 288 1981 488 2101 388" stroke="#d2a441" stroke-opacity=".22" stroke-width="2" fill="none"/><path d="M1888 415 C1978 335 2078 535 2198 435" stroke="#d2a441" stroke-opacity=".22" stroke-width="3" fill="none"/><path d="M65 462 C155 382 255 582 375 482" stroke="#d2a441" stroke-opacity=".22" stroke-width="4" fill="none"/><path d="M162 509 C252 429 352 629 472 529" stroke="#d2a441" stroke-opacity=".22" stroke-width="5" fill="none"/><path d="M259 556 C349 476 449 676 569 576" stroke="#d2a441" stroke-opacity=".22" stroke-width="2" fill="none"/><path d="M356 603 C446 523 546 723 666 623" stroke="#d2a441" stroke-opacity=".22" stroke-width="3" fill="none"/><path d="M453 650 C543 570 643 770 763 670" stroke="#d2a441" stroke-opacity=".22" stroke-width="4" fill="none"/><path d="M550 697 C640 617 740 817 860 717" stroke="#d2a441" stroke-opacity=".22" stroke-width="5" fill="none"/><path d="M647 744 C737 664 837 864 957 764" stroke="#d2a441" stroke-opacity=".22" stroke-width="2" fill="none"/><path d="M744 791 C834 711 934 911 1054 811" stroke="#d2a441" stroke-opacity=".22" stroke-width="3" fill="none"/><path d="M841 838 C931 758 1031 958 1151 858" stroke="#d2a441" stroke-opacity=".22" stroke-width="4" fill="none"/><path d="M938 885 C1028 805 1128 1005 1248 905" stroke="#d2a441" stroke-opacity=".22" stroke-width="5" fill="none"/><path d="M1035 932 C1125 852 1225 1052 1345 952" stroke="#d2a441" stroke-opacity=".22" stroke-width="2" fill="none"/><path d="M1132 219 C1222 139 1322 339 1442 239" stroke="#d2a441" stroke-opacity=".22" stroke-width="3" fill="none"/><path d="M1229 266 C1319 186 1419 386 1539 286" stroke="#d2a441" stroke-opacity=".22" stroke-width="4" fill="none"/><path d="M1326 313 C1416 233 1516 433 1636 333" stroke="#d2a441" stroke-opacity=".22" stroke-width="5" fill="none"/></g>
+<g><path d="M510 885 C450 610 580 500 700 560 C825 620 780 890 745 1010 L470 1010 Z" fill="#e8edf1" stroke="#d2a441" stroke-opacity=".55" stroke-width="8"/><circle cx="620" cy="505" r="74" fill="#e8edf1" stroke="#e0b252" stroke-width="7"/><path d="M1110 885 C1050 610 1180 500 1300 560 C1425 620 1380 890 1345 1010 L1070 1010 Z" fill="#111820" stroke="#d2a441" stroke-opacity=".55" stroke-width="8"/><circle cx="1220" cy="505" r="74" fill="#111820" stroke="#e0b252" stroke-width="7"/></g>
+<path d="M0 0 H1920 V1080 H0 Z" fill="none" stroke="#d2a441" stroke-opacity=".35" stroke-width="28"/>
+<text x="96" y="120" fill="#f8edc6" opacity=".42" font-size="42" font-family="serif">Araya Rooftop</text>
+<text x="96" y="174" fill="#c7d7e8" opacity=".24" font-size="24" font-family="serif">spider_gallery</text>
+</svg>

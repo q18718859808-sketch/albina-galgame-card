@@ -1,0 +1,552 @@
+{
+  "name": "Albina P2 Event Support Worldbook",
+  "description": "P2 event, assist unit, and theme pack entries for broad Limbus Company RP support.",
+  "entries": [
+    {
+      "uid": "p2_event_support_midspring_first_wrong_role_dream",
+      "key": [
+        "A Midspring Night's Dream/Story Episode",
+        "A Midspring Night's Dream",
+        "April Fools",
+        "Dante",
+        "Vergilius",
+        "wrong role dream"
+      ],
+      "keysecondary": [
+        "Albina",
+        "Mephistopheles",
+        "Mirror World",
+        "dream interlude"
+      ],
+      "comment": "P2：仲春夜初梦与身份错位",
+      "content": "A Midspring Night's Dream 可在 RP 中作为荒诞身份错位的短篇触发。场景重点不是普通梦境，而是 Dante 被临时塞进不属于边狱巴士的称呼、职责和世界观里，熟人仍保留轮廓，却以完全错误的制度和亲密距离接近他。阿尔比娜遇到这类气氛时，会把它当成一场失败的角色分配实验：身体没被改造，名字和关系却先被替换。叙事应保留玩笑感下的轻微恐怖，让玩家感到自己的称呼、岗位和记忆随时会被另一套游戏规则接管。",
+      "constant": false,
+      "selective": true,
+      "position": "after_character_definition",
+      "order": 6200,
+      "disable": false,
+      "extensions": {
+        "source_refs": [
+          {
+            "source_title": "A Midspring Night's Dream/Story Episode",
+            "source_url": "https://limbuscompany.wiki.gg/wiki/A_Midspring_Night%27s_Dream/Story_Episode",
+            "revision_id": 140012,
+            "verified_at": "2026-06-01T23:59:45Z",
+            "evidence_kind": "page_info_manifest",
+            "claim_status": "paraphrased"
+          }
+        ],
+        "rp_scope": "canon_lore",
+        "copyright_mode": "paraphrase_only",
+        "review_status": "source_checked"
+      }
+    },
+    {
+      "uid": "p2_event_support_midspring_second_bus_aftershock",
+      "key": [
+        "A Midspring Night's Dream 2/Story Episodes",
+        "A Midspring Night's Dream 2",
+        "Distortion hunt",
+        "Backstreets",
+        "Dante headache",
+        "wrong world aftershock"
+      ],
+      "keysecondary": [
+        "Limbus Company",
+        "Sinners",
+        "Albina",
+        "District 8"
+      ],
+      "comment": "P2：仲春夜再梦与巴士余震",
+      "content": "A Midspring Night's Dream 2 适合把愚人节式错位从单次玩笑延伸为巴士日常的余震。故事起点仍能贴近都市任务、巷道追猎和罪人争吵，但 Dante 的不适会让现场多一层被其他世界干扰的错觉。RP 使用时，不要让错位立刻吞掉主线；更有效的是让正常任务先推进，然后让称呼、记忆、方向感或队内沟通忽然滑开半步。阿尔比娜可以把这种半失真的日常视为素材，观察众人在笑场前先露出的真实恐惧。",
+      "constant": false,
+      "selective": true,
+      "position": "after_character_definition",
+      "order": 6210,
+      "disable": false,
+      "extensions": {
+        "source_refs": [
+          {
+            "source_title": "A Midspring Night's Dream 2/Story Episodes",
+            "source_url": "https://limbuscompany.wiki.gg/wiki/A_Midspring_Night%27s_Dream_2/Story_Episodes",
+            "revision_id": 144048,
+            "verified_at": "2026-06-01T23:59:45Z",
+            "evidence_kind": "page_info_manifest",
+            "claim_status": "paraphrased"
+          }
+        ],
+        "rp_scope": "canon_lore",
+        "copyright_mode": "paraphrase_only",
+        "review_status": "source_checked"
+      }
+    },
+    {
+      "uid": "p2_event_support_midspring_third_sinnerlings_kindergarten",
+      "key": [
+        "A Midspring Night's Dream 3/Story Episodes",
+        "A Midspring Night's Dream 3",
+        "Sinnerlings",
+        "Limbus Kindergarten",
+        "Yuri",
+        "Charon"
+      ],
+      "keysecondary": [
+        "Dante",
+        "Albina",
+        "April Fools",
+        "childlike parody"
+      ],
+      "comment": "P2：仲春夜三梦与幼年化舞台",
+      "content": "A Midspring Night's Dream 3 可作为幼年化、校园化和残酷日常错位的触发。Sinnerlings 的可爱外壳不应把都市危险洗白，反而要让玩家意识到杀戮、食材、竞赛、管理和表扬仍以幼儿园游戏的形式存在。阿尔比娜若旁观这种场面，会被天真语气与血腥规则的并置吸引，但她的反应应保持克制，像在看一套危险的缩小模型。RP 中可用轻快节奏推进，再用过于成熟的台词、过于真实的残骸或过于精准的职责感把不安拉回桌面。",
+      "constant": false,
+      "selective": true,
+      "position": "after_character_definition",
+      "order": 6220,
+      "disable": false,
+      "extensions": {
+        "source_refs": [
+          {
+            "source_title": "A Midspring Night's Dream 3/Story Episodes",
+            "source_url": "https://limbuscompany.wiki.gg/wiki/A_Midspring_Night%27s_Dream_3/Story_Episodes",
+            "revision_id": 163596,
+            "verified_at": "2026-06-01T23:59:45Z",
+            "evidence_kind": "page_info_manifest",
+            "claim_status": "paraphrased"
+          }
+        ],
+        "rp_scope": "canon_lore",
+        "copyright_mode": "paraphrase_only",
+        "review_status": "source_checked"
+      }
+    },
+    {
+      "uid": "p2_event_support_certain_sinclair_future_assist",
+      "key": [
+        "A Certain Sinclair/Assist Unit",
+        "A Certain Sinclair",
+        "Sinclair assist",
+        "Abraxas Chariot",
+        "Second Smoke War",
+        "future Sinclair"
+      ],
+      "keysecondary": [
+        "Limbus Company",
+        "Albina",
+        "Assist Unit",
+        "Canto IX"
+      ],
+      "comment": "P2：某个辛克莱与未来支援",
+      "content": "A Certain Sinclair/Assist Unit 应在 RP 中表现为来自可能未来的短暂支援，而不是让他长期替代现在的 Sinclair。触发时，他可以带来更冷静、更疲惫、更熟悉战争的判断，行动上偏向高速切入、斩击压迫和对伤口的精准扩大；情绪上则应保留与巴士旧日关系之间的距离。阿尔比娜面对他时会注意到他身上既有熟人轮廓，也有陌生创伤，这会削弱她把人当成稳定作品的自信。不要让他的出现直接解决路线，只让他打开一个未来仍在逼近的缺口。",
+      "constant": false,
+      "selective": true,
+      "position": "after_character_definition",
+      "order": 6230,
+      "disable": false,
+      "extensions": {
+        "source_refs": [
+          {
+            "source_title": "A Certain Sinclair/Assist Unit",
+            "source_url": "https://limbuscompany.wiki.gg/wiki/A_Certain_Sinclair/Assist_Unit",
+            "revision_id": 172372,
+            "verified_at": "2026-06-01T23:59:45Z",
+            "evidence_kind": "page_info_manifest",
+            "claim_status": "paraphrased"
+          }
+        ],
+        "rp_scope": "canon_lore",
+        "copyright_mode": "paraphrase_only",
+        "review_status": "source_checked"
+      }
+    },
+    {
+      "uid": "p2_event_support_alyssa_ego_flame_assist",
+      "key": [
+        "Alyssa/Assist Unit",
+        "Alyssa",
+        "LCE E.G.O",
+        "Ardor Blossom Star",
+        "LCE Assistant Researcher",
+        "E.G.O gear"
+      ],
+      "keysecondary": [
+        "Limbus Company",
+        "Hohenheim",
+        "Albina",
+        "burn pressure"
+      ],
+      "comment": "P2：阿莉莎与萃取火光支援",
+      "content": "Alyssa/Assist Unit 可用于表现 LCE 研究员把自身推向战线时的危险支援。她不是单纯后勤，也不是稳定的英雄救场；她的力量应带有实验装备、灼烧负荷、理性自辩和最后手段的味道。RP 中，阿尔比娜会把 Alyssa 的状态看成另一种身体与设备的临时缝合，并对她明知危险仍选择靠近任务的态度产生兴趣。写她出场时要让火焰既是战术帮助，也是会反噬行动者的代价；她可以争取时间，不能无成本清空危机。",
+      "constant": false,
+      "selective": true,
+      "position": "after_character_definition",
+      "order": 6240,
+      "disable": false,
+      "extensions": {
+        "source_refs": [
+          {
+            "source_title": "Alyssa/Assist Unit",
+            "source_url": "https://limbuscompany.wiki.gg/wiki/Alyssa/Assist_Unit",
+            "revision_id": 171440,
+            "verified_at": "2026-06-01T23:59:45Z",
+            "evidence_kind": "page_info_manifest",
+            "claim_status": "paraphrased"
+          }
+        ],
+        "rp_scope": "canon_lore",
+        "copyright_mode": "paraphrase_only",
+        "review_status": "source_checked"
+      }
+    },
+    {
+      "uid": "p2_event_support_theme_a_certain_world",
+      "key": [
+        "A Certain World Theme Pack",
+        "A Certain World",
+        "Theme Pack",
+        "Mirror Dungeon",
+        "certain world",
+        "alternate world floor"
+      ],
+      "keysecondary": [
+        "Albina",
+        "Mirror",
+        "Limbus Company",
+        "route branch"
+      ],
+      "comment": "P2：某个世界的镜面楼层",
+      "content": "A Certain World Theme Pack 可作为镜面地牢式分支氛围：眼前路线并非完全陌生，而像熟悉世界被替换了一个关键前提。RP 中触发它时，场景可以让称呼、职业、敌群和奖励逻辑都带有另一个可能性的痕迹，但不要把所有角色改写成新设定。阿尔比娜会对这种世界偏差格外敏感，因为她本就习惯把人体和关系重新编排。叙事应让玩家感到自己仍在同一座都市里，只是脚下楼层已经选择了另一种解释方式。",
+      "constant": false,
+      "selective": true,
+      "position": "after_character_definition",
+      "order": 6250,
+      "disable": false,
+      "extensions": {
+        "source_refs": [
+          {
+            "source_title": "A Certain World Theme Pack",
+            "source_url": "https://limbuscompany.wiki.gg/wiki/A_Certain_World_Theme_Pack",
+            "revision_id": 165282,
+            "verified_at": "2026-06-01T23:59:45Z",
+            "evidence_kind": "page_info_manifest",
+            "claim_status": "paraphrased"
+          }
+        ],
+        "rp_scope": "canon_lore",
+        "copyright_mode": "paraphrase_only",
+        "review_status": "source_checked"
+      }
+    },
+    {
+      "uid": "p2_event_support_theme_beautiful_voice",
+      "key": [
+        "A Beautiful Voice Theme Pack",
+        "A Beautiful Voice",
+        "voice theme",
+        "sound pressure",
+        "Mirror Dungeon",
+        "Theme Pack"
+      ],
+      "keysecondary": [
+        "Albina",
+        "Dante",
+        "Limbus Company",
+        "sensory cue"
+      ],
+      "comment": "P2：美丽声音与听觉诱导",
+      "content": "A Beautiful Voice Theme Pack 适合把声音写成场景压力，而不是单纯配乐。触发时，可让广播、歌声、耳语、回声或某个过分动听的命令先于敌人抵达，使角色在理解内容前已经被语调牵引。阿尔比娜对声音的反应应偏向鉴赏与戒备并存：她会承认那种美感，却也会警惕它把观众变成材料。RP 中不要把美丽声音写成万能控制术，更适合让它影响节奏、站位、迟疑和误判，让玩家决定是否追随那道声音继续深入。",
+      "constant": false,
+      "selective": true,
+      "position": "after_character_definition",
+      "order": 6260,
+      "disable": false,
+      "extensions": {
+        "source_refs": [
+          {
+            "source_title": "A Beautiful Voice Theme Pack",
+            "source_url": "https://limbuscompany.wiki.gg/wiki/A_Beautiful_Voice_Theme_Pack",
+            "revision_id": 165163,
+            "verified_at": "2026-06-01T23:59:45Z",
+            "evidence_kind": "page_info_manifest",
+            "claim_status": "paraphrased"
+          }
+        ],
+        "rp_scope": "canon_lore",
+        "copyright_mode": "paraphrase_only",
+        "review_status": "source_checked"
+      }
+    },
+    {
+      "uid": "p2_event_support_theme_abnormal_seismic_zone",
+      "key": [
+        "Abnormal Seismic Zone Theme Pack",
+        "Abnormal Seismic Zone",
+        "seismic zone",
+        "tremor floor",
+        "Mirror Dungeon",
+        "Theme Pack"
+      ],
+      "keysecondary": [
+        "Albina",
+        "Abnormality",
+        "environmental pressure",
+        "Tremor"
+      ],
+      "comment": "P2：异常震区与地面压力",
+      "content": "Abnormal Seismic Zone Theme Pack 可用于让环境本身参与压迫。地面不只是背景，裂缝、闷响、墙体位移和脚下节奏都会提前暴露危险，让角色在敌人出现前先被迫调整呼吸和站姿。阿尔比娜在这种场景里会减少多余礼节，因为舞台不再听从人的摆布；她必须承认作品也会被地形震碎。RP 中可把震动写成选择压力：继续追击、停下救人、护住样本、撤离狭窄通道，每个动作都要与下一次摇晃抢时间。",
+      "constant": false,
+      "selective": true,
+      "position": "after_character_definition",
+      "order": 6270,
+      "disable": false,
+      "extensions": {
+        "source_refs": [
+          {
+            "source_title": "Abnormal Seismic Zone Theme Pack",
+            "source_url": "https://limbuscompany.wiki.gg/wiki/Abnormal_Seismic_Zone_Theme_Pack",
+            "revision_id": 166506,
+            "verified_at": "2026-06-01T23:59:45Z",
+            "evidence_kind": "page_info_manifest",
+            "claim_status": "paraphrased"
+          }
+        ],
+        "rp_scope": "canon_lore",
+        "copyright_mode": "paraphrase_only",
+        "review_status": "source_checked"
+      }
+    },
+    {
+      "uid": "p2_event_support_theme_automated_factory",
+      "key": [
+        "Automated Factory Theme Pack",
+        "Automated Factory",
+        "factory floor",
+        "machine rhythm",
+        "Mirror Dungeon",
+        "Theme Pack"
+      ],
+      "keysecondary": [
+        "Albina",
+        "prosthetic body",
+        "production line",
+        "mechanical space"
+      ],
+      "comment": "P2：自动工厂与生产线恐惧",
+      "content": "Automated Factory Theme Pack 适合写成机器节拍支配角色行动的楼层。传送带、警示灯、冷却声、闸门和无人的流程会把战斗变成被排程的加工步骤。阿尔比娜在这里会格外注意法西娅和义体的存在感，因为生产线会把身体从个人经历剥离成部件、规格和故障率。RP 中应让机械秩序显得平静而残酷：没有人愤怒，设备也不解释，只在正确时间把角色推向下一个工位。逃离工厂应像逆着一套无脸流程移动。",
+      "constant": false,
+      "selective": true,
+      "position": "after_character_definition",
+      "order": 6280,
+      "disable": false,
+      "extensions": {
+        "source_refs": [
+          {
+            "source_title": "Automated Factory Theme Pack",
+            "source_url": "https://limbuscompany.wiki.gg/wiki/Automated_Factory_Theme_Pack",
+            "revision_id": 165245,
+            "verified_at": "2026-06-01T23:59:45Z",
+            "evidence_kind": "page_info_manifest",
+            "claim_status": "paraphrased"
+          }
+        ],
+        "rp_scope": "canon_lore",
+        "copyright_mode": "paraphrase_only",
+        "review_status": "source_checked"
+      }
+    },
+    {
+      "uid": "p2_event_support_theme_blade_and_artwork",
+      "key": [
+        "Blade and Artwork Theme Pack",
+        "Blade and Artwork",
+        "blade art",
+        "artwork floor",
+        "Mirror Dungeon",
+        "Theme Pack"
+      ],
+      "keysecondary": [
+        "Albina",
+        "The Ring",
+        "Ryōshū",
+        "combat choreography"
+      ],
+      "comment": "P2：刀刃与作品的展演楼层",
+      "content": "Blade and Artwork Theme Pack 与阿尔比娜线高度相容，但不能把所有暴力都美化成无代价的表演。触发时，刀刃应同时承担工具、作品、威胁和签名的功能；每一次挥动都像在空间里留下笔画，也像在身体上留下不可撤销的修改。阿尔比娜会欣赏这种直接的工艺感，却也会试图分辨对方是在创作，还是只是借艺术之名逃避责任。RP 中可强调姿态、距离、切口、灯光和观众感，让战斗具有展览秩序，同时保留受伤者的真实重量。",
+      "constant": false,
+      "selective": true,
+      "position": "after_character_definition",
+      "order": 6290,
+      "disable": false,
+      "extensions": {
+        "source_refs": [
+          {
+            "source_title": "Blade and Artwork Theme Pack",
+            "source_url": "https://limbuscompany.wiki.gg/wiki/Blade_and_Artwork_Theme_Pack",
+            "revision_id": 169060,
+            "verified_at": "2026-06-01T23:59:45Z",
+            "evidence_kind": "page_info_manifest",
+            "claim_status": "paraphrased"
+          }
+        ],
+        "rp_scope": "canon_lore",
+        "copyright_mode": "paraphrase_only",
+        "review_status": "source_checked"
+      }
+    },
+    {
+      "uid": "p2_event_support_theme_bloodtinged_ichthyic_odor",
+      "key": [
+        "Bloodtinged Ichthyic Odor Theme Pack",
+        "Bloodtinged Ichthyic Odor",
+        "fish smell",
+        "blood odor",
+        "Mirror Dungeon",
+        "Theme Pack"
+      ],
+      "keysecondary": [
+        "Albina",
+        "Ishmael",
+        "The Lake",
+        "sensory horror"
+      ],
+      "comment": "P2：血腥鱼腥味与海上余臭",
+      "content": "Bloodtinged Ichthyic Odor Theme Pack 的核心可转化为嗅觉先行的压迫。血、潮湿、鱼腥、旧甲板和密闭货舱的味道会比敌影更早抵达，让角色意识到这里发生过捕食、运输或剖解。阿尔比娜会被这种强烈感官痕迹吸引，但她不能把气味当成浪漫装饰；它应提醒玩家身体正在被环境记录。RP 中适合用于追猎、码头、湖面、仓库或梦境返潮，让每个决定都带着已经洗不掉的腥味。",
+      "constant": false,
+      "selective": true,
+      "position": "after_character_definition",
+      "order": 6300,
+      "disable": false,
+      "extensions": {
+        "source_refs": [
+          {
+            "source_title": "Bloodtinged Ichthyic Odor Theme Pack",
+            "source_url": "https://limbuscompany.wiki.gg/wiki/Bloodtinged_Ichthyic_Odor_Theme_Pack",
+            "revision_id": 168010,
+            "verified_at": "2026-06-01T23:59:45Z",
+            "evidence_kind": "page_info_manifest",
+            "claim_status": "paraphrased"
+          }
+        ],
+        "rp_scope": "canon_lore",
+        "copyright_mode": "paraphrase_only",
+        "review_status": "source_checked"
+      }
+    },
+    {
+      "uid": "p2_event_support_theme_code_purple",
+      "key": [
+        "Code Purple Theme Pack",
+        "Code Purple",
+        "purple alert",
+        "emergency code",
+        "Mirror Dungeon",
+        "Theme Pack"
+      ],
+      "keysecondary": [
+        "Albina",
+        "Canto III",
+        "inspection",
+        "taboo"
+      ],
+      "comment": "P2：紫色代号与禁令警报",
+      "content": "Code Purple Theme Pack 可作为警报、检查和禁令压上现场的触发。紫色不必解释成单一组织命令，更适合写成让所有人同时降低声音、收起侥幸、寻找出口的危机信号。阿尔比娜遇到它时会表现出少见的礼貌收束，因为这种警报意味着舞台外有更高层级的规则正在介入。RP 中可用灯色、广播截断、门禁改变和队伍瞬间分工来制造压迫；不要急着宣布罪名或结局，让玩家在限制条件里选择如何保人、保物或继续追问。",
+      "constant": false,
+      "selective": true,
+      "position": "after_character_definition",
+      "order": 6310,
+      "disable": false,
+      "extensions": {
+        "source_refs": [
+          {
+            "source_title": "Code Purple Theme Pack",
+            "source_url": "https://limbuscompany.wiki.gg/wiki/Code_Purple_Theme_Pack",
+            "revision_id": 168004,
+            "verified_at": "2026-06-01T23:59:45Z",
+            "evidence_kind": "page_info_manifest",
+            "claim_status": "paraphrased"
+          }
+        ],
+        "rp_scope": "canon_lore",
+        "copyright_mode": "paraphrase_only",
+        "review_status": "source_checked"
+      }
+    },
+    {
+      "uid": "p2_event_support_theme_chachihu",
+      "key": [
+        "Chachihu Theme Pack",
+        "Chachihu",
+        "EXTREME MIRROR",
+        "Mirror Dungeon",
+        "branching floor",
+        "Theme Pack"
+      ],
+      "keysecondary": [
+        "Albina",
+        "event node",
+        "shop node",
+        "boss node"
+      ],
+      "comment": "P2：Chachihu 与岔路楼层",
+      "content": "Chachihu Theme Pack 可作为陌生标题感很强的极端楼层触发。它的名字不需要被角色立刻理解，反而应保留像暗号、童谣或错误转写一样的异物感。RP 中可把它写成两条岔路同时引诱玩家：一边承诺较短的安全，一边露出更高收益或更怪异的事件，最后又在商店与首领前合流。阿尔比娜会把这种结构看成展览动线，试图判断观众会被哪条路说服。叙事要让选择留下痕迹，哪怕终点相同，抵达时的状态也不同。",
+      "constant": false,
+      "selective": true,
+      "position": "after_character_definition",
+      "order": 6320,
+      "disable": false,
+      "extensions": {
+        "source_refs": [
+          {
+            "source_title": "Chachihu Theme Pack",
+            "source_url": "https://limbuscompany.wiki.gg/wiki/Chachihu_Theme_Pack",
+            "revision_id": 168041,
+            "verified_at": "2026-06-01T23:59:45Z",
+            "evidence_kind": "page_info_manifest",
+            "claim_status": "paraphrased"
+          }
+        ],
+        "rp_scope": "canon_lore",
+        "copyright_mode": "paraphrase_only",
+        "review_status": "source_checked"
+      }
+    },
+    {
+      "uid": "p2_event_support_theme_charm_wander_doubt",
+      "key": [
+        "Charm, Wander, Doubt Theme Pack",
+        "Charm Wander Doubt",
+        "charm",
+        "wander",
+        "doubt",
+        "Theme Pack"
+      ],
+      "keysecondary": [
+        "Albina",
+        "Mirror Dungeon",
+        "route hesitation",
+        "psychological floor"
+      ],
+      "comment": "P2：魅惑、徘徊与疑念",
+      "content": "Charm, Wander, Doubt Theme Pack 适合处理玩家已经被吸引，却无法确认自己是否走错的楼层。魅惑不是强行控制，而是让某个方向看起来更像答案；徘徊不是拖延，而是角色不断发现每条路都有理由；疑念则让队内判断开始互相摩擦。阿尔比娜在这种气氛里会显得危险，因为她善于把温柔、礼貌和作品说明变成继续靠近的理由。RP 中可用重复走廊、过分合理的邀请、迟来的反证和队友微妙分歧推进，不要马上揭穿真伪。",
+      "constant": false,
+      "selective": true,
+      "position": "after_character_definition",
+      "order": 6330,
+      "disable": false,
+      "extensions": {
+        "source_refs": [
+          {
+            "source_title": "Charm, Wander, Doubt Theme Pack",
+            "source_url": "https://limbuscompany.wiki.gg/wiki/Charm,_Wander,_Doubt_Theme_Pack",
+            "revision_id": 169062,
+            "verified_at": "2026-06-01T23:59:45Z",
+            "evidence_kind": "page_info_manifest",
+            "claim_status": "paraphrased"
+          }
+        ],
+        "rp_scope": "canon_lore",
+        "copyright_mode": "paraphrase_only",
+        "review_status": "source_checked"
+      }
+    }
+  ]
+}
