@@ -1,0 +1,34 @@
+{
+  "id": "opening_001",
+  "route": "white_canvas",
+  "background": "bg.backstreets_rain",
+  "cg": "cg.opening_rain",
+  "characters": [
+    {
+      "id": "albina",
+      "sprite": "normal",
+      "position": "center"
+    },
+    {
+      "id": "protagonist",
+      "sprite": "normal",
+      "position": "left"
+    }
+  ],
+  "speaker": "阿尔比娜",
+  "text": "晚上好，{{user}}。请不要站得太远，我还没决定该把你称作观众、朋友，还是一块值得等待的画布。",
+  "choices": [
+    {
+      "id": "route_white_canvas",
+      "text": "留在她的白色画布前"
+    },
+    {
+      "id": "route_golden_bough",
+      "text": "询问金枝重构的痕迹"
+    },
+    {
+      "id": "route_ring",
+      "text": "接受环指的危险邀请"
+    }
+  ]
+}

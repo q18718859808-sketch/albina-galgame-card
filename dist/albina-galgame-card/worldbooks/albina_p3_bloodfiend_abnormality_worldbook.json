@@ -1,0 +1,343 @@
+{
+  "name": "Albina P3 Bloodfiend and Abnormality Worldbook",
+  "description": "P3 Chinese hand-written RP support for bloodfiend, bloodbag, and abnormality ecology.",
+  "entries": [
+    {
+      "uid": "p3_bloodfiend_lineage_blooming_hunger",
+      "key": [
+        "Bloodfiends",
+        "Budding Bloodfiend",
+        "Blossomed Bloodfiend",
+        "Bloomed Bloodfiend",
+        "Bloodfiend",
+        "血族",
+        "绽放血族"
+      ],
+      "keysecondary": [
+        "Albina",
+        "Don Quixote",
+        "La Manchaland",
+        "blood hunger",
+        "lineage"
+      ],
+      "comment": "P3：血族谱系与绽放饥渴",
+      "content": "血族登场时，重点不是把他们写成单纯吸血的怪物，而是把饥渴、血统、礼节和身份压力缠在一起。Budding、Blossomed、Bloomed 三种阶段感适合表现同一类存在从不稳定的萌芽，到能够维持姿态，再到把危险开成完整外形的过程。Albina 会先观察他们如何压住欲望：指尖是否停在杯沿，称呼是否过分端正，笑容是否像被训练过的伤口。越成熟的血族越不必急着扑杀，他们能用距离、座次、邀请和沉默让房间变成猎场。写这类场景时，让血味先出现在礼貌之后，让暴力像迟到的主菜，而不是第一句台词。",
+      "constant": false,
+      "selective": true,
+      "position": "after_character_definition",
+      "order": 6300,
+      "disable": false,
+      "extensions": {
+        "source_refs": [
+          {
+            "source_title": "Bloodfiends",
+            "source_url": "https://limbuscompany.wiki.gg/wiki/Bloodfiends",
+            "revision_id": 171148,
+            "verified_at": "2026-06-02T00:00:27Z",
+            "evidence_kind": "page_record",
+            "claim_status": "paraphrased"
+          },
+          {
+            "source_title": "Budding Bloodfiend",
+            "source_url": "https://limbuscompany.wiki.gg/wiki/Budding_Bloodfiend",
+            "revision_id": 167841,
+            "verified_at": "2026-06-02T00:00:27Z",
+            "evidence_kind": "page_record",
+            "claim_status": "paraphrased"
+          },
+          {
+            "source_title": "Blossomed Bloodfiend",
+            "source_url": "https://limbuscompany.wiki.gg/wiki/Blossomed_Bloodfiend",
+            "revision_id": 167840,
+            "verified_at": "2026-06-02T00:00:27Z",
+            "evidence_kind": "page_record",
+            "claim_status": "paraphrased"
+          },
+          {
+            "source_title": "Bloomed Bloodfiend",
+            "source_url": "https://limbuscompany.wiki.gg/wiki/Bloomed_Bloodfiend",
+            "revision_id": 171445,
+            "verified_at": "2026-06-02T00:00:27Z",
+            "evidence_kind": "page_record",
+            "claim_status": "paraphrased"
+          }
+        ],
+        "rp_scope": "canon_lore",
+        "copyright_mode": "paraphrase_only",
+        "review_status": "source_checked"
+      }
+    },
+    {
+      "uid": "p3_bloodfiend_ghost_penitence_prayers",
+      "key": [
+        "\"Ghost\" Bloodfiend of Failed Penitence",
+        "\"Ghost\" Bloodfiend of Prayers",
+        "Ghost Bloodfiend",
+        "Failed Penitence",
+        "Bloodfiend of Prayers",
+        "幽魂血族",
+        "祈祷血族"
+      ],
+      "keysecondary": [
+        "Albina",
+        "penitence",
+        "prayer",
+        "guilt",
+        "chapel"
+      ],
+      "comment": "P3：幽魂血族的忏悔与祈祷",
+      "content": "幽魂血族适合把血族恐怖从餐桌推向礼拜室。Failed Penitence 与 Prayers 不该只体现为飘忽外形，而应带着没有完成的悔罪、重复到发空的祈祷、以及被饥饿玷污的虔诚。场景里可以让声音先比身体出现：低声念诵、衣料摩擦、膝盖拖过地面的轻响，随后才是苍白的影子和血色的欲望。Albina 面对他们时不会急于嘲笑信仰，她更可能被那种把罪感整理成姿态的方式吸引，同时保持距离，因为这种存在常把求赦免和求进食混成同一个动作。让他们的危险来自温顺过头的靠近，而不是高声咆哮。",
+      "constant": false,
+      "selective": true,
+      "position": "after_character_definition",
+      "order": 6310,
+      "disable": false,
+      "extensions": {
+        "source_refs": [
+          {
+            "source_title": "\"Ghost\" Bloodfiend of Failed Penitence",
+            "source_url": "https://limbuscompany.wiki.gg/wiki/%22Ghost%22_Bloodfiend_of_Failed_Penitence",
+            "revision_id": 159523,
+            "verified_at": "2026-06-02T00:00:27Z",
+            "evidence_kind": "page_record",
+            "claim_status": "paraphrased"
+          },
+          {
+            "source_title": "\"Ghost\" Bloodfiend of Prayers",
+            "source_url": "https://limbuscompany.wiki.gg/wiki/%22Ghost%22_Bloodfiend_of_Prayers",
+            "revision_id": 162752,
+            "verified_at": "2026-06-02T00:00:27Z",
+            "evidence_kind": "page_record",
+            "claim_status": "paraphrased"
+          }
+        ],
+        "rp_scope": "canon_lore",
+        "copyright_mode": "paraphrase_only",
+        "review_status": "source_checked"
+      }
+    },
+    {
+      "uid": "p3_bloodfiend_parade_smiling_stage",
+      "key": [
+        "Bloodfiend of the Joyful Parade",
+        "Bloodfiend of the Happy Parade",
+        "Joyful Parade",
+        "Happy Parade",
+        "parade bloodfiend",
+        "游行血族"
+      ],
+      "keysecondary": [
+        "Albina",
+        "La Manchaland",
+        "parade",
+        "performance horror",
+        "celebration"
+      ],
+      "comment": "P3：游行血族的笑容舞台",
+      "content": "Joyful Parade 与 Happy Parade 的血族适合把庆典写成压迫装置。不要把欢乐当作轻松气氛；这里的笑声应像节拍器，彩饰像束缚，队列像被安排好的捕猎路线。它们越是表现得欢迎来客，越要让角色意识到自己正在被编入节目：站位被挤到队伍中间，退路被乐声遮住，礼貌回应变成默认参加。Albina 会敏锐地注意这些笑容的用途，因为她熟悉展演，也知道观众席和祭品席只差一次邀请。场景可以先写旗帜、脚步、掌声和过度甜美的称呼，再让血腥从装饰缝隙里渗出来。",
+      "constant": false,
+      "selective": true,
+      "position": "after_character_definition",
+      "order": 6320,
+      "disable": false,
+      "extensions": {
+        "source_refs": [
+          {
+            "source_title": "Bloodfiend of the Joyful Parade",
+            "source_url": "https://limbuscompany.wiki.gg/wiki/Bloodfiend_of_the_Joyful_Parade",
+            "revision_id": 171404,
+            "verified_at": "2026-06-02T00:00:27Z",
+            "evidence_kind": "page_record",
+            "claim_status": "paraphrased"
+          },
+          {
+            "source_title": "Bloodfiend of the Happy Parade",
+            "source_url": "https://limbuscompany.wiki.gg/wiki/Bloodfiend_of_the_Happy_Parade",
+            "revision_id": 171377,
+            "verified_at": "2026-06-02T00:00:27Z",
+            "evidence_kind": "page_record",
+            "claim_status": "paraphrased"
+          }
+        ],
+        "rp_scope": "canon_lore",
+        "copyright_mode": "paraphrase_only",
+        "review_status": "source_checked"
+      }
+    },
+    {
+      "uid": "p3_bloodbag_parade_servitude_crowd",
+      "key": [
+        "Budding Bloodbag",
+        "Bloodbag of the Painful Parade",
+        "Bloodbag of the Rear Parade",
+        "Bloodbag",
+        "bloodbag parade",
+        "血包",
+        "游行血包"
+      ],
+      "keysecondary": [
+        "Albina",
+        "Bloodfiend",
+        "La Manchaland",
+        "crowd pressure",
+        "servitude"
+      ],
+      "comment": "P3：血包队列与服从性饥饿",
+      "content": "Bloodbag 不应只当作数量填充。Budding Bloodbag 保留刚被卷入饥饿秩序的未完成感，Painful Parade 与 Rear Parade 则适合写成队伍里的承重层：他们承受命令、恐惧和痛苦，又把这些压力传给后排与旁观者。描写血包时，让他们像被庆典磨平的人群，动作有迟疑，眼神还残留一点自我，身体却已经按队列前进。Albina 会把这类存在看成一场失败的改造作品：材料还在呼吸，形状却已经归属于别人。真正的恐怖来自他们仍像人，却会在下一拍跟随鼓点围上来。",
+      "constant": false,
+      "selective": true,
+      "position": "after_character_definition",
+      "order": 6330,
+      "disable": false,
+      "extensions": {
+        "source_refs": [
+          {
+            "source_title": "Budding Bloodbag",
+            "source_url": "https://limbuscompany.wiki.gg/wiki/Budding_Bloodbag",
+            "revision_id": 167175,
+            "verified_at": "2026-06-02T00:00:27Z",
+            "evidence_kind": "page_record",
+            "claim_status": "paraphrased"
+          },
+          {
+            "source_title": "Bloodbag of the Painful Parade",
+            "source_url": "https://limbuscompany.wiki.gg/wiki/Bloodbag_of_the_Painful_Parade",
+            "revision_id": 159525,
+            "verified_at": "2026-06-02T00:00:27Z",
+            "evidence_kind": "page_record",
+            "claim_status": "paraphrased"
+          },
+          {
+            "source_title": "Bloodbag of the Rear Parade",
+            "source_url": "https://limbuscompany.wiki.gg/wiki/Bloodbag_of_the_Rear_Parade",
+            "revision_id": 162753,
+            "verified_at": "2026-06-02T00:00:27Z",
+            "evidence_kind": "page_record",
+            "claim_status": "paraphrased"
+          }
+        ],
+        "rp_scope": "canon_lore",
+        "copyright_mode": "paraphrase_only",
+        "review_status": "source_checked"
+      }
+    },
+    {
+      "uid": "p3_abnormality_alleyway_watchdog_territory",
+      "key": [
+        "Alleyway Watchdog",
+        "Watchdog",
+        "巷道看门犬",
+        "看门犬",
+        "backstreet abnormality",
+        "Abnormality"
+      ],
+      "keysecondary": [
+        "Albina",
+        "Backstreets",
+        "territory",
+        "thunder",
+        "pursuit"
+      ],
+      "comment": "P3：巷道看门犬的领地压迫",
+      "content": "Alleyway Watchdog 适合让狭窄街巷本身变成威胁。它的存在感不只来自扑击，而来自领地被宣告后的空间变化：积水发颤，墙面回音变短，转角像被咬住，行人本能地不再穿过那条路。Albina 若遭遇它，会先判断自己是否已经越过了无形门槛，而不是只盯着牙齿和爪子。让看门犬的压迫像雷雨前的静电，先让皮肤和金属饰件有所反应，再让低伏的轮廓从巷底逼近。它适合制造被追赶、被堵截、被迫选择绕路或诱离的桥段。",
+      "constant": false,
+      "selective": true,
+      "position": "after_character_definition",
+      "order": 6340,
+      "disable": false,
+      "extensions": {
+        "source_refs": [
+          {
+            "source_title": "Alleyway Watchdog",
+            "source_url": "https://limbuscompany.wiki.gg/wiki/Alleyway_Watchdog",
+            "revision_id": 142673,
+            "verified_at": "2026-06-02T00:00:27Z",
+            "evidence_kind": "page_record",
+            "claim_status": "paraphrased"
+          }
+        ],
+        "rp_scope": "canon_lore",
+        "copyright_mode": "paraphrase_only",
+        "review_status": "source_checked"
+      }
+    },
+    {
+      "uid": "p3_abnormality_alriune_funeral_bloom",
+      "key": [
+        "Alriune",
+        "花葬",
+        "flower abnormality",
+        "mourning flower",
+        "Abnormality"
+      ],
+      "keysecondary": [
+        "Albina",
+        "scent",
+        "mourning",
+        "dance",
+        "beauty"
+      ],
+      "comment": "P3：Alriune 的花葬诱引",
+      "content": "Alriune 的美不应写成单纯装饰，而应像一场会呼吸的葬礼。花香、舞步、纤细轮廓和近乎温柔的姿态，会让角色短暂忘记危险来自哪里。它适合在安静、封闭、光线柔软的场景中登场，让花瓣先覆盖地面，再覆盖判断力。Albina 会被这种危险吸引，因为它把死亡打磨成可观赏的形状，但她也会警惕任何过分顺滑的美：越是不露杀意，越可能已经把观看者拖进节奏。使用 Alriune 时，让美感和窒息感同步增长，不要急着撕破优雅外壳。",
+      "constant": false,
+      "selective": true,
+      "position": "after_character_definition",
+      "order": 6350,
+      "disable": false,
+      "extensions": {
+        "source_refs": [
+          {
+            "source_title": "Alriune",
+            "source_url": "https://limbuscompany.wiki.gg/wiki/Alriune",
+            "revision_id": 169665,
+            "verified_at": "2026-06-02T00:00:27Z",
+            "evidence_kind": "page_record",
+            "claim_status": "paraphrased"
+          }
+        ],
+        "rp_scope": "canon_lore",
+        "copyright_mode": "paraphrase_only",
+        "review_status": "source_checked"
+      }
+    },
+    {
+      "uid": "p3_abnormality_absorbing_tree_quiet_drain",
+      "key": [
+        "Absorbing Tree",
+        "吸收之树",
+        "tree abnormality",
+        "draining tree",
+        "Abnormality"
+      ],
+      "keysecondary": [
+        "Albina",
+        "root",
+        "desire",
+        "exhaustion",
+        "quiet horror"
+      ],
+      "comment": "P3：Absorbing Tree 的静默汲取",
+      "content": "Absorbing Tree 适合写成几乎不移动的威胁。它不需要追逐角色，只要让根系、阴影和过分安静的树冠占据场景，角色就会开始意识到体力、注意力或情绪正在被慢慢掏空。Albina 面对这种存在时，会把它看作一件危险的静物：越不主动，越像在等别人把愿望、疲惫或伤口递过去。描写它时，重点放在细微流失上，例如脚步变沉、语言变短、光线被枝叶吸走、靠近者突然想停下来休息。不要用喧闹制造恐怖，让沉默自己长出根。",
+      "constant": false,
+      "selective": true,
+      "position": "after_character_definition",
+      "order": 6360,
+      "disable": false,
+      "extensions": {
+        "source_refs": [
+          {
+            "source_title": "Absorbing Tree",
+            "source_url": "https://limbuscompany.wiki.gg/wiki/Absorbing_Tree",
+            "revision_id": 150216,
+            "verified_at": "2026-06-02T00:00:27Z",
+            "evidence_kind": "page_record",
+            "claim_status": "paraphrased"
+          }
+        ],
+        "rp_scope": "canon_lore",
+        "copyright_mode": "paraphrase_only",
+        "review_status": "source_checked"
+      }
+    }
+  ]
+}
