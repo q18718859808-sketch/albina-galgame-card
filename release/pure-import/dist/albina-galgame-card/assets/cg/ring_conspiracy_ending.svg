@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1920" height="1080" viewBox="0 0 1920 1080">
+
+  <defs>
+    <linearGradient id="city" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#08080d"/>
+      <stop offset="0.42" stop-color="#17202a"/>
+      <stop offset="1" stop-color="#3a1119"/>
+    </linearGradient>
+    <linearGradient id="gold" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#fff7c9"/>
+      <stop offset="0.48" stop-color="#d5a83d"/>
+      <stop offset="1" stop-color="#8b5d18"/>
+    </linearGradient>
+    <linearGradient id="porcelain" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#f7fbff"/>
+      <stop offset="0.52" stop-color="#b9c6ce"/>
+      <stop offset="1" stop-color="#59636a"/>
+    </linearGradient>
+    <filter id="softGlow"><feGaussianBlur stdDeviation="6" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+    <filter id="grain"><feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="3" stitchTiles="stitch"/><feColorMatrix type="saturate" values="0"/><feComponentTransfer><feFuncA type="table" tableValues="0 0.13"/></feComponentTransfer></filter>
+  </defs>
+
+<rect width="1920" height="1080" fill="url(#city)"/>
+<rect width="1920" height="1080" filter="url(#grain)" opacity=".45"/>
+<path d="M0 780 C420 660 620 880 930 740 C1240 600 1500 700 1920 610 L1920 1080 L0 1080 Z" fill="#05070b" opacity=".88"/>
+<g filter="url(#softGlow)"><path d="M93 180 C183 100 283 300 403 200" stroke="#f3e1a6" stroke-opacity=".22" stroke-width="2" fill="none"/><path d="M190 227 C280 147 380 347 500 247" stroke="#f3e1a6" stroke-opacity=".22" stroke-width="3" fill="none"/><path d="M287 274 C377 194 477 394 597 294" stroke="#f3e1a6" stroke-opacity=".22" stroke-width="4" fill="none"/><path d="M384 321 C474 241 574 441 694 341" stroke="#f3e1a6" stroke-opacity=".22" stroke-width="5" fill="none"/><path d="M481 368 C571 288 671 488 791 388" stroke="#f3e1a6" stroke-opacity=".22" stroke-width="2" fill="none"/><path d="M578 415 C668 335 768 535 888 435" stroke="#f3e1a6" stroke-opacity=".22" stroke-width="3" fill="none"/><path d="M675 462 C765 382 865 582 985 482" stroke="#f3e1a6" stroke-opacity=".22" stroke-width="4" fill="none"/><path d="M772 509 C862 429 962 629 1082 529" stroke="#f3e1a6" stroke-opacity=".22" stroke-width="5" fill="none"/><path d="M869 556 C959 476 1059 676 1179 576" stroke="#f3e1a6" stroke-opacity=".22" stroke-width="2" fill="none"/><path d="M966 603 C1056 523 1156 723 1276 623" stroke="#f3e1a6" stroke-opacity=".22" stroke-width="3" fill="none"/><path d="M1063 650 C1153 570 1253 770 1373 670" stroke="#f3e1a6" stroke-opacity=".22" stroke-width="4" fill="none"/><path d="M1160 697 C1250 617 1350 817 1470 717" stroke="#f3e1a6" stroke-opacity=".22" stroke-width="5" fill="none"/><path d="M1257 744 C1347 664 1447 864 1567 764" stroke="#f3e1a6" stroke-opacity=".22" stroke-width="2" fill="none"/><path d="M1354 791 C1444 711 1544 911 1664 811" stroke="#f3e1a6" stroke-opacity=".22" stroke-width="3" fill="none"/><path d="M1451 838 C1541 758 1641 958 1761 858" stroke="#f3e1a6" stroke-opacity=".22" stroke-width="4" fill="none"/><path d="M1548 885 C1638 805 1738 1005 1858 905" stroke="#f3e1a6" stroke-opacity=".22" stroke-width="5" fill="none"/><path d="M1645 932 C1735 852 1835 1052 1955 952" stroke="#f3e1a6" stroke-opacity=".22" stroke-width="2" fill="none"/><path d="M1742 219 C1832 139 1932 339 2052 239" stroke="#f3e1a6" stroke-opacity=".22" stroke-width="3" fill="none"/><path d="M1839 266 C1929 186 2029 386 2149 286" stroke="#f3e1a6" stroke-opacity=".22" stroke-width="4" fill="none"/><path d="M16 313 C106 233 206 433 326 333" stroke="#f3e1a6" stroke-opacity=".22" stroke-width="5" fill="none"/></g>
+<g><path d="M510 885 C450 610 580 500 700 560 C825 620 780 890 745 1010 L470 1010 Z" fill="#e8edf1" stroke="#f3e1a6" stroke-opacity=".55" stroke-width="8"/><circle cx="620" cy="505" r="74" fill="#e8edf1" stroke="#e0b252" stroke-width="7"/><path d="M1110 885 C1050 610 1180 500 1300 560 C1425 620 1380 890 1345 1010 L1070 1010 Z" fill="#111820" stroke="#f3e1a6" stroke-opacity=".55" stroke-width="8"/><circle cx="1220" cy="505" r="74" fill="#111820" stroke="#e0b252" stroke-width="7"/></g>
+<path d="M0 0 H1920 V1080 H0 Z" fill="none" stroke="#f3e1a6" stroke-opacity=".35" stroke-width="28"/>
+<text x="96" y="120" fill="#f8edc6" opacity=".42" font-size="42" font-family="serif">Ring Conspiracy Ending</text>
+<text x="96" y="174" fill="#c7d7e8" opacity=".24" font-size="24" font-family="serif">white_canvas</text>
+</svg>

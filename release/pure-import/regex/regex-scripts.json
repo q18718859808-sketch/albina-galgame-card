@@ -1,0 +1,16 @@
+{
+  "scripts": [
+    {
+      "scriptName": "Albina Hide Frontend Sentinels",
+      "findRegex": "/\\[albina-galgame-card:[^\\]]+\\]/g",
+      "replaceString": "",
+      "trimStrings": [],
+      "placement": [
+        2
+      ],
+      "disabled": false,
+      "markdownOnly": true,
+      "promptOnly": false
+    }
+  ]
+}

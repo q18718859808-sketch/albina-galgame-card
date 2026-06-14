@@ -1,0 +1,132 @@
+{
+  "generated_at": "2026-06-02T00:12:00+00:00",
+  "source_api": "https://limbuscompany.wiki.gg/api.php",
+  "policy": "metadata_only_no_article_text_saved",
+  "collection_mode": "p2_ego_identities_batch",
+  "namespace": 0,
+  "requested_titles": [
+    "Effloresced E.G.O::Spicebush Yi Sang",
+    "Effloresced E.G.O::Spicebush Yi Sang/Identity Story",
+    "Effloresced E.G.O::Spicebush Yi Sang/Voicelines",
+    "LCE E.G.O::AEDD Gregor",
+    "LCE E.G.O::AEDD Gregor/Identity Story",
+    "LCE E.G.O::AEDD Gregor/Voicelines",
+    "LCE E.G.O::Ardor Blossom Star Faust",
+    "LCE E.G.O::Ardor Blossom Star Faust/Identity Story",
+    "LCE E.G.O::Ardor Blossom Star Faust/Voicelines",
+    "LCE E.G.O::Lantern Yi Sang",
+    "LCE E.G.O::Lantern Yi Sang/Identity Story",
+    "LCE E.G.O::Lantern Yi Sang/Voicelines"
+  ],
+  "pages": [
+    {
+      "requested_title": "Effloresced E.G.O::Spicebush Yi Sang",
+      "title": "Effloresced E.G.O::Spicebush Yi Sang",
+      "pageid": 6785,
+      "length": 7917,
+      "lastrevid": 171245,
+      "fullurl": "https://limbuscompany.wiki.gg/wiki/Effloresced_E.G.O::Spicebush_Yi_Sang",
+      "canonicalurl": "https://limbuscompany.wiki.gg/wiki/Effloresced_E.G.O::Spicebush_Yi_Sang"
+    },
+    {
+      "requested_title": "Effloresced E.G.O::Spicebush Yi Sang/Identity Story",
+      "title": "Effloresced E.G.O::Spicebush Yi Sang/Identity Story",
+      "pageid": 3499,
+      "length": 6242,
+      "lastrevid": 84442,
+      "fullurl": "https://limbuscompany.wiki.gg/wiki/Effloresced_E.G.O::Spicebush_Yi_Sang/Identity_Story",
+      "canonicalurl": "https://limbuscompany.wiki.gg/wiki/Effloresced_E.G.O::Spicebush_Yi_Sang/Identity_Story"
+    },
+    {
+      "requested_title": "Effloresced E.G.O::Spicebush Yi Sang/Voicelines",
+      "title": "Effloresced E.G.O::Spicebush Yi Sang/Voicelines",
+      "pageid": 6839,
+      "length": 4811,
+      "lastrevid": 156978,
+      "fullurl": "https://limbuscompany.wiki.gg/wiki/Effloresced_E.G.O::Spicebush_Yi_Sang/Voicelines",
+      "canonicalurl": "https://limbuscompany.wiki.gg/wiki/Effloresced_E.G.O::Spicebush_Yi_Sang/Voicelines"
+    },
+    {
+      "requested_title": "LCE E.G.O::AEDD Gregor",
+      "title": "LCE E.G.O::AEDD Gregor",
+      "pageid": 33670,
+      "length": 22032,
+      "lastrevid": 171550,
+      "fullurl": "https://limbuscompany.wiki.gg/wiki/LCE_E.G.O::AEDD_Gregor",
+      "canonicalurl": "https://limbuscompany.wiki.gg/wiki/LCE_E.G.O::AEDD_Gregor"
+    },
+    {
+      "requested_title": "LCE E.G.O::AEDD Gregor/Identity Story",
+      "title": "LCE E.G.O::AEDD Gregor/Identity Story",
+      "pageid": 33867,
+      "length": 13929,
+      "lastrevid": 162726,
+      "fullurl": "https://limbuscompany.wiki.gg/wiki/LCE_E.G.O::AEDD_Gregor/Identity_Story",
+      "canonicalurl": "https://limbuscompany.wiki.gg/wiki/LCE_E.G.O::AEDD_Gregor/Identity_Story"
+    },
+    {
+      "requested_title": "LCE E.G.O::AEDD Gregor/Voicelines",
+      "title": "LCE E.G.O::AEDD Gregor/Voicelines",
+      "pageid": 33801,
+      "length": 7093,
+      "lastrevid": 164512,
+      "fullurl": "https://limbuscompany.wiki.gg/wiki/LCE_E.G.O::AEDD_Gregor/Voicelines",
+      "canonicalurl": "https://limbuscompany.wiki.gg/wiki/LCE_E.G.O::AEDD_Gregor/Voicelines"
+    },
+    {
+      "requested_title": "LCE E.G.O::Ardor Blossom Star Faust",
+      "title": "LCE E.G.O::Ardor Blossom Star Faust",
+      "pageid": 19524,
+      "length": 15987,
+      "lastrevid": 171676,
+      "fullurl": "https://limbuscompany.wiki.gg/wiki/LCE_E.G.O::Ardor_Blossom_Star_Faust",
+      "canonicalurl": "https://limbuscompany.wiki.gg/wiki/LCE_E.G.O::Ardor_Blossom_Star_Faust"
+    },
+    {
+      "requested_title": "LCE E.G.O::Ardor Blossom Star Faust/Identity Story",
+      "title": "LCE E.G.O::Ardor Blossom Star Faust/Identity Story",
+      "pageid": 19635,
+      "length": 11234,
+      "lastrevid": 92063,
+      "fullurl": "https://limbuscompany.wiki.gg/wiki/LCE_E.G.O::Ardor_Blossom_Star_Faust/Identity_Story",
+      "canonicalurl": "https://limbuscompany.wiki.gg/wiki/LCE_E.G.O::Ardor_Blossom_Star_Faust/Identity_Story"
+    },
+    {
+      "requested_title": "LCE E.G.O::Ardor Blossom Star Faust/Voicelines",
+      "title": "LCE E.G.O::Ardor Blossom Star Faust/Voicelines",
+      "pageid": 19623,
+      "length": 5629,
+      "lastrevid": 157007,
+      "fullurl": "https://limbuscompany.wiki.gg/wiki/LCE_E.G.O::Ardor_Blossom_Star_Faust/Voicelines",
+      "canonicalurl": "https://limbuscompany.wiki.gg/wiki/LCE_E.G.O::Ardor_Blossom_Star_Faust/Voicelines"
+    },
+    {
+      "requested_title": "LCE E.G.O::Lantern Yi Sang",
+      "title": "LCE E.G.O::Lantern Yi Sang",
+      "pageid": 19523,
+      "length": 15647,
+      "lastrevid": 171259,
+      "fullurl": "https://limbuscompany.wiki.gg/wiki/LCE_E.G.O::Lantern_Yi_Sang",
+      "canonicalurl": "https://limbuscompany.wiki.gg/wiki/LCE_E.G.O::Lantern_Yi_Sang"
+    },
+    {
+      "requested_title": "LCE E.G.O::Lantern Yi Sang/Identity Story",
+      "title": "LCE E.G.O::Lantern Yi Sang/Identity Story",
+      "pageid": 19634,
+      "length": 10227,
+      "lastrevid": 92062,
+      "fullurl": "https://limbuscompany.wiki.gg/wiki/LCE_E.G.O::Lantern_Yi_Sang/Identity_Story",
+      "canonicalurl": "https://limbuscompany.wiki.gg/wiki/LCE_E.G.O::Lantern_Yi_Sang/Identity_Story"
+    },
+    {
+      "requested_title": "LCE E.G.O::Lantern Yi Sang/Voicelines",
+      "title": "LCE E.G.O::Lantern Yi Sang/Voicelines",
+      "pageid": 19624,
+      "length": 5820,
+      "lastrevid": 156976,
+      "fullurl": "https://limbuscompany.wiki.gg/wiki/LCE_E.G.O::Lantern_Yi_Sang/Voicelines",
+      "canonicalurl": "https://limbuscompany.wiki.gg/wiki/LCE_E.G.O::Lantern_Yi_Sang/Voicelines"
+    }
+  ],
+  "missing_titles": []
+}

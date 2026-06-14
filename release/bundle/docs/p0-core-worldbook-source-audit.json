@@ -1,0 +1,23 @@
+{
+  "generated_at": "2026-06-01T15:09:16.326627+00:00",
+  "path": "D:\\codex\\albina-galgame-card\\worldbooks\\albina_p0_core_worldbook.json",
+  "passed": true,
+  "char_count": 13310,
+  "byte_count": 17274,
+  "entry_count": 8,
+  "disabled_entry_count": 0,
+  "entries_with_required_source_refs": 8,
+  "missing_source_count": 0,
+  "incomplete_source_count": 0,
+  "quote_marker_heavy_count": 0,
+  "mojibake_suspect_count": 0,
+  "missing_source_sample": [],
+  "incomplete_source_sample": [],
+  "quote_marker_heavy_sample": [],
+  "mojibake_suspect_sample": [],
+  "policy": {
+    "canon_entries_require_source_refs": true,
+    "copyright_scan": "heuristic_only",
+    "completion_claim_allowed": true
+  }
+}

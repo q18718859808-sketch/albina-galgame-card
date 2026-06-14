@@ -1,0 +1,52 @@
+{
+  "desktop": {
+    "viewport": {
+      "width": 1440,
+      "height": 900
+    },
+    "shotPath": "D:\\codex\\albina-galgame-card\\docs\\qa-desktop.png",
+    "before": {
+      "text": "白色画布\nBACKSTREETS_RAIN\n阿尔比娜\n\n晚上好，{{user}}。请不要站得太远，我还没决定该把你称作观众、朋友，还是一块值得等待的画布。\n\n留在她的白色画布前\n询问金枝重构的痕迹\n接受环指的危险邀请\n身份\n相册\n状态\n导出\n重置\n退出\n白色画布\n金枝重构\n环指共谋\n白色画布\nCH 1\n好感\n0\n信任\n0\n危险\n0\n共鸣\n0\n场景\nopening_001\n玩家\n{{user}}\n动效\nextreme",
+      "imageCount": 5,
+      "failedImages": [],
+      "jpgCount": 2,
+      "pngCount": 2,
+      "canvasSize": "1440x900",
+      "styleTextLength": 9865,
+      "choiceCount": 3,
+      "route": "白色画布",
+      "statusVisible": true
+    },
+    "after": {
+      "route": "白色画布",
+      "choiceCount": 2,
+      "text": "白色画布\nWHITE_CANVAS_ROOM\n阿尔比娜\n\n雨声替沉默补上了节拍。\n\n阿尔比娜垂眼听完你的选择，黑色手掌轻轻按住法西娅的剑脊。“我明白了，{{user}}。这一次，构图由你和我一起决定。”\n\n告诉她：完整也是一种作品\n反问她是否害怕自己的画布\n身份\n相册\n状态\n导出\n重置\n退出\n白色画布\n金枝重构\n环指共谋\n白色画布\nCH 1\n好感\n2\n信任\n2\n危险\n0\n共鸣\n1\n场景\nwhite_canvas_001\n玩家\n{{user}}\n动效\nextreme"
+    },
+    "issues": []
+  },
+  "mobile": {
+    "viewport": {
+      "width": 390,
+      "height": 844
+    },
+    "shotPath": "D:\\codex\\albina-galgame-card\\docs\\qa-mobile.png",
+    "before": {
+      "text": "阿尔比娜\n\n晚上好，{{user}}。请不要站得太远，我还没决定该把你称作观众、朋友，还是一块值得等待的画布。\n\n留在她的白色画布前\n询问金枝重构的痕迹\n接受环指的危险邀请\n身份\n相册\n状态\n导出\n重置\n退出\n白色画布\n金枝重构\n环指共谋",
+      "imageCount": 5,
+      "failedImages": [],
+      "jpgCount": 2,
+      "pngCount": 2,
+      "canvasSize": "390x844",
+      "styleTextLength": 9865,
+      "choiceCount": 3,
+      "route": "白色画布",
+      "statusVisible": false
+    },
+    "after": {
+      "route": "白色画布",
+      "choiceCount": 2,
+      "text": "阿尔比娜\n\n雨声替沉默补上了节拍。\n\n阿尔比娜垂眼听完你的选择，黑色手掌轻轻按住法西娅的剑脊。“我明白了，{{user}}。这一次，构图由你和我一起决定。”\n\n告诉她：完整也是一种作品\n反问她是否害怕自己的画布\n身份\n相册\n状态\n导出\n重置\n退出\n白色画布\n金枝重构\n环指共谋"
+    },
+    "issues": []
+  }
+}

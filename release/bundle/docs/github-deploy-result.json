@@ -1,0 +1,13 @@
+{
+  "generated_at": "2026-06-04T08:24:37.368959+00:00",
+  "repo": "https://github.com/q18718859808-sketch/albina-galgame-card",
+  "branch": "main",
+  "commit": "bd79c2ae18874d89812f415a5882cb7b5ed1daaa",
+  "tag": "v1.0.22",
+  "files": 416,
+  "reused_files": 406,
+  "uploaded_files": 10,
+  "cdn_url": "https://cdn.jsdelivr.net/gh/q18718859808-sketch/albina-galgame-card@bd79c2ae18874d89812f415a5882cb7b5ed1daaa/dist/albina-galgame-card/console/index.js",
+  "tag_cdn_url": "https://cdn.jsdelivr.net/gh/q18718859808-sketch/albina-galgame-card@v1.0.22/dist/albina-galgame-card/console/index.js",
+  "cdn_import": "import 'https://cdn.jsdelivr.net/gh/q18718859808-sketch/albina-galgame-card@bd79c2ae18874d89812f415a5882cb7b5ed1daaa/dist/albina-galgame-card/console/index.js'"
+}

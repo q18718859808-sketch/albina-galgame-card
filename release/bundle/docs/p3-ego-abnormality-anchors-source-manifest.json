@@ -1,0 +1,152 @@
+{
+  "generated_at": "2026-06-02T00:20:00.379354+00:00",
+  "source_api": "https://limbuscompany.wiki.gg/api.php",
+  "policy": "metadata_only_no_article_text_saved",
+  "collection_mode": "p3_ego_abnormality_anchor_batch",
+  "namespace": 0,
+  "requested_titles": [
+    "4th Match Flame Rodion",
+    "4th Match Flame Yi Sang",
+    "9:2 Sinclair",
+    "AEDD Heathcliff",
+    "Ardor Blossom Star Faust",
+    "Asymmetrical Inertia Heathcliff",
+    "Baba Yaga",
+    "Barbed Lasso",
+    "Basilisoup",
+    "Become Strong? Genuinely?",
+    "Between Two Worlds",
+    "Big Bird",
+    "Big, Scary Bear",
+    "Binds Heathcliff"
+  ],
+  "pages": [
+    {
+      "requested_title": "4th Match Flame Rodion",
+      "title": "4th Match Flame Rodion",
+      "pageid": 8693,
+      "length": 3847,
+      "lastrevid": 169325,
+      "fullurl": "https://limbuscompany.wiki.gg/wiki/4th_Match_Flame_Rodion",
+      "canonicalurl": "https://limbuscompany.wiki.gg/wiki/4th_Match_Flame_Rodion"
+    },
+    {
+      "requested_title": "4th Match Flame Yi Sang",
+      "title": "4th Match Flame Yi Sang",
+      "pageid": 708,
+      "length": 6676,
+      "lastrevid": 171689,
+      "fullurl": "https://limbuscompany.wiki.gg/wiki/4th_Match_Flame_Yi_Sang",
+      "canonicalurl": "https://limbuscompany.wiki.gg/wiki/4th_Match_Flame_Yi_Sang"
+    },
+    {
+      "requested_title": "9:2 Sinclair",
+      "title": "9:2 Sinclair",
+      "pageid": 322,
+      "length": 5699,
+      "lastrevid": 169478,
+      "fullurl": "https://limbuscompany.wiki.gg/wiki/9:2_Sinclair",
+      "canonicalurl": "https://limbuscompany.wiki.gg/wiki/9:2_Sinclair"
+    },
+    {
+      "requested_title": "AEDD Heathcliff",
+      "title": "AEDD Heathcliff",
+      "pageid": 2559,
+      "length": 6188,
+      "lastrevid": 169435,
+      "fullurl": "https://limbuscompany.wiki.gg/wiki/AEDD_Heathcliff",
+      "canonicalurl": "https://limbuscompany.wiki.gg/wiki/AEDD_Heathcliff"
+    },
+    {
+      "requested_title": "Ardor Blossom Star Faust",
+      "title": "Ardor Blossom Star Faust",
+      "pageid": 33671,
+      "length": 9864,
+      "lastrevid": 169308,
+      "fullurl": "https://limbuscompany.wiki.gg/wiki/Ardor_Blossom_Star_Faust",
+      "canonicalurl": "https://limbuscompany.wiki.gg/wiki/Ardor_Blossom_Star_Faust"
+    },
+    {
+      "requested_title": "Asymmetrical Inertia Heathcliff",
+      "title": "Asymmetrical Inertia Heathcliff",
+      "pageid": 18283,
+      "length": 11679,
+      "lastrevid": 169440,
+      "fullurl": "https://limbuscompany.wiki.gg/wiki/Asymmetrical_Inertia_Heathcliff",
+      "canonicalurl": "https://limbuscompany.wiki.gg/wiki/Asymmetrical_Inertia_Heathcliff"
+    },
+    {
+      "requested_title": "Baba Yaga",
+      "title": "Baba Yaga",
+      "pageid": 262,
+      "length": 7578,
+      "lastrevid": 170310,
+      "fullurl": "https://limbuscompany.wiki.gg/wiki/Baba_Yaga",
+      "canonicalurl": "https://limbuscompany.wiki.gg/wiki/Baba_Yaga"
+    },
+    {
+      "requested_title": "Barbed Lasso",
+      "title": "Barbed Lasso",
+      "pageid": 17381,
+      "length": 4586,
+      "lastrevid": 167182,
+      "fullurl": "https://limbuscompany.wiki.gg/wiki/Barbed_Lasso",
+      "canonicalurl": "https://limbuscompany.wiki.gg/wiki/Barbed_Lasso"
+    },
+    {
+      "requested_title": "Basilisoup",
+      "title": "Basilisoup",
+      "pageid": 691,
+      "length": 7257,
+      "lastrevid": 167373,
+      "fullurl": "https://limbuscompany.wiki.gg/wiki/Basilisoup",
+      "canonicalurl": "https://limbuscompany.wiki.gg/wiki/Basilisoup"
+    },
+    {
+      "requested_title": "Become Strong? Genuinely?",
+      "title": "Become Strong? Genuinely?",
+      "pageid": 3511,
+      "length": 8125,
+      "lastrevid": 167296,
+      "fullurl": "https://limbuscompany.wiki.gg/wiki/Become_Strong%3F_Genuinely%3F",
+      "canonicalurl": "https://limbuscompany.wiki.gg/wiki/Become_Strong%3F_Genuinely%3F"
+    },
+    {
+      "requested_title": "Between Two Worlds",
+      "title": "Between Two Worlds",
+      "pageid": 10330,
+      "length": 3990,
+      "lastrevid": 158888,
+      "fullurl": "https://limbuscompany.wiki.gg/wiki/Between_Two_Worlds",
+      "canonicalurl": "https://limbuscompany.wiki.gg/wiki/Between_Two_Worlds"
+    },
+    {
+      "requested_title": "Big Bird",
+      "title": "Big Bird",
+      "pageid": 32584,
+      "length": 3242,
+      "lastrevid": 160747,
+      "fullurl": "https://limbuscompany.wiki.gg/wiki/Big_Bird",
+      "canonicalurl": "https://limbuscompany.wiki.gg/wiki/Big_Bird"
+    },
+    {
+      "requested_title": "Big, Scary Bear",
+      "title": "Big, Scary Bear",
+      "pageid": 16205,
+      "length": 2537,
+      "lastrevid": 138599,
+      "fullurl": "https://limbuscompany.wiki.gg/wiki/Big,_Scary_Bear",
+      "canonicalurl": "https://limbuscompany.wiki.gg/wiki/Big,_Scary_Bear"
+    },
+    {
+      "requested_title": "Binds Heathcliff",
+      "title": "Binds Heathcliff",
+      "pageid": 9106,
+      "length": 7925,
+      "lastrevid": 169441,
+      "fullurl": "https://limbuscompany.wiki.gg/wiki/Binds_Heathcliff",
+      "canonicalurl": "https://limbuscompany.wiki.gg/wiki/Binds_Heathcliff"
+    }
+  ],
+  "missing_titles": []
+}

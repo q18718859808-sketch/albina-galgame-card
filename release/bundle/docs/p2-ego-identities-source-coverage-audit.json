@@ -1,0 +1,49 @@
+{
+  "generated_at": "2026-06-02T03:01:29.560763+00:00",
+  "manifest": "docs\\p2-ego-identities-source-manifest.json",
+  "manifest_collection_mode": "p2_ego_identities_batch",
+  "manifest_page_count": 12,
+  "worldbooks": [
+    {
+      "path": "worldbooks\\albina_p2_ego_identities_worldbook.json",
+      "entry_count": 8,
+      "entries_with_source_refs": 8,
+      "source_title_count": 12,
+      "source_titles": [
+        "Effloresced E.G.O::Spicebush Yi Sang",
+        "Effloresced E.G.O::Spicebush Yi Sang/Identity Story",
+        "Effloresced E.G.O::Spicebush Yi Sang/Voicelines",
+        "LCE E.G.O::AEDD Gregor",
+        "LCE E.G.O::AEDD Gregor/Identity Story",
+        "LCE E.G.O::AEDD Gregor/Voicelines",
+        "LCE E.G.O::Ardor Blossom Star Faust",
+        "LCE E.G.O::Ardor Blossom Star Faust/Identity Story",
+        "LCE E.G.O::Ardor Blossom Star Faust/Voicelines",
+        "LCE E.G.O::Lantern Yi Sang",
+        "LCE E.G.O::Lantern Yi Sang/Identity Story",
+        "LCE E.G.O::Lantern Yi Sang/Voicelines"
+      ]
+    }
+  ],
+  "total_worldbook_entries": 8,
+  "entries_with_source_refs": 8,
+  "referenced_source_title_count": 12,
+  "referenced_source_titles_in_manifest": [
+    "Effloresced E.G.O::Spicebush Yi Sang",
+    "Effloresced E.G.O::Spicebush Yi Sang/Identity Story",
+    "Effloresced E.G.O::Spicebush Yi Sang/Voicelines",
+    "LCE E.G.O::AEDD Gregor",
+    "LCE E.G.O::AEDD Gregor/Identity Story",
+    "LCE E.G.O::AEDD Gregor/Voicelines",
+    "LCE E.G.O::Ardor Blossom Star Faust",
+    "LCE E.G.O::Ardor Blossom Star Faust/Identity Story",
+    "LCE E.G.O::Ardor Blossom Star Faust/Voicelines",
+    "LCE E.G.O::Lantern Yi Sang",
+    "LCE E.G.O::Lantern Yi Sang/Identity Story",
+    "LCE E.G.O::Lantern Yi Sang/Voicelines"
+  ],
+  "source_titles_missing_from_manifest": [],
+  "unreferenced_manifest_title_count": 0,
+  "unreferenced_manifest_title_sample": [],
+  "passed": true
+}

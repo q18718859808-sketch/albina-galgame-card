@@ -1,0 +1,120 @@
+{
+  "audit_date": "2026-06-04",
+  "status_scope": "v1.0.22 narrative coverage audit",
+  "based_on": [
+    "docs/worldbook-source-status.md",
+    "docs/worldbook-source-coverage-audit.json",
+    "frontend/src/core/scenes.ts",
+    "docs/p4-expanded-bridge-report.json",
+    "docs/p4-article-reviewed-deep-report.json"
+  ],
+  "title_index_coverage": {
+    "status": "pass",
+    "manifest_page_count": 2142,
+    "referenced_source_title_count": 2142,
+    "unreferenced_manifest_title_count": 0,
+    "coverage_audit_passed": true,
+    "claim_allowed": "Full manifest-title coverage."
+  },
+  "source_ref_coverage": {
+    "status": "pass",
+    "worldbook_count": 20,
+    "entry_count": 2089,
+    "entries_with_source_refs": 2089
+  },
+  "deep_write_coverage": {
+    "status": "partial",
+    "hand_written_or_deep_source_backed_entry_count": 195,
+    "hand_written_or_deep_source_backed_source_title_count": 260,
+    "p4_manifest_bridge_entry_count": 1882,
+    "p4_source_title_count": 1882,
+    "claim_allowed": "Some entries are deep hand-written/source-backed coverage; P4 provides title-index bridge coverage.",
+    "claim_not_allowed": "Full deep-lore restoration or full article-level paraphrase coverage.",
+    "p4_expanded_bridge_entry_count": 1882,
+    "p4_unexpanded_bridge_entry_count": 0,
+    "expanded_bridge_claim_allowed": "Expanded P4 bridge entries are denser original RP prompts built from page-title taxonomy and manifest metadata.",
+    "expanded_bridge_claim_not_allowed": "They are not raw article paraphrases and do not increase the deep source-backed title count.",
+    "p4_article_reviewed_paraphrase_seed_count": 161,
+    "p4_article_reviewed_claim_allowed": "A small high-impact P4 subset has raw-page review evidence and original route-ready paraphrase seeds.",
+    "p4_article_reviewed_claim_not_allowed": "This is not full P4 article-level restoration and does not make the whole plot fully restored."
+  },
+  "frontend_scene_coverage": {
+    "status": "limited",
+    "source_file": "frontend/src/core/scenes.ts",
+    "scene_count": 15,
+    "route_count": 3,
+    "routes": [
+      "white_canvas",
+      "golden_bough_rebuild",
+      "ring_conspiracy"
+    ],
+    "scene_ids": [
+      "opening_001",
+      "white_canvas_001",
+      "white_canvas_002",
+      "white_canvas_003",
+      "white_canvas_004",
+      "white_canvas_005",
+      "golden_bough_001",
+      "golden_bough_002",
+      "golden_bough_003",
+      "golden_bough_004",
+      "golden_bough_005",
+      "ring_conspiracy_001",
+      "ring_conspiracy_002",
+      "ring_conspiracy_003",
+      "ring_conspiracy_004"
+    ]
+  },
+  "why_full_restoration_cannot_be_claimed": [
+    "The allpages manifest stores metadata only and does not store raw article text.",
+    "The P4 bridge layer has 1882 entries; 1882 are expanded bridge prompts, but they are still title-taxonomy/metadata based rather than article-level paraphrases.",
+    "The main static worldbook is not source-certified according to docs/worldbook-source-status.md.",
+    "123 quote-marker-heavy static entries still need manual copyright/style review according to docs/worldbook-source-status.md.",
+    "Full deep-lore completion still requires replacing bridge entries with richer original RP-ready paraphrase where title-taxonomy prompts are insufficient.",
+    "The frontend currently defines 15 scenes, so it is not a full playable restoration of the 2142-title source index.",
+    "Only a small P4 subset has article-review evidence; the remaining P4 bridge layer still needs article-level review before full deep-lore restoration can be claimed."
+  ],
+  "maintenance_rule": "When a P4 bridge entry is expanded into deeper source-backed prose, keep extensions.source_refs, rerun source audits, and update this document pair with the new deep-written and bridge counts.",
+  "p4_expanded_bridge_iteration": {
+    "version": "v1.0.16",
+    "updated_at": "2026-06-04T00:00:11Z",
+    "expanded_entry_count": 1882,
+    "report": "docs/p4-expanded-bridge-report.json",
+    "claim_status": "expanded_bridge_not_deep_article_restoration"
+  },
+  "v1_0_17_acceptance": [
+    {
+      "item": "Title-index coverage is auditable at 2142/2142 manifest titles.",
+      "status": "pass"
+    },
+    {
+      "item": "No unreferenced manifest titles remain.",
+      "status": "pass"
+    },
+    {
+      "item": "Source/bridge entries are auditable through source refs at 2089/2089 entries.",
+      "status": "pass"
+    },
+    {
+      "item": "Release wording may claim full manifest-title coverage but must not imply every P4 entry is a deep hand-written article paraphrase.",
+      "status": "pass_with_wording_constraint"
+    },
+    {
+      "item": "Frontend scene coverage is documented as 15 scenes across 3 routes.",
+      "status": "pass_with_scope_constraint"
+    },
+    {
+      "item": "Full deep-lore restoration, full article-level paraphrase, or full frontend story implementation.",
+      "status": "not_accepted_as_complete"
+    }
+  ],
+  "p4_article_review_iteration": {
+    "version": "v1.0.22",
+    "updated_at": "2026-06-04T08:22:00Z",
+    "article_reviewed_entry_count": 161,
+    "worldbook": "worldbooks/albina_p4_article_reviewed_identity_worldbook.json",
+    "report": "docs/p4-article-reviewed-deep-report.json",
+    "claim_status": "partial_article_reviewed_paraphrase_seed"
+  }
+}

@@ -1,0 +1,273 @@
+{
+  "generated_at": "2026-06-01T23:59:45.485182+00:00",
+  "source_api": "https://limbuscompany.wiki.gg/api.php",
+  "siteinfo": {
+    "general": {
+      "mainpage": "Limbus Company Wiki",
+      "base": "https://limbuscompany.wiki.gg/",
+      "sitename": "Limbus Company Wiki",
+      "mainpageisdomainroot": "",
+      "logo": "https://limbuscompany.wiki.gg/images/Site-logo.png?b1770e",
+      "generator": "MediaWiki 1.43.6",
+      "phpversion": "8.1.33",
+      "phpsapi": "fpm-fcgi",
+      "dbtype": "mysql",
+      "dbversion": "8.0.44",
+      "langconversion": "",
+      "linkconversion": "",
+      "titleconversion": "",
+      "linkprefixcharset": "",
+      "linkprefix": "",
+      "linktrail": "/^([a-z]+)(.*)$/sD",
+      "legaltitlechars": " %!\"$&'()*,\\-.\\/0-9:;=?@A-Z\\\\^_`a-z~\\x80-\\xFF+",
+      "invalidusernamechars": "@:>=",
+      "fixarabicunicode": "",
+      "fixmalayalamunicode": "",
+      "git-hash": "dbfc242be0bbaa1551cc67889356563042d8333b",
+      "git-branch": "wgg/1.43",
+      "case": "first-letter",
+      "lang": "en",
+      "fallback": [],
+      "fallback8bitEncoding": "windows-1252",
+      "writeapi": "",
+      "maxarticlesize": 4194304,
+      "timezone": "UTC",
+      "timeoffset": 0,
+      "articlepath": "/wiki/$1",
+      "scriptpath": "",
+      "script": "/index.php",
+      "variantarticlepath": "/wiki/$1?variant=$2",
+      "server": "https://limbuscompany.wiki.gg",
+      "servername": "limbuscompany.wiki.gg",
+      "wikiid": "limbuscompany_en",
+      "time": "2026-06-01T23:59:45Z",
+      "uploadsenabled": "",
+      "maxuploadsize": 15728640,
+      "minuploadchunksize": 1024,
+      "galleryoptions": {
+        "imagesPerRow": 0,
+        "imageWidth": 120,
+        "imageHeight": 120,
+        "captionLength": "",
+        "showBytes": "",
+        "showDimensions": "",
+        "mode": "traditional"
+      },
+      "thumblimits": [
+        160,
+        240,
+        320
+      ],
+      "imagelimits": [
+        {
+          "width": 320,
+          "height": 240
+        },
+        {
+          "width": 640,
+          "height": 480
+        },
+        {
+          "width": 1280,
+          "height": 1024
+        },
+        {
+          "width": 2560,
+          "height": 2048
+        }
+      ],
+      "favicon": "https://limbuscompany.wiki.gg/images/Site-favicon.ico?9d194e",
+      "centralidlookupprovider": "local",
+      "allcentralidlookupproviders": [
+        "local"
+      ],
+      "interwikimagic": "",
+      "magiclinks": [],
+      "categorycollation": "uppercase",
+      "nofollowlinks": "",
+      "nofollownsexceptions": [],
+      "nofollowdomainexceptions": [
+        "mediawiki.org",
+        "wiki.gg",
+        "indie.io",
+        "freedom.gg",
+        "mediawiki.org"
+      ],
+      "max-page-id": 36387,
+      "citeresponsivereferences": ""
+    },
+    "statistics": {
+      "pages": 33936,
+      "articles": 2133,
+      "edits": 172521,
+      "images": 26869,
+      "users": 655270,
+      "activeusers": 188,
+      "admins": 10,
+      "jobs": 0,
+      "cirrussearch-article-words": 1262137
+    }
+  },
+  "policy": "metadata_only_no_article_text_saved",
+  "collection_mode": "explicit_titles",
+  "namespace": null,
+  "requested_titles": [
+    "A Midspring Night's Dream/Story Episode",
+    "A Midspring Night's Dream 2/Story Episodes",
+    "A Midspring Night's Dream 3/Story Episodes",
+    "A Certain Sinclair/Assist Unit",
+    "Alyssa/Assist Unit",
+    "A Certain World Theme Pack",
+    "A Beautiful Voice Theme Pack",
+    "Abnormal Seismic Zone Theme Pack",
+    "Automated Factory Theme Pack",
+    "Blade and Artwork Theme Pack",
+    "Bloodtinged Ichthyic Odor Theme Pack",
+    "Code Purple Theme Pack",
+    "Chachihu Theme Pack",
+    "Charm, Wander, Doubt Theme Pack"
+  ],
+  "pages": [
+    {
+      "requested_title": "A Beautiful Voice Theme Pack",
+      "title": "A Beautiful Voice Theme Pack",
+      "pageid": 34639,
+      "length": 1896,
+      "lastrevid": 165163,
+      "touched": "2026-05-29T06:23:01Z",
+      "fullurl": "https://limbuscompany.wiki.gg/wiki/A_Beautiful_Voice_Theme_Pack",
+      "canonicalurl": "https://limbuscompany.wiki.gg/wiki/A_Beautiful_Voice_Theme_Pack"
+    },
+    {
+      "requested_title": "A Certain Sinclair/Assist Unit",
+      "title": "A Certain Sinclair/Assist Unit",
+      "pageid": 32121,
+      "length": 12506,
+      "lastrevid": 172372,
+      "touched": "2026-06-01T20:51:05Z",
+      "fullurl": "https://limbuscompany.wiki.gg/wiki/A_Certain_Sinclair/Assist_Unit",
+      "canonicalurl": "https://limbuscompany.wiki.gg/wiki/A_Certain_Sinclair/Assist_Unit"
+    },
+    {
+      "requested_title": "A Certain World Theme Pack",
+      "title": "A Certain World Theme Pack",
+      "pageid": 34665,
+      "length": 2367,
+      "lastrevid": 165282,
+      "touched": "2026-05-29T06:23:01Z",
+      "fullurl": "https://limbuscompany.wiki.gg/wiki/A_Certain_World_Theme_Pack",
+      "canonicalurl": "https://limbuscompany.wiki.gg/wiki/A_Certain_World_Theme_Pack"
+    },
+    {
+      "requested_title": "A Midspring Night's Dream 2/Story Episodes",
+      "title": "A Midspring Night's Dream 2/Story Episodes",
+      "pageid": 22157,
+      "length": 41829,
+      "lastrevid": 144048,
+      "touched": "2025-11-12T18:34:57Z",
+      "fullurl": "https://limbuscompany.wiki.gg/wiki/A_Midspring_Night%27s_Dream_2/Story_Episodes",
+      "canonicalurl": "https://limbuscompany.wiki.gg/wiki/A_Midspring_Night%27s_Dream_2/Story_Episodes"
+    },
+    {
+      "requested_title": "A Midspring Night's Dream 3/Story Episodes",
+      "title": "A Midspring Night's Dream 3/Story Episodes",
+      "pageid": 34200,
+      "length": 57221,
+      "lastrevid": 163596,
+      "touched": "2026-04-01T05:04:48Z",
+      "fullurl": "https://limbuscompany.wiki.gg/wiki/A_Midspring_Night%27s_Dream_3/Story_Episodes",
+      "canonicalurl": "https://limbuscompany.wiki.gg/wiki/A_Midspring_Night%27s_Dream_3/Story_Episodes"
+    },
+    {
+      "requested_title": "A Midspring Night's Dream/Story Episode",
+      "title": "A Midspring Night's Dream/Story Episode",
+      "pageid": 2624,
+      "length": 10691,
+      "lastrevid": 140012,
+      "touched": "2025-09-28T00:00:02Z",
+      "fullurl": "https://limbuscompany.wiki.gg/wiki/A_Midspring_Night%27s_Dream/Story_Episode",
+      "canonicalurl": "https://limbuscompany.wiki.gg/wiki/A_Midspring_Night%27s_Dream/Story_Episode"
+    },
+    {
+      "requested_title": "Abnormal Seismic Zone Theme Pack",
+      "title": "Abnormal Seismic Zone Theme Pack",
+      "pageid": 35213,
+      "length": 2009,
+      "lastrevid": 166506,
+      "touched": "2026-05-29T06:23:02Z",
+      "fullurl": "https://limbuscompany.wiki.gg/wiki/Abnormal_Seismic_Zone_Theme_Pack",
+      "canonicalurl": "https://limbuscompany.wiki.gg/wiki/Abnormal_Seismic_Zone_Theme_Pack"
+    },
+    {
+      "requested_title": "Alyssa/Assist Unit",
+      "title": "Alyssa/Assist Unit",
+      "pageid": 31719,
+      "length": 7958,
+      "lastrevid": 171440,
+      "touched": "2026-05-27T02:28:16Z",
+      "fullurl": "https://limbuscompany.wiki.gg/wiki/Alyssa/Assist_Unit",
+      "canonicalurl": "https://limbuscompany.wiki.gg/wiki/Alyssa/Assist_Unit"
+    },
+    {
+      "requested_title": "Automated Factory Theme Pack",
+      "title": "Automated Factory Theme Pack",
+      "pageid": 34653,
+      "length": 2019,
+      "lastrevid": 165245,
+      "touched": "2026-05-29T06:23:01Z",
+      "fullurl": "https://limbuscompany.wiki.gg/wiki/Automated_Factory_Theme_Pack",
+      "canonicalurl": "https://limbuscompany.wiki.gg/wiki/Automated_Factory_Theme_Pack"
+    },
+    {
+      "requested_title": "Blade and Artwork Theme Pack",
+      "title": "Blade and Artwork Theme Pack",
+      "pageid": 34674,
+      "length": 2777,
+      "lastrevid": 169060,
+      "touched": "2026-05-29T06:23:01Z",
+      "fullurl": "https://limbuscompany.wiki.gg/wiki/Blade_and_Artwork_Theme_Pack",
+      "canonicalurl": "https://limbuscompany.wiki.gg/wiki/Blade_and_Artwork_Theme_Pack"
+    },
+    {
+      "requested_title": "Bloodtinged Ichthyic Odor Theme Pack",
+      "title": "Bloodtinged Ichthyic Odor Theme Pack",
+      "pageid": 35469,
+      "length": 1982,
+      "lastrevid": 168010,
+      "touched": "2026-05-29T06:23:02Z",
+      "fullurl": "https://limbuscompany.wiki.gg/wiki/Bloodtinged_Ichthyic_Odor_Theme_Pack",
+      "canonicalurl": "https://limbuscompany.wiki.gg/wiki/Bloodtinged_Ichthyic_Odor_Theme_Pack"
+    },
+    {
+      "requested_title": "Chachihu Theme Pack",
+      "title": "Chachihu Theme Pack",
+      "pageid": 35472,
+      "length": 2019,
+      "lastrevid": 168041,
+      "touched": "2026-05-29T06:23:02Z",
+      "fullurl": "https://limbuscompany.wiki.gg/wiki/Chachihu_Theme_Pack",
+      "canonicalurl": "https://limbuscompany.wiki.gg/wiki/Chachihu_Theme_Pack"
+    },
+    {
+      "requested_title": "Charm, Wander, Doubt Theme Pack",
+      "title": "Charm, Wander, Doubt Theme Pack",
+      "pageid": 34672,
+      "length": 2011,
+      "lastrevid": 169062,
+      "touched": "2026-05-29T06:23:01Z",
+      "fullurl": "https://limbuscompany.wiki.gg/wiki/Charm,_Wander,_Doubt_Theme_Pack",
+      "canonicalurl": "https://limbuscompany.wiki.gg/wiki/Charm,_Wander,_Doubt_Theme_Pack"
+    },
+    {
+      "requested_title": "Code Purple Theme Pack",
+      "title": "Code Purple Theme Pack",
+      "pageid": 35464,
+      "length": 2204,
+      "lastrevid": 168004,
+      "touched": "2026-05-29T06:23:02Z",
+      "fullurl": "https://limbuscompany.wiki.gg/wiki/Code_Purple_Theme_Pack",
+      "canonicalurl": "https://limbuscompany.wiki.gg/wiki/Code_Purple_Theme_Pack"
+    }
+  ],
+  "missing_titles": []
+}

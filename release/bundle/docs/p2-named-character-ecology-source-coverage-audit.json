@@ -1,0 +1,61 @@
+{
+  "generated_at": "2026-06-02T00:27:20.498108+00:00",
+  "manifest": "docs\\p2-named-character-ecology-source-manifest.json",
+  "manifest_collection_mode": "p2_named_character_ecology_batch",
+  "manifest_page_count": 18,
+  "worldbooks": [
+    {
+      "path": "worldbooks\\albina_p2_named_character_ecology_worldbook.json",
+      "entry_count": 10,
+      "entries_with_source_refs": 10,
+      "source_title_count": 18,
+      "source_titles": [
+        "Aeng-du/Sprites",
+        "Alan/Sprites",
+        "Alessio/Sprites",
+        "Alfonso/Sprites",
+        "Alyssa/Sprites",
+        "Aseah/Sprites",
+        "Aya/Sprites",
+        "Bari/Sprites",
+        "Camille/Sprites",
+        "Cassetti/Sprites",
+        "Catherine/Sprites",
+        "Charon/Sprites",
+        "Dulcinea/Sprites",
+        "Ezra/Sprites",
+        "Fabius/Sprites",
+        "Gubo/Sprites",
+        "Hindley/Sprites",
+        "Hohenheim/Sprites"
+      ]
+    }
+  ],
+  "total_worldbook_entries": 10,
+  "entries_with_source_refs": 10,
+  "referenced_source_title_count": 18,
+  "referenced_source_titles_in_manifest": [
+    "Aeng-du/Sprites",
+    "Alan/Sprites",
+    "Alessio/Sprites",
+    "Alfonso/Sprites",
+    "Alyssa/Sprites",
+    "Aseah/Sprites",
+    "Aya/Sprites",
+    "Bari/Sprites",
+    "Camille/Sprites",
+    "Cassetti/Sprites",
+    "Catherine/Sprites",
+    "Charon/Sprites",
+    "Dulcinea/Sprites",
+    "Ezra/Sprites",
+    "Fabius/Sprites",
+    "Gubo/Sprites",
+    "Hindley/Sprites",
+    "Hohenheim/Sprites"
+  ],
+  "source_titles_missing_from_manifest": [],
+  "unreferenced_manifest_title_count": 0,
+  "unreferenced_manifest_title_sample": [],
+  "passed": true
+}

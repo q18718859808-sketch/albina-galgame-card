@@ -1,0 +1,28 @@
+{
+  "generated_at": "2026-06-02T04:54:40.360428+00:00",
+  "host": "https://new.fileditch.com/upload.php",
+  "target_file": "assets/characters/albina/normal.png",
+  "attempts": [
+    {
+      "method": "curl multipart POST",
+      "command_shape": "curl --http1.1 --tlsv1.2 -F files[]=@normal.png https://new.fileditch.com/upload.php",
+      "success": false,
+      "error": "curl: (35) schannel: failed to receive handshake, SSL/TLS connection failed"
+    },
+    {
+      "method": "curl PUT upload.php?filename=",
+      "command_shape": "curl --http1.1 --tlsv1.2 -T normal.png https://new.fileditch.com/upload.php?filename=albina-normal-v101.png",
+      "success": false,
+      "error": "curl: (35) schannel: failed to receive handshake, SSL/TLS connection failed"
+    },
+    {
+      "method": ".NET HttpClient multipart POST",
+      "command_shape": "HttpClient.PostAsync(https://new.fileditch.com/upload.php, MultipartFormDataContent)",
+      "success": false,
+      "error": "remote party closed the transport stream during TLS authentication"
+    }
+  ],
+  "uploaded_urls": [],
+  "status": "blocked_by_tls_handshake_failure",
+  "policy": "no fabricated image-host URLs; current public assets remain on GitHub/jsDelivr CDN"
+}

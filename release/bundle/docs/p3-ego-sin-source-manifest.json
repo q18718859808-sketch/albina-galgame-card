@@ -1,0 +1,273 @@
+{
+  "generated_at": "2026-06-02T00:05:04.400565+00:00",
+  "source_api": "https://limbuscompany.wiki.gg/api.php",
+  "siteinfo": {
+    "general": {
+      "mainpage": "Limbus Company Wiki",
+      "base": "https://limbuscompany.wiki.gg/",
+      "sitename": "Limbus Company Wiki",
+      "mainpageisdomainroot": "",
+      "logo": "https://limbuscompany.wiki.gg/images/Site-logo.png?b1770e",
+      "generator": "MediaWiki 1.43.6",
+      "phpversion": "8.1.33",
+      "phpsapi": "fpm-fcgi",
+      "dbtype": "mysql",
+      "dbversion": "8.0.44",
+      "langconversion": "",
+      "linkconversion": "",
+      "titleconversion": "",
+      "linkprefixcharset": "",
+      "linkprefix": "",
+      "linktrail": "/^([a-z]+)(.*)$/sD",
+      "legaltitlechars": " %!\"$&'()*,\\-.\\/0-9:;=?@A-Z\\\\^_`a-z~\\x80-\\xFF+",
+      "invalidusernamechars": "@:>=",
+      "fixarabicunicode": "",
+      "fixmalayalamunicode": "",
+      "git-hash": "dbfc242be0bbaa1551cc67889356563042d8333b",
+      "git-branch": "wgg/1.43",
+      "case": "first-letter",
+      "lang": "en",
+      "fallback": [],
+      "fallback8bitEncoding": "windows-1252",
+      "writeapi": "",
+      "maxarticlesize": 4194304,
+      "timezone": "UTC",
+      "timeoffset": 0,
+      "articlepath": "/wiki/$1",
+      "scriptpath": "",
+      "script": "/index.php",
+      "variantarticlepath": "/wiki/$1?variant=$2",
+      "server": "https://limbuscompany.wiki.gg",
+      "servername": "limbuscompany.wiki.gg",
+      "wikiid": "limbuscompany_en",
+      "time": "2026-06-02T00:05:04Z",
+      "uploadsenabled": "",
+      "maxuploadsize": 15728640,
+      "minuploadchunksize": 1024,
+      "galleryoptions": {
+        "imagesPerRow": 0,
+        "imageWidth": 120,
+        "imageHeight": 120,
+        "captionLength": "",
+        "showBytes": "",
+        "showDimensions": "",
+        "mode": "traditional"
+      },
+      "thumblimits": [
+        160,
+        240,
+        320
+      ],
+      "imagelimits": [
+        {
+          "width": 320,
+          "height": 240
+        },
+        {
+          "width": 640,
+          "height": 480
+        },
+        {
+          "width": 1280,
+          "height": 1024
+        },
+        {
+          "width": 2560,
+          "height": 2048
+        }
+      ],
+      "favicon": "https://limbuscompany.wiki.gg/images/Site-favicon.ico?9d194e",
+      "centralidlookupprovider": "local",
+      "allcentralidlookupproviders": [
+        "local"
+      ],
+      "interwikimagic": "",
+      "magiclinks": [],
+      "categorycollation": "uppercase",
+      "nofollowlinks": "",
+      "nofollownsexceptions": [],
+      "nofollowdomainexceptions": [
+        "mediawiki.org",
+        "wiki.gg",
+        "indie.io",
+        "freedom.gg",
+        "mediawiki.org"
+      ],
+      "max-page-id": 36387,
+      "citeresponsivereferences": ""
+    },
+    "statistics": {
+      "pages": 33936,
+      "articles": 2133,
+      "edits": 172517,
+      "images": 26869,
+      "users": 655270,
+      "activeusers": 188,
+      "admins": 10,
+      "jobs": 0,
+      "cirrussearch-article-words": 1262137
+    }
+  },
+  "policy": "metadata_only_no_article_text_saved",
+  "collection_mode": "p3_ego_sin_batch",
+  "namespace": null,
+  "requested_titles": [
+    "E.G.O/Gameplay",
+    "E.G.O Passives",
+    "Sin",
+    "Sin Resonance",
+    "Burn",
+    "Bleed",
+    "Rupture",
+    "Sinking",
+    "1.76 MHz",
+    "4th Match Flame Ryōshū",
+    "9:2 Faust",
+    "AEDD Gregor",
+    "Ardor Blossom Star Ishmael",
+    "Binds Outis"
+  ],
+  "pages": [
+    {
+      "requested_title": "1.76 MHz",
+      "title": "1.76 MHz",
+      "pageid": 33442,
+      "length": 4445,
+      "lastrevid": 169669,
+      "touched": "2026-05-17T12:42:02Z",
+      "fullurl": "https://limbuscompany.wiki.gg/wiki/1.76_MHz",
+      "canonicalurl": "https://limbuscompany.wiki.gg/wiki/1.76_MHz"
+    },
+    {
+      "requested_title": "4th Match Flame Ryōshū",
+      "title": "4th Match Flame Ryōshū",
+      "pageid": 10367,
+      "length": 9357,
+      "lastrevid": 171691,
+      "touched": "2026-05-28T07:41:03Z",
+      "fullurl": "https://limbuscompany.wiki.gg/wiki/4th_Match_Flame_Ry%C5%8Dsh%C5%AB",
+      "canonicalurl": "https://limbuscompany.wiki.gg/wiki/4th_Match_Flame_Ry%C5%8Dsh%C5%AB"
+    },
+    {
+      "requested_title": "9:2 Faust",
+      "title": "9:2 Faust",
+      "pageid": 2317,
+      "length": 5187,
+      "lastrevid": 169319,
+      "touched": "2026-05-16T15:04:32Z",
+      "fullurl": "https://limbuscompany.wiki.gg/wiki/9:2_Faust",
+      "canonicalurl": "https://limbuscompany.wiki.gg/wiki/9:2_Faust"
+    },
+    {
+      "requested_title": "AEDD Gregor",
+      "title": "AEDD Gregor",
+      "pageid": 8675,
+      "length": 4867,
+      "lastrevid": 169344,
+      "touched": "2026-05-16T15:04:32Z",
+      "fullurl": "https://limbuscompany.wiki.gg/wiki/AEDD_Gregor",
+      "canonicalurl": "https://limbuscompany.wiki.gg/wiki/AEDD_Gregor"
+    },
+    {
+      "requested_title": "Ardor Blossom Star Ishmael",
+      "title": "Ardor Blossom Star Ishmael",
+      "pageid": 10777,
+      "length": 5383,
+      "lastrevid": 169456,
+      "touched": "2026-05-16T15:04:32Z",
+      "fullurl": "https://limbuscompany.wiki.gg/wiki/Ardor_Blossom_Star_Ishmael",
+      "canonicalurl": "https://limbuscompany.wiki.gg/wiki/Ardor_Blossom_Star_Ishmael"
+    },
+    {
+      "requested_title": "Binds Outis",
+      "title": "Binds Outis",
+      "pageid": 3989,
+      "length": 7119,
+      "lastrevid": 169499,
+      "touched": "2026-05-28T06:52:35Z",
+      "fullurl": "https://limbuscompany.wiki.gg/wiki/Binds_Outis",
+      "canonicalurl": "https://limbuscompany.wiki.gg/wiki/Binds_Outis"
+    },
+    {
+      "requested_title": "Bleed",
+      "title": "Bleed",
+      "pageid": 15509,
+      "length": 29859,
+      "lastrevid": 168033,
+      "touched": "2026-05-02T11:48:19Z",
+      "fullurl": "https://limbuscompany.wiki.gg/wiki/Bleed",
+      "canonicalurl": "https://limbuscompany.wiki.gg/wiki/Bleed"
+    },
+    {
+      "requested_title": "Burn",
+      "title": "Burn",
+      "pageid": 15447,
+      "length": 11809,
+      "lastrevid": 168035,
+      "touched": "2026-05-01T16:31:22Z",
+      "fullurl": "https://limbuscompany.wiki.gg/wiki/Burn",
+      "canonicalurl": "https://limbuscompany.wiki.gg/wiki/Burn"
+    },
+    {
+      "requested_title": "E.G.O Passives",
+      "title": "E.G.O Passives",
+      "pageid": 15579,
+      "length": 6790,
+      "lastrevid": 170340,
+      "touched": "2026-05-23T05:38:07Z",
+      "fullurl": "https://limbuscompany.wiki.gg/wiki/E.G.O_Passives",
+      "canonicalurl": "https://limbuscompany.wiki.gg/wiki/E.G.O_Passives"
+    },
+    {
+      "requested_title": "E.G.O/Gameplay",
+      "title": "E.G.O/Gameplay",
+      "pageid": 7236,
+      "length": 10921,
+      "lastrevid": 170249,
+      "touched": "2026-05-22T00:18:05Z",
+      "fullurl": "https://limbuscompany.wiki.gg/wiki/E.G.O/Gameplay",
+      "canonicalurl": "https://limbuscompany.wiki.gg/wiki/E.G.O/Gameplay"
+    },
+    {
+      "requested_title": "Rupture",
+      "title": "Rupture",
+      "pageid": 15508,
+      "length": 16719,
+      "lastrevid": 168090,
+      "touched": "2026-05-02T11:41:10Z",
+      "fullurl": "https://limbuscompany.wiki.gg/wiki/Rupture",
+      "canonicalurl": "https://limbuscompany.wiki.gg/wiki/Rupture"
+    },
+    {
+      "requested_title": "Sin",
+      "title": "Sin",
+      "pageid": 19934,
+      "length": 11845,
+      "lastrevid": 172338,
+      "touched": "2026-06-01T09:59:52Z",
+      "fullurl": "https://limbuscompany.wiki.gg/wiki/Sin",
+      "canonicalurl": "https://limbuscompany.wiki.gg/wiki/Sin"
+    },
+    {
+      "requested_title": "Sin Resonance",
+      "title": "Sin Resonance",
+      "pageid": 21932,
+      "length": 3340,
+      "lastrevid": 170404,
+      "touched": "2026-05-24T14:03:11Z",
+      "fullurl": "https://limbuscompany.wiki.gg/wiki/Sin_Resonance",
+      "canonicalurl": "https://limbuscompany.wiki.gg/wiki/Sin_Resonance"
+    },
+    {
+      "requested_title": "Sinking",
+      "title": "Sinking",
+      "pageid": 15521,
+      "length": 23617,
+      "lastrevid": 167454,
+      "touched": "2026-04-28T15:36:36Z",
+      "fullurl": "https://limbuscompany.wiki.gg/wiki/Sinking",
+      "canonicalurl": "https://limbuscompany.wiki.gg/wiki/Sinking"
+    }
+  ],
+  "missing_titles": []
+}

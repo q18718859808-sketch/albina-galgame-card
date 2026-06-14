@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1920" height="1080" viewBox="0 0 1920 1080">
+
+  <defs>
+    <linearGradient id="city" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#08080d"/>
+      <stop offset="0.42" stop-color="#17202a"/>
+      <stop offset="1" stop-color="#3a1119"/>
+    </linearGradient>
+    <linearGradient id="gold" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#fff7c9"/>
+      <stop offset="0.48" stop-color="#d5a83d"/>
+      <stop offset="1" stop-color="#8b5d18"/>
+    </linearGradient>
+    <linearGradient id="porcelain" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#f7fbff"/>
+      <stop offset="0.52" stop-color="#b9c6ce"/>
+      <stop offset="1" stop-color="#59636a"/>
+    </linearGradient>
+    <filter id="softGlow"><feGaussianBlur stdDeviation="6" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+    <filter id="grain"><feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="3" stitchTiles="stitch"/><feColorMatrix type="saturate" values="0"/><feComponentTransfer><feFuncA type="table" tableValues="0 0.13"/></feComponentTransfer></filter>
+  </defs>
+
+<rect width="1920" height="1080" fill="url(#city)"/>
+<rect width="1920" height="1080" filter="url(#grain)" opacity=".45"/>
+<path d="M0 780 C420 660 620 880 930 740 C1240 600 1500 700 1920 610 L1920 1080 L0 1080 Z" fill="#05070b" opacity=".88"/>
+<g filter="url(#softGlow)"><path d="M915 180 C1005 100 1105 300 1225 200" stroke="#efc66a" stroke-opacity=".22" stroke-width="2" fill="none"/><path d="M1012 227 C1102 147 1202 347 1322 247" stroke="#efc66a" stroke-opacity=".22" stroke-width="3" fill="none"/><path d="M1109 274 C1199 194 1299 394 1419 294" stroke="#efc66a" stroke-opacity=".22" stroke-width="4" fill="none"/><path d="M1206 321 C1296 241 1396 441 1516 341" stroke="#efc66a" stroke-opacity=".22" stroke-width="5" fill="none"/><path d="M1303 368 C1393 288 1493 488 1613 388" stroke="#efc66a" stroke-opacity=".22" stroke-width="2" fill="none"/><path d="M1400 415 C1490 335 1590 535 1710 435" stroke="#efc66a" stroke-opacity=".22" stroke-width="3" fill="none"/><path d="M1497 462 C1587 382 1687 582 1807 482" stroke="#efc66a" stroke-opacity=".22" stroke-width="4" fill="none"/><path d="M1594 509 C1684 429 1784 629 1904 529" stroke="#efc66a" stroke-opacity=".22" stroke-width="5" fill="none"/><path d="M1691 556 C1781 476 1881 676 2001 576" stroke="#efc66a" stroke-opacity=".22" stroke-width="2" fill="none"/><path d="M1788 603 C1878 523 1978 723 2098 623" stroke="#efc66a" stroke-opacity=".22" stroke-width="3" fill="none"/><path d="M1885 650 C1975 570 2075 770 2195 670" stroke="#efc66a" stroke-opacity=".22" stroke-width="4" fill="none"/><path d="M62 697 C152 617 252 817 372 717" stroke="#efc66a" stroke-opacity=".22" stroke-width="5" fill="none"/><path d="M159 744 C249 664 349 864 469 764" stroke="#efc66a" stroke-opacity=".22" stroke-width="2" fill="none"/><path d="M256 791 C346 711 446 911 566 811" stroke="#efc66a" stroke-opacity=".22" stroke-width="3" fill="none"/><path d="M353 838 C443 758 543 958 663 858" stroke="#efc66a" stroke-opacity=".22" stroke-width="4" fill="none"/><path d="M450 885 C540 805 640 1005 760 905" stroke="#efc66a" stroke-opacity=".22" stroke-width="5" fill="none"/><path d="M547 932 C637 852 737 1052 857 952" stroke="#efc66a" stroke-opacity=".22" stroke-width="2" fill="none"/><path d="M644 219 C734 139 834 339 954 239" stroke="#efc66a" stroke-opacity=".22" stroke-width="3" fill="none"/><path d="M741 266 C831 186 931 386 1051 286" stroke="#efc66a" stroke-opacity=".22" stroke-width="4" fill="none"/><path d="M838 313 C928 233 1028 433 1148 333" stroke="#efc66a" stroke-opacity=".22" stroke-width="5" fill="none"/></g>
+<g><path d="M510 885 C450 610 580 500 700 560 C825 620 780 890 745 1010 L470 1010 Z" fill="#e8edf1" stroke="#efc66a" stroke-opacity=".55" stroke-width="8"/><circle cx="620" cy="505" r="74" fill="#e8edf1" stroke="#e0b252" stroke-width="7"/><path d="M1110 885 C1050 610 1180 500 1300 560 C1425 620 1380 890 1345 1010 L1070 1010 Z" fill="#111820" stroke="#efc66a" stroke-opacity=".55" stroke-width="8"/><circle cx="1220" cy="505" r="74" fill="#111820" stroke="#e0b252" stroke-width="7"/></g>
+<path d="M0 0 H1920 V1080 H0 Z" fill="none" stroke="#efc66a" stroke-opacity=".35" stroke-width="28"/>
+<text x="96" y="120" fill="#f8edc6" opacity=".42" font-size="42" font-family="serif">Lce Raid</text>
+<text x="96" y="174" fill="#c7d7e8" opacity=".24" font-size="24" font-family="serif">ring_atelier</text>
+</svg>

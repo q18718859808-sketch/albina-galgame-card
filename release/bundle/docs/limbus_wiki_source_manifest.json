@@ -1,0 +1,187 @@
+{
+  "generated_at": "2026-06-01T14:16:13.647771+00:00",
+  "source_api": "https://limbuscompany.wiki.gg/api.php",
+  "policy": "metadata_only_no_article_text_saved",
+  "requested_titles": [
+    "Albina",
+    "Albina/Enemy",
+    "Albina/Sprites",
+    "The Ring",
+    "The House of Spiders",
+    "Callisto",
+    "Fascia",
+    "Canto IX: The Unsevering",
+    "Limbus Company",
+    "The City",
+    "Backstreets",
+    "Five Fingers",
+    "Dante",
+    "Vergilius",
+    "Charon",
+    "Faust",
+    "Yi Sang"
+  ],
+  "pages": [
+    {
+      "requested_title": "Fascia",
+      "title": "Albina",
+      "pageid": 30723,
+      "length": 8134,
+      "lastrevid": 167288,
+      "touched": "2026-05-12T19:44:40Z",
+      "fullurl": "https://limbuscompany.wiki.gg/wiki/Albina",
+      "canonicalurl": "https://limbuscompany.wiki.gg/wiki/Albina"
+    },
+    {
+      "requested_title": "Albina/Enemy",
+      "title": "Albina/Enemy",
+      "pageid": 30499,
+      "length": 42817,
+      "lastrevid": 168933,
+      "touched": "2026-05-13T22:40:50Z",
+      "fullurl": "https://limbuscompany.wiki.gg/wiki/Albina/Enemy",
+      "canonicalurl": "https://limbuscompany.wiki.gg/wiki/Albina/Enemy"
+    },
+    {
+      "requested_title": "Albina/Sprites",
+      "title": "Albina/Sprites",
+      "pageid": 30725,
+      "length": 850,
+      "lastrevid": 153117,
+      "touched": "2026-01-16T14:38:35Z",
+      "fullurl": "https://limbuscompany.wiki.gg/wiki/Albina/Sprites",
+      "canonicalurl": "https://limbuscompany.wiki.gg/wiki/Albina/Sprites"
+    },
+    {
+      "requested_title": "Backstreets",
+      "title": "Backstreets",
+      "pageid": 1520,
+      "length": 26142,
+      "lastrevid": 170370,
+      "touched": "2026-05-24T04:30:17Z",
+      "fullurl": "https://limbuscompany.wiki.gg/wiki/Backstreets",
+      "canonicalurl": "https://limbuscompany.wiki.gg/wiki/Backstreets"
+    },
+    {
+      "requested_title": "Callisto",
+      "title": "Callisto",
+      "pageid": 31696,
+      "length": 12761,
+      "lastrevid": 166738,
+      "touched": "2026-05-12T19:44:40Z",
+      "fullurl": "https://limbuscompany.wiki.gg/wiki/Callisto",
+      "canonicalurl": "https://limbuscompany.wiki.gg/wiki/Callisto"
+    },
+    {
+      "requested_title": "Canto IX: The Unsevering",
+      "title": "Canto IX: The Unsevering",
+      "pageid": 24571,
+      "length": 20549,
+      "lastrevid": 171869,
+      "touched": "2026-05-29T09:49:46Z",
+      "fullurl": "https://limbuscompany.wiki.gg/wiki/Canto_IX:_The_Unsevering",
+      "canonicalurl": "https://limbuscompany.wiki.gg/wiki/Canto_IX:_The_Unsevering"
+    },
+    {
+      "requested_title": "Charon",
+      "title": "Charon",
+      "pageid": 9541,
+      "length": 10967,
+      "lastrevid": 158115,
+      "touched": "2026-02-18T22:07:20Z",
+      "fullurl": "https://limbuscompany.wiki.gg/wiki/Charon",
+      "canonicalurl": "https://limbuscompany.wiki.gg/wiki/Charon"
+    },
+    {
+      "requested_title": "Dante",
+      "title": "Dante",
+      "pageid": 3630,
+      "length": 18903,
+      "lastrevid": 170248,
+      "touched": "2026-05-21T23:08:06Z",
+      "fullurl": "https://limbuscompany.wiki.gg/wiki/Dante",
+      "canonicalurl": "https://limbuscompany.wiki.gg/wiki/Dante"
+    },
+    {
+      "requested_title": "Faust",
+      "title": "Faust",
+      "pageid": 5252,
+      "length": 20751,
+      "lastrevid": 168665,
+      "touched": "2026-05-12T19:44:40Z",
+      "fullurl": "https://limbuscompany.wiki.gg/wiki/Faust",
+      "canonicalurl": "https://limbuscompany.wiki.gg/wiki/Faust"
+    },
+    {
+      "requested_title": "Five Fingers",
+      "title": "Five Fingers",
+      "pageid": 22672,
+      "length": 12942,
+      "lastrevid": 169210,
+      "touched": "2026-05-19T23:29:45Z",
+      "fullurl": "https://limbuscompany.wiki.gg/wiki/Five_Fingers",
+      "canonicalurl": "https://limbuscompany.wiki.gg/wiki/Five_Fingers"
+    },
+    {
+      "requested_title": "Limbus Company",
+      "title": "Limbus Company",
+      "pageid": 3748,
+      "length": 43815,
+      "lastrevid": 170304,
+      "touched": "2026-05-22T18:58:09Z",
+      "fullurl": "https://limbuscompany.wiki.gg/wiki/Limbus_Company",
+      "canonicalurl": "https://limbuscompany.wiki.gg/wiki/Limbus_Company"
+    },
+    {
+      "requested_title": "The City",
+      "title": "The City",
+      "pageid": 20699,
+      "length": 52578,
+      "lastrevid": 166300,
+      "touched": "2026-05-12T19:44:40Z",
+      "fullurl": "https://limbuscompany.wiki.gg/wiki/The_City",
+      "canonicalurl": "https://limbuscompany.wiki.gg/wiki/The_City"
+    },
+    {
+      "requested_title": "The House of Spiders",
+      "title": "The House of Spiders",
+      "pageid": 30388,
+      "length": 27870,
+      "lastrevid": 172139,
+      "touched": "2026-05-31T02:12:52Z",
+      "fullurl": "https://limbuscompany.wiki.gg/wiki/The_House_of_Spiders",
+      "canonicalurl": "https://limbuscompany.wiki.gg/wiki/The_House_of_Spiders"
+    },
+    {
+      "requested_title": "The Ring",
+      "title": "The Ring",
+      "pageid": 9742,
+      "length": 28886,
+      "lastrevid": 172007,
+      "touched": "2026-05-30T04:07:23Z",
+      "fullurl": "https://limbuscompany.wiki.gg/wiki/The_Ring",
+      "canonicalurl": "https://limbuscompany.wiki.gg/wiki/The_Ring"
+    },
+    {
+      "requested_title": "Vergilius",
+      "title": "Vergilius",
+      "pageid": 9715,
+      "length": 7206,
+      "lastrevid": 168938,
+      "touched": "2026-05-13T23:18:33Z",
+      "fullurl": "https://limbuscompany.wiki.gg/wiki/Vergilius",
+      "canonicalurl": "https://limbuscompany.wiki.gg/wiki/Vergilius"
+    },
+    {
+      "requested_title": "Yi Sang",
+      "title": "Yi Sang",
+      "pageid": 6067,
+      "length": 25903,
+      "lastrevid": 172342,
+      "touched": "2026-06-01T12:37:16Z",
+      "fullurl": "https://limbuscompany.wiki.gg/wiki/Yi_Sang",
+      "canonicalurl": "https://limbuscompany.wiki.gg/wiki/Yi_Sang"
+    }
+  ],
+  "missing_titles": []
+}

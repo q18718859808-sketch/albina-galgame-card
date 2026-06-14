@@ -1,0 +1,314 @@
+{
+  "generated_at": "2026-06-04T08:24:49.631136+00:00",
+  "repo": "q18718859808-sketch/albina-galgame-card",
+  "tag": "v1.0.22",
+  "commit": "bd79c2ae18874d89812f415a5882cb7b5ed1daaa",
+  "urls": {
+    "tagConsole": "https://cdn.jsdelivr.net/gh/q18718859808-sketch/albina-galgame-card@v1.0.22/dist/albina-galgame-card/console/index.js",
+    "commitConsole": "https://cdn.jsdelivr.net/gh/q18718859808-sketch/albina-galgame-card@bd79c2ae18874d89812f415a5882cb7b5ed1daaa/dist/albina-galgame-card/console/index.js",
+    "testingcfConsole": "https://testingcf.jsdelivr.net/gh/q18718859808-sketch/albina-galgame-card@v1.0.22/dist/albina-galgame-card/console/index.js",
+    "fastlyConsole": "https://fastly.jsdelivr.net/gh/q18718859808-sketch/albina-galgame-card@v1.0.22/dist/albina-galgame-card/console/index.js",
+    "rawTagConsole": "https://raw.githubusercontent.com/q18718859808-sketch/albina-galgame-card/v1.0.22/dist/albina-galgame-card/console/index.js",
+    "rawCommitConsole": "https://raw.githubusercontent.com/q18718859808-sketch/albina-galgame-card/bd79c2ae18874d89812f415a5882cb7b5ed1daaa/dist/albina-galgame-card/console/index.js",
+    "tagP4Bridge": "https://cdn.jsdelivr.net/gh/q18718859808-sketch/albina-galgame-card@v1.0.22/dist/albina-galgame-card/worldbooks/pure/albina_p4_manifest_bridge_worldbook.pure.json",
+    "tagP4ArticleReviewed": "https://cdn.jsdelivr.net/gh/q18718859808-sketch/albina-galgame-card@v1.0.22/dist/albina-galgame-card/worldbooks/pure/albina_p4_article_reviewed_identity_worldbook.pure.json",
+    "rawTagP4ArticleReviewed": "https://raw.githubusercontent.com/q18718859808-sketch/albina-galgame-card/v1.0.22/dist/albina-galgame-card/worldbooks/pure/albina_p4_article_reviewed_identity_worldbook.pure.json",
+    "tagCardJson": "https://cdn.jsdelivr.net/gh/q18718859808-sketch/albina-galgame-card@v1.0.22/card/albina.card.json",
+    "tagManifest": "https://cdn.jsdelivr.net/gh/q18718859808-sketch/albina-galgame-card@v1.0.22/manifest.json",
+    "commitManifest": "https://cdn.jsdelivr.net/gh/q18718859808-sketch/albina-galgame-card@bd79c2ae18874d89812f415a5882cb7b5ed1daaa/manifest.json",
+    "tagAssetManifest": "https://cdn.jsdelivr.net/gh/q18718859808-sketch/albina-galgame-card@v1.0.22/dist/albina-galgame-card/assets/manifest.json",
+    "rawCommitReadme": "https://raw.githubusercontent.com/q18718859808-sketch/albina-galgame-card/bd79c2ae18874d89812f415a5882cb7b5ed1daaa/README.md",
+    "rawCommitInstall": "https://raw.githubusercontent.com/q18718859808-sketch/albina-galgame-card/bd79c2ae18874d89812f415a5882cb7b5ed1daaa/docs/install.md"
+  },
+  "tag_console": {
+    "ok": true,
+    "status": 200,
+    "bytes": 928508,
+    "headers": {
+      "Content-Type": "application/javascript; charset=utf-8",
+      "Cache-Control": "public, max-age=31536000, s-maxage=31536000, immutable",
+      "x-jsd-version": "1.0.22",
+      "etag": "W/\"e2afc-CpjY2G6rqTmk+pE47tBz1uNei20\"",
+      "x-cache": "MISS, MISS"
+    },
+    "marker_release_tag": true,
+    "marker_project_cdn_base": true,
+    "marker_no_previous_tag": true,
+    "marker_expandedBridgeTitles": true,
+    "marker_expanded_bridge_1882": true,
+    "marker_frontendScenes": true,
+    "marker_frontend_scenes_15": true,
+    "marker_no_forbidden_runtime_storage": true,
+    "passed": true
+  },
+  "commit_console": {
+    "ok": true,
+    "status": 200,
+    "bytes": 928508,
+    "headers": {
+      "Content-Type": "application/javascript; charset=utf-8",
+      "Cache-Control": "public, max-age=31536000, s-maxage=31536000, immutable",
+      "x-jsd-version": "bd79c2ae18874d89812f415a5882cb7b5ed1daaa",
+      "etag": "W/\"e2afc-CpjY2G6rqTmk+pE47tBz1uNei20\"",
+      "x-cache": "MISS, MISS"
+    },
+    "marker_release_tag": true,
+    "marker_project_cdn_base": true,
+    "marker_no_previous_tag": true,
+    "marker_expandedBridgeTitles": true,
+    "marker_expanded_bridge_1882": true,
+    "marker_frontendScenes": true,
+    "marker_frontend_scenes_15": true,
+    "marker_no_forbidden_runtime_storage": true,
+    "passed": true
+  },
+  "raw_tag_console": {
+    "ok": true,
+    "status": 200,
+    "bytes": 928508,
+    "headers": {
+      "Cache-Control": "max-age=300",
+      "Content-Type": "text/plain; charset=utf-8",
+      "ETag": "\"c0a14d8b594ad00ca4f47a3adef6e04a5511bbe8a219ba025d7b92b1c9c8fd3f\"",
+      "X-Cache": "MISS"
+    },
+    "marker_release_tag": true,
+    "marker_project_cdn_base": true,
+    "marker_no_previous_tag": true,
+    "marker_expandedBridgeTitles": true,
+    "marker_expanded_bridge_1882": true,
+    "marker_frontendScenes": true,
+    "marker_frontend_scenes_15": true,
+    "marker_no_forbidden_runtime_storage": true,
+    "passed": true
+  },
+  "raw_commit_console": {
+    "ok": true,
+    "status": 200,
+    "bytes": 928508,
+    "headers": {
+      "Cache-Control": "max-age=300",
+      "Content-Type": "text/plain; charset=utf-8",
+      "ETag": "\"c0a14d8b594ad00ca4f47a3adef6e04a5511bbe8a219ba025d7b92b1c9c8fd3f\"",
+      "X-Cache": "MISS"
+    },
+    "marker_release_tag": true,
+    "marker_project_cdn_base": true,
+    "marker_no_previous_tag": true,
+    "marker_expandedBridgeTitles": true,
+    "marker_expanded_bridge_1882": true,
+    "marker_frontendScenes": true,
+    "marker_frontend_scenes_15": true,
+    "marker_no_forbidden_runtime_storage": true,
+    "passed": true
+  },
+  "alt_console": [
+    {
+      "url": "https://testingcf.jsdelivr.net/gh/q18718859808-sketch/albina-galgame-card@v1.0.22/dist/albina-galgame-card/console/index.js",
+      "ok": true,
+      "status": 200,
+      "bytes": 928508,
+      "headers": {
+        "Content-Type": "application/javascript; charset=utf-8",
+        "Cache-Control": "public, max-age=31536000, s-maxage=31536000, immutable",
+        "x-jsd-version": "1.0.22",
+        "etag": "W/\"e2afc-CpjY2G6rqTmk+pE47tBz1uNei20\"",
+        "x-cache": "MISS, MISS"
+      },
+      "marker_release_tag": true,
+      "marker_project_cdn_base": true,
+      "marker_no_previous_tag": true,
+      "marker_expandedBridgeTitles": true,
+      "marker_expanded_bridge_1882": true,
+      "marker_frontendScenes": true,
+      "marker_frontend_scenes_15": true,
+      "marker_no_forbidden_runtime_storage": true,
+      "passed": true
+    },
+    {
+      "url": "https://fastly.jsdelivr.net/gh/q18718859808-sketch/albina-galgame-card@v1.0.22/dist/albina-galgame-card/console/index.js",
+      "ok": true,
+      "status": 200,
+      "bytes": 928508,
+      "headers": {
+        "Cache-Control": "public, max-age=31536000, s-maxage=31536000, immutable",
+        "Content-Type": "application/javascript; charset=utf-8",
+        "X-JSD-Version": "1.0.22",
+        "ETag": "W/\"e2afc-CpjY2G6rqTmk+pE47tBz1uNei20\"",
+        "X-Cache": "MISS, MISS"
+      },
+      "marker_release_tag": true,
+      "marker_project_cdn_base": true,
+      "marker_no_previous_tag": true,
+      "marker_expandedBridgeTitles": true,
+      "marker_expanded_bridge_1882": true,
+      "marker_frontendScenes": true,
+      "marker_frontend_scenes_15": true,
+      "marker_no_forbidden_runtime_storage": true,
+      "passed": true
+    }
+  ],
+  "p4_worldbook": {
+    "ok": true,
+    "status": 200,
+    "bytes": 3699965,
+    "headers": {
+      "Content-Type": "application/json; charset=utf-8",
+      "Cache-Control": "public, max-age=31536000, s-maxage=31536000, immutable",
+      "x-jsd-version": "1.0.22",
+      "etag": "W/\"3874fd-TQYcqW/kPVoV25ILmcxBt3H/7X4\"",
+      "x-cache": "MISS, MISS"
+    },
+    "entry_count": 1882,
+    "expected_entries": 1882,
+    "marker_count": 1882,
+    "bad_public_key_count": 0,
+    "bad_public_keys": [],
+    "bad_public_terms": [],
+    "passed": true
+  },
+  "p4_article_reviewed_worldbook": {
+    "ok": true,
+    "status": 200,
+    "bytes": 216135,
+    "headers": {
+      "Content-Type": "application/json; charset=utf-8",
+      "Cache-Control": "public, max-age=31536000, s-maxage=31536000, immutable",
+      "x-jsd-version": "1.0.22",
+      "etag": "W/\"34c47-d+8HtxMoBTRzpze/3tAH23I2fM0\"",
+      "x-cache": "MISS, MISS"
+    },
+    "entry_count": 161,
+    "expected_entries": 161,
+    "marker_count": 161,
+    "bad_public_key_count": 0,
+    "bad_public_keys": [],
+    "bad_public_terms": [],
+    "passed": true
+  },
+  "raw_p4_article_reviewed_worldbook": {
+    "ok": true,
+    "status": 200,
+    "bytes": 216135,
+    "headers": {
+      "Cache-Control": "max-age=300",
+      "Content-Type": "text/plain; charset=utf-8",
+      "ETag": "\"18de5a369b4961fd891a1804d57de955a29b01ac07e7e6a24adbd0eba0df46e1\"",
+      "X-Cache": "MISS"
+    },
+    "entry_count": 161,
+    "expected_entries": 161,
+    "marker_count": 161,
+    "bad_public_key_count": 0,
+    "bad_public_keys": [],
+    "bad_public_terms": [],
+    "passed": true
+  },
+  "card_json": {
+    "ok": true,
+    "status": 200,
+    "bytes": 67471,
+    "headers": {
+      "Content-Type": "application/json; charset=utf-8",
+      "Cache-Control": "public, max-age=31536000, s-maxage=31536000, immutable",
+      "x-jsd-version": "1.0.22",
+      "etag": "W/\"1078f-T9145Lo0SGoR/k01BwWrZ5KI6ZM\"",
+      "x-cache": "MISS, MISS"
+    },
+    "spec": "chara_card_v3",
+    "has_tag_import": true,
+    "has_previous_tag_import": false,
+    "has_cdn_import": true,
+    "passed": true
+  },
+  "manifest": {
+    "ok": true,
+    "status": 200,
+    "bytes": 25300,
+    "headers": {
+      "Content-Type": "application/json; charset=utf-8",
+      "Cache-Control": "public, max-age=31536000, s-maxage=31536000, immutable",
+      "x-jsd-version": "1.0.22",
+      "etag": "W/\"62d4-OhJu8DBkpf7y2UbzOUAgM/emyYs\"",
+      "x-cache": "MISS, MISS"
+    },
+    "project_id": "albina-galgame-card",
+    "tag": null,
+    "background_pack_count": 21,
+    "has_article_reviewed_p4_pack": true,
+    "has_p4_bridge_pack": true,
+    "has_readme": true,
+    "has_install_doc": true,
+    "passed": true
+  },
+  "commit_manifest": {
+    "ok": true,
+    "status": 200,
+    "bytes": 25300,
+    "headers": {
+      "Content-Type": "application/json; charset=utf-8",
+      "Cache-Control": "public, max-age=31536000, s-maxage=31536000, immutable",
+      "x-jsd-version": "bd79c2ae18874d89812f415a5882cb7b5ed1daaa",
+      "etag": "W/\"62d4-OhJu8DBkpf7y2UbzOUAgM/emyYs\"",
+      "x-cache": "MISS, MISS"
+    },
+    "project_id": "albina-galgame-card",
+    "tag": null,
+    "background_pack_count": 21,
+    "has_article_reviewed_p4_pack": true,
+    "has_p4_bridge_pack": true,
+    "has_readme": true,
+    "has_install_doc": true,
+    "passed": true
+  },
+  "asset_manifest": {
+    "ok": true,
+    "status": 200,
+    "bytes": 6007,
+    "headers": {
+      "Content-Type": "application/json; charset=utf-8",
+      "Cache-Control": "public, max-age=31536000, s-maxage=31536000, immutable",
+      "x-jsd-version": "1.0.22",
+      "etag": "W/\"1777-EkQ5iwbzn9/aNuWeCkSsf8/TZ+A\"",
+      "x-cache": "MISS, MISS"
+    },
+    "bg_count": 12,
+    "backgrounds_count": 12,
+    "cg_count": 30,
+    "characters_count": 14,
+    "passed": true
+  },
+  "readme": {
+    "ok": true,
+    "status": 200,
+    "bytes": 853,
+    "headers": {
+      "Cache-Control": "max-age=300",
+      "Content-Type": "text/plain; charset=utf-8",
+      "ETag": "\"05a9dbeb879195101f4a662f16b1c8f2617c5383fb03fdd19e72aa147d521286\"",
+      "X-Cache": "MISS"
+    },
+    "has_release_tag": true,
+    "has_jsdelivr_import": true,
+    "has_previous_tag": false,
+    "has_previous_commit": false,
+    "passed": true
+  },
+  "install_doc": {
+    "ok": true,
+    "status": 200,
+    "bytes": 321,
+    "headers": {
+      "Cache-Control": "max-age=300",
+      "Content-Type": "text/plain; charset=utf-8",
+      "ETag": "\"a4f81c5364ea954853eb91e889e6eabbfa201a0ba050c7034c61240947338980\"",
+      "X-Cache": "MISS"
+    },
+    "has_release_tag": true,
+    "has_jsdelivr_import": true,
+    "has_previous_tag": false,
+    "has_previous_commit": false,
+    "passed": true
+  },
+  "passed": true
+}

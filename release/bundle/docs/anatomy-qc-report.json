@@ -1,0 +1,101 @@
+{
+  "generated_at": "2026-06-02T01:15:26.645386+08:00",
+  "policy": "reject any image with visible extra fingers, missing fingers, fused/deformed fingers, broken joints, impossible limbs, malformed feet, text, logo, signature, watermark, barcode, stamp, UI marks, or fake typography; armor/weapon occlusion without visible anatomical defect is accepted_with_occlusion, not pass",
+  "rejected": [
+    {
+      "path": "C:\\Users\\张一帆\\.codex\\generated_images\\019e82fe-7a1a-7110-b5f8-81c159d7bbb4\\ig_0f3892552fe72229016a1db938dad08191a68b3b28b1b74f7f.png",
+      "reason": "left prosthetic hand and right grip anatomy are ambiguous under close crop; not accepted for final package"
+    }
+  ],
+  "assets_reviewed": [
+    {
+      "path": "assets/characters/albina/normal.png",
+      "verdict": "accepted_with_occlusion",
+      "text_logo_watermark_ui": "none observed",
+      "anatomy": "left hand, right gripping hand, ankles, and feet are heavily stylized/partly obscured by armor and weapon; no obvious extra limb, extra finger, missing finger, broken joint, or malformed foot observed, but hand/foot counts cannot be fully confirmed",
+      "new_crops": [
+        "docs/anatomy-qc-crops/normal_left_hand_new.png",
+        "docs/anatomy-qc-crops/normal_right_hand_new.png",
+        "docs/anatomy-qc-crops/normal_feet_new.png",
+        "docs/anatomy-qc-crops/normal_face_new.png",
+        "docs/anatomy-qc-crops/normal_full_thumbnail_new.png"
+      ],
+      "package_decision": "included because no explicit anatomical defect or text/logo contamination was observed; occlusion is documented for follow-up regeneration"
+    },
+    {
+      "path": "assets/avatar/albina-avatar.png",
+      "verdict": "accepted_with_occlusion",
+      "text_logo_watermark_ui": "none observed",
+      "anatomy": "upper-body crop; right hand gripping weapon is visible but partly occluded/stylized, lower body and feet are cropped out; no obvious malformed anatomy observed, but cannot fully confirm hands/feet from this asset alone",
+      "package_decision": "included because no explicit anatomical defect or text/logo contamination was observed; occlusion is documented for follow-up regeneration"
+    },
+    {
+      "path": "assets/cg/albina_key_visual.jpg",
+      "verdict": "accepted_with_occlusion",
+      "text_logo_watermark_ui": "none observed",
+      "anatomy": "full-body composition; hands and feet are small/partly obscured by weapon, armor, and perspective; no obvious malformed anatomy observed, but finger and foot detail cannot be fully confirmed",
+      "package_decision": "included because no explicit anatomical defect or text/logo contamination was observed; occlusion is documented for follow-up regeneration"
+    }
+  ],
+  "existing_crops_reviewed": [
+    {
+      "path": "docs/anatomy-qc-crops/candidate_hero_full_small.png",
+      "verdict": "risk",
+      "reason": "no text/logo observed; hands and feet are stylized and partly obscured, requiring risk classification rather than pass"
+    },
+    {
+      "path": "docs/anatomy-qc-crops/candidate_hero_left_hand.png",
+      "verdict": "reject",
+      "reason": "hand anatomy appears ambiguous/deformed under close crop, with unclear finger separation and claw-like articulation"
+    },
+    {
+      "path": "docs/anatomy-qc-crops/candidate_hero_right_hand_hilt.png",
+      "verdict": "risk",
+      "reason": "gripping hand is mostly hidden by weapon; no text/logo observed, but finger count cannot be confirmed"
+    },
+    {
+      "path": "docs/anatomy-qc-crops/candidate_hero_lower_body_feet.png",
+      "verdict": "risk",
+      "reason": "armored feet/ankles are partly hidden by weapon and dress; no clear malformed foot, but confirmation is limited"
+    },
+    {
+      "path": "docs/anatomy-qc-crops/candidate_hero_face_head.png",
+      "verdict": "pass",
+      "reason": "face/head crop has no observed text, logo, watermark, or facial anatomy defect"
+    },
+    {
+      "path": "docs/anatomy-qc-crops/current_normal_left_hand.png",
+      "verdict": "risk",
+      "reason": "current normal left hand is stylized/armored and partially occluded; no obvious extra/missing digits, but finger anatomy is not fully confirmable"
+    },
+    {
+      "path": "docs/anatomy-qc-crops/current_normal_right_hand_hilt.png",
+      "verdict": "risk",
+      "reason": "current normal right hand grips weapon with overlapping fingers; no obvious extra/missing digits, but count is partly occluded"
+    },
+    {
+      "path": "docs/anatomy-qc-crops/current_normal_feet.png",
+      "verdict": "risk",
+      "reason": "armored feet and ankles are mostly covered; no obvious malformed feet, but foot/ankle structure cannot be fully confirmed"
+    },
+    {
+      "path": "docs/anatomy-qc-crops/current_normal_face.png",
+      "verdict": "pass",
+      "reason": "face crop has no observed text, logo, watermark, or facial anatomy defect"
+    }
+  ],
+  "summary": {
+    "accepted_for_upload": [
+      "assets/cg/albina_key_visual.jpg",
+      "assets/characters/albina/normal.png",
+      "assets/avatar/albina-avatar.png"
+    ],
+    "current_asset_rejects": [],
+    "current_asset_risks": [],
+    "accepted_for_package": [
+      "assets/characters/albina/normal.png",
+      "assets/avatar/albina-avatar.png",
+      "assets/cg/albina_key_visual.jpg"
+    ]
+  }
+}

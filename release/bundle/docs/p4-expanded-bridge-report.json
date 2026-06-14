@@ -1,0 +1,31 @@
+{
+  "generated_at": "2026-06-04T00:00:11Z",
+  "version": "v1.0.16",
+  "selection_mode": "explicit_titles",
+  "policy": "expanded_bridge_not_article_level_paraphrase",
+  "worldbook": {
+    "path": "worldbooks\\albina_p4_manifest_bridge_worldbook.json",
+    "selected_count": 2,
+    "expanded_count": 2,
+    "total_expanded_count": 1882,
+    "total_unexpanded_count": 0,
+    "missing_count": 0,
+    "missing_titles": [],
+    "expanded_titles": [
+      "Limbus Canon Index",
+      "Unknown Canon Speaker"
+    ]
+  },
+  "queue": {
+    "path": "docs\\limbus_lore_rewrite_queue.json",
+    "changed_count": 2,
+    "review_status_summary": {
+      "expanded_bridge_needs_article_review": 1882,
+      "source_checked_paraphrase_seed": 260
+    },
+    "expansion_status_summary": {
+      "expanded_bridge_written": 1882,
+      "not_expanded": 260
+    }
+  }
+}

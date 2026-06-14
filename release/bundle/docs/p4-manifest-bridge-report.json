@@ -1,0 +1,11 @@
+{
+  "generated_at": "2026-06-02T04:44:19Z",
+  "manifest": "D:\\codex\\albina-galgame-card\\docs\\limbus_wiki_allpages_manifest.json",
+  "out": "D:\\codex\\albina-galgame-card\\worldbooks\\albina_p4_manifest_bridge_worldbook.json",
+  "manifest_page_count": 2142,
+  "already_covered_count": 260,
+  "generated_entry_count": 1882,
+  "generated_source_title_count": 1882,
+  "queue_updated_count": 1882,
+  "policy": "original_route_bridge_no_article_text"
+}

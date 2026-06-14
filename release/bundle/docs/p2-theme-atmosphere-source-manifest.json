@@ -1,0 +1,217 @@
+{
+  "generated_at": "2026-06-02T00:12:00Z",
+  "source_queue": "docs/limbus_lore_rewrite_queue.json",
+  "policy": "queue_metadata_only_no_article_text_saved",
+  "collection_mode": "explicit_titles_from_rewrite_queue",
+  "selection_criteria": {
+    "priority": "P2_rp_support",
+    "status": "pending_manual_paraphrase",
+    "page_type": "Theme Pack",
+    "selected_count": 20
+  },
+  "requested_titles": [
+    "A Midspring Night's Dream 2 Theme Pack",
+    "Addicting Lust Theme Pack",
+    "Bearers of Weight Theme Pack",
+    "Blessed Carnival Theme Pack",
+    "Bridle of Infinity Theme Pack",
+    "Burning Haze Theme Pack",
+    "Complete & Total Extermination Theme Pack",
+    "Crawling Abyss Theme Pack",
+    "Crushers & Breakers Theme Pack",
+    "Crushing External Force Theme Pack",
+    "Deep Sigh Theme Pack",
+    "Degraded Gloom Theme Pack",
+    "Devoured Gluttony Theme Pack",
+    "Dizzying Waves Theme Pack",
+    "Dregs of the Manor Theme Pack",
+    "Efflorescing Greenery Theme Pack",
+    "Emotional Craving Theme Pack",
+    "Emotional Flood Theme Pack",
+    "Emotional Indolence Theme Pack",
+    "Emotional Judgment Theme Pack"
+  ],
+  "pages": [
+    {
+      "requested_title": "A Midspring Night's Dream 2 Theme Pack",
+      "title": "A Midspring Night's Dream 2 Theme Pack",
+      "pageid": 35473,
+      "length": 1915,
+      "lastrevid": 168015,
+      "fullurl": "https://limbuscompany.wiki.gg/wiki/A_Midspring_Night%27s_Dream_2_Theme_Pack",
+      "canonicalurl": "https://limbuscompany.wiki.gg/wiki/A_Midspring_Night%27s_Dream_2_Theme_Pack"
+    },
+    {
+      "requested_title": "Addicting Lust Theme Pack",
+      "title": "Addicting Lust Theme Pack",
+      "pageid": 34703,
+      "length": 2384,
+      "lastrevid": 165425,
+      "fullurl": "https://limbuscompany.wiki.gg/wiki/Addicting_Lust_Theme_Pack",
+      "canonicalurl": "https://limbuscompany.wiki.gg/wiki/Addicting_Lust_Theme_Pack"
+    },
+    {
+      "requested_title": "Bearers of Weight Theme Pack",
+      "title": "Bearers of Weight Theme Pack",
+      "pageid": 35465,
+      "length": 1937,
+      "lastrevid": 168017,
+      "fullurl": "https://limbuscompany.wiki.gg/wiki/Bearers_of_Weight_Theme_Pack",
+      "canonicalurl": "https://limbuscompany.wiki.gg/wiki/Bearers_of_Weight_Theme_Pack"
+    },
+    {
+      "requested_title": "Blessed Carnival Theme Pack",
+      "title": "Blessed Carnival Theme Pack",
+      "pageid": 35467,
+      "length": 2003,
+      "lastrevid": 168008,
+      "fullurl": "https://limbuscompany.wiki.gg/wiki/Blessed_Carnival_Theme_Pack",
+      "canonicalurl": "https://limbuscompany.wiki.gg/wiki/Blessed_Carnival_Theme_Pack"
+    },
+    {
+      "requested_title": "Bridle of Infinity Theme Pack",
+      "title": "Bridle of Infinity Theme Pack",
+      "pageid": 34632,
+      "length": 1915,
+      "lastrevid": 165159,
+      "fullurl": "https://limbuscompany.wiki.gg/wiki/Bridle_of_Infinity_Theme_Pack",
+      "canonicalurl": "https://limbuscompany.wiki.gg/wiki/Bridle_of_Infinity_Theme_Pack"
+    },
+    {
+      "requested_title": "Burning Haze Theme Pack",
+      "title": "Burning Haze Theme Pack",
+      "pageid": 35208,
+      "length": 1911,
+      "lastrevid": 166494,
+      "fullurl": "https://limbuscompany.wiki.gg/wiki/Burning_Haze_Theme_Pack",
+      "canonicalurl": "https://limbuscompany.wiki.gg/wiki/Burning_Haze_Theme_Pack"
+    },
+    {
+      "requested_title": "Complete & Total Extermination Theme Pack",
+      "title": "Complete & Total Extermination Theme Pack",
+      "pageid": 35470,
+      "length": 1908,
+      "lastrevid": 168012,
+      "fullurl": "https://limbuscompany.wiki.gg/wiki/Complete_%26_Total_Extermination_Theme_Pack",
+      "canonicalurl": "https://limbuscompany.wiki.gg/wiki/Complete_%26_Total_Extermination_Theme_Pack"
+    },
+    {
+      "requested_title": "Crawling Abyss Theme Pack",
+      "title": "Crawling Abyss Theme Pack",
+      "pageid": 34663,
+      "length": 2431,
+      "lastrevid": 165268,
+      "fullurl": "https://limbuscompany.wiki.gg/wiki/Crawling_Abyss_Theme_Pack",
+      "canonicalurl": "https://limbuscompany.wiki.gg/wiki/Crawling_Abyss_Theme_Pack"
+    },
+    {
+      "requested_title": "Crushers & Breakers Theme Pack",
+      "title": "Crushers & Breakers Theme Pack",
+      "pageid": 34698,
+      "length": 1910,
+      "lastrevid": 165418,
+      "fullurl": "https://limbuscompany.wiki.gg/wiki/Crushers_%26_Breakers_Theme_Pack",
+      "canonicalurl": "https://limbuscompany.wiki.gg/wiki/Crushers_%26_Breakers_Theme_Pack"
+    },
+    {
+      "requested_title": "Crushing External Force Theme Pack",
+      "title": "Crushing External Force Theme Pack",
+      "pageid": 35214,
+      "length": 1669,
+      "lastrevid": 166503,
+      "fullurl": "https://limbuscompany.wiki.gg/wiki/Crushing_External_Force_Theme_Pack",
+      "canonicalurl": "https://limbuscompany.wiki.gg/wiki/Crushing_External_Force_Theme_Pack"
+    },
+    {
+      "requested_title": "Deep Sigh Theme Pack",
+      "title": "Deep Sigh Theme Pack",
+      "pageid": 35218,
+      "length": 1598,
+      "lastrevid": 166511,
+      "fullurl": "https://limbuscompany.wiki.gg/wiki/Deep_Sigh_Theme_Pack",
+      "canonicalurl": "https://limbuscompany.wiki.gg/wiki/Deep_Sigh_Theme_Pack"
+    },
+    {
+      "requested_title": "Degraded Gloom Theme Pack",
+      "title": "Degraded Gloom Theme Pack",
+      "pageid": 34712,
+      "length": 1997,
+      "lastrevid": 165439,
+      "fullurl": "https://limbuscompany.wiki.gg/wiki/Degraded_Gloom_Theme_Pack",
+      "canonicalurl": "https://limbuscompany.wiki.gg/wiki/Degraded_Gloom_Theme_Pack"
+    },
+    {
+      "requested_title": "Devoured Gluttony Theme Pack",
+      "title": "Devoured Gluttony Theme Pack",
+      "pageid": 34709,
+      "length": 1978,
+      "lastrevid": 165435,
+      "fullurl": "https://limbuscompany.wiki.gg/wiki/Devoured_Gluttony_Theme_Pack",
+      "canonicalurl": "https://limbuscompany.wiki.gg/wiki/Devoured_Gluttony_Theme_Pack"
+    },
+    {
+      "requested_title": "Dizzying Waves Theme Pack",
+      "title": "Dizzying Waves Theme Pack",
+      "pageid": 35212,
+      "length": 1714,
+      "lastrevid": 166498,
+      "fullurl": "https://limbuscompany.wiki.gg/wiki/Dizzying_Waves_Theme_Pack",
+      "canonicalurl": "https://limbuscompany.wiki.gg/wiki/Dizzying_Waves_Theme_Pack"
+    },
+    {
+      "requested_title": "Dregs of the Manor Theme Pack",
+      "title": "Dregs of the Manor Theme Pack",
+      "pageid": 34536,
+      "length": 2474,
+      "lastrevid": 165270,
+      "fullurl": "https://limbuscompany.wiki.gg/wiki/Dregs_of_the_Manor_Theme_Pack",
+      "canonicalurl": "https://limbuscompany.wiki.gg/wiki/Dregs_of_the_Manor_Theme_Pack"
+    },
+    {
+      "requested_title": "Efflorescing Greenery Theme Pack",
+      "title": "Efflorescing Greenery Theme Pack",
+      "pageid": 34630,
+      "length": 1834,
+      "lastrevid": 165157,
+      "fullurl": "https://limbuscompany.wiki.gg/wiki/Efflorescing_Greenery_Theme_Pack",
+      "canonicalurl": "https://limbuscompany.wiki.gg/wiki/Efflorescing_Greenery_Theme_Pack"
+    },
+    {
+      "requested_title": "Emotional Craving Theme Pack",
+      "title": "Emotional Craving Theme Pack",
+      "pageid": 34711,
+      "length": 1981,
+      "lastrevid": 165437,
+      "fullurl": "https://limbuscompany.wiki.gg/wiki/Emotional_Craving_Theme_Pack",
+      "canonicalurl": "https://limbuscompany.wiki.gg/wiki/Emotional_Craving_Theme_Pack"
+    },
+    {
+      "requested_title": "Emotional Flood Theme Pack",
+      "title": "Emotional Flood Theme Pack",
+      "pageid": 34714,
+      "length": 2002,
+      "lastrevid": 165441,
+      "fullurl": "https://limbuscompany.wiki.gg/wiki/Emotional_Flood_Theme_Pack",
+      "canonicalurl": "https://limbuscompany.wiki.gg/wiki/Emotional_Flood_Theme_Pack"
+    },
+    {
+      "requested_title": "Emotional Indolence Theme Pack",
+      "title": "Emotional Indolence Theme Pack",
+      "pageid": 34708,
+      "length": 2065,
+      "lastrevid": 165432,
+      "fullurl": "https://limbuscompany.wiki.gg/wiki/Emotional_Indolence_Theme_Pack",
+      "canonicalurl": "https://limbuscompany.wiki.gg/wiki/Emotional_Indolence_Theme_Pack"
+    },
+    {
+      "requested_title": "Emotional Judgment Theme Pack",
+      "title": "Emotional Judgment Theme Pack",
+      "pageid": 34720,
+      "length": 2049,
+      "lastrevid": 165447,
+      "fullurl": "https://limbuscompany.wiki.gg/wiki/Emotional_Judgment_Theme_Pack",
+      "canonicalurl": "https://limbuscompany.wiki.gg/wiki/Emotional_Judgment_Theme_Pack"
+    }
+  ],
+  "missing_titles": []
+}

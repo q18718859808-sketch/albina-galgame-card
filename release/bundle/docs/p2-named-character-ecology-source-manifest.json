@@ -1,0 +1,325 @@
+{
+  "generated_at": "2026-06-02T00:21:54.795501+00:00",
+  "source_api": "https://limbuscompany.wiki.gg/api.php",
+  "siteinfo": {
+    "general": {
+      "mainpage": "Limbus Company Wiki",
+      "base": "https://limbuscompany.wiki.gg/",
+      "sitename": "Limbus Company Wiki",
+      "mainpageisdomainroot": "",
+      "logo": "https://limbuscompany.wiki.gg/images/Site-logo.png?b1770e",
+      "generator": "MediaWiki 1.43.6",
+      "phpversion": "8.1.33",
+      "phpsapi": "fpm-fcgi",
+      "dbtype": "mysql",
+      "dbversion": "8.0.44",
+      "langconversion": "",
+      "linkconversion": "",
+      "titleconversion": "",
+      "linkprefixcharset": "",
+      "linkprefix": "",
+      "linktrail": "/^([a-z]+)(.*)$/sD",
+      "legaltitlechars": " %!\"$&'()*,\\-.\\/0-9:;=?@A-Z\\\\^_`a-z~\\x80-\\xFF+",
+      "invalidusernamechars": "@:>=",
+      "fixarabicunicode": "",
+      "fixmalayalamunicode": "",
+      "git-hash": "dbfc242be0bbaa1551cc67889356563042d8333b",
+      "git-branch": "wgg/1.43",
+      "case": "first-letter",
+      "lang": "en",
+      "fallback": [],
+      "fallback8bitEncoding": "windows-1252",
+      "writeapi": "",
+      "maxarticlesize": 4194304,
+      "timezone": "UTC",
+      "timeoffset": 0,
+      "articlepath": "/wiki/$1",
+      "scriptpath": "",
+      "script": "/index.php",
+      "variantarticlepath": "/wiki/$1?variant=$2",
+      "server": "https://limbuscompany.wiki.gg",
+      "servername": "limbuscompany.wiki.gg",
+      "wikiid": "limbuscompany_en",
+      "time": "2026-06-02T00:21:54Z",
+      "uploadsenabled": "",
+      "maxuploadsize": 15728640,
+      "minuploadchunksize": 1024,
+      "galleryoptions": {
+        "imagesPerRow": 0,
+        "imageWidth": 120,
+        "imageHeight": 120,
+        "captionLength": "",
+        "showBytes": "",
+        "showDimensions": "",
+        "mode": "traditional"
+      },
+      "thumblimits": [
+        160,
+        240,
+        320
+      ],
+      "imagelimits": [
+        {
+          "width": 320,
+          "height": 240
+        },
+        {
+          "width": 640,
+          "height": 480
+        },
+        {
+          "width": 1280,
+          "height": 1024
+        },
+        {
+          "width": 2560,
+          "height": 2048
+        }
+      ],
+      "favicon": "https://limbuscompany.wiki.gg/images/Site-favicon.ico?9d194e",
+      "centralidlookupprovider": "local",
+      "allcentralidlookupproviders": [
+        "local"
+      ],
+      "interwikimagic": "",
+      "magiclinks": [],
+      "categorycollation": "uppercase",
+      "nofollowlinks": "",
+      "nofollownsexceptions": [],
+      "nofollowdomainexceptions": [
+        "mediawiki.org",
+        "wiki.gg",
+        "indie.io",
+        "freedom.gg",
+        "mediawiki.org"
+      ],
+      "max-page-id": 36387,
+      "citeresponsivereferences": ""
+    },
+    "statistics": {
+      "pages": 33936,
+      "articles": 2133,
+      "edits": 172518,
+      "images": 26869,
+      "users": 655270,
+      "activeusers": 187,
+      "admins": 10,
+      "jobs": 0,
+      "cirrussearch-article-words": 1262137
+    }
+  },
+  "policy": "metadata_only_no_article_text_saved",
+  "collection_mode": "p2_named_character_ecology_batch",
+  "namespace": null,
+  "requested_titles": [
+    "Aeng-du/Sprites",
+    "Alan/Sprites",
+    "Alessio/Sprites",
+    "Alfonso/Sprites",
+    "Alyssa/Sprites",
+    "Aseah/Sprites",
+    "Aya/Sprites",
+    "Bari/Sprites",
+    "Cassetti/Sprites",
+    "Dulcinea/Sprites",
+    "Camille/Sprites",
+    "Catherine/Sprites",
+    "Charon/Sprites",
+    "Ezra/Sprites",
+    "Fabius/Sprites",
+    "Hindley/Sprites",
+    "Hohenheim/Sprites",
+    "Gubo/Sprites"
+  ],
+  "pages": [
+    {
+      "requested_title": "Aeng-du/Sprites",
+      "title": "Aeng-du/Sprites",
+      "pageid": 13858,
+      "length": 1096,
+      "lastrevid": 154927,
+      "touched": "2026-01-23T17:31:39Z",
+      "fullurl": "https://limbuscompany.wiki.gg/wiki/Aeng-du/Sprites",
+      "canonicalurl": "https://limbuscompany.wiki.gg/wiki/Aeng-du/Sprites"
+    },
+    {
+      "requested_title": "Alan/Sprites",
+      "title": "Alan/Sprites",
+      "pageid": 34879,
+      "length": 315,
+      "lastrevid": 165814,
+      "touched": "2026-04-16T12:52:19Z",
+      "fullurl": "https://limbuscompany.wiki.gg/wiki/Alan/Sprites",
+      "canonicalurl": "https://limbuscompany.wiki.gg/wiki/Alan/Sprites"
+    },
+    {
+      "requested_title": "Alessio/Sprites",
+      "title": "Alessio/Sprites",
+      "pageid": 17911,
+      "length": 270,
+      "lastrevid": 80205,
+      "touched": "2025-08-24T00:38:08Z",
+      "fullurl": "https://limbuscompany.wiki.gg/wiki/Alessio/Sprites",
+      "canonicalurl": "https://limbuscompany.wiki.gg/wiki/Alessio/Sprites"
+    },
+    {
+      "requested_title": "Alfonso/Sprites",
+      "title": "Alfonso/Sprites",
+      "pageid": 13705,
+      "length": 335,
+      "lastrevid": 62784,
+      "touched": "2025-08-24T00:38:09Z",
+      "fullurl": "https://limbuscompany.wiki.gg/wiki/Alfonso/Sprites",
+      "canonicalurl": "https://limbuscompany.wiki.gg/wiki/Alfonso/Sprites"
+    },
+    {
+      "requested_title": "Alyssa/Sprites",
+      "title": "Alyssa/Sprites",
+      "pageid": 30721,
+      "length": 1058,
+      "lastrevid": 155351,
+      "touched": "2026-01-25T20:36:47Z",
+      "fullurl": "https://limbuscompany.wiki.gg/wiki/Alyssa/Sprites",
+      "canonicalurl": "https://limbuscompany.wiki.gg/wiki/Alyssa/Sprites"
+    },
+    {
+      "requested_title": "Aseah/Sprites",
+      "title": "Aseah/Sprites",
+      "pageid": 13437,
+      "length": 298,
+      "lastrevid": 62145,
+      "touched": "2025-08-24T00:38:14Z",
+      "fullurl": "https://limbuscompany.wiki.gg/wiki/Aseah/Sprites",
+      "canonicalurl": "https://limbuscompany.wiki.gg/wiki/Aseah/Sprites"
+    },
+    {
+      "requested_title": "Aya/Sprites",
+      "title": "Aya/Sprites",
+      "pageid": 13779,
+      "length": 274,
+      "lastrevid": 62826,
+      "touched": "2025-08-24T00:38:18Z",
+      "fullurl": "https://limbuscompany.wiki.gg/wiki/Aya/Sprites",
+      "canonicalurl": "https://limbuscompany.wiki.gg/wiki/Aya/Sprites"
+    },
+    {
+      "requested_title": "Bari/Sprites",
+      "title": "Bari/Sprites",
+      "pageid": 17463,
+      "length": 309,
+      "lastrevid": 77168,
+      "touched": "2025-08-24T00:38:23Z",
+      "fullurl": "https://limbuscompany.wiki.gg/wiki/Bari/Sprites",
+      "canonicalurl": "https://limbuscompany.wiki.gg/wiki/Bari/Sprites"
+    },
+    {
+      "requested_title": "Camille/Sprites",
+      "title": "Camille/Sprites",
+      "pageid": 16142,
+      "length": 835,
+      "lastrevid": 77541,
+      "touched": "2026-01-14T15:12:48Z",
+      "fullurl": "https://limbuscompany.wiki.gg/wiki/Camille/Sprites",
+      "canonicalurl": "https://limbuscompany.wiki.gg/wiki/Camille/Sprites"
+    },
+    {
+      "requested_title": "Cassetti/Sprites",
+      "title": "Cassetti/Sprites",
+      "pageid": 14021,
+      "length": 604,
+      "lastrevid": 63631,
+      "touched": "2025-08-24T00:39:10Z",
+      "fullurl": "https://limbuscompany.wiki.gg/wiki/Cassetti/Sprites",
+      "canonicalurl": "https://limbuscompany.wiki.gg/wiki/Cassetti/Sprites"
+    },
+    {
+      "requested_title": "Catherine/Sprites",
+      "title": "Catherine/Sprites",
+      "pageid": 13318,
+      "length": 737,
+      "lastrevid": 71242,
+      "touched": "2025-08-24T00:39:10Z",
+      "fullurl": "https://limbuscompany.wiki.gg/wiki/Catherine/Sprites",
+      "canonicalurl": "https://limbuscompany.wiki.gg/wiki/Catherine/Sprites"
+    },
+    {
+      "requested_title": "Charon/Sprites",
+      "title": "Charon/Sprites",
+      "pageid": 22116,
+      "length": 1004,
+      "lastrevid": 163477,
+      "touched": "2026-03-31T21:35:35Z",
+      "fullurl": "https://limbuscompany.wiki.gg/wiki/Charon/Sprites",
+      "canonicalurl": "https://limbuscompany.wiki.gg/wiki/Charon/Sprites"
+    },
+    {
+      "requested_title": "Dulcinea/Sprites",
+      "title": "Dulcinea/Sprites",
+      "pageid": 17470,
+      "length": 483,
+      "lastrevid": 77180,
+      "touched": "2025-08-24T00:40:03Z",
+      "fullurl": "https://limbuscompany.wiki.gg/wiki/Dulcinea/Sprites",
+      "canonicalurl": "https://limbuscompany.wiki.gg/wiki/Dulcinea/Sprites"
+    },
+    {
+      "requested_title": "Ezra/Sprites",
+      "title": "Ezra/Sprites",
+      "pageid": 30607,
+      "length": 444,
+      "lastrevid": 148787,
+      "touched": "2025-12-31T15:39:46Z",
+      "fullurl": "https://limbuscompany.wiki.gg/wiki/Ezra/Sprites",
+      "canonicalurl": "https://limbuscompany.wiki.gg/wiki/Ezra/Sprites"
+    },
+    {
+      "requested_title": "Fabius/Sprites",
+      "title": "Fabius/Sprites",
+      "pageid": 28328,
+      "length": 653,
+      "lastrevid": 139928,
+      "touched": "2025-09-26T17:49:57Z",
+      "fullurl": "https://limbuscompany.wiki.gg/wiki/Fabius/Sprites",
+      "canonicalurl": "https://limbuscompany.wiki.gg/wiki/Fabius/Sprites"
+    },
+    {
+      "requested_title": "Gubo/Sprites",
+      "title": "Gubo/Sprites",
+      "pageid": 13717,
+      "length": 954,
+      "lastrevid": 152821,
+      "touched": "2026-01-16T06:11:38Z",
+      "fullurl": "https://limbuscompany.wiki.gg/wiki/Gubo/Sprites",
+      "canonicalurl": "https://limbuscompany.wiki.gg/wiki/Gubo/Sprites"
+    },
+    {
+      "requested_title": "Hindley/Sprites",
+      "title": "Hindley/Sprites",
+      "pageid": 13409,
+      "length": 1259,
+      "lastrevid": 65292,
+      "touched": "2025-08-24T00:41:05Z",
+      "fullurl": "https://limbuscompany.wiki.gg/wiki/Hindley/Sprites",
+      "canonicalurl": "https://limbuscompany.wiki.gg/wiki/Hindley/Sprites"
+    },
+    {
+      "requested_title": "Hohenheim/Sprites",
+      "title": "Hohenheim/Sprites",
+      "pageid": 19745,
+      "length": 1499,
+      "lastrevid": 153350,
+      "touched": "2026-01-18T15:35:05Z",
+      "fullurl": "https://limbuscompany.wiki.gg/wiki/Hohenheim/Sprites",
+      "canonicalurl": "https://limbuscompany.wiki.gg/wiki/Hohenheim/Sprites"
+    }
+  ],
+  "missing_titles": [],
+  "selection_policy": {
+    "queue_path": "docs/limbus_lore_rewrite_queue.json",
+    "required_priority": "P2_rp_support",
+    "required_status": "pending_manual_paraphrase",
+    "covered_by_required_absent": true,
+    "article_text_saved": false,
+    "image_reuse": false
+  }
+}

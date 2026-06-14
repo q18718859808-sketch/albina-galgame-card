@@ -1,0 +1,53 @@
+{
+  "generated_at": "2026-06-02T00:04:50.776793+00:00",
+  "manifest": "docs\\p3-bloodfiend-abnormality-source-manifest.json",
+  "manifest_collection_mode": "p3_bloodfiend_abnormality_batch",
+  "manifest_page_count": 14,
+  "worldbooks": [
+    {
+      "path": "worldbooks\\albina_p3_bloodfiend_abnormality_worldbook.json",
+      "entry_count": 7,
+      "entries_with_source_refs": 7,
+      "source_title_count": 14,
+      "source_titles": [
+        "\"Ghost\" Bloodfiend of Failed Penitence",
+        "\"Ghost\" Bloodfiend of Prayers",
+        "Absorbing Tree",
+        "Alleyway Watchdog",
+        "Alriune",
+        "Bloodbag of the Painful Parade",
+        "Bloodbag of the Rear Parade",
+        "Bloodfiend of the Happy Parade",
+        "Bloodfiend of the Joyful Parade",
+        "Bloodfiends",
+        "Bloomed Bloodfiend",
+        "Blossomed Bloodfiend",
+        "Budding Bloodbag",
+        "Budding Bloodfiend"
+      ]
+    }
+  ],
+  "total_worldbook_entries": 7,
+  "entries_with_source_refs": 7,
+  "referenced_source_title_count": 14,
+  "referenced_source_titles_in_manifest": [
+    "\"Ghost\" Bloodfiend of Failed Penitence",
+    "\"Ghost\" Bloodfiend of Prayers",
+    "Absorbing Tree",
+    "Alleyway Watchdog",
+    "Alriune",
+    "Bloodbag of the Painful Parade",
+    "Bloodbag of the Rear Parade",
+    "Bloodfiend of the Happy Parade",
+    "Bloodfiend of the Joyful Parade",
+    "Bloodfiends",
+    "Bloomed Bloodfiend",
+    "Blossomed Bloodfiend",
+    "Budding Bloodbag",
+    "Budding Bloodfiend"
+  ],
+  "source_titles_missing_from_manifest": [],
+  "unreferenced_manifest_title_count": 0,
+  "unreferenced_manifest_title_sample": [],
+  "passed": true
+}

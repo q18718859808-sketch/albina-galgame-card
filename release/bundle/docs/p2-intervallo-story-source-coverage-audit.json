@@ -1,0 +1,49 @@
+{
+  "generated_at": "2026-06-02T03:01:29.469513+00:00",
+  "manifest": "docs\\p2-intervallo-story-source-manifest.json",
+  "manifest_collection_mode": "explicit_titles",
+  "manifest_page_count": 12,
+  "worldbooks": [
+    {
+      "path": "worldbooks\\albina_p2_intervallo_story_worldbook.json",
+      "entry_count": 12,
+      "entries_with_source_refs": 12,
+      "source_title_count": 12,
+      "source_titles": [
+        "Episode Arknights - EX: Pilgrimage of Compassion/Story Episodes",
+        "Intervallo I: Hell's Chicken/Story Episodes",
+        "Intervallo II: S.E.A./Story Episodes",
+        "Intervallo III: Miracle in District 20/Story Episodes",
+        "Intervallo III: Yield My Flesh to Claim Their Bones/Story Episodes",
+        "Intervallo IV: Murder on the WARP Express/Story Episodes",
+        "Intervallo IV: Timekilling Time/Story Episodes",
+        "Intervallo V: LCB Regular Check-up/Story Episodes",
+        "Intervallo V: Nocturnal Sweeping/Story Episodes",
+        "Intervallo VI: Spring Cultivation/Story Episodes",
+        "Intervallo VII: Twining Threads/Story Episodes",
+        "Prologue: Selva Oscura/Story Episodes"
+      ]
+    }
+  ],
+  "total_worldbook_entries": 12,
+  "entries_with_source_refs": 12,
+  "referenced_source_title_count": 12,
+  "referenced_source_titles_in_manifest": [
+    "Episode Arknights - EX: Pilgrimage of Compassion/Story Episodes",
+    "Intervallo I: Hell's Chicken/Story Episodes",
+    "Intervallo II: S.E.A./Story Episodes",
+    "Intervallo III: Miracle in District 20/Story Episodes",
+    "Intervallo III: Yield My Flesh to Claim Their Bones/Story Episodes",
+    "Intervallo IV: Murder on the WARP Express/Story Episodes",
+    "Intervallo IV: Timekilling Time/Story Episodes",
+    "Intervallo V: LCB Regular Check-up/Story Episodes",
+    "Intervallo V: Nocturnal Sweeping/Story Episodes",
+    "Intervallo VI: Spring Cultivation/Story Episodes",
+    "Intervallo VII: Twining Threads/Story Episodes",
+    "Prologue: Selva Oscura/Story Episodes"
+  ],
+  "source_titles_missing_from_manifest": [],
+  "unreferenced_manifest_title_count": 0,
+  "unreferenced_manifest_title_sample": [],
+  "passed": true
+}

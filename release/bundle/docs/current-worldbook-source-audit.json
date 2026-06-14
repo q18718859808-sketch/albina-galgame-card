@@ -1,0 +1,205 @@
+{
+  "generated_at": "2026-06-01T15:34:44.183939+00:00",
+  "path": "D:\\codex\\albina-galgame-card\\worldbooks\\albina_rp_static_worldbook.json",
+  "passed": false,
+  "char_count": 274452,
+  "byte_count": 485391,
+  "entry_count": 258,
+  "disabled_entry_count": 0,
+  "entries_with_required_source_refs": 0,
+  "missing_source_count": 258,
+  "incomplete_source_count": 0,
+  "quote_marker_heavy_count": 123,
+  "mojibake_suspect_count": 0,
+  "missing_source_sample": [
+    {
+      "uid": "protocol_runtime",
+      "comment": "运行协议：前端权威与RP净化"
+    },
+    {
+      "uid": "safety_adult_consensual",
+      "comment": "安全边界：成人自愿与非性化暴力"
+    },
+    {
+      "uid": "player_default_profile",
+      "comment": "玩家默认身份"
+    },
+    {
+      "uid": "route_white_canvas",
+      "comment": "路线：白色画布"
+    },
+    {
+      "uid": "route_golden_bough_rebuild",
+      "comment": "路线：金枝重构"
+    },
+    {
+      "uid": "route_ring_conspiracy",
+      "comment": "路线：环指共谋"
+    },
+    {
+      "uid": "albina_voice",
+      "comment": "阿尔比娜语气规则"
+    },
+    {
+      "uid": "rp_第一卷-世界观-地理-历史-第一章-都市-The-City-1-1-都市概述",
+      "comment": "RP：第一卷：世界观·地理·历史 / 第一章：都市（The City） / 1.1 都市概述"
+    },
+    {
+      "uid": "rp_第一卷-世界观-地理-历史-第一章-都市-The-City-1-2-巢-Nest-与后巷-Backstreets",
+      "comment": "RP：第一卷：世界观·地理·历史 / 第一章：都市（The City） / 1.2 巢（Nest）与后巷（Backstreets）"
+    },
+    {
+      "uid": "rp_第一卷-世界观-地理-历史-第一章-都市-The-City-1-3-世界之翼-Wings",
+      "comment": "RP：第一卷：世界观·地理·历史 / 第一章：都市（The City） / 1.3 世界之翼（Wings）"
+    },
+    {
+      "uid": "rp_第一卷-世界观-地理-历史-第一章-都市-The-City-1-4-已知翼与奇点技术档案-L公司-脑叶公司-Lobotomy-C",
+      "comment": "RP：第一卷：世界观·地理·历史 / 第一章：都市（The City） / 1.4 已知翼与奇点技术档案 / L公司（脑叶公司 / Lobotomy Corporation）——已崩溃"
+    },
+    {
+      "uid": "rp_第一卷-世界观-地理-历史-第一章-都市-The-City-1-4-已知翼与奇点技术档案-其他已知翼",
+      "comment": "RP：第一卷：世界观·地理·历史 / 第一章：都市（The City） / 1.4 已知翼与奇点技术档案 / 其他已知翼**"
+    },
+    {
+      "uid": "rp_第一卷-世界观-地理-历史-第一章-都市-The-City-1-5-后巷生态与帮派",
+      "comment": "RP：第一卷：世界观·地理·历史 / 第一章：都市（The City） / 1.5 后巷生态与帮派"
+    },
+    {
+      "uid": "rp_第一卷-世界观-地理-历史-第一章-都市-The-City-1-6-郊区与外部威胁",
+      "comment": "RP：第一卷：世界观·地理·历史 / 第一章：都市（The City） / 1.6 郊区与外部威胁"
+    },
+    {
+      "uid": "rp_第一卷-世界观-地理-历史-第二章-脑叶公司与白夜黑昼-2-1-脑叶公司历史",
+      "comment": "RP：第一卷：世界观·地理·历史 / 第二章：脑叶公司与白夜黑昼 / 2.1 脑叶公司历史"
+    },
+    {
+      "uid": "rp_第一卷-世界观-地理-历史-第二章-脑叶公司与白夜黑昼-2-2-白夜黑昼事件-White-Nights-and-Dark-Day",
+      "comment": "RP：第一卷：世界观·地理·历史 / 第二章：脑叶公司与白夜黑昼 / 2.2 白夜黑昼事件（White Nights and Dark Days）"
+    },
+    {
+      "uid": "rp_第一卷-世界观-地理-历史-第二章-脑叶公司与白夜黑昼-2-3-白夜黑昼的后果",
+      "comment": "RP：第一卷：世界观·地理·历史 / 第二章：脑叶公司与白夜黑昼 / 2.3 白夜黑昼的后果"
+    },
+    {
+      "uid": "rp_第一卷-世界观-地理-历史-第二章-脑叶公司与白夜黑昼-2-4-废墟图书馆-Library-of-Ruina",
+      "comment": "RP：第一卷：世界观·地理·历史 / 第二章：脑叶公司与白夜黑昼 / 2.4 废墟图书馆（Library of Ruina）"
+    },
+    {
+      "uid": "rp_第一卷-世界观-地理-历史-第三章-都市势力与组织-3-1-首脑-The-Head",
+      "comment": "RP：第一卷：世界观·地理·历史 / 第三章：都市势力与组织 / 3.1 首脑（The Head）"
+    },
+    {
+      "uid": "rp_第二卷-边狱巴士公司-Limbus-Company-第一章-公司概述-1-1-边狱巴士公司-Limbus-Company",
+      "comment": "RP：第二卷：边狱巴士公司（Limbus Company） / 第一章：公司概述 / 1.1 边狱巴士公司（Limbus Company）"
+    }
+  ],
+  "incomplete_source_sample": [],
+  "quote_marker_heavy_sample": [
+    {
+      "uid": "albina_voice",
+      "comment": "阿尔比娜语气规则",
+      "quote_markers": 6
+    },
+    {
+      "uid": "rp_第一卷-世界观-地理-历史-第一章-都市-The-City-1-1-都市概述",
+      "comment": "RP：第一卷：世界观·地理·历史 / 第一章：都市（The City） / 1.1 都市概述",
+      "quote_markers": 12
+    },
+    {
+      "uid": "rp_第一卷-世界观-地理-历史-第一章-都市-The-City-1-2-巢-Nest-与后巷-Backstreets",
+      "comment": "RP：第一卷：世界观·地理·历史 / 第一章：都市（The City） / 1.2 巢（Nest）与后巷（Backstreets）",
+      "quote_markers": 8
+    },
+    {
+      "uid": "rp_第一卷-世界观-地理-历史-第一章-都市-The-City-1-3-世界之翼-Wings",
+      "comment": "RP：第一卷：世界观·地理·历史 / 第一章：都市（The City） / 1.3 世界之翼（Wings）",
+      "quote_markers": 8
+    },
+    {
+      "uid": "rp_第一卷-世界观-地理-历史-第一章-都市-The-City-1-4-已知翼与奇点技术档案-L公司-脑叶公司-Lobotomy-C",
+      "comment": "RP：第一卷：世界观·地理·历史 / 第一章：都市（The City） / 1.4 已知翼与奇点技术档案 / L公司（脑叶公司 / Lobotomy Corporation）——已崩溃",
+      "quote_markers": 20
+    },
+    {
+      "uid": "rp_第一卷-世界观-地理-历史-第一章-都市-The-City-1-5-后巷生态与帮派",
+      "comment": "RP：第一卷：世界观·地理·历史 / 第一章：都市（The City） / 1.5 后巷生态与帮派",
+      "quote_markers": 6
+    },
+    {
+      "uid": "rp_第一卷-世界观-地理-历史-第一章-都市-The-City-1-6-郊区与外部威胁",
+      "comment": "RP：第一卷：世界观·地理·历史 / 第一章：都市（The City） / 1.6 郊区与外部威胁",
+      "quote_markers": 4
+    },
+    {
+      "uid": "rp_第一卷-世界观-地理-历史-第二章-脑叶公司与白夜黑昼-2-1-脑叶公司历史",
+      "comment": "RP：第一卷：世界观·地理·历史 / 第二章：脑叶公司与白夜黑昼 / 2.1 脑叶公司历史",
+      "quote_markers": 10
+    },
+    {
+      "uid": "rp_第一卷-世界观-地理-历史-第二章-脑叶公司与白夜黑昼-2-2-白夜黑昼事件-White-Nights-and-Dark-Day",
+      "comment": "RP：第一卷：世界观·地理·历史 / 第二章：脑叶公司与白夜黑昼 / 2.2 白夜黑昼事件（White Nights and Dark Days）",
+      "quote_markers": 6
+    },
+    {
+      "uid": "rp_第一卷-世界观-地理-历史-第二章-脑叶公司与白夜黑昼-2-3-白夜黑昼的后果",
+      "comment": "RP：第一卷：世界观·地理·历史 / 第二章：脑叶公司与白夜黑昼 / 2.3 白夜黑昼的后果",
+      "quote_markers": 6
+    },
+    {
+      "uid": "rp_第一卷-世界观-地理-历史-第二章-脑叶公司与白夜黑昼-2-4-废墟图书馆-Library-of-Ruina",
+      "comment": "RP：第一卷：世界观·地理·历史 / 第二章：脑叶公司与白夜黑昼 / 2.4 废墟图书馆（Library of Ruina）",
+      "quote_markers": 4
+    },
+    {
+      "uid": "rp_第一卷-世界观-地理-历史-第三章-都市势力与组织-3-1-首脑-The-Head",
+      "comment": "RP：第一卷：世界观·地理·历史 / 第三章：都市势力与组织 / 3.1 首脑（The Head）",
+      "quote_markers": 6
+    },
+    {
+      "uid": "rp_第二卷-边狱巴士公司-Limbus-Company-第一章-公司概述-1-1-边狱巴士公司-Limbus-Company",
+      "comment": "RP：第二卷：边狱巴士公司（Limbus Company） / 第一章：公司概述 / 1.1 边狱巴士公司（Limbus Company）",
+      "quote_markers": 12
+    },
+    {
+      "uid": "rp_第二卷-边狱巴士公司-Limbus-Company-第一章-公司概述-1-2-组织架构-LCA-Limbus-Company-A",
+      "comment": "RP：第二卷：边狱巴士公司（Limbus Company） / 第一章：公司概述 / 1.2 组织架构 / LCA（Limbus Company Administration / 边狱公司行政部）",
+      "quote_markers": 6
+    },
+    {
+      "uid": "rp_第二卷-边狱巴士公司-Limbus-Company-第一章-公司概述-1-3-梅菲斯特号-Mephistopheles",
+      "comment": "RP：第二卷：边狱巴士公司（Limbus Company） / 第一章：公司概述 / 1.3 梅菲斯特号（Mephistopheles）",
+      "quote_markers": 4
+    },
+    {
+      "uid": "rp_第二卷-边狱巴士公司-Limbus-Company-第二章-执行经理-但丁-Dante-2-2-背景故事",
+      "comment": "RP：第二卷：边狱巴士公司（Limbus Company） / 第二章：执行经理——但丁（Dante） / 2.2 背景故事",
+      "quote_markers": 6
+    },
+    {
+      "uid": "rp_第二卷-边狱巴士公司-Limbus-Company-第二章-执行经理-但丁-Dante-2-3-能力详解",
+      "comment": "RP：第二卷：边狱巴士公司（Limbus Company） / 第二章：执行经理——但丁（Dante） / 2.3 能力详解",
+      "quote_markers": 6
+    },
+    {
+      "uid": "rp_第二卷-边狱巴士公司-Limbus-Company-第三章-向导与司机-3-1-维吉里乌斯-Vergilius",
+      "comment": "RP：第二卷：边狱巴士公司（Limbus Company） / 第三章：向导与司机 / 3.1 维吉里乌斯（Vergilius）",
+      "quote_markers": 6
+    },
+    {
+      "uid": "rp_第二卷-边狱巴士公司-Limbus-Company-第四章-十二罪人-The-Twelve-Sinners-4-1-罪人概述",
+      "comment": "RP：第二卷：边狱巴士公司（Limbus Company） / 第四章：十二罪人（The Twelve Sinners） / 4.1 罪人概述",
+      "quote_markers": 4
+    },
+    {
+      "uid": "rp_第二卷-边狱巴士公司-Limbus-Company-第四章-十二罪人-The-Twelve-Sinners-4-2-一号罪人-李",
+      "comment": "RP：第二卷：边狱巴士公司（Limbus Company） / 第四章：十二罪人（The Twelve Sinners） / 4.2 一号罪人：李箱（Yi Sang）",
+      "quote_markers": 6
+    }
+  ],
+  "mojibake_suspect_sample": [],
+  "policy": {
+    "canon_entries_require_source_refs": true,
+    "copyright_scan": "heuristic_only",
+    "completion_claim_allowed": false
+  }
+}

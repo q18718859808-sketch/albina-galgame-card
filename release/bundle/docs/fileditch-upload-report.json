@@ -1,0 +1,66 @@
+{
+  "generated_at": "2026-06-02T01:23:11.640202+08:00",
+  "service": "FileDitch",
+  "endpoint": "https://new.fileditch.com/upload.php",
+  "api_reference": "https://new.fileditch.com/api.html",
+  "attempts": [
+    {
+      "method": "curl raw POST",
+      "result": "failed",
+      "reason": "curl exit 35: schannel failed to receive handshake, SSL/TLS connection failed for all three files"
+    },
+    {
+      "method": "curl raw POST with --ssl-no-revoke",
+      "result": "failed",
+      "reason": "curl exit 35: schannel failed to receive handshake, SSL/TLS connection failed for all three files"
+    },
+    {
+      "method": "python requests raw POST",
+      "result": "failed",
+      "reason": "Connection reset by remote host: ConnectionResetError(10054, '?????????????????') for all three files"
+    },
+    {
+      "method": "parent curl GET api page",
+      "result": "failed",
+      "reason": "curl exit 35: schannel failed to receive handshake for https://new.fileditch.com/api.html"
+    },
+    {
+      "method": "parent curl HEAD homepage",
+      "result": "failed",
+      "reason": "curl exit 35: schannel failed to receive handshake for https://new.fileditch.com/"
+    },
+    {
+      "method": "parent curl HTTP homepage",
+      "result": "failed",
+      "reason": "curl exit 52: empty reply from server for http://new.fileditch.com/"
+    },
+    {
+      "method": "parent python requests GET",
+      "result": "failed",
+      "reason": "remote host reset connection 10054 for homepage and api page"
+    }
+  ],
+  "files": [
+    {
+      "local_path": "assets/cg/albina_key_visual.jpg",
+      "verdict_before_upload": "accepted_with_occlusion_no_explicit_anatomy_or_text_defect",
+      "upload_status": "failed",
+      "url": null,
+      "failure_reason": "FileDitch endpoint was unreachable from this environment: TLS handshake failed or remote host reset the connection before upload."
+    },
+    {
+      "local_path": "assets/characters/albina/normal.png",
+      "verdict_before_upload": "accepted_with_occlusion_no_explicit_anatomy_or_text_defect",
+      "upload_status": "failed",
+      "url": null,
+      "failure_reason": "FileDitch endpoint was unreachable from this environment: TLS handshake failed or remote host reset the connection before upload."
+    },
+    {
+      "local_path": "assets/avatar/albina-avatar.png",
+      "verdict_before_upload": "accepted_with_occlusion_no_explicit_anatomy_or_text_defect",
+      "upload_status": "failed",
+      "url": null,
+      "failure_reason": "FileDitch endpoint was unreachable from this environment: TLS handshake failed or remote host reset the connection before upload."
+    }
+  ]
+}

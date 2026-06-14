@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1920" height="1080" viewBox="0 0 1920 1080">
+
+  <defs>
+    <linearGradient id="city" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#08080d"/>
+      <stop offset="0.42" stop-color="#17202a"/>
+      <stop offset="1" stop-color="#3a1119"/>
+    </linearGradient>
+    <linearGradient id="gold" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#fff7c9"/>
+      <stop offset="0.48" stop-color="#d5a83d"/>
+      <stop offset="1" stop-color="#8b5d18"/>
+    </linearGradient>
+    <linearGradient id="porcelain" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#f7fbff"/>
+      <stop offset="0.52" stop-color="#b9c6ce"/>
+      <stop offset="1" stop-color="#59636a"/>
+    </linearGradient>
+    <filter id="softGlow"><feGaussianBlur stdDeviation="6" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+    <filter id="grain"><feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="3" stitchTiles="stitch"/><feColorMatrix type="saturate" values="0"/><feComponentTransfer><feFuncA type="table" tableValues="0 0.13"/></feComponentTransfer></filter>
+  </defs>
+
+<rect width="1920" height="1080" fill="url(#city)"/>
+<rect width="1920" height="1080" filter="url(#grain)" opacity=".45"/>
+<path d="M0 780 C420 660 620 880 930 740 C1240 600 1500 700 1920 610 L1920 1080 L0 1080 Z" fill="#05070b" opacity=".88"/>
+<g filter="url(#softGlow)"><path d="M1830 180 C1920 100 2020 300 2140 200" stroke="#e1b082" stroke-opacity=".22" stroke-width="2" fill="none"/><path d="M7 227 C97 147 197 347 317 247" stroke="#e1b082" stroke-opacity=".22" stroke-width="3" fill="none"/><path d="M104 274 C194 194 294 394 414 294" stroke="#e1b082" stroke-opacity=".22" stroke-width="4" fill="none"/><path d="M201 321 C291 241 391 441 511 341" stroke="#e1b082" stroke-opacity=".22" stroke-width="5" fill="none"/><path d="M298 368 C388 288 488 488 608 388" stroke="#e1b082" stroke-opacity=".22" stroke-width="2" fill="none"/><path d="M395 415 C485 335 585 535 705 435" stroke="#e1b082" stroke-opacity=".22" stroke-width="3" fill="none"/><path d="M492 462 C582 382 682 582 802 482" stroke="#e1b082" stroke-opacity=".22" stroke-width="4" fill="none"/><path d="M589 509 C679 429 779 629 899 529" stroke="#e1b082" stroke-opacity=".22" stroke-width="5" fill="none"/><path d="M686 556 C776 476 876 676 996 576" stroke="#e1b082" stroke-opacity=".22" stroke-width="2" fill="none"/><path d="M783 603 C873 523 973 723 1093 623" stroke="#e1b082" stroke-opacity=".22" stroke-width="3" fill="none"/><path d="M880 650 C970 570 1070 770 1190 670" stroke="#e1b082" stroke-opacity=".22" stroke-width="4" fill="none"/><path d="M977 697 C1067 617 1167 817 1287 717" stroke="#e1b082" stroke-opacity=".22" stroke-width="5" fill="none"/><path d="M1074 744 C1164 664 1264 864 1384 764" stroke="#e1b082" stroke-opacity=".22" stroke-width="2" fill="none"/><path d="M1171 791 C1261 711 1361 911 1481 811" stroke="#e1b082" stroke-opacity=".22" stroke-width="3" fill="none"/><path d="M1268 838 C1358 758 1458 958 1578 858" stroke="#e1b082" stroke-opacity=".22" stroke-width="4" fill="none"/><path d="M1365 885 C1455 805 1555 1005 1675 905" stroke="#e1b082" stroke-opacity=".22" stroke-width="5" fill="none"/><path d="M1462 932 C1552 852 1652 1052 1772 952" stroke="#e1b082" stroke-opacity=".22" stroke-width="2" fill="none"/><path d="M1559 219 C1649 139 1749 339 1869 239" stroke="#e1b082" stroke-opacity=".22" stroke-width="3" fill="none"/><path d="M1656 266 C1746 186 1846 386 1966 286" stroke="#e1b082" stroke-opacity=".22" stroke-width="4" fill="none"/><path d="M1753 313 C1843 233 1943 433 2063 333" stroke="#e1b082" stroke-opacity=".22" stroke-width="5" fill="none"/></g>
+<g><path d="M510 885 C450 610 580 500 700 560 C825 620 780 890 745 1010 L470 1010 Z" fill="#e8edf1" stroke="#e1b082" stroke-opacity=".55" stroke-width="8"/><circle cx="620" cy="505" r="74" fill="#e8edf1" stroke="#e0b252" stroke-width="7"/><path d="M1110 885 C1050 610 1180 500 1300 560 C1425 620 1380 890 1345 1010 L1070 1010 Z" fill="#111820" stroke="#e1b082" stroke-opacity=".55" stroke-width="8"/><circle cx="1220" cy="505" r="74" fill="#111820" stroke="#e0b252" stroke-width="7"/></g>
+<path d="M0 0 H1920 V1080 H0 Z" fill="none" stroke="#e1b082" stroke-opacity=".35" stroke-width="28"/>
+<text x="96" y="120" fill="#f8edc6" opacity=".42" font-size="42" font-family="serif">Rebuild Awakening</text>
+<text x="96" y="174" fill="#c7d7e8" opacity=".24" font-size="24" font-family="serif">outskirts_dawn</text>
+</svg>

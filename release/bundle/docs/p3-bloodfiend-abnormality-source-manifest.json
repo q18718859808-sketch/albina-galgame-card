@@ -1,0 +1,273 @@
+{
+  "generated_at": "2026-06-02T00:00:27.827257+00:00",
+  "source_api": "https://limbuscompany.wiki.gg/api.php",
+  "siteinfo": {
+    "general": {
+      "mainpage": "Limbus Company Wiki",
+      "base": "https://limbuscompany.wiki.gg/",
+      "sitename": "Limbus Company Wiki",
+      "mainpageisdomainroot": "",
+      "logo": "https://limbuscompany.wiki.gg/images/Site-logo.png?b1770e",
+      "generator": "MediaWiki 1.43.6",
+      "phpversion": "8.1.33",
+      "phpsapi": "fpm-fcgi",
+      "dbtype": "mysql",
+      "dbversion": "8.0.44",
+      "langconversion": "",
+      "linkconversion": "",
+      "titleconversion": "",
+      "linkprefixcharset": "",
+      "linkprefix": "",
+      "linktrail": "/^([a-z]+)(.*)$/sD",
+      "legaltitlechars": " %!\"$&'()*,\\-.\\/0-9:;=?@A-Z\\\\^_`a-z~\\x80-\\xFF+",
+      "invalidusernamechars": "@:>=",
+      "fixarabicunicode": "",
+      "fixmalayalamunicode": "",
+      "git-hash": "dbfc242be0bbaa1551cc67889356563042d8333b",
+      "git-branch": "wgg/1.43",
+      "case": "first-letter",
+      "lang": "en",
+      "fallback": [],
+      "fallback8bitEncoding": "windows-1252",
+      "writeapi": "",
+      "maxarticlesize": 4194304,
+      "timezone": "UTC",
+      "timeoffset": 0,
+      "articlepath": "/wiki/$1",
+      "scriptpath": "",
+      "script": "/index.php",
+      "variantarticlepath": "/wiki/$1?variant=$2",
+      "server": "https://limbuscompany.wiki.gg",
+      "servername": "limbuscompany.wiki.gg",
+      "wikiid": "limbuscompany_en",
+      "time": "2026-06-02T00:00:27Z",
+      "uploadsenabled": "",
+      "maxuploadsize": 15728640,
+      "minuploadchunksize": 1024,
+      "galleryoptions": {
+        "imagesPerRow": 0,
+        "imageWidth": 120,
+        "imageHeight": 120,
+        "captionLength": "",
+        "showBytes": "",
+        "showDimensions": "",
+        "mode": "traditional"
+      },
+      "thumblimits": [
+        160,
+        240,
+        320
+      ],
+      "imagelimits": [
+        {
+          "width": 320,
+          "height": 240
+        },
+        {
+          "width": 640,
+          "height": 480
+        },
+        {
+          "width": 1280,
+          "height": 1024
+        },
+        {
+          "width": 2560,
+          "height": 2048
+        }
+      ],
+      "favicon": "https://limbuscompany.wiki.gg/images/Site-favicon.ico?9d194e",
+      "centralidlookupprovider": "local",
+      "allcentralidlookupproviders": [
+        "local"
+      ],
+      "interwikimagic": "",
+      "magiclinks": [],
+      "categorycollation": "uppercase",
+      "nofollowlinks": "",
+      "nofollownsexceptions": [],
+      "nofollowdomainexceptions": [
+        "mediawiki.org",
+        "wiki.gg",
+        "indie.io",
+        "freedom.gg",
+        "mediawiki.org"
+      ],
+      "max-page-id": 36387,
+      "citeresponsivereferences": ""
+    },
+    "statistics": {
+      "pages": 33936,
+      "articles": 2133,
+      "edits": 172521,
+      "images": 26869,
+      "users": 655270,
+      "activeusers": 188,
+      "admins": 10,
+      "jobs": 0,
+      "cirrussearch-article-words": 1262137
+    }
+  },
+  "policy": "metadata_only_no_article_text_saved",
+  "collection_mode": "p3_bloodfiend_abnormality_batch",
+  "namespace": null,
+  "requested_titles": [
+    "Bloodfiends",
+    "\"Ghost\" Bloodfiend of Failed Penitence",
+    "\"Ghost\" Bloodfiend of Prayers",
+    "Budding Bloodfiend",
+    "Blossomed Bloodfiend",
+    "Bloomed Bloodfiend",
+    "Bloodfiend of the Joyful Parade",
+    "Bloodfiend of the Happy Parade",
+    "Budding Bloodbag",
+    "Bloodbag of the Painful Parade",
+    "Bloodbag of the Rear Parade",
+    "Alleyway Watchdog",
+    "Alriune",
+    "Absorbing Tree"
+  ],
+  "pages": [
+    {
+      "requested_title": "\"Ghost\" Bloodfiend of Failed Penitence",
+      "title": "\"Ghost\" Bloodfiend of Failed Penitence",
+      "pageid": 16647,
+      "length": 9931,
+      "lastrevid": 159523,
+      "touched": "2026-03-17T19:45:59Z",
+      "fullurl": "https://limbuscompany.wiki.gg/wiki/%22Ghost%22_Bloodfiend_of_Failed_Penitence",
+      "canonicalurl": "https://limbuscompany.wiki.gg/wiki/%22Ghost%22_Bloodfiend_of_Failed_Penitence"
+    },
+    {
+      "requested_title": "\"Ghost\" Bloodfiend of Prayers",
+      "title": "\"Ghost\" Bloodfiend of Prayers",
+      "pageid": 16648,
+      "length": 15186,
+      "lastrevid": 162752,
+      "touched": "2026-03-26T11:29:12Z",
+      "fullurl": "https://limbuscompany.wiki.gg/wiki/%22Ghost%22_Bloodfiend_of_Prayers",
+      "canonicalurl": "https://limbuscompany.wiki.gg/wiki/%22Ghost%22_Bloodfiend_of_Prayers"
+    },
+    {
+      "requested_title": "Absorbing Tree",
+      "title": "Absorbing Tree",
+      "pageid": 7854,
+      "length": 1560,
+      "lastrevid": 150216,
+      "touched": "2026-01-07T02:42:21Z",
+      "fullurl": "https://limbuscompany.wiki.gg/wiki/Absorbing_Tree",
+      "canonicalurl": "https://limbuscompany.wiki.gg/wiki/Absorbing_Tree"
+    },
+    {
+      "requested_title": "Alleyway Watchdog",
+      "title": "Alleyway Watchdog",
+      "pageid": 9209,
+      "length": 8283,
+      "lastrevid": 142673,
+      "touched": "2026-01-18T15:35:06Z",
+      "fullurl": "https://limbuscompany.wiki.gg/wiki/Alleyway_Watchdog",
+      "canonicalurl": "https://limbuscompany.wiki.gg/wiki/Alleyway_Watchdog"
+    },
+    {
+      "requested_title": "Alriune",
+      "title": "Alriune",
+      "pageid": 33152,
+      "length": 6062,
+      "lastrevid": 169665,
+      "touched": "2026-05-17T12:39:56Z",
+      "fullurl": "https://limbuscompany.wiki.gg/wiki/Alriune",
+      "canonicalurl": "https://limbuscompany.wiki.gg/wiki/Alriune"
+    },
+    {
+      "requested_title": "Bloodbag of the Painful Parade",
+      "title": "Bloodbag of the Painful Parade",
+      "pageid": 16661,
+      "length": 18256,
+      "lastrevid": 159525,
+      "touched": "2026-02-26T21:14:31Z",
+      "fullurl": "https://limbuscompany.wiki.gg/wiki/Bloodbag_of_the_Painful_Parade",
+      "canonicalurl": "https://limbuscompany.wiki.gg/wiki/Bloodbag_of_the_Painful_Parade"
+    },
+    {
+      "requested_title": "Bloodbag of the Rear Parade",
+      "title": "Bloodbag of the Rear Parade",
+      "pageid": 16662,
+      "length": 23258,
+      "lastrevid": 162753,
+      "touched": "2026-03-26T11:30:15Z",
+      "fullurl": "https://limbuscompany.wiki.gg/wiki/Bloodbag_of_the_Rear_Parade",
+      "canonicalurl": "https://limbuscompany.wiki.gg/wiki/Bloodbag_of_the_Rear_Parade"
+    },
+    {
+      "requested_title": "Bloodfiend of the Happy Parade",
+      "title": "Bloodfiend of the Happy Parade",
+      "pageid": 16674,
+      "length": 31482,
+      "lastrevid": 171377,
+      "touched": "2026-05-27T01:20:50Z",
+      "fullurl": "https://limbuscompany.wiki.gg/wiki/Bloodfiend_of_the_Happy_Parade",
+      "canonicalurl": "https://limbuscompany.wiki.gg/wiki/Bloodfiend_of_the_Happy_Parade"
+    },
+    {
+      "requested_title": "Bloodfiend of the Joyful Parade",
+      "title": "Bloodfiend of the Joyful Parade",
+      "pageid": 16676,
+      "length": 24871,
+      "lastrevid": 171404,
+      "touched": "2026-05-27T01:51:53Z",
+      "fullurl": "https://limbuscompany.wiki.gg/wiki/Bloodfiend_of_the_Joyful_Parade",
+      "canonicalurl": "https://limbuscompany.wiki.gg/wiki/Bloodfiend_of_the_Joyful_Parade"
+    },
+    {
+      "requested_title": "Bloodfiends",
+      "title": "Bloodfiends",
+      "pageid": 13990,
+      "length": 27756,
+      "lastrevid": 171148,
+      "touched": "2026-05-26T10:30:20Z",
+      "fullurl": "https://limbuscompany.wiki.gg/wiki/Bloodfiends",
+      "canonicalurl": "https://limbuscompany.wiki.gg/wiki/Bloodfiends"
+    },
+    {
+      "requested_title": "Bloomed Bloodfiend",
+      "title": "Bloomed Bloodfiend",
+      "pageid": 17525,
+      "length": 8590,
+      "lastrevid": 171445,
+      "touched": "2026-05-27T02:31:35Z",
+      "fullurl": "https://limbuscompany.wiki.gg/wiki/Bloomed_Bloodfiend",
+      "canonicalurl": "https://limbuscompany.wiki.gg/wiki/Bloomed_Bloodfiend"
+    },
+    {
+      "requested_title": "Blossomed Bloodfiend",
+      "title": "Blossomed Bloodfiend",
+      "pageid": 17521,
+      "length": 7379,
+      "lastrevid": 167840,
+      "touched": "2026-04-30T17:14:34Z",
+      "fullurl": "https://limbuscompany.wiki.gg/wiki/Blossomed_Bloodfiend",
+      "canonicalurl": "https://limbuscompany.wiki.gg/wiki/Blossomed_Bloodfiend"
+    },
+    {
+      "requested_title": "Budding Bloodbag",
+      "title": "Budding Bloodbag",
+      "pageid": 17513,
+      "length": 5657,
+      "lastrevid": 167175,
+      "touched": "2026-04-26T21:30:41Z",
+      "fullurl": "https://limbuscompany.wiki.gg/wiki/Budding_Bloodbag",
+      "canonicalurl": "https://limbuscompany.wiki.gg/wiki/Budding_Bloodbag"
+    },
+    {
+      "requested_title": "Budding Bloodfiend",
+      "title": "Budding Bloodfiend",
+      "pageid": 17523,
+      "length": 7492,
+      "lastrevid": 167841,
+      "touched": "2026-04-30T17:14:43Z",
+      "fullurl": "https://limbuscompany.wiki.gg/wiki/Budding_Bloodfiend",
+      "canonicalurl": "https://limbuscompany.wiki.gg/wiki/Budding_Bloodfiend"
+    }
+  ],
+  "missing_titles": []
+}

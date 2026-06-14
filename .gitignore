@@ -1,0 +1,7 @@
+# 只跟踪 release/ 目录用于 CDN 发布
+/*
+!release/
+!release/**/
+!/.gitignore
+!/README.md
+!/LICENSE

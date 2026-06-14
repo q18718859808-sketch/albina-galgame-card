@@ -1,0 +1,273 @@
+{
+  "generated_at": "2026-06-02T00:00:22.317321+00:00",
+  "source_api": "https://limbuscompany.wiki.gg/api.php",
+  "siteinfo": {
+    "general": {
+      "mainpage": "Limbus Company Wiki",
+      "base": "https://limbuscompany.wiki.gg/",
+      "sitename": "Limbus Company Wiki",
+      "mainpageisdomainroot": "",
+      "logo": "https://limbuscompany.wiki.gg/images/Site-logo.png?b1770e",
+      "generator": "MediaWiki 1.43.6",
+      "phpversion": "8.1.33",
+      "phpsapi": "fpm-fcgi",
+      "dbtype": "mysql",
+      "dbversion": "8.0.44",
+      "langconversion": "",
+      "linkconversion": "",
+      "titleconversion": "",
+      "linkprefixcharset": "",
+      "linkprefix": "",
+      "linktrail": "/^([a-z]+)(.*)$/sD",
+      "legaltitlechars": " %!\"$&'()*,\\-.\\/0-9:;=?@A-Z\\\\^_`a-z~\\x80-\\xFF+",
+      "invalidusernamechars": "@:>=",
+      "fixarabicunicode": "",
+      "fixmalayalamunicode": "",
+      "git-hash": "dbfc242be0bbaa1551cc67889356563042d8333b",
+      "git-branch": "wgg/1.43",
+      "case": "first-letter",
+      "lang": "en",
+      "fallback": [],
+      "fallback8bitEncoding": "windows-1252",
+      "writeapi": "",
+      "maxarticlesize": 4194304,
+      "timezone": "UTC",
+      "timeoffset": 0,
+      "articlepath": "/wiki/$1",
+      "scriptpath": "",
+      "script": "/index.php",
+      "variantarticlepath": "/wiki/$1?variant=$2",
+      "server": "https://limbuscompany.wiki.gg",
+      "servername": "limbuscompany.wiki.gg",
+      "wikiid": "limbuscompany_en",
+      "time": "2026-06-02T00:00:22Z",
+      "uploadsenabled": "",
+      "maxuploadsize": 15728640,
+      "minuploadchunksize": 1024,
+      "galleryoptions": {
+        "imagesPerRow": 0,
+        "imageWidth": 120,
+        "imageHeight": 120,
+        "captionLength": "",
+        "showBytes": "",
+        "showDimensions": "",
+        "mode": "traditional"
+      },
+      "thumblimits": [
+        160,
+        240,
+        320
+      ],
+      "imagelimits": [
+        {
+          "width": 320,
+          "height": 240
+        },
+        {
+          "width": 640,
+          "height": 480
+        },
+        {
+          "width": 1280,
+          "height": 1024
+        },
+        {
+          "width": 2560,
+          "height": 2048
+        }
+      ],
+      "favicon": "https://limbuscompany.wiki.gg/images/Site-favicon.ico?9d194e",
+      "centralidlookupprovider": "local",
+      "allcentralidlookupproviders": [
+        "local"
+      ],
+      "interwikimagic": "",
+      "magiclinks": [],
+      "categorycollation": "uppercase",
+      "nofollowlinks": "",
+      "nofollownsexceptions": [],
+      "nofollowdomainexceptions": [
+        "mediawiki.org",
+        "wiki.gg",
+        "indie.io",
+        "freedom.gg",
+        "mediawiki.org"
+      ],
+      "max-page-id": 36387,
+      "citeresponsivereferences": ""
+    },
+    "statistics": {
+      "pages": 33936,
+      "articles": 2133,
+      "edits": 172521,
+      "images": 26869,
+      "users": 655270,
+      "activeusers": 188,
+      "admins": 10,
+      "jobs": 0,
+      "cirrussearch-article-words": 1262137
+    }
+  },
+  "policy": "metadata_only_no_article_text_saved",
+  "collection_mode": "explicit_titles",
+  "namespace": null,
+  "requested_titles": [
+    "Cinq Association",
+    "Zwei Association",
+    "Seven Association",
+    "Shi Association",
+    "Liu Association",
+    "Dieci Association",
+    "Devyat' Association",
+    "Öufi Association",
+    "Blade Lineage",
+    "Kurokumo Clan",
+    "Fixers",
+    "Offices",
+    "Syndicates",
+    "The Index"
+  ],
+  "pages": [
+    {
+      "requested_title": "Blade Lineage",
+      "title": "Blade Lineage",
+      "pageid": 8967,
+      "length": 5995,
+      "lastrevid": 155817,
+      "touched": "2026-05-19T23:29:45Z",
+      "fullurl": "https://limbuscompany.wiki.gg/wiki/Blade_Lineage",
+      "canonicalurl": "https://limbuscompany.wiki.gg/wiki/Blade_Lineage"
+    },
+    {
+      "requested_title": "Cinq Association",
+      "title": "Cinq Association",
+      "pageid": 4425,
+      "length": 8594,
+      "lastrevid": 155766,
+      "touched": "2026-05-19T23:29:45Z",
+      "fullurl": "https://limbuscompany.wiki.gg/wiki/Cinq_Association",
+      "canonicalurl": "https://limbuscompany.wiki.gg/wiki/Cinq_Association"
+    },
+    {
+      "requested_title": "Devyat' Association",
+      "title": "Devyat' Association",
+      "pageid": 15505,
+      "length": 8561,
+      "lastrevid": 171559,
+      "touched": "2026-05-27T19:55:16Z",
+      "fullurl": "https://limbuscompany.wiki.gg/wiki/Devyat%27_Association",
+      "canonicalurl": "https://limbuscompany.wiki.gg/wiki/Devyat%27_Association"
+    },
+    {
+      "requested_title": "Dieci Association",
+      "title": "Dieci Association",
+      "pageid": 2383,
+      "length": 6200,
+      "lastrevid": 171558,
+      "touched": "2026-05-27T19:54:02Z",
+      "fullurl": "https://limbuscompany.wiki.gg/wiki/Dieci_Association",
+      "canonicalurl": "https://limbuscompany.wiki.gg/wiki/Dieci_Association"
+    },
+    {
+      "requested_title": "Fixers",
+      "title": "Fixers",
+      "pageid": 11162,
+      "length": 29808,
+      "lastrevid": 167530,
+      "touched": "2026-05-12T19:44:40Z",
+      "fullurl": "https://limbuscompany.wiki.gg/wiki/Fixers",
+      "canonicalurl": "https://limbuscompany.wiki.gg/wiki/Fixers"
+    },
+    {
+      "requested_title": "Kurokumo Clan",
+      "title": "Kurokumo Clan",
+      "pageid": 4856,
+      "length": 12272,
+      "lastrevid": 155854,
+      "touched": "2026-05-19T23:29:45Z",
+      "fullurl": "https://limbuscompany.wiki.gg/wiki/Kurokumo_Clan",
+      "canonicalurl": "https://limbuscompany.wiki.gg/wiki/Kurokumo_Clan"
+    },
+    {
+      "requested_title": "Liu Association",
+      "title": "Liu Association",
+      "pageid": 6457,
+      "length": 5939,
+      "lastrevid": 155768,
+      "touched": "2026-05-19T23:29:45Z",
+      "fullurl": "https://limbuscompany.wiki.gg/wiki/Liu_Association",
+      "canonicalurl": "https://limbuscompany.wiki.gg/wiki/Liu_Association"
+    },
+    {
+      "requested_title": "Offices",
+      "title": "Offices",
+      "pageid": 7861,
+      "length": 17859,
+      "lastrevid": 169725,
+      "touched": "2026-05-19T23:29:45Z",
+      "fullurl": "https://limbuscompany.wiki.gg/wiki/Offices",
+      "canonicalurl": "https://limbuscompany.wiki.gg/wiki/Offices"
+    },
+    {
+      "requested_title": "Seven Association",
+      "title": "Seven Association",
+      "pageid": 443,
+      "length": 4801,
+      "lastrevid": 171560,
+      "touched": "2026-05-27T19:57:31Z",
+      "fullurl": "https://limbuscompany.wiki.gg/wiki/Seven_Association",
+      "canonicalurl": "https://limbuscompany.wiki.gg/wiki/Seven_Association"
+    },
+    {
+      "requested_title": "Shi Association",
+      "title": "Shi Association",
+      "pageid": 6979,
+      "length": 6671,
+      "lastrevid": 164594,
+      "touched": "2026-05-19T23:29:45Z",
+      "fullurl": "https://limbuscompany.wiki.gg/wiki/Shi_Association",
+      "canonicalurl": "https://limbuscompany.wiki.gg/wiki/Shi_Association"
+    },
+    {
+      "requested_title": "Syndicates",
+      "title": "Syndicates",
+      "pageid": 11101,
+      "length": 22501,
+      "lastrevid": 169686,
+      "touched": "2026-05-19T23:29:45Z",
+      "fullurl": "https://limbuscompany.wiki.gg/wiki/Syndicates",
+      "canonicalurl": "https://limbuscompany.wiki.gg/wiki/Syndicates"
+    },
+    {
+      "requested_title": "The Index",
+      "title": "The Index",
+      "pageid": 25650,
+      "length": 22328,
+      "lastrevid": 172138,
+      "touched": "2026-05-31T02:10:11Z",
+      "fullurl": "https://limbuscompany.wiki.gg/wiki/The_Index",
+      "canonicalurl": "https://limbuscompany.wiki.gg/wiki/The_Index"
+    },
+    {
+      "requested_title": "Zwei Association",
+      "title": "Zwei Association",
+      "pageid": 4721,
+      "length": 8952,
+      "lastrevid": 155764,
+      "touched": "2026-05-19T23:29:45Z",
+      "fullurl": "https://limbuscompany.wiki.gg/wiki/Zwei_Association",
+      "canonicalurl": "https://limbuscompany.wiki.gg/wiki/Zwei_Association"
+    },
+    {
+      "requested_title": "Öufi Association",
+      "title": "Öufi Association",
+      "pageid": 9992,
+      "length": 5427,
+      "lastrevid": 162956,
+      "touched": "2026-05-19T23:29:45Z",
+      "fullurl": "https://limbuscompany.wiki.gg/wiki/%C3%96ufi_Association",
+      "canonicalurl": "https://limbuscompany.wiki.gg/wiki/%C3%96ufi_Association"
+    }
+  ],
+  "missing_titles": []
+}

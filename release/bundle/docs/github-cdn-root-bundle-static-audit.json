@@ -1,0 +1,128 @@
+{
+  "file": "D:\\codex\\albina-galgame-card\\release\\github-cdn-root\\dist\\albina-galgame-card\\console\\index.js",
+  "bytes": 928508,
+  "likely_kind": "independent_frontend_card",
+  "features": {
+    "vue": {
+      "present": true,
+      "count": 4,
+      "lines": [
+        1788,
+        2135,
+        2745,
+        18946
+      ]
+    },
+    "pinia": {
+      "present": false,
+      "count": 0,
+      "lines": []
+    },
+    "iframe": {
+      "present": true,
+      "count": 2,
+      "lines": [
+        19968,
+        19976
+      ]
+    },
+    "chat_variables": {
+      "present": true,
+      "count": 5,
+      "lines": [
+        4730,
+        7581,
+        7592,
+        7593,
+        7594
+      ]
+    },
+    "worldbook": {
+      "present": true,
+      "count": 19,
+      "lines": [
+        6006,
+        6019,
+        7267,
+        7268,
+        7275,
+        7283,
+        7285,
+        7287,
+        7292,
+        7308,
+        7322,
+        7328,
+        7387,
+        7420,
+        7573,
+        7574,
+        7575,
+        7674,
+        7846
+      ]
+    },
+    "generation": {
+      "present": true,
+      "count": 6,
+      "lines": [
+        7379,
+        7392,
+        7393,
+        7412,
+        7425,
+        7426
+      ]
+    },
+    "mvu": {
+      "present": false,
+      "count": 0,
+      "lines": []
+    },
+    "network": {
+      "present": true,
+      "count": 2,
+      "lines": [
+        2777,
+        2785
+      ]
+    },
+    "eval": {
+      "present": false,
+      "count": 0,
+      "lines": []
+    },
+    "local_storage": {
+      "present": false,
+      "count": 0,
+      "lines": []
+    },
+    "script_injection": {
+      "present": false,
+      "count": 0,
+      "lines": []
+    },
+    "forbidden_cdn_ref": {
+      "present": false,
+      "count": 0,
+      "lines": []
+    },
+    "source_map": {
+      "present": false,
+      "count": 0,
+      "lines": []
+    }
+  },
+  "urls": [
+    "http://www.w3.org/1998/Math/MathML",
+    "http://www.w3.org/1999/xhtml",
+    "http://www.w3.org/1999/xlink",
+    "http://www.w3.org/2000/svg",
+    "https://cdn.jsdelivr.net/gh/q18718859808-sketch/albina-galgame-card@v1.0.22/dist/${Mc}",
+    "https://jcgt.org/published/0007/04/01/\\n",
+    "https://vuejs.org/error-reference/#runtime-${r}"
+  ],
+  "risks": [
+    "performs network requests; verify no chat, token, or save data is uploaded"
+  ]
+}

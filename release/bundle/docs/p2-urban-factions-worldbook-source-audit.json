@@ -1,0 +1,23 @@
+{
+  "generated_at": "2026-06-02T00:05:43.695678+00:00",
+  "path": "worldbooks\\albina_p2_urban_factions_worldbook.json",
+  "passed": true,
+  "char_count": 17585,
+  "byte_count": 21448,
+  "entry_count": 9,
+  "disabled_entry_count": 0,
+  "entries_with_required_source_refs": 9,
+  "missing_source_count": 0,
+  "incomplete_source_count": 0,
+  "quote_marker_heavy_count": 0,
+  "mojibake_suspect_count": 0,
+  "missing_source_sample": [],
+  "incomplete_source_sample": [],
+  "quote_marker_heavy_sample": [],
+  "mojibake_suspect_sample": [],
+  "policy": {
+    "canon_entries_require_source_refs": true,
+    "copyright_scan": "heuristic_only",
+    "completion_claim_allowed": true
+  }
+}

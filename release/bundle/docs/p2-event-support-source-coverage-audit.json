@@ -1,0 +1,53 @@
+{
+  "generated_at": "2026-06-02T00:04:50.708294+00:00",
+  "manifest": "docs\\p2-event-support-source-manifest.json",
+  "manifest_collection_mode": "explicit_titles",
+  "manifest_page_count": 14,
+  "worldbooks": [
+    {
+      "path": "worldbooks\\albina_p2_event_support_worldbook.json",
+      "entry_count": 14,
+      "entries_with_source_refs": 14,
+      "source_title_count": 14,
+      "source_titles": [
+        "A Beautiful Voice Theme Pack",
+        "A Certain Sinclair/Assist Unit",
+        "A Certain World Theme Pack",
+        "A Midspring Night's Dream 2/Story Episodes",
+        "A Midspring Night's Dream 3/Story Episodes",
+        "A Midspring Night's Dream/Story Episode",
+        "Abnormal Seismic Zone Theme Pack",
+        "Alyssa/Assist Unit",
+        "Automated Factory Theme Pack",
+        "Blade and Artwork Theme Pack",
+        "Bloodtinged Ichthyic Odor Theme Pack",
+        "Chachihu Theme Pack",
+        "Charm, Wander, Doubt Theme Pack",
+        "Code Purple Theme Pack"
+      ]
+    }
+  ],
+  "total_worldbook_entries": 14,
+  "entries_with_source_refs": 14,
+  "referenced_source_title_count": 14,
+  "referenced_source_titles_in_manifest": [
+    "A Beautiful Voice Theme Pack",
+    "A Certain Sinclair/Assist Unit",
+    "A Certain World Theme Pack",
+    "A Midspring Night's Dream 2/Story Episodes",
+    "A Midspring Night's Dream 3/Story Episodes",
+    "A Midspring Night's Dream/Story Episode",
+    "Abnormal Seismic Zone Theme Pack",
+    "Alyssa/Assist Unit",
+    "Automated Factory Theme Pack",
+    "Blade and Artwork Theme Pack",
+    "Bloodtinged Ichthyic Odor Theme Pack",
+    "Chachihu Theme Pack",
+    "Charm, Wander, Doubt Theme Pack",
+    "Code Purple Theme Pack"
+  ],
+  "source_titles_missing_from_manifest": [],
+  "unreferenced_manifest_title_count": 0,
+  "unreferenced_manifest_title_sample": [],
+  "passed": true
+}

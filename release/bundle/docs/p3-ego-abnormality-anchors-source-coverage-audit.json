@@ -1,0 +1,53 @@
+{
+  "generated_at": "2026-06-02T00:22:12.238620+00:00",
+  "manifest": "docs\\p3-ego-abnormality-anchors-source-manifest.json",
+  "manifest_collection_mode": "p3_ego_abnormality_anchor_batch",
+  "manifest_page_count": 14,
+  "worldbooks": [
+    {
+      "path": "worldbooks\\albina_p3_ego_abnormality_anchors_worldbook.json",
+      "entry_count": 10,
+      "entries_with_source_refs": 10,
+      "source_title_count": 14,
+      "source_titles": [
+        "4th Match Flame Rodion",
+        "4th Match Flame Yi Sang",
+        "9:2 Sinclair",
+        "AEDD Heathcliff",
+        "Ardor Blossom Star Faust",
+        "Asymmetrical Inertia Heathcliff",
+        "Baba Yaga",
+        "Barbed Lasso",
+        "Basilisoup",
+        "Become Strong? Genuinely?",
+        "Between Two Worlds",
+        "Big Bird",
+        "Big, Scary Bear",
+        "Binds Heathcliff"
+      ]
+    }
+  ],
+  "total_worldbook_entries": 10,
+  "entries_with_source_refs": 10,
+  "referenced_source_title_count": 14,
+  "referenced_source_titles_in_manifest": [
+    "4th Match Flame Rodion",
+    "4th Match Flame Yi Sang",
+    "9:2 Sinclair",
+    "AEDD Heathcliff",
+    "Ardor Blossom Star Faust",
+    "Asymmetrical Inertia Heathcliff",
+    "Baba Yaga",
+    "Barbed Lasso",
+    "Basilisoup",
+    "Become Strong? Genuinely?",
+    "Between Two Worlds",
+    "Big Bird",
+    "Big, Scary Bear",
+    "Binds Heathcliff"
+  ],
+  "source_titles_missing_from_manifest": [],
+  "unreferenced_manifest_title_count": 0,
+  "unreferenced_manifest_title_sample": [],
+  "passed": true
+}

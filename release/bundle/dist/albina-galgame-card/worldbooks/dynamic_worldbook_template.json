@@ -1,0 +1,75 @@
+{
+  "name": "阿尔比娜动态世界书模板",
+  "description": "每个聊天存档运行时创建，用于玩家身份、已确认事实、关系变化、路线记忆和长期摘要。",
+  "entries": [
+    {
+      "uid": "dynamic_player_profile",
+      "key": [
+        "albina-galgame-card:player",
+        "{{user}}",
+        "玩家身份"
+      ],
+      "keysecondary": [],
+      "comment": "动态：玩家身份",
+      "content": "此条由前端写入。包含玩家自定义姓名、性别、外貌、背景、称谓、路线偏好和边界。\n",
+      "constant": true,
+      "selective": false,
+      "position": "before_character_definition",
+      "order": 10,
+      "disable": false,
+      "extensions": {
+        "depth": 4,
+        "role": "system",
+        "scan_depth": 4,
+        "case_sensitive": false,
+        "match_whole_words": false
+      }
+    },
+    {
+      "uid": "dynamic_confirmed_memory",
+      "key": [
+        "albina-galgame-card:memory",
+        "确认事实",
+        "长期记忆"
+      ],
+      "keysecondary": [],
+      "comment": "动态：确认事实与长期记忆",
+      "content": "此条由前端或用户确认后写入。AI 只能引用已确认事实，不得将一次性叙事误写为长期事实。\n",
+      "constant": false,
+      "selective": true,
+      "position": "after_character_definition",
+      "order": 20,
+      "disable": false,
+      "extensions": {
+        "depth": 4,
+        "role": "system",
+        "scan_depth": 4,
+        "case_sensitive": false,
+        "match_whole_words": false
+      }
+    },
+    {
+      "uid": "dynamic_relationship_route",
+      "key": [
+        "albina-galgame-card:relationship",
+        "阿尔比娜关系",
+        "路线状态"
+      ],
+      "keysecondary": [],
+      "comment": "动态：路线与关系",
+      "content": "保存当前路线、好感、信任、危险度、艺术共鸣、已解锁 CG 和关键旗标。\n",
+      "constant": false,
+      "selective": true,
+      "position": "after_character_definition",
+      "order": 30,
+      "disable": false,
+      "extensions": {
+        "depth": 4,
+        "role": "system",
+        "scan_depth": 4,
+        "case_sensitive": false,
+        "match_whole_words": false
+      }
+    }
+  ]
+}

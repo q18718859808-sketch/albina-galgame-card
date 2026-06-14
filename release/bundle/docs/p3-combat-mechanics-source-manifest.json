@@ -1,0 +1,191 @@
+{
+  "generated_at": "2026-06-02T00:12:00Z",
+  "source_api": "https://limbuscompany.wiki.gg/api.php",
+  "policy": "metadata_only_no_article_text_saved",
+  "collection_mode": "p3_combat_mechanics_batch",
+  "requested_titles": [
+    "Aggro",
+    "Ammo",
+    "Attack Weight",
+    "Battles",
+    "Charge",
+    "Poise",
+    "Tremor",
+    "Battle Announcers",
+    "Battle Announcers (Standard)",
+    "Battle Announcers (Seasons 1 - 3)",
+    "Battle Announcers (Seasons 4 - 5)",
+    "Battle Announcers (Walpurgisnacht I - V)",
+    "A Blade Fiend's Fathoms",
+    "A Blade Fiend's Fathoms/Floor 1",
+    "A Restaurateur's Mild Fathoms/Floor 1"
+  ],
+  "pages": [
+    {
+      "requested_title": "Aggro",
+      "title": "Aggro",
+      "priority": "P3_backlog",
+      "queue_status": "pending_manual_paraphrase",
+      "pageid": 18859,
+      "length": 9107,
+      "lastrevid": 166981,
+      "source_url": "https://limbuscompany.wiki.gg/wiki/Aggro",
+      "canonicalurl": "https://limbuscompany.wiki.gg/wiki/Aggro"
+    },
+    {
+      "requested_title": "Ammo",
+      "title": "Ammo",
+      "priority": "P3_backlog",
+      "queue_status": "pending_manual_paraphrase",
+      "pageid": 18296,
+      "length": 7836,
+      "lastrevid": 160913,
+      "source_url": "https://limbuscompany.wiki.gg/wiki/Ammo",
+      "canonicalurl": "https://limbuscompany.wiki.gg/wiki/Ammo"
+    },
+    {
+      "requested_title": "Attack Weight",
+      "title": "Attack Weight",
+      "priority": "P3_backlog",
+      "queue_status": "pending_manual_paraphrase",
+      "pageid": 25605,
+      "length": 4601,
+      "lastrevid": 172351,
+      "source_url": "https://limbuscompany.wiki.gg/wiki/Attack_Weight",
+      "canonicalurl": "https://limbuscompany.wiki.gg/wiki/Attack_Weight"
+    },
+    {
+      "requested_title": "Battles",
+      "title": "Battles",
+      "priority": "P3_backlog",
+      "queue_status": "pending_manual_paraphrase",
+      "pageid": 2809,
+      "length": 69418,
+      "lastrevid": 172063,
+      "source_url": "https://limbuscompany.wiki.gg/wiki/Battles",
+      "canonicalurl": "https://limbuscompany.wiki.gg/wiki/Battles"
+    },
+    {
+      "requested_title": "Charge",
+      "title": "Charge",
+      "priority": "P3_backlog",
+      "queue_status": "pending_manual_paraphrase",
+      "pageid": 15449,
+      "length": 16510,
+      "lastrevid": 169750,
+      "source_url": "https://limbuscompany.wiki.gg/wiki/Charge",
+      "canonicalurl": "https://limbuscompany.wiki.gg/wiki/Charge"
+    },
+    {
+      "requested_title": "Poise",
+      "title": "Poise",
+      "priority": "P3_backlog",
+      "queue_status": "pending_manual_paraphrase",
+      "pageid": 15507,
+      "length": 15888,
+      "lastrevid": 169485,
+      "source_url": "https://limbuscompany.wiki.gg/wiki/Poise",
+      "canonicalurl": "https://limbuscompany.wiki.gg/wiki/Poise"
+    },
+    {
+      "requested_title": "Tremor",
+      "title": "Tremor",
+      "priority": "P3_backlog",
+      "queue_status": "pending_manual_paraphrase",
+      "pageid": 15517,
+      "length": 28511,
+      "lastrevid": 168586,
+      "source_url": "https://limbuscompany.wiki.gg/wiki/Tremor",
+      "canonicalurl": "https://limbuscompany.wiki.gg/wiki/Tremor"
+    },
+    {
+      "requested_title": "Battle Announcers",
+      "title": "Battle Announcers",
+      "priority": "P3_backlog",
+      "queue_status": "pending_manual_paraphrase",
+      "pageid": 4691,
+      "length": 17638,
+      "lastrevid": 168631,
+      "source_url": "https://limbuscompany.wiki.gg/wiki/Battle_Announcers",
+      "canonicalurl": "https://limbuscompany.wiki.gg/wiki/Battle_Announcers"
+    },
+    {
+      "requested_title": "Battle Announcers (Standard)",
+      "title": "Battle Announcers (Standard)",
+      "priority": "P3_backlog",
+      "queue_status": "pending_manual_paraphrase",
+      "pageid": 29750,
+      "length": 31016,
+      "lastrevid": 159966,
+      "source_url": "https://limbuscompany.wiki.gg/wiki/Battle_Announcers_(Standard)",
+      "canonicalurl": "https://limbuscompany.wiki.gg/wiki/Battle_Announcers_(Standard)"
+    },
+    {
+      "requested_title": "Battle Announcers (Seasons 1 - 3)",
+      "title": "Battle Announcers (Seasons 1 - 3)",
+      "priority": "P3_backlog",
+      "queue_status": "pending_manual_paraphrase",
+      "pageid": 28986,
+      "length": 32352,
+      "lastrevid": 156563,
+      "source_url": "https://limbuscompany.wiki.gg/wiki/Battle_Announcers_(Seasons_1_-_3)",
+      "canonicalurl": "https://limbuscompany.wiki.gg/wiki/Battle_Announcers_(Seasons_1_-_3)"
+    },
+    {
+      "requested_title": "Battle Announcers (Seasons 4 - 5)",
+      "title": "Battle Announcers (Seasons 4 - 5)",
+      "priority": "P3_backlog",
+      "queue_status": "pending_manual_paraphrase",
+      "pageid": 28985,
+      "length": 48287,
+      "lastrevid": 149489,
+      "source_url": "https://limbuscompany.wiki.gg/wiki/Battle_Announcers_(Seasons_4_-_5)",
+      "canonicalurl": "https://limbuscompany.wiki.gg/wiki/Battle_Announcers_(Seasons_4_-_5)"
+    },
+    {
+      "requested_title": "Battle Announcers (Walpurgisnacht I - V)",
+      "title": "Battle Announcers (Walpurgisnacht I - V)",
+      "priority": "P3_backlog",
+      "queue_status": "pending_manual_paraphrase",
+      "pageid": 29749,
+      "length": 63992,
+      "lastrevid": 159306,
+      "source_url": "https://limbuscompany.wiki.gg/wiki/Battle_Announcers_(Walpurgisnacht_I_-_V)",
+      "canonicalurl": "https://limbuscompany.wiki.gg/wiki/Battle_Announcers_(Walpurgisnacht_I_-_V)"
+    },
+    {
+      "requested_title": "A Blade Fiend's Fathoms",
+      "title": "A Blade Fiend's Fathoms",
+      "priority": "P3_backlog",
+      "queue_status": "pending_manual_paraphrase",
+      "pageid": 8894,
+      "length": 35638,
+      "lastrevid": 144285,
+      "source_url": "https://limbuscompany.wiki.gg/wiki/A_Blade_Fiend%27s_Fathoms",
+      "canonicalurl": "https://limbuscompany.wiki.gg/wiki/A_Blade_Fiend%27s_Fathoms"
+    },
+    {
+      "requested_title": "A Blade Fiend's Fathoms/Floor 1",
+      "title": "A Blade Fiend's Fathoms/Floor 1",
+      "priority": "P3_backlog",
+      "queue_status": "pending_manual_paraphrase",
+      "pageid": 9611,
+      "length": 28038,
+      "lastrevid": 99149,
+      "source_url": "https://limbuscompany.wiki.gg/wiki/A_Blade_Fiend%27s_Fathoms/Floor_1",
+      "canonicalurl": "https://limbuscompany.wiki.gg/wiki/A_Blade_Fiend%27s_Fathoms/Floor_1"
+    },
+    {
+      "requested_title": "A Restaurateur's Mild Fathoms/Floor 1",
+      "title": "A Restaurateur's Mild Fathoms/Floor 1",
+      "priority": "P3_backlog",
+      "queue_status": "pending_manual_paraphrase",
+      "pageid": 9740,
+      "length": 21197,
+      "lastrevid": 156333,
+      "source_url": "https://limbuscompany.wiki.gg/wiki/A_Restaurateur%27s_Mild_Fathoms/Floor_1",
+      "canonicalurl": "https://limbuscompany.wiki.gg/wiki/A_Restaurateur%27s_Mild_Fathoms/Floor_1"
+    }
+  ],
+  "missing_titles": []
+}

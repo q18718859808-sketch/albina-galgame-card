@@ -1,0 +1,317 @@
+{
+  "generated_at": "2026-06-01T16:07:07.761905+00:00",
+  "source_api": "https://limbuscompany.wiki.gg/api.php",
+  "siteinfo": {
+    "general": {
+      "mainpage": "Limbus Company Wiki",
+      "base": "https://limbuscompany.wiki.gg/",
+      "sitename": "Limbus Company Wiki",
+      "mainpageisdomainroot": "",
+      "logo": "https://limbuscompany.wiki.gg/images/Site-logo.png?b1770e",
+      "generator": "MediaWiki 1.43.6",
+      "phpversion": "8.1.33",
+      "phpsapi": "fpm-fcgi",
+      "dbtype": "mysql",
+      "dbversion": "8.0.44",
+      "langconversion": "",
+      "linkconversion": "",
+      "titleconversion": "",
+      "linkprefixcharset": "",
+      "linkprefix": "",
+      "linktrail": "/^([a-z]+)(.*)$/sD",
+      "legaltitlechars": " %!\"$&'()*,\\-.\\/0-9:;=?@A-Z\\\\^_`a-z~\\x80-\\xFF+",
+      "invalidusernamechars": "@:>=",
+      "fixarabicunicode": "",
+      "fixmalayalamunicode": "",
+      "git-hash": "dbfc242be0bbaa1551cc67889356563042d8333b",
+      "git-branch": "wgg/1.43",
+      "case": "first-letter",
+      "lang": "en",
+      "fallback": [],
+      "fallback8bitEncoding": "windows-1252",
+      "writeapi": "",
+      "maxarticlesize": 4194304,
+      "timezone": "UTC",
+      "timeoffset": 0,
+      "articlepath": "/wiki/$1",
+      "scriptpath": "",
+      "script": "/index.php",
+      "variantarticlepath": "/wiki/$1?variant=$2",
+      "server": "https://limbuscompany.wiki.gg",
+      "servername": "limbuscompany.wiki.gg",
+      "wikiid": "limbuscompany_en",
+      "time": "2026-06-01T16:07:07Z",
+      "uploadsenabled": "",
+      "maxuploadsize": 15728640,
+      "minuploadchunksize": 1024,
+      "galleryoptions": {
+        "imagesPerRow": 0,
+        "imageWidth": 120,
+        "imageHeight": 120,
+        "captionLength": "",
+        "showBytes": "",
+        "showDimensions": "",
+        "mode": "traditional"
+      },
+      "thumblimits": [
+        160,
+        240,
+        320
+      ],
+      "imagelimits": [
+        {
+          "width": 320,
+          "height": 240
+        },
+        {
+          "width": 640,
+          "height": 480
+        },
+        {
+          "width": 1280,
+          "height": 1024
+        },
+        {
+          "width": 2560,
+          "height": 2048
+        }
+      ],
+      "favicon": "https://limbuscompany.wiki.gg/images/Site-favicon.ico?9d194e",
+      "centralidlookupprovider": "local",
+      "allcentralidlookupproviders": [
+        "local"
+      ],
+      "interwikimagic": "",
+      "magiclinks": [],
+      "categorycollation": "uppercase",
+      "nofollowlinks": "",
+      "nofollownsexceptions": [],
+      "nofollowdomainexceptions": [
+        "mediawiki.org",
+        "wiki.gg",
+        "indie.io",
+        "freedom.gg",
+        "mediawiki.org"
+      ],
+      "max-page-id": 36383,
+      "citeresponsivereferences": ""
+    },
+    "statistics": {
+      "pages": 33937,
+      "articles": 2133,
+      "edits": 172489,
+      "images": 26866,
+      "users": 655267,
+      "activeusers": 188,
+      "admins": 10,
+      "jobs": 0,
+      "cirrussearch-article-words": 1261740
+    }
+  },
+  "policy": "metadata_only_no_article_text_saved",
+  "collection_mode": "explicit_titles",
+  "namespace": null,
+  "requested_titles": [
+    "Callisto/Enemy",
+    "Callisto/Sprites",
+    "Araya/Sprites",
+    "Canto I: The Outcast/Story Episodes",
+    "Canto II: The Unloving/Story Episodes",
+    "Canto III: The Unconfronting/Story Episodes",
+    "Canto IV: The Unchanging/Story Episodes/Part I",
+    "Canto IV: The Unchanging/Story Episodes/Part II",
+    "Canto IV: The Unchanging/Story Episodes/Part III",
+    "Canto V: The Evil Defining/Story Episodes/Part I",
+    "Canto V: The Evil Defining/Story Episodes/Part II",
+    "Canto VI: The Heartbreaking/Story Episodes/Part I",
+    "Canto VI: The Heartbreaking/Story Episodes/Part II",
+    "Canto VI: The Heartbreaking/Story Episodes/Part III",
+    "Canto VII: The Dream Ending/Story Episodes/Part I",
+    "Canto VII: The Dream Ending/Story Episodes/Part II",
+    "Canto VIII: The Surrendered Witnessing/Story Episodes/Part I",
+    "Canto VIII: The Surrendered Witnessing/Story Episodes/Part III"
+  ],
+  "pages": [
+    {
+      "requested_title": "Araya/Sprites",
+      "title": "Araya/Sprites",
+      "pageid": 31925,
+      "length": 2908,
+      "lastrevid": 167042,
+      "touched": "2026-04-25T17:38:10Z",
+      "fullurl": "https://limbuscompany.wiki.gg/wiki/Araya/Sprites",
+      "canonicalurl": "https://limbuscompany.wiki.gg/wiki/Araya/Sprites"
+    },
+    {
+      "requested_title": "Callisto/Enemy",
+      "title": "Callisto/Enemy",
+      "pageid": 31833,
+      "length": 42790,
+      "lastrevid": 170268,
+      "touched": "2026-05-22T06:49:11Z",
+      "fullurl": "https://limbuscompany.wiki.gg/wiki/Callisto/Enemy",
+      "canonicalurl": "https://limbuscompany.wiki.gg/wiki/Callisto/Enemy"
+    },
+    {
+      "requested_title": "Callisto/Sprites",
+      "title": "Callisto/Sprites",
+      "pageid": 32251,
+      "length": 575,
+      "lastrevid": 153603,
+      "touched": "2026-01-17T14:23:20Z",
+      "fullurl": "https://limbuscompany.wiki.gg/wiki/Callisto/Sprites",
+      "canonicalurl": "https://limbuscompany.wiki.gg/wiki/Callisto/Sprites"
+    },
+    {
+      "requested_title": "Canto I: The Outcast/Story Episodes",
+      "title": "Canto I: The Outcast/Story Episodes",
+      "pageid": 581,
+      "length": 57639,
+      "lastrevid": 172128,
+      "touched": "2026-05-31T00:23:15Z",
+      "fullurl": "https://limbuscompany.wiki.gg/wiki/Canto_I:_The_Outcast/Story_Episodes",
+      "canonicalurl": "https://limbuscompany.wiki.gg/wiki/Canto_I:_The_Outcast/Story_Episodes"
+    },
+    {
+      "requested_title": "Canto II: The Unloving/Story Episodes",
+      "title": "Canto II: The Unloving/Story Episodes",
+      "pageid": 567,
+      "length": 125068,
+      "lastrevid": 156832,
+      "touched": "2026-02-05T21:34:49Z",
+      "fullurl": "https://limbuscompany.wiki.gg/wiki/Canto_II:_The_Unloving/Story_Episodes",
+      "canonicalurl": "https://limbuscompany.wiki.gg/wiki/Canto_II:_The_Unloving/Story_Episodes"
+    },
+    {
+      "requested_title": "Canto III: The Unconfronting/Story Episodes",
+      "title": "Canto III: The Unconfronting/Story Episodes",
+      "pageid": 2879,
+      "length": 120391,
+      "lastrevid": 141561,
+      "touched": "2025-10-20T11:52:51Z",
+      "fullurl": "https://limbuscompany.wiki.gg/wiki/Canto_III:_The_Unconfronting/Story_Episodes",
+      "canonicalurl": "https://limbuscompany.wiki.gg/wiki/Canto_III:_The_Unconfronting/Story_Episodes"
+    },
+    {
+      "requested_title": "Canto IV: The Unchanging/Story Episodes/Part I",
+      "title": "Canto IV: The Unchanging/Story Episodes/Part I",
+      "pageid": 6577,
+      "length": 140454,
+      "lastrevid": 172262,
+      "touched": "2026-05-31T12:07:34Z",
+      "fullurl": "https://limbuscompany.wiki.gg/wiki/Canto_IV:_The_Unchanging/Story_Episodes/Part_I",
+      "canonicalurl": "https://limbuscompany.wiki.gg/wiki/Canto_IV:_The_Unchanging/Story_Episodes/Part_I"
+    },
+    {
+      "requested_title": "Canto IV: The Unchanging/Story Episodes/Part II",
+      "title": "Canto IV: The Unchanging/Story Episodes/Part II",
+      "pageid": 5368,
+      "length": 91841,
+      "lastrevid": 172263,
+      "touched": "2026-05-31T12:08:06Z",
+      "fullurl": "https://limbuscompany.wiki.gg/wiki/Canto_IV:_The_Unchanging/Story_Episodes/Part_II",
+      "canonicalurl": "https://limbuscompany.wiki.gg/wiki/Canto_IV:_The_Unchanging/Story_Episodes/Part_II"
+    },
+    {
+      "requested_title": "Canto IV: The Unchanging/Story Episodes/Part III",
+      "title": "Canto IV: The Unchanging/Story Episodes/Part III",
+      "pageid": 7117,
+      "length": 6353,
+      "lastrevid": 172264,
+      "touched": "2026-05-31T12:09:06Z",
+      "fullurl": "https://limbuscompany.wiki.gg/wiki/Canto_IV:_The_Unchanging/Story_Episodes/Part_III",
+      "canonicalurl": "https://limbuscompany.wiki.gg/wiki/Canto_IV:_The_Unchanging/Story_Episodes/Part_III"
+    },
+    {
+      "requested_title": "Canto V: The Evil Defining/Story Episodes/Part I",
+      "title": "Canto V: The Evil Defining/Story Episodes/Part I",
+      "pageid": 3377,
+      "length": 142131,
+      "lastrevid": 172265,
+      "touched": "2026-05-31T12:10:30Z",
+      "fullurl": "https://limbuscompany.wiki.gg/wiki/Canto_V:_The_Evil_Defining/Story_Episodes/Part_I",
+      "canonicalurl": "https://limbuscompany.wiki.gg/wiki/Canto_V:_The_Evil_Defining/Story_Episodes/Part_I"
+    },
+    {
+      "requested_title": "Canto V: The Evil Defining/Story Episodes/Part II",
+      "title": "Canto V: The Evil Defining/Story Episodes/Part II",
+      "pageid": 3983,
+      "length": 142575,
+      "lastrevid": 172266,
+      "touched": "2026-05-31T12:10:59Z",
+      "fullurl": "https://limbuscompany.wiki.gg/wiki/Canto_V:_The_Evil_Defining/Story_Episodes/Part_II",
+      "canonicalurl": "https://limbuscompany.wiki.gg/wiki/Canto_V:_The_Evil_Defining/Story_Episodes/Part_II"
+    },
+    {
+      "requested_title": "Canto VI: The Heartbreaking/Story Episodes/Part I",
+      "title": "Canto VI: The Heartbreaking/Story Episodes/Part I",
+      "pageid": 6924,
+      "length": 200008,
+      "lastrevid": 172268,
+      "touched": "2026-05-31T12:13:30Z",
+      "fullurl": "https://limbuscompany.wiki.gg/wiki/Canto_VI:_The_Heartbreaking/Story_Episodes/Part_I",
+      "canonicalurl": "https://limbuscompany.wiki.gg/wiki/Canto_VI:_The_Heartbreaking/Story_Episodes/Part_I"
+    },
+    {
+      "requested_title": "Canto VI: The Heartbreaking/Story Episodes/Part II",
+      "title": "Canto VI: The Heartbreaking/Story Episodes/Part II",
+      "pageid": 3807,
+      "length": 67095,
+      "lastrevid": 172269,
+      "touched": "2026-05-31T12:13:55Z",
+      "fullurl": "https://limbuscompany.wiki.gg/wiki/Canto_VI:_The_Heartbreaking/Story_Episodes/Part_II",
+      "canonicalurl": "https://limbuscompany.wiki.gg/wiki/Canto_VI:_The_Heartbreaking/Story_Episodes/Part_II"
+    },
+    {
+      "requested_title": "Canto VI: The Heartbreaking/Story Episodes/Part III",
+      "title": "Canto VI: The Heartbreaking/Story Episodes/Part III",
+      "pageid": 10229,
+      "length": 142323,
+      "lastrevid": 172270,
+      "touched": "2026-05-31T12:14:21Z",
+      "fullurl": "https://limbuscompany.wiki.gg/wiki/Canto_VI:_The_Heartbreaking/Story_Episodes/Part_III",
+      "canonicalurl": "https://limbuscompany.wiki.gg/wiki/Canto_VI:_The_Heartbreaking/Story_Episodes/Part_III"
+    },
+    {
+      "requested_title": "Canto VII: The Dream Ending/Story Episodes/Part I",
+      "title": "Canto VII: The Dream Ending/Story Episodes/Part I",
+      "pageid": 7301,
+      "length": 212709,
+      "lastrevid": 172271,
+      "touched": "2026-05-31T12:15:05Z",
+      "fullurl": "https://limbuscompany.wiki.gg/wiki/Canto_VII:_The_Dream_Ending/Story_Episodes/Part_I",
+      "canonicalurl": "https://limbuscompany.wiki.gg/wiki/Canto_VII:_The_Dream_Ending/Story_Episodes/Part_I"
+    },
+    {
+      "requested_title": "Canto VII: The Dream Ending/Story Episodes/Part II",
+      "title": "Canto VII: The Dream Ending/Story Episodes/Part II",
+      "pageid": 16370,
+      "length": 121608,
+      "lastrevid": 172272,
+      "touched": "2026-05-31T12:15:27Z",
+      "fullurl": "https://limbuscompany.wiki.gg/wiki/Canto_VII:_The_Dream_Ending/Story_Episodes/Part_II",
+      "canonicalurl": "https://limbuscompany.wiki.gg/wiki/Canto_VII:_The_Dream_Ending/Story_Episodes/Part_II"
+    },
+    {
+      "requested_title": "Canto VIII: The Surrendered Witnessing/Story Episodes/Part I",
+      "title": "Canto VIII: The Surrendered Witnessing/Story Episodes/Part I",
+      "pageid": 23268,
+      "length": 215490,
+      "lastrevid": 172273,
+      "touched": "2026-05-31T12:30:48Z",
+      "fullurl": "https://limbuscompany.wiki.gg/wiki/Canto_VIII:_The_Surrendered_Witnessing/Story_Episodes/Part_I",
+      "canonicalurl": "https://limbuscompany.wiki.gg/wiki/Canto_VIII:_The_Surrendered_Witnessing/Story_Episodes/Part_I"
+    },
+    {
+      "requested_title": "Canto VIII: The Surrendered Witnessing/Story Episodes/Part III",
+      "title": "Canto VIII: The Surrendered Witnessing/Story Episodes/Part III",
+      "pageid": 24218,
+      "length": 262768,
+      "lastrevid": 172274,
+      "touched": "2026-05-31T12:31:17Z",
+      "fullurl": "https://limbuscompany.wiki.gg/wiki/Canto_VIII:_The_Surrendered_Witnessing/Story_Episodes/Part_III",
+      "canonicalurl": "https://limbuscompany.wiki.gg/wiki/Canto_VIII:_The_Surrendered_Witnessing/Story_Episodes/Part_III"
+    }
+  ],
+  "missing_titles": []
+}

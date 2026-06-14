@@ -1,0 +1,383 @@
+{
+  "generated_at": "2026-06-01T17:32:36.080316+00:00",
+  "source_api": "https://limbuscompany.wiki.gg/api.php",
+  "siteinfo": {
+    "general": {
+      "mainpage": "Limbus Company Wiki",
+      "base": "https://limbuscompany.wiki.gg/",
+      "sitename": "Limbus Company Wiki",
+      "mainpageisdomainroot": "",
+      "logo": "https://limbuscompany.wiki.gg/images/Site-logo.png?b1770e",
+      "generator": "MediaWiki 1.43.6",
+      "phpversion": "8.1.33",
+      "phpsapi": "fpm-fcgi",
+      "dbtype": "mysql",
+      "dbversion": "8.0.44",
+      "langconversion": "",
+      "linkconversion": "",
+      "titleconversion": "",
+      "linkprefixcharset": "",
+      "linkprefix": "",
+      "linktrail": "/^([a-z]+)(.*)$/sD",
+      "legaltitlechars": " %!\"$&'()*,\\-.\\/0-9:;=?@A-Z\\\\^_`a-z~\\x80-\\xFF+",
+      "invalidusernamechars": "@:>=",
+      "fixarabicunicode": "",
+      "fixmalayalamunicode": "",
+      "git-hash": "dbfc242be0bbaa1551cc67889356563042d8333b",
+      "git-branch": "wgg/1.43",
+      "case": "first-letter",
+      "lang": "en",
+      "fallback": [],
+      "fallback8bitEncoding": "windows-1252",
+      "writeapi": "",
+      "maxarticlesize": 4194304,
+      "timezone": "UTC",
+      "timeoffset": 0,
+      "articlepath": "/wiki/$1",
+      "scriptpath": "",
+      "script": "/index.php",
+      "variantarticlepath": "/wiki/$1?variant=$2",
+      "server": "https://limbuscompany.wiki.gg",
+      "servername": "limbuscompany.wiki.gg",
+      "wikiid": "limbuscompany_en",
+      "time": "2026-06-01T14:57:17Z",
+      "uploadsenabled": "",
+      "maxuploadsize": 15728640,
+      "minuploadchunksize": 1024,
+      "galleryoptions": {
+        "imagesPerRow": 0,
+        "imageWidth": 120,
+        "imageHeight": 120,
+        "captionLength": "",
+        "showBytes": "",
+        "showDimensions": "",
+        "mode": "traditional"
+      },
+      "thumblimits": [
+        160,
+        240,
+        320
+      ],
+      "imagelimits": [
+        {
+          "width": 320,
+          "height": 240
+        },
+        {
+          "width": 640,
+          "height": 480
+        },
+        {
+          "width": 1280,
+          "height": 1024
+        },
+        {
+          "width": 2560,
+          "height": 2048
+        }
+      ],
+      "favicon": "https://limbuscompany.wiki.gg/images/Site-favicon.ico?9d194e",
+      "centralidlookupprovider": "local",
+      "allcentralidlookupproviders": [
+        "local"
+      ],
+      "interwikimagic": "",
+      "magiclinks": [],
+      "categorycollation": "uppercase",
+      "nofollowlinks": "",
+      "nofollownsexceptions": [],
+      "nofollowdomainexceptions": [
+        "mediawiki.org",
+        "wiki.gg",
+        "indie.io",
+        "freedom.gg",
+        "mediawiki.org"
+      ],
+      "max-page-id": 36383,
+      "citeresponsivereferences": ""
+    },
+    "statistics": {
+      "pages": 33937,
+      "articles": 2133,
+      "edits": 172482,
+      "images": 26866,
+      "users": 655266,
+      "activeusers": 189,
+      "admins": 10,
+      "jobs": 0,
+      "cirrussearch-article-words": 1261740
+    }
+  },
+  "policy": "metadata_only_no_article_text_saved",
+  "collection_mode": "p2_identity_association_batch",
+  "namespace": 0,
+  "requested_titles": [
+    "Camille/Enemy",
+    "Öufi Assoc. Director/Enemy",
+    "District 20 Yurodiviye Captain/Enemy",
+    "Guido/Enemy",
+    "Kromer/Enemy/Kromer",
+    "Old G Corp. Head Manager/Enemy",
+    "Shi Huazhen/Enemy",
+    "Shi Sijing/Enemy",
+    "Shi Yihua/Enemy",
+    "Shiomi Yoru/Enemy",
+    "Jun/Enemy",
+    "Kira/Enemy",
+    "Kira/Assist Unit",
+    "Jia Mu/Enemy/Jia Mu",
+    "Jia Xichun/Assist Unit",
+    "Kong Qiu/Enemy",
+    "Lei Heng/Enemy",
+    "Wang Qingshan/Enemy",
+    "Wei/Enemy",
+    "Xue Pan/Enemy",
+    "Hohenheim/Enemy",
+    "Hohenheim/Assist Unit",
+    "Moses/Assist Unit",
+    "Vergilius/Assist Unit"
+  ],
+  "pages": [
+    {
+      "requested_title": "Camille/Enemy",
+      "title": "Camille/Enemy",
+      "pageid": 16128,
+      "length": 6362,
+      "lastrevid": 167845,
+      "touched": "2026-04-30T17:15:02Z",
+      "fullurl": "https://limbuscompany.wiki.gg/wiki/Camille/Enemy",
+      "canonicalurl": "https://limbuscompany.wiki.gg/wiki/Camille/Enemy"
+    },
+    {
+      "requested_title": "Pointillist Researcher of the Ring?",
+      "title": "Öufi Assoc. Director/Enemy",
+      "pageid": 3706,
+      "length": 5466,
+      "lastrevid": 171350,
+      "touched": "2026-05-26T23:48:40Z",
+      "fullurl": "https://limbuscompany.wiki.gg/wiki/%C3%96ufi_Assoc._Director/Enemy",
+      "canonicalurl": "https://limbuscompany.wiki.gg/wiki/%C3%96ufi_Assoc._Director/Enemy"
+    },
+    {
+      "requested_title": "District 20 Yurodiviye Captain/Enemy",
+      "title": "District 20 Yurodiviye Captain/Enemy",
+      "pageid": 12241,
+      "length": 12352,
+      "lastrevid": 155589,
+      "touched": "2026-03-17T19:47:57Z",
+      "fullurl": "https://limbuscompany.wiki.gg/wiki/District_20_Yurodiviye_Captain/Enemy",
+      "canonicalurl": "https://limbuscompany.wiki.gg/wiki/District_20_Yurodiviye_Captain/Enemy"
+    },
+    {
+      "requested_title": "Guido the Persistent",
+      "title": "Guido/Enemy",
+      "pageid": 6723,
+      "length": 18526,
+      "lastrevid": 167484,
+      "touched": "2026-04-28T15:44:29Z",
+      "fullurl": "https://limbuscompany.wiki.gg/wiki/Guido/Enemy",
+      "canonicalurl": "https://limbuscompany.wiki.gg/wiki/Guido/Enemy"
+    },
+    {
+      "requested_title": "Kromer/Enemy",
+      "title": "Kromer/Enemy/Kromer",
+      "pageid": 6855,
+      "length": 19082,
+      "lastrevid": 167270,
+      "touched": "2026-04-27T00:40:59Z",
+      "fullurl": "https://limbuscompany.wiki.gg/wiki/Kromer/Enemy/Kromer",
+      "canonicalurl": "https://limbuscompany.wiki.gg/wiki/Kromer/Enemy/Kromer"
+    },
+    {
+      "requested_title": "Old G Corp. Head Manager/Enemy",
+      "title": "Old G Corp. Head Manager/Enemy",
+      "pageid": 5600,
+      "length": 6439,
+      "lastrevid": 167190,
+      "touched": "2026-04-26T21:40:12Z",
+      "fullurl": "https://limbuscompany.wiki.gg/wiki/Old_G_Corp._Head_Manager/Enemy",
+      "canonicalurl": "https://limbuscompany.wiki.gg/wiki/Old_G_Corp._Head_Manager/Enemy"
+    },
+    {
+      "requested_title": "Shi Huazhen/Enemy",
+      "title": "Shi Huazhen/Enemy",
+      "pageid": 23652,
+      "length": 19757,
+      "lastrevid": 171428,
+      "touched": "2026-05-27T02:18:35Z",
+      "fullurl": "https://limbuscompany.wiki.gg/wiki/Shi_Huazhen/Enemy",
+      "canonicalurl": "https://limbuscompany.wiki.gg/wiki/Shi_Huazhen/Enemy"
+    },
+    {
+      "requested_title": "Shi Sijing/Enemy",
+      "title": "Shi Sijing/Enemy",
+      "pageid": 23699,
+      "length": 20421,
+      "lastrevid": 167874,
+      "touched": "2026-04-30T17:20:07Z",
+      "fullurl": "https://limbuscompany.wiki.gg/wiki/Shi_Sijing/Enemy",
+      "canonicalurl": "https://limbuscompany.wiki.gg/wiki/Shi_Sijing/Enemy"
+    },
+    {
+      "requested_title": "Shi Yihua/Enemy",
+      "title": "Shi Yihua/Enemy",
+      "pageid": 23706,
+      "length": 13955,
+      "lastrevid": 167875,
+      "touched": "2026-04-30T17:20:12Z",
+      "fullurl": "https://limbuscompany.wiki.gg/wiki/Shi_Yihua/Enemy",
+      "canonicalurl": "https://limbuscompany.wiki.gg/wiki/Shi_Yihua/Enemy"
+    },
+    {
+      "requested_title": "Shiomi Yoru/Enemy",
+      "title": "Shiomi Yoru/Enemy",
+      "pageid": 31066,
+      "length": 30475,
+      "lastrevid": 171427,
+      "touched": "2026-05-27T02:17:53Z",
+      "fullurl": "https://limbuscompany.wiki.gg/wiki/Shiomi_Yoru/Enemy",
+      "canonicalurl": "https://limbuscompany.wiki.gg/wiki/Shiomi_Yoru/Enemy"
+    },
+    {
+      "requested_title": "Jun/Enemy",
+      "title": "Jun/Enemy",
+      "pageid": 5212,
+      "length": 8978,
+      "lastrevid": 155540,
+      "touched": "2026-02-17T01:30:20Z",
+      "fullurl": "https://limbuscompany.wiki.gg/wiki/Jun/Enemy",
+      "canonicalurl": "https://limbuscompany.wiki.gg/wiki/Jun/Enemy"
+    },
+    {
+      "requested_title": "Kira/Enemy",
+      "title": "Kira/Enemy",
+      "pageid": 31852,
+      "length": 33133,
+      "lastrevid": 169517,
+      "touched": "2026-05-16T01:30:16Z",
+      "fullurl": "https://limbuscompany.wiki.gg/wiki/Kira/Enemy",
+      "canonicalurl": "https://limbuscompany.wiki.gg/wiki/Kira/Enemy"
+    },
+    {
+      "requested_title": "Kira/Assist Unit",
+      "title": "Kira/Assist Unit",
+      "pageid": 35099,
+      "length": 9441,
+      "lastrevid": 167202,
+      "touched": "2026-04-26T21:44:53Z",
+      "fullurl": "https://limbuscompany.wiki.gg/wiki/Kira/Assist_Unit",
+      "canonicalurl": "https://limbuscompany.wiki.gg/wiki/Kira/Assist_Unit"
+    },
+    {
+      "requested_title": "8-33",
+      "title": "Jia Mu/Enemy/Jia Mu",
+      "pageid": 24115,
+      "length": 15523,
+      "lastrevid": 171423,
+      "touched": "2026-05-27T02:10:20Z",
+      "fullurl": "https://limbuscompany.wiki.gg/wiki/Jia_Mu/Enemy/Jia_Mu",
+      "canonicalurl": "https://limbuscompany.wiki.gg/wiki/Jia_Mu/Enemy/Jia_Mu"
+    },
+    {
+      "requested_title": "Jia Xichun/Assist Unit",
+      "title": "Jia Xichun/Assist Unit",
+      "pageid": 16715,
+      "length": 34517,
+      "lastrevid": 167924,
+      "touched": "2026-04-30T20:32:56Z",
+      "fullurl": "https://limbuscompany.wiki.gg/wiki/Jia_Xichun/Assist_Unit",
+      "canonicalurl": "https://limbuscompany.wiki.gg/wiki/Jia_Xichun/Assist_Unit"
+    },
+    {
+      "requested_title": "Jia Qiu/Enemy",
+      "title": "Kong Qiu/Enemy",
+      "pageid": 23711,
+      "length": 40160,
+      "lastrevid": 171394,
+      "touched": "2026-05-27T01:40:42Z",
+      "fullurl": "https://limbuscompany.wiki.gg/wiki/Kong_Qiu/Enemy",
+      "canonicalurl": "https://limbuscompany.wiki.gg/wiki/Kong_Qiu/Enemy"
+    },
+    {
+      "requested_title": "8-30",
+      "title": "Lei Heng/Enemy",
+      "pageid": 24072,
+      "length": 41705,
+      "lastrevid": 172317,
+      "touched": "2026-05-31T19:24:56Z",
+      "fullurl": "https://limbuscompany.wiki.gg/wiki/Lei_Heng/Enemy",
+      "canonicalurl": "https://limbuscompany.wiki.gg/wiki/Lei_Heng/Enemy"
+    },
+    {
+      "requested_title": "Wang Qingshan/Enemy",
+      "title": "Wang Qingshan/Enemy",
+      "pageid": 23696,
+      "length": 18009,
+      "lastrevid": 171398,
+      "touched": "2026-05-27T01:43:59Z",
+      "fullurl": "https://limbuscompany.wiki.gg/wiki/Wang_Qingshan/Enemy",
+      "canonicalurl": "https://limbuscompany.wiki.gg/wiki/Wang_Qingshan/Enemy"
+    },
+    {
+      "requested_title": "Wei/Enemy",
+      "title": "Wei/Enemy",
+      "pageid": 26346,
+      "length": 14812,
+      "lastrevid": 171395,
+      "touched": "2026-05-27T01:41:38Z",
+      "fullurl": "https://limbuscompany.wiki.gg/wiki/Wei/Enemy",
+      "canonicalurl": "https://limbuscompany.wiki.gg/wiki/Wei/Enemy"
+    },
+    {
+      "requested_title": "Xue Pan/Enemy",
+      "title": "Xue Pan/Enemy",
+      "pageid": 23705,
+      "length": 15304,
+      "lastrevid": 171378,
+      "touched": "2026-05-27T01:22:46Z",
+      "fullurl": "https://limbuscompany.wiki.gg/wiki/Xue_Pan/Enemy",
+      "canonicalurl": "https://limbuscompany.wiki.gg/wiki/Xue_Pan/Enemy"
+    },
+    {
+      "requested_title": "Distorted Hohenheim",
+      "title": "Hohenheim/Enemy",
+      "pageid": 19828,
+      "length": 28352,
+      "lastrevid": 167944,
+      "touched": "2026-04-30T21:46:01Z",
+      "fullurl": "https://limbuscompany.wiki.gg/wiki/Hohenheim/Enemy",
+      "canonicalurl": "https://limbuscompany.wiki.gg/wiki/Hohenheim/Enemy"
+    },
+    {
+      "requested_title": "Hohenheim/Assist Unit",
+      "title": "Hohenheim/Assist Unit",
+      "pageid": 31711,
+      "length": 9316,
+      "lastrevid": 171450,
+      "touched": "2026-05-27T02:34:50Z",
+      "fullurl": "https://limbuscompany.wiki.gg/wiki/Hohenheim/Assist_Unit",
+      "canonicalurl": "https://limbuscompany.wiki.gg/wiki/Hohenheim/Assist_Unit"
+    },
+    {
+      "requested_title": "Moses/Assist Unit",
+      "title": "Moses/Assist Unit",
+      "pageid": 32043,
+      "length": 9752,
+      "lastrevid": 171454,
+      "touched": "2026-05-27T02:36:56Z",
+      "fullurl": "https://limbuscompany.wiki.gg/wiki/Moses/Assist_Unit",
+      "canonicalurl": "https://limbuscompany.wiki.gg/wiki/Moses/Assist_Unit"
+    },
+    {
+      "requested_title": "The Red Gaze Vergilius",
+      "title": "Vergilius/Assist Unit",
+      "pageid": 2661,
+      "length": 24709,
+      "lastrevid": 167934,
+      "touched": "2026-05-07T03:35:26Z",
+      "fullurl": "https://limbuscompany.wiki.gg/wiki/Vergilius/Assist_Unit",
+      "canonicalurl": "https://limbuscompany.wiki.gg/wiki/Vergilius/Assist_Unit"
+    }
+  ],
+  "missing_titles": []
+}

@@ -1,0 +1,3653 @@
+{
+  "generated_at": "2026-06-04T08:22:00Z",
+  "version": "v1.0.22",
+  "batch": "p4_article_reviewed_identity",
+  "article_reviewed_entry_count": 161,
+  "copyright_policy": "raw pages fetched for review evidence only; raw article text is not stored in repository artifacts",
+  "worldbook": "worldbooks/albina_p4_article_reviewed_identity_worldbook.json",
+  "evidence": [
+    {
+      "title": "The Manager of La Manchaland Don Quixote/Identity Story",
+      "source_url": "https://limbuscompany.wiki.gg/wiki/The_Manager_of_La_Manchaland_Don_Quixote/Identity_Story",
+      "revision_id": 141044,
+      "verified_at": "2026-06-04T05:29:56Z",
+      "raw_status": "fetched",
+      "raw_sha256": "4f85031e02cae1b5f3a74d439ac19d5a99afab2dd195cc62ba0d92d12cd1ed97",
+      "raw_bytes": 25453,
+      "row_count": 228,
+      "speaker_sample": [
+        "AfilCon"
+      ],
+      "keyword_counts": {
+        "Family": 26,
+        "Father": 40,
+        "dream": 18,
+        "blood": 12,
+        "Bloodfiend": 5,
+        "La Manchaland": 111,
+        "Ring": 16,
+        "Dawn": 1,
+        "Don Quixote": 4,
+        "Rodion": 40,
+        "Outis": 25,
+        "Gregor": 34
+      },
+      "stored_raw_text": false,
+      "reused_evidence": true
+    },
+    {
+      "title": "The Index Proxy - Effloresced E.G.O::Procuration Don Quixote/Identity Story",
+      "source_url": "https://limbuscompany.wiki.gg/wiki/The_Index_Proxy_-_Effloresced_E.G.O::Procuration_Don_Quixote/Identity_Story",
+      "revision_id": 152005,
+      "verified_at": "2026-06-04T05:29:56Z",
+      "raw_status": "fetched",
+      "raw_sha256": "5ccdb22c29cf9dda206080fba0df420bec95306b267858c8d35e421bcd4ecb1d",
+      "raw_bytes": 16022,
+      "row_count": 124,
+      "speaker_sample": [
+        "AfilCon"
+      ],
+      "keyword_counts": {
+        "Father": 16,
+        "blood": 2,
+        "Ring": 5,
+        "Index": 93,
+        "Prescript": 15,
+        "Procuration": 8,
+        "Nursefather": 16,
+        "spider": 3,
+        "Don Quixote": 134,
+        "Yi Sang": 49
+      },
+      "stored_raw_text": false,
+      "reused_evidence": true
+    },
+    {
+      "title": "The Ring Fauvist Docent Rodion/Identity Story",
+      "source_url": "https://limbuscompany.wiki.gg/wiki/The_Ring_Fauvist_Docent_Rodion/Identity_Story",
+      "revision_id": 165632,
+      "verified_at": "2026-06-04T05:29:56Z",
+      "raw_status": "fetched",
+      "raw_sha256": "d8f219676ad64d7219733f4901a2db9f949a2e016f1bdf67f8b77c507d8cd116",
+      "raw_bytes": 17660,
+      "row_count": 113,
+      "speaker_sample": [
+        "AfilCon"
+      ],
+      "keyword_counts": {
+        "blood": 3,
+        "Ring": 78,
+        "spider": 3,
+        "mentor": 1,
+        "Rodion": 80
+      },
+      "stored_raw_text": false,
+      "reused_evidence": true
+    },
+    {
+      "title": "The House of Spiders: The Ring Nursefather Hong Lu/Identity Story",
+      "source_url": "https://limbuscompany.wiki.gg/wiki/The_House_of_Spiders:_The_Ring_Nursefather_Hong_Lu/Identity_Story",
+      "revision_id": 163783,
+      "verified_at": "2026-06-04T05:29:56Z",
+      "raw_status": "fetched",
+      "raw_sha256": "a26d5062e3194525c0e97cb1a324a3002f9abf0675d1b3d29719466b9fb23de2",
+      "raw_bytes": 18065,
+      "row_count": 120,
+      "speaker_sample": [
+        "AfilCon"
+      ],
+      "keyword_counts": {
+        "Father": 59,
+        "blood": 1,
+        "Ring": 82,
+        "Nursefather": 59,
+        "spider": 6,
+        "N Corp": 1,
+        "Hong Lu": 118,
+        "Faust": 39
+      },
+      "stored_raw_text": false,
+      "reused_evidence": true
+    },
+    {
+      "title": "The House of Spiders: The Index Nursefather Yi Sang/Identity Story",
+      "source_url": "https://limbuscompany.wiki.gg/wiki/The_House_of_Spiders:_The_Index_Nursefather_Yi_Sang/Identity_Story",
+      "revision_id": 161609,
+      "verified_at": "2026-06-04T05:29:56Z",
+      "raw_status": "fetched",
+      "raw_sha256": "d81f4c5605a8eaf3e682d2ca3898011cf81f79fde8d3cf737ae6f6d00fb33d15",
+      "raw_bytes": 20194,
+      "row_count": 136,
+      "speaker_sample": [
+        "AfilCon"
+      ],
+      "keyword_counts": {
+        "Family": 4,
+        "Father": 84,
+        "Ring": 5,
+        "Index": 82,
+        "Prescript": 13,
+        "Nursefather": 80,
+        "spider": 4,
+        "Don Quixote": 1,
+        "Yi Sang": 159,
+        "Zwei": 1
+      },
+      "stored_raw_text": false,
+      "reused_evidence": true
+    },
+    {
+      "title": "The Ring Fauvist Student Meursault/Identity Story",
+      "source_url": "https://limbuscompany.wiki.gg/wiki/The_Ring_Fauvist_Student_Meursault/Identity_Story",
+      "revision_id": 165631,
+      "verified_at": "2026-06-04T05:29:56Z",
+      "raw_status": "fetched",
+      "raw_sha256": "75c3ba828db7861a2288eced60e656789a7331f3a9e95cdc690c18a357778658",
+      "raw_bytes": 6989,
+      "row_count": 56,
+      "speaker_sample": [
+        "AfilCon"
+      ],
+      "keyword_counts": {
+        "blood": 5,
+        "Ring": 8,
+        "paint": 2,
+        "Meursault": 5
+      },
+      "stored_raw_text": false,
+      "reused_evidence": true
+    },
+    {
+      "title": "The Ring Pointillist Student Yi Sang/Identity Story",
+      "source_url": "https://limbuscompany.wiki.gg/wiki/The_Ring_Pointillist_Student_Yi_Sang/Identity_Story",
+      "revision_id": 165621,
+      "verified_at": "2026-06-04T05:29:56Z",
+      "raw_status": "fetched",
+      "raw_sha256": "0496d72e6e6549abfed400f4447de4afe967c5cc64369d089c03a8274b404c00",
+      "raw_bytes": 5073,
+      "row_count": 42,
+      "speaker_sample": [],
+      "keyword_counts": {
+        "Ring": 9,
+        "paint": 4,
+        "pointill": 6,
+        "Yi Sang": 3,
+        "Seven": 1
+      },
+      "stored_raw_text": false,
+      "reused_evidence": true
+    },
+    {
+      "title": "The Ring Pointillist Student Outis/Identity Story",
+      "source_url": "https://limbuscompany.wiki.gg/wiki/The_Ring_Pointillist_Student_Outis/Identity_Story",
+      "revision_id": 165623,
+      "verified_at": "2026-06-04T05:29:56Z",
+      "raw_status": "fetched",
+      "raw_sha256": "0d339c66bd182eef2957bef2028b1f53e77d087ee45f1dbeb9c6dc8a8d9e7493",
+      "raw_bytes": 8783,
+      "row_count": 60,
+      "speaker_sample": [
+        "AfilCon"
+      ],
+      "keyword_counts": {
+        "blood": 4,
+        "Ring": 38,
+        "painting": 1,
+        "paint": 3,
+        "pointill": 28,
+        "Outis": 45
+      },
+      "stored_raw_text": false,
+      "reused_evidence": true
+    },
+    {
+      "title": "Cinq Assoc. East Section 3 Don Quixote/Identity Story",
+      "source_url": "https://limbuscompany.wiki.gg/wiki/Cinq_Assoc._East_Section_3_Don_Quixote/Identity_Story",
+      "revision_id": 94289,
+      "verified_at": "2026-06-04T05:29:56Z",
+      "raw_status": "fetched",
+      "raw_sha256": "1681c4c6a032243fcd044db5ff33e882d51c3f699f294f890d145744a5c22f4d",
+      "raw_bytes": 11358,
+      "row_count": 79,
+      "speaker_sample": [
+        "AfilCon"
+      ],
+      "keyword_counts": {
+        "blood": 1,
+        "Ring": 2,
+        "Cinq": 44,
+        "duel": 4,
+        "Blade": 3,
+        "Don Quixote": 64
+      },
+      "stored_raw_text": false,
+      "reused_evidence": true
+    },
+    {
+      "title": "Blade Lineage Mentor Meursault/Identity Story",
+      "source_url": "https://limbuscompany.wiki.gg/wiki/Blade_Lineage_Mentor_Meursault/Identity_Story",
+      "revision_id": 82176,
+      "verified_at": "2026-06-04T05:29:56Z",
+      "raw_status": "fetched",
+      "raw_sha256": "c4b2014729f9111172f6fc23ab7fd024f36f1a57147a8d12a26d65315d55a6c1",
+      "raw_bytes": 10370,
+      "row_count": 88,
+      "speaker_sample": [
+        "AfilCon"
+      ],
+      "keyword_counts": {
+        "Family": 1,
+        "blood": 1,
+        "Ring": 1,
+        "Blade": 13,
+        "mentor": 2,
+        "Meursault": 45,
+        "Seven": 2
+      },
+      "stored_raw_text": false,
+      "reused_evidence": true
+    },
+    {
+      "title": "N Corp. E.G.O::Fell Bullet Yi Sang/Identity Story",
+      "source_url": "https://limbuscompany.wiki.gg/wiki/N_Corp._E.G.O::Fell_Bullet_Yi_Sang/Identity_Story",
+      "revision_id": 138140,
+      "verified_at": "2026-06-04T05:29:56Z",
+      "raw_status": "fetched",
+      "raw_sha256": "1b7cf18d3adba7cf1be5829b57c1c9c45c28e0d3a6ebcf1ffc1b37349260efe4",
+      "raw_bytes": 5612,
+      "row_count": 57,
+      "speaker_sample": [
+        "AfilCon"
+      ],
+      "keyword_counts": {
+        "blood": 2,
+        "Ring": 1,
+        "paint": 1,
+        "N Corp": 5,
+        "bullet": 6,
+        "Yi Sang": 5
+      },
+      "stored_raw_text": false,
+      "reused_evidence": true
+    },
+    {
+      "title": "Dawn Office Fixer Sinclair/Identity Story",
+      "source_url": "https://limbuscompany.wiki.gg/wiki/Dawn_Office_Fixer_Sinclair/Identity_Story",
+      "revision_id": 82166,
+      "verified_at": "2026-06-04T05:29:56Z",
+      "raw_status": "fetched",
+      "raw_sha256": "a649bced281e9a2f7cc511bdfe1cd243f3c4d0a6a43a0fc6a07308a7f2dd17d0",
+      "raw_bytes": 8339,
+      "row_count": 81,
+      "speaker_sample": [
+        "AfilCon"
+      ],
+      "keyword_counts": {
+        "dream": 1,
+        "Ring": 7,
+        "Blade": 1,
+        "Dawn": 26,
+        "Office": 28,
+        "Sinclair": 47
+      },
+      "stored_raw_text": false,
+      "reused_evidence": true
+    },
+    {
+      "title": "The House of Spiders: The Middle Nursefather Outis/Identity Story",
+      "source_url": "https://limbuscompany.wiki.gg/wiki/The_House_of_Spiders:_The_Middle_Nursefather_Outis/Identity_Story",
+      "revision_id": 171780,
+      "verified_at": "2026-06-04T05:29:56Z",
+      "raw_status": "fetched",
+      "raw_sha256": "282d62e34cd1c80f32276773c70bb5f43c5f3aac667abc3a9ec2c052bfebcb0e",
+      "raw_bytes": 24820,
+      "row_count": 212,
+      "speaker_sample": [
+        "AfilCon"
+      ],
+      "keyword_counts": {
+        "Family": 5,
+        "Father": 76,
+        "blood": 1,
+        "Ring": 9,
+        "Index": 5,
+        "Nursefather": 76,
+        "spider": 22,
+        "Blade": 1,
+        "Office": 1,
+        "Yi Sang": 10,
+        "Rodion": 14,
+        "Outis": 149,
+        "Hong Lu": 6,
+        "Zwei": 4,
+        "Ishmael": 28,
+        "Ryōshū": 8
+      },
+      "stored_raw_text": false,
+      "reused_evidence": true
+    },
+    {
+      "title": "Blade of the House of Spiders Ryōshū/Identity Story",
+      "source_url": "https://limbuscompany.wiki.gg/wiki/Blade_of_the_House_of_Spiders_Ry%C5%8Dsh%C5%AB/Identity_Story",
+      "revision_id": 169134,
+      "verified_at": "2026-06-04T05:29:56Z",
+      "raw_status": "fetched",
+      "raw_sha256": "2daa0e6ec9b989ff59a0bce8ed150eaeeaddc6ad53d832b0497ffc9e91c755dd",
+      "raw_bytes": 21070,
+      "row_count": 168,
+      "speaker_sample": [
+        "AfilCon"
+      ],
+      "keyword_counts": {
+        "Father": 22,
+        "Ring": 12,
+        "paint": 3,
+        "Index": 5,
+        "Prescript": 3,
+        "Nursefather": 21,
+        "spider": 38,
+        "Blade": 20,
+        "Ryōshū": 26
+      },
+      "stored_raw_text": false,
+      "reused_evidence": true
+    },
+    {
+      "title": "The House of Spiders: The Middle Apprentice Ishmael/Identity Story",
+      "source_url": "https://limbuscompany.wiki.gg/wiki/The_House_of_Spiders:_The_Middle_Apprentice_Ishmael/Identity_Story",
+      "revision_id": 154785,
+      "verified_at": "2026-06-04T05:29:56Z",
+      "raw_status": "fetched",
+      "raw_sha256": "fd3f9488ecc7d6a4e4f7b8b16ceacdc465db1fbb6c58fed919865b7ad67a32d8",
+      "raw_bytes": 12409,
+      "row_count": 95,
+      "speaker_sample": [
+        "AfilCon"
+      ],
+      "keyword_counts": {
+        "Family": 1,
+        "Father": 17,
+        "Ring": 3,
+        "Prescript": 1,
+        "Nursefather": 17,
+        "spider": 9,
+        "Blade": 3,
+        "Office": 2,
+        "Outis": 25,
+        "Ishmael": 54
+      },
+      "stored_raw_text": false,
+      "reused_evidence": true
+    },
+    {
+      "title": "The House of Spiders: The Ring Apprentice Faust/Identity Story",
+      "source_url": "https://limbuscompany.wiki.gg/wiki/The_House_of_Spiders:_The_Ring_Apprentice_Faust/Identity_Story",
+      "revision_id": 163767,
+      "verified_at": "2026-06-04T05:29:56Z",
+      "raw_status": "fetched",
+      "raw_sha256": "30a6818c15085068a9678e2f8f89473c5061f87d9cfb68831d0591baf98df344",
+      "raw_bytes": 10881,
+      "row_count": 72,
+      "speaker_sample": [
+        "AfilCon"
+      ],
+      "keyword_counts": {
+        "blood": 1,
+        "Ring": 31,
+        "Index": 6,
+        "spider": 4,
+        "duel": 1,
+        "Blade": 1,
+        "Sinclair": 1,
+        "Don Quixote": 15,
+        "Ishmael": 1,
+        "Faust": 93
+      },
+      "stored_raw_text": false,
+      "reused_evidence": true
+    },
+    {
+      "title": "The House of Spiders: The Pinky Apprentice Sinclair/Identity Story",
+      "source_url": "https://limbuscompany.wiki.gg/wiki/The_House_of_Spiders:_The_Pinky_Apprentice_Sinclair/Identity_Story",
+      "revision_id": 156703,
+      "verified_at": "2026-06-04T05:29:56Z",
+      "raw_status": "fetched",
+      "raw_sha256": "9c1235e5dde49d68a653d132241ddd81a5f9ef603f6b42cc07514cca9e2a9f22",
+      "raw_bytes": 9827,
+      "row_count": 69,
+      "speaker_sample": [],
+      "keyword_counts": {
+        "Father": 14,
+        "dream": 2,
+        "blood": 1,
+        "Ring": 9,
+        "Index": 2,
+        "Nursefather": 14,
+        "spider": 4,
+        "Blade": 5,
+        "Sinclair": 3
+      },
+      "stored_raw_text": false,
+      "reused_evidence": true
+    },
+    {
+      "title": "The Priest of La Manchaland Gregor/Identity Story",
+      "source_url": "https://limbuscompany.wiki.gg/wiki/The_Priest_of_La_Manchaland_Gregor/Identity_Story",
+      "revision_id": 82089,
+      "verified_at": "2026-06-04T05:29:56Z",
+      "raw_status": "fetched",
+      "raw_sha256": "dfe272553478e5acac9defaf91e492ac2e6ef6cd8f43bb441aa09029f390086e",
+      "raw_bytes": 11036,
+      "row_count": 82,
+      "speaker_sample": [
+        "AfilCon"
+      ],
+      "keyword_counts": {
+        "Family": 9,
+        "Father": 13,
+        "dream": 2,
+        "blood": 33,
+        "Bloodfiend": 11,
+        "La Manchaland": 51,
+        "Ring": 4,
+        "Office": 5,
+        "Outis": 47,
+        "Gregor": 43
+      },
+      "stored_raw_text": false,
+      "reused_evidence": true
+    },
+    {
+      "title": "The Prince of La Manchaland Meursault/Identity Story",
+      "source_url": "https://limbuscompany.wiki.gg/wiki/The_Prince_of_La_Manchaland_Meursault/Identity_Story",
+      "revision_id": 142026,
+      "verified_at": "2026-06-04T05:29:56Z",
+      "raw_status": "fetched",
+      "raw_sha256": "01aaf652e5d29f468b4ac05bd06f16b7fa971f8a6abdb3b7a79b1a2d4c0fa0d9",
+      "raw_bytes": 10854,
+      "row_count": 88,
+      "speaker_sample": [
+        "AfilCon"
+      ],
+      "keyword_counts": {
+        "Family": 8,
+        "dream": 7,
+        "blood": 8,
+        "Bloodfiend": 4,
+        "La Manchaland": 15,
+        "Ring": 4,
+        "Office": 3,
+        "Meursault": 41
+      },
+      "stored_raw_text": false,
+      "reused_evidence": true
+    },
+    {
+      "title": "The Barber of La Manchaland Outis/Identity Story",
+      "source_url": "https://limbuscompany.wiki.gg/wiki/The_Barber_of_La_Manchaland_Outis/Identity_Story",
+      "revision_id": 82097,
+      "verified_at": "2026-06-04T05:29:56Z",
+      "raw_status": "fetched",
+      "raw_sha256": "3872c24ed7a0b0dec7b802bd1ae42e5b647a8c444a70203243a79407c59a1849",
+      "raw_bytes": 7305,
+      "row_count": 58,
+      "speaker_sample": [
+        "AfilCon"
+      ],
+      "keyword_counts": {
+        "Family": 1,
+        "Father": 1,
+        "blood": 2,
+        "Bloodfiend": 1,
+        "La Manchaland": 41,
+        "Ring": 5,
+        "paint": 1,
+        "Rodion": 15,
+        "Outis": 44
+      },
+      "stored_raw_text": false,
+      "reused_evidence": true
+    },
+    {
+      "title": "The Princess of La Manchaland Rodion/Identity Story",
+      "source_url": "https://limbuscompany.wiki.gg/wiki/The_Princess_of_La_Manchaland_Rodion/Identity_Story",
+      "revision_id": 82088,
+      "verified_at": "2026-06-04T05:29:56Z",
+      "raw_status": "fetched",
+      "raw_sha256": "8ef1085d2ab5eb0f7784680c6de97b008416423b74cb52ff942e5797285ec7c0",
+      "raw_bytes": 5399,
+      "row_count": 52,
+      "speaker_sample": [],
+      "keyword_counts": {
+        "Family": 1,
+        "Father": 10,
+        "dream": 5,
+        "blood": 7,
+        "Bloodfiend": 2,
+        "La Manchaland": 4,
+        "Ring": 5,
+        "Rodion": 3,
+        "Gregor": 1
+      },
+      "stored_raw_text": false,
+      "reused_evidence": true
+    },
+    {
+      "title": "The Index Proselyte:【Paper Slip】Faust/Identity Story",
+      "source_url": "https://limbuscompany.wiki.gg/wiki/The_Index_Proselyte:%E3%80%90Paper_Slip%E3%80%91Faust/Identity_Story",
+      "revision_id": 149268,
+      "verified_at": "2026-06-04T05:29:56Z",
+      "raw_status": "fetched",
+      "raw_sha256": "d7b43c89a21e3f293ed98fec9a3baba4fe3c4dbdb4262897a939c7d3d21ca62d",
+      "raw_bytes": 8950,
+      "row_count": 72,
+      "speaker_sample": [
+        "AfilCon"
+      ],
+      "keyword_counts": {
+        "Ring": 2,
+        "Index": 59,
+        "Prescript": 21,
+        "Faust": 76
+      },
+      "stored_raw_text": false,
+      "reused_evidence": true
+    },
+    {
+      "title": "W Corp. L4 Cleanup Agent - CCA Heathcliff/Identity Story",
+      "source_url": "https://limbuscompany.wiki.gg/wiki/W_Corp._L4_Cleanup_Agent_-_CCA_Heathcliff/Identity_Story",
+      "revision_id": 142448,
+      "verified_at": "2026-06-04T05:29:56Z",
+      "raw_status": "fetched",
+      "raw_sha256": "043a96cf8e6bdf6bbad373f5dec0a409cf5fad0f3c5779d95963185d084272a1",
+      "raw_bytes": 13622,
+      "row_count": 93,
+      "speaker_sample": [
+        "AfilCon"
+      ],
+      "keyword_counts": {
+        "dream": 1,
+        "blood": 5,
+        "Ring": 3,
+        "painting": 1,
+        "paint": 1,
+        "Index": 1,
+        "Prescript": 1,
+        "Blade": 1,
+        "Hong Lu": 28,
+        "Heathcliff": 71
+      },
+      "stored_raw_text": false,
+      "reused_evidence": true
+    },
+    {
+      "title": "W Corp. L3 Cleanup Captain Outis/Identity Story",
+      "source_url": "https://limbuscompany.wiki.gg/wiki/W_Corp._L3_Cleanup_Captain_Outis/Identity_Story",
+      "revision_id": 147841,
+      "verified_at": "2026-06-04T05:29:56Z",
+      "raw_status": "fetched",
+      "raw_sha256": "acaa50df6f9f178fad24d0711ee82ac82e2318fd2ab12c35f6eb8da775201044",
+      "raw_bytes": 13192,
+      "row_count": 93,
+      "speaker_sample": [
+        "AfilCon"
+      ],
+      "keyword_counts": {
+        "blood": 2,
+        "Ring": 4,
+        "paint": 1,
+        "Yi Sang": 23,
+        "Outis": 58,
+        "Ryōshū": 12
+      },
+      "stored_raw_text": false,
+      "reused_evidence": true
+    },
+    {
+      "title": "R Corp. 4th Pack Reindeer Rodion/Identity Story",
+      "source_url": "https://limbuscompany.wiki.gg/wiki/R_Corp._4th_Pack_Reindeer_Rodion/Identity_Story",
+      "revision_id": 147371,
+      "verified_at": "2026-06-04T05:29:56Z",
+      "raw_status": "fetched",
+      "raw_sha256": "cd8552a86ff7a2fb0e8e579aed8a3e209e11f7bff5e5bb467b7857eeebbbc4bf",
+      "raw_bytes": 18906,
+      "row_count": 156,
+      "speaker_sample": [
+        "AfilCon"
+      ],
+      "keyword_counts": {
+        "Family": 1,
+        "blood": 1,
+        "Ring": 6,
+        "Office": 1,
+        "Rodion": 121,
+        "Hong Lu": 14,
+        "Seven": 1,
+        "Ishmael": 34
+      },
+      "stored_raw_text": false,
+      "reused_evidence": true
+    },
+    {
+      "title": "R Corp. 4th Pack Reindeer Hong Lu/Identity Story",
+      "source_url": "https://limbuscompany.wiki.gg/wiki/R_Corp._4th_Pack_Reindeer_Hong_Lu/Identity_Story",
+      "revision_id": 103928,
+      "verified_at": "2026-06-04T05:29:56Z",
+      "raw_status": "fetched",
+      "raw_sha256": "d063e0c33ab24029a9e7caf03a514fcf879c1877b1a4f36c089294702ecc868d",
+      "raw_bytes": 9897,
+      "row_count": 77,
+      "speaker_sample": [
+        "AfilCon"
+      ],
+      "keyword_counts": {
+        "Ring": 2,
+        "bullet": 1,
+        "Meursault": 2,
+        "Hong Lu": 32,
+        "Heathcliff": 2,
+        "Ishmael": 24
+      },
+      "stored_raw_text": false,
+      "reused_evidence": true
+    },
+    {
+      "title": "Lobotomy E.G.O::Red Eyes & Penitence Ryōshū/Identity Story",
+      "source_url": "https://limbuscompany.wiki.gg/wiki/Lobotomy_E.G.O::Red_Eyes_%26_Penitence_Ry%C5%8Dsh%C5%AB/Identity_Story",
+      "revision_id": 82132,
+      "verified_at": "2026-06-04T05:29:56Z",
+      "raw_status": "fetched",
+      "raw_sha256": "76c9c6ffe00a424d4fa56b5ede6c4b488d389d19fc9fcc72da4574bd04e67dca",
+      "raw_bytes": 14289,
+      "row_count": 104,
+      "speaker_sample": [
+        "AfilCon"
+      ],
+      "keyword_counts": {
+        "Family": 1,
+        "blood": 2,
+        "Ring": 11,
+        "painting": 1,
+        "paint": 1,
+        "spider": 8,
+        "Dawn": 1,
+        "Don Quixote": 4,
+        "Yi Sang": 22,
+        "Outis": 14,
+        "Ryōshū": 42
+      },
+      "stored_raw_text": false,
+      "reused_evidence": true
+    },
+    {
+      "title": "N Corp. E.G.O::Contempt, Awe Ryōshū/Identity Story",
+      "source_url": "https://limbuscompany.wiki.gg/wiki/N_Corp._E.G.O::Contempt,_Awe_Ry%C5%8Dsh%C5%AB/Identity_Story",
+      "revision_id": 146580,
+      "verified_at": "2026-06-04T05:29:56Z",
+      "raw_status": "fetched",
+      "raw_sha256": "fbe9f39ad7d1e42d8ecc767231e49d58dc81ee4d51bc6197f37e771e7a11e3d2",
+      "raw_bytes": 14265,
+      "row_count": 92,
+      "speaker_sample": [
+        "AfilCon"
+      ],
+      "keyword_counts": {
+        "dream": 1,
+        "blood": 1,
+        "Ring": 5,
+        "Blade": 1,
+        "N Corp": 70,
+        "bullet": 4,
+        "Yi Sang": 57,
+        "Ryōshū": 72
+      },
+      "stored_raw_text": false,
+      "reused_evidence": true
+    },
+    {
+      "title": "Lobotomy E.G.O::Faint Aroma & Solitude Ryōshū/Identity Story",
+      "source_url": "https://limbuscompany.wiki.gg/wiki/Lobotomy_E.G.O::Faint_Aroma_%26_Solitude_Ry%C5%8Dsh%C5%AB/Identity_Story",
+      "revision_id": 161610,
+      "verified_at": "2026-06-04T05:29:56Z",
+      "raw_status": "fetched",
+      "raw_sha256": "b6c365ca429b0eb70dc010a8c5259f6edc8d0520d67581987690ce4e8600bb5a",
+      "raw_bytes": 11861,
+      "row_count": 97,
+      "speaker_sample": [
+        "AfilCon"
+      ],
+      "keyword_counts": {
+        "Ring": 5,
+        "bullet": 1,
+        "Seven": 1,
+        "Ryōshū": 34
+      },
+      "stored_raw_text": false,
+      "reused_evidence": true
+    },
+    {
+      "title": "Lobotomy E.G.O::Hornet【Alteration】Meursault/Identity Story",
+      "source_url": "https://limbuscompany.wiki.gg/wiki/Lobotomy_E.G.O::Hornet%E3%80%90Alteration%E3%80%91Meursault/Identity_Story",
+      "revision_id": 161612,
+      "verified_at": "2026-06-04T05:29:56Z",
+      "raw_status": "fetched",
+      "raw_sha256": "ac18eeb40d71a1b883963121b2ae705eeaee2403f602d0bee44a5ce92ebf0e9a",
+      "raw_bytes": 11896,
+      "row_count": 83,
+      "speaker_sample": [
+        "AfilCon"
+      ],
+      "keyword_counts": {
+        "Ring": 5,
+        "bullet": 1,
+        "Meursault": 104,
+        "Ryōshū": 9
+      },
+      "stored_raw_text": false,
+      "reused_evidence": true
+    },
+    {
+      "title": "Lobotomy E.G.O::In the Name of Love and Hate Don Quixote/Identity Story",
+      "source_url": "https://limbuscompany.wiki.gg/wiki/Lobotomy_E.G.O::In_the_Name_of_Love_and_Hate_Don_Quixote/Identity_Story",
+      "revision_id": 130083,
+      "verified_at": "2026-06-04T05:29:56Z",
+      "raw_status": "fetched",
+      "raw_sha256": "9db9eb0de2fdc0e8777346aaf05cea4cc2ba7496f97036d2c699babf25f63b7e",
+      "raw_bytes": 6992,
+      "row_count": 62,
+      "speaker_sample": [],
+      "keyword_counts": {
+        "dream": 3,
+        "Ring": 2,
+        "Don Quixote": 1
+      },
+      "stored_raw_text": false,
+      "reused_evidence": true
+    },
+    {
+      "title": "Lobotomy E.G.O::Lamp Gregor/Identity Story",
+      "source_url": "https://limbuscompany.wiki.gg/wiki/Lobotomy_E.G.O::Lamp_Gregor/Identity_Story",
+      "revision_id": 156846,
+      "verified_at": "2026-06-04T05:29:56Z",
+      "raw_status": "fetched",
+      "raw_sha256": "d6fc3c2dae5fca937ed19c366617a72419d47faf390b48cba9ee710e0ed2d129",
+      "raw_bytes": 12014,
+      "row_count": 90,
+      "speaker_sample": [
+        "AfilCon"
+      ],
+      "keyword_counts": {
+        "Ring": 2,
+        "Yi Sang": 3,
+        "Gregor": 67
+      },
+      "stored_raw_text": false,
+      "reused_evidence": true
+    },
+    {
+      "title": "Lobotomy E.G.O::Lantern Don Quixote/Identity Story",
+      "source_url": "https://limbuscompany.wiki.gg/wiki/Lobotomy_E.G.O::Lantern_Don_Quixote/Identity_Story",
+      "revision_id": 82134,
+      "verified_at": "2026-06-04T05:29:56Z",
+      "raw_status": "fetched",
+      "raw_sha256": "4b380364c059b114400a9d77958598e2d62226731319673908adb654812f7cc8",
+      "raw_bytes": 4314,
+      "row_count": 30,
+      "speaker_sample": [],
+      "keyword_counts": {
+        "Ring": 1,
+        "Don Quixote": 3,
+        "Outis": 2
+      },
+      "stored_raw_text": false,
+      "reused_evidence": true
+    },
+    {
+      "title": "Lobotomy E.G.O::Magic Bullet Outis/Identity Story",
+      "source_url": "https://limbuscompany.wiki.gg/wiki/Lobotomy_E.G.O::Magic_Bullet_Outis/Identity_Story",
+      "revision_id": 82133,
+      "verified_at": "2026-06-04T05:29:56Z",
+      "raw_status": "fetched",
+      "raw_sha256": "ebc30babe7e74e61301fee06ebed263aad80f79564b5e8577a0339e53c29284b",
+      "raw_bytes": 4211,
+      "row_count": 45,
+      "speaker_sample": [],
+      "keyword_counts": {
+        "Ring": 3,
+        "bullet": 11,
+        "Outis": 3
+      },
+      "stored_raw_text": false,
+      "reused_evidence": true
+    },
+    {
+      "title": "Lobotomy E.G.O::Red Sheet Sinclair/Identity Story",
+      "source_url": "https://limbuscompany.wiki.gg/wiki/Lobotomy_E.G.O::Red_Sheet_Sinclair/Identity_Story",
+      "revision_id": 82131,
+      "verified_at": "2026-06-04T05:29:56Z",
+      "raw_status": "fetched",
+      "raw_sha256": "1de8da3ad8332519fd2b2cc7f86bab91f8c00ec73c37a66acc5812dc20ba7a54",
+      "raw_bytes": 2319,
+      "row_count": 21,
+      "speaker_sample": [],
+      "keyword_counts": {
+        "Ring": 3,
+        "Sinclair": 3,
+        "K Corp": 3
+      },
+      "stored_raw_text": false,
+      "reused_evidence": true
+    },
+    {
+      "title": "Lobotomy E.G.O::Regret Faust/Identity Story",
+      "source_url": "https://limbuscompany.wiki.gg/wiki/Lobotomy_E.G.O::Regret_Faust/Identity_Story",
+      "revision_id": 82130,
+      "verified_at": "2026-06-04T05:29:56Z",
+      "raw_status": "fetched",
+      "raw_sha256": "eca12dc1c99efb84cafadf843fbd8644ba00b25ca4a441eb4b01436ca117c525",
+      "raw_bytes": 9422,
+      "row_count": 59,
+      "speaker_sample": [
+        "AfilCon"
+      ],
+      "keyword_counts": {
+        "Ring": 2,
+        "Dawn": 2,
+        "Faust": 110
+      },
+      "stored_raw_text": false,
+      "reused_evidence": true
+    },
+    {
+      "title": "Lobotomy E.G.O::Sloshing Ishmael/Identity Story",
+      "source_url": "https://limbuscompany.wiki.gg/wiki/Lobotomy_E.G.O::Sloshing_Ishmael/Identity_Story",
+      "revision_id": 82129,
+      "verified_at": "2026-06-04T05:29:56Z",
+      "raw_status": "fetched",
+      "raw_sha256": "e5a3c5a7a99e45d04f5de99198d8a67e4df4cb6c75045bb96b4b33ee56f06026",
+      "raw_bytes": 4584,
+      "row_count": 36,
+      "speaker_sample": [
+        "AfilCon"
+      ],
+      "keyword_counts": {
+        "Ring": 1,
+        "Sinclair": 2,
+        "Rodion": 8,
+        "K Corp": 4,
+        "Ishmael": 23
+      },
+      "stored_raw_text": false,
+      "reused_evidence": true
+    },
+    {
+      "title": "Lobotomy E.G.O::Solemn Lament Yi Sang/Identity Story",
+      "source_url": "https://limbuscompany.wiki.gg/wiki/Lobotomy_E.G.O::Solemn_Lament_Yi_Sang/Identity_Story",
+      "revision_id": 82128,
+      "verified_at": "2026-06-04T05:29:56Z",
+      "raw_status": "fetched",
+      "raw_sha256": "a5bb1424dfe95369ce4fbaf1901204eeaa4eb753978dc000f02f547ff57e8afd",
+      "raw_bytes": 9994,
+      "row_count": 75,
+      "speaker_sample": [
+        "AfilCon"
+      ],
+      "keyword_counts": {
+        "dream": 1,
+        "Ring": 3,
+        "bullet": 9,
+        "Dawn": 2,
+        "Yi Sang": 53,
+        "Faust": 2,
+        "Ryōshū": 16
+      },
+      "stored_raw_text": false,
+      "reused_evidence": true
+    },
+    {
+      "title": "Lobotomy E.G.O::Sunshower Heathcliff/Identity Story",
+      "source_url": "https://limbuscompany.wiki.gg/wiki/Lobotomy_E.G.O::Sunshower_Heathcliff/Identity_Story",
+      "revision_id": 82127,
+      "verified_at": "2026-06-04T05:29:56Z",
+      "raw_status": "fetched",
+      "raw_sha256": "9adc27718e1e7727d866850b1c2945f8d633c436c49db7dd54f10c808edee467",
+      "raw_bytes": 6239,
+      "row_count": 38,
+      "speaker_sample": [
+        "AfilCon"
+      ],
+      "keyword_counts": {
+        "Ring": 3,
+        "K Corp": 3,
+        "Heathcliff": 75
+      },
+      "stored_raw_text": false,
+      "reused_evidence": true
+    },
+    {
+      "title": "Lobotomy E.G.O::The Sword Sharpened with Tears Rodion/Identity Story",
+      "source_url": "https://limbuscompany.wiki.gg/wiki/Lobotomy_E.G.O::The_Sword_Sharpened_with_Tears_Rodion/Identity_Story",
+      "revision_id": 130495,
+      "verified_at": "2026-06-04T05:29:56Z",
+      "raw_status": "fetched",
+      "raw_sha256": "f5c9d31b5c2530e0951f3c5ee516b7e55d977e3861617dd2929dc43ef017a059",
+      "raw_bytes": 11025,
+      "row_count": 91,
+      "speaker_sample": [
+        "AfilCon"
+      ],
+      "keyword_counts": {
+        "dream": 1,
+        "Ring": 3,
+        "Blade": 3,
+        "Rodion": 58
+      },
+      "stored_raw_text": false,
+      "reused_evidence": true
+    },
+    {
+      "title": "Blade Lineage Salsu Don Quixote/Identity Story",
+      "source_url": "https://limbuscompany.wiki.gg/wiki/Blade_Lineage_Salsu_Don_Quixote/Identity_Story",
+      "revision_id": 82175,
+      "verified_at": "2026-06-04T05:29:56Z",
+      "raw_status": "fetched",
+      "raw_sha256": "1e894afa1ad73aa7ece22fc4e9fab519548b131d8d329cb186a2b31dbe36e1c7",
+      "raw_bytes": 7532,
+      "row_count": 59,
+      "speaker_sample": [
+        "AfilCon"
+      ],
+      "keyword_counts": {
+        "Ring": 3,
+        "Blade": 47,
+        "mentor": 1,
+        "Don Quixote": 41,
+        "Outis": 40
+      },
+      "stored_raw_text": false,
+      "reused_evidence": true
+    },
+    {
+      "title": "Blade Lineage Salsu Faust/Identity Story",
+      "source_url": "https://limbuscompany.wiki.gg/wiki/Blade_Lineage_Salsu_Faust/Identity_Story",
+      "revision_id": 82174,
+      "verified_at": "2026-06-04T05:29:56Z",
+      "raw_status": "fetched",
+      "raw_sha256": "174a17becd244852ffebd7b2d95a5dbca28dae83260b78b99c75d146a9794c24",
+      "raw_bytes": 3838,
+      "row_count": 44,
+      "speaker_sample": [],
+      "keyword_counts": {
+        "Ring": 2,
+        "Blade": 6,
+        "mentor": 4,
+        "Faust": 6
+      },
+      "stored_raw_text": false,
+      "reused_evidence": true
+    },
+    {
+      "title": "Blade Lineage Salsu Outis/Identity Story",
+      "source_url": "https://limbuscompany.wiki.gg/wiki/Blade_Lineage_Salsu_Outis/Identity_Story",
+      "revision_id": 82173,
+      "verified_at": "2026-06-04T05:29:56Z",
+      "raw_status": "fetched",
+      "raw_sha256": "0d0c6f99f9a4e2af38bc83b4be45c0d790a359aef2c69a5c712f779d6887294d",
+      "raw_bytes": 2184,
+      "row_count": 17,
+      "speaker_sample": [
+        "AfilCon"
+      ],
+      "keyword_counts": {
+        "Ring": 1,
+        "Blade": 13,
+        "Outis": 13
+      },
+      "stored_raw_text": false,
+      "reused_evidence": true
+    },
+    {
+      "title": "Blade Lineage Salsu Sinclair/Identity Story",
+      "source_url": "https://limbuscompany.wiki.gg/wiki/Blade_Lineage_Salsu_Sinclair/Identity_Story",
+      "revision_id": 82172,
+      "verified_at": "2026-06-04T05:29:56Z",
+      "raw_status": "fetched",
+      "raw_sha256": "89032aa85403df5e0e7addc61f83172bb88e366a15f950078550554948e1a149",
+      "raw_bytes": 1420,
+      "row_count": 12,
+      "speaker_sample": [
+        "AfilCon"
+      ],
+      "keyword_counts": {
+        "blood": 1,
+        "Ring": 1,
+        "Blade": 6,
+        "Sinclair": 6
+      },
+      "stored_raw_text": false,
+      "reused_evidence": true
+    },
+    {
+      "title": "Blade Lineage Salsu Yi Sang/Identity Story",
+      "source_url": "https://limbuscompany.wiki.gg/wiki/Blade_Lineage_Salsu_Yi_Sang/Identity_Story",
+      "revision_id": 82171,
+      "verified_at": "2026-06-04T05:29:56Z",
+      "raw_status": "fetched",
+      "raw_sha256": "7ead7db9d3e66cf5883030b0f3ff9a8876dee7ed13bb674deeb35c561cecf8a1",
+      "raw_bytes": 3151,
+      "row_count": 23,
+      "speaker_sample": [
+        "AfilCon"
+      ],
+      "keyword_counts": {
+        "blood": 1,
+        "Ring": 1,
+        "Blade": 17,
+        "Yi Sang": 20,
+        "Outis": 12
+      },
+      "stored_raw_text": false,
+      "reused_evidence": true
+    },
+    {
+      "title": "W Corp. L2 Cleanup Agent Faust/Identity Story",
+      "source_url": "https://limbuscompany.wiki.gg/wiki/W_Corp._L2_Cleanup_Agent_Faust/Identity_Story",
+      "revision_id": 82083,
+      "verified_at": "2026-06-04T05:29:56Z",
+      "raw_status": "fetched",
+      "raw_sha256": "cf146a3e4079ded1d1372c94bf8da3e82afe6f27b40b50c1ea156b71be5fd91d",
+      "raw_bytes": 2673,
+      "row_count": 15,
+      "speaker_sample": [
+        "AfilCon"
+      ],
+      "keyword_counts": {
+        "Faust": 34
+      },
+      "stored_raw_text": false,
+      "reused_evidence": true
+    },
+    {
+      "title": "W Corp. L2 Cleanup Agent Hong Lu/Identity Story",
+      "source_url": "https://limbuscompany.wiki.gg/wiki/W_Corp._L2_Cleanup_Agent_Hong_Lu/Identity_Story",
+      "revision_id": 82082,
+      "verified_at": "2026-06-04T05:29:56Z",
+      "raw_status": "fetched",
+      "raw_sha256": "e7a03ea5846318053141582eb6caf21f7fc8d5c28c4472364aea86b24b1e9f2d",
+      "raw_bytes": 4097,
+      "row_count": 30,
+      "speaker_sample": [
+        "AfilCon"
+      ],
+      "keyword_counts": {
+        "Family": 3,
+        "Ring": 1,
+        "Hong Lu": 20,
+        "Ryōshū": 5
+      },
+      "stored_raw_text": false,
+      "reused_evidence": true
+    },
+    {
+      "title": "W Corp. L2 Cleanup Agent Meursault/Identity Story",
+      "source_url": "https://limbuscompany.wiki.gg/wiki/W_Corp._L2_Cleanup_Agent_Meursault/Identity_Story",
+      "revision_id": 82081,
+      "verified_at": "2026-06-04T05:29:56Z",
+      "raw_status": "fetched",
+      "raw_sha256": "e5a6246cfe81a312b83ef431f183f97293b06c2ba9c3bc8e95c34303c831a26f",
+      "raw_bytes": 1903,
+      "row_count": 16,
+      "speaker_sample": [
+        "AfilCon"
+      ],
+      "keyword_counts": {
+        "Meursault": 6
+      },
+      "stored_raw_text": false,
+      "reused_evidence": true
+    },
+    {
+      "title": "W Corp. L3 Cleanup Agent Don Quixote/Identity Story",
+      "source_url": "https://limbuscompany.wiki.gg/wiki/W_Corp._L3_Cleanup_Agent_Don_Quixote/Identity_Story",
+      "revision_id": 82080,
+      "verified_at": "2026-06-04T05:29:56Z",
+      "raw_status": "fetched",
+      "raw_sha256": "eb58b306f1ce62fd4e8977ea78ad74082cf25656e18bb25e8a5c891c5c2add15",
+      "raw_bytes": 2764,
+      "row_count": 22,
+      "speaker_sample": [
+        "AfilCon"
+      ],
+      "keyword_counts": {
+        "Ring": 1,
+        "Don Quixote": 18,
+        "Faust": 14
+      },
+      "stored_raw_text": false,
+      "reused_evidence": true
+    },
+    {
+      "title": "W Corp. L3 Cleanup Agent Ryōshū/Identity Story",
+      "source_url": "https://limbuscompany.wiki.gg/wiki/W_Corp._L3_Cleanup_Agent_Ry%C5%8Dsh%C5%AB/Identity_Story",
+      "revision_id": 82079,
+      "verified_at": "2026-06-04T05:29:56Z",
+      "raw_status": "fetched",
+      "raw_sha256": "35562280611b2c8eea64e6b23af84cf287f90572e152d69280ee7a699bc2628e",
+      "raw_bytes": 4053,
+      "row_count": 39,
+      "speaker_sample": [],
+      "keyword_counts": {
+        "Ring": 2,
+        "Blade": 3,
+        "Ryōshū": 3
+      },
+      "stored_raw_text": false,
+      "reused_evidence": true
+    },
+    {
+      "title": "W Corp. L3 Cleanup Agent Yi Sang/Identity Story",
+      "source_url": "https://limbuscompany.wiki.gg/wiki/W_Corp._L3_Cleanup_Agent_Yi_Sang/Identity_Story",
+      "revision_id": 82078,
+      "verified_at": "2026-06-04T05:29:56Z",
+      "raw_status": "fetched",
+      "raw_sha256": "dc2368ef5f0c1619c0fd45570cd6f4e0474670919959a96c3638f37b9aa0081d",
+      "raw_bytes": 3639,
+      "row_count": 31,
+      "speaker_sample": [
+        "AfilCon"
+      ],
+      "keyword_counts": {
+        "Ring": 1,
+        "Yi Sang": 4
+      },
+      "stored_raw_text": false,
+      "reused_evidence": true
+    },
+    {
+      "title": "R Corp. 4th Pack Rabbit Heathcliff/Identity Story",
+      "source_url": "https://limbuscompany.wiki.gg/wiki/R_Corp._4th_Pack_Rabbit_Heathcliff/Identity_Story",
+      "revision_id": 143780,
+      "verified_at": "2026-06-04T05:29:56Z",
+      "raw_status": "fetched",
+      "raw_sha256": "aa8518c38540da703a558c91db24b3c7f9d6100b32f23a303a1796b55a3ffd99",
+      "raw_bytes": 1740,
+      "row_count": 14,
+      "speaker_sample": [
+        "AfilCon"
+      ],
+      "keyword_counts": {
+        "blood": 1,
+        "Heathcliff": 12
+      },
+      "stored_raw_text": false,
+      "reused_evidence": true
+    },
+    {
+      "title": "R Corp. 4th Pack Reindeer Ishmael/Identity Story",
+      "source_url": "https://limbuscompany.wiki.gg/wiki/R_Corp._4th_Pack_Reindeer_Ishmael/Identity_Story",
+      "revision_id": 82114,
+      "verified_at": "2026-06-04T05:29:56Z",
+      "raw_status": "fetched",
+      "raw_sha256": "57a4852f4773bf99ad5c858a79f7165fd0ae0ffea3548197cfdca88dd41f5663",
+      "raw_bytes": 1861,
+      "row_count": 15,
+      "speaker_sample": [
+        "AfilCon"
+      ],
+      "keyword_counts": {
+        "Ishmael": 9
+      },
+      "stored_raw_text": false,
+      "reused_evidence": true
+    },
+    {
+      "title": "R Corp. 4th Pack Rhino Meursault/Identity Story",
+      "source_url": "https://limbuscompany.wiki.gg/wiki/R_Corp._4th_Pack_Rhino_Meursault/Identity_Story",
+      "revision_id": 82113,
+      "verified_at": "2026-06-04T05:29:56Z",
+      "raw_status": "fetched",
+      "raw_sha256": "b9ddb80d65a6c985efadbbd2640030a88eced4d3d931c177ba2ef9966dc23ca0",
+      "raw_bytes": 2575,
+      "row_count": 24,
+      "speaker_sample": [],
+      "keyword_counts": {
+        "blood": 1,
+        "Blade": 1,
+        "Meursault": 3
+      },
+      "stored_raw_text": false,
+      "reused_evidence": true
+    },
+    {
+      "title": "The One Who Grips Faust/Identity Story",
+      "source_url": "https://limbuscompany.wiki.gg/wiki/The_One_Who_Grips_Faust/Identity_Story",
+      "revision_id": 129331,
+      "verified_at": "2026-06-04T05:29:56Z",
+      "raw_status": "fetched",
+      "raw_sha256": "06ecba630dd0e1ef05ea19598e3bb44dbf980eb93b12f17bba64d7cf90b8f53a",
+      "raw_bytes": 4436,
+      "row_count": 38,
+      "speaker_sample": [
+        "AfilCon"
+      ],
+      "keyword_counts": {
+        "blood": 1,
+        "N Corp": 2,
+        "Sinclair": 6,
+        "Faust": 45
+      },
+      "stored_raw_text": false,
+      "reused_evidence": true
+    },
+    {
+      "title": "The One Who Shall Grip Sinclair/Identity Story",
+      "source_url": "https://limbuscompany.wiki.gg/wiki/The_One_Who_Shall_Grip_Sinclair/Identity_Story",
+      "revision_id": 129332,
+      "verified_at": "2026-06-04T05:29:56Z",
+      "raw_status": "fetched",
+      "raw_sha256": "67f7cb7251160029f203f25c2b4df0fea6dfbd3f80c26b3eff6ec64f430c15e1",
+      "raw_bytes": 5579,
+      "row_count": 57,
+      "speaker_sample": [
+        "AfilCon"
+      ],
+      "keyword_counts": {
+        "Ring": 4,
+        "N Corp": 2,
+        "Sinclair": 23,
+        "Faust": 19
+      },
+      "stored_raw_text": false,
+      "reused_evidence": true
+    },
+    {
+      "title": "Wild Hunt Heathcliff/Identity Story",
+      "source_url": "https://limbuscompany.wiki.gg/wiki/Wild_Hunt_Heathcliff/Identity_Story",
+      "revision_id": 82076,
+      "verified_at": "2026-06-04T05:29:56Z",
+      "raw_status": "fetched",
+      "raw_sha256": "d66310e9594e07e21eebda4bd55e2c48d08a8fae45dd1f761f4076e1515de392",
+      "raw_bytes": 11428,
+      "row_count": 106,
+      "speaker_sample": [],
+      "keyword_counts": {
+        "blood": 2,
+        "Ring": 22,
+        "paint": 3,
+        "Blade": 2,
+        "Wild Hunt": 7,
+        "Wuthering Heights": 6,
+        "Heathcliff": 6
+      },
+      "stored_raw_text": false,
+      "reused_evidence": true
+    },
+    {
+      "title": "The Pequod Captain Ishmael/Identity Story",
+      "source_url": "https://limbuscompany.wiki.gg/wiki/The_Pequod_Captain_Ishmael/Identity_Story",
+      "revision_id": 82092,
+      "verified_at": "2026-06-04T05:29:56Z",
+      "raw_status": "fetched",
+      "raw_sha256": "2ae02f3de79d38c1ac036a562cf0c05e3fe3690fcc817d417b91be7583997dd0",
+      "raw_bytes": 7376,
+      "row_count": 70,
+      "speaker_sample": [
+        "AfilCon"
+      ],
+      "keyword_counts": {
+        "Ring": 4,
+        "Yi Sang": 3,
+        "Pequod": 50,
+        "Heathcliff": 2,
+        "Ishmael": 70
+      },
+      "stored_raw_text": false,
+      "reused_evidence": true
+    },
+    {
+      "title": "The Pequod First Mate Yi Sang/Identity Story",
+      "source_url": "https://limbuscompany.wiki.gg/wiki/The_Pequod_First_Mate_Yi_Sang/Identity_Story",
+      "revision_id": 82091,
+      "verified_at": "2026-06-04T05:29:56Z",
+      "raw_status": "fetched",
+      "raw_sha256": "1a8338a85b95c563f89038547db3a0923ef072f0729cb23f1fb31af05d7e0bde",
+      "raw_bytes": 4036,
+      "row_count": 37,
+      "speaker_sample": [
+        "AfilCon"
+      ],
+      "keyword_counts": {
+        "Yi Sang": 13,
+        "Pequod": 12,
+        "Ishmael": 1
+      },
+      "stored_raw_text": false,
+      "reused_evidence": true
+    },
+    {
+      "title": "The Pequod Harpooneer Heathcliff/Identity Story",
+      "source_url": "https://limbuscompany.wiki.gg/wiki/The_Pequod_Harpooneer_Heathcliff/Identity_Story",
+      "revision_id": 82090,
+      "verified_at": "2026-06-04T05:29:56Z",
+      "raw_status": "fetched",
+      "raw_sha256": "7f9aba70dd52a5ee8bf7bab082031c5b79660db3b6396f4f8489dbfe724e0354",
+      "raw_bytes": 3318,
+      "row_count": 31,
+      "speaker_sample": [],
+      "keyword_counts": {
+        "Pequod": 3,
+        "Heathcliff": 3
+      },
+      "stored_raw_text": false,
+      "reused_evidence": true
+    },
+    {
+      "title": "Edgar Family Butler Ishmael/Identity Story",
+      "source_url": "https://limbuscompany.wiki.gg/wiki/Edgar_Family_Butler_Ishmael/Identity_Story",
+      "revision_id": 82157,
+      "verified_at": "2026-06-04T05:29:56Z",
+      "raw_status": "fetched",
+      "raw_sha256": "c288496bd3cfcf5c8dd12db53d058c1879328e611824dd14ad42da2bbff3a0a0",
+      "raw_bytes": 6780,
+      "row_count": 59,
+      "speaker_sample": [
+        "AfilCon"
+      ],
+      "keyword_counts": {
+        "Family": 24,
+        "Ring": 6,
+        "Wuthering Heights": 3,
+        "Edgar": 25,
+        "Ishmael": 29,
+        "Gregor": 4,
+        "Ryōshū": 4
+      },
+      "stored_raw_text": false,
+      "reused_evidence": true
+    },
+    {
+      "title": "Edgar Family Chief Butler Ryōshū/Identity Story",
+      "source_url": "https://limbuscompany.wiki.gg/wiki/Edgar_Family_Chief_Butler_Ry%C5%8Dsh%C5%AB/Identity_Story",
+      "revision_id": 157537,
+      "verified_at": "2026-06-04T05:29:56Z",
+      "raw_status": "fetched",
+      "raw_sha256": "aadc826e661803ea45cd30768f43777de4701242dbf53cc420a013eb263c9e70",
+      "raw_bytes": 6956,
+      "row_count": 68,
+      "speaker_sample": [
+        "AfilCon"
+      ],
+      "keyword_counts": {
+        "Family": 11,
+        "Ring": 8,
+        "Wuthering Heights": 3,
+        "Edgar": 11,
+        "Ishmael": 12,
+        "Ryōshū": 26
+      },
+      "stored_raw_text": false,
+      "reused_evidence": true
+    },
+    {
+      "title": "Wuthering Heights Butler Faust/Identity Story",
+      "source_url": "https://limbuscompany.wiki.gg/wiki/Wuthering_Heights_Butler_Faust/Identity_Story",
+      "revision_id": 82075,
+      "verified_at": "2026-06-04T05:29:56Z",
+      "raw_status": "fetched",
+      "raw_sha256": "5000d8b96deaea90f32e430a0dc1146886401b5f3fc15840367f8d3ccab210db",
+      "raw_bytes": 5365,
+      "row_count": 45,
+      "speaker_sample": [
+        "AfilCon"
+      ],
+      "keyword_counts": {
+        "Family": 2,
+        "blood": 2,
+        "Ring": 32,
+        "Sinclair": 6,
+        "Outis": 16,
+        "Wuthering Heights": 30,
+        "Edgar": 2,
+        "Faust": 30
+      },
+      "stored_raw_text": false,
+      "reused_evidence": true
+    },
+    {
+      "title": "Wuthering Heights Chief Butler Outis/Identity Story",
+      "source_url": "https://limbuscompany.wiki.gg/wiki/Wuthering_Heights_Chief_Butler_Outis/Identity_Story",
+      "revision_id": 82074,
+      "verified_at": "2026-06-04T05:29:56Z",
+      "raw_status": "fetched",
+      "raw_sha256": "bd3b8f5d7046c4b93b905c55aab6ce3386f11d7e570962e36c4c2352d9a26b4c",
+      "raw_bytes": 8182,
+      "row_count": 61,
+      "speaker_sample": [
+        "AfilCon"
+      ],
+      "keyword_counts": {
+        "Family": 2,
+        "Ring": 43,
+        "Outis": 47,
+        "Wuthering Heights": 40,
+        "Edgar": 2,
+        "Faust": 28,
+        "Ryōshū": 3
+      },
+      "stored_raw_text": false,
+      "reused_evidence": true
+    },
+    {
+      "title": "Dieci Assoc. South Section 4 Hong Lu/Identity Story",
+      "source_url": "https://limbuscompany.wiki.gg/wiki/Dieci_Assoc._South_Section_4_Hong_Lu/Identity_Story",
+      "revision_id": 82162,
+      "verified_at": "2026-06-04T05:29:56Z",
+      "raw_status": "fetched",
+      "raw_sha256": "0490b69b2bf808fcc1cb2907456bda758a68ee310fef25453bfc5fa3c9bb6dcf",
+      "raw_bytes": 4936,
+      "row_count": 39,
+      "speaker_sample": [
+        "AfilCon"
+      ],
+      "keyword_counts": {
+        "Ring": 8,
+        "Yi Sang": 4,
+        "Rodion": 4,
+        "Hong Lu": 23,
+        "Dieci": 19
+      },
+      "stored_raw_text": false,
+      "reused_evidence": true
+    },
+    {
+      "title": "Dieci Assoc. South Section 4 Rodion/Identity Story",
+      "source_url": "https://limbuscompany.wiki.gg/wiki/Dieci_Assoc._South_Section_4_Rodion/Identity_Story",
+      "revision_id": 82161,
+      "verified_at": "2026-06-04T05:29:56Z",
+      "raw_status": "fetched",
+      "raw_sha256": "d22eca5900d7d0bc36216638fc7dfeea8949d19dab9a2803966f0186939a485f",
+      "raw_bytes": 6091,
+      "row_count": 42,
+      "speaker_sample": [
+        "AfilCon"
+      ],
+      "keyword_counts": {
+        "Rodion": 56,
+        "Dieci": 35
+      },
+      "stored_raw_text": false,
+      "reused_evidence": true
+    },
+    {
+      "title": "Dieci Assoc. South Section 4 Yi Sang/Identity Story",
+      "source_url": "https://limbuscompany.wiki.gg/wiki/Dieci_Assoc._South_Section_4_Yi_Sang/Identity_Story",
+      "revision_id": 82160,
+      "verified_at": "2026-06-04T05:29:56Z",
+      "raw_status": "fetched",
+      "raw_sha256": "4edc3387904bad525f8e290e7444ce166b22658d3a657a16c4f1390ece5fc9a5",
+      "raw_bytes": 4215,
+      "row_count": 27,
+      "speaker_sample": [],
+      "keyword_counts": {
+        "Ring": 3,
+        "Yi Sang": 3,
+        "Dieci": 4
+      },
+      "stored_raw_text": false,
+      "reused_evidence": true
+    },
+    {
+      "title": "Dieci Assoc. South Section 4 Director Meursault/Identity Story",
+      "source_url": "https://limbuscompany.wiki.gg/wiki/Dieci_Assoc._South_Section_4_Director_Meursault/Identity_Story",
+      "revision_id": 82163,
+      "verified_at": "2026-06-04T05:29:56Z",
+      "raw_status": "fetched",
+      "raw_sha256": "9a58af0c7c3701fae2232c08d8dcf92e563b2727d1e9af7566b590a02f2ec237",
+      "raw_bytes": 11105,
+      "row_count": 78,
+      "speaker_sample": [
+        "AfilCon"
+      ],
+      "keyword_counts": {
+        "Ring": 5,
+        "Office": 2,
+        "Meursault": 43,
+        "Dieci": 31
+      },
+      "stored_raw_text": false,
+      "reused_evidence": true
+    },
+    {
+      "title": "Cinq Assoc. South Section 4 Director Sinclair/Identity Story",
+      "source_url": "https://limbuscompany.wiki.gg/wiki/Cinq_Assoc._South_Section_4_Director_Sinclair/Identity_Story",
+      "revision_id": 82170,
+      "verified_at": "2026-06-04T05:29:56Z",
+      "raw_status": "fetched",
+      "raw_sha256": "704eb433b3baeb674186c3e875327fa6a5b72412d06f7b928247042d7593ab7a",
+      "raw_bytes": 7191,
+      "row_count": 58,
+      "speaker_sample": [
+        "AfilCon"
+      ],
+      "keyword_counts": {
+        "Ring": 3,
+        "Cinq": 39,
+        "duel": 7,
+        "Blade": 7,
+        "Office": 1,
+        "Sinclair": 33
+      },
+      "stored_raw_text": false,
+      "reused_evidence": true
+    },
+    {
+      "title": "Cinq Assoc. South Section 4 Outis/Identity Story",
+      "source_url": "https://limbuscompany.wiki.gg/wiki/Cinq_Assoc._South_Section_4_Outis/Identity_Story",
+      "revision_id": 130089,
+      "verified_at": "2026-06-04T05:29:56Z",
+      "raw_status": "fetched",
+      "raw_sha256": "564593efafdd84988fdd0923871ceaf07a3286cd4adeb6ceb410997576736f8e",
+      "raw_bytes": 5872,
+      "row_count": 49,
+      "speaker_sample": [
+        "AfilCon"
+      ],
+      "keyword_counts": {
+        "Ring": 1,
+        "Cinq": 22,
+        "duel": 2,
+        "Blade": 2,
+        "Don Quixote": 1,
+        "Outis": 36
+      },
+      "stored_raw_text": false,
+      "reused_evidence": true
+    },
+    {
+      "title": "Cinq Assoc. South Section 5 Director Don Quixote/Identity Story",
+      "source_url": "https://limbuscompany.wiki.gg/wiki/Cinq_Assoc._South_Section_5_Director_Don_Quixote/Identity_Story",
+      "revision_id": 82168,
+      "verified_at": "2026-06-04T05:29:56Z",
+      "raw_status": "fetched",
+      "raw_sha256": "d9e81184b40927bac0202630e4af97673b92ccbca886d915e98a907ee148c22e",
+      "raw_bytes": 6559,
+      "row_count": 51,
+      "speaker_sample": [
+        "AfilCon"
+      ],
+      "keyword_counts": {
+        "Ring": 3,
+        "Index": 1,
+        "Cinq": 29,
+        "duel": 7,
+        "Don Quixote": 45
+      },
+      "stored_raw_text": false,
+      "reused_evidence": true
+    },
+    {
+      "title": "Cinq Assoc. West Section 3 Meursault/Identity Story",
+      "source_url": "https://limbuscompany.wiki.gg/wiki/Cinq_Assoc._West_Section_3_Meursault/Identity_Story",
+      "revision_id": 82167,
+      "verified_at": "2026-06-04T05:29:56Z",
+      "raw_status": "fetched",
+      "raw_sha256": "4ee561aaae8c8385b9bb7b5831fc39df6a239c13d7d62a860c93c3d8b26f809b",
+      "raw_bytes": 7994,
+      "row_count": 57,
+      "speaker_sample": [
+        "AfilCon"
+      ],
+      "keyword_counts": {
+        "blood": 2,
+        "Ring": 3,
+        "Cinq": 27,
+        "duel": 3,
+        "Blade": 1,
+        "Meursault": 42
+      },
+      "stored_raw_text": false,
+      "reused_evidence": true
+    },
+    {
+      "title": "Liu Assoc. South Section 3 Yi Sang/Identity Story",
+      "source_url": "https://limbuscompany.wiki.gg/wiki/Liu_Assoc._South_Section_3_Yi_Sang/Identity_Story",
+      "revision_id": 93375,
+      "verified_at": "2026-06-04T05:29:56Z",
+      "raw_status": "fetched",
+      "raw_sha256": "37525e3222cf9295cbf9cdf919a052facdefcfd0140664133e0262b1310ed7c8",
+      "raw_bytes": 4709,
+      "row_count": 35,
+      "speaker_sample": [],
+      "keyword_counts": {
+        "Ring": 4,
+        "Blade": 3,
+        "Yi Sang": 3,
+        "Liu": 9
+      },
+      "stored_raw_text": false,
+      "reused_evidence": true
+    },
+    {
+      "title": "Liu Assoc. South Section 4 Director Rodion/Identity Story",
+      "source_url": "https://limbuscompany.wiki.gg/wiki/Liu_Assoc._South_Section_4_Director_Rodion/Identity_Story",
+      "revision_id": 93329,
+      "verified_at": "2026-06-04T05:29:56Z",
+      "raw_status": "fetched",
+      "raw_sha256": "bbfe550876baa586ba6e91dce22e45081794ee1b7e0d02a54fbd0db9987bfe7e",
+      "raw_bytes": 6584,
+      "row_count": 56,
+      "speaker_sample": [
+        "AfilCon"
+      ],
+      "keyword_counts": {
+        "Family": 1,
+        "Ring": 1,
+        "Rodion": 37,
+        "Liu": 35,
+        "Ishmael": 22,
+        "Ryōshū": 1
+      },
+      "stored_raw_text": false,
+      "reused_evidence": true
+    },
+    {
+      "title": "Liu Assoc. South Section 4 Ishmael/Identity Story",
+      "source_url": "https://limbuscompany.wiki.gg/wiki/Liu_Assoc._South_Section_4_Ishmael/Identity_Story",
+      "revision_id": 82140,
+      "verified_at": "2026-06-04T05:29:56Z",
+      "raw_status": "fetched",
+      "raw_sha256": "b8abc0604a01d9aa658d91744470ae2d8055ce6bd20b67db39939d37691db759",
+      "raw_bytes": 4602,
+      "row_count": 37,
+      "speaker_sample": [
+        "AfilCon"
+      ],
+      "keyword_counts": {
+        "Ring": 1,
+        "Liu": 21,
+        "Ishmael": 32
+      },
+      "stored_raw_text": false,
+      "reused_evidence": true
+    },
+    {
+      "title": "Liu Assoc. South Section 5 Hong Lu/Identity Story",
+      "source_url": "https://limbuscompany.wiki.gg/wiki/Liu_Assoc._South_Section_5_Hong_Lu/Identity_Story",
+      "revision_id": 84185,
+      "verified_at": "2026-06-04T05:29:56Z",
+      "raw_status": "fetched",
+      "raw_sha256": "36abba6804e1e4cb2e0e54f74e26c2afd11fbf40eeff5bd2890a426b9996782a",
+      "raw_bytes": 3621,
+      "row_count": 30,
+      "speaker_sample": [
+        "AfilCon"
+      ],
+      "keyword_counts": {
+        "Family": 1,
+        "Ring": 1,
+        "Yi Sang": 6,
+        "Hong Lu": 17,
+        "Liu": 11,
+        "Faust": 11
+      },
+      "stored_raw_text": false,
+      "reused_evidence": true
+    },
+    {
+      "title": "Seven Assoc. South Section 4 Faust/Identity Story",
+      "source_url": "https://limbuscompany.wiki.gg/wiki/Seven_Assoc._South_Section_4_Faust/Identity_Story",
+      "revision_id": 82107,
+      "verified_at": "2026-06-04T05:29:56Z",
+      "raw_status": "fetched",
+      "raw_sha256": "98f5a7be3d1b7e599936333db6be6f113bf298c58d10a59471e3f5e6eebad7ce",
+      "raw_bytes": 5181,
+      "row_count": 37,
+      "speaker_sample": [
+        "AfilCon"
+      ],
+      "keyword_counts": {
+        "Ring": 2,
+        "Office": 1,
+        "Seven": 22,
+        "Heathcliff": 1,
+        "Faust": 31
+      },
+      "stored_raw_text": false,
+      "reused_evidence": true
+    },
+    {
+      "title": "Seven Assoc. South Section 4 Heathcliff/Identity Story",
+      "source_url": "https://limbuscompany.wiki.gg/wiki/Seven_Assoc._South_Section_4_Heathcliff/Identity_Story",
+      "revision_id": 82106,
+      "verified_at": "2026-06-04T05:29:56Z",
+      "raw_status": "fetched",
+      "raw_sha256": "5e6999d0b5338837d5715fd715570c5f101b0370467e6913c68a22c1ea8e28b1",
+      "raw_bytes": 3176,
+      "row_count": 25,
+      "speaker_sample": [
+        "AfilCon"
+      ],
+      "keyword_counts": {
+        "blood": 1,
+        "Office": 1,
+        "Seven": 11,
+        "Heathcliff": 12,
+        "Faust": 6
+      },
+      "stored_raw_text": false,
+      "reused_evidence": true
+    },
+    {
+      "title": "Seven Assoc. South Section 6 Director Outis/Identity Story",
+      "source_url": "https://limbuscompany.wiki.gg/wiki/Seven_Assoc._South_Section_6_Director_Outis/Identity_Story",
+      "revision_id": 82105,
+      "verified_at": "2026-06-04T05:29:56Z",
+      "raw_status": "fetched",
+      "raw_sha256": "3106ebc80318827acc40bdc852186da424fcef38c6b9c6d7e3a6cf065b898159",
+      "raw_bytes": 2908,
+      "row_count": 27,
+      "speaker_sample": [
+        "AfilCon"
+      ],
+      "keyword_counts": {
+        "Ring": 1,
+        "Outis": 17,
+        "Seven": 11
+      },
+      "stored_raw_text": false,
+      "reused_evidence": true
+    },
+    {
+      "title": "Seven Assoc. South Section 6 Yi Sang/Identity Story",
+      "source_url": "https://limbuscompany.wiki.gg/wiki/Seven_Assoc._South_Section_6_Yi_Sang/Identity_Story",
+      "revision_id": 82103,
+      "verified_at": "2026-06-04T05:29:56Z",
+      "raw_status": "fetched",
+      "raw_sha256": "12f58f38a3943c2c92cf3145a716537840c3b7ec4c9a144d0a86b29118a732c7",
+      "raw_bytes": 2989,
+      "row_count": 21,
+      "speaker_sample": [
+        "AfilCon"
+      ],
+      "keyword_counts": {
+        "Ring": 1,
+        "Cinq": 1,
+        "Blade": 1,
+        "Yi Sang": 22,
+        "Seven": 18,
+        "Zwei": 2
+      },
+      "stored_raw_text": false,
+      "reused_evidence": true
+    },
+    {
+      "title": "Zwei Assoc. South Section 4 Faust/Identity Story",
+      "source_url": "https://limbuscompany.wiki.gg/wiki/Zwei_Assoc._South_Section_4_Faust/Identity_Story",
+      "revision_id": 82073,
+      "verified_at": "2026-06-04T05:29:56Z",
+      "raw_status": "fetched",
+      "raw_sha256": "e1c95db71340b6e2d2764aee51823d2a17f2a1027ba175e857da77ce5c4ae5f7",
+      "raw_bytes": 5900,
+      "row_count": 50,
+      "speaker_sample": [
+        "AfilCon"
+      ],
+      "keyword_counts": {
+        "Ring": 2,
+        "Sinclair": 10,
+        "Don Quixote": 4,
+        "Rodion": 7,
+        "Zwei": 44,
+        "Heathcliff": 1,
+        "Ishmael": 16,
+        "Faust": 49,
+        "Gregor": 1
+      },
+      "stored_raw_text": false,
+      "reused_evidence": true
+    },
+    {
+      "title": "Zwei Assoc. South Section 4 Gregor/Identity Story",
+      "source_url": "https://limbuscompany.wiki.gg/wiki/Zwei_Assoc._South_Section_4_Gregor/Identity_Story",
+      "revision_id": 143145,
+      "verified_at": "2026-06-04T05:29:56Z",
+      "raw_status": "fetched",
+      "raw_sha256": "e60418d3ee5363c60438db198b1c8ebbd8866362034c8e5304193d92e359fca1",
+      "raw_bytes": 5512,
+      "row_count": 46,
+      "speaker_sample": [
+        "AfilCon"
+      ],
+      "keyword_counts": {
+        "Ring": 1,
+        "Blade": 5,
+        "Office": 2,
+        "Zwei": 28,
+        "Gregor": 37
+      },
+      "stored_raw_text": false,
+      "reused_evidence": true
+    },
+    {
+      "title": "Zwei Assoc. South Section 5 Rodion/Identity Story",
+      "source_url": "https://limbuscompany.wiki.gg/wiki/Zwei_Assoc._South_Section_5_Rodion/Identity_Story",
+      "revision_id": 82071,
+      "verified_at": "2026-06-04T05:29:56Z",
+      "raw_status": "fetched",
+      "raw_sha256": "c9dd72b3c1c97baef4b690786abcafc38074719cca15d36e0be58bffd5966554",
+      "raw_bytes": 5313,
+      "row_count": 51,
+      "speaker_sample": [
+        "AfilCon"
+      ],
+      "keyword_counts": {
+        "Ring": 2,
+        "Blade": 1,
+        "Rodion": 37,
+        "Zwei": 31,
+        "Heathcliff": 13
+      },
+      "stored_raw_text": false,
+      "reused_evidence": true
+    },
+    {
+      "title": "Zwei Assoc. South Section 6 Sinclair/Identity Story",
+      "source_url": "https://limbuscompany.wiki.gg/wiki/Zwei_Assoc._South_Section_6_Sinclair/Identity_Story",
+      "revision_id": 104837,
+      "verified_at": "2026-06-04T05:29:56Z",
+      "raw_status": "fetched",
+      "raw_sha256": "4ba4b74f3195f8352e10bc3f3b453c23505ac60fbe68feff8e53dd5ec813efc4",
+      "raw_bytes": 1926,
+      "row_count": 16,
+      "speaker_sample": [
+        "AfilCon"
+      ],
+      "keyword_counts": {
+        "Ring": 1,
+        "Sinclair": 6,
+        "Don Quixote": 6,
+        "Zwei": 11
+      },
+      "stored_raw_text": false,
+      "reused_evidence": true
+    },
+    {
+      "title": "N Corp. Großhammer Meursault/Identity Story",
+      "source_url": "https://limbuscompany.wiki.gg/wiki/N_Corp._Gro%C3%9Fhammer_Meursault/Identity_Story",
+      "revision_id": 129333,
+      "verified_at": "2026-06-04T05:29:56Z",
+      "raw_status": "fetched",
+      "raw_sha256": "c91136a6fcfee4aed037a5020978132e65fdfdd24ee4aa1358d4dac0b3436e40",
+      "raw_bytes": 3096,
+      "row_count": 33,
+      "speaker_sample": [
+        "AfilCon"
+      ],
+      "keyword_counts": {
+        "Ring": 1,
+        "N Corp": 16,
+        "Meursault": 19,
+        "K Corp": 1
+      },
+      "stored_raw_text": false,
+      "reused_evidence": true
+    },
+    {
+      "title": "N Corp. Kleinhammer Heathcliff/Identity Story",
+      "source_url": "https://limbuscompany.wiki.gg/wiki/N_Corp._Kleinhammer_Heathcliff/Identity_Story",
+      "revision_id": 129335,
+      "verified_at": "2026-06-04T05:29:56Z",
+      "raw_status": "fetched",
+      "raw_sha256": "2a93064f6ec572896252852570ab3295d7fd7dbfed44b55d152a091c5035d017",
+      "raw_bytes": 2465,
+      "row_count": 27,
+      "speaker_sample": [
+        "AfilCon"
+      ],
+      "keyword_counts": {
+        "blood": 1,
+        "Ring": 3,
+        "N Corp": 13,
+        "Heathcliff": 10
+      },
+      "stored_raw_text": false,
+      "reused_evidence": true
+    },
+    {
+      "title": "N Corp. Mittelhammer Don Quixote/Identity Story",
+      "source_url": "https://limbuscompany.wiki.gg/wiki/N_Corp._Mittelhammer_Don_Quixote/Identity_Story",
+      "revision_id": 129336,
+      "verified_at": "2026-06-04T05:29:56Z",
+      "raw_status": "fetched",
+      "raw_sha256": "d572f3d352f34f45a2de53e866b15829e4f5b1078bca6dc7cad77952f44d302f",
+      "raw_bytes": 5363,
+      "row_count": 43,
+      "speaker_sample": [
+        "AfilCon"
+      ],
+      "keyword_counts": {
+        "dream": 1,
+        "blood": 1,
+        "Ring": 3,
+        "N Corp": 22,
+        "Don Quixote": 23
+      },
+      "stored_raw_text": false,
+      "reused_evidence": true
+    },
+    {
+      "title": "N Corp. Mittelhammer Rodion/Identity Story",
+      "source_url": "https://limbuscompany.wiki.gg/wiki/N_Corp._Mittelhammer_Rodion/Identity_Story",
+      "revision_id": 129334,
+      "verified_at": "2026-06-04T05:29:56Z",
+      "raw_status": "fetched",
+      "raw_sha256": "d00f30d1caadf20d1daff5bc13e0ecf9d59c719add66cd4b086d3f763ddcb308",
+      "raw_bytes": 3082,
+      "row_count": 21,
+      "speaker_sample": [
+        "AfilCon"
+      ],
+      "keyword_counts": {
+        "Ring": 1,
+        "N Corp": 22,
+        "Rodion": 39,
+        "Faust": 2
+      },
+      "stored_raw_text": false,
+      "reused_evidence": true
+    },
+    {
+      "title": "Tingtang Gang Gangleader Hong Lu/Identity Story",
+      "source_url": "https://limbuscompany.wiki.gg/wiki/Tingtang_Gang_Gangleader_Hong_Lu/Identity_Story",
+      "revision_id": 82085,
+      "verified_at": "2026-06-04T05:29:56Z",
+      "raw_status": "fetched",
+      "raw_sha256": "5ff6c9f8c97f330aec1f9bfea92a825e14df967ff7ba60db7ff8bb6bd78eef17",
+      "raw_bytes": 2705,
+      "row_count": 24,
+      "speaker_sample": [
+        "AfilCon"
+      ],
+      "keyword_counts": {
+        "Hong Lu": 20,
+        "Tingtang": 12
+      },
+      "stored_raw_text": false,
+      "reused_evidence": true
+    },
+    {
+      "title": "K Corp. Class 3 Excision Staff Hong Lu/Identity Story",
+      "source_url": "https://limbuscompany.wiki.gg/wiki/K_Corp._Class_3_Excision_Staff_Hong_Lu/Identity_Story",
+      "revision_id": 82149,
+      "verified_at": "2026-06-04T05:29:56Z",
+      "raw_status": "fetched",
+      "raw_sha256": "1b945dc8b40e1a860ecf8b1b345b6c2a58954292488b7982c447022629543d0d",
+      "raw_bytes": 5445,
+      "row_count": 44,
+      "speaker_sample": [
+        "AfilCon"
+      ],
+      "keyword_counts": {
+        "dream": 1,
+        "Hong Lu": 30,
+        "K Corp": 31
+      },
+      "stored_raw_text": false,
+      "reused_evidence": true
+    },
+    {
+      "title": "The Lord of Hongyuan Hong Lu/Identity Story",
+      "source_url": "https://limbuscompany.wiki.gg/wiki/The_Lord_of_Hongyuan_Hong_Lu/Identity_Story",
+      "revision_id": 143509,
+      "verified_at": "2026-06-04T07:45:13Z",
+      "raw_status": "fetched",
+      "raw_sha256": "a6a970f792733c844386585f3fc083e480f514eb315cb461b2e115957154c605",
+      "raw_bytes": 25148,
+      "row_count": 179,
+      "speaker_sample": [
+        "AfilCon"
+      ],
+      "keyword_counts": {
+        "Family": 18,
+        "dream": 7,
+        "blood": 4,
+        "Ring": 8,
+        "Blade": 1,
+        "Dawn": 1,
+        "Hong Lu": 84,
+        "Ishmael": 10,
+        "Faust": 14,
+        "Hongyuan": 64,
+        "Heishou": 13,
+        "Shi": 11,
+        "Devyat": 1
+      },
+      "stored_raw_text": false,
+      "reused_evidence": true
+    },
+    {
+      "title": "Night Awls Capitano Gregor/Identity Story",
+      "source_url": "https://limbuscompany.wiki.gg/wiki/Night_Awls_Capitano_Gregor/Identity_Story",
+      "revision_id": 143723,
+      "verified_at": "2026-06-04T07:45:13Z",
+      "raw_status": "fetched",
+      "raw_sha256": "b5e7bda32fd675d6a35cb73ebcb1b0d7872b472b8d43c55b5c5c3c240e1ad8c6",
+      "raw_bytes": 17657,
+      "row_count": 131,
+      "speaker_sample": [
+        "AfilCon"
+      ],
+      "keyword_counts": {
+        "blood": 1,
+        "Ring": 3,
+        "paint": 1,
+        "Index": 6,
+        "Blade": 1,
+        "Office": 4,
+        "Liu": 2,
+        "Gregor": 115,
+        "Night Awls": 93,
+        "Thumb": 11,
+        "Shi": 1,
+        "Kurokumo": 2
+      },
+      "stored_raw_text": false,
+      "reused_evidence": true
+    },
+    {
+      "title": "The Middle Big Brother Heathcliff/Identity Story",
+      "source_url": "https://limbuscompany.wiki.gg/wiki/The_Middle_Big_Brother_Heathcliff/Identity_Story",
+      "revision_id": 167602,
+      "verified_at": "2026-06-04T07:45:13Z",
+      "raw_status": "fetched",
+      "raw_sha256": "e7d8d69b87c707ab8bb01567f244addc67a99467f9bd5ffe027814ecfd0911c3",
+      "raw_bytes": 17190,
+      "row_count": 110,
+      "speaker_sample": [
+        "AfilCon"
+      ],
+      "keyword_counts": {
+        "blood": 2,
+        "Ring": 6,
+        "Sinclair": 13,
+        "Don Quixote": 8,
+        "Meursault": 15,
+        "Heathcliff": 98,
+        "Shi": 4
+      },
+      "stored_raw_text": false,
+      "reused_evidence": true
+    },
+    {
+      "title": "Heishou Pack - Wei Branch Don Quixote/Identity Story",
+      "source_url": "https://limbuscompany.wiki.gg/wiki/Heishou_Pack_-_Wei_Branch_Don_Quixote/Identity_Story",
+      "revision_id": 145262,
+      "verified_at": "2026-06-04T07:45:13Z",
+      "raw_status": "fetched",
+      "raw_sha256": "3fb17e57d8db37ab46c6f99effb621cb8e5b64a75bdfb4f5eaab33fe9a26f475",
+      "raw_bytes": 16911,
+      "row_count": 124,
+      "speaker_sample": [
+        "AfilCon"
+      ],
+      "keyword_counts": {
+        "Ring": 4,
+        "Don Quixote": 97,
+        "Faust": 48,
+        "Hongyuan": 4,
+        "Heishou": 89,
+        "Shi": 7
+      },
+      "stored_raw_text": false,
+      "reused_evidence": true
+    },
+    {
+      "title": "T Corp. Class 3 VDCU Staff Outis/Identity Story",
+      "source_url": "https://limbuscompany.wiki.gg/wiki/T_Corp._Class_3_VDCU_Staff_Outis/Identity_Story",
+      "revision_id": 130902,
+      "verified_at": "2026-06-04T07:45:13Z",
+      "raw_status": "fetched",
+      "raw_sha256": "003f743f0d4a2aed8d3a65d139c8d662ae750a32e4a637dde57478220631cc84",
+      "raw_bytes": 14840,
+      "row_count": 123,
+      "speaker_sample": [
+        "AfilCon"
+      ],
+      "keyword_counts": {
+        "blood": 1,
+        "Ring": 1,
+        "Blade": 1,
+        "Office": 2,
+        "Outis": 81,
+        "T Corp": 63,
+        "Shi": 7
+      },
+      "stored_raw_text": false,
+      "reused_evidence": true
+    },
+    {
+      "title": "The Thumb East Capo IIII Meursault/Identity Story",
+      "source_url": "https://limbuscompany.wiki.gg/wiki/The_Thumb_East_Capo_IIII_Meursault/Identity_Story",
+      "revision_id": 110236,
+      "verified_at": "2026-06-04T07:45:13Z",
+      "raw_status": "fetched",
+      "raw_sha256": "71b2eaacd2a5f8a7c579dc6ec54fa035114ec74c8c721611353c6b4e8f4bb0af",
+      "raw_bytes": 14202,
+      "row_count": 106,
+      "speaker_sample": [
+        "AfilCon"
+      ],
+      "keyword_counts": {
+        "Family": 8,
+        "blood": 3,
+        "Ring": 2,
+        "paint": 1,
+        "Blade": 7,
+        "bullet": 2,
+        "Office": 3,
+        "Meursault": 97,
+        "Hongyuan": 2,
+        "Thumb": 55,
+        "Shi": 5
+      },
+      "stored_raw_text": false,
+      "reused_evidence": true
+    },
+    {
+      "title": "Heishou Pack - Mao Branch Adept Faust/Identity Story",
+      "source_url": "https://limbuscompany.wiki.gg/wiki/Heishou_Pack_-_Mao_Branch_Adept_Faust/Identity_Story",
+      "revision_id": 132485,
+      "verified_at": "2026-06-04T07:45:13Z",
+      "raw_status": "fetched",
+      "raw_sha256": "1bf8f948b625bc7973147d21c94e25d5cf8dba0f2c67f625ed939a160381c5c8",
+      "raw_bytes": 14185,
+      "row_count": 87,
+      "speaker_sample": [
+        "AfilCon"
+      ],
+      "keyword_counts": {
+        "Family": 4,
+        "dream": 1,
+        "Ring": 4,
+        "Blade": 4,
+        "Hong Lu": 33,
+        "Faust": 123,
+        "Hongyuan": 6,
+        "Heishou": 54,
+        "Shi": 1
+      },
+      "stored_raw_text": false,
+      "reused_evidence": true
+    },
+    {
+      "title": "Family Hierarch Candidate Ishmael/Identity Story",
+      "source_url": "https://limbuscompany.wiki.gg/wiki/Family_Hierarch_Candidate_Ishmael/Identity_Story",
+      "revision_id": 132168,
+      "verified_at": "2026-06-04T07:45:13Z",
+      "raw_status": "fetched",
+      "raw_sha256": "89a77428d5bd10444c271a214239f727b6b66a2369f02f1fc04a72b7f3957659",
+      "raw_bytes": 13929,
+      "row_count": 118,
+      "speaker_sample": [
+        "AfilCon"
+      ],
+      "keyword_counts": {
+        "Family": 57,
+        "Ring": 6,
+        "Yi Sang": 45,
+        "Hong Lu": 11,
+        "Ishmael": 97,
+        "Hongyuan": 4,
+        "Shi": 3
+      },
+      "stored_raw_text": false,
+      "reused_evidence": true
+    },
+    {
+      "title": "Shi Assoc. East Section 3 Faust/Identity Story",
+      "source_url": "https://limbuscompany.wiki.gg/wiki/Shi_Assoc._East_Section_3_Faust/Identity_Story",
+      "revision_id": 147271,
+      "verified_at": "2026-06-04T07:45:13Z",
+      "raw_status": "fetched",
+      "raw_sha256": "2a6601235cdd06dcc945ac9c95f3e28124d978db20d1c24695a3c3ae8b04f83c",
+      "raw_bytes": 13180,
+      "row_count": 99,
+      "speaker_sample": [
+        "AfilCon"
+      ],
+      "keyword_counts": {
+        "Ring": 3,
+        "Blade": 1,
+        "Office": 2,
+        "Faust": 78,
+        "Shi": 52
+      },
+      "stored_raw_text": false,
+      "reused_evidence": true
+    },
+    {
+      "title": "Jeong's Office Rep Ishmael/Identity Story",
+      "source_url": "https://limbuscompany.wiki.gg/wiki/Jeong%27s_Office_Rep_Ishmael/Identity_Story",
+      "revision_id": 143660,
+      "verified_at": "2026-06-04T07:45:13Z",
+      "raw_status": "fetched",
+      "raw_sha256": "a15b4d259092c0d18c898f61ff89159a76114cebd5b3932e3141dd07f6f33573",
+      "raw_bytes": 13158,
+      "row_count": 97,
+      "speaker_sample": [
+        "AfilCon"
+      ],
+      "keyword_counts": {
+        "dream": 1,
+        "Ring": 2,
+        "bullet": 1,
+        "Office": 31,
+        "Ishmael": 58,
+        "Shi": 5
+      },
+      "stored_raw_text": false,
+      "reused_evidence": true
+    },
+    {
+      "title": "Devyat' Assoc. North Section 3 Sinclair/Identity Story",
+      "source_url": "https://limbuscompany.wiki.gg/wiki/Devyat%27_Assoc._North_Section_3_Sinclair/Identity_Story",
+      "revision_id": 83448,
+      "verified_at": "2026-06-04T07:45:13Z",
+      "raw_status": "fetched",
+      "raw_sha256": "2e5cc3b8dcefcd806ea33c4ef79c5f54eeb93785845a6d905884247fc92b7711",
+      "raw_bytes": 12828,
+      "row_count": 104,
+      "speaker_sample": [
+        "AfilCon"
+      ],
+      "keyword_counts": {
+        "Ring": 4,
+        "Sinclair": 70,
+        "Rodion": 28,
+        "Shi": 3,
+        "Devyat": 56
+      },
+      "stored_raw_text": false,
+      "reused_evidence": true
+    },
+    {
+      "title": "Heishou Pack - You Branch Adept Heathcliff/Identity Story",
+      "source_url": "https://limbuscompany.wiki.gg/wiki/Heishou_Pack_-_You_Branch_Adept_Heathcliff/Identity_Story",
+      "revision_id": 145376,
+      "verified_at": "2026-06-04T07:45:13Z",
+      "raw_status": "fetched",
+      "raw_sha256": "2535de5b91a3945e5a12e7e8fd4deaa4935d07b7ce217151dde0c8e56b33b644",
+      "raw_bytes": 12750,
+      "row_count": 98,
+      "speaker_sample": [
+        "AfilCon"
+      ],
+      "keyword_counts": {
+        "Family": 1,
+        "blood": 11,
+        "Ring": 2,
+        "Blade": 4,
+        "Dawn": 1,
+        "Sinclair": 10,
+        "Heathcliff": 59,
+        "Heishou": 48,
+        "Thumb": 1,
+        "Shi": 4
+      },
+      "stored_raw_text": false,
+      "reused_evidence": true
+    },
+    {
+      "title": "Heishou Pack - Si Branch Rodion/Identity Story",
+      "source_url": "https://limbuscompany.wiki.gg/wiki/Heishou_Pack_-_Si_Branch_Rodion/Identity_Story",
+      "revision_id": 132182,
+      "verified_at": "2026-06-04T07:45:13Z",
+      "raw_status": "fetched",
+      "raw_sha256": "88cda554d05ea1586b1988542255edffd0ef85936d9c89eb97f176b3c840a538",
+      "raw_bytes": 12373,
+      "row_count": 106,
+      "speaker_sample": [
+        "AfilCon"
+      ],
+      "keyword_counts": {
+        "Family": 13,
+        "blood": 2,
+        "Ring": 5,
+        "Rodion": 67,
+        "Gregor": 22,
+        "Hongyuan": 2,
+        "Heishou": 56,
+        "Shi": 1
+      },
+      "stored_raw_text": false,
+      "reused_evidence": true
+    },
+    {
+      "title": "Kurokumo Clan Wakashu Heathcliff/Identity Story",
+      "source_url": "https://limbuscompany.wiki.gg/wiki/Kurokumo_Clan_Wakashu_Heathcliff/Identity_Story",
+      "revision_id": 101333,
+      "verified_at": "2026-06-04T07:45:13Z",
+      "raw_status": "fetched",
+      "raw_sha256": "5fe6408788e90a6eed108a2c951ea06ef35513231ec91f1907fd08fa6d28f94f",
+      "raw_bytes": 12307,
+      "row_count": 106,
+      "speaker_sample": [
+        "AfilCon"
+      ],
+      "keyword_counts": {
+        "Family": 5,
+        "blood": 1,
+        "Ring": 4,
+        "Blade": 4,
+        "Outis": 26,
+        "Heathcliff": 74,
+        "Ishmael": 20,
+        "T Corp": 1,
+        "Thumb": 1,
+        "Shi": 5,
+        "Kurokumo": 68
+      },
+      "stored_raw_text": false,
+      "reused_evidence": true
+    },
+    {
+      "title": "LCA Udjat Vanguard Team 3 Leader Outis/Identity Story",
+      "source_url": "https://limbuscompany.wiki.gg/wiki/LCA_Udjat_Vanguard_Team_3_Leader_Outis/Identity_Story",
+      "revision_id": 156752,
+      "verified_at": "2026-06-04T07:45:13Z",
+      "raw_status": "fetched",
+      "raw_sha256": "888d610b215c3693479415030b6be6d8cd43855dc09befb655e888529f6a133c",
+      "raw_bytes": 12231,
+      "row_count": 103,
+      "speaker_sample": [
+        "AfilCon"
+      ],
+      "keyword_counts": {
+        "Father": 3,
+        "Ring": 6,
+        "Index": 4,
+        "Prescript": 1,
+        "Nursefather": 3,
+        "spider": 1,
+        "Office": 1,
+        "Outis": 93,
+        "Shi": 1,
+        "LCA": 70,
+        "Udjat": 17
+      },
+      "stored_raw_text": false,
+      "reused_evidence": true
+    },
+    {
+      "title": "Heishou Pack - You Branch Sinclair/Identity Story",
+      "source_url": "https://limbuscompany.wiki.gg/wiki/Heishou_Pack_-_You_Branch_Sinclair/Identity_Story",
+      "revision_id": 134513,
+      "verified_at": "2026-06-04T07:45:13Z",
+      "raw_status": "fetched",
+      "raw_sha256": "458f4d4a1bf2abc5ac565d5795c03bc18e40bb73e4663ba9b1d31b45e7ba4a86",
+      "raw_bytes": 11831,
+      "row_count": 92,
+      "speaker_sample": [
+        "AfilCon"
+      ],
+      "keyword_counts": {
+        "Family": 6,
+        "blood": 7,
+        "Ring": 3,
+        "Blade": 3,
+        "Sinclair": 43,
+        "Ishmael": 1,
+        "Hongyuan": 17,
+        "Heishou": 28,
+        "Shi": 4
+      },
+      "stored_raw_text": false,
+      "reused_evidence": true
+    },
+    {
+      "title": "Fanghunt Office Fixer Hong Lu/Identity Story",
+      "source_url": "https://limbuscompany.wiki.gg/wiki/Fanghunt_Office_Fixer_Hong_Lu/Identity_Story",
+      "revision_id": 82153,
+      "verified_at": "2026-06-04T07:45:13Z",
+      "raw_status": "fetched",
+      "raw_sha256": "7ce0ffb88a288363f680734af260081f931760acece96879552936521745c9de",
+      "raw_bytes": 11794,
+      "row_count": 105,
+      "speaker_sample": [
+        "AfilCon"
+      ],
+      "keyword_counts": {
+        "Family": 11,
+        "Father": 1,
+        "blood": 45,
+        "Bloodfiend": 38,
+        "Ring": 4,
+        "Office": 41,
+        "Hong Lu": 77,
+        "Shi": 1,
+        "Fanghunt": 41
+      },
+      "stored_raw_text": false,
+      "reused_evidence": true
+    },
+    {
+      "title": "Firefist Office Survivor Gregor/Identity Story",
+      "source_url": "https://limbuscompany.wiki.gg/wiki/Firefist_Office_Survivor_Gregor/Identity_Story",
+      "revision_id": 94273,
+      "verified_at": "2026-06-04T07:45:13Z",
+      "raw_status": "fetched",
+      "raw_sha256": "b65b8df4c10146737a6a681f35a92fbce978aa8aa8f0cd50f32ae49350922ca4",
+      "raw_bytes": 11602,
+      "row_count": 96,
+      "speaker_sample": [
+        "AfilCon"
+      ],
+      "keyword_counts": {
+        "dream": 3,
+        "blood": 18,
+        "Bloodfiend": 12,
+        "La Manchaland": 9,
+        "Ring": 3,
+        "Office": 49,
+        "Gregor": 53,
+        "Shi": 2,
+        "Firefist": 41
+      },
+      "stored_raw_text": false,
+      "reused_evidence": true
+    },
+    {
+      "title": "MultiCrack Office Rep Faust/Identity Story",
+      "source_url": "https://limbuscompany.wiki.gg/wiki/MultiCrack_Office_Rep_Faust/Identity_Story",
+      "revision_id": 82120,
+      "verified_at": "2026-06-04T07:45:13Z",
+      "raw_status": "fetched",
+      "raw_sha256": "0c442ecbc10a325c2bef0b9a49828bc3f735011141c215b7c0525236e06fb7a3",
+      "raw_bytes": 11031,
+      "row_count": 72,
+      "speaker_sample": [
+        "AfilCon"
+      ],
+      "keyword_counts": {
+        "Ring": 3,
+        "Office": 47,
+        "Seven": 1,
+        "Heathcliff": 10,
+        "Faust": 50,
+        "T Corp": 5,
+        "Shi": 4,
+        "Devyat": 1,
+        "MultiCrack": 42
+      },
+      "stored_raw_text": false,
+      "reused_evidence": true
+    },
+    {
+      "title": "Devyat' Assoc. North Section 3 Rodion/Identity Story",
+      "source_url": "https://limbuscompany.wiki.gg/wiki/Devyat%27_Assoc._North_Section_3_Rodion/Identity_Story",
+      "revision_id": 82164,
+      "verified_at": "2026-06-04T07:45:13Z",
+      "raw_status": "fetched",
+      "raw_sha256": "b99c7dfc7e3eadbd00ced5b77626ed2bcbc05bdc1e2f0fafc98722dc1ef9de01",
+      "raw_bytes": 10660,
+      "row_count": 85,
+      "speaker_sample": [
+        "AfilCon"
+      ],
+      "keyword_counts": {
+        "Ring": 3,
+        "Blade": 1,
+        "Office": 1,
+        "Rodion": 65,
+        "Dieci": 1,
+        "Shi": 1,
+        "Devyat": 38
+      },
+      "stored_raw_text": false,
+      "reused_evidence": true
+    },
+    {
+      "title": "T Corp. Class 3 Collection Staff Don Quixote/Identity Story",
+      "source_url": "https://limbuscompany.wiki.gg/wiki/T_Corp._Class_3_Collection_Staff_Don_Quixote/Identity_Story",
+      "revision_id": 82098,
+      "verified_at": "2026-06-04T07:45:13Z",
+      "raw_status": "fetched",
+      "raw_sha256": "592a5450efb0a7ea45abea090ce39d17369e6245205edd45cbe84635ee281cd9",
+      "raw_bytes": 10490,
+      "row_count": 68,
+      "speaker_sample": [
+        "AfilCon"
+      ],
+      "keyword_counts": {
+        "Ring": 5,
+        "Don Quixote": 53,
+        "Rodion": 14,
+        "T Corp": 38,
+        "Shi": 2
+      },
+      "stored_raw_text": false,
+      "reused_evidence": true
+    },
+    {
+      "title": "The Middle Little Brother Sinclair/Identity Story",
+      "source_url": "https://limbuscompany.wiki.gg/wiki/The_Middle_Little_Brother_Sinclair/Identity_Story",
+      "revision_id": 161613,
+      "verified_at": "2026-06-04T07:45:13Z",
+      "raw_status": "fetched",
+      "raw_sha256": "1abae5e0b47abe10d67a94ccb2b16e061c880675cdc44b4e91337cbf60d720e4",
+      "raw_bytes": 10339,
+      "row_count": 73,
+      "speaker_sample": [
+        "AfilCon"
+      ],
+      "keyword_counts": {
+        "Family": 1,
+        "Ring": 4,
+        "Sinclair": 56,
+        "Don Quixote": 8,
+        "Meursault": 11
+      },
+      "stored_raw_text": false,
+      "reused_evidence": true
+    },
+    {
+      "title": "Zwei Assoc. West Section 3 Ishmael/Identity Story",
+      "source_url": "https://limbuscompany.wiki.gg/wiki/Zwei_Assoc._West_Section_3_Ishmael/Identity_Story",
+      "revision_id": 82069,
+      "verified_at": "2026-06-04T07:45:13Z",
+      "raw_status": "fetched",
+      "raw_sha256": "f9b1270c3bd95df75975aaaef4d93b7421a60b010a300d4175de6b0b726a4236",
+      "raw_bytes": 10142,
+      "row_count": 75,
+      "speaker_sample": [
+        "AfilCon"
+      ],
+      "keyword_counts": {
+        "Ring": 6,
+        "Blade": 1,
+        "Zwei": 35,
+        "Ishmael": 38,
+        "Shi": 4
+      },
+      "stored_raw_text": false,
+      "reused_evidence": true
+    },
+    {
+      "title": "Kurokumo Clan Captain Gregor/Identity Story",
+      "source_url": "https://limbuscompany.wiki.gg/wiki/Kurokumo_Clan_Captain_Gregor/Identity_Story",
+      "revision_id": 82148,
+      "verified_at": "2026-06-04T07:45:13Z",
+      "raw_status": "fetched",
+      "raw_sha256": "44cfcad5e693ac990159f3d7cb71a629f75bdf8431ee9727fd221ee2a25bbf2f",
+      "raw_bytes": 10078,
+      "row_count": 75,
+      "speaker_sample": [
+        "AfilCon"
+      ],
+      "keyword_counts": {
+        "blood": 2,
+        "Ring": 5,
+        "Blade": 12,
+        "Office": 1,
+        "Rodion": 2,
+        "Gregor": 67,
+        "Ryōshū": 1,
+        "Thumb": 2,
+        "Shi": 1,
+        "Kurokumo": 56
+      },
+      "stored_raw_text": false,
+      "reused_evidence": true
+    },
+    {
+      "title": "Full-Stop Office Rep Hong Lu/Identity Story",
+      "source_url": "https://limbuscompany.wiki.gg/wiki/Full-Stop_Office_Rep_Hong_Lu/Identity_Story",
+      "revision_id": 143507,
+      "verified_at": "2026-06-04T07:45:13Z",
+      "raw_status": "fetched",
+      "raw_sha256": "67251ff938a2568c2c5d4c9f4a22fc3b8a13b6121d7716edae80a133de9f2de0",
+      "raw_bytes": 9800,
+      "row_count": 79,
+      "speaker_sample": [
+        "AfilCon"
+      ],
+      "keyword_counts": {
+        "Family": 2,
+        "blood": 1,
+        "Ring": 2,
+        "bullet": 9,
+        "Office": 37,
+        "Sinclair": 10,
+        "Hong Lu": 41,
+        "Heathcliff": 19,
+        "Shi": 15,
+        "Full-Stop": 36
+      },
+      "stored_raw_text": false,
+      "reused_evidence": true
+    },
+    {
+      "title": "MultiCrack Office Fixer Heathcliff/Identity Story",
+      "source_url": "https://limbuscompany.wiki.gg/wiki/MultiCrack_Office_Fixer_Heathcliff/Identity_Story",
+      "revision_id": 82121,
+      "verified_at": "2026-06-04T07:45:13Z",
+      "raw_status": "fetched",
+      "raw_sha256": "a1461211f67339ad864577740fddf886bd5c74f6b36076d5461327fe1b0458b4",
+      "raw_bytes": 9577,
+      "row_count": 76,
+      "speaker_sample": [
+        "AfilCon"
+      ],
+      "keyword_counts": {
+        "Family": 1,
+        "blood": 1,
+        "Ring": 6,
+        "Office": 35,
+        "Heathcliff": 41,
+        "MultiCrack": 33
+      },
+      "stored_raw_text": false,
+      "reused_evidence": true
+    },
+    {
+      "title": "T Corp. Class 2 Collection Staff Rodion/Identity Story",
+      "source_url": "https://limbuscompany.wiki.gg/wiki/T_Corp._Class_2_Collection_Staff_Rodion/Identity_Story",
+      "revision_id": 82099,
+      "verified_at": "2026-06-04T07:45:13Z",
+      "raw_status": "fetched",
+      "raw_sha256": "b8d8f9ebd306dacbc14244a3c5d4ec9b4e7d6a291231eea5374b8743e95e5ae4",
+      "raw_bytes": 9503,
+      "row_count": 80,
+      "speaker_sample": [
+        "AfilCon"
+      ],
+      "keyword_counts": {
+        "blood": 1,
+        "Ring": 3,
+        "Office": 1,
+        "Don Quixote": 12,
+        "Rodion": 39,
+        "Seven": 1,
+        "T Corp": 37,
+        "Shi": 1
+      },
+      "stored_raw_text": false,
+      "reused_evidence": true
+    },
+    {
+      "title": "Kurokumo Clan Captain Ishmael/Identity Story",
+      "source_url": "https://limbuscompany.wiki.gg/wiki/Kurokumo_Clan_Captain_Ishmael/Identity_Story",
+      "revision_id": 91586,
+      "verified_at": "2026-06-04T07:45:13Z",
+      "raw_status": "fetched",
+      "raw_sha256": "c7e88eaadea3a66fb73a37030f81b070ef43fd4748f863b84cebed02f39e6f21",
+      "raw_bytes": 9480,
+      "row_count": 66,
+      "speaker_sample": [
+        "AfilCon"
+      ],
+      "keyword_counts": {
+        "dream": 1,
+        "blood": 3,
+        "Ring": 6,
+        "duel": 2,
+        "Blade": 5,
+        "Office": 1,
+        "Heathcliff": 9,
+        "Ishmael": 50,
+        "Thumb": 5,
+        "Shi": 4,
+        "Kurokumo": 45
+      },
+      "stored_raw_text": false,
+      "reused_evidence": true
+    },
+    {
+      "title": "Drifting Blade of Hongyuan Ryōshū/Identity Story",
+      "source_url": "https://limbuscompany.wiki.gg/wiki/Drifting_Blade_of_Hongyuan_Ry%C5%8Dsh%C5%AB/Identity_Story",
+      "revision_id": 151417,
+      "verified_at": "2026-06-04T07:45:13Z",
+      "raw_status": "fetched",
+      "raw_sha256": "58cd7241f4e5d276ba74b08befdc400f9621eff574d58b7e86bb7e306e7e8169",
+      "raw_bytes": 9458,
+      "row_count": 72,
+      "speaker_sample": [
+        "AfilCon"
+      ],
+      "keyword_counts": {
+        "Family": 35,
+        "dream": 2,
+        "blood": 1,
+        "Ring": 8,
+        "Blade": 4,
+        "Ryōshū": 43,
+        "Hongyuan": 30,
+        "Shi": 26
+      },
+      "stored_raw_text": false,
+      "reused_evidence": true
+    },
+    {
+      "title": "Heishou Pack - Wu Branch Adept Yi Sang/Identity Story",
+      "source_url": "https://limbuscompany.wiki.gg/wiki/Heishou_Pack_-_Wu_Branch_Adept_Yi_Sang/Identity_Story",
+      "revision_id": 134514,
+      "verified_at": "2026-06-04T07:45:13Z",
+      "raw_status": "fetched",
+      "raw_sha256": "3638343e28fbee33a4edaf792798dc650e35fda6532236d9f1ee364e8b5fc7d5",
+      "raw_bytes": 9447,
+      "row_count": 94,
+      "speaker_sample": [],
+      "keyword_counts": {
+        "Family": 3,
+        "dream": 1,
+        "blood": 3,
+        "Ring": 8,
+        "Blade": 1,
+        "Yi Sang": 6,
+        "Hongyuan": 7,
+        "Heishou": 13,
+        "Shi": 1
+      },
+      "stored_raw_text": false,
+      "reused_evidence": true
+    },
+    {
+      "title": "Heishou Pack - Si Branch Gregor/Identity Story",
+      "source_url": "https://limbuscompany.wiki.gg/wiki/Heishou_Pack_-_Si_Branch_Gregor/Identity_Story",
+      "revision_id": 132181,
+      "verified_at": "2026-06-04T07:45:13Z",
+      "raw_status": "fetched",
+      "raw_sha256": "30b57f5496aadcd606a35c6c8d8970d8d29d8c1b753b803c802ae7225b90e7de",
+      "raw_bytes": 9204,
+      "row_count": 75,
+      "speaker_sample": [
+        "AfilCon"
+      ],
+      "keyword_counts": {
+        "Family": 2,
+        "Ring": 3,
+        "Rodion": 2,
+        "Seven": 2,
+        "Gregor": 57,
+        "Hongyuan": 1,
+        "Heishou": 43
+      },
+      "stored_raw_text": false,
+      "reused_evidence": true
+    },
+    {
+      "title": "Heishou Pack - Mao Branch Ryōshū/Identity Story",
+      "source_url": "https://limbuscompany.wiki.gg/wiki/Heishou_Pack_-_Mao_Branch_Ry%C5%8Dsh%C5%AB/Identity_Story",
+      "revision_id": 132165,
+      "verified_at": "2026-06-04T07:45:13Z",
+      "raw_status": "fetched",
+      "raw_sha256": "34f0beac83fa08a29bf6d51f24447b0816cf1c607b064d4e9337b7d52fcab64d",
+      "raw_bytes": 9130,
+      "row_count": 86,
+      "speaker_sample": [
+        "AfilCon"
+      ],
+      "keyword_counts": {
+        "Ring": 2,
+        "Ryōshū": 23,
+        "Heishou": 48,
+        "Shi": 1
+      },
+      "stored_raw_text": false,
+      "reused_evidence": true
+    },
+    {
+      "title": "District 20 Yurodivy Hong Lu/Identity Story",
+      "source_url": "https://limbuscompany.wiki.gg/wiki/District_20_Yurodivy_Hong_Lu/Identity_Story",
+      "revision_id": 82159,
+      "verified_at": "2026-06-04T07:45:13Z",
+      "raw_status": "fetched",
+      "raw_sha256": "85cf2141eb34e7151f432399ae2ed35dd95b544e03a067e95861776e80e3c9e5",
+      "raw_bytes": 8447,
+      "row_count": 54,
+      "speaker_sample": [
+        "AfilCon"
+      ],
+      "keyword_counts": {
+        "dream": 1,
+        "blood": 3,
+        "Ring": 3,
+        "Hong Lu": 37,
+        "Shi": 1,
+        "Yurodivy": 36
+      },
+      "stored_raw_text": false,
+      "reused_evidence": true
+    },
+    {
+      "title": "District 20 Yurodivy Ryōshū/Identity Story",
+      "source_url": "https://limbuscompany.wiki.gg/wiki/District_20_Yurodivy_Ry%C5%8Dsh%C5%AB/Identity_Story",
+      "revision_id": 82158,
+      "verified_at": "2026-06-04T07:45:13Z",
+      "raw_status": "fetched",
+      "raw_sha256": "728577fa886387bfbb2b05a4de1ab5f72c55e15a7d55dae436b8707bcac43427",
+      "raw_bytes": 8267,
+      "row_count": 69,
+      "speaker_sample": [
+        "AfilCon"
+      ],
+      "keyword_counts": {
+        "Ring": 3,
+        "Hong Lu": 7,
+        "Seven": 1,
+        "Ryōshū": 17,
+        "T Corp": 2,
+        "Shi": 5,
+        "Yurodivy": 29
+      },
+      "stored_raw_text": false,
+      "reused_evidence": true
+    },
+    {
+      "title": "Öufi Assoc. South Section 3 Heathcliff/Identity Story",
+      "source_url": "https://limbuscompany.wiki.gg/wiki/%C3%96ufi_Assoc._South_Section_3_Heathcliff/Identity_Story",
+      "revision_id": 82067,
+      "verified_at": "2026-06-04T07:45:13Z",
+      "raw_status": "fetched",
+      "raw_sha256": "f42ba4eda78b3f60abe1b65d6186f011e76fb16bc5f635e93ffa5e15d14205ba",
+      "raw_bytes": 8233,
+      "row_count": 65,
+      "speaker_sample": [
+        "AfilCon"
+      ],
+      "keyword_counts": {
+        "blood": 1,
+        "Ring": 2,
+        "Blade": 1,
+        "Heathcliff": 50,
+        "Shi": 3,
+        "Öufi": 33
+      },
+      "stored_raw_text": false,
+      "reused_evidence": true
+    },
+    {
+      "title": "Twinhook Pirates First Mate Gregor/Identity Story",
+      "source_url": "https://limbuscompany.wiki.gg/wiki/Twinhook_Pirates_First_Mate_Gregor/Identity_Story",
+      "revision_id": 82084,
+      "verified_at": "2026-06-04T07:45:13Z",
+      "raw_status": "fetched",
+      "raw_sha256": "9ac632dda18a1d7d8a6c2b3340a8747719d4c542d19a057f4da40857ee953b73",
+      "raw_bytes": 8190,
+      "row_count": 60,
+      "speaker_sample": [
+        "AfilCon"
+      ],
+      "keyword_counts": {
+        "Family": 1,
+        "Ring": 1,
+        "Gregor": 57,
+        "Shi": 2,
+        "Twinhook": 42
+      },
+      "stored_raw_text": false,
+      "reused_evidence": true
+    },
+    {
+      "title": "Heishou Pack - Mao Branch Outis/Identity Story",
+      "source_url": "https://limbuscompany.wiki.gg/wiki/Heishou_Pack_-_Mao_Branch_Outis/Identity_Story",
+      "revision_id": 139493,
+      "verified_at": "2026-06-04T07:45:13Z",
+      "raw_status": "fetched",
+      "raw_sha256": "689add2850cbff797bd37c6ef96acc19187b54d501e4b8e1a06dd1860e7abefb",
+      "raw_bytes": 8144,
+      "row_count": 69,
+      "speaker_sample": [
+        "AfilCon"
+      ],
+      "keyword_counts": {
+        "Family": 1,
+        "Ring": 4,
+        "Outis": 37,
+        "Hongyuan": 4,
+        "Heishou": 23,
+        "Shi": 4
+      },
+      "stored_raw_text": false,
+      "reused_evidence": true
+    },
+    {
+      "title": "The Middle Little Sister Don Quixote/Identity Story",
+      "source_url": "https://limbuscompany.wiki.gg/wiki/The_Middle_Little_Sister_Don_Quixote/Identity_Story",
+      "revision_id": 104836,
+      "verified_at": "2026-06-04T07:45:13Z",
+      "raw_status": "fetched",
+      "raw_sha256": "2ec04c8790c84f3b343315025d68fc711958dbcd72bab1204446a0fc3fba3e1b",
+      "raw_bytes": 8024,
+      "row_count": 62,
+      "speaker_sample": [
+        "AfilCon"
+      ],
+      "keyword_counts": {
+        "Family": 1,
+        "Ring": 3,
+        "Don Quixote": 50,
+        "Shi": 2
+      },
+      "stored_raw_text": false,
+      "reused_evidence": true
+    },
+    {
+      "title": "Hook Office Fixer Hong Lu/Identity Story",
+      "source_url": "https://limbuscompany.wiki.gg/wiki/Hook_Office_Fixer_Hong_Lu/Identity_Story",
+      "revision_id": 82150,
+      "verified_at": "2026-06-04T07:45:13Z",
+      "raw_status": "fetched",
+      "raw_sha256": "edb2424bdd97313f244c46dae8d2936882e45d33805f8b9b648df59909bb9890",
+      "raw_bytes": 7641,
+      "row_count": 54,
+      "speaker_sample": [
+        "AfilCon"
+      ],
+      "keyword_counts": {
+        "Office": 46,
+        "Meursault": 18,
+        "Hong Lu": 40,
+        "Ryōshū": 9,
+        "Hook Office": 38
+      },
+      "stored_raw_text": false,
+      "reused_evidence": true
+    },
+    {
+      "title": "Full-Stop Office Fixer Heathcliff/Identity Story",
+      "source_url": "https://limbuscompany.wiki.gg/wiki/Full-Stop_Office_Fixer_Heathcliff/Identity_Story",
+      "revision_id": 143579,
+      "verified_at": "2026-06-04T07:45:13Z",
+      "raw_status": "fetched",
+      "raw_sha256": "9a198c40e2fb9995ffea897e97b8bed8b8c788a4f7eeb28a9276ee1b1dd8a3f7",
+      "raw_bytes": 7585,
+      "row_count": 63,
+      "speaker_sample": [
+        "AfilCon"
+      ],
+      "keyword_counts": {
+        "blood": 1,
+        "bullet": 7,
+        "Office": 28,
+        "Hong Lu": 24,
+        "Heathcliff": 29,
+        "Shi": 5,
+        "Full-Stop": 25
+      },
+      "stored_raw_text": false,
+      "reused_evidence": true
+    },
+    {
+      "title": "Zwei Assoc. West Section 3 Sinclair/Identity Story",
+      "source_url": "https://limbuscompany.wiki.gg/wiki/Zwei_Assoc._West_Section_3_Sinclair/Identity_Story",
+      "revision_id": 82068,
+      "verified_at": "2026-06-04T07:58:57Z",
+      "raw_status": "fetched",
+      "raw_sha256": "3ac9ece25b758f67d33ec1b1b638b028a90ef8d0f122ff15fcb0d363fdeb12fb",
+      "raw_bytes": 6993,
+      "row_count": 62,
+      "speaker_sample": [
+        "AfilCon"
+      ],
+      "keyword_counts": {
+        "Ring": 3,
+        "Sinclair": 31,
+        "Zwei": 20,
+        "Shi": 3
+      },
+      "stored_raw_text": false,
+      "reused_evidence": true
+    },
+    {
+      "title": "R.B. Sous-chef Gregor/Identity Story",
+      "source_url": "https://limbuscompany.wiki.gg/wiki/R.B._Sous-chef_Gregor/Identity_Story",
+      "revision_id": 82111,
+      "verified_at": "2026-06-04T07:58:57Z",
+      "raw_status": "fetched",
+      "raw_sha256": "cb1eaaa9aa04e56818c1a8b92d28e21c8e15174b7de2e46ff84a611988eb4eba",
+      "raw_bytes": 6743,
+      "row_count": 54,
+      "speaker_sample": [
+        "AfilCon"
+      ],
+      "keyword_counts": {
+        "blood": 1,
+        "Ring": 3,
+        "Blade": 1,
+        "Gregor": 36,
+        "Ryōshū": 3,
+        "R.B.": 4
+      },
+      "stored_raw_text": false,
+      "reused_evidence": true
+    },
+    {
+      "title": "The Middle Little Brother Meursault/Identity Story",
+      "source_url": "https://limbuscompany.wiki.gg/wiki/The_Middle_Little_Brother_Meursault/Identity_Story",
+      "revision_id": 161611,
+      "verified_at": "2026-06-04T07:58:57Z",
+      "raw_status": "fetched",
+      "raw_sha256": "9889771892a1b4ecbe6bce2a5a828c70d66519be0c0166bee84c99882c2ef94a",
+      "raw_bytes": 6740,
+      "row_count": 58,
+      "speaker_sample": [
+        "AfilCon"
+      ],
+      "keyword_counts": {
+        "Family": 1,
+        "blood": 2,
+        "Ring": 2,
+        "Meursault": 50,
+        "Shi": 1
+      },
+      "stored_raw_text": false,
+      "reused_evidence": true
+    },
+    {
+      "title": "The Thumb East Soldato II Sinclair/Identity Story",
+      "source_url": "https://limbuscompany.wiki.gg/wiki/The_Thumb_East_Soldato_II_Sinclair/Identity_Story",
+      "revision_id": 110239,
+      "verified_at": "2026-06-04T07:58:57Z",
+      "raw_status": "fetched",
+      "raw_sha256": "023dc327a486c9df96278383ac6e173fb49aefd02bc1c55241a7cc99ce76f332",
+      "raw_bytes": 6374,
+      "row_count": 51,
+      "speaker_sample": [],
+      "keyword_counts": {
+        "Ring": 1,
+        "Blade": 1,
+        "bullet": 1,
+        "Office": 2,
+        "Sinclair": 4,
+        "Thumb": 13,
+        "Shi": 1
+      },
+      "stored_raw_text": false,
+      "reused_evidence": true
+    },
+    {
+      "title": "LCCB Assistant Manager Ryōshū/Identity Story",
+      "source_url": "https://limbuscompany.wiki.gg/wiki/LCCB_Assistant_Manager_Ry%C5%8Dsh%C5%AB/Identity_Story",
+      "revision_id": 82142,
+      "verified_at": "2026-06-04T07:58:57Z",
+      "raw_status": "fetched",
+      "raw_sha256": "cc97e8d02ad5c6888f9161b9cbfaaf2eef5969df85c42ebb6622606df622deff",
+      "raw_bytes": 6159,
+      "row_count": 49,
+      "speaker_sample": [
+        "AfilCon"
+      ],
+      "keyword_counts": {
+        "blood": 1,
+        "Ring": 8,
+        "Ishmael": 6,
+        "Ryōshū": 18,
+        "Shi": 1,
+        "Twinhook": 1,
+        "LCCB": 30
+      },
+      "stored_raw_text": false,
+      "reused_evidence": true
+    },
+    {
+      "title": "Rosespanner Workshop Rep Rodion/Identity Story",
+      "source_url": "https://limbuscompany.wiki.gg/wiki/Rosespanner_Workshop_Rep_Rodion/Identity_Story",
+      "revision_id": 129407,
+      "verified_at": "2026-06-04T07:58:57Z",
+      "raw_status": "fetched",
+      "raw_sha256": "7e5540ee2facf39c0958e1ab8e1dd958aca5ea4f1971bb1e7eb687f3b4214cb8",
+      "raw_bytes": 5862,
+      "row_count": 51,
+      "speaker_sample": [
+        "AfilCon"
+      ],
+      "keyword_counts": {
+        "Ring": 1,
+        "Office": 5,
+        "Rodion": 43,
+        "K Corp": 4,
+        "Rosespanner": 30
+      },
+      "stored_raw_text": false,
+      "reused_evidence": true
+    },
+    {
+      "title": "Rosespanner Workshop Fixer Meursault/Identity Story",
+      "source_url": "https://limbuscompany.wiki.gg/wiki/Rosespanner_Workshop_Fixer_Meursault/Identity_Story",
+      "revision_id": 100256,
+      "verified_at": "2026-06-04T07:58:57Z",
+      "raw_status": "fetched",
+      "raw_sha256": "d376d754a73b00acde22db3253b28139be8afeb5a2fc40a491f86b5a2b2a3c91",
+      "raw_bytes": 5127,
+      "row_count": 43,
+      "speaker_sample": [
+        "AfilCon"
+      ],
+      "keyword_counts": {
+        "Ring": 7,
+        "Office": 6,
+        "Meursault": 28,
+        "K Corp": 3,
+        "Rosespanner": 21
+      },
+      "stored_raw_text": false,
+      "reused_evidence": true
+    },
+    {
+      "title": "Molar Office Fixer Outis/Identity Story",
+      "source_url": "https://limbuscompany.wiki.gg/wiki/Molar_Office_Fixer_Outis/Identity_Story",
+      "revision_id": 82123,
+      "verified_at": "2026-06-04T07:58:57Z",
+      "raw_status": "fetched",
+      "raw_sha256": "d89f9242eff9e01c2dc7df275f1793d97f4e137b6943befd76859482aff46169",
+      "raw_bytes": 4690,
+      "row_count": 35,
+      "speaker_sample": [
+        "AfilCon"
+      ],
+      "keyword_counts": {
+        "dream": 1,
+        "Ring": 2,
+        "Office": 32,
+        "Yi Sang": 1,
+        "Outis": 23,
+        "Shi": 1,
+        "Molar": 14
+      },
+      "stored_raw_text": false,
+      "reused_evidence": true
+    },
+    {
+      "title": "R.B. Chef de Cuisine Ryōshū/Identity Story",
+      "source_url": "https://limbuscompany.wiki.gg/wiki/R.B._Chef_de_Cuisine_Ry%C5%8Dsh%C5%AB/Identity_Story",
+      "revision_id": 82112,
+      "verified_at": "2026-06-04T07:58:57Z",
+      "raw_status": "fetched",
+      "raw_sha256": "e254db57e03a6862793f60a1cea717d5822a4e11c6ec8f69efb754cfcc2bf7a9",
+      "raw_bytes": 4559,
+      "row_count": 39,
+      "speaker_sample": [
+        "AfilCon"
+      ],
+      "keyword_counts": {
+        "blood": 1,
+        "Ring": 4,
+        "Blade": 1,
+        "Gregor": 1,
+        "Ryōshū": 14,
+        "R.B.": 2
+      },
+      "stored_raw_text": false,
+      "reused_evidence": true
+    },
+    {
+      "title": "Rosespanner Workshop Fixer Gregor/Identity Story",
+      "source_url": "https://limbuscompany.wiki.gg/wiki/Rosespanner_Workshop_Fixer_Gregor/Identity_Story",
+      "revision_id": 82110,
+      "verified_at": "2026-06-04T07:58:57Z",
+      "raw_status": "fetched",
+      "raw_sha256": "acd43614193ca6aee191af52ecea10ebeda36d27ff9db5070c68482e39408778",
+      "raw_bytes": 4473,
+      "row_count": 38,
+      "speaker_sample": [
+        "AfilCon"
+      ],
+      "keyword_counts": {
+        "dream": 2,
+        "Ring": 4,
+        "Office": 3,
+        "K Corp": 3,
+        "Gregor": 23,
+        "Rosespanner": 19
+      },
+      "stored_raw_text": false,
+      "reused_evidence": true
+    },
+    {
+      "title": "Dead Rabbits Boss Meursault/Identity Story",
+      "source_url": "https://limbuscompany.wiki.gg/wiki/Dead_Rabbits_Boss_Meursault/Identity_Story",
+      "revision_id": 82165,
+      "verified_at": "2026-06-04T07:58:57Z",
+      "raw_status": "fetched",
+      "raw_sha256": "9c8084e51181e81f3fdd5c9ad3bab0d75e77f86d29d59a6c033058c14180989e",
+      "raw_bytes": 4380,
+      "row_count": 34,
+      "speaker_sample": [],
+      "keyword_counts": {
+        "Family": 1,
+        "blood": 1,
+        "Ring": 5,
+        "Meursault": 3,
+        "Wuthering Heights": 3,
+        "Heathcliff": 1,
+        "Dead Rabbits": 3
+      },
+      "stored_raw_text": false,
+      "reused_evidence": true
+    },
+    {
+      "title": "Molar Boatworks Fixer Sinclair/Identity Story",
+      "source_url": "https://limbuscompany.wiki.gg/wiki/Molar_Boatworks_Fixer_Sinclair/Identity_Story",
+      "revision_id": 82124,
+      "verified_at": "2026-06-04T07:58:57Z",
+      "raw_status": "fetched",
+      "raw_sha256": "3a9189770a8e9b30ffb3e2bf9c56f9d9c16e54acb385b18935f42f3b27b0200e",
+      "raw_bytes": 4336,
+      "row_count": 47,
+      "speaker_sample": [
+        "AfilCon"
+      ],
+      "keyword_counts": {
+        "Ring": 3,
+        "Sinclair": 29,
+        "Molar": 15
+      },
+      "stored_raw_text": false,
+      "reused_evidence": true
+    },
+    {
+      "title": "Edgar Family Heir Gregor/Identity Story",
+      "source_url": "https://limbuscompany.wiki.gg/wiki/Edgar_Family_Heir_Gregor/Identity_Story",
+      "revision_id": 82155,
+      "verified_at": "2026-06-04T07:58:57Z",
+      "raw_status": "fetched",
+      "raw_sha256": "4093bd48d6025fa03a6e9876ce213e083daacde770f56859f90b7e002114199a",
+      "raw_bytes": 3967,
+      "row_count": 41,
+      "speaker_sample": [],
+      "keyword_counts": {
+        "Family": 4,
+        "dream": 2,
+        "Ring": 3,
+        "Blade": 1,
+        "Wuthering Heights": 3,
+        "Edgar": 3,
+        "Gregor": 4
+      },
+      "stored_raw_text": false,
+      "reused_evidence": true
+    },
+    {
+      "title": "Molar Boatworks Fixer Ishmael/Identity Story",
+      "source_url": "https://limbuscompany.wiki.gg/wiki/Molar_Boatworks_Fixer_Ishmael/Identity_Story",
+      "revision_id": 82125,
+      "verified_at": "2026-06-04T07:58:57Z",
+      "raw_status": "fetched",
+      "raw_sha256": "d8f7256ca0ce1ad7f30d42ba8a00035ffaf801cc55052e11d519dee739c09f7b",
+      "raw_bytes": 3874,
+      "row_count": 32,
+      "speaker_sample": [
+        "AfilCon"
+      ],
+      "keyword_counts": {
+        "Ring": 2,
+        "Office": 1,
+        "Ishmael": 27,
+        "Shi": 1,
+        "Molar": 14
+      },
+      "stored_raw_text": false,
+      "reused_evidence": true
+    },
+    {
+      "title": "Molar Office Fixer Yi Sang/Identity Story",
+      "source_url": "https://limbuscompany.wiki.gg/wiki/Molar_Office_Fixer_Yi_Sang/Identity_Story",
+      "revision_id": 82122,
+      "verified_at": "2026-06-04T07:58:57Z",
+      "raw_status": "fetched",
+      "raw_sha256": "24af3160c3a3fa1a5ca6e71b17574ce651ddb8554f883f8ae072997db83691ec",
+      "raw_bytes": 3872,
+      "row_count": 32,
+      "speaker_sample": [
+        "AfilCon"
+      ],
+      "keyword_counts": {
+        "Office": 23,
+        "Yi Sang": 17,
+        "Outis": 10,
+        "Molar": 15
+      },
+      "stored_raw_text": false,
+      "reused_evidence": true
+    },
+    {
+      "title": "Liu Assoc. South Section 4 Ryōshū/Identity Story",
+      "source_url": "https://limbuscompany.wiki.gg/wiki/Liu_Assoc._South_Section_4_Ry%C5%8Dsh%C5%AB/Identity_Story",
+      "revision_id": 82139,
+      "verified_at": "2026-06-04T07:58:57Z",
+      "raw_status": "fetched",
+      "raw_sha256": "0eb05c35d00cb82c664182a64f827480b366c1831274f9edce12b0610dfe2ef7",
+      "raw_bytes": 3297,
+      "row_count": 30,
+      "speaker_sample": [],
+      "keyword_counts": {
+        "Ring": 1,
+        "Liu": 8,
+        "Ryōshū": 3
+      },
+      "stored_raw_text": false,
+      "reused_evidence": true
+    },
+    {
+      "title": "Shi Assoc. South Section 5 Ishmael/Identity Story",
+      "source_url": "https://limbuscompany.wiki.gg/wiki/Shi_Assoc._South_Section_5_Ishmael/Identity_Story",
+      "revision_id": 157569,
+      "verified_at": "2026-06-04T07:58:57Z",
+      "raw_status": "fetched",
+      "raw_sha256": "663f8c895ca7415ee5101d53439329cfb69f41a9e1b641f008632a16285f7af4",
+      "raw_bytes": 3190,
+      "row_count": 29,
+      "speaker_sample": [
+        "AfilCon"
+      ],
+      "keyword_counts": {
+        "Ring": 2,
+        "Don Quixote": 6,
+        "Ishmael": 12,
+        "Shi": 13
+      },
+      "stored_raw_text": false,
+      "reused_evidence": true
+    },
+    {
+      "title": "Liu Assoc. South Section 6 Gregor/Identity Story",
+      "source_url": "https://limbuscompany.wiki.gg/wiki/Liu_Assoc._South_Section_6_Gregor/Identity_Story",
+      "revision_id": 82137,
+      "verified_at": "2026-06-04T07:58:57Z",
+      "raw_status": "fetched",
+      "raw_sha256": "d2c7759c4a3c90755009a9f73bd92873e8715fcdabc0cda06a9bb01e206ff0d1",
+      "raw_bytes": 3097,
+      "row_count": 24,
+      "speaker_sample": [
+        "AfilCon"
+      ],
+      "keyword_counts": {
+        "Ring": 2,
+        "Liu": 12,
+        "Gregor": 20
+      },
+      "stored_raw_text": false,
+      "reused_evidence": true
+    },
+    {
+      "title": "Los Mariachis Jefe Sinclair/Identity Story",
+      "source_url": "https://limbuscompany.wiki.gg/wiki/Los_Mariachis_Jefe_Sinclair/Identity_Story",
+      "revision_id": 82126,
+      "verified_at": "2026-06-04T07:58:57Z",
+      "raw_status": "fetched",
+      "raw_sha256": "b4baa8d5721fb7afcfa2bb5bef57f62515876ce8404d450aa44daf33e09f2173",
+      "raw_bytes": 2940,
+      "row_count": 26,
+      "speaker_sample": [
+        "AfilCon"
+      ],
+      "keyword_counts": {
+        "blood": 1,
+        "Sinclair": 4,
+        "Los Mariachis": 13
+      },
+      "stored_raw_text": false,
+      "reused_evidence": true
+    },
+    {
+      "title": "G Corp. Head Manager Outis/Identity Story",
+      "source_url": "https://limbuscompany.wiki.gg/wiki/G_Corp._Head_Manager_Outis/Identity_Story",
+      "revision_id": 82152,
+      "verified_at": "2026-06-04T07:58:57Z",
+      "raw_status": "fetched",
+      "raw_sha256": "ac5626dcac49433e7a26bff369773bdbc5d1b762488b1f4e9d06605d4339ed91",
+      "raw_bytes": 2681,
+      "row_count": 20,
+      "speaker_sample": [
+        "AfilCon"
+      ],
+      "keyword_counts": {
+        "Outis": 12,
+        "G Corp": 11
+      },
+      "stored_raw_text": false,
+      "reused_evidence": true
+    },
+    {
+      "title": "Lobotomy Corp. Remnant Faust/Identity Story",
+      "source_url": "https://limbuscompany.wiki.gg/wiki/Lobotomy_Corp._Remnant_Faust/Identity_Story",
+      "revision_id": 82135,
+      "verified_at": "2026-06-04T07:58:57Z",
+      "raw_status": "fetched",
+      "raw_sha256": "d97a758979f9d6c7bdffd3373f51e37c8d37d85f132926340983278ab65f889f",
+      "raw_bytes": 2361,
+      "row_count": 20,
+      "speaker_sample": [
+        "AfilCon"
+      ],
+      "keyword_counts": {
+        "Ring": 1,
+        "Faust": 20,
+        "Shi": 1,
+        "Lobotomy Corp": 9
+      },
+      "stored_raw_text": false,
+      "reused_evidence": true
+    },
+    {
+      "title": "LCCB Assistant Manager Rodion/Identity Story",
+      "source_url": "https://limbuscompany.wiki.gg/wiki/LCCB_Assistant_Manager_Rodion/Identity_Story",
+      "revision_id": 82143,
+      "verified_at": "2026-06-04T07:58:57Z",
+      "raw_status": "fetched",
+      "raw_sha256": "8c109a9c6b3edb414ba3146948cd31fe5c26add8441ac2ee1afc32f2b978ae28",
+      "raw_bytes": 2283,
+      "row_count": 20,
+      "speaker_sample": [
+        "AfilCon"
+      ],
+      "keyword_counts": {
+        "Ring": 1,
+        "Rodion": 14,
+        "Liu": 1,
+        "LCCB": 14
+      },
+      "stored_raw_text": false,
+      "reused_evidence": true
+    },
+    {
+      "title": "Shi Assoc. South Section 5 Heathcliff/Identity Story",
+      "source_url": "https://limbuscompany.wiki.gg/wiki/Shi_Assoc._South_Section_5_Heathcliff/Identity_Story",
+      "revision_id": 157570,
+      "verified_at": "2026-06-04T07:58:57Z",
+      "raw_status": "fetched",
+      "raw_sha256": "720dc1682d39b339d8ae0e8e1f44c8351fb05c651ea90e233e0e8c3b3edd3d26",
+      "raw_bytes": 2221,
+      "row_count": 18,
+      "speaker_sample": [
+        "AfilCon"
+      ],
+      "keyword_counts": {
+        "Blade": 1,
+        "Heathcliff": 12,
+        "Ishmael": 8,
+        "Shi": 12
+      },
+      "stored_raw_text": false,
+      "reused_evidence": true
+    },
+    {
+      "title": "LCCB Assistant Manager Ishmael/Identity Story",
+      "source_url": "https://limbuscompany.wiki.gg/wiki/LCCB_Assistant_Manager_Ishmael/Identity_Story",
+      "revision_id": 82144,
+      "verified_at": "2026-06-04T07:58:57Z",
+      "raw_status": "fetched",
+      "raw_sha256": "e253342ffe9aadcec22714d3109dc5c391e610285bfbc4b49b5329263e5176f6",
+      "raw_bytes": 2199,
+      "row_count": 17,
+      "speaker_sample": [
+        "AfilCon"
+      ],
+      "keyword_counts": {
+        "Ring": 3,
+        "Dawn": 1,
+        "Ishmael": 10,
+        "Shi": 1,
+        "LCCB": 14
+      },
+      "stored_raw_text": false,
+      "reused_evidence": true
+    },
+    {
+      "title": "Kurokumo Clan Wakashu Hong Lu/Identity Story",
+      "source_url": "https://limbuscompany.wiki.gg/wiki/Kurokumo_Clan_Wakashu_Hong_Lu/Identity_Story",
+      "revision_id": 82147,
+      "verified_at": "2026-06-04T07:58:57Z",
+      "raw_status": "fetched",
+      "raw_sha256": "19db2a214db4c24f6c633eabfdba31ee51b111166d95382fdeefca4539858b43",
+      "raw_bytes": 2098,
+      "row_count": 17,
+      "speaker_sample": [
+        "AfilCon"
+      ],
+      "keyword_counts": {
+        "Blade": 2,
+        "Hong Lu": 8,
+        "Thumb": 2,
+        "Shi": 8,
+        "Kurokumo": 11
+      },
+      "stored_raw_text": false,
+      "reused_evidence": true
+    },
+    {
+      "title": "Kurokumo Clan Wakashu Rodion/Identity Story",
+      "source_url": "https://limbuscompany.wiki.gg/wiki/Kurokumo_Clan_Wakashu_Rodion/Identity_Story",
+      "revision_id": 82146,
+      "verified_at": "2026-06-04T07:58:57Z",
+      "raw_status": "fetched",
+      "raw_sha256": "6e83a1acf815fdcd1e3f7dbb25e96d19a9e152ba80e626477d5d2d952edebb43",
+      "raw_bytes": 1910,
+      "row_count": 14,
+      "speaker_sample": [
+        "AfilCon"
+      ],
+      "keyword_counts": {
+        "Blade": 3,
+        "Rodion": 6,
+        "Ryōshū": 2,
+        "Kurokumo": 8
+      },
+      "stored_raw_text": false,
+      "reused_evidence": true
+    },
+    {
+      "title": "Seven Assoc. South Section 6 Ryōshū/Identity Story",
+      "source_url": "https://limbuscompany.wiki.gg/wiki/Seven_Assoc._South_Section_6_Ry%C5%8Dsh%C5%AB/Identity_Story",
+      "revision_id": 82104,
+      "verified_at": "2026-06-04T07:58:57Z",
+      "raw_status": "fetched",
+      "raw_sha256": "35e9029fde835c8c8e8cb4576fbab2afce3c56f8b32c62b255e6c84908727ba2",
+      "raw_bytes": 1856,
+      "row_count": 17,
+      "speaker_sample": [
+        "AfilCon"
+      ],
+      "keyword_counts": {
+        "Ring": 1,
+        "Seven": 11,
+        "Ryōshū": 6,
+        "Shi": 1
+      },
+      "stored_raw_text": false,
+      "reused_evidence": true
+    },
+    {
+      "title": "Kurokumo Clan Wakashu Ryōshū/Identity Story",
+      "source_url": "https://limbuscompany.wiki.gg/wiki/Kurokumo_Clan_Wakashu_Ry%C5%8Dsh%C5%AB/Identity_Story",
+      "revision_id": 82145,
+      "verified_at": "2026-06-04T07:58:57Z",
+      "raw_status": "fetched",
+      "raw_sha256": "7242c4aa2fa2e70bd46aaaef75d792e351e794547d4ba65e1a334f8278a986a2",
+      "raw_bytes": 1831,
+      "row_count": 14,
+      "speaker_sample": [
+        "AfilCon"
+      ],
+      "keyword_counts": {
+        "Blade": 4,
+        "Ryōshū": 7,
+        "Kurokumo": 11
+      },
+      "stored_raw_text": false,
+      "reused_evidence": true
+    },
+    {
+      "title": "Liu Assoc. South Section 6 Meursault/Identity Story",
+      "source_url": "https://limbuscompany.wiki.gg/wiki/Liu_Assoc._South_Section_6_Meursault/Identity_Story",
+      "revision_id": 91613,
+      "verified_at": "2026-06-04T07:58:57Z",
+      "raw_status": "fetched",
+      "raw_sha256": "d8e0063329ab51c0cb6e3be13bd6a7833f0f8a3f5a57df293ffb964c58d13b81",
+      "raw_bytes": 1821,
+      "row_count": 14,
+      "speaker_sample": [
+        "AfilCon"
+      ],
+      "keyword_counts": {
+        "Ring": 2,
+        "Meursault": 11,
+        "Liu": 13
+      },
+      "stored_raw_text": false,
+      "reused_evidence": true
+    },
+    {
+      "title": "G Corp. Manager Corporal Gregor/Identity Story",
+      "source_url": "https://limbuscompany.wiki.gg/wiki/G_Corp._Manager_Corporal_Gregor/Identity_Story",
+      "revision_id": 82151,
+      "verified_at": "2026-06-04T07:58:57Z",
+      "raw_status": "fetched",
+      "raw_sha256": "f01d0516422d588ad78eff549e237350e4e9ab86cd147ccf0d84b5795b8115b1",
+      "raw_bytes": 1556,
+      "row_count": 16,
+      "speaker_sample": [],
+      "keyword_counts": {
+        "blood": 1,
+        "Gregor": 2,
+        "G Corp": 4
+      },
+      "stored_raw_text": false,
+      "reused_evidence": true
+    },
+    {
+      "title": "Shi Assoc. South Section 5 Director Don Quixote/Identity Story",
+      "source_url": "https://limbuscompany.wiki.gg/wiki/Shi_Assoc._South_Section_5_Director_Don_Quixote/Identity_Story",
+      "revision_id": 157571,
+      "verified_at": "2026-06-04T07:58:57Z",
+      "raw_status": "fetched",
+      "raw_sha256": "c0df5c36d256188cf95321daaa738c245a8113c5cb9764664938d78694ac7b86",
+      "raw_bytes": 1352,
+      "row_count": 12,
+      "speaker_sample": [],
+      "keyword_counts": {
+        "paint": 1,
+        "Blade": 1,
+        "Don Quixote": 3,
+        "Shi": 5
+      },
+      "stored_raw_text": false,
+      "reused_evidence": true
+    }
+  ],
+  "queue": {
+    "changed_count": 161,
+    "review_status_summary": {
+      "article_reviewed_paraphrase_seed": 161,
+      "expanded_bridge_needs_article_review": 1721,
+      "source_checked_paraphrase_seed": 260
+    },
+    "expansion_status_summary": {
+      "article_reviewed_deep_seed": 161,
+      "expanded_bridge_written": 1721,
+      "not_expanded": 260
+    },
+    "p4_article_reviewed_title_count": 161
+  }
+}

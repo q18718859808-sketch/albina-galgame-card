@@ -1,0 +1,1014 @@
+{
+  "generated_at": "2026-06-04T08:26:21.209415+00:00",
+  "reference": {
+    "zip": "D:\\codex\\8bit-reference\\tavern_dist-8bit-v1.0.10.zip",
+    "card": "D:\\codex\\8bit-reference\\8bit-card.json",
+    "entry": "D:\\codex\\8bit-reference\\extracted\\tavern_dist-8bit-v1.0.10\\dist\\8bit的幻想\\脚本\\控制台\\index.js"
+  },
+  "eightbit": {
+    "script": {
+      "path": "dist/8bit的幻想/脚本/控制台/index.js",
+      "bytes": 678299,
+      "chars": 622910,
+      "lines": 2,
+      "markers": {
+        "replaceScriptButtons": 1,
+        "eventOn": 1,
+        "getVariables": 4,
+        "replaceVariables": 2,
+        "createWorldbookEntries": 1,
+        "getOrCreateChatWorldbook": 1,
+        "generateRaw": 3,
+        "generate(": 1,
+        "iframe": 1,
+        "localStorage": 0,
+        "sessionStorage": 0,
+        "indexedDB": 0,
+        "eval(": 0,
+        "new Function": 0,
+        "fetch(": 1,
+        "XMLHttpRequest": 0,
+        "WebSocket": 0
+      },
+      "likely_safe": true
+    },
+    "sourcemap": {
+      "exists": true,
+      "bytes": 1677854,
+      "sources": 115,
+      "sources_with_content": 115,
+      "components": 60,
+      "core_modules": 29,
+      "stores": 2,
+      "notable_sources": [
+        "webpack://tavern_helper_template/src/8bit的幻想/脚本/控制台/components/combat/CombatPanel.vue?5940",
+        "webpack://tavern_helper_template/src/8bit的幻想/脚本/控制台/components/hud/MiniMapCircle.vue?123a",
+        "webpack://tavern_helper_template/src/8bit的幻想/脚本/控制台/components/opening/OpeningPanel.vue?dec4",
+        "webpack://tavern_helper_template/src/8bit的幻想/脚本/控制台/components/party/PartyPanel.vue?c8c0",
+        "webpack://tavern_helper_template/src/8bit的幻想/脚本/控制台/components/settings/DedicatedResourcePanel.vue?aaa5",
+        "webpack://tavern_helper_template/src/8bit的幻想/脚本/控制台/components/combat/CombatPanel.vue?1b56",
+        "webpack://tavern_helper_template/src/8bit的幻想/脚本/控制台/components/hud/MiniMapCircle.vue?5be0",
+        "webpack://tavern_helper_template/src/8bit的幻想/脚本/控制台/components/opening/OpeningPanel.vue?0bbb",
+        "webpack://tavern_helper_template/src/8bit的幻想/脚本/控制台/components/party/PartyPanel.vue?eea7",
+        "webpack://tavern_helper_template/src/8bit的幻想/脚本/控制台/components/settings/DedicatedResourcePanel.vue?4c5d",
+        "src://tavern_helper_template/src/8bit的幻想/脚本/控制台/core/types.ts",
+        "src://tavern_helper_template/src/8bit的幻想/脚本/控制台/core/apiProfiles.ts",
+        "src://tavern_helper_template/src/8bit的幻想/脚本/控制台/core/clock.ts",
+        "src://tavern_helper_template/src/8bit的幻想/脚本/控制台/core/equipment.ts",
+        "src://tavern_helper_template/src/8bit的幻想/脚本/控制台/core/companions.ts",
+        "src://tavern_helper_template/src/8bit的幻想/脚本/控制台/core/professions.ts",
+        "src://tavern_helper_template/src/8bit的幻想/脚本/控制台/core/content.ts",
+        "src://tavern_helper_template/src/8bit的幻想/脚本/控制台/core/skills.ts",
+        "src://tavern_helper_template/src/8bit的幻想/脚本/控制台/core/player.ts",
+        "src://tavern_helper_template/src/8bit的幻想/脚本/控制台/core/inventory.ts",
+        "src://tavern_helper_template/src/8bit的幻想/脚本/控制台/core/map.ts",
+        "src://tavern_helper_template/src/8bit的幻想/脚本/控制台/core/quests.ts",
+        "src://tavern_helper_template/src/8bit的幻想/脚本/控制台/core/worldbook.ts",
+        "src://tavern_helper_template/src/8bit的幻想/脚本/控制台/core/npcs.ts",
+        "src://tavern_helper_template/src/8bit的幻想/脚本/控制台/core/reality.ts",
+        "src://tavern_helper_template/src/8bit的幻想/脚本/控制台/core/watch.ts",
+        "src://tavern_helper_template/src/8bit的幻想/脚本/控制台/core/save.ts",
+        "src://tavern_helper_template/src/8bit的幻想/脚本/控制台/core/combat.ts",
+        "src://tavern_helper_template/src/8bit的幻想/脚本/控制台/core/achievements.ts",
+        "src://tavern_helper_template/src/8bit的幻想/脚本/控制台/core/experience.ts",
+        "src://tavern_helper_template/src/8bit的幻想/脚本/控制台/core/monsters.ts",
+        "src://tavern_helper_template/src/8bit的幻想/脚本/控制台/core/narration.ts",
+        "src://tavern_helper_template/src/8bit的幻想/脚本/控制台/core/shop.ts",
+        "src://tavern_helper_template/src/8bit的幻想/脚本/控制台/core/actions.ts",
+        "src://tavern_helper_template/src/8bit的幻想/脚本/控制台/core/contacts.ts",
+        "src://tavern_helper_template/src/8bit的幻想/脚本/控制台/core/debug.ts",
+        "src://tavern_helper_template/src/8bit的幻想/脚本/控制台/core/dedicatedResources.ts",
+        "src://tavern_helper_template/src/8bit的幻想/脚本/控制台/core/opening.ts",
+        "src://tavern_helper_template/src/8bit的幻想/脚本/控制台/stores/gameStore.ts",
+        "src://tavern_helper_template/src/8bit的幻想/脚本/控制台/components/creation/CharacterCreationPanel.vue",
+        "webpack://tavern_helper_template/src/8bit的幻想/脚本/控制台/components/creation/CharacterCreationPanel.vue?90c0",
+        "src://tavern_helper_template/src/8bit的幻想/脚本/控制台/components/combat/CombatPanel.vue",
+        "webpack://tavern_helper_template/src/8bit的幻想/脚本/控制台/components/combat/CombatPanel.vue?acf1",
+        "src://tavern_helper_template/src/8bit的幻想/脚本/控制台/stores/uiStore.ts",
+        "src://tavern_helper_template/src/8bit的幻想/脚本/控制台/components/contact/SceneConfirmModal.vue",
+        "webpack://tavern_helper_template/src/8bit的幻想/脚本/控制台/components/contact/SceneConfirmModal.vue?2ecd",
+        "src://tavern_helper_template/src/8bit的幻想/脚本/控制台/components/debug/DebugPanel.vue",
+        "webpack://tavern_helper_template/src/8bit的幻想/脚本/控制台/components/debug/DebugPanel.vue?113d",
+        "src://tavern_helper_template/src/8bit的幻想/脚本/控制台/components/opening/OpeningPanel.vue",
+        "webpack://tavern_helper_template/src/8bit的幻想/脚本/控制台/components/opening/OpeningPanel.vue?e88e",
+        "src://tavern_helper_template/src/8bit的幻想/脚本/控制台/components/stage/NarrativeStagePanel.vue",
+        "webpack://tavern_helper_template/src/8bit的幻想/脚本/控制台/components/stage/NarrativeStagePanel.vue?3ff2",
+        "src://tavern_helper_template/src/8bit的幻想/脚本/控制台/components/achievement/AchievementPanel.vue",
+        "webpack://tavern_helper_template/src/8bit的幻想/脚本/控制台/components/achievement/AchievementPanel.vue?0267",
+        "src://tavern_helper_template/src/8bit的幻想/脚本/控制台/components/equipment/EquipmentPanel.vue",
+        "webpack://tavern_helper_template/src/8bit的幻想/脚本/控制台/components/equipment/EquipmentPanel.vue?287a",
+        "src://tavern_helper_template/src/8bit的幻想/脚本/控制台/components/inventory/InventoryPanel.vue",
+        "webpack://tavern_helper_template/src/8bit的幻想/脚本/控制台/components/inventory/InventoryPanel.vue?4b41",
+        "src://tavern_helper_template/src/8bit的幻想/脚本/控制台/components/map/MapPanel.vue",
+        "webpack://tavern_helper_template/src/8bit的幻想/脚本/控制台/components/map/MapPanel.vue?a9b7",
+        "src://tavern_helper_template/src/8bit的幻想/脚本/控制台/components/npc/NpcPanel.vue",
+        "webpack://tavern_helper_template/src/8bit的幻想/脚本/控制台/components/npc/NpcPanel.vue?9dbc",
+        "src://tavern_helper_template/src/8bit的幻想/脚本/控制台/components/party/PartyPanel.vue",
+        "webpack://tavern_helper_template/src/8bit的幻想/脚本/控制台/components/party/PartyPanel.vue?31b0",
+        "src://tavern_helper_template/src/8bit的幻想/脚本/控制台/components/player/PlayerPanel.vue",
+        "webpack://tavern_helper_template/src/8bit的幻想/脚本/控制台/components/player/PlayerPanel.vue?a84d",
+        "src://tavern_helper_template/src/8bit的幻想/脚本/控制台/components/quest/QuestPanel.vue",
+        "webpack://tavern_helper_template/src/8bit的幻想/脚本/控制台/components/quest/QuestPanel.vue?6bcf",
+        "src://tavern_helper_template/src/8bit的幻想/脚本/控制台/components/reality/RealityPanel.vue",
+        "webpack://tavern_helper_template/src/8bit的幻想/脚本/控制台/components/reality/RealityPanel.vue?4e4b",
+        "src://tavern_helper_template/src/8bit的幻想/脚本/控制台/components/settings/ApiProfilePanel.vue",
+        "webpack://tavern_helper_template/src/8bit的幻想/脚本/控制台/components/settings/ApiProfilePanel.vue?053d",
+        "src://tavern_helper_template/src/8bit的幻想/脚本/控制台/components/settings/DedicatedResourcePanel.vue",
+        "webpack://tavern_helper_template/src/8bit的幻想/脚本/控制台/components/settings/DedicatedResourcePanel.vue?7d9e",
+        "src://tavern_helper_template/src/8bit的幻想/脚本/控制台/components/status/StatusPanel.vue",
+        "webpack://tavern_helper_template/src/8bit的幻想/脚本/控制台/components/status/StatusPanel.vue?330c",
+        "src://tavern_helper_template/src/8bit的幻想/脚本/控制台/components/time/TimePanel.vue",
+        "webpack://tavern_helper_template/src/8bit的幻想/脚本/控制台/components/time/TimePanel.vue?5ca1",
+        "src://tavern_helper_template/src/8bit的幻想/脚本/控制台/components/log/StoryLogPanel.vue",
+        "webpack://tavern_helper_template/src/8bit的幻想/脚本/控制台/components/log/StoryLogPanel.vue?fbcf"
+      ]
+    },
+    "assets": {
+      "image_count": 60,
+      "ext_counts": {
+        ".png": 60
+      },
+      "total_bytes": 88016194,
+      "dimension_counts": {
+        "1254x1254": 21,
+        "887x1774": 13,
+        "256x256": 7,
+        "1920x1080": 5,
+        "512x1024": 4,
+        "512x128": 3,
+        "1920x800": 2,
+        "384x384": 1,
+        "600x200": 1,
+        "400x600": 1,
+        "800x200": 1,
+        "512x512": 1
+      },
+      "largest": [
+        {
+          "path": "dist/8bit的幻想/脚本/控制台/assets/BG-06_标题画面.png",
+          "bytes": 4416675,
+          "dim": "1920x1080"
+        },
+        {
+          "path": "dist/8bit的幻想/脚本/控制台/assets/BG-07_村庄场景背景.png",
+          "bytes": 4284000,
+          "dim": "1920x1080"
+        },
+        {
+          "path": "dist/8bit的幻想/脚本/控制台/assets/BG-01_8bit世界正文背景.png",
+          "bytes": 4097984,
+          "dim": "1920x1080"
+        },
+        {
+          "path": "dist/8bit的幻想/脚本/控制台/assets/BG-05_角色创建背景.png",
+          "bytes": 3734581,
+          "dim": "1920x1080"
+        },
+        {
+          "path": "dist/8bit的幻想/脚本/控制台/assets/BG-02_现实世界正文背景.png",
+          "bytes": 3711650,
+          "dim": "1920x1080"
+        },
+        {
+          "path": "dist/8bit的幻想/脚本/控制台/assets/BG-03_草地战斗背景.png",
+          "bytes": 3171189,
+          "dim": "1920x800"
+        },
+        {
+          "path": "dist/8bit的幻想/脚本/控制台/assets/BG-04_洞窟战斗背景.png",
+          "bytes": 2890337,
+          "dim": "1920x800"
+        },
+        {
+          "path": "dist/8bit的幻想/脚本/控制台/assets/CH-12_贝壳钟守米洛立绘.png",
+          "bytes": 2751441,
+          "dim": "887x1774"
+        },
+        {
+          "path": "dist/8bit的幻想/脚本/控制台/assets/CH-08_杂货商诺玛立绘.png",
+          "bytes": 2584400,
+          "dim": "887x1774"
+        },
+        {
+          "path": "dist/8bit的幻想/脚本/控制台/assets/CH-09_旧训练师布洛立绘.png",
+          "bytes": 2504875,
+          "dim": "887x1774"
+        },
+        {
+          "path": "dist/8bit的幻想/脚本/控制台/assets/CH-13_熔火关口铁匠格兰立绘.png",
+          "bytes": 2498362,
+          "dim": "887x1774"
+        },
+        {
+          "path": "dist/8bit的幻想/脚本/控制台/assets/CH-05_地图师芬恩立绘.png",
+          "bytes": 2483101,
+          "dim": "887x1774"
+        },
+        {
+          "path": "dist/8bit的幻想/脚本/控制台/assets/CH-14_雪镜驿站看守妮可立绘.png",
+          "bytes": 2313357,
+          "dim": "887x1774"
+        },
+        {
+          "path": "dist/8bit的幻想/脚本/控制台/assets/CH-07_旧徽章的小孩罗罗立绘.png",
+          "bytes": 2077244,
+          "dim": "887x1774"
+        },
+        {
+          "path": "dist/8bit的幻想/脚本/控制台/assets/CH-01B_女勇者替换立绘.png",
+          "bytes": 1975734,
+          "dim": "887x1774"
+        },
+        {
+          "path": "dist/8bit的幻想/脚本/控制台/assets/CH-10_旧存档回声立绘.png",
+          "bytes": 1901368,
+          "dim": "887x1774"
+        },
+        {
+          "path": "dist/8bit的幻想/脚本/控制台/assets/CH-01A_男勇者替换立绘.png",
+          "bytes": 1706401,
+          "dim": "887x1774"
+        },
+        {
+          "path": "dist/8bit的幻想/脚本/控制台/assets/CH-11_绿风哨兵拉芙立绘.png",
+          "bytes": 1674413,
+          "dim": "887x1774"
+        },
+        {
+          "path": "dist/8bit的幻想/脚本/控制台/assets/CH-06_小教会修女伊莉亚立绘.png",
+          "bytes": 1614413,
+          "dim": "887x1774"
+        },
+        {
+          "path": "dist/8bit的幻想/脚本/控制台/assets/MN-10_苔纹骑士种.png",
+          "bytes": 1609561,
+          "dim": "1254x1254"
+        }
+      ]
+    },
+    "worldbooks": {
+      "file_count": 1,
+      "entry_count": 119,
+      "total_bytes": 214136,
+      "files": [
+        {
+          "path": "dist/8bit的幻想/专属预设和世界书/8bit的幻想_v1.0测试世界书.json",
+          "bytes": 214136,
+          "entries": 119
+        }
+      ]
+    }
+  },
+  "albina": {
+    "script": {
+      "path": "dist/albina-galgame-card/console/index.js",
+      "bytes": 928508,
+      "chars": 907746,
+      "lines": 20003,
+      "markers": {
+        "replaceScriptButtons": 2,
+        "eventOn": 2,
+        "getVariables": 4,
+        "replaceVariables": 2,
+        "createWorldbookEntries": 2,
+        "getOrCreateChatWorldbook": 2,
+        "generateRaw": 4,
+        "generate(": 2,
+        "iframe": 1,
+        "localStorage": 0,
+        "sessionStorage": 0,
+        "indexedDB": 0,
+        "eval(": 0,
+        "new Function": 0,
+        "fetch(": 0,
+        "XMLHttpRequest": 2,
+        "WebSocket": 0
+      },
+      "likely_safe": true
+    },
+    "frontend_source": {
+      "file_count": 35,
+      "by_extension": {
+        ".css": 1,
+        ".ts": 21,
+        ".vue": 13
+      },
+      "top_dirs": {
+        "core": 16,
+        "components": 12,
+        ".": 5,
+        "stores": 1,
+        "styles": 1
+      },
+      "files": [
+        "App.vue",
+        "components/ActivityPanel.vue",
+        "components/EventLedgerPanel.vue",
+        "components/GalStage.vue",
+        "components/LoadoutPanel.vue",
+        "components/MainMenu.vue",
+        "components/OpeningStoryPanel.vue",
+        "components/ProgressionPanel.vue",
+        "components/QuestMapPanel.vue",
+        "components/RouteBoardPanel.vue",
+        "components/StatusPanel.vue",
+        "components/TacticalPanel.vue",
+        "components/TextBox.vue",
+        "config.ts",
+        "core/actions.ts",
+        "core/activityEngine.ts",
+        "core/assets.ts",
+        "core/conflictEngine.ts",
+        "core/defaultSave.ts",
+        "core/economyEngine.ts",
+        "core/eventResolver.ts",
+        "core/generation.ts",
+        "core/loadoutEngine.ts",
+        "core/progressionEngine.ts",
+        "core/questEngine.ts",
+        "core/routeEngine.ts",
+        "core/save.ts",
+        "core/scenes.ts",
+        "core/storyLogEngine.ts",
+        "core/worldbook.ts",
+        "env.d.ts",
+        "index.ts",
+        "stores/gameStore.ts",
+        "styles/global.css",
+        "types.ts"
+      ]
+    },
+    "assets": {
+      "image_count": 168,
+      "ext_counts": {
+        ".jpg": 43,
+        ".png": 43,
+        ".svg": 82
+      },
+      "total_bytes": 43506865,
+      "dimension_counts": {
+        "svg": 82,
+        "1280x720": 42,
+        "900x1200": 42,
+        "512x768": 1,
+        "1080x1920": 1
+      },
+      "largest": [
+        {
+          "path": "dist/albina-galgame-card/assets/characters/albina/amused.png",
+          "bytes": 958956,
+          "dim": "900x1200"
+        },
+        {
+          "path": "dist/albina-galgame-card/assets/characters/albina/armored.png",
+          "bytes": 958956,
+          "dim": "900x1200"
+        },
+        {
+          "path": "dist/albina-galgame-card/assets/characters/albina/combat.png",
+          "bytes": 958956,
+          "dim": "900x1200"
+        },
+        {
+          "path": "dist/albina-galgame-card/assets/characters/albina/endgame.png",
+          "bytes": 958956,
+          "dim": "900x1200"
+        },
+        {
+          "path": "dist/albina-galgame-card/assets/characters/albina/fascia-open.png",
+          "bytes": 958956,
+          "dim": "900x1200"
+        },
+        {
+          "path": "dist/albina-galgame-card/assets/characters/albina/focused.png",
+          "bytes": 958956,
+          "dim": "900x1200"
+        },
+        {
+          "path": "dist/albina-galgame-card/assets/characters/albina/furious.png",
+          "bytes": 958956,
+          "dim": "900x1200"
+        },
+        {
+          "path": "dist/albina-galgame-card/assets/characters/albina/golden-bough.png",
+          "bytes": 958956,
+          "dim": "900x1200"
+        },
+        {
+          "path": "dist/albina-galgame-card/assets/characters/albina/maestro.png",
+          "bytes": 958956,
+          "dim": "900x1200"
+        },
+        {
+          "path": "dist/albina-galgame-card/assets/characters/albina/normal.png",
+          "bytes": 958956,
+          "dim": "900x1200"
+        },
+        {
+          "path": "dist/albina-galgame-card/assets/characters/albina/rain.png",
+          "bytes": 958956,
+          "dim": "900x1200"
+        },
+        {
+          "path": "dist/albina-galgame-card/assets/characters/albina/ring-conspiracy.png",
+          "bytes": 958956,
+          "dim": "900x1200"
+        },
+        {
+          "path": "dist/albina-galgame-card/assets/characters/albina/shy.png",
+          "bytes": 958956,
+          "dim": "900x1200"
+        },
+        {
+          "path": "dist/albina-galgame-card/assets/characters/albina/smile.png",
+          "bytes": 958956,
+          "dim": "900x1200"
+        },
+        {
+          "path": "dist/albina-galgame-card/assets/characters/albina/surgical.png",
+          "bytes": 958956,
+          "dim": "900x1200"
+        },
+        {
+          "path": "dist/albina-galgame-card/assets/characters/albina/unarmored.png",
+          "bytes": 958956,
+          "dim": "900x1200"
+        },
+        {
+          "path": "dist/albina-galgame-card/assets/characters/albina/white-canvas.png",
+          "bytes": 958956,
+          "dim": "900x1200"
+        },
+        {
+          "path": "dist/albina-galgame-card/assets/characters/albina/wounded.png",
+          "bytes": 958956,
+          "dim": "900x1200"
+        },
+        {
+          "path": "dist/albina-galgame-card/assets/characters/faust/normal.png",
+          "bytes": 919963,
+          "dim": "900x1200"
+        },
+        {
+          "path": "dist/albina-galgame-card/assets/characters/vergilius/normal.png",
+          "bytes": 886285,
+          "dim": "900x1200"
+        }
+      ]
+    },
+    "visual_asset_gates": {
+      "exists": true,
+      "passed": true,
+      "bg_count": 12,
+      "background_count": 12,
+      "cg_count": 30,
+      "albina_sprite_count": 18,
+      "protagonist_sprite_count": 12,
+      "supporting_sprite_count": 12,
+      "primary_asset_count": 84,
+      "svg_primary_refs": [],
+      "dimension_failures": [],
+      "alpha_failures": [],
+      "style_lock_present": true,
+      "errors": []
+    },
+    "worldbooks": {
+      "file_count": 24,
+      "entry_count": 3015,
+      "total_bytes": 5371480,
+      "files": [
+        {
+          "path": "dist/albina-galgame-card/worldbooks/albina_rp_static_worldbook.json",
+          "bytes": 408317,
+          "entries": 258
+        },
+        {
+          "path": "dist/albina-galgame-card/worldbooks/dynamic_worldbook_template.json",
+          "bytes": 2263,
+          "entries": 3
+        },
+        {
+          "path": "dist/albina-galgame-card/worldbooks/static-worldbook.template.json",
+          "bytes": 408317,
+          "entries": 258
+        },
+        {
+          "path": "dist/albina-galgame-card/worldbooks/pure/albina_p0_core_worldbook.pure.json",
+          "bytes": 10175,
+          "entries": 8
+        },
+        {
+          "path": "dist/albina-galgame-card/worldbooks/pure/albina_p1_canto_ix_scene_worldbook.pure.json",
+          "bytes": 7743,
+          "entries": 7
+        },
+        {
+          "path": "dist/albina-galgame-card/worldbooks/pure/albina_p1_limbus_core_worldbook.pure.json",
+          "bytes": 13763,
+          "entries": 14
+        },
+        {
+          "path": "dist/albina-galgame-card/worldbooks/pure/albina_p1_sinner_voice_worldbook.pure.json",
+          "bytes": 10032,
+          "entries": 12
+        },
+        {
+          "path": "dist/albina-galgame-card/worldbooks/pure/albina_p2_canto_backbone_worldbook.pure.json",
+          "bytes": 13383,
+          "entries": 10
+        },
+        {
+          "path": "dist/albina-galgame-card/worldbooks/pure/albina_p2_ego_identities_worldbook.pure.json",
+          "bytes": 10365,
+          "entries": 8
+        },
+        {
+          "path": "dist/albina-galgame-card/worldbooks/pure/albina_p2_enemy_ecology_worldbook.pure.json",
+          "bytes": 11888,
+          "entries": 9
+        },
+        {
+          "path": "dist/albina-galgame-card/worldbooks/pure/albina_p2_event_support_worldbook.pure.json",
+          "bytes": 16456,
+          "entries": 14
+        },
+        {
+          "path": "dist/albina-galgame-card/worldbooks/pure/albina_p2_identity_association_worldbook.pure.json",
+          "bytes": 13941,
+          "entries": 10
+        },
+        {
+          "path": "dist/albina-galgame-card/worldbooks/pure/albina_p2_intervallo_story_worldbook.pure.json",
+          "bytes": 16371,
+          "entries": 12
+        },
+        {
+          "path": "dist/albina-galgame-card/worldbooks/pure/albina_p2_named_character_ecology_worldbook.pure.json",
+          "bytes": 12255,
+          "entries": 10
+        },
+        {
+          "path": "dist/albina-galgame-card/worldbooks/pure/albina_p2_theme_atmosphere_worldbook.pure.json",
+          "bytes": 24368,
+          "entries": 20
+        },
+        {
+          "path": "dist/albina-galgame-card/worldbooks/pure/albina_p2_urban_factions_worldbook.pure.json",
+          "bytes": 11169,
+          "entries": 9
+        },
+        {
+          "path": "dist/albina-galgame-card/worldbooks/pure/albina_p3_bloodfiend_abnormality_worldbook.pure.json",
+          "bytes": 8826,
+          "entries": 7
+        },
+        {
+          "path": "dist/albina-galgame-card/worldbooks/pure/albina_p3_combat_mechanics_worldbook.pure.json",
+          "bytes": 11442,
+          "entries": 10
+        },
+        {
+          "path": "dist/albina-galgame-card/worldbooks/pure/albina_p3_ego_abnormality_anchors_worldbook.pure.json",
+          "bytes": 11767,
+          "entries": 10
+        },
+        {
+          "path": "dist/albina-galgame-card/worldbooks/pure/albina_p3_ego_sin_worldbook.pure.json",
+          "bytes": 10974,
+          "entries": 10
+        },
+        {
+          "path": "dist/albina-galgame-card/worldbooks/pure/albina_p4_article_reviewed_identity_worldbook.pure.json",
+          "bytes": 216135,
+          "entries": 161
+        },
+        {
+          "path": "dist/albina-galgame-card/worldbooks/pure/albina_p4_manifest_bridge_worldbook.pure.json",
+          "bytes": 3699965,
+          "entries": 1882
+        },
+        {
+          "path": "dist/albina-galgame-card/worldbooks/pure/albina_rp_static_worldbook.pure.json",
+          "bytes": 408317,
+          "entries": 258
+        },
+        {
+          "path": "dist/albina-galgame-card/worldbooks/pure/albina_verified_seed_worldbook.pure.json",
+          "bytes": 13248,
+          "entries": 15
+        }
+      ]
+    },
+    "coverage": {
+      "manifest_page_count": 2142,
+      "referenced_source_title_count": 2142,
+      "unreferenced_manifest_title_count": 0,
+      "total_worldbook_entries": 2089,
+      "passed": true
+    },
+    "expanded_bridge": {
+      "expanded_count": 1882,
+      "unexpanded_p4_count": 0,
+      "policy": "expanded_bridge_not_article_level_paraphrase",
+      "report": "docs/p4-expanded-bridge-report.json"
+    },
+    "article_reviewed_p4": {
+      "entry_count": 161,
+      "queue_title_count": 161,
+      "worldbook": "worldbooks/albina_p4_article_reviewed_identity_worldbook.json",
+      "report": "docs/p4-article-reviewed-deep-report.json",
+      "policy": "raw pages fetched for review evidence only; raw article text is not stored in repository artifacts"
+    },
+    "pure_release": {
+      "target_count": 24,
+      "finding_count": 0,
+      "passed": true
+    },
+    "deploy": {
+      "generated_at": "2026-06-04T08:24:37.368959+00:00",
+      "repo": "https://github.com/q18718859808-sketch/albina-galgame-card",
+      "branch": "main",
+      "commit": "bd79c2ae18874d89812f415a5882cb7b5ed1daaa",
+      "tag": "v1.0.22",
+      "files": 416,
+      "reused_files": 406,
+      "uploaded_files": 10,
+      "cdn_url": "https://cdn.jsdelivr.net/gh/q18718859808-sketch/albina-galgame-card@bd79c2ae18874d89812f415a5882cb7b5ed1daaa/dist/albina-galgame-card/console/index.js",
+      "tag_cdn_url": "https://cdn.jsdelivr.net/gh/q18718859808-sketch/albina-galgame-card@v1.0.22/dist/albina-galgame-card/console/index.js",
+      "cdn_import": "import 'https://cdn.jsdelivr.net/gh/q18718859808-sketch/albina-galgame-card@bd79c2ae18874d89812f415a5882cb7b5ed1daaa/dist/albina-galgame-card/console/index.js'"
+    },
+    "fileditch": {
+      "status": "blocked_by_tls_handshake_failure",
+      "uploaded_urls": 0
+    }
+  },
+  "completion": {
+    "scores": {
+      "st_helper_independent_frontend": 92,
+      "release_cdn_purity": 96,
+      "worldbook_manifest_coverage": 88,
+      "worldbook_deep_handwriting": 92,
+      "frontend_system_depth": 100,
+      "gameplay_loop_depth": 100,
+      "visual_asset_breadth": 92,
+      "visual_asset_consistency": 92,
+      "state_authority_and_persistence": 100,
+      "security": 92,
+      "documentation_and_reproducibility": 86
+    },
+    "weights": {
+      "st_helper_independent_frontend": 0.12,
+      "release_cdn_purity": 0.1,
+      "worldbook_manifest_coverage": 0.1,
+      "worldbook_deep_handwriting": 0.13,
+      "frontend_system_depth": 0.14,
+      "gameplay_loop_depth": 0.13,
+      "visual_asset_breadth": 0.08,
+      "visual_asset_consistency": 0.07,
+      "state_authority_and_persistence": 0.07,
+      "security": 0.03,
+      "documentation_and_reproducibility": 0.03
+    },
+    "overall": 94.5,
+    "implemented_features": [
+      "route_engine",
+      "route_board_panel",
+      "event_resolver",
+      "event_ledger_panel",
+      "economy_engine",
+      "player_risk_mitigation",
+      "activity_engine",
+      "repeatable_route_activities",
+      "activity_unlock_rewards",
+      "activity_panel",
+      "schema_v5_plus_migration",
+      "quest_map_engine",
+      "quest_map_loop",
+      "three_route_quest_chains",
+      "quest_map_panel",
+      "schema_v6_migration",
+      "inventory_equipment_wardrobe_engine",
+      "loadout_rule_options",
+      "progression_unlock_log",
+      "cg_gallery_rule_layer",
+      "loadout_panel",
+      "schema_v7_loadout_migration",
+      "combat_action_resolution_engine",
+      "mastery_growth_loop",
+      "exchange_contact_watch_loop",
+      "watch_signal_layer",
+      "tactical_panel",
+      "schema_v8_tactical_migration",
+      "progression_engine",
+      "achievement_system",
+      "profession_progression",
+      "opening_reality_overlay_layer",
+      "scene_branch_choreography",
+      "story_index_runtime",
+      "progression_panel",
+      "schema_v9_progression_migration",
+      "opening_story_log_engine",
+      "opening_draft_confirm_state_machine",
+      "structured_story_log_summary",
+      "opening_story_panel",
+      "schema_v10_story_log_migration",
+      "p4_expanded_bridge_batch",
+      "raster_asset_manifest_gates"
+    ]
+  },
+  "v1_0_9_verification": {
+    "story_index_runtime": {
+      "passed": true,
+      "artifact_markers": [
+        "narrativeIndex",
+        "manifest_title_index",
+        "frontend_scene_runtime",
+        "p4_bridge_lore",
+        "narrativeFullPlotRestored",
+        "narrativeIndexedTitles"
+      ],
+      "source_markers": {
+        "frontend/src/core/progressionEngine.ts": {
+          "passed": true,
+          "markers": [
+            "MANIFEST_TITLE_COUNT = 2142",
+            "BRIDGE_TITLE_COUNT = 1882",
+            "buildNarrativeIndex",
+            "buildNarrativeCoverageSummary",
+            "fullPlotRestored: false"
+          ]
+        }
+      },
+      "markers": [
+        "narrativeIndex",
+        "manifest_title_index",
+        "frontend_scene_runtime",
+        "p4_bridge_lore",
+        "narrativeFullPlotRestored",
+        "narrativeIndexedTitles"
+      ]
+    },
+    "achievement_system": {
+      "passed": true,
+      "artifact_markers": [
+        "unlockedAchievementIds",
+        "achievementLog",
+        "ach_manifest_index_ack",
+        "索引边界确认"
+      ],
+      "source_markers": {
+        "frontend/src/core/progressionEngine.ts": {
+          "passed": true,
+          "markers": [
+            "ACHIEVEMENT_DEFINITIONS",
+            "availableAchievements",
+            "syncAchievements",
+            "unlockedAchievementIds"
+          ]
+        }
+      },
+      "markers": [
+        "unlockedAchievementIds",
+        "achievementLog",
+        "ach_manifest_index_ack",
+        "索引边界确认"
+      ]
+    },
+    "profession_progression": {
+      "passed": true,
+      "artifact_markers": [
+        "activeProfessionId",
+        "professionProgress",
+        "narrative_curator",
+        "剧情索引师"
+      ],
+      "source_markers": {
+        "frontend/src/core/progressionEngine.ts": {
+          "passed": true,
+          "markers": [
+            "PROFESSION_DEFINITIONS",
+            "availableProfessions",
+            "selectProfession",
+            "professionProgress"
+          ]
+        }
+      },
+      "markers": [
+        "activeProfessionId",
+        "professionProgress",
+        "narrative_curator",
+        "剧情索引师"
+      ]
+    },
+    "opening_reality_overlay": {
+      "passed": true,
+      "artifact_markers": [
+        "realityOverlayIds",
+        "resolvedRealityOverlayIds",
+        "overlay_opening_boundary",
+        "开场边界投影"
+      ],
+      "source_markers": {
+        "frontend/src/core/progressionEngine.ts": {
+          "passed": true,
+          "markers": [
+            "REALITY_OVERLAY_DEFINITIONS",
+            "availableRealityOverlays",
+            "resolveRealityOverlay",
+            "overlay_opening_boundary"
+          ]
+        }
+      },
+      "markers": [
+        "realityOverlayIds",
+        "resolvedRealityOverlayIds",
+        "overlay_opening_boundary",
+        "开场边界投影"
+      ]
+    },
+    "scene_branch_choreography": {
+      "passed": true,
+      "artifact_markers": [
+        "resolvedSceneBranchIds",
+        "sceneBranchLog",
+        "branch_white_rain_followup",
+        "雨巷二次回望"
+      ],
+      "source_markers": {
+        "frontend/src/core/progressionEngine.ts": {
+          "passed": true,
+          "markers": [
+            "SCENE_BRANCH_DEFINITIONS",
+            "availableSceneBranches",
+            "resolveSceneBranch",
+            "branch_white_rain_followup"
+          ]
+        }
+      },
+      "markers": [
+        "resolvedSceneBranchIds",
+        "sceneBranchLog",
+        "branch_white_rain_followup",
+        "雨巷二次回望"
+      ]
+    },
+    "progression_panel": {
+      "passed": true,
+      "artifact_markers": [
+        "showProgressionPanel",
+        "剧情索引与成长层",
+        "记录分支",
+        "确认覆盖"
+      ],
+      "source_markers": {
+        "frontend/src/components/ProgressionPanel.vue": {
+          "passed": true,
+          "markers": [
+            "剧情索引与成长层",
+            "完整复原",
+            "记录分支",
+            "确认覆盖"
+          ]
+        },
+        "frontend/src/App.vue": {
+          "passed": true,
+          "markers": [
+            "ProgressionPanel",
+            "showProgressionPanel"
+          ]
+        }
+      },
+      "markers": [
+        "showProgressionPanel",
+        "剧情索引与成长层",
+        "记录分支",
+        "确认覆盖"
+      ]
+    }
+  },
+  "v1_0_10_verification": {
+    "opening_story_log_state": {
+      "passed": true,
+      "artifact_markers": [
+        "openingDrafts",
+        "activeOpeningDraftId",
+        "storyLog",
+        "storyLogSummaries",
+        "opening_story_log"
+      ],
+      "source_markers": {
+        "frontend/src/core/storyLogEngine.ts": {
+          "passed": true,
+          "markers": [
+            "ensureStoryLogSystems",
+            "buildOpeningDraftSeed",
+            "confirmOpeningDraft",
+            "summarizeStoryLog"
+          ]
+        },
+        "frontend/src/core/defaultSave.ts": {
+          "passed": true,
+          "markers": [
+            "SAVE_SCHEMA_VERSION = 10"
+          ]
+        }
+      },
+      "markers": [
+        "openingDrafts",
+        "activeOpeningDraftId",
+        "storyLog",
+        "storyLogSummaries",
+        "opening_story_log"
+      ]
+    },
+    "opening_story_panel": {
+      "passed": true,
+      "artifact_markers": [
+        "showOpeningStoryPanel",
+        "开场草案与故事日志",
+        "生成开场草案",
+        "确认开场",
+        "生成摘要"
+      ],
+      "source_markers": {
+        "frontend/src/components/OpeningStoryPanel.vue": {
+          "passed": true,
+          "markers": [
+            "开场草案与故事日志",
+            "生成开场草案",
+            "确认开场",
+            "生成摘要"
+          ]
+        },
+        "frontend/src/App.vue": {
+          "passed": true,
+          "markers": [
+            "OpeningStoryPanel",
+            "showOpeningStoryPanel"
+          ]
+        }
+      },
+      "markers": [
+        "showOpeningStoryPanel",
+        "开场草案与故事日志",
+        "生成开场草案",
+        "确认开场",
+        "生成摘要"
+      ]
+    },
+    "story_log_worldbook_context": {
+      "passed": true,
+      "artifact_markers": [
+        "storySummary:",
+        "storyLog:",
+        "openingDraftStatus",
+        "storyLogEntries",
+        "storyLogSummaries"
+      ],
+      "source_markers": {
+        "frontend/src/core/worldbook.ts": {
+          "passed": true,
+          "markers": [
+            "opening_story_log",
+            "storySummary:",
+            "storyLog:",
+            "openingDraftStatus"
+          ]
+        }
+      },
+      "markers": [
+        "storySummary:",
+        "storyLog:",
+        "openingDraftStatus",
+        "storyLogEntries",
+        "storyLogSummaries"
+      ]
+    }
+  },
+  "priority_gaps": [
+    {
+      "id": "narrative_full_plot_restoration",
+      "severity": "P0",
+      "evidence": "The current release has a runtime narrative index, achievements, profession progression, reality overlays, scene branches, and an opening/story-log layer. It now has 1882/1882 expanded P4 bridge prompts, 161 article-reviewed P4 paraphrase seeds, and a 15-scene frontend chain. This proves stronger narrative support, but not full original plot restoration: 195 non-P4 deep/source-backed entries cover 260 titles, 0 P4 titles remain compact bridge prompts, and most expanded bridge prompts are still title-taxonomy support rather than article-reviewed deep prose.",
+      "target": "Convert the highest-impact expanded bridge prompts into article-reviewed deep paraphrases and expand the playable chapter/story-log layer before claiming full original plot restoration."
+    },
+    {
+      "id": "worldbook_deep_handwriting",
+      "severity": "P1",
+      "evidence": "Albina covers 2142 titles. The P4 layer now has 1882/1882 expanded bridge prompts, 161 article-reviewed P4 paraphrase seeds, and 0 compact bridge prompts. The remaining expanded bridge prompts still need article-level review before they count as deep hand-written lore.",
+      "target": "Promote the highest-impact expanded bridge entries into article-reviewed deep paraphrases while keeping pure import clean."
+    },
+    {
+      "id": "visual_asset_breadth",
+      "severity": "P2",
+      "evidence": "Albina release manifest exposes 12 backgrounds, 30 CG panels, 18 Albina sprites, 12 protagonist sprites, and 12 supporting sprites. Raster gates pass.",
+      "target": "Keep raster manifest gates passing and continue manual contact-sheet screening for composition, anatomy, route specificity, and no-text/no-watermark issues."
+    },
+    {
+      "id": "fileditch",
+      "severity": "P1",
+      "evidence": "FileDitch uploads still fail with TLS handshake; public assets are GitHub/jsDelivr-hosted.",
+      "target": "Resolve upload path externally or add a deterministic image-host mirroring step once FileDitch accepts TLS."
+    }
+  ]
+}

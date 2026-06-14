@@ -1,0 +1,59 @@
+{
+  "generated_at": "2026-06-01T16:49:34.877325+00:00",
+  "manifest": "docs\\p2-enemy-ecology-source-manifest.json",
+  "manifest_collection_mode": "p2_enemy_ecology_batch",
+  "manifest_page_count": 17,
+  "worldbooks": [
+    {
+      "path": "worldbooks\\albina_p2_enemy_ecology_worldbook.json",
+      "entry_count": 9,
+      "entries_with_source_refs": 9,
+      "source_title_count": 17,
+      "source_titles": [
+        "Ahab/Enemy/Ahab",
+        "Ahab/Enemy/Effloresced E.G.O::GasHarpoon",
+        "Ahab/Sprites",
+        "Aida/Enemy",
+        "Alleyway Watchdog/Enemy",
+        "Ambling Pearl/Enemy",
+        "Ardor Blossom Moth/Enemy",
+        "Bamboo-hatted Kim/Enemy/Distorted Bamboo-hatted Kim",
+        "Bamboo-hatted Kim/Enemy/Distorting Bamboo-hatted Kim",
+        "Bari/Enemy",
+        "Blubbering Toad/Enemy",
+        "Brazen Bull/Enemy",
+        "Butterfly of Entangled Lives 羅生蝶/Enemy/Butterfly of Entangled Lives::Imago",
+        "Butterfly of Entangled Lives 羅生蝶/Enemy/Butterfly of Entangled Lives::The Pupa",
+        "Cassetti/Enemy",
+        "Dead Rabbits Boss/Enemy",
+        "Dulcinea/Enemy"
+      ]
+    }
+  ],
+  "total_worldbook_entries": 9,
+  "entries_with_source_refs": 9,
+  "referenced_source_title_count": 17,
+  "referenced_source_titles_in_manifest": [
+    "Ahab/Enemy/Ahab",
+    "Ahab/Enemy/Effloresced E.G.O::GasHarpoon",
+    "Ahab/Sprites",
+    "Aida/Enemy",
+    "Alleyway Watchdog/Enemy",
+    "Ambling Pearl/Enemy",
+    "Ardor Blossom Moth/Enemy",
+    "Bamboo-hatted Kim/Enemy/Distorted Bamboo-hatted Kim",
+    "Bamboo-hatted Kim/Enemy/Distorting Bamboo-hatted Kim",
+    "Bari/Enemy",
+    "Blubbering Toad/Enemy",
+    "Brazen Bull/Enemy",
+    "Butterfly of Entangled Lives 羅生蝶/Enemy/Butterfly of Entangled Lives::Imago",
+    "Butterfly of Entangled Lives 羅生蝶/Enemy/Butterfly of Entangled Lives::The Pupa",
+    "Cassetti/Enemy",
+    "Dead Rabbits Boss/Enemy",
+    "Dulcinea/Enemy"
+  ],
+  "source_titles_missing_from_manifest": [],
+  "unreferenced_manifest_title_count": 0,
+  "unreferenced_manifest_title_sample": [],
+  "passed": true
+}

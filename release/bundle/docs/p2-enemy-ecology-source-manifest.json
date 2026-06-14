@@ -1,0 +1,306 @@
+{
+  "generated_at": "2026-06-01T16:41:21.955489+00:00",
+  "source_api": "https://limbuscompany.wiki.gg/api.php",
+  "siteinfo": {
+    "general": {
+      "mainpage": "Limbus Company Wiki",
+      "base": "https://limbuscompany.wiki.gg/",
+      "sitename": "Limbus Company Wiki",
+      "mainpageisdomainroot": "",
+      "logo": "https://limbuscompany.wiki.gg/images/Site-logo.png?b1770e",
+      "generator": "MediaWiki 1.43.6",
+      "phpversion": "8.1.33",
+      "phpsapi": "fpm-fcgi",
+      "dbtype": "mysql",
+      "dbversion": "8.0.44",
+      "langconversion": "",
+      "linkconversion": "",
+      "titleconversion": "",
+      "linkprefixcharset": "",
+      "linkprefix": "",
+      "linktrail": "/^([a-z]+)(.*)$/sD",
+      "legaltitlechars": " %!\"$&'()*,\\-.\\/0-9:;=?@A-Z\\\\^_`a-z~\\x80-\\xFF+",
+      "invalidusernamechars": "@:>=",
+      "fixarabicunicode": "",
+      "fixmalayalamunicode": "",
+      "git-hash": "dbfc242be0bbaa1551cc67889356563042d8333b",
+      "git-branch": "wgg/1.43",
+      "case": "first-letter",
+      "lang": "en",
+      "fallback": [],
+      "fallback8bitEncoding": "windows-1252",
+      "writeapi": "",
+      "maxarticlesize": 4194304,
+      "timezone": "UTC",
+      "timeoffset": 0,
+      "articlepath": "/wiki/$1",
+      "scriptpath": "",
+      "script": "/index.php",
+      "variantarticlepath": "/wiki/$1?variant=$2",
+      "server": "https://limbuscompany.wiki.gg",
+      "servername": "limbuscompany.wiki.gg",
+      "wikiid": "limbuscompany_en",
+      "time": "2026-06-01T16:41:21Z",
+      "uploadsenabled": "",
+      "maxuploadsize": 15728640,
+      "minuploadchunksize": 1024,
+      "galleryoptions": {
+        "imagesPerRow": 0,
+        "imageWidth": 120,
+        "imageHeight": 120,
+        "captionLength": "",
+        "showBytes": "",
+        "showDimensions": "",
+        "mode": "traditional"
+      },
+      "thumblimits": [
+        160,
+        240,
+        320
+      ],
+      "imagelimits": [
+        {
+          "width": 320,
+          "height": 240
+        },
+        {
+          "width": 640,
+          "height": 480
+        },
+        {
+          "width": 1280,
+          "height": 1024
+        },
+        {
+          "width": 2560,
+          "height": 2048
+        }
+      ],
+      "favicon": "https://limbuscompany.wiki.gg/images/Site-favicon.ico?9d194e",
+      "centralidlookupprovider": "local",
+      "allcentralidlookupproviders": [
+        "local"
+      ],
+      "interwikimagic": "",
+      "magiclinks": [],
+      "categorycollation": "uppercase",
+      "nofollowlinks": "",
+      "nofollownsexceptions": [],
+      "nofollowdomainexceptions": [
+        "mediawiki.org",
+        "wiki.gg",
+        "indie.io",
+        "freedom.gg",
+        "mediawiki.org"
+      ],
+      "max-page-id": 36383,
+      "citeresponsivereferences": ""
+    },
+    "statistics": {
+      "pages": 33937,
+      "articles": 2133,
+      "edits": 172489,
+      "images": 26866,
+      "users": 655267,
+      "activeusers": 188,
+      "admins": 10,
+      "jobs": 0,
+      "cirrussearch-article-words": 1261740
+    }
+  },
+  "policy": "metadata_only_no_article_text_saved",
+  "collection_mode": "p2_enemy_ecology_batch",
+  "namespace": null,
+  "requested_titles": [
+    "Ahab/Enemy/Ahab",
+    "Ahab/Enemy/Effloresced E.G.O::GasHarpoon",
+    "Ahab/Sprites",
+    "Aida/Enemy",
+    "Alleyway Watchdog/Enemy",
+    "Ambling Pearl/Enemy",
+    "Ardor Blossom Moth/Enemy",
+    "Bamboo-hatted Kim/Enemy/Distorted Bamboo-hatted Kim",
+    "Bamboo-hatted Kim/Enemy/Distorting Bamboo-hatted Kim",
+    "Bari/Enemy",
+    "Blubbering Toad/Enemy",
+    "Brazen Bull/Enemy",
+    "Butterfly of Entangled Lives 羅生蝶/Enemy/Butterfly of Entangled Lives::Imago",
+    "Butterfly of Entangled Lives 羅生蝶/Enemy/Butterfly of Entangled Lives::The Pupa",
+    "Cassetti/Enemy",
+    "Dead Rabbits Boss/Enemy",
+    "Dulcinea/Enemy"
+  ],
+  "pages": [
+    {
+      "requested_title": "Ahab/Enemy/Ahab",
+      "title": "Ahab/Enemy/Ahab",
+      "pageid": 3961,
+      "length": 8455,
+      "lastrevid": 167833,
+      "touched": "2026-05-07T09:12:01Z",
+      "fullurl": "https://limbuscompany.wiki.gg/wiki/Ahab/Enemy/Ahab",
+      "canonicalurl": "https://limbuscompany.wiki.gg/wiki/Ahab/Enemy/Ahab"
+    },
+    {
+      "requested_title": "Ahab/Enemy/Effloresced E.G.O::GasHarpoon",
+      "title": "Ahab/Enemy/Effloresced E.G.O::GasHarpoon",
+      "pageid": 10687,
+      "length": 36036,
+      "lastrevid": 168694,
+      "touched": "2026-05-11T00:51:43Z",
+      "fullurl": "https://limbuscompany.wiki.gg/wiki/Ahab/Enemy/Effloresced_E.G.O::GasHarpoon",
+      "canonicalurl": "https://limbuscompany.wiki.gg/wiki/Ahab/Enemy/Effloresced_E.G.O::GasHarpoon"
+    },
+    {
+      "requested_title": "Ahab/Sprites",
+      "title": "Ahab/Sprites",
+      "pageid": 13470,
+      "length": 1448,
+      "lastrevid": 62150,
+      "touched": "2025-08-24T00:38:07Z",
+      "fullurl": "https://limbuscompany.wiki.gg/wiki/Ahab/Sprites",
+      "canonicalurl": "https://limbuscompany.wiki.gg/wiki/Ahab/Sprites"
+    },
+    {
+      "requested_title": "Aida/Enemy",
+      "title": "Aida/Enemy",
+      "pageid": 7692,
+      "length": 12744,
+      "lastrevid": 155545,
+      "touched": "2026-02-17T01:30:20Z",
+      "fullurl": "https://limbuscompany.wiki.gg/wiki/Aida/Enemy",
+      "canonicalurl": "https://limbuscompany.wiki.gg/wiki/Aida/Enemy"
+    },
+    {
+      "requested_title": "Alleyway Watchdog/Enemy",
+      "title": "Alleyway Watchdog/Enemy",
+      "pageid": 3598,
+      "length": 52976,
+      "lastrevid": 168280,
+      "touched": "2026-05-04T14:31:27Z",
+      "fullurl": "https://limbuscompany.wiki.gg/wiki/Alleyway_Watchdog/Enemy",
+      "canonicalurl": "https://limbuscompany.wiki.gg/wiki/Alleyway_Watchdog/Enemy"
+    },
+    {
+      "requested_title": "Ambling Pearl/Enemy",
+      "title": "Ambling Pearl/Enemy",
+      "pageid": 12101,
+      "length": 19331,
+      "lastrevid": 167246,
+      "touched": "2026-04-26T22:06:15Z",
+      "fullurl": "https://limbuscompany.wiki.gg/wiki/Ambling_Pearl/Enemy",
+      "canonicalurl": "https://limbuscompany.wiki.gg/wiki/Ambling_Pearl/Enemy"
+    },
+    {
+      "requested_title": "Ardor Blossom Moth/Enemy",
+      "title": "Ardor Blossom Moth/Enemy",
+      "pageid": 5192,
+      "length": 35430,
+      "lastrevid": 167208,
+      "touched": "2026-04-26T21:47:01Z",
+      "fullurl": "https://limbuscompany.wiki.gg/wiki/Ardor_Blossom_Moth/Enemy",
+      "canonicalurl": "https://limbuscompany.wiki.gg/wiki/Ardor_Blossom_Moth/Enemy"
+    },
+    {
+      "requested_title": "Bamboo-hatted Kim/Enemy/Distorted Bamboo-hatted Kim",
+      "title": "Bamboo-hatted Kim/Enemy/Distorted Bamboo-hatted Kim",
+      "pageid": 11960,
+      "length": 16615,
+      "lastrevid": 171429,
+      "touched": "2026-05-27T02:19:02Z",
+      "fullurl": "https://limbuscompany.wiki.gg/wiki/Bamboo-hatted_Kim/Enemy/Distorted_Bamboo-hatted_Kim",
+      "canonicalurl": "https://limbuscompany.wiki.gg/wiki/Bamboo-hatted_Kim/Enemy/Distorted_Bamboo-hatted_Kim"
+    },
+    {
+      "requested_title": "Bamboo-hatted Kim/Enemy/Distorting Bamboo-hatted Kim",
+      "title": "Bamboo-hatted Kim/Enemy/Distorting Bamboo-hatted Kim",
+      "pageid": 20046,
+      "length": 13451,
+      "lastrevid": 171417,
+      "touched": "2026-05-27T02:01:42Z",
+      "fullurl": "https://limbuscompany.wiki.gg/wiki/Bamboo-hatted_Kim/Enemy/Distorting_Bamboo-hatted_Kim",
+      "canonicalurl": "https://limbuscompany.wiki.gg/wiki/Bamboo-hatted_Kim/Enemy/Distorting_Bamboo-hatted_Kim"
+    },
+    {
+      "requested_title": "Bari/Enemy",
+      "title": "Bari/Enemy",
+      "pageid": 16707,
+      "length": 7232,
+      "lastrevid": 156417,
+      "touched": "2026-03-17T19:54:42Z",
+      "fullurl": "https://limbuscompany.wiki.gg/wiki/Bari/Enemy",
+      "canonicalurl": "https://limbuscompany.wiki.gg/wiki/Bari/Enemy"
+    },
+    {
+      "requested_title": "Blubbering Toad/Enemy",
+      "title": "Blubbering Toad/Enemy",
+      "pageid": 8766,
+      "length": 27873,
+      "lastrevid": 167999,
+      "touched": "2026-05-01T10:40:02Z",
+      "fullurl": "https://limbuscompany.wiki.gg/wiki/Blubbering_Toad/Enemy",
+      "canonicalurl": "https://limbuscompany.wiki.gg/wiki/Blubbering_Toad/Enemy"
+    },
+    {
+      "requested_title": "Brazen Bull/Enemy",
+      "title": "Brazen Bull/Enemy",
+      "pageid": 8905,
+      "length": 19691,
+      "lastrevid": 168152,
+      "touched": "2026-05-03T01:11:17Z",
+      "fullurl": "https://limbuscompany.wiki.gg/wiki/Brazen_Bull/Enemy",
+      "canonicalurl": "https://limbuscompany.wiki.gg/wiki/Brazen_Bull/Enemy"
+    },
+    {
+      "requested_title": "Butterfly of Entangled Lives 羅生蝶/Enemy/Butterfly of Entangled Lives::Imago",
+      "title": "Butterfly of Entangled Lives 羅生蝶/Enemy/Butterfly of Entangled Lives::Imago",
+      "pageid": 36341,
+      "length": 25635,
+      "lastrevid": 172089,
+      "touched": "2026-05-31T00:18:53Z",
+      "fullurl": "https://limbuscompany.wiki.gg/wiki/Butterfly_of_Entangled_Lives_%E7%BE%85%E7%94%9F%E8%9D%B6/Enemy/Butterfly_of_Entangled_Lives::Imago",
+      "canonicalurl": "https://limbuscompany.wiki.gg/wiki/Butterfly_of_Entangled_Lives_%E7%BE%85%E7%94%9F%E8%9D%B6/Enemy/Butterfly_of_Entangled_Lives::Imago"
+    },
+    {
+      "requested_title": "Butterfly of Entangled Lives 羅生蝶/Enemy/Butterfly of Entangled Lives::The Pupa",
+      "title": "Butterfly of Entangled Lives 羅生蝶/Enemy/Butterfly of Entangled Lives::The Pupa",
+      "pageid": 36259,
+      "length": 5658,
+      "lastrevid": 172359,
+      "touched": "2026-06-01T15:55:38Z",
+      "fullurl": "https://limbuscompany.wiki.gg/wiki/Butterfly_of_Entangled_Lives_%E7%BE%85%E7%94%9F%E8%9D%B6/Enemy/Butterfly_of_Entangled_Lives::The_Pupa",
+      "canonicalurl": "https://limbuscompany.wiki.gg/wiki/Butterfly_of_Entangled_Lives_%E7%BE%85%E7%94%9F%E8%9D%B6/Enemy/Butterfly_of_Entangled_Lives::The_Pupa"
+    },
+    {
+      "requested_title": "Cassetti/Enemy",
+      "title": "Cassetti/Enemy",
+      "pageid": 14041,
+      "length": 20531,
+      "lastrevid": 171452,
+      "touched": "2026-05-27T02:35:53Z",
+      "fullurl": "https://limbuscompany.wiki.gg/wiki/Cassetti/Enemy",
+      "canonicalurl": "https://limbuscompany.wiki.gg/wiki/Cassetti/Enemy"
+    },
+    {
+      "requested_title": "Dead Rabbits Boss/Enemy",
+      "title": "Dead Rabbits Boss/Enemy",
+      "pageid": 4274,
+      "length": 17483,
+      "lastrevid": 167847,
+      "touched": "2026-04-30T17:15:31Z",
+      "fullurl": "https://limbuscompany.wiki.gg/wiki/Dead_Rabbits_Boss/Enemy",
+      "canonicalurl": "https://limbuscompany.wiki.gg/wiki/Dead_Rabbits_Boss/Enemy"
+    },
+    {
+      "requested_title": "Dulcinea/Enemy",
+      "title": "Dulcinea/Enemy",
+      "pageid": 16695,
+      "length": 47365,
+      "lastrevid": 171380,
+      "touched": "2026-05-27T01:26:18Z",
+      "fullurl": "https://limbuscompany.wiki.gg/wiki/Dulcinea/Enemy",
+      "canonicalurl": "https://limbuscompany.wiki.gg/wiki/Dulcinea/Enemy"
+    }
+  ],
+  "missing_titles": []
+}

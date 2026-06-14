@@ -1,0 +1,53 @@
+{
+  "generated_at": "2026-06-02T00:05:43.864409+00:00",
+  "manifest": "docs\\p2-urban-factions-source-manifest.json",
+  "manifest_collection_mode": "explicit_titles",
+  "manifest_page_count": 14,
+  "worldbooks": [
+    {
+      "path": "worldbooks\\albina_p2_urban_factions_worldbook.json",
+      "entry_count": 9,
+      "entries_with_source_refs": 9,
+      "source_title_count": 14,
+      "source_titles": [
+        "Blade Lineage",
+        "Cinq Association",
+        "Devyat' Association",
+        "Dieci Association",
+        "Fixers",
+        "Kurokumo Clan",
+        "Liu Association",
+        "Offices",
+        "Seven Association",
+        "Shi Association",
+        "Syndicates",
+        "The Index",
+        "Zwei Association",
+        "Öufi Association"
+      ]
+    }
+  ],
+  "total_worldbook_entries": 9,
+  "entries_with_source_refs": 9,
+  "referenced_source_title_count": 14,
+  "referenced_source_titles_in_manifest": [
+    "Blade Lineage",
+    "Cinq Association",
+    "Devyat' Association",
+    "Dieci Association",
+    "Fixers",
+    "Kurokumo Clan",
+    "Liu Association",
+    "Offices",
+    "Seven Association",
+    "Shi Association",
+    "Syndicates",
+    "The Index",
+    "Zwei Association",
+    "Öufi Association"
+  ],
+  "source_titles_missing_from_manifest": [],
+  "unreferenced_manifest_title_count": 0,
+  "unreferenced_manifest_title_sample": [],
+  "passed": true
+}
