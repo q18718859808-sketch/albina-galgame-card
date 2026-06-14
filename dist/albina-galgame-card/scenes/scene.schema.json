@@ -1,0 +1,40 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Albina Galgame Scene",
+  "type": "object",
+  "required": [
+    "id",
+    "route",
+    "background",
+    "characters",
+    "speaker",
+    "text",
+    "choices"
+  ],
+  "properties": {
+    "id": {
+      "type": "string"
+    },
+    "route": {
+      "type": "string"
+    },
+    "background": {
+      "type": "string"
+    },
+    "cg": {
+      "type": "string"
+    },
+    "characters": {
+      "type": "array"
+    },
+    "speaker": {
+      "type": "string"
+    },
+    "text": {
+      "type": "string"
+    },
+    "choices": {
+      "type": "array"
+    }
+  }
+}

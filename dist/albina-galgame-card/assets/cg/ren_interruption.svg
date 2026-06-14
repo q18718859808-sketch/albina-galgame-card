@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1920" height="1080" viewBox="0 0 1920 1080">
+
+  <defs>
+    <linearGradient id="city" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#08080d"/>
+      <stop offset="0.42" stop-color="#17202a"/>
+      <stop offset="1" stop-color="#3a1119"/>
+    </linearGradient>
+    <linearGradient id="gold" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#fff7c9"/>
+      <stop offset="0.48" stop-color="#d5a83d"/>
+      <stop offset="1" stop-color="#8b5d18"/>
+    </linearGradient>
+    <linearGradient id="porcelain" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#f7fbff"/>
+      <stop offset="0.52" stop-color="#b9c6ce"/>
+      <stop offset="1" stop-color="#59636a"/>
+    </linearGradient>
+    <filter id="softGlow"><feGaussianBlur stdDeviation="6" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+    <filter id="grain"><feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="3" stitchTiles="stitch"/><feColorMatrix type="saturate" values="0"/><feComponentTransfer><feFuncA type="table" tableValues="0 0.13"/></feComponentTransfer></filter>
+  </defs>
+
+<rect width="1920" height="1080" fill="url(#city)"/>
+<rect width="1920" height="1080" filter="url(#grain)" opacity=".45"/>
+<path d="M0 780 C420 660 620 880 930 740 C1240 600 1500 700 1920 610 L1920 1080 L0 1080 Z" fill="#05070b" opacity=".88"/>
+<g filter="url(#softGlow)"><path d="M1342 180 C1432 100 1532 300 1652 200" stroke="#6aa0c8" stroke-opacity=".22" stroke-width="2" fill="none"/><path d="M1439 227 C1529 147 1629 347 1749 247" stroke="#6aa0c8" stroke-opacity=".22" stroke-width="3" fill="none"/><path d="M1536 274 C1626 194 1726 394 1846 294" stroke="#6aa0c8" stroke-opacity=".22" stroke-width="4" fill="none"/><path d="M1633 321 C1723 241 1823 441 1943 341" stroke="#6aa0c8" stroke-opacity=".22" stroke-width="5" fill="none"/><path d="M1730 368 C1820 288 1920 488 2040 388" stroke="#6aa0c8" stroke-opacity=".22" stroke-width="2" fill="none"/><path d="M1827 415 C1917 335 2017 535 2137 435" stroke="#6aa0c8" stroke-opacity=".22" stroke-width="3" fill="none"/><path d="M4 462 C94 382 194 582 314 482" stroke="#6aa0c8" stroke-opacity=".22" stroke-width="4" fill="none"/><path d="M101 509 C191 429 291 629 411 529" stroke="#6aa0c8" stroke-opacity=".22" stroke-width="5" fill="none"/><path d="M198 556 C288 476 388 676 508 576" stroke="#6aa0c8" stroke-opacity=".22" stroke-width="2" fill="none"/><path d="M295 603 C385 523 485 723 605 623" stroke="#6aa0c8" stroke-opacity=".22" stroke-width="3" fill="none"/><path d="M392 650 C482 570 582 770 702 670" stroke="#6aa0c8" stroke-opacity=".22" stroke-width="4" fill="none"/><path d="M489 697 C579 617 679 817 799 717" stroke="#6aa0c8" stroke-opacity=".22" stroke-width="5" fill="none"/><path d="M586 744 C676 664 776 864 896 764" stroke="#6aa0c8" stroke-opacity=".22" stroke-width="2" fill="none"/><path d="M683 791 C773 711 873 911 993 811" stroke="#6aa0c8" stroke-opacity=".22" stroke-width="3" fill="none"/><path d="M780 838 C870 758 970 958 1090 858" stroke="#6aa0c8" stroke-opacity=".22" stroke-width="4" fill="none"/><path d="M877 885 C967 805 1067 1005 1187 905" stroke="#6aa0c8" stroke-opacity=".22" stroke-width="5" fill="none"/><path d="M974 932 C1064 852 1164 1052 1284 952" stroke="#6aa0c8" stroke-opacity=".22" stroke-width="2" fill="none"/><path d="M1071 219 C1161 139 1261 339 1381 239" stroke="#6aa0c8" stroke-opacity=".22" stroke-width="3" fill="none"/><path d="M1168 266 C1258 186 1358 386 1478 286" stroke="#6aa0c8" stroke-opacity=".22" stroke-width="4" fill="none"/><path d="M1265 313 C1355 233 1455 433 1575 333" stroke="#6aa0c8" stroke-opacity=".22" stroke-width="5" fill="none"/></g>
+<g><path d="M510 885 C450 610 580 500 700 560 C825 620 780 890 745 1010 L470 1010 Z" fill="#e8edf1" stroke="#6aa0c8" stroke-opacity=".55" stroke-width="8"/><circle cx="620" cy="505" r="74" fill="#e8edf1" stroke="#e0b252" stroke-width="7"/><path d="M1110 885 C1050 610 1180 500 1300 560 C1425 620 1380 890 1345 1010 L1070 1010 Z" fill="#111820" stroke="#6aa0c8" stroke-opacity=".55" stroke-width="8"/><circle cx="1220" cy="505" r="74" fill="#111820" stroke="#e0b252" stroke-width="7"/></g>
+<path d="M0 0 H1920 V1080 H0 Z" fill="none" stroke="#6aa0c8" stroke-opacity=".35" stroke-width="28"/>
+<text x="96" y="120" fill="#f8edc6" opacity=".42" font-size="42" font-family="serif">Ren Interruption</text>
+<text x="96" y="174" fill="#c7d7e8" opacity=".24" font-size="24" font-family="serif">backstreets_rain</text>
+</svg>

@@ -1,0 +1,223 @@
+{
+  "name": "阿尔比娜 P2 敌对生态补充",
+  "description": "面向沉浸式 RP 导入的敌人、异想体与战斗氛围补充包。",
+  "entries": [
+    {
+      "uid": "p2_enemy_ecology_ahab_harpoon_command_pressure",
+      "key": [
+        "Ahab/Enemy/Ahab",
+        "Ahab/Enemy/Effloresced E.G.O::GasHarpoon",
+        "Ahab/Sprites",
+        "Ahab",
+        "GasHarpoon",
+        "Effloresced E.G.O"
+      ],
+      "keysecondary": [
+        "Albina",
+        "Pequod",
+        "Ishmael",
+        "enemy ecology"
+      ],
+      "comment": "P2：Ahab 指挥压力与 GasHarpoon 阶段化演出",
+      "content": "Ahab 系敌方页在 RP 中应承担指挥型高压敌人的功能，而不是普通强敌标签。基础 Ahab、Effloresced E.G.O::GasHarpoon 与 Ahab/Sprites 共同提示她的叙事用途：一个人的意志可以把战场压缩成航线、命令、追猎和被迫服从的集合。写她出场时，要把空气写得像被鱼叉钉住，队伍成员会先感到方向被夺走，然后才意识到攻击已经逼近。Albina 遇到这类敌人时不应立刻把对方降格成素材，她会先辨认那种把执念组织成战术的力量，并在礼貌背后露出谨慎。若前端未确认战斗结果，AI 只描写命令压迫、外观阶段感、追击节奏和角色心理反应，不自行判定击破、捕获或人格崩溃。",
+      "constant": false,
+      "selective": true,
+      "position": "after_character_definition",
+      "order": 6100,
+      "disable": false
+    },
+    {
+      "uid": "p2_enemy_ecology_backstreet_human_bosses",
+      "key": [
+        "Aida/Enemy",
+        "Dead Rabbits Boss/Enemy",
+        "Aida",
+        "Dead Rabbits Boss",
+        "Backstreets boss",
+        "human enemy"
+      ],
+      "keysecondary": [
+        "Albina",
+        "Limbus Company",
+        "Fixer",
+        "urban violence"
+      ],
+      "comment": "P2：都市人类头目与街区暴力生态",
+      "content": "Aida/Enemy 与 Dead Rabbits Boss/Enemy 适合合并成都市人类头目的 RP 生态入口。它们的作用不是把敌人写成无名杂兵，而是提醒场景中存在街区名号、帮派姿态、临场威吓和人类组织暴力。遇到这类敌人时，战斗前的视线、站位、叫嚣、旧账和围观者沉默都比单纯挥刀更重要。Albina 可以把这些人看作都市粗糙面的活标本：他们没有艺术家的修辞，却把生存方式磨成了可被展示的轮廓。AI 应保持敌人的人类尺度，不把他们夸写成超自然灾厄；真正的压迫来自人群秩序、地盘规则和失败后会被继续追讨的现实后果。",
+      "constant": false,
+      "selective": true,
+      "position": "after_character_definition",
+      "order": 6110,
+      "disable": false
+    },
+    {
+      "uid": "p2_enemy_ecology_wet_alley_abnormalities",
+      "key": [
+        "Alleyway Watchdog/Enemy",
+        "Ambling Pearl/Enemy",
+        "Blubbering Toad/Enemy",
+        "Alleyway Watchdog",
+        "Ambling Pearl",
+        "Blubbering Toad",
+        "Abnormality"
+      ],
+      "keysecondary": [
+        "Albina",
+        "Sin resonance",
+        "abnormality ecology",
+        "environmental pressure"
+      ],
+      "comment": "P2：潮湿巷道系异想体的环境压迫",
+      "content": "Alleyway Watchdog/Enemy、Ambling Pearl/Enemy 与 Blubbering Toad/Enemy 可作为潮湿、狭窄、反复缠身的异想体生态组使用。RP 中不要只写怪物外形，要让场地也参与压迫：巷道回声、湿痕、慢速逼近、无法立即甩脱的注视，以及角色在判断是否接近时的迟疑。Albina 对这类存在的兴趣会偏向感官层面，她会观察表面光泽、呼吸节奏、粘滞感和行动留下的痕迹，但她不会在前端确认前擅自给出弱点或掉落。适合触发低能见度探索、队伍被迫改道、用户需要决定是否冒险接触的场景。",
+      "constant": false,
+      "selective": true,
+      "position": "after_character_definition",
+      "order": 6120,
+      "disable": false
+    },
+    {
+      "uid": "p2_enemy_ecology_heat_and_charge_abnormalities",
+      "key": [
+        "Ardor Blossom Moth/Enemy",
+        "Brazen Bull/Enemy",
+        "Ardor Blossom Moth",
+        "Brazen Bull",
+        "flame pressure",
+        "charge pressure"
+      ],
+      "keysecondary": [
+        "Albina",
+        "Abnormality",
+        "combat staging",
+        "heat"
+      ],
+      "comment": "P2：灼热与冲撞型异想体舞台",
+      "content": "Ardor Blossom Moth/Enemy 与 Brazen Bull/Enemy 可作为高热、冲击和不可久留场地的生态组。写这类敌人时，重点是让玩家感到安全距离不断被削短：热浪压低呼吸，地面震动提前暴露下一次冲撞，角色的衣料、金属和皮肤感受先于理性作出反应。Albina 会被这种粗暴明亮的存在吸引，因为它们不像 Ring 式作品那样精密，却能用单一压迫把人的姿态逼出极限。AI 不应擅自写出具体耐性、阶段锁或技能倍率，只把热、光、冲击、扑近和撤离选择转化为 RP 可见的压力。",
+      "constant": false,
+      "selective": true,
+      "position": "after_character_definition",
+      "order": 6130,
+      "disable": false
+    },
+    {
+      "uid": "p2_enemy_ecology_bamboo_hatted_kim_distortion_path",
+      "key": [
+        "Bamboo-hatted Kim/Enemy/Distorted Bamboo-hatted Kim",
+        "Bamboo-hatted Kim/Enemy/Distorting Bamboo-hatted Kim",
+        "Bamboo-hatted Kim",
+        "Distorted Bamboo-hatted Kim",
+        "Distorting Bamboo-hatted Kim",
+        "Distortion"
+      ],
+      "keysecondary": [
+        "Albina",
+        "sword duel",
+        "honor collapse",
+        "single boss pressure"
+      ],
+      "comment": "P2：Bamboo-hatted Kim 的扭曲路径与决斗感",
+      "content": "Bamboo-hatted Kim 的两个 Enemy 页面应在 RP 中形成一条从临界到定型的扭曲路径。写他时不要把重点放在怪物化外观，而要写一个已经被某种执念拉到刀锋尽头的人：沉默、礼节、架势、出刀前的空白，以及队伍意识到自己面对的不是街头斗殴而是决斗场。Distorting 与 Distorted 两个状态适合用于不同场景强度，前者保留崩裂前的迟滞和不稳定，后者强调已经成形的压迫。Albina 会对这种将自我折成战斗姿态的过程产生冷静兴趣，但她不应替代战斗系统宣布对方是否仍可挽回。",
+      "constant": false,
+      "selective": true,
+      "position": "after_character_definition",
+      "order": 6140,
+      "disable": false
+    },
+    {
+      "uid": "p2_enemy_ecology_bari_named_encounter",
+      "key": [
+        "Bari/Enemy",
+        "Bari",
+        "named enemy",
+        "duel encounter",
+        "Canto encounter"
+      ],
+      "keysecondary": [
+        "Albina",
+        "Limbus Company",
+        "named opponent",
+        "scene authority"
+      ],
+      "comment": "P2：Bari 命名敌人的场面权重",
+      "content": "Bari/Enemy 应作为命名敌人的场面权重触发项使用。只要该内容命中，叙事就不该把 Bari 写成路障，而要把她写成一个能改变现场礼法的人：说话前的停顿、对距离的掌控、对队伍反应的观察，以及她进入战斗后周围角色不自觉降低声量的变化。Albina 面对 Bari 时会更注意对方如何占据叙事中心，因为这类敌人往往不是靠数量压制玩家，而是靠身份、姿态和已发生过的故事把选择空间缩窄。AI 不应补写未确认的身世细节，只保留命名敌人应有的压迫、辨识度和交涉余地。",
+      "constant": false,
+      "selective": true,
+      "position": "after_character_definition",
+      "order": 6150,
+      "disable": false
+    },
+    {
+      "uid": "p2_enemy_ecology_entangled_butterfly_life_cycle",
+      "key": [
+        "Butterfly of Entangled Lives 羅生蝶/Enemy/Butterfly of Entangled Lives::Imago",
+        "Butterfly of Entangled Lives 羅生蝶/Enemy/Butterfly of Entangled Lives::The Pupa",
+        "Butterfly of Entangled Lives",
+        "羅生蝶",
+        "Imago",
+        "The Pupa",
+        "life cycle"
+      ],
+      "keysecondary": [
+        "Albina",
+        "Abnormality",
+        "metamorphosis",
+        "memory pressure"
+      ],
+      "comment": "P2：羅生蝶的蛹与成体阶段叙事",
+      "content": "Butterfly of Entangled Lives 羅生蝶 的 Pupa 与 Imago 两个 Enemy 页面适合写成阶段化生命循环，而不是两种互不相干的敌人。RP 中应把蛹态写成凝滞、包裹、未完成和被迫等待的压力，把成体写成展开、飞散、牵连和难以收束的压力。Albina 会把这种阶段差异看成作品从草稿到完成的残酷转化，但她的审美兴趣不能替代战斗事实。适合用于记忆、蜕变、选择代价和角色被迫面对过去痕迹的场景。AI 只描述阶段感、群像反应和空间氛围，不擅自判定孵化条件、特殊资源或最终奖励。",
+      "constant": false,
+      "selective": true,
+      "position": "after_character_definition",
+      "order": 6160,
+      "disable": false
+    },
+    {
+      "uid": "p2_enemy_ecology_bloodfiend_aristocratic_horror",
+      "key": [
+        "Cassetti/Enemy",
+        "Dulcinea/Enemy",
+        "Cassetti",
+        "Dulcinea",
+        "Bloodfiend",
+        "aristocratic horror",
+        "La Manchaland"
+      ],
+      "keysecondary": [
+        "Albina",
+        "Don Quixote",
+        "blood court",
+        "noble enemy"
+      ],
+      "comment": "P2：Cassetti 与 Dulcinea 的贵族式恐怖",
+      "content": "Cassetti/Enemy 与 Dulcinea/Enemy 适合构成血族贵族式恐怖的 RP 入口。与街区头目不同，这类敌人的压迫感来自礼仪、称谓、血统位置和舞台化的优雅残酷。Cassetti 可用于较直接的危险和失控接触，Dulcinea 则更适合写成美丽、权威、残忍和仪式感交叠的中心。Albina 在这类场景中会被对方的装饰性与暴力性同时吸引，因为它们接近她熟悉的展览逻辑，却把观众也纳入餐桌或舞台。AI 应避免把贵族恐怖写成单纯吸血模板，而要表现言行礼节如何让暴力显得更冷、更慢、更难拒绝。",
+      "constant": false,
+      "selective": true,
+      "position": "after_character_definition",
+      "order": 6170,
+      "disable": false
+    },
+    {
+      "uid": "p2_enemy_ecology_frontend_authority_boundary",
+      "key": [
+        "enemy ecology",
+        "battle authority",
+        "enemy ecology",
+        "Albina combat RP",
+        "Enemy page"
+      ],
+      "keysecondary": [
+        "Ahab",
+        "Bamboo-hatted Kim",
+        "Dulcinea",
+        "Abnormality"
+      ],
+      "comment": "P2：敌人生态内容的战斗权限边界",
+      "content": "本批 Enemy 内容的共同用途是给 RP 提供敌人生态、舞台压力和角色反应，而不是让 AI 接管前端战斗。若命中 Ahab、Bamboo-hatted Kim、Bari、Dulcinea 或异想体敌人，AI 可以写敌人的出场重量、行动倾向、压迫方式、Albina 的审美反应、队伍成员的临场判断和用户可选择的行动方向。AI 不得自行宣布敌人血量归零、阶段跳转、特殊机制触发、战利品获得或剧情结局。数值、状态、路线、CG 与长期事实以独立前端和已确认聊天变量为准。这个边界能让背景包既保留 canon_lore 的还原度，又不污染 Galgame 前端的权威状态。",
+      "constant": false,
+      "selective": true,
+      "position": "after_character_definition",
+      "order": 6180,
+      "disable": false
+    }
+  ]
+}

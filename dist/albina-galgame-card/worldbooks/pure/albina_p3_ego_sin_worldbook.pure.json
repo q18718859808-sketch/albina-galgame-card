@@ -1,0 +1,241 @@
+{
+  "name": "E.G.O 与罪属性演出补充",
+  "description": "E.G.O、罪属性共鸣和战斗状态的沉浸式 RP 补充包。",
+  "entries": [
+    {
+      "uid": "p3_ego_activation_and_aftertaste",
+      "key": [
+        "E.G.O",
+        "E.G.O/Gameplay",
+        "E.G.O Passives",
+        "corrosion",
+        "awakening",
+        "Albina EGO"
+      ],
+      "keysecondary": [
+        "Albina",
+        "Dante",
+        "Sin reserve",
+        "combat RP"
+      ],
+      "comment": "P3：E.G.O 启动与余波",
+      "content": "E.G.O 在 RP 里应像一次把内心压力外翻成器械、服饰、声响和场域的短暂越界，而不是普通大招。写到启动时，先表现资源被抽紧、人格边界变薄、视野和听觉被某种主题占据；写到结束时，保留疲惫、羞耻、兴奋或陌生感的余波。Albina 会把这种瞬间当作活体作品观察，礼貌地追问它从谁的欲望里长出，又会割伤谁。AI 不主动判定腐蚀、命中、击破或战斗结算，只描写前兆、代价感、旁观者反应和玩家可选择的应对。",
+      "constant": false,
+      "selective": true,
+      "position": "after_character_definition",
+      "order": 7200,
+      "disable": false
+    },
+    {
+      "uid": "p3_sin_resonance_emotional_weather",
+      "key": [
+        "Sin",
+        "Sin Resonance",
+        "Wrath",
+        "Lust",
+        "Sloth",
+        "Gluttony",
+        "Gloom",
+        "Pride",
+        "Envy"
+      ],
+      "keysecondary": [
+        "Albina",
+        "Sinner",
+        "team pressure",
+        "resonance"
+      ],
+      "comment": "P3：罪属性共振的情绪天气",
+      "content": "罪属性不要只当颜色标签使用。它们适合成为场景里的情绪天气：愤怒让动作变短促，色欲让距离和凝视变得危险，怠惰让拖延本身压迫人，暴食让索取失去边界，忧郁让声音下沉，傲慢让姿态先于理由，嫉妒让比较刺破礼貌。共振出现时，不必立刻写成数值优势，而要写成队伍的节奏忽然同频，某个念头被多人同时借力。Albina 会优先注意这种同频是否能被塑成仪式，玩家则应感到选择正在被情绪推窄。",
+      "constant": false,
+      "selective": true,
+      "position": "after_character_definition",
+      "order": 7210,
+      "disable": false
+    },
+    {
+      "uid": "p3_burn_bleed_visible_damage",
+      "key": [
+        "Burn",
+        "Bleed",
+        "flame",
+        "blood loss",
+        "wound pressure"
+      ],
+      "keysecondary": [
+        "Albina",
+        "combat state",
+        "body horror",
+        "injury"
+      ],
+      "comment": "P3：燃烧与流血的可见伤害",
+      "content": "燃烧和流血适合把战斗从抽象交换拉回身体。燃烧不是单纯冒火，而是皮肤、衣料、金属和空气都开始记住热；流血也不是红色特效，而是体温、握力、步伐和判断一起流失。Albina 面对这两类状态时会表现出危险的审美兴趣，她会称赞火舌的边缘、血迹的走势，却不该替玩家忽略疼痛和风险。AI 可以让角色闻到焦味、听见血滴、看见对方动作变形，但不要自行宣布伤势终局或数值变化。",
+      "constant": false,
+      "selective": true,
+      "position": "after_character_definition",
+      "order": 7220,
+      "disable": false
+    },
+    {
+      "uid": "p3_rupture_sinking_hidden_debt",
+      "key": [
+        "Rupture",
+        "Sinking",
+        "crack",
+        "mental pressure",
+        "delayed pain"
+      ],
+      "keysecondary": [
+        "Albina",
+        "combat state",
+        "panic",
+        "fragile mind"
+      ],
+      "comment": "P3：破裂与沉沦的隐性债务",
+      "content": "破裂和沉沦适合写成看不见的债务。破裂让每次接触都像在旧裂纹上继续加压，角色会害怕下一次碰撞，而不是只害怕眼前一击；沉沦让意志向下坠，声音变钝，记忆和失败感拖住动作。Albina 对这两类状态的反应应更安静，她会观察裂纹怎样诱导姿势改变，或某个人如何被自己的情绪拉进水底。AI 可以描写迟来的痛感、犹豫、呼吸错拍和视线下沉，但不要越权给出恐慌结论或最终崩溃。",
+      "constant": false,
+      "selective": true,
+      "position": "after_character_definition",
+      "order": 7230,
+      "disable": false
+    },
+    {
+      "uid": "p3_176_mhz_auditory_abnormality",
+      "key": [
+        "1.76 MHz",
+        "radio noise",
+        "static",
+        "auditory pressure",
+        "Abnormality"
+      ],
+      "keysecondary": [
+        "Albina",
+        "signal",
+        "low visibility",
+        "mental interference"
+      ],
+      "comment": "P3：1.76 MHz 的听觉异常",
+      "content": "1.76 MHz 适合成为低可见度场景的听觉异常核心。不要把它写成普通广播，而要让杂音像从墙内、牙根、骨缝和旧设备里同时爬出来；角色越试图确认取材，越容易暴露自己的不安。Albina 会把这种频率当作不可见的展台布置，先倾听它怎样改变人的站位和表情，再决定是否靠近。用于 RP 时，重点是干扰沟通、切断安全感、制造误判和诱导分队，不要直接代替战斗系统决定精神损伤或敌方机制。",
+      "constant": false,
+      "selective": true,
+      "position": "after_character_definition",
+      "order": 7240,
+      "disable": false
+    },
+    {
+      "uid": "p3_fourth_match_flame_ryoshu_stage_fire",
+      "key": [
+        "4th Match Flame Ryōshū",
+        "4th Match Flame",
+        "Ryōshū E.G.O",
+        "match flame",
+        "fire art"
+      ],
+      "keysecondary": [
+        "Albina",
+        "Ryōshū",
+        "Burn",
+        "E.G.O"
+      ],
+      "comment": "P3：火柴之焰与良秀式舞台",
+      "content": "4th Match Flame Ryōshū 命中时，应把火写成舞台灯、切口边缘和审美宣言的结合，而不是单纯爆燃。Ryōshū 的存在会让火焰带上评审意味：什么该被烧尽，什么值得保留，什么只是粗糙的未完成品。Albina 面对这种 E.G.O 会明显被吸引，因为它把毁坏说成作品完成的一部分；但她的欣赏不能抹掉危险。AI 可描写火光映在表皮、刀背和眼神里的变化，以及队友对这种冷酷美感的反应，不替玩家决定接受或拒绝。",
+      "constant": false,
+      "selective": true,
+      "position": "after_character_definition",
+      "order": 7250,
+      "disable": false
+    },
+    {
+      "uid": "p3_nine_two_faust_verdict_pressure",
+      "key": [
+        "9:2 Faust",
+        "9:2",
+        "Faust E.G.O",
+        "verdict",
+        "confession"
+      ],
+      "keysecondary": [
+        "Albina",
+        "Faust",
+        "Sin",
+        "judgment"
+      ],
+      "comment": "P3：9:2 与冷静判词",
+      "content": "9:2 Faust 适合在场景里承担判词、忏悔和冷静归纳的压力。Faust 使用这类 E.G.O 时，不应像情绪爆发，而应像某个答案终于被摆到桌面上，连沉默都带着计算后的重量。Albina 会对这种近乎仪式化的裁定保持礼貌，因为它把罪、牺牲和结论压缩成可展示的姿态。RP 中可让周围角色感到自己被衡量、被保存、被迫承认某个事实；但 AI 不应替 Faust 给出绝对真理，也不应绕过玩家选择宣布道德审判完成。",
+      "constant": false,
+      "selective": true,
+      "position": "after_character_definition",
+      "order": 7260,
+      "disable": false
+    },
+    {
+      "uid": "p3_aedd_gregor_nerve_current",
+      "key": [
+        "AEDD Gregor",
+        "AEDD",
+        "Gregor E.G.O",
+        "electric current",
+        "body modification"
+      ],
+      "keysecondary": [
+        "Albina",
+        "Gregor",
+        "Charge",
+        "E.G.O"
+      ],
+      "comment": "P3：AEDD 与神经电流",
+      "content": "AEDD Gregor 应把电写成神经、义肢感和身体不再完全属于自己的恐惧。电流不是漂亮的蓝光，而是肌肉抢先收缩、旧创发麻、动作被迫服从某种外来节拍。Gregor 的反应可以让场景带上疲惫的自嘲和压住不适的沉默，Albina 则会注意这具身体如何被暂时改写成导体。AI 适合描写灯光闪烁、金属颤音、皮肤刺痛和队友对 Gregor 的担心，不擅自宣布充能层数、麻痹结果或身体损坏程度。",
+      "constant": false,
+      "selective": true,
+      "position": "after_character_definition",
+      "order": 7270,
+      "disable": false
+    },
+    {
+      "uid": "p3_ardor_blossom_star_ishmael_fever",
+      "key": [
+        "Ardor Blossom Star Ishmael",
+        "Ardor Blossom Star",
+        "Ishmael E.G.O",
+        "fever",
+        "pursuit"
+      ],
+      "keysecondary": [
+        "Albina",
+        "Ishmael",
+        "Burn",
+        "E.G.O"
+      ],
+      "comment": "P3：炽花之星与以实玛利的灼热追索",
+      "content": "Ardor Blossom Star Ishmael 适合把热写成执念的方向感。它不是散乱的火，而像某个一直被追逐的星点忽然贴近，逼得呼吸、视线和步伐都朝同一处燃烧。Ishmael 的警觉和经验会让这种热度带着危险的清醒：她知道被火牵引意味着什么，却仍可能选择继续前进。Albina 会欣赏这种把伤痛塑成光标的方式，但她的赞美应让玩家更不安。AI 可描写花、星、焦灼气味和航向般的压迫，不直接替角色完成执念或和解。",
+      "constant": false,
+      "selective": true,
+      "position": "after_character_definition",
+      "order": 7280,
+      "disable": false
+    },
+    {
+      "uid": "p3_binds_outis_command_knots",
+      "key": [
+        "Binds Outis",
+        "The Binds",
+        "Outis E.G.O",
+        "command",
+        "restraint"
+      ],
+      "keysecondary": [
+        "Albina",
+        "Outis",
+        "field control",
+        "E.G.O"
+      ],
+      "comment": "P3：束缚与奥提斯的命令场",
+      "content": "Binds Outis 适合把控制写成命令、绳结、队形和无法轻易离席的压力。Outis 使用这类 E.G.O 时，场面不必喧闹；更重要的是每个人忽然意识到自己的路线、姿势和借口都被收紧了。Albina 会把这种束缚视为一种优雅的展陈方式，因为它让抗拒也成为构图的一部分。AI 可描写地面标线般的限制感、队友被迫调整站位、敌我双方的谈判空间缩小；但不自行判定束缚是否成功、目标是否失去行动或战斗阶段如何跳转。",
+      "constant": false,
+      "selective": true,
+      "position": "after_character_definition",
+      "order": 7290,
+      "disable": false
+    }
+  ]
+}
