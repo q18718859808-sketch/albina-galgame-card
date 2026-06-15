@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1920" height="1080" viewBox="0 0 1920 1080">
+
+  <defs>
+    <linearGradient id="city" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#08080d"/>
+      <stop offset="0.42" stop-color="#17202a"/>
+      <stop offset="1" stop-color="#3a1119"/>
+    </linearGradient>
+    <linearGradient id="gold" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#fff7c9"/>
+      <stop offset="0.48" stop-color="#d5a83d"/>
+      <stop offset="1" stop-color="#8b5d18"/>
+    </linearGradient>
+    <linearGradient id="porcelain" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#f7fbff"/>
+      <stop offset="0.52" stop-color="#b9c6ce"/>
+      <stop offset="1" stop-color="#59636a"/>
+    </linearGradient>
+    <filter id="softGlow"><feGaussianBlur stdDeviation="6" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+    <filter id="grain"><feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="3" stitchTiles="stitch"/><feColorMatrix type="saturate" values="0"/><feComponentTransfer><feFuncA type="table" tableValues="0 0.13"/></feComponentTransfer></filter>
+  </defs>
+
+<rect width="1920" height="1080" fill="url(#city)"/>
+<rect width="1920" height="1080" filter="url(#grain)" opacity=".45"/>
+<path d="M0 780 C420 660 620 880 930 740 C1240 600 1500 700 1920 610 L1920 1080 L0 1080 Z" fill="#05070b" opacity=".88"/>
+<g filter="url(#softGlow)"><path d="M32 180 C122 100 222 300 342 200" stroke="#9db8d1" stroke-opacity=".22" stroke-width="2" fill="none"/><path d="M129 227 C219 147 319 347 439 247" stroke="#9db8d1" stroke-opacity=".22" stroke-width="3" fill="none"/><path d="M226 274 C316 194 416 394 536 294" stroke="#9db8d1" stroke-opacity=".22" stroke-width="4" fill="none"/><path d="M323 321 C413 241 513 441 633 341" stroke="#9db8d1" stroke-opacity=".22" stroke-width="5" fill="none"/><path d="M420 368 C510 288 610 488 730 388" stroke="#9db8d1" stroke-opacity=".22" stroke-width="2" fill="none"/><path d="M517 415 C607 335 707 535 827 435" stroke="#9db8d1" stroke-opacity=".22" stroke-width="3" fill="none"/><path d="M614 462 C704 382 804 582 924 482" stroke="#9db8d1" stroke-opacity=".22" stroke-width="4" fill="none"/><path d="M711 509 C801 429 901 629 1021 529" stroke="#9db8d1" stroke-opacity=".22" stroke-width="5" fill="none"/><path d="M808 556 C898 476 998 676 1118 576" stroke="#9db8d1" stroke-opacity=".22" stroke-width="2" fill="none"/><path d="M905 603 C995 523 1095 723 1215 623" stroke="#9db8d1" stroke-opacity=".22" stroke-width="3" fill="none"/><path d="M1002 650 C1092 570 1192 770 1312 670" stroke="#9db8d1" stroke-opacity=".22" stroke-width="4" fill="none"/><path d="M1099 697 C1189 617 1289 817 1409 717" stroke="#9db8d1" stroke-opacity=".22" stroke-width="5" fill="none"/><path d="M1196 744 C1286 664 1386 864 1506 764" stroke="#9db8d1" stroke-opacity=".22" stroke-width="2" fill="none"/><path d="M1293 791 C1383 711 1483 911 1603 811" stroke="#9db8d1" stroke-opacity=".22" stroke-width="3" fill="none"/><path d="M1390 838 C1480 758 1580 958 1700 858" stroke="#9db8d1" stroke-opacity=".22" stroke-width="4" fill="none"/><path d="M1487 885 C1577 805 1677 1005 1797 905" stroke="#9db8d1" stroke-opacity=".22" stroke-width="5" fill="none"/><path d="M1584 932 C1674 852 1774 1052 1894 952" stroke="#9db8d1" stroke-opacity=".22" stroke-width="2" fill="none"/><path d="M1681 219 C1771 139 1871 339 1991 239" stroke="#9db8d1" stroke-opacity=".22" stroke-width="3" fill="none"/><path d="M1778 266 C1868 186 1968 386 2088 286" stroke="#9db8d1" stroke-opacity=".22" stroke-width="4" fill="none"/><path d="M1875 313 C1965 233 2065 433 2185 333" stroke="#9db8d1" stroke-opacity=".22" stroke-width="5" fill="none"/></g>
+<g><path d="M510 885 C450 610 580 500 700 560 C825 620 780 890 745 1010 L470 1010 Z" fill="#e8edf1" stroke="#9db8d1" stroke-opacity=".55" stroke-width="8"/><circle cx="620" cy="505" r="74" fill="#e8edf1" stroke="#e0b252" stroke-width="7"/><path d="M1110 885 C1050 610 1180 500 1300 560 C1425 620 1380 890 1345 1010 L1070 1010 Z" fill="#111820" stroke="#9db8d1" stroke-opacity=".55" stroke-width="8"/><circle cx="1220" cy="505" r="74" fill="#111820" stroke="#e0b252" stroke-width="7"/></g>
+<path d="M0 0 H1920 V1080 H0 Z" fill="none" stroke="#9db8d1" stroke-opacity=".35" stroke-width="28"/>
+<text x="96" y="120" fill="#f8edc6" opacity=".42" font-size="42" font-family="serif">Golden Bough Ending</text>
+<text x="96" y="174" fill="#c7d7e8" opacity=".24" font-size="24" font-family="serif">rain_room</text>
+</svg>
