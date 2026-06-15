@@ -43,7 +43,7 @@
       "阿尔比娜",
       "单女主",
       "RP",
-      "v1.0.36"
+      "v1.0.37"
     ],
     "character_version": "1.0.0",
     "extensions": {
@@ -1062,6 +1062,6 @@
       ]
     },
     "creator_notes": "【导入须知】\n1. 必须安装 SillyTavern + 酒馆助手（TavernHelper）扩展\n2. 导入后会自动加载前端（需要联网，CDN: jsDelivr）\n3. 点击按钮「打开阿尔比娜前端」进入完整 Galgame UI\n4. 存档自动保存在聊天变量 + 动态世界书\n\n",
-    "cdn_import": "import 'https://cdn.jsdelivr.net/gh/q18718859808-sketch/albina-galgame-card@v1.0.36/dist/albina-galgame-card/console/index.js'\n"
+    "cdn_import": "import 'https://cdn.jsdelivr.net/gh/q18718859808-sketch/albina-galgame-card@v1.0.37/dist/albina-galgame-card/console/index.js'\n"
   }
 }
