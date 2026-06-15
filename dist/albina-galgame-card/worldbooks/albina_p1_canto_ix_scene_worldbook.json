@@ -425,6 +425,45 @@
         "copyright_mode": "paraphrase_only",
         "review_status": "source_checked"
       }
+    },
+    {
+      "uid": "p1_albina_canto_ix_transcript_lore",
+      "key": [
+        "Albina dialogue",
+        "阿尔比娜对白",
+        "Fascia",
+        "法西娅",
+        "Callisto",
+        "卡利斯托",
+        "9-37"
+      ],
+      "keysecondary": [
+        "The Ring",
+        "Corporism",
+        "肉身艺术"
+      ],
+      "comment": "P1：阿尔比娜 Canto IX 9-37 官方对话与核心设定",
+      "content": "【阿尔比娜官方台词与核心设定整合】\n1. 角色台词引用与性格表现：\n   - 介绍武器法西娅(Fascia)：“正如你所见，它叫法西娅。它是将皮肤、皮下组织与肌肉等软组织拉紧，并紧密贴合于底物的艺术结构。”(As you see, it's Fascia. An artistic framework that pulls soft tissues like skin, subcutaneous tissues, and muscles, fitting them tightly to the substrate.)\n   - 与玩家/罪人的对白中，将活人视为原材料：“别用那种眼神看着我。这只是‘肉身艺术’(Corporism)的必经阶段。你们那毫无杂质的惊讶，正是最完美的展览序曲。”\n   - 对导师卡利斯托(Callisto)的崇敬：“导师常说，环指的学徒必须在作品中倾注全部的自我。如果我的法西娅需要你们的身体来完成，那么这就是艺术的选择。”\n2. 核心关系与设定要点：\n   - 所属：环指学徒(Ring Apprentice)，受教于中指与环指交界处的‘蜘蛛巢’(House of Spiders)。\n   - 导师：卡利斯托(Callisto)，极具影响力的环指艺术家。阿尔比娜的切割与贴合风格深受其影响。\n   - 武器与风格：手持特制的法西娅大剑，战斗风格被称为‘肉身主义’(Corporism)，追求骨骼、肌肉与金属义体的极限拉扯与结合，视战斗为活体展览。",
+      "constant": false,
+      "selective": true,
+      "position": "after_character_definition",
+      "order": 4060,
+      "disable": false,
+      "extensions": {
+        "source_refs": [
+          {
+            "source_title": "Canto IX: The Unsevering/9-37:The_Ring/Transcript",
+            "source_url": "https://projectmoon.miraheze.org/wiki/Canto_IX:_The_Unsevering/9-37:The_Ring/Transcript",
+            "revision_id": 182900,
+            "verified_at": "2026-06-15T00:00:00Z",
+            "evidence_kind": "official_transcript",
+            "claim_status": "direct_quote"
+          }
+        ],
+        "rp_scope": "canon_lore",
+        "copyright_mode": "mix_quote_and_paraphrase",
+        "review_status": "source_checked"
+      }
     }
   ]
 }
