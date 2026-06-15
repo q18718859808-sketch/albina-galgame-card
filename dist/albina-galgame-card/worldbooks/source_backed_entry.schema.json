@@ -1,0 +1,48 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.invalid/albina-galgame-card/source-backed-entry.schema.json",
+  "title": "Albina Source-Backed Worldbook Entry Extension",
+  "type": "object",
+  "required": ["source_refs", "rp_scope", "copyright_mode", "review_status"],
+  "properties": {
+    "source_refs": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "source_title",
+          "source_url",
+          "revision_id",
+          "verified_at",
+          "evidence_kind",
+          "claim_status"
+        ],
+        "properties": {
+          "source_title": { "type": "string", "minLength": 1 },
+          "source_url": { "type": "string", "format": "uri" },
+          "revision_id": { "type": ["integer", "string"] },
+          "verified_at": { "type": "string" },
+          "evidence_kind": { "type": "string", "minLength": 1 },
+          "claim_status": {
+            "type": "string",
+            "enum": ["verified", "paraphrased", "bridge", "fanon", "needs_review"]
+          }
+        },
+        "additionalProperties": true
+      }
+    },
+    "rp_scope": {
+      "type": "string",
+      "enum": ["canon_lore", "card_route", "ui_protocol", "fanon_bridge"]
+    },
+    "copyright_mode": {
+      "type": "string",
+      "enum": ["paraphrase_only", "short_quote_reviewed", "original"]
+    },
+    "review_status": {
+      "type": "string",
+      "enum": ["needs_review", "source_checked", "rejected"]
+    }
+  },
+  "additionalProperties": true
+}
