@@ -1,0 +1,8 @@
+# Build / temp artifacts
+*.log
+__pycache__/
+*.pyc
+
+# But keep dist assets and card
+!dist/
+!card/

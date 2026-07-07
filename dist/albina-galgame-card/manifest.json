@@ -1,5 +1,5 @@
 {
-  "base": "https://cdn.jsdelivr.net/gh/q18718859808-sketch/albina-galgame-card@v1.0.37/dist/albina-galgame-card",
+  "base": "https://cdn.jsdelivr.net/gh/q18718859808-sketch/albina-galgame-card@v1.0.38/dist/albina-galgame-card",
   "bg": {
     "backstreets_rain": "assets/bg/backstreets_rain.png",
     "city_rooftop": "assets/bg/city_rooftop.png",
@@ -265,6 +265,10 @@
     "scanline_mask": "assets/ui/scanline_mask.png",
     "status_panel": "assets/ui/status_panel.png",
     "textbox": "assets/ui/textbox.png"
+  },
+  "videos": {
+    "op": "assets/videos/op.mp4",
+    "ed": "assets/videos/ed.mp4"
   },
   "audio": {
     "battle_canto_1": "assets/audio/bgm/battle_canto_1.mp3",
