@@ -43,7 +43,7 @@
       "阿尔比娜",
       "单女主",
       "RP",
-      "v1.0.38"
+      "v1.0.39"
     ],
     "character_version": "1.0.0",
     "extensions": {
@@ -53,7 +53,7 @@
       "albina_galgame_card": {
         "project_id": "albina-galgame-card",
         "save_key": "albinaGalgameCardGameSaveV1",
-        "cdn_import": "import 'https://cdn.jsdelivr.net/gh/q18718859808-sketch/albina-galgame-card@v1.0.38/dist/albina-galgame-card/console/index.js'\n",
+        "cdn_import": "import 'https://cdn.jsdelivr.net/gh/q18718859808-sketch/albina-galgame-card@v1.0.39/dist/albina-galgame-card/console/index.js'\n",
         "routes": [
           "white_canvas",
           "golden_bough_rebuild",
@@ -67,7 +67,7 @@
             "enabled": true,
             "name": "Albina",
             "id": "7f664fa2-7123-484f-bafb-bc812ae1103f",
-            "content": "import 'https://cdn.jsdelivr.net/gh/q18718859808-sketch/albina-galgame-card@v1.0.38/dist/albina-galgame-card/console/index.js'\n",
+            "content": "import 'https://cdn.jsdelivr.net/gh/q18718859808-sketch/albina-galgame-card@v1.0.39/dist/albina-galgame-card/console/index.js'\n",
             "info": "",
             "button": {
               "enabled": true,
@@ -85,7 +85,7 @@
             "enabled": true,
             "name": "Albina SFE — 序列帧CG演出",
             "id": "b7d02f19-6e3a-4c8b-9d1f-3a0c4e8b2f57",
-            "content": "// Sequence Frame Engine — 动画级序列帧CG演出\n// 与 CinematicEngine 协同：有对应镜头时用SFE，否则回退到2D特效\n(async function(){const B='https://cdn.jsdelivr.net/gh/q18718859808-sketch/albina-galgame-card@v1.0.38/release/github-cdn-root/dist/albina-galgame-card/sfe';function lC(h){return new Promise((r,j)=>{if(document.querySelector(`link[href=\"${h}\"]`))return r();const l=document.createElement('link');l.rel='stylesheet';l.href=h;l.onload=r;l.onerror=()=>j(new Error('CSS fail'));document.head.appendChild(l)})}function lS(s){return new Promise((r,j)=>{if(document.querySelector(`script[src=\"${s}\"]`))return r();const t=document.createElement('script');t.src=s;t.onload=r;t.onerror=()=>j(new Error('JS fail'));document.head.appendChild(t)})}function wI(t=30000){return new Promise((r,j)=>{const e=document.querySelector('iframe[script_id]');if(e)return r(e);const tm=setTimeout(()=>j(new Error('iframe timeout')),t);const o=new MutationObserver(()=>{const f=document.querySelector('iframe[script_id]');if(f){clearTimeout(tm);o.disconnect();r(f)}});o.observe(document.body,{childList:true,subtree:true})})}try{await lC(B+'/sfe-engine.css');await lS(B+'/sfe-engine.js');await lS(B+'/sfe-director.js');const f=await wI();const eng=window.AlbinaSFE.mount(f,{});await window.AlbinaSFEDirector.registerAll(eng);window.addEventListener('message',(e)=>{const d=e.data;if(!d||!d.__albinaCinema)return;const map=window.AlbinaSFEDirector.SHOT_MAP;if(map[d.event]){window.AlbinaSFEDirector.triggerByMarker(eng,d.event)}});console.log('[SFE] 序列帧CG演出系统就绪')}catch(e){console.error('[SFE]',e)}})();\n",
+            "content": "// Sequence Frame Engine — 动画级序列帧CG演出\n// 与 CinematicEngine 协同：有对应镜头时用SFE，否则回退到2D特效\n(async function(){const B='https://cdn.jsdelivr.net/gh/q18718859808-sketch/albina-galgame-card@v1.0.39/release/github-cdn-root/dist/albina-galgame-card/sfe';function lC(h){return new Promise((r,j)=>{if(document.querySelector(`link[href=\"${h}\"]`))return r();const l=document.createElement('link');l.rel='stylesheet';l.href=h;l.onload=r;l.onerror=()=>j(new Error('CSS fail'));document.head.appendChild(l)})}function lS(s){return new Promise((r,j)=>{if(document.querySelector(`script[src=\"${s}\"]`))return r();const t=document.createElement('script');t.src=s;t.onload=r;t.onerror=()=>j(new Error('JS fail'));document.head.appendChild(t)})}function wI(t=30000){return new Promise((r,j)=>{const e=document.querySelector('iframe[script_id]');if(e)return r(e);const tm=setTimeout(()=>j(new Error('iframe timeout')),t);const o=new MutationObserver(()=>{const f=document.querySelector('iframe[script_id]');if(f){clearTimeout(tm);o.disconnect();r(f)}});o.observe(document.body,{childList:true,subtree:true})})}try{await lC(B+'/sfe-engine.css');await lS(B+'/sfe-engine.js');await lS(B+'/sfe-director.js');const f=await wI();const eng=window.AlbinaSFE.mount(f,{});await window.AlbinaSFEDirector.registerAll(eng);window.addEventListener('message',(e)=>{const d=e.data;if(!d||!d.__albinaCinema)return;const map=window.AlbinaSFEDirector.SHOT_MAP;if(map[d.event]){window.AlbinaSFEDirector.triggerByMarker(eng,d.event)}});console.log('[SFE] 序列帧CG演出系统就绪')}catch(e){console.error('[SFE]',e)}})();\n",
             "info": "Sequence Frame Engine — Heaven's Feel grade cinematic CG animation",
             "button": {
               "enabled": false,
@@ -98,7 +98,7 @@
             "enabled": true,
             "name": "Albina CinematicEngine",
             "id": "a3c91e07-5d28-4f9a-b7e0-2f8c3d9a1e46",
-            "content": "// CinematicEngine — Heaven's Feel grade cinematic overlay\n// Loads after main bundle, mounts overlay + injects iframe bridge\n(async function(){const B='https://cdn.jsdelivr.net/gh/q18718859808-sketch/albina-galgame-card@v1.0.38/release/github-cdn-root/dist/albina-galgame-card/cinema';function lC(h){return new Promise((r,j)=>{if(document.querySelector(`link[href=\"${h}\"]`))return r();const l=document.createElement('link');l.rel='stylesheet';l.href=h;l.onload=r;l.onerror=()=>j(new Error('CSS fail'));document.head.appendChild(l)})}function lS(s){return new Promise((r,j)=>{if(document.querySelector(`script[src=\"${s}\"]`))return r();const t=document.createElement('script');t.src=s;t.onload=r;t.onerror=()=>j(new Error('JS fail'));document.head.appendChild(t)})}function mE(){if(typeof window.AlbinaCinema==='undefined'){return new Promise(r=>{setTimeout(()=>mE().then(r),500)})}return window.AlbinaCinema.mount()}function iB(i,s){return new Promise(r=>{const t=()=>{try{const d=i.contentDocument||i.contentWindow.document;if(!d||!d.head)return false;if(i.contentWindow.__albinaCinemaBridge)return true;const sc=d.createElement('script');sc.src=s;sc.onload=()=>r(true);sc.onerror=()=>r(false);d.head.appendChild(sc);return true}catch(e){return false}};if(t())return;let a=0;const iv=setInterval(()=>{if(t()||++a>20){clearInterval(iv);r(a<=20)}},500)})}try{await Promise.all([lC(B+'/cinematic-engine.css'),lS(B+'/cinematic-engine.js')]);await mE();const f=document.querySelector('iframe[script_id]');if(f){await iB(f,B+'/cinema-iframe-bridge.js')}console.log('[Cinema] 天之杯演出系统就绪')}catch(e){console.error('[Cinema]',e)}})();\n",
+            "content": "// CinematicEngine — Heaven's Feel grade cinematic overlay\n// Loads after main bundle, mounts overlay + injects iframe bridge\n(async function(){const B='https://cdn.jsdelivr.net/gh/q18718859808-sketch/albina-galgame-card@v1.0.39/release/github-cdn-root/dist/albina-galgame-card/cinema';function lC(h){return new Promise((r,j)=>{if(document.querySelector(`link[href=\"${h}\"]`))return r();const l=document.createElement('link');l.rel='stylesheet';l.href=h;l.onload=r;l.onerror=()=>j(new Error('CSS fail'));document.head.appendChild(l)})}function lS(s){return new Promise((r,j)=>{if(document.querySelector(`script[src=\"${s}\"]`))return r();const t=document.createElement('script');t.src=s;t.onload=r;t.onerror=()=>j(new Error('JS fail'));document.head.appendChild(t)})}function mE(){if(typeof window.AlbinaCinema==='undefined'){return new Promise(r=>{setTimeout(()=>mE().then(r),500)})}return window.AlbinaCinema.mount()}function iB(i,s){return new Promise(r=>{const t=()=>{try{const d=i.contentDocument||i.contentWindow.document;if(!d||!d.head)return false;if(i.contentWindow.__albinaCinemaBridge)return true;const sc=d.createElement('script');sc.src=s;sc.onload=()=>r(true);sc.onerror=()=>r(false);d.head.appendChild(sc);return true}catch(e){return false}};if(t())return;let a=0;const iv=setInterval(()=>{if(t()||++a>20){clearInterval(iv);r(a<=20)}},500)})}try{await Promise.all([lC(B+'/cinematic-engine.css'),lS(B+'/cinematic-engine.js')]);await mE();const f=document.querySelector('iframe[script_id]');if(f){await iB(f,B+'/cinema-iframe-bridge.js')}console.log('[Cinema] 天之杯演出系统就绪')}catch(e){console.error('[Cinema]',e)}})();\n",
             "info": "Heaven's Feel grade cinematic effects overlay",
             "button": {
               "enabled": false,
@@ -111,7 +111,7 @@
             "enabled": true,
             "name": "Albina OP/ED Video",
             "id": "c4d05f18-7a2b-4c91-8e3d-9f1b2c3d4e5f",
-            "content": "import 'https://cdn.jsdelivr.net/gh/q18718859808-sketch/albina-galgame-card@v1.0.38/dist/albina-galgame-card/video-injector.js'\n",
+            "content": "import 'https://cdn.jsdelivr.net/gh/q18718859808-sketch/albina-galgame-card@v1.0.39/dist/albina-galgame-card/video-injector.js'\n",
             "info": "OP/ED 真视频播放（替换静态 CG 序列）",
             "button": {
               "enabled": false,
@@ -1133,7 +1133,7 @@
         }
       ]
     },
-    "creator_notes": "【导入须知】\n1. 必须安装 SillyTavern + 酒馆助手（TavernHelper）扩展\n2. 导入后会自动加载前端（需要联网，CDN: jsDelivr）\n3. 点击按钮「打开阿尔比娜前端」进入完整 Galgame UI\n4. 存档自动保存在聊天变量 + 动态世界书\n5. v1.0.38：OP/ED 真实视频播放（Seedance 1.5 Pro + Real-ESRGAN + RIFE + MiniMax Music 1.5 卡点对齐）\n",
-    "cdn_import": "import 'https://cdn.jsdelivr.net/gh/q18718859808-sketch/albina-galgame-card@v1.0.38/dist/albina-galgame-card/console/index.js'\n"
+    "creator_notes": "【导入须知】\n1. 必须安装 SillyTavern + 酒馆助手（TavernHelper）扩展\n2. 导入后会自动加载前端（需要联网，CDN: jsDelivr）\n3. 点击按钮「打开阿尔比娜前端」进入完整 Galgame UI\n4. 存档自动保存在聊天变量 + 动态世界书\n5. v1.0.38：OP/ED 真实视频播放（Seedance 1.5 Pro + Real-ESRGAN + RIFE + MiniMax Music 1.5 卡点对齐）\n6. v1.0.39：新增 11 张 AI 重绘原创资源（6 CG + 4 立绘 + 1 故事背景），使用 pie gpt-image-2 API 按照自家画画风（暗黑哥特 / 酒蓝+古金+瓷白配色 / Limbus Company 美学）生成\n",
+    "cdn_import": "import 'https://cdn.jsdelivr.net/gh/q18718859808-sketch/albina-galgame-card@v1.0.39/dist/albina-galgame-card/console/index.js'\n"
   }
 }
