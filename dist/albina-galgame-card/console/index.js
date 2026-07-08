@@ -5132,7 +5132,7 @@ function Tl(e) {
 }
 //#endregion
 //#region src/config.ts
-var El = "albina-galgame-card", Dl = "阿尔比娜 Galgame Card", Ol = "打开阿尔比娜前端", kl = "albinaGalgameCardGameSaveV1", Al = `https://cdn.jsdelivr.net/gh/q18718859808-sketch/albina-galgame-card@v1.0.40/dist/${El}`, jl = {
+var El = "albina-galgame-card", Dl = "阿尔比娜 Galgame Card", Ol = "打开阿尔比娜前端", kl = "albinaGalgameCardGameSaveV1", Al = `https://cdn.jsdelivr.net/gh/q18718859808-sketch/albina-galgame-card@v1.0.41/dist/${El}`, jl = {
 	opening_001: {
 		chapter: 1,
 		sceneId: "opening_001",

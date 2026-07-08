@@ -5132,7 +5132,7 @@ function Tl(e) {
 }
 //#endregion
 //#region src/config.ts
-var El = "albina-galgame-card", Dl = "阿尔比娜 Galgame Card", Ol = "打开阿尔比娜前端", kl = "albinaGalgameCardGameSaveV1", Al = `https://cdn.jsdelivr.net/gh/q18718859808-sketch/albina-galgame-card@v1.0.40/dist/${El}`, jl = {
+var El = "albina-galgame-card", Dl = "阿尔比娜 Galgame Card", Ol = "打开阿尔比娜前端", kl = "albinaGalgameCardGameSaveV1", Al = `https://cdn.jsdelivr.net/gh/q18718859808-sketch/albina-galgame-card@v1.0.41/dist/${El}`, jl = {
 	opening_001: {
 		chapter: 1,
 		sceneId: "opening_001",
@@ -21367,6 +21367,8 @@ function Ux(e) {
 	return n.includes("/console/") ? `${new URL("../assets/", n).href}${t}` : `${Al}/assets/${t}`;
 }
 function Wx(e) {
+	const t = ["canto_ix_opening", "albina_debut", "rain_confession", "battle_climax", "hell_gate", "ring_conspiracy"];
+	if (t.includes(e)) return Ux(`original_cg/${e}.png`);
 	return Ux(`cg/${e}.jpg`);
 }
 //#endregion
@@ -21501,9 +21503,9 @@ var Gx = { class: "textbox" }, Kx = { class: "speaker-row" }, qx = { class: "spe
 				key: `${e.id}-${e.sprite}`,
 				class: M(["character", [e.position, { active: e.active }]]),
 				style: ce({ "--sprite-scale": e.scale ?? 1 }),
-				src: z(Ux)(`characters/${e.id}/${e.sprite}.png`),
-				alt: e.id
-			}, null, 14, tS))), 128))]),
+				src: z(Ux)(e.id === "albina" && ["normal", "smile", "sad", "battle"].includes(e.sprite) ? `original_albina_sprites/${e.sprite}.png` : `characters/${e.id}/${e.sprite}.png`),
+				alt: e.id, onError: (ev) => { const im = ev.currentTarget; if (im.dataset.svgTried) return; im.dataset.svgTried = "1"; const c = im.getAttribute("src") || ""; if (c.endsWith(".png")) im.src = c.replace(/\.png$/, ".svg"); }
+		}, null, 14, tS))), 128))]),
 			W("div", nS, [W("span", null, N(z(t).routeLabel), 1), W("strong", null, N(z(t).save.locationId), 1)]),
 			ia(Zx),
 			z(t).loading ? (H(), U("div", rS, "生成中")) : G("", !0)

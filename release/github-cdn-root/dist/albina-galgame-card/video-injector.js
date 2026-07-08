@@ -1,11 +1,65 @@
-// Albina OpeningMovie / EndingMovie Video Injector
-// v1.0.40 — 用真实 OP/ED 视频替换默认的静态 CG 序列
+// Albina OpeningMovie / EndingMovie Video Injector + Bridge Layer Loader
+// v1.0.41 — 用真实 OP/ED 视频替换默认的静态 CG 序列
+//          + 加载 SFE / Cinema / Bridge 桥接层（融合 bigmalove/galgame v1.2 架构）
 // 通过 postMessage 接管 bootPhase=opening_movie，播放完毕后切回 title
 (async function () {
-  const VERSION = 'v1.0.40';
+  const VERSION = 'v1.0.41';
   const CDN_BASE = `https://cdn.jsdelivr.net/gh/q18718859808-sketch/albina-galgame-card@${VERSION}/dist/albina-galgame-card`;
   const OP_URL = `${CDN_BASE}/assets/videos/op.mp4`;
   const ED_URL = `${CDN_BASE}/assets/videos/ed.mp4`;
+  const BRIDGE_CSS = `${CDN_BASE}/albina-bridge/albina-bridge.css`;
+  const BRIDGE_JS = `${CDN_BASE}/albina-bridge/albina-bridge.js`;
+  const SFE_CSS = `${CDN_BASE}/sfe/sfe-engine.css`;
+  const SFE_JS = `${CDN_BASE}/sfe/sfe-engine.js`;
+  const SFE_DIRECTOR_JS = `${CDN_BASE}/sfe/sfe-director.js`;
+  const CINEMA_CSS = `${CDN_BASE}/cinema/cinematic-engine.css`;
+  const CINEMA_JS = `${CDN_BASE}/cinema/cinematic-engine.js`;
+  const CINEMA_BRIDGE_JS = `${CDN_BASE}/cinema/cinema-iframe-bridge.js`;
+
+  // ---------- 资源注入助手 ----------
+  function injectCSS(href, into) {
+    const doc = into || document;
+    const l = doc.createElement('link');
+    l.rel = 'stylesheet'; l.href = href; l.dataset.albinaAsset = '1';
+    (doc.head || doc.documentElement).appendChild(l);
+    return l;
+  }
+  function injectJS(src, into, onload, onerror) {
+    const doc = into || document;
+    const s = doc.createElement('script');
+    s.src = src; s.async = false; s.dataset.albinaAsset = '1';
+    if (onload) s.onload = onload;
+    if (onerror) s.onerror = onerror;
+    (doc.head || doc.documentElement).appendChild(s);
+    return s;
+  }
+
+  // ---------- 加载 SFE / Cinema / Bridge 桥接层 ----------
+  function loadBridgeAssets(iframe) {
+    const into = iframe ? (iframe.contentDocument || iframe.contentWindow.document) : document;
+    if (!into) return;
+    if (into.querySelector('[data-albina-asset]')) return; // 已加载
+    try {
+      // SFE (Sequence Frame Engine)
+      injectCSS(SFE_CSS, into);
+      injectJS(SFE_JS, into);
+      injectJS(SFE_DIRECTOR_JS, into);
+      // Cinematic Engine
+      injectCSS(CINEMA_CSS, into);
+      injectJS(CINEMA_JS, into);
+      injectJS(CINEMA_BRIDGE_JS, into);
+      // Bridge Layer (融合 bigmalove/galgame 架构)
+      injectCSS(BRIDGE_CSS, into);
+      injectJS(BRIDGE_JS, into, function () {
+        console.log('[AlbinaBridge] loaded inside iframe');
+      }, function () {
+        console.warn('[AlbinaBridge] load failed:', BRIDGE_JS);
+      });
+      console.log('[AlbinaAssets] SFE + Cinema + Bridge injected @', VERSION);
+    } catch (e) {
+      console.warn('[AlbinaAssets] inject failed:', e);
+    }
+  }
 
   // 等待 iframe 加载（同 SFE/Cinema 的模式）
   function waitIframe(t = 30000) {
@@ -120,6 +174,10 @@
   // 启动时如果已经在 OP 阶段，直接挂载
   try {
     const f = await waitIframe(15000);
+    // 立即注入 SFE + Cinema + Bridge 桥接层
+    loadBridgeAssets(f);
+    // 同时在父窗口注入 Bridge（覆盖 iframe 之外的 UI 层）
+    loadBridgeAssets(null);
     setTimeout(() => {
       try {
         const w = f.contentWindow;
@@ -134,7 +192,9 @@
     }, 800);
   } catch (e) {
     console.warn('[AlbinaVideo] iframe 未就绪，等待 bootPhase 事件', e);
+    // iframe 没就绪也至少在父窗口注入 Bridge
+    loadBridgeAssets(null);
   }
 
-  console.log('[AlbinaVideo] OP/ED 视频注入器已就绪 @', VERSION);
+  console.log('[AlbinaVideo] OP/ED 视频注入器 + Bridge 加载器已就绪 @', VERSION);
 })();
