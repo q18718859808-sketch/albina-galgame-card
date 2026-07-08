@@ -1,5 +1,5 @@
-{
-  "base": "https://cdn.jsdelivr.net/gh/q18718859808-sketch/albina-galgame-card@v1.0.39/dist/albina-galgame-card",
+﻿{
+  "base": "https://cdn.jsdelivr.net/gh/q18718859808-sketch/albina-galgame-card@v1.0.40/dist/albina-galgame-card",
   "bg": {
     "backstreets_rain": "assets/bg/backstreets_rain.png",
     "city_rooftop": "assets/bg/city_rooftop.png",
@@ -247,6 +247,6 @@
       "source": "Canto IX Victory"
     }
   },
-  "_v1_0_39_note": "v1.0.39 (2026-07-08): Added 11 original AI-generated resources created with pie (api.pie-xian.com) gpt-image-2 API, using our house art style (dark gothic, wine-blue + antique-gold + porcelain palette, Limbus Company aesthetic). Generated: 6 core CGs (canto_ix_opening, albina_debut, rain_confession, battle_climax, hell_gate, ring_conspiracy), 4 Albina sprite variants (normal, smile, sad, battle), 1 story background (library_interior). Style suffix encoding: '#08080d→#17202a→#3a1119 / #fff7c9→#d5a83d→#8b5d18 / #f7fbff→#b9c6ce→#59636a'. Note: 6 additional resources (revelation_gallery, finale_dawn, manor_exterior, garden_night, courtyard_ruins, throne_hall_dark) failed to generate due to API persistent 404 errors; will be retried in v1.0.40.",
-  "_removed_official_resources_note": "v1.0.38: Removed 125+ references to non-existent official Limbus Company resources (assets/limbus_official_albina/, assets/canto_ix_official/cg/, assets/canto_ix_official/bg_story/, assets/canto_ix_official/bg_battle/, assets/canto_ix_official/sprites/) due to copyright concerns and missing files. v1.0.39: Replaced with AI-generated original resources using our house art style."
+  "_v1_0_39_note": "v1.0.40 (2026-07-08): Added 11 original AI-generated resources created with pie (api.pie-xian.com) gpt-image-2 API, using our house art style (dark gothic, wine-blue + antique-gold + porcelain palette, Limbus Company aesthetic). Generated: 6 core CGs (canto_ix_opening, albina_debut, rain_confession, battle_climax, hell_gate, ring_conspiracy), 4 Albina sprite variants (normal, smile, sad, battle), 1 story background (library_interior). Style suffix encoding: '#08080d→#17202a→#3a1119 / #fff7c9→#d5a83d→#8b5d18 / #f7fbff→#b9c6ce→#59636a'. Note: 6 additional resources (revelation_gallery, finale_dawn, manor_exterior, garden_night, courtyard_ruins, throne_hall_dark) failed to generate due to API persistent 404 errors; will be retried in v1.0.40.",
+  "_removed_official_resources_note": "v1.0.38: Removed 125+ references to non-existent official Limbus Company resources (assets/limbus_official_albina/, assets/canto_ix_official/cg/, assets/canto_ix_official/bg_story/, assets/canto_ix_official/bg_battle/, assets/canto_ix_official/sprites/) due to copyright concerns and missing files. v1.0.40: Replaced with AI-generated original resources using our house art style."
 }

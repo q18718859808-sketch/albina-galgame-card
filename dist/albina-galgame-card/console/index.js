@@ -5132,7 +5132,7 @@ function Tl(e) {
 }
 //#endregion
 //#region src/config.ts
-var El = "albina-galgame-card", Dl = "阿尔比娜 Galgame Card", Ol = "打开阿尔比娜前端", kl = "albinaGalgameCardGameSaveV1", Al = `https://cdn.jsdelivr.net/gh/q18718859808-sketch/albina-galgame-card@v1.0.37/dist/${El}`, jl = {
+var El = "albina-galgame-card", Dl = "阿尔比娜 Galgame Card", Ol = "打开阿尔比娜前端", kl = "albinaGalgameCardGameSaveV1", Al = `https://cdn.jsdelivr.net/gh/q18718859808-sketch/albina-galgame-card@v1.0.40/dist/${El}`, jl = {
 	opening_001: {
 		chapter: 1,
 		sceneId: "opening_001",
@@ -10246,13 +10246,13 @@ var Xd = Ks("game", {
 			this.hasSeenOpening || this.save.hasSeenOpening ? (this.bootPhase = "title", Ud.playBGM("title_theme", 1.5)) : (this.bootPhase = "opening_movie", Ud.playBGM("main_menu", 1.2));
 		},
 		startNewGame() {
-			this.bootPhase = "game", this.save.bootPhase = "game", Ud.playSE("ui_confirm"), this.ui.showSetup = !0, this.persist();
+			this.bootPhase = "game", this.save.bootPhase = "game", Ud.playSE("ui_confirm"), this.ui.showSetup = !0, this.persist(), window.postMessage({ __albinaBoot: !0, phase: "game" }, "*");
 		},
 		continueGame() {
 			this.bootPhase = "game", this.save.bootPhase = "game", Ud.playSE("ui_confirm"), this.persist();
 		},
 		returnToTitle() {
-			this.bootPhase = "title", this.save.bootPhase = "title", Ud.playBGM("title_theme", 1), Ud.playSE("ui_back"), this.persist();
+			this.bootPhase = "title", this.save.bootPhase = "title", Ud.playBGM("title_theme", 1), Ud.playSE("ui_back"), this.persist(), window.postMessage({ __albinaBoot: !0, phase: "title" }, "*");
 		},
 		persist() {
 			this.save = Vd(this.save), xd(this.save);
@@ -10273,8 +10273,8 @@ var Xd = Ks("game", {
 					authoritativeResult: t.authoritativeResult,
 					createdAt: (/* @__PURE__ */ new Date()).toISOString()
 				}), this.save.history = this.save.history.slice(0, 80), t.ok && (this.appendStoryLog("choice", `选择：${t.playerInput}`, t.authoritativeResult, `choice:${e}`, !0), this.syncUnlocks(`choice:${e}`), this.syncProgression(`choice:${e}`), Yd(this.save, `choice:${e}`, t.authoritativeResult)), this.ui.flash = !0, window.setTimeout(() => {
-					this.ui.flash = !1;
-				}, 420), this.persist();
+				this.ui.flash = !1;
+			}, 420), this.persist(), window.postMessage({ __albinaCinema: !0, event: this.save.scene.sceneId, phase: "scene_change", route: this.save.route, sceneId: this.save.scene.sceneId, tone: this.save.scene.tone }, "*");
 			} catch (e) {
 				this.error = String(e);
 			} finally {
@@ -21367,6 +21367,8 @@ function Ux(e) {
 	return n.includes("/console/") ? `${new URL("../assets/", n).href}${t}` : `${Al}/assets/${t}`;
 }
 function Wx(e) {
+	const t = ["canto_ix_opening", "albina_debut", "rain_confession", "battle_climax", "hell_gate", "ring_conspiracy"];
+	if (t.includes(e)) return Ux(`original_cg/${e}.png`);
 	return Ux(`cg/${e}.jpg`);
 }
 //#endregion
@@ -21501,9 +21503,9 @@ var Gx = { class: "textbox" }, Kx = { class: "speaker-row" }, qx = { class: "spe
 				key: `${e.id}-${e.sprite}`,
 				class: M(["character", [e.position, { active: e.active }]]),
 				style: ce({ "--sprite-scale": e.scale ?? 1 }),
-				src: z(Ux)(`characters/${e.id}/${e.sprite}.png`),
-				alt: e.id
-			}, null, 14, tS))), 128))]),
+				src: z(Ux)(e.id === "albina" && ["normal", "smile", "sad", "battle"].includes(e.sprite) ? `original_albina_sprites/${e.sprite}.png` : `characters/${e.id}/${e.sprite}.png`),
+				alt: e.id, onError: (ev) => { const im = ev.currentTarget; if (im.dataset.svgTried) return; im.dataset.svgTried = "1"; const c = im.getAttribute("src") || ""; if (c.endsWith(".png")) im.src = c.replace(/\.png$/, ".svg"); }
+		}, null, 14, tS))), 128))]),
 			W("div", nS, [W("span", null, N(z(t).routeLabel), 1), W("strong", null, N(z(t).save.locationId), 1)]),
 			ia(Zx),
 			z(t).loading ? (H(), U("div", rS, "生成中")) : G("", !0)
