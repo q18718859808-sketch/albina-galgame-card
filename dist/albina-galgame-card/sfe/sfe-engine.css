@@ -1,0 +1,91 @@
+/* Albina SFE — 序列帧CG演出引擎样式 v1.0.40 */
+.albina-sfe-layer {
+  position: fixed;
+  inset: 0;
+  z-index: 99998;
+  pointer-events: none;
+  overflow: hidden;
+  background: #000;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+.albina-sfe-layer.visible {
+  opacity: 1;
+  pointer-events: auto;
+}
+.albina-sfe-frame {
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  opacity: 0;
+  transition: opacity 0.06s linear;
+}
+.albina-sfe-frame.active {
+  opacity: 1;
+}
+.albina-sfe-caption {
+  position: absolute;
+  bottom: 8%;
+  left: 50%;
+  transform: translateX(-50%);
+  color: #f0ead6;
+  font-family: "Noto Serif SC", "Songti SC", serif;
+  font-size: clamp(14px, 2.2vw, 22px);
+  letter-spacing: 0.08em;
+  text-shadow: 0 2px 12px rgba(0,0,0,0.8), 0 0 24px rgba(20,30,80,0.4);
+  opacity: 0;
+  transition: opacity 0.5s ease, transform 0.5s ease;
+  padding: 12px 32px;
+  background: linear-gradient(180deg, rgba(10,10,20,0) 0%, rgba(10,10,20,0.5) 100%);
+  border-radius: 4px;
+  max-width: 70vw;
+  text-align: center;
+}
+.albina-sfe-caption.visible {
+  opacity: 1;
+  transform: translateX(-50%) translateY(-8px);
+}
+.albina-sfe-skip {
+  position: absolute;
+  top: 24px;
+  right: 24px;
+  padding: 8px 20px;
+  background: rgba(20,20,20,0.6);
+  color: #c8c4b8;
+  border: 1px solid rgba(200,196,184,0.3);
+  border-radius: 3px;
+  cursor: pointer;
+  font-family: sans-serif;
+  font-size: 13px;
+  letter-spacing: 0.1em;
+  opacity: 0;
+  transition: opacity 0.3s ease, background 0.2s ease;
+}
+.albina-sfe-layer.visible .albina-sfe-skip {
+  opacity: 1;
+}
+.albina-sfe-skip:hover {
+  background: rgba(40,40,50,0.8);
+  color: #f0ead6;
+}
+.albina-sfe-vignette {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(ellipse at center, transparent 40%, rgba(0,0,0,0.55) 100%);
+  pointer-events: none;
+}
+.albina-sfe-scanline {
+  position: absolute;
+  inset: 0;
+  background: repeating-linear-gradient(
+    0deg,
+    rgba(0,0,0,0) 0px,
+    rgba(0,0,0,0) 2px,
+    rgba(0,0,0,0.04) 3px,
+    rgba(0,0,0,0) 4px
+  );
+  pointer-events: none;
+  mix-blend-mode: multiply;
+}
