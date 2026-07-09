@@ -1,10 +1,12 @@
 // Albina OpeningMovie / EndingMovie Video Injector + Bridge Layer Loader
-// v1.0.42 - 全量融合 bigmalove/galgame v1.2 架构
+// v1.0.43 - + Codex hatch-pet 精灵图集帧动画工具链全量部署
+//          + albina-sprite-atlas.js 浏览器帧动画播放器 (8x9 网格)
+//          + hatch_pet_workflow.py 本地命令行工作流入口
 //          + IndexedDB 资产仓库 + PIXI 8 特效引擎 + 富标签解析器
 //          + 生图后端适配 + TTS 适配 + 地图系统
 // 通过 postMessage 接管 bootPhase=opening_movie，播放完毕后切回 title
 (async function () {
-  const VERSION = 'v1.0.42';
+  const VERSION = 'v1.0.43';
   const CDN_BASE = `https://cdn.jsdelivr.net/gh/q18718859808-sketch/albina-galgame-card@${VERSION}/dist/albina-galgame-card`;
   const OP_URL = `${CDN_BASE}/assets/videos/op.mp4`;
   const ED_URL = `${CDN_BASE}/assets/videos/ed.mp4`;
@@ -16,6 +18,7 @@
   const IMAGE_GEN_JS = `${CDN_BASE}/albina-bridge/albina-image-gen.js`;
   const TTS_JS = `${CDN_BASE}/albina-bridge/albina-tts.js`;
   const MAP_JS = `${CDN_BASE}/albina-bridge/albina-map.js`;
+  const SPRITE_ATLAS_JS = `${CDN_BASE}/albina-bridge/albina-sprite-atlas.js`;
   const SFE_CSS = `${CDN_BASE}/sfe/sfe-engine.css`;
   const SFE_JS = `${CDN_BASE}/sfe/sfe-engine.js`;
   const SFE_DIRECTOR_JS = `${CDN_BASE}/sfe/sfe-director.js`;
@@ -64,8 +67,9 @@
       injectJS(IMAGE_GEN_JS, into);
       injectJS(TTS_JS, into);
       injectJS(MAP_JS, into);
+      injectJS(SPRITE_ATLAS_JS, into);
       injectJS(BRIDGE_JS, into, function () {
-        console.log('[AlbinaBridge] v1.0.42 loaded with all 12 modules');
+        console.log('[AlbinaBridge] v1.0.43 loaded with all 13 modules (+sprite-atlas)');
       }, function () {
         console.warn('[AlbinaBridge] load failed:', BRIDGE_JS);
       });
