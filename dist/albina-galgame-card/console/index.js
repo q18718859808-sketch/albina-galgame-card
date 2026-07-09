@@ -1,4 +1,4 @@
-//#region node_modules/@vue/shared/dist/shared.esm-bundler.js
+﻿//#region node_modules/@vue/shared/dist/shared.esm-bundler.js
 /* @__NO_SIDE_EFFECTS__ */
 function e(e) {
 	let t = /* @__PURE__ */ Object.create(null);
@@ -5132,7 +5132,7 @@ function Tl(e) {
 }
 //#endregion
 //#region src/config.ts
-var El = "albina-galgame-card", Dl = "阿尔比娜 Galgame Card", Ol = "打开阿尔比娜前端", kl = "albinaGalgameCardGameSaveV1", Al = `https://cdn.jsdelivr.net/gh/q18718859808-sketch/albina-galgame-card@v1.0.41/dist/${El}`, jl = {
+var El = "albina-galgame-card", Dl = "阿尔比娜 Galgame Card", Ol = "打开阿尔比娜前端", kl = "albinaGalgameCardGameSaveV1", Al = `https://cdn.jsdelivr.net/gh/q18718859808-sketch/albina-galgame-card@v1.0.42/dist/${El}`, jl = {
 	opening_001: {
 		chapter: 1,
 		sceneId: "opening_001",
