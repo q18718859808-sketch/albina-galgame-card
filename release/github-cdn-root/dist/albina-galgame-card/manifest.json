@@ -1,6 +1,6 @@
 ﻿{
-  "base": "https://cdn.jsdelivr.net/gh/q18718859808-sketch/albina-galgame-card@v1.0.43/dist/albina-galgame-card",
-  "version": "1.0.43",
+  "base": "https://cdn.jsdelivr.net/gh/q18718859808-sketch/albina-galgame-card@v1.0.44/dist/albina-galgame-card",
+  "version": "1.0.44",
   "bridge": {
     "css": "albina-bridge/albina-bridge.css",
     "js": "albina-bridge/albina-bridge.js"

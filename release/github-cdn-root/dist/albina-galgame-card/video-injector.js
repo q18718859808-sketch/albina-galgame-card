@@ -1,4 +1,5 @@
 // Albina OpeningMovie / EndingMovie Video Injector + Bridge Layer Loader
+// v1.0.44 - + 静态立绘自动替换为帧动画 (autoReplaceStaticImages)
 // v1.0.43 - + Codex hatch-pet 精灵图集帧动画工具链全量部署
 //          + albina-sprite-atlas.js 浏览器帧动画播放器 (8x9 网格)
 //          + hatch_pet_workflow.py 本地命令行工作流入口
@@ -6,7 +7,7 @@
 //          + 生图后端适配 + TTS 适配 + 地图系统
 // 通过 postMessage 接管 bootPhase=opening_movie，播放完毕后切回 title
 (async function () {
-  const VERSION = 'v1.0.43';
+  const VERSION = 'v1.0.44';
   const CDN_BASE = `https://cdn.jsdelivr.net/gh/q18718859808-sketch/albina-galgame-card@${VERSION}/dist/albina-galgame-card`;
   const OP_URL = `${CDN_BASE}/assets/videos/op.mp4`;
   const ED_URL = `${CDN_BASE}/assets/videos/ed.mp4`;
@@ -69,7 +70,10 @@
       injectJS(MAP_JS, into);
       injectJS(SPRITE_ATLAS_JS, into);
       injectJS(BRIDGE_JS, into, function () {
-        console.log('[AlbinaBridge] v1.0.43 loaded with all 13 modules (+sprite-atlas)');
+        console.log('[AlbinaBridge] v1.0.44 loaded with all 13 modules (+sprite-atlas)');
+        if (into.defaultView && into.defaultView.AlbinaSpriteAtlas) {
+          into.defaultView.AlbinaSpriteAtlas.autoReplaceStaticImages({ fps: 8, loop: true });
+        }
       }, function () {
         console.warn('[AlbinaBridge] load failed:', BRIDGE_JS);
       });
