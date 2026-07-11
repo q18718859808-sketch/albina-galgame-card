@@ -6,6 +6,7 @@ export interface LedgerJob {
   attempt?: number;
   output?: string;
   error?: string;
+  providerJobId?: string;
   updatedAt?: string;
   [key: string]: unknown;
 }
@@ -106,7 +107,7 @@ async function acquireLock(path: string): Promise<FileHandle> {
     try {
       return await open(path, 'wx');
     } catch (error) {
-      if ((error as NodeJS.ErrnoException).code !== 'EEXIST') throw error;
+      if (!['EEXIST', 'EPERM', 'EACCES'].includes((error as NodeJS.ErrnoException).code ?? '')) throw error;
       await new Promise((resolve) => setTimeout(resolve, 10));
     }
   }

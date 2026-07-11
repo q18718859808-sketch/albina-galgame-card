@@ -47,3 +47,11 @@ The temporary `tools/media/node_modules/.vite*` caches created by Vitest were re
 Anysearch verification against current PiAPI documentation confirmed `https://api.piapi.ai/v1/images/generations`, `/v1/images/edits`, and the unified video task endpoints `POST /api/v1/task` plus `GET /api/v1/task/{task_id}`. The task brief is authoritative for the requested `seedance-1.5-pro`, `/v1/audio/speech`, and `/v1/music_generation` model routes. The implementation remains fixture-driven because no live paid request was authorized. Music duration is therefore treated as a requested validation target, not a provider guarantee.
 
 [Logic Verifier service unavailable; numerical and code-security results were not independently verified by that MCP.]
+
+## Independent review follow-up: Seedance idempotency
+
+The remaining Important review finding was fixed after the initial Task 5 commit. Video submission and polling now have separate retry boundaries. Submission may retry only until a provider job ID is returned. The ID is persisted to the single-writer ledger immediately, before the first poll. Poll 429, 5xx, and recognized network transport failures retry only `pollVideo` with that same ID; they cannot re-enter submission.
+
+When a process restarts, generation reads an existing `providerJobId` from the ledger and resumes polling without calling submit. Exhausted poll retries leave the provider ID intact so a later run can continue safely. The general retry helper now recognizes common fetch, socket, connection-reset, DNS-temporary, and timeout transport failures. Windows `EPERM`/`EACCES` lock-open races are treated as lock contention alongside `EEXIST`.
+
+Regression evidence: a submit-success/poll-500/poll-success test observes the provider ID already present before the first poll and asserts exactly one submit call; a recovery test seeds the ledger with a provider ID and asserts zero submit calls. Media verification now passes 22 tests across four files; root verification remains 65 tests across twelve files. Both media/root typechecks and builds pass.

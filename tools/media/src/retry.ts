@@ -29,7 +29,18 @@ export async function retry<T>(operation: () => Promise<T>, options: RetryOption
 
 function isTransient(error: unknown): boolean {
   const status = (error as RetryableError | undefined)?.status;
-  return status === 408 || status === 429 || (typeof status === 'number' && status >= 500 && status <= 599);
+  return (
+    status === 408 ||
+    status === 429 ||
+    (typeof status === 'number' && status >= 500 && status <= 599) ||
+    isNetworkError(error)
+  );
+}
+
+function isNetworkError(error: unknown): boolean {
+  if (!(error instanceof Error)) return false;
+  const causeCode = String((error.cause as { code?: unknown } | undefined)?.code ?? '');
+  return /fetch failed|network|socket|ECONN|ETIMEDOUT|EAI_AGAIN/i.test(`${error.message} ${causeCode}`);
 }
 
 function delay(milliseconds: number): Promise<void> {

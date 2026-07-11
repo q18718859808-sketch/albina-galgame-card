@@ -47,7 +47,10 @@ export class MediaGenerator {
     await this.options.ledger.upsertJob(id, { status: 'running' });
     try {
       if (job.kind === 'music') await this.options.ledger.assertMusicRequestAllowed();
-      const artifact = await retry(() => this.requestArtifact(job));
+      const artifact =
+        job.kind === 'video'
+          ? await this.generateVideo(job, id)
+          : await retry(() => this.requestArtifact(job), { sleep: this.sleep });
       if (artifact.kind === 'ambiguous') {
         await this.options.ledger.startMusicCooldown();
         await this.options.ledger.upsertJob(id, { status: 'ambiguous', error: artifact.reason });
@@ -84,19 +87,25 @@ export class MediaGenerator {
       if (!this.client.generateMusic) throw new Error('Media client does not implement generateMusic');
       return this.client.generateMusic(job);
     }
-    return this.generateVideo(job);
+    throw new Error(`Unsupported media job kind: ${String(job.kind)}`);
   }
 
-  private async generateVideo(job: Extract<MediaJob, { kind: 'video' }>): Promise<NormalizedArtifact> {
+  private async generateVideo(job: Extract<MediaJob, { kind: 'video' }>, jobId: string): Promise<NormalizedArtifact> {
     if (!this.client.submitVideo || !this.client.pollVideo) throw new Error('Media client does not implement video submit/poll');
-    const submitted = await this.client.submitVideo(job);
+    const persisted = (await this.options.ledger.read()).jobs[jobId]?.providerJobId;
+    let providerJobId = typeof persisted === 'string' ? persisted : undefined;
+    if (!providerJobId) {
+      const submitted = await retry(() => this.client.submitVideo!(job), { sleep: this.sleep });
+      providerJobId = submitted.providerJobId;
+      await this.options.ledger.upsertJob(jobId, { status: 'polling', providerJobId });
+    }
     for (let attempt = 0; attempt < 120; attempt += 1) {
-      const result = await this.client.pollVideo(submitted.providerJobId);
+      const result = await retry(() => this.client.pollVideo!(providerJobId), { sleep: this.sleep });
       if ('kind' in result) return result;
-      if (result.status === 'failed') throw new Error(`Pie video job failed: ${submitted.providerJobId}`);
+      if (result.status === 'failed') throw new Error(`Pie video job failed: ${providerJobId}`);
       await this.sleep(5_000);
     }
-    throw new Error(`Pie video job timed out: ${submitted.providerJobId}`);
+    throw new Error(`Pie video job timed out: ${providerJobId}`);
   }
 
   private async storeArtifact(artifact: NormalizedArtifact, output: string): Promise<void> {

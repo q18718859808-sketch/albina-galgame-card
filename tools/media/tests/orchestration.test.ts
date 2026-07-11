@@ -70,6 +70,16 @@ describe('network resilience', () => {
     expect(sleep).toHaveBeenNthCalledWith(2, 20);
   });
 
+  test('retries network transport failures', async () => {
+    const operation = vi
+      .fn<() => Promise<string>>()
+      .mockRejectedValueOnce(Object.assign(new TypeError('fetch failed'), { cause: { code: 'ECONNRESET' } }))
+      .mockResolvedValue('ok');
+
+    await expect(retry(operation, { attempts: 2, sleep: async () => undefined })).resolves.toBe('ok');
+    expect(operation).toHaveBeenCalledTimes(2);
+  });
+
   test('resumes a partial download with a byte range', async () => {
     const directory = await mkdtemp(join(tmpdir(), 'albina-media-download-'));
     const destination = join(directory, 'artifact.bin');
@@ -108,6 +118,50 @@ describe('artifact generation', () => {
 
     expect(downloader).toHaveBeenCalledOnce();
     expect((await ledger.read()).jobs[contentHashJobId(job)]?.status).toBe('completed');
+  });
+
+  test('does not resubmit after a transient poll failure', async () => {
+    const directory = await mkdtemp(join(tmpdir(), 'albina-media-video-retry-'));
+    const output = join(directory, 'video.mp4');
+    const job = { kind: 'video' as const, prompt: 'rain', durationSeconds: 5, output };
+    const ledger = new Ledger(join(directory, 'ledger.json'));
+    const submitVideo = vi.fn().mockResolvedValue({ providerJobId: 'provider_once', status: 'pending' });
+    const pollVideo = vi
+      .fn()
+      .mockImplementationOnce(async () => {
+        expect((await ledger.read()).jobs[contentHashJobId(job)]?.providerJobId).toBe('provider_once');
+        throw Object.assign(new Error('gateway'), { status: 500 });
+      })
+      .mockResolvedValueOnce({
+        kind: 'video',
+        model: 'seedance-1.5-pro',
+        mimeType: 'video/mp4',
+        bytes: new Uint8Array([1, 2, 3]),
+      });
+
+    await expect(
+      new MediaGenerator({ client: { submitVideo, pollVideo }, ledger, sleep: async () => undefined }).generate([job]),
+    ).rejects.toThrow(/validation/i);
+
+    expect(submitVideo).toHaveBeenCalledOnce();
+    expect(pollVideo).toHaveBeenCalledTimes(2);
+    expect((await ledger.read()).jobs[contentHashJobId(job)]?.providerJobId).toBe('provider_once');
+  });
+
+  test('resumes polling a persisted provider job without submitting again', async () => {
+    const directory = await mkdtemp(join(tmpdir(), 'albina-media-video-resume-'));
+    const job = { kind: 'video' as const, prompt: 'rain', durationSeconds: 5, output: join(directory, 'video.mp4') };
+    const ledger = new Ledger(join(directory, 'ledger.json'));
+    await ledger.upsertJob(contentHashJobId(job), { status: 'failed', providerJobId: 'provider_existing' });
+    const submitVideo = vi.fn();
+    const pollVideo = vi.fn().mockResolvedValue({ providerJobId: 'provider_existing', status: 'failed' });
+
+    await expect(
+      new MediaGenerator({ client: { submitVideo, pollVideo }, ledger, sleep: async () => undefined }).generate([job]),
+    ).rejects.toThrow(/provider_existing/);
+
+    expect(submitVideo).not.toHaveBeenCalled();
+    expect(pollVideo).toHaveBeenCalledWith('provider_existing');
   });
 });
 
