@@ -195,4 +195,51 @@ describe('AudioService', () => {
     service.dispose();
     vi.useRealTimers();
   });
+
+  it('keeps the previous BGM owned while the replacement play is pending and stopAll runs', async () => {
+    let resolveReplacement!: () => void;
+    const replacementPlay = new Promise<void>((resolve) => { resolveReplacement = resolve; });
+    const created: FakeAudio[] = [];
+    const service = new AudioService(() => {
+      const audio = new FakeAudio();
+      if (created.length === 1) audio.play.mockReturnValue(replacementPlay);
+      created.push(audio);
+      return audio;
+    });
+    await service.playBgm('a.mp3', 0);
+
+    const replacement = service.playBgm('b.mp3', 100);
+    service.stopAll();
+    resolveReplacement();
+
+    await expect(replacement).resolves.toBe(false);
+    expect(created[0]?.pause).toHaveBeenCalledOnce();
+    expect(created[1]?.pause).toHaveBeenCalledOnce();
+    expect(created[0]?.src).toBe('');
+    expect(created[1]?.src).toBe('');
+  });
+
+  it('releases both prior tracks when a newer BGM supersedes a pending replacement', async () => {
+    let resolvePending!: () => void;
+    const pendingPlay = new Promise<void>((resolve) => { resolvePending = resolve; });
+    const created: FakeAudio[] = [];
+    const service = new AudioService(() => {
+      const audio = new FakeAudio();
+      if (created.length === 1) audio.play.mockReturnValue(pendingPlay);
+      created.push(audio);
+      return audio;
+    });
+    await service.playBgm('a.mp3', 0);
+
+    const pending = service.playBgm('b.mp3', 100);
+    await expect(service.playBgm('c.mp3', 0)).resolves.toBe(true);
+    resolvePending();
+
+    await expect(pending).resolves.toBe(false);
+    expect(created[0]?.pause).toHaveBeenCalledOnce();
+    expect(created[1]?.pause).toHaveBeenCalledOnce();
+    expect(created[0]?.src).toBe('');
+    expect(created[1]?.src).toBe('');
+    expect(created[2]?.pause).not.toHaveBeenCalled();
+  });
 });

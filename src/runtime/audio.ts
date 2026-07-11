@@ -52,13 +52,14 @@ export class AudioService {
     next.loop = true;
     next.volume = crossfadeMs > 0 ? 0 : this.bgmVolume();
     this.bgm = next;
+    this.pendingBgmPrevious = previous;
     const isCurrent = () => this.isCurrentBgm(next, lifecycle, generation);
     const played = await this.tryPlay(next, isCurrent);
     if (!played) {
       if (!isCurrent()) return false;
-      this.pendingBgmPrevious = previous;
       return false;
     }
+    this.pendingBgmPrevious = undefined;
     if (!previous || crossfadeMs <= 0) {
       releaseAudio(previous);
       next.volume = this.bgmVolume();

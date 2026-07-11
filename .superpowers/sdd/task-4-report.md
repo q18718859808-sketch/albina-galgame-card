@@ -57,3 +57,11 @@ The review RED suite added delayed image/audio completions, concurrent Blob URL 
 After the fixes, `npm test -- tests/runtime` passed with five files and 33 tests. `npm test` passed with 12 files and 63 tests. `npm run typecheck` completed without diagnostics, and `npm run build` completed successfully with Vite 7.3.6. `git diff --check` reported no whitespace errors, and `git status -- release dist` remained clean.
 
 [Verification service unavailable, results not independently verified]
+
+## Final BGM Ownership Follow-up
+
+The final review found one remaining await-window ownership gap. After track A was active and `playBgm(B)` had assigned B as current but was still awaiting `B.play()`, A existed only in the suspended method's local variable. A concurrent `stopAll()` or `playBgm(C)` therefore could not enumerate and release A.
+
+Two delayed-promise tests reproduced the issue before implementation. In both A-to-B-to-stop and A-to-B-to-C sequences, A had zero pause calls while B remained pending. `playBgm` now records the outgoing track in `pendingBgmPrevious` before awaiting the replacement's `play()`. Successful replacement transfers that ownership immediately into direct release or the tracked crossfade; blocked replacement retains it for recovery; teardown and superseding replacement can always release both tracks. A stale B promise is rejected by the existing lifecycle/BGM generation checks and returns `false` without restoring either released track.
+
+Final verification passed: runtime five files and 35 tests, full suite 12 files and 65 tests, strict typecheck, and production build. The release and dist trees remained unchanged.
