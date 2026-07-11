@@ -1,0 +1,14 @@
+{
+  "trace_id": "[REDACTED]",
+  "data": {
+    "status": 2,
+    "audio": "https://example.invalid/redacted/music.mp3"
+  },
+  "extra_info": {
+    "music_duration": 12500
+  },
+  "base_resp": {
+    "status_code": 0,
+    "status_msg": "success"
+  }
+}

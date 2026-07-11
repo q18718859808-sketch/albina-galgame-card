@@ -1,0 +1,14 @@
+{
+  "name": "@albina/media",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "bin": {
+    "media": "dist/src/cli.js"
+  },
+  "scripts": {
+    "build": "node ../../node_modules/typescript/bin/tsc -p tsconfig.json",
+    "test": "node ../../node_modules/vitest/vitest.mjs run --config vitest.config.ts",
+    "typecheck": "node ../../node_modules/typescript/bin/tsc -p tsconfig.json --noEmit"
+  }
+}

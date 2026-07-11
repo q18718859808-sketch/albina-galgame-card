@@ -1,0 +1,9 @@
+{
+  "created": 1783814400,
+  "data": [
+    {
+      "url": "https://example.invalid/redacted/generated-image.png",
+      "revised_prompt": "[REDACTED]"
+    }
+  ]
+}

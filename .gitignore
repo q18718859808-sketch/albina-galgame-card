@@ -4,10 +4,13 @@ __pycache__/
 *.pyc
 node_modules/
 build/
+/tools/media/dist/
+/tools/media/artifacts/
+/tools/media/jobs/.ledger.json*
 
 # But keep dist assets and card
-!dist/
-!card/
+!/dist/
+!/card/
 
 # v1.0.44: strip 文件太大不上传 GitHub，本地保留
 dist/albina-galgame-card/assets/sprite-atlas/*_strip.png

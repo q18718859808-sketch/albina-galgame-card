@@ -1,0 +1,12 @@
+{
+  "kind": "image",
+  "prompt": "Offline production placeholder; replace before generation.",
+  "width": 1024,
+  "height": 1024,
+  "output": "tools/media/artifacts/example.png",
+  "validation": {
+    "width": 1024,
+    "height": 1024,
+    "alpha": false
+  }
+}
