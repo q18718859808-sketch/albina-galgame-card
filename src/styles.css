@@ -1,0 +1,45 @@
+:root {
+  color: #f6efe1;
+  background: #020307;
+  font-family: Inter, "Noto Sans SC", "Microsoft YaHei", system-ui, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+.source-baseline {
+  width: min(48rem, calc(100% - 2rem));
+  margin: 10vh auto;
+  padding: clamp(1.5rem, 4vw, 3rem);
+  border: 1px solid rgb(215 175 70 / 38%);
+  background: linear-gradient(145deg, rgb(7 12 18 / 96%), rgb(2 3 7 / 96%));
+  box-shadow: 0 2rem 6rem rgb(0 0 0 / 55%);
+}
+
+.source-baseline__eyebrow,
+.source-baseline dt {
+  color: #d7af46;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+}
+
+.source-baseline h1 {
+  margin-block: 0.5rem 1rem;
+}
+
+.source-baseline dl {
+  display: grid;
+  grid-template-columns: max-content minmax(0, 1fr);
+  gap: 0.75rem 1rem;
+  margin-block-end: 0;
+}
+
+.source-baseline dd {
+  margin: 0;
+  overflow-wrap: anywhere;
+}
