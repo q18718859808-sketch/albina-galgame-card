@@ -4,3 +4,4 @@ Baseline: d4e1a31
 Task 0: complete (isolated worktree; 28 JS syntax checks and 133 JSON parses clean)
 Task 1: complete (commits 40903b2..c66bea0, review clean; reproducible source baseline and canonical release sync)
 Task 2: complete (commits d81a8aa..01ff92f, review clean; strict domain schemas and v1 save migration)
+Task 3: complete (commits c89e4f3..eca8290, review clean; deterministic 46-scene story compiler and nine endings)
