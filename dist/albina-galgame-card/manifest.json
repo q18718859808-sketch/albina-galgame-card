@@ -1,4 +1,4 @@
-﻿{
+{
   "base": "https://cdn.jsdelivr.net/gh/q18718859808-sketch/albina-galgame-card@v1.0.44/dist/albina-galgame-card",
   "version": "1.0.44",
   "bridge": {
@@ -16,18 +16,18 @@
     "bridge": "cinema/cinema-iframe-bridge.js"
   },
   "bg": {
-    "backstreets_rain": "assets/bg/backstreets_rain.png",
-    "city_rooftop": "assets/bg/city_rooftop.png",
-    "golden_bough": "assets/bg/golden_bough.png",
-    "lce_lab": "assets/bg/lce_lab.png",
-    "limbus_bus": "assets/bg/limbus_bus.png",
-    "mirror_corridor": "assets/bg/mirror_corridor.png",
-    "nest_station": "assets/bg/nest_station.png",
-    "outskirts_dawn": "assets/bg/outskirts_dawn.png",
-    "rain_room": "assets/bg/rain_room.png",
-    "ring_atelier": "assets/bg/ring_atelier.png",
-    "spider_gallery": "assets/bg/spider_gallery.png",
-    "white_canvas": "assets/bg/white_canvas.png"
+    "backstreets_rain": "assets/bg/backstreets_rain.jpg",
+    "city_rooftop": "assets/bg/city_rooftop.jpg",
+    "golden_bough": "assets/bg/golden_bough.jpg",
+    "lce_lab": "assets/bg/lce_lab.jpg",
+    "limbus_bus": "assets/bg/limbus_bus.jpg",
+    "mirror_corridor": "assets/bg/mirror_corridor.jpg",
+    "nest_station": "assets/bg/nest_station.jpg",
+    "outskirts_dawn": "assets/bg/outskirts_dawn.jpg",
+    "rain_room": "assets/bg/rain_room.jpg",
+    "ring_atelier": "assets/bg/ring_atelier.jpg",
+    "spider_gallery": "assets/bg/spider_gallery.jpg",
+    "white_canvas": "assets/bg/white_canvas.jpg"
   },
   "original_cg": {
     "canto_ix_opening": "assets/original_cg/canto_ix_opening.png",
@@ -69,7 +69,7 @@
       "wounded": "assets/characters/albina/wounded.png"
     },
     "araya": {
-      "normal": "assets/characters/araya/normal.png"
+      "normal": "assets/characters/araya/normal.svg"
     },
     "callisto": {
       "normal": "assets/characters/callisto/normal.png"
@@ -90,7 +90,7 @@
       "normal": "assets/characters/golden_apparition/normal.png"
     },
     "kira": {
-      "normal": "assets/characters/kira/normal.png"
+      "normal": "assets/characters/kira/normal.svg"
     },
     "lcd_captain": {
       "normal": "assets/characters/lcd_captain/normal.png"
@@ -99,7 +99,7 @@
       "normal": "assets/characters/lce_doctor/normal.png"
     },
     "lucio": {
-      "normal": "assets/characters/lucio/normal.png"
+      "normal": "assets/characters/lucio/normal.svg"
     },
     "protagonist": {
       "battle": "assets/characters/protagonist/battle.png",
@@ -122,13 +122,13 @@
       "normal": "assets/characters/ring_agent/normal.png"
     },
     "ryoshu": {
-      "normal": "assets/characters/ryoshu/normal.png"
+      "normal": "assets/characters/ryoshu/normal.svg"
     },
     "sinclair": {
-      "normal": "assets/characters/sinclair/normal.png"
+      "normal": "assets/characters/sinclair/normal.svg"
     },
     "sora": {
-      "normal": "assets/characters/sora/normal.png"
+      "normal": "assets/characters/sora/normal.svg"
     },
     "vergilius": {
       "normal": "assets/characters/vergilius/normal.png"
@@ -139,79 +139,55 @@
   },
   "cg": {
     "albina_key_visual": "assets/cg/albina_key_visual.jpg",
-    "araya_rooftop": "assets/cg/araya_rooftop.png",
-    "art_resonance": "assets/cg/art_resonance.png",
-    "backstreet_pursuit": "assets/cg/backstreet_pursuit.png",
-    "canto_2_scene_14_14": "assets/cg/canto_2_scene_14_14.png",
-    "canto_2_scene_1_4": "assets/cg/canto_2_scene_1_4.png",
-    "canto_2_scene_2_6": "assets/cg/canto_2_scene_2_6.png",
-    "canto_2_scene_2_7": "assets/cg/canto_2_scene_2_7.png",
-    "chapter_6_climax": "assets/cg/chapter_6_climax.png",
-    "chapter_s22": "assets/cg/chapter_s22.png",
-    "combat_scene_101": "assets/cg/combat_scene_101.png",
+    "araya_rooftop": "assets/cg/araya_rooftop.jpg",
+    "art_resonance": "assets/cg/art_resonance.jpg",
+    "backstreet_pursuit": "assets/cg/backstreet_pursuit.jpg",
     "combat_transition_01": "assets/cg/combat_transition_01.jpg",
     "combat_transition_02": "assets/cg/combat_transition_02.jpg",
     "combat_transition_03": "assets/cg/combat_transition_03.jpg",
     "combat_transition_04": "assets/cg/combat_transition_04.jpg",
     "combat_transition_05": "assets/cg/combat_transition_05.jpg",
     "combat_transition_06": "assets/cg/combat_transition_06.jpg",
-    "conspiracy_contract": "assets/cg/conspiracy_contract.png",
-    "danger_threshold": "assets/cg/danger_threshold.png",
-    "dante_star_vision": "assets/cg/dante_star_vision.png",
-    "fascia_heartbeat": "assets/cg/fascia_heartbeat.png",
-    "first_gallery": "assets/cg/first_gallery.png",
-    "golden_bough_ending": "assets/cg/golden_bough_ending.png",
-    "golden_bough_rebuild": "assets/cg/golden_bough_rebuild.png",
-    "hell_gate_confrontation": "assets/cg/hell_gate_confrontation.png",
-    "hell_gate_entrance": "assets/cg/hell_gate_entrance.png",
-    "hollow_torso_reveal": "assets/cg/hollow_torso_reveal.png",
-    "lce_raid": "assets/cg/lce_raid.png",
-    "limbus_bus_night": "assets/cg/limbus_bus_night.png",
-    "maestro_shadow": "assets/cg/maestro_shadow.png",
-    "opening_rain": "assets/cg/opening_rain.png",
-    "prologue_fascia_reveal": "assets/cg/prologue_fascia_reveal.png",
-    "prologue_gallery_intro": "assets/cg/prologue_gallery_intro.png",
-    "prologue_meeting": "assets/cg/prologue_meeting.png",
-    "rain_confession": "assets/cg/rain_confession.png",
-    "rebuild_awakening": "assets/cg/rebuild_awakening.png",
-    "ren_interruption": "assets/cg/ren_interruption.png",
-    "ring_conspiracy_ending": "assets/cg/ring_conspiracy_ending.png",
-    "ring_invitation": "assets/cg/ring_invitation.png",
-    "sinclair_flash": "assets/cg/sinclair_flash.png",
-    "surgery_of_memory": "assets/cg/surgery_of_memory.png",
-    "trust_threshold": "assets/cg/trust_threshold.png",
-    "white_canvas_choice": "assets/cg/white_canvas_choice.png",
-    "white_canvas_ending": "assets/cg/white_canvas_ending.png"
+    "conspiracy_contract": "assets/cg/conspiracy_contract.jpg",
+    "danger_threshold": "assets/cg/danger_threshold.jpg",
+    "fascia_heartbeat": "assets/cg/fascia_heartbeat.jpg",
+    "first_gallery": "assets/cg/first_gallery.jpg",
+    "golden_bough_ending": "assets/cg/golden_bough_ending.jpg",
+    "golden_bough_rebuild": "assets/cg/golden_bough_rebuild.jpg",
+    "hollow_torso_reveal": "assets/cg/hollow_torso_reveal.jpg",
+    "lce_raid": "assets/cg/lce_raid.jpg",
+    "limbus_bus_night": "assets/cg/limbus_bus_night.jpg",
+    "maestro_shadow": "assets/cg/maestro_shadow.jpg",
+    "opening_rain": "assets/cg/opening_rain.jpg",
+    "rain_confession": "assets/cg/rain_confession.jpg",
+    "rebuild_awakening": "assets/cg/rebuild_awakening.jpg",
+    "ren_interruption": "assets/cg/ren_interruption.jpg",
+    "ring_conspiracy_ending": "assets/cg/ring_conspiracy_ending.jpg",
+    "ring_invitation": "assets/cg/ring_invitation.jpg",
+    "sinclair_flash": "assets/cg/sinclair_flash.jpg",
+    "surgery_of_memory": "assets/cg/surgery_of_memory.jpg",
+    "trust_threshold": "assets/cg/trust_threshold.jpg",
+    "white_canvas_choice": "assets/cg/white_canvas_choice.jpg",
+    "white_canvas_ending": "assets/cg/white_canvas_ending.jpg"
   },
   "ui": {
-    "choice_button": "assets/ui/choice_button.png",
-    "gallery_frame": "assets/ui/gallery_frame.png",
-    "menu_plate": "assets/ui/menu_plate.png",
-    "scanline_mask": "assets/ui/scanline_mask.png",
-    "status_panel": "assets/ui/status_panel.png",
-    "textbox": "assets/ui/textbox.png"
+    "choice_button": "assets/ui/choice_button.svg",
+    "gallery_frame": "assets/ui/gallery_frame.svg",
+    "menu_plate": "assets/ui/menu_plate.svg",
+    "scanline_mask": "assets/ui/scanline_mask.svg",
+    "status_panel": "assets/ui/status_panel.svg",
+    "textbox": "assets/ui/textbox.svg"
   },
   "videos": {
-    "op": "assets/videos/op.mp4",
-    "ed": "assets/videos/ed.mp4"
+    "ed": "assets/videos/ed.mp4",
+    "op": "assets/videos/op.mp4"
   },
   "audio": {
-    "battle_canto_1": "assets/audio/bgm/battle_canto_1.mp3",
-    "battle_canto_2": "assets/audio/bgm/battle_canto_2.mp3",
-    "boss_ahab": "assets/audio/bgm/boss_ahab.mp3",
-    "boss_cassetti": "assets/audio/bgm/boss_cassetti.mp3",
-    "boss_dongbaek": "assets/audio/bgm/boss_dongbaek.mp3",
-    "boss_erlkonig": "assets/audio/bgm/boss_erlkonig.mp3",
+    "backstreets_rain": "assets/audio/bgm/backstreets_rain.mp3",
+    "between_two_worlds": "assets/audio/bgm/between_two_worlds.mp3",
     "boss_kromer": "assets/audio/bgm/boss_kromer.mp3",
-    "boss_sancho": "assets/audio/bgm/boss_sancho.mp3",
-    "dungeon_standard": "assets/audio/bgm/dungeon_standard.mp3",
     "main_menu": "assets/audio/bgm/main_menu.mp3",
-    "story_gloomy": "assets/audio/bgm/story_gloomy.mp3",
-    "story_happy": "assets/audio/bgm/story_happy.mp3",
-    "story_serious": "assets/audio/bgm/story_serious.mp3",
-    "story_suspense": "assets/audio/bgm/story_suspense.mp3",
     "title_theme": "assets/audio/bgm/title_theme.mp3",
-    "victory_fanfare": "assets/audio/bgm/victory_fanfare.mp3",
     "blood_splat": "assets/audio/se/blood_splat.wav",
     "glass_shatter": "assets/audio/se/glass_shatter.wav",
     "slash_heavy": "assets/audio/se/slash_heavy.wav",
@@ -263,5 +239,7 @@
     }
   },
   "_v1_0_39_note": "v1.0.40 (2026-07-08): Added 11 original AI-generated resources created with pie (api.pie-xian.com) gpt-image-2 API, using our house art style (dark gothic, wine-blue + antique-gold + porcelain palette, Limbus Company aesthetic). Generated: 6 core CGs (canto_ix_opening, albina_debut, rain_confession, battle_climax, hell_gate, ring_conspiracy), 4 Albina sprite variants (normal, smile, sad, battle), 1 story background (library_interior). Style suffix encoding: '#08080d→#17202a→#3a1119 / #fff7c9→#d5a83d→#8b5d18 / #f7fbff→#b9c6ce→#59636a'. Note: 6 additional resources (revelation_gallery, finale_dawn, manor_exterior, garden_night, courtyard_ruins, throne_hall_dark) failed to generate due to API persistent 404 errors; will be retried in v1.0.40.",
-  "_removed_official_resources_note": "v1.0.38: Removed 125+ references to non-existent official Limbus Company resources (assets/limbus_official_albina/, assets/canto_ix_official/cg/, assets/canto_ix_official/bg_story/, assets/canto_ix_official/bg_battle/, assets/canto_ix_official/sprites/) due to copyright concerns and missing files. v1.0.40: Replaced with AI-generated original resources using our house art style."
+  "_removed_official_resources_note": "v1.0.38: Removed 125+ references to non-existent official Limbus Company resources (assets/limbus_official_albina/, assets/canto_ix_official/cg/, assets/canto_ix_official/bg_story/, assets/canto_ix_official/bg_battle/, assets/canto_ix_official/sprites/) due to copyright concerns and missing files. v1.0.40: Replaced with AI-generated original resources using our house art style.",
+  "asset_manifest_v2": "assets/asset-manifest-v2.json",
+  "runtime_lookup": "assets/runtime-lookup.json"
 }

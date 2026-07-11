@@ -11,6 +11,6 @@
 
 ## CDN
 ```js
-import 'https://cdn.jsdelivr.net/gh/q18718859808-sketch/albina-galgame-card@v1.0.22/dist/albina-galgame-card/console/index.js'
+import 'https://cdn.jsdelivr.net/gh/q18718859808-sketch/albina-galgame-card@v1.0.44/dist/albina-galgame-card/console/index.js'
 ```
 

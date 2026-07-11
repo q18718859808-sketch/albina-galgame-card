@@ -1,0 +1,5758 @@
+{
+  "version": 2,
+  "projectId": "albina-galgame-card",
+  "basePath": "assets",
+  "assets": [
+    {
+      "id": "bg.backstreets_rain",
+      "kind": "image",
+      "path": "bg/backstreets_rain.jpg",
+      "mimeType": "image/jpeg",
+      "sha256": "7a897b01c41634b0ab05b8411f487e60712909f153aed6b866c6e724f7a05ec7",
+      "bytes": 195160
+    },
+    {
+      "id": "bg.city_rooftop",
+      "kind": "image",
+      "path": "bg/city_rooftop.jpg",
+      "mimeType": "image/jpeg",
+      "sha256": "4428f1f905a752eab7e4f6119f236f12767778db7f4768d2463a03ee6dcc4697",
+      "bytes": 207867
+    },
+    {
+      "id": "bg.golden_bough",
+      "kind": "image",
+      "path": "bg/golden_bough.jpg",
+      "mimeType": "image/jpeg",
+      "sha256": "5e6a552b04b4333ca30c001a3020168908d7867926982ca4097145fa735ee207",
+      "bytes": 222682
+    },
+    {
+      "id": "bg.lce_lab",
+      "kind": "image",
+      "path": "bg/lce_lab.jpg",
+      "mimeType": "image/jpeg",
+      "sha256": "b982f39f13eb87cdb59d1540ff4f7688c4b319600a7174a758288f3c4efe672d",
+      "bytes": 202605
+    },
+    {
+      "id": "bg.limbus_bus",
+      "kind": "image",
+      "path": "bg/limbus_bus.jpg",
+      "mimeType": "image/jpeg",
+      "sha256": "c684aba165f3d0a195d6e5b438be4bc9b2a070a4ac3364e91bef93716aab9c60",
+      "bytes": 194697
+    },
+    {
+      "id": "bg.mirror_corridor",
+      "kind": "image",
+      "path": "bg/mirror_corridor.jpg",
+      "mimeType": "image/jpeg",
+      "sha256": "aac5cfac5624763538d533b63914c845c266dc17845789d9c3f7d5bb408603f9",
+      "bytes": 193914
+    },
+    {
+      "id": "bg.nest_station",
+      "kind": "image",
+      "path": "bg/nest_station.jpg",
+      "mimeType": "image/jpeg",
+      "sha256": "732fa0c67c071560b01c536d5ed76944c60d1a0d9a5034087ca79bf5ffff9ad2",
+      "bytes": 196705
+    },
+    {
+      "id": "bg.outskirts_dawn",
+      "kind": "image",
+      "path": "bg/outskirts_dawn.jpg",
+      "mimeType": "image/jpeg",
+      "sha256": "4ccbdbab6a95b5d79ae476a96f8b453ed07241e599014002fdc83475f8bd092a",
+      "bytes": 182100
+    },
+    {
+      "id": "bg.rain_room",
+      "kind": "image",
+      "path": "bg/rain_room.jpg",
+      "mimeType": "image/jpeg",
+      "sha256": "0a4b24f02a4f9274d6691594cbfd8c1f2512c1fe4559083a22c6cf2891cb198e",
+      "bytes": 198604
+    },
+    {
+      "id": "bg.ring_atelier",
+      "kind": "image",
+      "path": "bg/ring_atelier.jpg",
+      "mimeType": "image/jpeg",
+      "sha256": "aed9195327ca4feef20a611b2bd0f0ed4a8fba22f12fdf685bafc5b3ed13eb10",
+      "bytes": 197708
+    },
+    {
+      "id": "bg.spider_gallery",
+      "kind": "image",
+      "path": "bg/spider_gallery.jpg",
+      "mimeType": "image/jpeg",
+      "sha256": "78a4336f0aa42c3ecf10667aeeb40dcdd42b271548872255c66aee716abcf024",
+      "bytes": 223415
+    },
+    {
+      "id": "bg.white_canvas",
+      "kind": "image",
+      "path": "bg/white_canvas.jpg",
+      "mimeType": "image/jpeg",
+      "sha256": "6551848df5f6a312cbd769356b512643b33f2b9e68c9b8da21ad98ab9ef80605",
+      "bytes": 193895
+    },
+    {
+      "id": "cg.araya_rooftop",
+      "kind": "image",
+      "path": "cg/araya_rooftop.jpg",
+      "mimeType": "image/jpeg",
+      "sha256": "1ecd4ffa5f53471b66b5aecbfa37a8289c603c2a5ce2212538da01cbd5d5d8e4",
+      "bytes": 226727
+    },
+    {
+      "id": "cg.art_resonance",
+      "kind": "image",
+      "path": "cg/art_resonance.jpg",
+      "mimeType": "image/jpeg",
+      "sha256": "da4000d606059e545bbf427451a999ea99e9fd730b71033cf61ed0e5c7ebeb1a",
+      "bytes": 221527
+    },
+    {
+      "id": "cg.backstreet_pursuit",
+      "kind": "image",
+      "path": "cg/backstreet_pursuit.jpg",
+      "mimeType": "image/jpeg",
+      "sha256": "ff18127cd0ae95ad91c3e85ceec047def159a58bfec852708271a65d4f53b774",
+      "bytes": 208589
+    },
+    {
+      "id": "cg.conspiracy_contract",
+      "kind": "image",
+      "path": "cg/conspiracy_contract.jpg",
+      "mimeType": "image/jpeg",
+      "sha256": "72922d9f7aac148fcfe1e6d7bed34fa8fd7bfc7323641b67feb5279fbe87dad1",
+      "bytes": 215416
+    },
+    {
+      "id": "cg.fascia_heartbeat",
+      "kind": "image",
+      "path": "cg/fascia_heartbeat.jpg",
+      "mimeType": "image/jpeg",
+      "sha256": "2640a75be54575dce6bdc1b9023b06934899cbf4b5492cf012ef1e9c7d2f71e6",
+      "bytes": 204579
+    },
+    {
+      "id": "cg.golden_bough_ending",
+      "kind": "image",
+      "path": "cg/golden_bough_ending.jpg",
+      "mimeType": "image/jpeg",
+      "sha256": "4700e8485eb57b194cf6878741509ddc1e323d486878114259b9405051045491",
+      "bytes": 217599
+    },
+    {
+      "id": "cg.hollow_torso_reveal",
+      "kind": "image",
+      "path": "cg/hollow_torso_reveal.jpg",
+      "mimeType": "image/jpeg",
+      "sha256": "46e83edaabd17b1316bd705daf1a14614c0a7ae8b6164281b9770a2e020fe3e5",
+      "bytes": 212406
+    },
+    {
+      "id": "cg.lce_raid",
+      "kind": "image",
+      "path": "cg/lce_raid.jpg",
+      "mimeType": "image/jpeg",
+      "sha256": "037414f5985f5d972656d297f771e4553d3c01d1d700185bea68f40723892284",
+      "bytes": 191396
+    },
+    {
+      "id": "cg.limbus_bus_night",
+      "kind": "image",
+      "path": "cg/limbus_bus_night.jpg",
+      "mimeType": "image/jpeg",
+      "sha256": "0b1054ef8e4b8cd99b8f234ae2abd5c5e160813b73d1e564dba47c67f8a7cd8a",
+      "bytes": 202828
+    },
+    {
+      "id": "cg.maestro_shadow",
+      "kind": "image",
+      "path": "cg/maestro_shadow.jpg",
+      "mimeType": "image/jpeg",
+      "sha256": "ff93dcfc2b02faf7920d1426ebdfadf86d58aa5744117a6d692d2f5f370fa5c6",
+      "bytes": 223021
+    },
+    {
+      "id": "cg.opening_rain",
+      "kind": "image",
+      "path": "cg/opening_rain.jpg",
+      "mimeType": "image/jpeg",
+      "sha256": "557521106b516bf35aa9b55473c6f977a80bdf8ed6f7fe3f8ecf47de6c961931",
+      "bytes": 190464
+    },
+    {
+      "id": "cg.rain_confession",
+      "kind": "image",
+      "path": "cg/rain_confession.jpg",
+      "mimeType": "image/jpeg",
+      "sha256": "2312880e97be851f6f2688efb07f8d1475e7e4ea1ff3de2dde2db622bee41884",
+      "bytes": 233325
+    },
+    {
+      "id": "cg.rebuild_awakening",
+      "kind": "image",
+      "path": "cg/rebuild_awakening.jpg",
+      "mimeType": "image/jpeg",
+      "sha256": "21c280bc65cf08f4d34b983a9731e3e231bd154a724cec0ee32dc11fc3698648",
+      "bytes": 182730
+    },
+    {
+      "id": "cg.ring_conspiracy_ending",
+      "kind": "image",
+      "path": "cg/ring_conspiracy_ending.jpg",
+      "mimeType": "image/jpeg",
+      "sha256": "dd57358bb86e03d8619a820ff3b0773dea49d24a760ea09593c5594652876ea3",
+      "bytes": 219860
+    },
+    {
+      "id": "cg.surgery_of_memory",
+      "kind": "image",
+      "path": "cg/surgery_of_memory.jpg",
+      "mimeType": "image/jpeg",
+      "sha256": "3856e752a99b3c8c4d83ae3cd2ae259ce8911b63439c3925d92d8bafc2231b68",
+      "bytes": 241224
+    },
+    {
+      "id": "cg.trust_threshold",
+      "kind": "image",
+      "path": "cg/trust_threshold.jpg",
+      "mimeType": "image/jpeg",
+      "sha256": "ee433f58ec08d7311b0dccee6f184d5b6235e398bbc62698455276e33db673fc",
+      "bytes": 183900
+    },
+    {
+      "id": "cg.white_canvas_choice",
+      "kind": "image",
+      "path": "cg/white_canvas_choice.jpg",
+      "mimeType": "image/jpeg",
+      "sha256": "ed4e27e3e480ec1bb7c3e1f400274fe8ca6277c9bd114a9edca1bcd3ad93a0d9",
+      "bytes": 200807
+    },
+    {
+      "id": "cg.white_canvas_ending",
+      "kind": "image",
+      "path": "cg/white_canvas_ending.jpg",
+      "mimeType": "image/jpeg",
+      "sha256": "c9c999a7eed0a02dc31fe84736e7ef8af39ecd47e288c3d99d19b9bc56b5145c",
+      "bytes": 232672
+    },
+    {
+      "id": "file.audio.bgm.backstreets.rain.mp3",
+      "kind": "audio",
+      "path": "audio/bgm/backstreets_rain.mp3",
+      "mimeType": "audio/mpeg",
+      "sha256": "97b5969e9379853e1cc14028fbb908d8607f71ebea87f371ad0499ef94a0a414",
+      "bytes": 4192274
+    },
+    {
+      "id": "file.audio.bgm.between.two.worlds.mp3",
+      "kind": "audio",
+      "path": "audio/bgm/between_two_worlds.mp3",
+      "mimeType": "audio/mpeg",
+      "sha256": "25470853676263801b044d22761e579a750db722aefbf1d8d48676f49f626184",
+      "bytes": 2979130
+    },
+    {
+      "id": "file.audio.bgm.boss.kromer.mp3",
+      "kind": "audio",
+      "path": "audio/bgm/boss_kromer.mp3",
+      "mimeType": "audio/mpeg",
+      "sha256": "923955f3d2091d427d9e345dd6bf9d143a5c3b37631f9ada77a7bca625aa97dd",
+      "bytes": 3679463
+    },
+    {
+      "id": "file.audio.bgm.main.menu.mp3",
+      "kind": "audio",
+      "path": "audio/bgm/main_menu.mp3",
+      "mimeType": "audio/mpeg",
+      "sha256": "299a5619829dbb95604531d310fd89dd190009589bdcdc2ef7881f878b1f7a60",
+      "bytes": 7685141
+    },
+    {
+      "id": "file.audio.bgm.title.theme.mp3",
+      "kind": "audio",
+      "path": "audio/bgm/title_theme.mp3",
+      "mimeType": "audio/mpeg",
+      "sha256": "03917669cba8086f921712e0db8c59d32e02d63e3be443d8d4458a9d2786ded3",
+      "bytes": 2540613
+    },
+    {
+      "id": "file.audio.se.blood.splat.wav",
+      "kind": "audio",
+      "path": "audio/se/blood_splat.wav",
+      "mimeType": "audio/wav",
+      "sha256": "87c30bfd8c336786de618759015f3ee24eee2638d406d7541c7c3fc17201bc17",
+      "bytes": 17684
+    },
+    {
+      "id": "file.audio.se.glass.shatter.wav",
+      "kind": "audio",
+      "path": "audio/se/glass_shatter.wav",
+      "mimeType": "audio/wav",
+      "sha256": "7f066a84a711bcdcf48abc70b07e92ee21957e25cd06765d3637226c55bddda2",
+      "bytes": 15920
+    },
+    {
+      "id": "file.audio.se.slash.heavy.wav",
+      "kind": "audio",
+      "path": "audio/se/slash_heavy.wav",
+      "mimeType": "audio/wav",
+      "sha256": "c93d1adea430352fd38fd9ef315c54801f9fde63350a2fa62584ad20441c7f57",
+      "bytes": 15920
+    },
+    {
+      "id": "file.audio.se.typing.blip.wav",
+      "kind": "audio",
+      "path": "audio/se/typing_blip.wav",
+      "mimeType": "audio/wav",
+      "sha256": "0002e7621f5dd6510cc047dbcfaee2cc7ab958dc20b1d149809958a6f14b1668",
+      "bytes": 4012
+    },
+    {
+      "id": "file.audio.se.ui.back.wav",
+      "kind": "audio",
+      "path": "audio/se/ui_back.wav",
+      "mimeType": "audio/wav",
+      "sha256": "c80e3b1f405a1a2c3d35c5f7b0d94839aba09bce28136b76b94b17a72eaf7f65",
+      "bytes": 10628
+    },
+    {
+      "id": "file.audio.se.ui.click.wav",
+      "kind": "audio",
+      "path": "audio/se/ui_click.wav",
+      "mimeType": "audio/wav",
+      "sha256": "fb67965be3a2b903b7f06c19646df9943f5607bea683798718fe2e77a188e270",
+      "bytes": 2248
+    },
+    {
+      "id": "file.audio.se.ui.confirm.wav",
+      "kind": "audio",
+      "path": "audio/se/ui_confirm.wav",
+      "mimeType": "audio/wav",
+      "sha256": "7fc178ebe16e5de7b62514cca74b1fdcf800dc85156c2d450079279a2446904b",
+      "bytes": 17684
+    },
+    {
+      "id": "file.avatar.albina.avatar.png",
+      "kind": "image",
+      "path": "avatar/albina-avatar.png",
+      "mimeType": "image/png",
+      "sha256": "159e7304b4bb6e364754aa2ee960851b804d9f359f07b48ac5fc9812e988e58f",
+      "bytes": 408911
+    },
+    {
+      "id": "file.bg.backstreets.rain.jpg",
+      "kind": "image",
+      "path": "bg/backstreets_rain.jpg",
+      "mimeType": "image/jpeg",
+      "sha256": "7a897b01c41634b0ab05b8411f487e60712909f153aed6b866c6e724f7a05ec7",
+      "bytes": 195160
+    },
+    {
+      "id": "file.bg.backstreets.rain.svg",
+      "kind": "image",
+      "path": "bg/backstreets_rain.svg",
+      "mimeType": "image/svg+xml",
+      "sha256": "2ca9364ada8709526e9d64a945422fb06f36da448e183295ab466a22d1cc995a",
+      "bytes": 12706
+    },
+    {
+      "id": "file.bg.city.rooftop.jpg",
+      "kind": "image",
+      "path": "bg/city_rooftop.jpg",
+      "mimeType": "image/jpeg",
+      "sha256": "4428f1f905a752eab7e4f6119f236f12767778db7f4768d2463a03ee6dcc4697",
+      "bytes": 207867
+    },
+    {
+      "id": "file.bg.city.rooftop.svg",
+      "kind": "image",
+      "path": "bg/city_rooftop.svg",
+      "mimeType": "image/svg+xml",
+      "sha256": "5eae2ee6b750ba1d93ef35eb4b7c67808e1895875d51a9e0075695a35e95a31e",
+      "bytes": 12706
+    },
+    {
+      "id": "file.bg.golden.bough.jpg",
+      "kind": "image",
+      "path": "bg/golden_bough.jpg",
+      "mimeType": "image/jpeg",
+      "sha256": "5e6a552b04b4333ca30c001a3020168908d7867926982ca4097145fa735ee207",
+      "bytes": 222682
+    },
+    {
+      "id": "file.bg.golden.bough.svg",
+      "kind": "image",
+      "path": "bg/golden_bough.svg",
+      "mimeType": "image/svg+xml",
+      "sha256": "94f087ceec5a2a42d7cd56c60d3c880e72798facff376fe1ace1627420b5e54b",
+      "bytes": 12720
+    },
+    {
+      "id": "file.bg.lce.lab.jpg",
+      "kind": "image",
+      "path": "bg/lce_lab.jpg",
+      "mimeType": "image/jpeg",
+      "sha256": "b982f39f13eb87cdb59d1540ff4f7688c4b319600a7174a758288f3c4efe672d",
+      "bytes": 202605
+    },
+    {
+      "id": "file.bg.lce.lab.svg",
+      "kind": "image",
+      "path": "bg/lce_lab.svg",
+      "mimeType": "image/svg+xml",
+      "sha256": "0cf1998d6f245face41e86d83bfab30dc5b4d1fc8a63ae1d4da7d74b16814569",
+      "bytes": 12708
+    },
+    {
+      "id": "file.bg.limbus.bus.jpg",
+      "kind": "image",
+      "path": "bg/limbus_bus.jpg",
+      "mimeType": "image/jpeg",
+      "sha256": "c684aba165f3d0a195d6e5b438be4bc9b2a070a4ac3364e91bef93716aab9c60",
+      "bytes": 194697
+    },
+    {
+      "id": "file.bg.limbus.bus.svg",
+      "kind": "image",
+      "path": "bg/limbus_bus.svg",
+      "mimeType": "image/svg+xml",
+      "sha256": "ac55a1801f59f4f6158a979f56e61edf5dea42c4ad59a9c00ca77f240fef9345",
+      "bytes": 12716
+    },
+    {
+      "id": "file.bg.mirror.corridor.jpg",
+      "kind": "image",
+      "path": "bg/mirror_corridor.jpg",
+      "mimeType": "image/jpeg",
+      "sha256": "aac5cfac5624763538d533b63914c845c266dc17845789d9c3f7d5bb408603f9",
+      "bytes": 193914
+    },
+    {
+      "id": "file.bg.mirror.corridor.svg",
+      "kind": "image",
+      "path": "bg/mirror_corridor.svg",
+      "mimeType": "image/svg+xml",
+      "sha256": "f682139293def0b42bce1f99df089252290d1b056a66876eb5ecf868fb43bfad",
+      "bytes": 12716
+    },
+    {
+      "id": "file.bg.nest.station.jpg",
+      "kind": "image",
+      "path": "bg/nest_station.jpg",
+      "mimeType": "image/jpeg",
+      "sha256": "732fa0c67c071560b01c536d5ed76944c60d1a0d9a5034087ca79bf5ffff9ad2",
+      "bytes": 196705
+    },
+    {
+      "id": "file.bg.nest.station.svg",
+      "kind": "image",
+      "path": "bg/nest_station.svg",
+      "mimeType": "image/svg+xml",
+      "sha256": "f29c2177b49dd12d1a7b98c3f1b4fd0d04c425f2668532da61c51a2ae45720bf",
+      "bytes": 12697
+    },
+    {
+      "id": "file.bg.outskirts.dawn.jpg",
+      "kind": "image",
+      "path": "bg/outskirts_dawn.jpg",
+      "mimeType": "image/jpeg",
+      "sha256": "4ccbdbab6a95b5d79ae476a96f8b453ed07241e599014002fdc83475f8bd092a",
+      "bytes": 182100
+    },
+    {
+      "id": "file.bg.outskirts.dawn.svg",
+      "kind": "image",
+      "path": "bg/outskirts_dawn.svg",
+      "mimeType": "image/svg+xml",
+      "sha256": "5f64fe26325f8d446f5ed235a1bf4e293a1fbc2fe5802b43c73cfcd57939dac7",
+      "bytes": 12725
+    },
+    {
+      "id": "file.bg.rain.room.jpg",
+      "kind": "image",
+      "path": "bg/rain_room.jpg",
+      "mimeType": "image/jpeg",
+      "sha256": "0a4b24f02a4f9274d6691594cbfd8c1f2512c1fe4559083a22c6cf2891cb198e",
+      "bytes": 198604
+    },
+    {
+      "id": "file.bg.rain.room.svg",
+      "kind": "image",
+      "path": "bg/rain_room.svg",
+      "mimeType": "image/svg+xml",
+      "sha256": "3329c56d45d54fbd27ebc7918a2287bbdb922b437815430a51d1b4c0f65a7f42",
+      "bytes": 12705
+    },
+    {
+      "id": "file.bg.ring.atelier.jpg",
+      "kind": "image",
+      "path": "bg/ring_atelier.jpg",
+      "mimeType": "image/jpeg",
+      "sha256": "aed9195327ca4feef20a611b2bd0f0ed4a8fba22f12fdf685bafc5b3ed13eb10",
+      "bytes": 197708
+    },
+    {
+      "id": "file.bg.ring.atelier.svg",
+      "kind": "image",
+      "path": "bg/ring_atelier.svg",
+      "mimeType": "image/svg+xml",
+      "sha256": "2352c7ca280b2b41a785eb0e28391cb5d69ab18b7087b985a653d28309cabdb9",
+      "bytes": 12700
+    },
+    {
+      "id": "file.bg.spider.gallery.jpg",
+      "kind": "image",
+      "path": "bg/spider_gallery.jpg",
+      "mimeType": "image/jpeg",
+      "sha256": "78a4336f0aa42c3ecf10667aeeb40dcdd42b271548872255c66aee716abcf024",
+      "bytes": 223415
+    },
+    {
+      "id": "file.bg.spider.gallery.svg",
+      "kind": "image",
+      "path": "bg/spider_gallery.svg",
+      "mimeType": "image/svg+xml",
+      "sha256": "8a0cf1a4a74e8031b34ff92efc6cd4285206a1ebf30b94f4b37d3ece83952adf",
+      "bytes": 12710
+    },
+    {
+      "id": "file.bg.white.canvas.jpg",
+      "kind": "image",
+      "path": "bg/white_canvas.jpg",
+      "mimeType": "image/jpeg",
+      "sha256": "6551848df5f6a312cbd769356b512643b33f2b9e68c9b8da21ad98ab9ef80605",
+      "bytes": 193895
+    },
+    {
+      "id": "file.bg.white.canvas.svg",
+      "kind": "image",
+      "path": "bg/white_canvas.svg",
+      "mimeType": "image/svg+xml",
+      "sha256": "cf0d8b2dfc155f8189eb37648a9ab478914bdb1055cae1aaf15ccb9bfdc812ff",
+      "bytes": 12718
+    },
+    {
+      "id": "file.cg.albina.key.visual.jpg",
+      "kind": "image",
+      "path": "cg/albina_key_visual.jpg",
+      "mimeType": "image/jpeg",
+      "sha256": "3cc08f61408a8e1b964dc5ca9b4d2b19d6cd30a8536d154d4fc35bed22fdcfca",
+      "bytes": 779782
+    },
+    {
+      "id": "file.cg.araya.rooftop.jpg",
+      "kind": "image",
+      "path": "cg/araya_rooftop.jpg",
+      "mimeType": "image/jpeg",
+      "sha256": "1ecd4ffa5f53471b66b5aecbfa37a8289c603c2a5ce2212538da01cbd5d5d8e4",
+      "bytes": 226727
+    },
+    {
+      "id": "file.cg.araya.rooftop.svg",
+      "kind": "image",
+      "path": "cg/araya_rooftop.svg",
+      "mimeType": "image/svg+xml",
+      "sha256": "43e4ba9ab056357d81d759009ccc8a52cd4435dceda13a2201581cf845f1ed3b",
+      "bytes": 4598
+    },
+    {
+      "id": "file.cg.art.resonance.jpg",
+      "kind": "image",
+      "path": "cg/art_resonance.jpg",
+      "mimeType": "image/jpeg",
+      "sha256": "da4000d606059e545bbf427451a999ea99e9fd730b71033cf61ed0e5c7ebeb1a",
+      "bytes": 221527
+    },
+    {
+      "id": "file.cg.art.resonance.svg",
+      "kind": "image",
+      "path": "cg/art_resonance.svg",
+      "mimeType": "image/svg+xml",
+      "sha256": "b5a5ce4b049a732f48fa745803585ab1fead1c96dcd2cc94c583a4bb79f051fc",
+      "bytes": 4593
+    },
+    {
+      "id": "file.cg.backstreet.pursuit.jpg",
+      "kind": "image",
+      "path": "cg/backstreet_pursuit.jpg",
+      "mimeType": "image/jpeg",
+      "sha256": "ff18127cd0ae95ad91c3e85ceec047def159a58bfec852708271a65d4f53b774",
+      "bytes": 208589
+    },
+    {
+      "id": "file.cg.backstreet.pursuit.svg",
+      "kind": "image",
+      "path": "cg/backstreet_pursuit.svg",
+      "mimeType": "image/svg+xml",
+      "sha256": "e07b123e0dd8010b0ccb5fb36d97a85f89373e6403b62e2f1750b2ca6a07fbae",
+      "bytes": 4592
+    },
+    {
+      "id": "file.cg.combat.transition.01.jpg",
+      "kind": "image",
+      "path": "cg/combat_transition_01.jpg",
+      "mimeType": "image/jpeg",
+      "sha256": "1636765ed07b103ccc5696e5c3cf4152d300c64b147f2a3b2722dd2151275209",
+      "bytes": 238482
+    },
+    {
+      "id": "file.cg.combat.transition.02.jpg",
+      "kind": "image",
+      "path": "cg/combat_transition_02.jpg",
+      "mimeType": "image/jpeg",
+      "sha256": "15da031ead573ecff24ecb8c7f5ac0d64b966f8e4c40c4290a18a6dd658fcbf8",
+      "bytes": 231222
+    },
+    {
+      "id": "file.cg.combat.transition.03.jpg",
+      "kind": "image",
+      "path": "cg/combat_transition_03.jpg",
+      "mimeType": "image/jpeg",
+      "sha256": "4c9ba8fa3d28ba90724bcb8b73a43d8978e445db277b66e35a4547e0b80ae476",
+      "bytes": 220810
+    },
+    {
+      "id": "file.cg.combat.transition.04.jpg",
+      "kind": "image",
+      "path": "cg/combat_transition_04.jpg",
+      "mimeType": "image/jpeg",
+      "sha256": "ef89995f67a6c3ca3f101d05019aaf4f79824462c0d76ccb2da30a1beae8e9f8",
+      "bytes": 187028
+    },
+    {
+      "id": "file.cg.combat.transition.05.jpg",
+      "kind": "image",
+      "path": "cg/combat_transition_05.jpg",
+      "mimeType": "image/jpeg",
+      "sha256": "e51393ad94223802f49b78be139d181d1dc89d8bf98fdf76beb195a91eb9098e",
+      "bytes": 254728
+    },
+    {
+      "id": "file.cg.combat.transition.06.jpg",
+      "kind": "image",
+      "path": "cg/combat_transition_06.jpg",
+      "mimeType": "image/jpeg",
+      "sha256": "7038c8301aa5b607bd7050e7c5347a0d659c8599187161d42d942ed7c3a21c44",
+      "bytes": 208052
+    },
+    {
+      "id": "file.cg.conspiracy.contract.jpg",
+      "kind": "image",
+      "path": "cg/conspiracy_contract.jpg",
+      "mimeType": "image/jpeg",
+      "sha256": "72922d9f7aac148fcfe1e6d7bed34fa8fd7bfc7323641b67feb5279fbe87dad1",
+      "bytes": 215416
+    },
+    {
+      "id": "file.cg.conspiracy.contract.svg",
+      "kind": "image",
+      "path": "cg/conspiracy_contract.svg",
+      "mimeType": "image/svg+xml",
+      "sha256": "65b88a00b4226ce0ddcb924ca7c118e5408911a933c635df30fd603363888327",
+      "bytes": 4605
+    },
+    {
+      "id": "file.cg.danger.threshold.jpg",
+      "kind": "image",
+      "path": "cg/danger_threshold.jpg",
+      "mimeType": "image/jpeg",
+      "sha256": "f5b5356ad2ff469f4dc77d49b54511b9cde21dfc99c52b91f54610e4545ea140",
+      "bytes": 242967
+    },
+    {
+      "id": "file.cg.danger.threshold.svg",
+      "kind": "image",
+      "path": "cg/danger_threshold.svg",
+      "mimeType": "image/svg+xml",
+      "sha256": "132fddc83900e0a6095e42cc22b0a6c62be3e6fa5b30248ed78bc59aa27bb19c",
+      "bytes": 4596
+    },
+    {
+      "id": "file.cg.fascia.heartbeat.jpg",
+      "kind": "image",
+      "path": "cg/fascia_heartbeat.jpg",
+      "mimeType": "image/jpeg",
+      "sha256": "2640a75be54575dce6bdc1b9023b06934899cbf4b5492cf012ef1e9c7d2f71e6",
+      "bytes": 204579
+    },
+    {
+      "id": "file.cg.fascia.heartbeat.svg",
+      "kind": "image",
+      "path": "cg/fascia_heartbeat.svg",
+      "mimeType": "image/svg+xml",
+      "sha256": "f3e00df4100539e897eeb62c251c9276722b6b4fb1c989ab7bd7889e407728c9",
+      "bytes": 4594
+    },
+    {
+      "id": "file.cg.first.gallery.jpg",
+      "kind": "image",
+      "path": "cg/first_gallery.jpg",
+      "mimeType": "image/jpeg",
+      "sha256": "da6961a762bd452191d1f4c0fd78b3ad0aa008a550fc873bbbd82761c498ead4",
+      "bytes": 237789
+    },
+    {
+      "id": "file.cg.first.gallery.svg",
+      "kind": "image",
+      "path": "cg/first_gallery.svg",
+      "mimeType": "image/svg+xml",
+      "sha256": "60840a171afe923653c08bb9e7d7d744ed27d09cc4ec8cb7d575ef3fe6322425",
+      "bytes": 4594
+    },
+    {
+      "id": "file.cg.golden.bough.ending.jpg",
+      "kind": "image",
+      "path": "cg/golden_bough_ending.jpg",
+      "mimeType": "image/jpeg",
+      "sha256": "4700e8485eb57b194cf6878741509ddc1e323d486878114259b9405051045491",
+      "bytes": 217599
+    },
+    {
+      "id": "file.cg.golden.bough.ending.svg",
+      "kind": "image",
+      "path": "cg/golden_bough_ending.svg",
+      "mimeType": "image/svg+xml",
+      "sha256": "9a28d702a7845c7f109b75e62f074614b12eb15c2a0ef939d2a372dd448e7eea",
+      "bytes": 4597
+    },
+    {
+      "id": "file.cg.golden.bough.rebuild.jpg",
+      "kind": "image",
+      "path": "cg/golden_bough_rebuild.jpg",
+      "mimeType": "image/jpeg",
+      "sha256": "0c8c941f77ea39f704563e02e1ed22e8619d8c335ada4215e179a8c6a1caef55",
+      "bytes": 226407
+    },
+    {
+      "id": "file.cg.golden.bough.rebuild.svg",
+      "kind": "image",
+      "path": "cg/golden_bough_rebuild.svg",
+      "mimeType": "image/svg+xml",
+      "sha256": "1ee378cb16da5bc913f6269f0a47bb5fe4087f9f75e0b324108c7f3e056887ab",
+      "bytes": 4600
+    },
+    {
+      "id": "file.cg.hollow.torso.reveal.jpg",
+      "kind": "image",
+      "path": "cg/hollow_torso_reveal.jpg",
+      "mimeType": "image/jpeg",
+      "sha256": "46e83edaabd17b1316bd705daf1a14614c0a7ae8b6164281b9770a2e020fe3e5",
+      "bytes": 212406
+    },
+    {
+      "id": "file.cg.hollow.torso.reveal.svg",
+      "kind": "image",
+      "path": "cg/hollow_torso_reveal.svg",
+      "mimeType": "image/svg+xml",
+      "sha256": "7b6159f5848060278c6b5d61f998ef7b946ceb70a321bcca08bc8c1d3aec0c9a",
+      "bytes": 4599
+    },
+    {
+      "id": "file.cg.lce.raid.jpg",
+      "kind": "image",
+      "path": "cg/lce_raid.jpg",
+      "mimeType": "image/jpeg",
+      "sha256": "037414f5985f5d972656d297f771e4553d3c01d1d700185bea68f40723892284",
+      "bytes": 191396
+    },
+    {
+      "id": "file.cg.lce.raid.svg",
+      "kind": "image",
+      "path": "cg/lce_raid.svg",
+      "mimeType": "image/svg+xml",
+      "sha256": "dcc9fa8598f9d638f78fc4dc44fe83b281817f2f685dd30c953d8ba57260f0c6",
+      "bytes": 4591
+    },
+    {
+      "id": "file.cg.limbus.bus.night.jpg",
+      "kind": "image",
+      "path": "cg/limbus_bus_night.jpg",
+      "mimeType": "image/jpeg",
+      "sha256": "0b1054ef8e4b8cd99b8f234ae2abd5c5e160813b73d1e564dba47c67f8a7cd8a",
+      "bytes": 202828
+    },
+    {
+      "id": "file.cg.limbus.bus.night.svg",
+      "kind": "image",
+      "path": "cg/limbus_bus_night.svg",
+      "mimeType": "image/svg+xml",
+      "sha256": "8fed7ceb727391ca5dd5876a7a04bc0d08d347152719b4429c41ada34a64d257",
+      "bytes": 4599
+    },
+    {
+      "id": "file.cg.maestro.shadow.jpg",
+      "kind": "image",
+      "path": "cg/maestro_shadow.jpg",
+      "mimeType": "image/jpeg",
+      "sha256": "ff93dcfc2b02faf7920d1426ebdfadf86d58aa5744117a6d692d2f5f370fa5c6",
+      "bytes": 223021
+    },
+    {
+      "id": "file.cg.maestro.shadow.svg",
+      "kind": "image",
+      "path": "cg/maestro_shadow.svg",
+      "mimeType": "image/svg+xml",
+      "sha256": "d136ee2ad277d4c29e285f42e2d97ccc04ddc30606b0798a5b6eebabb680708c",
+      "bytes": 4597
+    },
+    {
+      "id": "file.cg.opening.rain.jpg",
+      "kind": "image",
+      "path": "cg/opening_rain.jpg",
+      "mimeType": "image/jpeg",
+      "sha256": "557521106b516bf35aa9b55473c6f977a80bdf8ed6f7fe3f8ecf47de6c961931",
+      "bytes": 190464
+    },
+    {
+      "id": "file.cg.opening.rain.svg",
+      "kind": "image",
+      "path": "cg/opening_rain.svg",
+      "mimeType": "image/svg+xml",
+      "sha256": "660b6694c5a692daf70deb6ed839e04091d824c5b223b531cb176fd3b9d81bb3",
+      "bytes": 4596
+    },
+    {
+      "id": "file.cg.rain.confession.jpg",
+      "kind": "image",
+      "path": "cg/rain_confession.jpg",
+      "mimeType": "image/jpeg",
+      "sha256": "2312880e97be851f6f2688efb07f8d1475e7e4ea1ff3de2dde2db622bee41884",
+      "bytes": 233325
+    },
+    {
+      "id": "file.cg.rain.confession.svg",
+      "kind": "image",
+      "path": "cg/rain_confession.svg",
+      "mimeType": "image/svg+xml",
+      "sha256": "fdf4e4c642b2b1e50a5de5bf198a32c19749a4863cf5463f00107e0eede39b9c",
+      "bytes": 4598
+    },
+    {
+      "id": "file.cg.rebuild.awakening.jpg",
+      "kind": "image",
+      "path": "cg/rebuild_awakening.jpg",
+      "mimeType": "image/jpeg",
+      "sha256": "21c280bc65cf08f4d34b983a9731e3e231bd154a724cec0ee32dc11fc3698648",
+      "bytes": 182730
+    },
+    {
+      "id": "file.cg.rebuild.awakening.svg",
+      "kind": "image",
+      "path": "cg/rebuild_awakening.svg",
+      "mimeType": "image/svg+xml",
+      "sha256": "258465af59037896eee5a5a760e921ed5eb846c72e18cb52c1e393d5b4389db5",
+      "bytes": 4596
+    },
+    {
+      "id": "file.cg.ren.interruption.jpg",
+      "kind": "image",
+      "path": "cg/ren_interruption.jpg",
+      "mimeType": "image/jpeg",
+      "sha256": "1f69370dc412adddb7367be1f751bd720db2a1b4ab7105bc091a1f3754799083",
+      "bytes": 229446
+    },
+    {
+      "id": "file.cg.ren.interruption.svg",
+      "kind": "image",
+      "path": "cg/ren_interruption.svg",
+      "mimeType": "image/svg+xml",
+      "sha256": "719824c4c8223e4ea153e211007caa31f07a959c07e97bb9c72890e06d3da814",
+      "bytes": 4597
+    },
+    {
+      "id": "file.cg.ring.conspiracy.ending.jpg",
+      "kind": "image",
+      "path": "cg/ring_conspiracy_ending.jpg",
+      "mimeType": "image/jpeg",
+      "sha256": "dd57358bb86e03d8619a820ff3b0773dea49d24a760ea09593c5594652876ea3",
+      "bytes": 219860
+    },
+    {
+      "id": "file.cg.ring.conspiracy.ending.svg",
+      "kind": "image",
+      "path": "cg/ring_conspiracy_ending.svg",
+      "mimeType": "image/svg+xml",
+      "sha256": "bc17d94853829bb360d530c7074f7cebc92b05a08997eaf28f0ae51532c3780e",
+      "bytes": 4600
+    },
+    {
+      "id": "file.cg.ring.invitation.jpg",
+      "kind": "image",
+      "path": "cg/ring_invitation.jpg",
+      "mimeType": "image/jpeg",
+      "sha256": "ad02a44c0f89ce0a9e3a173a82bad62c6cfe94121c2e994bc91a487cdd13e5c1",
+      "bytes": 206839
+    },
+    {
+      "id": "file.cg.ring.invitation.svg",
+      "kind": "image",
+      "path": "cg/ring_invitation.svg",
+      "mimeType": "image/svg+xml",
+      "sha256": "4015dd820a43df8884c0e2e8a4b1a220524836933570e7cacf22c5cb02f20b22",
+      "bytes": 4601
+    },
+    {
+      "id": "file.cg.sinclair.flash.jpg",
+      "kind": "image",
+      "path": "cg/sinclair_flash.jpg",
+      "mimeType": "image/jpeg",
+      "sha256": "d434d887564b5ada77b2deb3ddf2b81c9d32427f55ba281ce96447dcc4f62d1e",
+      "bytes": 221337
+    },
+    {
+      "id": "file.cg.sinclair.flash.svg",
+      "kind": "image",
+      "path": "cg/sinclair_flash.svg",
+      "mimeType": "image/svg+xml",
+      "sha256": "a06692b7c81aa54996b2ccf9e08fe9dd98deb7094f2e82fe5495e45192d5040f",
+      "bytes": 4589
+    },
+    {
+      "id": "file.cg.surgery.of.memory.jpg",
+      "kind": "image",
+      "path": "cg/surgery_of_memory.jpg",
+      "mimeType": "image/jpeg",
+      "sha256": "3856e752a99b3c8c4d83ae3cd2ae259ce8911b63439c3925d92d8bafc2231b68",
+      "bytes": 241224
+    },
+    {
+      "id": "file.cg.surgery.of.memory.svg",
+      "kind": "image",
+      "path": "cg/surgery_of_memory.svg",
+      "mimeType": "image/svg+xml",
+      "sha256": "7b640a9324dbed3cfab52d953a3c231c620d3b205939b8726b6bf178515bfae2",
+      "bytes": 4598
+    },
+    {
+      "id": "file.cg.trust.threshold.jpg",
+      "kind": "image",
+      "path": "cg/trust_threshold.jpg",
+      "mimeType": "image/jpeg",
+      "sha256": "ee433f58ec08d7311b0dccee6f184d5b6235e398bbc62698455276e33db673fc",
+      "bytes": 183900
+    },
+    {
+      "id": "file.cg.trust.threshold.svg",
+      "kind": "image",
+      "path": "cg/trust_threshold.svg",
+      "mimeType": "image/svg+xml",
+      "sha256": "4ed32ef158df4c7ebbf7d2afede80277866b6d964ecbc8395f21c3a9e21ef3ec",
+      "bytes": 4600
+    },
+    {
+      "id": "file.cg.white.canvas.choice.jpg",
+      "kind": "image",
+      "path": "cg/white_canvas_choice.jpg",
+      "mimeType": "image/jpeg",
+      "sha256": "ed4e27e3e480ec1bb7c3e1f400274fe8ca6277c9bd114a9edca1bcd3ad93a0d9",
+      "bytes": 200807
+    },
+    {
+      "id": "file.cg.white.canvas.choice.svg",
+      "kind": "image",
+      "path": "cg/white_canvas_choice.svg",
+      "mimeType": "image/svg+xml",
+      "sha256": "9cffaefd8f010f1c0af094ede03e209dc496af0ed874cd98e5211edd41bb1c2d",
+      "bytes": 4599
+    },
+    {
+      "id": "file.cg.white.canvas.ending.jpg",
+      "kind": "image",
+      "path": "cg/white_canvas_ending.jpg",
+      "mimeType": "image/jpeg",
+      "sha256": "c9c999a7eed0a02dc31fe84736e7ef8af39ecd47e288c3d99d19b9bc56b5145c",
+      "bytes": 232672
+    },
+    {
+      "id": "file.cg.white.canvas.ending.svg",
+      "kind": "image",
+      "path": "cg/white_canvas_ending.svg",
+      "mimeType": "image/svg+xml",
+      "sha256": "c4bc0030a9ed0538c6f8feec6c0585c9bc4723dca8f9d12bb4a6867f5966de60",
+      "bytes": 4602
+    },
+    {
+      "id": "file.characters.albina.amused.png",
+      "kind": "image",
+      "path": "characters/albina/amused.png",
+      "mimeType": "image/png",
+      "sha256": "a0156c8d34a69b500b2882307bbe55ed77db8d049a07039f75195e864eb8c2e1",
+      "bytes": 648683
+    },
+    {
+      "id": "file.characters.albina.amused.svg",
+      "kind": "image",
+      "path": "characters/albina/amused.svg",
+      "mimeType": "image/svg+xml",
+      "sha256": "d944a9f1d9c6655865944af0d0ba2ae94ea761f61aae7ee0f53061e6eadaa4e1",
+      "bytes": 3248
+    },
+    {
+      "id": "file.characters.albina.armored.png",
+      "kind": "image",
+      "path": "characters/albina/armored.png",
+      "mimeType": "image/png",
+      "sha256": "a0192ec0071b3d2af4f3d7e38ab29e7ed4cd140b084ebc10ff47e8a42e2a36e5",
+      "bytes": 1043427
+    },
+    {
+      "id": "file.characters.albina.armored.svg",
+      "kind": "image",
+      "path": "characters/albina/armored.svg",
+      "mimeType": "image/svg+xml",
+      "sha256": "eb6d0341f181d58c37b0fe88aae31e993b4c88aa77906bf3645f879eab0b5de4",
+      "bytes": 3249
+    },
+    {
+      "id": "file.characters.albina.combat.png",
+      "kind": "image",
+      "path": "characters/albina/combat.png",
+      "mimeType": "image/png",
+      "sha256": "d253d25b615b31dbdc14b9b85a6873732fbe7f5595624a6a1f67db8e1c373833",
+      "bytes": 794440
+    },
+    {
+      "id": "file.characters.albina.combat.svg",
+      "kind": "image",
+      "path": "characters/albina/combat.svg",
+      "mimeType": "image/svg+xml",
+      "sha256": "e1adc354d6e1fc2a7fa2a6ae2aac4cc53c273b9bb2c6266aefd5e2f1b77c47ea",
+      "bytes": 3248
+    },
+    {
+      "id": "file.characters.albina.endgame.png",
+      "kind": "image",
+      "path": "characters/albina/endgame.png",
+      "mimeType": "image/png",
+      "sha256": "10ba1187d40b50910ff2183f83812dff890885b47d27d64d96fcd719b603e92a",
+      "bytes": 886696
+    },
+    {
+      "id": "file.characters.albina.endgame.svg",
+      "kind": "image",
+      "path": "characters/albina/endgame.svg",
+      "mimeType": "image/svg+xml",
+      "sha256": "ff345247b32c32910e63e133e2f9bdb9ab693a070633196799d00c4c49932ea2",
+      "bytes": 3249
+    },
+    {
+      "id": "file.characters.albina.fascia.open.png",
+      "kind": "image",
+      "path": "characters/albina/fascia-open.png",
+      "mimeType": "image/png",
+      "sha256": "794865a3149891f0562df93cf61e3671f6793283949a6cdeec60f299cf0a8c4a",
+      "bytes": 226988
+    },
+    {
+      "id": "file.characters.albina.fascia.open.svg",
+      "kind": "image",
+      "path": "characters/albina/fascia-open.svg",
+      "mimeType": "image/svg+xml",
+      "sha256": "68051cff6817febc6c852e576dfe2be9ef119989ddbcfa3cb9b7d81826e0d30d",
+      "bytes": 3253
+    },
+    {
+      "id": "file.characters.albina.focused.png",
+      "kind": "image",
+      "path": "characters/albina/focused.png",
+      "mimeType": "image/png",
+      "sha256": "1049d898e1ee6dc266385bf528c6d321fbe6ad298c5d6b9e58ac9d46fdb32c3a",
+      "bytes": 752133
+    },
+    {
+      "id": "file.characters.albina.focused.svg",
+      "kind": "image",
+      "path": "characters/albina/focused.svg",
+      "mimeType": "image/svg+xml",
+      "sha256": "e0f0aec562ce528c0f05d4f171cf3b139e6d06a1730fe3388896d4d5c7807c25",
+      "bytes": 3249
+    },
+    {
+      "id": "file.characters.albina.furious.png",
+      "kind": "image",
+      "path": "characters/albina/furious.png",
+      "mimeType": "image/png",
+      "sha256": "7df3a04ea9c87534d5d0746e98ae84adb1921d268e58f1c388c1f090b7ecfda1",
+      "bytes": 157756
+    },
+    {
+      "id": "file.characters.albina.furious.svg",
+      "kind": "image",
+      "path": "characters/albina/furious.svg",
+      "mimeType": "image/svg+xml",
+      "sha256": "ffbc84b7a8f991385884e1b52bc73774e908aad1482f276feb863815f169cb9e",
+      "bytes": 3249
+    },
+    {
+      "id": "file.characters.albina.golden.bough.png",
+      "kind": "image",
+      "path": "characters/albina/golden-bough.png",
+      "mimeType": "image/png",
+      "sha256": "7b96b2ec44022a3b8a86b2480e25bd01eb5ac32218e63382373e97c273baf831",
+      "bytes": 731292
+    },
+    {
+      "id": "file.characters.albina.golden.bough.svg",
+      "kind": "image",
+      "path": "characters/albina/golden-bough.svg",
+      "mimeType": "image/svg+xml",
+      "sha256": "270131e1276bf547097e47be0e18589bfa0345e8a257543bb38888052b4bd8e8",
+      "bytes": 3254
+    },
+    {
+      "id": "file.characters.albina.maestro.png",
+      "kind": "image",
+      "path": "characters/albina/maestro.png",
+      "mimeType": "image/png",
+      "sha256": "b148b529b7fab01184fcfa54c8b80fa9a48fcc7723fc3498bd58e504015ea0ea",
+      "bytes": 434686
+    },
+    {
+      "id": "file.characters.albina.maestro.svg",
+      "kind": "image",
+      "path": "characters/albina/maestro.svg",
+      "mimeType": "image/svg+xml",
+      "sha256": "63b1b5064275f5d5d4c6aeafbcafa1dfd721732e1d20b0d4460ff9a447867cb1",
+      "bytes": 3249
+    },
+    {
+      "id": "file.characters.albina.normal.png",
+      "kind": "image",
+      "path": "characters/albina/normal.png",
+      "mimeType": "image/png",
+      "sha256": "e68f9d04dda42e9ab86dcb686663057619c8dfbeff5f7d70078a083b0228aa55",
+      "bytes": 647858
+    },
+    {
+      "id": "file.characters.albina.normal.svg",
+      "kind": "image",
+      "path": "characters/albina/normal.svg",
+      "mimeType": "image/svg+xml",
+      "sha256": "906300d14804a6265b2f0189460958a3681e546d430b789952bb80e228f95fc6",
+      "bytes": 3248
+    },
+    {
+      "id": "file.characters.albina.rain.png",
+      "kind": "image",
+      "path": "characters/albina/rain.png",
+      "mimeType": "image/png",
+      "sha256": "a2b3fd27325ace3c20e92c441900e338b027f7cdcdb603c12dc92924e0175f06",
+      "bytes": 649497
+    },
+    {
+      "id": "file.characters.albina.rain.svg",
+      "kind": "image",
+      "path": "characters/albina/rain.svg",
+      "mimeType": "image/svg+xml",
+      "sha256": "2cea8476fd8a8d8b00756b2cbf391147f40e2267a9dd1ae6b9cfa80bc3050e34",
+      "bytes": 3246
+    },
+    {
+      "id": "file.characters.albina.ring.conspiracy.png",
+      "kind": "image",
+      "path": "characters/albina/ring-conspiracy.png",
+      "mimeType": "image/png",
+      "sha256": "a0192ec0071b3d2af4f3d7e38ab29e7ed4cd140b084ebc10ff47e8a42e2a36e5",
+      "bytes": 1043427
+    },
+    {
+      "id": "file.characters.albina.ring.conspiracy.svg",
+      "kind": "image",
+      "path": "characters/albina/ring-conspiracy.svg",
+      "mimeType": "image/svg+xml",
+      "sha256": "cc72d233e523b3b73dceac5c9630139967f4429eb56876dcdea50f260403d9c7",
+      "bytes": 3257
+    },
+    {
+      "id": "file.characters.albina.shy.png",
+      "kind": "image",
+      "path": "characters/albina/shy.png",
+      "mimeType": "image/png",
+      "sha256": "928100cc984332c9b4f769cc38dba965425a91cc1aece23e9d384fc993509247",
+      "bytes": 649383
+    },
+    {
+      "id": "file.characters.albina.shy.svg",
+      "kind": "image",
+      "path": "characters/albina/shy.svg",
+      "mimeType": "image/svg+xml",
+      "sha256": "7daf3a0563615f07a420b5e80dc56475ea591f47b542ba654d9a72ee21bd86cf",
+      "bytes": 3245
+    },
+    {
+      "id": "file.characters.albina.smile.png",
+      "kind": "image",
+      "path": "characters/albina/smile.png",
+      "mimeType": "image/png",
+      "sha256": "c35bc3e8aae3870801f75205d5b1cff67d5fe5c48876824ed14a0820414e7659",
+      "bytes": 648264
+    },
+    {
+      "id": "file.characters.albina.smile.svg",
+      "kind": "image",
+      "path": "characters/albina/smile.svg",
+      "mimeType": "image/svg+xml",
+      "sha256": "bbcc931251f2505b5126c3ab176fcc7f857ae4c48aab5d2750d61c06d81db20b",
+      "bytes": 3247
+    },
+    {
+      "id": "file.characters.albina.surgical.png",
+      "kind": "image",
+      "path": "characters/albina/surgical.png",
+      "mimeType": "image/png",
+      "sha256": "b01318b4e4677e4d6e4de6aad53149717364d36a0d66b56425100e31a6547897",
+      "bytes": 360435
+    },
+    {
+      "id": "file.characters.albina.surgical.svg",
+      "kind": "image",
+      "path": "characters/albina/surgical.svg",
+      "mimeType": "image/svg+xml",
+      "sha256": "1d25fd6fbbceb25c593a225db28a567cafd34710d010b5d900c78e3bbde244e0",
+      "bytes": 3250
+    },
+    {
+      "id": "file.characters.albina.unarmored.png",
+      "kind": "image",
+      "path": "characters/albina/unarmored.png",
+      "mimeType": "image/png",
+      "sha256": "b0a7cb32e6c114ec975d0e4dbf2ab8a756de2b86688e9bbff390e32c0dba8a34",
+      "bytes": 225675
+    },
+    {
+      "id": "file.characters.albina.unarmored.svg",
+      "kind": "image",
+      "path": "characters/albina/unarmored.svg",
+      "mimeType": "image/svg+xml",
+      "sha256": "57bb64084a2c1785e74f4e4df9767a903a5063f91b56f239de72ef4d0865eada",
+      "bytes": 3251
+    },
+    {
+      "id": "file.characters.albina.white.canvas.png",
+      "kind": "image",
+      "path": "characters/albina/white-canvas.png",
+      "mimeType": "image/png",
+      "sha256": "cbf1f679143b6ed9ceee9a12ce5bab2ce571e09cbade31b9ae673d0e6479f3aa",
+      "bytes": 360278
+    },
+    {
+      "id": "file.characters.albina.white.canvas.svg",
+      "kind": "image",
+      "path": "characters/albina/white-canvas.svg",
+      "mimeType": "image/svg+xml",
+      "sha256": "2ace4fd2654d28e4a37b9ca5327632b9ec1c3e2e2c45538323c89a34a5f31d48",
+      "bytes": 3254
+    },
+    {
+      "id": "file.characters.albina.wounded.png",
+      "kind": "image",
+      "path": "characters/albina/wounded.png",
+      "mimeType": "image/png",
+      "sha256": "6d3e49d8dc54796ab3c2fc5f114b98881f0c8ca2d12a1a81ef8f6dbcea97fe01",
+      "bytes": 360844
+    },
+    {
+      "id": "file.characters.albina.wounded.svg",
+      "kind": "image",
+      "path": "characters/albina/wounded.svg",
+      "mimeType": "image/svg+xml",
+      "sha256": "33af83cc546db12d0b154a16db04df73773fa8a9ff8cf8b899b798098604ef95",
+      "bytes": 3249
+    },
+    {
+      "id": "file.characters.araya.normal.svg",
+      "kind": "image",
+      "path": "characters/araya/normal.svg",
+      "mimeType": "image/svg+xml",
+      "sha256": "8581b9680f7eaa0ee12cdb681e03792e154b25323bc7c466541fa69914a9e668",
+      "bytes": 2913
+    },
+    {
+      "id": "file.characters.callisto.normal.png",
+      "kind": "image",
+      "path": "characters/callisto/normal.png",
+      "mimeType": "image/png",
+      "sha256": "7c9c806f2a9517c65648b085ec22d1b93d47effdab3d8be91d2f368c7e6039fd",
+      "bytes": 377258
+    },
+    {
+      "id": "file.characters.callisto.normal.svg",
+      "kind": "image",
+      "path": "characters/callisto/normal.svg",
+      "mimeType": "image/svg+xml",
+      "sha256": "9d2814ddff972ccfd9089c1c4c997b553375fa52496111719d879e176c00f8aa",
+      "bytes": 2916
+    },
+    {
+      "id": "file.characters.charon.normal.png",
+      "kind": "image",
+      "path": "characters/charon/normal.png",
+      "mimeType": "image/png",
+      "sha256": "7c66384703968377258e10af0e17f5cb7ebd238d13b205b832e9c389244ac819",
+      "bytes": 415773
+    },
+    {
+      "id": "file.characters.dante.normal.png",
+      "kind": "image",
+      "path": "characters/dante/normal.png",
+      "mimeType": "image/png",
+      "sha256": "1db98bd0ed89ce5d66c175a525907c6bee207fbe61a4bb118e41a141a2613603",
+      "bytes": 788630
+    },
+    {
+      "id": "file.characters.dante.normal.svg",
+      "kind": "image",
+      "path": "characters/dante/normal.svg",
+      "mimeType": "image/svg+xml",
+      "sha256": "9359c9496cea38dc4a0e9bf5ac2ad0491e3641ded1db4d15280fbe1d7a7c73e7",
+      "bytes": 2913
+    },
+    {
+      "id": "file.characters.faust.normal.png",
+      "kind": "image",
+      "path": "characters/faust/normal.png",
+      "mimeType": "image/png",
+      "sha256": "9e5839384ac0d57d445d14301a38abdc357a28f33d8c345255c49b2f4fb9f5c7",
+      "bytes": 919963
+    },
+    {
+      "id": "file.characters.fixer.informant.normal.png",
+      "kind": "image",
+      "path": "characters/fixer_informant/normal.png",
+      "mimeType": "image/png",
+      "sha256": "c276eb35ccbd7ef8dc813d5db74b9e146131f909a55c1fff3f04cf8af95db82c",
+      "bytes": 485462
+    },
+    {
+      "id": "file.characters.golden.apparition.normal.png",
+      "kind": "image",
+      "path": "characters/golden_apparition/normal.png",
+      "mimeType": "image/png",
+      "sha256": "fc90202b6b36e901fe0e75e9e2bcb9e07dc13ef32dc97083a01a4703c6ba9faf",
+      "bytes": 633415
+    },
+    {
+      "id": "file.characters.kira.normal.svg",
+      "kind": "image",
+      "path": "characters/kira/normal.svg",
+      "mimeType": "image/svg+xml",
+      "sha256": "db4e29ed314e57c624f53c7c2917166ccdc80efcbcab02b211013e7f1aaf90f8",
+      "bytes": 2912
+    },
+    {
+      "id": "file.characters.lcd.captain.normal.png",
+      "kind": "image",
+      "path": "characters/lcd_captain/normal.png",
+      "mimeType": "image/png",
+      "sha256": "30b6ff5afb4d0d754a52546bbc4ae467d517cbb09baf5f4633b0f2cbe5e5a959",
+      "bytes": 410856
+    },
+    {
+      "id": "file.characters.lce.doctor.normal.png",
+      "kind": "image",
+      "path": "characters/lce_doctor/normal.png",
+      "mimeType": "image/png",
+      "sha256": "938fdd640295fdd9c5d98e225696137f48667b140f2649961d6a504976b011f9",
+      "bytes": 597985
+    },
+    {
+      "id": "file.characters.lucio.normal.svg",
+      "kind": "image",
+      "path": "characters/lucio/normal.svg",
+      "mimeType": "image/svg+xml",
+      "sha256": "39f61ef72e599cef8d5e70dbcab010eba95bcc126ea60828b32cfb2dca4ee0ce",
+      "bytes": 2913
+    },
+    {
+      "id": "file.characters.protagonist.battle.png",
+      "kind": "image",
+      "path": "characters/protagonist/battle.png",
+      "mimeType": "image/png",
+      "sha256": "a436e968a646e580f9e6fca88ca9e82615f1a8a05cf68e1c494afe05a594d09f",
+      "bytes": 656294
+    },
+    {
+      "id": "file.characters.protagonist.battle.svg",
+      "kind": "image",
+      "path": "characters/protagonist/battle.svg",
+      "mimeType": "image/svg+xml",
+      "sha256": "2714036a2a99cb87401a0eddf7793708b8b6666149ed2a5b68d43c7e48feec5c",
+      "bytes": 2916
+    },
+    {
+      "id": "file.characters.protagonist.coat.png",
+      "kind": "image",
+      "path": "characters/protagonist/coat.png",
+      "mimeType": "image/png",
+      "sha256": "d0cdfe6a196d9454452818d2383f9b33ce8ef106ae509e532694ef3914f97e2c",
+      "bytes": 701207
+    },
+    {
+      "id": "file.characters.protagonist.coat.svg",
+      "kind": "image",
+      "path": "characters/protagonist/coat.svg",
+      "mimeType": "image/svg+xml",
+      "sha256": "325c15acfe95486379b88ef972deacbda05c36bf81776d5446ca8fb5d74ba07a",
+      "bytes": 2914
+    },
+    {
+      "id": "file.characters.protagonist.formal.png",
+      "kind": "image",
+      "path": "characters/protagonist/formal.png",
+      "mimeType": "image/png",
+      "sha256": "efebe731bf08143f2c8eec7f5ebe82b85c1fb803abe2a51f607ebe7d5da3ab69",
+      "bytes": 682957
+    },
+    {
+      "id": "file.characters.protagonist.formal.svg",
+      "kind": "image",
+      "path": "characters/protagonist/formal.svg",
+      "mimeType": "image/svg+xml",
+      "sha256": "ca1d3e79cebcbda034005fa85a351828355f58e68f40e41d14fe111d6ac19dd2",
+      "bytes": 2916
+    },
+    {
+      "id": "file.characters.protagonist.injured.png",
+      "kind": "image",
+      "path": "characters/protagonist/injured.png",
+      "mimeType": "image/png",
+      "sha256": "a1c76d3d01d85a5fb59d130d0cb6978492a39381d92ccbd050e3fa79b147877f",
+      "bytes": 633632
+    },
+    {
+      "id": "file.characters.protagonist.injured.svg",
+      "kind": "image",
+      "path": "characters/protagonist/injured.svg",
+      "mimeType": "image/svg+xml",
+      "sha256": "0eae48dde7a3858af53f50333970724334f258cf95b2520f3aa4b65066d1d82a",
+      "bytes": 2917
+    },
+    {
+      "id": "file.characters.protagonist.normal.png",
+      "kind": "image",
+      "path": "characters/protagonist/normal.png",
+      "mimeType": "image/png",
+      "sha256": "ef345aaf8817f9d42edee91b15c7593454a8aeacba015d956eb570567d93c42c",
+      "bytes": 617841
+    },
+    {
+      "id": "file.characters.protagonist.normal.svg",
+      "kind": "image",
+      "path": "characters/protagonist/normal.svg",
+      "mimeType": "image/svg+xml",
+      "sha256": "d3e9d5f6683d341ac85b449edc86e31ea8e4b65e809894e1f626917b866ad4f1",
+      "bytes": 2916
+    },
+    {
+      "id": "file.characters.protagonist.profile.png",
+      "kind": "image",
+      "path": "characters/protagonist/profile.png",
+      "mimeType": "image/png",
+      "sha256": "7bebf79d688e6c6beddff75ce5ebb0be542f1b24faf0af2dec4c889fc2f4ea6e",
+      "bytes": 608664
+    },
+    {
+      "id": "file.characters.protagonist.profile.svg",
+      "kind": "image",
+      "path": "characters/protagonist/profile.svg",
+      "mimeType": "image/svg+xml",
+      "sha256": "5de466e68995311d479e51333fc7cbe91a20adf52e9ca096f1e9bb2d9a2bcffc",
+      "bytes": 2917
+    },
+    {
+      "id": "file.characters.protagonist.resolve.png",
+      "kind": "image",
+      "path": "characters/protagonist/resolve.png",
+      "mimeType": "image/png",
+      "sha256": "f084da28bd5b55273519eab6c230bc580e069f7f302cff85d333f43f833684f3",
+      "bytes": 765412
+    },
+    {
+      "id": "file.characters.protagonist.resolve.svg",
+      "kind": "image",
+      "path": "characters/protagonist/resolve.svg",
+      "mimeType": "image/svg+xml",
+      "sha256": "bbd02ce4a997e9ee5beab2ded88f9dffc8306fe51041d006a7306da98affcbf1",
+      "bytes": 2917
+    },
+    {
+      "id": "file.characters.protagonist.serious.png",
+      "kind": "image",
+      "path": "characters/protagonist/serious.png",
+      "mimeType": "image/png",
+      "sha256": "d9fff4f95ed8513b464cd32be5735ec1a3d2b10e581c24a8232ab9a78f81a538",
+      "bytes": 612296
+    },
+    {
+      "id": "file.characters.protagonist.serious.svg",
+      "kind": "image",
+      "path": "characters/protagonist/serious.svg",
+      "mimeType": "image/svg+xml",
+      "sha256": "f1ef84f3803614dccaa639097dca33e17dd3a36dcb59e0d9dd658166ec5d4564",
+      "bytes": 2917
+    },
+    {
+      "id": "file.characters.protagonist.shadow.png",
+      "kind": "image",
+      "path": "characters/protagonist/shadow.png",
+      "mimeType": "image/png",
+      "sha256": "47579ad18953940ceaf00122676a79d3f8618a0057cc1f1f740535df4644a04e",
+      "bytes": 679619
+    },
+    {
+      "id": "file.characters.protagonist.shadow.svg",
+      "kind": "image",
+      "path": "characters/protagonist/shadow.svg",
+      "mimeType": "image/svg+xml",
+      "sha256": "ac87cb2d8726e88b77ae25299ac8759bf167df93e44cd429ef93916d04381e90",
+      "bytes": 2916
+    },
+    {
+      "id": "file.characters.protagonist.smile.png",
+      "kind": "image",
+      "path": "characters/protagonist/smile.png",
+      "mimeType": "image/png",
+      "sha256": "c040495b425c09c2044e86ee2951527dce6145ffb7d41e2c28ae390d39feef24",
+      "bytes": 681742
+    },
+    {
+      "id": "file.characters.protagonist.smile.svg",
+      "kind": "image",
+      "path": "characters/protagonist/smile.svg",
+      "mimeType": "image/svg+xml",
+      "sha256": "8b0900e469b604123c1aa72b0be47464908f5418013720cf5da8801ad7048b69",
+      "bytes": 2915
+    },
+    {
+      "id": "file.characters.protagonist.tender.png",
+      "kind": "image",
+      "path": "characters/protagonist/tender.png",
+      "mimeType": "image/png",
+      "sha256": "1e99e5724db77e7fc536d433980519121cc43740bfc17b4f810444a2681fb214",
+      "bytes": 693086
+    },
+    {
+      "id": "file.characters.protagonist.tender.svg",
+      "kind": "image",
+      "path": "characters/protagonist/tender.svg",
+      "mimeType": "image/svg+xml",
+      "sha256": "23737b94add6d8044d0df61bcbba15f70f3a9d996792e161a6488816c44750d7",
+      "bytes": 2916
+    },
+    {
+      "id": "file.characters.protagonist.wet.hair.png",
+      "kind": "image",
+      "path": "characters/protagonist/wet-hair.png",
+      "mimeType": "image/png",
+      "sha256": "ef02c60087130fba338bd9757c5ea9f045435e60d658450890c6ab5d50699dd5",
+      "bytes": 702889
+    },
+    {
+      "id": "file.characters.protagonist.wet.hair.svg",
+      "kind": "image",
+      "path": "characters/protagonist/wet-hair.svg",
+      "mimeType": "image/svg+xml",
+      "sha256": "b11284a46a2b5211ef413377f08ec31b80edfb80b854046f68066a0dfd369c23",
+      "bytes": 2918
+    },
+    {
+      "id": "file.characters.ren.normal.png",
+      "kind": "image",
+      "path": "characters/ren/normal.png",
+      "mimeType": "image/png",
+      "sha256": "0bd7caac7ae057da27bf86378d17b24ee43a48b958713ece4f8fbf6a79cba6b6",
+      "bytes": 793467
+    },
+    {
+      "id": "file.characters.ren.normal.svg",
+      "kind": "image",
+      "path": "characters/ren/normal.svg",
+      "mimeType": "image/svg+xml",
+      "sha256": "5b6eeb0a73be55028f1c6f349160e9d541cee9e93425d9c150a3bd2f7b791698",
+      "bytes": 2911
+    },
+    {
+      "id": "file.characters.ring.agent.normal.png",
+      "kind": "image",
+      "path": "characters/ring_agent/normal.png",
+      "mimeType": "image/png",
+      "sha256": "71536876e4949ff36037d647f05727bf39bb6bf843b186757aacfcc95bcfe07e",
+      "bytes": 581593
+    },
+    {
+      "id": "file.characters.ryoshu.normal.svg",
+      "kind": "image",
+      "path": "characters/ryoshu/normal.svg",
+      "mimeType": "image/svg+xml",
+      "sha256": "2018187b67ef8f2dfe4d3a97929c2dacc8bc8755efe2e77916cc697e9346fc93",
+      "bytes": 2914
+    },
+    {
+      "id": "file.characters.sinclair.normal.svg",
+      "kind": "image",
+      "path": "characters/sinclair/normal.svg",
+      "mimeType": "image/svg+xml",
+      "sha256": "b507dc70e66ddfee18a0c0fdcfe2722215c23cbbbac048bb4b774718169f5352",
+      "bytes": 2916
+    },
+    {
+      "id": "file.characters.sora.normal.svg",
+      "kind": "image",
+      "path": "characters/sora/normal.svg",
+      "mimeType": "image/svg+xml",
+      "sha256": "939a4d464cd7bee2a0764528981df14b9c9e948ac2673ce659d0c326f04236ad",
+      "bytes": 2912
+    },
+    {
+      "id": "file.characters.vergilius.normal.png",
+      "kind": "image",
+      "path": "characters/vergilius/normal.png",
+      "mimeType": "image/png",
+      "sha256": "a952f7b8042794613c6fdfe7c6e58d7675d06c9c5653ac837247c94b3ab01135",
+      "bytes": 886285
+    },
+    {
+      "id": "file.characters.vergilius.normal.svg",
+      "kind": "image",
+      "path": "characters/vergilius/normal.svg",
+      "mimeType": "image/svg+xml",
+      "sha256": "0c0714c38d9c295f3e8c84aecbb91c757869471fd288093b543ad4ee85da213c",
+      "bytes": 2917
+    },
+    {
+      "id": "file.characters.yi.sang.normal.png",
+      "kind": "image",
+      "path": "characters/yi_sang/normal.png",
+      "mimeType": "image/png",
+      "sha256": "9d18999b8e7b82e957fddd582b9605a5d46deca6bddcb45eb4930d9daaa2393d",
+      "bytes": 814771
+    },
+    {
+      "id": "file.generated.alpha.sheets.albina.01.png",
+      "kind": "image",
+      "path": "generated/alpha-sheets/albina_01.png",
+      "mimeType": "image/png",
+      "sha256": "2290adb83dd7e3bfb2d8cfc1cca5d0603a5d439d93a7bb2c954a190dd5e50b44",
+      "bytes": 1467607
+    },
+    {
+      "id": "file.generated.alpha.sheets.albina.02.png",
+      "kind": "image",
+      "path": "generated/alpha-sheets/albina_02.png",
+      "mimeType": "image/png",
+      "sha256": "687cb237c5231f3d9168196b89e0648d45ab3e57452c029ce091cd13b4ad9ff0",
+      "bytes": 1494916
+    },
+    {
+      "id": "file.generated.alpha.sheets.albina.03.png",
+      "kind": "image",
+      "path": "generated/alpha-sheets/albina_03.png",
+      "mimeType": "image/png",
+      "sha256": "b4959f69bb6d4ce6f45b22075c884f1a954c1b4df1754cf7e3e00b1e00924d4c",
+      "bytes": 1397534
+    },
+    {
+      "id": "file.generated.alpha.sheets.protagonist.01.png",
+      "kind": "image",
+      "path": "generated/alpha-sheets/protagonist_01.png",
+      "mimeType": "image/png",
+      "sha256": "439b657c685a9b21dc5eb98277f76040bda7be8b76049f79dab6852d3e6eb26e",
+      "bytes": 1037169
+    },
+    {
+      "id": "file.generated.alpha.sheets.protagonist.02.png",
+      "kind": "image",
+      "path": "generated/alpha-sheets/protagonist_02.png",
+      "mimeType": "image/png",
+      "sha256": "b5d417f293782cf228f2bf19b324977deda5547109401c5171ea908bfc2e9d62",
+      "bytes": 1093806
+    },
+    {
+      "id": "file.generated.alpha.sheets.supporting.png",
+      "kind": "image",
+      "path": "generated/alpha-sheets/supporting.png",
+      "mimeType": "image/png",
+      "sha256": "39a3570a99611e67490bc4161c97711bf0270c725aba640fffcf8df059176079",
+      "bytes": 1301881
+    },
+    {
+      "id": "file.original.albina.sprites.battle.png",
+      "kind": "image",
+      "path": "original_albina_sprites/battle.png",
+      "mimeType": "image/png",
+      "sha256": "b2bcaad7d5ddd3779102080b0d2081dec9941512a1afb677f5eb2392764c9bee",
+      "bytes": 1793581
+    },
+    {
+      "id": "file.original.albina.sprites.normal.png",
+      "kind": "image",
+      "path": "original_albina_sprites/normal.png",
+      "mimeType": "image/png",
+      "sha256": "6ee2ad5749e0a459680f14ae97e18e774e9c4b9d1aca5a353a49f2d0239270e3",
+      "bytes": 2017896
+    },
+    {
+      "id": "file.original.albina.sprites.sad.png",
+      "kind": "image",
+      "path": "original_albina_sprites/sad.png",
+      "mimeType": "image/png",
+      "sha256": "13edd79c92ba4230f00e8a008a565fbce60b06687bb3ed8101d2c4e63cb23240",
+      "bytes": 1795574
+    },
+    {
+      "id": "file.original.albina.sprites.smile.png",
+      "kind": "image",
+      "path": "original_albina_sprites/smile.png",
+      "mimeType": "image/png",
+      "sha256": "825bc4d615e5906d190b698a47e2fafad8ab51396696af5b965c66e3e098e0d2",
+      "bytes": 2236822
+    },
+    {
+      "id": "file.original.bg.story.library.interior.png",
+      "kind": "image",
+      "path": "original_bg_story/library_interior.png",
+      "mimeType": "image/png",
+      "sha256": "7ccd48b32fc88df3ec38ba66bf70fa490cd3c4931261a3ff13a51198c584e275",
+      "bytes": 2217028
+    },
+    {
+      "id": "file.original.cg.albina.debut.png",
+      "kind": "image",
+      "path": "original_cg/albina_debut.png",
+      "mimeType": "image/png",
+      "sha256": "cd69fc4291142ffac6e2609441ac32155c806431f7e5ef7c9602dafa5bd26d2b",
+      "bytes": 1913934
+    },
+    {
+      "id": "file.original.cg.battle.climax.png",
+      "kind": "image",
+      "path": "original_cg/battle_climax.png",
+      "mimeType": "image/png",
+      "sha256": "8f5cd613a620380fb091b2fc3cdfc645fd4e3e81864cbdf08b4e4a70a042ece6",
+      "bytes": 2049868
+    },
+    {
+      "id": "file.original.cg.canto.ix.opening.png",
+      "kind": "image",
+      "path": "original_cg/canto_ix_opening.png",
+      "mimeType": "image/png",
+      "sha256": "e28454287967229bfaed69c43e626330e14694d6383cfc643c6554beb7053ae2",
+      "bytes": 2376570
+    },
+    {
+      "id": "file.original.cg.hell.gate.png",
+      "kind": "image",
+      "path": "original_cg/hell_gate.png",
+      "mimeType": "image/png",
+      "sha256": "e2d9846c0e9a031328e92bd4532544b5f272c889fc7a7ce71675bfebb06edb3e",
+      "bytes": 2306012
+    },
+    {
+      "id": "file.original.cg.rain.confession.png",
+      "kind": "image",
+      "path": "original_cg/rain_confession.png",
+      "mimeType": "image/png",
+      "sha256": "b5615295563c2e30c4aea259e4a2b5bbf2a617355934902f810daf16a39d869b",
+      "bytes": 2041140
+    },
+    {
+      "id": "file.original.cg.ring.conspiracy.png",
+      "kind": "image",
+      "path": "original_cg/ring_conspiracy.png",
+      "mimeType": "image/png",
+      "sha256": "0df61afec53eafdf9b0abafacbedee5805f55a9664702b958abd2477be90e0ea",
+      "bytes": 2074900
+    },
+    {
+      "id": "file.sprite.atlas.albina.amused.strip.png",
+      "kind": "image",
+      "path": "sprite-atlas/albina/amused_strip.png",
+      "mimeType": "image/png",
+      "sha256": "598feb3ab51f6f0e7826c337e66b3f3cad71897061152e22a9096a6d00373d13",
+      "bytes": 3783351
+    },
+    {
+      "id": "file.sprite.atlas.albina.armored.strip.png",
+      "kind": "image",
+      "path": "sprite-atlas/albina/armored_strip.png",
+      "mimeType": "image/png",
+      "sha256": "e7556db93ffd2c4774a08cb55fd8cd37ade36f5d0a2c67122abb28958f065c0e",
+      "bytes": 3502098
+    },
+    {
+      "id": "file.sprite.atlas.albina.combat.strip.png",
+      "kind": "image",
+      "path": "sprite-atlas/albina/combat_strip.png",
+      "mimeType": "image/png",
+      "sha256": "34b4a9cb3ff6f77eaa187f1d884961f23d8f9e228da56165a160d9d45ac669b8",
+      "bytes": 3685070
+    },
+    {
+      "id": "file.sprite.atlas.albina.endgame.strip.png",
+      "kind": "image",
+      "path": "sprite-atlas/albina/endgame_strip.png",
+      "mimeType": "image/png",
+      "sha256": "9183824dde93f21acbcffd5d42ccaf5a34341612926a3d866038a7fcdcd2aa95",
+      "bytes": 4114092
+    },
+    {
+      "id": "file.sprite.atlas.albina.fascia.open.strip.png",
+      "kind": "image",
+      "path": "sprite-atlas/albina/fascia-open_strip.png",
+      "mimeType": "image/png",
+      "sha256": "83202a591278a6beabe854df464af772e58c2fa6d1a4d1072dba62082bcf5525",
+      "bytes": 3359680
+    },
+    {
+      "id": "file.sprite.atlas.albina.focused.strip.png",
+      "kind": "image",
+      "path": "sprite-atlas/albina/focused_strip.png",
+      "mimeType": "image/png",
+      "sha256": "ccf851bf3e230333846ceb4fd3cbee2e0554ebb729550026acf3ab4b08249b60",
+      "bytes": 4001551
+    },
+    {
+      "id": "file.sprite.atlas.albina.furious.strip.png",
+      "kind": "image",
+      "path": "sprite-atlas/albina/furious_strip.png",
+      "mimeType": "image/png",
+      "sha256": "92e05e4c2b6c45072203edce970ad083d1f98877a5aecd8eb3f4bc3871f2ddbe",
+      "bytes": 3225121
+    },
+    {
+      "id": "file.sprite.atlas.albina.golden.bough.strip.png",
+      "kind": "image",
+      "path": "sprite-atlas/albina/golden-bough_strip.png",
+      "mimeType": "image/png",
+      "sha256": "37acb5099f4b78fa4b43cdbf7374de92898c5fa8277a25b73187e510cb672b3f",
+      "bytes": 3829701
+    },
+    {
+      "id": "file.sprite.atlas.albina.maestro.strip.png",
+      "kind": "image",
+      "path": "sprite-atlas/albina/maestro_strip.png",
+      "mimeType": "image/png",
+      "sha256": "448278bd52df48c90421900511a5d3a4362c0af5890284422a665431632f0e2a",
+      "bytes": 3245882
+    },
+    {
+      "id": "file.sprite.atlas.albina.normal.strip.png",
+      "kind": "image",
+      "path": "sprite-atlas/albina/normal_strip.png",
+      "mimeType": "image/png",
+      "sha256": "9dd6396a5a4bb5ed031e5e6af329a7e23d43f52468b9a743fa3ccb87b96dc68f",
+      "bytes": 3297901
+    },
+    {
+      "id": "file.sprite.atlas.albina.rain.strip.png",
+      "kind": "image",
+      "path": "sprite-atlas/albina/rain_strip.png",
+      "mimeType": "image/png",
+      "sha256": "1dfd20241c048a6bdbf257d726242b74e3faa291aee37f19d956a3a4427b5b75",
+      "bytes": 3777733
+    },
+    {
+      "id": "file.sprite.atlas.albina.ring.conspiracy.strip.png",
+      "kind": "image",
+      "path": "sprite-atlas/albina/ring-conspiracy_strip.png",
+      "mimeType": "image/png",
+      "sha256": "791a8e97afe98ef66e8ff98ec4030e20e6e218178ca24525ef7c16a91e11286f",
+      "bytes": 3542405
+    },
+    {
+      "id": "file.sprite.atlas.albina.shy.strip.png",
+      "kind": "image",
+      "path": "sprite-atlas/albina/shy_strip.png",
+      "mimeType": "image/png",
+      "sha256": "b4fce99a14a9e49de682712c71a3420cbe98bed8cb671b08f3b39e0a6eed7efa",
+      "bytes": 3529806
+    },
+    {
+      "id": "file.sprite.atlas.albina.smile.strip.png",
+      "kind": "image",
+      "path": "sprite-atlas/albina/smile_strip.png",
+      "mimeType": "image/png",
+      "sha256": "edeea2c2e1176f1c84a82ed101601fcdf30b8531732a217867711c9f0beaf537",
+      "bytes": 3520893
+    },
+    {
+      "id": "file.sprite.atlas.albina.surgical.strip.png",
+      "kind": "image",
+      "path": "sprite-atlas/albina/surgical_strip.png",
+      "mimeType": "image/png",
+      "sha256": "fe3f8cae7d405baf2d4cdcddc7f2d1dd18826c5a0f10f835749722b41d3545df",
+      "bytes": 3268222
+    },
+    {
+      "id": "file.sprite.atlas.albina.unarmored.strip.png",
+      "kind": "image",
+      "path": "sprite-atlas/albina/unarmored_strip.png",
+      "mimeType": "image/png",
+      "sha256": "86d9ba8388fa7e6523b37911e3514e5746ddf19e3d61d463488df27d69032e16",
+      "bytes": 3599579
+    },
+    {
+      "id": "file.sprite.atlas.albina.white.canvas.strip.png",
+      "kind": "image",
+      "path": "sprite-atlas/albina/white-canvas_strip.png",
+      "mimeType": "image/png",
+      "sha256": "2ecd8aaa89e60e6a4c23463298cb0a17d39911d900064a62b933920a3ef23c16",
+      "bytes": 3419321
+    },
+    {
+      "id": "file.sprite.atlas.albina.wounded.strip.png",
+      "kind": "image",
+      "path": "sprite-atlas/albina/wounded_strip.png",
+      "mimeType": "image/png",
+      "sha256": "62e276c181e626f0dec0f0df427840bcd73d467948850a556e113c8718c95dae",
+      "bytes": 3510714
+    },
+    {
+      "id": "file.sprite.atlas.callisto.normal.strip.png",
+      "kind": "image",
+      "path": "sprite-atlas/callisto/normal_strip.png",
+      "mimeType": "image/png",
+      "sha256": "d45214594fe8048be693b4f4ef3b6dd2ff485996d260e89b82c468ef85bb66fa",
+      "bytes": 3570340
+    },
+    {
+      "id": "file.sprite.atlas.charon.normal.strip.png",
+      "kind": "image",
+      "path": "sprite-atlas/charon/normal_strip.png",
+      "mimeType": "image/png",
+      "sha256": "bc8875c1e57ba504ecd61f6b0952f11440829c13607290c397cc94bf0a90efc9",
+      "bytes": 3129094
+    },
+    {
+      "id": "file.sprite.atlas.dante.normal.strip.png",
+      "kind": "image",
+      "path": "sprite-atlas/dante/normal_strip.png",
+      "mimeType": "image/png",
+      "sha256": "1a588b00eec5b542f30e91c9b1f1be1bac50f8f79fd2ebc7ff2a9fa20e558bac",
+      "bytes": 3287194
+    },
+    {
+      "id": "file.sprite.atlas.faust.normal.strip.png",
+      "kind": "image",
+      "path": "sprite-atlas/faust/normal_strip.png",
+      "mimeType": "image/png",
+      "sha256": "712b5327d431689157584249798faf2cbd1dbfc42a245b0b1390207ce28a0a77",
+      "bytes": 3718801
+    },
+    {
+      "id": "file.sprite.atlas.fixer.informant.normal.strip.png",
+      "kind": "image",
+      "path": "sprite-atlas/fixer_informant/normal_strip.png",
+      "mimeType": "image/png",
+      "sha256": "eb32b3dffd3d4cc2bbec142662e0965ec5bde6334476b66f72be4fde65b42cc9",
+      "bytes": 3222195
+    },
+    {
+      "id": "file.sprite.atlas.golden.apparition.normal.strip.png",
+      "kind": "image",
+      "path": "sprite-atlas/golden_apparition/normal_strip.png",
+      "mimeType": "image/png",
+      "sha256": "fbcafb3363f6ab9d06f3f95c1337a3675737d2e0123295f87a5c8705154dee33",
+      "bytes": 3927065
+    },
+    {
+      "id": "file.sprite.atlas.lcd.captain.normal.strip.png",
+      "kind": "image",
+      "path": "sprite-atlas/lcd_captain/normal_strip.png",
+      "mimeType": "image/png",
+      "sha256": "38e07bfb12f420430f7240d715c7f61de84ea815576701719c8f2facd3b02166",
+      "bytes": 3264020
+    },
+    {
+      "id": "file.sprite.atlas.lce.doctor.normal.strip.png",
+      "kind": "image",
+      "path": "sprite-atlas/lce_doctor/normal_strip.png",
+      "mimeType": "image/png",
+      "sha256": "f05fbdcbead14511b2e34cc712715b5582504bf2af17e2e86dbbdb8d146868d1",
+      "bytes": 3297944
+    },
+    {
+      "id": "file.sprite.atlas.original.cg.albina.debut.strip.png",
+      "kind": "image",
+      "path": "sprite-atlas/original_cg/albina_debut_strip.png",
+      "mimeType": "image/png",
+      "sha256": "2ee88c382d413f62803f01a1a80a5743b9bf21061426cc3a16ea77a717506669",
+      "bytes": 2925431
+    },
+    {
+      "id": "file.sprite.atlas.original.cg.battle.climax.strip.png",
+      "kind": "image",
+      "path": "sprite-atlas/original_cg/battle_climax_strip.png",
+      "mimeType": "image/png",
+      "sha256": "db536e31152fa857e4958cc748e645eefbee8f45576ba1183a5f8ffcb43b1264",
+      "bytes": 2864495
+    },
+    {
+      "id": "file.sprite.atlas.protagonist.battle.strip.png",
+      "kind": "image",
+      "path": "sprite-atlas/protagonist/battle_strip.png",
+      "mimeType": "image/png",
+      "sha256": "d3286aaeff322a1267719016000ed283ea1b42badf2878f962ae136b6f8b7fb8",
+      "bytes": 3165211
+    },
+    {
+      "id": "file.sprite.atlas.protagonist.coat.strip.png",
+      "kind": "image",
+      "path": "sprite-atlas/protagonist/coat_strip.png",
+      "mimeType": "image/png",
+      "sha256": "b5806c2fd33ddd2335b8ecf79fe638e1c595c680cb6ad7373b82c0196f2aedbb",
+      "bytes": 3023731
+    },
+    {
+      "id": "file.sprite.atlas.protagonist.formal.strip.png",
+      "kind": "image",
+      "path": "sprite-atlas/protagonist/formal_strip.png",
+      "mimeType": "image/png",
+      "sha256": "89c9540a0dfe2d93dbc9e6d2cadb8bb93411e30957199488307ec9a1128677aa",
+      "bytes": 2945421
+    },
+    {
+      "id": "file.sprite.atlas.protagonist.injured.strip.png",
+      "kind": "image",
+      "path": "sprite-atlas/protagonist/injured_strip.png",
+      "mimeType": "image/png",
+      "sha256": "d5bcb863366b807ef4011c7f781c50c89e41aa47065464c1bcea7361c023ded3",
+      "bytes": 3274205
+    },
+    {
+      "id": "file.sprite.atlas.protagonist.normal.strip.png",
+      "kind": "image",
+      "path": "sprite-atlas/protagonist/normal_strip.png",
+      "mimeType": "image/png",
+      "sha256": "55484d8acc4f36587a84e4448aa8040923c8126107f5a9f8db335d1eeffe3b7f",
+      "bytes": 3086501
+    },
+    {
+      "id": "file.sprite.atlas.protagonist.profile.strip.png",
+      "kind": "image",
+      "path": "sprite-atlas/protagonist/profile_strip.png",
+      "mimeType": "image/png",
+      "sha256": "0620c7a13ae03657aaad952fd67d34376b52807ca50a2445fa7faecd2c34c813",
+      "bytes": 3391031
+    },
+    {
+      "id": "file.sprite.atlas.protagonist.resolve.strip.png",
+      "kind": "image",
+      "path": "sprite-atlas/protagonist/resolve_strip.png",
+      "mimeType": "image/png",
+      "sha256": "905698655d09de75c11fd7266298c5d9c358a7f5ef1439208ab16486765c3afc",
+      "bytes": 3079167
+    },
+    {
+      "id": "file.sprite.atlas.protagonist.serious.strip.png",
+      "kind": "image",
+      "path": "sprite-atlas/protagonist/serious_strip.png",
+      "mimeType": "image/png",
+      "sha256": "2fdbf141f0eeaf5770e51eccd572ccb7656d61286f11d79bd01cc5aa584d1311",
+      "bytes": 2877761
+    },
+    {
+      "id": "file.sprite.atlas.protagonist.shadow.strip.png",
+      "kind": "image",
+      "path": "sprite-atlas/protagonist/shadow_strip.png",
+      "mimeType": "image/png",
+      "sha256": "84afdc243de21b187237e3a2b8886f1c83b84d90bbcc913f623e32d6dc75a3a8",
+      "bytes": 2881745
+    },
+    {
+      "id": "file.sprite.atlas.protagonist.smile.strip.png",
+      "kind": "image",
+      "path": "sprite-atlas/protagonist/smile_strip.png",
+      "mimeType": "image/png",
+      "sha256": "ca025ac7f5d9b087296f431077c6526e578f594511ff98dc6f1b49ca67fc00b3",
+      "bytes": 3054297
+    },
+    {
+      "id": "file.sprite.atlas.protagonist.tender.strip.png",
+      "kind": "image",
+      "path": "sprite-atlas/protagonist/tender_strip.png",
+      "mimeType": "image/png",
+      "sha256": "cfc900db01d60e931b55c5c0921cc9dfdaf7d1f91af529ee4d96e964c4dab6b7",
+      "bytes": 2946077
+    },
+    {
+      "id": "file.sprite.atlas.protagonist.wet.hair.strip.png",
+      "kind": "image",
+      "path": "sprite-atlas/protagonist/wet-hair_strip.png",
+      "mimeType": "image/png",
+      "sha256": "ad2cdd374474a8fb05dc74bd47c0602b890b3e0f8ed6f42af5a6c6e9e72e55b1",
+      "bytes": 3018208
+    },
+    {
+      "id": "file.sprite.atlas.ren.normal.strip.png",
+      "kind": "image",
+      "path": "sprite-atlas/ren/normal_strip.png",
+      "mimeType": "image/png",
+      "sha256": "b1ab709df36557c1c92d5f7f74103050302bf274be9872bc3e53a67d811c6f20",
+      "bytes": 3325824
+    },
+    {
+      "id": "file.sprite.atlas.ring.agent.normal.strip.png",
+      "kind": "image",
+      "path": "sprite-atlas/ring_agent/normal_strip.png",
+      "mimeType": "image/png",
+      "sha256": "1433fcc31f67fb58731739cfec7738b3686f770b4c8f7219975003b8f0ad9280",
+      "bytes": 3142702
+    },
+    {
+      "id": "file.sprite.atlas.vergilius.normal.strip.png",
+      "kind": "image",
+      "path": "sprite-atlas/vergilius/normal_strip.png",
+      "mimeType": "image/png",
+      "sha256": "bc94c7bf3b146bc9171ff07633468b49c9ebeb58ca013d9e37b0ff3bec93e0f2",
+      "bytes": 3721980
+    },
+    {
+      "id": "file.sprite.atlas.yi.sang.normal.strip.png",
+      "kind": "image",
+      "path": "sprite-atlas/yi_sang/normal_strip.png",
+      "mimeType": "image/png",
+      "sha256": "cb35289ae216903f3c9b8727c01a37054eb8bd661edada48fe3e51e50be2edee",
+      "bytes": 3081862
+    },
+    {
+      "id": "file.ui.choice.button.svg",
+      "kind": "image",
+      "path": "ui/choice_button.svg",
+      "mimeType": "image/svg+xml",
+      "sha256": "6301a268c0d874185842cecba0acee7c99f4c29e8caba5203cd1ceb6e3b0cea5",
+      "bytes": 1645
+    },
+    {
+      "id": "file.ui.gallery.frame.svg",
+      "kind": "image",
+      "path": "ui/gallery_frame.svg",
+      "mimeType": "image/svg+xml",
+      "sha256": "19bf13a6c6a24a90a7372e98e422b5911a5eb63b870e2bd546f07d80439fc854",
+      "bytes": 1646
+    },
+    {
+      "id": "file.ui.menu.plate.svg",
+      "kind": "image",
+      "path": "ui/menu_plate.svg",
+      "mimeType": "image/svg+xml",
+      "sha256": "d8c0d45b6abdff52651712ec4dbb30736d61939563ccf920995d330475925d7d",
+      "bytes": 1643
+    },
+    {
+      "id": "file.ui.scanline.mask.svg",
+      "kind": "image",
+      "path": "ui/scanline_mask.svg",
+      "mimeType": "image/svg+xml",
+      "sha256": "8ca0f95223f6e523626d09a5e09dbca55f90687728e6fc23f15b28c3f6fdc4af",
+      "bytes": 1645
+    },
+    {
+      "id": "file.ui.status.panel.svg",
+      "kind": "image",
+      "path": "ui/status_panel.svg",
+      "mimeType": "image/svg+xml",
+      "sha256": "93e422a5c871f4bb7b8ec4965e04d3b5501da1117d81942f034479dd8a5dbd36",
+      "bytes": 1645
+    },
+    {
+      "id": "file.ui.textbox.svg",
+      "kind": "image",
+      "path": "ui/textbox.svg",
+      "mimeType": "image/svg+xml",
+      "sha256": "87eca356e01c43e6b571db16ec84b33fabe92697d62c251ffb9a0c5b33858b39",
+      "bytes": 1655
+    },
+    {
+      "id": "file.videos.ed.mp4",
+      "kind": "video",
+      "path": "videos/ed.mp4",
+      "mimeType": "video/mp4",
+      "sha256": "01ac39c322816e6b98df0bc2fc57c952e610c19062578d4197c8685a6ba59761",
+      "bytes": 13428432
+    },
+    {
+      "id": "file.videos.op.mp4",
+      "kind": "video",
+      "path": "videos/op.mp4",
+      "mimeType": "video/mp4",
+      "sha256": "7d47fd8dec2fc4ac70c80c436412b084683ca2367825626a455e57ad87ed8b2b",
+      "bytes": 15563758
+    },
+    {
+      "id": "strip.original.albina.sprites.battle",
+      "kind": "image",
+      "path": "sprite-atlas/original_albina_sprites/battle_strip.png",
+      "mimeType": "image/png"
+    },
+    {
+      "id": "strip.original.albina.sprites.normal",
+      "kind": "image",
+      "path": "sprite-atlas/original_albina_sprites/normal_strip.png",
+      "mimeType": "image/png"
+    },
+    {
+      "id": "strip.original.albina.sprites.sad",
+      "kind": "image",
+      "path": "sprite-atlas/original_albina_sprites/sad_strip.png",
+      "mimeType": "image/png"
+    },
+    {
+      "id": "strip.original.albina.sprites.smile",
+      "kind": "image",
+      "path": "sprite-atlas/original_albina_sprites/smile_strip.png",
+      "mimeType": "image/png"
+    },
+    {
+      "id": "strip.original.cg.canto.ix.opening",
+      "kind": "image",
+      "path": "sprite-atlas/original_cg/canto_ix_opening_strip.png",
+      "mimeType": "image/png"
+    },
+    {
+      "id": "strip.original.cg.hell.gate",
+      "kind": "image",
+      "path": "sprite-atlas/original_cg/hell_gate_strip.png",
+      "mimeType": "image/png"
+    },
+    {
+      "id": "strip.original.cg.rain.confession",
+      "kind": "image",
+      "path": "sprite-atlas/original_cg/rain_confession_strip.png",
+      "mimeType": "image/png"
+    },
+    {
+      "id": "strip.original.cg.ring.conspiracy",
+      "kind": "image",
+      "path": "sprite-atlas/original_cg/ring_conspiracy_strip.png",
+      "mimeType": "image/png"
+    },
+    {
+      "id": "voice.result.conspiracy_005_let_her_answer",
+      "kind": "audio",
+      "path": "audio/voice/result/conspiracy_005_let_her_answer.mp3",
+      "mimeType": "audio/mpeg"
+    },
+    {
+      "id": "voice.result.conspiracy_005_refuse_duo",
+      "kind": "audio",
+      "path": "audio/voice/result/conspiracy_005_refuse_duo.mp3",
+      "mimeType": "audio/mpeg"
+    },
+    {
+      "id": "voice.result.conspiracy_006_block_view",
+      "kind": "audio",
+      "path": "audio/voice/result/conspiracy_006_block_view.mp3",
+      "mimeType": "audio/mpeg"
+    },
+    {
+      "id": "voice.result.conspiracy_006_stand_with_her",
+      "kind": "audio",
+      "path": "audio/voice/result/conspiracy_006_stand_with_her.mp3",
+      "mimeType": "audio/mpeg"
+    },
+    {
+      "id": "voice.result.conspiracy_007_break_frame",
+      "kind": "audio",
+      "path": "audio/voice/result/conspiracy_007_break_frame.mp3",
+      "mimeType": "audio/mpeg"
+    },
+    {
+      "id": "voice.result.conspiracy_007_seize_frame",
+      "kind": "audio",
+      "path": "audio/voice/result/conspiracy_007_seize_frame.mp3",
+      "mimeType": "audio/mpeg"
+    },
+    {
+      "id": "voice.result.conspiracy_008_hand_pen_to_her",
+      "kind": "audio",
+      "path": "audio/voice/result/conspiracy_008_hand_pen_to_her.mp3",
+      "mimeType": "audio/mpeg"
+    },
+    {
+      "id": "voice.result.conspiracy_008_refuse_testimony",
+      "kind": "audio",
+      "path": "audio/voice/result/conspiracy_008_refuse_testimony.mp3",
+      "mimeType": "audio/mpeg"
+    },
+    {
+      "id": "voice.result.conspiracy_009_choose_present",
+      "kind": "audio",
+      "path": "audio/voice/result/conspiracy_009_choose_present.mp3",
+      "mimeType": "audio/mpeg"
+    },
+    {
+      "id": "voice.result.conspiracy_009_refuse_choice",
+      "kind": "audio",
+      "path": "audio/voice/result/conspiracy_009_refuse_choice.mp3",
+      "mimeType": "audio/mpeg"
+    },
+    {
+      "id": "voice.result.conspiracy_010_keep_badge_unworn",
+      "kind": "audio",
+      "path": "audio/voice/result/conspiracy_010_keep_badge_unworn.mp3",
+      "mimeType": "audio/mpeg"
+    },
+    {
+      "id": "voice.result.conspiracy_010_throw_badge",
+      "kind": "audio",
+      "path": "audio/voice/result/conspiracy_010_throw_badge.mp3",
+      "mimeType": "audio/mpeg"
+    },
+    {
+      "id": "voice.result.conspiracy_011_burn_film",
+      "kind": "audio",
+      "path": "audio/voice/result/conspiracy_011_burn_film.mp3",
+      "mimeType": "audio/mpeg"
+    },
+    {
+      "id": "voice.result.conspiracy_011_rewrite_ending",
+      "kind": "audio",
+      "path": "audio/voice/result/conspiracy_011_rewrite_ending.mp3",
+      "mimeType": "audio/mpeg"
+    },
+    {
+      "id": "voice.result.conspiracy_012_end_tonight",
+      "kind": "audio",
+      "path": "audio/voice/result/conspiracy_012_end_tonight.mp3",
+      "mimeType": "audio/mpeg"
+    },
+    {
+      "id": "voice.result.conspiracy_012_keep_blade",
+      "kind": "audio",
+      "path": "audio/voice/result/conspiracy_012_keep_blade.mp3",
+      "mimeType": "audio/mpeg"
+    },
+    {
+      "id": "voice.result.conspiracy_013_hold_one_second",
+      "kind": "audio",
+      "path": "audio/voice/result/conspiracy_013_hold_one_second.mp3",
+      "mimeType": "audio/mpeg"
+    },
+    {
+      "id": "voice.result.conspiracy_013_return_gently",
+      "kind": "audio",
+      "path": "audio/voice/result/conspiracy_013_return_gently.mp3",
+      "mimeType": "audio/mpeg"
+    },
+    {
+      "id": "voice.result.conspiracy_014_erase_from_catalog",
+      "kind": "audio",
+      "path": "audio/voice/result/conspiracy_014_erase_from_catalog.mp3",
+      "mimeType": "audio/mpeg"
+    },
+    {
+      "id": "voice.result.conspiracy_014_keep_one_line",
+      "kind": "audio",
+      "path": "audio/voice/result/conspiracy_014_keep_one_line.mp3",
+      "mimeType": "audio/mpeg"
+    },
+    {
+      "id": "voice.result.conspiracy_accept",
+      "kind": "audio",
+      "path": "audio/voice/result/conspiracy_accept.mp3",
+      "mimeType": "audio/mpeg"
+    },
+    {
+      "id": "voice.result.conspiracy_break_pursuit_frame",
+      "kind": "audio",
+      "path": "audio/voice/result/conspiracy_break_pursuit_frame.mp3",
+      "mimeType": "audio/mpeg"
+    },
+    {
+      "id": "voice.result.conspiracy_escape_to_backstreets",
+      "kind": "audio",
+      "path": "audio/voice/result/conspiracy_escape_to_backstreets.mp3",
+      "mimeType": "audio/mpeg"
+    },
+    {
+      "id": "voice.result.conspiracy_feed_false_signature",
+      "kind": "audio",
+      "path": "audio/voice/result/conspiracy_feed_false_signature.mp3",
+      "mimeType": "audio/mpeg"
+    },
+    {
+      "id": "voice.result.conspiracy_pressure",
+      "kind": "audio",
+      "path": "audio/voice/result/conspiracy_pressure.mp3",
+      "mimeType": "audio/mpeg"
+    },
+    {
+      "id": "voice.result.enter_conspiracy",
+      "kind": "audio",
+      "path": "audio/voice/result/enter_conspiracy.mp3",
+      "mimeType": "audio/mpeg"
+    },
+    {
+      "id": "voice.result.enter_rebuild",
+      "kind": "audio",
+      "path": "audio/voice/result/enter_rebuild.mp3",
+      "mimeType": "audio/mpeg"
+    },
+    {
+      "id": "voice.result.enter_white_canvas",
+      "kind": "audio",
+      "path": "audio/voice/result/enter_white_canvas.mp3",
+      "mimeType": "audio/mpeg"
+    },
+    {
+      "id": "voice.result.golden_bough_rebuild.bad_ending",
+      "kind": "audio",
+      "path": "audio/voice/result/golden_bough_rebuild/bad_ending.mp3",
+      "mimeType": "audio/mpeg"
+    },
+    {
+      "id": "voice.result.golden_bough_rebuild.normal_ending",
+      "kind": "audio",
+      "path": "audio/voice/result/golden_bough_rebuild/normal_ending.mp3",
+      "mimeType": "audio/mpeg"
+    },
+    {
+      "id": "voice.result.golden_bough_rebuild.true_ending",
+      "kind": "audio",
+      "path": "audio/voice/result/golden_bough_rebuild/true_ending.mp3",
+      "mimeType": "audio/mpeg"
+    },
+    {
+      "id": "voice.result.golden_bough_route_complete",
+      "kind": "audio",
+      "path": "audio/voice/result/golden_bough_route_complete.mp3",
+      "mimeType": "audio/mpeg"
+    },
+    {
+      "id": "voice.result.golden_bough_route_final",
+      "kind": "audio",
+      "path": "audio/voice/result/golden_bough_route_final.mp3",
+      "mimeType": "audio/mpeg"
+    },
+    {
+      "id": "voice.result.rebuild_006_keep_silent_anchor",
+      "kind": "audio",
+      "path": "audio/voice/result/rebuild_006_keep_silent_anchor.mp3",
+      "mimeType": "audio/mpeg"
+    },
+    {
+      "id": "voice.result.rebuild_006_read_aloud",
+      "kind": "audio",
+      "path": "audio/voice/result/rebuild_006_read_aloud.mp3",
+      "mimeType": "audio/mpeg"
+    },
+    {
+      "id": "voice.result.rebuild_007_match_her_pulse",
+      "kind": "audio",
+      "path": "audio/voice/result/rebuild_007_match_her_pulse.mp3",
+      "mimeType": "audio/mpeg"
+    },
+    {
+      "id": "voice.result.rebuild_007_stay_own_rhythm",
+      "kind": "audio",
+      "path": "audio/voice/result/rebuild_007_stay_own_rhythm.mp3",
+      "mimeType": "audio/mpeg"
+    },
+    {
+      "id": "voice.result.rebuild_008_protect_current_self",
+      "kind": "audio",
+      "path": "audio/voice/result/rebuild_008_protect_current_self.mp3",
+      "mimeType": "audio/mpeg"
+    },
+    {
+      "id": "voice.result.rebuild_008_trade_old_memory",
+      "kind": "audio",
+      "path": "audio/voice/result/rebuild_008_trade_old_memory.mp3",
+      "mimeType": "audio/mpeg"
+    },
+    {
+      "id": "voice.result.rebuild_009_hand_question_back",
+      "kind": "audio",
+      "path": "audio/voice/result/rebuild_009_hand_question_back.mp3",
+      "mimeType": "audio/mpeg"
+    },
+    {
+      "id": "voice.result.rebuild_009_refuse_perfect_copy",
+      "kind": "audio",
+      "path": "audio/voice/result/rebuild_009_refuse_perfect_copy.mp3",
+      "mimeType": "audio/mpeg"
+    },
+    {
+      "id": "voice.result.rebuild_010_ask_her_choice",
+      "kind": "audio",
+      "path": "audio/voice/result/rebuild_010_ask_her_choice.mp3",
+      "mimeType": "audio/mpeg"
+    },
+    {
+      "id": "voice.result.rebuild_010_veto_sealing",
+      "kind": "audio",
+      "path": "audio/voice/result/rebuild_010_veto_sealing.mp3",
+      "mimeType": "audio/mpeg"
+    },
+    {
+      "id": "voice.result.rebuild_011_ask_next_revision",
+      "kind": "audio",
+      "path": "audio/voice/result/rebuild_011_ask_next_revision.mp3",
+      "mimeType": "audio/mpeg"
+    },
+    {
+      "id": "voice.result.rebuild_011_sit_beside",
+      "kind": "audio",
+      "path": "audio/voice/result/rebuild_011_sit_beside.mp3",
+      "mimeType": "audio/mpeg"
+    },
+    {
+      "id": "voice.result.rebuild_012_break_contract",
+      "kind": "audio",
+      "path": "audio/voice/result/rebuild_012_break_contract.mp3",
+      "mimeType": "audio/mpeg"
+    },
+    {
+      "id": "voice.result.rebuild_012_negotiate_terms",
+      "kind": "audio",
+      "path": "audio/voice/result/rebuild_012_negotiate_terms.mp3",
+      "mimeType": "audio/mpeg"
+    },
+    {
+      "id": "voice.result.rebuild_013_offer_witness",
+      "kind": "audio",
+      "path": "audio/voice/result/rebuild_013_offer_witness.mp3",
+      "mimeType": "audio/mpeg"
+    },
+    {
+      "id": "voice.result.rebuild_013_promise_name",
+      "kind": "audio",
+      "path": "audio/voice/result/rebuild_013_promise_name.mp3",
+      "mimeType": "audio/mpeg"
+    },
+    {
+      "id": "voice.result.rebuild_014_ask_when_to_light",
+      "kind": "audio",
+      "path": "audio/voice/result/rebuild_014_ask_when_to_light.mp3",
+      "mimeType": "audio/mpeg"
+    },
+    {
+      "id": "voice.result.rebuild_014_keep_unlit",
+      "kind": "audio",
+      "path": "audio/voice/result/rebuild_014_keep_unlit.mp3",
+      "mimeType": "audio/mpeg"
+    },
+    {
+      "id": "voice.result.rebuild_accept_missing_pieces",
+      "kind": "audio",
+      "path": "audio/voice/result/rebuild_accept_missing_pieces.mp3",
+      "mimeType": "audio/mpeg"
+    },
+    {
+      "id": "voice.result.rebuild_anchor",
+      "kind": "audio",
+      "path": "audio/voice/result/rebuild_anchor.mp3",
+      "mimeType": "audio/mpeg"
+    },
+    {
+      "id": "voice.result.rebuild_cut_false_completion",
+      "kind": "audio",
+      "path": "audio/voice/result/rebuild_cut_false_completion.mp3",
+      "mimeType": "audio/mpeg"
+    },
+    {
+      "id": "voice.result.rebuild_guard_fascia_pulse",
+      "kind": "audio",
+      "path": "audio/voice/result/rebuild_guard_fascia_pulse.mp3",
+      "mimeType": "audio/mpeg"
+    },
+    {
+      "id": "voice.result.rebuild_push_into_raid",
+      "kind": "audio",
+      "path": "audio/voice/result/rebuild_push_into_raid.mp3",
+      "mimeType": "audio/mpeg"
+    },
+    {
+      "id": "voice.result.rebuild_question_fascia",
+      "kind": "audio",
+      "path": "audio/voice/result/rebuild_question_fascia.mp3",
+      "mimeType": "audio/mpeg"
+    },
+    {
+      "id": "voice.result.rebuild_use_rooftop_signal",
+      "kind": "audio",
+      "path": "audio/voice/result/rebuild_use_rooftop_signal.mp3",
+      "mimeType": "audio/mpeg"
+    },
+    {
+      "id": "voice.result.return_opening_from_rebuild",
+      "kind": "audio",
+      "path": "audio/voice/result/return_opening_from_rebuild.mp3",
+      "mimeType": "audio/mpeg"
+    },
+    {
+      "id": "voice.result.return_opening_from_ring",
+      "kind": "audio",
+      "path": "audio/voice/result/return_opening_from_ring.mp3",
+      "mimeType": "audio/mpeg"
+    },
+    {
+      "id": "voice.result.return_opening_from_white",
+      "kind": "audio",
+      "path": "audio/voice/result/return_opening_from_white.mp3",
+      "mimeType": "audio/mpeg"
+    },
+    {
+      "id": "voice.result.ring_conspiracy_route_complete",
+      "kind": "audio",
+      "path": "audio/voice/result/ring_conspiracy_route_complete.mp3",
+      "mimeType": "audio/mpeg"
+    },
+    {
+      "id": "voice.result.ring_conspiracy_route_final",
+      "kind": "audio",
+      "path": "audio/voice/result/ring_conspiracy_route_final.mp3",
+      "mimeType": "audio/mpeg"
+    },
+    {
+      "id": "voice.result.ring_conspiracy.bad_ending",
+      "kind": "audio",
+      "path": "audio/voice/result/ring_conspiracy/bad_ending.mp3",
+      "mimeType": "audio/mpeg"
+    },
+    {
+      "id": "voice.result.ring_conspiracy.normal_ending",
+      "kind": "audio",
+      "path": "audio/voice/result/ring_conspiracy/normal_ending.mp3",
+      "mimeType": "audio/mpeg"
+    },
+    {
+      "id": "voice.result.ring_conspiracy.true_ending",
+      "kind": "audio",
+      "path": "audio/voice/result/ring_conspiracy/true_ending.mp3",
+      "mimeType": "audio/mpeg"
+    },
+    {
+      "id": "voice.result.white_006_name_silence",
+      "kind": "audio",
+      "path": "audio/voice/result/white_006_name_silence.mp3",
+      "mimeType": "audio/mpeg"
+    },
+    {
+      "id": "voice.result.white_006_refuse_naming",
+      "kind": "audio",
+      "path": "audio/voice/result/white_006_refuse_naming.mp3",
+      "mimeType": "audio/mpeg"
+    },
+    {
+      "id": "voice.result.white_007_ask_fascia_term",
+      "kind": "audio",
+      "path": "audio/voice/result/white_007_ask_fascia_term.mp3",
+      "mimeType": "audio/mpeg"
+    },
+    {
+      "id": "voice.result.white_007_keep_mirror_open",
+      "kind": "audio",
+      "path": "audio/voice/result/white_007_keep_mirror_open.mp3",
+      "mimeType": "audio/mpeg"
+    },
+    {
+      "id": "voice.result.white_008_hold_fascia",
+      "kind": "audio",
+      "path": "audio/voice/result/white_008_hold_fascia.mp3",
+      "mimeType": "audio/mpeg"
+    },
+    {
+      "id": "voice.result.white_008_stay_witness_only",
+      "kind": "audio",
+      "path": "audio/voice/result/white_008_stay_witness_only.mp3",
+      "mimeType": "audio/mpeg"
+    },
+    {
+      "id": "voice.result.white_009_keep_half_step",
+      "kind": "audio",
+      "path": "audio/voice/result/white_009_keep_half_step.mp3",
+      "mimeType": "audio/mpeg"
+    },
+    {
+      "id": "voice.result.white_009_share_umbrella_edge",
+      "kind": "audio",
+      "path": "audio/voice/result/white_009_share_umbrella_edge.mp3",
+      "mimeType": "audio/mpeg"
+    },
+    {
+      "id": "voice.result.white_010_acknowledge_leave",
+      "kind": "audio",
+      "path": "audio/voice/result/white_010_acknowledge_leave.mp3",
+      "mimeType": "audio/mpeg"
+    },
+    {
+      "id": "voice.result.white_010_offer_return_ticket",
+      "kind": "audio",
+      "path": "audio/voice/result/white_010_offer_return_ticket.mp3",
+      "mimeType": "audio/mpeg"
+    },
+    {
+      "id": "voice.result.white_011_curtain_call",
+      "kind": "audio",
+      "path": "audio/voice/result/white_011_curtain_call.mp3",
+      "mimeType": "audio/mpeg"
+    },
+    {
+      "id": "voice.result.white_011_walk_beside",
+      "kind": "audio",
+      "path": "audio/voice/result/white_011_walk_beside.mp3",
+      "mimeType": "audio/mpeg"
+    },
+    {
+      "id": "voice.result.white_012_let_her_decide",
+      "kind": "audio",
+      "path": "audio/voice/result/white_012_let_her_decide.mp3",
+      "mimeType": "audio/mpeg"
+    },
+    {
+      "id": "voice.result.white_012_refuse_exhibit",
+      "kind": "audio",
+      "path": "audio/voice/result/white_012_refuse_exhibit.mp3",
+      "mimeType": "audio/mpeg"
+    },
+    {
+      "id": "voice.result.white_013_point_to_mirror",
+      "kind": "audio",
+      "path": "audio/voice/result/white_013_point_to_mirror.mp3",
+      "mimeType": "audio/mpeg"
+    },
+    {
+      "id": "voice.result.white_013_refuse_to_choose",
+      "kind": "audio",
+      "path": "audio/voice/result/white_013_refuse_to_choose.mp3",
+      "mimeType": "audio/mpeg"
+    },
+    {
+      "id": "voice.result.white_014_keep_base_color",
+      "kind": "audio",
+      "path": "audio/voice/result/white_014_keep_base_color.mp3",
+      "mimeType": "audio/mpeg"
+    },
+    {
+      "id": "voice.result.white_014_offer_restart",
+      "kind": "audio",
+      "path": "audio/voice/result/white_014_offer_restart.mp3",
+      "mimeType": "audio/mpeg"
+    },
+    {
+      "id": "voice.result.white_canvas_route_complete",
+      "kind": "audio",
+      "path": "audio/voice/result/white_canvas_route_complete.mp3",
+      "mimeType": "audio/mpeg"
+    },
+    {
+      "id": "voice.result.white_canvas_route_final",
+      "kind": "audio",
+      "path": "audio/voice/result/white_canvas_route_final.mp3",
+      "mimeType": "audio/mpeg"
+    },
+    {
+      "id": "voice.result.white_canvas.bad_ending",
+      "kind": "audio",
+      "path": "audio/voice/result/white_canvas/bad_ending.mp3",
+      "mimeType": "audio/mpeg"
+    },
+    {
+      "id": "voice.result.white_canvas.normal_ending",
+      "kind": "audio",
+      "path": "audio/voice/result/white_canvas/normal_ending.mp3",
+      "mimeType": "audio/mpeg"
+    },
+    {
+      "id": "voice.result.white_canvas.true_ending",
+      "kind": "audio",
+      "path": "audio/voice/result/white_canvas/true_ending.mp3",
+      "mimeType": "audio/mpeg"
+    },
+    {
+      "id": "voice.result.white_follow_to_lab",
+      "kind": "audio",
+      "path": "audio/voice/result/white_follow_to_lab.mp3",
+      "mimeType": "audio/mpeg"
+    },
+    {
+      "id": "voice.result.white_interrupt_lab_terms",
+      "kind": "audio",
+      "path": "audio/voice/result/white_interrupt_lab_terms.mp3",
+      "mimeType": "audio/mpeg"
+    },
+    {
+      "id": "voice.result.white_keep_empty_seat",
+      "kind": "audio",
+      "path": "audio/voice/result/white_keep_empty_seat.mp3",
+      "mimeType": "audio/mpeg"
+    },
+    {
+      "id": "voice.result.white_share_rain_window",
+      "kind": "audio",
+      "path": "audio/voice/result/white_share_rain_window.mp3",
+      "mimeType": "audio/mpeg"
+    },
+    {
+      "id": "voice.result.white_sign_witness_protocol",
+      "kind": "audio",
+      "path": "audio/voice/result/white_sign_witness_protocol.mp3",
+      "mimeType": "audio/mpeg"
+    },
+    {
+      "id": "voice.result.white_tease_back",
+      "kind": "audio",
+      "path": "audio/voice/result/white_tease_back.mp3",
+      "mimeType": "audio/mpeg"
+    },
+    {
+      "id": "voice.result.white_touch_boundary",
+      "kind": "audio",
+      "path": "audio/voice/result/white_touch_boundary.mp3",
+      "mimeType": "audio/mpeg"
+    },
+    {
+      "id": "voice.scene.golden_bough_001",
+      "kind": "audio",
+      "path": "audio/voice/scene/golden_bough_001.mp3",
+      "mimeType": "audio/mpeg"
+    },
+    {
+      "id": "voice.scene.golden_bough_002",
+      "kind": "audio",
+      "path": "audio/voice/scene/golden_bough_002.mp3",
+      "mimeType": "audio/mpeg"
+    },
+    {
+      "id": "voice.scene.golden_bough_003",
+      "kind": "audio",
+      "path": "audio/voice/scene/golden_bough_003.mp3",
+      "mimeType": "audio/mpeg"
+    },
+    {
+      "id": "voice.scene.golden_bough_004",
+      "kind": "audio",
+      "path": "audio/voice/scene/golden_bough_004.mp3",
+      "mimeType": "audio/mpeg"
+    },
+    {
+      "id": "voice.scene.golden_bough_005",
+      "kind": "audio",
+      "path": "audio/voice/scene/golden_bough_005.mp3",
+      "mimeType": "audio/mpeg"
+    },
+    {
+      "id": "voice.scene.golden_bough_006",
+      "kind": "audio",
+      "path": "audio/voice/scene/golden_bough_006.mp3",
+      "mimeType": "audio/mpeg"
+    },
+    {
+      "id": "voice.scene.golden_bough_007",
+      "kind": "audio",
+      "path": "audio/voice/scene/golden_bough_007.mp3",
+      "mimeType": "audio/mpeg"
+    },
+    {
+      "id": "voice.scene.golden_bough_008",
+      "kind": "audio",
+      "path": "audio/voice/scene/golden_bough_008.mp3",
+      "mimeType": "audio/mpeg"
+    },
+    {
+      "id": "voice.scene.golden_bough_009",
+      "kind": "audio",
+      "path": "audio/voice/scene/golden_bough_009.mp3",
+      "mimeType": "audio/mpeg"
+    },
+    {
+      "id": "voice.scene.golden_bough_010",
+      "kind": "audio",
+      "path": "audio/voice/scene/golden_bough_010.mp3",
+      "mimeType": "audio/mpeg"
+    },
+    {
+      "id": "voice.scene.golden_bough_011",
+      "kind": "audio",
+      "path": "audio/voice/scene/golden_bough_011.mp3",
+      "mimeType": "audio/mpeg"
+    },
+    {
+      "id": "voice.scene.golden_bough_012",
+      "kind": "audio",
+      "path": "audio/voice/scene/golden_bough_012.mp3",
+      "mimeType": "audio/mpeg"
+    },
+    {
+      "id": "voice.scene.golden_bough_013",
+      "kind": "audio",
+      "path": "audio/voice/scene/golden_bough_013.mp3",
+      "mimeType": "audio/mpeg"
+    },
+    {
+      "id": "voice.scene.golden_bough_014",
+      "kind": "audio",
+      "path": "audio/voice/scene/golden_bough_014.mp3",
+      "mimeType": "audio/mpeg"
+    },
+    {
+      "id": "voice.scene.golden_bough_015",
+      "kind": "audio",
+      "path": "audio/voice/scene/golden_bough_015.mp3",
+      "mimeType": "audio/mpeg"
+    },
+    {
+      "id": "voice.scene.golden_bough_rebuild_ending_bad",
+      "kind": "audio",
+      "path": "audio/voice/scene/golden_bough_rebuild_ending_bad.mp3",
+      "mimeType": "audio/mpeg"
+    },
+    {
+      "id": "voice.scene.golden_bough_rebuild_ending_gate",
+      "kind": "audio",
+      "path": "audio/voice/scene/golden_bough_rebuild_ending_gate.mp3",
+      "mimeType": "audio/mpeg"
+    },
+    {
+      "id": "voice.scene.golden_bough_rebuild_ending_normal",
+      "kind": "audio",
+      "path": "audio/voice/scene/golden_bough_rebuild_ending_normal.mp3",
+      "mimeType": "audio/mpeg"
+    },
+    {
+      "id": "voice.scene.golden_bough_rebuild_ending_true",
+      "kind": "audio",
+      "path": "audio/voice/scene/golden_bough_rebuild_ending_true.mp3",
+      "mimeType": "audio/mpeg"
+    },
+    {
+      "id": "voice.scene.opening_001",
+      "kind": "audio",
+      "path": "audio/voice/scene/opening_001.mp3",
+      "mimeType": "audio/mpeg"
+    },
+    {
+      "id": "voice.scene.ring_conspiracy_001",
+      "kind": "audio",
+      "path": "audio/voice/scene/ring_conspiracy_001.mp3",
+      "mimeType": "audio/mpeg"
+    },
+    {
+      "id": "voice.scene.ring_conspiracy_002",
+      "kind": "audio",
+      "path": "audio/voice/scene/ring_conspiracy_002.mp3",
+      "mimeType": "audio/mpeg"
+    },
+    {
+      "id": "voice.scene.ring_conspiracy_003",
+      "kind": "audio",
+      "path": "audio/voice/scene/ring_conspiracy_003.mp3",
+      "mimeType": "audio/mpeg"
+    },
+    {
+      "id": "voice.scene.ring_conspiracy_004",
+      "kind": "audio",
+      "path": "audio/voice/scene/ring_conspiracy_004.mp3",
+      "mimeType": "audio/mpeg"
+    },
+    {
+      "id": "voice.scene.ring_conspiracy_005",
+      "kind": "audio",
+      "path": "audio/voice/scene/ring_conspiracy_005.mp3",
+      "mimeType": "audio/mpeg"
+    },
+    {
+      "id": "voice.scene.ring_conspiracy_006",
+      "kind": "audio",
+      "path": "audio/voice/scene/ring_conspiracy_006.mp3",
+      "mimeType": "audio/mpeg"
+    },
+    {
+      "id": "voice.scene.ring_conspiracy_007",
+      "kind": "audio",
+      "path": "audio/voice/scene/ring_conspiracy_007.mp3",
+      "mimeType": "audio/mpeg"
+    },
+    {
+      "id": "voice.scene.ring_conspiracy_008",
+      "kind": "audio",
+      "path": "audio/voice/scene/ring_conspiracy_008.mp3",
+      "mimeType": "audio/mpeg"
+    },
+    {
+      "id": "voice.scene.ring_conspiracy_009",
+      "kind": "audio",
+      "path": "audio/voice/scene/ring_conspiracy_009.mp3",
+      "mimeType": "audio/mpeg"
+    },
+    {
+      "id": "voice.scene.ring_conspiracy_010",
+      "kind": "audio",
+      "path": "audio/voice/scene/ring_conspiracy_010.mp3",
+      "mimeType": "audio/mpeg"
+    },
+    {
+      "id": "voice.scene.ring_conspiracy_011",
+      "kind": "audio",
+      "path": "audio/voice/scene/ring_conspiracy_011.mp3",
+      "mimeType": "audio/mpeg"
+    },
+    {
+      "id": "voice.scene.ring_conspiracy_012",
+      "kind": "audio",
+      "path": "audio/voice/scene/ring_conspiracy_012.mp3",
+      "mimeType": "audio/mpeg"
+    },
+    {
+      "id": "voice.scene.ring_conspiracy_013",
+      "kind": "audio",
+      "path": "audio/voice/scene/ring_conspiracy_013.mp3",
+      "mimeType": "audio/mpeg"
+    },
+    {
+      "id": "voice.scene.ring_conspiracy_014",
+      "kind": "audio",
+      "path": "audio/voice/scene/ring_conspiracy_014.mp3",
+      "mimeType": "audio/mpeg"
+    },
+    {
+      "id": "voice.scene.ring_conspiracy_015",
+      "kind": "audio",
+      "path": "audio/voice/scene/ring_conspiracy_015.mp3",
+      "mimeType": "audio/mpeg"
+    },
+    {
+      "id": "voice.scene.ring_conspiracy_ending_bad",
+      "kind": "audio",
+      "path": "audio/voice/scene/ring_conspiracy_ending_bad.mp3",
+      "mimeType": "audio/mpeg"
+    },
+    {
+      "id": "voice.scene.ring_conspiracy_ending_gate",
+      "kind": "audio",
+      "path": "audio/voice/scene/ring_conspiracy_ending_gate.mp3",
+      "mimeType": "audio/mpeg"
+    },
+    {
+      "id": "voice.scene.ring_conspiracy_ending_normal",
+      "kind": "audio",
+      "path": "audio/voice/scene/ring_conspiracy_ending_normal.mp3",
+      "mimeType": "audio/mpeg"
+    },
+    {
+      "id": "voice.scene.ring_conspiracy_ending_true",
+      "kind": "audio",
+      "path": "audio/voice/scene/ring_conspiracy_ending_true.mp3",
+      "mimeType": "audio/mpeg"
+    },
+    {
+      "id": "voice.scene.white_canvas_001",
+      "kind": "audio",
+      "path": "audio/voice/scene/white_canvas_001.mp3",
+      "mimeType": "audio/mpeg"
+    },
+    {
+      "id": "voice.scene.white_canvas_002",
+      "kind": "audio",
+      "path": "audio/voice/scene/white_canvas_002.mp3",
+      "mimeType": "audio/mpeg"
+    },
+    {
+      "id": "voice.scene.white_canvas_003",
+      "kind": "audio",
+      "path": "audio/voice/scene/white_canvas_003.mp3",
+      "mimeType": "audio/mpeg"
+    },
+    {
+      "id": "voice.scene.white_canvas_004",
+      "kind": "audio",
+      "path": "audio/voice/scene/white_canvas_004.mp3",
+      "mimeType": "audio/mpeg"
+    },
+    {
+      "id": "voice.scene.white_canvas_005",
+      "kind": "audio",
+      "path": "audio/voice/scene/white_canvas_005.mp3",
+      "mimeType": "audio/mpeg"
+    },
+    {
+      "id": "voice.scene.white_canvas_006",
+      "kind": "audio",
+      "path": "audio/voice/scene/white_canvas_006.mp3",
+      "mimeType": "audio/mpeg"
+    },
+    {
+      "id": "voice.scene.white_canvas_007",
+      "kind": "audio",
+      "path": "audio/voice/scene/white_canvas_007.mp3",
+      "mimeType": "audio/mpeg"
+    },
+    {
+      "id": "voice.scene.white_canvas_008",
+      "kind": "audio",
+      "path": "audio/voice/scene/white_canvas_008.mp3",
+      "mimeType": "audio/mpeg"
+    },
+    {
+      "id": "voice.scene.white_canvas_009",
+      "kind": "audio",
+      "path": "audio/voice/scene/white_canvas_009.mp3",
+      "mimeType": "audio/mpeg"
+    },
+    {
+      "id": "voice.scene.white_canvas_010",
+      "kind": "audio",
+      "path": "audio/voice/scene/white_canvas_010.mp3",
+      "mimeType": "audio/mpeg"
+    },
+    {
+      "id": "voice.scene.white_canvas_011",
+      "kind": "audio",
+      "path": "audio/voice/scene/white_canvas_011.mp3",
+      "mimeType": "audio/mpeg"
+    },
+    {
+      "id": "voice.scene.white_canvas_012",
+      "kind": "audio",
+      "path": "audio/voice/scene/white_canvas_012.mp3",
+      "mimeType": "audio/mpeg"
+    },
+    {
+      "id": "voice.scene.white_canvas_013",
+      "kind": "audio",
+      "path": "audio/voice/scene/white_canvas_013.mp3",
+      "mimeType": "audio/mpeg"
+    },
+    {
+      "id": "voice.scene.white_canvas_014",
+      "kind": "audio",
+      "path": "audio/voice/scene/white_canvas_014.mp3",
+      "mimeType": "audio/mpeg"
+    },
+    {
+      "id": "voice.scene.white_canvas_015",
+      "kind": "audio",
+      "path": "audio/voice/scene/white_canvas_015.mp3",
+      "mimeType": "audio/mpeg"
+    },
+    {
+      "id": "voice.scene.white_canvas_ending_bad",
+      "kind": "audio",
+      "path": "audio/voice/scene/white_canvas_ending_bad.mp3",
+      "mimeType": "audio/mpeg"
+    },
+    {
+      "id": "voice.scene.white_canvas_ending_gate",
+      "kind": "audio",
+      "path": "audio/voice/scene/white_canvas_ending_gate.mp3",
+      "mimeType": "audio/mpeg"
+    },
+    {
+      "id": "voice.scene.white_canvas_ending_normal",
+      "kind": "audio",
+      "path": "audio/voice/scene/white_canvas_ending_normal.mp3",
+      "mimeType": "audio/mpeg"
+    },
+    {
+      "id": "voice.scene.white_canvas_ending_true",
+      "kind": "audio",
+      "path": "audio/voice/scene/white_canvas_ending_true.mp3",
+      "mimeType": "audio/mpeg"
+    }
+  ],
+  "portraits": [
+    {
+      "version": 2,
+      "id": "portrait.albina.amused",
+      "characterId": "albina",
+      "path": "sprite-atlas/albina/amused_strip.png",
+      "animation": {
+        "kind": "strip",
+        "frameCount": 8,
+        "frameWidth": 192,
+        "frameHeight": 1024,
+        "fps": 8
+      },
+      "fallbackAssetId": "file.characters.albina.amused.png"
+    },
+    {
+      "version": 2,
+      "id": "portrait.albina.armored",
+      "characterId": "albina",
+      "path": "sprite-atlas/albina/armored_strip.png",
+      "animation": {
+        "kind": "strip",
+        "frameCount": 8,
+        "frameWidth": 192,
+        "frameHeight": 1024,
+        "fps": 8
+      },
+      "fallbackAssetId": "file.characters.albina.armored.png"
+    },
+    {
+      "version": 2,
+      "id": "portrait.albina.combat",
+      "characterId": "albina",
+      "path": "sprite-atlas/albina/combat_strip.png",
+      "animation": {
+        "kind": "strip",
+        "frameCount": 8,
+        "frameWidth": 192,
+        "frameHeight": 1024,
+        "fps": 8
+      },
+      "fallbackAssetId": "file.characters.albina.combat.png"
+    },
+    {
+      "version": 2,
+      "id": "portrait.albina.endgame",
+      "characterId": "albina",
+      "path": "sprite-atlas/albina/endgame_strip.png",
+      "animation": {
+        "kind": "strip",
+        "frameCount": 8,
+        "frameWidth": 192,
+        "frameHeight": 1024,
+        "fps": 8
+      },
+      "fallbackAssetId": "file.characters.albina.endgame.png"
+    },
+    {
+      "version": 2,
+      "id": "portrait.albina.fascia-open",
+      "characterId": "albina",
+      "path": "sprite-atlas/albina/fascia-open_strip.png",
+      "animation": {
+        "kind": "strip",
+        "frameCount": 8,
+        "frameWidth": 192,
+        "frameHeight": 1024,
+        "fps": 8
+      },
+      "fallbackAssetId": "file.characters.albina.fascia.open.png"
+    },
+    {
+      "version": 2,
+      "id": "portrait.albina.focused",
+      "characterId": "albina",
+      "path": "sprite-atlas/albina/focused_strip.png",
+      "animation": {
+        "kind": "strip",
+        "frameCount": 8,
+        "frameWidth": 192,
+        "frameHeight": 1024,
+        "fps": 8
+      },
+      "fallbackAssetId": "file.characters.albina.focused.png"
+    },
+    {
+      "version": 2,
+      "id": "portrait.albina.furious",
+      "characterId": "albina",
+      "path": "sprite-atlas/albina/furious_strip.png",
+      "animation": {
+        "kind": "strip",
+        "frameCount": 8,
+        "frameWidth": 192,
+        "frameHeight": 1024,
+        "fps": 8
+      },
+      "fallbackAssetId": "file.characters.albina.furious.png"
+    },
+    {
+      "version": 2,
+      "id": "portrait.albina.golden-bough",
+      "characterId": "albina",
+      "path": "sprite-atlas/albina/golden-bough_strip.png",
+      "animation": {
+        "kind": "strip",
+        "frameCount": 8,
+        "frameWidth": 192,
+        "frameHeight": 1024,
+        "fps": 8
+      },
+      "fallbackAssetId": "file.characters.albina.golden.bough.png"
+    },
+    {
+      "version": 2,
+      "id": "portrait.albina.maestro",
+      "characterId": "albina",
+      "path": "sprite-atlas/albina/maestro_strip.png",
+      "animation": {
+        "kind": "strip",
+        "frameCount": 8,
+        "frameWidth": 192,
+        "frameHeight": 1024,
+        "fps": 8
+      },
+      "fallbackAssetId": "file.characters.albina.maestro.png"
+    },
+    {
+      "version": 2,
+      "id": "portrait.albina.normal",
+      "characterId": "albina",
+      "path": "sprite-atlas/albina/normal_strip.png",
+      "animation": {
+        "kind": "strip",
+        "frameCount": 8,
+        "frameWidth": 192,
+        "frameHeight": 1024,
+        "fps": 8
+      },
+      "fallbackAssetId": "file.characters.albina.normal.png"
+    },
+    {
+      "version": 2,
+      "id": "portrait.albina.rain",
+      "characterId": "albina",
+      "path": "sprite-atlas/albina/rain_strip.png",
+      "animation": {
+        "kind": "strip",
+        "frameCount": 8,
+        "frameWidth": 192,
+        "frameHeight": 1024,
+        "fps": 8
+      },
+      "fallbackAssetId": "file.characters.albina.rain.png"
+    },
+    {
+      "version": 2,
+      "id": "portrait.albina.ring-conspiracy",
+      "characterId": "albina",
+      "path": "sprite-atlas/albina/ring-conspiracy_strip.png",
+      "animation": {
+        "kind": "strip",
+        "frameCount": 8,
+        "frameWidth": 192,
+        "frameHeight": 1024,
+        "fps": 8
+      },
+      "fallbackAssetId": "file.characters.albina.ring.conspiracy.png"
+    },
+    {
+      "version": 2,
+      "id": "portrait.albina.shy",
+      "characterId": "albina",
+      "path": "sprite-atlas/albina/shy_strip.png",
+      "animation": {
+        "kind": "strip",
+        "frameCount": 8,
+        "frameWidth": 192,
+        "frameHeight": 1024,
+        "fps": 8
+      },
+      "fallbackAssetId": "file.characters.albina.shy.png"
+    },
+    {
+      "version": 2,
+      "id": "portrait.albina.smile",
+      "characterId": "albina",
+      "path": "sprite-atlas/albina/smile_strip.png",
+      "animation": {
+        "kind": "strip",
+        "frameCount": 8,
+        "frameWidth": 192,
+        "frameHeight": 1024,
+        "fps": 8
+      },
+      "fallbackAssetId": "file.characters.albina.smile.png"
+    },
+    {
+      "version": 2,
+      "id": "portrait.albina.surgical",
+      "characterId": "albina",
+      "path": "sprite-atlas/albina/surgical_strip.png",
+      "animation": {
+        "kind": "strip",
+        "frameCount": 8,
+        "frameWidth": 192,
+        "frameHeight": 1024,
+        "fps": 8
+      },
+      "fallbackAssetId": "file.characters.albina.surgical.png"
+    },
+    {
+      "version": 2,
+      "id": "portrait.albina.unarmored",
+      "characterId": "albina",
+      "path": "sprite-atlas/albina/unarmored_strip.png",
+      "animation": {
+        "kind": "strip",
+        "frameCount": 8,
+        "frameWidth": 192,
+        "frameHeight": 1024,
+        "fps": 8
+      },
+      "fallbackAssetId": "file.characters.albina.unarmored.png"
+    },
+    {
+      "version": 2,
+      "id": "portrait.albina.white-canvas",
+      "characterId": "albina",
+      "path": "sprite-atlas/albina/white-canvas_strip.png",
+      "animation": {
+        "kind": "strip",
+        "frameCount": 8,
+        "frameWidth": 192,
+        "frameHeight": 1024,
+        "fps": 8
+      },
+      "fallbackAssetId": "file.characters.albina.white.canvas.png"
+    },
+    {
+      "version": 2,
+      "id": "portrait.albina.wounded",
+      "characterId": "albina",
+      "path": "sprite-atlas/albina/wounded_strip.png",
+      "animation": {
+        "kind": "strip",
+        "frameCount": 8,
+        "frameWidth": 192,
+        "frameHeight": 1024,
+        "fps": 8
+      },
+      "fallbackAssetId": "file.characters.albina.wounded.png"
+    },
+    {
+      "version": 2,
+      "id": "portrait.callisto.normal",
+      "characterId": "callisto",
+      "path": "sprite-atlas/callisto/normal_strip.png",
+      "animation": {
+        "kind": "strip",
+        "frameCount": 8,
+        "frameWidth": 192,
+        "frameHeight": 1024,
+        "fps": 8
+      },
+      "fallbackAssetId": "file.characters.callisto.normal.png"
+    },
+    {
+      "version": 2,
+      "id": "portrait.charon.normal",
+      "characterId": "charon",
+      "path": "sprite-atlas/charon/normal_strip.png",
+      "animation": {
+        "kind": "strip",
+        "frameCount": 8,
+        "frameWidth": 192,
+        "frameHeight": 1024,
+        "fps": 8
+      },
+      "fallbackAssetId": "file.characters.charon.normal.png"
+    },
+    {
+      "version": 2,
+      "id": "portrait.dante.normal",
+      "characterId": "dante",
+      "path": "sprite-atlas/dante/normal_strip.png",
+      "animation": {
+        "kind": "strip",
+        "frameCount": 8,
+        "frameWidth": 192,
+        "frameHeight": 1024,
+        "fps": 8
+      },
+      "fallbackAssetId": "file.characters.dante.normal.png"
+    },
+    {
+      "version": 2,
+      "id": "portrait.fascia.normal",
+      "characterId": "fascia",
+      "path": "characters/albina/fascia-open.png",
+      "animation": {
+        "kind": "static"
+      }
+    },
+    {
+      "version": 2,
+      "id": "portrait.faust.normal",
+      "characterId": "faust",
+      "path": "sprite-atlas/faust/normal_strip.png",
+      "animation": {
+        "kind": "strip",
+        "frameCount": 8,
+        "frameWidth": 192,
+        "frameHeight": 1024,
+        "fps": 8
+      },
+      "fallbackAssetId": "file.characters.faust.normal.png"
+    },
+    {
+      "version": 2,
+      "id": "portrait.fixer_informant.normal",
+      "characterId": "fixer_informant",
+      "path": "sprite-atlas/fixer_informant/normal_strip.png",
+      "animation": {
+        "kind": "strip",
+        "frameCount": 8,
+        "frameWidth": 192,
+        "frameHeight": 1024,
+        "fps": 8
+      },
+      "fallbackAssetId": "file.characters.fixer.informant.normal.png"
+    },
+    {
+      "version": 2,
+      "id": "portrait.golden_apparition.normal",
+      "characterId": "golden_apparition",
+      "path": "sprite-atlas/golden_apparition/normal_strip.png",
+      "animation": {
+        "kind": "strip",
+        "frameCount": 8,
+        "frameWidth": 192,
+        "frameHeight": 1024,
+        "fps": 8
+      },
+      "fallbackAssetId": "file.characters.golden.apparition.normal.png"
+    },
+    {
+      "version": 2,
+      "id": "portrait.lcd_captain.normal",
+      "characterId": "lcd_captain",
+      "path": "sprite-atlas/lcd_captain/normal_strip.png",
+      "animation": {
+        "kind": "strip",
+        "frameCount": 8,
+        "frameWidth": 192,
+        "frameHeight": 1024,
+        "fps": 8
+      },
+      "fallbackAssetId": "file.characters.lcd.captain.normal.png"
+    },
+    {
+      "version": 2,
+      "id": "portrait.lce_doctor.normal",
+      "characterId": "lce_doctor",
+      "path": "sprite-atlas/lce_doctor/normal_strip.png",
+      "animation": {
+        "kind": "strip",
+        "frameCount": 8,
+        "frameWidth": 192,
+        "frameHeight": 1024,
+        "fps": 8
+      },
+      "fallbackAssetId": "file.characters.lce.doctor.normal.png"
+    },
+    {
+      "version": 2,
+      "id": "portrait.original_cg.albina_debut",
+      "characterId": "original_cg",
+      "path": "sprite-atlas/original_cg/albina_debut_strip.png",
+      "animation": {
+        "kind": "strip",
+        "frameCount": 8,
+        "frameWidth": 192,
+        "frameHeight": 1024,
+        "fps": 8
+      },
+      "fallbackAssetId": "file.original.cg.albina.debut.png"
+    },
+    {
+      "version": 2,
+      "id": "portrait.original_cg.battle_climax",
+      "characterId": "original_cg",
+      "path": "sprite-atlas/original_cg/battle_climax_strip.png",
+      "animation": {
+        "kind": "strip",
+        "frameCount": 8,
+        "frameWidth": 192,
+        "frameHeight": 1024,
+        "fps": 8
+      },
+      "fallbackAssetId": "file.original.cg.battle.climax.png"
+    },
+    {
+      "version": 2,
+      "id": "portrait.protagonist.battle",
+      "characterId": "protagonist",
+      "path": "sprite-atlas/protagonist/battle_strip.png",
+      "animation": {
+        "kind": "strip",
+        "frameCount": 8,
+        "frameWidth": 192,
+        "frameHeight": 1024,
+        "fps": 8
+      },
+      "fallbackAssetId": "file.characters.protagonist.battle.png"
+    },
+    {
+      "version": 2,
+      "id": "portrait.protagonist.coat",
+      "characterId": "protagonist",
+      "path": "sprite-atlas/protagonist/coat_strip.png",
+      "animation": {
+        "kind": "strip",
+        "frameCount": 8,
+        "frameWidth": 192,
+        "frameHeight": 1024,
+        "fps": 8
+      },
+      "fallbackAssetId": "file.characters.protagonist.coat.png"
+    },
+    {
+      "version": 2,
+      "id": "portrait.protagonist.formal",
+      "characterId": "protagonist",
+      "path": "sprite-atlas/protagonist/formal_strip.png",
+      "animation": {
+        "kind": "strip",
+        "frameCount": 8,
+        "frameWidth": 192,
+        "frameHeight": 1024,
+        "fps": 8
+      },
+      "fallbackAssetId": "file.characters.protagonist.formal.png"
+    },
+    {
+      "version": 2,
+      "id": "portrait.protagonist.injured",
+      "characterId": "protagonist",
+      "path": "sprite-atlas/protagonist/injured_strip.png",
+      "animation": {
+        "kind": "strip",
+        "frameCount": 8,
+        "frameWidth": 192,
+        "frameHeight": 1024,
+        "fps": 8
+      },
+      "fallbackAssetId": "file.characters.protagonist.injured.png"
+    },
+    {
+      "version": 2,
+      "id": "portrait.protagonist.normal",
+      "characterId": "protagonist",
+      "path": "sprite-atlas/protagonist/normal_strip.png",
+      "animation": {
+        "kind": "strip",
+        "frameCount": 8,
+        "frameWidth": 192,
+        "frameHeight": 1024,
+        "fps": 8
+      },
+      "fallbackAssetId": "file.characters.protagonist.normal.png"
+    },
+    {
+      "version": 2,
+      "id": "portrait.protagonist.profile",
+      "characterId": "protagonist",
+      "path": "sprite-atlas/protagonist/profile_strip.png",
+      "animation": {
+        "kind": "strip",
+        "frameCount": 8,
+        "frameWidth": 192,
+        "frameHeight": 1024,
+        "fps": 8
+      },
+      "fallbackAssetId": "file.characters.protagonist.profile.png"
+    },
+    {
+      "version": 2,
+      "id": "portrait.protagonist.resolve",
+      "characterId": "protagonist",
+      "path": "sprite-atlas/protagonist/resolve_strip.png",
+      "animation": {
+        "kind": "strip",
+        "frameCount": 8,
+        "frameWidth": 192,
+        "frameHeight": 1024,
+        "fps": 8
+      },
+      "fallbackAssetId": "file.characters.protagonist.resolve.png"
+    },
+    {
+      "version": 2,
+      "id": "portrait.protagonist.serious",
+      "characterId": "protagonist",
+      "path": "sprite-atlas/protagonist/serious_strip.png",
+      "animation": {
+        "kind": "strip",
+        "frameCount": 8,
+        "frameWidth": 192,
+        "frameHeight": 1024,
+        "fps": 8
+      },
+      "fallbackAssetId": "file.characters.protagonist.serious.png"
+    },
+    {
+      "version": 2,
+      "id": "portrait.protagonist.shadow",
+      "characterId": "protagonist",
+      "path": "sprite-atlas/protagonist/shadow_strip.png",
+      "animation": {
+        "kind": "strip",
+        "frameCount": 8,
+        "frameWidth": 192,
+        "frameHeight": 1024,
+        "fps": 8
+      },
+      "fallbackAssetId": "file.characters.protagonist.shadow.png"
+    },
+    {
+      "version": 2,
+      "id": "portrait.protagonist.smile",
+      "characterId": "protagonist",
+      "path": "sprite-atlas/protagonist/smile_strip.png",
+      "animation": {
+        "kind": "strip",
+        "frameCount": 8,
+        "frameWidth": 192,
+        "frameHeight": 1024,
+        "fps": 8
+      },
+      "fallbackAssetId": "file.characters.protagonist.smile.png"
+    },
+    {
+      "version": 2,
+      "id": "portrait.protagonist.tender",
+      "characterId": "protagonist",
+      "path": "sprite-atlas/protagonist/tender_strip.png",
+      "animation": {
+        "kind": "strip",
+        "frameCount": 8,
+        "frameWidth": 192,
+        "frameHeight": 1024,
+        "fps": 8
+      },
+      "fallbackAssetId": "file.characters.protagonist.tender.png"
+    },
+    {
+      "version": 2,
+      "id": "portrait.protagonist.wet-hair",
+      "characterId": "protagonist",
+      "path": "sprite-atlas/protagonist/wet-hair_strip.png",
+      "animation": {
+        "kind": "strip",
+        "frameCount": 8,
+        "frameWidth": 192,
+        "frameHeight": 1024,
+        "fps": 8
+      },
+      "fallbackAssetId": "file.characters.protagonist.wet.hair.png"
+    },
+    {
+      "version": 2,
+      "id": "portrait.ren.normal",
+      "characterId": "ren",
+      "path": "sprite-atlas/ren/normal_strip.png",
+      "animation": {
+        "kind": "strip",
+        "frameCount": 8,
+        "frameWidth": 192,
+        "frameHeight": 1024,
+        "fps": 8
+      },
+      "fallbackAssetId": "file.characters.ren.normal.png"
+    },
+    {
+      "version": 2,
+      "id": "portrait.ring_agent.normal",
+      "characterId": "ring_agent",
+      "path": "sprite-atlas/ring_agent/normal_strip.png",
+      "animation": {
+        "kind": "strip",
+        "frameCount": 8,
+        "frameWidth": 192,
+        "frameHeight": 1024,
+        "fps": 8
+      },
+      "fallbackAssetId": "file.characters.ring.agent.normal.png"
+    },
+    {
+      "version": 2,
+      "id": "portrait.vergilius.normal",
+      "characterId": "vergilius",
+      "path": "sprite-atlas/vergilius/normal_strip.png",
+      "animation": {
+        "kind": "strip",
+        "frameCount": 8,
+        "frameWidth": 192,
+        "frameHeight": 1024,
+        "fps": 8
+      },
+      "fallbackAssetId": "file.characters.vergilius.normal.png"
+    },
+    {
+      "version": 2,
+      "id": "portrait.yi_sang.normal",
+      "characterId": "yi_sang",
+      "path": "sprite-atlas/yi_sang/normal_strip.png",
+      "animation": {
+        "kind": "strip",
+        "frameCount": 8,
+        "frameWidth": 192,
+        "frameHeight": 1024,
+        "fps": 8
+      },
+      "fallbackAssetId": "file.characters.yi.sang.normal.png"
+    }
+  ],
+  "mediaJobs": [
+    {
+      "version": 2,
+      "id": "job.strip.original.albina.sprites.battle",
+      "assetId": "strip.original.albina.sprites.battle",
+      "kind": "image-edit",
+      "model": "gpt-image-2",
+      "status": "pending",
+      "contentHash": "1f2bfd5f7b505c355c3a4aa849bfd46d667d0fe75af2ea71235cba4ea56ea1f1",
+      "inputAssetIds": [
+        "file.original.albina.sprites.battle.png"
+      ],
+      "outputPath": "sprite-atlas/original_albina_sprites/battle_strip.png",
+      "attempts": 3,
+      "error": "HTTP 403: {\"error\":{\"message\":\"预扣费额度失败, 用户剩余额度: ＄0.050000, 需要预扣费额度: ＄0.100000 (request id: 202607091842143082986988268d9d66TROf2Up)\",\"type\":\"new_api_error\",\"param\":\"\",\"code\":\"insufficient_user_quota\"}}"
+    },
+    {
+      "version": 2,
+      "id": "job.strip.original.albina.sprites.normal",
+      "assetId": "strip.original.albina.sprites.normal",
+      "kind": "image-edit",
+      "model": "gpt-image-2",
+      "status": "pending",
+      "contentHash": "b92d284a2e50aaf02ebd8b3996a50749f93a057d19bc2a7afcc7ee065306dfcb",
+      "inputAssetIds": [
+        "file.original.albina.sprites.normal.png"
+      ],
+      "outputPath": "sprite-atlas/original_albina_sprites/normal_strip.png",
+      "attempts": 3,
+      "error": "HTTP 403: {\"error\":{\"message\":\"预扣费额度失败, 用户剩余额度: ＄0.050000, 需要预扣费额度: ＄0.100000 (request id: 202607091842477024722458268d9d6mw1xzwxB)\",\"type\":\"new_api_error\",\"param\":\"\",\"code\":\"insufficient_user_quota\"}}"
+    },
+    {
+      "version": 2,
+      "id": "job.strip.original.albina.sprites.sad",
+      "assetId": "strip.original.albina.sprites.sad",
+      "kind": "image-edit",
+      "model": "gpt-image-2",
+      "status": "pending",
+      "contentHash": "ca5a1122df15a71bb788355d8ac5af627564cb97d12bdf483499fd35eee2fc97",
+      "inputAssetIds": [
+        "file.original.albina.sprites.sad.png"
+      ],
+      "outputPath": "sprite-atlas/original_albina_sprites/sad_strip.png",
+      "attempts": 0
+    },
+    {
+      "version": 2,
+      "id": "job.strip.original.albina.sprites.smile",
+      "assetId": "strip.original.albina.sprites.smile",
+      "kind": "image-edit",
+      "model": "gpt-image-2",
+      "status": "pending",
+      "contentHash": "c1dce303e33582f94413e268abb26f0eb2ee106a84e74b63697ccba2300fb9f0",
+      "inputAssetIds": [
+        "file.original.albina.sprites.smile.png"
+      ],
+      "outputPath": "sprite-atlas/original_albina_sprites/smile_strip.png",
+      "attempts": 0
+    },
+    {
+      "version": 2,
+      "id": "job.strip.original.cg.canto.ix.opening",
+      "assetId": "strip.original.cg.canto.ix.opening",
+      "kind": "image-edit",
+      "model": "gpt-image-2",
+      "status": "pending",
+      "contentHash": "032993f9e4c1981393e364a8b5272ca690f9dda11951a01cd83b13390ae3aab0",
+      "inputAssetIds": [
+        "file.original.cg.canto.ix.opening.png"
+      ],
+      "outputPath": "sprite-atlas/original_cg/canto_ix_opening_strip.png",
+      "attempts": 3,
+      "error": "HTTP 403: {\"error\":{\"message\":\"预扣费额度失败, 用户剩余额度: ＄0.050000, 需要预扣费额度: ＄0.100000 (request id: 202607091839498508537008268d9d67gwnpnxM)\",\"type\":\"new_api_error\",\"param\":\"\",\"code\":\"insufficient_user_quota\"}}"
+    },
+    {
+      "version": 2,
+      "id": "job.strip.original.cg.hell.gate",
+      "assetId": "strip.original.cg.hell.gate",
+      "kind": "image-edit",
+      "model": "gpt-image-2",
+      "status": "pending",
+      "contentHash": "ce3a392e94477edff91c0b734e0316700eae6e6814223106e12d8f14417f12ed",
+      "inputAssetIds": [
+        "file.original.cg.hell.gate.png"
+      ],
+      "outputPath": "sprite-atlas/original_cg/hell_gate_strip.png",
+      "attempts": 3,
+      "error": "HTTP 403: {\"error\":{\"message\":\"预扣费额度失败, 用户剩余额度: ＄0.050000, 需要预扣费额度: ＄0.100000 (request id: 202607091840249061893478268d9d6ka0wLtJk)\",\"type\":\"new_api_error\",\"param\":\"\",\"code\":\"insufficient_user_quota\"}}"
+    },
+    {
+      "version": 2,
+      "id": "job.strip.original.cg.rain.confession",
+      "assetId": "strip.original.cg.rain.confession",
+      "kind": "image-edit",
+      "model": "gpt-image-2",
+      "status": "pending",
+      "contentHash": "3df4e7b9df7a4ae8e9f7b2819bbf45ee8ef76d8a7af908a5ead09bf89602b073",
+      "inputAssetIds": [
+        "file.original.cg.rain.confession.png"
+      ],
+      "outputPath": "sprite-atlas/original_cg/rain_confession_strip.png",
+      "attempts": 3,
+      "error": "HTTP 403: {\"error\":{\"message\":\"预扣费额度失败, 用户剩余额度: ＄0.050000, 需要预扣费额度: ＄0.100000 (request id: 202607091840546398154378268d9d6BnzkAOYB)\",\"type\":\"new_api_error\",\"param\":\"\",\"code\":\"insufficient_user_quota\"}}"
+    },
+    {
+      "version": 2,
+      "id": "job.strip.original.cg.ring.conspiracy",
+      "assetId": "strip.original.cg.ring.conspiracy",
+      "kind": "image-edit",
+      "model": "gpt-image-2",
+      "status": "pending",
+      "contentHash": "572873181a31313d7b15266c864ca85d28e269394d3ae3b5101c71e279b83a91",
+      "inputAssetIds": [
+        "file.original.cg.ring.conspiracy.png"
+      ],
+      "outputPath": "sprite-atlas/original_cg/ring_conspiracy_strip.png",
+      "attempts": 3,
+      "error": "HTTP 403: {\"error\":{\"message\":\"预扣费额度失败, 用户剩余额度: ＄0.050000, 需要预扣费额度: ＄0.100000 (request id: 202607091841379559462728268d9d67jCFuMAr)\",\"type\":\"new_api_error\",\"param\":\"\",\"code\":\"insufficient_user_quota\"}}"
+    },
+    {
+      "version": 2,
+      "id": "job.voice.result.conspiracy_005_let_her_answer",
+      "assetId": "voice.result.conspiracy_005_let_her_answer",
+      "kind": "speech",
+      "model": "speech-2.8-hd",
+      "status": "pending",
+      "contentHash": "f3f383e53a6c05f99a2fd6b539ff67725718fbd476b3fd79d27eec33da9d0dae",
+      "inputAssetIds": [],
+      "outputPath": "audio/voice/result/conspiracy_005_let_her_answer.mp3",
+      "attempts": 0
+    },
+    {
+      "version": 2,
+      "id": "job.voice.result.conspiracy_005_refuse_duo",
+      "assetId": "voice.result.conspiracy_005_refuse_duo",
+      "kind": "speech",
+      "model": "speech-2.8-hd",
+      "status": "pending",
+      "contentHash": "1810d3f5a01ae0a1b9acb15177b52f29d0723076baf535effd293d62ce0d4ba2",
+      "inputAssetIds": [],
+      "outputPath": "audio/voice/result/conspiracy_005_refuse_duo.mp3",
+      "attempts": 0
+    },
+    {
+      "version": 2,
+      "id": "job.voice.result.conspiracy_006_block_view",
+      "assetId": "voice.result.conspiracy_006_block_view",
+      "kind": "speech",
+      "model": "speech-2.8-hd",
+      "status": "pending",
+      "contentHash": "512ebfb8e7ab19d4b0c1304f6631b1790e64276ced05ff9d53436a90bcbc1bd3",
+      "inputAssetIds": [],
+      "outputPath": "audio/voice/result/conspiracy_006_block_view.mp3",
+      "attempts": 0
+    },
+    {
+      "version": 2,
+      "id": "job.voice.result.conspiracy_006_stand_with_her",
+      "assetId": "voice.result.conspiracy_006_stand_with_her",
+      "kind": "speech",
+      "model": "speech-2.8-hd",
+      "status": "pending",
+      "contentHash": "325a115cf6c20c3cc31bfafd166a30c1c7dfa444b52d7ef71034124f3e2fbadf",
+      "inputAssetIds": [],
+      "outputPath": "audio/voice/result/conspiracy_006_stand_with_her.mp3",
+      "attempts": 0
+    },
+    {
+      "version": 2,
+      "id": "job.voice.result.conspiracy_007_break_frame",
+      "assetId": "voice.result.conspiracy_007_break_frame",
+      "kind": "speech",
+      "model": "speech-2.8-hd",
+      "status": "pending",
+      "contentHash": "59ce677749bad6459ddd3e8e5ff1a7b917496b41b806dc2f888da5bfa5a765db",
+      "inputAssetIds": [],
+      "outputPath": "audio/voice/result/conspiracy_007_break_frame.mp3",
+      "attempts": 0
+    },
+    {
+      "version": 2,
+      "id": "job.voice.result.conspiracy_007_seize_frame",
+      "assetId": "voice.result.conspiracy_007_seize_frame",
+      "kind": "speech",
+      "model": "speech-2.8-hd",
+      "status": "pending",
+      "contentHash": "6f13899bdb458e8908287dd7825fde28f7182a64ecaff2e00799ea184991fdd8",
+      "inputAssetIds": [],
+      "outputPath": "audio/voice/result/conspiracy_007_seize_frame.mp3",
+      "attempts": 0
+    },
+    {
+      "version": 2,
+      "id": "job.voice.result.conspiracy_008_hand_pen_to_her",
+      "assetId": "voice.result.conspiracy_008_hand_pen_to_her",
+      "kind": "speech",
+      "model": "speech-2.8-hd",
+      "status": "pending",
+      "contentHash": "c5b61aa9cb3d8dda0695be7a86cb3d2bf8026f550885686ae784a17edd276e48",
+      "inputAssetIds": [],
+      "outputPath": "audio/voice/result/conspiracy_008_hand_pen_to_her.mp3",
+      "attempts": 0
+    },
+    {
+      "version": 2,
+      "id": "job.voice.result.conspiracy_008_refuse_testimony",
+      "assetId": "voice.result.conspiracy_008_refuse_testimony",
+      "kind": "speech",
+      "model": "speech-2.8-hd",
+      "status": "pending",
+      "contentHash": "39aaf14231fdde3197ce3bce9ed40099e40096bc041d87c72fefa44c0e840145",
+      "inputAssetIds": [],
+      "outputPath": "audio/voice/result/conspiracy_008_refuse_testimony.mp3",
+      "attempts": 0
+    },
+    {
+      "version": 2,
+      "id": "job.voice.result.conspiracy_009_choose_present",
+      "assetId": "voice.result.conspiracy_009_choose_present",
+      "kind": "speech",
+      "model": "speech-2.8-hd",
+      "status": "pending",
+      "contentHash": "3047ef3acac999955a8e1bfed4799daf4ba43df19b0bf7e56595f384a15784eb",
+      "inputAssetIds": [],
+      "outputPath": "audio/voice/result/conspiracy_009_choose_present.mp3",
+      "attempts": 0
+    },
+    {
+      "version": 2,
+      "id": "job.voice.result.conspiracy_009_refuse_choice",
+      "assetId": "voice.result.conspiracy_009_refuse_choice",
+      "kind": "speech",
+      "model": "speech-2.8-hd",
+      "status": "pending",
+      "contentHash": "eeac31a5d41659187abdd89aacbc0f6dad5bf6d80099b236390d229587d67109",
+      "inputAssetIds": [],
+      "outputPath": "audio/voice/result/conspiracy_009_refuse_choice.mp3",
+      "attempts": 0
+    },
+    {
+      "version": 2,
+      "id": "job.voice.result.conspiracy_010_keep_badge_unworn",
+      "assetId": "voice.result.conspiracy_010_keep_badge_unworn",
+      "kind": "speech",
+      "model": "speech-2.8-hd",
+      "status": "pending",
+      "contentHash": "16c6589e6bb237f60c16fba32fb65c6a70e51f36698bd405e7466f16a46e3219",
+      "inputAssetIds": [],
+      "outputPath": "audio/voice/result/conspiracy_010_keep_badge_unworn.mp3",
+      "attempts": 0
+    },
+    {
+      "version": 2,
+      "id": "job.voice.result.conspiracy_010_throw_badge",
+      "assetId": "voice.result.conspiracy_010_throw_badge",
+      "kind": "speech",
+      "model": "speech-2.8-hd",
+      "status": "pending",
+      "contentHash": "9b0668d529b067e537e9cd592ca9aee2dc2bc2652abe0be5e8c0ddec5c72e702",
+      "inputAssetIds": [],
+      "outputPath": "audio/voice/result/conspiracy_010_throw_badge.mp3",
+      "attempts": 0
+    },
+    {
+      "version": 2,
+      "id": "job.voice.result.conspiracy_011_burn_film",
+      "assetId": "voice.result.conspiracy_011_burn_film",
+      "kind": "speech",
+      "model": "speech-2.8-hd",
+      "status": "pending",
+      "contentHash": "5351555071997c959545b48106a9357196cc9c7ca28c46f9bfa623639462db56",
+      "inputAssetIds": [],
+      "outputPath": "audio/voice/result/conspiracy_011_burn_film.mp3",
+      "attempts": 0
+    },
+    {
+      "version": 2,
+      "id": "job.voice.result.conspiracy_011_rewrite_ending",
+      "assetId": "voice.result.conspiracy_011_rewrite_ending",
+      "kind": "speech",
+      "model": "speech-2.8-hd",
+      "status": "pending",
+      "contentHash": "44387f330d4c2209a58686e857f1087a4fd408b3e6be0ea23caa13c790c06ec2",
+      "inputAssetIds": [],
+      "outputPath": "audio/voice/result/conspiracy_011_rewrite_ending.mp3",
+      "attempts": 0
+    },
+    {
+      "version": 2,
+      "id": "job.voice.result.conspiracy_012_end_tonight",
+      "assetId": "voice.result.conspiracy_012_end_tonight",
+      "kind": "speech",
+      "model": "speech-2.8-hd",
+      "status": "pending",
+      "contentHash": "762b791e184b8794807a1bfc3d5a14dc5905c54c0006a65674cadcc266c375f8",
+      "inputAssetIds": [],
+      "outputPath": "audio/voice/result/conspiracy_012_end_tonight.mp3",
+      "attempts": 0
+    },
+    {
+      "version": 2,
+      "id": "job.voice.result.conspiracy_012_keep_blade",
+      "assetId": "voice.result.conspiracy_012_keep_blade",
+      "kind": "speech",
+      "model": "speech-2.8-hd",
+      "status": "pending",
+      "contentHash": "c10d47047af6bcdd707c11eafdfd992600472ca1b74ac05c0198072e96de38cc",
+      "inputAssetIds": [],
+      "outputPath": "audio/voice/result/conspiracy_012_keep_blade.mp3",
+      "attempts": 0
+    },
+    {
+      "version": 2,
+      "id": "job.voice.result.conspiracy_013_hold_one_second",
+      "assetId": "voice.result.conspiracy_013_hold_one_second",
+      "kind": "speech",
+      "model": "speech-2.8-hd",
+      "status": "pending",
+      "contentHash": "b19cae424db9f5db9be5849fb21023897de9e60dffd7db3f52d09eba75ee6535",
+      "inputAssetIds": [],
+      "outputPath": "audio/voice/result/conspiracy_013_hold_one_second.mp3",
+      "attempts": 0
+    },
+    {
+      "version": 2,
+      "id": "job.voice.result.conspiracy_013_return_gently",
+      "assetId": "voice.result.conspiracy_013_return_gently",
+      "kind": "speech",
+      "model": "speech-2.8-hd",
+      "status": "pending",
+      "contentHash": "a20db65feff45dae2f27105b6c6fac72938b4e9243c97fff0a4e192fdc79a1e4",
+      "inputAssetIds": [],
+      "outputPath": "audio/voice/result/conspiracy_013_return_gently.mp3",
+      "attempts": 0
+    },
+    {
+      "version": 2,
+      "id": "job.voice.result.conspiracy_014_erase_from_catalog",
+      "assetId": "voice.result.conspiracy_014_erase_from_catalog",
+      "kind": "speech",
+      "model": "speech-2.8-hd",
+      "status": "pending",
+      "contentHash": "ac83a5a8f220f20d5efc5758ff03e0843d79ea0188cb6ca07398d82d6ef82b31",
+      "inputAssetIds": [],
+      "outputPath": "audio/voice/result/conspiracy_014_erase_from_catalog.mp3",
+      "attempts": 0
+    },
+    {
+      "version": 2,
+      "id": "job.voice.result.conspiracy_014_keep_one_line",
+      "assetId": "voice.result.conspiracy_014_keep_one_line",
+      "kind": "speech",
+      "model": "speech-2.8-hd",
+      "status": "pending",
+      "contentHash": "e7607697c55380da581fa797facf850fba3fcfbb8003209adb77fd02549170d7",
+      "inputAssetIds": [],
+      "outputPath": "audio/voice/result/conspiracy_014_keep_one_line.mp3",
+      "attempts": 0
+    },
+    {
+      "version": 2,
+      "id": "job.voice.result.conspiracy_accept",
+      "assetId": "voice.result.conspiracy_accept",
+      "kind": "speech",
+      "model": "speech-2.8-hd",
+      "status": "pending",
+      "contentHash": "f9ff7d5e39a470fbf263fdc162b188c61cd86475bd8b220511d59610afee2a06",
+      "inputAssetIds": [],
+      "outputPath": "audio/voice/result/conspiracy_accept.mp3",
+      "attempts": 0
+    },
+    {
+      "version": 2,
+      "id": "job.voice.result.conspiracy_break_pursuit_frame",
+      "assetId": "voice.result.conspiracy_break_pursuit_frame",
+      "kind": "speech",
+      "model": "speech-2.8-hd",
+      "status": "pending",
+      "contentHash": "93222666078d72edeadc4998e0ae145af86f39deb466f323f21c5d0f806d6ce9",
+      "inputAssetIds": [],
+      "outputPath": "audio/voice/result/conspiracy_break_pursuit_frame.mp3",
+      "attempts": 0
+    },
+    {
+      "version": 2,
+      "id": "job.voice.result.conspiracy_escape_to_backstreets",
+      "assetId": "voice.result.conspiracy_escape_to_backstreets",
+      "kind": "speech",
+      "model": "speech-2.8-hd",
+      "status": "pending",
+      "contentHash": "5edcb9ac810e4a12695f86510a851444cd2ccac4bce123a7c943b476ce86ec71",
+      "inputAssetIds": [],
+      "outputPath": "audio/voice/result/conspiracy_escape_to_backstreets.mp3",
+      "attempts": 0
+    },
+    {
+      "version": 2,
+      "id": "job.voice.result.conspiracy_feed_false_signature",
+      "assetId": "voice.result.conspiracy_feed_false_signature",
+      "kind": "speech",
+      "model": "speech-2.8-hd",
+      "status": "pending",
+      "contentHash": "a5fd71d03ca849b88f706ab1cbd48c3015bc33a0e47e8a1986395115516253b0",
+      "inputAssetIds": [],
+      "outputPath": "audio/voice/result/conspiracy_feed_false_signature.mp3",
+      "attempts": 0
+    },
+    {
+      "version": 2,
+      "id": "job.voice.result.conspiracy_pressure",
+      "assetId": "voice.result.conspiracy_pressure",
+      "kind": "speech",
+      "model": "speech-2.8-hd",
+      "status": "pending",
+      "contentHash": "054ccf1782013004128b9d9e1b5b244e9209021b7bff10b5460d04dc942dbce7",
+      "inputAssetIds": [],
+      "outputPath": "audio/voice/result/conspiracy_pressure.mp3",
+      "attempts": 0
+    },
+    {
+      "version": 2,
+      "id": "job.voice.result.enter_conspiracy",
+      "assetId": "voice.result.enter_conspiracy",
+      "kind": "speech",
+      "model": "speech-2.8-hd",
+      "status": "pending",
+      "contentHash": "915a7126ed585f4a5e96b19cd7608a8ab5808bd0f41a62264c062edc51735636",
+      "inputAssetIds": [],
+      "outputPath": "audio/voice/result/enter_conspiracy.mp3",
+      "attempts": 0
+    },
+    {
+      "version": 2,
+      "id": "job.voice.result.enter_rebuild",
+      "assetId": "voice.result.enter_rebuild",
+      "kind": "speech",
+      "model": "speech-2.8-hd",
+      "status": "pending",
+      "contentHash": "c03a67501d94c248c8ca51ed7782af95d9374e406dc72f2ddc5de5e6b499bc8b",
+      "inputAssetIds": [],
+      "outputPath": "audio/voice/result/enter_rebuild.mp3",
+      "attempts": 0
+    },
+    {
+      "version": 2,
+      "id": "job.voice.result.enter_white_canvas",
+      "assetId": "voice.result.enter_white_canvas",
+      "kind": "speech",
+      "model": "speech-2.8-hd",
+      "status": "pending",
+      "contentHash": "d486fc8441e996ddb3e5f583cfd4a91947f77594c79e2988a5ab87d146526c99",
+      "inputAssetIds": [],
+      "outputPath": "audio/voice/result/enter_white_canvas.mp3",
+      "attempts": 0
+    },
+    {
+      "version": 2,
+      "id": "job.voice.result.golden_bough_rebuild.bad_ending",
+      "assetId": "voice.result.golden_bough_rebuild.bad_ending",
+      "kind": "speech",
+      "model": "speech-2.8-hd",
+      "status": "pending",
+      "contentHash": "d89871aaea48ab8324b529cca9c73ec294d66ff0d0dca731a7b7caa132b53600",
+      "inputAssetIds": [],
+      "outputPath": "audio/voice/result/golden_bough_rebuild/bad_ending.mp3",
+      "attempts": 0
+    },
+    {
+      "version": 2,
+      "id": "job.voice.result.golden_bough_rebuild.normal_ending",
+      "assetId": "voice.result.golden_bough_rebuild.normal_ending",
+      "kind": "speech",
+      "model": "speech-2.8-hd",
+      "status": "pending",
+      "contentHash": "d4998e665e87cd05a9f0fb3c116e6c03a400bdc84c485edef54a60582741ce75",
+      "inputAssetIds": [],
+      "outputPath": "audio/voice/result/golden_bough_rebuild/normal_ending.mp3",
+      "attempts": 0
+    },
+    {
+      "version": 2,
+      "id": "job.voice.result.golden_bough_rebuild.true_ending",
+      "assetId": "voice.result.golden_bough_rebuild.true_ending",
+      "kind": "speech",
+      "model": "speech-2.8-hd",
+      "status": "pending",
+      "contentHash": "6cc0c0c56f7bec3c8fcdd65dbe59990a90dbf13df7eb227afec7e7c13faa1228",
+      "inputAssetIds": [],
+      "outputPath": "audio/voice/result/golden_bough_rebuild/true_ending.mp3",
+      "attempts": 0
+    },
+    {
+      "version": 2,
+      "id": "job.voice.result.golden_bough_route_complete",
+      "assetId": "voice.result.golden_bough_route_complete",
+      "kind": "speech",
+      "model": "speech-2.8-hd",
+      "status": "pending",
+      "contentHash": "a01ddb688a0c4e33b597ec83f6433297edad44927c68391144167e0896e5c7fe",
+      "inputAssetIds": [],
+      "outputPath": "audio/voice/result/golden_bough_route_complete.mp3",
+      "attempts": 0
+    },
+    {
+      "version": 2,
+      "id": "job.voice.result.golden_bough_route_final",
+      "assetId": "voice.result.golden_bough_route_final",
+      "kind": "speech",
+      "model": "speech-2.8-hd",
+      "status": "pending",
+      "contentHash": "0398de3a7ee107b91cbd943253692036546eb3d071641875415710cc394d4e70",
+      "inputAssetIds": [],
+      "outputPath": "audio/voice/result/golden_bough_route_final.mp3",
+      "attempts": 0
+    },
+    {
+      "version": 2,
+      "id": "job.voice.result.rebuild_006_keep_silent_anchor",
+      "assetId": "voice.result.rebuild_006_keep_silent_anchor",
+      "kind": "speech",
+      "model": "speech-2.8-hd",
+      "status": "pending",
+      "contentHash": "6532bc1241a8357df07993d7ed8cb58b2e44a4f4281c35dc44633f60020de0be",
+      "inputAssetIds": [],
+      "outputPath": "audio/voice/result/rebuild_006_keep_silent_anchor.mp3",
+      "attempts": 0
+    },
+    {
+      "version": 2,
+      "id": "job.voice.result.rebuild_006_read_aloud",
+      "assetId": "voice.result.rebuild_006_read_aloud",
+      "kind": "speech",
+      "model": "speech-2.8-hd",
+      "status": "pending",
+      "contentHash": "099ce3d0d03b10880130fc519eda4959007168664974886fcdeb5a5530c5adbd",
+      "inputAssetIds": [],
+      "outputPath": "audio/voice/result/rebuild_006_read_aloud.mp3",
+      "attempts": 0
+    },
+    {
+      "version": 2,
+      "id": "job.voice.result.rebuild_007_match_her_pulse",
+      "assetId": "voice.result.rebuild_007_match_her_pulse",
+      "kind": "speech",
+      "model": "speech-2.8-hd",
+      "status": "pending",
+      "contentHash": "b19223ff3f3554a6d135eeb01de6a3f6dc60f95c43a7319fef30160fb5828f78",
+      "inputAssetIds": [],
+      "outputPath": "audio/voice/result/rebuild_007_match_her_pulse.mp3",
+      "attempts": 0
+    },
+    {
+      "version": 2,
+      "id": "job.voice.result.rebuild_007_stay_own_rhythm",
+      "assetId": "voice.result.rebuild_007_stay_own_rhythm",
+      "kind": "speech",
+      "model": "speech-2.8-hd",
+      "status": "pending",
+      "contentHash": "49aede676ad4faa5fd520b886ee196765a15aaa9c824c3d5c18573d38e7ef363",
+      "inputAssetIds": [],
+      "outputPath": "audio/voice/result/rebuild_007_stay_own_rhythm.mp3",
+      "attempts": 0
+    },
+    {
+      "version": 2,
+      "id": "job.voice.result.rebuild_008_protect_current_self",
+      "assetId": "voice.result.rebuild_008_protect_current_self",
+      "kind": "speech",
+      "model": "speech-2.8-hd",
+      "status": "pending",
+      "contentHash": "2c695e544e097f914bc84b036b041101936c08b6648dee26f18a187bb8a28948",
+      "inputAssetIds": [],
+      "outputPath": "audio/voice/result/rebuild_008_protect_current_self.mp3",
+      "attempts": 0
+    },
+    {
+      "version": 2,
+      "id": "job.voice.result.rebuild_008_trade_old_memory",
+      "assetId": "voice.result.rebuild_008_trade_old_memory",
+      "kind": "speech",
+      "model": "speech-2.8-hd",
+      "status": "pending",
+      "contentHash": "7f3f3d627747371743544c3893a855e8d8744b469185a22ace27c3fbc4c3fef8",
+      "inputAssetIds": [],
+      "outputPath": "audio/voice/result/rebuild_008_trade_old_memory.mp3",
+      "attempts": 0
+    },
+    {
+      "version": 2,
+      "id": "job.voice.result.rebuild_009_hand_question_back",
+      "assetId": "voice.result.rebuild_009_hand_question_back",
+      "kind": "speech",
+      "model": "speech-2.8-hd",
+      "status": "pending",
+      "contentHash": "41b657aa5d832dc62dc60c2c30c1a1333c76ad6dfa52bf954d36bb697982b2b0",
+      "inputAssetIds": [],
+      "outputPath": "audio/voice/result/rebuild_009_hand_question_back.mp3",
+      "attempts": 0
+    },
+    {
+      "version": 2,
+      "id": "job.voice.result.rebuild_009_refuse_perfect_copy",
+      "assetId": "voice.result.rebuild_009_refuse_perfect_copy",
+      "kind": "speech",
+      "model": "speech-2.8-hd",
+      "status": "pending",
+      "contentHash": "e090795b0b43b03cf2d4063b6a04f139f5c8467e70703bd4e6f0c1e235632421",
+      "inputAssetIds": [],
+      "outputPath": "audio/voice/result/rebuild_009_refuse_perfect_copy.mp3",
+      "attempts": 0
+    },
+    {
+      "version": 2,
+      "id": "job.voice.result.rebuild_010_ask_her_choice",
+      "assetId": "voice.result.rebuild_010_ask_her_choice",
+      "kind": "speech",
+      "model": "speech-2.8-hd",
+      "status": "pending",
+      "contentHash": "b6f8ac5704336607aa8122614ed4101d16d583a88ca8f268486aa24286382b10",
+      "inputAssetIds": [],
+      "outputPath": "audio/voice/result/rebuild_010_ask_her_choice.mp3",
+      "attempts": 0
+    },
+    {
+      "version": 2,
+      "id": "job.voice.result.rebuild_010_veto_sealing",
+      "assetId": "voice.result.rebuild_010_veto_sealing",
+      "kind": "speech",
+      "model": "speech-2.8-hd",
+      "status": "pending",
+      "contentHash": "e33d2d90b90f0344573f25821a5cbabaa1cfb26b7ad0d1a519c1f309320345ea",
+      "inputAssetIds": [],
+      "outputPath": "audio/voice/result/rebuild_010_veto_sealing.mp3",
+      "attempts": 0
+    },
+    {
+      "version": 2,
+      "id": "job.voice.result.rebuild_011_ask_next_revision",
+      "assetId": "voice.result.rebuild_011_ask_next_revision",
+      "kind": "speech",
+      "model": "speech-2.8-hd",
+      "status": "pending",
+      "contentHash": "5c8be09b17beedc3863aa952fd277b035364dedff78ab40511373255ce6435de",
+      "inputAssetIds": [],
+      "outputPath": "audio/voice/result/rebuild_011_ask_next_revision.mp3",
+      "attempts": 0
+    },
+    {
+      "version": 2,
+      "id": "job.voice.result.rebuild_011_sit_beside",
+      "assetId": "voice.result.rebuild_011_sit_beside",
+      "kind": "speech",
+      "model": "speech-2.8-hd",
+      "status": "pending",
+      "contentHash": "7f74ec7947a81b6751cff85423e6394795a6fe3ed7d198aad09faf62eb0d4a6a",
+      "inputAssetIds": [],
+      "outputPath": "audio/voice/result/rebuild_011_sit_beside.mp3",
+      "attempts": 0
+    },
+    {
+      "version": 2,
+      "id": "job.voice.result.rebuild_012_break_contract",
+      "assetId": "voice.result.rebuild_012_break_contract",
+      "kind": "speech",
+      "model": "speech-2.8-hd",
+      "status": "pending",
+      "contentHash": "5e87ba6a58736aec898228f138627bc9cbc58766acf6ccf46d206de48a2a784a",
+      "inputAssetIds": [],
+      "outputPath": "audio/voice/result/rebuild_012_break_contract.mp3",
+      "attempts": 0
+    },
+    {
+      "version": 2,
+      "id": "job.voice.result.rebuild_012_negotiate_terms",
+      "assetId": "voice.result.rebuild_012_negotiate_terms",
+      "kind": "speech",
+      "model": "speech-2.8-hd",
+      "status": "pending",
+      "contentHash": "ad5cd57ba336fb1a19dd31266006024efee2b24723a02c374824a36e94b1c05a",
+      "inputAssetIds": [],
+      "outputPath": "audio/voice/result/rebuild_012_negotiate_terms.mp3",
+      "attempts": 0
+    },
+    {
+      "version": 2,
+      "id": "job.voice.result.rebuild_013_offer_witness",
+      "assetId": "voice.result.rebuild_013_offer_witness",
+      "kind": "speech",
+      "model": "speech-2.8-hd",
+      "status": "pending",
+      "contentHash": "152335671e2a77d05efba22ce1f510516488c16975e3f7c19485f75ef2762c9c",
+      "inputAssetIds": [],
+      "outputPath": "audio/voice/result/rebuild_013_offer_witness.mp3",
+      "attempts": 0
+    },
+    {
+      "version": 2,
+      "id": "job.voice.result.rebuild_013_promise_name",
+      "assetId": "voice.result.rebuild_013_promise_name",
+      "kind": "speech",
+      "model": "speech-2.8-hd",
+      "status": "pending",
+      "contentHash": "a731eef676dead2713a7f6eefbe505a15587323da52e89593ab3f1d47d09839c",
+      "inputAssetIds": [],
+      "outputPath": "audio/voice/result/rebuild_013_promise_name.mp3",
+      "attempts": 0
+    },
+    {
+      "version": 2,
+      "id": "job.voice.result.rebuild_014_ask_when_to_light",
+      "assetId": "voice.result.rebuild_014_ask_when_to_light",
+      "kind": "speech",
+      "model": "speech-2.8-hd",
+      "status": "pending",
+      "contentHash": "6ec9dce3e23102e1e20364ac2aa7fa06dfb48ae7f0680e2e0f52087ee615824b",
+      "inputAssetIds": [],
+      "outputPath": "audio/voice/result/rebuild_014_ask_when_to_light.mp3",
+      "attempts": 0
+    },
+    {
+      "version": 2,
+      "id": "job.voice.result.rebuild_014_keep_unlit",
+      "assetId": "voice.result.rebuild_014_keep_unlit",
+      "kind": "speech",
+      "model": "speech-2.8-hd",
+      "status": "pending",
+      "contentHash": "a0c748fca029143ad03a290e9da05f9a78e112585129ac5593fbedd402c46c97",
+      "inputAssetIds": [],
+      "outputPath": "audio/voice/result/rebuild_014_keep_unlit.mp3",
+      "attempts": 0
+    },
+    {
+      "version": 2,
+      "id": "job.voice.result.rebuild_accept_missing_pieces",
+      "assetId": "voice.result.rebuild_accept_missing_pieces",
+      "kind": "speech",
+      "model": "speech-2.8-hd",
+      "status": "pending",
+      "contentHash": "2d52175864c945c15e7e804d4d532ff1381fc78bb9a248df9ced417c67e25bad",
+      "inputAssetIds": [],
+      "outputPath": "audio/voice/result/rebuild_accept_missing_pieces.mp3",
+      "attempts": 0
+    },
+    {
+      "version": 2,
+      "id": "job.voice.result.rebuild_anchor",
+      "assetId": "voice.result.rebuild_anchor",
+      "kind": "speech",
+      "model": "speech-2.8-hd",
+      "status": "pending",
+      "contentHash": "c950593e4733594cf809a081e3ac767d2ce4c0346fc60fd86ec76163235c4f84",
+      "inputAssetIds": [],
+      "outputPath": "audio/voice/result/rebuild_anchor.mp3",
+      "attempts": 0
+    },
+    {
+      "version": 2,
+      "id": "job.voice.result.rebuild_cut_false_completion",
+      "assetId": "voice.result.rebuild_cut_false_completion",
+      "kind": "speech",
+      "model": "speech-2.8-hd",
+      "status": "pending",
+      "contentHash": "c6b12d46eea70e0a35c7265ee3bce46aa2a80bcfd98ccd9327f46e571f63acb1",
+      "inputAssetIds": [],
+      "outputPath": "audio/voice/result/rebuild_cut_false_completion.mp3",
+      "attempts": 0
+    },
+    {
+      "version": 2,
+      "id": "job.voice.result.rebuild_guard_fascia_pulse",
+      "assetId": "voice.result.rebuild_guard_fascia_pulse",
+      "kind": "speech",
+      "model": "speech-2.8-hd",
+      "status": "pending",
+      "contentHash": "965513d66e7ae3d09ab0cb0e5bcbdcc0cd501feb9ed995f3be14b11b92581f9d",
+      "inputAssetIds": [],
+      "outputPath": "audio/voice/result/rebuild_guard_fascia_pulse.mp3",
+      "attempts": 0
+    },
+    {
+      "version": 2,
+      "id": "job.voice.result.rebuild_push_into_raid",
+      "assetId": "voice.result.rebuild_push_into_raid",
+      "kind": "speech",
+      "model": "speech-2.8-hd",
+      "status": "pending",
+      "contentHash": "172e8f0d849d1f2f28815094e640edd0dd277c273791c2817b6531237791e726",
+      "inputAssetIds": [],
+      "outputPath": "audio/voice/result/rebuild_push_into_raid.mp3",
+      "attempts": 0
+    },
+    {
+      "version": 2,
+      "id": "job.voice.result.rebuild_question_fascia",
+      "assetId": "voice.result.rebuild_question_fascia",
+      "kind": "speech",
+      "model": "speech-2.8-hd",
+      "status": "pending",
+      "contentHash": "e1771a6b278ef5ded8fa3338aaddee62d2e0e9ffeb8e7ba5004fc57919d0cfb6",
+      "inputAssetIds": [],
+      "outputPath": "audio/voice/result/rebuild_question_fascia.mp3",
+      "attempts": 0
+    },
+    {
+      "version": 2,
+      "id": "job.voice.result.rebuild_use_rooftop_signal",
+      "assetId": "voice.result.rebuild_use_rooftop_signal",
+      "kind": "speech",
+      "model": "speech-2.8-hd",
+      "status": "pending",
+      "contentHash": "eee807664cbf04e2bb5962a86b4b2647d6cdd93f83f3f06286fa636d58d4f8cb",
+      "inputAssetIds": [],
+      "outputPath": "audio/voice/result/rebuild_use_rooftop_signal.mp3",
+      "attempts": 0
+    },
+    {
+      "version": 2,
+      "id": "job.voice.result.return_opening_from_rebuild",
+      "assetId": "voice.result.return_opening_from_rebuild",
+      "kind": "speech",
+      "model": "speech-2.8-hd",
+      "status": "pending",
+      "contentHash": "489a3ced52b3a2877b0ef2d4c341d038139b3ec532b4e29be48c2abb457b81f5",
+      "inputAssetIds": [],
+      "outputPath": "audio/voice/result/return_opening_from_rebuild.mp3",
+      "attempts": 0
+    },
+    {
+      "version": 2,
+      "id": "job.voice.result.return_opening_from_ring",
+      "assetId": "voice.result.return_opening_from_ring",
+      "kind": "speech",
+      "model": "speech-2.8-hd",
+      "status": "pending",
+      "contentHash": "601e2de172a2f59e76aa2cae117868b7997ee32c4140863507191f92f6238d09",
+      "inputAssetIds": [],
+      "outputPath": "audio/voice/result/return_opening_from_ring.mp3",
+      "attempts": 0
+    },
+    {
+      "version": 2,
+      "id": "job.voice.result.return_opening_from_white",
+      "assetId": "voice.result.return_opening_from_white",
+      "kind": "speech",
+      "model": "speech-2.8-hd",
+      "status": "pending",
+      "contentHash": "1fdfd8ce61f434e9461bfe0959bea61bc18112a263e166f4a55fa387a8a8949c",
+      "inputAssetIds": [],
+      "outputPath": "audio/voice/result/return_opening_from_white.mp3",
+      "attempts": 0
+    },
+    {
+      "version": 2,
+      "id": "job.voice.result.ring_conspiracy_route_complete",
+      "assetId": "voice.result.ring_conspiracy_route_complete",
+      "kind": "speech",
+      "model": "speech-2.8-hd",
+      "status": "pending",
+      "contentHash": "97db04d698d56c6b95faf750b0941157ad47dd249f732a29f8a6eb80cd93b14d",
+      "inputAssetIds": [],
+      "outputPath": "audio/voice/result/ring_conspiracy_route_complete.mp3",
+      "attempts": 0
+    },
+    {
+      "version": 2,
+      "id": "job.voice.result.ring_conspiracy_route_final",
+      "assetId": "voice.result.ring_conspiracy_route_final",
+      "kind": "speech",
+      "model": "speech-2.8-hd",
+      "status": "pending",
+      "contentHash": "f76d34ac726ec0096aea067e5d723553126b672845a3e444156c481812fb5e05",
+      "inputAssetIds": [],
+      "outputPath": "audio/voice/result/ring_conspiracy_route_final.mp3",
+      "attempts": 0
+    },
+    {
+      "version": 2,
+      "id": "job.voice.result.ring_conspiracy.bad_ending",
+      "assetId": "voice.result.ring_conspiracy.bad_ending",
+      "kind": "speech",
+      "model": "speech-2.8-hd",
+      "status": "pending",
+      "contentHash": "dc7e4f536d361accd92c95dc4ba849105ef0ba1c2a0d2edf80e5c6d91bedc1c2",
+      "inputAssetIds": [],
+      "outputPath": "audio/voice/result/ring_conspiracy/bad_ending.mp3",
+      "attempts": 0
+    },
+    {
+      "version": 2,
+      "id": "job.voice.result.ring_conspiracy.normal_ending",
+      "assetId": "voice.result.ring_conspiracy.normal_ending",
+      "kind": "speech",
+      "model": "speech-2.8-hd",
+      "status": "pending",
+      "contentHash": "8a7e3c9f05a90371a0388e6a1c042a177080f498a425b111fb9182234a769529",
+      "inputAssetIds": [],
+      "outputPath": "audio/voice/result/ring_conspiracy/normal_ending.mp3",
+      "attempts": 0
+    },
+    {
+      "version": 2,
+      "id": "job.voice.result.ring_conspiracy.true_ending",
+      "assetId": "voice.result.ring_conspiracy.true_ending",
+      "kind": "speech",
+      "model": "speech-2.8-hd",
+      "status": "pending",
+      "contentHash": "679efa1f9c044888bd74f65afb777626e07f3dad8f51ee9df117a8dfcb6945bf",
+      "inputAssetIds": [],
+      "outputPath": "audio/voice/result/ring_conspiracy/true_ending.mp3",
+      "attempts": 0
+    },
+    {
+      "version": 2,
+      "id": "job.voice.result.white_006_name_silence",
+      "assetId": "voice.result.white_006_name_silence",
+      "kind": "speech",
+      "model": "speech-2.8-hd",
+      "status": "pending",
+      "contentHash": "7f06500296abb4ba6505073f68db4284c7222c4da2d25609509d9eb80248f9d9",
+      "inputAssetIds": [],
+      "outputPath": "audio/voice/result/white_006_name_silence.mp3",
+      "attempts": 0
+    },
+    {
+      "version": 2,
+      "id": "job.voice.result.white_006_refuse_naming",
+      "assetId": "voice.result.white_006_refuse_naming",
+      "kind": "speech",
+      "model": "speech-2.8-hd",
+      "status": "pending",
+      "contentHash": "030163f267843d614622771c9b20cb8d5564e997644d4e23e27b4ecc4679e307",
+      "inputAssetIds": [],
+      "outputPath": "audio/voice/result/white_006_refuse_naming.mp3",
+      "attempts": 0
+    },
+    {
+      "version": 2,
+      "id": "job.voice.result.white_007_ask_fascia_term",
+      "assetId": "voice.result.white_007_ask_fascia_term",
+      "kind": "speech",
+      "model": "speech-2.8-hd",
+      "status": "pending",
+      "contentHash": "1180a46917933c929d50b3ec42842e1fdcf59ae8b776964821917c3bdbf7b626",
+      "inputAssetIds": [],
+      "outputPath": "audio/voice/result/white_007_ask_fascia_term.mp3",
+      "attempts": 0
+    },
+    {
+      "version": 2,
+      "id": "job.voice.result.white_007_keep_mirror_open",
+      "assetId": "voice.result.white_007_keep_mirror_open",
+      "kind": "speech",
+      "model": "speech-2.8-hd",
+      "status": "pending",
+      "contentHash": "9524672bd68622fe8f1ec8ca448b01f2a8c56d7db6b4fb535222efc00a756faf",
+      "inputAssetIds": [],
+      "outputPath": "audio/voice/result/white_007_keep_mirror_open.mp3",
+      "attempts": 0
+    },
+    {
+      "version": 2,
+      "id": "job.voice.result.white_008_hold_fascia",
+      "assetId": "voice.result.white_008_hold_fascia",
+      "kind": "speech",
+      "model": "speech-2.8-hd",
+      "status": "pending",
+      "contentHash": "d03d72ae6894e6a4cce08cd92b4b4966357df012d864ad9053f0ed95e51ccc00",
+      "inputAssetIds": [],
+      "outputPath": "audio/voice/result/white_008_hold_fascia.mp3",
+      "attempts": 0
+    },
+    {
+      "version": 2,
+      "id": "job.voice.result.white_008_stay_witness_only",
+      "assetId": "voice.result.white_008_stay_witness_only",
+      "kind": "speech",
+      "model": "speech-2.8-hd",
+      "status": "pending",
+      "contentHash": "19e3c99410dcdbd16ff445ba2b5ad3da129c0c915b189050faf608c8f896111f",
+      "inputAssetIds": [],
+      "outputPath": "audio/voice/result/white_008_stay_witness_only.mp3",
+      "attempts": 0
+    },
+    {
+      "version": 2,
+      "id": "job.voice.result.white_009_keep_half_step",
+      "assetId": "voice.result.white_009_keep_half_step",
+      "kind": "speech",
+      "model": "speech-2.8-hd",
+      "status": "pending",
+      "contentHash": "9ca26f946bd7b4d704734be27ee242fd2431bf3f63a68cf74926497fdf06ed2b",
+      "inputAssetIds": [],
+      "outputPath": "audio/voice/result/white_009_keep_half_step.mp3",
+      "attempts": 0
+    },
+    {
+      "version": 2,
+      "id": "job.voice.result.white_009_share_umbrella_edge",
+      "assetId": "voice.result.white_009_share_umbrella_edge",
+      "kind": "speech",
+      "model": "speech-2.8-hd",
+      "status": "pending",
+      "contentHash": "cd420bcfd0e641e9525bb8eb039273035a120e97d0f8566a7b8bc92218021bb0",
+      "inputAssetIds": [],
+      "outputPath": "audio/voice/result/white_009_share_umbrella_edge.mp3",
+      "attempts": 0
+    },
+    {
+      "version": 2,
+      "id": "job.voice.result.white_010_acknowledge_leave",
+      "assetId": "voice.result.white_010_acknowledge_leave",
+      "kind": "speech",
+      "model": "speech-2.8-hd",
+      "status": "pending",
+      "contentHash": "8f9a7d08a241fdf7741e13bc3271eff224dfc7add0aadb0f2d8978936fc1badd",
+      "inputAssetIds": [],
+      "outputPath": "audio/voice/result/white_010_acknowledge_leave.mp3",
+      "attempts": 0
+    },
+    {
+      "version": 2,
+      "id": "job.voice.result.white_010_offer_return_ticket",
+      "assetId": "voice.result.white_010_offer_return_ticket",
+      "kind": "speech",
+      "model": "speech-2.8-hd",
+      "status": "pending",
+      "contentHash": "dd175dd30111f2b176af918b21372fe45b661cf881db90e5d34ac346fa401fe5",
+      "inputAssetIds": [],
+      "outputPath": "audio/voice/result/white_010_offer_return_ticket.mp3",
+      "attempts": 0
+    },
+    {
+      "version": 2,
+      "id": "job.voice.result.white_011_curtain_call",
+      "assetId": "voice.result.white_011_curtain_call",
+      "kind": "speech",
+      "model": "speech-2.8-hd",
+      "status": "pending",
+      "contentHash": "97f0b27ede20124b989019eaac5d300d7fc7a70c16217fc8e79915e4bce17938",
+      "inputAssetIds": [],
+      "outputPath": "audio/voice/result/white_011_curtain_call.mp3",
+      "attempts": 0
+    },
+    {
+      "version": 2,
+      "id": "job.voice.result.white_011_walk_beside",
+      "assetId": "voice.result.white_011_walk_beside",
+      "kind": "speech",
+      "model": "speech-2.8-hd",
+      "status": "pending",
+      "contentHash": "e7af846ce8413b7a6f812bb54c4e731965cc6df6764d11a7da0bb28c6aa0a42f",
+      "inputAssetIds": [],
+      "outputPath": "audio/voice/result/white_011_walk_beside.mp3",
+      "attempts": 0
+    },
+    {
+      "version": 2,
+      "id": "job.voice.result.white_012_let_her_decide",
+      "assetId": "voice.result.white_012_let_her_decide",
+      "kind": "speech",
+      "model": "speech-2.8-hd",
+      "status": "pending",
+      "contentHash": "134be86549d41ef6c6fe6fffac9cdc9e3314ac4f820ae7f1c0a9bf677ba80eb0",
+      "inputAssetIds": [],
+      "outputPath": "audio/voice/result/white_012_let_her_decide.mp3",
+      "attempts": 0
+    },
+    {
+      "version": 2,
+      "id": "job.voice.result.white_012_refuse_exhibit",
+      "assetId": "voice.result.white_012_refuse_exhibit",
+      "kind": "speech",
+      "model": "speech-2.8-hd",
+      "status": "pending",
+      "contentHash": "637b00a00a8099b62cce4e8efeaa3d33d91711971fb1a850e6063a1143fd6f19",
+      "inputAssetIds": [],
+      "outputPath": "audio/voice/result/white_012_refuse_exhibit.mp3",
+      "attempts": 0
+    },
+    {
+      "version": 2,
+      "id": "job.voice.result.white_013_point_to_mirror",
+      "assetId": "voice.result.white_013_point_to_mirror",
+      "kind": "speech",
+      "model": "speech-2.8-hd",
+      "status": "pending",
+      "contentHash": "6cd781f673bc8db127f2b1f4c8e516eec52fe5f550ef4a6078cc754e392f16f1",
+      "inputAssetIds": [],
+      "outputPath": "audio/voice/result/white_013_point_to_mirror.mp3",
+      "attempts": 0
+    },
+    {
+      "version": 2,
+      "id": "job.voice.result.white_013_refuse_to_choose",
+      "assetId": "voice.result.white_013_refuse_to_choose",
+      "kind": "speech",
+      "model": "speech-2.8-hd",
+      "status": "pending",
+      "contentHash": "e7ebfbce73a42d3b5b5f2b01cccec646a721781306b6c37ec0e40f5ba56320eb",
+      "inputAssetIds": [],
+      "outputPath": "audio/voice/result/white_013_refuse_to_choose.mp3",
+      "attempts": 0
+    },
+    {
+      "version": 2,
+      "id": "job.voice.result.white_014_keep_base_color",
+      "assetId": "voice.result.white_014_keep_base_color",
+      "kind": "speech",
+      "model": "speech-2.8-hd",
+      "status": "pending",
+      "contentHash": "bf7fa348b2b6ba03e5056c7844d6962b0dab7822580c5c83e0ca2579b08b3ae4",
+      "inputAssetIds": [],
+      "outputPath": "audio/voice/result/white_014_keep_base_color.mp3",
+      "attempts": 0
+    },
+    {
+      "version": 2,
+      "id": "job.voice.result.white_014_offer_restart",
+      "assetId": "voice.result.white_014_offer_restart",
+      "kind": "speech",
+      "model": "speech-2.8-hd",
+      "status": "pending",
+      "contentHash": "af38ba91f6b20c77e33d304ee5b316d3e5bb71594f024215fda5e596ff3b4e4d",
+      "inputAssetIds": [],
+      "outputPath": "audio/voice/result/white_014_offer_restart.mp3",
+      "attempts": 0
+    },
+    {
+      "version": 2,
+      "id": "job.voice.result.white_canvas_route_complete",
+      "assetId": "voice.result.white_canvas_route_complete",
+      "kind": "speech",
+      "model": "speech-2.8-hd",
+      "status": "pending",
+      "contentHash": "443b082013a95c80bd934aad37deb90348d21180eb78d5552570b33d633f01e2",
+      "inputAssetIds": [],
+      "outputPath": "audio/voice/result/white_canvas_route_complete.mp3",
+      "attempts": 0
+    },
+    {
+      "version": 2,
+      "id": "job.voice.result.white_canvas_route_final",
+      "assetId": "voice.result.white_canvas_route_final",
+      "kind": "speech",
+      "model": "speech-2.8-hd",
+      "status": "pending",
+      "contentHash": "4cb03d7a5fc4d78394ba1536ac84c053b69b3f84242bdda1e66f8a20a2fe3567",
+      "inputAssetIds": [],
+      "outputPath": "audio/voice/result/white_canvas_route_final.mp3",
+      "attempts": 0
+    },
+    {
+      "version": 2,
+      "id": "job.voice.result.white_canvas.bad_ending",
+      "assetId": "voice.result.white_canvas.bad_ending",
+      "kind": "speech",
+      "model": "speech-2.8-hd",
+      "status": "pending",
+      "contentHash": "d32cf35fb3a017f43c511daa08f2bbeb569c4ad885c9e81c97eddfc60e130873",
+      "inputAssetIds": [],
+      "outputPath": "audio/voice/result/white_canvas/bad_ending.mp3",
+      "attempts": 0
+    },
+    {
+      "version": 2,
+      "id": "job.voice.result.white_canvas.normal_ending",
+      "assetId": "voice.result.white_canvas.normal_ending",
+      "kind": "speech",
+      "model": "speech-2.8-hd",
+      "status": "pending",
+      "contentHash": "202c20c23cb598df0f54276e82b720d8afcb3f88e03918799982dcc8729c3672",
+      "inputAssetIds": [],
+      "outputPath": "audio/voice/result/white_canvas/normal_ending.mp3",
+      "attempts": 0
+    },
+    {
+      "version": 2,
+      "id": "job.voice.result.white_canvas.true_ending",
+      "assetId": "voice.result.white_canvas.true_ending",
+      "kind": "speech",
+      "model": "speech-2.8-hd",
+      "status": "pending",
+      "contentHash": "ffe3b269312fe44739d93e4fceaac6c0f09cb3a0cd73c574fcaf03efb17cf16c",
+      "inputAssetIds": [],
+      "outputPath": "audio/voice/result/white_canvas/true_ending.mp3",
+      "attempts": 0
+    },
+    {
+      "version": 2,
+      "id": "job.voice.result.white_follow_to_lab",
+      "assetId": "voice.result.white_follow_to_lab",
+      "kind": "speech",
+      "model": "speech-2.8-hd",
+      "status": "pending",
+      "contentHash": "24d912332b82525ad483f1dc25d77af76c9698628beee659dc025102fd9790c2",
+      "inputAssetIds": [],
+      "outputPath": "audio/voice/result/white_follow_to_lab.mp3",
+      "attempts": 0
+    },
+    {
+      "version": 2,
+      "id": "job.voice.result.white_interrupt_lab_terms",
+      "assetId": "voice.result.white_interrupt_lab_terms",
+      "kind": "speech",
+      "model": "speech-2.8-hd",
+      "status": "pending",
+      "contentHash": "6f688a22ea6d3e68d4dd6de4aa91dc182388c2965445251ac8981fda60f2d811",
+      "inputAssetIds": [],
+      "outputPath": "audio/voice/result/white_interrupt_lab_terms.mp3",
+      "attempts": 0
+    },
+    {
+      "version": 2,
+      "id": "job.voice.result.white_keep_empty_seat",
+      "assetId": "voice.result.white_keep_empty_seat",
+      "kind": "speech",
+      "model": "speech-2.8-hd",
+      "status": "pending",
+      "contentHash": "643ea264187a32cf9ad482fba2ed26193ab43181eab4dcda694b26f268f3dc49",
+      "inputAssetIds": [],
+      "outputPath": "audio/voice/result/white_keep_empty_seat.mp3",
+      "attempts": 0
+    },
+    {
+      "version": 2,
+      "id": "job.voice.result.white_share_rain_window",
+      "assetId": "voice.result.white_share_rain_window",
+      "kind": "speech",
+      "model": "speech-2.8-hd",
+      "status": "pending",
+      "contentHash": "beb70d22a82bca300d6365c2e2d4c272224f3b3c37fb5be9564be69531e88caa",
+      "inputAssetIds": [],
+      "outputPath": "audio/voice/result/white_share_rain_window.mp3",
+      "attempts": 0
+    },
+    {
+      "version": 2,
+      "id": "job.voice.result.white_sign_witness_protocol",
+      "assetId": "voice.result.white_sign_witness_protocol",
+      "kind": "speech",
+      "model": "speech-2.8-hd",
+      "status": "pending",
+      "contentHash": "d15f8d373be6cae7cfbde2be845734e80996533972d765949109dba143926dda",
+      "inputAssetIds": [],
+      "outputPath": "audio/voice/result/white_sign_witness_protocol.mp3",
+      "attempts": 0
+    },
+    {
+      "version": 2,
+      "id": "job.voice.result.white_tease_back",
+      "assetId": "voice.result.white_tease_back",
+      "kind": "speech",
+      "model": "speech-2.8-hd",
+      "status": "pending",
+      "contentHash": "566a16db2881363a3f2532c2291cb3a6af8bdcd77f061ec2a75622971da66b5c",
+      "inputAssetIds": [],
+      "outputPath": "audio/voice/result/white_tease_back.mp3",
+      "attempts": 0
+    },
+    {
+      "version": 2,
+      "id": "job.voice.result.white_touch_boundary",
+      "assetId": "voice.result.white_touch_boundary",
+      "kind": "speech",
+      "model": "speech-2.8-hd",
+      "status": "pending",
+      "contentHash": "75d48b9eb1c32cc473f0fc825b9af79ad0f87020e98e4bfad2b869a0675bfbe8",
+      "inputAssetIds": [],
+      "outputPath": "audio/voice/result/white_touch_boundary.mp3",
+      "attempts": 0
+    },
+    {
+      "version": 2,
+      "id": "job.voice.scene.golden_bough_001",
+      "assetId": "voice.scene.golden_bough_001",
+      "kind": "speech",
+      "model": "speech-2.8-hd",
+      "status": "pending",
+      "contentHash": "dbfcfc3ef0104d6d1233008efb5851e20b8a5a91f8df39713847dcde9408b0d0",
+      "inputAssetIds": [],
+      "outputPath": "audio/voice/scene/golden_bough_001.mp3",
+      "attempts": 0
+    },
+    {
+      "version": 2,
+      "id": "job.voice.scene.golden_bough_002",
+      "assetId": "voice.scene.golden_bough_002",
+      "kind": "speech",
+      "model": "speech-2.8-hd",
+      "status": "pending",
+      "contentHash": "2be11115c790b8e7da7898c5a751dd820e646d0abc3b93dbe82c66aaa5e29652",
+      "inputAssetIds": [],
+      "outputPath": "audio/voice/scene/golden_bough_002.mp3",
+      "attempts": 0
+    },
+    {
+      "version": 2,
+      "id": "job.voice.scene.golden_bough_003",
+      "assetId": "voice.scene.golden_bough_003",
+      "kind": "speech",
+      "model": "speech-2.8-hd",
+      "status": "pending",
+      "contentHash": "d85fb52216745501c04bc3c0ef109f7323cc21e519a6532b219a273862ee4c60",
+      "inputAssetIds": [],
+      "outputPath": "audio/voice/scene/golden_bough_003.mp3",
+      "attempts": 0
+    },
+    {
+      "version": 2,
+      "id": "job.voice.scene.golden_bough_004",
+      "assetId": "voice.scene.golden_bough_004",
+      "kind": "speech",
+      "model": "speech-2.8-hd",
+      "status": "pending",
+      "contentHash": "fca801c2a30e50cf39e0f87b6108bccfbf2c42fad48bc766a9dfd07b4832b6d4",
+      "inputAssetIds": [],
+      "outputPath": "audio/voice/scene/golden_bough_004.mp3",
+      "attempts": 0
+    },
+    {
+      "version": 2,
+      "id": "job.voice.scene.golden_bough_005",
+      "assetId": "voice.scene.golden_bough_005",
+      "kind": "speech",
+      "model": "speech-2.8-hd",
+      "status": "pending",
+      "contentHash": "9af8a220629513ea036c6be2812e95c8be16185a5992198f6102fe8413e0ff9f",
+      "inputAssetIds": [],
+      "outputPath": "audio/voice/scene/golden_bough_005.mp3",
+      "attempts": 0
+    },
+    {
+      "version": 2,
+      "id": "job.voice.scene.golden_bough_006",
+      "assetId": "voice.scene.golden_bough_006",
+      "kind": "speech",
+      "model": "speech-2.8-hd",
+      "status": "pending",
+      "contentHash": "dc60aa3d61e35403bb2368ec76ed41c5463382c4a728080102a3bdc311ffbae4",
+      "inputAssetIds": [],
+      "outputPath": "audio/voice/scene/golden_bough_006.mp3",
+      "attempts": 0
+    },
+    {
+      "version": 2,
+      "id": "job.voice.scene.golden_bough_007",
+      "assetId": "voice.scene.golden_bough_007",
+      "kind": "speech",
+      "model": "speech-2.8-hd",
+      "status": "pending",
+      "contentHash": "1a60911dff5bfc5d859fc87eb59d6ab217b9b017c3a84d58d2f1b037aad141b3",
+      "inputAssetIds": [],
+      "outputPath": "audio/voice/scene/golden_bough_007.mp3",
+      "attempts": 0
+    },
+    {
+      "version": 2,
+      "id": "job.voice.scene.golden_bough_008",
+      "assetId": "voice.scene.golden_bough_008",
+      "kind": "speech",
+      "model": "speech-2.8-hd",
+      "status": "pending",
+      "contentHash": "bb8e66622760d5b06a8fb879d2bd342819859963f9e248d84255c9725e5bce08",
+      "inputAssetIds": [],
+      "outputPath": "audio/voice/scene/golden_bough_008.mp3",
+      "attempts": 0
+    },
+    {
+      "version": 2,
+      "id": "job.voice.scene.golden_bough_009",
+      "assetId": "voice.scene.golden_bough_009",
+      "kind": "speech",
+      "model": "speech-2.8-hd",
+      "status": "pending",
+      "contentHash": "70ac48ab2818519eaac2e4e4cf6b55151c7851a6012c15ac9520b9bc13d3b5a0",
+      "inputAssetIds": [],
+      "outputPath": "audio/voice/scene/golden_bough_009.mp3",
+      "attempts": 0
+    },
+    {
+      "version": 2,
+      "id": "job.voice.scene.golden_bough_010",
+      "assetId": "voice.scene.golden_bough_010",
+      "kind": "speech",
+      "model": "speech-2.8-hd",
+      "status": "pending",
+      "contentHash": "51f797e7b44264ee64f2dee15f8c96f2a9eb360fe32fe30e00c5239c68e9a519",
+      "inputAssetIds": [],
+      "outputPath": "audio/voice/scene/golden_bough_010.mp3",
+      "attempts": 0
+    },
+    {
+      "version": 2,
+      "id": "job.voice.scene.golden_bough_011",
+      "assetId": "voice.scene.golden_bough_011",
+      "kind": "speech",
+      "model": "speech-2.8-hd",
+      "status": "pending",
+      "contentHash": "ba9954f466f30dd330af460335408216af17825fb5fd327c1ee6ddf4491e3b47",
+      "inputAssetIds": [],
+      "outputPath": "audio/voice/scene/golden_bough_011.mp3",
+      "attempts": 0
+    },
+    {
+      "version": 2,
+      "id": "job.voice.scene.golden_bough_012",
+      "assetId": "voice.scene.golden_bough_012",
+      "kind": "speech",
+      "model": "speech-2.8-hd",
+      "status": "pending",
+      "contentHash": "1f9c6250adedcc63fc7a16e04678e4759df965b548f8fcb5ef5cc1afceaa0fbd",
+      "inputAssetIds": [],
+      "outputPath": "audio/voice/scene/golden_bough_012.mp3",
+      "attempts": 0
+    },
+    {
+      "version": 2,
+      "id": "job.voice.scene.golden_bough_013",
+      "assetId": "voice.scene.golden_bough_013",
+      "kind": "speech",
+      "model": "speech-2.8-hd",
+      "status": "pending",
+      "contentHash": "142419bad757ba6109d824c02027a15ca8ea14b3075b0fee84bfc344b52dacec",
+      "inputAssetIds": [],
+      "outputPath": "audio/voice/scene/golden_bough_013.mp3",
+      "attempts": 0
+    },
+    {
+      "version": 2,
+      "id": "job.voice.scene.golden_bough_014",
+      "assetId": "voice.scene.golden_bough_014",
+      "kind": "speech",
+      "model": "speech-2.8-hd",
+      "status": "pending",
+      "contentHash": "456049b98001aec4bbc3c84ae77d71ba95e4e1115942d7cf45290a5d2bfcb815",
+      "inputAssetIds": [],
+      "outputPath": "audio/voice/scene/golden_bough_014.mp3",
+      "attempts": 0
+    },
+    {
+      "version": 2,
+      "id": "job.voice.scene.golden_bough_015",
+      "assetId": "voice.scene.golden_bough_015",
+      "kind": "speech",
+      "model": "speech-2.8-hd",
+      "status": "pending",
+      "contentHash": "ed05041b0117a6ee1f3ce694258d1dd701ed481dd536d95a12870757469e3d74",
+      "inputAssetIds": [],
+      "outputPath": "audio/voice/scene/golden_bough_015.mp3",
+      "attempts": 0
+    },
+    {
+      "version": 2,
+      "id": "job.voice.scene.golden_bough_rebuild_ending_bad",
+      "assetId": "voice.scene.golden_bough_rebuild_ending_bad",
+      "kind": "speech",
+      "model": "speech-2.8-hd",
+      "status": "pending",
+      "contentHash": "c9ca486a2b7337ebdceafcf110e2c50a23cd1522d4c841286a41f33708153d0e",
+      "inputAssetIds": [],
+      "outputPath": "audio/voice/scene/golden_bough_rebuild_ending_bad.mp3",
+      "attempts": 0
+    },
+    {
+      "version": 2,
+      "id": "job.voice.scene.golden_bough_rebuild_ending_gate",
+      "assetId": "voice.scene.golden_bough_rebuild_ending_gate",
+      "kind": "speech",
+      "model": "speech-2.8-hd",
+      "status": "pending",
+      "contentHash": "27edcde262f1db7c957863e68160cf5de99ba93a1e34fd2bd5b4feeca374534e",
+      "inputAssetIds": [],
+      "outputPath": "audio/voice/scene/golden_bough_rebuild_ending_gate.mp3",
+      "attempts": 0
+    },
+    {
+      "version": 2,
+      "id": "job.voice.scene.golden_bough_rebuild_ending_normal",
+      "assetId": "voice.scene.golden_bough_rebuild_ending_normal",
+      "kind": "speech",
+      "model": "speech-2.8-hd",
+      "status": "pending",
+      "contentHash": "c76a3e68b49ae3e60ad20543c77320651e5814bf75fbfde6aed3800474ed3049",
+      "inputAssetIds": [],
+      "outputPath": "audio/voice/scene/golden_bough_rebuild_ending_normal.mp3",
+      "attempts": 0
+    },
+    {
+      "version": 2,
+      "id": "job.voice.scene.golden_bough_rebuild_ending_true",
+      "assetId": "voice.scene.golden_bough_rebuild_ending_true",
+      "kind": "speech",
+      "model": "speech-2.8-hd",
+      "status": "pending",
+      "contentHash": "154c9b368acda308f6dc909cb354ba735501d98e27b1f8f6052f37de7365c9ee",
+      "inputAssetIds": [],
+      "outputPath": "audio/voice/scene/golden_bough_rebuild_ending_true.mp3",
+      "attempts": 0
+    },
+    {
+      "version": 2,
+      "id": "job.voice.scene.opening_001",
+      "assetId": "voice.scene.opening_001",
+      "kind": "speech",
+      "model": "speech-2.8-hd",
+      "status": "pending",
+      "contentHash": "6a239201a7f739d029816a4c4f62da72ba7d00478b382ce5290f345808828c9f",
+      "inputAssetIds": [],
+      "outputPath": "audio/voice/scene/opening_001.mp3",
+      "attempts": 0
+    },
+    {
+      "version": 2,
+      "id": "job.voice.scene.ring_conspiracy_001",
+      "assetId": "voice.scene.ring_conspiracy_001",
+      "kind": "speech",
+      "model": "speech-2.8-hd",
+      "status": "pending",
+      "contentHash": "0a3064a971cdf029d4f4c68bb182f0be5a891bdf3f756b4ea68ee465c088b4ab",
+      "inputAssetIds": [],
+      "outputPath": "audio/voice/scene/ring_conspiracy_001.mp3",
+      "attempts": 0
+    },
+    {
+      "version": 2,
+      "id": "job.voice.scene.ring_conspiracy_002",
+      "assetId": "voice.scene.ring_conspiracy_002",
+      "kind": "speech",
+      "model": "speech-2.8-hd",
+      "status": "pending",
+      "contentHash": "7566039c95eca35073a30d95fc2fcfb0b755690688ef205aa5ecb10194b9bb66",
+      "inputAssetIds": [],
+      "outputPath": "audio/voice/scene/ring_conspiracy_002.mp3",
+      "attempts": 0
+    },
+    {
+      "version": 2,
+      "id": "job.voice.scene.ring_conspiracy_003",
+      "assetId": "voice.scene.ring_conspiracy_003",
+      "kind": "speech",
+      "model": "speech-2.8-hd",
+      "status": "pending",
+      "contentHash": "ab3c62d77aaf609c07cd053b8c25e5037fab381b0d823aa9534c872237da6b74",
+      "inputAssetIds": [],
+      "outputPath": "audio/voice/scene/ring_conspiracy_003.mp3",
+      "attempts": 0
+    },
+    {
+      "version": 2,
+      "id": "job.voice.scene.ring_conspiracy_004",
+      "assetId": "voice.scene.ring_conspiracy_004",
+      "kind": "speech",
+      "model": "speech-2.8-hd",
+      "status": "pending",
+      "contentHash": "b5414797fef5f1b4ecc891751e54b399d6bb38ffff07ba0195d4c8c6b347eea8",
+      "inputAssetIds": [],
+      "outputPath": "audio/voice/scene/ring_conspiracy_004.mp3",
+      "attempts": 0
+    },
+    {
+      "version": 2,
+      "id": "job.voice.scene.ring_conspiracy_005",
+      "assetId": "voice.scene.ring_conspiracy_005",
+      "kind": "speech",
+      "model": "speech-2.8-hd",
+      "status": "pending",
+      "contentHash": "972371913e195e62e255eaf5023e3b60f55e0af83a33021eebe90553e5eab7ee",
+      "inputAssetIds": [],
+      "outputPath": "audio/voice/scene/ring_conspiracy_005.mp3",
+      "attempts": 0
+    },
+    {
+      "version": 2,
+      "id": "job.voice.scene.ring_conspiracy_006",
+      "assetId": "voice.scene.ring_conspiracy_006",
+      "kind": "speech",
+      "model": "speech-2.8-hd",
+      "status": "pending",
+      "contentHash": "4b4c3a1c1f7b0303a73dd4a23386ba1a31aac265f4e1d3df93b0f50ad5c1f459",
+      "inputAssetIds": [],
+      "outputPath": "audio/voice/scene/ring_conspiracy_006.mp3",
+      "attempts": 0
+    },
+    {
+      "version": 2,
+      "id": "job.voice.scene.ring_conspiracy_007",
+      "assetId": "voice.scene.ring_conspiracy_007",
+      "kind": "speech",
+      "model": "speech-2.8-hd",
+      "status": "pending",
+      "contentHash": "353140ce8ff674e3262b6935bb390fed27300e4b41e6e26c5d7bac2ae575622e",
+      "inputAssetIds": [],
+      "outputPath": "audio/voice/scene/ring_conspiracy_007.mp3",
+      "attempts": 0
+    },
+    {
+      "version": 2,
+      "id": "job.voice.scene.ring_conspiracy_008",
+      "assetId": "voice.scene.ring_conspiracy_008",
+      "kind": "speech",
+      "model": "speech-2.8-hd",
+      "status": "pending",
+      "contentHash": "a900e7a7cc73abe2260e8511aef2b493d0fab97efc5ced50c8ca5d8f12639450",
+      "inputAssetIds": [],
+      "outputPath": "audio/voice/scene/ring_conspiracy_008.mp3",
+      "attempts": 0
+    },
+    {
+      "version": 2,
+      "id": "job.voice.scene.ring_conspiracy_009",
+      "assetId": "voice.scene.ring_conspiracy_009",
+      "kind": "speech",
+      "model": "speech-2.8-hd",
+      "status": "pending",
+      "contentHash": "d658b5d6196ca793f1e0d1fa3f227457d69b205f334f313e36ef599412a03c69",
+      "inputAssetIds": [],
+      "outputPath": "audio/voice/scene/ring_conspiracy_009.mp3",
+      "attempts": 0
+    },
+    {
+      "version": 2,
+      "id": "job.voice.scene.ring_conspiracy_010",
+      "assetId": "voice.scene.ring_conspiracy_010",
+      "kind": "speech",
+      "model": "speech-2.8-hd",
+      "status": "pending",
+      "contentHash": "d7b9cea5cf6c89f00195d281bbb275871d849a5a92736df1b3cfbefb772c58e2",
+      "inputAssetIds": [],
+      "outputPath": "audio/voice/scene/ring_conspiracy_010.mp3",
+      "attempts": 0
+    },
+    {
+      "version": 2,
+      "id": "job.voice.scene.ring_conspiracy_011",
+      "assetId": "voice.scene.ring_conspiracy_011",
+      "kind": "speech",
+      "model": "speech-2.8-hd",
+      "status": "pending",
+      "contentHash": "aed9e286abd55afde6e9c19ca701f36fde48e3c742b093ca5dc56388c8f5d3c3",
+      "inputAssetIds": [],
+      "outputPath": "audio/voice/scene/ring_conspiracy_011.mp3",
+      "attempts": 0
+    },
+    {
+      "version": 2,
+      "id": "job.voice.scene.ring_conspiracy_012",
+      "assetId": "voice.scene.ring_conspiracy_012",
+      "kind": "speech",
+      "model": "speech-2.8-hd",
+      "status": "pending",
+      "contentHash": "22b28c415fdafc8f7fa6a060b1006aa6a17941e7eeefc636bb7830b5eb8d5ba3",
+      "inputAssetIds": [],
+      "outputPath": "audio/voice/scene/ring_conspiracy_012.mp3",
+      "attempts": 0
+    },
+    {
+      "version": 2,
+      "id": "job.voice.scene.ring_conspiracy_013",
+      "assetId": "voice.scene.ring_conspiracy_013",
+      "kind": "speech",
+      "model": "speech-2.8-hd",
+      "status": "pending",
+      "contentHash": "a3a1ca5c6068b2ed308524823b67cb4a7c6c32b4e4493073425f8e3eeccdbcd0",
+      "inputAssetIds": [],
+      "outputPath": "audio/voice/scene/ring_conspiracy_013.mp3",
+      "attempts": 0
+    },
+    {
+      "version": 2,
+      "id": "job.voice.scene.ring_conspiracy_014",
+      "assetId": "voice.scene.ring_conspiracy_014",
+      "kind": "speech",
+      "model": "speech-2.8-hd",
+      "status": "pending",
+      "contentHash": "b71578387d47633ca0d7ed77d9ebe8de1c3175e4df755df5494dd3b80894de1a",
+      "inputAssetIds": [],
+      "outputPath": "audio/voice/scene/ring_conspiracy_014.mp3",
+      "attempts": 0
+    },
+    {
+      "version": 2,
+      "id": "job.voice.scene.ring_conspiracy_015",
+      "assetId": "voice.scene.ring_conspiracy_015",
+      "kind": "speech",
+      "model": "speech-2.8-hd",
+      "status": "pending",
+      "contentHash": "c9dc66c03750651bf004e508e71454c8e4de65aad06f702e0174f46e6c2c4529",
+      "inputAssetIds": [],
+      "outputPath": "audio/voice/scene/ring_conspiracy_015.mp3",
+      "attempts": 0
+    },
+    {
+      "version": 2,
+      "id": "job.voice.scene.ring_conspiracy_ending_bad",
+      "assetId": "voice.scene.ring_conspiracy_ending_bad",
+      "kind": "speech",
+      "model": "speech-2.8-hd",
+      "status": "pending",
+      "contentHash": "e56edff311c3f89b37df24a595e677724ef2840ff9e4768e708aecbe09d963a7",
+      "inputAssetIds": [],
+      "outputPath": "audio/voice/scene/ring_conspiracy_ending_bad.mp3",
+      "attempts": 0
+    },
+    {
+      "version": 2,
+      "id": "job.voice.scene.ring_conspiracy_ending_gate",
+      "assetId": "voice.scene.ring_conspiracy_ending_gate",
+      "kind": "speech",
+      "model": "speech-2.8-hd",
+      "status": "pending",
+      "contentHash": "d1860024d9685b274ddf43843fdf7e73e30d3d9930910d04e6d8b8e357b11800",
+      "inputAssetIds": [],
+      "outputPath": "audio/voice/scene/ring_conspiracy_ending_gate.mp3",
+      "attempts": 0
+    },
+    {
+      "version": 2,
+      "id": "job.voice.scene.ring_conspiracy_ending_normal",
+      "assetId": "voice.scene.ring_conspiracy_ending_normal",
+      "kind": "speech",
+      "model": "speech-2.8-hd",
+      "status": "pending",
+      "contentHash": "ac8a9509d474987361bd339b96ac88061694e844372e5726ed90691de37c439f",
+      "inputAssetIds": [],
+      "outputPath": "audio/voice/scene/ring_conspiracy_ending_normal.mp3",
+      "attempts": 0
+    },
+    {
+      "version": 2,
+      "id": "job.voice.scene.ring_conspiracy_ending_true",
+      "assetId": "voice.scene.ring_conspiracy_ending_true",
+      "kind": "speech",
+      "model": "speech-2.8-hd",
+      "status": "pending",
+      "contentHash": "f95f9df3f97c69ed6b15079e723b25104ed56c62ecbf3b2127463887d569b714",
+      "inputAssetIds": [],
+      "outputPath": "audio/voice/scene/ring_conspiracy_ending_true.mp3",
+      "attempts": 0
+    },
+    {
+      "version": 2,
+      "id": "job.voice.scene.white_canvas_001",
+      "assetId": "voice.scene.white_canvas_001",
+      "kind": "speech",
+      "model": "speech-2.8-hd",
+      "status": "pending",
+      "contentHash": "2cbbd9d30cc68cbf59586cc1cac3f7ed739812d95a49f82f79ae51716ef7af15",
+      "inputAssetIds": [],
+      "outputPath": "audio/voice/scene/white_canvas_001.mp3",
+      "attempts": 0
+    },
+    {
+      "version": 2,
+      "id": "job.voice.scene.white_canvas_002",
+      "assetId": "voice.scene.white_canvas_002",
+      "kind": "speech",
+      "model": "speech-2.8-hd",
+      "status": "pending",
+      "contentHash": "d48e8a304d6852020660809a7106034d467ea1628a9c7c314290258f63518473",
+      "inputAssetIds": [],
+      "outputPath": "audio/voice/scene/white_canvas_002.mp3",
+      "attempts": 0
+    },
+    {
+      "version": 2,
+      "id": "job.voice.scene.white_canvas_003",
+      "assetId": "voice.scene.white_canvas_003",
+      "kind": "speech",
+      "model": "speech-2.8-hd",
+      "status": "pending",
+      "contentHash": "2ae9bc9526b7d7ac135e6a476b8e57c157a9c2a0bb16b7ecba7be609cd30b9b8",
+      "inputAssetIds": [],
+      "outputPath": "audio/voice/scene/white_canvas_003.mp3",
+      "attempts": 0
+    },
+    {
+      "version": 2,
+      "id": "job.voice.scene.white_canvas_004",
+      "assetId": "voice.scene.white_canvas_004",
+      "kind": "speech",
+      "model": "speech-2.8-hd",
+      "status": "pending",
+      "contentHash": "7b599f802063ade2cf0acde50ce384caa2654c986deb0ed7f281c7db2f522080",
+      "inputAssetIds": [],
+      "outputPath": "audio/voice/scene/white_canvas_004.mp3",
+      "attempts": 0
+    },
+    {
+      "version": 2,
+      "id": "job.voice.scene.white_canvas_005",
+      "assetId": "voice.scene.white_canvas_005",
+      "kind": "speech",
+      "model": "speech-2.8-hd",
+      "status": "pending",
+      "contentHash": "36fba56120f274d9e3deb13ec7e6337a865edb2c18f98d20d958085dc103c529",
+      "inputAssetIds": [],
+      "outputPath": "audio/voice/scene/white_canvas_005.mp3",
+      "attempts": 0
+    },
+    {
+      "version": 2,
+      "id": "job.voice.scene.white_canvas_006",
+      "assetId": "voice.scene.white_canvas_006",
+      "kind": "speech",
+      "model": "speech-2.8-hd",
+      "status": "pending",
+      "contentHash": "2845c64f8810f6f924da4b78f461d864ee544a5e585ff209c8bc387a3a1de05c",
+      "inputAssetIds": [],
+      "outputPath": "audio/voice/scene/white_canvas_006.mp3",
+      "attempts": 0
+    },
+    {
+      "version": 2,
+      "id": "job.voice.scene.white_canvas_007",
+      "assetId": "voice.scene.white_canvas_007",
+      "kind": "speech",
+      "model": "speech-2.8-hd",
+      "status": "pending",
+      "contentHash": "351f1812fd35f6eb4c080e7a519bfb490314c8f33fe0fcc40d2ed8d35b638b24",
+      "inputAssetIds": [],
+      "outputPath": "audio/voice/scene/white_canvas_007.mp3",
+      "attempts": 0
+    },
+    {
+      "version": 2,
+      "id": "job.voice.scene.white_canvas_008",
+      "assetId": "voice.scene.white_canvas_008",
+      "kind": "speech",
+      "model": "speech-2.8-hd",
+      "status": "pending",
+      "contentHash": "b7f70cd7d7c51f812625348aa3c79fb3012d1eb59bcaa88303f2bedf7641f1ef",
+      "inputAssetIds": [],
+      "outputPath": "audio/voice/scene/white_canvas_008.mp3",
+      "attempts": 0
+    },
+    {
+      "version": 2,
+      "id": "job.voice.scene.white_canvas_009",
+      "assetId": "voice.scene.white_canvas_009",
+      "kind": "speech",
+      "model": "speech-2.8-hd",
+      "status": "pending",
+      "contentHash": "ee6e0792697380c70ee7342fab8fd06208c07f98a6a305c7df5500c488642cba",
+      "inputAssetIds": [],
+      "outputPath": "audio/voice/scene/white_canvas_009.mp3",
+      "attempts": 0
+    },
+    {
+      "version": 2,
+      "id": "job.voice.scene.white_canvas_010",
+      "assetId": "voice.scene.white_canvas_010",
+      "kind": "speech",
+      "model": "speech-2.8-hd",
+      "status": "pending",
+      "contentHash": "3e9883cf189070e8cb36a62e4e816406c86f2e71dfb546e8d89f5bff8d315828",
+      "inputAssetIds": [],
+      "outputPath": "audio/voice/scene/white_canvas_010.mp3",
+      "attempts": 0
+    },
+    {
+      "version": 2,
+      "id": "job.voice.scene.white_canvas_011",
+      "assetId": "voice.scene.white_canvas_011",
+      "kind": "speech",
+      "model": "speech-2.8-hd",
+      "status": "pending",
+      "contentHash": "91095d8217d96d9bb48769e139640c769023e5300e088fe6379d24ecf22fb273",
+      "inputAssetIds": [],
+      "outputPath": "audio/voice/scene/white_canvas_011.mp3",
+      "attempts": 0
+    },
+    {
+      "version": 2,
+      "id": "job.voice.scene.white_canvas_012",
+      "assetId": "voice.scene.white_canvas_012",
+      "kind": "speech",
+      "model": "speech-2.8-hd",
+      "status": "pending",
+      "contentHash": "31bc74e7b39f1defac39b35d553a87ba803948b03f0343bbf201dabea637a468",
+      "inputAssetIds": [],
+      "outputPath": "audio/voice/scene/white_canvas_012.mp3",
+      "attempts": 0
+    },
+    {
+      "version": 2,
+      "id": "job.voice.scene.white_canvas_013",
+      "assetId": "voice.scene.white_canvas_013",
+      "kind": "speech",
+      "model": "speech-2.8-hd",
+      "status": "pending",
+      "contentHash": "55270103d0312358869702ef63604595202a670a65829ed91bf08645b0f71e29",
+      "inputAssetIds": [],
+      "outputPath": "audio/voice/scene/white_canvas_013.mp3",
+      "attempts": 0
+    },
+    {
+      "version": 2,
+      "id": "job.voice.scene.white_canvas_014",
+      "assetId": "voice.scene.white_canvas_014",
+      "kind": "speech",
+      "model": "speech-2.8-hd",
+      "status": "pending",
+      "contentHash": "3c82f0d0234de4abad53173fb3e2278734bb550e02ac477bdb789cf2665ffc0e",
+      "inputAssetIds": [],
+      "outputPath": "audio/voice/scene/white_canvas_014.mp3",
+      "attempts": 0
+    },
+    {
+      "version": 2,
+      "id": "job.voice.scene.white_canvas_015",
+      "assetId": "voice.scene.white_canvas_015",
+      "kind": "speech",
+      "model": "speech-2.8-hd",
+      "status": "pending",
+      "contentHash": "2000daff6ebef7cc236670dbaa1ce7b9f0f7bfee1551d742e59b78eae1ebb28e",
+      "inputAssetIds": [],
+      "outputPath": "audio/voice/scene/white_canvas_015.mp3",
+      "attempts": 0
+    },
+    {
+      "version": 2,
+      "id": "job.voice.scene.white_canvas_ending_bad",
+      "assetId": "voice.scene.white_canvas_ending_bad",
+      "kind": "speech",
+      "model": "speech-2.8-hd",
+      "status": "pending",
+      "contentHash": "2efdd60af47ad6264c35debec7fe3fb6afa8734c27b6f0b030122960fd92f7d0",
+      "inputAssetIds": [],
+      "outputPath": "audio/voice/scene/white_canvas_ending_bad.mp3",
+      "attempts": 0
+    },
+    {
+      "version": 2,
+      "id": "job.voice.scene.white_canvas_ending_gate",
+      "assetId": "voice.scene.white_canvas_ending_gate",
+      "kind": "speech",
+      "model": "speech-2.8-hd",
+      "status": "pending",
+      "contentHash": "5bc1db3761fb2deec6c0687c1289baa81db39065afc04265f34322be98a86bb4",
+      "inputAssetIds": [],
+      "outputPath": "audio/voice/scene/white_canvas_ending_gate.mp3",
+      "attempts": 0
+    },
+    {
+      "version": 2,
+      "id": "job.voice.scene.white_canvas_ending_normal",
+      "assetId": "voice.scene.white_canvas_ending_normal",
+      "kind": "speech",
+      "model": "speech-2.8-hd",
+      "status": "pending",
+      "contentHash": "c81b3e0f0747af451d71df24fd8f06a8468f34dec9eb54163646ac032f749fbe",
+      "inputAssetIds": [],
+      "outputPath": "audio/voice/scene/white_canvas_ending_normal.mp3",
+      "attempts": 0
+    },
+    {
+      "version": 2,
+      "id": "job.voice.scene.white_canvas_ending_true",
+      "assetId": "voice.scene.white_canvas_ending_true",
+      "kind": "speech",
+      "model": "speech-2.8-hd",
+      "status": "pending",
+      "contentHash": "becd2c46446876ec8c906ff85b7722c1202e977bef374bf386264dfdf2dd38d2",
+      "inputAssetIds": [],
+      "outputPath": "audio/voice/scene/white_canvas_ending_true.mp3",
+      "attempts": 0
+    }
+  ]
+}

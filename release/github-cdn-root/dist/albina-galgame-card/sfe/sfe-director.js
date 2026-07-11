@@ -8,7 +8,7 @@
   };
 
   // CDN base for CG images — aligned with galgame frontend Ux() base
-  const CDN = 'https://cdn.jsdelivr.net/gh/q18718859808-sketch/albina-galgame-card@v1.0.40/dist/albina-galgame-card/assets';
+  const CDN = 'https://cdn.jsdelivr.net/gh/q18718859808-sketch/albina-galgame-card@v1.0.44/dist/albina-galgame-card/assets';
 
   function cg(name) { return `${CDN}/cg/${name}.jpg`; }
   function og(name) { return `${CDN}/original_cg/${name}.png`; }

@@ -4,10 +4,12 @@
   "private": true,
   "type": "module",
   "scripts": {
+    "assets:generate": "node scripts/audit-assets.mjs --write",
+    "assets:audit": "node scripts/audit-assets.mjs",
     "build": "vite build",
     "typecheck": "vue-tsc --noEmit",
     "test": "vitest run",
-    "release:sync": "npm run build && node scripts/build-release.mjs"
+    "release:sync": "npm run build && npm run assets:generate && node scripts/build-release.mjs && npm run assets:audit"
   },
   "dependencies": {
     "pinia": "^3.0.3",

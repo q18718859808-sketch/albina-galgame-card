@@ -79,13 +79,35 @@
     },
   };
 
+  const RUNTIME_LOOKUP_URL = CDN_BASE + '/assets/runtime-lookup.json';
+
+  // Generated lookup also registers supporting casts and original CG strips,
+  // for example portrait.original_cg.albina_debut.
+  function registerRuntimeLookup(lookup) {
+    const portraits = lookup && lookup.portraitsById ? lookup.portraitsById : {};
+    Object.keys(portraits).forEach(function (id) {
+      const match = id.match(/^portrait\.([^.]+)\.(.+)$/);
+      const url = portraits[id];
+      if (!match || typeof url !== 'string' || url.indexOf('/sprite-atlas/') < 0) return;
+      STRIP_MAP[match[1]] = STRIP_MAP[match[1]] || {};
+      STRIP_MAP[match[1]][match[2]] = url;
+    });
+    return STRIP_MAP;
+  }
+
+  async function loadRuntimeLookup() {
+    const response = await fetch(RUNTIME_LOOKUP_URL);
+    if (!response.ok) throw new Error('Runtime lookup HTTP ' + response.status);
+    return registerRuntimeLookup(await response.json());
+  }
+
   // 查表: 根据角色ID和表情返回完整 strip URL, 不存在返回 null
   function getStripUrl(characterId, expression) {
     const charMap = STRIP_MAP[characterId];
     if (!charMap) return null;
     const relPath = charMap[expression];
     if (!relPath) return null;
-    return CDN_BASE + '/' + relPath;
+    return /^https?:\/\//.test(relPath) ? relPath : CDN_BASE + '/' + relPath;
   }
 
   const _instances = new Map();
@@ -433,7 +455,7 @@
 
   // ---- 自动替换静态立绘为 strip 帧动画 ----
   let _autoReplaceObserver = null;
-  const DEFAULT_STRIP_SELECTOR = 'img[src*="characters/albina/"], img[src*="characters/protagonist/"]';
+  const DEFAULT_STRIP_SELECTOR = 'img[src*="characters/"]';
 
   // 从 img.src 解析 characterId + expression, 返回对应 strip URL (不存在则 null)
   function _parseImgToStripUrl(img) {
@@ -544,10 +566,16 @@
   function getAllInstances() { return Array.from(_instances.values()); }
   function getById(id) { return _instances.get(id); }
 
+  loadRuntimeLookup().then(function () {
+    autoReplaceStaticImages({ observe: false });
+  }).catch(function (error) {
+    console.warn('[AlbinaSpriteAtlas] runtime lookup unavailable:', error);
+  });
+
   window.AlbinaSpriteAtlas = {
     SHEET_WIDTH, SHEET_HEIGHT, COLS, ROWS, FRAME_WIDTH, FRAME_HEIGHT,
     ROW_NAMES, ROW_INDEX, STATE_MAP,
-    CDN_BASE, STRIP_MAP, getStripUrl,
+    CDN_BASE, STRIP_MAP, getStripUrl, registerRuntimeLookup, loadRuntimeLookup,
     createSpriteAtlas, loadSpritesheet, loadFromPetJson,
     play, stop, setState, playOnce, setFps, destroy, resize,
     loadFromStrip, renderStripFrame, playStrip, createStripPlayer,
