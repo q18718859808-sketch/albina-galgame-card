@@ -1,0 +1,1378 @@
+[
+  {
+    "version": 2,
+    "id": "white_canvas_001",
+    "chapter": 1,
+    "route": "white_canvas",
+    "locationId": "white_canvas_room",
+    "backgroundAssetId": "bg.white_canvas",
+    "cgAssetId": "cg.white_canvas_choice",
+    "tone": "quiet",
+    "portraits": [
+      {
+        "characterId": "protagonist",
+        "portraitAssetId": "portrait.protagonist.tender",
+        "position": "left",
+        "active": false,
+        "scale": 0.94
+      },
+      {
+        "characterId": "albina",
+        "portraitAssetId": "portrait.albina.white-canvas",
+        "position": "right",
+        "active": true,
+        "scale": 1
+      }
+    ],
+    "speaker": "阿尔比娜",
+    "text": "白色并不代表干净。它只是暂时还没有被决定。你也是这样，{{user}}。",
+    "voiceAssetId": "voice.scene.white_canvas_001",
+    "choices": [
+      {
+        "id": "white_touch_boundary",
+        "text": "告诉她：完整也是一种作品",
+        "nextSceneId": "white_canvas_002",
+        "resultText": "你选择“告诉她：完整也是一种作品”。阿尔比娜：她把黑色手掌停在离你心口一寸的位置，没有继续向前。法西娅安静得像也在等待你的许可。",
+        "resultVoiceAssetId": "voice.result.white_touch_boundary",
+        "effects": {
+          "values": {
+            "affectionAlbina": 3,
+            "trust": 4,
+            "artResonance": 2
+          },
+          "setFlags": [
+            "albina_learns_wholeness"
+          ],
+          "unlockCg": [
+            "trust_threshold"
+          ]
+        }
+      },
+      {
+        "id": "white_tease_back",
+        "text": "反问她是否害怕自己的画布",
+        "nextSceneId": "white_canvas_002",
+        "resultText": "你选择“反问她是否害怕自己的画布”。阿尔比娜：她把黑色手掌停在离你心口一寸的位置，没有继续向前。法西娅安静得像也在等待你的许可。",
+        "resultVoiceAssetId": "voice.result.white_tease_back",
+        "effects": {
+          "values": {
+            "affectionAlbina": 2,
+            "danger": 1,
+            "artResonance": 3
+          },
+          "setFlags": [
+            "player_teases_artist"
+          ],
+          "unlockCg": [
+            "art_resonance"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "version": 2,
+    "id": "white_canvas_002",
+    "chapter": 2,
+    "route": "white_canvas",
+    "locationId": "rain_room",
+    "backgroundAssetId": "bg.rain_room",
+    "cgAssetId": "cg.rain_confession",
+    "tone": "rain",
+    "portraits": [
+      {
+        "characterId": "albina",
+        "portraitAssetId": "portrait.albina.shy",
+        "position": "center",
+        "active": true,
+        "scale": 1
+      }
+    ],
+    "speaker": "阿尔比娜",
+    "text": "她把黑色手掌停在离你心口一寸的位置，没有继续向前。法西娅安静得像也在等待你的许可。",
+    "voiceAssetId": "voice.scene.white_canvas_002",
+    "choices": [
+      {
+        "id": "white_follow_to_lab",
+        "text": "陪她把画布带进 LCE 临时手术室",
+        "nextSceneId": "white_canvas_003",
+        "resultText": "你选择“陪她把画布带进 LCE 临时手术室”。LCE 医师：灯光没有温度。记录员要求你签下旁观协议，阿尔比娜却先把笔推给自己：这一次，谁也不能替她同意被拆解。",
+        "resultVoiceAssetId": "voice.result.white_follow_to_lab",
+        "effects": {
+          "values": {
+            "affectionAlbina": 2,
+            "trust": 3,
+            "artResonance": 2
+          },
+          "setFlags": [
+            "white_lab_boundary_seen"
+          ],
+          "unlockCg": [
+            "hollow_torso_reveal"
+          ]
+        }
+      },
+      {
+        "id": "return_opening_from_white",
+        "text": "回到路线选择",
+        "nextSceneId": "opening_001",
+        "resultText": "你选择“回到路线选择”。阿尔比娜：晚上好，{{user}}。请不要站得太远，我还没决定该把你称作观众、朋友，还是一块值得等待的画布。",
+        "resultVoiceAssetId": "voice.result.return_opening_from_white",
+        "effects": {
+          "values": {
+            "trust": 1
+          },
+          "setFlags": [
+            "white_canvas_looped"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "version": 2,
+    "id": "white_canvas_003",
+    "chapter": 3,
+    "route": "white_canvas",
+    "locationId": "lce_lab",
+    "backgroundAssetId": "bg.lce_lab",
+    "cgAssetId": "cg.hollow_torso_reveal",
+    "tone": "quiet",
+    "portraits": [
+      {
+        "characterId": "lce_doctor",
+        "portraitAssetId": "portrait.lce_doctor.normal",
+        "position": "left",
+        "active": false,
+        "scale": 0.86
+      },
+      {
+        "characterId": "albina",
+        "portraitAssetId": "portrait.albina.surgical",
+        "position": "center",
+        "active": true,
+        "scale": 1
+      },
+      {
+        "characterId": "protagonist",
+        "portraitAssetId": "portrait.protagonist.serious",
+        "position": "right",
+        "active": false,
+        "scale": 0.9
+      }
+    ],
+    "speaker": "LCE 医师",
+    "text": "灯光没有温度。记录员要求你签下旁观协议，阿尔比娜却先把笔推给自己：这一次，谁也不能替她同意被拆解。",
+    "voiceAssetId": "voice.scene.white_canvas_003",
+    "choices": [
+      {
+        "id": "white_sign_witness_protocol",
+        "text": "只签见证，不签处置权",
+        "nextSceneId": "white_canvas_004",
+        "resultText": "你选择“只签见证，不签处置权”。阿尔比娜：巴士窗上映出她的白色义体，也映出你故意留下的空座。她说完整不是没有裂缝，而是裂缝终于有了不被展览的权利。",
+        "resultVoiceAssetId": "voice.result.white_sign_witness_protocol",
+        "effects": {
+          "values": {
+            "affectionAlbina": 1,
+            "trust": 4,
+            "artResonance": 2
+          },
+          "setFlags": [
+            "witness_not_ownership"
+          ],
+          "unlockCg": [
+            "lce_raid"
+          ]
+        }
+      },
+      {
+        "id": "white_interrupt_lab_terms",
+        "text": "要求医师删去所有所有权措辞",
+        "nextSceneId": "white_canvas_004",
+        "resultText": "你选择“要求医师删去所有所有权措辞”。阿尔比娜：巴士窗上映出她的白色义体，也映出你故意留下的空座。她说完整不是没有裂缝，而是裂缝终于有了不被展览的权利。",
+        "resultVoiceAssetId": "voice.result.white_interrupt_lab_terms",
+        "effects": {
+          "values": {
+            "trust": 3,
+            "danger": 1,
+            "artResonance": 3
+          },
+          "setFlags": [
+            "lab_terms_rewritten"
+          ],
+          "unlockCg": [
+            "fascia_heartbeat"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "version": 2,
+    "id": "white_canvas_004",
+    "chapter": 4,
+    "route": "white_canvas",
+    "locationId": "limbus_bus",
+    "backgroundAssetId": "bg.limbus_bus",
+    "cgAssetId": "cg.limbus_bus_night",
+    "tone": "rain",
+    "portraits": [
+      {
+        "characterId": "dante",
+        "portraitAssetId": "portrait.dante.normal",
+        "position": "left",
+        "active": false,
+        "scale": 0.82
+      },
+      {
+        "characterId": "albina",
+        "portraitAssetId": "portrait.albina.rain",
+        "position": "center",
+        "active": true,
+        "scale": 1
+      },
+      {
+        "characterId": "protagonist",
+        "portraitAssetId": "portrait.protagonist.wet-hair",
+        "position": "right",
+        "active": false,
+        "scale": 0.9
+      }
+    ],
+    "speaker": "阿尔比娜",
+    "text": "巴士窗上映出她的白色义体，也映出你故意留下的空座。她说完整不是没有裂缝，而是裂缝终于有了不被展览的权利。",
+    "voiceAssetId": "voice.scene.white_canvas_004",
+    "choices": [
+      {
+        "id": "white_keep_empty_seat",
+        "text": "替她保留那张无人审判的座位",
+        "nextSceneId": "white_canvas_005",
+        "resultText": "你选择“替她保留那张无人审判的座位”。阿尔比娜：黎明像一层还没有落款的底色。她把法西娅插在你们之间，不是阻隔，而是提醒：任何亲密都必须能被双方随时收回。",
+        "resultVoiceAssetId": "voice.result.white_keep_empty_seat",
+        "effects": {
+          "values": {
+            "affectionAlbina": 4,
+            "trust": 3,
+            "artResonance": 1
+          },
+          "setFlags": [
+            "white_canvas_empty_seat"
+          ],
+          "unlockCg": [
+            "white_canvas_ending"
+          ]
+        }
+      },
+      {
+        "id": "white_share_rain_window",
+        "text": "把雨夜倒影交给她自己命名",
+        "nextSceneId": "white_canvas_005",
+        "resultText": "你选择“把雨夜倒影交给她自己命名”。阿尔比娜：黎明像一层还没有落款的底色。她把法西娅插在你们之间，不是阻隔，而是提醒：任何亲密都必须能被双方随时收回。",
+        "resultVoiceAssetId": "voice.result.white_share_rain_window",
+        "effects": {
+          "values": {
+            "affectionAlbina": 3,
+            "trust": 2,
+            "artResonance": 3
+          },
+          "setFlags": [
+            "rain_reflection_named"
+          ],
+          "unlockCg": [
+            "rain_confession"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "version": 2,
+    "id": "white_canvas_005",
+    "chapter": 5,
+    "route": "white_canvas",
+    "locationId": "outskirts_dawn",
+    "backgroundAssetId": "bg.outskirts_dawn",
+    "cgAssetId": "cg.white_canvas_ending",
+    "tone": "quiet",
+    "portraits": [
+      {
+        "characterId": "protagonist",
+        "portraitAssetId": "portrait.protagonist.resolve",
+        "position": "left",
+        "active": false,
+        "scale": 0.92
+      },
+      {
+        "characterId": "albina",
+        "portraitAssetId": "portrait.albina.endgame",
+        "position": "center",
+        "active": true,
+        "scale": 1
+      }
+    ],
+    "speaker": "阿尔比娜",
+    "text": "黎明像一层还没有落款的底色。她把法西娅插在你们之间，不是阻隔，而是提醒：任何亲密都必须能被双方随时收回。",
+    "voiceAssetId": "voice.scene.white_canvas_005",
+    "choices": [
+      {
+        "id": "white_canvas_route_complete",
+        "text": "记录白色画布路线的暂定结局",
+        "nextSceneId": "white_canvas_006",
+        "resultText": "你选择“记录白色画布路线的暂定结局”。阿尔比娜：空展厅的回声比任何观众都诚实。她拿起一支没有颜料的画笔，在你面前比划出一条看不见的轮廓：这是你今晚没有说出口的那句话。",
+        "resultVoiceAssetId": "voice.result.white_canvas_route_complete",
+        "effects": {
+          "values": {
+            "affectionAlbina": 2,
+            "trust": 2,
+            "danger": -1,
+            "artResonance": 2
+          },
+          "setFlags": [
+            "white_canvas_route_complete"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "version": 2,
+    "id": "white_canvas_006",
+    "chapter": 6,
+    "route": "white_canvas",
+    "locationId": "white_canvas_room",
+    "backgroundAssetId": "bg.white_canvas",
+    "cgAssetId": "cg.white_canvas_choice",
+    "tone": "quiet",
+    "portraits": [
+      {
+        "characterId": "albina",
+        "portraitAssetId": "portrait.albina.white-canvas",
+        "position": "center",
+        "active": true,
+        "scale": 1
+      },
+      {
+        "characterId": "protagonist",
+        "portraitAssetId": "portrait.protagonist.tender",
+        "position": "left",
+        "active": false,
+        "scale": 0.92
+      }
+    ],
+    "speaker": "阿尔比娜",
+    "text": "空展厅的回声比任何观众都诚实。她拿起一支没有颜料的画笔，在你面前比划出一条看不见的轮廓：这是你今晚没有说出口的那句话。",
+    "voiceAssetId": "voice.scene.white_canvas_006",
+    "choices": [
+      {
+        "id": "white_006_name_silence",
+        "text": "替那条轮廓取一个不会被收藏的名字",
+        "nextSceneId": "white_canvas_007",
+        "resultText": "你选择“替那条轮廓取一个不会被收藏的名字”。法西娅：法西娅的低语从镜面里渗出来：你正在画的并不是她，是一个被允许随时擦掉的你。阿尔比娜没有反驳，只是把那面镜子轻轻转开半寸。",
+        "resultVoiceAssetId": "voice.result.white_006_name_silence",
+        "effects": {
+          "values": {
+            "affectionAlbina": 3,
+            "trust": 3,
+            "artResonance": 3
+          },
+          "setFlags": [
+            "silhouette_named"
+          ],
+          "unlockCg": [
+            "art_resonance"
+          ]
+        }
+      },
+      {
+        "id": "white_006_refuse_naming",
+        "text": "让轮廓保持无名，由她决定",
+        "nextSceneId": "white_canvas_007",
+        "resultText": "你选择“让轮廓保持无名，由她决定”。法西娅：法西娅的低语从镜面里渗出来：你正在画的并不是她，是一个被允许随时擦掉的你。阿尔比娜没有反驳，只是把那面镜子轻轻转开半寸。",
+        "resultVoiceAssetId": "voice.result.white_006_refuse_naming",
+        "effects": {
+          "values": {
+            "affectionAlbina": 2,
+            "trust": 4,
+            "artResonance": 2
+          },
+          "setFlags": [
+            "naming_returned"
+          ],
+          "unlockCg": [
+            "trust_threshold"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "version": 2,
+    "id": "white_canvas_007",
+    "chapter": 7,
+    "route": "white_canvas",
+    "locationId": "mirror_corridor",
+    "backgroundAssetId": "bg.mirror_corridor",
+    "cgAssetId": "cg.fascia_heartbeat",
+    "tone": "quiet",
+    "portraits": [
+      {
+        "characterId": "albina",
+        "portraitAssetId": "portrait.albina.shy",
+        "position": "right",
+        "active": true,
+        "scale": 1
+      },
+      {
+        "characterId": "fascia",
+        "portraitAssetId": "portrait.fascia.normal",
+        "position": "center",
+        "active": false,
+        "scale": 0.86
+      },
+      {
+        "characterId": "protagonist",
+        "portraitAssetId": "portrait.protagonist.tender",
+        "position": "left",
+        "active": false,
+        "scale": 0.9
+      }
+    ],
+    "speaker": "法西娅",
+    "text": "法西娅的低语从镜面里渗出来：你正在画的并不是她，是一个被允许随时擦掉的你。阿尔比娜没有反驳，只是把那面镜子轻轻转开半寸。",
+    "voiceAssetId": "voice.scene.white_canvas_007",
+    "choices": [
+      {
+        "id": "white_007_keep_mirror_open",
+        "text": "让镜子继续映照，不替她遮蔽",
+        "nextSceneId": "white_canvas_008",
+        "resultText": "你选择“让镜子继续映照，不替她遮蔽”。阿尔比娜：义体维护槽的白光下，她把法西娅从胸口取出来，放在你和她之间的托盘上。她说：完整不是把它装回去，是承认它有权利短暂离开我。",
+        "resultVoiceAssetId": "voice.result.white_007_keep_mirror_open",
+        "effects": {
+          "values": {
+            "trust": 3,
+            "danger": 1,
+            "artResonance": 4
+          },
+          "setFlags": [
+            "mirror_kept_open"
+          ],
+          "unlockCg": [
+            "fascia_heartbeat"
+          ]
+        }
+      },
+      {
+        "id": "white_007_ask_fascia_term",
+        "text": "当着阿尔比娜问法西娅一个边界问题",
+        "nextSceneId": "white_canvas_008",
+        "resultText": "你选择“当着阿尔比娜问法西娅一个边界问题”。阿尔比娜：义体维护槽的白光下，她把法西娅从胸口取出来，放在你和她之间的托盘上。她说：完整不是把它装回去，是承认它有权利短暂离开我。",
+        "resultVoiceAssetId": "voice.result.white_007_ask_fascia_term",
+        "effects": {
+          "values": {
+            "affectionAlbina": 1,
+            "trust": 2,
+            "artResonance": 3
+          },
+          "setFlags": [
+            "fascia_addressed_directly"
+          ],
+          "unlockCg": [
+            "art_resonance"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "version": 2,
+    "id": "white_canvas_008",
+    "chapter": 8,
+    "route": "white_canvas",
+    "locationId": "lce_lab",
+    "backgroundAssetId": "bg.lce_lab",
+    "cgAssetId": "cg.hollow_torso_reveal",
+    "tone": "quiet",
+    "portraits": [
+      {
+        "characterId": "lce_doctor",
+        "portraitAssetId": "portrait.lce_doctor.normal",
+        "position": "left",
+        "active": false,
+        "scale": 0.84
+      },
+      {
+        "characterId": "albina",
+        "portraitAssetId": "portrait.albina.surgical",
+        "position": "center",
+        "active": true,
+        "scale": 1
+      },
+      {
+        "characterId": "protagonist",
+        "portraitAssetId": "portrait.protagonist.serious",
+        "position": "right",
+        "active": false,
+        "scale": 0.9
+      }
+    ],
+    "speaker": "阿尔比娜",
+    "text": "义体维护槽的白光下，她把法西娅从胸口取出来，放在你和她之间的托盘上。她说：完整不是把它装回去，是承认它有权利短暂离开我。",
+    "voiceAssetId": "voice.scene.white_canvas_008",
+    "choices": [
+      {
+        "id": "white_008_hold_fascia",
+        "text": "替她暂时照看法西娅",
+        "nextSceneId": "white_canvas_009",
+        "resultText": "你选择“替她暂时照看法西娅”。阿尔比娜：雨室的水线像无数根未被签名的画框。她让你站在她身后半步，说那个距离刚好能让两人都不必替对方回答。",
+        "resultVoiceAssetId": "voice.result.white_008_hold_fascia",
+        "effects": {
+          "values": {
+            "affectionAlbina": 2,
+            "trust": 5,
+            "artResonance": 2
+          },
+          "setFlags": [
+            "fascia_held_by_player"
+          ],
+          "unlockCg": [
+            "fascia_heartbeat"
+          ]
+        }
+      },
+      {
+        "id": "white_008_stay_witness_only",
+        "text": "只站在她视野内，不接手",
+        "nextSceneId": "white_canvas_009",
+        "resultText": "你选择“只站在她视野内，不接手”。阿尔比娜：雨室的水线像无数根未被签名的画框。她让你站在她身后半步，说那个距离刚好能让两人都不必替对方回答。",
+        "resultVoiceAssetId": "voice.result.white_008_stay_witness_only",
+        "effects": {
+          "values": {
+            "affectionAlbina": 1,
+            "trust": 3,
+            "artResonance": 3
+          },
+          "setFlags": [
+            "witness_distance_kept"
+          ],
+          "unlockCg": [
+            "lce_raid"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "version": 2,
+    "id": "white_canvas_009",
+    "chapter": 9,
+    "route": "white_canvas",
+    "locationId": "rain_room",
+    "backgroundAssetId": "bg.rain_room",
+    "cgAssetId": "cg.rain_confession",
+    "tone": "rain",
+    "portraits": [
+      {
+        "characterId": "albina",
+        "portraitAssetId": "portrait.albina.rain",
+        "position": "center",
+        "active": true,
+        "scale": 1
+      },
+      {
+        "characterId": "protagonist",
+        "portraitAssetId": "portrait.protagonist.wet-hair",
+        "position": "left",
+        "active": false,
+        "scale": 0.92
+      }
+    ],
+    "speaker": "阿尔比娜",
+    "text": "雨室的水线像无数根未被签名的画框。她让你站在她身后半步，说那个距离刚好能让两人都不必替对方回答。",
+    "voiceAssetId": "voice.scene.white_canvas_009",
+    "choices": [
+      {
+        "id": "white_009_keep_half_step",
+        "text": "守住半步距离，不擅自靠近",
+        "nextSceneId": "white_canvas_010",
+        "resultText": "你选择“守住半步距离，不擅自靠近”。但丁：但丁没有抬头，只低声提醒：她在试着把自己画成一个可以离开的人，你最好别急着把她画成离不开你的人。",
+        "resultVoiceAssetId": "voice.result.white_009_keep_half_step",
+        "effects": {
+          "values": {
+            "affectionAlbina": 3,
+            "trust": 4,
+            "artResonance": 2
+          },
+          "setFlags": [
+            "half_step_distance"
+          ],
+          "unlockCg": [
+            "rain_confession"
+          ]
+        }
+      },
+      {
+        "id": "white_009_share_umbrella_edge",
+        "text": "把伞沿偏向她那侧",
+        "nextSceneId": "white_canvas_010",
+        "resultText": "你选择“把伞沿偏向她那侧”。但丁：但丁没有抬头，只低声提醒：她在试着把自己画成一个可以离开的人，你最好别急着把她画成离不开你的人。",
+        "resultVoiceAssetId": "voice.result.white_009_share_umbrella_edge",
+        "effects": {
+          "values": {
+            "affectionAlbina": 4,
+            "trust": 2,
+            "artResonance": 2
+          },
+          "setFlags": [
+            "umbrella_shared"
+          ],
+          "unlockCg": [
+            "rain_reflection"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "version": 2,
+    "id": "white_canvas_010",
+    "chapter": 10,
+    "route": "white_canvas",
+    "locationId": "limbus_bus",
+    "backgroundAssetId": "bg.limbus_bus",
+    "cgAssetId": "cg.limbus_bus_night",
+    "tone": "rain",
+    "portraits": [
+      {
+        "characterId": "dante",
+        "portraitAssetId": "portrait.dante.normal",
+        "position": "left",
+        "active": false,
+        "scale": 0.8
+      },
+      {
+        "characterId": "albina",
+        "portraitAssetId": "portrait.albina.rain",
+        "position": "center",
+        "active": true,
+        "scale": 1
+      },
+      {
+        "characterId": "protagonist",
+        "portraitAssetId": "portrait.protagonist.serious",
+        "position": "right",
+        "active": false,
+        "scale": 0.9
+      }
+    ],
+    "speaker": "但丁",
+    "text": "但丁没有抬头，只低声提醒：她在试着把自己画成一个可以离开的人，你最好别急着把她画成离不开你的人。",
+    "voiceAssetId": "voice.scene.white_canvas_010",
+    "choices": [
+      {
+        "id": "white_010_acknowledge_leave",
+        "text": "承认她随时可以离开这张画布",
+        "nextSceneId": "white_canvas_011",
+        "resultText": "你选择“承认她随时可以离开这张画布”。阿尔比娜：巢穴车站的灯光白得发硬。她站在月台边缘，没有回头，只问：如果一个艺术家拒绝被展览，你愿意做那个替她谢幕的人吗？",
+        "resultVoiceAssetId": "voice.result.white_010_acknowledge_leave",
+        "effects": {
+          "values": {
+            "affectionAlbina": 2,
+            "trust": 4,
+            "artResonance": 3
+          },
+          "setFlags": [
+            "leaving_acknowledged"
+          ],
+          "unlockCg": [
+            "limbus_bus_night"
+          ]
+        }
+      },
+      {
+        "id": "white_010_offer_return_ticket",
+        "text": "给她一张可以返回的车票，而不是绳索",
+        "nextSceneId": "white_canvas_011",
+        "resultText": "你选择“给她一张可以返回的车票，而不是绳索”。阿尔比娜：巢穴车站的灯光白得发硬。她站在月台边缘，没有回头，只问：如果一个艺术家拒绝被展览，你愿意做那个替她谢幕的人吗？",
+        "resultVoiceAssetId": "voice.result.white_010_offer_return_ticket",
+        "effects": {
+          "values": {
+            "affectionAlbina": 3,
+            "trust": 3,
+            "artResonance": 2
+          },
+          "setFlags": [
+            "return_ticket_given"
+          ],
+          "unlockCg": [
+            "rain_reflection"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "version": 2,
+    "id": "white_canvas_011",
+    "chapter": 11,
+    "route": "white_canvas",
+    "locationId": "nest_station",
+    "backgroundAssetId": "bg.nest_station",
+    "cgAssetId": "cg.art_resonance",
+    "tone": "quiet",
+    "portraits": [
+      {
+        "characterId": "albina",
+        "portraitAssetId": "portrait.albina.white-canvas",
+        "position": "center",
+        "active": true,
+        "scale": 1
+      },
+      {
+        "characterId": "protagonist",
+        "portraitAssetId": "portrait.protagonist.resolve",
+        "position": "left",
+        "active": false,
+        "scale": 0.92
+      }
+    ],
+    "speaker": "阿尔比娜",
+    "text": "巢穴车站的灯光白得发硬。她站在月台边缘，没有回头，只问：如果一个艺术家拒绝被展览，你愿意做那个替她谢幕的人吗？",
+    "voiceAssetId": "voice.scene.white_canvas_011",
+    "choices": [
+      {
+        "id": "white_011_curtain_call",
+        "text": "答应替她谢幕，不替她登台",
+        "nextSceneId": "white_canvas_012",
+        "resultText": "你选择“答应替她谢幕，不替她登台”。卡利斯托：蜘蛛画廊借给白画布一个临时展位。卡利斯托微笑着提议：把她最有缺陷的那一面挂出来，观众会替你们完成剩下的故事。",
+        "resultVoiceAssetId": "voice.result.white_011_curtain_call",
+        "effects": {
+          "values": {
+            "affectionAlbina": 2,
+            "trust": 5,
+            "artResonance": 3
+          },
+          "setFlags": [
+            "curtain_call_promised"
+          ],
+          "unlockCg": [
+            "white_canvas_ending"
+          ]
+        }
+      },
+      {
+        "id": "white_011_walk_beside",
+        "text": "陪她走下月台，不离开也不催促",
+        "nextSceneId": "white_canvas_012",
+        "resultText": "你选择“陪她走下月台，不离开也不催促”。卡利斯托：蜘蛛画廊借给白画布一个临时展位。卡利斯托微笑着提议：把她最有缺陷的那一面挂出来，观众会替你们完成剩下的故事。",
+        "resultVoiceAssetId": "voice.result.white_011_walk_beside",
+        "effects": {
+          "values": {
+            "affectionAlbina": 4,
+            "trust": 3,
+            "artResonance": 2
+          },
+          "setFlags": [
+            "platform_walked_together"
+          ],
+          "unlockCg": [
+            "rain_confession"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "version": 2,
+    "id": "white_canvas_012",
+    "chapter": 12,
+    "route": "white_canvas",
+    "locationId": "spider_gallery",
+    "backgroundAssetId": "bg.spider_gallery",
+    "cgAssetId": "cg.maestro_shadow",
+    "tone": "gallery",
+    "portraits": [
+      {
+        "characterId": "callisto",
+        "portraitAssetId": "portrait.callisto.normal",
+        "position": "left",
+        "active": false,
+        "scale": 0.84
+      },
+      {
+        "characterId": "albina",
+        "portraitAssetId": "portrait.albina.ring-conspiracy",
+        "position": "center",
+        "active": true,
+        "scale": 1
+      },
+      {
+        "characterId": "protagonist",
+        "portraitAssetId": "portrait.protagonist.serious",
+        "position": "right",
+        "active": false,
+        "scale": 0.9
+      }
+    ],
+    "speaker": "卡利斯托",
+    "text": "蜘蛛画廊借给白画布一个临时展位。卡利斯托微笑着提议：把她最有缺陷的那一面挂出来，观众会替你们完成剩下的故事。",
+    "voiceAssetId": "voice.scene.white_canvas_012",
+    "choices": [
+      {
+        "id": "white_012_refuse_exhibit",
+        "text": "当众拒绝展出她的缺陷",
+        "nextSceneId": "white_canvas_013",
+        "resultText": "你选择“当众拒绝展出她的缺陷”。阿尔比娜：环指工坊的颜料气味里混着血。她握着一柄画刀，对你说：今天我可能要毁掉一件作品，请你告诉我哪一件是她真正想毁掉的。",
+        "resultVoiceAssetId": "voice.result.white_012_refuse_exhibit",
+        "effects": {
+          "values": {
+            "affectionAlbina": 2,
+            "trust": 4,
+            "danger": 1,
+            "artResonance": 3
+          },
+          "setFlags": [
+            "defect_not_exhibited"
+          ],
+          "unlockCg": [
+            "trust_threshold"
+          ]
+        }
+      },
+      {
+        "id": "white_012_let_her_decide",
+        "text": "把展与不展的决定权交还给她",
+        "nextSceneId": "white_canvas_013",
+        "resultText": "你选择“把展与不展的决定权交还给她”。阿尔比娜：环指工坊的颜料气味里混着血。她握着一柄画刀，对你说：今天我可能要毁掉一件作品，请你告诉我哪一件是她真正想毁掉的。",
+        "resultVoiceAssetId": "voice.result.white_012_let_her_decide",
+        "effects": {
+          "values": {
+            "affectionAlbina": 3,
+            "trust": 5,
+            "artResonance": 4
+          },
+          "setFlags": [
+            "exhibit_choice_returned"
+          ],
+          "unlockCg": [
+            "art_resonance"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "version": 2,
+    "id": "white_canvas_013",
+    "chapter": 13,
+    "route": "white_canvas",
+    "locationId": "ring_atelier",
+    "backgroundAssetId": "bg.ring_atelier",
+    "cgAssetId": "cg.art_resonance",
+    "tone": "gallery",
+    "portraits": [
+      {
+        "characterId": "albina",
+        "portraitAssetId": "portrait.albina.furious",
+        "position": "right",
+        "active": true,
+        "scale": 1
+      },
+      {
+        "characterId": "protagonist",
+        "portraitAssetId": "portrait.protagonist.battle",
+        "position": "left",
+        "active": false,
+        "scale": 0.92
+      }
+    ],
+    "speaker": "阿尔比娜",
+    "text": "环指工坊的颜料气味里混着血。她握着一柄画刀，对你说：今天我可能要毁掉一件作品，请你告诉我哪一件是她真正想毁掉的。",
+    "voiceAssetId": "voice.scene.white_canvas_013",
+    "choices": [
+      {
+        "id": "white_013_point_to_mirror",
+        "text": "指向墙上那面映过法西娅的镜子",
+        "nextSceneId": "white_canvas_014",
+        "resultText": "你选择“指向墙上那面映过法西娅的镜子”。阿尔比娜：楼顶的风把她的话吹得很轻。她说：如果有一天我想把自己重新画成空白，你会替我保留这最后一层底色，还是替我重新开始？",
+        "resultVoiceAssetId": "voice.result.white_013_point_to_mirror",
+        "effects": {
+          "values": {
+            "affectionAlbina": 2,
+            "trust": 3,
+            "artResonance": 5
+          },
+          "setFlags": [
+            "mirror_pointed_out"
+          ],
+          "unlockCg": [
+            "mirror_broken"
+          ]
+        }
+      },
+      {
+        "id": "white_013_refuse_to_choose",
+        "text": "拒绝替她决定，让她自己下刀",
+        "nextSceneId": "white_canvas_014",
+        "resultText": "你选择“拒绝替她决定，让她自己下刀”。阿尔比娜：楼顶的风把她的话吹得很轻。她说：如果有一天我想把自己重新画成空白，你会替我保留这最后一层底色，还是替我重新开始？",
+        "resultVoiceAssetId": "voice.result.white_013_refuse_to_choose",
+        "effects": {
+          "values": {
+            "affectionAlbina": 1,
+            "trust": 4,
+            "artResonance": 3
+          },
+          "setFlags": [
+            "knife_returned"
+          ],
+          "unlockCg": [
+            "art_resonance"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "version": 2,
+    "id": "white_canvas_014",
+    "chapter": 14,
+    "route": "white_canvas",
+    "locationId": "city_rooftop",
+    "backgroundAssetId": "bg.city_rooftop",
+    "cgAssetId": "cg.trust_threshold",
+    "tone": "quiet",
+    "portraits": [
+      {
+        "characterId": "albina",
+        "portraitAssetId": "portrait.albina.endgame",
+        "position": "center",
+        "active": true,
+        "scale": 1
+      },
+      {
+        "characterId": "protagonist",
+        "portraitAssetId": "portrait.protagonist.resolve",
+        "position": "left",
+        "active": false,
+        "scale": 0.92
+      }
+    ],
+    "speaker": "阿尔比娜",
+    "text": "楼顶的风把她的话吹得很轻。她说：如果有一天我想把自己重新画成空白，你会替我保留这最后一层底色，还是替我重新开始？",
+    "voiceAssetId": "voice.scene.white_canvas_014",
+    "choices": [
+      {
+        "id": "white_014_keep_base_color",
+        "text": "答应替她保留最后一层底色",
+        "nextSceneId": "white_canvas_015",
+        "resultText": "你选择“答应替她保留最后一层底色”。阿尔比娜：城郊的黎明像一张终于干透的画布。她把法西娅重新放回胸口，又把画笔交到你手里：这张画布已经记住了你，但它仍然属于我。",
+        "resultVoiceAssetId": "voice.result.white_014_keep_base_color",
+        "effects": {
+          "values": {
+            "affectionAlbina": 4,
+            "trust": 4,
+            "artResonance": 3
+          },
+          "setFlags": [
+            "base_color_kept"
+          ],
+          "unlockCg": [
+            "white_canvas_ending"
+          ]
+        }
+      },
+      {
+        "id": "white_014_offer_restart",
+        "text": "答应陪她从空白重新开始",
+        "nextSceneId": "white_canvas_015",
+        "resultText": "你选择“答应陪她从空白重新开始”。阿尔比娜：城郊的黎明像一张终于干透的画布。她把法西娅重新放回胸口，又把画笔交到你手里：这张画布已经记住了你，但它仍然属于我。",
+        "resultVoiceAssetId": "voice.result.white_014_offer_restart",
+        "effects": {
+          "values": {
+            "affectionAlbina": 3,
+            "trust": 5,
+            "artResonance": 4
+          },
+          "setFlags": [
+            "restart_offered"
+          ],
+          "unlockCg": [
+            "art_resonance"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "version": 2,
+    "id": "white_canvas_015",
+    "chapter": 15,
+    "route": "white_canvas",
+    "locationId": "outskirts_dawn",
+    "backgroundAssetId": "bg.outskirts_dawn",
+    "cgAssetId": "cg.white_canvas_ending",
+    "tone": "quiet",
+    "portraits": [
+      {
+        "characterId": "protagonist",
+        "portraitAssetId": "portrait.protagonist.resolve",
+        "position": "left",
+        "active": false,
+        "scale": 0.92
+      },
+      {
+        "characterId": "albina",
+        "portraitAssetId": "portrait.albina.endgame",
+        "position": "center",
+        "active": true,
+        "scale": 1
+      },
+      {
+        "characterId": "fascia",
+        "portraitAssetId": "portrait.fascia.normal",
+        "position": "right",
+        "active": false,
+        "scale": 0.84
+      }
+    ],
+    "speaker": "阿尔比娜",
+    "text": "城郊的黎明像一张终于干透的画布。她把法西娅重新放回胸口，又把画笔交到你手里：这张画布已经记住了你，但它仍然属于我。",
+    "voiceAssetId": "voice.scene.white_canvas_015",
+    "choices": [
+      {
+        "id": "white_canvas_route_final",
+        "text": "为白色画布路线盖上最后一枚印章",
+        "nextSceneId": "white_canvas_ending_gate",
+        "resultText": "你选择“为白色画布路线盖上最后一枚印章”。白色画布路线终章已封存，进入固定结局资格判定。",
+        "resultVoiceAssetId": "voice.result.white_canvas_route_final",
+        "effects": {
+          "values": {
+            "affectionAlbina": 3,
+            "trust": 3,
+            "danger": -2,
+            "artResonance": 4
+          },
+          "setFlags": [
+            "white_canvas_route_final"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "version": 2,
+    "id": "white_canvas_ending_gate",
+    "chapter": 16,
+    "route": "white_canvas",
+    "locationId": "outskirts_dawn",
+    "backgroundAssetId": "bg.outskirts_dawn",
+    "cgAssetId": "cg.white_canvas_ending",
+    "tone": "quiet",
+    "portraits": [
+      {
+        "characterId": "protagonist",
+        "portraitAssetId": "portrait.protagonist.resolve",
+        "position": "left",
+        "active": false,
+        "scale": 0.92
+      },
+      {
+        "characterId": "albina",
+        "portraitAssetId": "portrait.albina.endgame",
+        "position": "center",
+        "active": true,
+        "scale": 1
+      },
+      {
+        "characterId": "fascia",
+        "portraitAssetId": "portrait.fascia.normal",
+        "position": "right",
+        "active": false,
+        "scale": 0.84
+      }
+    ],
+    "speaker": "叙事记录",
+    "text": "白色画布的全部选择已封存。系统将只依据持久状态判定结局，不请求任何运行时生成。",
+    "voiceAssetId": "voice.scene.white_canvas_ending_gate",
+    "choices": [
+      {
+        "id": "white_canvas_choose_true_ending",
+        "text": "确认彼此共同抵达的真结局",
+        "nextSceneId": "white_canvas_ending_true",
+        "resultText": "结局判定完成：白色画布·TRUE。资格规则与选择记录已固定写入。",
+        "resultVoiceAssetId": "voice.result.white_canvas.true_ending",
+        "availability": {
+          "allOf": [
+            {
+              "kind": "flag",
+              "flag": "white_canvas_route_final",
+              "equals": true
+            },
+            {
+              "kind": "value",
+              "key": "trust",
+              "operator": "gte",
+              "value": 52
+            },
+            {
+              "kind": "value",
+              "key": "artResonance",
+              "operator": "gte",
+              "value": 44
+            },
+            {
+              "kind": "value",
+              "key": "danger",
+              "operator": "lte",
+              "value": 5
+            }
+          ]
+        },
+        "effects": {
+          "setFlags": [
+            "ending_white_canvas_true_qualified"
+          ]
+        }
+      },
+      {
+        "id": "white_canvas_choose_normal_ending",
+        "text": "接受仍留有余白的普通结局",
+        "nextSceneId": "white_canvas_ending_normal",
+        "resultText": "结局判定完成：白色画布·NORMAL。资格规则与选择记录已固定写入。",
+        "resultVoiceAssetId": "voice.result.white_canvas.normal_ending",
+        "availability": {
+          "allOf": [
+            {
+              "kind": "flag",
+              "flag": "white_canvas_route_final",
+              "equals": true
+            }
+          ],
+          "fallback": true
+        },
+        "effects": {
+          "setFlags": [
+            "ending_white_canvas_normal_qualified"
+          ]
+        }
+      },
+      {
+        "id": "white_canvas_choose_bad_ending",
+        "text": "承认这次未能跨过的坏结局",
+        "nextSceneId": "white_canvas_ending_bad",
+        "resultText": "结局判定完成：白色画布·BAD。资格规则与选择记录已固定写入。",
+        "resultVoiceAssetId": "voice.result.white_canvas.bad_ending",
+        "availability": {
+          "allOf": [
+            {
+              "kind": "flag",
+              "flag": "white_canvas_route_final",
+              "equals": true
+            }
+          ],
+          "anyOf": [
+            {
+              "kind": "value",
+              "key": "trust",
+              "operator": "lte",
+              "value": 44
+            },
+            {
+              "kind": "value",
+              "key": "artResonance",
+              "operator": "lte",
+              "value": 38
+            }
+          ]
+        },
+        "effects": {
+          "setFlags": [
+            "ending_white_canvas_bad_qualified"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "version": 2,
+    "id": "white_canvas_ending_true",
+    "chapter": 17,
+    "route": "white_canvas",
+    "locationId": "outskirts_dawn",
+    "backgroundAssetId": "bg.outskirts_dawn",
+    "cgAssetId": "cg.white_canvas_ending",
+    "tone": "quiet",
+    "portraits": [
+      {
+        "characterId": "protagonist",
+        "portraitAssetId": "portrait.protagonist.resolve",
+        "position": "left",
+        "active": false,
+        "scale": 0.92
+      },
+      {
+        "characterId": "albina",
+        "portraitAssetId": "portrait.albina.endgame",
+        "position": "center",
+        "active": true,
+        "scale": 1
+      },
+      {
+        "characterId": "fascia",
+        "portraitAssetId": "portrait.fascia.normal",
+        "position": "right",
+        "active": false,
+        "scale": 0.84
+      }
+    ],
+    "speaker": "阿尔比娜",
+    "text": "晨光落在未署名的白画上。阿尔比娜没有把你画成作品，而是把并肩离开的两道影子留在画框之外：这一次，完整与亲密同时成立。",
+    "voiceAssetId": "voice.scene.white_canvas_ending_true",
+    "choices": [],
+    "ending": {
+      "route": "white_canvas",
+      "kind": "true",
+      "eligibility": {
+        "allOf": [
+          {
+            "kind": "flag",
+            "flag": "white_canvas_route_final",
+            "equals": true
+          },
+          {
+            "kind": "value",
+            "key": "trust",
+            "operator": "gte",
+            "value": 52
+          },
+          {
+            "kind": "value",
+            "key": "artResonance",
+            "operator": "gte",
+            "value": 44
+          },
+          {
+            "kind": "value",
+            "key": "danger",
+            "operator": "lte",
+            "value": 5
+          }
+        ]
+      }
+    }
+  },
+  {
+    "version": 2,
+    "id": "white_canvas_ending_normal",
+    "chapter": 17,
+    "route": "white_canvas",
+    "locationId": "outskirts_dawn",
+    "backgroundAssetId": "bg.outskirts_dawn",
+    "cgAssetId": "cg.white_canvas_ending",
+    "tone": "quiet",
+    "portraits": [
+      {
+        "characterId": "protagonist",
+        "portraitAssetId": "portrait.protagonist.resolve",
+        "position": "left",
+        "active": false,
+        "scale": 0.92
+      },
+      {
+        "characterId": "albina",
+        "portraitAssetId": "portrait.albina.endgame",
+        "position": "center",
+        "active": true,
+        "scale": 1
+      },
+      {
+        "characterId": "fascia",
+        "portraitAssetId": "portrait.fascia.normal",
+        "position": "right",
+        "active": false,
+        "scale": 0.84
+      }
+    ],
+    "speaker": "阿尔比娜",
+    "text": "展厅按约熄灯。你们保留了尚未说尽的话，也保留了随时重画的权利。阿尔比娜把空白画布卷好，约定下一场雨后再见。",
+    "voiceAssetId": "voice.scene.white_canvas_ending_normal",
+    "choices": [],
+    "ending": {
+      "route": "white_canvas",
+      "kind": "normal",
+      "eligibility": {
+        "allOf": [
+          {
+            "kind": "flag",
+            "flag": "white_canvas_route_final",
+            "equals": true
+          }
+        ],
+        "fallback": true
+      }
+    }
+  },
+  {
+    "version": 2,
+    "id": "white_canvas_ending_bad",
+    "chapter": 17,
+    "route": "white_canvas",
+    "locationId": "outskirts_dawn",
+    "backgroundAssetId": "bg.outskirts_dawn",
+    "cgAssetId": "cg.white_canvas_ending",
+    "tone": "quiet",
+    "portraits": [
+      {
+        "characterId": "protagonist",
+        "portraitAssetId": "portrait.protagonist.resolve",
+        "position": "left",
+        "active": false,
+        "scale": 0.92
+      },
+      {
+        "characterId": "albina",
+        "portraitAssetId": "portrait.albina.endgame",
+        "position": "center",
+        "active": true,
+        "scale": 1
+      },
+      {
+        "characterId": "fascia",
+        "portraitAssetId": "portrait.fascia.normal",
+        "position": "right",
+        "active": false,
+        "scale": 0.84
+      }
+    ],
+    "speaker": "阿尔比娜",
+    "text": "白厅没有发生争吵，只剩一张过早完成的画。阿尔比娜礼貌地收回画笔与称呼；边界仍被守住，但你们没能把信任带到黎明。",
+    "voiceAssetId": "voice.scene.white_canvas_ending_bad",
+    "choices": [],
+    "ending": {
+      "route": "white_canvas",
+      "kind": "bad",
+      "eligibility": {
+        "allOf": [
+          {
+            "kind": "flag",
+            "flag": "white_canvas_route_final",
+            "equals": true
+          }
+        ],
+        "anyOf": [
+          {
+            "kind": "value",
+            "key": "trust",
+            "operator": "lte",
+            "value": 44
+          },
+          {
+            "kind": "value",
+            "key": "artResonance",
+            "operator": "lte",
+            "value": 38
+          }
+        ]
+      }
+    }
+  }
+]

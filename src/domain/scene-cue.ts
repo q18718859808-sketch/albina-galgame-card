@@ -33,11 +33,58 @@ export const ChoiceEffectsSchema = z
   })
   .strict();
 
+export const StoryValueKeySchema = z.enum([
+  'affectionAlbina',
+  'trust',
+  'danger',
+  'artResonance',
+]);
+
+export const EligibilityPredicateSchema = z.discriminatedUnion('kind', [
+  z
+    .object({
+      kind: z.literal('value'),
+      key: StoryValueKeySchema,
+      operator: z.enum(['gte', 'lte', 'eq']),
+      value: z.number().finite(),
+    })
+    .strict(),
+  z
+    .object({
+      kind: z.literal('flag'),
+      flag: z.string().min(1),
+      equals: z.boolean(),
+    })
+    .strict(),
+]);
+
+export const ChoiceAvailabilitySchema = z
+  .object({
+    allOf: z.array(EligibilityPredicateSchema).min(1).optional(),
+    anyOf: z.array(EligibilityPredicateSchema).min(1).optional(),
+    fallback: z.boolean().optional(),
+  })
+  .strict()
+  .refine((condition) => condition.allOf || condition.anyOf || condition.fallback === true, {
+    message: 'Choice availability must declare predicates or a fallback',
+  });
+
+export const EndingDescriptorSchema = z
+  .object({
+    route: RouteIdSchema,
+    kind: z.enum(['true', 'normal', 'bad']),
+    eligibility: ChoiceAvailabilitySchema,
+  })
+  .strict();
+
 export const SceneChoiceSchema = z
   .object({
     id: z.string().min(1),
     text: z.string().min(1),
     nextSceneId: z.string().min(1),
+    resultText: z.string().min(1).optional(),
+    resultVoiceAssetId: z.string().min(1).optional(),
+    availability: ChoiceAvailabilitySchema.optional(),
     effects: ChoiceEffectsSchema,
   })
   .strict();
@@ -69,11 +116,15 @@ export const SceneCueSchema = z
     bgmAssetId: z.string().min(1).optional(),
     sfxAssetIds: z.array(z.string().min(1)).optional(),
     choices: z.array(SceneChoiceSchema),
+    ending: EndingDescriptorSchema.optional(),
   })
   .strict();
 
 export type RouteId = z.infer<typeof RouteIdSchema>;
 export type ChoiceEffects = z.infer<typeof ChoiceEffectsSchema>;
+export type EligibilityPredicate = z.infer<typeof EligibilityPredicateSchema>;
+export type ChoiceAvailability = z.infer<typeof ChoiceAvailabilitySchema>;
+export type EndingDescriptor = z.infer<typeof EndingDescriptorSchema>;
 export type SceneChoice = z.infer<typeof SceneChoiceSchema>;
 export type PortraitCue = z.infer<typeof PortraitCueSchema>;
 export type SceneCue = z.infer<typeof SceneCueSchema>;

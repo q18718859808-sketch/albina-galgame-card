@@ -1,0 +1,94 @@
+[
+  {
+    "version": 2,
+    "id": "opening_001",
+    "chapter": 1,
+    "route": "white_canvas",
+    "locationId": "backstreets_rain",
+    "backgroundAssetId": "bg.backstreets_rain",
+    "cgAssetId": "cg.opening_rain",
+    "tone": "rain",
+    "portraits": [
+      {
+        "characterId": "protagonist",
+        "portraitAssetId": "portrait.protagonist.normal",
+        "position": "left",
+        "active": false,
+        "scale": 0.92
+      },
+      {
+        "characterId": "albina",
+        "portraitAssetId": "portrait.albina.normal",
+        "position": "center",
+        "active": true,
+        "scale": 1
+      }
+    ],
+    "speaker": "阿尔比娜",
+    "text": "晚上好，{{user}}。请不要站得太远，我还没决定该把你称作观众、朋友，还是一块值得等待的画布。",
+    "voiceAssetId": "voice.scene.opening_001",
+    "choices": [
+      {
+        "id": "enter_white_canvas",
+        "text": "留在她的白色画布前",
+        "nextSceneId": "white_canvas_001",
+        "resultText": "你选择“留在她的白色画布前”。阿尔比娜：白色并不代表干净。它只是暂时还没有被决定。你也是这样，{{user}}。",
+        "resultVoiceAssetId": "voice.result.enter_white_canvas",
+        "effects": {
+          "route": "white_canvas",
+          "values": {
+            "affectionAlbina": 2,
+            "trust": 2,
+            "artResonance": 1
+          },
+          "setFlags": [
+            "route_white_canvas_seen"
+          ],
+          "unlockCg": [
+            "opening_rain"
+          ]
+        }
+      },
+      {
+        "id": "enter_rebuild",
+        "text": "询问金枝重构的痕迹",
+        "nextSceneId": "golden_bough_001",
+        "resultText": "你选择“询问金枝重构的痕迹”。阿尔比娜：金色光尘沿着她的义体裂缝回流。她先确认的不是自己，而是法西娅是否还在呼吸。",
+        "resultVoiceAssetId": "voice.result.enter_rebuild",
+        "effects": {
+          "route": "golden_bough_rebuild",
+          "values": {
+            "trust": 3,
+            "danger": 1
+          },
+          "setFlags": [
+            "route_rebuild_seen"
+          ],
+          "unlockCg": [
+            "golden_bough_rebuild"
+          ]
+        }
+      },
+      {
+        "id": "enter_conspiracy",
+        "text": "接受环指的危险邀请",
+        "nextSceneId": "ring_conspiracy_001",
+        "resultText": "你选择“接受环指的危险邀请”。阿尔比娜：蜘蛛巢的灯光像手术刀一样落下。她向你递来一份没有署名的委托，笑得礼貌又危险。",
+        "resultVoiceAssetId": "voice.result.enter_conspiracy",
+        "effects": {
+          "route": "ring_conspiracy",
+          "values": {
+            "danger": 3,
+            "artResonance": 2
+          },
+          "setFlags": [
+            "route_conspiracy_seen"
+          ],
+          "unlockCg": [
+            "ring_invitation"
+          ]
+        }
+      }
+    ]
+  }
+]

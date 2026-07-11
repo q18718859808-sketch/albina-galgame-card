@@ -1,0 +1,1410 @@
+[
+  {
+    "version": 2,
+    "id": "ring_conspiracy_001",
+    "chapter": 1,
+    "route": "ring_conspiracy",
+    "locationId": "spider_gallery",
+    "backgroundAssetId": "bg.spider_gallery",
+    "cgAssetId": "cg.conspiracy_contract",
+    "tone": "threat",
+    "portraits": [
+      {
+        "characterId": "callisto",
+        "portraitAssetId": "portrait.callisto.normal",
+        "position": "left",
+        "active": false,
+        "scale": 0.86
+      },
+      {
+        "characterId": "albina",
+        "portraitAssetId": "portrait.albina.ring-conspiracy",
+        "position": "center",
+        "active": true,
+        "scale": 1
+      },
+      {
+        "characterId": "ren",
+        "portraitAssetId": "portrait.ren.normal",
+        "position": "right",
+        "active": false,
+        "scale": 0.84
+      }
+    ],
+    "speaker": "阿尔比娜",
+    "text": "蜘蛛巢的灯光像手术刀一样落下。她向你递来一份没有署名的委托，笑得礼貌又危险。",
+    "voiceAssetId": "voice.scene.ring_conspiracy_001",
+    "choices": [
+      {
+        "id": "conspiracy_accept",
+        "text": "接下委托，但保留自己的条件",
+        "nextSceneId": "ring_conspiracy_002",
+        "resultText": "你选择“接下委托，但保留自己的条件”。阿尔比娜：她第一次没有把怒意伪装成礼貌。那不是要毁掉你的眼神，更像是不允许任何人替她决定你的用途。",
+        "resultVoiceAssetId": "voice.result.conspiracy_accept",
+        "effects": {
+          "values": {
+            "trust": 2,
+            "danger": 3,
+            "artResonance": 3
+          },
+          "setFlags": [
+            "contract_with_boundary"
+          ],
+          "unlockCg": [
+            "conspiracy_contract"
+          ]
+        }
+      },
+      {
+        "id": "conspiracy_pressure",
+        "text": "逼她说出真正目标",
+        "nextSceneId": "ring_conspiracy_002",
+        "resultText": "你选择“逼她说出真正目标”。阿尔比娜：她第一次没有把怒意伪装成礼貌。那不是要毁掉你的眼神，更像是不允许任何人替她决定你的用途。",
+        "resultVoiceAssetId": "voice.result.conspiracy_pressure",
+        "effects": {
+          "values": {
+            "affectionAlbina": 1,
+            "danger": 4,
+            "artResonance": 2
+          },
+          "setFlags": [
+            "pressed_true_goal"
+          ],
+          "unlockCg": [
+            "maestro_shadow"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "version": 2,
+    "id": "ring_conspiracy_002",
+    "chapter": 2,
+    "route": "ring_conspiracy",
+    "locationId": "ring_atelier",
+    "backgroundAssetId": "bg.ring_atelier",
+    "cgAssetId": "cg.ring_conspiracy_ending",
+    "tone": "gallery",
+    "portraits": [
+      {
+        "characterId": "albina",
+        "portraitAssetId": "portrait.albina.furious",
+        "position": "right",
+        "active": true,
+        "scale": 1
+      },
+      {
+        "characterId": "protagonist",
+        "portraitAssetId": "portrait.protagonist.battle",
+        "position": "left",
+        "active": false,
+        "scale": 0.95
+      }
+    ],
+    "speaker": "阿尔比娜",
+    "text": "她第一次没有把怒意伪装成礼貌。那不是要毁掉你的眼神，更像是不允许任何人替她决定你的用途。",
+    "voiceAssetId": "voice.scene.ring_conspiracy_002",
+    "choices": [
+      {
+        "id": "conspiracy_escape_to_backstreets",
+        "text": "带着未签名委托冲出画廊",
+        "nextSceneId": "ring_conspiracy_003",
+        "resultText": "你选择“带着未签名委托冲出画廊”。环指代理人：追兵把雨巷切成一个个展格，仿佛你们已经是可出售的连环画。阿尔比娜没有回头，只把法西娅横在你和委托书之间。",
+        "resultVoiceAssetId": "voice.result.conspiracy_escape_to_backstreets",
+        "effects": {
+          "values": {
+            "trust": 2,
+            "danger": 3,
+            "artResonance": 2
+          },
+          "setFlags": [
+            "ring_escape_committed"
+          ],
+          "unlockCg": [
+            "backstreet_pursuit"
+          ]
+        }
+      },
+      {
+        "id": "return_opening_from_ring",
+        "text": "回到路线选择",
+        "nextSceneId": "opening_001",
+        "resultText": "你选择“回到路线选择”。阿尔比娜：晚上好，{{user}}。请不要站得太远，我还没决定该把你称作观众、朋友，还是一块值得等待的画布。",
+        "resultVoiceAssetId": "voice.result.return_opening_from_ring",
+        "effects": {
+          "values": {
+            "trust": 1,
+            "danger": -1
+          },
+          "setFlags": [
+            "conspiracy_looped"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "version": 2,
+    "id": "ring_conspiracy_003",
+    "chapter": 3,
+    "route": "ring_conspiracy",
+    "locationId": "backstreets_rain",
+    "backgroundAssetId": "bg.backstreets_rain",
+    "cgAssetId": "cg.backstreet_pursuit",
+    "tone": "threat",
+    "portraits": [
+      {
+        "characterId": "ring_agent",
+        "portraitAssetId": "portrait.ring_agent.normal",
+        "position": "left",
+        "active": false,
+        "scale": 0.84
+      },
+      {
+        "characterId": "albina",
+        "portraitAssetId": "portrait.albina.combat",
+        "position": "center",
+        "active": true,
+        "scale": 1
+      },
+      {
+        "characterId": "protagonist",
+        "portraitAssetId": "portrait.protagonist.battle",
+        "position": "right",
+        "active": false,
+        "scale": 0.92
+      }
+    ],
+    "speaker": "环指代理人",
+    "text": "追兵把雨巷切成一个个展格，仿佛你们已经是可出售的连环画。阿尔比娜没有回头，只把法西娅横在你和委托书之间。",
+    "voiceAssetId": "voice.scene.ring_conspiracy_003",
+    "choices": [
+      {
+        "id": "conspiracy_break_pursuit_frame",
+        "text": "打碎追兵布下的取景框",
+        "nextSceneId": "ring_conspiracy_004",
+        "resultText": "你选择“打碎追兵布下的取景框”。阿尔比娜：回到蜘蛛画廊时，所有灯都向她弯下去。她把那份委托钉在空框里，语气平静：如果他们要收藏背叛，就先学会被背叛凝视。",
+        "resultVoiceAssetId": "voice.result.conspiracy_break_pursuit_frame",
+        "effects": {
+          "values": {
+            "trust": 3,
+            "danger": 2,
+            "artResonance": 3
+          },
+          "setFlags": [
+            "pursuit_frame_broken"
+          ],
+          "unlockCg": [
+            "combat_transition_01"
+          ]
+        }
+      },
+      {
+        "id": "conspiracy_feed_false_signature",
+        "text": "交出伪造签名引开视线",
+        "nextSceneId": "ring_conspiracy_004",
+        "resultText": "你选择“交出伪造签名引开视线”。阿尔比娜：回到蜘蛛画廊时，所有灯都向她弯下去。她把那份委托钉在空框里，语气平静：如果他们要收藏背叛，就先学会被背叛凝视。",
+        "resultVoiceAssetId": "voice.result.conspiracy_feed_false_signature",
+        "effects": {
+          "values": {
+            "trust": 2,
+            "danger": -1,
+            "artResonance": 4
+          },
+          "setFlags": [
+            "false_signature_planted"
+          ],
+          "unlockCg": [
+            "ren_interruption"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "version": 2,
+    "id": "ring_conspiracy_004",
+    "chapter": 4,
+    "route": "ring_conspiracy",
+    "locationId": "spider_gallery",
+    "backgroundAssetId": "bg.spider_gallery",
+    "cgAssetId": "cg.maestro_shadow",
+    "tone": "gallery",
+    "portraits": [
+      {
+        "characterId": "ren",
+        "portraitAssetId": "portrait.ren.normal",
+        "position": "left",
+        "active": false,
+        "scale": 0.82
+      },
+      {
+        "characterId": "albina",
+        "portraitAssetId": "portrait.albina.maestro",
+        "position": "center",
+        "active": true,
+        "scale": 1
+      },
+      {
+        "characterId": "protagonist",
+        "portraitAssetId": "portrait.protagonist.shadow",
+        "position": "right",
+        "active": false,
+        "scale": 0.9
+      }
+    ],
+    "speaker": "阿尔比娜",
+    "text": "回到蜘蛛画廊时，所有灯都向她弯下去。她把那份委托钉在空框里，语气平静：如果他们要收藏背叛，就先学会被背叛凝视。",
+    "voiceAssetId": "voice.scene.ring_conspiracy_004",
+    "choices": [
+      {
+        "id": "ring_conspiracy_route_complete",
+        "text": "记录环指共谋路线的暂定结局",
+        "nextSceneId": "ring_conspiracy_005",
+        "resultText": "你选择“记录环指共谋路线的暂定结局”。卡利斯托：卡利斯托把另一份署了名的委托推到你们中间，笑得像在挑礼物：既然上次没有展出你的缺陷，这次不如让你们两个一起成为一件合作作品。",
+        "resultVoiceAssetId": "voice.result.ring_conspiracy_route_complete",
+        "effects": {
+          "values": {
+            "affectionAlbina": 1,
+            "trust": 2,
+            "danger": -2,
+            "artResonance": 3
+          },
+          "setFlags": [
+            "ring_conspiracy_route_complete"
+          ],
+          "unlockCg": [
+            "ring_conspiracy_ending"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "version": 2,
+    "id": "ring_conspiracy_005",
+    "chapter": 5,
+    "route": "ring_conspiracy",
+    "locationId": "ring_atelier",
+    "backgroundAssetId": "bg.ring_atelier",
+    "cgAssetId": "cg.maestro_shadow",
+    "tone": "gallery",
+    "portraits": [
+      {
+        "characterId": "callisto",
+        "portraitAssetId": "portrait.callisto.normal",
+        "position": "left",
+        "active": false,
+        "scale": 0.86
+      },
+      {
+        "characterId": "albina",
+        "portraitAssetId": "portrait.albina.maestro",
+        "position": "center",
+        "active": true,
+        "scale": 1
+      },
+      {
+        "characterId": "protagonist",
+        "portraitAssetId": "portrait.protagonist.shadow",
+        "position": "right",
+        "active": false,
+        "scale": 0.9
+      }
+    ],
+    "speaker": "卡利斯托",
+    "text": "卡利斯托把另一份署了名的委托推到你们中间，笑得像在挑礼物：既然上次没有展出你的缺陷，这次不如让你们两个一起成为一件合作作品。",
+    "voiceAssetId": "voice.scene.ring_conspiracy_005",
+    "choices": [
+      {
+        "id": "conspiracy_005_refuse_duo",
+        "text": "当众拒绝成为合作展品",
+        "nextSceneId": "ring_conspiracy_006",
+        "resultText": "你选择“当众拒绝成为合作展品”。阿尔比娜：蜘蛛画廊的灯突然转向她。她把法西娅插进墙上一幅空框，声音很冷：你们想收藏我，那就先学会被我凝视。",
+        "resultVoiceAssetId": "voice.result.conspiracy_005_refuse_duo",
+        "effects": {
+          "values": {
+            "trust": 3,
+            "danger": 2,
+            "artResonance": 3
+          },
+          "setFlags": [
+            "duo_exhibit_refused"
+          ],
+          "unlockCg": [
+            "maestro_shadow"
+          ]
+        }
+      },
+      {
+        "id": "conspiracy_005_let_her_answer",
+        "text": "不替她回答，让阿尔比娜开口",
+        "nextSceneId": "ring_conspiracy_006",
+        "resultText": "你选择“不替她回答，让阿尔比娜开口”。阿尔比娜：蜘蛛画廊的灯突然转向她。她把法西娅插进墙上一幅空框，声音很冷：你们想收藏我，那就先学会被我凝视。",
+        "resultVoiceAssetId": "voice.result.conspiracy_005_let_her_answer",
+        "effects": {
+          "values": {
+            "affectionAlbina": 2,
+            "trust": 4,
+            "artResonance": 4
+          },
+          "setFlags": [
+            "albina_answered_herself"
+          ],
+          "unlockCg": [
+            "conspiracy_contract"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "version": 2,
+    "id": "ring_conspiracy_006",
+    "chapter": 6,
+    "route": "ring_conspiracy",
+    "locationId": "spider_gallery",
+    "backgroundAssetId": "bg.spider_gallery",
+    "cgAssetId": "cg.conspiracy_contract",
+    "tone": "threat",
+    "portraits": [
+      {
+        "characterId": "ren",
+        "portraitAssetId": "portrait.ren.normal",
+        "position": "left",
+        "active": false,
+        "scale": 0.84
+      },
+      {
+        "characterId": "albina",
+        "portraitAssetId": "portrait.albina.furious",
+        "position": "center",
+        "active": true,
+        "scale": 1
+      },
+      {
+        "characterId": "protagonist",
+        "portraitAssetId": "portrait.protagonist.battle",
+        "position": "right",
+        "active": false,
+        "scale": 0.92
+      }
+    ],
+    "speaker": "阿尔比娜",
+    "text": "蜘蛛画廊的灯突然转向她。她把法西娅插进墙上一幅空框，声音很冷：你们想收藏我，那就先学会被我凝视。",
+    "voiceAssetId": "voice.scene.ring_conspiracy_006",
+    "choices": [
+      {
+        "id": "conspiracy_006_stand_with_her",
+        "text": "站到她身侧，分担凝视",
+        "nextSceneId": "ring_conspiracy_007",
+        "resultText": "你选择“站到她身侧，分担凝视”。环指代理人：雨巷的尽头被代理人堵住。他不拔武器，只是举起一面空画框，要把你们框进环指的目录。阿尔比娜低声让你选：是冲破画框，还是把它抢过来。",
+        "resultVoiceAssetId": "voice.result.conspiracy_006_stand_with_her",
+        "effects": {
+          "values": {
+            "affectionAlbina": 3,
+            "trust": 4,
+            "danger": 1,
+            "artResonance": 3
+          },
+          "setFlags": [
+            "gaze_shared"
+          ],
+          "unlockCg": [
+            "maestro_shadow"
+          ]
+        }
+      },
+      {
+        "id": "conspiracy_006_block_view",
+        "text": "挡在她和委托人之间",
+        "nextSceneId": "ring_conspiracy_007",
+        "resultText": "你选择“挡在她和委托人之间”。环指代理人：雨巷的尽头被代理人堵住。他不拔武器，只是举起一面空画框，要把你们框进环指的目录。阿尔比娜低声让你选：是冲破画框，还是把它抢过来。",
+        "resultVoiceAssetId": "voice.result.conspiracy_006_block_view",
+        "effects": {
+          "values": {
+            "affectionAlbina": 2,
+            "trust": 3,
+            "danger": 3,
+            "artResonance": 2
+          },
+          "setFlags": [
+            "view_blocked"
+          ],
+          "unlockCg": [
+            "combat_transition_01"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "version": 2,
+    "id": "ring_conspiracy_007",
+    "chapter": 7,
+    "route": "ring_conspiracy",
+    "locationId": "backstreets_rain",
+    "backgroundAssetId": "bg.backstreets_rain",
+    "cgAssetId": "cg.backstreet_pursuit",
+    "tone": "threat",
+    "portraits": [
+      {
+        "characterId": "ring_agent",
+        "portraitAssetId": "portrait.ring_agent.normal",
+        "position": "left",
+        "active": false,
+        "scale": 0.84
+      },
+      {
+        "characterId": "albina",
+        "portraitAssetId": "portrait.albina.combat",
+        "position": "center",
+        "active": true,
+        "scale": 1
+      },
+      {
+        "characterId": "protagonist",
+        "portraitAssetId": "portrait.protagonist.battle",
+        "position": "right",
+        "active": false,
+        "scale": 0.92
+      }
+    ],
+    "speaker": "环指代理人",
+    "text": "雨巷的尽头被代理人堵住。他不拔武器，只是举起一面空画框，要把你们框进环指的目录。阿尔比娜低声让你选：是冲破画框，还是把它抢过来。",
+    "voiceAssetId": "voice.scene.ring_conspiracy_007",
+    "choices": [
+      {
+        "id": "conspiracy_007_break_frame",
+        "text": "冲破画框",
+        "nextSceneId": "ring_conspiracy_008",
+        "resultText": "你选择“冲破画框”。LCE 医师：LCE 把你们暂扣在手术间。医师递来一份中立证词表，说只要她肯指认环指，就帮她换掉被环指标注过的接口。她没有看表，先看你。",
+        "resultVoiceAssetId": "voice.result.conspiracy_007_break_frame",
+        "effects": {
+          "values": {
+            "trust": 3,
+            "danger": 3,
+            "artResonance": 3
+          },
+          "setFlags": [
+            "street_frame_broken"
+          ],
+          "unlockCg": [
+            "combat_transition_01"
+          ]
+        }
+      },
+      {
+        "id": "conspiracy_007_seize_frame",
+        "text": "把画框抢过来，反过来框住他",
+        "nextSceneId": "ring_conspiracy_008",
+        "resultText": "你选择“把画框抢过来，反过来框住他”。LCE 医师：LCE 把你们暂扣在手术间。医师递来一份中立证词表，说只要她肯指认环指，就帮她换掉被环指标注过的接口。她没有看表，先看你。",
+        "resultVoiceAssetId": "voice.result.conspiracy_007_seize_frame",
+        "effects": {
+          "values": {
+            "trust": 4,
+            "danger": 2,
+            "artResonance": 4
+          },
+          "setFlags": [
+            "frame_seized"
+          ],
+          "unlockCg": [
+            "maestro_shadow"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "version": 2,
+    "id": "ring_conspiracy_008",
+    "chapter": 8,
+    "route": "ring_conspiracy",
+    "locationId": "lce_lab",
+    "backgroundAssetId": "bg.lce_lab",
+    "cgAssetId": "cg.lce_raid",
+    "tone": "threat",
+    "portraits": [
+      {
+        "characterId": "lce_doctor",
+        "portraitAssetId": "portrait.lce_doctor.normal",
+        "position": "left",
+        "active": false,
+        "scale": 0.84
+      },
+      {
+        "characterId": "albina",
+        "portraitAssetId": "portrait.albina.surgical",
+        "position": "center",
+        "active": true,
+        "scale": 1
+      },
+      {
+        "characterId": "protagonist",
+        "portraitAssetId": "portrait.protagonist.serious",
+        "position": "right",
+        "active": false,
+        "scale": 0.9
+      }
+    ],
+    "speaker": "LCE 医师",
+    "text": "LCE 把你们暂扣在手术间。医师递来一份中立证词表，说只要她肯指认环指，就帮她换掉被环指标注过的接口。她没有看表，先看你。",
+    "voiceAssetId": "voice.scene.ring_conspiracy_008",
+    "choices": [
+      {
+        "id": "conspiracy_008_refuse_testimony",
+        "text": "当面拒绝用她换取证词",
+        "nextSceneId": "ring_conspiracy_009",
+        "resultText": "你选择“当面拒绝用她换取证词”。阿尔比娜：镜廊里同时映出\"环指版的她\"和\"现在的她\"。她让法西娅在两面镜子之间选一面，然后问你：你愿意被哪一个版本记得？",
+        "resultVoiceAssetId": "voice.result.conspiracy_008_refuse_testimony",
+        "effects": {
+          "values": {
+            "affectionAlbina": 2,
+            "trust": 5,
+            "danger": 2,
+            "artResonance": 2
+          },
+          "setFlags": [
+            "testimony_refused"
+          ],
+          "unlockCg": [
+            "lce_raid"
+          ]
+        }
+      },
+      {
+        "id": "conspiracy_008_hand_pen_to_her",
+        "text": "把笔交还给她，由她自己决定",
+        "nextSceneId": "ring_conspiracy_009",
+        "resultText": "你选择“把笔交还给她，由她自己决定”。阿尔比娜：镜廊里同时映出\"环指版的她\"和\"现在的她\"。她让法西娅在两面镜子之间选一面，然后问你：你愿意被哪一个版本记得？",
+        "resultVoiceAssetId": "voice.result.conspiracy_008_hand_pen_to_her",
+        "effects": {
+          "values": {
+            "affectionAlbina": 3,
+            "trust": 4,
+            "artResonance": 3
+          },
+          "setFlags": [
+            "pen_returned_to_albina"
+          ],
+          "unlockCg": [
+            "conspiracy_contract"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "version": 2,
+    "id": "ring_conspiracy_009",
+    "chapter": 9,
+    "route": "ring_conspiracy",
+    "locationId": "mirror_corridor",
+    "backgroundAssetId": "bg.mirror_corridor",
+    "cgAssetId": "cg.maestro_shadow",
+    "tone": "gallery",
+    "portraits": [
+      {
+        "characterId": "golden_apparition",
+        "portraitAssetId": "portrait.golden_apparition.normal",
+        "position": "left",
+        "active": false,
+        "scale": 0.82
+      },
+      {
+        "characterId": "albina",
+        "portraitAssetId": "portrait.albina.maestro",
+        "position": "center",
+        "active": true,
+        "scale": 1
+      },
+      {
+        "characterId": "protagonist",
+        "portraitAssetId": "portrait.protagonist.shadow",
+        "position": "right",
+        "active": false,
+        "scale": 0.9
+      }
+    ],
+    "speaker": "阿尔比娜",
+    "text": "镜廊里同时映出\"环指版的她\"和\"现在的她\"。她让法西娅在两面镜子之间选一面，然后问你：你愿意被哪一个版本记得？",
+    "voiceAssetId": "voice.scene.ring_conspiracy_009",
+    "choices": [
+      {
+        "id": "conspiracy_009_choose_present",
+        "text": "选现在的她，不挑那个环指版",
+        "nextSceneId": "ring_conspiracy_010",
+        "resultText": "你选择“选现在的她，不挑那个环指版”。卡利斯托：卡利斯托拿出一枚\"合作者徽章\"，说只要她肯戴上，环指就放过你。阿尔比娜笑了一下，把徽章塞进你掌心：你来替我决定，要不要让我用它换你。",
+        "resultVoiceAssetId": "voice.result.conspiracy_009_choose_present",
+        "effects": {
+          "values": {
+            "affectionAlbina": 4,
+            "trust": 3,
+            "artResonance": 3
+          },
+          "setFlags": [
+            "present_albina_chosen"
+          ],
+          "unlockCg": [
+            "art_resonance"
+          ]
+        }
+      },
+      {
+        "id": "conspiracy_009_refuse_choice",
+        "text": "拒绝回答，让她自己挑镜子",
+        "nextSceneId": "ring_conspiracy_010",
+        "resultText": "你选择“拒绝回答，让她自己挑镜子”。卡利斯托：卡利斯托拿出一枚\"合作者徽章\"，说只要她肯戴上，环指就放过你。阿尔比娜笑了一下，把徽章塞进你掌心：你来替我决定，要不要让我用它换你。",
+        "resultVoiceAssetId": "voice.result.conspiracy_009_refuse_choice",
+        "effects": {
+          "values": {
+            "affectionAlbina": 2,
+            "trust": 4,
+            "artResonance": 4
+          },
+          "setFlags": [
+            "mirror_choice_returned"
+          ],
+          "unlockCg": [
+            "maestro_shadow"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "version": 2,
+    "id": "ring_conspiracy_010",
+    "chapter": 10,
+    "route": "ring_conspiracy",
+    "locationId": "ring_atelier",
+    "backgroundAssetId": "bg.ring_atelier",
+    "cgAssetId": "cg.conspiracy_contract",
+    "tone": "gallery",
+    "portraits": [
+      {
+        "characterId": "callisto",
+        "portraitAssetId": "portrait.callisto.normal",
+        "position": "left",
+        "active": false,
+        "scale": 0.84
+      },
+      {
+        "characterId": "albina",
+        "portraitAssetId": "portrait.albina.furious",
+        "position": "center",
+        "active": true,
+        "scale": 1
+      },
+      {
+        "characterId": "protagonist",
+        "portraitAssetId": "portrait.protagonist.battle",
+        "position": "right",
+        "active": false,
+        "scale": 0.92
+      }
+    ],
+    "speaker": "卡利斯托",
+    "text": "卡利斯托拿出一枚\"合作者徽章\"，说只要她肯戴上，环指就放过你。阿尔比娜笑了一下，把徽章塞进你掌心：你来替我决定，要不要让我用它换你。",
+    "voiceAssetId": "voice.scene.ring_conspiracy_010",
+    "choices": [
+      {
+        "id": "conspiracy_010_throw_badge",
+        "text": "把徽章扔回卡利斯托脸上",
+        "nextSceneId": "ring_conspiracy_011",
+        "resultText": "你选择“把徽章扔回卡利斯托脸上”。环指代理人：代理人撕下礼貌，举出一卷写好剧本的胶片：今晚的故事已经定稿，结局是你们两个都被装裱。阿尔比娜握紧法西娅，低声让你替她改写最后一格分镜。",
+        "resultVoiceAssetId": "voice.result.conspiracy_010_throw_badge",
+        "effects": {
+          "values": {
+            "affectionAlbina": 3,
+            "trust": 4,
+            "danger": 3,
+            "artResonance": 2
+          },
+          "setFlags": [
+            "badge_thrown"
+          ],
+          "unlockCg": [
+            "combat_transition_01"
+          ]
+        }
+      },
+      {
+        "id": "conspiracy_010_keep_badge_unworn",
+        "text": "收下徽章，但谁都不许戴",
+        "nextSceneId": "ring_conspiracy_011",
+        "resultText": "你选择“收下徽章，但谁都不许戴”。环指代理人：代理人撕下礼貌，举出一卷写好剧本的胶片：今晚的故事已经定稿，结局是你们两个都被装裱。阿尔比娜握紧法西娅，低声让你替她改写最后一格分镜。",
+        "resultVoiceAssetId": "voice.result.conspiracy_010_keep_badge_unworn",
+        "effects": {
+          "values": {
+            "affectionAlbina": 2,
+            "trust": 3,
+            "danger": 1,
+            "artResonance": 4
+          },
+          "setFlags": [
+            "badge_kept_unworn"
+          ],
+          "unlockCg": [
+            "maestro_shadow"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "version": 2,
+    "id": "ring_conspiracy_011",
+    "chapter": 11,
+    "route": "ring_conspiracy",
+    "locationId": "spider_gallery",
+    "backgroundAssetId": "bg.spider_gallery",
+    "cgAssetId": "cg.maestro_shadow",
+    "tone": "threat",
+    "portraits": [
+      {
+        "characterId": "ren",
+        "portraitAssetId": "portrait.ren.normal",
+        "position": "left",
+        "active": false,
+        "scale": 0.82
+      },
+      {
+        "characterId": "albina",
+        "portraitAssetId": "portrait.albina.combat",
+        "position": "center",
+        "active": true,
+        "scale": 1
+      },
+      {
+        "characterId": "protagonist",
+        "portraitAssetId": "portrait.protagonist.battle",
+        "position": "right",
+        "active": false,
+        "scale": 0.92
+      }
+    ],
+    "speaker": "环指代理人",
+    "text": "代理人撕下礼貌，举出一卷写好剧本的胶片：今晚的故事已经定稿，结局是你们两个都被装裱。阿尔比娜握紧法西娅，低声让你替她改写最后一格分镜。",
+    "voiceAssetId": "voice.scene.ring_conspiracy_011",
+    "choices": [
+      {
+        "id": "conspiracy_011_rewrite_ending",
+        "text": "当众改写结局，让他们措手不及",
+        "nextSceneId": "ring_conspiracy_012",
+        "resultText": "你选择“当众改写结局，让他们措手不及”。维吉利乌斯：楼顶上，维吉利乌斯把一柄已经卸下锋刃的环指画刀扔在你们脚边：用这个结束今晚，或者用它开始下一次共谋，你们自己挑。",
+        "resultVoiceAssetId": "voice.result.conspiracy_011_rewrite_ending",
+        "effects": {
+          "values": {
+            "trust": 4,
+            "danger": 2,
+            "artResonance": 4
+          },
+          "setFlags": [
+            "ending_rewritten"
+          ],
+          "unlockCg": [
+            "ring_conspiracy_ending"
+          ]
+        }
+      },
+      {
+        "id": "conspiracy_011_burn_film",
+        "text": "直接烧掉胶片，让剧本作废",
+        "nextSceneId": "ring_conspiracy_012",
+        "resultText": "你选择“直接烧掉胶片，让剧本作废”。维吉利乌斯：楼顶上，维吉利乌斯把一柄已经卸下锋刃的环指画刀扔在你们脚边：用这个结束今晚，或者用它开始下一次共谋，你们自己挑。",
+        "resultVoiceAssetId": "voice.result.conspiracy_011_burn_film",
+        "effects": {
+          "values": {
+            "trust": 3,
+            "danger": 4,
+            "artResonance": 3
+          },
+          "setFlags": [
+            "film_burned"
+          ],
+          "unlockCg": [
+            "combat_transition_01"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "version": 2,
+    "id": "ring_conspiracy_012",
+    "chapter": 12,
+    "route": "ring_conspiracy",
+    "locationId": "city_rooftop",
+    "backgroundAssetId": "bg.city_rooftop",
+    "cgAssetId": "cg.araya_rooftop",
+    "tone": "threat",
+    "portraits": [
+      {
+        "characterId": "vergilius",
+        "portraitAssetId": "portrait.vergilius.normal",
+        "position": "left",
+        "active": false,
+        "scale": 0.84
+      },
+      {
+        "characterId": "albina",
+        "portraitAssetId": "portrait.albina.rain",
+        "position": "center",
+        "active": true,
+        "scale": 1
+      },
+      {
+        "characterId": "protagonist",
+        "portraitAssetId": "portrait.protagonist.resolve",
+        "position": "right",
+        "active": false,
+        "scale": 0.92
+      }
+    ],
+    "speaker": "维吉利乌斯",
+    "text": "楼顶上，维吉利乌斯把一柄已经卸下锋刃的环指画刀扔在你们脚边：用这个结束今晚，或者用它开始下一次共谋，你们自己挑。",
+    "voiceAssetId": "voice.scene.ring_conspiracy_012",
+    "choices": [
+      {
+        "id": "conspiracy_012_end_tonight",
+        "text": "选择结束今晚的共谋",
+        "nextSceneId": "ring_conspiracy_013",
+        "resultText": "你选择“选择结束今晚的共谋”。阿尔比娜：夜班巴士把你们带离环指的视线。她靠在窗边，把法西娅从胸口取出来放在你掌心一秒：今晚我借你这一秒心跳，作为不签名的合作凭证。",
+        "resultVoiceAssetId": "voice.result.conspiracy_012_end_tonight",
+        "effects": {
+          "values": {
+            "affectionAlbina": 2,
+            "trust": 3,
+            "danger": -2,
+            "artResonance": 3
+          },
+          "setFlags": [
+            "night_ended"
+          ],
+          "unlockCg": [
+            "ring_conspiracy_ending"
+          ]
+        }
+      },
+      {
+        "id": "conspiracy_012_keep_blade",
+        "text": "收下画刀，留给未来必要时再用",
+        "nextSceneId": "ring_conspiracy_013",
+        "resultText": "你选择“收下画刀，留给未来必要时再用”。阿尔比娜：夜班巴士把你们带离环指的视线。她靠在窗边，把法西娅从胸口取出来放在你掌心一秒：今晚我借你这一秒心跳，作为不签名的合作凭证。",
+        "resultVoiceAssetId": "voice.result.conspiracy_012_keep_blade",
+        "effects": {
+          "values": {
+            "affectionAlbina": 1,
+            "trust": 4,
+            "danger": 1,
+            "artResonance": 4
+          },
+          "setFlags": [
+            "blade_kept"
+          ],
+          "unlockCg": [
+            "maestro_shadow"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "version": 2,
+    "id": "ring_conspiracy_013",
+    "chapter": 13,
+    "route": "ring_conspiracy",
+    "locationId": "limbus_bus",
+    "backgroundAssetId": "bg.limbus_bus",
+    "cgAssetId": "cg.limbus_bus_night",
+    "tone": "quiet",
+    "portraits": [
+      {
+        "characterId": "dante",
+        "portraitAssetId": "portrait.dante.normal",
+        "position": "left",
+        "active": false,
+        "scale": 0.8
+      },
+      {
+        "characterId": "albina",
+        "portraitAssetId": "portrait.albina.rain",
+        "position": "center",
+        "active": true,
+        "scale": 1
+      },
+      {
+        "characterId": "protagonist",
+        "portraitAssetId": "portrait.protagonist.wet-hair",
+        "position": "right",
+        "active": false,
+        "scale": 0.9
+      }
+    ],
+    "speaker": "阿尔比娜",
+    "text": "夜班巴士把你们带离环指的视线。她靠在窗边，把法西娅从胸口取出来放在你掌心一秒：今晚我借你这一秒心跳，作为不签名的合作凭证。",
+    "voiceAssetId": "voice.scene.ring_conspiracy_013",
+    "choices": [
+      {
+        "id": "conspiracy_013_hold_one_second",
+        "text": "认真握住那一秒，不多不少",
+        "nextSceneId": "ring_conspiracy_014",
+        "resultText": "你选择“认真握住那一秒，不多不少”。卡利斯托：巢穴车站最后一盏灯下，卡利斯托最后一次出现，递来一张空白入场券：你愿意把今晚写进环指的目录，还是彻底从目录里抹去？",
+        "resultVoiceAssetId": "voice.result.conspiracy_013_hold_one_second",
+        "effects": {
+          "values": {
+            "affectionAlbina": 4,
+            "trust": 3,
+            "artResonance": 3
+          },
+          "setFlags": [
+            "one_second_held"
+          ],
+          "unlockCg": [
+            "fascia_heartbeat"
+          ]
+        }
+      },
+      {
+        "id": "conspiracy_013_return_gently",
+        "text": "提前把它轻轻送回，不占有",
+        "nextSceneId": "ring_conspiracy_014",
+        "resultText": "你选择“提前把它轻轻送回，不占有”。卡利斯托：巢穴车站最后一盏灯下，卡利斯托最后一次出现，递来一张空白入场券：你愿意把今晚写进环指的目录，还是彻底从目录里抹去？",
+        "resultVoiceAssetId": "voice.result.conspiracy_013_return_gently",
+        "effects": {
+          "values": {
+            "affectionAlbina": 2,
+            "trust": 5,
+            "artResonance": 4
+          },
+          "setFlags": [
+            "heartbeat_returned_early"
+          ],
+          "unlockCg": [
+            "rain_reflection"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "version": 2,
+    "id": "ring_conspiracy_014",
+    "chapter": 14,
+    "route": "ring_conspiracy",
+    "locationId": "nest_station",
+    "backgroundAssetId": "bg.nest_station",
+    "cgAssetId": "cg.ring_conspiracy_ending",
+    "tone": "gallery",
+    "portraits": [
+      {
+        "characterId": "callisto",
+        "portraitAssetId": "portrait.callisto.normal",
+        "position": "left",
+        "active": false,
+        "scale": 0.82
+      },
+      {
+        "characterId": "albina",
+        "portraitAssetId": "portrait.albina.maestro",
+        "position": "center",
+        "active": true,
+        "scale": 1
+      },
+      {
+        "characterId": "protagonist",
+        "portraitAssetId": "portrait.protagonist.shadow",
+        "position": "right",
+        "active": false,
+        "scale": 0.9
+      }
+    ],
+    "speaker": "卡利斯托",
+    "text": "巢穴车站最后一盏灯下，卡利斯托最后一次出现，递来一张空白入场券：你愿意把今晚写进环指的目录，还是彻底从目录里抹去？",
+    "voiceAssetId": "voice.scene.ring_conspiracy_014",
+    "choices": [
+      {
+        "id": "conspiracy_014_erase_from_catalog",
+        "text": "选择从环指目录里彻底抹去",
+        "nextSceneId": "ring_conspiracy_015",
+        "resultText": "你选择“选择从环指目录里彻底抹去”。阿尔比娜：城郊黎明把环指的灯火远远压在身后。她停下脚步，把那柄卸下锋刃的画刀插进土里：今晚的共谋到此为止，下一次见面，我会以自己的名义邀请你。",
+        "resultVoiceAssetId": "voice.result.conspiracy_014_erase_from_catalog",
+        "effects": {
+          "values": {
+            "affectionAlbina": 2,
+            "trust": 4,
+            "danger": -2,
+            "artResonance": 3
+          },
+          "setFlags": [
+            "catalog_erased"
+          ],
+          "unlockCg": [
+            "ring_conspiracy_ending"
+          ]
+        }
+      },
+      {
+        "id": "conspiracy_014_keep_one_line",
+        "text": "只保留一行不被署名的记录",
+        "nextSceneId": "ring_conspiracy_015",
+        "resultText": "你选择“只保留一行不被署名的记录”。阿尔比娜：城郊黎明把环指的灯火远远压在身后。她停下脚步，把那柄卸下锋刃的画刀插进土里：今晚的共谋到此为止，下一次见面，我会以自己的名义邀请你。",
+        "resultVoiceAssetId": "voice.result.conspiracy_014_keep_one_line",
+        "effects": {
+          "values": {
+            "affectionAlbina": 3,
+            "trust": 3,
+            "artResonance": 4
+          },
+          "setFlags": [
+            "anonymous_line_kept"
+          ],
+          "unlockCg": [
+            "maestro_shadow"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "version": 2,
+    "id": "ring_conspiracy_015",
+    "chapter": 15,
+    "route": "ring_conspiracy",
+    "locationId": "outskirts_dawn",
+    "backgroundAssetId": "bg.outskirts_dawn",
+    "cgAssetId": "cg.ring_conspiracy_ending",
+    "tone": "quiet",
+    "portraits": [
+      {
+        "characterId": "protagonist",
+        "portraitAssetId": "portrait.protagonist.resolve",
+        "position": "left",
+        "active": false,
+        "scale": 0.92
+      },
+      {
+        "characterId": "albina",
+        "portraitAssetId": "portrait.albina.endgame",
+        "position": "center",
+        "active": true,
+        "scale": 1
+      }
+    ],
+    "speaker": "阿尔比娜",
+    "text": "城郊黎明把环指的灯火远远压在身后。她停下脚步，把那柄卸下锋刃的画刀插进土里：今晚的共谋到此为止，下一次见面，我会以自己的名义邀请你。",
+    "voiceAssetId": "voice.scene.ring_conspiracy_015",
+    "choices": [
+      {
+        "id": "ring_conspiracy_route_final",
+        "text": "为环指共谋路线合上最后一卷胶片",
+        "nextSceneId": "ring_conspiracy_ending_gate",
+        "resultText": "你选择“为环指共谋路线合上最后一卷胶片”。环指共谋路线终章已封存，进入固定结局资格判定。",
+        "resultVoiceAssetId": "voice.result.ring_conspiracy_route_final",
+        "effects": {
+          "values": {
+            "affectionAlbina": 3,
+            "trust": 3,
+            "danger": -2,
+            "artResonance": 4
+          },
+          "setFlags": [
+            "ring_conspiracy_route_final"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "version": 2,
+    "id": "ring_conspiracy_ending_gate",
+    "chapter": 16,
+    "route": "ring_conspiracy",
+    "locationId": "outskirts_dawn",
+    "backgroundAssetId": "bg.outskirts_dawn",
+    "cgAssetId": "cg.ring_conspiracy_ending",
+    "tone": "quiet",
+    "portraits": [
+      {
+        "characterId": "protagonist",
+        "portraitAssetId": "portrait.protagonist.resolve",
+        "position": "left",
+        "active": false,
+        "scale": 0.92
+      },
+      {
+        "characterId": "albina",
+        "portraitAssetId": "portrait.albina.endgame",
+        "position": "center",
+        "active": true,
+        "scale": 1
+      }
+    ],
+    "speaker": "叙事记录",
+    "text": "环指共谋的全部选择已封存。系统将只依据持久状态判定结局，不请求任何运行时生成。",
+    "voiceAssetId": "voice.scene.ring_conspiracy_ending_gate",
+    "choices": [
+      {
+        "id": "ring_conspiracy_choose_true_ending",
+        "text": "确认彼此共同抵达的真结局",
+        "nextSceneId": "ring_conspiracy_ending_true",
+        "resultText": "结局判定完成：环指共谋·TRUE。资格规则与选择记录已固定写入。",
+        "resultVoiceAssetId": "voice.result.ring_conspiracy.true_ending",
+        "availability": {
+          "allOf": [
+            {
+              "kind": "flag",
+              "flag": "ring_conspiracy_route_final",
+              "equals": true
+            },
+            {
+              "kind": "value",
+              "key": "trust",
+              "operator": "gte",
+              "value": 49
+            },
+            {
+              "kind": "value",
+              "key": "artResonance",
+              "operator": "gte",
+              "value": 49
+            },
+            {
+              "kind": "value",
+              "key": "danger",
+              "operator": "lte",
+              "value": 15
+            }
+          ]
+        },
+        "effects": {
+          "setFlags": [
+            "ending_ring_conspiracy_true_qualified"
+          ]
+        }
+      },
+      {
+        "id": "ring_conspiracy_choose_normal_ending",
+        "text": "接受仍留有余白的普通结局",
+        "nextSceneId": "ring_conspiracy_ending_normal",
+        "resultText": "结局判定完成：环指共谋·NORMAL。资格规则与选择记录已固定写入。",
+        "resultVoiceAssetId": "voice.result.ring_conspiracy.normal_ending",
+        "availability": {
+          "allOf": [
+            {
+              "kind": "flag",
+              "flag": "ring_conspiracy_route_final",
+              "equals": true
+            }
+          ],
+          "fallback": true
+        },
+        "effects": {
+          "setFlags": [
+            "ending_ring_conspiracy_normal_qualified"
+          ]
+        }
+      },
+      {
+        "id": "ring_conspiracy_choose_bad_ending",
+        "text": "承认这次未能跨过的坏结局",
+        "nextSceneId": "ring_conspiracy_ending_bad",
+        "resultText": "结局判定完成：环指共谋·BAD。资格规则与选择记录已固定写入。",
+        "resultVoiceAssetId": "voice.result.ring_conspiracy.bad_ending",
+        "availability": {
+          "allOf": [
+            {
+              "kind": "flag",
+              "flag": "ring_conspiracy_route_final",
+              "equals": true
+            }
+          ],
+          "anyOf": [
+            {
+              "kind": "value",
+              "key": "trust",
+              "operator": "lte",
+              "value": 44
+            },
+            {
+              "kind": "value",
+              "key": "danger",
+              "operator": "gte",
+              "value": 18
+            }
+          ]
+        },
+        "effects": {
+          "setFlags": [
+            "ending_ring_conspiracy_bad_qualified"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "version": 2,
+    "id": "ring_conspiracy_ending_true",
+    "chapter": 17,
+    "route": "ring_conspiracy",
+    "locationId": "outskirts_dawn",
+    "backgroundAssetId": "bg.outskirts_dawn",
+    "cgAssetId": "cg.ring_conspiracy_ending",
+    "tone": "quiet",
+    "portraits": [
+      {
+        "characterId": "protagonist",
+        "portraitAssetId": "portrait.protagonist.resolve",
+        "position": "left",
+        "active": false,
+        "scale": 0.92
+      },
+      {
+        "characterId": "albina",
+        "portraitAssetId": "portrait.albina.endgame",
+        "position": "center",
+        "active": true,
+        "scale": 1
+      }
+    ],
+    "speaker": "阿尔比娜",
+    "text": "环指的目录里只剩一页无法归档的空白。阿尔比娜以自己的名字向你发出下一次邀请；你们不再是展品或棋子，而是彼此承认的共谋者。",
+    "voiceAssetId": "voice.scene.ring_conspiracy_ending_true",
+    "choices": [],
+    "ending": {
+      "route": "ring_conspiracy",
+      "kind": "true",
+      "eligibility": {
+        "allOf": [
+          {
+            "kind": "flag",
+            "flag": "ring_conspiracy_route_final",
+            "equals": true
+          },
+          {
+            "kind": "value",
+            "key": "trust",
+            "operator": "gte",
+            "value": 49
+          },
+          {
+            "kind": "value",
+            "key": "artResonance",
+            "operator": "gte",
+            "value": 49
+          },
+          {
+            "kind": "value",
+            "key": "danger",
+            "operator": "lte",
+            "value": 15
+          }
+        ]
+      }
+    }
+  },
+  {
+    "version": 2,
+    "id": "ring_conspiracy_ending_normal",
+    "chapter": 17,
+    "route": "ring_conspiracy",
+    "locationId": "outskirts_dawn",
+    "backgroundAssetId": "bg.outskirts_dawn",
+    "cgAssetId": "cg.ring_conspiracy_ending",
+    "tone": "quiet",
+    "portraits": [
+      {
+        "characterId": "protagonist",
+        "portraitAssetId": "portrait.protagonist.resolve",
+        "position": "left",
+        "active": false,
+        "scale": 0.92
+      },
+      {
+        "characterId": "albina",
+        "portraitAssetId": "portrait.albina.endgame",
+        "position": "center",
+        "active": true,
+        "scale": 1
+      }
+    ],
+    "speaker": "阿尔比娜",
+    "text": "你们离开了画廊，也留下了一条匿名记录作为制衡。危险没有消失，但契约已被改写；阿尔比娜把下一次会面留给更安全的夜晚。",
+    "voiceAssetId": "voice.scene.ring_conspiracy_ending_normal",
+    "choices": [],
+    "ending": {
+      "route": "ring_conspiracy",
+      "kind": "normal",
+      "eligibility": {
+        "allOf": [
+          {
+            "kind": "flag",
+            "flag": "ring_conspiracy_route_final",
+            "equals": true
+          }
+        ],
+        "fallback": true
+      }
+    }
+  },
+  {
+    "version": 2,
+    "id": "ring_conspiracy_ending_bad",
+    "chapter": 17,
+    "route": "ring_conspiracy",
+    "locationId": "outskirts_dawn",
+    "backgroundAssetId": "bg.outskirts_dawn",
+    "cgAssetId": "cg.ring_conspiracy_ending",
+    "tone": "quiet",
+    "portraits": [
+      {
+        "characterId": "protagonist",
+        "portraitAssetId": "portrait.protagonist.resolve",
+        "position": "left",
+        "active": false,
+        "scale": 0.92
+      },
+      {
+        "characterId": "albina",
+        "portraitAssetId": "portrait.albina.endgame",
+        "position": "center",
+        "active": true,
+        "scale": 1
+      }
+    ],
+    "speaker": "阿尔比娜",
+    "text": "追击停止时，代价已经写进彼此的沉默。你们逃出了装裱，却没能保住共同节奏；阿尔比娜独自带走那柄无锋画刀，没有约定再见。",
+    "voiceAssetId": "voice.scene.ring_conspiracy_ending_bad",
+    "choices": [],
+    "ending": {
+      "route": "ring_conspiracy",
+      "kind": "bad",
+      "eligibility": {
+        "allOf": [
+          {
+            "kind": "flag",
+            "flag": "ring_conspiracy_route_final",
+            "equals": true
+          }
+        ],
+        "anyOf": [
+          {
+            "kind": "value",
+            "key": "trust",
+            "operator": "lte",
+            "value": 44
+          },
+          {
+            "kind": "value",
+            "key": "danger",
+            "operator": "gte",
+            "value": 18
+          }
+        ]
+      }
+    }
+  }
+]

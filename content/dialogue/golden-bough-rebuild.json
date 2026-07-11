@@ -1,0 +1,1379 @@
+[
+  {
+    "version": 2,
+    "id": "golden_bough_001",
+    "chapter": 1,
+    "route": "golden_bough_rebuild",
+    "locationId": "golden_bough_fault",
+    "backgroundAssetId": "bg.golden_bough",
+    "cgAssetId": "cg.rebuild_awakening",
+    "tone": "golden",
+    "portraits": [
+      {
+        "characterId": "albina",
+        "portraitAssetId": "portrait.albina.golden-bough",
+        "position": "center",
+        "active": true,
+        "scale": 1
+      },
+      {
+        "characterId": "protagonist",
+        "portraitAssetId": "portrait.protagonist.serious",
+        "position": "left",
+        "active": false,
+        "scale": 0.9
+      }
+    ],
+    "speaker": "阿尔比娜",
+    "text": "金色光尘沿着她的义体裂缝回流。她先确认的不是自己，而是法西娅是否还在呼吸。",
+    "voiceAssetId": "voice.scene.golden_bough_001",
+    "choices": [
+      {
+        "id": "rebuild_anchor",
+        "text": "成为她的记忆锚点",
+        "nextSceneId": "golden_bough_002",
+        "resultText": "你选择“成为她的记忆锚点”。旁白：镜面里的阿尔比娜有无数个切口，但每一道切口都避开了你替她守住的名字。",
+        "resultVoiceAssetId": "voice.result.rebuild_anchor",
+        "effects": {
+          "values": {
+            "affectionAlbina": 1,
+            "trust": 5,
+            "artResonance": 2
+          },
+          "setFlags": [
+            "player_memory_anchor"
+          ],
+          "unlockCg": [
+            "surgery_of_memory"
+          ]
+        }
+      },
+      {
+        "id": "rebuild_question_fascia",
+        "text": "先检查法西娅",
+        "nextSceneId": "golden_bough_002",
+        "resultText": "你选择“先检查法西娅”。旁白：镜面里的阿尔比娜有无数个切口，但每一道切口都避开了你替她守住的名字。",
+        "resultVoiceAssetId": "voice.result.rebuild_question_fascia",
+        "effects": {
+          "values": {
+            "trust": 2,
+            "danger": 1,
+            "artResonance": 4
+          },
+          "setFlags": [
+            "fascia_checked_first"
+          ],
+          "unlockCg": [
+            "fascia_heartbeat"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "version": 2,
+    "id": "golden_bough_002",
+    "chapter": 2,
+    "route": "golden_bough_rebuild",
+    "locationId": "mirror_corridor",
+    "backgroundAssetId": "bg.mirror_corridor",
+    "cgAssetId": "cg.golden_bough_ending",
+    "tone": "golden",
+    "portraits": [
+      {
+        "characterId": "albina",
+        "portraitAssetId": "portrait.albina.endgame",
+        "position": "right",
+        "active": true,
+        "scale": 1
+      },
+      {
+        "characterId": "protagonist",
+        "portraitAssetId": "portrait.protagonist.resolve",
+        "position": "left",
+        "active": false,
+        "scale": 0.94
+      }
+    ],
+    "speaker": "旁白",
+    "text": "镜面里的阿尔比娜有无数个切口，但每一道切口都避开了你替她守住的名字。",
+    "voiceAssetId": "voice.scene.golden_bough_002",
+    "choices": [
+      {
+        "id": "rebuild_push_into_raid",
+        "text": "带着记忆锚点突入金枝异常现场",
+        "nextSceneId": "golden_bough_003",
+        "resultText": "你选择“带着记忆锚点突入金枝异常现场”。浮士德：金枝残响把病床、画架和战场叠成一张薄膜。浮士德只给出结论：如果锚点断裂，阿尔比娜会把自己误认为一件已经完成的作品。",
+        "resultVoiceAssetId": "voice.result.rebuild_push_into_raid",
+        "effects": {
+          "values": {
+            "trust": 3,
+            "danger": 2,
+            "artResonance": 3
+          },
+          "setFlags": [
+            "rebuild_raid_committed"
+          ],
+          "unlockCg": [
+            "lce_raid"
+          ]
+        }
+      },
+      {
+        "id": "return_opening_from_rebuild",
+        "text": "回到路线选择",
+        "nextSceneId": "opening_001",
+        "resultText": "你选择“回到路线选择”。阿尔比娜：晚上好，{{user}}。请不要站得太远，我还没决定该把你称作观众、朋友，还是一块值得等待的画布。",
+        "resultVoiceAssetId": "voice.result.return_opening_from_rebuild",
+        "effects": {
+          "values": {
+            "trust": 1
+          },
+          "setFlags": [
+            "rebuild_looped"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "version": 2,
+    "id": "golden_bough_003",
+    "chapter": 3,
+    "route": "golden_bough_rebuild",
+    "locationId": "lce_lab",
+    "backgroundAssetId": "bg.lce_lab",
+    "cgAssetId": "cg.lce_raid",
+    "tone": "threat",
+    "portraits": [
+      {
+        "characterId": "faust",
+        "portraitAssetId": "portrait.faust.normal",
+        "position": "left",
+        "active": false,
+        "scale": 0.82
+      },
+      {
+        "characterId": "albina",
+        "portraitAssetId": "portrait.albina.fascia-open",
+        "position": "center",
+        "active": true,
+        "scale": 1
+      },
+      {
+        "characterId": "protagonist",
+        "portraitAssetId": "portrait.protagonist.battle",
+        "position": "right",
+        "active": false,
+        "scale": 0.92
+      }
+    ],
+    "speaker": "浮士德",
+    "text": "金枝残响把病床、画架和战场叠成一张薄膜。浮士德只给出结论：如果锚点断裂，阿尔比娜会把自己误认为一件已经完成的作品。",
+    "voiceAssetId": "voice.scene.golden_bough_003",
+    "choices": [
+      {
+        "id": "rebuild_cut_false_completion",
+        "text": "切断“完成品”的错误定义",
+        "nextSceneId": "golden_bough_004",
+        "resultText": "你选择“切断“完成品”的错误定义”。维吉利乌斯：楼顶的风把金色光尘吹成刀刃。维吉利乌斯没有劝阻，只提醒你：重构不是修好她，而是承认她有权决定哪些缺口继续存在。",
+        "resultVoiceAssetId": "voice.result.rebuild_cut_false_completion",
+        "effects": {
+          "values": {
+            "trust": 4,
+            "danger": 1,
+            "artResonance": 4
+          },
+          "setFlags": [
+            "false_completion_cut"
+          ],
+          "unlockCg": [
+            "surgery_of_memory"
+          ]
+        }
+      },
+      {
+        "id": "rebuild_guard_fascia_pulse",
+        "text": "守住法西娅的心跳频率",
+        "nextSceneId": "golden_bough_004",
+        "resultText": "你选择“守住法西娅的心跳频率”。维吉利乌斯：楼顶的风把金色光尘吹成刀刃。维吉利乌斯没有劝阻，只提醒你：重构不是修好她，而是承认她有权决定哪些缺口继续存在。",
+        "resultVoiceAssetId": "voice.result.rebuild_guard_fascia_pulse",
+        "effects": {
+          "values": {
+            "affectionAlbina": 1,
+            "trust": 3,
+            "artResonance": 3
+          },
+          "setFlags": [
+            "fascia_pulse_guarded"
+          ],
+          "unlockCg": [
+            "fascia_heartbeat"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "version": 2,
+    "id": "golden_bough_004",
+    "chapter": 4,
+    "route": "golden_bough_rebuild",
+    "locationId": "city_rooftop",
+    "backgroundAssetId": "bg.city_rooftop",
+    "cgAssetId": "cg.araya_rooftop",
+    "tone": "golden",
+    "portraits": [
+      {
+        "characterId": "vergilius",
+        "portraitAssetId": "portrait.vergilius.normal",
+        "position": "left",
+        "active": false,
+        "scale": 0.84
+      },
+      {
+        "characterId": "albina",
+        "portraitAssetId": "portrait.albina.golden-bough",
+        "position": "center",
+        "active": true,
+        "scale": 1
+      },
+      {
+        "characterId": "protagonist",
+        "portraitAssetId": "portrait.protagonist.resolve",
+        "position": "right",
+        "active": false,
+        "scale": 0.92
+      }
+    ],
+    "speaker": "维吉利乌斯",
+    "text": "楼顶的风把金色光尘吹成刀刃。维吉利乌斯没有劝阻，只提醒你：重构不是修好她，而是承认她有权决定哪些缺口继续存在。",
+    "voiceAssetId": "voice.scene.golden_bough_004",
+    "choices": [
+      {
+        "id": "rebuild_accept_missing_pieces",
+        "text": "承认缺口也是她的结构",
+        "nextSceneId": "golden_bough_005",
+        "resultText": "你选择“承认缺口也是她的结构”。阿尔比娜：最后一面镜子没有给她完整倒影，只给出一条可以返回的路。她握住你的手腕，确认那不是束缚，而是一次被允许的回航。",
+        "resultVoiceAssetId": "voice.result.rebuild_accept_missing_pieces",
+        "effects": {
+          "values": {
+            "affectionAlbina": 2,
+            "trust": 4,
+            "artResonance": 2
+          },
+          "setFlags": [
+            "missing_pieces_accepted"
+          ],
+          "unlockCg": [
+            "golden_bough_ending"
+          ]
+        }
+      },
+      {
+        "id": "rebuild_use_rooftop_signal",
+        "text": "用楼顶信号重排记忆顺序",
+        "nextSceneId": "golden_bough_005",
+        "resultText": "你选择“用楼顶信号重排记忆顺序”。阿尔比娜：最后一面镜子没有给她完整倒影，只给出一条可以返回的路。她握住你的手腕，确认那不是束缚，而是一次被允许的回航。",
+        "resultVoiceAssetId": "voice.result.rebuild_use_rooftop_signal",
+        "effects": {
+          "values": {
+            "trust": 3,
+            "danger": -1,
+            "artResonance": 4
+          },
+          "setFlags": [
+            "rooftop_signal_reordered"
+          ],
+          "unlockCg": [
+            "araya_rooftop"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "version": 2,
+    "id": "golden_bough_005",
+    "chapter": 5,
+    "route": "golden_bough_rebuild",
+    "locationId": "mirror_corridor",
+    "backgroundAssetId": "bg.mirror_corridor",
+    "cgAssetId": "cg.golden_bough_ending",
+    "tone": "golden",
+    "portraits": [
+      {
+        "characterId": "golden_apparition",
+        "portraitAssetId": "portrait.golden_apparition.normal",
+        "position": "left",
+        "active": false,
+        "scale": 0.82
+      },
+      {
+        "characterId": "albina",
+        "portraitAssetId": "portrait.albina.endgame",
+        "position": "center",
+        "active": true,
+        "scale": 1
+      },
+      {
+        "characterId": "protagonist",
+        "portraitAssetId": "portrait.protagonist.resolve",
+        "position": "right",
+        "active": false,
+        "scale": 0.92
+      }
+    ],
+    "speaker": "阿尔比娜",
+    "text": "最后一面镜子没有给她完整倒影，只给出一条可以返回的路。她握住你的手腕，确认那不是束缚，而是一次被允许的回航。",
+    "voiceAssetId": "voice.scene.golden_bough_005",
+    "choices": [
+      {
+        "id": "golden_bough_route_complete",
+        "text": "记录金枝重构路线的暂定结局",
+        "nextSceneId": "golden_bough_006",
+        "resultText": "你选择“记录金枝重构路线的暂定结局”。浮士德：记忆手术台上，金色光尘在义体接缝里像旧伤口一样反复渗出。浮士德递过一把刻度尺：她说她想重构的不是身体，是你替她记下却没敢念出来的那段。",
+        "resultVoiceAssetId": "voice.result.golden_bough_route_complete",
+        "effects": {
+          "values": {
+            "affectionAlbina": 1,
+            "trust": 2,
+            "danger": -1,
+            "artResonance": 3
+          },
+          "setFlags": [
+            "golden_bough_route_complete"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "version": 2,
+    "id": "golden_bough_006",
+    "chapter": 6,
+    "route": "golden_bough_rebuild",
+    "locationId": "lce_lab",
+    "backgroundAssetId": "bg.lce_lab",
+    "cgAssetId": "cg.surgery_of_memory",
+    "tone": "golden",
+    "portraits": [
+      {
+        "characterId": "faust",
+        "portraitAssetId": "portrait.faust.normal",
+        "position": "left",
+        "active": false,
+        "scale": 0.82
+      },
+      {
+        "characterId": "albina",
+        "portraitAssetId": "portrait.albina.fascia-open",
+        "position": "center",
+        "active": true,
+        "scale": 1
+      },
+      {
+        "characterId": "protagonist",
+        "portraitAssetId": "portrait.protagonist.serious",
+        "position": "right",
+        "active": false,
+        "scale": 0.9
+      }
+    ],
+    "speaker": "浮士德",
+    "text": "记忆手术台上，金色光尘在义体接缝里像旧伤口一样反复渗出。浮士德递过一把刻度尺：她说她想重构的不是身体，是你替她记下却没敢念出来的那段。",
+    "voiceAssetId": "voice.scene.golden_bough_006",
+    "choices": [
+      {
+        "id": "rebuild_006_read_aloud",
+        "text": "把那段记忆当着她的面念出来",
+        "nextSceneId": "golden_bough_007",
+        "resultText": "你选择“把那段记忆当着她的面念出来”。阿尔比娜：金枝裂隙里的回声全是她过去没说完的句子。她让法西娅在你和她之间选择一个频率，说这次她要先听见自己的节拍，再决定要不要跟上。",
+        "resultVoiceAssetId": "voice.result.rebuild_006_read_aloud",
+        "effects": {
+          "values": {
+            "affectionAlbina": 2,
+            "trust": 4,
+            "artResonance": 3
+          },
+          "setFlags": [
+            "memory_read_aloud"
+          ],
+          "unlockCg": [
+            "surgery_of_memory"
+          ]
+        }
+      },
+      {
+        "id": "rebuild_006_keep_silent_anchor",
+        "text": "只做锚点，不替她出声",
+        "nextSceneId": "golden_bough_007",
+        "resultText": "你选择“只做锚点，不替她出声”。阿尔比娜：金枝裂隙里的回声全是她过去没说完的句子。她让法西娅在你和她之间选择一个频率，说这次她要先听见自己的节拍，再决定要不要跟上。",
+        "resultVoiceAssetId": "voice.result.rebuild_006_keep_silent_anchor",
+        "effects": {
+          "values": {
+            "affectionAlbina": 1,
+            "trust": 5,
+            "artResonance": 2
+          },
+          "setFlags": [
+            "silent_anchor_kept"
+          ],
+          "unlockCg": [
+            "fascia_heartbeat"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "version": 2,
+    "id": "golden_bough_007",
+    "chapter": 7,
+    "route": "golden_bough_rebuild",
+    "locationId": "golden_bough_fault",
+    "backgroundAssetId": "bg.golden_bough",
+    "cgAssetId": "cg.rebuild_awakening",
+    "tone": "golden",
+    "portraits": [
+      {
+        "characterId": "albina",
+        "portraitAssetId": "portrait.albina.golden-bough",
+        "position": "center",
+        "active": true,
+        "scale": 1
+      },
+      {
+        "characterId": "protagonist",
+        "portraitAssetId": "portrait.protagonist.battle",
+        "position": "left",
+        "active": false,
+        "scale": 0.92
+      }
+    ],
+    "speaker": "阿尔比娜",
+    "text": "金枝裂隙里的回声全是她过去没说完的句子。她让法西娅在你和她之间选择一个频率，说这次她要先听见自己的节拍，再决定要不要跟上。",
+    "voiceAssetId": "voice.scene.golden_bough_007",
+    "choices": [
+      {
+        "id": "rebuild_007_match_her_pulse",
+        "text": "按她的节拍调整呼吸",
+        "nextSceneId": "golden_bough_008",
+        "resultText": "你选择“按她的节拍调整呼吸”。维吉利乌斯：LCE 的搜捕光柱扫过楼顶。维吉利乌斯扔下一句话：你救不回完整的她，但你能决定让她以哪个版本继续存在。阿尔比娜握紧法西娅，等你下判断。",
+        "resultVoiceAssetId": "voice.result.rebuild_007_match_her_pulse",
+        "effects": {
+          "values": {
+            "affectionAlbina": 3,
+            "trust": 4,
+            "artResonance": 3
+          },
+          "setFlags": [
+            "pulse_matched"
+          ],
+          "unlockCg": [
+            "fascia_heartbeat"
+          ]
+        }
+      },
+      {
+        "id": "rebuild_007_stay_own_rhythm",
+        "text": "保留你自己的呼吸节奏，让她对齐",
+        "nextSceneId": "golden_bough_008",
+        "resultText": "你选择“保留你自己的呼吸节奏，让她对齐”。维吉利乌斯：LCE 的搜捕光柱扫过楼顶。维吉利乌斯扔下一句话：你救不回完整的她，但你能决定让她以哪个版本继续存在。阿尔比娜握紧法西娅，等你下判断。",
+        "resultVoiceAssetId": "voice.result.rebuild_007_stay_own_rhythm",
+        "effects": {
+          "values": {
+            "affectionAlbina": 1,
+            "trust": 3,
+            "artResonance": 4
+          },
+          "setFlags": [
+            "own_rhythm_kept"
+          ],
+          "unlockCg": [
+            "surgery_of_memory"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "version": 2,
+    "id": "golden_bough_008",
+    "chapter": 8,
+    "route": "golden_bough_rebuild",
+    "locationId": "city_rooftop",
+    "backgroundAssetId": "bg.city_rooftop",
+    "cgAssetId": "cg.araya_rooftop",
+    "tone": "threat",
+    "portraits": [
+      {
+        "characterId": "vergilius",
+        "portraitAssetId": "portrait.vergilius.normal",
+        "position": "left",
+        "active": false,
+        "scale": 0.84
+      },
+      {
+        "characterId": "albina",
+        "portraitAssetId": "portrait.albina.combat",
+        "position": "center",
+        "active": true,
+        "scale": 1
+      },
+      {
+        "characterId": "protagonist",
+        "portraitAssetId": "portrait.protagonist.battle",
+        "position": "right",
+        "active": false,
+        "scale": 0.92
+      }
+    ],
+    "speaker": "维吉利乌斯",
+    "text": "LCE 的搜捕光柱扫过楼顶。维吉利乌斯扔下一句话：你救不回完整的她，但你能决定让她以哪个版本继续存在。阿尔比娜握紧法西娅，等你下判断。",
+    "voiceAssetId": "voice.scene.golden_bough_008",
+    "choices": [
+      {
+        "id": "rebuild_008_protect_current_self",
+        "text": "保护此刻这个尚未完成的她",
+        "nextSceneId": "golden_bough_009",
+        "resultText": "你选择“保护此刻这个尚未完成的她”。金色幻影：镜廊深处的金色幻影模仿着她的旧姿态，问她：要不要把我装回去，省得你再做一个有缺口的自己？她抬头看你，等你回答那个不属于她的问题。",
+        "resultVoiceAssetId": "voice.result.rebuild_008_protect_current_self",
+        "effects": {
+          "values": {
+            "affectionAlbina": 2,
+            "trust": 4,
+            "danger": 1,
+            "artResonance": 3
+          },
+          "setFlags": [
+            "current_self_protected"
+          ],
+          "unlockCg": [
+            "lce_raid"
+          ]
+        }
+      },
+      {
+        "id": "rebuild_008_trade_old_memory",
+        "text": "用一段旧记忆换取撤退时间",
+        "nextSceneId": "golden_bough_009",
+        "resultText": "你选择“用一段旧记忆换取撤退时间”。金色幻影：镜廊深处的金色幻影模仿着她的旧姿态，问她：要不要把我装回去，省得你再做一个有缺口的自己？她抬头看你，等你回答那个不属于她的问题。",
+        "resultVoiceAssetId": "voice.result.rebuild_008_trade_old_memory",
+        "effects": {
+          "values": {
+            "trust": 2,
+            "danger": -2,
+            "artResonance": 4
+          },
+          "setFlags": [
+            "memory_traded"
+          ],
+          "unlockCg": [
+            "surgery_of_memory"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "version": 2,
+    "id": "golden_bough_009",
+    "chapter": 9,
+    "route": "golden_bough_rebuild",
+    "locationId": "mirror_corridor",
+    "backgroundAssetId": "bg.mirror_corridor",
+    "cgAssetId": "cg.golden_bough_ending",
+    "tone": "golden",
+    "portraits": [
+      {
+        "characterId": "golden_apparition",
+        "portraitAssetId": "portrait.golden_apparition.normal",
+        "position": "left",
+        "active": false,
+        "scale": 0.82
+      },
+      {
+        "characterId": "albina",
+        "portraitAssetId": "portrait.albina.endgame",
+        "position": "center",
+        "active": true,
+        "scale": 1
+      },
+      {
+        "characterId": "protagonist",
+        "portraitAssetId": "portrait.protagonist.resolve",
+        "position": "right",
+        "active": false,
+        "scale": 0.92
+      }
+    ],
+    "speaker": "金色幻影",
+    "text": "镜廊深处的金色幻影模仿着她的旧姿态，问她：要不要把我装回去，省得你再做一个有缺口的自己？她抬头看你，等你回答那个不属于她的问题。",
+    "voiceAssetId": "voice.scene.golden_bough_009",
+    "choices": [
+      {
+        "id": "rebuild_009_refuse_perfect_copy",
+        "text": "替她拒绝那个完美复制品",
+        "nextSceneId": "golden_bough_010",
+        "resultText": "你选择“替她拒绝那个完美复制品”。LCE 医师：医师递来一份重构协议：只要她愿意封存一段记忆，LCE 就允许她保留现在的外形。她把笔尖停在协议上，没有签字，先看你的反应。",
+        "resultVoiceAssetId": "voice.result.rebuild_009_refuse_perfect_copy",
+        "effects": {
+          "values": {
+            "affectionAlbina": 2,
+            "trust": 5,
+            "artResonance": 3
+          },
+          "setFlags": [
+            "perfect_copy_refused"
+          ],
+          "unlockCg": [
+            "golden_bough_ending"
+          ]
+        }
+      },
+      {
+        "id": "rebuild_009_hand_question_back",
+        "text": "把问题原样交还给她",
+        "nextSceneId": "golden_bough_010",
+        "resultText": "你选择“把问题原样交还给她”。LCE 医师：医师递来一份重构协议：只要她愿意封存一段记忆，LCE 就允许她保留现在的外形。她把笔尖停在协议上，没有签字，先看你的反应。",
+        "resultVoiceAssetId": "voice.result.rebuild_009_hand_question_back",
+        "effects": {
+          "values": {
+            "affectionAlbina": 3,
+            "trust": 3,
+            "artResonance": 4
+          },
+          "setFlags": [
+            "question_returned"
+          ],
+          "unlockCg": [
+            "araya_rooftop"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "version": 2,
+    "id": "golden_bough_010",
+    "chapter": 10,
+    "route": "golden_bough_rebuild",
+    "locationId": "lce_lab",
+    "backgroundAssetId": "bg.lce_lab",
+    "cgAssetId": "cg.lce_raid",
+    "tone": "threat",
+    "portraits": [
+      {
+        "characterId": "lce_doctor",
+        "portraitAssetId": "portrait.lce_doctor.normal",
+        "position": "left",
+        "active": false,
+        "scale": 0.84
+      },
+      {
+        "characterId": "albina",
+        "portraitAssetId": "portrait.albina.surgical",
+        "position": "center",
+        "active": true,
+        "scale": 1
+      },
+      {
+        "characterId": "protagonist",
+        "portraitAssetId": "portrait.protagonist.serious",
+        "position": "right",
+        "active": false,
+        "scale": 0.9
+      }
+    ],
+    "speaker": "LCE 医师",
+    "text": "医师递来一份重构协议：只要她愿意封存一段记忆，LCE 就允许她保留现在的外形。她把笔尖停在协议上，没有签字，先看你的反应。",
+    "voiceAssetId": "voice.scene.golden_bough_010",
+    "choices": [
+      {
+        "id": "rebuild_010_veto_sealing",
+        "text": "当着医师反对封存记忆",
+        "nextSceneId": "golden_bough_011",
+        "resultText": "你选择“当着医师反对封存记忆”。阿尔比娜：夜班巴士上，她把额头轻轻抵在窗玻璃上。她说：你今天替我守住的，不是金枝，是一个允许我继续修改自己的我。",
+        "resultVoiceAssetId": "voice.result.rebuild_010_veto_sealing",
+        "effects": {
+          "values": {
+            "affectionAlbina": 2,
+            "trust": 4,
+            "danger": 2,
+            "artResonance": 3
+          },
+          "setFlags": [
+            "memory_seal_vetoed"
+          ],
+          "unlockCg": [
+            "lce_raid"
+          ]
+        }
+      },
+      {
+        "id": "rebuild_010_ask_her_choice",
+        "text": "低声问她自己想怎么签",
+        "nextSceneId": "golden_bough_011",
+        "resultText": "你选择“低声问她自己想怎么签”。阿尔比娜：夜班巴士上，她把额头轻轻抵在窗玻璃上。她说：你今天替我守住的，不是金枝，是一个允许我继续修改自己的我。",
+        "resultVoiceAssetId": "voice.result.rebuild_010_ask_her_choice",
+        "effects": {
+          "values": {
+            "affectionAlbina": 3,
+            "trust": 5,
+            "artResonance": 2
+          },
+          "setFlags": [
+            "seal_choice_hers"
+          ],
+          "unlockCg": [
+            "surgery_of_memory"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "version": 2,
+    "id": "golden_bough_011",
+    "chapter": 11,
+    "route": "golden_bough_rebuild",
+    "locationId": "limbus_bus",
+    "backgroundAssetId": "bg.limbus_bus",
+    "cgAssetId": "cg.limbus_bus_night",
+    "tone": "quiet",
+    "portraits": [
+      {
+        "characterId": "dante",
+        "portraitAssetId": "portrait.dante.normal",
+        "position": "left",
+        "active": false,
+        "scale": 0.8
+      },
+      {
+        "characterId": "albina",
+        "portraitAssetId": "portrait.albina.rain",
+        "position": "center",
+        "active": true,
+        "scale": 1
+      },
+      {
+        "characterId": "protagonist",
+        "portraitAssetId": "portrait.protagonist.tender",
+        "position": "right",
+        "active": false,
+        "scale": 0.9
+      }
+    ],
+    "speaker": "阿尔比娜",
+    "text": "夜班巴士上，她把额头轻轻抵在窗玻璃上。她说：你今天替我守住的，不是金枝，是一个允许我继续修改自己的我。",
+    "voiceAssetId": "voice.scene.golden_bough_011",
+    "choices": [
+      {
+        "id": "rebuild_011_sit_beside",
+        "text": "坐到她旁边，不说话",
+        "nextSceneId": "golden_bough_012",
+        "resultText": "你选择“坐到她旁边，不说话”。环指代理人：环指工坊里有人拿出一枚金枝仿品，提议替她换掉所有\"未完成\"的接口。她握紧法西娅，等你判断这是救济，还是又一次把她写成完成品的尝试。",
+        "resultVoiceAssetId": "voice.result.rebuild_011_sit_beside",
+        "effects": {
+          "values": {
+            "affectionAlbina": 4,
+            "trust": 3,
+            "artResonance": 2
+          },
+          "setFlags": [
+            "silent_companionship"
+          ],
+          "unlockCg": [
+            "limbus_bus_night"
+          ]
+        }
+      },
+      {
+        "id": "rebuild_011_ask_next_revision",
+        "text": "问她下一笔想修改哪里",
+        "nextSceneId": "golden_bough_012",
+        "resultText": "你选择“问她下一笔想修改哪里”。环指代理人：环指工坊里有人拿出一枚金枝仿品，提议替她换掉所有\"未完成\"的接口。她握紧法西娅，等你判断这是救济，还是又一次把她写成完成品的尝试。",
+        "resultVoiceAssetId": "voice.result.rebuild_011_ask_next_revision",
+        "effects": {
+          "values": {
+            "affectionAlbina": 2,
+            "trust": 4,
+            "artResonance": 3
+          },
+          "setFlags": [
+            "next_revision_asked"
+          ],
+          "unlockCg": [
+            "araya_rooftop"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "version": 2,
+    "id": "golden_bough_012",
+    "chapter": 12,
+    "route": "golden_bough_rebuild",
+    "locationId": "ring_atelier",
+    "backgroundAssetId": "bg.ring_atelier",
+    "cgAssetId": "cg.conspiracy_contract",
+    "tone": "gallery",
+    "portraits": [
+      {
+        "characterId": "ren",
+        "portraitAssetId": "portrait.ren.normal",
+        "position": "left",
+        "active": false,
+        "scale": 0.84
+      },
+      {
+        "characterId": "albina",
+        "portraitAssetId": "portrait.albina.furious",
+        "position": "center",
+        "active": true,
+        "scale": 1
+      },
+      {
+        "characterId": "protagonist",
+        "portraitAssetId": "portrait.protagonist.battle",
+        "position": "right",
+        "active": false,
+        "scale": 0.92
+      }
+    ],
+    "speaker": "环指代理人",
+    "text": "环指工坊里有人拿出一枚金枝仿品，提议替她换掉所有\"未完成\"的接口。她握紧法西娅，等你判断这是救济，还是又一次把她写成完成品的尝试。",
+    "voiceAssetId": "voice.scene.golden_bough_012",
+    "choices": [
+      {
+        "id": "rebuild_012_break_contract",
+        "text": "当面撕毁那份替换协议",
+        "nextSceneId": "golden_bough_013",
+        "resultText": "你选择“当面撕毁那份替换协议”。阿尔比娜：回到金枝裂隙，她终于允许自己颤抖。她说：你不肯替我决定形状，那我能不能请求你，在我下一次重构失败时，仍然叫出我现在的名字？",
+        "resultVoiceAssetId": "voice.result.rebuild_012_break_contract",
+        "effects": {
+          "values": {
+            "trust": 4,
+            "danger": 2,
+            "artResonance": 3
+          },
+          "setFlags": [
+            "replacement_contract_torn"
+          ],
+          "unlockCg": [
+            "conspiracy_contract"
+          ]
+        }
+      },
+      {
+        "id": "rebuild_012_negotiate_terms",
+        "text": "替她重新谈判条件，不让她独自承担",
+        "nextSceneId": "golden_bough_013",
+        "resultText": "你选择“替她重新谈判条件，不让她独自承担”。阿尔比娜：回到金枝裂隙，她终于允许自己颤抖。她说：你不肯替我决定形状，那我能不能请求你，在我下一次重构失败时，仍然叫出我现在的名字？",
+        "resultVoiceAssetId": "voice.result.rebuild_012_negotiate_terms",
+        "effects": {
+          "values": {
+            "affectionAlbina": 2,
+            "trust": 3,
+            "artResonance": 4
+          },
+          "setFlags": [
+            "terms_renegotiated"
+          ],
+          "unlockCg": [
+            "surgery_of_memory"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "version": 2,
+    "id": "golden_bough_013",
+    "chapter": 13,
+    "route": "golden_bough_rebuild",
+    "locationId": "golden_bough_fault",
+    "backgroundAssetId": "bg.golden_bough",
+    "cgAssetId": "cg.golden_bough_ending",
+    "tone": "golden",
+    "portraits": [
+      {
+        "characterId": "albina",
+        "portraitAssetId": "portrait.albina.golden-bough",
+        "position": "center",
+        "active": true,
+        "scale": 1
+      },
+      {
+        "characterId": "fascia",
+        "portraitAssetId": "portrait.fascia.normal",
+        "position": "right",
+        "active": false,
+        "scale": 0.84
+      },
+      {
+        "characterId": "protagonist",
+        "portraitAssetId": "portrait.protagonist.resolve",
+        "position": "left",
+        "active": false,
+        "scale": 0.92
+      }
+    ],
+    "speaker": "阿尔比娜",
+    "text": "回到金枝裂隙，她终于允许自己颤抖。她说：你不肯替我决定形状，那我能不能请求你，在我下一次重构失败时，仍然叫出我现在的名字？",
+    "voiceAssetId": "voice.scene.golden_bough_013",
+    "choices": [
+      {
+        "id": "rebuild_013_promise_name",
+        "text": "答应她即使失败也记得这个名字",
+        "nextSceneId": "golden_bough_014",
+        "resultText": "你选择“答应她即使失败也记得这个名字”。阿尔比娜：镜廊最后一面镜子没有给倒影，只映出一枚未熄的金枝。她把镜子推向你：请你替我保管它，但不要替我点亮它。",
+        "resultVoiceAssetId": "voice.result.rebuild_013_promise_name",
+        "effects": {
+          "values": {
+            "affectionAlbina": 4,
+            "trust": 5,
+            "artResonance": 3
+          },
+          "setFlags": [
+            "name_promise_given"
+          ],
+          "unlockCg": [
+            "golden_bough_ending"
+          ]
+        }
+      },
+      {
+        "id": "rebuild_013_offer_witness",
+        "text": "只承诺做见证，不承诺结果",
+        "nextSceneId": "golden_bough_014",
+        "resultText": "你选择“只承诺做见证，不承诺结果”。阿尔比娜：镜廊最后一面镜子没有给倒影，只映出一枚未熄的金枝。她把镜子推向你：请你替我保管它，但不要替我点亮它。",
+        "resultVoiceAssetId": "voice.result.rebuild_013_offer_witness",
+        "effects": {
+          "values": {
+            "affectionAlbina": 2,
+            "trust": 4,
+            "artResonance": 4
+          },
+          "setFlags": [
+            "witness_only_promise"
+          ],
+          "unlockCg": [
+            "surgery_of_memory"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "version": 2,
+    "id": "golden_bough_014",
+    "chapter": 14,
+    "route": "golden_bough_rebuild",
+    "locationId": "mirror_corridor",
+    "backgroundAssetId": "bg.mirror_corridor",
+    "cgAssetId": "cg.araya_rooftop",
+    "tone": "golden",
+    "portraits": [
+      {
+        "characterId": "albina",
+        "portraitAssetId": "portrait.albina.endgame",
+        "position": "center",
+        "active": true,
+        "scale": 1
+      },
+      {
+        "characterId": "protagonist",
+        "portraitAssetId": "portrait.protagonist.resolve",
+        "position": "left",
+        "active": false,
+        "scale": 0.92
+      }
+    ],
+    "speaker": "阿尔比娜",
+    "text": "镜廊最后一面镜子没有给倒影，只映出一枚未熄的金枝。她把镜子推向你：请你替我保管它，但不要替我点亮它。",
+    "voiceAssetId": "voice.scene.golden_bough_014",
+    "choices": [
+      {
+        "id": "rebuild_014_keep_unlit",
+        "text": "答应只保管，不替她点亮",
+        "nextSceneId": "golden_bough_015",
+        "resultText": "你选择“答应只保管，不替她点亮”。阿尔比娜：黎明把金枝的光尘压成一层很薄的金属。她抬头看你，第一次没有问该不该重构自己，而是说：谢谢你愿意陪我等到这一层颜色冷却。",
+        "resultVoiceAssetId": "voice.result.rebuild_014_keep_unlit",
+        "effects": {
+          "values": {
+            "affectionAlbina": 3,
+            "trust": 5,
+            "artResonance": 3
+          },
+          "setFlags": [
+            "gilded_bough_kept_unlit"
+          ],
+          "unlockCg": [
+            "golden_bough_ending"
+          ]
+        }
+      },
+      {
+        "id": "rebuild_014_ask_when_to_light",
+        "text": "问她什么时刻才能点亮",
+        "nextSceneId": "golden_bough_015",
+        "resultText": "你选择“问她什么时刻才能点亮”。阿尔比娜：黎明把金枝的光尘压成一层很薄的金属。她抬头看你，第一次没有问该不该重构自己，而是说：谢谢你愿意陪我等到这一层颜色冷却。",
+        "resultVoiceAssetId": "voice.result.rebuild_014_ask_when_to_light",
+        "effects": {
+          "values": {
+            "affectionAlbina": 3,
+            "trust": 3,
+            "artResonance": 4
+          },
+          "setFlags": [
+            "lighting_condition_asked"
+          ],
+          "unlockCg": [
+            "araya_rooftop"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "version": 2,
+    "id": "golden_bough_015",
+    "chapter": 15,
+    "route": "golden_bough_rebuild",
+    "locationId": "outskirts_dawn",
+    "backgroundAssetId": "bg.outskirts_dawn",
+    "cgAssetId": "cg.golden_bough_ending",
+    "tone": "golden",
+    "portraits": [
+      {
+        "characterId": "protagonist",
+        "portraitAssetId": "portrait.protagonist.resolve",
+        "position": "left",
+        "active": false,
+        "scale": 0.92
+      },
+      {
+        "characterId": "albina",
+        "portraitAssetId": "portrait.albina.endgame",
+        "position": "center",
+        "active": true,
+        "scale": 1
+      }
+    ],
+    "speaker": "阿尔比娜",
+    "text": "黎明把金枝的光尘压成一层很薄的金属。她抬头看你，第一次没有问该不该重构自己，而是说：谢谢你愿意陪我等到这一层颜色冷却。",
+    "voiceAssetId": "voice.scene.golden_bough_015",
+    "choices": [
+      {
+        "id": "golden_bough_route_final",
+        "text": "为金枝重构路线落最后一笔",
+        "nextSceneId": "golden_bough_rebuild_ending_gate",
+        "resultText": "你选择“为金枝重构路线落最后一笔”。金枝重构路线终章已封存，进入固定结局资格判定。",
+        "resultVoiceAssetId": "voice.result.golden_bough_route_final",
+        "effects": {
+          "values": {
+            "affectionAlbina": 3,
+            "trust": 3,
+            "danger": -2,
+            "artResonance": 4
+          },
+          "setFlags": [
+            "golden_bough_route_final"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "version": 2,
+    "id": "golden_bough_rebuild_ending_gate",
+    "chapter": 16,
+    "route": "golden_bough_rebuild",
+    "locationId": "outskirts_dawn",
+    "backgroundAssetId": "bg.outskirts_dawn",
+    "cgAssetId": "cg.golden_bough_ending",
+    "tone": "golden",
+    "portraits": [
+      {
+        "characterId": "protagonist",
+        "portraitAssetId": "portrait.protagonist.resolve",
+        "position": "left",
+        "active": false,
+        "scale": 0.92
+      },
+      {
+        "characterId": "albina",
+        "portraitAssetId": "portrait.albina.endgame",
+        "position": "center",
+        "active": true,
+        "scale": 1
+      }
+    ],
+    "speaker": "叙事记录",
+    "text": "金枝重构的全部选择已封存。系统将只依据持久状态判定结局，不请求任何运行时生成。",
+    "voiceAssetId": "voice.scene.golden_bough_rebuild_ending_gate",
+    "choices": [
+      {
+        "id": "golden_bough_rebuild_choose_true_ending",
+        "text": "确认彼此共同抵达的真结局",
+        "nextSceneId": "golden_bough_rebuild_ending_true",
+        "resultText": "结局判定完成：金枝重构·TRUE。资格规则与选择记录已固定写入。",
+        "resultVoiceAssetId": "voice.result.golden_bough_rebuild.true_ending",
+        "availability": {
+          "allOf": [
+            {
+              "kind": "flag",
+              "flag": "golden_bough_route_final",
+              "equals": true
+            },
+            {
+              "kind": "value",
+              "key": "trust",
+              "operator": "gte",
+              "value": 56
+            },
+            {
+              "kind": "value",
+              "key": "artResonance",
+              "operator": "gte",
+              "value": 50
+            },
+            {
+              "kind": "value",
+              "key": "danger",
+              "operator": "lte",
+              "value": 8
+            }
+          ]
+        },
+        "effects": {
+          "setFlags": [
+            "ending_golden_bough_rebuild_true_qualified"
+          ]
+        }
+      },
+      {
+        "id": "golden_bough_rebuild_choose_normal_ending",
+        "text": "接受仍留有余白的普通结局",
+        "nextSceneId": "golden_bough_rebuild_ending_normal",
+        "resultText": "结局判定完成：金枝重构·NORMAL。资格规则与选择记录已固定写入。",
+        "resultVoiceAssetId": "voice.result.golden_bough_rebuild.normal_ending",
+        "availability": {
+          "allOf": [
+            {
+              "kind": "flag",
+              "flag": "golden_bough_route_final",
+              "equals": true
+            }
+          ],
+          "fallback": true
+        },
+        "effects": {
+          "setFlags": [
+            "ending_golden_bough_rebuild_normal_qualified"
+          ]
+        }
+      },
+      {
+        "id": "golden_bough_rebuild_choose_bad_ending",
+        "text": "承认这次未能跨过的坏结局",
+        "nextSceneId": "golden_bough_rebuild_ending_bad",
+        "resultText": "结局判定完成：金枝重构·BAD。资格规则与选择记录已固定写入。",
+        "resultVoiceAssetId": "voice.result.golden_bough_rebuild.bad_ending",
+        "availability": {
+          "allOf": [
+            {
+              "kind": "flag",
+              "flag": "golden_bough_route_final",
+              "equals": true
+            }
+          ],
+          "anyOf": [
+            {
+              "kind": "value",
+              "key": "trust",
+              "operator": "lte",
+              "value": 49
+            },
+            {
+              "kind": "value",
+              "key": "artResonance",
+              "operator": "lte",
+              "value": 44
+            }
+          ]
+        },
+        "effects": {
+          "setFlags": [
+            "ending_golden_bough_rebuild_bad_qualified"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "version": 2,
+    "id": "golden_bough_rebuild_ending_true",
+    "chapter": 17,
+    "route": "golden_bough_rebuild",
+    "locationId": "outskirts_dawn",
+    "backgroundAssetId": "bg.outskirts_dawn",
+    "cgAssetId": "cg.golden_bough_ending",
+    "tone": "golden",
+    "portraits": [
+      {
+        "characterId": "protagonist",
+        "portraitAssetId": "portrait.protagonist.resolve",
+        "position": "left",
+        "active": false,
+        "scale": 0.92
+      },
+      {
+        "characterId": "albina",
+        "portraitAssetId": "portrait.albina.endgame",
+        "position": "center",
+        "active": true,
+        "scale": 1
+      }
+    ],
+    "speaker": "阿尔比娜",
+    "text": "金枝残响终于与法西娅的心跳重合。阿尔比娜记得每一次称呼、暂停和重新确认；她以新的身体醒来，也完整记得是谁陪她走过重构。",
+    "voiceAssetId": "voice.scene.golden_bough_rebuild_ending_true",
+    "choices": [],
+    "ending": {
+      "route": "golden_bough_rebuild",
+      "kind": "true",
+      "eligibility": {
+        "allOf": [
+          {
+            "kind": "flag",
+            "flag": "golden_bough_route_final",
+            "equals": true
+          },
+          {
+            "kind": "value",
+            "key": "trust",
+            "operator": "gte",
+            "value": 56
+          },
+          {
+            "kind": "value",
+            "key": "artResonance",
+            "operator": "gte",
+            "value": 50
+          },
+          {
+            "kind": "value",
+            "key": "danger",
+            "operator": "lte",
+            "value": 8
+          }
+        ]
+      }
+    }
+  },
+  {
+    "version": 2,
+    "id": "golden_bough_rebuild_ending_normal",
+    "chapter": 17,
+    "route": "golden_bough_rebuild",
+    "locationId": "outskirts_dawn",
+    "backgroundAssetId": "bg.outskirts_dawn",
+    "cgAssetId": "cg.golden_bough_ending",
+    "tone": "golden",
+    "portraits": [
+      {
+        "characterId": "protagonist",
+        "portraitAssetId": "portrait.protagonist.resolve",
+        "position": "left",
+        "active": false,
+        "scale": 0.92
+      },
+      {
+        "characterId": "albina",
+        "portraitAssetId": "portrait.albina.endgame",
+        "position": "center",
+        "active": true,
+        "scale": 1
+      }
+    ],
+    "speaker": "阿尔比娜",
+    "text": "重构在可控范围内结束。部分残响仍被封存在金色薄膜后，但阿尔比娜认得你，也认得自己。你们决定把余下修复交给时间。",
+    "voiceAssetId": "voice.scene.golden_bough_rebuild_ending_normal",
+    "choices": [],
+    "ending": {
+      "route": "golden_bough_rebuild",
+      "kind": "normal",
+      "eligibility": {
+        "allOf": [
+          {
+            "kind": "flag",
+            "flag": "golden_bough_route_final",
+            "equals": true
+          }
+        ],
+        "fallback": true
+      }
+    }
+  },
+  {
+    "version": 2,
+    "id": "golden_bough_rebuild_ending_bad",
+    "chapter": 17,
+    "route": "golden_bough_rebuild",
+    "locationId": "outskirts_dawn",
+    "backgroundAssetId": "bg.outskirts_dawn",
+    "cgAssetId": "cg.golden_bough_ending",
+    "tone": "golden",
+    "portraits": [
+      {
+        "characterId": "protagonist",
+        "portraitAssetId": "portrait.protagonist.resolve",
+        "position": "left",
+        "active": false,
+        "scale": 0.92
+      },
+      {
+        "characterId": "albina",
+        "portraitAssetId": "portrait.albina.endgame",
+        "position": "center",
+        "active": true,
+        "scale": 1
+      }
+    ],
+    "speaker": "阿尔比娜",
+    "text": "稳定槽保住了身体，却没能保住全部连续性。阿尔比娜醒来时仍然礼貌，只把你当作可靠的见证者；被遗漏的称呼沉在金枝深处。",
+    "voiceAssetId": "voice.scene.golden_bough_rebuild_ending_bad",
+    "choices": [],
+    "ending": {
+      "route": "golden_bough_rebuild",
+      "kind": "bad",
+      "eligibility": {
+        "allOf": [
+          {
+            "kind": "flag",
+            "flag": "golden_bough_route_final",
+            "equals": true
+          }
+        ],
+        "anyOf": [
+          {
+            "kind": "value",
+            "key": "trust",
+            "operator": "lte",
+            "value": 49
+          },
+          {
+            "kind": "value",
+            "key": "artResonance",
+            "operator": "lte",
+            "value": 44
+          }
+        ]
+      }
+    }
+  }
+]

@@ -1,0 +1,20 @@
+{
+  "version": 2,
+  "projectId": "albina-galgame-card",
+  "initialSceneId": "opening_001",
+  "routeEntrySceneIds": {
+    "white_canvas": "white_canvas_001",
+    "golden_bough_rebuild": "golden_bough_001",
+    "ring_conspiracy": "ring_conspiracy_001"
+  },
+  "legacyOracle": {
+    "sceneAnchors": 46,
+    "choices": 87
+  },
+  "dialogueFiles": [
+    "dialogue/opening.json",
+    "dialogue/white-canvas.json",
+    "dialogue/golden-bough-rebuild.json",
+    "dialogue/ring-conspiracy.json"
+  ]
+}
