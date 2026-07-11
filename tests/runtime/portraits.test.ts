@@ -74,4 +74,71 @@ describe('PortraitService', () => {
     expect(cancelFrame).toHaveBeenCalledWith(42);
     expect(context.clearRect).toHaveBeenCalledWith(0, 0, 100, 200);
   });
+
+  it('does not draw or start RAF when a pending image load resolves after stopAll', async () => {
+    let resolveImage!: (image: ImageLike) => void;
+    const image = new Promise<ImageLike>((resolve) => { resolveImage = resolve; });
+    const { canvas, context } = createCanvas();
+    const requestFrame = vi.fn(() => 7);
+    const service = new PortraitService(manifest, {
+      loadImage: () => image,
+      requestFrame,
+      cancelFrame: vi.fn(),
+      reducedMotion: () => false,
+    });
+
+    const playback = service.play('portrait.animated', canvas);
+    service.stopAll();
+    resolveImage({ src: 'assets/sprite-atlas/albina_strip.png' });
+    await playback;
+
+    expect(requestFrame).not.toHaveBeenCalled();
+    expect(context.drawImage).not.toHaveBeenCalled();
+  });
+
+  it('uses the static fallback when strip loading fails', async () => {
+    const { canvas, context } = createCanvas();
+    const loadImage = vi.fn(async (url: string) => {
+      if (url.includes('sprite-atlas')) throw new Error('strip unavailable');
+      return { src: url } satisfies ImageLike;
+    });
+    const service = new PortraitService(manifest, {
+      loadImage,
+      requestFrame: vi.fn(),
+      cancelFrame: vi.fn(),
+      reducedMotion: () => false,
+    });
+
+    await service.play('portrait.animated', canvas);
+
+    expect(loadImage.mock.calls.map(([url]) => url)).toEqual([
+      'assets/sprite-atlas/albina_strip.png',
+      'assets/characters/albina.png',
+    ]);
+    expect(context.drawImage.mock.calls[0]?.[0]).toMatchObject({ src: 'assets/characters/albina.png' });
+  });
+
+  it('crops the first strip frame when reduced motion has no static fallback', async () => {
+    const { canvas, context } = createCanvas();
+    const noFallback: AssetManifestV2 = {
+      ...manifest,
+      portraits: [{ ...manifest.portraits[0]!, fallbackAssetId: undefined }],
+    };
+    delete noFallback.portraits[0]!.fallbackAssetId;
+    const loadImage = vi.fn(async (url: string) => ({ src: url } satisfies ImageLike));
+    const service = new PortraitService(noFallback, {
+      loadImage,
+      requestFrame: vi.fn(),
+      cancelFrame: vi.fn(),
+      reducedMotion: () => true,
+    });
+
+    await service.play('portrait.animated', canvas);
+
+    expect(loadImage).toHaveBeenCalledOnce();
+    expect(context.drawImage).toHaveBeenCalledWith(
+      { src: 'assets/sprite-atlas/albina_strip.png' },
+      0, 0, 100, 200, 0, 0, 100, 200,
+    );
+  });
 });

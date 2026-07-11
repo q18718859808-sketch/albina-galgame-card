@@ -37,19 +37,25 @@ export class AudioService {
   private fadingOut: RuntimeAudio | undefined;
   private fadeTimer: ReturnType<typeof setTimeout> | undefined;
   private fadeFinish: (() => void) | undefined;
+  private lifecycleGeneration = 0;
+  private bgmGeneration = 0;
 
   constructor(private readonly createAudio: AudioFactory = defaultAudioFactory) {}
 
   async playBgm(source: string, crossfadeMs = 500): Promise<boolean> {
     this.cancelFade();
-    const previous = this.bgm;
+    const lifecycle = this.lifecycleGeneration;
+    const generation = ++this.bgmGeneration;
+    const previous = this.takePreviousBgm();
     const next = this.createAudio(source);
     next.src = source;
     next.loop = true;
     next.volume = crossfadeMs > 0 ? 0 : this.bgmVolume();
     this.bgm = next;
-    const played = await this.tryPlay(next);
+    const isCurrent = () => this.isCurrentBgm(next, lifecycle, generation);
+    const played = await this.tryPlay(next, isCurrent);
     if (!played) {
+      if (!isCurrent()) return false;
       this.pendingBgmPrevious = previous;
       return false;
     }
@@ -59,7 +65,7 @@ export class AudioService {
       return true;
     }
     await this.crossfade(previous, next, crossfadeMs);
-    return true;
+    return isCurrent();
   }
 
   enqueueVoice(source: string): Promise<boolean> {
@@ -71,8 +77,10 @@ export class AudioService {
   async recoverAutoplay(): Promise<boolean> {
     const blocked = this.blocked;
     if (!blocked) return true;
+    const lifecycle = this.lifecycleGeneration;
     try {
       await blocked.play();
+      if (!this.isCurrentBlocked(blocked, lifecycle)) return false;
       this.blocked = undefined;
       if (blocked === this.bgm && this.pendingBgmPrevious) {
         releaseAudio(this.pendingBgmPrevious);
@@ -86,6 +94,8 @@ export class AudioService {
   }
 
   stopAll(): void {
+    this.lifecycleGeneration += 1;
+    this.bgmGeneration += 1;
     this.cancelFade();
     this.finishVoice(false);
     this.voiceQueue.splice(0).forEach((job) => job.resolve(false));
@@ -101,12 +111,12 @@ export class AudioService {
     this.stopAll();
   }
 
-  private async tryPlay(audio: RuntimeAudio): Promise<boolean> {
+  private async tryPlay(audio: RuntimeAudio, isCurrent: () => boolean): Promise<boolean> {
     try {
       await audio.play();
-      return true;
+      return isCurrent();
     } catch {
-      this.blocked = audio;
+      if (isCurrent()) this.blocked = audio;
       return false;
     }
   }
@@ -129,31 +139,34 @@ export class AudioService {
     };
     this.voiceEnded = ended;
     audio.addEventListener('ended', ended);
-    void this.tryPlay(audio);
+    const lifecycle = this.lifecycleGeneration;
+    void this.tryPlay(audio, () => this.lifecycleGeneration === lifecycle && this.voice === audio);
   }
 
   private finishVoice(played: boolean): void {
     const voice = this.voice;
     if (voice && this.voiceEnded) voice.removeEventListener('ended', this.voiceEnded);
     releaseAudio(voice);
+    if (this.blocked === voice) this.blocked = undefined;
     this.voice = undefined;
     this.voiceEnded = undefined;
     const job = this.activeVoiceJob;
     this.activeVoiceJob = undefined;
-    if (this.bgm) this.bgm.volume = 1;
+    if (voice && this.bgm) this.bgm.volume = 1;
     job?.resolve(played);
   }
 
   private crossfade(previous: RuntimeAudio, next: RuntimeAudio, durationMs: number): Promise<void> {
     const steps = 10;
     const delay = durationMs / steps;
+    const previousStartVolume = previous.volume;
     let step = 0;
     return new Promise((resolve) => {
       this.fadingOut = previous;
       this.fadeFinish = resolve;
       const advance = () => {
         step += 1;
-        previous.volume = Math.max(0, 1 - step / steps);
+        previous.volume = Math.max(0, previousStartVolume * (1 - step / steps));
         next.volume = this.bgmVolume() * Math.min(1, step / steps);
         if (step >= steps) {
           releaseAudio(previous);
@@ -174,5 +187,30 @@ export class AudioService {
     this.fadingOut = undefined;
     this.fadeFinish?.();
     this.fadeFinish = undefined;
+  }
+
+  private takePreviousBgm(): RuntimeAudio | undefined {
+    if (this.pendingBgmPrevious) {
+      const previous = this.pendingBgmPrevious;
+      this.pendingBgmPrevious = undefined;
+      if (this.blocked === this.bgm) this.blocked = undefined;
+      releaseAudio(this.bgm);
+      return previous;
+    }
+    if (this.blocked === this.bgm) {
+      this.blocked = undefined;
+      releaseAudio(this.bgm);
+      return undefined;
+    }
+    return this.bgm;
+  }
+
+  private isCurrentBgm(audio: RuntimeAudio, lifecycle: number, generation: number): boolean {
+    return this.lifecycleGeneration === lifecycle && this.bgmGeneration === generation && this.bgm === audio;
+  }
+
+  private isCurrentBlocked(audio: RuntimeAudio, lifecycle: number): boolean {
+    const owned = this.bgm === audio || this.voice === audio;
+    return this.lifecycleGeneration === lifecycle && this.blocked === audio && owned;
   }
 }

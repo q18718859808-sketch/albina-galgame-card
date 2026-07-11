@@ -120,4 +120,79 @@ describe('AudioService', () => {
 
     await expect(voice).resolves.toBe(false);
   });
+
+  it('ignores a pending BGM play completion after stopAll', async () => {
+    let resolvePlay!: () => void;
+    const pendingPlay = new Promise<void>((resolve) => { resolvePlay = resolve; });
+    const audio = new FakeAudio();
+    audio.play.mockReturnValue(pendingPlay);
+    const service = new AudioService(() => audio);
+
+    const result = service.playBgm('bgm.mp3', 100);
+    service.stopAll();
+    resolvePlay();
+
+    await expect(result).resolves.toBe(false);
+    expect(audio.src).toBe('');
+    expect(audio.volume).toBe(0);
+  });
+
+  it('does not replay a released track when autoplay recovery resolves after stopAll', async () => {
+    let resolveRecovery!: () => void;
+    const recovery = new Promise<void>((resolve) => { resolveRecovery = resolve; });
+    const audio = new FakeAudio();
+    audio.play
+      .mockRejectedValueOnce(new DOMException('blocked', 'NotAllowedError'))
+      .mockReturnValueOnce(recovery);
+    const service = new AudioService(() => audio);
+    await service.playBgm('bgm.mp3', 0);
+
+    const recovered = service.recoverAutoplay();
+    service.stopAll();
+    resolveRecovery();
+
+    await expect(recovered).resolves.toBe(false);
+    await expect(service.recoverAutoplay()).resolves.toBe(true);
+    expect(audio.play).toHaveBeenCalledTimes(2);
+  });
+
+  it('discards blocked pending BGM when a newer track starts', async () => {
+    const created: FakeAudio[] = [];
+    const service = new AudioService(() => {
+      const audio = new FakeAudio();
+      if (created.length === 0) audio.play.mockRejectedValueOnce(new DOMException('blocked', 'NotAllowedError'));
+      created.push(audio);
+      return audio;
+    });
+
+    await service.playBgm('blocked.mp3', 0);
+    await service.playBgm('current.mp3', 0);
+    await expect(service.recoverAutoplay()).resolves.toBe(true);
+
+    expect(created[0]?.play).toHaveBeenCalledOnce();
+    expect(created[0]?.src).toBe('');
+  });
+
+  it('crossfades from the currently ducked BGM volume without jumping upward', async () => {
+    vi.useFakeTimers();
+    const created: FakeAudio[] = [];
+    const service = new AudioService(() => {
+      const audio = new FakeAudio();
+      created.push(audio);
+      return audio;
+    });
+    await service.playBgm('old.mp3', 0);
+    void service.enqueueVoice('voice.mp3');
+    expect(created[0]?.volume).toBe(0.25);
+
+    const transition = service.playBgm('next.mp3', 100);
+    await Promise.resolve();
+    await vi.advanceTimersByTimeAsync(10);
+
+    expect(created[0]?.volume).toBeLessThanOrEqual(0.25);
+    await vi.runAllTimersAsync();
+    await transition;
+    service.dispose();
+    vi.useRealTimers();
+  });
 });

@@ -37,3 +37,23 @@ The runtime source audit found no `parent` DOM access, selector queries, jQuery 
 The services depend on injected browser/host capabilities and domain types rather than global page ownership. Resource ownership is explicit: every timer, RAF handle, canvas, audio element, Blob URL, subscription, and database connection has a release path. The implementation re-creates requested behavior from tests and interfaces without copying BigMalove source.
 
 [Verification service unavailable, results not independently verified by the project-specified Logic Verifier MCP; verification used Vitest, strict TypeScript, Vite build, source-pattern audit, and Git boundary checks.]
+
+## Important Review Fixes
+
+The independent Task 4 review identified lifecycle and concurrency gaps. The typewriter now exposes separate `cancel()` and `completeNow()` semantics: cancellation resolves with only the visible prefix, while complete-now emits and resolves with the full text immediately. Both paths clear the active timer.
+
+Portrait loading now carries both a runtime lifecycle generation and a per-canvas generation. A chat change, load, unmount, explicit stop, or superseding play invalidates pending image work, so a late image resolution cannot draw, register a playback, or schedule RAF. Reduced-motion rendering and strip-load failure use a declared static fallback when available. When no fallback exists, reduced motion loads the strip once and crops its first frame instead of compressing the complete strip or retrying the same URL.
+
+Blob URL lookup is now single-flight per asset and guarded by an object-URL generation. Release, cache replacement, and disposal invalidate pending lookups. A stale lookup cannot publish a URL; every URL that is created is either entered into the tracked map or revoked immediately. Concurrent callers receive the same tracked URL.
+
+Audio BGM operations now use lifecycle and BGM generations. Pending `play()` and autoplay-recovery completions verify current ownership before changing state, so teardown cannot be followed by stale state writes. Starting a newer track discards a blocked obsolete track and its pending transition rather than making it recoverable. Crossfade attenuation begins at the outgoing track's actual volume, preserving voice ducking without an upward jump. Voice autoplay work uses the same lifecycle ownership guard, and teardown still settles active and queued voice promises.
+
+Special-CG queue reads and writes now run through a serial promise lock. Concurrent enqueue, dequeue, peek, and clear operations observe FIFO order without lost updates or duplicate delivery under IndexedDB-style structured-clone behavior.
+
+### Review TDD Evidence
+
+The review RED suite added delayed image/audio completions, concurrent Blob URL reads, release-during-read, blocked-track replacement, ducked crossfade, and concurrent special-CG operations. The initial focused run contained 28 tests: 10 failed for the expected missing or unsafe behaviors and 18 passed. The failures included missing complete-now behavior, RAF resurrection after stop, incorrect strip fallback rendering, duplicate/untracked Blob URLs, stale audio completion writes, obsolete blocked-track replay, crossfade volume jump, and lost concurrent queue writes. The exact public `completeNow()` name was separately observed RED before implementation.
+
+After the fixes, `npm test -- tests/runtime` passed with five files and 33 tests. `npm test` passed with 12 files and 63 tests. `npm run typecheck` completed without diagnostics, and `npm run build` completed successfully with Vite 7.3.6. `git diff --check` reported no whitespace errors, and `git status -- release dist` remained clean.
+
+[Verification service unavailable, results not independently verified]

@@ -1,7 +1,15 @@
 export type TypewriterSink = (visibleText: string) => void;
 
+interface ActiveWrite {
+  timer?: ReturnType<typeof setTimeout>;
+  text: string;
+  sink: TypewriterSink;
+  visible: string;
+  resolve(value: string): void;
+}
+
 export class TypewriterService {
-  private active: { timer?: ReturnType<typeof setTimeout>; finish: () => void } | undefined;
+  private active: ActiveWrite | undefined;
 
   write(text: string, sink: TypewriterSink, intervalMs = 24): Promise<string> {
     this.cancel();
@@ -11,32 +19,40 @@ export class TypewriterService {
     }
     return new Promise((resolve) => {
       let index = 0;
-      let visible = '';
-      const finish = () => {
-        const result = visible;
-        this.active = undefined;
-        resolve(result);
-      };
+      const active: ActiveWrite = { text, sink, visible: '', resolve };
       const reveal = () => {
-        visible = text.slice(0, index + 1);
+        active.visible = text.slice(0, index + 1);
         index += 1;
-        sink(visible);
-        if (index >= text.length) finish();
-        else this.active!.timer = setTimeout(reveal, Math.max(0, intervalMs));
+        sink(active.visible);
+        if (index >= text.length) this.settle(active, text);
+        else active.timer = setTimeout(reveal, Math.max(0, intervalMs));
       };
-      this.active = { finish };
-      this.active.timer = setTimeout(reveal, Math.max(0, intervalMs));
+      this.active = active;
+      active.timer = setTimeout(reveal, Math.max(0, intervalMs));
     });
   }
 
   cancel(): void {
     const active = this.active;
     if (!active) return;
-    if (active.timer !== undefined) clearTimeout(active.timer);
-    active.finish();
+    this.settle(active, active.visible);
+  }
+
+  completeNow(): void {
+    const active = this.active;
+    if (!active) return;
+    if (active.visible !== active.text) active.sink(active.text);
+    this.settle(active, active.text);
   }
 
   dispose(): void {
     this.cancel();
+  }
+
+  private settle(active: ActiveWrite, result: string): void {
+    if (this.active !== active) return;
+    if (active.timer !== undefined) clearTimeout(active.timer);
+    this.active = undefined;
+    active.resolve(result);
   }
 }

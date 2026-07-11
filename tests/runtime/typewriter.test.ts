@@ -29,4 +29,19 @@ describe('TypewriterService', () => {
     expect(vi.getTimerCount()).toBe(0);
     vi.useRealTimers();
   });
+
+  it('completes the active write immediately without using cancel semantics', async () => {
+    vi.useFakeTimers();
+    const updates: string[] = [];
+    const service = new TypewriterService();
+
+    const done = service.write('Albina', updates.push.bind(updates), 10);
+    await vi.advanceTimersByTimeAsync(10);
+    service.completeNow();
+
+    await expect(done).resolves.toBe('Albina');
+    expect(updates.at(-1)).toBe('Albina');
+    expect(vi.getTimerCount()).toBe(0);
+    vi.useRealTimers();
+  });
 });

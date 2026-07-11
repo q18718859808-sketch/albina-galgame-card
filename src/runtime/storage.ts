@@ -84,7 +84,9 @@ function defaultObjectUrls(): ObjectUrlApi | undefined {
 
 export class AlbinaStorage {
   private readonly objectUrls = new Map<string, string>();
+  private readonly pendingObjectUrls = new Map<string, Promise<string | undefined>>();
   private readonly urlApi: ObjectUrlApi | undefined;
+  private objectUrlGeneration = 0;
 
   constructor(
     private readonly backend: StorageBackend = new IndexedDbBackend(),
@@ -94,6 +96,8 @@ export class AlbinaStorage {
   }
 
   async cacheAsset(assetId: string, blob: Blob): Promise<void> {
+    this.objectUrlGeneration += 1;
+    this.pendingObjectUrls.clear();
     this.releaseObjectUrl(assetId);
     await this.backend.put('assets', assetId, blob);
   }
@@ -105,11 +109,15 @@ export class AlbinaStorage {
   async getAssetUrl(assetId: string): Promise<string | undefined> {
     const existing = this.objectUrls.get(assetId);
     if (existing) return existing;
-    const blob = await this.getCachedAsset(assetId);
-    if (!blob || !this.urlApi) return undefined;
-    const url = this.urlApi.createObjectURL(blob);
-    this.objectUrls.set(assetId, url);
-    return url;
+    const pending = this.pendingObjectUrls.get(assetId);
+    if (pending) return pending;
+    const generation = this.objectUrlGeneration;
+    const lookup = this.createAssetUrl(assetId, generation);
+    this.pendingObjectUrls.set(assetId, lookup);
+    void lookup.finally(() => {
+      if (this.pendingObjectUrls.get(assetId) === lookup) this.pendingObjectUrls.delete(assetId);
+    });
+    return lookup;
   }
 
   async saveSnapshot(save: SaveV2, thumbnail: Blob): Promise<void> {
@@ -137,6 +145,8 @@ export class AlbinaStorage {
   }
 
   releaseObjectUrls(): void {
+    this.objectUrlGeneration += 1;
+    this.pendingObjectUrls.clear();
     for (const assetId of [...this.objectUrls.keys()]) this.releaseObjectUrl(assetId);
   }
 
@@ -150,5 +160,19 @@ export class AlbinaStorage {
     if (!url) return;
     this.urlApi?.revokeObjectURL(url);
     this.objectUrls.delete(assetId);
+  }
+
+  private async createAssetUrl(assetId: string, generation: number): Promise<string | undefined> {
+    const blob = await this.getCachedAsset(assetId);
+    if (!blob || !this.urlApi || generation !== this.objectUrlGeneration) return undefined;
+    const existing = this.objectUrls.get(assetId);
+    if (existing) return existing;
+    const url = this.urlApi.createObjectURL(blob);
+    if (generation !== this.objectUrlGeneration) {
+      this.urlApi.revokeObjectURL(url);
+      return undefined;
+    }
+    this.objectUrls.set(assetId, url);
+    return url;
   }
 }
