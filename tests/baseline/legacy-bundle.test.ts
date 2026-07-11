@@ -7,11 +7,7 @@ type SourceEntry = {
 };
 
 async function loadSourceEntry(): Promise<SourceEntry> {
-  try {
-    return await import('../../src/main');
-  } catch {
-    return {};
-  }
+  return import('../../src/main');
 }
 
 describe('reproducible source baseline', () => {

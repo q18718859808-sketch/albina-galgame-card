@@ -1,252 +1,154 @@
-﻿{
-  "base": "https://cdn.jsdelivr.net/gh/q18718859808-sketch/albina-galgame-card@v1.0.40/dist/albina-galgame-card",
+{
+  "style_lock": {
+    "name": "CG battle narrative illustration",
+    "notes": [
+      "cold lethal battlefield-ruin mood",
+      "hard cinematic contrast",
+      "sharp combat dynamics",
+      "dark cold palette",
+      "film storyboard framing",
+      "Albina costume/equipment calibrated from reference research, not packed from official art"
+    ]
+  },
   "bg": {
-    "backstreets_rain": "assets/bg/backstreets_rain.png",
-    "city_rooftop": "assets/bg/city_rooftop.png",
-    "golden_bough": "assets/bg/golden_bough.png",
-    "lce_lab": "assets/bg/lce_lab.png",
-    "limbus_bus": "assets/bg/limbus_bus.png",
-    "mirror_corridor": "assets/bg/mirror_corridor.png",
-    "nest_station": "assets/bg/nest_station.png",
-    "outskirts_dawn": "assets/bg/outskirts_dawn.png",
-    "rain_room": "assets/bg/rain_room.png",
-    "ring_atelier": "assets/bg/ring_atelier.png",
-    "spider_gallery": "assets/bg/spider_gallery.png",
-    "white_canvas": "assets/bg/white_canvas.png"
+    "backstreets_rain": "bg/backstreets_rain.jpg",
+    "spider_gallery": "bg/spider_gallery.jpg",
+    "lce_lab": "bg/lce_lab.jpg",
+    "golden_bough": "bg/golden_bough.jpg",
+    "limbus_bus": "bg/limbus_bus.jpg",
+    "ring_atelier": "bg/ring_atelier.jpg",
+    "city_rooftop": "bg/city_rooftop.jpg",
+    "mirror_corridor": "bg/mirror_corridor.jpg",
+    "outskirts_dawn": "bg/outskirts_dawn.jpg",
+    "nest_station": "bg/nest_station.jpg",
+    "rain_room": "bg/rain_room.jpg",
+    "white_canvas": "bg/white_canvas.jpg"
   },
-  "original_cg": {
-    "canto_ix_opening": "assets/original_cg/canto_ix_opening.png",
-    "albina_debut": "assets/original_cg/albina_debut.png",
-    "rain_confession": "assets/original_cg/rain_confession.png",
-    "battle_climax": "assets/original_cg/battle_climax.png",
-    "hell_gate": "assets/original_cg/hell_gate.png",
-    "ring_conspiracy": "assets/original_cg/ring_conspiracy.png"
+  "backgrounds": {
+    "backstreets_rain": "bg/backstreets_rain.jpg",
+    "spider_gallery": "bg/spider_gallery.jpg",
+    "lce_lab": "bg/lce_lab.jpg",
+    "golden_bough": "bg/golden_bough.jpg",
+    "limbus_bus": "bg/limbus_bus.jpg",
+    "ring_atelier": "bg/ring_atelier.jpg",
+    "city_rooftop": "bg/city_rooftop.jpg",
+    "mirror_corridor": "bg/mirror_corridor.jpg",
+    "outskirts_dawn": "bg/outskirts_dawn.jpg",
+    "nest_station": "bg/nest_station.jpg",
+    "rain_room": "bg/rain_room.jpg",
+    "white_canvas": "bg/white_canvas.jpg"
   },
-  "original_albina_sprites": {
-    "normal": "assets/original_albina_sprites/normal.png",
-    "smile": "assets/original_albina_sprites/smile.png",
-    "sad": "assets/original_albina_sprites/sad.png",
-    "battle": "assets/original_albina_sprites/battle.png"
-  },
-  "original_bg_story": {
-    "library_interior": "assets/original_bg_story/library_interior.png"
-  },
-  "original_bg_battle": {},
   "characters": {
     "albina": {
-      "amused": "assets/characters/albina/amused.png",
-      "armored": "assets/characters/albina/armored.png",
-      "combat": "assets/characters/albina/combat.png",
-      "endgame": "assets/characters/albina/endgame.png",
-      "fascia-open": "assets/characters/albina/fascia-open.png",
-      "focused": "assets/characters/albina/focused.png",
-      "furious": "assets/characters/albina/furious.png",
-      "golden-bough": "assets/characters/albina/golden-bough.png",
-      "maestro": "assets/characters/albina/maestro.png",
-      "normal": "assets/characters/albina/normal.png",
-      "rain": "assets/characters/albina/rain.png",
-      "ring-conspiracy": "assets/characters/albina/ring-conspiracy.png",
-      "shy": "assets/characters/albina/shy.png",
-      "smile": "assets/characters/albina/smile.png",
-      "surgical": "assets/characters/albina/surgical.png",
-      "unarmored": "assets/characters/albina/unarmored.png",
-      "white-canvas": "assets/characters/albina/white-canvas.png",
-      "wounded": "assets/characters/albina/wounded.png"
-    },
-    "araya": {
-      "normal": "assets/characters/araya/normal.png"
-    },
-    "callisto": {
-      "normal": "assets/characters/callisto/normal.png"
-    },
-    "charon": {
-      "normal": "assets/characters/charon/normal.png"
-    },
-    "dante": {
-      "normal": "assets/characters/dante/normal.png"
-    },
-    "faust": {
-      "normal": "assets/characters/faust/normal.png"
-    },
-    "fixer_informant": {
-      "normal": "assets/characters/fixer_informant/normal.png"
-    },
-    "golden_apparition": {
-      "normal": "assets/characters/golden_apparition/normal.png"
-    },
-    "kira": {
-      "normal": "assets/characters/kira/normal.png"
-    },
-    "lcd_captain": {
-      "normal": "assets/characters/lcd_captain/normal.png"
-    },
-    "lce_doctor": {
-      "normal": "assets/characters/lce_doctor/normal.png"
-    },
-    "lucio": {
-      "normal": "assets/characters/lucio/normal.png"
+      "normal": "characters/albina/normal.png",
+      "smile": "characters/albina/smile.png",
+      "surgical": "characters/albina/surgical.png",
+      "combat": "characters/albina/combat.png",
+      "armored": "characters/albina/armored.png",
+      "unarmored": "characters/albina/unarmored.png",
+      "shy": "characters/albina/shy.png",
+      "amused": "characters/albina/amused.png",
+      "focused": "characters/albina/focused.png",
+      "wounded": "characters/albina/wounded.png",
+      "furious": "characters/albina/furious.png",
+      "fascia-open": "characters/albina/fascia-open.png",
+      "maestro": "characters/albina/maestro.png",
+      "white-canvas": "characters/albina/white-canvas.png",
+      "golden-bough": "characters/albina/golden-bough.png",
+      "ring-conspiracy": "characters/albina/ring-conspiracy.png",
+      "endgame": "characters/albina/endgame.png",
+      "rain": "characters/albina/rain.png"
     },
     "protagonist": {
-      "battle": "assets/characters/protagonist/battle.png",
-      "coat": "assets/characters/protagonist/coat.png",
-      "formal": "assets/characters/protagonist/formal.png",
-      "injured": "assets/characters/protagonist/injured.png",
-      "normal": "assets/characters/protagonist/normal.png",
-      "profile": "assets/characters/protagonist/profile.png",
-      "resolve": "assets/characters/protagonist/resolve.png",
-      "serious": "assets/characters/protagonist/serious.png",
-      "shadow": "assets/characters/protagonist/shadow.png",
-      "smile": "assets/characters/protagonist/smile.png",
-      "tender": "assets/characters/protagonist/tender.png",
-      "wet-hair": "assets/characters/protagonist/wet-hair.png"
+      "normal": "characters/protagonist/normal.png",
+      "smile": "characters/protagonist/smile.png",
+      "serious": "characters/protagonist/serious.png",
+      "injured": "characters/protagonist/injured.png",
+      "coat": "characters/protagonist/coat.png",
+      "formal": "characters/protagonist/formal.png",
+      "battle": "characters/protagonist/battle.png",
+      "tender": "characters/protagonist/tender.png",
+      "shadow": "characters/protagonist/shadow.png",
+      "profile": "characters/protagonist/profile.png",
+      "resolve": "characters/protagonist/resolve.png",
+      "wet-hair": "characters/protagonist/wet-hair.png"
     },
-    "ren": {
-      "normal": "assets/characters/ren/normal.png"
-    },
-    "ring_agent": {
-      "normal": "assets/characters/ring_agent/normal.png"
-    },
-    "ryoshu": {
-      "normal": "assets/characters/ryoshu/normal.png"
-    },
-    "sinclair": {
-      "normal": "assets/characters/sinclair/normal.png"
-    },
-    "sora": {
-      "normal": "assets/characters/sora/normal.png"
+    "dante": {
+      "normal": "characters/dante/normal.png"
     },
     "vergilius": {
-      "normal": "assets/characters/vergilius/normal.png"
+      "normal": "characters/vergilius/normal.png"
+    },
+    "charon": {
+      "normal": "characters/charon/normal.png"
+    },
+    "faust": {
+      "normal": "characters/faust/normal.png"
     },
     "yi_sang": {
-      "normal": "assets/characters/yi_sang/normal.png"
+      "normal": "characters/yi_sang/normal.png"
+    },
+    "lcd_captain": {
+      "normal": "characters/lcd_captain/normal.png"
+    },
+    "callisto": {
+      "normal": "characters/callisto/normal.png"
+    },
+    "ren": {
+      "normal": "characters/ren/normal.png"
+    },
+    "lce_doctor": {
+      "normal": "characters/lce_doctor/normal.png"
+    },
+    "fixer_informant": {
+      "normal": "characters/fixer_informant/normal.png"
+    },
+    "golden_apparition": {
+      "normal": "characters/golden_apparition/normal.png"
+    },
+    "ring_agent": {
+      "normal": "characters/ring_agent/normal.png"
     }
   },
   "cg": {
-    "albina_key_visual": "assets/cg/albina_key_visual.jpg",
-    "araya_rooftop": "assets/cg/araya_rooftop.png",
-    "art_resonance": "assets/cg/art_resonance.png",
-    "backstreet_pursuit": "assets/cg/backstreet_pursuit.png",
-    "canto_2_scene_14_14": "assets/cg/canto_2_scene_14_14.png",
-    "canto_2_scene_1_4": "assets/cg/canto_2_scene_1_4.png",
-    "canto_2_scene_2_6": "assets/cg/canto_2_scene_2_6.png",
-    "canto_2_scene_2_7": "assets/cg/canto_2_scene_2_7.png",
-    "chapter_6_climax": "assets/cg/chapter_6_climax.png",
-    "chapter_s22": "assets/cg/chapter_s22.png",
-    "combat_scene_101": "assets/cg/combat_scene_101.png",
-    "combat_transition_01": "assets/cg/combat_transition_01.jpg",
-    "combat_transition_02": "assets/cg/combat_transition_02.jpg",
-    "combat_transition_03": "assets/cg/combat_transition_03.jpg",
-    "combat_transition_04": "assets/cg/combat_transition_04.jpg",
-    "combat_transition_05": "assets/cg/combat_transition_05.jpg",
-    "combat_transition_06": "assets/cg/combat_transition_06.jpg",
-    "conspiracy_contract": "assets/cg/conspiracy_contract.png",
-    "danger_threshold": "assets/cg/danger_threshold.png",
-    "dante_star_vision": "assets/cg/dante_star_vision.png",
-    "fascia_heartbeat": "assets/cg/fascia_heartbeat.png",
-    "first_gallery": "assets/cg/first_gallery.png",
-    "golden_bough_ending": "assets/cg/golden_bough_ending.png",
-    "golden_bough_rebuild": "assets/cg/golden_bough_rebuild.png",
-    "hell_gate_confrontation": "assets/cg/hell_gate_confrontation.png",
-    "hell_gate_entrance": "assets/cg/hell_gate_entrance.png",
-    "hollow_torso_reveal": "assets/cg/hollow_torso_reveal.png",
-    "lce_raid": "assets/cg/lce_raid.png",
-    "limbus_bus_night": "assets/cg/limbus_bus_night.png",
-    "maestro_shadow": "assets/cg/maestro_shadow.png",
-    "opening_rain": "assets/cg/opening_rain.png",
-    "prologue_fascia_reveal": "assets/cg/prologue_fascia_reveal.png",
-    "prologue_gallery_intro": "assets/cg/prologue_gallery_intro.png",
-    "prologue_meeting": "assets/cg/prologue_meeting.png",
-    "rain_confession": "assets/cg/rain_confession.png",
-    "rebuild_awakening": "assets/cg/rebuild_awakening.png",
-    "ren_interruption": "assets/cg/ren_interruption.png",
-    "ring_conspiracy_ending": "assets/cg/ring_conspiracy_ending.png",
-    "ring_invitation": "assets/cg/ring_invitation.png",
-    "sinclair_flash": "assets/cg/sinclair_flash.png",
-    "surgery_of_memory": "assets/cg/surgery_of_memory.png",
-    "trust_threshold": "assets/cg/trust_threshold.png",
-    "white_canvas_choice": "assets/cg/white_canvas_choice.png",
-    "white_canvas_ending": "assets/cg/white_canvas_ending.png"
+    "opening_rain": "cg/opening_rain.jpg",
+    "first_gallery": "cg/first_gallery.jpg",
+    "fascia_heartbeat": "cg/fascia_heartbeat.jpg",
+    "white_canvas_choice": "cg/white_canvas_choice.jpg",
+    "backstreet_pursuit": "cg/backstreet_pursuit.jpg",
+    "lce_raid": "cg/lce_raid.jpg",
+    "golden_bough_rebuild": "cg/golden_bough_rebuild.jpg",
+    "ring_invitation": "cg/ring_invitation.jpg",
+    "trust_threshold": "cg/trust_threshold.jpg",
+    "danger_threshold": "cg/danger_threshold.jpg",
+    "art_resonance": "cg/art_resonance.jpg",
+    "maestro_shadow": "cg/maestro_shadow.jpg",
+    "ren_interruption": "cg/ren_interruption.jpg",
+    "araya_rooftop": "cg/araya_rooftop.jpg",
+    "sinclair_flash": "cg/sinclair_flash.jpg",
+    "limbus_bus_night": "cg/limbus_bus_night.jpg",
+    "surgery_of_memory": "cg/surgery_of_memory.jpg",
+    "hollow_torso_reveal": "cg/hollow_torso_reveal.jpg",
+    "rain_confession": "cg/rain_confession.jpg",
+    "conspiracy_contract": "cg/conspiracy_contract.jpg",
+    "rebuild_awakening": "cg/rebuild_awakening.jpg",
+    "white_canvas_ending": "cg/white_canvas_ending.jpg",
+    "golden_bough_ending": "cg/golden_bough_ending.jpg",
+    "ring_conspiracy_ending": "cg/ring_conspiracy_ending.jpg",
+    "combat_transition_01": "cg/combat_transition_01.jpg",
+    "combat_transition_02": "cg/combat_transition_02.jpg",
+    "combat_transition_03": "cg/combat_transition_03.jpg",
+    "combat_transition_04": "cg/combat_transition_04.jpg",
+    "combat_transition_05": "cg/combat_transition_05.jpg",
+    "combat_transition_06": "cg/combat_transition_06.jpg"
   },
   "ui": {
-    "choice_button": "assets/ui/choice_button.png",
-    "gallery_frame": "assets/ui/gallery_frame.png",
-    "menu_plate": "assets/ui/menu_plate.png",
-    "scanline_mask": "assets/ui/scanline_mask.png",
-    "status_panel": "assets/ui/status_panel.png",
-    "textbox": "assets/ui/textbox.png"
+    "textbox": "ui/textbox.svg",
+    "choice_button": "ui/choice_button.svg",
+    "status_panel": "ui/status_panel.svg",
+    "gallery_frame": "ui/gallery_frame.svg",
+    "menu_plate": "ui/menu_plate.svg",
+    "scanline_mask": "ui/scanline_mask.svg"
   },
-  "videos": {
-    "op": "assets/videos/op.mp4",
-    "ed": "assets/videos/ed.mp4"
-  },
-  "audio": {
-    "battle_canto_1": "assets/audio/bgm/battle_canto_1.mp3",
-    "battle_canto_2": "assets/audio/bgm/battle_canto_2.mp3",
-    "boss_ahab": "assets/audio/bgm/boss_ahab.mp3",
-    "boss_cassetti": "assets/audio/bgm/boss_cassetti.mp3",
-    "boss_dongbaek": "assets/audio/bgm/boss_dongbaek.mp3",
-    "boss_erlkonig": "assets/audio/bgm/boss_erlkonig.mp3",
-    "boss_kromer": "assets/audio/bgm/boss_kromer.mp3",
-    "boss_sancho": "assets/audio/bgm/boss_sancho.mp3",
-    "dungeon_standard": "assets/audio/bgm/dungeon_standard.mp3",
-    "main_menu": "assets/audio/bgm/main_menu.mp3",
-    "story_gloomy": "assets/audio/bgm/story_gloomy.mp3",
-    "story_happy": "assets/audio/bgm/story_happy.mp3",
-    "story_serious": "assets/audio/bgm/story_serious.mp3",
-    "story_suspense": "assets/audio/bgm/story_suspense.mp3",
-    "title_theme": "assets/audio/bgm/title_theme.mp3",
-    "victory_fanfare": "assets/audio/bgm/victory_fanfare.mp3",
-    "blood_splat": "assets/audio/se/blood_splat.wav",
-    "glass_shatter": "assets/audio/se/glass_shatter.wav",
-    "slash_heavy": "assets/audio/se/slash_heavy.wav",
-    "typing_blip": "assets/audio/se/typing_blip.wav",
-    "ui_back": "assets/audio/se/ui_back.wav",
-    "ui_click": "assets/audio/se/ui_click.wav",
-    "ui_confirm": "assets/audio/se/ui_confirm.wav"
-  },
-  "bgm_metadata": {
-    "title_theme": {
-      "official": "SAIKAI",
-      "source": "Canto IX Title"
-    },
-    "main_menu": {
-      "official": "Aka no Ito (Red Thread)",
-      "source": "Canto IX Menu"
-    },
-    "story_serious": {
-      "official": "Inheritage",
-      "source": "Canto IX Dramatic"
-    },
-    "story_gloomy": {
-      "official": "Dirge for the Ring",
-      "source": "Canto IX Lament"
-    },
-    "battle_canto_1": {
-      "official": "The Point at World's End",
-      "source": "Canto IX Battle 1"
-    },
-    "battle_canto_2": {
-      "official": "Spider Blossom",
-      "source": "Canto IX Battle 2"
-    },
-    "boss_ahab": {
-      "official": "Ahab's Wrath",
-      "source": "Canto IX Boss"
-    },
-    "boss_cassetti": {
-      "official": "Cassetti's Crescendo",
-      "source": "Canto IX Boss"
-    },
-    "boss_erlkonig": {
-      "official": "Erlkonig Procession",
-      "source": "Canto IX Boss"
-    },
-    "victory_fanfare": {
-      "official": "Crown of the Ring",
-      "source": "Canto IX Victory"
-    }
-  },
-  "_v1_0_39_note": "v1.0.40 (2026-07-08): Added 11 original AI-generated resources created with pie (api.pie-xian.com) gpt-image-2 API, using our house art style (dark gothic, wine-blue + antique-gold + porcelain palette, Limbus Company aesthetic). Generated: 6 core CGs (canto_ix_opening, albina_debut, rain_confession, battle_climax, hell_gate, ring_conspiracy), 4 Albina sprite variants (normal, smile, sad, battle), 1 story background (library_interior). Style suffix encoding: '#08080d→#17202a→#3a1119 / #fff7c9→#d5a83d→#8b5d18 / #f7fbff→#b9c6ce→#59636a'. Note: 6 additional resources (revelation_gallery, finale_dawn, manor_exterior, garden_night, courtyard_ruins, throne_hall_dark) failed to generate due to API persistent 404 errors; will be retried in v1.0.40.",
-  "_removed_official_resources_note": "v1.0.38: Removed 125+ references to non-existent official Limbus Company resources (assets/limbus_official_albina/, assets/canto_ix_official/cg/, assets/canto_ix_official/bg_story/, assets/canto_ix_official/bg_battle/, assets/canto_ix_official/sprites/) due to copyright concerns and missing files. v1.0.40: Replaced with AI-generated original resources using our house art style."
+  "audio": {}
 }

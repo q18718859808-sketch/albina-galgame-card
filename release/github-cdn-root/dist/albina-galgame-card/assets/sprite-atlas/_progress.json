@@ -1,0 +1,402 @@
+{
+  "albina/normal_strip.png": {
+    "status": "done",
+    "source": "assets\\characters\\albina\\normal.png",
+    "output": "assets\\sprite-atlas\\albina\\normal_strip.png",
+    "size": 3297901,
+    "attempts": 1,
+    "timestamp": 1783619793
+  },
+  "albina/amused_strip.png": {
+    "status": "done",
+    "source": "assets\\characters\\albina\\amused.png",
+    "output": "assets\\sprite-atlas\\albina\\amused_strip.png",
+    "size": 3783351,
+    "attempts": 1,
+    "timestamp": 1783619896
+  },
+  "albina/armored_strip.png": {
+    "status": "done",
+    "source": "assets\\characters\\albina\\armored.png",
+    "output": "assets\\sprite-atlas\\albina\\armored_strip.png",
+    "size": 3502098,
+    "attempts": 1,
+    "timestamp": 1783619937
+  },
+  "albina/combat_strip.png": {
+    "status": "done",
+    "source": "assets\\characters\\albina\\combat.png",
+    "output": "assets\\sprite-atlas\\albina\\combat_strip.png",
+    "size": 3685070,
+    "attempts": 1,
+    "timestamp": 1783620018
+  },
+  "albina/endgame_strip.png": {
+    "status": "done",
+    "source": "assets\\characters\\albina\\endgame.png",
+    "output": "assets\\sprite-atlas\\albina\\endgame_strip.png",
+    "size": 4114092,
+    "attempts": 1,
+    "timestamp": 1783620082
+  },
+  "albina/fascia-open_strip.png": {
+    "status": "done",
+    "source": "assets\\characters\\albina\\fascia-open.png",
+    "output": "assets\\sprite-atlas\\albina\\fascia-open_strip.png",
+    "size": 3359680,
+    "attempts": 1,
+    "timestamp": 1783620120
+  },
+  "albina/focused_strip.png": {
+    "status": "done",
+    "source": "assets\\characters\\albina\\focused.png",
+    "output": "assets\\sprite-atlas\\albina\\focused_strip.png",
+    "size": 4001551,
+    "attempts": 2,
+    "timestamp": 1783620301
+  },
+  "albina/furious_strip.png": {
+    "status": "done",
+    "source": "assets\\characters\\albina\\furious.png",
+    "output": "assets\\sprite-atlas\\albina\\furious_strip.png",
+    "size": 3225121,
+    "attempts": 1,
+    "timestamp": 1783620360
+  },
+  "albina/golden-bough_strip.png": {
+    "status": "done",
+    "source": "assets\\characters\\albina\\golden-bough.png",
+    "output": "assets\\sprite-atlas\\albina\\golden-bough_strip.png",
+    "size": 3829701,
+    "attempts": 1,
+    "timestamp": 1783620403
+  },
+  "albina/maestro_strip.png": {
+    "status": "done",
+    "source": "assets\\characters\\albina\\maestro.png",
+    "output": "assets\\sprite-atlas\\albina\\maestro_strip.png",
+    "size": 3245882,
+    "attempts": 1,
+    "timestamp": 1783620450
+  },
+  "albina/rain_strip.png": {
+    "status": "done",
+    "source": "assets\\characters\\albina\\rain.png",
+    "output": "assets\\sprite-atlas\\albina\\rain_strip.png",
+    "size": 3777733,
+    "attempts": 1,
+    "timestamp": 1783620491
+  },
+  "albina/ring-conspiracy_strip.png": {
+    "status": "done",
+    "source": "assets\\characters\\albina\\ring-conspiracy.png",
+    "output": "assets\\sprite-atlas\\albina\\ring-conspiracy_strip.png",
+    "size": 3542405,
+    "attempts": 1,
+    "timestamp": 1783620539
+  },
+  "albina/shy_strip.png": {
+    "status": "done",
+    "source": "assets\\characters\\albina\\shy.png",
+    "output": "assets\\sprite-atlas\\albina\\shy_strip.png",
+    "size": 3529806,
+    "attempts": 1,
+    "timestamp": 1783620658
+  },
+  "albina/smile_strip.png": {
+    "status": "done",
+    "source": "assets\\characters\\albina\\smile.png",
+    "output": "assets\\sprite-atlas\\albina\\smile_strip.png",
+    "size": 3520893,
+    "attempts": 1,
+    "timestamp": 1783620776
+  },
+  "albina/surgical_strip.png": {
+    "status": "done",
+    "source": "assets\\characters\\albina\\surgical.png",
+    "output": "assets\\sprite-atlas\\albina\\surgical_strip.png",
+    "size": 3268222,
+    "attempts": 1,
+    "timestamp": 1783620815
+  },
+  "albina/unarmored_strip.png": {
+    "status": "done",
+    "source": "assets\\characters\\albina\\unarmored.png",
+    "output": "assets\\sprite-atlas\\albina\\unarmored_strip.png",
+    "size": 3599579,
+    "attempts": 1,
+    "timestamp": 1783620855
+  },
+  "albina/white-canvas_strip.png": {
+    "status": "done",
+    "source": "assets\\characters\\albina\\white-canvas.png",
+    "output": "assets\\sprite-atlas\\albina\\white-canvas_strip.png",
+    "size": 3419321,
+    "attempts": 1,
+    "timestamp": 1783620928
+  },
+  "albina/wounded_strip.png": {
+    "status": "done",
+    "source": "assets\\characters\\albina\\wounded.png",
+    "output": "assets\\sprite-atlas\\albina\\wounded_strip.png",
+    "size": 3510714,
+    "attempts": 1,
+    "timestamp": 1783620973
+  },
+  "protagonist/battle_strip.png": {
+    "status": "done",
+    "source": "assets\\characters\\protagonist\\battle.png",
+    "output": "assets\\sprite-atlas\\protagonist\\battle_strip.png",
+    "size": 3165211,
+    "attempts": 1,
+    "timestamp": 1783621025
+  },
+  "protagonist/coat_strip.png": {
+    "status": "done",
+    "source": "assets\\characters\\protagonist\\coat.png",
+    "output": "assets\\sprite-atlas\\protagonist\\coat_strip.png",
+    "size": 3023731,
+    "attempts": 1,
+    "timestamp": 1783621114
+  },
+  "protagonist/formal_strip.png": {
+    "status": "done",
+    "source": "assets\\characters\\protagonist\\formal.png",
+    "output": "assets\\sprite-atlas\\protagonist\\formal_strip.png",
+    "size": 2945421,
+    "attempts": 1,
+    "timestamp": 1783621203
+  },
+  "protagonist/injured_strip.png": {
+    "status": "done",
+    "source": "assets\\characters\\protagonist\\injured.png",
+    "output": "assets\\sprite-atlas\\protagonist\\injured_strip.png",
+    "size": 3274205,
+    "attempts": 1,
+    "timestamp": 1783621246
+  },
+  "protagonist/normal_strip.png": {
+    "status": "done",
+    "source": "assets\\characters\\protagonist\\normal.png",
+    "output": "assets\\sprite-atlas\\protagonist\\normal_strip.png",
+    "size": 3086501,
+    "attempts": 1,
+    "timestamp": 1783621331
+  },
+  "protagonist/profile_strip.png": {
+    "status": "done",
+    "source": "assets\\characters\\protagonist\\profile.png",
+    "output": "assets\\sprite-atlas\\protagonist\\profile_strip.png",
+    "size": 3391031,
+    "attempts": 1,
+    "timestamp": 1783621374
+  },
+  "protagonist/resolve_strip.png": {
+    "status": "done",
+    "source": "assets\\characters\\protagonist\\resolve.png",
+    "output": "assets\\sprite-atlas\\protagonist\\resolve_strip.png",
+    "size": 3079167,
+    "attempts": 1,
+    "timestamp": 1783621453
+  },
+  "protagonist/serious_strip.png": {
+    "status": "done",
+    "source": "assets\\characters\\protagonist\\serious.png",
+    "output": "assets\\sprite-atlas\\protagonist\\serious_strip.png",
+    "size": 2877761,
+    "attempts": 1,
+    "timestamp": 1783621496
+  },
+  "protagonist/shadow_strip.png": {
+    "status": "done",
+    "source": "assets\\characters\\protagonist\\shadow.png",
+    "output": "assets\\sprite-atlas\\protagonist\\shadow_strip.png",
+    "size": 2881745,
+    "attempts": 1,
+    "timestamp": 1783621533
+  },
+  "protagonist/smile_strip.png": {
+    "status": "done",
+    "source": "assets\\characters\\protagonist\\smile.png",
+    "output": "assets\\sprite-atlas\\protagonist\\smile_strip.png",
+    "size": 3054297,
+    "attempts": 1,
+    "timestamp": 1783621573
+  },
+  "protagonist/tender_strip.png": {
+    "status": "done",
+    "source": "assets\\characters\\protagonist\\tender.png",
+    "output": "assets\\sprite-atlas\\protagonist\\tender_strip.png",
+    "size": 2946077,
+    "attempts": 1,
+    "timestamp": 1783621678
+  },
+  "protagonist/wet-hair_strip.png": {
+    "status": "done",
+    "source": "assets\\characters\\protagonist\\wet-hair.png",
+    "output": "assets\\sprite-atlas\\protagonist\\wet-hair_strip.png",
+    "size": 3018208,
+    "attempts": 1,
+    "timestamp": 1783621718
+  },
+  "callisto/normal_strip.png": {
+    "status": "done",
+    "source": "assets\\characters\\callisto\\normal.png",
+    "output": "assets\\sprite-atlas\\callisto\\normal_strip.png",
+    "size": 3570340,
+    "attempts": 1,
+    "timestamp": 1783621771
+  },
+  "charon/normal_strip.png": {
+    "status": "done",
+    "source": "assets\\characters\\charon\\normal.png",
+    "output": "assets\\sprite-atlas\\charon\\normal_strip.png",
+    "size": 3129094,
+    "attempts": 1,
+    "timestamp": 1783621838
+  },
+  "dante/normal_strip.png": {
+    "status": "done",
+    "source": "assets\\characters\\dante\\normal.png",
+    "output": "assets\\sprite-atlas\\dante\\normal_strip.png",
+    "size": 3287194,
+    "attempts": 1,
+    "timestamp": 1783621878
+  },
+  "faust/normal_strip.png": {
+    "status": "done",
+    "source": "assets\\characters\\faust\\normal.png",
+    "output": "assets\\sprite-atlas\\faust\\normal_strip.png",
+    "size": 3718801,
+    "attempts": 1,
+    "timestamp": 1783621925
+  },
+  "ren/normal_strip.png": {
+    "status": "done",
+    "source": "assets\\characters\\ren\\normal.png",
+    "output": "assets\\sprite-atlas\\ren\\normal_strip.png",
+    "size": 3325824,
+    "attempts": 1,
+    "timestamp": 1783621970
+  },
+  "vergilius/normal_strip.png": {
+    "status": "done",
+    "source": "assets\\characters\\vergilius\\normal.png",
+    "output": "assets\\sprite-atlas\\vergilius\\normal_strip.png",
+    "size": 3721980,
+    "attempts": 1,
+    "timestamp": 1783622022
+  },
+  "yi_sang/normal_strip.png": {
+    "status": "done",
+    "source": "assets\\characters\\yi_sang\\normal.png",
+    "output": "assets\\sprite-atlas\\yi_sang\\normal_strip.png",
+    "size": 3081862,
+    "attempts": 1,
+    "timestamp": 1783622062
+  },
+  "golden_apparition/normal_strip.png": {
+    "status": "done",
+    "source": "assets\\characters\\golden_apparition\\normal.png",
+    "output": "assets\\sprite-atlas\\golden_apparition\\normal_strip.png",
+    "size": 3927065,
+    "attempts": 1,
+    "timestamp": 1783622100
+  },
+  "lcd_captain/normal_strip.png": {
+    "status": "done",
+    "source": "assets\\characters\\lcd_captain\\normal.png",
+    "output": "assets\\sprite-atlas\\lcd_captain\\normal_strip.png",
+    "size": 3264020,
+    "attempts": 1,
+    "timestamp": 1783622140
+  },
+  "lce_doctor/normal_strip.png": {
+    "status": "done",
+    "source": "assets\\characters\\lce_doctor\\normal.png",
+    "output": "assets\\sprite-atlas\\lce_doctor\\normal_strip.png",
+    "size": 3297944,
+    "attempts": 1,
+    "timestamp": 1783622185
+  },
+  "fixer_informant/normal_strip.png": {
+    "status": "done",
+    "source": "assets\\characters\\fixer_informant\\normal.png",
+    "output": "assets\\sprite-atlas\\fixer_informant\\normal_strip.png",
+    "size": 3222195,
+    "attempts": 1,
+    "timestamp": 1783622234
+  },
+  "ring_agent/normal_strip.png": {
+    "status": "done",
+    "source": "assets\\characters\\ring_agent\\normal.png",
+    "output": "assets\\sprite-atlas\\ring_agent\\normal_strip.png",
+    "size": 3142702,
+    "attempts": 1,
+    "timestamp": 1783622272
+  },
+  "original_cg/albina_debut_strip.png": {
+    "status": "done",
+    "source": "assets\\original_cg\\albina_debut.png",
+    "output": "assets\\sprite-atlas\\original_cg\\albina_debut_strip.png",
+    "size": 2925431,
+    "attempts": 1,
+    "timestamp": 1783622310
+  },
+  "original_cg/battle_climax_strip.png": {
+    "status": "done",
+    "source": "assets\\original_cg\\battle_climax.png",
+    "output": "assets\\sprite-atlas\\original_cg\\battle_climax_strip.png",
+    "size": 2864495,
+    "attempts": 1,
+    "timestamp": 1783622352
+  },
+  "original_cg/canto_ix_opening_strip.png": {
+    "status": "failed",
+    "source": "assets\\original_cg\\canto_ix_opening.png",
+    "output": "assets\\sprite-atlas\\original_cg\\canto_ix_opening_strip.png",
+    "error": "HTTP 403: {\"error\":{\"message\":\"预扣费额度失败, 用户剩余额度: ＄0.050000, 需要预扣费额度: ＄0.100000 (request id: 202607091839498508537008268d9d67gwnpnxM)\",\"type\":\"new_api_error\",\"param\":\"\",\"code\":\"insufficient_user_quota\"}}",
+    "attempts": 3,
+    "timestamp": 1783622390
+  },
+  "original_cg/hell_gate_strip.png": {
+    "status": "failed",
+    "source": "assets\\original_cg\\hell_gate.png",
+    "output": "assets\\sprite-atlas\\original_cg\\hell_gate_strip.png",
+    "error": "HTTP 403: {\"error\":{\"message\":\"预扣费额度失败, 用户剩余额度: ＄0.050000, 需要预扣费额度: ＄0.100000 (request id: 202607091840249061893478268d9d6ka0wLtJk)\",\"type\":\"new_api_error\",\"param\":\"\",\"code\":\"insufficient_user_quota\"}}",
+    "attempts": 3,
+    "timestamp": 1783622425
+  },
+  "original_cg/rain_confession_strip.png": {
+    "status": "failed",
+    "source": "assets\\original_cg\\rain_confession.png",
+    "output": "assets\\sprite-atlas\\original_cg\\rain_confession_strip.png",
+    "error": "HTTP 403: {\"error\":{\"message\":\"预扣费额度失败, 用户剩余额度: ＄0.050000, 需要预扣费额度: ＄0.100000 (request id: 202607091840546398154378268d9d6BnzkAOYB)\",\"type\":\"new_api_error\",\"param\":\"\",\"code\":\"insufficient_user_quota\"}}",
+    "attempts": 3,
+    "timestamp": 1783622454
+  },
+  "original_cg/ring_conspiracy_strip.png": {
+    "status": "failed",
+    "source": "assets\\original_cg\\ring_conspiracy.png",
+    "output": "assets\\sprite-atlas\\original_cg\\ring_conspiracy_strip.png",
+    "error": "HTTP 403: {\"error\":{\"message\":\"预扣费额度失败, 用户剩余额度: ＄0.050000, 需要预扣费额度: ＄0.100000 (request id: 202607091841379559462728268d9d67jCFuMAr)\",\"type\":\"new_api_error\",\"param\":\"\",\"code\":\"insufficient_user_quota\"}}",
+    "attempts": 3,
+    "timestamp": 1783622498
+  },
+  "original_albina_sprites/battle_strip.png": {
+    "status": "failed",
+    "source": "assets\\original_albina_sprites\\battle.png",
+    "output": "assets\\sprite-atlas\\original_albina_sprites\\battle_strip.png",
+    "error": "HTTP 403: {\"error\":{\"message\":\"预扣费额度失败, 用户剩余额度: ＄0.050000, 需要预扣费额度: ＄0.100000 (request id: 202607091842143082986988268d9d66TROf2Up)\",\"type\":\"new_api_error\",\"param\":\"\",\"code\":\"insufficient_user_quota\"}}",
+    "attempts": 3,
+    "timestamp": 1783622534
+  },
+  "original_albina_sprites/normal_strip.png": {
+    "status": "failed",
+    "source": "assets\\original_albina_sprites\\normal.png",
+    "output": "assets\\sprite-atlas\\original_albina_sprites\\normal_strip.png",
+    "error": "HTTP 403: {\"error\":{\"message\":\"预扣费额度失败, 用户剩余额度: ＄0.050000, 需要预扣费额度: ＄0.100000 (request id: 202607091842477024722458268d9d6mw1xzwxB)\",\"type\":\"new_api_error\",\"param\":\"\",\"code\":\"insufficient_user_quota\"}}",
+    "attempts": 3,
+    "timestamp": 1783622568
+  }
+}
