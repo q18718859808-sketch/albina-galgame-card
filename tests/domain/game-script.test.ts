@@ -120,7 +120,7 @@ describe('GameScriptV2Schema', () => {
     const manifest = {
       version: 2,
       projectId: 'albina-galgame-card',
-      basePath: 'assets/',
+      basePath: 'assets',
       assets: [
         { id: scene.backgroundAssetId, kind: 'image', path: 'bg/white-canvas.png' },
         { id: scene.cgAssetId, kind: 'image', path: 'cg/white-canvas.png' },

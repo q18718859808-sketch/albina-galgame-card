@@ -27,3 +27,11 @@ The final domain suite contains 16 tests across three files. It covers valid and
 An independent read-only review initially identified three Important issues: permissive non-JSON logs, missing combined GameScript/manifest validation, and Windows absolute-path acceptance. All three were reproduced with RED tests and resolved before final verification.
 
 [Verification service unavailable, results not independently verified by the project-specified Logic Verifier MCP; verification used the repository test, typecheck, build, diff, and independent agent review gates available in this environment.]
+
+## Independent review follow-up
+
+The independent Task 2 review requested two additional contract tightenings. `RelativeAssetPathSchema` now accepts only canonical `/`-separated relative paths whose segments are non-empty and neither `.` nor `..`. It rejects leading or trailing separators, repeated separators, current-directory segments, parent-directory segments, drive or URI colons, backslashes, root paths, and UNC paths. Manifest test fixtures now use the canonical base path `assets` rather than `assets/`.
+
+`SaveLogsSchema` now includes strict JSON-array slots for the v1.0.44 `routeObjectives`, `watchSignals`, `narrativeIndex`, and `openingDrafts` collections. `createDefaultSaveV2` initializes all four slots, and `migrateSaveV1` explicitly sanitizes and preserves each legacy collection. The v1 preservation test now verifies representative nested JSON records for all four fields.
+
+The follow-up RED run failed on the non-canonical path cases and the four missing migration collections before implementation. After the focused fix, `npm test -- tests/domain` passed with 3 files and 16 tests; `npm test` passed with 5 files and 19 tests; `npm run typecheck` and `npm run build` both completed successfully. The release and dist media trees remained unchanged.

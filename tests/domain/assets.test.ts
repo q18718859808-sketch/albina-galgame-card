@@ -43,7 +43,15 @@ describe('asset schemas', () => {
   it('rejects unknown fields and wrong versions', () => {
     expect(() => PortraitAssetSchema.parse({ ...portrait, version: 1 })).toThrow();
     expect(() => MediaJobSchema.parse({ ...mediaJob, runtimeApiKey: 'secret' })).toThrow();
-    for (const path of ['C:\\assets\\portrait.png', '\\assets\\portrait.png', '\\\\server\\share\\portrait.png']) {
+    for (const path of [
+      'C:\\assets\\portrait.png',
+      '\\assets\\portrait.png',
+      '\\\\server\\share\\portrait.png',
+      './cg/a.png',
+      'cg/./a.png',
+      'cg//a.png',
+      'cg/a.png/',
+    ]) {
       expect(() => PortraitAssetSchema.parse({ ...portrait, path })).toThrow(/relative/i);
     }
   });
@@ -52,7 +60,7 @@ describe('asset schemas', () => {
     const manifest = {
       version: 2,
       projectId: 'albina-galgame-card',
-      basePath: 'assets/',
+      basePath: 'assets',
       assets: [
         {
           id: 'portrait.albina.normal.static',
@@ -71,7 +79,7 @@ describe('asset schemas', () => {
     const manifest = {
       version: 2,
       projectId: 'albina-galgame-card',
-      basePath: 'assets/',
+      basePath: 'assets',
       assets: [
         {
           id: 'portrait.albina.normal.static',
@@ -90,7 +98,7 @@ describe('asset schemas', () => {
     const duplicate = {
       version: 2,
       projectId: 'albina-galgame-card',
-      basePath: 'assets/',
+      basePath: 'assets',
       assets: [
         { id: 'cg.opening', kind: 'image', path: 'cg/opening.png' },
         { id: 'cg.opening', kind: 'image', path: 'cg/opening-copy.png' },

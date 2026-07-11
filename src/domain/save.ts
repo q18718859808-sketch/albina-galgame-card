@@ -84,6 +84,10 @@ export const SaveLogsSchema = z
     consequences: LogArraySchema,
     routeEvents: LogArraySchema,
     replayAnchors: LogArraySchema,
+    routeObjectives: LogArraySchema,
+    watchSignals: LogArraySchema,
+    narrativeIndex: LogArraySchema,
+    openingDrafts: LogArraySchema,
     conflicts: LogArraySchema,
     exchanges: LogArraySchema,
     contacts: LogArraySchema,
@@ -130,7 +134,8 @@ const DEFAULT_TIMESTAMP = '1970-01-01T00:00:00.000Z';
 function createDefaultLogs(): SaveV2['logs'] {
   return {
     history: [], timeline: [], routeActions: [], routeActivity: [], progressionUnlocks: [],
-    consequences: [], routeEvents: [], replayAnchors: [], conflicts: [], exchanges: [], contacts: [],
+    consequences: [], routeEvents: [], replayAnchors: [], routeObjectives: [], watchSignals: [],
+    narrativeIndex: [], openingDrafts: [], conflicts: [], exchanges: [], contacts: [],
     achievements: [], realityOverlays: [], sceneBranches: [], story: [], storySummaries: [], dynamicMemories: [],
   };
 }

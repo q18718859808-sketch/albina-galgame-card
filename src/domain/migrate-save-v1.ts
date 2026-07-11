@@ -128,6 +128,8 @@ function migrateLogs(record: UnknownRecord): SaveV2['logs'] {
     routeActions: logEntries(record.routeActionLog), routeActivity: logEntries(record.routeActivityLog),
     progressionUnlocks: logEntries(record.progressionUnlockLog), consequences: logEntries(record.consequences),
     routeEvents: logEntries(record.routeEvents), replayAnchors: logEntries(record.replayAnchors),
+    routeObjectives: logEntries(record.routeObjectives), watchSignals: logEntries(record.watchSignals),
+    narrativeIndex: logEntries(record.narrativeIndex), openingDrafts: logEntries(record.openingDrafts),
     conflicts: logEntries(record.conflictResolutionLog), exchanges: logEntries(record.exchangeLog),
     contacts: logEntries(record.contactLog), achievements: logEntries(record.achievementLog),
     realityOverlays: logEntries(record.realityOverlayLog), sceneBranches: logEntries(record.sceneBranchLog),

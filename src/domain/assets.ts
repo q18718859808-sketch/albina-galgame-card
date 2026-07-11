@@ -2,10 +2,15 @@ import { z } from 'zod';
 
 import { DOMAIN_VERSION } from './scene-cue';
 
-const RelativeAssetPathSchema = z
+function isCanonicalRelativePath(path: string): boolean {
+  if (path.startsWith('/') || path.endsWith('/') || path.includes('\\') || path.includes(':')) return false;
+  return path.split('/').every((segment) => segment.length > 0 && segment !== '.' && segment !== '..');
+}
+
+export const RelativeAssetPathSchema = z
   .string()
   .min(1)
-  .refine((path) => !path.startsWith('/') && !path.includes('..') && !path.includes('\\') && !/^[a-z]+:/i.test(path), {
+  .refine(isCanonicalRelativePath, {
     message: 'Asset paths must be relative to the canonical asset root',
   });
 
