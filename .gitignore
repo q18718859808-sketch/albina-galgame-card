@@ -7,6 +7,8 @@ build/
 /tools/media/dist/
 /tools/media/artifacts/
 /tools/media/jobs/.ledger.json*
+/staging/media/
+/tools/media/production/.ledger.json*
 
 # But keep dist assets and card
 !/dist/

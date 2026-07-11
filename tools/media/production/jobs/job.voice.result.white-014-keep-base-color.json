@@ -1,0 +1,12 @@
+{
+  "kind": "speech",
+  "input": "你选择“答应替她保留最后一层底色”。阿尔比娜：城郊的黎明像一张终于干透的画布。她把法西娅重新放回胸口，又把画笔交到你手里：这张画布已经记住了你，但它仍然属于我。",
+  "voice": "coral",
+  "output": "D:\\创作\\albina-v2-complete\\staging\\media\\audio\\voice\\result\\white_014_keep_base_color.mp3",
+  "validation": {
+    "minDurationSeconds": 0.2,
+    "maxDurationSeconds": 60,
+    "minLoudnessDbfs": -30,
+    "maxLoudnessDbfs": -6
+  }
+}

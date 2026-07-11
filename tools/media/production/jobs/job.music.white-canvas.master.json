@@ -1,0 +1,12 @@
+{
+  "kind": "music",
+  "prompt": "Albina visual novel cue white canvas, master, instrumental dark chamber-electronic score, coherent motif, production ready, no spoken word.",
+  "durationSeconds": 90,
+  "output": "D:\\创作\\albina-v2-complete\\staging\\media\\music\\white_canvas\\master.mp3",
+  "validation": {
+    "minDurationSeconds": 50,
+    "maxDurationSeconds": 100,
+    "minLoudnessDbfs": -30,
+    "maxLoudnessDbfs": -6
+  }
+}

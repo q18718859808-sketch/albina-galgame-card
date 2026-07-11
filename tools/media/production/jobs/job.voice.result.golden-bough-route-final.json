@@ -1,0 +1,12 @@
+{
+  "kind": "speech",
+  "input": "你选择“为金枝重构路线落最后一笔”。金枝重构路线终章已封存，进入固定结局资格判定。",
+  "voice": "coral",
+  "output": "D:\\创作\\albina-v2-complete\\staging\\media\\audio\\voice\\result\\golden_bough_route_final.mp3",
+  "validation": {
+    "minDurationSeconds": 0.2,
+    "maxDurationSeconds": 60,
+    "minLoudnessDbfs": -30,
+    "maxLoudnessDbfs": -6
+  }
+}

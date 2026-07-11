@@ -8,6 +8,7 @@ import { contentHashJobId } from './hash.js';
 import { loadJob } from './job.js';
 import { Ledger } from './ledger.js';
 import { PieClient } from './pie-client.js';
+import { prepareProduction } from './production.js';
 
 interface CliDependencies {
   stdout?: (line: string) => void;
@@ -26,6 +27,11 @@ export async function runCli(args: string[], dependencies: CliDependencies = {})
   if (command === 'generate') return generate(args, ledgerPath, dependencies, stdout);
   if (command === 'validate') return validate(args, stdout);
   if (command === 'promote') return promote(args, stdout);
+  if (command === 'prepare-production') {
+    const destination = option(args, '--to') ?? resolve(cwd, 'tools/media/production/jobs');
+    stdout(JSON.stringify(await prepareProduction(cwd, destination)));
+    return 0;
+  }
   throw new Error('Usage: media <inventory|generate|validate|promote>');
 }
 

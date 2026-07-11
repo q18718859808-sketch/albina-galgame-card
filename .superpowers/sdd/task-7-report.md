@@ -1,0 +1,33 @@
+# Task 7 production report
+
+Status: NEEDS_CONTEXT.
+
+The production pipeline is prepared and reproducible, but this process did not have `PIE_API_KEY`, so no network request, paid generation, staging artifact, validation, promotion, or binary commit was attempted. Pie remains the only configured media provider; no CloseAPI path was added or used.
+
+The new `media prepare-production` command derives production specs from `content/asset-manifest-v2.json`, the authoritative dialogue files, and canonical asset paths. It freezes the character roster, canonical-source outfit rule, six-color palette, eight strip expressions, speaker-to-probed-voice mapping, and music cue sheet. Generated specs contain no credentials or provider responses.
+
+Prepared inventory: 8 `gpt-image-2` edit-first eight-frame strip jobs, 154 `speech-2.8-hd` fixed-dialogue jobs, 29 `seedance-1.5-pro` jobs (prologue, route scenes 3/5/8/11/15, nine endings, OP, and three EDs), 3 `music-2.6` stability probes, and 81 delivery jobs representing 27 cues in master/instrumental/loop variants. Total: 275 jobs plus one index file.
+
+All output targets point to ignored `staging/media/**`. The ledger and production ledger patterns are ignored. Promotion remains validation-gated through the existing media CLI, and archival masters are not assigned web-bundle destinations. The old bundle was not modified.
+
+Verification passed: media tests 24/24, media typecheck, media build, root tests 70/70, root typecheck, and `git diff --check`. Repeated preparation produced byte-identical `index.json` in the determinism test.
+
+When a funded Pie key is available in the current process, regenerate specs with:
+
+`node tools/media/dist/src/cli.js prepare-production --to tools/media/production/jobs`
+
+Then execute the eight image jobs first:
+
+`Get-ChildItem tools/media/production/jobs/job.strip.*.json | ForEach-Object { node tools/media/dist/src/cli.js generate $_.FullName --ledger staging/media/.ledger.json }`
+
+Execute speech after the strip batch:
+
+`Get-ChildItem tools/media/production/jobs/job.voice.*.json | ForEach-Object { node tools/media/dist/src/cli.js generate $_.FullName --ledger staging/media/.ledger.json }`
+
+Execute music probes one at a time and validate each before continuing; only after all three are recorded successful should bulk music run:
+
+`1..3 | ForEach-Object { node tools/media/dist/src/cli.js generate "tools/media/production/jobs/job.music.probe.$_.json" --ledger staging/media/.ledger.json }`
+
+Video and non-probe music specs are complete but intentionally remain unexecuted until credentials and the music gate permit them. Every generated artifact must be validated before `media promote`; only web delivery encodes belong under `dist/albina-galgame-card/assets`, while archival masters stay outside the web tree.
+
+[Verification service unavailable, results not independently verified by the requested MCP services.]

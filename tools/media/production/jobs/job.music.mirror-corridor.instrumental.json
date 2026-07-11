@@ -1,0 +1,12 @@
+{
+  "kind": "music",
+  "prompt": "Albina visual novel cue mirror corridor, instrumental, instrumental dark chamber-electronic score, coherent motif, production ready, no spoken word.",
+  "durationSeconds": 90,
+  "output": "D:\\创作\\albina-v2-complete\\staging\\media\\music\\mirror_corridor\\instrumental.mp3",
+  "validation": {
+    "minDurationSeconds": 50,
+    "maxDurationSeconds": 100,
+    "minLoudnessDbfs": -30,
+    "maxLoudnessDbfs": -6
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "kind": "music",
+  "probe": true,
+  "prompt": "Instrumental dark chamber-electronic visual novel underscore, stable form, clean ending, no vocals.",
+  "durationSeconds": 15,
+  "output": "D:\\创作\\albina-v2-complete\\staging\\media\\music\\probes\\probe-1.mp3",
+  "validation": {
+    "minDurationSeconds": 12,
+    "maxDurationSeconds": 18,
+    "minLoudnessDbfs": -30,
+    "maxLoudnessDbfs": -6
+  }
+}

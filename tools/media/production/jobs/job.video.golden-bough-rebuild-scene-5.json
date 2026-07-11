@@ -1,0 +1,12 @@
+{
+  "kind": "video",
+  "prompt": "Albina visual novel animated CG: golden bough rebuild scene 5. Use approved keyframe composition, restrained cinematic motion, preserve character identity and frozen palette, no text or logos.",
+  "durationSeconds": 8,
+  "output": "D:\\创作\\albina-v2-complete\\staging\\media\\video\\golden_bough_rebuild_scene_5.mp4",
+  "validation": {
+    "minWidth": 1280,
+    "minHeight": 720,
+    "minDurationSeconds": 7,
+    "maxDurationSeconds": 31
+  }
+}
