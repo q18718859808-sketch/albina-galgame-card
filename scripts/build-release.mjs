@@ -34,9 +34,20 @@ async function normalizeGeneratedText(root) {
   }
 }
 
+async function removeWebGenerationTools(root) {
+  for (const entry of await readdir(root, { withFileTypes: true })) {
+    const path = resolve(root, entry.name);
+    if (entry.isDirectory()) {
+      if (/^(?:tools?|scripts?)$/iu.test(entry.name)) await rm(path, { recursive: true, force: true });
+      else await removeWebGenerationTools(path);
+    } else if (/\.(?:bat|cmd|ps1|py|sh)$/iu.test(entry.name)) await rm(path, { force: true });
+  }
+}
+
 await rm(canonicalSourceRoot, { recursive: true, force: true });
 await copyTree(buildRoot, canonicalSourceRoot);
 await normalizeGeneratedText(canonicalSourceRoot);
+await removeWebGenerationTools(canonicalRoot);
 console.log(`Promoted source build to ${canonicalSourceRoot}`);
 
 await rm(releaseRoot, { recursive: true, force: true });

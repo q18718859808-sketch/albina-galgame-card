@@ -12,7 +12,7 @@ const galleryAssets = computed(() => game.galleryIds.map((id) => ({ id, url: gam
 
 function exportCurrentSave(): void { exportText.value = game.exportSave(); }
 async function importCurrentSave(): Promise<void> { if (importText.value.trim()) await game.importSave(importText.value); }
-onBeforeUnmount(() => game.runtime.unmount());
+onBeforeUnmount(() => { game.disposeUiListeners(); game.runtime.unmount(); });
 </script>
 
 <template>
@@ -26,17 +26,31 @@ onBeforeUnmount(() => game.runtime.unmount());
         <nav class="title-actions" aria-label="主菜单">
           <button data-testid="new-game" @click="game.start">开始新篇</button>
           <button data-testid="continue-game" :disabled="game.loading" @click="game.continueGame">继续</button>
+          <button data-testid="title-saves" @click="game.openSaves">存档</button>
           <button @click="game.openGallery">CG 图鉴</button>
-          <button @click="game.screen = 'settings'">设置</button>
+          <button data-testid="title-settings" @click="game.screen = 'settings'">设置</button>
         </nav>
         <p class="build-state">v{{ ALBINA_RELEASE_VERSION }} · 确定性主剧情 · 运行时零媒体 API</p>
+      </div>
+    </section>
+
+    <section v-else-if="game.screen === 'saves'" class="panel-screen" data-testid="saves-screen">
+      <header><button @click="game.screen = 'title'">返回</button><h2>存档管理</h2></header>
+      <div class="slot-actions"><button data-testid="save-slot-1" @click="game.saveSlot(1)">保存到槽位 1</button><button @click="game.saveSlot(2)">保存到槽位 2</button><button @click="game.saveSlot(3)">保存到槽位 3</button></div>
+      <div class="save-slot-grid">
+        <article v-for="slot in game.saveSlots" :key="slot.id" class="save-slot" :data-save-id="slot.id">
+          <img v-if="slot.thumbnailUrl" :src="slot.thumbnailUrl" alt="存档缩略图">
+          <div><strong>{{ slot.id }}</strong><p>{{ slot.sceneId }}</p><time>{{ slot.updatedAt }}</time></div>
+          <button @click="game.restoreSlot(slot.id)">读取</button><button @click="game.deleteSlot(slot.id)">删除</button>
+        </article>
+        <p v-if="game.saveSlots.length === 0">暂无普通存档。</p>
       </div>
     </section>
 
     <section v-else-if="game.screen === 'gallery'" class="panel-screen" data-testid="gallery-screen">
       <header><button @click="game.backToGame">返回</button><h2>CG 图鉴</h2></header>
       <div class="gallery-grid">
-        <figure v-for="asset in galleryAssets" :key="asset.id"><img :src="asset.url" :alt="asset.id"><figcaption>{{ asset.id }}</figcaption></figure>
+        <figure v-for="asset in galleryAssets" :key="asset.id"><img :src="asset.url" :alt="asset.id" crossorigin="anonymous"><figcaption>{{ asset.id }}</figcaption></figure>
         <p v-if="galleryAssets.length === 0">尚未解锁 CG。</p>
       </div>
     </section>
@@ -47,27 +61,28 @@ onBeforeUnmount(() => game.runtime.unmount());
       <label><input v-model="game.reducedMotion" type="checkbox"> 减少动态效果</label>
       <label><input :checked="game.muted" type="checkbox" @change="game.toggleMute"> 静音</label>
       <button data-testid="autoplay-recovery" @click="game.recoverAutoplay">恢复音频播放</button>
-      <p class="asset-status">图像条带仍有 8 项等待 Pie 恢复；Music 2.6 批量生产因稳定性门槛暂停。本版本不会在游玩时请求生成接口。</p>
+      <p class="asset-status">图像条带仍有 8 项等待 Pie 恢复；Music 2.6 已观察到两次 504，批量生产因稳定性门槛暂停。本预览版不会在游玩时请求生成接口，也不宣称 Complete Edition 已完成。</p>
     </section>
 
     <section v-else class="game-screen" data-testid="game-screen" :data-scene-id="game.scene.id">
-      <img v-if="game.media.backgroundUrl" class="game-screen__background" :src="game.media.backgroundUrl" alt="">
+      <img v-if="game.media.backgroundUrl" class="game-screen__background" :src="game.media.backgroundUrl" alt="" crossorigin="anonymous">
       <video
         v-if="game.media.videoUrl"
         class="game-screen__video"
         :src="game.media.videoUrl"
         :poster="game.media.fallbackUrl"
         autoplay muted loop playsinline
+        crossorigin="anonymous"
         data-testid="scene-video"
         @error="game.setVideoFailed"
       />
-      <img v-else-if="game.media.fallbackUrl" class="game-screen__cg" :src="game.media.fallbackUrl" alt="剧情 CG" data-testid="static-fallback">
-      <PortraitStage v-if="!game.scene.cgAssetId" :portraits="game.scene.portraits" :service="game.runtime.portraits" />
+      <img v-else-if="game.media.fallbackUrl" class="game-screen__cg" :src="game.media.fallbackUrl" alt="剧情 CG" data-testid="static-fallback" crossorigin="anonymous">
+      <PortraitStage :portraits="game.scene.portraits" :service="game.runtime.portraits" />
 
       <header class="game-hud">
         <span>CH.{{ game.scene.chapter }} · {{ game.scene.locationId }}</span>
         <span>信任 {{ game.save.values.trust }} / 危险 {{ game.save.values.danger }} / 共鸣 {{ game.save.values.artResonance }}</span>
-        <nav><button @click="game.quickSave">快速存档</button><button @click="game.openGallery">图鉴</button><button @click="game.toggleMute">{{ game.muted ? '启音' : '静音' }}</button></nav>
+        <nav><button @click="game.quickSave">快速存档</button><button data-testid="game-saves" @click="game.openSaves">存档</button><button @click="game.openGallery">图鉴</button><button data-testid="game-settings" @click="game.screen = 'settings'">设置</button><button @click="game.toggleMute">{{ game.muted ? '启音' : '静音' }}</button></nav>
       </header>
 
       <article class="dialogue-box" data-testid="dialogue-box" @click="game.completeText">

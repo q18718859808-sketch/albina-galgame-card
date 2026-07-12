@@ -30,6 +30,8 @@ describe('v2 release completeness with explicit blocked channels', () => {
     expect(runtime).toHaveLength(29);
     expect(desktop).toHaveLength(29);
     expect(story.scenes.filter((scene) => scene.videoAssetId && scene.desktopVideoAssetId)).toHaveLength(25);
+    expect(story.scenes.every((scene) => Boolean(scene.bgmAssetId))).toBe(true);
+    expect(story.scenes.filter((scene) => scene.tone === 'threat').every((scene) => (scene.sfxAssetIds?.length ?? 0) > 0)).toBe(true);
   });
 
   it('publishes blocked production channels without pretending completion', async () => {

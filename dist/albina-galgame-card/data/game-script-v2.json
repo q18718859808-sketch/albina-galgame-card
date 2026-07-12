@@ -38,6 +38,7 @@
       "speaker": "阿尔比娜",
       "text": "晚上好，{{user}}。请不要站得太远，我还没决定该把你称作观众、朋友，还是一块值得等待的画布。",
       "voiceAssetId": "voice.scene.opening_001",
+      "bgmAssetId": "file.audio.bgm.backstreets.rain.mp3",
       "choices": [
         {
           "id": "enter_white_canvas",
@@ -130,6 +131,7 @@
       "speaker": "阿尔比娜",
       "text": "白色并不代表干净。它只是暂时还没有被决定。你也是这样，{{user}}。",
       "voiceAssetId": "voice.scene.white_canvas_001",
+      "bgmAssetId": "file.audio.bgm.between.two.worlds.mp3",
       "choices": [
         {
           "id": "white_touch_boundary",
@@ -194,6 +196,7 @@
       "speaker": "阿尔比娜",
       "text": "她把黑色手掌停在离你心口一寸的位置，没有继续向前。法西娅安静得像也在等待你的许可。",
       "voiceAssetId": "voice.scene.white_canvas_002",
+      "bgmAssetId": "file.audio.bgm.between.two.worlds.mp3",
       "choices": [
         {
           "id": "white_follow_to_lab",
@@ -269,6 +272,7 @@
       "speaker": "LCE 医师",
       "text": "灯光没有温度。记录员要求你签下旁观协议，阿尔比娜却先把笔推给自己：这一次，谁也不能替她同意被拆解。",
       "voiceAssetId": "voice.scene.white_canvas_003",
+      "bgmAssetId": "file.audio.bgm.between.two.worlds.mp3",
       "choices": [
         {
           "id": "white_sign_witness_protocol",
@@ -347,6 +351,7 @@
       "speaker": "阿尔比娜",
       "text": "巴士窗上映出她的白色义体，也映出你故意留下的空座。她说完整不是没有裂缝，而是裂缝终于有了不被展览的权利。",
       "voiceAssetId": "voice.scene.white_canvas_004",
+      "bgmAssetId": "file.audio.bgm.between.two.worlds.mp3",
       "choices": [
         {
           "id": "white_keep_empty_seat",
@@ -420,6 +425,7 @@
       "speaker": "阿尔比娜",
       "text": "黎明像一层还没有落款的底色。她把法西娅插在你们之间，不是阻隔，而是提醒：任何亲密都必须能被双方随时收回。",
       "voiceAssetId": "voice.scene.white_canvas_005",
+      "bgmAssetId": "file.audio.bgm.between.two.worlds.mp3",
       "choices": [
         {
           "id": "white_canvas_route_complete",
@@ -469,6 +475,7 @@
       "speaker": "阿尔比娜",
       "text": "空展厅的回声比任何观众都诚实。她拿起一支没有颜料的画笔，在你面前比划出一条看不见的轮廓：这是你今晚没有说出口的那句话。",
       "voiceAssetId": "voice.scene.white_canvas_006",
+      "bgmAssetId": "file.audio.bgm.between.two.worlds.mp3",
       "choices": [
         {
           "id": "white_006_name_silence",
@@ -547,6 +554,7 @@
       "speaker": "法西娅",
       "text": "法西娅的低语从镜面里渗出来：你正在画的并不是她，是一个被允许随时擦掉的你。阿尔比娜没有反驳，只是把那面镜子轻轻转开半寸。",
       "voiceAssetId": "voice.scene.white_canvas_007",
+      "bgmAssetId": "file.audio.bgm.between.two.worlds.mp3",
       "choices": [
         {
           "id": "white_007_keep_mirror_open",
@@ -627,6 +635,7 @@
       "speaker": "阿尔比娜",
       "text": "义体维护槽的白光下，她把法西娅从胸口取出来，放在你和她之间的托盘上。她说：完整不是把它装回去，是承认它有权利短暂离开我。",
       "voiceAssetId": "voice.scene.white_canvas_008",
+      "bgmAssetId": "file.audio.bgm.between.two.worlds.mp3",
       "choices": [
         {
           "id": "white_008_hold_fascia",
@@ -698,6 +707,7 @@
       "speaker": "阿尔比娜",
       "text": "雨室的水线像无数根未被签名的画框。她让你站在她身后半步，说那个距离刚好能让两人都不必替对方回答。",
       "voiceAssetId": "voice.scene.white_canvas_009",
+      "bgmAssetId": "file.audio.bgm.between.two.worlds.mp3",
       "choices": [
         {
           "id": "white_009_keep_half_step",
@@ -776,6 +786,7 @@
       "speaker": "但丁",
       "text": "但丁没有抬头，只低声提醒：她在试着把自己画成一个可以离开的人，你最好别急着把她画成离不开你的人。",
       "voiceAssetId": "voice.scene.white_canvas_010",
+      "bgmAssetId": "file.audio.bgm.between.two.worlds.mp3",
       "choices": [
         {
           "id": "white_010_acknowledge_leave",
@@ -849,6 +860,7 @@
       "speaker": "阿尔比娜",
       "text": "巢穴车站的灯光白得发硬。她站在月台边缘，没有回头，只问：如果一个艺术家拒绝被展览，你愿意做那个替她谢幕的人吗？",
       "voiceAssetId": "voice.scene.white_canvas_011",
+      "bgmAssetId": "file.audio.bgm.between.two.worlds.mp3",
       "choices": [
         {
           "id": "white_011_curtain_call",
@@ -927,6 +939,10 @@
       "speaker": "卡利斯托",
       "text": "蜘蛛画廊借给白画布一个临时展位。卡利斯托微笑着提议：把她最有缺陷的那一面挂出来，观众会替你们完成剩下的故事。",
       "voiceAssetId": "voice.scene.white_canvas_012",
+      "bgmAssetId": "file.audio.bgm.between.two.worlds.mp3",
+      "sfxAssetIds": [
+        "file.audio.se.glass.shatter.wav"
+      ],
       "choices": [
         {
           "id": "white_012_refuse_exhibit",
@@ -999,6 +1015,10 @@
       "speaker": "阿尔比娜",
       "text": "环指工坊的颜料气味里混着血。她握着一柄画刀，对你说：今天我可能要毁掉一件作品，请你告诉我哪一件是她真正想毁掉的。",
       "voiceAssetId": "voice.scene.white_canvas_013",
+      "bgmAssetId": "file.audio.bgm.between.two.worlds.mp3",
+      "sfxAssetIds": [
+        "file.audio.se.glass.shatter.wav"
+      ],
       "choices": [
         {
           "id": "white_013_point_to_mirror",
@@ -1070,6 +1090,7 @@
       "speaker": "阿尔比娜",
       "text": "楼顶的风把她的话吹得很轻。她说：如果有一天我想把自己重新画成空白，你会替我保留这最后一层底色，还是替我重新开始？",
       "voiceAssetId": "voice.scene.white_canvas_014",
+      "bgmAssetId": "file.audio.bgm.between.two.worlds.mp3",
       "choices": [
         {
           "id": "white_014_keep_base_color",
@@ -1150,6 +1171,7 @@
       "speaker": "阿尔比娜",
       "text": "城郊的黎明像一张终于干透的画布。她把法西娅重新放回胸口，又把画笔交到你手里：这张画布已经记住了你，但它仍然属于我。",
       "voiceAssetId": "voice.scene.white_canvas_015",
+      "bgmAssetId": "file.audio.bgm.between.two.worlds.mp3",
       "choices": [
         {
           "id": "white_canvas_route_final",
@@ -1206,6 +1228,7 @@
       "speaker": "叙事记录",
       "text": "白色画布的全部选择已封存。系统将只依据持久状态判定结局，不请求任何运行时生成。",
       "voiceAssetId": "voice.scene.white_canvas_ending_gate",
+      "bgmAssetId": "file.audio.bgm.between.two.worlds.mp3",
       "choices": [
         {
           "id": "white_canvas_choose_true_ending",
@@ -1342,6 +1365,7 @@
       "speaker": "阿尔比娜",
       "text": "晨光落在未署名的白画上。阿尔比娜没有把你画成作品，而是把并肩离开的两道影子留在画框之外：这一次，完整与亲密同时成立。",
       "voiceAssetId": "voice.scene.white_canvas_ending_true",
+      "bgmAssetId": "file.audio.bgm.between.two.worlds.mp3",
       "choices": [],
       "ending": {
         "route": "white_canvas",
@@ -1412,6 +1436,7 @@
       "speaker": "阿尔比娜",
       "text": "展厅按约熄灯。你们保留了尚未说尽的话，也保留了随时重画的权利。阿尔比娜把空白画布卷好，约定下一场雨后再见。",
       "voiceAssetId": "voice.scene.white_canvas_ending_normal",
+      "bgmAssetId": "file.audio.bgm.between.two.worlds.mp3",
       "choices": [],
       "ending": {
         "route": "white_canvas",
@@ -1465,6 +1490,7 @@
       "speaker": "阿尔比娜",
       "text": "白厅没有发生争吵，只剩一张过早完成的画。阿尔比娜礼貌地收回画笔与称呼；边界仍被守住，但你们没能把信任带到黎明。",
       "voiceAssetId": "voice.scene.white_canvas_ending_bad",
+      "bgmAssetId": "file.audio.bgm.between.two.worlds.mp3",
       "choices": [],
       "ending": {
         "route": "white_canvas",
@@ -1522,6 +1548,7 @@
       "speaker": "阿尔比娜",
       "text": "金色光尘沿着她的义体裂缝回流。她先确认的不是自己，而是法西娅是否还在呼吸。",
       "voiceAssetId": "voice.scene.golden_bough_001",
+      "bgmAssetId": "file.audio.bgm.title.theme.mp3",
       "choices": [
         {
           "id": "rebuild_anchor",
@@ -1593,6 +1620,7 @@
       "speaker": "旁白",
       "text": "镜面里的阿尔比娜有无数个切口，但每一道切口都避开了你替她守住的名字。",
       "voiceAssetId": "voice.scene.golden_bough_002",
+      "bgmAssetId": "file.audio.bgm.title.theme.mp3",
       "choices": [
         {
           "id": "rebuild_push_into_raid",
@@ -1668,6 +1696,10 @@
       "speaker": "浮士德",
       "text": "金枝残响把病床、画架和战场叠成一张薄膜。浮士德只给出结论：如果锚点断裂，阿尔比娜会把自己误认为一件已经完成的作品。",
       "voiceAssetId": "voice.scene.golden_bough_003",
+      "bgmAssetId": "file.audio.bgm.title.theme.mp3",
+      "sfxAssetIds": [
+        "file.audio.se.slash.heavy.wav"
+      ],
       "choices": [
         {
           "id": "rebuild_cut_false_completion",
@@ -1746,6 +1778,7 @@
       "speaker": "维吉利乌斯",
       "text": "楼顶的风把金色光尘吹成刀刃。维吉利乌斯没有劝阻，只提醒你：重构不是修好她，而是承认她有权决定哪些缺口继续存在。",
       "voiceAssetId": "voice.scene.golden_bough_004",
+      "bgmAssetId": "file.audio.bgm.title.theme.mp3",
       "choices": [
         {
           "id": "rebuild_accept_missing_pieces",
@@ -1826,6 +1859,7 @@
       "speaker": "阿尔比娜",
       "text": "最后一面镜子没有给她完整倒影，只给出一条可以返回的路。她握住你的手腕，确认那不是束缚，而是一次被允许的回航。",
       "voiceAssetId": "voice.scene.golden_bough_005",
+      "bgmAssetId": "file.audio.bgm.title.theme.mp3",
       "choices": [
         {
           "id": "golden_bough_route_complete",
@@ -1882,6 +1916,7 @@
       "speaker": "浮士德",
       "text": "记忆手术台上，金色光尘在义体接缝里像旧伤口一样反复渗出。浮士德递过一把刻度尺：她说她想重构的不是身体，是你替她记下却没敢念出来的那段。",
       "voiceAssetId": "voice.scene.golden_bough_006",
+      "bgmAssetId": "file.audio.bgm.title.theme.mp3",
       "choices": [
         {
           "id": "rebuild_006_read_aloud",
@@ -1953,6 +1988,7 @@
       "speaker": "阿尔比娜",
       "text": "金枝裂隙里的回声全是她过去没说完的句子。她让法西娅在你和她之间选择一个频率，说这次她要先听见自己的节拍，再决定要不要跟上。",
       "voiceAssetId": "voice.scene.golden_bough_007",
+      "bgmAssetId": "file.audio.bgm.title.theme.mp3",
       "choices": [
         {
           "id": "rebuild_007_match_her_pulse",
@@ -2033,6 +2069,10 @@
       "speaker": "维吉利乌斯",
       "text": "LCE 的搜捕光柱扫过楼顶。维吉利乌斯扔下一句话：你救不回完整的她，但你能决定让她以哪个版本继续存在。阿尔比娜握紧法西娅，等你下判断。",
       "voiceAssetId": "voice.scene.golden_bough_008",
+      "bgmAssetId": "file.audio.bgm.title.theme.mp3",
+      "sfxAssetIds": [
+        "file.audio.se.slash.heavy.wav"
+      ],
       "choices": [
         {
           "id": "rebuild_008_protect_current_self",
@@ -2112,6 +2152,7 @@
       "speaker": "金色幻影",
       "text": "镜廊深处的金色幻影模仿着她的旧姿态，问她：要不要把我装回去，省得你再做一个有缺口的自己？她抬头看你，等你回答那个不属于她的问题。",
       "voiceAssetId": "voice.scene.golden_bough_009",
+      "bgmAssetId": "file.audio.bgm.title.theme.mp3",
       "choices": [
         {
           "id": "rebuild_009_refuse_perfect_copy",
@@ -2190,6 +2231,10 @@
       "speaker": "LCE 医师",
       "text": "医师递来一份重构协议：只要她愿意封存一段记忆，LCE 就允许她保留现在的外形。她把笔尖停在协议上，没有签字，先看你的反应。",
       "voiceAssetId": "voice.scene.golden_bough_010",
+      "bgmAssetId": "file.audio.bgm.title.theme.mp3",
+      "sfxAssetIds": [
+        "file.audio.se.slash.heavy.wav"
+      ],
       "choices": [
         {
           "id": "rebuild_010_veto_sealing",
@@ -2271,6 +2316,7 @@
       "speaker": "阿尔比娜",
       "text": "夜班巴士上，她把额头轻轻抵在窗玻璃上。她说：你今天替我守住的，不是金枝，是一个允许我继续修改自己的我。",
       "voiceAssetId": "voice.scene.golden_bough_011",
+      "bgmAssetId": "file.audio.bgm.title.theme.mp3",
       "choices": [
         {
           "id": "rebuild_011_sit_beside",
@@ -2349,6 +2395,10 @@
       "speaker": "环指代理人",
       "text": "环指工坊里有人拿出一枚金枝仿品，提议替她换掉所有\"未完成\"的接口。她握紧法西娅，等你判断这是救济，还是又一次把她写成完成品的尝试。",
       "voiceAssetId": "voice.scene.golden_bough_012",
+      "bgmAssetId": "file.audio.bgm.title.theme.mp3",
+      "sfxAssetIds": [
+        "file.audio.se.glass.shatter.wav"
+      ],
       "choices": [
         {
           "id": "rebuild_012_break_contract",
@@ -2427,6 +2477,7 @@
       "speaker": "阿尔比娜",
       "text": "回到金枝裂隙，她终于允许自己颤抖。她说：你不肯替我决定形状，那我能不能请求你，在我下一次重构失败时，仍然叫出我现在的名字？",
       "voiceAssetId": "voice.scene.golden_bough_013",
+      "bgmAssetId": "file.audio.bgm.title.theme.mp3",
       "choices": [
         {
           "id": "rebuild_013_promise_name",
@@ -2498,6 +2549,7 @@
       "speaker": "阿尔比娜",
       "text": "镜廊最后一面镜子没有给倒影，只映出一枚未熄的金枝。她把镜子推向你：请你替我保管它，但不要替我点亮它。",
       "voiceAssetId": "voice.scene.golden_bough_014",
+      "bgmAssetId": "file.audio.bgm.title.theme.mp3",
       "choices": [
         {
           "id": "rebuild_014_keep_unlit",
@@ -2571,6 +2623,7 @@
       "speaker": "阿尔比娜",
       "text": "黎明把金枝的光尘压成一层很薄的金属。她抬头看你，第一次没有问该不该重构自己，而是说：谢谢你愿意陪我等到这一层颜色冷却。",
       "voiceAssetId": "voice.scene.golden_bough_015",
+      "bgmAssetId": "file.audio.bgm.title.theme.mp3",
       "choices": [
         {
           "id": "golden_bough_route_final",
@@ -2620,6 +2673,7 @@
       "speaker": "叙事记录",
       "text": "金枝重构的全部选择已封存。系统将只依据持久状态判定结局，不请求任何运行时生成。",
       "voiceAssetId": "voice.scene.golden_bough_rebuild_ending_gate",
+      "bgmAssetId": "file.audio.bgm.title.theme.mp3",
       "choices": [
         {
           "id": "golden_bough_rebuild_choose_true_ending",
@@ -2749,6 +2803,7 @@
       "speaker": "阿尔比娜",
       "text": "金枝残响终于与法西娅的心跳重合。阿尔比娜记得每一次称呼、暂停和重新确认；她以新的身体醒来，也完整记得是谁陪她走过重构。",
       "voiceAssetId": "voice.scene.golden_bough_rebuild_ending_true",
+      "bgmAssetId": "file.audio.bgm.title.theme.mp3",
       "choices": [],
       "ending": {
         "route": "golden_bough_rebuild",
@@ -2812,6 +2867,7 @@
       "speaker": "阿尔比娜",
       "text": "重构在可控范围内结束。部分残响仍被封存在金色薄膜后，但阿尔比娜认得你，也认得自己。你们决定把余下修复交给时间。",
       "voiceAssetId": "voice.scene.golden_bough_rebuild_ending_normal",
+      "bgmAssetId": "file.audio.bgm.title.theme.mp3",
       "choices": [],
       "ending": {
         "route": "golden_bough_rebuild",
@@ -2858,6 +2914,7 @@
       "speaker": "阿尔比娜",
       "text": "稳定槽保住了身体，却没能保住全部连续性。阿尔比娜醒来时仍然礼貌，只把你当作可靠的见证者；被遗漏的称呼沉在金枝深处。",
       "voiceAssetId": "voice.scene.golden_bough_rebuild_ending_bad",
+      "bgmAssetId": "file.audio.bgm.title.theme.mp3",
       "choices": [],
       "ending": {
         "route": "golden_bough_rebuild",
@@ -2922,6 +2979,10 @@
       "speaker": "阿尔比娜",
       "text": "蜘蛛巢的灯光像手术刀一样落下。她向你递来一份没有署名的委托，笑得礼貌又危险。",
       "voiceAssetId": "voice.scene.ring_conspiracy_001",
+      "bgmAssetId": "file.audio.bgm.boss.kromer.mp3",
+      "sfxAssetIds": [
+        "file.audio.se.slash.heavy.wav"
+      ],
       "choices": [
         {
           "id": "conspiracy_accept",
@@ -2993,6 +3054,10 @@
       "speaker": "阿尔比娜",
       "text": "她第一次没有把怒意伪装成礼貌。那不是要毁掉你的眼神，更像是不允许任何人替她决定你的用途。",
       "voiceAssetId": "voice.scene.ring_conspiracy_002",
+      "bgmAssetId": "file.audio.bgm.boss.kromer.mp3",
+      "sfxAssetIds": [
+        "file.audio.se.glass.shatter.wav"
+      ],
       "choices": [
         {
           "id": "conspiracy_escape_to_backstreets",
@@ -3069,6 +3134,10 @@
       "speaker": "环指代理人",
       "text": "追兵把雨巷切成一个个展格，仿佛你们已经是可出售的连环画。阿尔比娜没有回头，只把法西娅横在你和委托书之间。",
       "voiceAssetId": "voice.scene.ring_conspiracy_003",
+      "bgmAssetId": "file.audio.bgm.boss.kromer.mp3",
+      "sfxAssetIds": [
+        "file.audio.se.slash.heavy.wav"
+      ],
       "choices": [
         {
           "id": "conspiracy_break_pursuit_frame",
@@ -3147,6 +3216,10 @@
       "speaker": "阿尔比娜",
       "text": "回到蜘蛛画廊时，所有灯都向她弯下去。她把那份委托钉在空框里，语气平静：如果他们要收藏背叛，就先学会被背叛凝视。",
       "voiceAssetId": "voice.scene.ring_conspiracy_004",
+      "bgmAssetId": "file.audio.bgm.boss.kromer.mp3",
+      "sfxAssetIds": [
+        "file.audio.se.glass.shatter.wav"
+      ],
       "choices": [
         {
           "id": "ring_conspiracy_route_complete",
@@ -3208,6 +3281,10 @@
       "speaker": "卡利斯托",
       "text": "卡利斯托把另一份署了名的委托推到你们中间，笑得像在挑礼物：既然上次没有展出你的缺陷，这次不如让你们两个一起成为一件合作作品。",
       "voiceAssetId": "voice.scene.ring_conspiracy_005",
+      "bgmAssetId": "file.audio.bgm.boss.kromer.mp3",
+      "sfxAssetIds": [
+        "file.audio.se.glass.shatter.wav"
+      ],
       "choices": [
         {
           "id": "conspiracy_005_refuse_duo",
@@ -3286,6 +3363,10 @@
       "speaker": "阿尔比娜",
       "text": "蜘蛛画廊的灯突然转向她。她把法西娅插进墙上一幅空框，声音很冷：你们想收藏我，那就先学会被我凝视。",
       "voiceAssetId": "voice.scene.ring_conspiracy_006",
+      "bgmAssetId": "file.audio.bgm.boss.kromer.mp3",
+      "sfxAssetIds": [
+        "file.audio.se.slash.heavy.wav"
+      ],
       "choices": [
         {
           "id": "conspiracy_006_stand_with_her",
@@ -3366,6 +3447,10 @@
       "speaker": "环指代理人",
       "text": "雨巷的尽头被代理人堵住。他不拔武器，只是举起一面空画框，要把你们框进环指的目录。阿尔比娜低声让你选：是冲破画框，还是把它抢过来。",
       "voiceAssetId": "voice.scene.ring_conspiracy_007",
+      "bgmAssetId": "file.audio.bgm.boss.kromer.mp3",
+      "sfxAssetIds": [
+        "file.audio.se.slash.heavy.wav"
+      ],
       "choices": [
         {
           "id": "conspiracy_007_break_frame",
@@ -3446,6 +3531,10 @@
       "speaker": "LCE 医师",
       "text": "LCE 把你们暂扣在手术间。医师递来一份中立证词表，说只要她肯指认环指，就帮她换掉被环指标注过的接口。她没有看表，先看你。",
       "voiceAssetId": "voice.scene.ring_conspiracy_008",
+      "bgmAssetId": "file.audio.bgm.boss.kromer.mp3",
+      "sfxAssetIds": [
+        "file.audio.se.slash.heavy.wav"
+      ],
       "choices": [
         {
           "id": "conspiracy_008_refuse_testimony",
@@ -3525,6 +3614,10 @@
       "speaker": "阿尔比娜",
       "text": "镜廊里同时映出\"环指版的她\"和\"现在的她\"。她让法西娅在两面镜子之间选一面，然后问你：你愿意被哪一个版本记得？",
       "voiceAssetId": "voice.scene.ring_conspiracy_009",
+      "bgmAssetId": "file.audio.bgm.boss.kromer.mp3",
+      "sfxAssetIds": [
+        "file.audio.se.glass.shatter.wav"
+      ],
       "choices": [
         {
           "id": "conspiracy_009_choose_present",
@@ -3603,6 +3696,10 @@
       "speaker": "卡利斯托",
       "text": "卡利斯托拿出一枚\"合作者徽章\"，说只要她肯戴上，环指就放过你。阿尔比娜笑了一下，把徽章塞进你掌心：你来替我决定，要不要让我用它换你。",
       "voiceAssetId": "voice.scene.ring_conspiracy_010",
+      "bgmAssetId": "file.audio.bgm.boss.kromer.mp3",
+      "sfxAssetIds": [
+        "file.audio.se.glass.shatter.wav"
+      ],
       "choices": [
         {
           "id": "conspiracy_010_throw_badge",
@@ -3685,6 +3782,10 @@
       "speaker": "环指代理人",
       "text": "代理人撕下礼貌，举出一卷写好剧本的胶片：今晚的故事已经定稿，结局是你们两个都被装裱。阿尔比娜握紧法西娅，低声让你替她改写最后一格分镜。",
       "voiceAssetId": "voice.scene.ring_conspiracy_011",
+      "bgmAssetId": "file.audio.bgm.boss.kromer.mp3",
+      "sfxAssetIds": [
+        "file.audio.se.slash.heavy.wav"
+      ],
       "choices": [
         {
           "id": "conspiracy_011_rewrite_ending",
@@ -3763,6 +3864,10 @@
       "speaker": "维吉利乌斯",
       "text": "楼顶上，维吉利乌斯把一柄已经卸下锋刃的环指画刀扔在你们脚边：用这个结束今晚，或者用它开始下一次共谋，你们自己挑。",
       "voiceAssetId": "voice.scene.ring_conspiracy_012",
+      "bgmAssetId": "file.audio.bgm.boss.kromer.mp3",
+      "sfxAssetIds": [
+        "file.audio.se.slash.heavy.wav"
+      ],
       "choices": [
         {
           "id": "conspiracy_012_end_tonight",
@@ -3843,6 +3948,7 @@
       "speaker": "阿尔比娜",
       "text": "夜班巴士把你们带离环指的视线。她靠在窗边，把法西娅从胸口取出来放在你掌心一秒：今晚我借你这一秒心跳，作为不签名的合作凭证。",
       "voiceAssetId": "voice.scene.ring_conspiracy_013",
+      "bgmAssetId": "file.audio.bgm.boss.kromer.mp3",
       "choices": [
         {
           "id": "conspiracy_013_hold_one_second",
@@ -3921,6 +4027,10 @@
       "speaker": "卡利斯托",
       "text": "巢穴车站最后一盏灯下，卡利斯托最后一次出现，递来一张空白入场券：你愿意把今晚写进环指的目录，还是彻底从目录里抹去？",
       "voiceAssetId": "voice.scene.ring_conspiracy_014",
+      "bgmAssetId": "file.audio.bgm.boss.kromer.mp3",
+      "sfxAssetIds": [
+        "file.audio.se.glass.shatter.wav"
+      ],
       "choices": [
         {
           "id": "conspiracy_014_erase_from_catalog",
@@ -3995,6 +4105,7 @@
       "speaker": "阿尔比娜",
       "text": "城郊黎明把环指的灯火远远压在身后。她停下脚步，把那柄卸下锋刃的画刀插进土里：今晚的共谋到此为止，下一次见面，我会以自己的名义邀请你。",
       "voiceAssetId": "voice.scene.ring_conspiracy_015",
+      "bgmAssetId": "file.audio.bgm.boss.kromer.mp3",
       "choices": [
         {
           "id": "ring_conspiracy_route_final",
@@ -4044,6 +4155,7 @@
       "speaker": "叙事记录",
       "text": "环指共谋的全部选择已封存。系统将只依据持久状态判定结局，不请求任何运行时生成。",
       "voiceAssetId": "voice.scene.ring_conspiracy_ending_gate",
+      "bgmAssetId": "file.audio.bgm.boss.kromer.mp3",
       "choices": [
         {
           "id": "ring_conspiracy_choose_true_ending",
@@ -4173,6 +4285,7 @@
       "speaker": "阿尔比娜",
       "text": "环指的目录里只剩一页无法归档的空白。阿尔比娜以自己的名字向你发出下一次邀请；你们不再是展品或棋子，而是彼此承认的共谋者。",
       "voiceAssetId": "voice.scene.ring_conspiracy_ending_true",
+      "bgmAssetId": "file.audio.bgm.boss.kromer.mp3",
       "choices": [],
       "ending": {
         "route": "ring_conspiracy",
@@ -4236,6 +4349,7 @@
       "speaker": "阿尔比娜",
       "text": "你们离开了画廊，也留下了一条匿名记录作为制衡。危险没有消失，但契约已被改写；阿尔比娜把下一次会面留给更安全的夜晚。",
       "voiceAssetId": "voice.scene.ring_conspiracy_ending_normal",
+      "bgmAssetId": "file.audio.bgm.boss.kromer.mp3",
       "choices": [],
       "ending": {
         "route": "ring_conspiracy",
@@ -4282,6 +4396,7 @@
       "speaker": "阿尔比娜",
       "text": "追击停止时，代价已经写进彼此的沉默。你们逃出了装裱，却没能保住共同节奏；阿尔比娜独自带走那柄无锋画刀，没有约定再见。",
       "voiceAssetId": "voice.scene.ring_conspiracy_ending_bad",
+      "bgmAssetId": "file.audio.bgm.boss.kromer.mp3",
       "choices": [],
       "ending": {
         "route": "ring_conspiracy",

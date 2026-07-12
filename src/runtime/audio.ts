@@ -31,6 +31,7 @@ export class AudioService {
   private voice: RuntimeAudio | undefined;
   private voiceEnded: (() => void) | undefined;
   private readonly voiceQueue: VoiceJob[] = [];
+  private readonly sfx = new Set<RuntimeAudio>();
   private activeVoiceJob: VoiceJob | undefined;
   private blocked: RuntimeAudio | undefined;
   private pendingBgmPrevious: RuntimeAudio | undefined;
@@ -75,6 +76,26 @@ export class AudioService {
     return result;
   }
 
+  async playSfx(source: string): Promise<boolean> {
+    const audio = this.createAudio(source);
+    audio.src = source;
+    audio.loop = false;
+    const ended = () => {
+      audio.removeEventListener('ended', ended);
+      this.sfx.delete(audio);
+      releaseAudio(audio);
+    };
+    audio.addEventListener('ended', ended);
+    this.sfx.add(audio);
+    try {
+      await audio.play();
+      return this.sfx.has(audio);
+    } catch {
+      ended();
+      return false;
+    }
+  }
+
   async recoverAutoplay(): Promise<boolean> {
     const blocked = this.blocked;
     if (!blocked) return true;
@@ -101,7 +122,9 @@ export class AudioService {
     this.finishVoice(false);
     this.voiceQueue.splice(0).forEach((job) => job.resolve(false));
     const audioResources = new Set([this.bgm, this.blocked, this.pendingBgmPrevious, this.fadingOut]);
+    this.sfx.forEach((audio) => audioResources.add(audio));
     audioResources.forEach(releaseAudio);
+    this.sfx.clear();
     this.bgm = undefined;
     this.blocked = undefined;
     this.pendingBgmPrevious = undefined;

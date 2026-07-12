@@ -41,6 +41,7 @@ export class PortraitService {
   private readonly environment: PortraitEnvironment;
   private readonly canvasGenerations = new WeakMap<CanvasLike, number>();
   private lifecycleGeneration = 0;
+  private urlResolver: ((portraitId: string) => Promise<string | undefined>) | undefined;
 
   constructor(
     private readonly manifest: AssetManifestV2,
@@ -64,6 +65,8 @@ export class PortraitService {
     }
     await this.playStrip(portrait, context, canvas, lifecycle, generation);
   }
+
+  setUrlResolver(resolver: (portraitId: string) => Promise<string | undefined>): void { this.urlResolver = resolver; }
 
   stop(canvas: CanvasLike): void {
     this.nextCanvasGeneration(canvas);
@@ -107,7 +110,8 @@ export class PortraitService {
       : undefined;
     let image: ImageLike;
     try {
-      image = await this.environment.loadImage(this.assetUrl(fallback?.path ?? portrait.path));
+      const resolved = await this.urlResolver?.(fallback?.id ?? portrait.id);
+      image = await this.environment.loadImage(resolved ?? this.assetUrl(fallback?.path ?? portrait.path));
     } catch {
       return false;
     }
@@ -131,7 +135,8 @@ export class PortraitService {
     const animation = portrait.animation;
     let image: ImageLike;
     try {
-      image = await this.environment.loadImage(this.assetUrl(portrait.path));
+      const resolved = await this.urlResolver?.(portrait.id);
+      image = await this.environment.loadImage(resolved ?? this.assetUrl(portrait.path));
     } catch {
       if (!portrait.fallbackAssetId) return;
       const drawn = await this.drawStatic(portrait, context, canvas, lifecycle, generation);

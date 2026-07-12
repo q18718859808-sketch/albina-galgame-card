@@ -28,6 +28,14 @@ class FakeAudio implements RuntimeAudio {
 }
 
 describe('AudioService', () => {
+  it('plays one-shot SFX and releases it after completion', async () => {
+    const audio = new FakeAudio();
+    const service = new AudioService(() => audio);
+    await expect(service.playSfx('impact.wav')).resolves.toBe(true);
+    audio.emitEnded();
+    expect(audio.pause).toHaveBeenCalledOnce();
+    expect(audio.src).toBe('');
+  });
   it('crossfades BGM and releases the previous track', async () => {
     vi.useFakeTimers();
     const created: FakeAudio[] = [];

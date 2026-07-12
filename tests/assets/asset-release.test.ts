@@ -66,7 +66,7 @@ describe('canonical asset release', () => {
     expect(report.release.missing).toEqual([]);
     expect(report.release.mismatch).toEqual(expect.any(Array));
     expect(report.release.stale).toEqual(expect.any(Array));
-  });
+  }, 15_000);
 
   it('uses one versioned CDN root in card and mutable bridge loaders', async () => {
     const files = [

@@ -14,5 +14,5 @@ jobs:
       - run: npm run release:sync
       - run: node scripts/verify-release.mjs
       - run: npm run security:scan
-      - run: npm run test:e2e -- --project=desktop
+      - run: npm run test:e2e
       - run: git diff --exit-code -- . ':!release/github-cdn-root/docs/**'

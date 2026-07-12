@@ -2,6 +2,8 @@ import { createHash } from 'node:crypto';
 import { access, mkdir, readFile, readdir, stat, writeFile } from 'node:fs/promises';
 import { extname, relative, resolve } from 'node:path';
 
+import { validateAssetIntegrity } from './lib/asset-integrity.mjs';
+
 const projectRoot = resolve(import.meta.dirname, '..');
 const canonicalRoot = resolve(projectRoot, 'dist/albina-galgame-card');
 const assetRoot = resolve(canonicalRoot, 'assets');
@@ -247,6 +249,7 @@ async function characterMap() {
 async function updateLegacyManifest() {
   const path = resolve(canonicalRoot, 'manifest.json');
   const legacy = await readJson(path);
+  for (const key of Object.keys(legacy)) if (/^_v\d/u.test(key)) delete legacy[key];
   legacy.base = cdnBase;
   legacy.version = releaseVersion;
   legacy.asset_manifest_v2 = 'assets/asset-manifest-v2.json';
@@ -304,7 +307,7 @@ async function auditManifest(manifest, lookup) {
   const unresolved = [];
   const ids = new Set([...manifest.assets.map((asset) => asset.id), ...manifest.portraits.map((portrait) => portrait.id)]);
   const pendingIds = new Set(manifest.mediaJobs.filter((job) => job.status === 'pending').map((job) => job.assetId));
-  for (const asset of manifest.assets) if (!pendingIds.has(asset.id) && !(await pathExists(resolve(assetRoot, asset.path)))) unresolved.push(`missing asset: ${asset.id} -> ${asset.path}`);
+  unresolved.push(...await validateAssetIntegrity(assetRoot, manifest.assets, pendingIds));
   for (const portrait of manifest.portraits) if (!(await pathExists(resolve(assetRoot, portrait.path)))) unresolved.push(`missing portrait: ${portrait.id} -> ${portrait.path}`);
   for (const job of manifest.mediaJobs) {
     if (!ids.has(job.assetId)) unresolved.push(`unknown job asset: ${job.id} -> ${job.assetId}`);
@@ -313,6 +316,19 @@ async function auditManifest(manifest, lookup) {
   const lookupIds = new Set([...Object.keys(lookup.assetsById), ...Object.keys(lookup.portraitsById), ...Object.keys(lookup.pendingById)]);
   for (const id of ids) if (!lookupIds.has(id)) unresolved.push(`missing runtime lookup: ${id}`);
   return unresolved;
+}
+
+async function auditNoWebGenerationTools() {
+  const findings = [];
+  for (const root of [canonicalRoot, releaseMirrorRoot]) {
+    for (const path of await walkFiles(root)) {
+      const relativePath = toPosix(relative(root, path));
+      if (/(?:^|\/)(?:tools?|scripts?)(?:\/|$)/iu.test(relativePath) || /\.(?:bat|cmd|ps1|py|sh)$/iu.test(relativePath)) {
+        findings.push(`generation tool in web release: ${relativePath}`);
+      }
+    }
+  }
+  return findings;
 }
 
 async function auditLegacyManifest() {
@@ -341,7 +357,7 @@ async function auditMutableLoaders() {
 async function audit() {
   const manifest = await readJson(contentManifestPath);
   const lookup = await readJson(resolve(assetRoot, 'runtime-lookup.json'));
-  const unresolved = [...await auditManifest(manifest, lookup), ...await auditLegacyManifest(), ...await auditStory(lookup), ...await auditMutableLoaders()];
+  const unresolved = [...await auditManifest(manifest, lookup), ...await auditLegacyManifest(), ...await auditStory(lookup), ...await auditMutableLoaders(), ...await auditNoWebGenerationTools()];
   return { unresolved, release: await classifyRelease(), inventory: { canonicalFiles: (await walkFiles(canonicalRoot)).length, releaseFiles: (await walkFiles(releaseRoot)).length } };
 }
 

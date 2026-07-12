@@ -1,5 +1,6 @@
 {
-  "version": "2.0.0",
+  "version": "2.0.0-preview",
+  "completeEdition": false,
   "runtimeMediaApis": false,
   "completed": {
     "deterministicScenes": 58,
@@ -11,6 +12,6 @@
   },
   "blocked": {
     "portraitStrips": { "count": 8, "reason": "Pie gpt-image-2 returned HTTP 503 / unavailable model access" },
-    "music26": { "count": 81, "reason": "Pie music-2.6 first stability probe returned HTTP 504; bulk gate remains closed" }
+    "music26": { "count": 81, "reason": "Pie music-2.6 produced two observed HTTP 504 failures; the three-success bulk gate remains closed" }
   }
 }

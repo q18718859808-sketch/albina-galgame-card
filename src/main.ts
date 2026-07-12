@@ -26,7 +26,7 @@ export function installAlbinaOneClick(): void {
     const style = document.createElement('link');
     style.rel = 'stylesheet';
     style.dataset.albinaStyle = 'v2';
-    style.href = new URL('./albina-source.css', import.meta.url).href;
+    style.href = new URL(/* @vite-ignore */ './albina-source.css', import.meta.url).href;
     document.head.append(style);
   }
   const launcher = document.createElement('button');

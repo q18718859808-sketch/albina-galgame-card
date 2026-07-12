@@ -46,6 +46,12 @@ button:disabled { opacity: .45; cursor: not-allowed; }
 .gallery-grid figure { margin: 0; background: #0b1018; border: 1px solid rgb(215 175 70 / 24%); }
 .gallery-grid img { display: block; width: 100%; aspect-ratio: 16 / 9; object-fit: cover; }
 .gallery-grid figcaption { padding: .6rem; color: #aeb8c3; font-size: .75rem; overflow-wrap: anywhere; }
+.slot-actions { display: flex; flex-wrap: wrap; gap: .7rem; margin-block: 1.2rem; }
+.save-slot-grid { display: grid; gap: .8rem; }
+.save-slot { display: grid; grid-template-columns: minmax(8rem, 15rem) 1fr auto auto; gap: 1rem; align-items: center; padding: .7rem; border: 1px solid rgb(215 175 70 / 28%); background: #0b1018; }
+.save-slot img { width: 100%; aspect-ratio: 16 / 9; object-fit: cover; }
+.save-slot p { margin: .35rem 0; color: #b8c1cc; }
+.save-slot time { color: #7f8a97; font-size: .75rem; }
 @media (max-width: 800px) {
   .game-hud { align-items: flex-start; flex-wrap: wrap; }
   .game-hud > span:nth-child(2) { display: none; }
@@ -53,6 +59,7 @@ button:disabled { opacity: .45; cursor: not-allowed; }
   .portrait-stage { inset-inline: -35%; }
   .portrait-stage__canvas { width: 65vw; }
   .save-tools { display: none; }
+  .save-slot { grid-template-columns: 7rem 1fr; }
   .title-screen__content { width: calc(100% - 2rem); }
 }
 @media (prefers-reduced-motion: reduce) { *, *::before, *::after { animation-duration: .01ms !important; transition-duration: .01ms !important; scroll-behavior: auto !important; } }

@@ -40,9 +40,24 @@ function videoNameForScene(scene) {
 function addVideoCues(scenes) {
   return scenes.map((scene) => {
     const name = videoNameForScene(scene);
-    if (!name) return scene;
+    const bgmAssetId = scene.route === 'ring_conspiracy'
+      ? 'file.audio.bgm.boss.kromer.mp3'
+      : scene.route === 'golden_bough_rebuild'
+        ? 'file.audio.bgm.title.theme.mp3'
+        : scene.locationId === 'backstreets_rain'
+          ? 'file.audio.bgm.backstreets.rain.mp3'
+          : 'file.audio.bgm.between.two.worlds.mp3';
+    const sfxAssetIds = scene.tone === 'threat'
+      ? ['file.audio.se.slash.heavy.wav']
+      : scene.tone === 'gallery'
+        ? ['file.audio.se.glass.shatter.wav']
+        : undefined;
+    const media = {
+      ...scene, bgmAssetId, ...(sfxAssetIds ? { sfxAssetIds } : {}),
+    };
+    if (!name) return media;
     return {
-      ...scene,
+      ...media,
       videoAssetId: `video.animated.runtime.${name}`,
       desktopVideoAssetId: `video.animated.desktop.${name}`,
     };

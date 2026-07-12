@@ -1133,7 +1133,7 @@
         }
       ]
     },
-    "creator_notes": "【Albina v2.0.0 导入须知】\n1. 需要 SillyTavern + 酒馆助手（TavernHelper），导入后由唯一启用脚本加载独立 Vue/Pinia 前端。\n2. 点击「打开阿尔比娜前端」进入确定性主剧情；路线、数值、选择、存档和图库均以前端 GameScriptV2 / SaveV2 为权威。\n3. 已交付 154 条固定剧情语音与 29 组动画 CG 的桌面/移动 Web 编码，运行时不调用任何媒体生成 API，也不携带密钥。\n4. 旧 SFE、父窗口 Cinematic Overlay 与旧 OP/ED injector 已禁用，仅保留文件级兼容回退。\n5. 受 Pie 当前可用性影响，8 个 gpt-image-2 动态立绘条带仍待补齐；Music 2.6 首次稳定性探针 504，81 个音乐变体批次保持暂停，不伪报完成。\n",
+    "creator_notes": "【Albina v2.0.0 预览版导入须知】\n1. 需要 SillyTavern + 酒馆助手（TavernHelper），导入后由唯一启用脚本加载独立 Vue/Pinia 前端。\n2. 点击「打开阿尔比娜前端」进入确定性主剧情；路线、数值、选择、存档和图库均以前端 GameScriptV2 / SaveV2 为权威。\n3. 已交付 154 条固定剧情语音与 29 组动画 CG 的桌面/移动 Web 编码，运行时不调用任何媒体生成 API，也不携带密钥。\n4. 旧 SFE、父窗口 Cinematic Overlay 与旧 OP/ED injector 已禁用，仅保留文件级兼容回退；所有生成工具已从 Web 发布树移除。\n5. 此版本不是 Complete Edition：8 个 gpt-image-2 动态立绘条带仍待补齐；Music 2.6 已观察到两次 504，81 个音乐变体批次保持暂停，不伪报完成。\n",
     "cdn_import": "import 'https://cdn.jsdelivr.net/gh/q18718859808-sketch/albina-galgame-card@v2.0.0/dist/albina-galgame-card/source/albina-source.js'\n"
   }
 }
