@@ -1,4 +1,5 @@
 import { mkdir, readFile, writeFile } from 'node:fs/promises';
+import { randomUUID } from 'node:crypto';
 import { dirname } from 'node:path';
 
 import { downloadResumable } from './download.js';
@@ -30,6 +31,7 @@ export class MediaGenerator {
   private readonly client: MediaClient;
   private readonly downloader: typeof downloadResumable;
   private readonly sleep: (milliseconds: number) => Promise<void>;
+  private readonly owner = `${process.pid}-${randomUUID()}`;
 
   constructor(private readonly options: GeneratorOptions) {
     this.client = options.client ?? new PieClient();
@@ -53,7 +55,12 @@ export class MediaGenerator {
       }
     }
     if (job.kind === 'music' && !job.probe) await this.options.ledger.assertMusicBulkReady();
-    await this.options.ledger.upsertJob(id, { status: 'running' });
+    const claim = await this.options.ledger.claimJob(id, this.owner);
+    if (claim === 'busy') return;
+    if (claim === 'already-completed') {
+      await validateJobArtifact(job);
+      return;
+    }
     try {
       if (job.kind === 'music') await this.options.ledger.assertMusicRequestAllowed();
       const artifact =

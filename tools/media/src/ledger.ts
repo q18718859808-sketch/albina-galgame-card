@@ -8,6 +8,8 @@ export interface LedgerJob {
   error?: string;
   providerJobId?: string;
   updatedAt?: string;
+  leaseOwner?: string;
+  leaseUntil?: number;
   [key: string]: unknown;
 }
 
@@ -59,6 +61,16 @@ export class Ledger {
     });
   }
 
+  async claimJob(id: string, owner: string, leaseMilliseconds = 10 * 60 * 1000): Promise<'claimed' | 'already-completed' | 'busy'> {
+    return this.update((state) => {
+      const existing = state.jobs[id];
+      if (existing?.status === 'completed') return 'already-completed';
+      if (existing?.status === 'running' && typeof existing.leaseUntil === 'number' && existing.leaseUntil > this.now()) return 'busy';
+      state.jobs[id] = { ...existing, status: 'running', leaseOwner: owner, leaseUntil: this.now() + leaseMilliseconds, updatedAt: new Date(this.now()).toISOString() };
+      return 'claimed';
+    });
+  }
+
   async recordMusicProbe(valid: boolean): Promise<void> {
     await this.update((state) => {
       state.music.consecutiveValidProbes = valid ? state.music.consecutiveValidProbes + 1 : 0;
@@ -82,15 +94,16 @@ export class Ledger {
     if (state.music.cooldownUntil > this.now()) throw new MusicCooldownError(state.music.cooldownUntil);
   }
 
-  private async update(mutator: (state: LedgerState) => void): Promise<void> {
+  private async update<T>(mutator: (state: LedgerState) => T): Promise<T> {
     await mkdir(dirname(this.path), { recursive: true });
     const lock = await acquireLock(`${this.path}.lock`);
     try {
       const state = await this.read();
-      mutator(state);
+      const result = mutator(state);
       const temporary = `${this.path}.${process.pid}.${Date.now()}.tmp`;
       await writeFile(temporary, `${JSON.stringify(state, null, 2)}\n`, 'utf8');
       await rename(temporary, this.path);
+      return result;
     } finally {
       await lock.close();
       await unlink(`${this.path}.lock`).catch(() => undefined);

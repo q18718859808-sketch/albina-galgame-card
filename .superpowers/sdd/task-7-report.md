@@ -57,3 +57,13 @@ Production inventory now skips non-job JSON such as `index.json` and emits a `st
 Image editing now carries each job's width and height through the generator into Pie multipart fields. The request includes exact `size`, `n=1`, `quality=high`, and `output_format=png`; the `high` setting matches the repository's existing locked Pie image implementation. Adapter tests assert the eight-frame production size `4096x512` exactly.
 
 Focused verification command: `npm --prefix tools/media test -- adapters.test.ts orchestration.test.ts cli.test.ts`. Result: 3 files passed, 25/25 tests passed. Type verification command: `npm --prefix tools/media run typecheck`. Result: passed.
+
+## Atomic paid-job claims follow-up
+
+Paid jobs now enter through a single ledger-lock claim operation. The claim returns `claimed`, `already-completed`, or `busy`, records a lease owner and expiry, prevents concurrent generators from issuing duplicate provider calls, and permits explicit reclaim only after lease expiry. Completed artifacts remain validation-gated, stale outputs regenerate, and existing Seedance provider job IDs continue to resume polling.
+
+There remains an unavoidable narrow crash window after a provider accepts a new asynchronous video submission but before its returned provider job ID is persisted. The implementation continues to minimize this window by writing the ID immediately after submission and before polling. Synchronous image, speech, and music calls are protected against concurrent and fresh-running duplicate execution by the lease, though an operator should investigate rather than reclaim a lease after an uncertain process crash.
+
+Inventory now skips only the exact production `index.json`. Any other malformed or invalid job JSON throws and causes a nonzero CLI exit instead of being silently omitted.
+
+Focused verification command: `npm --prefix tools/media test -- orchestration.test.ts cli.test.ts`. Result: 2 files passed, 22/22 tests passed. Type verification command: `npm --prefix tools/media run typecheck`. Result: passed.

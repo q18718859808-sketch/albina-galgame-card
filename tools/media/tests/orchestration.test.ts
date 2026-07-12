@@ -54,6 +54,17 @@ describe('single-writer ledger', () => {
     now += 5 * 60 * 1000;
     await expect(ledger.assertMusicRequestAllowed()).resolves.toBeUndefined();
   });
+
+  test('keeps a fresh running lease busy and explicitly reclaims it after expiry', async () => {
+    const directory = await mkdtemp(join(tmpdir(), 'albina-media-lease-'));
+    let now = 1_000;
+    const ledger = new Ledger(join(directory, 'ledger.json'), { now: () => now });
+    await expect(ledger.claimJob('paid', 'first', 100)).resolves.toBe('claimed');
+    await expect(ledger.claimJob('paid', 'second', 100)).resolves.toBe('busy');
+    now = 1_101;
+    await expect(ledger.claimJob('paid', 'second', 100)).resolves.toBe('claimed');
+    expect((await ledger.read()).jobs.paid).toMatchObject({ status: 'running', leaseOwner: 'second', leaseUntil: 1_201 });
+  });
 });
 
 describe('network resilience', () => {
@@ -96,6 +107,32 @@ describe('network resilience', () => {
 });
 
 describe('artifact generation', () => {
+  test('allows only one provider call across concurrent generators', async () => {
+    const directory = await mkdtemp(join(tmpdir(), 'albina-media-concurrent-'));
+    const output = join(directory, 'image.png');
+    const job = { kind: 'image' as const, prompt: 'rain', width: 100, height: 100, output, validation: { width: 100, height: 100, alpha: true } };
+    const ledger = new Ledger(join(directory, 'ledger.json'));
+    let release!: () => void;
+    const held = new Promise<void>((resolve) => { release = resolve; });
+    const generateImage = vi.fn(async () => { await held; return { kind: 'image' as const, model: 'gpt-image-2', bytes: pngHeader(100, 100, 6) }; });
+    const first = new MediaGenerator({ client: { generateImage }, ledger }).generate([job]);
+    await vi.waitFor(() => expect(generateImage).toHaveBeenCalledOnce());
+    const second = new MediaGenerator({ client: { generateImage }, ledger }).generate([job]);
+    await second;
+    release();
+    await first;
+    expect(generateImage).toHaveBeenCalledOnce();
+  });
+
+  test('does not restart a job with a fresh running lease', async () => {
+    const directory = await mkdtemp(join(tmpdir(), 'albina-media-running-resume-'));
+    const job = { kind: 'image' as const, prompt: 'rain', width: 100, height: 100, output: join(directory, 'image.png'), validation: { width: 100, height: 100, alpha: true } };
+    const ledger = new Ledger(join(directory, 'ledger.json'));
+    await ledger.claimJob(contentHashJobId(job), 'other-process');
+    const generateImage = vi.fn();
+    await new MediaGenerator({ client: { generateImage }, ledger }).generate([job]);
+    expect(generateImage).not.toHaveBeenCalled();
+  });
   test('skips a completed job with a still-valid output without provider billing', async () => {
     const directory = await mkdtemp(join(tmpdir(), 'albina-media-completed-valid-'));
     const output = join(directory, 'image.png');

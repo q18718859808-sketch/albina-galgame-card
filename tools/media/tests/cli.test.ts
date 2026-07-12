@@ -33,6 +33,14 @@ describe('media CLI', () => {
     ]));
   });
 
+  test('inventory fails on malformed job JSON other than the exact production index', async () => {
+    const directory = await mkdtemp(join(tmpdir(), 'albina-media-cli-invalid-inventory-'));
+    const jobsDirectory = join(directory, 'jobs');
+    await writeJson(join(jobsDirectory, 'index.json'), { version: 1, jobs: [] });
+    await writeJson(join(jobsDirectory, 'broken.json'), { version: 1, unexpected: true });
+    await expect(runCli(['inventory', '--jobs', jobsDirectory], { stdout: () => undefined })).rejects.toThrow(/invalid media job/i);
+  });
+
   test('validate and promote copy only a validated artifact', async () => {
     const directory = await mkdtemp(join(tmpdir(), 'albina-media-cli-promote-'));
     const source = join(directory, 'strip.png');

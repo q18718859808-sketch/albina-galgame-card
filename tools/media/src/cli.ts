@@ -42,13 +42,11 @@ async function inventory(args: string[], ledgerPath: string, cwd: string, stdout
   const rows = [];
   for (const file of files) {
     const path = resolve(jobsDirectory, file);
-    let job;
-    try {
-      job = await loadJob(path);
-    } catch (error) {
-      rows.push({ file: path, status: 'skipped', reason: error instanceof Error ? error.message : String(error) });
+    if (file === 'index.json') {
+      rows.push({ file: path, status: 'skipped', reason: 'production index' });
       continue;
     }
+    const job = await loadJob(path);
     const id = contentHashJobId(job);
     rows.push({ id, file: path, kind: job.kind, status: state.jobs[id]?.status ?? 'new', output: job.output });
   }
