@@ -13,6 +13,7 @@ describe('media CLI', () => {
     const directory = await mkdtemp(join(tmpdir(), 'albina-media-cli-inventory-'));
     const jobsDirectory = join(directory, 'jobs');
     const jobPath = join(jobsDirectory, 'image.json');
+    await writeJson(join(jobsDirectory, 'index.json'), { version: 1, jobs: [] });
     await writeJson(jobPath, { kind: 'image', prompt: 'rain', width: 800, height: 100, output: 'artifacts/rain.png' });
     const job = JSON.parse(await readFile(jobPath, 'utf8')) as unknown;
     const id = contentHashJobId(job);
@@ -26,9 +27,10 @@ describe('media CLI', () => {
     });
 
     expect(code).toBe(0);
-    expect(JSON.parse(output.join('\n'))).toEqual([
+    expect(JSON.parse(output.join('\n'))).toEqual(expect.arrayContaining([
       expect.objectContaining({ id, file: jobPath, kind: 'image', status: 'completed' }),
-    ]);
+      expect.objectContaining({ file: join(jobsDirectory, 'index.json'), status: 'skipped' }),
+    ]));
   });
 
   test('validate and promote copy only a validated artifact', async () => {

@@ -12,7 +12,7 @@ import { validateAudio, validateImage, validateVideo } from './validate.js';
 
 export interface MediaClient {
   generateImage?(input: { prompt: string; width: number; height: number }): Promise<NormalizedArtifact>;
-  editImage?(input: { prompt: string; image: Uint8Array }): Promise<NormalizedArtifact>;
+  editImage?(input: { prompt: string; image: Uint8Array; width: number; height: number }): Promise<NormalizedArtifact>;
   submitVideo?(input: { prompt: string; durationSeconds: number; image: Uint8Array }): Promise<{ providerJobId: string; status: string }>;
   pollVideo?(id: string): Promise<NormalizedArtifact | { providerJobId: string; status: string }>;
   generateSpeech?(input: { input: string; voice: string }): Promise<NormalizedArtifact>;
@@ -42,8 +42,17 @@ export class MediaGenerator {
   }
 
   private async generateOne(job: MediaJob): Promise<void> {
-    if (job.kind === 'music' && !job.probe) await this.options.ledger.assertMusicBulkReady();
     const id = contentHashJobId(job);
+    const existing = (await this.options.ledger.read()).jobs[id];
+    if (existing?.status === 'completed') {
+      try {
+        await validateJobArtifact(job);
+        return;
+      } catch (error) {
+        await this.options.ledger.upsertJob(id, { status: 'stale', error: `Completed artifact requires regeneration: ${error instanceof Error ? error.message : String(error)}` });
+      }
+    }
+    if (job.kind === 'music' && !job.probe) await this.options.ledger.assertMusicBulkReady();
     await this.options.ledger.upsertJob(id, { status: 'running' });
     try {
       if (job.kind === 'music') await this.options.ledger.assertMusicRequestAllowed();
@@ -73,7 +82,7 @@ export class MediaGenerator {
   private async requestArtifact(job: MediaJob): Promise<NormalizedArtifact | AmbiguousArtifact> {
     if (job.kind === 'image' && job.sourceImage) {
       if (!this.client.editImage) throw new Error('Media client does not implement editImage');
-      return this.client.editImage({ prompt: job.prompt, image: await readFile(job.sourceImage) });
+      return this.client.editImage({ prompt: job.prompt, image: await readFile(job.sourceImage), width: job.width, height: job.height });
     }
     if (job.kind === 'image') {
       if (!this.client.generateImage) throw new Error('Media client does not implement generateImage');

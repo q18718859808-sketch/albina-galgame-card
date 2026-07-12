@@ -48,11 +48,15 @@ export class PieClient {
     return imageArtifact(await response.json());
   }
 
-  async editImage(input: { prompt: string; image: Uint8Array }): Promise<NormalizedArtifact> {
+  async editImage(input: { prompt: string; image: Uint8Array; width: number; height: number }): Promise<NormalizedArtifact> {
     const form = new FormData();
     form.set('model', 'gpt-image-2');
     form.set('prompt', input.prompt);
     form.set('image', new Blob([Buffer.from(input.image)]), 'input.png');
+    form.set('size', `${input.width}x${input.height}`);
+    form.set('n', '1');
+    form.set('quality', 'high');
+    form.set('output_format', 'png');
     const response = await this.request('/v1/images/edits', { method: 'POST', body: form });
     return imageArtifact(await response.json());
   }

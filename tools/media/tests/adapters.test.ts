@@ -37,14 +37,20 @@ describe('PieClient', () => {
         expect(new Headers(init?.headers).get('authorization')).toBe('Bearer test-only');
         return jsonResponse(await fixture('image-generation.json'));
       })
-      .mockImplementationOnce(async (url) => {
+      .mockImplementationOnce(async (url, init) => {
         expect(String(url)).toBe('https://api.pie-xian.com/v1/images/edits');
+        const form = init?.body as FormData;
+        expect(form.get('size')).toBe('4096x512');
+        expect(form.get('n')).toBe('1');
+        expect(form.get('quality')).toBe('high');
+        expect(form.get('output_format')).toBe('png');
+        expect((form.get('image') as File).name).toBe('input.png');
         return jsonResponse(await fixture('image-edit.json'));
       });
     const client = new PieClient({ env: { PIE_API_KEY: 'test-only' }, fetcher });
 
     const generated = await client.generateImage({ prompt: 'rain', width: 1024, height: 1536 });
-    const edited = await client.editImage({ prompt: 'transparent portrait', image: new Uint8Array([1, 2, 3]) });
+    const edited = await client.editImage({ prompt: 'transparent portrait', image: new Uint8Array([1, 2, 3]), width: 4096, height: 512 });
 
     expect(generated).toMatchObject({ kind: 'image', model: 'gpt-image-2', sourceUrl: expect.stringContaining('generated-image') });
     expect(edited).toMatchObject({ kind: 'image', model: 'gpt-image-2', sourceUrl: expect.stringContaining('edited-image') });

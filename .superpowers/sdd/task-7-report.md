@@ -47,3 +47,13 @@ Type verification command: `npm --prefix tools/media run typecheck`. Result: pas
 The default provider origin is now the locked Pie channel `https://api.pie-xian.com`. Adapter coverage asserts a representative bearer request (`/v1/images/generations`) and x-api-key request (`/api/v1/task`) both target that origin, while an explicitly injected `baseUrl` remains available for isolated tests. Repository search confirms `api.piapi.ai` is absent from the media implementation and tests.
 
 The eight current edit-first sources were inspected directly. All eight begin with the PNG signature `89504E470D0A1A0A` and have `.png` canonical paths, so the existing multipart `image/png` and `input.png` metadata is correct for this production inventory; no edit multipart change was necessary.
+
+## Billing-safe resume and image-edit dimensions follow-up
+
+Completed ledger jobs are now billing-safe to resume. A completed job is skipped only after its declared output is revalidated successfully. Missing or invalid completed output is marked stale and regenerated; failed jobs continue through the normal bounded retry path. Video resume behavior remains unchanged because an existing provider job ID is still reused by the video polling path.
+
+Production inventory now skips non-job JSON such as `index.json` and emits a `status: "skipped"` row with the validation reason rather than aborting the entire listing.
+
+Image editing now carries each job's width and height through the generator into Pie multipart fields. The request includes exact `size`, `n=1`, `quality=high`, and `output_format=png`; the `high` setting matches the repository's existing locked Pie image implementation. Adapter tests assert the eight-frame production size `4096x512` exactly.
+
+Focused verification command: `npm --prefix tools/media test -- adapters.test.ts orchestration.test.ts cli.test.ts`. Result: 3 files passed, 25/25 tests passed. Type verification command: `npm --prefix tools/media run typecheck`. Result: passed.

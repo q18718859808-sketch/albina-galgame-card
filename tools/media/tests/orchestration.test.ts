@@ -96,6 +96,42 @@ describe('network resilience', () => {
 });
 
 describe('artifact generation', () => {
+  test('skips a completed job with a still-valid output without provider billing', async () => {
+    const directory = await mkdtemp(join(tmpdir(), 'albina-media-completed-valid-'));
+    const output = join(directory, 'image.png');
+    const job = { kind: 'image' as const, prompt: 'rain', width: 100, height: 100, output, validation: { width: 100, height: 100, alpha: true } };
+    await writeFile(output, pngHeader(100, 100, 6));
+    const ledger = new Ledger(join(directory, 'ledger.json'));
+    await ledger.upsertJob(contentHashJobId(job), { status: 'completed', output });
+    const generateImage = vi.fn();
+    await new MediaGenerator({ client: { generateImage }, ledger }).generate([job]);
+    expect(generateImage).not.toHaveBeenCalled();
+  });
+
+  test.each(['missing', 'invalid'])('regenerates a completed job when its output is %s', async (state) => {
+    const directory = await mkdtemp(join(tmpdir(), 'albina-media-completed-stale-'));
+    const output = join(directory, 'image.png');
+    const job = { kind: 'image' as const, prompt: 'rain', width: 100, height: 100, output, validation: { width: 100, height: 100, alpha: true } };
+    if (state === 'invalid') await writeFile(output, Buffer.from('bad'));
+    const ledger = new Ledger(join(directory, 'ledger.json'));
+    await ledger.upsertJob(contentHashJobId(job), { status: 'completed', output });
+    const generateImage = vi.fn().mockResolvedValue({ kind: 'image', model: 'gpt-image-2', bytes: pngHeader(100, 100, 6) });
+    await new MediaGenerator({ client: { generateImage }, ledger }).generate([job]);
+    expect(generateImage).toHaveBeenCalledOnce();
+    expect((await ledger.read()).jobs[contentHashJobId(job)]?.status).toBe('completed');
+  });
+
+  test('retries a previously failed job through the normal transient retry path', async () => {
+    const directory = await mkdtemp(join(tmpdir(), 'albina-media-failed-retry-'));
+    const output = join(directory, 'image.png');
+    const job = { kind: 'image' as const, prompt: 'rain', width: 100, height: 100, output, validation: { width: 100, height: 100, alpha: true } };
+    const ledger = new Ledger(join(directory, 'ledger.json'));
+    await ledger.upsertJob(contentHashJobId(job), { status: 'failed', error: '503' });
+    const generateImage = vi.fn().mockRejectedValueOnce(Object.assign(new Error('busy'), { status: 503 })).mockResolvedValueOnce({ kind: 'image', model: 'gpt-image-2', bytes: pngHeader(100, 100, 6) });
+    await new MediaGenerator({ client: { generateImage }, ledger, sleep: async () => undefined }).generate([job]);
+    expect(generateImage).toHaveBeenCalledTimes(2);
+  });
+
   test('uses the real client instance, stores, validates, and completes a job', async () => {
     const directory = await mkdtemp(join(tmpdir(), 'albina-media-generate-'));
     const output = join(directory, 'image.png');
