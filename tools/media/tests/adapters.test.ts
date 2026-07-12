@@ -60,12 +60,10 @@ describe('PieClient', () => {
     const fetcher = vi
       .fn<FetchLike>()
       .mockImplementationOnce(async (url, init) => {
-        expect(String(url)).toBe('https://api.pie-xian.com/api/v1/task');
-        expect(new Headers(init?.headers).get('x-api-key')).toBe('test-only');
+        expect(String(url)).toBe('https://api.pie-xian.com/v1/videos');
+        expect(new Headers(init?.headers).get('authorization')).toBe('Bearer test-only');
         expect(JSON.parse(String(init?.body))).toMatchObject({
-          model: 'seedance',
-          task_type: 'seedance-1.5-pro',
-          input: { prompt: 'slow rain', duration: 5, images: ['data:image/png;base64,iVBORw0KGgo='] },
+          model: 'seedance-1.5-pro', prompt: 'slow rain', seconds: '5', resolution_name: '720p', images: ['data:image/png;base64,iVBORw0KGgo='],
         });
         return jsonResponse(await fixture('video-submit.json'));
       })
@@ -89,7 +87,7 @@ describe('PieClient', () => {
 
   test('labels JPEG Seedance keyframes from their byte signature and rejects unsupported bytes', async () => {
     const fetcher = vi.fn<FetchLike>().mockImplementation(async (_url, init) => {
-      expect(JSON.parse(String(init?.body))).toMatchObject({ input: { images: ['data:image/jpeg;base64,/9j/4AAQ'] } });
+      expect(JSON.parse(String(init?.body))).toMatchObject({ images: ['data:image/jpeg;base64,/9j/4AAQ'] });
       return jsonResponse(await fixture('video-submit.json'));
     });
     const client = new PieClient({ env: { PIE_API_KEY: 'test-only' }, fetcher });

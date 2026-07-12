@@ -20,6 +20,7 @@ describe('production job preparation', () => {
     expect(index.jobs.filter((job: { kind: string }) => job.kind === 'speech').every((job: { voice: string }) => allowedVoices.has(job.voice))).toBe(true);
     expect(Object.values(index.freeze.voices).every((voice) => allowedVoices.has(String(voice)))).toBe(true);
     expect(index.jobs.filter((job: { kind: string }) => job.kind === 'video').every((job: { sourceImage?: string }) => job.sourceImage)).toBe(true);
+    expect(index.jobs.filter((job: { kind: string }) => job.kind === 'video').every((job: { durationSeconds: number; masterOutput?: string; desktopOutput?: string }) => job.durationSeconds === 8 && job.masterOutput && job.desktopOutput)).toBe(true);
     expect(index.jobs.filter((job: { kind: string }) => job.kind === 'image').every((job: { validation: object }) => JSON.stringify(job.validation).includes('frameCount'))).toBe(true);
   });
 

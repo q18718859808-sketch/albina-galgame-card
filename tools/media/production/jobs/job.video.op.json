@@ -1,14 +1,16 @@
 {
   "kind": "video",
   "prompt": "Albina visual novel animated CG: op. Use approved keyframe composition, restrained cinematic motion, preserve character identity and frozen palette, no text or logos.",
-  "durationSeconds": 30,
+  "durationSeconds": 8,
   "sourceImage": "D:\\创作\\albina-v2-complete\\dist\\albina-galgame-card\\assets\\cg\\opening_rain.jpg",
-  "output": "D:\\创作\\albina-v2-complete\\staging\\media\\video\\op.mp4",
+  "masterOutput": "D:\\创作\\albina-v2-complete\\staging\\media\\video\\master\\op.mp4",
+  "output": "D:\\创作\\albina-v2-complete\\staging\\media\\video\\runtime\\op.mp4",
+  "desktopOutput": "D:\\创作\\albina-v2-complete\\staging\\media\\video\\desktop\\op.mp4",
   "validation": {
     "width": 1280,
     "height": 720,
     "fps": 24,
-    "durationSeconds": 30,
+    "durationSeconds": 8,
     "tolerance": 1
   }
 }

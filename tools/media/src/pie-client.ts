@@ -63,31 +63,32 @@ export class PieClient {
 
   async submitVideo(input: { prompt: string; durationSeconds: number; image: Uint8Array }): Promise<{ providerJobId: string; status: string }> {
     const imageMimeType = detectImageMimeType(input.image);
-    const response = await this.request('/api/v1/task', {
+    const response = await this.request('/v1/videos', {
       method: 'POST',
       headers: { 'content-type': 'application/json; charset=utf-8' },
       body: JSON.stringify({
-        model: 'seedance',
-        task_type: 'seedance-1.5-pro',
-        input: { prompt: input.prompt, duration: input.durationSeconds, images: [`data:${imageMimeType};base64,${Buffer.from(input.image).toString('base64')}`] },
+        model: 'seedance-1.5-pro', prompt: input.prompt, seconds: String(input.durationSeconds), resolution_name: '720p', images: [`data:${imageMimeType};base64,${Buffer.from(input.image).toString('base64')}`],
       }),
-    }, [], 'x-api-key');
-    const body = (await response.json()) as { data?: { task_id?: unknown; status?: unknown } };
-    if (typeof body.data?.task_id !== 'string' || typeof body.data.status !== 'string') throw new Error('Invalid Pie video submit response');
-    return { providerJobId: body.data.task_id, status: body.data.status };
+    });
+    const body = (await response.json()) as { id?: unknown; task_id?: unknown; status?: unknown; state?: unknown; data?: { id?: unknown } };
+    const id = body.id ?? body.task_id ?? body.data?.id;
+    if (typeof id !== 'string') throw new Error('Invalid Pie video submit response');
+    return { providerJobId: id, status: String(body.status ?? body.state ?? 'pending') };
   }
 
   async pollVideo(providerJobId: string): Promise<NormalizedArtifact | { providerJobId: string; status: string }> {
-    const response = await this.request(`/api/v1/task/${encodeURIComponent(providerJobId)}`, {}, [], 'x-api-key');
-    const body = (await response.json()) as { data?: { status?: unknown; output?: { video?: unknown } } };
-    if (!['success', 'completed', 'succeeded'].includes(String(body.data?.status))) {
-      return { providerJobId, status: String(body.data?.status ?? 'unknown') };
+    const response = await this.request(`/v1/videos/${encodeURIComponent(providerJobId)}`);
+    const body = (await response.json()) as { status?: unknown; state?: unknown; metadata?: { url?: unknown }; video_url?: unknown; result?: { video_url?: unknown } };
+    const status = String(body.status ?? body.state ?? 'unknown');
+    if (!['success', 'completed', 'succeeded', 'complete'].includes(status)) {
+      return { providerJobId, status };
     }
-    if (typeof body.data?.output?.video !== 'string') throw new Error('Invalid Pie video poll response');
+    const video = body.metadata?.url ?? body.video_url ?? body.result?.video_url;
+    if (typeof video !== 'string') throw new Error('Invalid Pie video poll response');
     return {
       kind: 'video',
       model: 'seedance-1.5-pro',
-      sourceUrl: body.data.output.video,
+      sourceUrl: video,
       mimeType: 'video/mp4',
     };
   }

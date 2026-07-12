@@ -276,7 +276,7 @@ describe('artifact generation', () => {
     const output = join(directory, 'video.mp4');
     const keyframe = join(directory, 'keyframe.png');
     await writeFile(keyframe, pngHeader(100, 100, 6));
-    const job = { kind: 'video' as const, prompt: 'rain', durationSeconds: 5, sourceImage: keyframe, output };
+    const job = { kind: 'video' as const, prompt: 'rain', durationSeconds: 5, sourceImage: keyframe, masterOutput: join(directory, 'master.mp4'), desktopOutput: join(directory, 'desktop.mp4'), output };
     const ledger = new Ledger(join(directory, 'ledger.json'));
     const submitVideo = vi.fn().mockResolvedValue({ providerJobId: 'provider_once', status: 'pending' });
     const pollVideo = vi
@@ -293,7 +293,7 @@ describe('artifact generation', () => {
       });
 
     await expect(
-      new MediaGenerator({ client: { submitVideo, pollVideo }, ledger, sleep: async () => undefined }).generate([job]),
+      new MediaGenerator({ client: { submitVideo, pollVideo }, ledger, sleep: async () => undefined, videoPostprocess: mockVideoProcess }).generate([job]),
     ).rejects.toThrow(/validation/i);
 
     expect(submitVideo).toHaveBeenCalledOnce();
@@ -304,7 +304,7 @@ describe('artifact generation', () => {
 
   test('resumes polling a persisted provider job without submitting again', async () => {
     const directory = await mkdtemp(join(tmpdir(), 'albina-media-video-resume-'));
-    const job = { kind: 'video' as const, prompt: 'rain', durationSeconds: 5, sourceImage: join(directory, 'keyframe.png'), output: join(directory, 'video.mp4') };
+    const job = { kind: 'video' as const, prompt: 'rain', durationSeconds: 5, sourceImage: join(directory, 'keyframe.png'), masterOutput: join(directory, 'master.mp4'), desktopOutput: join(directory, 'desktop.mp4'), output: join(directory, 'video.mp4') };
     const ledger = new Ledger(join(directory, 'ledger.json'));
     await ledger.upsertJob(contentHashJobId(job), { status: 'failed', providerJobId: 'provider_existing' });
     const submitVideo = vi.fn();
@@ -338,3 +338,4 @@ function pngHeader(width: number, height: number, colorType: number): Buffer {
   buffer[25] = colorType;
   return buffer;
 }
+async function mockVideoProcess(master: string, runtime: string, desktop: string): Promise<void> { const bytes = await readFile(master); await writeFile(runtime, bytes); await writeFile(desktop, bytes); }

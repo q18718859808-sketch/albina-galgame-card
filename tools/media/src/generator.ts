@@ -1,5 +1,7 @@
 import { mkdir, readFile, rename, unlink, writeFile } from 'node:fs/promises';
 import { randomUUID } from 'node:crypto';
+import { execFile } from 'node:child_process';
+import { promisify } from 'node:util';
 import { dirname } from 'node:path';
 
 import { downloadResumable } from './download.js';
@@ -26,6 +28,7 @@ interface GeneratorOptions {
   downloader?: typeof downloadResumable;
   sleep?: (milliseconds: number) => Promise<void>;
   afterCompletedValidationFailure?: () => Promise<void>;
+  videoPostprocess?: (master: string, runtime: string, desktop: string) => Promise<void>;
 }
 
 export class MediaGenerator {
@@ -76,8 +79,24 @@ export class MediaGenerator {
         throw new Error('Music request outcome is ambiguous after HTTP 504');
       }
       temporaryOutput = await this.storeArtifact(artifact, job.output);
+      let masterTemporary: string | undefined;
+      let desktopTemporary: string | undefined;
+      if (job.kind === 'video') {
+        masterTemporary = temporaryOutput;
+        temporaryOutput = `${job.output}.${this.owner}.normalized`;
+        desktopTemporary = `${job.desktopOutput}.${this.owner}.normalized`;
+        await mkdir(dirname(job.desktopOutput), { recursive: true });
+        await (this.options.videoPostprocess ?? postprocessVideo)(masterTemporary, temporaryOutput, desktopTemporary);
+      }
       await validateJobArtifact({ ...job, output: temporaryOutput });
-      await this.options.ledger.commitClaimedJob(id, this.owner, token, () => rename(temporaryOutput!, job.output), { status: 'completed', output: job.output }, job.kind === 'music' && job.probe ? true : undefined);
+      await this.options.ledger.commitClaimedJob(id, this.owner, token, async () => {
+        if (job.kind === 'video') {
+          await mkdir(dirname(job.masterOutput), { recursive: true });
+          await rename(masterTemporary!, job.masterOutput);
+          await rename(desktopTemporary!, job.desktopOutput);
+        }
+        await rename(temporaryOutput!, job.output);
+      }, { status: 'completed', output: job.output }, job.kind === 'music' && job.probe ? true : undefined);
       temporaryOutput = undefined;
     } catch (error) {
       if (temporaryOutput) await unlink(temporaryOutput).catch(() => undefined);
@@ -137,6 +156,12 @@ export class MediaGenerator {
     else throw new Error('Pie artifact contains neither bytes nor a download URL');
     return temporary;
   }
+}
+
+const execFileAsync = promisify(execFile);
+async function postprocessVideo(master: string, runtime: string, desktop: string): Promise<void> {
+  await execFileAsync('ffmpeg', ['-y', '-i', master, '-vf', 'fps=24,scale=1280:720:force_original_aspect_ratio=decrease,pad=1280:720:(ow-iw)/2:(oh-ih)/2', '-an', '-c:v', 'libx264', '-pix_fmt', 'yuv420p', '-movflags', '+faststart', runtime]);
+  await execFileAsync('ffmpeg', ['-y', '-i', master, '-vf', 'fps=24,scale=1920:1080:force_original_aspect_ratio=decrease,pad=1920:1080:(ow-iw)/2:(oh-ih)/2', '-an', '-c:v', 'libx264', '-pix_fmt', 'yuv420p', '-movflags', '+faststart', desktop]);
 }
 
 export async function validateJobArtifact(job: MediaJob): Promise<unknown> {

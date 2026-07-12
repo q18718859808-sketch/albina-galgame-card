@@ -1,9 +1,1 @@
-{
-  "timestamp": 1783814402,
-  "data": {
-    "task_id": "job_[REDACTED]",
-    "model": "seedance",
-    "task_type": "seedance-1.5-pro",
-    "status": "pending"
-  }
-}
+{"id":"job_[REDACTED]","status":"pending"}

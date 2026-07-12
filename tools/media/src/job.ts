@@ -21,6 +21,8 @@ export interface VideoJob extends BaseJob {
   prompt: string;
   durationSeconds: number;
   sourceImage: string;
+  masterOutput: string;
+  desktopOutput: string;
   validation?: VideoExpectation;
 }
 
@@ -47,7 +49,7 @@ export async function loadJob(path: string): Promise<MediaJob> {
   }
   if (typeof value.output !== 'string') throw new Error(`Media job is missing output: ${path}`);
   assertValidationShape(value, path);
-  if (value.kind === 'video' && typeof value.sourceImage !== 'string') throw new Error(`Video job is missing approved keyframe: ${path}`);
+  if (value.kind === 'video' && (typeof value.sourceImage !== 'string' || typeof value.masterOutput !== 'string' || typeof value.desktopOutput !== 'string')) throw new Error(`Video job is missing approved keyframe or derivative outputs: ${path}`);
   return value as unknown as MediaJob;
 }
 

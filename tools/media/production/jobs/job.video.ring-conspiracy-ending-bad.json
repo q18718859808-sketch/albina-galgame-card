@@ -3,7 +3,9 @@
   "prompt": "Albina visual novel animated CG: ring conspiracy ending bad. Use approved keyframe composition, restrained cinematic motion, preserve character identity and frozen palette, no text or logos.",
   "durationSeconds": 8,
   "sourceImage": "D:\\创作\\albina-v2-complete\\dist\\albina-galgame-card\\assets\\cg\\ring_conspiracy_ending.jpg",
-  "output": "D:\\创作\\albina-v2-complete\\staging\\media\\video\\ring_conspiracy_ending_bad.mp4",
+  "masterOutput": "D:\\创作\\albina-v2-complete\\staging\\media\\video\\master\\ring_conspiracy_ending_bad.mp4",
+  "output": "D:\\创作\\albina-v2-complete\\staging\\media\\video\\runtime\\ring_conspiracy_ending_bad.mp4",
+  "desktopOutput": "D:\\创作\\albina-v2-complete\\staging\\media\\video\\desktop\\ring_conspiracy_ending_bad.mp4",
   "validation": {
     "width": 1280,
     "height": 720,

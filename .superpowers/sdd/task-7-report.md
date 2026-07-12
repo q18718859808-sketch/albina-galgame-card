@@ -103,3 +103,13 @@ Focused verification command: `npm --prefix tools/media test -- orchestration.te
 The speech allowlist is now exactly the six voices verified with the active Pie credential: `alloy`, `echo`, `fable`, `nova`, `onyx`, and `shimmer`. The unauthorized `ash`, `ballad`, `coral`, `sage`, and `verse` voices are rejected locally before a request.
 
 The frozen character mapping was regenerated using only verified voices while preserving differentiation: Albina uses `nova`; narration uses `onyx`; Fascia, Faust, and the golden image use `shimmer`; Vergilius and the LCE doctor use `echo`; Dante uses `alloy`; Callisto and the Ring agent use `fable`. All 154 speech job specs and the production index were deterministically regenerated. Historic failed ledger entries retain their old content hashes and do not affect the new specs.
+
+## Verified Seedance video contract and derivatives
+
+The video adapter now follows the locally proven Pie contract: Bearer `POST /v1/videos` with `model: seedance-1.5-pro`, string `seconds`, `resolution_name: 720p`, prompt, and keyframe data URL; task IDs are accepted from `id`, `task_id`, or `data.id`. Bearer polling uses `GET /v1/videos/{id}`, reads status from `status` or `state`, and resolves successful URLs from `metadata.url`, `video_url`, or `result.video_url`. The incorrect `/api/v1/task` x-api-key path was removed.
+
+All 29 video jobs are frozen to the supported eight-second duration and regenerated under new content hashes; the 29 previous immediate failures remain historic ledger records. Each job declares a raw Seedance master, a normalized 1280x720 24fps runtime output, and a 1920x1080 desktop derivative. ffmpeg uses `force_original_aspect_ratio=decrease` plus centered padding, so neither derivative distorts the source. The approved static keyframe remains available as fallback.
+
+Raw download and both derivatives use owner-unique temporary paths. Runtime validation occurs before the fencing transaction atomically verifies the claim and promotes the raw master plus both derivatives. Archival masters remain in staging and are not web delivery assets.
+
+Verification commands: `npm --prefix tools/media test` passed 41/41 tests across five files; `npm --prefix tools/media run typecheck` passed; production regeneration reported 275 jobs with 29 videos and no non-video inventory count drift.

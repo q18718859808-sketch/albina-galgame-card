@@ -3,7 +3,9 @@
   "prompt": "Albina visual novel animated CG: white canvas ending normal. Use approved keyframe composition, restrained cinematic motion, preserve character identity and frozen palette, no text or logos.",
   "durationSeconds": 8,
   "sourceImage": "D:\\创作\\albina-v2-complete\\dist\\albina-galgame-card\\assets\\cg\\white_canvas_ending.jpg",
-  "output": "D:\\创作\\albina-v2-complete\\staging\\media\\video\\white_canvas_ending_normal.mp4",
+  "masterOutput": "D:\\创作\\albina-v2-complete\\staging\\media\\video\\master\\white_canvas_ending_normal.mp4",
+  "output": "D:\\创作\\albina-v2-complete\\staging\\media\\video\\runtime\\white_canvas_ending_normal.mp4",
+  "desktopOutput": "D:\\创作\\albina-v2-complete\\staging\\media\\video\\desktop\\white_canvas_ending_normal.mp4",
   "validation": {
     "width": 1280,
     "height": 720,

@@ -1,14 +1,16 @@
 {
   "kind": "video",
   "prompt": "Albina visual novel animated CG: ed golden bough rebuild. Use approved keyframe composition, restrained cinematic motion, preserve character identity and frozen palette, no text or logos.",
-  "durationSeconds": 30,
+  "durationSeconds": 8,
   "sourceImage": "D:\\创作\\albina-v2-complete\\dist\\albina-galgame-card\\assets\\cg\\golden_bough_ending.jpg",
-  "output": "D:\\创作\\albina-v2-complete\\staging\\media\\video\\ed_golden_bough_rebuild.mp4",
+  "masterOutput": "D:\\创作\\albina-v2-complete\\staging\\media\\video\\master\\ed_golden_bough_rebuild.mp4",
+  "output": "D:\\创作\\albina-v2-complete\\staging\\media\\video\\runtime\\ed_golden_bough_rebuild.mp4",
+  "desktopOutput": "D:\\创作\\albina-v2-complete\\staging\\media\\video\\desktop\\ed_golden_bough_rebuild.mp4",
   "validation": {
     "width": 1280,
     "height": 720,
     "fps": 24,
-    "durationSeconds": 30,
+    "durationSeconds": 8,
     "tolerance": 1
   }
 }
