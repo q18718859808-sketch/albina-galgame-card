@@ -43,7 +43,7 @@ it('promotes source into canonical dist before mirroring the complete dist tree'
     expect(existsSync(join(projectRoot, 'release/github-cdn-root/dist/albina-galgame-card/console/index.js'))).toBe(true);
     expect(await readFile(canonicalLegacy, 'utf8')).toBe('legacy-bundle');
     expect(await readFile(join(projectRoot, 'release/github-cdn-root/dist/albina-galgame-card/data/game-script-v2.json'), 'utf8')).toBe('canonical-data');
-    expect(await readFile(historicalReleaseFile, 'utf8')).toBe('historical-release-file');
+    expect(existsSync(historicalReleaseFile)).toBe(false);
     expect(existsSync(leakedTool)).toBe(false);
     expect(existsSync(join(projectRoot, 'release/github-cdn-root/dist/albina-galgame-card/albina-bridge/tools/leak.py'))).toBe(false);
   } finally {

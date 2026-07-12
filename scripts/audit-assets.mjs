@@ -3,6 +3,7 @@ import { access, mkdir, readFile, readdir, stat, writeFile } from 'node:fs/promi
 import { extname, relative, resolve } from 'node:path';
 
 import { validateAssetIntegrity } from './lib/asset-integrity.mjs';
+import { hasReleaseDifferences } from './lib/release-integrity.mjs';
 
 const projectRoot = resolve(import.meta.dirname, '..');
 const canonicalRoot = resolve(projectRoot, 'dist/albina-galgame-card');
@@ -366,4 +367,4 @@ if (arguments_.has('--write')) await writeGeneratedArtifacts();
 const report = await audit();
 if (arguments_.has('--json')) process.stdout.write(`${JSON.stringify(report)}\n`);
 else console.log(`Asset audit: ${report.unresolved.length} unresolved; release missing=${report.release.missing.length}, mismatch=${report.release.mismatch.length}, stale=${report.release.stale.length}`);
-if (report.unresolved.length > 0) process.exitCode = 1;
+if (report.unresolved.length > 0 || hasReleaseDifferences(report.release)) process.exitCode = 1;

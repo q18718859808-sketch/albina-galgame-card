@@ -16,21 +16,17 @@ export async function prepareProduction(root: string, outputDirectory: string) {
   const script = await json(resolve(root, 'content/game-script-v2.json'));
   const scenes = (await Promise.all(script.dialogueFiles.map((file: string) => json(resolve(root, 'content', file))))).flat();
   const assetPaths = new Map(manifest.assets.map((asset: RecordValue) => [asset.id, asset.path]));
-  const textByVoice = new Map<string, { text: string; speaker: string }>();
-  for (const scene of scenes) {
-    textByVoice.set(scene.voiceAssetId, { text: scene.text, speaker: scene.speaker });
-    for (const choice of scene.choices ?? []) textByVoice.set(choice.resultVoiceAssetId, { text: choice.resultText, speaker: scene.speaker });
-  }
+  const speechLines = collectSpeechLines(scenes);
   const jobs: RecordValue[] = [];
   for (const pending of manifest.mediaJobs.filter((job: RecordValue) => job.kind === 'image-edit')) {
     const source = assetPaths.get(pending.inputAssetIds[0]);
     if (typeof source !== 'string') throw new Error(`Missing source asset for ${pending.id}`);
     jobs.push({ id: pending.id, kind: 'image', prompt: 'Edit the supplied canonical reference into one transparent horizontal strip of exactly eight equal square frames. Preserve identity, outfit, palette, silhouette and line style. Frames: neutral, blink, speak, smile, sad, tense, action, recovery. No text, no borders, no extra subjects.', width: 4096, height: 512, sourceImage: resolve(root, 'dist/albina-galgame-card/assets', source), output: resolve(root, 'staging/media', pending.outputPath), validation: { width: 4096, height: 512, alpha: true, frameCount: 8 } });
   }
-  for (const pending of manifest.mediaJobs.filter((job: RecordValue) => job.kind === 'speech')) {
-    const line = textByVoice.get(pending.assetId);
-    if (!line) throw new Error(`Missing dialogue for ${pending.assetId}`);
-    jobs.push({ id: pending.id, kind: 'speech', input: line.text, voice: voices[line.speaker] ?? 'alloy', output: resolve(root, 'staging/media', pending.outputPath), validation: { minDurationSeconds: 0.2, maxDurationSeconds: 60, minLoudnessDbfs: -30, maxLoudnessDbfs: -6 } });
+  for (const [assetId, line] of speechLines) {
+    const outputPath = assetPaths.get(assetId);
+    if (typeof outputPath !== 'string') throw new Error(`Missing approved voice asset for ${assetId}`);
+    jobs.push({ id: `job.speech.${assetId}`, kind: 'speech', input: line.text, voice: voices[line.speaker] ?? 'alloy', output: resolve(root, 'staging/media', outputPath), validation: { minDurationSeconds: 0.2, maxDurationSeconds: 60, minLoudnessDbfs: -30, maxLoudnessDbfs: -6 } });
   }
   const videoIds = ['prologue', ...routeNames.flatMap(route => [3,5,8,11,15].map(n => `${route}_scene_${n}`)), ...routeNames.flatMap(route => ['true','normal','bad'].map(end => `${route}_ending_${end}`)), 'op', ...routeNames.map(route => `ed_${route}`)];
   for (const id of videoIds) {
@@ -51,6 +47,21 @@ export async function prepareProduction(root: string, outputDirectory: string) {
 }
 
 async function json(path: string) { return JSON.parse(await readFile(path, 'utf8')); }
+function collectSpeechLines(scenes: RecordValue[]): [string, { text: string; speaker: string }][] {
+  const lines = new Map<string, { text: string; speaker: string }>();
+  const add = (assetId: unknown, text: unknown, speaker: unknown) => {
+    if (typeof assetId !== 'string' || typeof text !== 'string' || typeof speaker !== 'string') return;
+    const next = { text, speaker };
+    const current = lines.get(assetId);
+    if (current && (current.text !== next.text || current.speaker !== next.speaker)) throw new Error(`Conflicting dialogue for ${assetId}`);
+    lines.set(assetId, next);
+  };
+  for (const scene of scenes) {
+    add(scene.voiceAssetId, scene.text, scene.speaker);
+    for (const choice of scene.choices ?? []) add(choice.resultVoiceAssetId, choice.resultText, scene.speaker);
+  }
+  return [...lines.entries()].sort(([a], [b]) => a.localeCompare(b));
+}
 function safe(id: string) { return id.replaceAll(/[^a-z0-9.-]/giu, '-'); }
 function stripId(job: RecordValue) { const { id: _id, ...spec } = job; return spec; }
 function videoKeyframe(id: string): string {

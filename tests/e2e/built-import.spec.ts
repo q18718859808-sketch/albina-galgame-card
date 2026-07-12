@@ -1,6 +1,10 @@
 import { expect, test } from '@playwright/test';
 
 test('executes the published Tavern Helper module, injects CSS, mounts, recovers audio, and unmounts', async ({ page }) => {
+  let sourceModuleRequests = 0;
+  page.on('request', (request) => {
+    if (request.url().endsWith('/dist/albina-galgame-card/source/albina-source.js')) sourceModuleRequests += 1;
+  });
   await page.addInitScript(() => {
     let plays = 0;
     let pauses = 0;
@@ -29,8 +33,14 @@ test('executes the published Tavern Helper module, injects CSS, mounts, recovers
     HTMLMediaElement.prototype.pause = function () { pauses += 1; };
   });
   await page.goto('/built-harness.html');
+  await page.evaluate(() => {
+    const duplicate = document.createElement('script');
+    duplicate.src = '/albina-classic-loader.js';
+    document.head.append(duplicate);
+  });
   const launcher = page.locator('[data-albina-launcher]');
   await expect(launcher).toBeVisible();
+  expect(sourceModuleRequests).toBe(1);
   await expect(page.locator('link[data-albina-style]')).toHaveAttribute('href', /albina-source\.css$/u);
   await launcher.click();
   await expect(page.locator('[data-albina-shell]')).toBeVisible();

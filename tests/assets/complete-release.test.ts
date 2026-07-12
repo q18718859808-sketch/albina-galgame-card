@@ -1,3 +1,4 @@
+import { existsSync } from 'node:fs';
 import { readFile } from 'node:fs/promises';
 import { join } from 'node:path';
 
@@ -45,7 +46,12 @@ describe('v2 release completeness with explicit blocked channels', () => {
     const card = await json('card/albina.card.json') as { data: { extensions: { tavern_helper: { scripts: Array<{ enabled: boolean; content: string }> } } } };
     const enabled = card.data.extensions.tavern_helper.scripts.filter((script) => script.enabled);
     expect(enabled).toHaveLength(1);
-    expect(enabled[0]?.content).toContain('@v2.0.0/dist/albina-galgame-card/source/albina-source.js');
+    expect(enabled[0]?.content).toContain('@v2.0.0/dist/albina-galgame-card/source/albina-classic-loader.js');
+    expect(enabled[0]?.content).not.toMatch(/^\s*import\s/mu);
     expect(enabled[0]?.content).not.toContain('/console/index.js');
+    expect(existsSync('dist/albina-galgame-card/source/albina-classic-loader.js')).toBe(true);
+    const loader = await readFile('public/albina-classic-loader.js', 'utf8');
+    expect(loader).not.toMatch(/^\s*import\s/mu);
+    expect(loader).toContain('import(sourceUrl)');
   });
 });

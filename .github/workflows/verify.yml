@@ -14,5 +14,8 @@ jobs:
       - run: npm run release:sync
       - run: node scripts/verify-release.mjs
       - run: npm run security:scan
+      - run: npm --prefix tools/media run typecheck
+      - run: npm --prefix tools/media test
+      - run: npm --prefix tools/media run build
       - run: npm run test:e2e
-      - run: git diff --exit-code -- . ':!release/github-cdn-root/docs/**'
+      - run: git diff --exit-code -- .

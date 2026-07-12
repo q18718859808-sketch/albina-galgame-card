@@ -12,10 +12,20 @@ describe('production job preparation', () => {
     const summary = await prepareProduction(root, output);
     expect(summary).toEqual({ image: 8, speech: 154, video: 29, musicProbe: 3, music: 81, total: 275 });
     const index = JSON.parse(await readFile(join(output, 'index.json'), 'utf8'));
+    const manifest = JSON.parse(await readFile(join(root, 'content/asset-manifest-v2.json'), 'utf8'));
+    const script = JSON.parse(await readFile(join(root, 'content/game-script-v2.json'), 'utf8'));
+    const scenes = (await Promise.all(script.dialogueFiles.map((file: string) => readFile(join(root, 'content', file), 'utf8').then(JSON.parse)))).flat();
+    const expectedSpeechIds = [...new Set(scenes.flatMap((scene: { voiceAssetId?: string; choices?: { resultVoiceAssetId?: string }[] }) => [
+      scene.voiceAssetId,
+      ...(scene.choices ?? []).map((choice) => choice.resultVoiceAssetId),
+    ].filter((id): id is string => Boolean(id))))].sort((a, b) => a.localeCompare(b));
+    // Speech must be planned from the fixed script, even after all manifest jobs are approved.
+    expect(manifest.mediaJobs.filter((job: { kind: string }) => job.kind === 'speech')).toHaveLength(0);
     expect(index.jobs).toHaveLength(275);
     expect(index.freeze.voices).toMatchObject({ '阿尔比娜': 'nova', '叙事记录': 'onyx' });
     expect(index.jobs.filter((job: { kind: string }) => job.kind === 'image')).toHaveLength(8);
     expect(index.jobs.filter((job: { kind: string }) => job.kind === 'speech')).toHaveLength(154);
+    expect(index.jobs.filter((job: { kind: string }) => job.kind === 'speech').map((job: { id: string }) => job.id)).toEqual(expectedSpeechIds.map((id) => `job.speech.${id}`));
     const allowedVoices = new Set(['alloy', 'echo', 'fable', 'nova', 'onyx', 'shimmer']);
     expect(index.jobs.filter((job: { kind: string }) => job.kind === 'speech').every((job: { voice: string }) => allowedVoices.has(job.voice))).toBe(true);
     expect(Object.values(index.freeze.voices).every((voice) => allowedVoices.has(String(voice)))).toBe(true);
