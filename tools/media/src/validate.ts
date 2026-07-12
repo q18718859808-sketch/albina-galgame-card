@@ -32,6 +32,7 @@ export interface VideoExpectation {
   durationSeconds: number;
   tolerance?: number;
 }
+export interface FlexibleVideoExpectation { minFps: number; maxFps: number; minDurationSeconds: number; maxDurationSeconds: number; }
 
 export interface AudioInspection {
   durationSeconds: number;
@@ -77,6 +78,13 @@ export async function validateVideo(
   assert(actual.width === expectation.width && actual.height === expectation.height, 'Video dimensions do not match expectation');
   assert(Math.abs(actual.fps - expectation.fps) <= tolerance, 'Video FPS does not match expectation');
   assert(Math.abs(actual.durationSeconds - expectation.durationSeconds) <= tolerance, 'Video duration does not match expectation');
+  return actual;
+}
+export async function validateVideoFlexible(path: string, expectation: FlexibleVideoExpectation, probe: (path: string) => Promise<unknown> = ffprobe) {
+  const actual = inspectVideoProbe(await probe(path));
+  assert(actual.width > 0 && actual.height > 0, 'Video dimensions are invalid');
+  assert(actual.fps >= expectation.minFps && actual.fps <= expectation.maxFps, 'Video FPS is outside the accepted range');
+  assert(actual.durationSeconds >= expectation.minDurationSeconds && actual.durationSeconds <= expectation.maxDurationSeconds, 'Video duration is outside the accepted range');
   return actual;
 }
 

@@ -113,3 +113,13 @@ All 29 video jobs are frozen to the supported eight-second duration and regenera
 Raw download and both derivatives use owner-unique temporary paths. Runtime validation occurs before the fencing transaction atomically verifies the claim and promotes the raw master plus both derivatives. Archival masters remain in staging and are not web delivery assets.
 
 Verification commands: `npm --prefix tools/media test` passed 41/41 tests across five files; `npm --prefix tools/media run typecheck` passed; production regeneration reported 275 jobs with 29 videos and no non-video inventory count drift.
+
+## Video bundle validation and resume follow-up
+
+Video completion now means the full three-file bundle is valid. Runtime delivery is ffprobe-validated at 1280x720, 24fps, and eight seconds; desktop delivery is validated at 1920x1080, 24fps, and eight seconds; the raw Seedance master must exist, contain a valid video stream, run between seven and nine seconds, and report a reasonable 12-60fps without assuming provider-specific dimensions.
+
+The completed fast path validates all three files. A missing or corrupt raw master, runtime, or desktop derivative CAS-marks the job stale and re-enters the claimed generation path. The prior `providerJobId` remains on the ledger entry, so recovery resumes polling/downloading without a new video submission. Initial production likewise validates all three temporary files before the fenced multi-output commit.
+
+Failure and lost-claim cleanup removes the raw, runtime, and desktop owner-specific temporary files. Tests cover successful triple-output commit plus completed bundles with a missing master or corrupt desktop; both recovery cases make zero new submit calls and reuse the existing provider ID.
+
+Verification commands: `npm --prefix tools/media test` passed 44/44 tests across five files; `npm --prefix tools/media run typecheck` passed. Production specs were regenerated deterministically with strict runtime, desktop, and master validation records.

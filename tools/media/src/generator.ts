@@ -11,7 +11,7 @@ import { JobBusyError, Ledger, LostJobClaimError } from './ledger.js';
 import { PieClient } from './pie-client.js';
 import { retry } from './retry.js';
 import type { AmbiguousArtifact, NormalizedArtifact } from './types.js';
-import { validateAudio, validateImage, validateVideo } from './validate.js';
+import { validateAudio, validateImage, validateVideo, validateVideoFlexible } from './validate.js';
 
 export interface MediaClient {
   generateImage?(input: { prompt: string; width: number; height: number }): Promise<NormalizedArtifact>;
@@ -29,6 +29,7 @@ interface GeneratorOptions {
   sleep?: (milliseconds: number) => Promise<void>;
   afterCompletedValidationFailure?: () => Promise<void>;
   videoPostprocess?: (master: string, runtime: string, desktop: string) => Promise<void>;
+  validateArtifact?: (job: MediaJob) => Promise<unknown>;
 }
 
 export class MediaGenerator {
@@ -53,7 +54,7 @@ export class MediaGenerator {
     for (;;) {
       const existing = (await this.options.ledger.read()).jobs[id];
       if (existing?.status === 'completed') {
-        try { await validateJobArtifact(job); return; }
+        try { await (this.options.validateArtifact ?? validateJobArtifact)(job); return; }
         catch (error) {
           await this.options.afterCompletedValidationFailure?.();
           const result = await this.options.ledger.markCompletedArtifactStale(id, { claimToken: existing.claimToken, updatedAt: existing.updatedAt }, `Completed artifact requires regeneration: ${error instanceof Error ? error.message : String(error)}`);
@@ -68,6 +69,8 @@ export class MediaGenerator {
       break;
     }
     let temporaryOutput: string | undefined;
+    let masterTemporary: string | undefined;
+    let desktopTemporary: string | undefined;
     try {
       if (job.kind === 'music') await this.options.ledger.assertMusicRequestAllowed();
       const artifact =
@@ -79,8 +82,6 @@ export class MediaGenerator {
         throw new Error('Music request outcome is ambiguous after HTTP 504');
       }
       temporaryOutput = await this.storeArtifact(artifact, job.output);
-      let masterTemporary: string | undefined;
-      let desktopTemporary: string | undefined;
       if (job.kind === 'video') {
         masterTemporary = temporaryOutput;
         temporaryOutput = `${job.output}.${this.owner}.normalized`;
@@ -88,7 +89,7 @@ export class MediaGenerator {
         await mkdir(dirname(job.desktopOutput), { recursive: true });
         await (this.options.videoPostprocess ?? postprocessVideo)(masterTemporary, temporaryOutput, desktopTemporary);
       }
-      await validateJobArtifact({ ...job, output: temporaryOutput });
+      await (this.options.validateArtifact ?? validateJobArtifact)(job.kind === 'video' ? { ...job, output: temporaryOutput, masterOutput: masterTemporary!, desktopOutput: desktopTemporary! } : { ...job, output: temporaryOutput });
       await this.options.ledger.commitClaimedJob(id, this.owner, token, async () => {
         if (job.kind === 'video') {
           await mkdir(dirname(job.masterOutput), { recursive: true });
@@ -98,8 +99,12 @@ export class MediaGenerator {
         await rename(temporaryOutput!, job.output);
       }, { status: 'completed', output: job.output }, job.kind === 'music' && job.probe ? true : undefined);
       temporaryOutput = undefined;
+      masterTemporary = undefined;
+      desktopTemporary = undefined;
     } catch (error) {
       if (temporaryOutput) await unlink(temporaryOutput).catch(() => undefined);
+      if (masterTemporary) await unlink(masterTemporary).catch(() => undefined);
+      if (desktopTemporary) await unlink(desktopTemporary).catch(() => undefined);
       const current = (await this.options.ledger.read()).jobs[id];
       if (current?.status !== 'ambiguous') {
         await this.options.ledger.updateClaimedJob(id, this.owner, token, { status: 'failed', error: error instanceof Error ? error.message : String(error) }, job.kind === 'music' && job.probe ? false : undefined).catch((claimError) => { if (!(claimError instanceof LostJobClaimError)) throw claimError; });
@@ -167,6 +172,6 @@ async function postprocessVideo(master: string, runtime: string, desktop: string
 export async function validateJobArtifact(job: MediaJob): Promise<unknown> {
   if (!job.validation) throw new Error('Media job must declare validation before validation or promotion');
   if (job.kind === 'image') return validateImage(job.output, job.validation);
-  if (job.kind === 'video') return validateVideo(job.output, job.validation);
+  if (job.kind === 'video') return Promise.all([validateVideo(job.output, job.validation), validateVideo(job.desktopOutput, job.desktopValidation), validateVideoFlexible(job.masterOutput, job.masterValidation)]);
   return validateAudio(job.output, job.validation);
 }

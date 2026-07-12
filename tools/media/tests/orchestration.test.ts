@@ -1,4 +1,4 @@
-import { mkdtemp, readFile, writeFile } from 'node:fs/promises';
+import { access, mkdtemp, readFile, writeFile } from 'node:fs/promises';
 import { tmpdir } from 'node:os';
 import { join } from 'node:path';
 
@@ -6,6 +6,7 @@ import { describe, expect, test, vi } from 'vitest';
 
 import { downloadResumable } from '../src/download.js';
 import { MediaGenerator } from '../src/generator.js';
+import type { MediaJob } from '../src/job.js';
 import { contentHashJobId } from '../src/hash.js';
 import { JobBusyError, Ledger, MusicBulkNotReadyError, MusicCooldownError } from '../src/ledger.js';
 import { PieClient } from '../src/pie-client.js';
@@ -276,7 +277,7 @@ describe('artifact generation', () => {
     const output = join(directory, 'video.mp4');
     const keyframe = join(directory, 'keyframe.png');
     await writeFile(keyframe, pngHeader(100, 100, 6));
-    const job = { kind: 'video' as const, prompt: 'rain', durationSeconds: 5, sourceImage: keyframe, masterOutput: join(directory, 'master.mp4'), desktopOutput: join(directory, 'desktop.mp4'), output };
+    const job = { kind: 'video' as const, prompt: 'rain', durationSeconds: 5, sourceImage: keyframe, masterOutput: join(directory, 'master.mp4'), desktopOutput: join(directory, 'desktop.mp4'), output, desktopValidation: { width: 1920, height: 1080, fps: 24, durationSeconds: 5 }, masterValidation: { minFps: 12, maxFps: 60, minDurationSeconds: 4, maxDurationSeconds: 6 } };
     const ledger = new Ledger(join(directory, 'ledger.json'));
     const submitVideo = vi.fn().mockResolvedValue({ providerJobId: 'provider_once', status: 'pending' });
     const pollVideo = vi
@@ -302,9 +303,40 @@ describe('artifact generation', () => {
     expect((await ledger.read()).jobs[contentHashJobId(job)]?.providerJobId).toBe('provider_once');
   });
 
+  test('commits a validated raw/runtime/desktop video bundle together', async () => {
+    const directory = await mkdtemp(join(tmpdir(), 'albina-media-video-bundle-'));
+    const keyframe = join(directory, 'key.png'); await writeFile(keyframe, pngHeader(10, 10, 6));
+    const job = videoJob(directory, keyframe);
+    const submitVideo = vi.fn().mockResolvedValue({ providerJobId: 'video_bundle', status: 'pending' });
+    const pollVideo = vi.fn().mockResolvedValue({ kind: 'video', model: 'seedance-1.5-pro', bytes: new Uint8Array([9]) });
+    const videoPostprocess = async (_master: string, runtime: string, desktop: string) => { await writeFile(runtime, new Uint8Array([8])); await writeFile(desktop, new Uint8Array([7])); };
+    const validateArtifact = async (candidate: MediaJob) => { if (candidate.kind !== 'video') throw new Error('expected video'); return Promise.all([access(candidate.masterOutput), access(candidate.output), access(candidate.desktopOutput)]); };
+    await new MediaGenerator({ client: { submitVideo, pollVideo }, ledger: new Ledger(join(directory, 'ledger.json')), sleep: async () => undefined, videoPostprocess, validateArtifact }).generate([job]);
+    expect(await readFile(job.masterOutput)).toEqual(Buffer.from([9]));
+    expect(await readFile(job.output)).toEqual(Buffer.from([8]));
+    expect(await readFile(job.desktopOutput)).toEqual(Buffer.from([7]));
+  });
+
+  test.each(['missing-master', 'corrupt-desktop'])('recovers a completed %s bundle using its provider id without resubmit', async (condition) => {
+    const directory = await mkdtemp(join(tmpdir(), 'albina-media-video-recover-'));
+    const keyframe = join(directory, 'key.png'); await writeFile(keyframe, pngHeader(10, 10, 6));
+    const job = videoJob(directory, keyframe);
+    await writeFile(job.output, Buffer.from('valid')); await writeFile(job.desktopOutput, Buffer.from(condition === 'corrupt-desktop' ? 'bad' : 'valid'));
+    if (condition !== 'missing-master') await writeFile(job.masterOutput, Buffer.from('valid'));
+    const ledger = new Ledger(join(directory, 'ledger.json'));
+    await ledger.upsertJob(contentHashJobId(job), { status: 'completed', providerJobId: 'existing_video', claimToken: 1 });
+    const validateArtifact = async (candidate: MediaJob) => { if (candidate.kind !== 'video') throw new Error('expected video'); const values = await Promise.all([readFile(candidate.masterOutput), readFile(candidate.output), readFile(candidate.desktopOutput)]); if (values.some((value) => value.toString() === 'bad')) throw new Error('corrupt video bundle'); };
+    const submitVideo = vi.fn();
+    const pollVideo = vi.fn().mockResolvedValue({ kind: 'video', model: 'seedance-1.5-pro', bytes: Buffer.from('new-master') });
+    const videoPostprocess = async (_master: string, runtime: string, desktop: string) => { await writeFile(runtime, Buffer.from('new-runtime')); await writeFile(desktop, Buffer.from('new-desktop')); };
+    await new MediaGenerator({ client: { submitVideo, pollVideo }, ledger, sleep: async () => undefined, videoPostprocess, validateArtifact }).generate([job]);
+    expect(submitVideo).not.toHaveBeenCalled();
+    expect(pollVideo).toHaveBeenCalledWith('existing_video');
+  });
+
   test('resumes polling a persisted provider job without submitting again', async () => {
     const directory = await mkdtemp(join(tmpdir(), 'albina-media-video-resume-'));
-    const job = { kind: 'video' as const, prompt: 'rain', durationSeconds: 5, sourceImage: join(directory, 'keyframe.png'), masterOutput: join(directory, 'master.mp4'), desktopOutput: join(directory, 'desktop.mp4'), output: join(directory, 'video.mp4') };
+    const job = { kind: 'video' as const, prompt: 'rain', durationSeconds: 5, sourceImage: join(directory, 'keyframe.png'), masterOutput: join(directory, 'master.mp4'), desktopOutput: join(directory, 'desktop.mp4'), output: join(directory, 'video.mp4'), desktopValidation: { width: 1920, height: 1080, fps: 24, durationSeconds: 5 }, masterValidation: { minFps: 12, maxFps: 60, minDurationSeconds: 4, maxDurationSeconds: 6 } };
     const ledger = new Ledger(join(directory, 'ledger.json'));
     await ledger.upsertJob(contentHashJobId(job), { status: 'failed', providerJobId: 'provider_existing' });
     const submitVideo = vi.fn();
@@ -339,3 +371,4 @@ function pngHeader(width: number, height: number, colorType: number): Buffer {
   return buffer;
 }
 async function mockVideoProcess(master: string, runtime: string, desktop: string): Promise<void> { const bytes = await readFile(master); await writeFile(runtime, bytes); await writeFile(desktop, bytes); }
+function videoJob(directory: string, sourceImage: string) { return { kind: 'video' as const, prompt: 'rain', durationSeconds: 8, sourceImage, masterOutput: join(directory, 'master.mp4'), output: join(directory, 'runtime.mp4'), desktopOutput: join(directory, 'desktop.mp4'), validation: { width: 1280, height: 720, fps: 24, durationSeconds: 8 }, desktopValidation: { width: 1920, height: 1080, fps: 24, durationSeconds: 8 }, masterValidation: { minFps: 12, maxFps: 60, minDurationSeconds: 7, maxDurationSeconds: 9 } }; }

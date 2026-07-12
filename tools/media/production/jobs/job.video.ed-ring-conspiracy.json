@@ -12,5 +12,18 @@
     "fps": 24,
     "durationSeconds": 8,
     "tolerance": 1
+  },
+  "desktopValidation": {
+    "width": 1920,
+    "height": 1080,
+    "fps": 24,
+    "durationSeconds": 8,
+    "tolerance": 1
+  },
+  "masterValidation": {
+    "minFps": 12,
+    "maxFps": 60,
+    "minDurationSeconds": 7,
+    "maxDurationSeconds": 9
   }
 }
