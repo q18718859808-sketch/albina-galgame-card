@@ -107,8 +107,10 @@ export class Ledger {
     });
   }
 
-  async startMusicCooldown(): Promise<void> {
+  async markClaimedMusicAmbiguous(id: string, owner: string, token: number, reason: string): Promise<void> {
     await this.update((state) => {
+      const job = requireClaim(state, id, owner, token);
+      state.jobs[id] = { ...job, status: 'ambiguous', error: reason, updatedAt: new Date(this.now()).toISOString() };
       state.music.cooldownUntil = this.now() + 5 * 60 * 1000;
       state.music.consecutiveValidProbes = 0;
     });

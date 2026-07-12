@@ -49,7 +49,9 @@ describe('single-writer ledger', () => {
     await ledger.recordMusicProbe(true);
     await expect(ledger.assertMusicBulkReady()).resolves.toBeUndefined();
 
-    await ledger.startMusicCooldown();
+    const cooldownClaim = await ledger.claimJob('cooldown-probe', 'test');
+    if (cooldownClaim.status !== 'claimed') throw new Error('expected cooldown claim');
+    await ledger.markClaimedMusicAmbiguous('cooldown-probe', 'test', cooldownClaim.token, 'gateway-timeout');
     await expect(ledger.assertMusicRequestAllowed()).rejects.toBeInstanceOf(MusicCooldownError);
     now += 5 * 60 * 1000;
     await expect(ledger.assertMusicRequestAllowed()).resolves.toBeUndefined();
@@ -78,6 +80,23 @@ describe('single-writer ledger', () => {
     expect(second.status).toBe('claimed');
     await expect(ledger.updateClaimedJob('probe', 'a', first.token, { status: 'failed' }, false)).rejects.toThrow(/claim was lost/i);
     expect((await ledger.read()).music.consecutiveValidProbes).toBe(1);
+  });
+
+  test('does not let a lost ambiguous claimant alter the reclaimed job, cooldown, or probe streak', async () => {
+    const directory = await mkdtemp(join(tmpdir(), 'albina-media-ambiguous-fence-'));
+    let now = 1_000;
+    const ledger = new Ledger(join(directory, 'ledger.json'), { now: () => now });
+    await ledger.recordMusicProbe(true);
+    await ledger.recordMusicProbe(true);
+    const first = await ledger.claimJob('music', 'a', 100);
+    if (first.status !== 'claimed') throw new Error('expected first claim');
+    now = 1_101;
+    const second = await ledger.claimJob('music', 'b', 100);
+    if (second.status !== 'claimed') throw new Error('expected second claim');
+    await expect(ledger.markClaimedMusicAmbiguous('music', 'a', first.token, 'gateway-timeout')).rejects.toThrow(/claim was lost/i);
+    const state = await ledger.read();
+    expect(state.jobs.music).toMatchObject({ status: 'running', leaseOwner: 'b', claimToken: second.token });
+    expect(state.music).toEqual({ consecutiveValidProbes: 2, cooldownUntil: 0 });
   });
 });
 

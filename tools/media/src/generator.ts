@@ -72,8 +72,7 @@ export class MediaGenerator {
           ? await this.generateVideo(job, id, token)
           : await retry(() => this.requestArtifact(job), { sleep: this.sleep });
       if (artifact.kind === 'ambiguous') {
-        await this.options.ledger.startMusicCooldown();
-        await this.options.ledger.updateClaimedJob(id, this.owner, token, { status: 'ambiguous', error: artifact.reason }, job.probe ? false : undefined);
+        await this.options.ledger.markClaimedMusicAmbiguous(id, this.owner, token, artifact.reason);
         throw new Error('Music request outcome is ambiguous after HTTP 504');
       }
       temporaryOutput = await this.storeArtifact(artifact, job.output);

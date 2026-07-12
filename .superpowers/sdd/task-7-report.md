@@ -89,3 +89,11 @@ Music probe streak changes are now coupled to the fenced outcome transaction. A 
 The deterministic CAS test pauses worker A after validating an old completed artifact as invalid, lets worker B regenerate and complete, then resumes A. A makes zero provider calls and preserves B's completed token and artifact. A separate lost-claim probe test confirms the global streak remains unchanged.
 
 Focused verification command: `npm --prefix tools/media test -- orchestration.test.ts`. Result: 1 file passed, 20/20 tests passed. Type verification command: `npm --prefix tools/media run typecheck`. Result: passed.
+
+## Ambiguous music cooldown fencing follow-up
+
+Ambiguous music handling is now one atomic claim-fenced ledger transaction. `markClaimedMusicAmbiguous` first verifies the current owner/token, then marks the job ambiguous, sets the five-minute cooldown, and resets consecutive valid probes together. The former unfenced cooldown mutation entry point was removed.
+
+The deterministic lost-claim test lets B reclaim the music job before A attempts its ambiguous write. A receives a lost-claim error, while B's running job, the zero cooldown, and the existing probe streak remain unchanged.
+
+Focused verification command: `npm --prefix tools/media test -- orchestration.test.ts cli.test.ts`. Result: 2 files passed, 27/27 tests passed. Type verification command: `npm --prefix tools/media run typecheck`. Result: passed.
