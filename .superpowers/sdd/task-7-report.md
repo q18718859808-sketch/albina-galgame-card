@@ -41,3 +41,9 @@ The re-review MIME issue is fixed. Seedance keyframes are now classified from th
 Focused adapter verification command: `npm --prefix tools/media test -- adapters.test.ts`. Result: one test file passed, 6/6 tests passed, including PNG, real JPEG-signature bytes, and unsupported-byte rejection.
 
 Type verification command: `npm --prefix tools/media run typecheck`. Result: passed with no diagnostics.
+
+## Locked Pie channel endpoint follow-up
+
+The default provider origin is now the locked Pie channel `https://api.pie-xian.com`. Adapter coverage asserts a representative bearer request (`/v1/images/generations`) and x-api-key request (`/api/v1/task`) both target that origin, while an explicitly injected `baseUrl` remains available for isolated tests. Repository search confirms `api.piapi.ai` is absent from the media implementation and tests.
+
+The eight current edit-first sources were inspected directly. All eight begin with the PNG signature `89504E470D0A1A0A` and have `.png` canonical paths, so the existing multipart `image/png` and `input.png` metadata is correct for this production inventory; no edit multipart change was necessary.

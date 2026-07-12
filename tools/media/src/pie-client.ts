@@ -19,7 +19,7 @@ export class PieApiError extends Error {
   }
 }
 
-const DEFAULT_BASE_URL = 'https://api.piapi.ai';
+const DEFAULT_BASE_URL = 'https://api.pie-xian.com';
 const OPENAI_VOICES = new Set(['alloy', 'ash', 'ballad', 'coral', 'echo', 'fable', 'nova', 'onyx', 'sage', 'shimmer', 'verse']);
 
 interface PieClientOptions {

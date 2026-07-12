@@ -32,8 +32,15 @@ describe('PieClient', () => {
   test('normalizes recorded image generation and edit responses', async () => {
     const fetcher = vi
       .fn<FetchLike>()
-      .mockResolvedValueOnce(jsonResponse(await fixture('image-generation.json')))
-      .mockResolvedValueOnce(jsonResponse(await fixture('image-edit.json')));
+      .mockImplementationOnce(async (url, init) => {
+        expect(String(url)).toBe('https://api.pie-xian.com/v1/images/generations');
+        expect(new Headers(init?.headers).get('authorization')).toBe('Bearer test-only');
+        return jsonResponse(await fixture('image-generation.json'));
+      })
+      .mockImplementationOnce(async (url) => {
+        expect(String(url)).toBe('https://api.pie-xian.com/v1/images/edits');
+        return jsonResponse(await fixture('image-edit.json'));
+      });
     const client = new PieClient({ env: { PIE_API_KEY: 'test-only' }, fetcher });
 
     const generated = await client.generateImage({ prompt: 'rain', width: 1024, height: 1536 });
@@ -47,7 +54,7 @@ describe('PieClient', () => {
     const fetcher = vi
       .fn<FetchLike>()
       .mockImplementationOnce(async (url, init) => {
-        expect(String(url)).toBe('https://api.piapi.ai/api/v1/task');
+        expect(String(url)).toBe('https://api.pie-xian.com/api/v1/task');
         expect(new Headers(init?.headers).get('x-api-key')).toBe('test-only');
         expect(JSON.parse(String(init?.body))).toMatchObject({
           model: 'seedance',
@@ -64,6 +71,14 @@ describe('PieClient', () => {
 
     expect(submitted).toEqual({ providerJobId: 'job_[REDACTED]', status: 'pending' });
     expect(completed).toMatchObject({ kind: 'video', model: 'seedance-1.5-pro', sourceUrl: expect.stringContaining('video.mp4') });
+  });
+
+  test('keeps an explicitly injected base URL for isolated tests', async () => {
+    const fetcher = vi.fn<FetchLike>().mockImplementation(async (url) => {
+      expect(String(url)).toBe('https://example.invalid/v1/images/generations');
+      return jsonResponse(await fixture('image-generation.json'));
+    });
+    await new PieClient({ env: { PIE_API_KEY: 'test-only' }, fetcher, baseUrl: 'https://example.invalid/' }).generateImage({ prompt: 'x', width: 1, height: 1 });
   });
 
   test('labels JPEG Seedance keyframes from their byte signature and rejects unsupported bytes', async () => {
