@@ -65,6 +65,20 @@ describe('single-writer ledger', () => {
     await expect(ledger.claimJob('paid', 'second', 100)).resolves.toMatchObject({ status: 'claimed', token: 2 });
     expect((await ledger.read()).jobs.paid).toMatchObject({ status: 'running', leaseOwner: 'second', leaseUntil: 1_201 });
   });
+
+  test('does not let a lost probe claim increment or reset consecutive probe state', async () => {
+    const directory = await mkdtemp(join(tmpdir(), 'albina-media-probe-fence-'));
+    let now = 1_000;
+    const ledger = new Ledger(join(directory, 'ledger.json'), { now: () => now });
+    const first = await ledger.claimJob('probe', 'a', 100);
+    if (first.status !== 'claimed') throw new Error('expected claim');
+    await ledger.recordMusicProbe(true);
+    now = 1_101;
+    const second = await ledger.claimJob('probe', 'b', 100);
+    expect(second.status).toBe('claimed');
+    await expect(ledger.updateClaimedJob('probe', 'a', first.token, { status: 'failed' }, false)).rejects.toThrow(/claim was lost/i);
+    expect((await ledger.read()).music.consecutiveValidProbes).toBe(1);
+  });
 });
 
 describe('network resilience', () => {
@@ -165,6 +179,29 @@ describe('artifact generation', () => {
     const generateImage = vi.fn();
     await new MediaGenerator({ client: { generateImage }, ledger }).generate([job]);
     expect(generateImage).not.toHaveBeenCalled();
+  });
+
+  test('CAS-protects completed-invalid stale marking from a newer completion', async () => {
+    const directory = await mkdtemp(join(tmpdir(), 'albina-media-stale-cas-'));
+    const output = join(directory, 'image.png');
+    const job = { kind: 'image' as const, prompt: 'rain', width: 100, height: 100, output, validation: { width: 100, height: 100, alpha: true } };
+    await writeFile(output, Buffer.from('invalid'));
+    const ledger = new Ledger(join(directory, 'ledger.json'));
+    await ledger.upsertJob(contentHashJobId(job), { status: 'completed', claimToken: 1, output });
+    let releaseA!: () => void;
+    let reachedA!: () => void;
+    const reached = new Promise<void>((resolve) => { reachedA = resolve; });
+    const held = new Promise<void>((resolve) => { releaseA = resolve; });
+    const providerA = vi.fn();
+    const workerA = new MediaGenerator({ client: { generateImage: providerA }, ledger, afterCompletedValidationFailure: async () => { reachedA(); await held; } }).generate([job]);
+    await reached;
+    const providerB = vi.fn(async () => ({ kind: 'image' as const, model: 'gpt-image-2', bytes: pngHeader(100, 100, 6) }));
+    await new MediaGenerator({ client: { generateImage: providerB }, ledger }).generate([job]);
+    releaseA();
+    await workerA;
+    expect(providerA).not.toHaveBeenCalled();
+    expect(providerB).toHaveBeenCalledOnce();
+    expect((await ledger.read()).jobs[contentHashJobId(job)]).toMatchObject({ status: 'completed', claimToken: 2 });
   });
 
   test.each(['missing', 'invalid'])('regenerates a completed job when its output is %s', async (state) => {

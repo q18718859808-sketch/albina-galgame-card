@@ -25,6 +25,7 @@ interface GeneratorOptions {
   ledger: Ledger;
   downloader?: typeof downloadResumable;
   sleep?: (milliseconds: number) => Promise<void>;
+  afterCompletedValidationFailure?: () => Promise<void>;
 }
 
 export class MediaGenerator {
@@ -45,23 +46,24 @@ export class MediaGenerator {
 
   private async generateOne(job: MediaJob): Promise<void> {
     const id = contentHashJobId(job);
-    const existing = (await this.options.ledger.read()).jobs[id];
-    if (existing?.status === 'completed') {
-      try {
-        await validateJobArtifact(job);
-        return;
-      } catch (error) {
-        await this.options.ledger.upsertJob(id, { status: 'stale', error: `Completed artifact requires regeneration: ${error instanceof Error ? error.message : String(error)}` });
+    let token: number;
+    for (;;) {
+      const existing = (await this.options.ledger.read()).jobs[id];
+      if (existing?.status === 'completed') {
+        try { await validateJobArtifact(job); return; }
+        catch (error) {
+          await this.options.afterCompletedValidationFailure?.();
+          const result = await this.options.ledger.markCompletedArtifactStale(id, { claimToken: existing.claimToken, updatedAt: existing.updatedAt }, `Completed artifact requires regeneration: ${error instanceof Error ? error.message : String(error)}`);
+          if (result === 'conflict') continue;
+        }
       }
+      if (job.kind === 'music' && !job.probe) await this.options.ledger.assertMusicBulkReady();
+      const claim = await this.options.ledger.claimJob(id, this.owner);
+      if (claim.status === 'busy') throw new JobBusyError(id);
+      if (claim.status === 'already-completed') continue;
+      token = claim.token;
+      break;
     }
-    if (job.kind === 'music' && !job.probe) await this.options.ledger.assertMusicBulkReady();
-    const claim = await this.options.ledger.claimJob(id, this.owner);
-    if (claim.status === 'busy') throw new JobBusyError(id);
-    if (claim.status === 'already-completed') {
-      await validateJobArtifact(job);
-      return;
-    }
-    const token = claim.token;
     let temporaryOutput: string | undefined;
     try {
       if (job.kind === 'music') await this.options.ledger.assertMusicRequestAllowed();
@@ -71,20 +73,18 @@ export class MediaGenerator {
           : await retry(() => this.requestArtifact(job), { sleep: this.sleep });
       if (artifact.kind === 'ambiguous') {
         await this.options.ledger.startMusicCooldown();
-        await this.options.ledger.updateClaimedJob(id, this.owner, token, { status: 'ambiguous', error: artifact.reason });
+        await this.options.ledger.updateClaimedJob(id, this.owner, token, { status: 'ambiguous', error: artifact.reason }, job.probe ? false : undefined);
         throw new Error('Music request outcome is ambiguous after HTTP 504');
       }
       temporaryOutput = await this.storeArtifact(artifact, job.output);
       await validateJobArtifact({ ...job, output: temporaryOutput });
-      if (job.kind === 'music' && job.probe) await this.options.ledger.recordMusicProbe(true);
-      await this.options.ledger.commitClaimedJob(id, this.owner, token, () => rename(temporaryOutput!, job.output), { status: 'completed', output: job.output });
+      await this.options.ledger.commitClaimedJob(id, this.owner, token, () => rename(temporaryOutput!, job.output), { status: 'completed', output: job.output }, job.kind === 'music' && job.probe ? true : undefined);
       temporaryOutput = undefined;
     } catch (error) {
       if (temporaryOutput) await unlink(temporaryOutput).catch(() => undefined);
-      if (job.kind === 'music' && job.probe) await this.options.ledger.recordMusicProbe(false);
       const current = (await this.options.ledger.read()).jobs[id];
       if (current?.status !== 'ambiguous') {
-        await this.options.ledger.updateClaimedJob(id, this.owner, token, { status: 'failed', error: error instanceof Error ? error.message : String(error) }).catch((claimError) => { if (!(claimError instanceof LostJobClaimError)) throw claimError; });
+        await this.options.ledger.updateClaimedJob(id, this.owner, token, { status: 'failed', error: error instanceof Error ? error.message : String(error) }, job.kind === 'music' && job.probe ? false : undefined).catch((claimError) => { if (!(claimError instanceof LostJobClaimError)) throw claimError; });
       }
       throw error;
     }

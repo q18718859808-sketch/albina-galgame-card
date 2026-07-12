@@ -79,15 +79,25 @@ export class Ledger {
     await this.update((state) => { const job = requireClaim(state, id, owner, token); job.leaseUntil = this.now() + leaseMilliseconds; job.updatedAt = new Date(this.now()).toISOString(); });
   }
 
-  async updateClaimedJob(id: string, owner: string, token: number, entry: LedgerJob): Promise<void> {
-    await this.update((state) => { const job = requireClaim(state, id, owner, token); state.jobs[id] = { ...job, ...entry, updatedAt: new Date(this.now()).toISOString() }; });
+  async markCompletedArtifactStale(id: string, expected: { claimToken: number | undefined; updatedAt: string | undefined }, error: string): Promise<'marked' | 'conflict'> {
+    return this.update((state) => {
+      const job = state.jobs[id];
+      if (job?.status !== 'completed' || job.claimToken !== expected.claimToken || job.updatedAt !== expected.updatedAt) return 'conflict';
+      state.jobs[id] = { ...job, status: 'stale', error, updatedAt: new Date(this.now()).toISOString() };
+      return 'marked';
+    });
   }
 
-  async commitClaimedJob(id: string, owner: string, token: number, commitArtifact: () => Promise<void>, entry: LedgerJob): Promise<void> {
+  async updateClaimedJob(id: string, owner: string, token: number, entry: LedgerJob, probeValid?: boolean): Promise<void> {
+    await this.update((state) => { const job = requireClaim(state, id, owner, token); state.jobs[id] = { ...job, ...entry, updatedAt: new Date(this.now()).toISOString() }; updateProbe(state, probeValid); });
+  }
+
+  async commitClaimedJob(id: string, owner: string, token: number, commitArtifact: () => Promise<void>, entry: LedgerJob, probeValid?: boolean): Promise<void> {
     await this.withLockedState(async (state) => {
       const job = requireClaim(state, id, owner, token);
       await commitArtifact();
       state.jobs[id] = { ...job, ...entry, updatedAt: new Date(this.now()).toISOString() };
+      updateProbe(state, probeValid);
     });
   }
 
@@ -140,6 +150,7 @@ function requireClaim(state: LedgerState, id: string, owner: string, token: numb
   if (job?.status !== 'running' || job.leaseOwner !== owner || job.claimToken !== token) throw new LostJobClaimError(id);
   return job;
 }
+function updateProbe(state: LedgerState, valid?: boolean): void { if (valid !== undefined) state.music.consecutiveValidProbes = valid ? state.music.consecutiveValidProbes + 1 : 0; }
 
 function emptyLedger(): LedgerState {
   return { version: 1, jobs: {}, music: { consecutiveValidProbes: 0, cooldownUntil: 0 } };

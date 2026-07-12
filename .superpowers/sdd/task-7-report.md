@@ -79,3 +79,13 @@ Active leases now surface as `JobBusyError`. CLI generation rejects, emits no su
 The deterministic fencing test expires worker A's lease, lets worker B reclaim and commit, then resolves A. A receives a lost-claim error, B's bytes remain in the final output, and the ledger retains B's completed token.
 
 Focused verification command: `npm --prefix tools/media test -- orchestration.test.ts cli.test.ts`. Result: 2 files passed, 24/24 tests passed. Type verification command: `npm --prefix tools/media run typecheck`. Result: passed.
+
+## Completed-artifact CAS and probe fencing follow-up
+
+The completed-invalid transition is now compare-and-swap protected by the exact completed `claimToken` and `updatedAt` observed before validation. If another worker marks stale, regenerates, and completes while the first worker is paused, the first worker's stale CAS conflicts; it re-reads, validates the new artifact, and exits without a provider call or ledger overwrite.
+
+Music probe streak changes are now coupled to the fenced outcome transaction. A successful probe increments the streak in the same locked transaction that commits its validated artifact and completed state. Failed or ambiguous probes reset the streak only while their owner/token remains current. A lost-claim worker can neither increment nor reset the global probe gate.
+
+The deterministic CAS test pauses worker A after validating an old completed artifact as invalid, lets worker B regenerate and complete, then resumes A. A makes zero provider calls and preserves B's completed token and artifact. A separate lost-claim probe test confirms the global streak remains unchanged.
+
+Focused verification command: `npm --prefix tools/media test -- orchestration.test.ts`. Result: 1 file passed, 20/20 tests passed. Type verification command: `npm --prefix tools/media run typecheck`. Result: passed.
