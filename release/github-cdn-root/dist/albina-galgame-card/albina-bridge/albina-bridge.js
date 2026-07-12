@@ -23,7 +23,7 @@
 
   const CDN_BASE = (function () {
     const m = /\/dist\/albina-galgame-card\//.exec(location.pathname);
-    if (!m) return 'https://cdn.jsdelivr.net/gh/q18718859808-sketch/albina-galgame-card@v1.0.44/dist/albina-galgame-card';
+    if (!m) return 'https://cdn.jsdelivr.net/gh/q18718859808-sketch/albina-galgame-card@v2.0.0/dist/albina-galgame-card';
     return location.protocol + '//' + location.host + location.pathname.split('/dist/albina-galgame-card/')[0] + '/dist/albina-galgame-card';
   })();
 

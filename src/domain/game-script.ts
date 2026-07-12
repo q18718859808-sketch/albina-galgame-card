@@ -77,6 +77,8 @@ export function createGameScriptV2Schema(manifestInput: unknown): typeof GameScr
       const references: Array<[string | undefined, PropertyKey[]]> = [
         [scene.backgroundAssetId, ['scenes', sceneIndex, 'backgroundAssetId']],
         [scene.cgAssetId, ['scenes', sceneIndex, 'cgAssetId']],
+        [scene.videoAssetId, ['scenes', sceneIndex, 'videoAssetId']],
+        [scene.desktopVideoAssetId, ['scenes', sceneIndex, 'desktopVideoAssetId']],
         [scene.voiceAssetId, ['scenes', sceneIndex, 'voiceAssetId']],
         [scene.bgmAssetId, ['scenes', sceneIndex, 'bgmAssetId']],
       ];

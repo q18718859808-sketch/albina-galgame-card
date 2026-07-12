@@ -35,6 +35,7 @@ export interface AlbinaRuntimeOptions {
   storageBackend?: StorageBackend;
   objectUrls?: ObjectUrlApi;
   portraits?: PortraitEnvironment;
+  assetBaseUrl?: string;
 }
 
 export class AlbinaRuntime {
@@ -52,7 +53,7 @@ export class AlbinaRuntime {
     this.host = new TavernHostAdapter(options.host);
     this.audio = new AudioService(options.audioFactory);
     this.storage = new AlbinaStorage(options.storageBackend, options.objectUrls);
-    this.portraits = new PortraitService(options.manifest, options.portraits);
+    this.portraits = new PortraitService(options.manifest, options.portraits, options.assetBaseUrl);
     this.gallery = new GalleryService(this.storage);
     this.specialCg = new SpecialCgService(this.storage);
   }

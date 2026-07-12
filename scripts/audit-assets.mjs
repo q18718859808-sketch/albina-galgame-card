@@ -8,7 +8,8 @@ const assetRoot = resolve(canonicalRoot, 'assets');
 const releaseRoot = resolve(projectRoot, 'release/github-cdn-root');
 const releaseMirrorRoot = resolve(releaseRoot, 'dist/albina-galgame-card');
 const contentManifestPath = resolve(projectRoot, 'content/asset-manifest-v2.json');
-const cdnBase = 'https://cdn.jsdelivr.net/gh/q18718859808-sketch/albina-galgame-card@v1.0.44/dist/albina-galgame-card';
+const releaseVersion = '2.0.0';
+const cdnBase = `https://cdn.jsdelivr.net/gh/q18718859808-sketch/albina-galgame-card@v${releaseVersion}/dist/albina-galgame-card`;
 const mediaExtensions = new Set(['.jpg', '.json', '.mp3', '.mp4', '.png', '.svg', '.wav']);
 
 const toPosix = (path) => path.replaceAll('\\', '/');
@@ -152,26 +153,46 @@ function stripJobs(progress) {
   return { assets, jobs };
 }
 
-function voiceJobs(references) {
+async function voiceAssets(references) {
   const assets = [];
   const jobs = [];
   for (const assetId of references.filter((id) => id.startsWith('voice.'))) {
     const outputPath = `audio/voice/${assetId.replace(/^voice\./u, '').replaceAll('.', '/')}.mp3`;
-    assets.push({ id: assetId, kind: 'audio', path: outputPath, mimeType: 'audio/mpeg' });
-    jobs.push({
-      version: 2, id: `job.${assetId}`, assetId, kind: 'speech', model: 'speech-2.8-hd', status: 'pending',
-      contentHash: hash(JSON.stringify({ assetId, outputPath })), inputAssetIds: [], outputPath, attempts: 0,
-    });
+    if (await pathExists(resolve(assetRoot, outputPath))) {
+      const bytes = await readFile(resolve(assetRoot, outputPath));
+      assets.push({ id: assetId, kind: 'audio', path: outputPath, mimeType: 'audio/mpeg', sha256: hash(bytes), bytes: bytes.length });
+    } else {
+      assets.push({ id: assetId, kind: 'audio', path: outputPath, mimeType: 'audio/mpeg' });
+      jobs.push({
+        version: 2, id: `job.${assetId}`, assetId, kind: 'speech', model: 'speech-2.8-hd', status: 'pending',
+        contentHash: hash(JSON.stringify({ assetId, outputPath })), inputAssetIds: [], outputPath, attempts: 0,
+      });
+    }
   }
   return { assets, jobs };
+}
+
+async function videoAssets() {
+  const assets = [];
+  for (const profile of ['runtime', 'desktop']) {
+    const root = resolve(assetRoot, 'video/animated', profile);
+    for (const path of await walkFiles(root)) {
+      if (extname(path).toLowerCase() !== '.mp4') continue;
+      const name = relative(root, path).replaceAll('\\', '/').replace(/\.mp4$/u, '');
+      const outputPath = `video/animated/${profile}/${name}.mp4`;
+      const bytes = await readFile(path);
+      assets.push({ id: `video.animated.${profile}.${name}`, kind: 'video', path: outputPath, mimeType: 'video/mp4', sha256: hash(bytes), bytes: bytes.length });
+    }
+  }
+  return assets;
 }
 
 async function buildManifest() {
   const progress = await readJson(resolve(assetRoot, 'sprite-atlas/_progress.json'));
   const references = collectStoryReferences(await readStory());
   const strips = stripJobs(progress);
-  const voices = voiceJobs(references);
-  const assets = [...await physicalAssets(), ...await semanticAssets(references), ...strips.assets, ...voices.assets];
+  const voices = await voiceAssets(references);
+  const assets = [...await physicalAssets(), ...await semanticAssets(references), ...await videoAssets(), ...strips.assets, ...voices.assets];
   assets.sort((a, b) => a.id.localeCompare(b.id));
   return { version: 2, projectId: 'albina-galgame-card', basePath: 'assets', assets, portraits: await completedPortraits(progress), mediaJobs: [...strips.jobs, ...voices.jobs].sort((a, b) => a.id.localeCompare(b.id)) };
 }
@@ -227,7 +248,7 @@ async function updateLegacyManifest() {
   const path = resolve(canonicalRoot, 'manifest.json');
   const legacy = await readJson(path);
   legacy.base = cdnBase;
-  legacy.version = '1.0.44';
+  legacy.version = releaseVersion;
   legacy.asset_manifest_v2 = 'assets/asset-manifest-v2.json';
   legacy.runtime_lookup = 'assets/runtime-lookup.json';
   legacy.bg = await directoryMap('bg', 'bg', ['.jpg', '.png', '.svg']);
@@ -310,7 +331,7 @@ async function auditMutableLoaders() {
   const files = ['card/albina.card.json', 'card/character-card.template.json', 'card/card-protocol.md', 'card/character_card_protocol.md', 'dist/albina-galgame-card/albina-bridge/albina-bridge.js', 'dist/albina-galgame-card/albina-bridge/albina-sprite-atlas.js', 'dist/albina-galgame-card/sfe/sfe-director.js', 'dist/albina-galgame-card/video-injector.js'];
   const text = (await Promise.all(files.map((path) => readFile(resolve(projectRoot, path), 'utf8')))).join('\n');
   const unresolved = [];
-  if (/@v1\.0\.(?:22|26|34|40|41)\b/u.test(text)) unresolved.push('mixed CDN version tags');
+  if (/@v(?!2\.0\.0\b)\d+\.\d+\.\d+/u.test(text)) unresolved.push('mixed CDN version tags');
   if (text.includes('/release/github-cdn-root/')) unresolved.push('release-tree CDN path');
   if (text.includes('https://cdn.jsdelivr.net/gh/malove/foo')) unresolved.push('placeholder CDN root');
   if (/["'`]\/assets\/audio\//u.test(text)) unresolved.push('root-relative audio URL');

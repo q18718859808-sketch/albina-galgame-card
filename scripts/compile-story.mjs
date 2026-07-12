@@ -28,9 +28,30 @@ function assertLegacyOracle(scenes, oracle) {
   }
 }
 
+function videoNameForScene(scene) {
+  if (scene.id === 'opening_001') return 'prologue';
+  if (scene.ending) return scene.id.replaceAll('-', '_');
+  const match = /^(white_canvas|golden_bough|ring_conspiracy)_(003|005|008|011|015)$/u.exec(scene.id);
+  if (!match) return undefined;
+  const route = match[1] === 'golden_bough' ? 'golden_bough_rebuild' : match[1];
+  return `${route}_scene_${Number(match[2])}`;
+}
+
+function addVideoCues(scenes) {
+  return scenes.map((scene) => {
+    const name = videoNameForScene(scene);
+    if (!name) return scene;
+    return {
+      ...scene,
+      videoAssetId: `video.animated.runtime.${name}`,
+      desktopVideoAssetId: `video.animated.desktop.${name}`,
+    };
+  });
+}
+
 async function compileStory() {
   const manifest = await readJson(manifestPath);
-  const scenes = await loadDialogueFiles(manifest.dialogueFiles);
+  const scenes = addVideoCues(await loadDialogueFiles(manifest.dialogueFiles));
   assertLegacyOracle(scenes, manifest.legacyOracle);
   const compiled = parseGameScriptV2({
     version: manifest.version,

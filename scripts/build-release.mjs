@@ -1,4 +1,4 @@
-import { copyFile, mkdir, readdir, rm } from 'node:fs/promises';
+import { copyFile, mkdir, readFile, readdir, rm, writeFile } from 'node:fs/promises';
 import { resolve } from 'node:path';
 
 const projectRoot = resolve(import.meta.dirname, '..');
@@ -23,8 +23,20 @@ async function copyTree(source, destination) {
   }
 }
 
+async function normalizeGeneratedText(root) {
+  for (const entry of await readdir(root, { withFileTypes: true })) {
+    const path = resolve(root, entry.name);
+    if (entry.isDirectory()) await normalizeGeneratedText(path);
+    else if (/\.(?:css|js)$/u.test(entry.name)) {
+      const text = await readFile(path, 'utf8');
+      await writeFile(path, `${text.replace(/[ \t]+$/gmu, '').replace(/\s*$/u, '')}\n`, 'utf8');
+    }
+  }
+}
+
 await rm(canonicalSourceRoot, { recursive: true, force: true });
 await copyTree(buildRoot, canonicalSourceRoot);
+await normalizeGeneratedText(canonicalSourceRoot);
 console.log(`Promoted source build to ${canonicalSourceRoot}`);
 
 await rm(releaseRoot, { recursive: true, force: true });

@@ -1,0 +1,16 @@
+{
+  "version": "2.0.0",
+  "runtimeMediaApis": false,
+  "completed": {
+    "deterministicScenes": 58,
+    "endings": 9,
+    "fixedVoiceAssets": 154,
+    "animatedCgRuntime": 29,
+    "animatedCgDesktop": 29,
+    "portraitStrips": 44
+  },
+  "blocked": {
+    "portraitStrips": { "count": 8, "reason": "Pie gpt-image-2 returned HTTP 503 / unavailable model access" },
+    "music26": { "count": 81, "reason": "Pie music-2.6 first stability probe returned HTTP 504; bulk gate remains closed" }
+  }
+}

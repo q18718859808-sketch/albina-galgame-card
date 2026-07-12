@@ -17,11 +17,11 @@ describe('reproducible source baseline', () => {
     expect(source.mountAlbinaApplication).toBeTypeOf('function');
   });
 
-  it('exposes the canonical v1.0.44 CDN asset resolver', async () => {
+  it('keeps the legacy bundle path while resolving assets through the canonical v2 CDN', async () => {
     const source = await loadSourceEntry();
 
     expect(source.CANONICAL_CDN_BASE).toBe(
-      'https://cdn.jsdelivr.net/gh/q18718859808-sketch/albina-galgame-card@v1.0.44/dist/albina-galgame-card',
+      'https://cdn.jsdelivr.net/gh/q18718859808-sketch/albina-galgame-card@v2.0.0/dist/albina-galgame-card',
     );
     expect(source.resolveCanonicalCdnAsset).toBeTypeOf('function');
 

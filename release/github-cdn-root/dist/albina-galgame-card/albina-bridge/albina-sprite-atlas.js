@@ -37,8 +37,8 @@
     'narration': 'review',
   };
 
-  // CDN 基础路径 (v1.0.44)
-  const CDN_BASE = 'https://cdn.jsdelivr.net/gh/q18718859808-sketch/albina-galgame-card@v1.0.44/dist/albina-galgame-card';
+  // CDN 基础路径 (v2.0.0)
+  const CDN_BASE = 'https://cdn.jsdelivr.net/gh/q18718859808-sketch/albina-galgame-card@v2.0.0/dist/albina-galgame-card';
 
   // Strip 映射表: characterId -> expression -> strip 资源相对路径
   // 条带图为单行水平排列的 8 帧动画, 文件名 <expression>_strip.png

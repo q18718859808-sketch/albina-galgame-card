@@ -4,6 +4,8 @@ __pycache__/
 *.pyc
 node_modules/
 build/
+test-results/
+playwright-report/
 /tools/media/dist/
 /tools/media/artifacts/
 /tools/media/jobs/.ledger.json*

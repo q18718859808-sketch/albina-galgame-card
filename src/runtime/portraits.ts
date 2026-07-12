@@ -42,7 +42,11 @@ export class PortraitService {
   private readonly canvasGenerations = new WeakMap<CanvasLike, number>();
   private lifecycleGeneration = 0;
 
-  constructor(private readonly manifest: AssetManifestV2, environment?: PortraitEnvironment) {
+  constructor(
+    private readonly manifest: AssetManifestV2,
+    environment?: PortraitEnvironment,
+    private readonly baseUrl = '',
+  ) {
     this.environment = environment ?? defaultEnvironment();
   }
 
@@ -87,7 +91,8 @@ export class PortraitService {
   }
 
   private assetUrl(path: string): string {
-    return `${this.manifest.basePath.replace(/\/$/, '')}/${path}`;
+    const prefix = this.baseUrl ? `${this.baseUrl.replace(/\/$/u, '')}/` : '';
+    return `${prefix}${this.manifest.basePath.replace(/\/$/, '')}/${path}`;
   }
 
   private async drawStatic(

@@ -108,6 +108,8 @@ export const SceneCueSchema = z
     locationId: z.string().min(1),
     backgroundAssetId: z.string().min(1),
     cgAssetId: z.string().min(1).optional(),
+    videoAssetId: z.string().min(1).optional(),
+    desktopVideoAssetId: z.string().min(1).optional(),
     tone: z.string().min(1),
     portraits: z.array(PortraitCueSchema),
     speaker: z.string().min(1),

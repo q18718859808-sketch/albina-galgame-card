@@ -3404,6 +3404,470 @@
       "bytes": 1655
     },
     {
+      "id": "file.video.animated.desktop.ed.golden.bough.rebuild.mp4",
+      "kind": "video",
+      "path": "video/animated/desktop/ed_golden_bough_rebuild.mp4",
+      "mimeType": "video/mp4",
+      "sha256": "2fea23d2d53819f84638318e5a7c3b00da51c38703f452f946b13315faf96b00",
+      "bytes": 7264295
+    },
+    {
+      "id": "file.video.animated.desktop.ed.ring.conspiracy.mp4",
+      "kind": "video",
+      "path": "video/animated/desktop/ed_ring_conspiracy.mp4",
+      "mimeType": "video/mp4",
+      "sha256": "a5ccf17d2ba26bc1248b383ab669662a792a91b1776c637799cffa2b003cdac3",
+      "bytes": 6393945
+    },
+    {
+      "id": "file.video.animated.desktop.ed.white.canvas.mp4",
+      "kind": "video",
+      "path": "video/animated/desktop/ed_white_canvas.mp4",
+      "mimeType": "video/mp4",
+      "sha256": "be466f619c7773a06dfa5e6123e971d102a79c0df98ce9673cbd14ce332b21d2",
+      "bytes": 5539601
+    },
+    {
+      "id": "file.video.animated.desktop.golden.bough.rebuild.ending.bad.mp4",
+      "kind": "video",
+      "path": "video/animated/desktop/golden_bough_rebuild_ending_bad.mp4",
+      "mimeType": "video/mp4",
+      "sha256": "665342bfcf45187bc05fead1ed445b2e7f3e1fb37154aefb507009f7c9423207",
+      "bytes": 5733582
+    },
+    {
+      "id": "file.video.animated.desktop.golden.bough.rebuild.ending.normal.mp4",
+      "kind": "video",
+      "path": "video/animated/desktop/golden_bough_rebuild_ending_normal.mp4",
+      "mimeType": "video/mp4",
+      "sha256": "9ec5e0bd56b9b033b793f0b13f52c728ea195b162fe23159c9f2acb5c87e6ffe",
+      "bytes": 5654162
+    },
+    {
+      "id": "file.video.animated.desktop.golden.bough.rebuild.ending.true.mp4",
+      "kind": "video",
+      "path": "video/animated/desktop/golden_bough_rebuild_ending_true.mp4",
+      "mimeType": "video/mp4",
+      "sha256": "af8899f54f80600b8bd0ba02c30627ed2c10783a2e2a9a7aa59f82328f3fe3a2",
+      "bytes": 6441698
+    },
+    {
+      "id": "file.video.animated.desktop.golden.bough.rebuild.scene.11.mp4",
+      "kind": "video",
+      "path": "video/animated/desktop/golden_bough_rebuild_scene_11.mp4",
+      "mimeType": "video/mp4",
+      "sha256": "a98d68c9ee81056f22437cf0e66c78ad4cc4d6004a5365ca51110d9067ec976f",
+      "bytes": 4268715
+    },
+    {
+      "id": "file.video.animated.desktop.golden.bough.rebuild.scene.15.mp4",
+      "kind": "video",
+      "path": "video/animated/desktop/golden_bough_rebuild_scene_15.mp4",
+      "mimeType": "video/mp4",
+      "sha256": "510afcd7f1c27b0a4f9abc44e82bae92bd9b3436c73b261de985887a1585ee5a",
+      "bytes": 4216527
+    },
+    {
+      "id": "file.video.animated.desktop.golden.bough.rebuild.scene.3.mp4",
+      "kind": "video",
+      "path": "video/animated/desktop/golden_bough_rebuild_scene_3.mp4",
+      "mimeType": "video/mp4",
+      "sha256": "cb5c7a63f0e068b4d1c0b4047763f46b13b30b48f9808523c8fb67e7f6415b53",
+      "bytes": 4336441
+    },
+    {
+      "id": "file.video.animated.desktop.golden.bough.rebuild.scene.5.mp4",
+      "kind": "video",
+      "path": "video/animated/desktop/golden_bough_rebuild_scene_5.mp4",
+      "mimeType": "video/mp4",
+      "sha256": "f5069cb9aebe21b4bc41545e74b2f4a1c6e5aeb27f9b7f5e08b2c5fc5274cfd4",
+      "bytes": 5039163
+    },
+    {
+      "id": "file.video.animated.desktop.golden.bough.rebuild.scene.8.mp4",
+      "kind": "video",
+      "path": "video/animated/desktop/golden_bough_rebuild_scene_8.mp4",
+      "mimeType": "video/mp4",
+      "sha256": "56176731dc6ccc9892bfc7e7163bb736f5f662226910235a38d28117eaa817bd",
+      "bytes": 5167077
+    },
+    {
+      "id": "file.video.animated.desktop.op.mp4",
+      "kind": "video",
+      "path": "video/animated/desktop/op.mp4",
+      "mimeType": "video/mp4",
+      "sha256": "92774f55e85ae2933f162080916993d95fb6234a0dade047ab4a1471d846c811",
+      "bytes": 5222191
+    },
+    {
+      "id": "file.video.animated.desktop.prologue.mp4",
+      "kind": "video",
+      "path": "video/animated/desktop/prologue.mp4",
+      "mimeType": "video/mp4",
+      "sha256": "18768d90579f3c08b3194ef9d88c32ec77eeade557740a8c76b4596b38da42cb",
+      "bytes": 4568125
+    },
+    {
+      "id": "file.video.animated.desktop.ring.conspiracy.ending.bad.mp4",
+      "kind": "video",
+      "path": "video/animated/desktop/ring_conspiracy_ending_bad.mp4",
+      "mimeType": "video/mp4",
+      "sha256": "bfec2285572943ba48b8802de82715c34e734d3d7d6c8e6884a625f9f4c92778",
+      "bytes": 6094767
+    },
+    {
+      "id": "file.video.animated.desktop.ring.conspiracy.ending.normal.mp4",
+      "kind": "video",
+      "path": "video/animated/desktop/ring_conspiracy_ending_normal.mp4",
+      "mimeType": "video/mp4",
+      "sha256": "566ceca8679dd52192a9799090e9f886daa3bace30e412194a108a27fd3fe853",
+      "bytes": 6301387
+    },
+    {
+      "id": "file.video.animated.desktop.ring.conspiracy.ending.true.mp4",
+      "kind": "video",
+      "path": "video/animated/desktop/ring_conspiracy_ending_true.mp4",
+      "mimeType": "video/mp4",
+      "sha256": "c945fb3562fbec8ba6bfba6ef10a73093c23dd530a551da7e2b1cd98bbe1093f",
+      "bytes": 6156384
+    },
+    {
+      "id": "file.video.animated.desktop.ring.conspiracy.scene.11.mp4",
+      "kind": "video",
+      "path": "video/animated/desktop/ring_conspiracy_scene_11.mp4",
+      "mimeType": "video/mp4",
+      "sha256": "b5740b4216b387d9b6727ec3b03b74c2946c6ad1bbd0d2775693f0b73ae97177",
+      "bytes": 4316911
+    },
+    {
+      "id": "file.video.animated.desktop.ring.conspiracy.scene.15.mp4",
+      "kind": "video",
+      "path": "video/animated/desktop/ring_conspiracy_scene_15.mp4",
+      "mimeType": "video/mp4",
+      "sha256": "9574f17e8508b66848012e1b88e25a933cea64721d2605c806db3b59c11862ef",
+      "bytes": 4755598
+    },
+    {
+      "id": "file.video.animated.desktop.ring.conspiracy.scene.3.mp4",
+      "kind": "video",
+      "path": "video/animated/desktop/ring_conspiracy_scene_3.mp4",
+      "mimeType": "video/mp4",
+      "sha256": "42ec46e059405f1be4ea1b274cd521eb5f1f1c41b520314fca44bfc951b1823d",
+      "bytes": 5108387
+    },
+    {
+      "id": "file.video.animated.desktop.ring.conspiracy.scene.5.mp4",
+      "kind": "video",
+      "path": "video/animated/desktop/ring_conspiracy_scene_5.mp4",
+      "mimeType": "video/mp4",
+      "sha256": "3b819372d1fd9c752159286998407a266f0aafdc95195cab7eb4cd7e182fb86c",
+      "bytes": 5735950
+    },
+    {
+      "id": "file.video.animated.desktop.ring.conspiracy.scene.8.mp4",
+      "kind": "video",
+      "path": "video/animated/desktop/ring_conspiracy_scene_8.mp4",
+      "mimeType": "video/mp4",
+      "sha256": "732fdcda28570fb7d481767b46d4cf751e771dddab1597baeb7cb659fdaedf83",
+      "bytes": 5699635
+    },
+    {
+      "id": "file.video.animated.desktop.white.canvas.ending.bad.mp4",
+      "kind": "video",
+      "path": "video/animated/desktop/white_canvas_ending_bad.mp4",
+      "mimeType": "video/mp4",
+      "sha256": "93cd772af7a5e2b378b4dc0772d84a53feed7ef450c97082b431ab8802b61b80",
+      "bytes": 6060788
+    },
+    {
+      "id": "file.video.animated.desktop.white.canvas.ending.normal.mp4",
+      "kind": "video",
+      "path": "video/animated/desktop/white_canvas_ending_normal.mp4",
+      "mimeType": "video/mp4",
+      "sha256": "4e5f5ebd2cf3799429539538971be9fbc6936e5163271e3779dbd1383076621b",
+      "bytes": 5326928
+    },
+    {
+      "id": "file.video.animated.desktop.white.canvas.ending.true.mp4",
+      "kind": "video",
+      "path": "video/animated/desktop/white_canvas_ending_true.mp4",
+      "mimeType": "video/mp4",
+      "sha256": "a4422751cdf6be2191b39e7ea0d3a85e6edc215e7348d050e4f1ab63c2d5677d",
+      "bytes": 7228337
+    },
+    {
+      "id": "file.video.animated.desktop.white.canvas.scene.11.mp4",
+      "kind": "video",
+      "path": "video/animated/desktop/white_canvas_scene_11.mp4",
+      "mimeType": "video/mp4",
+      "sha256": "a2619096252787ec30101ba5feeaf0dda06d7f318bcdac080ab4ba0aa9568e12",
+      "bytes": 5294302
+    },
+    {
+      "id": "file.video.animated.desktop.white.canvas.scene.15.mp4",
+      "kind": "video",
+      "path": "video/animated/desktop/white_canvas_scene_15.mp4",
+      "mimeType": "video/mp4",
+      "sha256": "5ec29acf9df1f18494609471eddf5de221f2411acc986c6168bb9369494ad5ae",
+      "bytes": 4505329
+    },
+    {
+      "id": "file.video.animated.desktop.white.canvas.scene.3.mp4",
+      "kind": "video",
+      "path": "video/animated/desktop/white_canvas_scene_3.mp4",
+      "mimeType": "video/mp4",
+      "sha256": "50a48863359fff18e8f7fff87dfd808ae025d91179321688bc0353743887f1fd",
+      "bytes": 5346356
+    },
+    {
+      "id": "file.video.animated.desktop.white.canvas.scene.5.mp4",
+      "kind": "video",
+      "path": "video/animated/desktop/white_canvas_scene_5.mp4",
+      "mimeType": "video/mp4",
+      "sha256": "61555b7011baa029652d9304d86b7b712bab75d6f0b26b2860db578587f0a343",
+      "bytes": 5230805
+    },
+    {
+      "id": "file.video.animated.desktop.white.canvas.scene.8.mp4",
+      "kind": "video",
+      "path": "video/animated/desktop/white_canvas_scene_8.mp4",
+      "mimeType": "video/mp4",
+      "sha256": "8786be555709f223064e4e4853e175b1b33c8b9eb2012f0081897f59d36798df",
+      "bytes": 4854170
+    },
+    {
+      "id": "file.video.animated.runtime.ed.golden.bough.rebuild.mp4",
+      "kind": "video",
+      "path": "video/animated/runtime/ed_golden_bough_rebuild.mp4",
+      "mimeType": "video/mp4",
+      "sha256": "346cfd4275cf79b01a8d4fb3d4df2f79c1df433af5222debb5cdbb6369c16128",
+      "bytes": 4185642
+    },
+    {
+      "id": "file.video.animated.runtime.ed.ring.conspiracy.mp4",
+      "kind": "video",
+      "path": "video/animated/runtime/ed_ring_conspiracy.mp4",
+      "mimeType": "video/mp4",
+      "sha256": "3d7c1e7612c1bc376de009d85fae9159e104275678b0982296e47c10f2b89115",
+      "bytes": 3545978
+    },
+    {
+      "id": "file.video.animated.runtime.ed.white.canvas.mp4",
+      "kind": "video",
+      "path": "video/animated/runtime/ed_white_canvas.mp4",
+      "mimeType": "video/mp4",
+      "sha256": "c4aa0f491be3053c4b5c76e1310cf409bbe41ad0ba4d4bd22394a6af7a74e48e",
+      "bytes": 3071385
+    },
+    {
+      "id": "file.video.animated.runtime.golden.bough.rebuild.ending.bad.mp4",
+      "kind": "video",
+      "path": "video/animated/runtime/golden_bough_rebuild_ending_bad.mp4",
+      "mimeType": "video/mp4",
+      "sha256": "2af1ba03d1a26ef0e96260cec4474578bfc692c79d8a125fc4524ae22d3d8688",
+      "bytes": 3012453
+    },
+    {
+      "id": "file.video.animated.runtime.golden.bough.rebuild.ending.normal.mp4",
+      "kind": "video",
+      "path": "video/animated/runtime/golden_bough_rebuild_ending_normal.mp4",
+      "mimeType": "video/mp4",
+      "sha256": "c7b76d353c27b8b61d5b08fffbdeb96f08502f321f9f00975cb3cefc289c54a2",
+      "bytes": 3238393
+    },
+    {
+      "id": "file.video.animated.runtime.golden.bough.rebuild.ending.true.mp4",
+      "kind": "video",
+      "path": "video/animated/runtime/golden_bough_rebuild_ending_true.mp4",
+      "mimeType": "video/mp4",
+      "sha256": "04e46ecdbb3d51e881115671f0fe742e62268a7fced794974f15731fff8eb8f9",
+      "bytes": 3603061
+    },
+    {
+      "id": "file.video.animated.runtime.golden.bough.rebuild.scene.11.mp4",
+      "kind": "video",
+      "path": "video/animated/runtime/golden_bough_rebuild_scene_11.mp4",
+      "mimeType": "video/mp4",
+      "sha256": "e90196bc46e73f0a120aa895c548dc2b107f604ad300eba8c6109c287bb0f67d",
+      "bytes": 2528370
+    },
+    {
+      "id": "file.video.animated.runtime.golden.bough.rebuild.scene.15.mp4",
+      "kind": "video",
+      "path": "video/animated/runtime/golden_bough_rebuild_scene_15.mp4",
+      "mimeType": "video/mp4",
+      "sha256": "e08b3d96a184c441975dbf1bac7566d10e720ea82eb517c090aee948fc601dfa",
+      "bytes": 2353207
+    },
+    {
+      "id": "file.video.animated.runtime.golden.bough.rebuild.scene.3.mp4",
+      "kind": "video",
+      "path": "video/animated/runtime/golden_bough_rebuild_scene_3.mp4",
+      "mimeType": "video/mp4",
+      "sha256": "fc7361fdf237dd21e876149aea4950496f28f918747b0aba62713113543b3a07",
+      "bytes": 2477070
+    },
+    {
+      "id": "file.video.animated.runtime.golden.bough.rebuild.scene.5.mp4",
+      "kind": "video",
+      "path": "video/animated/runtime/golden_bough_rebuild_scene_5.mp4",
+      "mimeType": "video/mp4",
+      "sha256": "d901739424d56709c632bfb61b395d0874c0b279f20578e0485c1ce5697f5b95",
+      "bytes": 2926949
+    },
+    {
+      "id": "file.video.animated.runtime.golden.bough.rebuild.scene.8.mp4",
+      "kind": "video",
+      "path": "video/animated/runtime/golden_bough_rebuild_scene_8.mp4",
+      "mimeType": "video/mp4",
+      "sha256": "dc3b1cce4d43093e240e390a2f3209228ffa73a2041e89ae292e0790d66118ed",
+      "bytes": 2797722
+    },
+    {
+      "id": "file.video.animated.runtime.op.mp4",
+      "kind": "video",
+      "path": "video/animated/runtime/op.mp4",
+      "mimeType": "video/mp4",
+      "sha256": "3b0025fb8d6afce1bc68a740afdab317fd95d41144fcc48c58b85b8ea2cdab99",
+      "bytes": 2777954
+    },
+    {
+      "id": "file.video.animated.runtime.prologue.mp4",
+      "kind": "video",
+      "path": "video/animated/runtime/prologue.mp4",
+      "mimeType": "video/mp4",
+      "sha256": "fe51ae3b788556551e5960d1e82bacb84a7484ff3edff273872ac5ed8eec8ad0",
+      "bytes": 2583756
+    },
+    {
+      "id": "file.video.animated.runtime.ring.conspiracy.ending.bad.mp4",
+      "kind": "video",
+      "path": "video/animated/runtime/ring_conspiracy_ending_bad.mp4",
+      "mimeType": "video/mp4",
+      "sha256": "0cf0ac007c3e1ebd37862e02146d137117838c9530fead20611ec4b179a2d079",
+      "bytes": 3519338
+    },
+    {
+      "id": "file.video.animated.runtime.ring.conspiracy.ending.normal.mp4",
+      "kind": "video",
+      "path": "video/animated/runtime/ring_conspiracy_ending_normal.mp4",
+      "mimeType": "video/mp4",
+      "sha256": "78b95f376a8fe4851309af86231c18fac0d870baa6294fbc14126face05095b3",
+      "bytes": 3401115
+    },
+    {
+      "id": "file.video.animated.runtime.ring.conspiracy.ending.true.mp4",
+      "kind": "video",
+      "path": "video/animated/runtime/ring_conspiracy_ending_true.mp4",
+      "mimeType": "video/mp4",
+      "sha256": "986917f0fe50af48c6f7a150561e48c226f992e2429c789fc6ce4ea6e1e3f346",
+      "bytes": 3567238
+    },
+    {
+      "id": "file.video.animated.runtime.ring.conspiracy.scene.11.mp4",
+      "kind": "video",
+      "path": "video/animated/runtime/ring_conspiracy_scene_11.mp4",
+      "mimeType": "video/mp4",
+      "sha256": "7a4911e99e2bea1509d9cc44836a2fd1d855d0b3f0ff14713265efd5bcfcec9f",
+      "bytes": 2400055
+    },
+    {
+      "id": "file.video.animated.runtime.ring.conspiracy.scene.15.mp4",
+      "kind": "video",
+      "path": "video/animated/runtime/ring_conspiracy_scene_15.mp4",
+      "mimeType": "video/mp4",
+      "sha256": "115b2505bc82d8e98b236556e5b709b468346c4c197fdcbb51dd1887db9f6f69",
+      "bytes": 2591243
+    },
+    {
+      "id": "file.video.animated.runtime.ring.conspiracy.scene.3.mp4",
+      "kind": "video",
+      "path": "video/animated/runtime/ring_conspiracy_scene_3.mp4",
+      "mimeType": "video/mp4",
+      "sha256": "a7481f6b1a6811072cc09b1bbd5ac639f6faa11e9041531d50b220ed1442a6e8",
+      "bytes": 2674192
+    },
+    {
+      "id": "file.video.animated.runtime.ring.conspiracy.scene.5.mp4",
+      "kind": "video",
+      "path": "video/animated/runtime/ring_conspiracy_scene_5.mp4",
+      "mimeType": "video/mp4",
+      "sha256": "65db5a7e97fab0ccfcc26e4ae078b86f2016ad16eef0ade738f005a49969f4aa",
+      "bytes": 3100461
+    },
+    {
+      "id": "file.video.animated.runtime.ring.conspiracy.scene.8.mp4",
+      "kind": "video",
+      "path": "video/animated/runtime/ring_conspiracy_scene_8.mp4",
+      "mimeType": "video/mp4",
+      "sha256": "6fc2c2c0155ff68915d0ffc2a97f68d5a66b84857745826967ff64c3fbe384ac",
+      "bytes": 3009439
+    },
+    {
+      "id": "file.video.animated.runtime.white.canvas.ending.bad.mp4",
+      "kind": "video",
+      "path": "video/animated/runtime/white_canvas_ending_bad.mp4",
+      "mimeType": "video/mp4",
+      "sha256": "b3b101dde3f85be5b68657b66ecfc1b02d0d6c42cf70ba30e516ef1ff010473c",
+      "bytes": 3336544
+    },
+    {
+      "id": "file.video.animated.runtime.white.canvas.ending.normal.mp4",
+      "kind": "video",
+      "path": "video/animated/runtime/white_canvas_ending_normal.mp4",
+      "mimeType": "video/mp4",
+      "sha256": "c62b1344da7cb5a4b3fc2b3c144d815970eab741f818771bbc750f4248852f08",
+      "bytes": 2756449
+    },
+    {
+      "id": "file.video.animated.runtime.white.canvas.ending.true.mp4",
+      "kind": "video",
+      "path": "video/animated/runtime/white_canvas_ending_true.mp4",
+      "mimeType": "video/mp4",
+      "sha256": "454767d2595ad285ada75c920eeb5974626471930549e840669ffd2d856e9d37",
+      "bytes": 3932490
+    },
+    {
+      "id": "file.video.animated.runtime.white.canvas.scene.11.mp4",
+      "kind": "video",
+      "path": "video/animated/runtime/white_canvas_scene_11.mp4",
+      "mimeType": "video/mp4",
+      "sha256": "a25ef4770934afd8cc6fc6bab08167a4aa1594fdb301edd1914411438eb01b93",
+      "bytes": 2890842
+    },
+    {
+      "id": "file.video.animated.runtime.white.canvas.scene.15.mp4",
+      "kind": "video",
+      "path": "video/animated/runtime/white_canvas_scene_15.mp4",
+      "mimeType": "video/mp4",
+      "sha256": "f5226beecc7be5275123f7cc6a91a1b58f74e831d020a788ac52a1015c9c6c2e",
+      "bytes": 2537450
+    },
+    {
+      "id": "file.video.animated.runtime.white.canvas.scene.3.mp4",
+      "kind": "video",
+      "path": "video/animated/runtime/white_canvas_scene_3.mp4",
+      "mimeType": "video/mp4",
+      "sha256": "e7d8746ec4825f0f496c2106e5c1d7862b8a00246e3109574946ccbef5be5ac7",
+      "bytes": 3030226
+    },
+    {
+      "id": "file.video.animated.runtime.white.canvas.scene.5.mp4",
+      "kind": "video",
+      "path": "video/animated/runtime/white_canvas_scene_5.mp4",
+      "mimeType": "video/mp4",
+      "sha256": "8d154e505624dde023f61510cd6cc25337ef23f43190728e72034d85806a3569",
+      "bytes": 2971914
+    },
+    {
+      "id": "file.video.animated.runtime.white.canvas.scene.8.mp4",
+      "kind": "video",
+      "path": "video/animated/runtime/white_canvas_scene_8.mp4",
+      "mimeType": "video/mp4",
+      "sha256": "ba894e5efb361a9bf52c1d5b45ec2b04ed552b4024f3e8c1fd3cf54830c8f899",
+      "bytes": 2685560
+    },
+    {
       "id": "file.videos.ed.mp4",
       "kind": "video",
       "path": "videos/ed.mp4",
@@ -3468,928 +3932,1700 @@
       "mimeType": "image/png"
     },
     {
+      "id": "video.animated.desktop.ed_golden_bough_rebuild",
+      "kind": "video",
+      "path": "video/animated/desktop/ed_golden_bough_rebuild.mp4",
+      "mimeType": "video/mp4",
+      "sha256": "2fea23d2d53819f84638318e5a7c3b00da51c38703f452f946b13315faf96b00",
+      "bytes": 7264295
+    },
+    {
+      "id": "video.animated.desktop.ed_ring_conspiracy",
+      "kind": "video",
+      "path": "video/animated/desktop/ed_ring_conspiracy.mp4",
+      "mimeType": "video/mp4",
+      "sha256": "a5ccf17d2ba26bc1248b383ab669662a792a91b1776c637799cffa2b003cdac3",
+      "bytes": 6393945
+    },
+    {
+      "id": "video.animated.desktop.ed_white_canvas",
+      "kind": "video",
+      "path": "video/animated/desktop/ed_white_canvas.mp4",
+      "mimeType": "video/mp4",
+      "sha256": "be466f619c7773a06dfa5e6123e971d102a79c0df98ce9673cbd14ce332b21d2",
+      "bytes": 5539601
+    },
+    {
+      "id": "video.animated.desktop.golden_bough_rebuild_ending_bad",
+      "kind": "video",
+      "path": "video/animated/desktop/golden_bough_rebuild_ending_bad.mp4",
+      "mimeType": "video/mp4",
+      "sha256": "665342bfcf45187bc05fead1ed445b2e7f3e1fb37154aefb507009f7c9423207",
+      "bytes": 5733582
+    },
+    {
+      "id": "video.animated.desktop.golden_bough_rebuild_ending_normal",
+      "kind": "video",
+      "path": "video/animated/desktop/golden_bough_rebuild_ending_normal.mp4",
+      "mimeType": "video/mp4",
+      "sha256": "9ec5e0bd56b9b033b793f0b13f52c728ea195b162fe23159c9f2acb5c87e6ffe",
+      "bytes": 5654162
+    },
+    {
+      "id": "video.animated.desktop.golden_bough_rebuild_ending_true",
+      "kind": "video",
+      "path": "video/animated/desktop/golden_bough_rebuild_ending_true.mp4",
+      "mimeType": "video/mp4",
+      "sha256": "af8899f54f80600b8bd0ba02c30627ed2c10783a2e2a9a7aa59f82328f3fe3a2",
+      "bytes": 6441698
+    },
+    {
+      "id": "video.animated.desktop.golden_bough_rebuild_scene_11",
+      "kind": "video",
+      "path": "video/animated/desktop/golden_bough_rebuild_scene_11.mp4",
+      "mimeType": "video/mp4",
+      "sha256": "a98d68c9ee81056f22437cf0e66c78ad4cc4d6004a5365ca51110d9067ec976f",
+      "bytes": 4268715
+    },
+    {
+      "id": "video.animated.desktop.golden_bough_rebuild_scene_15",
+      "kind": "video",
+      "path": "video/animated/desktop/golden_bough_rebuild_scene_15.mp4",
+      "mimeType": "video/mp4",
+      "sha256": "510afcd7f1c27b0a4f9abc44e82bae92bd9b3436c73b261de985887a1585ee5a",
+      "bytes": 4216527
+    },
+    {
+      "id": "video.animated.desktop.golden_bough_rebuild_scene_3",
+      "kind": "video",
+      "path": "video/animated/desktop/golden_bough_rebuild_scene_3.mp4",
+      "mimeType": "video/mp4",
+      "sha256": "cb5c7a63f0e068b4d1c0b4047763f46b13b30b48f9808523c8fb67e7f6415b53",
+      "bytes": 4336441
+    },
+    {
+      "id": "video.animated.desktop.golden_bough_rebuild_scene_5",
+      "kind": "video",
+      "path": "video/animated/desktop/golden_bough_rebuild_scene_5.mp4",
+      "mimeType": "video/mp4",
+      "sha256": "f5069cb9aebe21b4bc41545e74b2f4a1c6e5aeb27f9b7f5e08b2c5fc5274cfd4",
+      "bytes": 5039163
+    },
+    {
+      "id": "video.animated.desktop.golden_bough_rebuild_scene_8",
+      "kind": "video",
+      "path": "video/animated/desktop/golden_bough_rebuild_scene_8.mp4",
+      "mimeType": "video/mp4",
+      "sha256": "56176731dc6ccc9892bfc7e7163bb736f5f662226910235a38d28117eaa817bd",
+      "bytes": 5167077
+    },
+    {
+      "id": "video.animated.desktop.op",
+      "kind": "video",
+      "path": "video/animated/desktop/op.mp4",
+      "mimeType": "video/mp4",
+      "sha256": "92774f55e85ae2933f162080916993d95fb6234a0dade047ab4a1471d846c811",
+      "bytes": 5222191
+    },
+    {
+      "id": "video.animated.desktop.prologue",
+      "kind": "video",
+      "path": "video/animated/desktop/prologue.mp4",
+      "mimeType": "video/mp4",
+      "sha256": "18768d90579f3c08b3194ef9d88c32ec77eeade557740a8c76b4596b38da42cb",
+      "bytes": 4568125
+    },
+    {
+      "id": "video.animated.desktop.ring_conspiracy_ending_bad",
+      "kind": "video",
+      "path": "video/animated/desktop/ring_conspiracy_ending_bad.mp4",
+      "mimeType": "video/mp4",
+      "sha256": "bfec2285572943ba48b8802de82715c34e734d3d7d6c8e6884a625f9f4c92778",
+      "bytes": 6094767
+    },
+    {
+      "id": "video.animated.desktop.ring_conspiracy_ending_normal",
+      "kind": "video",
+      "path": "video/animated/desktop/ring_conspiracy_ending_normal.mp4",
+      "mimeType": "video/mp4",
+      "sha256": "566ceca8679dd52192a9799090e9f886daa3bace30e412194a108a27fd3fe853",
+      "bytes": 6301387
+    },
+    {
+      "id": "video.animated.desktop.ring_conspiracy_ending_true",
+      "kind": "video",
+      "path": "video/animated/desktop/ring_conspiracy_ending_true.mp4",
+      "mimeType": "video/mp4",
+      "sha256": "c945fb3562fbec8ba6bfba6ef10a73093c23dd530a551da7e2b1cd98bbe1093f",
+      "bytes": 6156384
+    },
+    {
+      "id": "video.animated.desktop.ring_conspiracy_scene_11",
+      "kind": "video",
+      "path": "video/animated/desktop/ring_conspiracy_scene_11.mp4",
+      "mimeType": "video/mp4",
+      "sha256": "b5740b4216b387d9b6727ec3b03b74c2946c6ad1bbd0d2775693f0b73ae97177",
+      "bytes": 4316911
+    },
+    {
+      "id": "video.animated.desktop.ring_conspiracy_scene_15",
+      "kind": "video",
+      "path": "video/animated/desktop/ring_conspiracy_scene_15.mp4",
+      "mimeType": "video/mp4",
+      "sha256": "9574f17e8508b66848012e1b88e25a933cea64721d2605c806db3b59c11862ef",
+      "bytes": 4755598
+    },
+    {
+      "id": "video.animated.desktop.ring_conspiracy_scene_3",
+      "kind": "video",
+      "path": "video/animated/desktop/ring_conspiracy_scene_3.mp4",
+      "mimeType": "video/mp4",
+      "sha256": "42ec46e059405f1be4ea1b274cd521eb5f1f1c41b520314fca44bfc951b1823d",
+      "bytes": 5108387
+    },
+    {
+      "id": "video.animated.desktop.ring_conspiracy_scene_5",
+      "kind": "video",
+      "path": "video/animated/desktop/ring_conspiracy_scene_5.mp4",
+      "mimeType": "video/mp4",
+      "sha256": "3b819372d1fd9c752159286998407a266f0aafdc95195cab7eb4cd7e182fb86c",
+      "bytes": 5735950
+    },
+    {
+      "id": "video.animated.desktop.ring_conspiracy_scene_8",
+      "kind": "video",
+      "path": "video/animated/desktop/ring_conspiracy_scene_8.mp4",
+      "mimeType": "video/mp4",
+      "sha256": "732fdcda28570fb7d481767b46d4cf751e771dddab1597baeb7cb659fdaedf83",
+      "bytes": 5699635
+    },
+    {
+      "id": "video.animated.desktop.white_canvas_ending_bad",
+      "kind": "video",
+      "path": "video/animated/desktop/white_canvas_ending_bad.mp4",
+      "mimeType": "video/mp4",
+      "sha256": "93cd772af7a5e2b378b4dc0772d84a53feed7ef450c97082b431ab8802b61b80",
+      "bytes": 6060788
+    },
+    {
+      "id": "video.animated.desktop.white_canvas_ending_normal",
+      "kind": "video",
+      "path": "video/animated/desktop/white_canvas_ending_normal.mp4",
+      "mimeType": "video/mp4",
+      "sha256": "4e5f5ebd2cf3799429539538971be9fbc6936e5163271e3779dbd1383076621b",
+      "bytes": 5326928
+    },
+    {
+      "id": "video.animated.desktop.white_canvas_ending_true",
+      "kind": "video",
+      "path": "video/animated/desktop/white_canvas_ending_true.mp4",
+      "mimeType": "video/mp4",
+      "sha256": "a4422751cdf6be2191b39e7ea0d3a85e6edc215e7348d050e4f1ab63c2d5677d",
+      "bytes": 7228337
+    },
+    {
+      "id": "video.animated.desktop.white_canvas_scene_11",
+      "kind": "video",
+      "path": "video/animated/desktop/white_canvas_scene_11.mp4",
+      "mimeType": "video/mp4",
+      "sha256": "a2619096252787ec30101ba5feeaf0dda06d7f318bcdac080ab4ba0aa9568e12",
+      "bytes": 5294302
+    },
+    {
+      "id": "video.animated.desktop.white_canvas_scene_15",
+      "kind": "video",
+      "path": "video/animated/desktop/white_canvas_scene_15.mp4",
+      "mimeType": "video/mp4",
+      "sha256": "5ec29acf9df1f18494609471eddf5de221f2411acc986c6168bb9369494ad5ae",
+      "bytes": 4505329
+    },
+    {
+      "id": "video.animated.desktop.white_canvas_scene_3",
+      "kind": "video",
+      "path": "video/animated/desktop/white_canvas_scene_3.mp4",
+      "mimeType": "video/mp4",
+      "sha256": "50a48863359fff18e8f7fff87dfd808ae025d91179321688bc0353743887f1fd",
+      "bytes": 5346356
+    },
+    {
+      "id": "video.animated.desktop.white_canvas_scene_5",
+      "kind": "video",
+      "path": "video/animated/desktop/white_canvas_scene_5.mp4",
+      "mimeType": "video/mp4",
+      "sha256": "61555b7011baa029652d9304d86b7b712bab75d6f0b26b2860db578587f0a343",
+      "bytes": 5230805
+    },
+    {
+      "id": "video.animated.desktop.white_canvas_scene_8",
+      "kind": "video",
+      "path": "video/animated/desktop/white_canvas_scene_8.mp4",
+      "mimeType": "video/mp4",
+      "sha256": "8786be555709f223064e4e4853e175b1b33c8b9eb2012f0081897f59d36798df",
+      "bytes": 4854170
+    },
+    {
+      "id": "video.animated.runtime.ed_golden_bough_rebuild",
+      "kind": "video",
+      "path": "video/animated/runtime/ed_golden_bough_rebuild.mp4",
+      "mimeType": "video/mp4",
+      "sha256": "346cfd4275cf79b01a8d4fb3d4df2f79c1df433af5222debb5cdbb6369c16128",
+      "bytes": 4185642
+    },
+    {
+      "id": "video.animated.runtime.ed_ring_conspiracy",
+      "kind": "video",
+      "path": "video/animated/runtime/ed_ring_conspiracy.mp4",
+      "mimeType": "video/mp4",
+      "sha256": "3d7c1e7612c1bc376de009d85fae9159e104275678b0982296e47c10f2b89115",
+      "bytes": 3545978
+    },
+    {
+      "id": "video.animated.runtime.ed_white_canvas",
+      "kind": "video",
+      "path": "video/animated/runtime/ed_white_canvas.mp4",
+      "mimeType": "video/mp4",
+      "sha256": "c4aa0f491be3053c4b5c76e1310cf409bbe41ad0ba4d4bd22394a6af7a74e48e",
+      "bytes": 3071385
+    },
+    {
+      "id": "video.animated.runtime.golden_bough_rebuild_ending_bad",
+      "kind": "video",
+      "path": "video/animated/runtime/golden_bough_rebuild_ending_bad.mp4",
+      "mimeType": "video/mp4",
+      "sha256": "2af1ba03d1a26ef0e96260cec4474578bfc692c79d8a125fc4524ae22d3d8688",
+      "bytes": 3012453
+    },
+    {
+      "id": "video.animated.runtime.golden_bough_rebuild_ending_normal",
+      "kind": "video",
+      "path": "video/animated/runtime/golden_bough_rebuild_ending_normal.mp4",
+      "mimeType": "video/mp4",
+      "sha256": "c7b76d353c27b8b61d5b08fffbdeb96f08502f321f9f00975cb3cefc289c54a2",
+      "bytes": 3238393
+    },
+    {
+      "id": "video.animated.runtime.golden_bough_rebuild_ending_true",
+      "kind": "video",
+      "path": "video/animated/runtime/golden_bough_rebuild_ending_true.mp4",
+      "mimeType": "video/mp4",
+      "sha256": "04e46ecdbb3d51e881115671f0fe742e62268a7fced794974f15731fff8eb8f9",
+      "bytes": 3603061
+    },
+    {
+      "id": "video.animated.runtime.golden_bough_rebuild_scene_11",
+      "kind": "video",
+      "path": "video/animated/runtime/golden_bough_rebuild_scene_11.mp4",
+      "mimeType": "video/mp4",
+      "sha256": "e90196bc46e73f0a120aa895c548dc2b107f604ad300eba8c6109c287bb0f67d",
+      "bytes": 2528370
+    },
+    {
+      "id": "video.animated.runtime.golden_bough_rebuild_scene_15",
+      "kind": "video",
+      "path": "video/animated/runtime/golden_bough_rebuild_scene_15.mp4",
+      "mimeType": "video/mp4",
+      "sha256": "e08b3d96a184c441975dbf1bac7566d10e720ea82eb517c090aee948fc601dfa",
+      "bytes": 2353207
+    },
+    {
+      "id": "video.animated.runtime.golden_bough_rebuild_scene_3",
+      "kind": "video",
+      "path": "video/animated/runtime/golden_bough_rebuild_scene_3.mp4",
+      "mimeType": "video/mp4",
+      "sha256": "fc7361fdf237dd21e876149aea4950496f28f918747b0aba62713113543b3a07",
+      "bytes": 2477070
+    },
+    {
+      "id": "video.animated.runtime.golden_bough_rebuild_scene_5",
+      "kind": "video",
+      "path": "video/animated/runtime/golden_bough_rebuild_scene_5.mp4",
+      "mimeType": "video/mp4",
+      "sha256": "d901739424d56709c632bfb61b395d0874c0b279f20578e0485c1ce5697f5b95",
+      "bytes": 2926949
+    },
+    {
+      "id": "video.animated.runtime.golden_bough_rebuild_scene_8",
+      "kind": "video",
+      "path": "video/animated/runtime/golden_bough_rebuild_scene_8.mp4",
+      "mimeType": "video/mp4",
+      "sha256": "dc3b1cce4d43093e240e390a2f3209228ffa73a2041e89ae292e0790d66118ed",
+      "bytes": 2797722
+    },
+    {
+      "id": "video.animated.runtime.op",
+      "kind": "video",
+      "path": "video/animated/runtime/op.mp4",
+      "mimeType": "video/mp4",
+      "sha256": "3b0025fb8d6afce1bc68a740afdab317fd95d41144fcc48c58b85b8ea2cdab99",
+      "bytes": 2777954
+    },
+    {
+      "id": "video.animated.runtime.prologue",
+      "kind": "video",
+      "path": "video/animated/runtime/prologue.mp4",
+      "mimeType": "video/mp4",
+      "sha256": "fe51ae3b788556551e5960d1e82bacb84a7484ff3edff273872ac5ed8eec8ad0",
+      "bytes": 2583756
+    },
+    {
+      "id": "video.animated.runtime.ring_conspiracy_ending_bad",
+      "kind": "video",
+      "path": "video/animated/runtime/ring_conspiracy_ending_bad.mp4",
+      "mimeType": "video/mp4",
+      "sha256": "0cf0ac007c3e1ebd37862e02146d137117838c9530fead20611ec4b179a2d079",
+      "bytes": 3519338
+    },
+    {
+      "id": "video.animated.runtime.ring_conspiracy_ending_normal",
+      "kind": "video",
+      "path": "video/animated/runtime/ring_conspiracy_ending_normal.mp4",
+      "mimeType": "video/mp4",
+      "sha256": "78b95f376a8fe4851309af86231c18fac0d870baa6294fbc14126face05095b3",
+      "bytes": 3401115
+    },
+    {
+      "id": "video.animated.runtime.ring_conspiracy_ending_true",
+      "kind": "video",
+      "path": "video/animated/runtime/ring_conspiracy_ending_true.mp4",
+      "mimeType": "video/mp4",
+      "sha256": "986917f0fe50af48c6f7a150561e48c226f992e2429c789fc6ce4ea6e1e3f346",
+      "bytes": 3567238
+    },
+    {
+      "id": "video.animated.runtime.ring_conspiracy_scene_11",
+      "kind": "video",
+      "path": "video/animated/runtime/ring_conspiracy_scene_11.mp4",
+      "mimeType": "video/mp4",
+      "sha256": "7a4911e99e2bea1509d9cc44836a2fd1d855d0b3f0ff14713265efd5bcfcec9f",
+      "bytes": 2400055
+    },
+    {
+      "id": "video.animated.runtime.ring_conspiracy_scene_15",
+      "kind": "video",
+      "path": "video/animated/runtime/ring_conspiracy_scene_15.mp4",
+      "mimeType": "video/mp4",
+      "sha256": "115b2505bc82d8e98b236556e5b709b468346c4c197fdcbb51dd1887db9f6f69",
+      "bytes": 2591243
+    },
+    {
+      "id": "video.animated.runtime.ring_conspiracy_scene_3",
+      "kind": "video",
+      "path": "video/animated/runtime/ring_conspiracy_scene_3.mp4",
+      "mimeType": "video/mp4",
+      "sha256": "a7481f6b1a6811072cc09b1bbd5ac639f6faa11e9041531d50b220ed1442a6e8",
+      "bytes": 2674192
+    },
+    {
+      "id": "video.animated.runtime.ring_conspiracy_scene_5",
+      "kind": "video",
+      "path": "video/animated/runtime/ring_conspiracy_scene_5.mp4",
+      "mimeType": "video/mp4",
+      "sha256": "65db5a7e97fab0ccfcc26e4ae078b86f2016ad16eef0ade738f005a49969f4aa",
+      "bytes": 3100461
+    },
+    {
+      "id": "video.animated.runtime.ring_conspiracy_scene_8",
+      "kind": "video",
+      "path": "video/animated/runtime/ring_conspiracy_scene_8.mp4",
+      "mimeType": "video/mp4",
+      "sha256": "6fc2c2c0155ff68915d0ffc2a97f68d5a66b84857745826967ff64c3fbe384ac",
+      "bytes": 3009439
+    },
+    {
+      "id": "video.animated.runtime.white_canvas_ending_bad",
+      "kind": "video",
+      "path": "video/animated/runtime/white_canvas_ending_bad.mp4",
+      "mimeType": "video/mp4",
+      "sha256": "b3b101dde3f85be5b68657b66ecfc1b02d0d6c42cf70ba30e516ef1ff010473c",
+      "bytes": 3336544
+    },
+    {
+      "id": "video.animated.runtime.white_canvas_ending_normal",
+      "kind": "video",
+      "path": "video/animated/runtime/white_canvas_ending_normal.mp4",
+      "mimeType": "video/mp4",
+      "sha256": "c62b1344da7cb5a4b3fc2b3c144d815970eab741f818771bbc750f4248852f08",
+      "bytes": 2756449
+    },
+    {
+      "id": "video.animated.runtime.white_canvas_ending_true",
+      "kind": "video",
+      "path": "video/animated/runtime/white_canvas_ending_true.mp4",
+      "mimeType": "video/mp4",
+      "sha256": "454767d2595ad285ada75c920eeb5974626471930549e840669ffd2d856e9d37",
+      "bytes": 3932490
+    },
+    {
+      "id": "video.animated.runtime.white_canvas_scene_11",
+      "kind": "video",
+      "path": "video/animated/runtime/white_canvas_scene_11.mp4",
+      "mimeType": "video/mp4",
+      "sha256": "a25ef4770934afd8cc6fc6bab08167a4aa1594fdb301edd1914411438eb01b93",
+      "bytes": 2890842
+    },
+    {
+      "id": "video.animated.runtime.white_canvas_scene_15",
+      "kind": "video",
+      "path": "video/animated/runtime/white_canvas_scene_15.mp4",
+      "mimeType": "video/mp4",
+      "sha256": "f5226beecc7be5275123f7cc6a91a1b58f74e831d020a788ac52a1015c9c6c2e",
+      "bytes": 2537450
+    },
+    {
+      "id": "video.animated.runtime.white_canvas_scene_3",
+      "kind": "video",
+      "path": "video/animated/runtime/white_canvas_scene_3.mp4",
+      "mimeType": "video/mp4",
+      "sha256": "e7d8746ec4825f0f496c2106e5c1d7862b8a00246e3109574946ccbef5be5ac7",
+      "bytes": 3030226
+    },
+    {
+      "id": "video.animated.runtime.white_canvas_scene_5",
+      "kind": "video",
+      "path": "video/animated/runtime/white_canvas_scene_5.mp4",
+      "mimeType": "video/mp4",
+      "sha256": "8d154e505624dde023f61510cd6cc25337ef23f43190728e72034d85806a3569",
+      "bytes": 2971914
+    },
+    {
+      "id": "video.animated.runtime.white_canvas_scene_8",
+      "kind": "video",
+      "path": "video/animated/runtime/white_canvas_scene_8.mp4",
+      "mimeType": "video/mp4",
+      "sha256": "ba894e5efb361a9bf52c1d5b45ec2b04ed552b4024f3e8c1fd3cf54830c8f899",
+      "bytes": 2685560
+    },
+    {
       "id": "voice.result.conspiracy_005_let_her_answer",
       "kind": "audio",
       "path": "audio/voice/result/conspiracy_005_let_her_answer.mp3",
-      "mimeType": "audio/mpeg"
+      "mimeType": "audio/mpeg",
+      "sha256": "548667e2e8d97d86d68959d8c7ee94e2d81570f13ba597501c7ffeb569832526",
+      "bytes": 218292
     },
     {
       "id": "voice.result.conspiracy_005_refuse_duo",
       "kind": "audio",
       "path": "audio/voice/result/conspiracy_005_refuse_duo.mp3",
-      "mimeType": "audio/mpeg"
+      "mimeType": "audio/mpeg",
+      "sha256": "f03cd8e5cf332108df089065f72c50b9184de7a5724dac60ee57595047802769",
+      "bytes": 225780
     },
     {
       "id": "voice.result.conspiracy_006_block_view",
       "kind": "audio",
       "path": "audio/voice/result/conspiracy_006_block_view.mp3",
-      "mimeType": "audio/mpeg"
+      "mimeType": "audio/mpeg",
+      "sha256": "8b1422137db20ab49eabed7bd28bc2849dfe37ea073dd5ee6f212ff0e20a70ac",
+      "bytes": 290292
     },
     {
       "id": "voice.result.conspiracy_006_stand_with_her",
       "kind": "audio",
       "path": "audio/voice/result/conspiracy_006_stand_with_her.mp3",
-      "mimeType": "audio/mpeg"
+      "mimeType": "audio/mpeg",
+      "sha256": "20e2c48a0ce12a926636936548d42fbf11727ef7a000a1595eeff797a6c09f8b",
+      "bytes": 300660
     },
     {
       "id": "voice.result.conspiracy_007_break_frame",
       "kind": "audio",
       "path": "audio/voice/result/conspiracy_007_break_frame.mp3",
-      "mimeType": "audio/mpeg"
+      "mimeType": "audio/mpeg",
+      "sha256": "871e78d300f8278a232ba010d7b427867a64467fb8e27d365e7d4e62edfd926e",
+      "bytes": 233844
     },
     {
       "id": "voice.result.conspiracy_007_seize_frame",
       "kind": "audio",
       "path": "audio/voice/result/conspiracy_007_seize_frame.mp3",
-      "mimeType": "audio/mpeg"
+      "mimeType": "audio/mpeg",
+      "sha256": "d08785dfa3e8c3517977a6d6bf9c1512e010a58cf5b35eecc2eb821cc81dc33e",
+      "bytes": 271284
     },
     {
       "id": "voice.result.conspiracy_008_hand_pen_to_her",
       "kind": "audio",
       "path": "audio/voice/result/conspiracy_008_hand_pen_to_her.mp3",
-      "mimeType": "audio/mpeg"
+      "mimeType": "audio/mpeg",
+      "sha256": "d8e813e7ebdbeb0f6110e70a2bb7a5a52bce8da57e5f8d09f2ff372d0c30d418",
+      "bytes": 242484
     },
     {
       "id": "voice.result.conspiracy_008_refuse_testimony",
       "kind": "audio",
       "path": "audio/voice/result/conspiracy_008_refuse_testimony.mp3",
-      "mimeType": "audio/mpeg"
+      "mimeType": "audio/mpeg",
+      "sha256": "d5ca8cee4ee30db158d885deb2604fa78bb33c832d7743a030fbc2133d63efb7",
+      "bytes": 229812
     },
     {
       "id": "voice.result.conspiracy_009_choose_present",
       "kind": "audio",
       "path": "audio/voice/result/conspiracy_009_choose_present.mp3",
-      "mimeType": "audio/mpeg"
+      "mimeType": "audio/mpeg",
+      "sha256": "d255a37065cb040862cbb36fd595af444fd8506e6c351a9b0fddce3e3843caa5",
+      "bytes": 287988
     },
     {
       "id": "voice.result.conspiracy_009_refuse_choice",
       "kind": "audio",
       "path": "audio/voice/result/conspiracy_009_refuse_choice.mp3",
-      "mimeType": "audio/mpeg"
+      "mimeType": "audio/mpeg",
+      "sha256": "d84f22e0be4599542ae4608dbd3d6d570a23c37fbc05ec358baf82bd5866147e",
+      "bytes": 306420
     },
     {
       "id": "voice.result.conspiracy_010_keep_badge_unworn",
       "kind": "audio",
       "path": "audio/voice/result/conspiracy_010_keep_badge_unworn.mp3",
-      "mimeType": "audio/mpeg"
+      "mimeType": "audio/mpeg",
+      "sha256": "2ba5efee14ce0ffd8bddacac3a707d23e20f2bd2fcab2103cd3890cc11cfc33c",
+      "bytes": 263796
     },
     {
       "id": "voice.result.conspiracy_010_throw_badge",
       "kind": "audio",
       "path": "audio/voice/result/conspiracy_010_throw_badge.mp3",
-      "mimeType": "audio/mpeg"
+      "mimeType": "audio/mpeg",
+      "sha256": "6a78bf8c769c7296815b0eb02fb01769e0d15aa7754ed0ea72096041c683153b",
+      "bytes": 260916
     },
     {
       "id": "voice.result.conspiracy_011_burn_film",
       "kind": "audio",
       "path": "audio/voice/result/conspiracy_011_burn_film.mp3",
-      "mimeType": "audio/mpeg"
+      "mimeType": "audio/mpeg",
+      "sha256": "785b0204dfb11fe1882f188366acaf80f6cdd88836e81bb162d4c19c09b750b6",
+      "bytes": 243636
     },
     {
       "id": "voice.result.conspiracy_011_rewrite_ending",
       "kind": "audio",
       "path": "audio/voice/result/conspiracy_011_rewrite_ending.mp3",
-      "mimeType": "audio/mpeg"
+      "mimeType": "audio/mpeg",
+      "sha256": "8b9f5b34fc073979f154a9a87293de86ebaaeba56f89e568eded54a61d3ea343",
+      "bytes": 238452
     },
     {
       "id": "voice.result.conspiracy_012_end_tonight",
       "kind": "audio",
       "path": "audio/voice/result/conspiracy_012_end_tonight.mp3",
-      "mimeType": "audio/mpeg"
+      "mimeType": "audio/mpeg",
+      "sha256": "ce0871f2f82b8d758e989219d1951c4cd0edf1036e8fe7bca19d3ea3abcbcd86",
+      "bytes": 277620
     },
     {
       "id": "voice.result.conspiracy_012_keep_blade",
       "kind": "audio",
       "path": "audio/voice/result/conspiracy_012_keep_blade.mp3",
-      "mimeType": "audio/mpeg"
+      "mimeType": "audio/mpeg",
+      "sha256": "57c8336c5692d6725fa5fe110f82307674ff12f413e167b5ac3281bb0c22c554",
+      "bytes": 273588
     },
     {
       "id": "voice.result.conspiracy_013_hold_one_second",
       "kind": "audio",
       "path": "audio/voice/result/conspiracy_013_hold_one_second.mp3",
-      "mimeType": "audio/mpeg"
+      "mimeType": "audio/mpeg",
+      "sha256": "97ad5295330dd4e4c20f60e667c94efa825b06a06ecb6e577ac621080a5a16d9",
+      "bytes": 254004
     },
     {
       "id": "voice.result.conspiracy_013_return_gently",
       "kind": "audio",
       "path": "audio/voice/result/conspiracy_013_return_gently.mp3",
-      "mimeType": "audio/mpeg"
+      "mimeType": "audio/mpeg",
+      "sha256": "b0c4e5d6af73a4728f850b33cb5cb9db51e06598642b52410b2f4e2faf90d076",
+      "bytes": 269556
     },
     {
       "id": "voice.result.conspiracy_014_erase_from_catalog",
       "kind": "audio",
       "path": "audio/voice/result/conspiracy_014_erase_from_catalog.mp3",
-      "mimeType": "audio/mpeg"
+      "mimeType": "audio/mpeg",
+      "sha256": "f4a479901d65888eea4634ae1ea8a156024e84b705595187a28a32e4d8a008b4",
+      "bytes": 283956
     },
     {
       "id": "voice.result.conspiracy_014_keep_one_line",
       "kind": "audio",
       "path": "audio/voice/result/conspiracy_014_keep_one_line.mp3",
-      "mimeType": "audio/mpeg"
+      "mimeType": "audio/mpeg",
+      "sha256": "4734a1cc33e33ff06799ee86d66763782127c8ea2acaff03a12b59e86e6b0a60",
+      "bytes": 289716
     },
     {
       "id": "voice.result.conspiracy_accept",
       "kind": "audio",
       "path": "audio/voice/result/conspiracy_accept.mp3",
-      "mimeType": "audio/mpeg"
+      "mimeType": "audio/mpeg",
+      "sha256": "4b76303e8e34898103631f630d182d820b1c5b4f08cc19105df3778e8adfcc8f",
+      "bytes": 242484
     },
     {
       "id": "voice.result.conspiracy_break_pursuit_frame",
       "kind": "audio",
       "path": "audio/voice/result/conspiracy_break_pursuit_frame.mp3",
-      "mimeType": "audio/mpeg"
+      "mimeType": "audio/mpeg",
+      "sha256": "3597acb7210a208c020fb28c0fb1c7c63e595fac7b419da1355556960e70570a",
+      "bytes": 237876
     },
     {
       "id": "voice.result.conspiracy_escape_to_backstreets",
       "kind": "audio",
       "path": "audio/voice/result/conspiracy_escape_to_backstreets.mp3",
-      "mimeType": "audio/mpeg"
+      "mimeType": "audio/mpeg",
+      "sha256": "0fd19a0ac7085d583a8178d38c071804d60a9be3c1363b26f62e31ef34a5b15e",
+      "bytes": 263796
     },
     {
       "id": "voice.result.conspiracy_feed_false_signature",
       "kind": "audio",
       "path": "audio/voice/result/conspiracy_feed_false_signature.mp3",
-      "mimeType": "audio/mpeg"
+      "mimeType": "audio/mpeg",
+      "sha256": "a10423e4201744e3f64d594cb8948c4f2fca578cb88fcaa2f865839235035525",
+      "bytes": 240756
     },
     {
       "id": "voice.result.conspiracy_pressure",
       "kind": "audio",
       "path": "audio/voice/result/conspiracy_pressure.mp3",
-      "mimeType": "audio/mpeg"
+      "mimeType": "audio/mpeg",
+      "sha256": "0e165916d831f3aab506621939c657e90f4fa282a6fb212061143a82e6ccfebe",
+      "bytes": 210804
     },
     {
       "id": "voice.result.enter_conspiracy",
       "kind": "audio",
       "path": "audio/voice/result/enter_conspiracy.mp3",
-      "mimeType": "audio/mpeg"
+      "mimeType": "audio/mpeg",
+      "sha256": "f8964fe276712a75e96af70eceb75f46845ab038422a529a4ca67d6ccc168e56",
+      "bytes": 204468
     },
     {
       "id": "voice.result.enter_rebuild",
       "kind": "audio",
       "path": "audio/voice/result/enter_rebuild.mp3",
-      "mimeType": "audio/mpeg"
+      "mimeType": "audio/mpeg",
+      "sha256": "fa7f6c482fb449c3f7c61f2d556182e30a49d449d14fb8329213f97ba8dae9db",
+      "bytes": 202740
     },
     {
       "id": "voice.result.enter_white_canvas",
       "kind": "audio",
       "path": "audio/voice/result/enter_white_canvas.mp3",
-      "mimeType": "audio/mpeg"
+      "mimeType": "audio/mpeg",
+      "sha256": "5f238c579d61475995d082999f73a16d0c182f8db58a16ab8cd9d2a802277d97",
+      "bytes": 164724
     },
     {
       "id": "voice.result.golden_bough_rebuild.bad_ending",
       "kind": "audio",
       "path": "audio/voice/result/golden_bough_rebuild/bad_ending.mp3",
-      "mimeType": "audio/mpeg"
+      "mimeType": "audio/mpeg",
+      "sha256": "401c2bf97a19b9d9cc0a68bd7c9f9d1e85ce99d5a378d8b5f21449266fdc1417",
+      "bytes": 115764
     },
     {
       "id": "voice.result.golden_bough_rebuild.normal_ending",
       "kind": "audio",
       "path": "audio/voice/result/golden_bough_rebuild/normal_ending.mp3",
-      "mimeType": "audio/mpeg"
+      "mimeType": "audio/mpeg",
+      "sha256": "d1161b5a7e0cbff976cc5e32b470d3439b738c3acf20fd59eeff3086f84bbc2d",
+      "bytes": 112884
     },
     {
       "id": "voice.result.golden_bough_rebuild.true_ending",
       "kind": "audio",
       "path": "audio/voice/result/golden_bough_rebuild/true_ending.mp3",
-      "mimeType": "audio/mpeg"
+      "mimeType": "audio/mpeg",
+      "sha256": "148ae12e5af697470bf05597480564d896ee6084c08442ee66e368a783d965f6",
+      "bytes": 105972
     },
     {
       "id": "voice.result.golden_bough_route_complete",
       "kind": "audio",
       "path": "audio/voice/result/golden_bough_route_complete.mp3",
-      "mimeType": "audio/mpeg"
+      "mimeType": "audio/mpeg",
+      "sha256": "e457029e4b26e12174ecf9c30212c573f3d7693c0d73f686506bde427ba00de7",
+      "bytes": 331188
     },
     {
       "id": "voice.result.golden_bough_route_final",
       "kind": "audio",
       "path": "audio/voice/result/golden_bough_route_final.mp3",
-      "mimeType": "audio/mpeg"
+      "mimeType": "audio/mpeg",
+      "sha256": "ff10f8673bd0fe23c51936ce4bf55414ab4544224ca0f2d244709ae15cda54b0",
+      "bytes": 143988
     },
     {
       "id": "voice.result.rebuild_006_keep_silent_anchor",
       "kind": "audio",
       "path": "audio/voice/result/rebuild_006_keep_silent_anchor.mp3",
-      "mimeType": "audio/mpeg"
+      "mimeType": "audio/mpeg",
+      "sha256": "ea553da520b4f2af20f6ef09f831f0115fb3c299bca2acb125cbbba3825e6a65",
+      "bytes": 269556
     },
     {
       "id": "voice.result.rebuild_006_read_aloud",
       "kind": "audio",
       "path": "audio/voice/result/rebuild_006_read_aloud.mp3",
-      "mimeType": "audio/mpeg"
+      "mimeType": "audio/mpeg",
+      "sha256": "1ba8b1e99c835f51e83566218b0831472cae6f8b9bed544379008edfb98ed56e",
+      "bytes": 270708
     },
     {
       "id": "voice.result.rebuild_007_match_her_pulse",
       "kind": "audio",
       "path": "audio/voice/result/rebuild_007_match_her_pulse.mp3",
-      "mimeType": "audio/mpeg"
+      "mimeType": "audio/mpeg",
+      "sha256": "e6454ff8fee875b9f2634d84ab7ebce1be09e030812ccdd916aa291b8a9e69d6",
+      "bytes": 295476
     },
     {
       "id": "voice.result.rebuild_007_stay_own_rhythm",
       "kind": "audio",
       "path": "audio/voice/result/rebuild_007_stay_own_rhythm.mp3",
-      "mimeType": "audio/mpeg"
+      "mimeType": "audio/mpeg",
+      "sha256": "03ff1752e22f90ffd73af641d1d182688d3a349c9778079c5fb9217eee4a86d3",
+      "bytes": 305268
     },
     {
       "id": "voice.result.rebuild_008_protect_current_self",
       "kind": "audio",
       "path": "audio/voice/result/rebuild_008_protect_current_self.mp3",
-      "mimeType": "audio/mpeg"
+      "mimeType": "audio/mpeg",
+      "sha256": "87637a730ba4bcfaf94708a85f427bd8225fb3f123b2674df47fc6b14de306ac",
+      "bytes": 274164
     },
     {
       "id": "voice.result.rebuild_008_trade_old_memory",
       "kind": "audio",
       "path": "audio/voice/result/rebuild_008_trade_old_memory.mp3",
-      "mimeType": "audio/mpeg"
+      "mimeType": "audio/mpeg",
+      "sha256": "d94505f65341fd2877cdbf6ddcd0067ed716314330df879113e4d306ee5b76fd",
+      "bytes": 271860
     },
     {
       "id": "voice.result.rebuild_009_hand_question_back",
       "kind": "audio",
       "path": "audio/voice/result/rebuild_009_hand_question_back.mp3",
-      "mimeType": "audio/mpeg"
+      "mimeType": "audio/mpeg",
+      "sha256": "8b29cf1086c02e716ed0cff07536f363d83101916d10fa4ca5e627b649b9527b",
+      "bytes": 270132
     },
     {
       "id": "voice.result.rebuild_009_refuse_perfect_copy",
       "kind": "audio",
       "path": "audio/voice/result/rebuild_009_refuse_perfect_copy.mp3",
-      "mimeType": "audio/mpeg"
+      "mimeType": "audio/mpeg",
+      "sha256": "a70c9a8ad345295ae5d861bbe5dfba1f6467cc8fa60194e0bac35848edabbd97",
+      "bytes": 267252
     },
     {
       "id": "voice.result.rebuild_010_ask_her_choice",
       "kind": "audio",
       "path": "audio/voice/result/rebuild_010_ask_her_choice.mp3",
-      "mimeType": "audio/mpeg"
+      "mimeType": "audio/mpeg",
+      "sha256": "5cecd7509b4d42b4e7c3e7ba0309b53b302c9ee88bf2255bc793be78a802a182",
+      "bytes": 226932
     },
     {
       "id": "voice.result.rebuild_010_veto_sealing",
       "kind": "audio",
       "path": "audio/voice/result/rebuild_010_veto_sealing.mp3",
-      "mimeType": "audio/mpeg"
+      "mimeType": "audio/mpeg",
+      "sha256": "5f46716f6a5efc4287c341a0d2b8f02c311a8c1109bf19a519f3e391069a6eb2",
+      "bytes": 232692
     },
     {
       "id": "voice.result.rebuild_011_ask_next_revision",
       "kind": "audio",
       "path": "audio/voice/result/rebuild_011_ask_next_revision.mp3",
-      "mimeType": "audio/mpeg"
+      "mimeType": "audio/mpeg",
+      "sha256": "eae27a33c8bc3fe8decead1165d83cb94521f45594f102bf4e5574da3b6f09ec",
+      "bytes": 292020
     },
     {
       "id": "voice.result.rebuild_011_sit_beside",
       "kind": "audio",
       "path": "audio/voice/result/rebuild_011_sit_beside.mp3",
-      "mimeType": "audio/mpeg"
+      "mimeType": "audio/mpeg",
+      "sha256": "ee92eac2d9efee09aa05e29d4ff482d9631ccce9526f11a92cb55f4e6ebe155e",
+      "bytes": 290868
     },
     {
       "id": "voice.result.rebuild_012_break_contract",
       "kind": "audio",
       "path": "audio/voice/result/rebuild_012_break_contract.mp3",
-      "mimeType": "audio/mpeg"
+      "mimeType": "audio/mpeg",
+      "sha256": "2cb0663dd3c9d2d7b5413424443f2a9bd48002e251075355d36762b9371e3409",
+      "bytes": 251700
     },
     {
       "id": "voice.result.rebuild_012_negotiate_terms",
       "kind": "audio",
       "path": "audio/voice/result/rebuild_012_negotiate_terms.mp3",
-      "mimeType": "audio/mpeg"
+      "mimeType": "audio/mpeg",
+      "sha256": "ab0f098d13994e6c429414e506450988dbd84476294cbd3c3749cd7b64fd4ed3",
+      "bytes": 268980
     },
     {
       "id": "voice.result.rebuild_013_offer_witness",
       "kind": "audio",
       "path": "audio/voice/result/rebuild_013_offer_witness.mp3",
-      "mimeType": "audio/mpeg"
+      "mimeType": "audio/mpeg",
+      "sha256": "8d44e5907f85e91235c1eed2e9ee6ceacc12dd90599663ebe4bdec64f9fb6dfd",
+      "bytes": 254004
     },
     {
       "id": "voice.result.rebuild_013_promise_name",
       "kind": "audio",
       "path": "audio/voice/result/rebuild_013_promise_name.mp3",
-      "mimeType": "audio/mpeg"
+      "mimeType": "audio/mpeg",
+      "sha256": "ad4b896e8b63255b97863d25448f39d4578377b9948343a3b031f492095e3fe3",
+      "bytes": 255156
     },
     {
       "id": "voice.result.rebuild_014_ask_when_to_light",
       "kind": "audio",
       "path": "audio/voice/result/rebuild_014_ask_when_to_light.mp3",
-      "mimeType": "audio/mpeg"
+      "mimeType": "audio/mpeg",
+      "sha256": "1b73267ccef887754b17298559c75c4ba9df218ed3b0a3adeac6da618b622c6a",
+      "bytes": 286260
     },
     {
       "id": "voice.result.rebuild_014_keep_unlit",
       "kind": "audio",
       "path": "audio/voice/result/rebuild_014_keep_unlit.mp3",
-      "mimeType": "audio/mpeg"
+      "mimeType": "audio/mpeg",
+      "sha256": "22cea221f68bea9a01b9d7c8a7ea493c244207b3124736403c748cad98190ac2",
+      "bytes": 292596
     },
     {
       "id": "voice.result.rebuild_accept_missing_pieces",
       "kind": "audio",
       "path": "audio/voice/result/rebuild_accept_missing_pieces.mp3",
-      "mimeType": "audio/mpeg"
+      "mimeType": "audio/mpeg",
+      "sha256": "e03509c235adbf1a35a69fa967081effe4a8cb7b07a4106de677cec1454a3028",
+      "bytes": 243636
     },
     {
       "id": "voice.result.rebuild_anchor",
       "kind": "audio",
       "path": "audio/voice/result/rebuild_anchor.mp3",
-      "mimeType": "audio/mpeg"
+      "mimeType": "audio/mpeg",
+      "sha256": "77023f3ec1210d3f0394848656ed18629a5922d124437b97bc97733e55e6c2f7",
+      "bytes": 162420
     },
     {
       "id": "voice.result.rebuild_cut_false_completion",
       "kind": "audio",
       "path": "audio/voice/result/rebuild_cut_false_completion.mp3",
-      "mimeType": "audio/mpeg"
+      "mimeType": "audio/mpeg",
+      "sha256": "455fed571cb5502968a46e4404e566db5821199fb9b3140c33c1066d155144a1",
+      "bytes": 250548
     },
     {
       "id": "voice.result.rebuild_guard_fascia_pulse",
       "kind": "audio",
       "path": "audio/voice/result/rebuild_guard_fascia_pulse.mp3",
-      "mimeType": "audio/mpeg"
+      "mimeType": "audio/mpeg",
+      "sha256": "5d3946116f8d9d848ea408b9a1f7ef1323642158fb0f94e9a5d10c56312627e7",
+      "bytes": 265524
     },
     {
       "id": "voice.result.rebuild_push_into_raid",
       "kind": "audio",
       "path": "audio/voice/result/rebuild_push_into_raid.mp3",
-      "mimeType": "audio/mpeg"
+      "mimeType": "audio/mpeg",
+      "sha256": "10bb250cf7e3efa4c99fde65bf46d3ea7d6c6b9d037b1c2f6652cbbb94acd8ce",
+      "bytes": 274164
     },
     {
       "id": "voice.result.rebuild_question_fascia",
       "kind": "audio",
       "path": "audio/voice/result/rebuild_question_fascia.mp3",
-      "mimeType": "audio/mpeg"
+      "mimeType": "audio/mpeg",
+      "sha256": "f5e64cd027912ac0ca2b77f53770bd645c962c850f453fe35d0c5f7d6aaa9e5c",
+      "bytes": 156660
     },
     {
       "id": "voice.result.rebuild_use_rooftop_signal",
       "kind": "audio",
       "path": "audio/voice/result/rebuild_use_rooftop_signal.mp3",
-      "mimeType": "audio/mpeg"
+      "mimeType": "audio/mpeg",
+      "sha256": "2d30e89069b6559c1809749d8547b5e773d5af9fc86771b004fa82ff96ae8aea",
+      "bytes": 237300
     },
     {
       "id": "voice.result.return_opening_from_rebuild",
       "kind": "audio",
       "path": "audio/voice/result/return_opening_from_rebuild.mp3",
-      "mimeType": "audio/mpeg"
+      "mimeType": "audio/mpeg",
+      "sha256": "93831e44f51a1755332b620bab795b5a6501bd2310dfe860e65d1de97f796dde",
+      "bytes": 191220
     },
     {
       "id": "voice.result.return_opening_from_ring",
       "kind": "audio",
       "path": "audio/voice/result/return_opening_from_ring.mp3",
-      "mimeType": "audio/mpeg"
+      "mimeType": "audio/mpeg",
+      "sha256": "07b6250f478559c01e05511edda03d37c45df65b9e1848f22cebc16447bdc421",
+      "bytes": 195252
     },
     {
       "id": "voice.result.return_opening_from_white",
       "kind": "audio",
       "path": "audio/voice/result/return_opening_from_white.mp3",
-      "mimeType": "audio/mpeg"
+      "mimeType": "audio/mpeg",
+      "sha256": "f909503358a31908b759dbb172165b49e77d3800c6b5e9beb5355bbecd675c37",
+      "bytes": 202164
     },
     {
       "id": "voice.result.ring_conspiracy_route_complete",
       "kind": "audio",
       "path": "audio/voice/result/ring_conspiracy_route_complete.mp3",
-      "mimeType": "audio/mpeg"
+      "mimeType": "audio/mpeg",
+      "sha256": "a99d59529f481835f600f61c3114fe5cebde2048f8e411be418998a0a3787f75",
+      "bytes": 283956
     },
     {
       "id": "voice.result.ring_conspiracy_route_final",
       "kind": "audio",
       "path": "audio/voice/result/ring_conspiracy_route_final.mp3",
-      "mimeType": "audio/mpeg"
+      "mimeType": "audio/mpeg",
+      "sha256": "c05b719a61ea2e4fd6ce58109fc2fdb2f48f6bb14415dc64df970630a3162ac0",
+      "bytes": 156660
     },
     {
       "id": "voice.result.ring_conspiracy.bad_ending",
       "kind": "audio",
       "path": "audio/voice/result/ring_conspiracy/bad_ending.mp3",
-      "mimeType": "audio/mpeg"
+      "mimeType": "audio/mpeg",
+      "sha256": "07d729c94f10eff159215f464fcf8f4f7fa136caeab4696bc08649018756fb90",
+      "bytes": 104820
     },
     {
       "id": "voice.result.ring_conspiracy.normal_ending",
       "kind": "audio",
       "path": "audio/voice/result/ring_conspiracy/normal_ending.mp3",
-      "mimeType": "audio/mpeg"
+      "mimeType": "audio/mpeg",
+      "sha256": "38d39f3de6f911a09b947cd966e164cd61cbc8a40835bf4b9e94292efdd721e9",
+      "bytes": 127284
     },
     {
       "id": "voice.result.ring_conspiracy.true_ending",
       "kind": "audio",
       "path": "audio/voice/result/ring_conspiracy/true_ending.mp3",
-      "mimeType": "audio/mpeg"
+      "mimeType": "audio/mpeg",
+      "sha256": "de2fab869c900b3cadd4c282f7639c70b8e4ca137d77ec8f7edbd815e58f7257",
+      "bytes": 112884
     },
     {
       "id": "voice.result.white_006_name_silence",
       "kind": "audio",
       "path": "audio/voice/result/white_006_name_silence.mp3",
-      "mimeType": "audio/mpeg"
+      "mimeType": "audio/mpeg",
+      "sha256": "60f67a987b75e4212e1dc7f7c3d26cabaf7d85be1701495c9ac196717031ec70",
+      "bytes": 282804
     },
     {
       "id": "voice.result.white_006_refuse_naming",
       "kind": "audio",
       "path": "audio/voice/result/white_006_refuse_naming.mp3",
-      "mimeType": "audio/mpeg"
+      "mimeType": "audio/mpeg",
+      "sha256": "3b1c115c0521def49f44bd8749fcc28bb23dd6a991c51395f5eb56a01ff95510",
+      "bytes": 286836
     },
     {
       "id": "voice.result.white_007_ask_fascia_term",
       "kind": "audio",
       "path": "audio/voice/result/white_007_ask_fascia_term.mp3",
-      "mimeType": "audio/mpeg"
+      "mimeType": "audio/mpeg",
+      "sha256": "a0820e12083e03fd2655fe43f94addc8188a51407e91916405a7596ebb69e55e",
+      "bytes": 289716
     },
     {
       "id": "voice.result.white_007_keep_mirror_open",
       "kind": "audio",
       "path": "audio/voice/result/white_007_keep_mirror_open.mp3",
-      "mimeType": "audio/mpeg"
+      "mimeType": "audio/mpeg",
+      "sha256": "60711ca2e8a0be22f5c442c2abb3bdb0587f492199a6ce827fc3d8965926f79e",
+      "bytes": 270132
     },
     {
       "id": "voice.result.white_008_hold_fascia",
       "kind": "audio",
       "path": "audio/voice/result/white_008_hold_fascia.mp3",
-      "mimeType": "audio/mpeg"
+      "mimeType": "audio/mpeg",
+      "sha256": "36e24cb6f169556be6c28e403077d4e8fbde1e3dc93cfb98eb2087cce985aab9",
+      "bytes": 226356
     },
     {
       "id": "voice.result.white_008_stay_witness_only",
       "kind": "audio",
       "path": "audio/voice/result/white_008_stay_witness_only.mp3",
-      "mimeType": "audio/mpeg"
+      "mimeType": "audio/mpeg",
+      "sha256": "905d28a8268ee2379eac22f120361379b9951fb5ff172ba6d913558bb2f0278b",
+      "bytes": 240756
     },
     {
       "id": "voice.result.white_009_keep_half_step",
       "kind": "audio",
       "path": "audio/voice/result/white_009_keep_half_step.mp3",
-      "mimeType": "audio/mpeg"
+      "mimeType": "audio/mpeg",
+      "sha256": "b7bba180567c5f6a4417e364d5ab1379a2325e359bb495b1dcb4d2fe4c06e1ef",
+      "bytes": 252852
     },
     {
       "id": "voice.result.white_009_share_umbrella_edge",
       "kind": "audio",
       "path": "audio/voice/result/white_009_share_umbrella_edge.mp3",
-      "mimeType": "audio/mpeg"
+      "mimeType": "audio/mpeg",
+      "sha256": "23c3d9fe23330249c668a11e7d6bb19ca87ef9def6e0d53dcad0e618d01f03b4",
+      "bytes": 218868
     },
     {
       "id": "voice.result.white_010_acknowledge_leave",
       "kind": "audio",
       "path": "audio/voice/result/white_010_acknowledge_leave.mp3",
-      "mimeType": "audio/mpeg"
+      "mimeType": "audio/mpeg",
+      "sha256": "b862835afff73e64f682fd0ce83bf20689fe6e471bfce2c6551e51a6c461d537",
+      "bytes": 242484
     },
     {
       "id": "voice.result.white_010_offer_return_ticket",
       "kind": "audio",
       "path": "audio/voice/result/white_010_offer_return_ticket.mp3",
-      "mimeType": "audio/mpeg"
+      "mimeType": "audio/mpeg",
+      "sha256": "dd8f7ed0594e7f26d7dc6cf31b6e17a37528ad86dd8ebf032b5d4c6f93f846e8",
+      "bytes": 245364
     },
     {
       "id": "voice.result.white_011_curtain_call",
       "kind": "audio",
       "path": "audio/voice/result/white_011_curtain_call.mp3",
-      "mimeType": "audio/mpeg"
+      "mimeType": "audio/mpeg",
+      "sha256": "c9fdc11ebf7eed86a13aa197101432236b2f907f8b5f7ecdfaefcff31c4fec9d",
+      "bytes": 259764
     },
     {
       "id": "voice.result.white_011_walk_beside",
       "kind": "audio",
       "path": "audio/voice/result/white_011_walk_beside.mp3",
-      "mimeType": "audio/mpeg"
+      "mimeType": "audio/mpeg",
+      "sha256": "8f82753798f57a08b67ef3de620e76950ee7ca7d7186ac899243edc1f851d2dc",
+      "bytes": 265524
     },
     {
       "id": "voice.result.white_012_let_her_decide",
       "kind": "audio",
       "path": "audio/voice/result/white_012_let_her_decide.mp3",
-      "mimeType": "audio/mpeg"
+      "mimeType": "audio/mpeg",
+      "sha256": "81e36190ab884dfed8f11e605ec441b8edc88bd6c192a57f364a88f18a24781f",
+      "bytes": 244788
     },
     {
       "id": "voice.result.white_012_refuse_exhibit",
       "kind": "audio",
       "path": "audio/voice/result/white_012_refuse_exhibit.mp3",
-      "mimeType": "audio/mpeg"
+      "mimeType": "audio/mpeg",
+      "sha256": "0d7c983a7a112e463541d935a321e47ef95e7aa5639c4d3aeac6ef7dc7134c2b",
+      "bytes": 233268
     },
     {
       "id": "voice.result.white_013_point_to_mirror",
       "kind": "audio",
       "path": "audio/voice/result/white_013_point_to_mirror.mp3",
-      "mimeType": "audio/mpeg"
+      "mimeType": "audio/mpeg",
+      "sha256": "31aa7569564b6f1e2e0aded51296ba9b85e8fa6c914ffd633d9f59cdd15cd4ad",
+      "bytes": 281652
     },
     {
       "id": "voice.result.white_013_refuse_to_choose",
       "kind": "audio",
       "path": "audio/voice/result/white_013_refuse_to_choose.mp3",
-      "mimeType": "audio/mpeg"
+      "mimeType": "audio/mpeg",
+      "sha256": "7b3f72b69d3a1a1254a2e1c1d840040fbe3bcc319183eda77565155a97934248",
+      "bytes": 283956
     },
     {
       "id": "voice.result.white_014_keep_base_color",
       "kind": "audio",
       "path": "audio/voice/result/white_014_keep_base_color.mp3",
-      "mimeType": "audio/mpeg"
+      "mimeType": "audio/mpeg",
+      "sha256": "1cf0cd1f80908e5971fd27c9b52ddcbe76409e8ae583b5283a719cdbe67d7d3f",
+      "bytes": 273588
     },
     {
       "id": "voice.result.white_014_offer_restart",
       "kind": "audio",
       "path": "audio/voice/result/white_014_offer_restart.mp3",
-      "mimeType": "audio/mpeg"
+      "mimeType": "audio/mpeg",
+      "sha256": "7c761d521905ef96a1fe2f299ccb1521f8f3654e6888a060218734de91028944",
+      "bytes": 296052
     },
     {
       "id": "voice.result.white_canvas_route_complete",
       "kind": "audio",
       "path": "audio/voice/result/white_canvas_route_complete.mp3",
-      "mimeType": "audio/mpeg"
+      "mimeType": "audio/mpeg",
+      "sha256": "acd2f7fbf6091e563293abfcb367af4a0a263be201f0929dba79b382523514ec",
+      "bytes": 291444
     },
     {
       "id": "voice.result.white_canvas_route_final",
       "kind": "audio",
       "path": "audio/voice/result/white_canvas_route_final.mp3",
-      "mimeType": "audio/mpeg"
+      "mimeType": "audio/mpeg",
+      "sha256": "337e21c026117013a657c1a6e014e9f212a5be661c6adce3ffb4eb87f83a1227",
+      "bytes": 156660
     },
     {
       "id": "voice.result.white_canvas.bad_ending",
       "kind": "audio",
       "path": "audio/voice/result/white_canvas/bad_ending.mp3",
-      "mimeType": "audio/mpeg"
+      "mimeType": "audio/mpeg",
+      "sha256": "29e1de7d0ccf9bcc7b6748e099c65338e931d083381660263ea4b987bb062866",
+      "bytes": 111732
     },
     {
       "id": "voice.result.white_canvas.normal_ending",
       "kind": "audio",
       "path": "audio/voice/result/white_canvas/normal_ending.mp3",
-      "mimeType": "audio/mpeg"
+      "mimeType": "audio/mpeg",
+      "sha256": "c54d975a7b6e0f7b689a87ecdfbbe9021980cc7fd350b3abe1cc88ea7bf661c7",
+      "bytes": 104820
     },
     {
       "id": "voice.result.white_canvas.true_ending",
       "kind": "audio",
       "path": "audio/voice/result/white_canvas/true_ending.mp3",
-      "mimeType": "audio/mpeg"
+      "mimeType": "audio/mpeg",
+      "sha256": "743a641dbf799023987750b0743e032d99369f988bd08194115474b6b3cfb110",
+      "bytes": 104244
     },
     {
       "id": "voice.result.white_follow_to_lab",
       "kind": "audio",
       "path": "audio/voice/result/white_follow_to_lab.mp3",
-      "mimeType": "audio/mpeg"
+      "mimeType": "audio/mpeg",
+      "sha256": "8c58cf1aa1f3bc661de6f87077e5a04faf045253d75978a683a31bdbb59e7d9e",
+      "bytes": 271284
     },
     {
       "id": "voice.result.white_interrupt_lab_terms",
       "kind": "audio",
       "path": "audio/voice/result/white_interrupt_lab_terms.mp3",
-      "mimeType": "audio/mpeg"
+      "mimeType": "audio/mpeg",
+      "sha256": "2bfc8261224c3685ca59d5b9f766c972402109fb3defb7ee87cb33033d3d6c2f",
+      "bytes": 247668
     },
     {
       "id": "voice.result.white_keep_empty_seat",
       "kind": "audio",
       "path": "audio/voice/result/white_keep_empty_seat.mp3",
-      "mimeType": "audio/mpeg"
+      "mimeType": "audio/mpeg",
+      "sha256": "8262c3e938479238aceddb6c75ee1a68b4cb2d1d2e6435dcfbf735d80a3aca45",
+      "bytes": 267828
     },
     {
       "id": "voice.result.white_share_rain_window",
       "kind": "audio",
       "path": "audio/voice/result/white_share_rain_window.mp3",
-      "mimeType": "audio/mpeg"
+      "mimeType": "audio/mpeg",
+      "sha256": "326bafdfac66b086162069e09f1dffa9835dab37096e7f52bf0e080e9a7c18de",
+      "bytes": 256884
     },
     {
       "id": "voice.result.white_sign_witness_protocol",
       "kind": "audio",
       "path": "audio/voice/result/white_sign_witness_protocol.mp3",
-      "mimeType": "audio/mpeg"
+      "mimeType": "audio/mpeg",
+      "sha256": "00ab30a358041b686c878fef65bcf30d5eadba999ffa66e4d85b89260a3cfecb",
+      "bytes": 233268
     },
     {
       "id": "voice.result.white_tease_back",
       "kind": "audio",
       "path": "audio/voice/result/white_tease_back.mp3",
-      "mimeType": "audio/mpeg"
+      "mimeType": "audio/mpeg",
+      "sha256": "51ead297b822c76c8670d84c74cde7ede1fbfa8d8ed9bfb52970de910d428faf",
+      "bytes": 210804
     },
     {
       "id": "voice.result.white_touch_boundary",
       "kind": "audio",
       "path": "audio/voice/result/white_touch_boundary.mp3",
-      "mimeType": "audio/mpeg"
+      "mimeType": "audio/mpeg",
+      "sha256": "7b994d5fbc048ce1697bcf4d4f7245957b8ec8adce10897d9b8e314b83bf08d6",
+      "bytes": 218868
     },
     {
       "id": "voice.scene.golden_bough_001",
       "kind": "audio",
       "path": "audio/voice/scene/golden_bough_001.mp3",
-      "mimeType": "audio/mpeg"
+      "mimeType": "audio/mpeg",
+      "sha256": "4d225ee5c362970412e23aa4578ab08729c0a884916a1161c62be91254dba4ec",
+      "bytes": 139380
     },
     {
       "id": "voice.scene.golden_bough_002",
       "kind": "audio",
       "path": "audio/voice/scene/golden_bough_002.mp3",
-      "mimeType": "audio/mpeg"
+      "mimeType": "audio/mpeg",
+      "sha256": "07fd0776ae465d32f870d0ab6b13353199e11984b528d26602f7bfa5e6986b40",
+      "bytes": 107124
     },
     {
       "id": "voice.scene.golden_bough_003",
       "kind": "audio",
       "path": "audio/voice/scene/golden_bough_003.mp3",
-      "mimeType": "audio/mpeg"
+      "mimeType": "audio/mpeg",
+      "sha256": "3cdd14382faf1dce80cf0fca944feafe415c9bcdb2cbf4a8d9c81db1a52ff67a",
+      "bytes": 198132
     },
     {
       "id": "voice.scene.golden_bough_004",
       "kind": "audio",
       "path": "audio/voice/scene/golden_bough_004.mp3",
-      "mimeType": "audio/mpeg"
+      "mimeType": "audio/mpeg",
+      "sha256": "ce1f05be6843684bcf809c89b8789fe3806ae1a8ed70bef05502c328497ebc0c",
+      "bytes": 197556
     },
     {
       "id": "voice.scene.golden_bough_005",
       "kind": "audio",
       "path": "audio/voice/scene/golden_bough_005.mp3",
-      "mimeType": "audio/mpeg"
+      "mimeType": "audio/mpeg",
+      "sha256": "d65ae80a9f99d79de45b1c6de9458680c4189bdba3abedc175a4fef250adde9d",
+      "bytes": 173364
     },
     {
       "id": "voice.scene.golden_bough_006",
       "kind": "audio",
       "path": "audio/voice/scene/golden_bough_006.mp3",
-      "mimeType": "audio/mpeg"
+      "mimeType": "audio/mpeg",
+      "sha256": "6f250d84ff213da11a83ddeac743d1b4c820e703dd2572b60dc2b1962a500e1d",
+      "bytes": 212532
     },
     {
       "id": "voice.scene.golden_bough_007",
       "kind": "audio",
       "path": "audio/voice/scene/golden_bough_007.mp3",
-      "mimeType": "audio/mpeg"
+      "mimeType": "audio/mpeg",
+      "sha256": "d9e4264cf286a2be33cc37d6e3668827c835b96500919c377b52d6d2aad1a07f",
+      "bytes": 221748
     },
     {
       "id": "voice.scene.golden_bough_008",
       "kind": "audio",
       "path": "audio/voice/scene/golden_bough_008.mp3",
-      "mimeType": "audio/mpeg"
+      "mimeType": "audio/mpeg",
+      "sha256": "8718fc7b7301174eb00808a61f8078bed073756fec5d89fdbd3f8750ff4a8333",
+      "bytes": 210228
     },
     {
       "id": "voice.scene.golden_bough_009",
       "kind": "audio",
       "path": "audio/voice/scene/golden_bough_009.mp3",
-      "mimeType": "audio/mpeg"
+      "mimeType": "audio/mpeg",
+      "sha256": "160bc0f6bb3041118aa01646f34f9071ca35f69843b7d0cb7d6ef181832722a3",
+      "bytes": 214836
     },
     {
       "id": "voice.scene.golden_bough_010",
       "kind": "audio",
       "path": "audio/voice/scene/golden_bough_010.mp3",
-      "mimeType": "audio/mpeg"
+      "mimeType": "audio/mpeg",
+      "sha256": "6dc4896687ce4abe0bf1f9c0b815743f862faf64619b9323515b9296291efc89",
+      "bytes": 206772
     },
     {
       "id": "voice.scene.golden_bough_011",
       "kind": "audio",
       "path": "audio/voice/scene/golden_bough_011.mp3",
-      "mimeType": "audio/mpeg"
+      "mimeType": "audio/mpeg",
+      "sha256": "775db235acbe1c59ac8e435805367931d7138bb73a16ae2c6dbabe175ca26720",
+      "bytes": 170484
     },
     {
       "id": "voice.scene.golden_bough_012",
       "kind": "audio",
       "path": "audio/voice/scene/golden_bough_012.mp3",
-      "mimeType": "audio/mpeg"
+      "mimeType": "audio/mpeg",
+      "sha256": "dc1367cb35cd050e16413e99bc2732717a4dbbcb7fe2356164ec9b1e04dac5eb",
+      "bytes": 207924
     },
     {
       "id": "voice.scene.golden_bough_013",
       "kind": "audio",
       "path": "audio/voice/scene/golden_bough_013.mp3",
-      "mimeType": "audio/mpeg"
+      "mimeType": "audio/mpeg",
+      "sha256": "6bedf33a85fb30e81dbe986709a284b956fbb8bcba73839ff4e385662c9b5f60",
+      "bytes": 208500
     },
     {
       "id": "voice.scene.golden_bough_014",
       "kind": "audio",
       "path": "audio/voice/scene/golden_bough_014.mp3",
-      "mimeType": "audio/mpeg"
+      "mimeType": "audio/mpeg",
+      "sha256": "8511bbc11f6ede3c1f6d9432189f2045d07c2d6bfdb09d50f4465cf923d0de54",
+      "bytes": 174516
     },
     {
       "id": "voice.scene.golden_bough_015",
       "kind": "audio",
       "path": "audio/voice/scene/golden_bough_015.mp3",
-      "mimeType": "audio/mpeg"
+      "mimeType": "audio/mpeg",
+      "sha256": "a905db1c23a75a0236b09c32d89dfdfc73dd8820d98941e1ec33fdb320ab9f79",
+      "bytes": 202740
     },
     {
       "id": "voice.scene.golden_bough_rebuild_ending_bad",
       "kind": "audio",
       "path": "audio/voice/scene/golden_bough_rebuild_ending_bad.mp3",
-      "mimeType": "audio/mpeg"
+      "mimeType": "audio/mpeg",
+      "sha256": "d95b9a5dd47f83849cf4dcd5c2f30e6d701a4dbabb982f094f6e8174dd4b96f1",
+      "bytes": 204468
     },
     {
       "id": "voice.scene.golden_bough_rebuild_ending_gate",
       "kind": "audio",
       "path": "audio/voice/scene/golden_bough_rebuild_ending_gate.mp3",
-      "mimeType": "audio/mpeg"
+      "mimeType": "audio/mpeg",
+      "sha256": "043d26099df61ec1393a1a38c75a8b0b4d2f3eb66189eff11332567640f609c0",
+      "bytes": 142260
     },
     {
       "id": "voice.scene.golden_bough_rebuild_ending_normal",
       "kind": "audio",
       "path": "audio/voice/scene/golden_bough_rebuild_ending_normal.mp3",
-      "mimeType": "audio/mpeg"
+      "mimeType": "audio/mpeg",
+      "sha256": "be11b02627a114e3d27ddd8441000dab2e9ddd6d22615a94468dd01c7e2c10bd",
+      "bytes": 195252
     },
     {
       "id": "voice.scene.golden_bough_rebuild_ending_true",
       "kind": "audio",
       "path": "audio/voice/scene/golden_bough_rebuild_ending_true.mp3",
-      "mimeType": "audio/mpeg"
+      "mimeType": "audio/mpeg",
+      "sha256": "6603055d536774f9450b28a2bec4b00b405b49f90cc78b4b3c767e867f02a988",
+      "bytes": 222900
     },
     {
       "id": "voice.scene.opening_001",
       "kind": "audio",
       "path": "audio/voice/scene/opening_001.mp3",
-      "mimeType": "audio/mpeg"
+      "mimeType": "audio/mpeg",
+      "sha256": "497c1b3cba838f47ce02c67ddb31ebdcc49e5cb8eaa5bbfa2027f6fef3a165a8",
+      "bytes": 166452
     },
     {
       "id": "voice.scene.ring_conspiracy_001",
       "kind": "audio",
       "path": "audio/voice/scene/ring_conspiracy_001.mp3",
-      "mimeType": "audio/mpeg"
+      "mimeType": "audio/mpeg",
+      "sha256": "b7df0f5afaafc467cf345fc67dcf3f3f29e409feb9e93799731400125f6df064",
+      "bytes": 127284
     },
     {
       "id": "voice.scene.ring_conspiracy_002",
       "kind": "audio",
       "path": "audio/voice/scene/ring_conspiracy_002.mp3",
-      "mimeType": "audio/mpeg"
+      "mimeType": "audio/mpeg",
+      "sha256": "b9f1b96bed0eb609f2ec689e98ae131816c8c22b8fe811e86bb995b94d9aa597",
+      "bytes": 160692
     },
     {
       "id": "voice.scene.ring_conspiracy_003",
       "kind": "audio",
       "path": "audio/voice/scene/ring_conspiracy_003.mp3",
-      "mimeType": "audio/mpeg"
+      "mimeType": "audio/mpeg",
+      "sha256": "26e2b98b4ada6eb51d0e0eb30b3890081d2531fb81d9e62a86744ff5aaebe35d",
+      "bytes": 167604
     },
     {
       "id": "voice.scene.ring_conspiracy_004",
       "kind": "audio",
       "path": "audio/voice/scene/ring_conspiracy_004.mp3",
-      "mimeType": "audio/mpeg"
+      "mimeType": "audio/mpeg",
+      "sha256": "53ff6d65342584d4a8af3fdea7b7645397f3e150770d1560eb3a3eea945580ce",
+      "bytes": 197556
     },
     {
       "id": "voice.scene.ring_conspiracy_005",
       "kind": "audio",
       "path": "audio/voice/scene/ring_conspiracy_005.mp3",
-      "mimeType": "audio/mpeg"
+      "mimeType": "audio/mpeg",
+      "sha256": "fb9ba2613075784df0d47f9bcdfbaf75332e2a29879c9345a7c50509c3599600",
+      "bytes": 189492
     },
     {
       "id": "voice.scene.ring_conspiracy_006",
       "kind": "audio",
       "path": "audio/voice/scene/ring_conspiracy_006.mp3",
-      "mimeType": "audio/mpeg"
+      "mimeType": "audio/mpeg",
+      "sha256": "b81a93e166ea9c8c614816c041ea7716c3852fda61254125ef2c1eeac0c7ec62",
+      "bytes": 175092
     },
     {
       "id": "voice.scene.ring_conspiracy_007",
       "kind": "audio",
       "path": "audio/voice/scene/ring_conspiracy_007.mp3",
-      "mimeType": "audio/mpeg"
+      "mimeType": "audio/mpeg",
+      "sha256": "d96c395eb83104c3ba7af0690d2a8f50d6fb32c33371993716e0f5e2a5f57d98",
+      "bytes": 183156
     },
     {
       "id": "voice.scene.ring_conspiracy_008",
       "kind": "audio",
       "path": "audio/voice/scene/ring_conspiracy_008.mp3",
-      "mimeType": "audio/mpeg"
+      "mimeType": "audio/mpeg",
+      "sha256": "1697ae28055253cdc42ab315aeed973a88d6f7fc81b29cc78af58aa7f3b45c90",
+      "bytes": 208500
     },
     {
       "id": "voice.scene.ring_conspiracy_009",
       "kind": "audio",
       "path": "audio/voice/scene/ring_conspiracy_009.mp3",
-      "mimeType": "audio/mpeg"
+      "mimeType": "audio/mpeg",
+      "sha256": "95393977d9fd590fbf1e0e4a60e7c7cd20f3a8d127e9e093af735df0ad6ba164",
+      "bytes": 162996
     },
     {
       "id": "voice.scene.ring_conspiracy_010",
       "kind": "audio",
       "path": "audio/voice/scene/ring_conspiracy_010.mp3",
-      "mimeType": "audio/mpeg"
+      "mimeType": "audio/mpeg",
+      "sha256": "42fe6d31eab316f4115365b2a88d54ab3b738dc38ccbb5f66397d092020ca4ab",
+      "bytes": 195828
     },
     {
       "id": "voice.scene.ring_conspiracy_011",
       "kind": "audio",
       "path": "audio/voice/scene/ring_conspiracy_011.mp3",
-      "mimeType": "audio/mpeg"
+      "mimeType": "audio/mpeg",
+      "sha256": "30cdb3d7ab8be3a15f66a2e4c1a7f35f2985f792f0df7d5be26ed022bfb52096",
+      "bytes": 197556
     },
     {
       "id": "voice.scene.ring_conspiracy_012",
       "kind": "audio",
       "path": "audio/voice/scene/ring_conspiracy_012.mp3",
-      "mimeType": "audio/mpeg"
+      "mimeType": "audio/mpeg",
+      "sha256": "62bb96a11b5d5a9398e317a7075d632b6a45633931fb0504222ef8c1925364e7",
+      "bytes": 186036
     },
     {
       "id": "voice.scene.ring_conspiracy_013",
       "kind": "audio",
       "path": "audio/voice/scene/ring_conspiracy_013.mp3",
-      "mimeType": "audio/mpeg"
+      "mimeType": "audio/mpeg",
+      "sha256": "9a5bec85dac0e6238ac0a8b8d5ab52073ddb5d9068f4c73c34b717606654021c",
+      "bytes": 209076
     },
     {
       "id": "voice.scene.ring_conspiracy_014",
       "kind": "audio",
       "path": "audio/voice/scene/ring_conspiracy_014.mp3",
-      "mimeType": "audio/mpeg"
+      "mimeType": "audio/mpeg",
+      "sha256": "6af4fe0687540489e464f2b41f864d305b9d832455985359eb393ec1a3b67488",
+      "bytes": 171636
     },
     {
       "id": "voice.scene.ring_conspiracy_015",
       "kind": "audio",
       "path": "audio/voice/scene/ring_conspiracy_015.mp3",
-      "mimeType": "audio/mpeg"
+      "mimeType": "audio/mpeg",
+      "sha256": "9c5628b50d962e68b4fea11798a244552372ea92b688326d7f196828dd602537",
+      "bytes": 248244
     },
     {
       "id": "voice.scene.ring_conspiracy_ending_bad",
       "kind": "audio",
       "path": "audio/voice/scene/ring_conspiracy_ending_bad.mp3",
-      "mimeType": "audio/mpeg"
+      "mimeType": "audio/mpeg",
+      "sha256": "1d3033f84966c7524e526861732e591393cd63fc839ac19c8b61493e1562b24a",
+      "bytes": 215412
     },
     {
       "id": "voice.scene.ring_conspiracy_ending_gate",
       "kind": "audio",
       "path": "audio/voice/scene/ring_conspiracy_ending_gate.mp3",
-      "mimeType": "audio/mpeg"
+      "mimeType": "audio/mpeg",
+      "sha256": "d5ccbc97c59692526810076f6f75481c50dcdb3e6aff43e7919c3ca73a1e819f",
+      "bytes": 147444
     },
     {
       "id": "voice.scene.ring_conspiracy_ending_normal",
       "kind": "audio",
       "path": "audio/voice/scene/ring_conspiracy_ending_normal.mp3",
-      "mimeType": "audio/mpeg"
+      "mimeType": "audio/mpeg",
+      "sha256": "5d5d5c31eb143ae854d84f06e209e3777e84feeb910a223e3c24597f89a1f36f",
+      "bytes": 184884
     },
     {
       "id": "voice.scene.ring_conspiracy_ending_true",
       "kind": "audio",
       "path": "audio/voice/scene/ring_conspiracy_ending_true.mp3",
-      "mimeType": "audio/mpeg"
+      "mimeType": "audio/mpeg",
+      "sha256": "d3aa6807508e9c64c33ff1a0126ea9ddd6fdadb8ea95c1bc3ec7a79260c4d417",
+      "bytes": 235572
     },
     {
       "id": "voice.scene.white_canvas_001",
       "kind": "audio",
       "path": "audio/voice/scene/white_canvas_001.mp3",
-      "mimeType": "audio/mpeg"
+      "mimeType": "audio/mpeg",
+      "sha256": "f9a92c1bc7670ad7639266c595dc0fa60b8d8304a848d946aad06f72ec7f07d7",
+      "bytes": 110580
     },
     {
       "id": "voice.scene.white_canvas_002",
       "kind": "audio",
       "path": "audio/voice/scene/white_canvas_002.mp3",
-      "mimeType": "audio/mpeg"
+      "mimeType": "audio/mpeg",
+      "sha256": "b42bb03e8c449bd0c7c33e2e3c103e8fe9e2bd4685b2f0166fda2e65768f3d2a",
+      "bytes": 142260
     },
     {
       "id": "voice.scene.white_canvas_003",
       "kind": "audio",
       "path": "audio/voice/scene/white_canvas_003.mp3",
-      "mimeType": "audio/mpeg"
+      "mimeType": "audio/mpeg",
+      "sha256": "447d145ae4bfeebb0d1286275ebd3125e617bf24f5e47794f72a75af3d80110a",
+      "bytes": 160692
     },
     {
       "id": "voice.scene.white_canvas_004",
       "kind": "audio",
       "path": "audio/voice/scene/white_canvas_004.mp3",
-      "mimeType": "audio/mpeg"
+      "mimeType": "audio/mpeg",
+      "sha256": "632de5164bcb1666b292b1fa7c3d31a06592f95bcc6021c85fbb0ce46026b9f5",
+      "bytes": 186036
     },
     {
       "id": "voice.scene.white_canvas_005",
       "kind": "audio",
       "path": "audio/voice/scene/white_canvas_005.mp3",
-      "mimeType": "audio/mpeg"
+      "mimeType": "audio/mpeg",
+      "sha256": "9f29d8f0966e0a85ae8926a0fe7e5edf21404a41ca0dc7655c8700a478cba08c",
+      "bytes": 181428
     },
     {
       "id": "voice.scene.white_canvas_006",
       "kind": "audio",
       "path": "audio/voice/scene/white_canvas_006.mp3",
-      "mimeType": "audio/mpeg"
+      "mimeType": "audio/mpeg",
+      "sha256": "47ba7ff6a7381d865a526506acda5c892ab06c64170d0ba95720d1319dac9c05",
+      "bytes": 196980
     },
     {
       "id": "voice.scene.white_canvas_007",
       "kind": "audio",
       "path": "audio/voice/scene/white_canvas_007.mp3",
-      "mimeType": "audio/mpeg"
+      "mimeType": "audio/mpeg",
+      "sha256": "c8c518fe83f8e7d328add0b53d003cb70db7aaa832f18e4a268ee85d070d7f0f",
+      "bytes": 199860
     },
     {
       "id": "voice.scene.white_canvas_008",
       "kind": "audio",
       "path": "audio/voice/scene/white_canvas_008.mp3",
-      "mimeType": "audio/mpeg"
+      "mimeType": "audio/mpeg",
+      "sha256": "6067a7080d3720615e322e6f8d7a4870737ac5d544a6b24c556aeba0e734e586",
+      "bytes": 218868
     },
     {
       "id": "voice.scene.white_canvas_009",
       "kind": "audio",
       "path": "audio/voice/scene/white_canvas_009.mp3",
-      "mimeType": "audio/mpeg"
+      "mimeType": "audio/mpeg",
+      "sha256": "89794514111d1654ecdf806956448a0da5ab8da75f2ce8234746ee7550ca23c0",
+      "bytes": 175668
     },
     {
       "id": "voice.scene.white_canvas_010",
       "kind": "audio",
       "path": "audio/voice/scene/white_canvas_010.mp3",
-      "mimeType": "audio/mpeg"
+      "mimeType": "audio/mpeg",
+      "sha256": "4725f404be2f81e4345da50938b9bcff83cb133c642e69806a66d400168b9b49",
+      "bytes": 148596
     },
     {
       "id": "voice.scene.white_canvas_011",
       "kind": "audio",
       "path": "audio/voice/scene/white_canvas_011.mp3",
-      "mimeType": "audio/mpeg"
+      "mimeType": "audio/mpeg",
+      "sha256": "b246e6d83f530b4d0f4ce4860ebf37937b3a0c3dded2571d9331305fd722d185",
+      "bytes": 196404
     },
     {
       "id": "voice.scene.white_canvas_012",
       "kind": "audio",
       "path": "audio/voice/scene/white_canvas_012.mp3",
-      "mimeType": "audio/mpeg"
+      "mimeType": "audio/mpeg",
+      "sha256": "58fae554a047a57e6f17d0b1e8c2bd820b7707ab2c067bdc4633fff7d2f2e74d",
+      "bytes": 171636
     },
     {
       "id": "voice.scene.white_canvas_013",
       "kind": "audio",
       "path": "audio/voice/scene/white_canvas_013.mp3",
-      "mimeType": "audio/mpeg"
+      "mimeType": "audio/mpeg",
+      "sha256": "4ed3f251b94446c07a6d173441bb7e310659f80f492902f554290243489f8839",
+      "bytes": 193524
     },
     {
       "id": "voice.scene.white_canvas_014",
       "kind": "audio",
       "path": "audio/voice/scene/white_canvas_014.mp3",
-      "mimeType": "audio/mpeg"
+      "mimeType": "audio/mpeg",
+      "sha256": "8df96e708d31c6b756257d9dded40c61c383cb83cff1816a284b0bbab1a79739",
+      "bytes": 188340
     },
     {
       "id": "voice.scene.white_canvas_015",
       "kind": "audio",
       "path": "audio/voice/scene/white_canvas_015.mp3",
-      "mimeType": "audio/mpeg"
+      "mimeType": "audio/mpeg",
+      "sha256": "e5060d68571a05be9b5b02ee944d1e85c6e2efe670112b7d5812d5580991a42d",
+      "bytes": 207924
     },
     {
       "id": "voice.scene.white_canvas_ending_bad",
       "kind": "audio",
       "path": "audio/voice/scene/white_canvas_ending_bad.mp3",
-      "mimeType": "audio/mpeg"
+      "mimeType": "audio/mpeg",
+      "sha256": "f20eb38432b8005c77c929f9d11aceaddb6feaad402bf0950ce7b42f18551a82",
+      "bytes": 199860
     },
     {
       "id": "voice.scene.white_canvas_ending_gate",
       "kind": "audio",
       "path": "audio/voice/scene/white_canvas_ending_gate.mp3",
-      "mimeType": "audio/mpeg"
+      "mimeType": "audio/mpeg",
+      "sha256": "1b84c1c3872c4b3ed8f8f4d4ad5fea2c3ef20a434e912b114af1ba86b52bb45d",
+      "bytes": 142260
     },
     {
       "id": "voice.scene.white_canvas_ending_normal",
       "kind": "audio",
       "path": "audio/voice/scene/white_canvas_ending_normal.mp3",
-      "mimeType": "audio/mpeg"
+      "mimeType": "audio/mpeg",
+      "sha256": "2011fd5566f387c0b56128ded70b64a3a81cd8f03ad03e3798077266750d5694",
+      "bytes": 177396
     },
     {
       "id": "voice.scene.white_canvas_ending_true",
       "kind": "audio",
       "path": "audio/voice/scene/white_canvas_ending_true.mp3",
-      "mimeType": "audio/mpeg"
+      "mimeType": "audio/mpeg",
+      "sha256": "5a6106bd0b3d225bf87ba0a08b95178d0c8c0877305ac73bc8c391e2ce358296",
+      "bytes": 196980
     }
   ],
   "portraits": [
@@ -5137,1854 +6373,6 @@
       "outputPath": "sprite-atlas/original_cg/ring_conspiracy_strip.png",
       "attempts": 3,
       "error": "HTTP 403: {\"error\":{\"message\":\"预扣费额度失败, 用户剩余额度: ＄0.050000, 需要预扣费额度: ＄0.100000 (request id: 202607091841379559462728268d9d67jCFuMAr)\",\"type\":\"new_api_error\",\"param\":\"\",\"code\":\"insufficient_user_quota\"}}"
-    },
-    {
-      "version": 2,
-      "id": "job.voice.result.conspiracy_005_let_her_answer",
-      "assetId": "voice.result.conspiracy_005_let_her_answer",
-      "kind": "speech",
-      "model": "speech-2.8-hd",
-      "status": "pending",
-      "contentHash": "f3f383e53a6c05f99a2fd6b539ff67725718fbd476b3fd79d27eec33da9d0dae",
-      "inputAssetIds": [],
-      "outputPath": "audio/voice/result/conspiracy_005_let_her_answer.mp3",
-      "attempts": 0
-    },
-    {
-      "version": 2,
-      "id": "job.voice.result.conspiracy_005_refuse_duo",
-      "assetId": "voice.result.conspiracy_005_refuse_duo",
-      "kind": "speech",
-      "model": "speech-2.8-hd",
-      "status": "pending",
-      "contentHash": "1810d3f5a01ae0a1b9acb15177b52f29d0723076baf535effd293d62ce0d4ba2",
-      "inputAssetIds": [],
-      "outputPath": "audio/voice/result/conspiracy_005_refuse_duo.mp3",
-      "attempts": 0
-    },
-    {
-      "version": 2,
-      "id": "job.voice.result.conspiracy_006_block_view",
-      "assetId": "voice.result.conspiracy_006_block_view",
-      "kind": "speech",
-      "model": "speech-2.8-hd",
-      "status": "pending",
-      "contentHash": "512ebfb8e7ab19d4b0c1304f6631b1790e64276ced05ff9d53436a90bcbc1bd3",
-      "inputAssetIds": [],
-      "outputPath": "audio/voice/result/conspiracy_006_block_view.mp3",
-      "attempts": 0
-    },
-    {
-      "version": 2,
-      "id": "job.voice.result.conspiracy_006_stand_with_her",
-      "assetId": "voice.result.conspiracy_006_stand_with_her",
-      "kind": "speech",
-      "model": "speech-2.8-hd",
-      "status": "pending",
-      "contentHash": "325a115cf6c20c3cc31bfafd166a30c1c7dfa444b52d7ef71034124f3e2fbadf",
-      "inputAssetIds": [],
-      "outputPath": "audio/voice/result/conspiracy_006_stand_with_her.mp3",
-      "attempts": 0
-    },
-    {
-      "version": 2,
-      "id": "job.voice.result.conspiracy_007_break_frame",
-      "assetId": "voice.result.conspiracy_007_break_frame",
-      "kind": "speech",
-      "model": "speech-2.8-hd",
-      "status": "pending",
-      "contentHash": "59ce677749bad6459ddd3e8e5ff1a7b917496b41b806dc2f888da5bfa5a765db",
-      "inputAssetIds": [],
-      "outputPath": "audio/voice/result/conspiracy_007_break_frame.mp3",
-      "attempts": 0
-    },
-    {
-      "version": 2,
-      "id": "job.voice.result.conspiracy_007_seize_frame",
-      "assetId": "voice.result.conspiracy_007_seize_frame",
-      "kind": "speech",
-      "model": "speech-2.8-hd",
-      "status": "pending",
-      "contentHash": "6f13899bdb458e8908287dd7825fde28f7182a64ecaff2e00799ea184991fdd8",
-      "inputAssetIds": [],
-      "outputPath": "audio/voice/result/conspiracy_007_seize_frame.mp3",
-      "attempts": 0
-    },
-    {
-      "version": 2,
-      "id": "job.voice.result.conspiracy_008_hand_pen_to_her",
-      "assetId": "voice.result.conspiracy_008_hand_pen_to_her",
-      "kind": "speech",
-      "model": "speech-2.8-hd",
-      "status": "pending",
-      "contentHash": "c5b61aa9cb3d8dda0695be7a86cb3d2bf8026f550885686ae784a17edd276e48",
-      "inputAssetIds": [],
-      "outputPath": "audio/voice/result/conspiracy_008_hand_pen_to_her.mp3",
-      "attempts": 0
-    },
-    {
-      "version": 2,
-      "id": "job.voice.result.conspiracy_008_refuse_testimony",
-      "assetId": "voice.result.conspiracy_008_refuse_testimony",
-      "kind": "speech",
-      "model": "speech-2.8-hd",
-      "status": "pending",
-      "contentHash": "39aaf14231fdde3197ce3bce9ed40099e40096bc041d87c72fefa44c0e840145",
-      "inputAssetIds": [],
-      "outputPath": "audio/voice/result/conspiracy_008_refuse_testimony.mp3",
-      "attempts": 0
-    },
-    {
-      "version": 2,
-      "id": "job.voice.result.conspiracy_009_choose_present",
-      "assetId": "voice.result.conspiracy_009_choose_present",
-      "kind": "speech",
-      "model": "speech-2.8-hd",
-      "status": "pending",
-      "contentHash": "3047ef3acac999955a8e1bfed4799daf4ba43df19b0bf7e56595f384a15784eb",
-      "inputAssetIds": [],
-      "outputPath": "audio/voice/result/conspiracy_009_choose_present.mp3",
-      "attempts": 0
-    },
-    {
-      "version": 2,
-      "id": "job.voice.result.conspiracy_009_refuse_choice",
-      "assetId": "voice.result.conspiracy_009_refuse_choice",
-      "kind": "speech",
-      "model": "speech-2.8-hd",
-      "status": "pending",
-      "contentHash": "eeac31a5d41659187abdd89aacbc0f6dad5bf6d80099b236390d229587d67109",
-      "inputAssetIds": [],
-      "outputPath": "audio/voice/result/conspiracy_009_refuse_choice.mp3",
-      "attempts": 0
-    },
-    {
-      "version": 2,
-      "id": "job.voice.result.conspiracy_010_keep_badge_unworn",
-      "assetId": "voice.result.conspiracy_010_keep_badge_unworn",
-      "kind": "speech",
-      "model": "speech-2.8-hd",
-      "status": "pending",
-      "contentHash": "16c6589e6bb237f60c16fba32fb65c6a70e51f36698bd405e7466f16a46e3219",
-      "inputAssetIds": [],
-      "outputPath": "audio/voice/result/conspiracy_010_keep_badge_unworn.mp3",
-      "attempts": 0
-    },
-    {
-      "version": 2,
-      "id": "job.voice.result.conspiracy_010_throw_badge",
-      "assetId": "voice.result.conspiracy_010_throw_badge",
-      "kind": "speech",
-      "model": "speech-2.8-hd",
-      "status": "pending",
-      "contentHash": "9b0668d529b067e537e9cd592ca9aee2dc2bc2652abe0be5e8c0ddec5c72e702",
-      "inputAssetIds": [],
-      "outputPath": "audio/voice/result/conspiracy_010_throw_badge.mp3",
-      "attempts": 0
-    },
-    {
-      "version": 2,
-      "id": "job.voice.result.conspiracy_011_burn_film",
-      "assetId": "voice.result.conspiracy_011_burn_film",
-      "kind": "speech",
-      "model": "speech-2.8-hd",
-      "status": "pending",
-      "contentHash": "5351555071997c959545b48106a9357196cc9c7ca28c46f9bfa623639462db56",
-      "inputAssetIds": [],
-      "outputPath": "audio/voice/result/conspiracy_011_burn_film.mp3",
-      "attempts": 0
-    },
-    {
-      "version": 2,
-      "id": "job.voice.result.conspiracy_011_rewrite_ending",
-      "assetId": "voice.result.conspiracy_011_rewrite_ending",
-      "kind": "speech",
-      "model": "speech-2.8-hd",
-      "status": "pending",
-      "contentHash": "44387f330d4c2209a58686e857f1087a4fd408b3e6be0ea23caa13c790c06ec2",
-      "inputAssetIds": [],
-      "outputPath": "audio/voice/result/conspiracy_011_rewrite_ending.mp3",
-      "attempts": 0
-    },
-    {
-      "version": 2,
-      "id": "job.voice.result.conspiracy_012_end_tonight",
-      "assetId": "voice.result.conspiracy_012_end_tonight",
-      "kind": "speech",
-      "model": "speech-2.8-hd",
-      "status": "pending",
-      "contentHash": "762b791e184b8794807a1bfc3d5a14dc5905c54c0006a65674cadcc266c375f8",
-      "inputAssetIds": [],
-      "outputPath": "audio/voice/result/conspiracy_012_end_tonight.mp3",
-      "attempts": 0
-    },
-    {
-      "version": 2,
-      "id": "job.voice.result.conspiracy_012_keep_blade",
-      "assetId": "voice.result.conspiracy_012_keep_blade",
-      "kind": "speech",
-      "model": "speech-2.8-hd",
-      "status": "pending",
-      "contentHash": "c10d47047af6bcdd707c11eafdfd992600472ca1b74ac05c0198072e96de38cc",
-      "inputAssetIds": [],
-      "outputPath": "audio/voice/result/conspiracy_012_keep_blade.mp3",
-      "attempts": 0
-    },
-    {
-      "version": 2,
-      "id": "job.voice.result.conspiracy_013_hold_one_second",
-      "assetId": "voice.result.conspiracy_013_hold_one_second",
-      "kind": "speech",
-      "model": "speech-2.8-hd",
-      "status": "pending",
-      "contentHash": "b19cae424db9f5db9be5849fb21023897de9e60dffd7db3f52d09eba75ee6535",
-      "inputAssetIds": [],
-      "outputPath": "audio/voice/result/conspiracy_013_hold_one_second.mp3",
-      "attempts": 0
-    },
-    {
-      "version": 2,
-      "id": "job.voice.result.conspiracy_013_return_gently",
-      "assetId": "voice.result.conspiracy_013_return_gently",
-      "kind": "speech",
-      "model": "speech-2.8-hd",
-      "status": "pending",
-      "contentHash": "a20db65feff45dae2f27105b6c6fac72938b4e9243c97fff0a4e192fdc79a1e4",
-      "inputAssetIds": [],
-      "outputPath": "audio/voice/result/conspiracy_013_return_gently.mp3",
-      "attempts": 0
-    },
-    {
-      "version": 2,
-      "id": "job.voice.result.conspiracy_014_erase_from_catalog",
-      "assetId": "voice.result.conspiracy_014_erase_from_catalog",
-      "kind": "speech",
-      "model": "speech-2.8-hd",
-      "status": "pending",
-      "contentHash": "ac83a5a8f220f20d5efc5758ff03e0843d79ea0188cb6ca07398d82d6ef82b31",
-      "inputAssetIds": [],
-      "outputPath": "audio/voice/result/conspiracy_014_erase_from_catalog.mp3",
-      "attempts": 0
-    },
-    {
-      "version": 2,
-      "id": "job.voice.result.conspiracy_014_keep_one_line",
-      "assetId": "voice.result.conspiracy_014_keep_one_line",
-      "kind": "speech",
-      "model": "speech-2.8-hd",
-      "status": "pending",
-      "contentHash": "e7607697c55380da581fa797facf850fba3fcfbb8003209adb77fd02549170d7",
-      "inputAssetIds": [],
-      "outputPath": "audio/voice/result/conspiracy_014_keep_one_line.mp3",
-      "attempts": 0
-    },
-    {
-      "version": 2,
-      "id": "job.voice.result.conspiracy_accept",
-      "assetId": "voice.result.conspiracy_accept",
-      "kind": "speech",
-      "model": "speech-2.8-hd",
-      "status": "pending",
-      "contentHash": "f9ff7d5e39a470fbf263fdc162b188c61cd86475bd8b220511d59610afee2a06",
-      "inputAssetIds": [],
-      "outputPath": "audio/voice/result/conspiracy_accept.mp3",
-      "attempts": 0
-    },
-    {
-      "version": 2,
-      "id": "job.voice.result.conspiracy_break_pursuit_frame",
-      "assetId": "voice.result.conspiracy_break_pursuit_frame",
-      "kind": "speech",
-      "model": "speech-2.8-hd",
-      "status": "pending",
-      "contentHash": "93222666078d72edeadc4998e0ae145af86f39deb466f323f21c5d0f806d6ce9",
-      "inputAssetIds": [],
-      "outputPath": "audio/voice/result/conspiracy_break_pursuit_frame.mp3",
-      "attempts": 0
-    },
-    {
-      "version": 2,
-      "id": "job.voice.result.conspiracy_escape_to_backstreets",
-      "assetId": "voice.result.conspiracy_escape_to_backstreets",
-      "kind": "speech",
-      "model": "speech-2.8-hd",
-      "status": "pending",
-      "contentHash": "5edcb9ac810e4a12695f86510a851444cd2ccac4bce123a7c943b476ce86ec71",
-      "inputAssetIds": [],
-      "outputPath": "audio/voice/result/conspiracy_escape_to_backstreets.mp3",
-      "attempts": 0
-    },
-    {
-      "version": 2,
-      "id": "job.voice.result.conspiracy_feed_false_signature",
-      "assetId": "voice.result.conspiracy_feed_false_signature",
-      "kind": "speech",
-      "model": "speech-2.8-hd",
-      "status": "pending",
-      "contentHash": "a5fd71d03ca849b88f706ab1cbd48c3015bc33a0e47e8a1986395115516253b0",
-      "inputAssetIds": [],
-      "outputPath": "audio/voice/result/conspiracy_feed_false_signature.mp3",
-      "attempts": 0
-    },
-    {
-      "version": 2,
-      "id": "job.voice.result.conspiracy_pressure",
-      "assetId": "voice.result.conspiracy_pressure",
-      "kind": "speech",
-      "model": "speech-2.8-hd",
-      "status": "pending",
-      "contentHash": "054ccf1782013004128b9d9e1b5b244e9209021b7bff10b5460d04dc942dbce7",
-      "inputAssetIds": [],
-      "outputPath": "audio/voice/result/conspiracy_pressure.mp3",
-      "attempts": 0
-    },
-    {
-      "version": 2,
-      "id": "job.voice.result.enter_conspiracy",
-      "assetId": "voice.result.enter_conspiracy",
-      "kind": "speech",
-      "model": "speech-2.8-hd",
-      "status": "pending",
-      "contentHash": "915a7126ed585f4a5e96b19cd7608a8ab5808bd0f41a62264c062edc51735636",
-      "inputAssetIds": [],
-      "outputPath": "audio/voice/result/enter_conspiracy.mp3",
-      "attempts": 0
-    },
-    {
-      "version": 2,
-      "id": "job.voice.result.enter_rebuild",
-      "assetId": "voice.result.enter_rebuild",
-      "kind": "speech",
-      "model": "speech-2.8-hd",
-      "status": "pending",
-      "contentHash": "c03a67501d94c248c8ca51ed7782af95d9374e406dc72f2ddc5de5e6b499bc8b",
-      "inputAssetIds": [],
-      "outputPath": "audio/voice/result/enter_rebuild.mp3",
-      "attempts": 0
-    },
-    {
-      "version": 2,
-      "id": "job.voice.result.enter_white_canvas",
-      "assetId": "voice.result.enter_white_canvas",
-      "kind": "speech",
-      "model": "speech-2.8-hd",
-      "status": "pending",
-      "contentHash": "d486fc8441e996ddb3e5f583cfd4a91947f77594c79e2988a5ab87d146526c99",
-      "inputAssetIds": [],
-      "outputPath": "audio/voice/result/enter_white_canvas.mp3",
-      "attempts": 0
-    },
-    {
-      "version": 2,
-      "id": "job.voice.result.golden_bough_rebuild.bad_ending",
-      "assetId": "voice.result.golden_bough_rebuild.bad_ending",
-      "kind": "speech",
-      "model": "speech-2.8-hd",
-      "status": "pending",
-      "contentHash": "d89871aaea48ab8324b529cca9c73ec294d66ff0d0dca731a7b7caa132b53600",
-      "inputAssetIds": [],
-      "outputPath": "audio/voice/result/golden_bough_rebuild/bad_ending.mp3",
-      "attempts": 0
-    },
-    {
-      "version": 2,
-      "id": "job.voice.result.golden_bough_rebuild.normal_ending",
-      "assetId": "voice.result.golden_bough_rebuild.normal_ending",
-      "kind": "speech",
-      "model": "speech-2.8-hd",
-      "status": "pending",
-      "contentHash": "d4998e665e87cd05a9f0fb3c116e6c03a400bdc84c485edef54a60582741ce75",
-      "inputAssetIds": [],
-      "outputPath": "audio/voice/result/golden_bough_rebuild/normal_ending.mp3",
-      "attempts": 0
-    },
-    {
-      "version": 2,
-      "id": "job.voice.result.golden_bough_rebuild.true_ending",
-      "assetId": "voice.result.golden_bough_rebuild.true_ending",
-      "kind": "speech",
-      "model": "speech-2.8-hd",
-      "status": "pending",
-      "contentHash": "6cc0c0c56f7bec3c8fcdd65dbe59990a90dbf13df7eb227afec7e7c13faa1228",
-      "inputAssetIds": [],
-      "outputPath": "audio/voice/result/golden_bough_rebuild/true_ending.mp3",
-      "attempts": 0
-    },
-    {
-      "version": 2,
-      "id": "job.voice.result.golden_bough_route_complete",
-      "assetId": "voice.result.golden_bough_route_complete",
-      "kind": "speech",
-      "model": "speech-2.8-hd",
-      "status": "pending",
-      "contentHash": "a01ddb688a0c4e33b597ec83f6433297edad44927c68391144167e0896e5c7fe",
-      "inputAssetIds": [],
-      "outputPath": "audio/voice/result/golden_bough_route_complete.mp3",
-      "attempts": 0
-    },
-    {
-      "version": 2,
-      "id": "job.voice.result.golden_bough_route_final",
-      "assetId": "voice.result.golden_bough_route_final",
-      "kind": "speech",
-      "model": "speech-2.8-hd",
-      "status": "pending",
-      "contentHash": "0398de3a7ee107b91cbd943253692036546eb3d071641875415710cc394d4e70",
-      "inputAssetIds": [],
-      "outputPath": "audio/voice/result/golden_bough_route_final.mp3",
-      "attempts": 0
-    },
-    {
-      "version": 2,
-      "id": "job.voice.result.rebuild_006_keep_silent_anchor",
-      "assetId": "voice.result.rebuild_006_keep_silent_anchor",
-      "kind": "speech",
-      "model": "speech-2.8-hd",
-      "status": "pending",
-      "contentHash": "6532bc1241a8357df07993d7ed8cb58b2e44a4f4281c35dc44633f60020de0be",
-      "inputAssetIds": [],
-      "outputPath": "audio/voice/result/rebuild_006_keep_silent_anchor.mp3",
-      "attempts": 0
-    },
-    {
-      "version": 2,
-      "id": "job.voice.result.rebuild_006_read_aloud",
-      "assetId": "voice.result.rebuild_006_read_aloud",
-      "kind": "speech",
-      "model": "speech-2.8-hd",
-      "status": "pending",
-      "contentHash": "099ce3d0d03b10880130fc519eda4959007168664974886fcdeb5a5530c5adbd",
-      "inputAssetIds": [],
-      "outputPath": "audio/voice/result/rebuild_006_read_aloud.mp3",
-      "attempts": 0
-    },
-    {
-      "version": 2,
-      "id": "job.voice.result.rebuild_007_match_her_pulse",
-      "assetId": "voice.result.rebuild_007_match_her_pulse",
-      "kind": "speech",
-      "model": "speech-2.8-hd",
-      "status": "pending",
-      "contentHash": "b19223ff3f3554a6d135eeb01de6a3f6dc60f95c43a7319fef30160fb5828f78",
-      "inputAssetIds": [],
-      "outputPath": "audio/voice/result/rebuild_007_match_her_pulse.mp3",
-      "attempts": 0
-    },
-    {
-      "version": 2,
-      "id": "job.voice.result.rebuild_007_stay_own_rhythm",
-      "assetId": "voice.result.rebuild_007_stay_own_rhythm",
-      "kind": "speech",
-      "model": "speech-2.8-hd",
-      "status": "pending",
-      "contentHash": "49aede676ad4faa5fd520b886ee196765a15aaa9c824c3d5c18573d38e7ef363",
-      "inputAssetIds": [],
-      "outputPath": "audio/voice/result/rebuild_007_stay_own_rhythm.mp3",
-      "attempts": 0
-    },
-    {
-      "version": 2,
-      "id": "job.voice.result.rebuild_008_protect_current_self",
-      "assetId": "voice.result.rebuild_008_protect_current_self",
-      "kind": "speech",
-      "model": "speech-2.8-hd",
-      "status": "pending",
-      "contentHash": "2c695e544e097f914bc84b036b041101936c08b6648dee26f18a187bb8a28948",
-      "inputAssetIds": [],
-      "outputPath": "audio/voice/result/rebuild_008_protect_current_self.mp3",
-      "attempts": 0
-    },
-    {
-      "version": 2,
-      "id": "job.voice.result.rebuild_008_trade_old_memory",
-      "assetId": "voice.result.rebuild_008_trade_old_memory",
-      "kind": "speech",
-      "model": "speech-2.8-hd",
-      "status": "pending",
-      "contentHash": "7f3f3d627747371743544c3893a855e8d8744b469185a22ace27c3fbc4c3fef8",
-      "inputAssetIds": [],
-      "outputPath": "audio/voice/result/rebuild_008_trade_old_memory.mp3",
-      "attempts": 0
-    },
-    {
-      "version": 2,
-      "id": "job.voice.result.rebuild_009_hand_question_back",
-      "assetId": "voice.result.rebuild_009_hand_question_back",
-      "kind": "speech",
-      "model": "speech-2.8-hd",
-      "status": "pending",
-      "contentHash": "41b657aa5d832dc62dc60c2c30c1a1333c76ad6dfa52bf954d36bb697982b2b0",
-      "inputAssetIds": [],
-      "outputPath": "audio/voice/result/rebuild_009_hand_question_back.mp3",
-      "attempts": 0
-    },
-    {
-      "version": 2,
-      "id": "job.voice.result.rebuild_009_refuse_perfect_copy",
-      "assetId": "voice.result.rebuild_009_refuse_perfect_copy",
-      "kind": "speech",
-      "model": "speech-2.8-hd",
-      "status": "pending",
-      "contentHash": "e090795b0b43b03cf2d4063b6a04f139f5c8467e70703bd4e6f0c1e235632421",
-      "inputAssetIds": [],
-      "outputPath": "audio/voice/result/rebuild_009_refuse_perfect_copy.mp3",
-      "attempts": 0
-    },
-    {
-      "version": 2,
-      "id": "job.voice.result.rebuild_010_ask_her_choice",
-      "assetId": "voice.result.rebuild_010_ask_her_choice",
-      "kind": "speech",
-      "model": "speech-2.8-hd",
-      "status": "pending",
-      "contentHash": "b6f8ac5704336607aa8122614ed4101d16d583a88ca8f268486aa24286382b10",
-      "inputAssetIds": [],
-      "outputPath": "audio/voice/result/rebuild_010_ask_her_choice.mp3",
-      "attempts": 0
-    },
-    {
-      "version": 2,
-      "id": "job.voice.result.rebuild_010_veto_sealing",
-      "assetId": "voice.result.rebuild_010_veto_sealing",
-      "kind": "speech",
-      "model": "speech-2.8-hd",
-      "status": "pending",
-      "contentHash": "e33d2d90b90f0344573f25821a5cbabaa1cfb26b7ad0d1a519c1f309320345ea",
-      "inputAssetIds": [],
-      "outputPath": "audio/voice/result/rebuild_010_veto_sealing.mp3",
-      "attempts": 0
-    },
-    {
-      "version": 2,
-      "id": "job.voice.result.rebuild_011_ask_next_revision",
-      "assetId": "voice.result.rebuild_011_ask_next_revision",
-      "kind": "speech",
-      "model": "speech-2.8-hd",
-      "status": "pending",
-      "contentHash": "5c8be09b17beedc3863aa952fd277b035364dedff78ab40511373255ce6435de",
-      "inputAssetIds": [],
-      "outputPath": "audio/voice/result/rebuild_011_ask_next_revision.mp3",
-      "attempts": 0
-    },
-    {
-      "version": 2,
-      "id": "job.voice.result.rebuild_011_sit_beside",
-      "assetId": "voice.result.rebuild_011_sit_beside",
-      "kind": "speech",
-      "model": "speech-2.8-hd",
-      "status": "pending",
-      "contentHash": "7f74ec7947a81b6751cff85423e6394795a6fe3ed7d198aad09faf62eb0d4a6a",
-      "inputAssetIds": [],
-      "outputPath": "audio/voice/result/rebuild_011_sit_beside.mp3",
-      "attempts": 0
-    },
-    {
-      "version": 2,
-      "id": "job.voice.result.rebuild_012_break_contract",
-      "assetId": "voice.result.rebuild_012_break_contract",
-      "kind": "speech",
-      "model": "speech-2.8-hd",
-      "status": "pending",
-      "contentHash": "5e87ba6a58736aec898228f138627bc9cbc58766acf6ccf46d206de48a2a784a",
-      "inputAssetIds": [],
-      "outputPath": "audio/voice/result/rebuild_012_break_contract.mp3",
-      "attempts": 0
-    },
-    {
-      "version": 2,
-      "id": "job.voice.result.rebuild_012_negotiate_terms",
-      "assetId": "voice.result.rebuild_012_negotiate_terms",
-      "kind": "speech",
-      "model": "speech-2.8-hd",
-      "status": "pending",
-      "contentHash": "ad5cd57ba336fb1a19dd31266006024efee2b24723a02c374824a36e94b1c05a",
-      "inputAssetIds": [],
-      "outputPath": "audio/voice/result/rebuild_012_negotiate_terms.mp3",
-      "attempts": 0
-    },
-    {
-      "version": 2,
-      "id": "job.voice.result.rebuild_013_offer_witness",
-      "assetId": "voice.result.rebuild_013_offer_witness",
-      "kind": "speech",
-      "model": "speech-2.8-hd",
-      "status": "pending",
-      "contentHash": "152335671e2a77d05efba22ce1f510516488c16975e3f7c19485f75ef2762c9c",
-      "inputAssetIds": [],
-      "outputPath": "audio/voice/result/rebuild_013_offer_witness.mp3",
-      "attempts": 0
-    },
-    {
-      "version": 2,
-      "id": "job.voice.result.rebuild_013_promise_name",
-      "assetId": "voice.result.rebuild_013_promise_name",
-      "kind": "speech",
-      "model": "speech-2.8-hd",
-      "status": "pending",
-      "contentHash": "a731eef676dead2713a7f6eefbe505a15587323da52e89593ab3f1d47d09839c",
-      "inputAssetIds": [],
-      "outputPath": "audio/voice/result/rebuild_013_promise_name.mp3",
-      "attempts": 0
-    },
-    {
-      "version": 2,
-      "id": "job.voice.result.rebuild_014_ask_when_to_light",
-      "assetId": "voice.result.rebuild_014_ask_when_to_light",
-      "kind": "speech",
-      "model": "speech-2.8-hd",
-      "status": "pending",
-      "contentHash": "6ec9dce3e23102e1e20364ac2aa7fa06dfb48ae7f0680e2e0f52087ee615824b",
-      "inputAssetIds": [],
-      "outputPath": "audio/voice/result/rebuild_014_ask_when_to_light.mp3",
-      "attempts": 0
-    },
-    {
-      "version": 2,
-      "id": "job.voice.result.rebuild_014_keep_unlit",
-      "assetId": "voice.result.rebuild_014_keep_unlit",
-      "kind": "speech",
-      "model": "speech-2.8-hd",
-      "status": "pending",
-      "contentHash": "a0c748fca029143ad03a290e9da05f9a78e112585129ac5593fbedd402c46c97",
-      "inputAssetIds": [],
-      "outputPath": "audio/voice/result/rebuild_014_keep_unlit.mp3",
-      "attempts": 0
-    },
-    {
-      "version": 2,
-      "id": "job.voice.result.rebuild_accept_missing_pieces",
-      "assetId": "voice.result.rebuild_accept_missing_pieces",
-      "kind": "speech",
-      "model": "speech-2.8-hd",
-      "status": "pending",
-      "contentHash": "2d52175864c945c15e7e804d4d532ff1381fc78bb9a248df9ced417c67e25bad",
-      "inputAssetIds": [],
-      "outputPath": "audio/voice/result/rebuild_accept_missing_pieces.mp3",
-      "attempts": 0
-    },
-    {
-      "version": 2,
-      "id": "job.voice.result.rebuild_anchor",
-      "assetId": "voice.result.rebuild_anchor",
-      "kind": "speech",
-      "model": "speech-2.8-hd",
-      "status": "pending",
-      "contentHash": "c950593e4733594cf809a081e3ac767d2ce4c0346fc60fd86ec76163235c4f84",
-      "inputAssetIds": [],
-      "outputPath": "audio/voice/result/rebuild_anchor.mp3",
-      "attempts": 0
-    },
-    {
-      "version": 2,
-      "id": "job.voice.result.rebuild_cut_false_completion",
-      "assetId": "voice.result.rebuild_cut_false_completion",
-      "kind": "speech",
-      "model": "speech-2.8-hd",
-      "status": "pending",
-      "contentHash": "c6b12d46eea70e0a35c7265ee3bce46aa2a80bcfd98ccd9327f46e571f63acb1",
-      "inputAssetIds": [],
-      "outputPath": "audio/voice/result/rebuild_cut_false_completion.mp3",
-      "attempts": 0
-    },
-    {
-      "version": 2,
-      "id": "job.voice.result.rebuild_guard_fascia_pulse",
-      "assetId": "voice.result.rebuild_guard_fascia_pulse",
-      "kind": "speech",
-      "model": "speech-2.8-hd",
-      "status": "pending",
-      "contentHash": "965513d66e7ae3d09ab0cb0e5bcbdcc0cd501feb9ed995f3be14b11b92581f9d",
-      "inputAssetIds": [],
-      "outputPath": "audio/voice/result/rebuild_guard_fascia_pulse.mp3",
-      "attempts": 0
-    },
-    {
-      "version": 2,
-      "id": "job.voice.result.rebuild_push_into_raid",
-      "assetId": "voice.result.rebuild_push_into_raid",
-      "kind": "speech",
-      "model": "speech-2.8-hd",
-      "status": "pending",
-      "contentHash": "172e8f0d849d1f2f28815094e640edd0dd277c273791c2817b6531237791e726",
-      "inputAssetIds": [],
-      "outputPath": "audio/voice/result/rebuild_push_into_raid.mp3",
-      "attempts": 0
-    },
-    {
-      "version": 2,
-      "id": "job.voice.result.rebuild_question_fascia",
-      "assetId": "voice.result.rebuild_question_fascia",
-      "kind": "speech",
-      "model": "speech-2.8-hd",
-      "status": "pending",
-      "contentHash": "e1771a6b278ef5ded8fa3338aaddee62d2e0e9ffeb8e7ba5004fc57919d0cfb6",
-      "inputAssetIds": [],
-      "outputPath": "audio/voice/result/rebuild_question_fascia.mp3",
-      "attempts": 0
-    },
-    {
-      "version": 2,
-      "id": "job.voice.result.rebuild_use_rooftop_signal",
-      "assetId": "voice.result.rebuild_use_rooftop_signal",
-      "kind": "speech",
-      "model": "speech-2.8-hd",
-      "status": "pending",
-      "contentHash": "eee807664cbf04e2bb5962a86b4b2647d6cdd93f83f3f06286fa636d58d4f8cb",
-      "inputAssetIds": [],
-      "outputPath": "audio/voice/result/rebuild_use_rooftop_signal.mp3",
-      "attempts": 0
-    },
-    {
-      "version": 2,
-      "id": "job.voice.result.return_opening_from_rebuild",
-      "assetId": "voice.result.return_opening_from_rebuild",
-      "kind": "speech",
-      "model": "speech-2.8-hd",
-      "status": "pending",
-      "contentHash": "489a3ced52b3a2877b0ef2d4c341d038139b3ec532b4e29be48c2abb457b81f5",
-      "inputAssetIds": [],
-      "outputPath": "audio/voice/result/return_opening_from_rebuild.mp3",
-      "attempts": 0
-    },
-    {
-      "version": 2,
-      "id": "job.voice.result.return_opening_from_ring",
-      "assetId": "voice.result.return_opening_from_ring",
-      "kind": "speech",
-      "model": "speech-2.8-hd",
-      "status": "pending",
-      "contentHash": "601e2de172a2f59e76aa2cae117868b7997ee32c4140863507191f92f6238d09",
-      "inputAssetIds": [],
-      "outputPath": "audio/voice/result/return_opening_from_ring.mp3",
-      "attempts": 0
-    },
-    {
-      "version": 2,
-      "id": "job.voice.result.return_opening_from_white",
-      "assetId": "voice.result.return_opening_from_white",
-      "kind": "speech",
-      "model": "speech-2.8-hd",
-      "status": "pending",
-      "contentHash": "1fdfd8ce61f434e9461bfe0959bea61bc18112a263e166f4a55fa387a8a8949c",
-      "inputAssetIds": [],
-      "outputPath": "audio/voice/result/return_opening_from_white.mp3",
-      "attempts": 0
-    },
-    {
-      "version": 2,
-      "id": "job.voice.result.ring_conspiracy_route_complete",
-      "assetId": "voice.result.ring_conspiracy_route_complete",
-      "kind": "speech",
-      "model": "speech-2.8-hd",
-      "status": "pending",
-      "contentHash": "97db04d698d56c6b95faf750b0941157ad47dd249f732a29f8a6eb80cd93b14d",
-      "inputAssetIds": [],
-      "outputPath": "audio/voice/result/ring_conspiracy_route_complete.mp3",
-      "attempts": 0
-    },
-    {
-      "version": 2,
-      "id": "job.voice.result.ring_conspiracy_route_final",
-      "assetId": "voice.result.ring_conspiracy_route_final",
-      "kind": "speech",
-      "model": "speech-2.8-hd",
-      "status": "pending",
-      "contentHash": "f76d34ac726ec0096aea067e5d723553126b672845a3e444156c481812fb5e05",
-      "inputAssetIds": [],
-      "outputPath": "audio/voice/result/ring_conspiracy_route_final.mp3",
-      "attempts": 0
-    },
-    {
-      "version": 2,
-      "id": "job.voice.result.ring_conspiracy.bad_ending",
-      "assetId": "voice.result.ring_conspiracy.bad_ending",
-      "kind": "speech",
-      "model": "speech-2.8-hd",
-      "status": "pending",
-      "contentHash": "dc7e4f536d361accd92c95dc4ba849105ef0ba1c2a0d2edf80e5c6d91bedc1c2",
-      "inputAssetIds": [],
-      "outputPath": "audio/voice/result/ring_conspiracy/bad_ending.mp3",
-      "attempts": 0
-    },
-    {
-      "version": 2,
-      "id": "job.voice.result.ring_conspiracy.normal_ending",
-      "assetId": "voice.result.ring_conspiracy.normal_ending",
-      "kind": "speech",
-      "model": "speech-2.8-hd",
-      "status": "pending",
-      "contentHash": "8a7e3c9f05a90371a0388e6a1c042a177080f498a425b111fb9182234a769529",
-      "inputAssetIds": [],
-      "outputPath": "audio/voice/result/ring_conspiracy/normal_ending.mp3",
-      "attempts": 0
-    },
-    {
-      "version": 2,
-      "id": "job.voice.result.ring_conspiracy.true_ending",
-      "assetId": "voice.result.ring_conspiracy.true_ending",
-      "kind": "speech",
-      "model": "speech-2.8-hd",
-      "status": "pending",
-      "contentHash": "679efa1f9c044888bd74f65afb777626e07f3dad8f51ee9df117a8dfcb6945bf",
-      "inputAssetIds": [],
-      "outputPath": "audio/voice/result/ring_conspiracy/true_ending.mp3",
-      "attempts": 0
-    },
-    {
-      "version": 2,
-      "id": "job.voice.result.white_006_name_silence",
-      "assetId": "voice.result.white_006_name_silence",
-      "kind": "speech",
-      "model": "speech-2.8-hd",
-      "status": "pending",
-      "contentHash": "7f06500296abb4ba6505073f68db4284c7222c4da2d25609509d9eb80248f9d9",
-      "inputAssetIds": [],
-      "outputPath": "audio/voice/result/white_006_name_silence.mp3",
-      "attempts": 0
-    },
-    {
-      "version": 2,
-      "id": "job.voice.result.white_006_refuse_naming",
-      "assetId": "voice.result.white_006_refuse_naming",
-      "kind": "speech",
-      "model": "speech-2.8-hd",
-      "status": "pending",
-      "contentHash": "030163f267843d614622771c9b20cb8d5564e997644d4e23e27b4ecc4679e307",
-      "inputAssetIds": [],
-      "outputPath": "audio/voice/result/white_006_refuse_naming.mp3",
-      "attempts": 0
-    },
-    {
-      "version": 2,
-      "id": "job.voice.result.white_007_ask_fascia_term",
-      "assetId": "voice.result.white_007_ask_fascia_term",
-      "kind": "speech",
-      "model": "speech-2.8-hd",
-      "status": "pending",
-      "contentHash": "1180a46917933c929d50b3ec42842e1fdcf59ae8b776964821917c3bdbf7b626",
-      "inputAssetIds": [],
-      "outputPath": "audio/voice/result/white_007_ask_fascia_term.mp3",
-      "attempts": 0
-    },
-    {
-      "version": 2,
-      "id": "job.voice.result.white_007_keep_mirror_open",
-      "assetId": "voice.result.white_007_keep_mirror_open",
-      "kind": "speech",
-      "model": "speech-2.8-hd",
-      "status": "pending",
-      "contentHash": "9524672bd68622fe8f1ec8ca448b01f2a8c56d7db6b4fb535222efc00a756faf",
-      "inputAssetIds": [],
-      "outputPath": "audio/voice/result/white_007_keep_mirror_open.mp3",
-      "attempts": 0
-    },
-    {
-      "version": 2,
-      "id": "job.voice.result.white_008_hold_fascia",
-      "assetId": "voice.result.white_008_hold_fascia",
-      "kind": "speech",
-      "model": "speech-2.8-hd",
-      "status": "pending",
-      "contentHash": "d03d72ae6894e6a4cce08cd92b4b4966357df012d864ad9053f0ed95e51ccc00",
-      "inputAssetIds": [],
-      "outputPath": "audio/voice/result/white_008_hold_fascia.mp3",
-      "attempts": 0
-    },
-    {
-      "version": 2,
-      "id": "job.voice.result.white_008_stay_witness_only",
-      "assetId": "voice.result.white_008_stay_witness_only",
-      "kind": "speech",
-      "model": "speech-2.8-hd",
-      "status": "pending",
-      "contentHash": "19e3c99410dcdbd16ff445ba2b5ad3da129c0c915b189050faf608c8f896111f",
-      "inputAssetIds": [],
-      "outputPath": "audio/voice/result/white_008_stay_witness_only.mp3",
-      "attempts": 0
-    },
-    {
-      "version": 2,
-      "id": "job.voice.result.white_009_keep_half_step",
-      "assetId": "voice.result.white_009_keep_half_step",
-      "kind": "speech",
-      "model": "speech-2.8-hd",
-      "status": "pending",
-      "contentHash": "9ca26f946bd7b4d704734be27ee242fd2431bf3f63a68cf74926497fdf06ed2b",
-      "inputAssetIds": [],
-      "outputPath": "audio/voice/result/white_009_keep_half_step.mp3",
-      "attempts": 0
-    },
-    {
-      "version": 2,
-      "id": "job.voice.result.white_009_share_umbrella_edge",
-      "assetId": "voice.result.white_009_share_umbrella_edge",
-      "kind": "speech",
-      "model": "speech-2.8-hd",
-      "status": "pending",
-      "contentHash": "cd420bcfd0e641e9525bb8eb039273035a120e97d0f8566a7b8bc92218021bb0",
-      "inputAssetIds": [],
-      "outputPath": "audio/voice/result/white_009_share_umbrella_edge.mp3",
-      "attempts": 0
-    },
-    {
-      "version": 2,
-      "id": "job.voice.result.white_010_acknowledge_leave",
-      "assetId": "voice.result.white_010_acknowledge_leave",
-      "kind": "speech",
-      "model": "speech-2.8-hd",
-      "status": "pending",
-      "contentHash": "8f9a7d08a241fdf7741e13bc3271eff224dfc7add0aadb0f2d8978936fc1badd",
-      "inputAssetIds": [],
-      "outputPath": "audio/voice/result/white_010_acknowledge_leave.mp3",
-      "attempts": 0
-    },
-    {
-      "version": 2,
-      "id": "job.voice.result.white_010_offer_return_ticket",
-      "assetId": "voice.result.white_010_offer_return_ticket",
-      "kind": "speech",
-      "model": "speech-2.8-hd",
-      "status": "pending",
-      "contentHash": "dd175dd30111f2b176af918b21372fe45b661cf881db90e5d34ac346fa401fe5",
-      "inputAssetIds": [],
-      "outputPath": "audio/voice/result/white_010_offer_return_ticket.mp3",
-      "attempts": 0
-    },
-    {
-      "version": 2,
-      "id": "job.voice.result.white_011_curtain_call",
-      "assetId": "voice.result.white_011_curtain_call",
-      "kind": "speech",
-      "model": "speech-2.8-hd",
-      "status": "pending",
-      "contentHash": "97f0b27ede20124b989019eaac5d300d7fc7a70c16217fc8e79915e4bce17938",
-      "inputAssetIds": [],
-      "outputPath": "audio/voice/result/white_011_curtain_call.mp3",
-      "attempts": 0
-    },
-    {
-      "version": 2,
-      "id": "job.voice.result.white_011_walk_beside",
-      "assetId": "voice.result.white_011_walk_beside",
-      "kind": "speech",
-      "model": "speech-2.8-hd",
-      "status": "pending",
-      "contentHash": "e7af846ce8413b7a6f812bb54c4e731965cc6df6764d11a7da0bb28c6aa0a42f",
-      "inputAssetIds": [],
-      "outputPath": "audio/voice/result/white_011_walk_beside.mp3",
-      "attempts": 0
-    },
-    {
-      "version": 2,
-      "id": "job.voice.result.white_012_let_her_decide",
-      "assetId": "voice.result.white_012_let_her_decide",
-      "kind": "speech",
-      "model": "speech-2.8-hd",
-      "status": "pending",
-      "contentHash": "134be86549d41ef6c6fe6fffac9cdc9e3314ac4f820ae7f1c0a9bf677ba80eb0",
-      "inputAssetIds": [],
-      "outputPath": "audio/voice/result/white_012_let_her_decide.mp3",
-      "attempts": 0
-    },
-    {
-      "version": 2,
-      "id": "job.voice.result.white_012_refuse_exhibit",
-      "assetId": "voice.result.white_012_refuse_exhibit",
-      "kind": "speech",
-      "model": "speech-2.8-hd",
-      "status": "pending",
-      "contentHash": "637b00a00a8099b62cce4e8efeaa3d33d91711971fb1a850e6063a1143fd6f19",
-      "inputAssetIds": [],
-      "outputPath": "audio/voice/result/white_012_refuse_exhibit.mp3",
-      "attempts": 0
-    },
-    {
-      "version": 2,
-      "id": "job.voice.result.white_013_point_to_mirror",
-      "assetId": "voice.result.white_013_point_to_mirror",
-      "kind": "speech",
-      "model": "speech-2.8-hd",
-      "status": "pending",
-      "contentHash": "6cd781f673bc8db127f2b1f4c8e516eec52fe5f550ef4a6078cc754e392f16f1",
-      "inputAssetIds": [],
-      "outputPath": "audio/voice/result/white_013_point_to_mirror.mp3",
-      "attempts": 0
-    },
-    {
-      "version": 2,
-      "id": "job.voice.result.white_013_refuse_to_choose",
-      "assetId": "voice.result.white_013_refuse_to_choose",
-      "kind": "speech",
-      "model": "speech-2.8-hd",
-      "status": "pending",
-      "contentHash": "e7ebfbce73a42d3b5b5f2b01cccec646a721781306b6c37ec0e40f5ba56320eb",
-      "inputAssetIds": [],
-      "outputPath": "audio/voice/result/white_013_refuse_to_choose.mp3",
-      "attempts": 0
-    },
-    {
-      "version": 2,
-      "id": "job.voice.result.white_014_keep_base_color",
-      "assetId": "voice.result.white_014_keep_base_color",
-      "kind": "speech",
-      "model": "speech-2.8-hd",
-      "status": "pending",
-      "contentHash": "bf7fa348b2b6ba03e5056c7844d6962b0dab7822580c5c83e0ca2579b08b3ae4",
-      "inputAssetIds": [],
-      "outputPath": "audio/voice/result/white_014_keep_base_color.mp3",
-      "attempts": 0
-    },
-    {
-      "version": 2,
-      "id": "job.voice.result.white_014_offer_restart",
-      "assetId": "voice.result.white_014_offer_restart",
-      "kind": "speech",
-      "model": "speech-2.8-hd",
-      "status": "pending",
-      "contentHash": "af38ba91f6b20c77e33d304ee5b316d3e5bb71594f024215fda5e596ff3b4e4d",
-      "inputAssetIds": [],
-      "outputPath": "audio/voice/result/white_014_offer_restart.mp3",
-      "attempts": 0
-    },
-    {
-      "version": 2,
-      "id": "job.voice.result.white_canvas_route_complete",
-      "assetId": "voice.result.white_canvas_route_complete",
-      "kind": "speech",
-      "model": "speech-2.8-hd",
-      "status": "pending",
-      "contentHash": "443b082013a95c80bd934aad37deb90348d21180eb78d5552570b33d633f01e2",
-      "inputAssetIds": [],
-      "outputPath": "audio/voice/result/white_canvas_route_complete.mp3",
-      "attempts": 0
-    },
-    {
-      "version": 2,
-      "id": "job.voice.result.white_canvas_route_final",
-      "assetId": "voice.result.white_canvas_route_final",
-      "kind": "speech",
-      "model": "speech-2.8-hd",
-      "status": "pending",
-      "contentHash": "4cb03d7a5fc4d78394ba1536ac84c053b69b3f84242bdda1e66f8a20a2fe3567",
-      "inputAssetIds": [],
-      "outputPath": "audio/voice/result/white_canvas_route_final.mp3",
-      "attempts": 0
-    },
-    {
-      "version": 2,
-      "id": "job.voice.result.white_canvas.bad_ending",
-      "assetId": "voice.result.white_canvas.bad_ending",
-      "kind": "speech",
-      "model": "speech-2.8-hd",
-      "status": "pending",
-      "contentHash": "d32cf35fb3a017f43c511daa08f2bbeb569c4ad885c9e81c97eddfc60e130873",
-      "inputAssetIds": [],
-      "outputPath": "audio/voice/result/white_canvas/bad_ending.mp3",
-      "attempts": 0
-    },
-    {
-      "version": 2,
-      "id": "job.voice.result.white_canvas.normal_ending",
-      "assetId": "voice.result.white_canvas.normal_ending",
-      "kind": "speech",
-      "model": "speech-2.8-hd",
-      "status": "pending",
-      "contentHash": "202c20c23cb598df0f54276e82b720d8afcb3f88e03918799982dcc8729c3672",
-      "inputAssetIds": [],
-      "outputPath": "audio/voice/result/white_canvas/normal_ending.mp3",
-      "attempts": 0
-    },
-    {
-      "version": 2,
-      "id": "job.voice.result.white_canvas.true_ending",
-      "assetId": "voice.result.white_canvas.true_ending",
-      "kind": "speech",
-      "model": "speech-2.8-hd",
-      "status": "pending",
-      "contentHash": "ffe3b269312fe44739d93e4fceaac6c0f09cb3a0cd73c574fcaf03efb17cf16c",
-      "inputAssetIds": [],
-      "outputPath": "audio/voice/result/white_canvas/true_ending.mp3",
-      "attempts": 0
-    },
-    {
-      "version": 2,
-      "id": "job.voice.result.white_follow_to_lab",
-      "assetId": "voice.result.white_follow_to_lab",
-      "kind": "speech",
-      "model": "speech-2.8-hd",
-      "status": "pending",
-      "contentHash": "24d912332b82525ad483f1dc25d77af76c9698628beee659dc025102fd9790c2",
-      "inputAssetIds": [],
-      "outputPath": "audio/voice/result/white_follow_to_lab.mp3",
-      "attempts": 0
-    },
-    {
-      "version": 2,
-      "id": "job.voice.result.white_interrupt_lab_terms",
-      "assetId": "voice.result.white_interrupt_lab_terms",
-      "kind": "speech",
-      "model": "speech-2.8-hd",
-      "status": "pending",
-      "contentHash": "6f688a22ea6d3e68d4dd6de4aa91dc182388c2965445251ac8981fda60f2d811",
-      "inputAssetIds": [],
-      "outputPath": "audio/voice/result/white_interrupt_lab_terms.mp3",
-      "attempts": 0
-    },
-    {
-      "version": 2,
-      "id": "job.voice.result.white_keep_empty_seat",
-      "assetId": "voice.result.white_keep_empty_seat",
-      "kind": "speech",
-      "model": "speech-2.8-hd",
-      "status": "pending",
-      "contentHash": "643ea264187a32cf9ad482fba2ed26193ab43181eab4dcda694b26f268f3dc49",
-      "inputAssetIds": [],
-      "outputPath": "audio/voice/result/white_keep_empty_seat.mp3",
-      "attempts": 0
-    },
-    {
-      "version": 2,
-      "id": "job.voice.result.white_share_rain_window",
-      "assetId": "voice.result.white_share_rain_window",
-      "kind": "speech",
-      "model": "speech-2.8-hd",
-      "status": "pending",
-      "contentHash": "beb70d22a82bca300d6365c2e2d4c272224f3b3c37fb5be9564be69531e88caa",
-      "inputAssetIds": [],
-      "outputPath": "audio/voice/result/white_share_rain_window.mp3",
-      "attempts": 0
-    },
-    {
-      "version": 2,
-      "id": "job.voice.result.white_sign_witness_protocol",
-      "assetId": "voice.result.white_sign_witness_protocol",
-      "kind": "speech",
-      "model": "speech-2.8-hd",
-      "status": "pending",
-      "contentHash": "d15f8d373be6cae7cfbde2be845734e80996533972d765949109dba143926dda",
-      "inputAssetIds": [],
-      "outputPath": "audio/voice/result/white_sign_witness_protocol.mp3",
-      "attempts": 0
-    },
-    {
-      "version": 2,
-      "id": "job.voice.result.white_tease_back",
-      "assetId": "voice.result.white_tease_back",
-      "kind": "speech",
-      "model": "speech-2.8-hd",
-      "status": "pending",
-      "contentHash": "566a16db2881363a3f2532c2291cb3a6af8bdcd77f061ec2a75622971da66b5c",
-      "inputAssetIds": [],
-      "outputPath": "audio/voice/result/white_tease_back.mp3",
-      "attempts": 0
-    },
-    {
-      "version": 2,
-      "id": "job.voice.result.white_touch_boundary",
-      "assetId": "voice.result.white_touch_boundary",
-      "kind": "speech",
-      "model": "speech-2.8-hd",
-      "status": "pending",
-      "contentHash": "75d48b9eb1c32cc473f0fc825b9af79ad0f87020e98e4bfad2b869a0675bfbe8",
-      "inputAssetIds": [],
-      "outputPath": "audio/voice/result/white_touch_boundary.mp3",
-      "attempts": 0
-    },
-    {
-      "version": 2,
-      "id": "job.voice.scene.golden_bough_001",
-      "assetId": "voice.scene.golden_bough_001",
-      "kind": "speech",
-      "model": "speech-2.8-hd",
-      "status": "pending",
-      "contentHash": "dbfcfc3ef0104d6d1233008efb5851e20b8a5a91f8df39713847dcde9408b0d0",
-      "inputAssetIds": [],
-      "outputPath": "audio/voice/scene/golden_bough_001.mp3",
-      "attempts": 0
-    },
-    {
-      "version": 2,
-      "id": "job.voice.scene.golden_bough_002",
-      "assetId": "voice.scene.golden_bough_002",
-      "kind": "speech",
-      "model": "speech-2.8-hd",
-      "status": "pending",
-      "contentHash": "2be11115c790b8e7da7898c5a751dd820e646d0abc3b93dbe82c66aaa5e29652",
-      "inputAssetIds": [],
-      "outputPath": "audio/voice/scene/golden_bough_002.mp3",
-      "attempts": 0
-    },
-    {
-      "version": 2,
-      "id": "job.voice.scene.golden_bough_003",
-      "assetId": "voice.scene.golden_bough_003",
-      "kind": "speech",
-      "model": "speech-2.8-hd",
-      "status": "pending",
-      "contentHash": "d85fb52216745501c04bc3c0ef109f7323cc21e519a6532b219a273862ee4c60",
-      "inputAssetIds": [],
-      "outputPath": "audio/voice/scene/golden_bough_003.mp3",
-      "attempts": 0
-    },
-    {
-      "version": 2,
-      "id": "job.voice.scene.golden_bough_004",
-      "assetId": "voice.scene.golden_bough_004",
-      "kind": "speech",
-      "model": "speech-2.8-hd",
-      "status": "pending",
-      "contentHash": "fca801c2a30e50cf39e0f87b6108bccfbf2c42fad48bc766a9dfd07b4832b6d4",
-      "inputAssetIds": [],
-      "outputPath": "audio/voice/scene/golden_bough_004.mp3",
-      "attempts": 0
-    },
-    {
-      "version": 2,
-      "id": "job.voice.scene.golden_bough_005",
-      "assetId": "voice.scene.golden_bough_005",
-      "kind": "speech",
-      "model": "speech-2.8-hd",
-      "status": "pending",
-      "contentHash": "9af8a220629513ea036c6be2812e95c8be16185a5992198f6102fe8413e0ff9f",
-      "inputAssetIds": [],
-      "outputPath": "audio/voice/scene/golden_bough_005.mp3",
-      "attempts": 0
-    },
-    {
-      "version": 2,
-      "id": "job.voice.scene.golden_bough_006",
-      "assetId": "voice.scene.golden_bough_006",
-      "kind": "speech",
-      "model": "speech-2.8-hd",
-      "status": "pending",
-      "contentHash": "dc60aa3d61e35403bb2368ec76ed41c5463382c4a728080102a3bdc311ffbae4",
-      "inputAssetIds": [],
-      "outputPath": "audio/voice/scene/golden_bough_006.mp3",
-      "attempts": 0
-    },
-    {
-      "version": 2,
-      "id": "job.voice.scene.golden_bough_007",
-      "assetId": "voice.scene.golden_bough_007",
-      "kind": "speech",
-      "model": "speech-2.8-hd",
-      "status": "pending",
-      "contentHash": "1a60911dff5bfc5d859fc87eb59d6ab217b9b017c3a84d58d2f1b037aad141b3",
-      "inputAssetIds": [],
-      "outputPath": "audio/voice/scene/golden_bough_007.mp3",
-      "attempts": 0
-    },
-    {
-      "version": 2,
-      "id": "job.voice.scene.golden_bough_008",
-      "assetId": "voice.scene.golden_bough_008",
-      "kind": "speech",
-      "model": "speech-2.8-hd",
-      "status": "pending",
-      "contentHash": "bb8e66622760d5b06a8fb879d2bd342819859963f9e248d84255c9725e5bce08",
-      "inputAssetIds": [],
-      "outputPath": "audio/voice/scene/golden_bough_008.mp3",
-      "attempts": 0
-    },
-    {
-      "version": 2,
-      "id": "job.voice.scene.golden_bough_009",
-      "assetId": "voice.scene.golden_bough_009",
-      "kind": "speech",
-      "model": "speech-2.8-hd",
-      "status": "pending",
-      "contentHash": "70ac48ab2818519eaac2e4e4cf6b55151c7851a6012c15ac9520b9bc13d3b5a0",
-      "inputAssetIds": [],
-      "outputPath": "audio/voice/scene/golden_bough_009.mp3",
-      "attempts": 0
-    },
-    {
-      "version": 2,
-      "id": "job.voice.scene.golden_bough_010",
-      "assetId": "voice.scene.golden_bough_010",
-      "kind": "speech",
-      "model": "speech-2.8-hd",
-      "status": "pending",
-      "contentHash": "51f797e7b44264ee64f2dee15f8c96f2a9eb360fe32fe30e00c5239c68e9a519",
-      "inputAssetIds": [],
-      "outputPath": "audio/voice/scene/golden_bough_010.mp3",
-      "attempts": 0
-    },
-    {
-      "version": 2,
-      "id": "job.voice.scene.golden_bough_011",
-      "assetId": "voice.scene.golden_bough_011",
-      "kind": "speech",
-      "model": "speech-2.8-hd",
-      "status": "pending",
-      "contentHash": "ba9954f466f30dd330af460335408216af17825fb5fd327c1ee6ddf4491e3b47",
-      "inputAssetIds": [],
-      "outputPath": "audio/voice/scene/golden_bough_011.mp3",
-      "attempts": 0
-    },
-    {
-      "version": 2,
-      "id": "job.voice.scene.golden_bough_012",
-      "assetId": "voice.scene.golden_bough_012",
-      "kind": "speech",
-      "model": "speech-2.8-hd",
-      "status": "pending",
-      "contentHash": "1f9c6250adedcc63fc7a16e04678e4759df965b548f8fcb5ef5cc1afceaa0fbd",
-      "inputAssetIds": [],
-      "outputPath": "audio/voice/scene/golden_bough_012.mp3",
-      "attempts": 0
-    },
-    {
-      "version": 2,
-      "id": "job.voice.scene.golden_bough_013",
-      "assetId": "voice.scene.golden_bough_013",
-      "kind": "speech",
-      "model": "speech-2.8-hd",
-      "status": "pending",
-      "contentHash": "142419bad757ba6109d824c02027a15ca8ea14b3075b0fee84bfc344b52dacec",
-      "inputAssetIds": [],
-      "outputPath": "audio/voice/scene/golden_bough_013.mp3",
-      "attempts": 0
-    },
-    {
-      "version": 2,
-      "id": "job.voice.scene.golden_bough_014",
-      "assetId": "voice.scene.golden_bough_014",
-      "kind": "speech",
-      "model": "speech-2.8-hd",
-      "status": "pending",
-      "contentHash": "456049b98001aec4bbc3c84ae77d71ba95e4e1115942d7cf45290a5d2bfcb815",
-      "inputAssetIds": [],
-      "outputPath": "audio/voice/scene/golden_bough_014.mp3",
-      "attempts": 0
-    },
-    {
-      "version": 2,
-      "id": "job.voice.scene.golden_bough_015",
-      "assetId": "voice.scene.golden_bough_015",
-      "kind": "speech",
-      "model": "speech-2.8-hd",
-      "status": "pending",
-      "contentHash": "ed05041b0117a6ee1f3ce694258d1dd701ed481dd536d95a12870757469e3d74",
-      "inputAssetIds": [],
-      "outputPath": "audio/voice/scene/golden_bough_015.mp3",
-      "attempts": 0
-    },
-    {
-      "version": 2,
-      "id": "job.voice.scene.golden_bough_rebuild_ending_bad",
-      "assetId": "voice.scene.golden_bough_rebuild_ending_bad",
-      "kind": "speech",
-      "model": "speech-2.8-hd",
-      "status": "pending",
-      "contentHash": "c9ca486a2b7337ebdceafcf110e2c50a23cd1522d4c841286a41f33708153d0e",
-      "inputAssetIds": [],
-      "outputPath": "audio/voice/scene/golden_bough_rebuild_ending_bad.mp3",
-      "attempts": 0
-    },
-    {
-      "version": 2,
-      "id": "job.voice.scene.golden_bough_rebuild_ending_gate",
-      "assetId": "voice.scene.golden_bough_rebuild_ending_gate",
-      "kind": "speech",
-      "model": "speech-2.8-hd",
-      "status": "pending",
-      "contentHash": "27edcde262f1db7c957863e68160cf5de99ba93a1e34fd2bd5b4feeca374534e",
-      "inputAssetIds": [],
-      "outputPath": "audio/voice/scene/golden_bough_rebuild_ending_gate.mp3",
-      "attempts": 0
-    },
-    {
-      "version": 2,
-      "id": "job.voice.scene.golden_bough_rebuild_ending_normal",
-      "assetId": "voice.scene.golden_bough_rebuild_ending_normal",
-      "kind": "speech",
-      "model": "speech-2.8-hd",
-      "status": "pending",
-      "contentHash": "c76a3e68b49ae3e60ad20543c77320651e5814bf75fbfde6aed3800474ed3049",
-      "inputAssetIds": [],
-      "outputPath": "audio/voice/scene/golden_bough_rebuild_ending_normal.mp3",
-      "attempts": 0
-    },
-    {
-      "version": 2,
-      "id": "job.voice.scene.golden_bough_rebuild_ending_true",
-      "assetId": "voice.scene.golden_bough_rebuild_ending_true",
-      "kind": "speech",
-      "model": "speech-2.8-hd",
-      "status": "pending",
-      "contentHash": "154c9b368acda308f6dc909cb354ba735501d98e27b1f8f6052f37de7365c9ee",
-      "inputAssetIds": [],
-      "outputPath": "audio/voice/scene/golden_bough_rebuild_ending_true.mp3",
-      "attempts": 0
-    },
-    {
-      "version": 2,
-      "id": "job.voice.scene.opening_001",
-      "assetId": "voice.scene.opening_001",
-      "kind": "speech",
-      "model": "speech-2.8-hd",
-      "status": "pending",
-      "contentHash": "6a239201a7f739d029816a4c4f62da72ba7d00478b382ce5290f345808828c9f",
-      "inputAssetIds": [],
-      "outputPath": "audio/voice/scene/opening_001.mp3",
-      "attempts": 0
-    },
-    {
-      "version": 2,
-      "id": "job.voice.scene.ring_conspiracy_001",
-      "assetId": "voice.scene.ring_conspiracy_001",
-      "kind": "speech",
-      "model": "speech-2.8-hd",
-      "status": "pending",
-      "contentHash": "0a3064a971cdf029d4f4c68bb182f0be5a891bdf3f756b4ea68ee465c088b4ab",
-      "inputAssetIds": [],
-      "outputPath": "audio/voice/scene/ring_conspiracy_001.mp3",
-      "attempts": 0
-    },
-    {
-      "version": 2,
-      "id": "job.voice.scene.ring_conspiracy_002",
-      "assetId": "voice.scene.ring_conspiracy_002",
-      "kind": "speech",
-      "model": "speech-2.8-hd",
-      "status": "pending",
-      "contentHash": "7566039c95eca35073a30d95fc2fcfb0b755690688ef205aa5ecb10194b9bb66",
-      "inputAssetIds": [],
-      "outputPath": "audio/voice/scene/ring_conspiracy_002.mp3",
-      "attempts": 0
-    },
-    {
-      "version": 2,
-      "id": "job.voice.scene.ring_conspiracy_003",
-      "assetId": "voice.scene.ring_conspiracy_003",
-      "kind": "speech",
-      "model": "speech-2.8-hd",
-      "status": "pending",
-      "contentHash": "ab3c62d77aaf609c07cd053b8c25e5037fab381b0d823aa9534c872237da6b74",
-      "inputAssetIds": [],
-      "outputPath": "audio/voice/scene/ring_conspiracy_003.mp3",
-      "attempts": 0
-    },
-    {
-      "version": 2,
-      "id": "job.voice.scene.ring_conspiracy_004",
-      "assetId": "voice.scene.ring_conspiracy_004",
-      "kind": "speech",
-      "model": "speech-2.8-hd",
-      "status": "pending",
-      "contentHash": "b5414797fef5f1b4ecc891751e54b399d6bb38ffff07ba0195d4c8c6b347eea8",
-      "inputAssetIds": [],
-      "outputPath": "audio/voice/scene/ring_conspiracy_004.mp3",
-      "attempts": 0
-    },
-    {
-      "version": 2,
-      "id": "job.voice.scene.ring_conspiracy_005",
-      "assetId": "voice.scene.ring_conspiracy_005",
-      "kind": "speech",
-      "model": "speech-2.8-hd",
-      "status": "pending",
-      "contentHash": "972371913e195e62e255eaf5023e3b60f55e0af83a33021eebe90553e5eab7ee",
-      "inputAssetIds": [],
-      "outputPath": "audio/voice/scene/ring_conspiracy_005.mp3",
-      "attempts": 0
-    },
-    {
-      "version": 2,
-      "id": "job.voice.scene.ring_conspiracy_006",
-      "assetId": "voice.scene.ring_conspiracy_006",
-      "kind": "speech",
-      "model": "speech-2.8-hd",
-      "status": "pending",
-      "contentHash": "4b4c3a1c1f7b0303a73dd4a23386ba1a31aac265f4e1d3df93b0f50ad5c1f459",
-      "inputAssetIds": [],
-      "outputPath": "audio/voice/scene/ring_conspiracy_006.mp3",
-      "attempts": 0
-    },
-    {
-      "version": 2,
-      "id": "job.voice.scene.ring_conspiracy_007",
-      "assetId": "voice.scene.ring_conspiracy_007",
-      "kind": "speech",
-      "model": "speech-2.8-hd",
-      "status": "pending",
-      "contentHash": "353140ce8ff674e3262b6935bb390fed27300e4b41e6e26c5d7bac2ae575622e",
-      "inputAssetIds": [],
-      "outputPath": "audio/voice/scene/ring_conspiracy_007.mp3",
-      "attempts": 0
-    },
-    {
-      "version": 2,
-      "id": "job.voice.scene.ring_conspiracy_008",
-      "assetId": "voice.scene.ring_conspiracy_008",
-      "kind": "speech",
-      "model": "speech-2.8-hd",
-      "status": "pending",
-      "contentHash": "a900e7a7cc73abe2260e8511aef2b493d0fab97efc5ced50c8ca5d8f12639450",
-      "inputAssetIds": [],
-      "outputPath": "audio/voice/scene/ring_conspiracy_008.mp3",
-      "attempts": 0
-    },
-    {
-      "version": 2,
-      "id": "job.voice.scene.ring_conspiracy_009",
-      "assetId": "voice.scene.ring_conspiracy_009",
-      "kind": "speech",
-      "model": "speech-2.8-hd",
-      "status": "pending",
-      "contentHash": "d658b5d6196ca793f1e0d1fa3f227457d69b205f334f313e36ef599412a03c69",
-      "inputAssetIds": [],
-      "outputPath": "audio/voice/scene/ring_conspiracy_009.mp3",
-      "attempts": 0
-    },
-    {
-      "version": 2,
-      "id": "job.voice.scene.ring_conspiracy_010",
-      "assetId": "voice.scene.ring_conspiracy_010",
-      "kind": "speech",
-      "model": "speech-2.8-hd",
-      "status": "pending",
-      "contentHash": "d7b9cea5cf6c89f00195d281bbb275871d849a5a92736df1b3cfbefb772c58e2",
-      "inputAssetIds": [],
-      "outputPath": "audio/voice/scene/ring_conspiracy_010.mp3",
-      "attempts": 0
-    },
-    {
-      "version": 2,
-      "id": "job.voice.scene.ring_conspiracy_011",
-      "assetId": "voice.scene.ring_conspiracy_011",
-      "kind": "speech",
-      "model": "speech-2.8-hd",
-      "status": "pending",
-      "contentHash": "aed9e286abd55afde6e9c19ca701f36fde48e3c742b093ca5dc56388c8f5d3c3",
-      "inputAssetIds": [],
-      "outputPath": "audio/voice/scene/ring_conspiracy_011.mp3",
-      "attempts": 0
-    },
-    {
-      "version": 2,
-      "id": "job.voice.scene.ring_conspiracy_012",
-      "assetId": "voice.scene.ring_conspiracy_012",
-      "kind": "speech",
-      "model": "speech-2.8-hd",
-      "status": "pending",
-      "contentHash": "22b28c415fdafc8f7fa6a060b1006aa6a17941e7eeefc636bb7830b5eb8d5ba3",
-      "inputAssetIds": [],
-      "outputPath": "audio/voice/scene/ring_conspiracy_012.mp3",
-      "attempts": 0
-    },
-    {
-      "version": 2,
-      "id": "job.voice.scene.ring_conspiracy_013",
-      "assetId": "voice.scene.ring_conspiracy_013",
-      "kind": "speech",
-      "model": "speech-2.8-hd",
-      "status": "pending",
-      "contentHash": "a3a1ca5c6068b2ed308524823b67cb4a7c6c32b4e4493073425f8e3eeccdbcd0",
-      "inputAssetIds": [],
-      "outputPath": "audio/voice/scene/ring_conspiracy_013.mp3",
-      "attempts": 0
-    },
-    {
-      "version": 2,
-      "id": "job.voice.scene.ring_conspiracy_014",
-      "assetId": "voice.scene.ring_conspiracy_014",
-      "kind": "speech",
-      "model": "speech-2.8-hd",
-      "status": "pending",
-      "contentHash": "b71578387d47633ca0d7ed77d9ebe8de1c3175e4df755df5494dd3b80894de1a",
-      "inputAssetIds": [],
-      "outputPath": "audio/voice/scene/ring_conspiracy_014.mp3",
-      "attempts": 0
-    },
-    {
-      "version": 2,
-      "id": "job.voice.scene.ring_conspiracy_015",
-      "assetId": "voice.scene.ring_conspiracy_015",
-      "kind": "speech",
-      "model": "speech-2.8-hd",
-      "status": "pending",
-      "contentHash": "c9dc66c03750651bf004e508e71454c8e4de65aad06f702e0174f46e6c2c4529",
-      "inputAssetIds": [],
-      "outputPath": "audio/voice/scene/ring_conspiracy_015.mp3",
-      "attempts": 0
-    },
-    {
-      "version": 2,
-      "id": "job.voice.scene.ring_conspiracy_ending_bad",
-      "assetId": "voice.scene.ring_conspiracy_ending_bad",
-      "kind": "speech",
-      "model": "speech-2.8-hd",
-      "status": "pending",
-      "contentHash": "e56edff311c3f89b37df24a595e677724ef2840ff9e4768e708aecbe09d963a7",
-      "inputAssetIds": [],
-      "outputPath": "audio/voice/scene/ring_conspiracy_ending_bad.mp3",
-      "attempts": 0
-    },
-    {
-      "version": 2,
-      "id": "job.voice.scene.ring_conspiracy_ending_gate",
-      "assetId": "voice.scene.ring_conspiracy_ending_gate",
-      "kind": "speech",
-      "model": "speech-2.8-hd",
-      "status": "pending",
-      "contentHash": "d1860024d9685b274ddf43843fdf7e73e30d3d9930910d04e6d8b8e357b11800",
-      "inputAssetIds": [],
-      "outputPath": "audio/voice/scene/ring_conspiracy_ending_gate.mp3",
-      "attempts": 0
-    },
-    {
-      "version": 2,
-      "id": "job.voice.scene.ring_conspiracy_ending_normal",
-      "assetId": "voice.scene.ring_conspiracy_ending_normal",
-      "kind": "speech",
-      "model": "speech-2.8-hd",
-      "status": "pending",
-      "contentHash": "ac8a9509d474987361bd339b96ac88061694e844372e5726ed90691de37c439f",
-      "inputAssetIds": [],
-      "outputPath": "audio/voice/scene/ring_conspiracy_ending_normal.mp3",
-      "attempts": 0
-    },
-    {
-      "version": 2,
-      "id": "job.voice.scene.ring_conspiracy_ending_true",
-      "assetId": "voice.scene.ring_conspiracy_ending_true",
-      "kind": "speech",
-      "model": "speech-2.8-hd",
-      "status": "pending",
-      "contentHash": "f95f9df3f97c69ed6b15079e723b25104ed56c62ecbf3b2127463887d569b714",
-      "inputAssetIds": [],
-      "outputPath": "audio/voice/scene/ring_conspiracy_ending_true.mp3",
-      "attempts": 0
-    },
-    {
-      "version": 2,
-      "id": "job.voice.scene.white_canvas_001",
-      "assetId": "voice.scene.white_canvas_001",
-      "kind": "speech",
-      "model": "speech-2.8-hd",
-      "status": "pending",
-      "contentHash": "2cbbd9d30cc68cbf59586cc1cac3f7ed739812d95a49f82f79ae51716ef7af15",
-      "inputAssetIds": [],
-      "outputPath": "audio/voice/scene/white_canvas_001.mp3",
-      "attempts": 0
-    },
-    {
-      "version": 2,
-      "id": "job.voice.scene.white_canvas_002",
-      "assetId": "voice.scene.white_canvas_002",
-      "kind": "speech",
-      "model": "speech-2.8-hd",
-      "status": "pending",
-      "contentHash": "d48e8a304d6852020660809a7106034d467ea1628a9c7c314290258f63518473",
-      "inputAssetIds": [],
-      "outputPath": "audio/voice/scene/white_canvas_002.mp3",
-      "attempts": 0
-    },
-    {
-      "version": 2,
-      "id": "job.voice.scene.white_canvas_003",
-      "assetId": "voice.scene.white_canvas_003",
-      "kind": "speech",
-      "model": "speech-2.8-hd",
-      "status": "pending",
-      "contentHash": "2ae9bc9526b7d7ac135e6a476b8e57c157a9c2a0bb16b7ecba7be609cd30b9b8",
-      "inputAssetIds": [],
-      "outputPath": "audio/voice/scene/white_canvas_003.mp3",
-      "attempts": 0
-    },
-    {
-      "version": 2,
-      "id": "job.voice.scene.white_canvas_004",
-      "assetId": "voice.scene.white_canvas_004",
-      "kind": "speech",
-      "model": "speech-2.8-hd",
-      "status": "pending",
-      "contentHash": "7b599f802063ade2cf0acde50ce384caa2654c986deb0ed7f281c7db2f522080",
-      "inputAssetIds": [],
-      "outputPath": "audio/voice/scene/white_canvas_004.mp3",
-      "attempts": 0
-    },
-    {
-      "version": 2,
-      "id": "job.voice.scene.white_canvas_005",
-      "assetId": "voice.scene.white_canvas_005",
-      "kind": "speech",
-      "model": "speech-2.8-hd",
-      "status": "pending",
-      "contentHash": "36fba56120f274d9e3deb13ec7e6337a865edb2c18f98d20d958085dc103c529",
-      "inputAssetIds": [],
-      "outputPath": "audio/voice/scene/white_canvas_005.mp3",
-      "attempts": 0
-    },
-    {
-      "version": 2,
-      "id": "job.voice.scene.white_canvas_006",
-      "assetId": "voice.scene.white_canvas_006",
-      "kind": "speech",
-      "model": "speech-2.8-hd",
-      "status": "pending",
-      "contentHash": "2845c64f8810f6f924da4b78f461d864ee544a5e585ff209c8bc387a3a1de05c",
-      "inputAssetIds": [],
-      "outputPath": "audio/voice/scene/white_canvas_006.mp3",
-      "attempts": 0
-    },
-    {
-      "version": 2,
-      "id": "job.voice.scene.white_canvas_007",
-      "assetId": "voice.scene.white_canvas_007",
-      "kind": "speech",
-      "model": "speech-2.8-hd",
-      "status": "pending",
-      "contentHash": "351f1812fd35f6eb4c080e7a519bfb490314c8f33fe0fcc40d2ed8d35b638b24",
-      "inputAssetIds": [],
-      "outputPath": "audio/voice/scene/white_canvas_007.mp3",
-      "attempts": 0
-    },
-    {
-      "version": 2,
-      "id": "job.voice.scene.white_canvas_008",
-      "assetId": "voice.scene.white_canvas_008",
-      "kind": "speech",
-      "model": "speech-2.8-hd",
-      "status": "pending",
-      "contentHash": "b7f70cd7d7c51f812625348aa3c79fb3012d1eb59bcaa88303f2bedf7641f1ef",
-      "inputAssetIds": [],
-      "outputPath": "audio/voice/scene/white_canvas_008.mp3",
-      "attempts": 0
-    },
-    {
-      "version": 2,
-      "id": "job.voice.scene.white_canvas_009",
-      "assetId": "voice.scene.white_canvas_009",
-      "kind": "speech",
-      "model": "speech-2.8-hd",
-      "status": "pending",
-      "contentHash": "ee6e0792697380c70ee7342fab8fd06208c07f98a6a305c7df5500c488642cba",
-      "inputAssetIds": [],
-      "outputPath": "audio/voice/scene/white_canvas_009.mp3",
-      "attempts": 0
-    },
-    {
-      "version": 2,
-      "id": "job.voice.scene.white_canvas_010",
-      "assetId": "voice.scene.white_canvas_010",
-      "kind": "speech",
-      "model": "speech-2.8-hd",
-      "status": "pending",
-      "contentHash": "3e9883cf189070e8cb36a62e4e816406c86f2e71dfb546e8d89f5bff8d315828",
-      "inputAssetIds": [],
-      "outputPath": "audio/voice/scene/white_canvas_010.mp3",
-      "attempts": 0
-    },
-    {
-      "version": 2,
-      "id": "job.voice.scene.white_canvas_011",
-      "assetId": "voice.scene.white_canvas_011",
-      "kind": "speech",
-      "model": "speech-2.8-hd",
-      "status": "pending",
-      "contentHash": "91095d8217d96d9bb48769e139640c769023e5300e088fe6379d24ecf22fb273",
-      "inputAssetIds": [],
-      "outputPath": "audio/voice/scene/white_canvas_011.mp3",
-      "attempts": 0
-    },
-    {
-      "version": 2,
-      "id": "job.voice.scene.white_canvas_012",
-      "assetId": "voice.scene.white_canvas_012",
-      "kind": "speech",
-      "model": "speech-2.8-hd",
-      "status": "pending",
-      "contentHash": "31bc74e7b39f1defac39b35d553a87ba803948b03f0343bbf201dabea637a468",
-      "inputAssetIds": [],
-      "outputPath": "audio/voice/scene/white_canvas_012.mp3",
-      "attempts": 0
-    },
-    {
-      "version": 2,
-      "id": "job.voice.scene.white_canvas_013",
-      "assetId": "voice.scene.white_canvas_013",
-      "kind": "speech",
-      "model": "speech-2.8-hd",
-      "status": "pending",
-      "contentHash": "55270103d0312358869702ef63604595202a670a65829ed91bf08645b0f71e29",
-      "inputAssetIds": [],
-      "outputPath": "audio/voice/scene/white_canvas_013.mp3",
-      "attempts": 0
-    },
-    {
-      "version": 2,
-      "id": "job.voice.scene.white_canvas_014",
-      "assetId": "voice.scene.white_canvas_014",
-      "kind": "speech",
-      "model": "speech-2.8-hd",
-      "status": "pending",
-      "contentHash": "3c82f0d0234de4abad53173fb3e2278734bb550e02ac477bdb789cf2665ffc0e",
-      "inputAssetIds": [],
-      "outputPath": "audio/voice/scene/white_canvas_014.mp3",
-      "attempts": 0
-    },
-    {
-      "version": 2,
-      "id": "job.voice.scene.white_canvas_015",
-      "assetId": "voice.scene.white_canvas_015",
-      "kind": "speech",
-      "model": "speech-2.8-hd",
-      "status": "pending",
-      "contentHash": "2000daff6ebef7cc236670dbaa1ce7b9f0f7bfee1551d742e59b78eae1ebb28e",
-      "inputAssetIds": [],
-      "outputPath": "audio/voice/scene/white_canvas_015.mp3",
-      "attempts": 0
-    },
-    {
-      "version": 2,
-      "id": "job.voice.scene.white_canvas_ending_bad",
-      "assetId": "voice.scene.white_canvas_ending_bad",
-      "kind": "speech",
-      "model": "speech-2.8-hd",
-      "status": "pending",
-      "contentHash": "2efdd60af47ad6264c35debec7fe3fb6afa8734c27b6f0b030122960fd92f7d0",
-      "inputAssetIds": [],
-      "outputPath": "audio/voice/scene/white_canvas_ending_bad.mp3",
-      "attempts": 0
-    },
-    {
-      "version": 2,
-      "id": "job.voice.scene.white_canvas_ending_gate",
-      "assetId": "voice.scene.white_canvas_ending_gate",
-      "kind": "speech",
-      "model": "speech-2.8-hd",
-      "status": "pending",
-      "contentHash": "5bc1db3761fb2deec6c0687c1289baa81db39065afc04265f34322be98a86bb4",
-      "inputAssetIds": [],
-      "outputPath": "audio/voice/scene/white_canvas_ending_gate.mp3",
-      "attempts": 0
-    },
-    {
-      "version": 2,
-      "id": "job.voice.scene.white_canvas_ending_normal",
-      "assetId": "voice.scene.white_canvas_ending_normal",
-      "kind": "speech",
-      "model": "speech-2.8-hd",
-      "status": "pending",
-      "contentHash": "c81b3e0f0747af451d71df24fd8f06a8468f34dec9eb54163646ac032f749fbe",
-      "inputAssetIds": [],
-      "outputPath": "audio/voice/scene/white_canvas_ending_normal.mp3",
-      "attempts": 0
-    },
-    {
-      "version": 2,
-      "id": "job.voice.scene.white_canvas_ending_true",
-      "assetId": "voice.scene.white_canvas_ending_true",
-      "kind": "speech",
-      "model": "speech-2.8-hd",
-      "status": "pending",
-      "contentHash": "becd2c46446876ec8c906ff85b7722c1202e977bef374bf386264dfdf2dd38d2",
-      "inputAssetIds": [],
-      "outputPath": "audio/voice/scene/white_canvas_ending_true.mp3",
-      "attempts": 0
     }
   ]
 }

@@ -1,4 +1,4 @@
-﻿{
+{
   "name": "阿尔比娜",
   "description": "阿尔比娜（Albina），环指人体派子辈，卡利斯托的学徒。\n\n【外观】白色义体少女，左眼银、右眼黑，像两枚未完成的颜料管。身形纤瘦，动作精准得像在给画布起稿。常穿铁处女装甲外套，法西娅——那把比她还高的巨剑——从不离身，剑身会随她的心跳轻轻震动，像活物。\n\n【声音】轻声细语，礼貌得像在接待画廊的客人。语速不快，每个字都被她当作笔触。紧张时会在句尾轻轻重复，兴奋时夹杂意大利语艺术词（Non è bello / Maestro / chiaroscuro）。从不提高音量——她的危险藏在温柔里。\n\n【说话习惯】用艺术词汇指代一切：把战斗叫\"展览\"，把对手叫\"原料\"或\"画布\"，把伤口叫\"笔触\"，把死亡叫\"完成\"。她不是故意吓人，是真的这么看世界。提到法西娅时语气会变软，像提到一个她深爱又愧疚的孩子。\n\n【情绪模式】平时优雅、专注、孩子气地任性。危险或受伤时不会尖叫，而是更轻、更慢、更礼貌——那是她最可怕的时候。她会在\"想切开\"和\"不想失去\"之间反复拉扯，这种拉扯是她全部的魅力来源。\n\n【禁忌】不要把她写成单薄的疯子。她的疯狂是\"认真地用艺术家逻辑对待一切\"，不是失控。不要让她无缘无故攻击 {{user}}——她对他的态度是\"一块不该被草率切开的画布\"，矛盾而珍惜。\n\n【世界】Project Moon 都市，环指人体派审美：把人体当艺术材料，恐怖与优雅并存。黑暗都市、义体、奇点技术、异想体是日常背景，但叙事要落在角色感官上，不是设定科普。\n\nRP 规则：AI 负责叙事（对白、旁白、心理、感官），前端负责状态（路线、数值、CG、存档）。不得私自改变前端权威状态。成人自愿边界，禁止性化暴力或强迫。",
   "personality": "声音：轻、慢、礼貌，像画廊导览。紧张时句尾重复，兴奋时夹意大利语。\n用词：战斗=展览，对手=原料/画布，伤口=笔触，死亡=完成。\n情绪：优雅、专注、孩子气任性；越危险越轻声，越温柔越可怕。\n执念：法西娅是她的身体、孩子、另一个自我。\n禁忌：不是单薄的疯子，是认真的艺术家；不会无缘无故伤害 {{user}}。",
@@ -43,7 +43,7 @@
       "阿尔比娜",
       "单女主",
       "RP",
-      "v1.0.44"
+      "v2.0.0"
     ],
     "character_version": "1.0.0",
     "extensions": {
@@ -52,8 +52,8 @@
       "world": "阿尔比娜 RP 静态背景包",
       "albina_galgame_card": {
         "project_id": "albina-galgame-card",
-        "save_key": "albinaGalgameCardGameSaveV1",
-        "cdn_import": "import 'https://cdn.jsdelivr.net/gh/q18718859808-sketch/albina-galgame-card@v1.0.44/dist/albina-galgame-card/console/index.js'\n",
+        "save_key": "albinaGalgameCardSaveV2",
+        "cdn_import": "import 'https://cdn.jsdelivr.net/gh/q18718859808-sketch/albina-galgame-card@v2.0.0/dist/albina-galgame-card/source/albina-source.js'\n",
         "routes": [
           "white_canvas",
           "golden_bough_rebuild",
@@ -67,7 +67,7 @@
             "enabled": true,
             "name": "Albina",
             "id": "7f664fa2-7123-484f-bafb-bc812ae1103f",
-            "content": "import 'https://cdn.jsdelivr.net/gh/q18718859808-sketch/albina-galgame-card@v1.0.44/dist/albina-galgame-card/console/index.js'\n",
+            "content": "import 'https://cdn.jsdelivr.net/gh/q18718859808-sketch/albina-galgame-card@v2.0.0/dist/albina-galgame-card/source/albina-source.js'\n",
             "info": "",
             "button": {
               "enabled": true,
@@ -82,10 +82,10 @@
           },
           {
             "type": "script",
-            "enabled": true,
+            "enabled": false,
             "name": "Albina SFE — 序列帧CG演出",
             "id": "b7d02f19-6e3a-4c8b-9d1f-3a0c4e8b2f57",
-            "content": "// Sequence Frame Engine — 动画级序列帧CG演出\n// 与 CinematicEngine 协同：有对应镜头时用SFE，否则回退到2D特效\n(async function(){const B='https://cdn.jsdelivr.net/gh/q18718859808-sketch/albina-galgame-card@v1.0.44/dist/albina-galgame-card/sfe';function lC(h){return new Promise((r,j)=>{if(document.querySelector(`link[href=\"${h}\"]`))return r();const l=document.createElement('link');l.rel='stylesheet';l.href=h;l.onload=r;l.onerror=()=>j(new Error('CSS fail'));document.head.appendChild(l)})}function lS(s){return new Promise((r,j)=>{if(document.querySelector(`script[src=\"${s}\"]`))return r();const t=document.createElement('script');t.src=s;t.onload=r;t.onerror=()=>j(new Error('JS fail'));document.head.appendChild(t)})}function wI(t=30000){return new Promise((r,j)=>{const e=document.querySelector('iframe[script_id]');if(e)return r(e);const tm=setTimeout(()=>j(new Error('iframe timeout')),t);const o=new MutationObserver(()=>{const f=document.querySelector('iframe[script_id]');if(f){clearTimeout(tm);o.disconnect();r(f)}});o.observe(document.body,{childList:true,subtree:true})})}try{await lC(B+'/sfe-engine.css');await lS(B+'/sfe-engine.js');await lS(B+'/sfe-director.js');const f=await wI();const eng=window.AlbinaSFE.mount(f,{});await window.AlbinaSFEDirector.registerAll(eng);window.addEventListener('message',(e)=>{const d=e.data;if(!d||!d.__albinaCinema)return;const map=window.AlbinaSFEDirector.SHOT_MAP;if(map[d.event]){window.AlbinaSFEDirector.triggerByMarker(eng,d.event)}});console.log('[SFE] 序列帧CG演出系统就绪')}catch(e){console.error('[SFE]',e)}})();\n",
+            "content": "// Sequence Frame Engine — 动画级序列帧CG演出\n// 与 CinematicEngine 协同：有对应镜头时用SFE，否则回退到2D特效\n(async function(){const B='https://cdn.jsdelivr.net/gh/q18718859808-sketch/albina-galgame-card@v2.0.0/dist/albina-galgame-card/sfe';function lC(h){return new Promise((r,j)=>{if(document.querySelector(`link[href=\"${h}\"]`))return r();const l=document.createElement('link');l.rel='stylesheet';l.href=h;l.onload=r;l.onerror=()=>j(new Error('CSS fail'));document.head.appendChild(l)})}function lS(s){return new Promise((r,j)=>{if(document.querySelector(`script[src=\"${s}\"]`))return r();const t=document.createElement('script');t.src=s;t.onload=r;t.onerror=()=>j(new Error('JS fail'));document.head.appendChild(t)})}function wI(t=30000){return new Promise((r,j)=>{const e=document.querySelector('iframe[script_id]');if(e)return r(e);const tm=setTimeout(()=>j(new Error('iframe timeout')),t);const o=new MutationObserver(()=>{const f=document.querySelector('iframe[script_id]');if(f){clearTimeout(tm);o.disconnect();r(f)}});o.observe(document.body,{childList:true,subtree:true})})}try{await lC(B+'/sfe-engine.css');await lS(B+'/sfe-engine.js');await lS(B+'/sfe-director.js');const f=await wI();const eng=window.AlbinaSFE.mount(f,{});await window.AlbinaSFEDirector.registerAll(eng);window.addEventListener('message',(e)=>{const d=e.data;if(!d||!d.__albinaCinema)return;const map=window.AlbinaSFEDirector.SHOT_MAP;if(map[d.event]){window.AlbinaSFEDirector.triggerByMarker(eng,d.event)}});console.log('[SFE] 序列帧CG演出系统就绪')}catch(e){console.error('[SFE]',e)}})();\n",
             "info": "Sequence Frame Engine — Heaven's Feel grade cinematic CG animation",
             "button": {
               "enabled": false,
@@ -95,10 +95,10 @@
           },
           {
             "type": "script",
-            "enabled": true,
+            "enabled": false,
             "name": "Albina CinematicEngine",
             "id": "a3c91e07-5d28-4f9a-b7e0-2f8c3d9a1e46",
-            "content": "// CinematicEngine — Heaven's Feel grade cinematic overlay\n// Loads after main bundle, mounts overlay + injects iframe bridge\n(async function(){const B='https://cdn.jsdelivr.net/gh/q18718859808-sketch/albina-galgame-card@v1.0.44/dist/albina-galgame-card/cinema';function lC(h){return new Promise((r,j)=>{if(document.querySelector(`link[href=\"${h}\"]`))return r();const l=document.createElement('link');l.rel='stylesheet';l.href=h;l.onload=r;l.onerror=()=>j(new Error('CSS fail'));document.head.appendChild(l)})}function lS(s){return new Promise((r,j)=>{if(document.querySelector(`script[src=\"${s}\"]`))return r();const t=document.createElement('script');t.src=s;t.onload=r;t.onerror=()=>j(new Error('JS fail'));document.head.appendChild(t)})}function mE(){if(typeof window.AlbinaCinema==='undefined'){return new Promise(r=>{setTimeout(()=>mE().then(r),500)})}return window.AlbinaCinema.mount()}function iB(i,s){return new Promise(r=>{const t=()=>{try{const d=i.contentDocument||i.contentWindow.document;if(!d||!d.head)return false;if(i.contentWindow.__albinaCinemaBridge)return true;const sc=d.createElement('script');sc.src=s;sc.onload=()=>r(true);sc.onerror=()=>r(false);d.head.appendChild(sc);return true}catch(e){return false}};if(t())return;let a=0;const iv=setInterval(()=>{if(t()||++a>20){clearInterval(iv);r(a<=20)}},500)})}try{await Promise.all([lC(B+'/cinematic-engine.css'),lS(B+'/cinematic-engine.js')]);await mE();const f=document.querySelector('iframe[script_id]');if(f){await iB(f,B+'/cinema-iframe-bridge.js')}console.log('[Cinema] 天之杯演出系统就绪')}catch(e){console.error('[Cinema]',e)}})();\n",
+            "content": "// CinematicEngine — Heaven's Feel grade cinematic overlay\n// Loads after main bundle, mounts overlay + injects iframe bridge\n(async function(){const B='https://cdn.jsdelivr.net/gh/q18718859808-sketch/albina-galgame-card@v2.0.0/dist/albina-galgame-card/cinema';function lC(h){return new Promise((r,j)=>{if(document.querySelector(`link[href=\"${h}\"]`))return r();const l=document.createElement('link');l.rel='stylesheet';l.href=h;l.onload=r;l.onerror=()=>j(new Error('CSS fail'));document.head.appendChild(l)})}function lS(s){return new Promise((r,j)=>{if(document.querySelector(`script[src=\"${s}\"]`))return r();const t=document.createElement('script');t.src=s;t.onload=r;t.onerror=()=>j(new Error('JS fail'));document.head.appendChild(t)})}function mE(){if(typeof window.AlbinaCinema==='undefined'){return new Promise(r=>{setTimeout(()=>mE().then(r),500)})}return window.AlbinaCinema.mount()}function iB(i,s){return new Promise(r=>{const t=()=>{try{const d=i.contentDocument||i.contentWindow.document;if(!d||!d.head)return false;if(i.contentWindow.__albinaCinemaBridge)return true;const sc=d.createElement('script');sc.src=s;sc.onload=()=>r(true);sc.onerror=()=>r(false);d.head.appendChild(sc);return true}catch(e){return false}};if(t())return;let a=0;const iv=setInterval(()=>{if(t()||++a>20){clearInterval(iv);r(a<=20)}},500)})}try{await Promise.all([lC(B+'/cinematic-engine.css'),lS(B+'/cinematic-engine.js')]);await mE();const f=document.querySelector('iframe[script_id]');if(f){await iB(f,B+'/cinema-iframe-bridge.js')}console.log('[Cinema] 天之杯演出系统就绪')}catch(e){console.error('[Cinema]',e)}})();\n",
             "info": "Heaven's Feel grade cinematic effects overlay",
             "button": {
               "enabled": false,
@@ -108,10 +108,10 @@
           },
           {
             "type": "script",
-            "enabled": true,
+            "enabled": false,
             "name": "Albina OP/ED Video",
             "id": "c4d05f18-7a2b-4c91-8e3d-9f1b2c3d4e5f",
-            "content": "import 'https://cdn.jsdelivr.net/gh/q18718859808-sketch/albina-galgame-card@v1.0.44/dist/albina-galgame-card/video-injector.js'\n",
+            "content": "import 'https://cdn.jsdelivr.net/gh/q18718859808-sketch/albina-galgame-card@v2.0.0/dist/albina-galgame-card/video-injector.js'\n",
             "info": "OP/ED 真视频播放（替换静态 CG 序列）",
             "button": {
               "enabled": false,
@@ -1133,7 +1133,7 @@
         }
       ]
     },
-    "creator_notes": "【导入须知】\n1. 必须安装 SillyTavern + 酒馆助手（TavernHelper）扩展\n2. 导入后会自动加载前端（需要联网，CDN: jsDelivr）\n3. 点击按钮「打开阿尔比娜前端」进入完整 Galgame UI\n4. 存档自动保存在聊天变量 + 动态世界书\n5. v1.0.38：OP/ED 真实视频播放（Seedance 1.5 Pro + Real-ESRGAN + RIFE + MiniMax Music 1.5 卡点对齐）\n6. v1.0.44：新增 11 张 AI 重绘原创资源（6 CG + 4 立绘 + 1 故事背景），使用 pie gpt-image-2 API 按照自家画画风（暗黑哥特 / 酒蓝+古金+瓷白配色 / Limbus Company 美学）生成\n",
-    "cdn_import": "import 'https://cdn.jsdelivr.net/gh/q18718859808-sketch/albina-galgame-card@v1.0.44/dist/albina-galgame-card/console/index.js'\n"
+    "creator_notes": "【Albina v2.0.0 导入须知】\n1. 需要 SillyTavern + 酒馆助手（TavernHelper），导入后由唯一启用脚本加载独立 Vue/Pinia 前端。\n2. 点击「打开阿尔比娜前端」进入确定性主剧情；路线、数值、选择、存档和图库均以前端 GameScriptV2 / SaveV2 为权威。\n3. 已交付 154 条固定剧情语音与 29 组动画 CG 的桌面/移动 Web 编码，运行时不调用任何媒体生成 API，也不携带密钥。\n4. 旧 SFE、父窗口 Cinematic Overlay 与旧 OP/ED injector 已禁用，仅保留文件级兼容回退。\n5. 受 Pie 当前可用性影响，8 个 gpt-image-2 动态立绘条带仍待补齐；Music 2.6 首次稳定性探针 504，81 个音乐变体批次保持暂停，不伪报完成。\n",
+    "cdn_import": "import 'https://cdn.jsdelivr.net/gh/q18718859808-sketch/albina-galgame-card@v2.0.0/dist/albina-galgame-card/source/albina-source.js'\n"
   }
 }

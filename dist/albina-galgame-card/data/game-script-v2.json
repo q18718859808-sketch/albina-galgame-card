@@ -16,6 +16,8 @@
       "locationId": "backstreets_rain",
       "backgroundAssetId": "bg.backstreets_rain",
       "cgAssetId": "cg.opening_rain",
+      "videoAssetId": "video.animated.runtime.prologue",
+      "desktopVideoAssetId": "video.animated.desktop.prologue",
       "tone": "rain",
       "portraits": [
         {
@@ -238,6 +240,8 @@
       "locationId": "lce_lab",
       "backgroundAssetId": "bg.lce_lab",
       "cgAssetId": "cg.hollow_torso_reveal",
+      "videoAssetId": "video.animated.runtime.white_canvas_scene_3",
+      "desktopVideoAssetId": "video.animated.desktop.white_canvas_scene_3",
       "tone": "quiet",
       "portraits": [
         {
@@ -394,6 +398,8 @@
       "locationId": "outskirts_dawn",
       "backgroundAssetId": "bg.outskirts_dawn",
       "cgAssetId": "cg.white_canvas_ending",
+      "videoAssetId": "video.animated.runtime.white_canvas_scene_5",
+      "desktopVideoAssetId": "video.animated.desktop.white_canvas_scene_5",
       "tone": "quiet",
       "portraits": [
         {
@@ -592,6 +598,8 @@
       "locationId": "lce_lab",
       "backgroundAssetId": "bg.lce_lab",
       "cgAssetId": "cg.hollow_torso_reveal",
+      "videoAssetId": "video.animated.runtime.white_canvas_scene_8",
+      "desktopVideoAssetId": "video.animated.desktop.white_canvas_scene_8",
       "tone": "quiet",
       "portraits": [
         {
@@ -819,6 +827,8 @@
       "locationId": "nest_station",
       "backgroundAssetId": "bg.nest_station",
       "cgAssetId": "cg.art_resonance",
+      "videoAssetId": "video.animated.runtime.white_canvas_scene_11",
+      "desktopVideoAssetId": "video.animated.desktop.white_canvas_scene_11",
       "tone": "quiet",
       "portraits": [
         {
@@ -1111,6 +1121,8 @@
       "locationId": "outskirts_dawn",
       "backgroundAssetId": "bg.outskirts_dawn",
       "cgAssetId": "cg.white_canvas_ending",
+      "videoAssetId": "video.animated.runtime.white_canvas_scene_15",
+      "desktopVideoAssetId": "video.animated.desktop.white_canvas_scene_15",
       "tone": "quiet",
       "portraits": [
         {
@@ -1301,6 +1313,8 @@
       "locationId": "outskirts_dawn",
       "backgroundAssetId": "bg.outskirts_dawn",
       "cgAssetId": "cg.white_canvas_ending",
+      "videoAssetId": "video.animated.runtime.white_canvas_ending_true",
+      "desktopVideoAssetId": "video.animated.desktop.white_canvas_ending_true",
       "tone": "quiet",
       "portraits": [
         {
@@ -1369,6 +1383,8 @@
       "locationId": "outskirts_dawn",
       "backgroundAssetId": "bg.outskirts_dawn",
       "cgAssetId": "cg.white_canvas_ending",
+      "videoAssetId": "video.animated.runtime.white_canvas_ending_normal",
+      "desktopVideoAssetId": "video.animated.desktop.white_canvas_ending_normal",
       "tone": "quiet",
       "portraits": [
         {
@@ -1420,6 +1436,8 @@
       "locationId": "outskirts_dawn",
       "backgroundAssetId": "bg.outskirts_dawn",
       "cgAssetId": "cg.white_canvas_ending",
+      "videoAssetId": "video.animated.runtime.white_canvas_ending_bad",
+      "desktopVideoAssetId": "video.animated.desktop.white_canvas_ending_bad",
       "tone": "quiet",
       "portraits": [
         {
@@ -1621,6 +1639,8 @@
       "locationId": "lce_lab",
       "backgroundAssetId": "bg.lce_lab",
       "cgAssetId": "cg.lce_raid",
+      "videoAssetId": "video.animated.runtime.golden_bough_rebuild_scene_3",
+      "desktopVideoAssetId": "video.animated.desktop.golden_bough_rebuild_scene_3",
       "tone": "threat",
       "portraits": [
         {
@@ -1777,6 +1797,8 @@
       "locationId": "mirror_corridor",
       "backgroundAssetId": "bg.mirror_corridor",
       "cgAssetId": "cg.golden_bough_ending",
+      "videoAssetId": "video.animated.runtime.golden_bough_rebuild_scene_5",
+      "desktopVideoAssetId": "video.animated.desktop.golden_bough_rebuild_scene_5",
       "tone": "golden",
       "portraits": [
         {
@@ -1982,6 +2004,8 @@
       "locationId": "city_rooftop",
       "backgroundAssetId": "bg.city_rooftop",
       "cgAssetId": "cg.araya_rooftop",
+      "videoAssetId": "video.animated.runtime.golden_bough_rebuild_scene_8",
+      "desktopVideoAssetId": "video.animated.desktop.golden_bough_rebuild_scene_8",
       "tone": "threat",
       "portraits": [
         {
@@ -2218,6 +2242,8 @@
       "locationId": "limbus_bus",
       "backgroundAssetId": "bg.limbus_bus",
       "cgAssetId": "cg.limbus_bus_night",
+      "videoAssetId": "video.animated.runtime.golden_bough_rebuild_scene_11",
+      "desktopVideoAssetId": "video.animated.desktop.golden_bough_rebuild_scene_11",
       "tone": "quiet",
       "portraits": [
         {
@@ -2523,6 +2549,8 @@
       "locationId": "outskirts_dawn",
       "backgroundAssetId": "bg.outskirts_dawn",
       "cgAssetId": "cg.golden_bough_ending",
+      "videoAssetId": "video.animated.runtime.golden_bough_rebuild_scene_15",
+      "desktopVideoAssetId": "video.animated.desktop.golden_bough_rebuild_scene_15",
       "tone": "golden",
       "portraits": [
         {
@@ -2699,6 +2727,8 @@
       "locationId": "outskirts_dawn",
       "backgroundAssetId": "bg.outskirts_dawn",
       "cgAssetId": "cg.golden_bough_ending",
+      "videoAssetId": "video.animated.runtime.golden_bough_rebuild_ending_true",
+      "desktopVideoAssetId": "video.animated.desktop.golden_bough_rebuild_ending_true",
       "tone": "golden",
       "portraits": [
         {
@@ -2760,6 +2790,8 @@
       "locationId": "outskirts_dawn",
       "backgroundAssetId": "bg.outskirts_dawn",
       "cgAssetId": "cg.golden_bough_ending",
+      "videoAssetId": "video.animated.runtime.golden_bough_rebuild_ending_normal",
+      "desktopVideoAssetId": "video.animated.desktop.golden_bough_rebuild_ending_normal",
       "tone": "golden",
       "portraits": [
         {
@@ -2804,6 +2836,8 @@
       "locationId": "outskirts_dawn",
       "backgroundAssetId": "bg.outskirts_dawn",
       "cgAssetId": "cg.golden_bough_ending",
+      "videoAssetId": "video.animated.runtime.golden_bough_rebuild_ending_bad",
+      "desktopVideoAssetId": "video.animated.desktop.golden_bough_rebuild_ending_bad",
       "tone": "golden",
       "portraits": [
         {
@@ -3006,6 +3040,8 @@
       "locationId": "backstreets_rain",
       "backgroundAssetId": "bg.backstreets_rain",
       "cgAssetId": "cg.backstreet_pursuit",
+      "videoAssetId": "video.animated.runtime.ring_conspiracy_scene_3",
+      "desktopVideoAssetId": "video.animated.desktop.ring_conspiracy_scene_3",
       "tone": "threat",
       "portraits": [
         {
@@ -3143,6 +3179,8 @@
       "locationId": "ring_atelier",
       "backgroundAssetId": "bg.ring_atelier",
       "cgAssetId": "cg.maestro_shadow",
+      "videoAssetId": "video.animated.runtime.ring_conspiracy_scene_5",
+      "desktopVideoAssetId": "video.animated.desktop.ring_conspiracy_scene_5",
       "tone": "gallery",
       "portraits": [
         {
@@ -3379,6 +3417,8 @@
       "locationId": "lce_lab",
       "backgroundAssetId": "bg.lce_lab",
       "cgAssetId": "cg.lce_raid",
+      "videoAssetId": "video.animated.runtime.ring_conspiracy_scene_8",
+      "desktopVideoAssetId": "video.animated.desktop.ring_conspiracy_scene_8",
       "tone": "threat",
       "portraits": [
         {
@@ -3616,6 +3656,8 @@
       "locationId": "spider_gallery",
       "backgroundAssetId": "bg.spider_gallery",
       "cgAssetId": "cg.maestro_shadow",
+      "videoAssetId": "video.animated.runtime.ring_conspiracy_scene_11",
+      "desktopVideoAssetId": "video.animated.desktop.ring_conspiracy_scene_11",
       "tone": "threat",
       "portraits": [
         {
@@ -3931,6 +3973,8 @@
       "locationId": "outskirts_dawn",
       "backgroundAssetId": "bg.outskirts_dawn",
       "cgAssetId": "cg.ring_conspiracy_ending",
+      "videoAssetId": "video.animated.runtime.ring_conspiracy_scene_15",
+      "desktopVideoAssetId": "video.animated.desktop.ring_conspiracy_scene_15",
       "tone": "quiet",
       "portraits": [
         {
@@ -4107,6 +4151,8 @@
       "locationId": "outskirts_dawn",
       "backgroundAssetId": "bg.outskirts_dawn",
       "cgAssetId": "cg.ring_conspiracy_ending",
+      "videoAssetId": "video.animated.runtime.ring_conspiracy_ending_true",
+      "desktopVideoAssetId": "video.animated.desktop.ring_conspiracy_ending_true",
       "tone": "quiet",
       "portraits": [
         {
@@ -4168,6 +4214,8 @@
       "locationId": "outskirts_dawn",
       "backgroundAssetId": "bg.outskirts_dawn",
       "cgAssetId": "cg.ring_conspiracy_ending",
+      "videoAssetId": "video.animated.runtime.ring_conspiracy_ending_normal",
+      "desktopVideoAssetId": "video.animated.desktop.ring_conspiracy_ending_normal",
       "tone": "quiet",
       "portraits": [
         {
@@ -4212,6 +4260,8 @@
       "locationId": "outskirts_dawn",
       "backgroundAssetId": "bg.outskirts_dawn",
       "cgAssetId": "cg.ring_conspiracy_ending",
+      "videoAssetId": "video.animated.runtime.ring_conspiracy_ending_bad",
+      "desktopVideoAssetId": "video.animated.desktop.ring_conspiracy_ending_bad",
       "tone": "quiet",
       "portraits": [
         {
