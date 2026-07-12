@@ -5,7 +5,7 @@ import { join } from 'node:path';
 import { describe, expect, test, vi } from 'vitest';
 
 import { downloadResumable } from '../src/download.js';
-import { MediaGenerator } from '../src/generator.js';
+import { MediaGenerator, normalizeVideo } from '../src/generator.js';
 import type { MediaJob } from '../src/job.js';
 import { contentHashJobId } from '../src/hash.js';
 import { JobBusyError, Ledger, MusicBulkNotReadyError, MusicCooldownError } from '../src/ledger.js';
@@ -141,6 +141,16 @@ describe('network resilience', () => {
 });
 
 describe('artifact generation', () => {
+  test('forces MP4 muxing for both normalized video derivatives', async () => {
+    const execute = vi.fn<(file: string, args: string[]) => Promise<unknown>>(async () => undefined);
+    await normalizeVideo('master.tmp', 'runtime.worker.normalized.mp4', 'desktop.worker.normalized.mp4', execute);
+    expect(execute).toHaveBeenCalledTimes(2);
+    for (const call of execute.mock.calls) {
+      expect(call[0]).toBe('ffmpeg');
+      expect(call[1]).toEqual(expect.arrayContaining(['-f', 'mp4']));
+      expect(call[1].at(-1)).toMatch(/\.mp4$/);
+    }
+  });
   test('allows only one provider call across concurrent generators', async () => {
     const directory = await mkdtemp(join(tmpdir(), 'albina-media-concurrent-'));
     const output = join(directory, 'image.png');

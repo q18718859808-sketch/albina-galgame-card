@@ -84,10 +84,10 @@ export class MediaGenerator {
       temporaryOutput = await this.storeArtifact(artifact, job.output);
       if (job.kind === 'video') {
         masterTemporary = temporaryOutput;
-        temporaryOutput = `${job.output}.${this.owner}.normalized`;
-        desktopTemporary = `${job.desktopOutput}.${this.owner}.normalized`;
+        temporaryOutput = `${job.output}.${this.owner}.normalized.mp4`;
+        desktopTemporary = `${job.desktopOutput}.${this.owner}.normalized.mp4`;
         await mkdir(dirname(job.desktopOutput), { recursive: true });
-        await (this.options.videoPostprocess ?? postprocessVideo)(masterTemporary, temporaryOutput, desktopTemporary);
+        await (this.options.videoPostprocess ?? normalizeVideo)(masterTemporary, temporaryOutput, desktopTemporary);
       }
       await (this.options.validateArtifact ?? validateJobArtifact)(job.kind === 'video' ? { ...job, output: temporaryOutput, masterOutput: masterTemporary!, desktopOutput: desktopTemporary! } : { ...job, output: temporaryOutput });
       await this.options.ledger.commitClaimedJob(id, this.owner, token, async () => {
@@ -164,9 +164,9 @@ export class MediaGenerator {
 }
 
 const execFileAsync = promisify(execFile);
-async function postprocessVideo(master: string, runtime: string, desktop: string): Promise<void> {
-  await execFileAsync('ffmpeg', ['-y', '-i', master, '-vf', 'fps=24,scale=1280:720:force_original_aspect_ratio=decrease,pad=1280:720:(ow-iw)/2:(oh-ih)/2', '-an', '-c:v', 'libx264', '-pix_fmt', 'yuv420p', '-movflags', '+faststart', runtime]);
-  await execFileAsync('ffmpeg', ['-y', '-i', master, '-vf', 'fps=24,scale=1920:1080:force_original_aspect_ratio=decrease,pad=1920:1080:(ow-iw)/2:(oh-ih)/2', '-an', '-c:v', 'libx264', '-pix_fmt', 'yuv420p', '-movflags', '+faststart', desktop]);
+export async function normalizeVideo(master: string, runtime: string, desktop: string, execute: (file: string, args: string[]) => Promise<unknown> = execFileAsync): Promise<void> {
+  await execute('ffmpeg', ['-y', '-i', master, '-vf', 'fps=24,scale=1280:720:force_original_aspect_ratio=decrease,pad=1280:720:(ow-iw)/2:(oh-ih)/2', '-an', '-c:v', 'libx264', '-pix_fmt', 'yuv420p', '-movflags', '+faststart', '-f', 'mp4', runtime]);
+  await execute('ffmpeg', ['-y', '-i', master, '-vf', 'fps=24,scale=1920:1080:force_original_aspect_ratio=decrease,pad=1920:1080:(ow-iw)/2:(oh-ih)/2', '-an', '-c:v', 'libx264', '-pix_fmt', 'yuv420p', '-movflags', '+faststart', '-f', 'mp4', desktop]);
 }
 
 export async function validateJobArtifact(job: MediaJob): Promise<unknown> {

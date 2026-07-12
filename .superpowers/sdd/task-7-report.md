@@ -123,3 +123,9 @@ The completed fast path validates all three files. A missing or corrupt raw mast
 Failure and lost-claim cleanup removes the raw, runtime, and desktop owner-specific temporary files. Tests cover successful triple-output commit plus completed bundles with a missing master or corrupt desktop; both recovery cases make zero new submit calls and reuse the existing provider ID.
 
 Verification commands: `npm --prefix tools/media test` passed 44/44 tests across five files; `npm --prefix tools/media run typecheck` passed. Production specs were regenerated deterministically with strict runtime, desktop, and master validation records.
+
+## Seedance normalization muxer follow-up
+
+The successful remote Seedance master exposed an ffmpeg muxer inference failure because normalized temporary filenames ended in `.normalized`. Runtime and desktop temporary filenames now end in `.normalized.mp4`, and both ffmpeg invocations explicitly pass `-f mp4`. Owner-specific fencing names and three-file failure cleanup remain intact. Retry continues to reuse the ledger's existing provider job ID, so this local normalization correction does not resubmit the paid remote task.
+
+The regression test captures both ffmpeg invocations and asserts an explicit MP4 muxer plus `.mp4` output suffix for runtime and desktop derivatives.
