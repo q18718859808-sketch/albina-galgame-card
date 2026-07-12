@@ -1,11 +1,11 @@
-import { mkdir, readFile, writeFile } from 'node:fs/promises';
+import { mkdir, readFile, rename, unlink, writeFile } from 'node:fs/promises';
 import { randomUUID } from 'node:crypto';
 import { dirname } from 'node:path';
 
 import { downloadResumable } from './download.js';
 import { contentHashJobId } from './hash.js';
 import type { MediaJob } from './job.js';
-import { Ledger } from './ledger.js';
+import { JobBusyError, Ledger, LostJobClaimError } from './ledger.js';
 import { PieClient } from './pie-client.js';
 import { retry } from './retry.js';
 import type { AmbiguousArtifact, NormalizedArtifact } from './types.js';
@@ -56,31 +56,35 @@ export class MediaGenerator {
     }
     if (job.kind === 'music' && !job.probe) await this.options.ledger.assertMusicBulkReady();
     const claim = await this.options.ledger.claimJob(id, this.owner);
-    if (claim === 'busy') return;
-    if (claim === 'already-completed') {
+    if (claim.status === 'busy') throw new JobBusyError(id);
+    if (claim.status === 'already-completed') {
       await validateJobArtifact(job);
       return;
     }
+    const token = claim.token;
+    let temporaryOutput: string | undefined;
     try {
       if (job.kind === 'music') await this.options.ledger.assertMusicRequestAllowed();
       const artifact =
         job.kind === 'video'
-          ? await this.generateVideo(job, id)
+          ? await this.generateVideo(job, id, token)
           : await retry(() => this.requestArtifact(job), { sleep: this.sleep });
       if (artifact.kind === 'ambiguous') {
         await this.options.ledger.startMusicCooldown();
-        await this.options.ledger.upsertJob(id, { status: 'ambiguous', error: artifact.reason });
+        await this.options.ledger.updateClaimedJob(id, this.owner, token, { status: 'ambiguous', error: artifact.reason });
         throw new Error('Music request outcome is ambiguous after HTTP 504');
       }
-      await this.storeArtifact(artifact, job.output);
-      await validateJobArtifact(job);
+      temporaryOutput = await this.storeArtifact(artifact, job.output);
+      await validateJobArtifact({ ...job, output: temporaryOutput });
       if (job.kind === 'music' && job.probe) await this.options.ledger.recordMusicProbe(true);
-      await this.options.ledger.upsertJob(id, { status: 'completed', output: job.output });
+      await this.options.ledger.commitClaimedJob(id, this.owner, token, () => rename(temporaryOutput!, job.output), { status: 'completed', output: job.output });
+      temporaryOutput = undefined;
     } catch (error) {
+      if (temporaryOutput) await unlink(temporaryOutput).catch(() => undefined);
       if (job.kind === 'music' && job.probe) await this.options.ledger.recordMusicProbe(false);
       const current = (await this.options.ledger.read()).jobs[id];
       if (current?.status !== 'ambiguous') {
-        await this.options.ledger.upsertJob(id, { status: 'failed', error: error instanceof Error ? error.message : String(error) });
+        await this.options.ledger.updateClaimedJob(id, this.owner, token, { status: 'failed', error: error instanceof Error ? error.message : String(error) }).catch((claimError) => { if (!(claimError instanceof LostJobClaimError)) throw claimError; });
       }
       throw error;
     }
@@ -106,7 +110,7 @@ export class MediaGenerator {
     throw new Error(`Unsupported media job kind: ${String(job.kind)}`);
   }
 
-  private async generateVideo(job: Extract<MediaJob, { kind: 'video' }>, jobId: string): Promise<NormalizedArtifact> {
+  private async generateVideo(job: Extract<MediaJob, { kind: 'video' }>, jobId: string, token: number): Promise<NormalizedArtifact> {
     if (!this.client.submitVideo || !this.client.pollVideo) throw new Error('Media client does not implement video submit/poll');
     const persisted = (await this.options.ledger.read()).jobs[jobId]?.providerJobId;
     let providerJobId = typeof persisted === 'string' ? persisted : undefined;
@@ -114,9 +118,10 @@ export class MediaGenerator {
       const image = await readFile(job.sourceImage);
       const submitted = await retry(() => this.client.submitVideo!({ ...job, image }), { sleep: this.sleep });
       providerJobId = submitted.providerJobId;
-      await this.options.ledger.upsertJob(jobId, { status: 'polling', providerJobId });
+      await this.options.ledger.updateClaimedJob(jobId, this.owner, token, { status: 'running', providerJobId });
     }
     for (let attempt = 0; attempt < 120; attempt += 1) {
+      await this.options.ledger.renewClaim(jobId, this.owner, token);
       const result = await retry(() => this.client.pollVideo!(providerJobId), { sleep: this.sleep });
       if ('kind' in result) return result;
       if (result.status === 'failed') throw new Error(`Pie video job failed: ${providerJobId}`);
@@ -125,11 +130,13 @@ export class MediaGenerator {
     throw new Error(`Pie video job timed out: ${providerJobId}`);
   }
 
-  private async storeArtifact(artifact: NormalizedArtifact, output: string): Promise<void> {
+  private async storeArtifact(artifact: NormalizedArtifact, output: string): Promise<string> {
     await mkdir(dirname(output), { recursive: true });
-    if (artifact.bytes) await writeFile(output, artifact.bytes);
-    else if (artifact.sourceUrl) await this.downloader(artifact.sourceUrl, output);
+    const temporary = `${output}.${this.owner}.part`;
+    if (artifact.bytes) await writeFile(temporary, artifact.bytes);
+    else if (artifact.sourceUrl) await this.downloader(artifact.sourceUrl, temporary);
     else throw new Error('Pie artifact contains neither bytes nor a download URL');
+    return temporary;
   }
 }
 

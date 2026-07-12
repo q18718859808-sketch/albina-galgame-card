@@ -41,6 +41,18 @@ describe('media CLI', () => {
     await expect(runCli(['inventory', '--jobs', jobsDirectory], { stdout: () => undefined })).rejects.toThrow(/invalid media job/i);
   });
 
+  test('generate surfaces an active lease as a non-success busy error', async () => {
+    const directory = await mkdtemp(join(tmpdir(), 'albina-media-cli-busy-'));
+    const jobPath = join(directory, 'image.json');
+    const job = { kind: 'image', prompt: 'rain', width: 10, height: 10, output: join(directory, 'image.png'), validation: { width: 10, height: 10, alpha: true } };
+    await writeJson(jobPath, job);
+    const ledgerPath = join(directory, 'ledger.json');
+    await new Ledger(ledgerPath).claimJob(contentHashJobId(job), 'other-worker');
+    const output: string[] = [];
+    await expect(runCli(['generate', jobPath, '--ledger', ledgerPath], { client: { generateImage: vi.fn() }, stdout: (line) => output.push(line) })).rejects.toThrow(/busy/i);
+    expect(output).toEqual([]);
+  });
+
   test('validate and promote copy only a validated artifact', async () => {
     const directory = await mkdtemp(join(tmpdir(), 'albina-media-cli-promote-'));
     const source = join(directory, 'strip.png');

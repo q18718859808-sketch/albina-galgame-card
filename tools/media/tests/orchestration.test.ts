@@ -7,7 +7,7 @@ import { describe, expect, test, vi } from 'vitest';
 import { downloadResumable } from '../src/download.js';
 import { MediaGenerator } from '../src/generator.js';
 import { contentHashJobId } from '../src/hash.js';
-import { Ledger, MusicBulkNotReadyError, MusicCooldownError } from '../src/ledger.js';
+import { JobBusyError, Ledger, MusicBulkNotReadyError, MusicCooldownError } from '../src/ledger.js';
 import { PieClient } from '../src/pie-client.js';
 import { retry } from '../src/retry.js';
 
@@ -59,10 +59,10 @@ describe('single-writer ledger', () => {
     const directory = await mkdtemp(join(tmpdir(), 'albina-media-lease-'));
     let now = 1_000;
     const ledger = new Ledger(join(directory, 'ledger.json'), { now: () => now });
-    await expect(ledger.claimJob('paid', 'first', 100)).resolves.toBe('claimed');
-    await expect(ledger.claimJob('paid', 'second', 100)).resolves.toBe('busy');
+    await expect(ledger.claimJob('paid', 'first', 100)).resolves.toMatchObject({ status: 'claimed', token: 1 });
+    await expect(ledger.claimJob('paid', 'second', 100)).resolves.toEqual({ status: 'busy' });
     now = 1_101;
-    await expect(ledger.claimJob('paid', 'second', 100)).resolves.toBe('claimed');
+    await expect(ledger.claimJob('paid', 'second', 100)).resolves.toMatchObject({ status: 'claimed', token: 2 });
     expect((await ledger.read()).jobs.paid).toMatchObject({ status: 'running', leaseOwner: 'second', leaseUntil: 1_201 });
   });
 });
@@ -118,10 +118,32 @@ describe('artifact generation', () => {
     const first = new MediaGenerator({ client: { generateImage }, ledger }).generate([job]);
     await vi.waitFor(() => expect(generateImage).toHaveBeenCalledOnce());
     const second = new MediaGenerator({ client: { generateImage }, ledger }).generate([job]);
-    await second;
+    await expect(second).rejects.toBeInstanceOf(JobBusyError);
     release();
     await first;
     expect(generateImage).toHaveBeenCalledOnce();
+  });
+
+  test('fences an expired worker from overwriting a reclaimed worker output or ledger state', async () => {
+    const directory = await mkdtemp(join(tmpdir(), 'albina-media-fencing-'));
+    const output = join(directory, 'image.png');
+    const job = { kind: 'image' as const, prompt: 'rain', width: 100, height: 100, output, validation: { width: 100, height: 100, alpha: true } };
+    let now = 1_000;
+    const ledger = new Ledger(join(directory, 'ledger.json'), { now: () => now });
+    let releaseA!: () => void;
+    const heldA = new Promise<void>((resolve) => { releaseA = resolve; });
+    const oldBytes = pngHeader(100, 100, 6); oldBytes[30] = 1;
+    const newBytes = pngHeader(100, 100, 6); newBytes[30] = 2;
+    const firstProvider = vi.fn(async () => { await heldA; return { kind: 'image' as const, model: 'gpt-image-2', bytes: oldBytes }; });
+    const first = new MediaGenerator({ client: { generateImage: firstProvider }, ledger }).generate([job]);
+    await vi.waitFor(() => expect(firstProvider).toHaveBeenCalledOnce());
+    now += 10 * 60 * 1000 + 1;
+    const secondProvider = vi.fn(async () => ({ kind: 'image' as const, model: 'gpt-image-2', bytes: newBytes }));
+    await new MediaGenerator({ client: { generateImage: secondProvider }, ledger }).generate([job]);
+    releaseA();
+    await expect(first).rejects.toThrow(/claim was lost/i);
+    expect(await readFile(output)).toEqual(newBytes);
+    expect((await ledger.read()).jobs[contentHashJobId(job)]).toMatchObject({ status: 'completed', claimToken: 2 });
   });
 
   test('does not restart a job with a fresh running lease', async () => {
@@ -130,7 +152,7 @@ describe('artifact generation', () => {
     const ledger = new Ledger(join(directory, 'ledger.json'));
     await ledger.claimJob(contentHashJobId(job), 'other-process');
     const generateImage = vi.fn();
-    await new MediaGenerator({ client: { generateImage }, ledger }).generate([job]);
+    await expect(new MediaGenerator({ client: { generateImage }, ledger }).generate([job])).rejects.toBeInstanceOf(JobBusyError);
     expect(generateImage).not.toHaveBeenCalled();
   });
   test('skips a completed job with a still-valid output without provider billing', async () => {

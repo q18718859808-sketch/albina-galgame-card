@@ -67,3 +67,15 @@ There remains an unavoidable narrow crash window after a provider accepts a new 
 Inventory now skips only the exact production `index.json`. Any other malformed or invalid job JSON throws and causes a nonzero CLI exit instead of being silently omitted.
 
 Focused verification command: `npm --prefix tools/media test -- orchestration.test.ts cli.test.ts`. Result: 2 files passed, 22/22 tests passed. Type verification command: `npm --prefix tools/media run typecheck`. Result: passed.
+
+## Lease fencing and explicit busy follow-up
+
+Claims now carry a monotonic fencing token in addition to owner and expiry. Every owner-sensitive provider-ID, ambiguous, failed, and completed ledger write verifies the current owner/token atomically. Final artifacts are downloaded or written to an owner-unique temporary path, validated there, and renamed to the delivery path only while holding the ledger lock after a successful fence check. A reclaimed old worker therefore cannot overwrite the newer worker's output or ledger state.
+
+Video polling renews its lease on every poll cycle, and the initial claim covers synchronous paid operations. If a synchronous provider call remains in flight beyond the lease and an operator explicitly reclaims it, duplicate provider execution cannot be prevented because the remote call cannot be cancelled transactionally; fencing guarantees the older result is discarded and cannot commit. Reclaiming an uncertain synchronous lease should therefore remain an explicit operator decision.
+
+Active leases now surface as `JobBusyError`. CLI generation rejects, emits no success output, and exits nonzero instead of silently pretending the job was generated.
+
+The deterministic fencing test expires worker A's lease, lets worker B reclaim and commit, then resolves A. A receives a lost-claim error, B's bytes remain in the final output, and the ledger retains B's completed token.
+
+Focused verification command: `npm --prefix tools/media test -- orchestration.test.ts cli.test.ts`. Result: 2 files passed, 24/24 tests passed. Type verification command: `npm --prefix tools/media run typecheck`. Result: passed.

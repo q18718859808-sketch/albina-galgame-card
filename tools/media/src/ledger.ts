@@ -10,6 +10,7 @@ export interface LedgerJob {
   updatedAt?: string;
   leaseOwner?: string;
   leaseUntil?: number;
+  claimToken?: number;
   [key: string]: unknown;
 }
 
@@ -35,6 +36,8 @@ export class MusicCooldownError extends Error {
     this.name = 'MusicCooldownError';
   }
 }
+export class JobBusyError extends Error { constructor(id: string) { super(`Media job is busy under an active lease: ${id}`); this.name = 'JobBusyError'; } }
+export class LostJobClaimError extends Error { constructor(id: string) { super(`Media job claim was lost or reclaimed: ${id}`); this.name = 'LostJobClaimError'; } }
 
 export class Ledger {
   private readonly now: () => number;
@@ -61,13 +64,30 @@ export class Ledger {
     });
   }
 
-  async claimJob(id: string, owner: string, leaseMilliseconds = 10 * 60 * 1000): Promise<'claimed' | 'already-completed' | 'busy'> {
+  async claimJob(id: string, owner: string, leaseMilliseconds = 10 * 60 * 1000): Promise<{ status: 'claimed'; token: number } | { status: 'already-completed' } | { status: 'busy' }> {
     return this.update((state) => {
       const existing = state.jobs[id];
-      if (existing?.status === 'completed') return 'already-completed';
-      if (existing?.status === 'running' && typeof existing.leaseUntil === 'number' && existing.leaseUntil > this.now()) return 'busy';
-      state.jobs[id] = { ...existing, status: 'running', leaseOwner: owner, leaseUntil: this.now() + leaseMilliseconds, updatedAt: new Date(this.now()).toISOString() };
-      return 'claimed';
+      if (existing?.status === 'completed') return { status: 'already-completed' } as const;
+      if (existing?.status === 'running' && typeof existing.leaseUntil === 'number' && existing.leaseUntil > this.now()) return { status: 'busy' } as const;
+      const token = (existing?.claimToken ?? 0) + 1;
+      state.jobs[id] = { ...existing, status: 'running', leaseOwner: owner, leaseUntil: this.now() + leaseMilliseconds, claimToken: token, updatedAt: new Date(this.now()).toISOString() };
+      return { status: 'claimed', token } as const;
+    });
+  }
+
+  async renewClaim(id: string, owner: string, token: number, leaseMilliseconds = 10 * 60 * 1000): Promise<void> {
+    await this.update((state) => { const job = requireClaim(state, id, owner, token); job.leaseUntil = this.now() + leaseMilliseconds; job.updatedAt = new Date(this.now()).toISOString(); });
+  }
+
+  async updateClaimedJob(id: string, owner: string, token: number, entry: LedgerJob): Promise<void> {
+    await this.update((state) => { const job = requireClaim(state, id, owner, token); state.jobs[id] = { ...job, ...entry, updatedAt: new Date(this.now()).toISOString() }; });
+  }
+
+  async commitClaimedJob(id: string, owner: string, token: number, commitArtifact: () => Promise<void>, entry: LedgerJob): Promise<void> {
+    await this.withLockedState(async (state) => {
+      const job = requireClaim(state, id, owner, token);
+      await commitArtifact();
+      state.jobs[id] = { ...job, ...entry, updatedAt: new Date(this.now()).toISOString() };
     });
   }
 
@@ -95,11 +115,15 @@ export class Ledger {
   }
 
   private async update<T>(mutator: (state: LedgerState) => T): Promise<T> {
+    return this.withLockedState(async (state) => mutator(state));
+  }
+
+  private async withLockedState<T>(mutator: (state: LedgerState) => Promise<T>): Promise<T> {
     await mkdir(dirname(this.path), { recursive: true });
     const lock = await acquireLock(`${this.path}.lock`);
     try {
       const state = await this.read();
-      const result = mutator(state);
+      const result = await mutator(state);
       const temporary = `${this.path}.${process.pid}.${Date.now()}.tmp`;
       await writeFile(temporary, `${JSON.stringify(state, null, 2)}\n`, 'utf8');
       await rename(temporary, this.path);
@@ -109,6 +133,12 @@ export class Ledger {
       await unlink(`${this.path}.lock`).catch(() => undefined);
     }
   }
+}
+
+function requireClaim(state: LedgerState, id: string, owner: string, token: number): LedgerJob {
+  const job = state.jobs[id];
+  if (job?.status !== 'running' || job.leaseOwner !== owner || job.claimToken !== token) throw new LostJobClaimError(id);
+  return job;
 }
 
 function emptyLedger(): LedgerState {
