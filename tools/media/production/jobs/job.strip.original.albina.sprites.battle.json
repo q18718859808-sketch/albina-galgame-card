@@ -8,7 +8,7 @@
   "validation": {
     "width": 4096,
     "height": 512,
-    "requireAlpha": true,
-    "stripFrames": 8
+    "alpha": true,
+    "frameCount": 8
   }
 }

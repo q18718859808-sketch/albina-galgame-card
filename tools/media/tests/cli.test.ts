@@ -69,7 +69,7 @@ describe('media CLI', () => {
     const directory = await mkdtemp(join(tmpdir(), 'albina-media-cli-ambiguous-'));
     const jobPath = join(directory, 'music.json');
     const ledgerPath = join(directory, 'ledger.json');
-    await writeJson(jobPath, { kind: 'music', prompt: 'one', durationSeconds: 5, output: join(directory, 'one.mp3') });
+    await writeJson(jobPath, { kind: 'music', probe: true, prompt: 'one', durationSeconds: 5, output: join(directory, 'one.mp3') });
     const client = {
       generateMusic: vi.fn().mockResolvedValue({ kind: 'ambiguous', model: 'music-2.6', reason: 'gateway-timeout' }),
     };

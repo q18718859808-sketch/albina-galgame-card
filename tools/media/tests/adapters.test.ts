@@ -52,14 +52,14 @@ describe('PieClient', () => {
         expect(JSON.parse(String(init?.body))).toMatchObject({
           model: 'seedance',
           task_type: 'seedance-1.5-pro',
-          input: { prompt: 'slow rain', duration: 5 },
+          input: { prompt: 'slow rain', duration: 5, images: ['data:image/png;base64,AQID'] },
         });
         return jsonResponse(await fixture('video-submit.json'));
       })
       .mockResolvedValueOnce(jsonResponse(await fixture('video-poll.json')));
     const client = new PieClient({ env: { PIE_API_KEY: 'test-only' }, fetcher });
 
-    const submitted = await client.submitVideo({ prompt: 'slow rain', durationSeconds: 5 });
+    const submitted = await client.submitVideo({ prompt: 'slow rain', durationSeconds: 5, image: new Uint8Array([1, 2, 3]) });
     const completed = await client.pollVideo(submitted.providerJobId);
 
     expect(submitted).toEqual({ providerJobId: 'job_[REDACTED]', status: 'pending' });

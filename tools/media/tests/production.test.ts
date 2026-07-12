@@ -16,6 +16,8 @@ describe('production job preparation', () => {
     expect(index.freeze.voices).toMatchObject({ '阿尔比娜': 'coral', '叙事记录': 'onyx' });
     expect(index.jobs.filter((job: { kind: string }) => job.kind === 'image')).toHaveLength(8);
     expect(index.jobs.filter((job: { kind: string }) => job.kind === 'speech')).toHaveLength(154);
+    expect(index.jobs.filter((job: { kind: string }) => job.kind === 'video').every((job: { sourceImage?: string }) => job.sourceImage)).toBe(true);
+    expect(index.jobs.filter((job: { kind: string }) => job.kind === 'image').every((job: { validation: object }) => JSON.stringify(job.validation).includes('frameCount'))).toBe(true);
   });
 
   test('is byte reproducible', async () => {

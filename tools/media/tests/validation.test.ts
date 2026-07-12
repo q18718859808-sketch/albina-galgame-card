@@ -6,6 +6,7 @@ import { fileURLToPath } from 'node:url';
 import { describe, expect, test } from 'vitest';
 
 import { MediaValidationError, validateAudio, validateImage, validateVideo } from '../src/validate.js';
+import { loadJob } from '../src/job.js';
 
 describe('media validation', () => {
   test('validates image dimensions, alpha, and eight-frame strips', async () => {
@@ -61,6 +62,13 @@ describe('media validation', () => {
     await expect(
       validateVideo('recorded.mp4', { width: 1920, height: 1080, fps: 24, durationSeconds: 5 }, async () => probe),
     ).rejects.toThrow(/dimensions/i);
+  });
+
+  test('rejects unknown validation fields instead of silently ignoring them', async () => {
+    const directory = await mkdtemp(join(tmpdir(), 'albina-media-invalid-validation-'));
+    const path = join(directory, 'job.json');
+    await writeFile(path, JSON.stringify({ kind: 'image', prompt: 'x', width: 8, height: 1, output: 'x.png', validation: { width: 8, height: 1, stripFrames: 8 } }));
+    await expect(loadJob(path)).rejects.toThrow(/unknown validation fields/i);
   });
 });
 

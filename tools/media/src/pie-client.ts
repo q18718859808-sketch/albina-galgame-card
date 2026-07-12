@@ -57,14 +57,14 @@ export class PieClient {
     return imageArtifact(await response.json());
   }
 
-  async submitVideo(input: { prompt: string; durationSeconds: number }): Promise<{ providerJobId: string; status: string }> {
+  async submitVideo(input: { prompt: string; durationSeconds: number; image: Uint8Array }): Promise<{ providerJobId: string; status: string }> {
     const response = await this.request('/api/v1/task', {
       method: 'POST',
       headers: { 'content-type': 'application/json; charset=utf-8' },
       body: JSON.stringify({
         model: 'seedance',
         task_type: 'seedance-1.5-pro',
-        input: { prompt: input.prompt, duration: input.durationSeconds },
+        input: { prompt: input.prompt, duration: input.durationSeconds, images: [`data:image/png;base64,${Buffer.from(input.image).toString('base64')}`] },
       }),
     }, [], 'x-api-key');
     const body = (await response.json()) as { data?: { task_id?: unknown; status?: unknown } };

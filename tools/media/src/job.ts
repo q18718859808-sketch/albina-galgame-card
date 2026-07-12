@@ -20,6 +20,7 @@ export interface VideoJob extends BaseJob {
   kind: 'video';
   prompt: string;
   durationSeconds: number;
+  sourceImage: string;
   validation?: VideoExpectation;
 }
 
@@ -45,7 +46,20 @@ export async function loadJob(path: string): Promise<MediaJob> {
     throw new Error(`Invalid media job: ${path}`);
   }
   if (typeof value.output !== 'string') throw new Error(`Media job is missing output: ${path}`);
+  assertValidationShape(value, path);
+  if (value.kind === 'video' && typeof value.sourceImage !== 'string') throw new Error(`Video job is missing approved keyframe: ${path}`);
   return value as unknown as MediaJob;
+}
+
+function assertValidationShape(value: Record<string, unknown>, path: string): void {
+  if (!isRecord(value.validation)) return;
+  const allowed = value.kind === 'image'
+    ? new Set(['width', 'height', 'alpha', 'frameCount'])
+    : value.kind === 'video'
+      ? new Set(['width', 'height', 'fps', 'durationSeconds', 'tolerance'])
+      : new Set(['minDurationSeconds', 'maxDurationSeconds', 'minLoudnessDbfs', 'maxLoudnessDbfs']);
+  const unknown = Object.keys(value.validation).filter((key) => !allowed.has(key));
+  if (unknown.length > 0) throw new Error(`Unknown validation fields in ${path}: ${unknown.join(', ')}`);
 }
 
 function isRecord(value: unknown): value is Record<string, unknown> {

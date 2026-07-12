@@ -123,7 +123,9 @@ describe('artifact generation', () => {
   test('does not resubmit after a transient poll failure', async () => {
     const directory = await mkdtemp(join(tmpdir(), 'albina-media-video-retry-'));
     const output = join(directory, 'video.mp4');
-    const job = { kind: 'video' as const, prompt: 'rain', durationSeconds: 5, output };
+    const keyframe = join(directory, 'keyframe.png');
+    await writeFile(keyframe, pngHeader(100, 100, 6));
+    const job = { kind: 'video' as const, prompt: 'rain', durationSeconds: 5, sourceImage: keyframe, output };
     const ledger = new Ledger(join(directory, 'ledger.json'));
     const submitVideo = vi.fn().mockResolvedValue({ providerJobId: 'provider_once', status: 'pending' });
     const pollVideo = vi
@@ -144,13 +146,14 @@ describe('artifact generation', () => {
     ).rejects.toThrow(/validation/i);
 
     expect(submitVideo).toHaveBeenCalledOnce();
+    expect(submitVideo).toHaveBeenCalledWith(expect.objectContaining({ image: expect.any(Uint8Array) }));
     expect(pollVideo).toHaveBeenCalledTimes(2);
     expect((await ledger.read()).jobs[contentHashJobId(job)]?.providerJobId).toBe('provider_once');
   });
 
   test('resumes polling a persisted provider job without submitting again', async () => {
     const directory = await mkdtemp(join(tmpdir(), 'albina-media-video-resume-'));
-    const job = { kind: 'video' as const, prompt: 'rain', durationSeconds: 5, output: join(directory, 'video.mp4') };
+    const job = { kind: 'video' as const, prompt: 'rain', durationSeconds: 5, sourceImage: join(directory, 'keyframe.png'), output: join(directory, 'video.mp4') };
     const ledger = new Ledger(join(directory, 'ledger.json'));
     await ledger.upsertJob(contentHashJobId(job), { status: 'failed', providerJobId: 'provider_existing' });
     const submitVideo = vi.fn();
@@ -162,6 +165,14 @@ describe('artifact generation', () => {
 
     expect(submitVideo).not.toHaveBeenCalled();
     expect(pollVideo).toHaveBeenCalledWith('provider_existing');
+  });
+
+  test('blocks even one non-probe music job until three probes pass', async () => {
+    const directory = await mkdtemp(join(tmpdir(), 'albina-media-single-music-'));
+    const generateMusic = vi.fn();
+    const job = { kind: 'music' as const, prompt: 'cue', durationSeconds: 30, output: join(directory, 'cue.mp3'), validation: { minDurationSeconds: 20, maxDurationSeconds: 40 } };
+    await expect(new MediaGenerator({ client: { generateMusic }, ledger: new Ledger(join(directory, 'ledger.json')) }).generate([job])).rejects.toBeInstanceOf(MusicBulkNotReadyError);
+    expect(generateMusic).not.toHaveBeenCalled();
   });
 });
 

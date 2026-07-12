@@ -1189,8 +1189,8 @@
       "validation": {
         "width": 4096,
         "height": 512,
-        "requireAlpha": true,
-        "stripFrames": 8
+        "alpha": true,
+        "frameCount": 8
       }
     },
     {
@@ -1204,8 +1204,8 @@
       "validation": {
         "width": 4096,
         "height": 512,
-        "requireAlpha": true,
-        "stripFrames": 8
+        "alpha": true,
+        "frameCount": 8
       }
     },
     {
@@ -1219,8 +1219,8 @@
       "validation": {
         "width": 4096,
         "height": 512,
-        "requireAlpha": true,
-        "stripFrames": 8
+        "alpha": true,
+        "frameCount": 8
       }
     },
     {
@@ -1234,8 +1234,8 @@
       "validation": {
         "width": 4096,
         "height": 512,
-        "requireAlpha": true,
-        "stripFrames": 8
+        "alpha": true,
+        "frameCount": 8
       }
     },
     {
@@ -1249,8 +1249,8 @@
       "validation": {
         "width": 4096,
         "height": 512,
-        "requireAlpha": true,
-        "stripFrames": 8
+        "alpha": true,
+        "frameCount": 8
       }
     },
     {
@@ -1264,8 +1264,8 @@
       "validation": {
         "width": 4096,
         "height": 512,
-        "requireAlpha": true,
-        "stripFrames": 8
+        "alpha": true,
+        "frameCount": 8
       }
     },
     {
@@ -1279,8 +1279,8 @@
       "validation": {
         "width": 4096,
         "height": 512,
-        "requireAlpha": true,
-        "stripFrames": 8
+        "alpha": true,
+        "frameCount": 8
       }
     },
     {
@@ -1294,8 +1294,8 @@
       "validation": {
         "width": 4096,
         "height": 512,
-        "requireAlpha": true,
-        "stripFrames": 8
+        "alpha": true,
+        "frameCount": 8
       }
     },
     {
@@ -1303,12 +1303,14 @@
       "kind": "video",
       "prompt": "Albina visual novel animated CG: ed golden bough rebuild. Use approved keyframe composition, restrained cinematic motion, preserve character identity and frozen palette, no text or logos.",
       "durationSeconds": 30,
+      "sourceImage": "D:\\创作\\albina-v2-complete\\dist\\albina-galgame-card\\assets\\cg\\golden_bough_ending.jpg",
       "output": "D:\\创作\\albina-v2-complete\\staging\\media\\video\\ed_golden_bough_rebuild.mp4",
       "validation": {
-        "minWidth": 1280,
-        "minHeight": 720,
-        "minDurationSeconds": 7,
-        "maxDurationSeconds": 31
+        "width": 1280,
+        "height": 720,
+        "fps": 24,
+        "durationSeconds": 30,
+        "tolerance": 1
       }
     },
     {
@@ -1316,12 +1318,14 @@
       "kind": "video",
       "prompt": "Albina visual novel animated CG: ed ring conspiracy. Use approved keyframe composition, restrained cinematic motion, preserve character identity and frozen palette, no text or logos.",
       "durationSeconds": 30,
+      "sourceImage": "D:\\创作\\albina-v2-complete\\dist\\albina-galgame-card\\assets\\cg\\ring_conspiracy_ending.jpg",
       "output": "D:\\创作\\albina-v2-complete\\staging\\media\\video\\ed_ring_conspiracy.mp4",
       "validation": {
-        "minWidth": 1280,
-        "minHeight": 720,
-        "minDurationSeconds": 7,
-        "maxDurationSeconds": 31
+        "width": 1280,
+        "height": 720,
+        "fps": 24,
+        "durationSeconds": 30,
+        "tolerance": 1
       }
     },
     {
@@ -1329,12 +1333,14 @@
       "kind": "video",
       "prompt": "Albina visual novel animated CG: ed white canvas. Use approved keyframe composition, restrained cinematic motion, preserve character identity and frozen palette, no text or logos.",
       "durationSeconds": 30,
+      "sourceImage": "D:\\创作\\albina-v2-complete\\dist\\albina-galgame-card\\assets\\cg\\white_canvas_ending.jpg",
       "output": "D:\\创作\\albina-v2-complete\\staging\\media\\video\\ed_white_canvas.mp4",
       "validation": {
-        "minWidth": 1280,
-        "minHeight": 720,
-        "minDurationSeconds": 7,
-        "maxDurationSeconds": 31
+        "width": 1280,
+        "height": 720,
+        "fps": 24,
+        "durationSeconds": 30,
+        "tolerance": 1
       }
     },
     {
@@ -1342,12 +1348,14 @@
       "kind": "video",
       "prompt": "Albina visual novel animated CG: golden bough rebuild ending bad. Use approved keyframe composition, restrained cinematic motion, preserve character identity and frozen palette, no text or logos.",
       "durationSeconds": 8,
+      "sourceImage": "D:\\创作\\albina-v2-complete\\dist\\albina-galgame-card\\assets\\cg\\golden_bough_ending.jpg",
       "output": "D:\\创作\\albina-v2-complete\\staging\\media\\video\\golden_bough_rebuild_ending_bad.mp4",
       "validation": {
-        "minWidth": 1280,
-        "minHeight": 720,
-        "minDurationSeconds": 7,
-        "maxDurationSeconds": 31
+        "width": 1280,
+        "height": 720,
+        "fps": 24,
+        "durationSeconds": 8,
+        "tolerance": 1
       }
     },
     {
@@ -1355,12 +1363,14 @@
       "kind": "video",
       "prompt": "Albina visual novel animated CG: golden bough rebuild ending normal. Use approved keyframe composition, restrained cinematic motion, preserve character identity and frozen palette, no text or logos.",
       "durationSeconds": 8,
+      "sourceImage": "D:\\创作\\albina-v2-complete\\dist\\albina-galgame-card\\assets\\cg\\golden_bough_ending.jpg",
       "output": "D:\\创作\\albina-v2-complete\\staging\\media\\video\\golden_bough_rebuild_ending_normal.mp4",
       "validation": {
-        "minWidth": 1280,
-        "minHeight": 720,
-        "minDurationSeconds": 7,
-        "maxDurationSeconds": 31
+        "width": 1280,
+        "height": 720,
+        "fps": 24,
+        "durationSeconds": 8,
+        "tolerance": 1
       }
     },
     {
@@ -1368,12 +1378,14 @@
       "kind": "video",
       "prompt": "Albina visual novel animated CG: golden bough rebuild ending true. Use approved keyframe composition, restrained cinematic motion, preserve character identity and frozen palette, no text or logos.",
       "durationSeconds": 8,
+      "sourceImage": "D:\\创作\\albina-v2-complete\\dist\\albina-galgame-card\\assets\\cg\\golden_bough_ending.jpg",
       "output": "D:\\创作\\albina-v2-complete\\staging\\media\\video\\golden_bough_rebuild_ending_true.mp4",
       "validation": {
-        "minWidth": 1280,
-        "minHeight": 720,
-        "minDurationSeconds": 7,
-        "maxDurationSeconds": 31
+        "width": 1280,
+        "height": 720,
+        "fps": 24,
+        "durationSeconds": 8,
+        "tolerance": 1
       }
     },
     {
@@ -1381,12 +1393,14 @@
       "kind": "video",
       "prompt": "Albina visual novel animated CG: golden bough rebuild scene 11. Use approved keyframe composition, restrained cinematic motion, preserve character identity and frozen palette, no text or logos.",
       "durationSeconds": 8,
+      "sourceImage": "D:\\创作\\albina-v2-complete\\dist\\albina-galgame-card\\assets\\cg\\rebuild_awakening.jpg",
       "output": "D:\\创作\\albina-v2-complete\\staging\\media\\video\\golden_bough_rebuild_scene_11.mp4",
       "validation": {
-        "minWidth": 1280,
-        "minHeight": 720,
-        "minDurationSeconds": 7,
-        "maxDurationSeconds": 31
+        "width": 1280,
+        "height": 720,
+        "fps": 24,
+        "durationSeconds": 8,
+        "tolerance": 1
       }
     },
     {
@@ -1394,12 +1408,14 @@
       "kind": "video",
       "prompt": "Albina visual novel animated CG: golden bough rebuild scene 15. Use approved keyframe composition, restrained cinematic motion, preserve character identity and frozen palette, no text or logos.",
       "durationSeconds": 8,
+      "sourceImage": "D:\\创作\\albina-v2-complete\\dist\\albina-galgame-card\\assets\\cg\\rebuild_awakening.jpg",
       "output": "D:\\创作\\albina-v2-complete\\staging\\media\\video\\golden_bough_rebuild_scene_15.mp4",
       "validation": {
-        "minWidth": 1280,
-        "minHeight": 720,
-        "minDurationSeconds": 7,
-        "maxDurationSeconds": 31
+        "width": 1280,
+        "height": 720,
+        "fps": 24,
+        "durationSeconds": 8,
+        "tolerance": 1
       }
     },
     {
@@ -1407,12 +1423,14 @@
       "kind": "video",
       "prompt": "Albina visual novel animated CG: golden bough rebuild scene 3. Use approved keyframe composition, restrained cinematic motion, preserve character identity and frozen palette, no text or logos.",
       "durationSeconds": 8,
+      "sourceImage": "D:\\创作\\albina-v2-complete\\dist\\albina-galgame-card\\assets\\cg\\rebuild_awakening.jpg",
       "output": "D:\\创作\\albina-v2-complete\\staging\\media\\video\\golden_bough_rebuild_scene_3.mp4",
       "validation": {
-        "minWidth": 1280,
-        "minHeight": 720,
-        "minDurationSeconds": 7,
-        "maxDurationSeconds": 31
+        "width": 1280,
+        "height": 720,
+        "fps": 24,
+        "durationSeconds": 8,
+        "tolerance": 1
       }
     },
     {
@@ -1420,12 +1438,14 @@
       "kind": "video",
       "prompt": "Albina visual novel animated CG: golden bough rebuild scene 5. Use approved keyframe composition, restrained cinematic motion, preserve character identity and frozen palette, no text or logos.",
       "durationSeconds": 8,
+      "sourceImage": "D:\\创作\\albina-v2-complete\\dist\\albina-galgame-card\\assets\\cg\\rebuild_awakening.jpg",
       "output": "D:\\创作\\albina-v2-complete\\staging\\media\\video\\golden_bough_rebuild_scene_5.mp4",
       "validation": {
-        "minWidth": 1280,
-        "minHeight": 720,
-        "minDurationSeconds": 7,
-        "maxDurationSeconds": 31
+        "width": 1280,
+        "height": 720,
+        "fps": 24,
+        "durationSeconds": 8,
+        "tolerance": 1
       }
     },
     {
@@ -1433,12 +1453,14 @@
       "kind": "video",
       "prompt": "Albina visual novel animated CG: golden bough rebuild scene 8. Use approved keyframe composition, restrained cinematic motion, preserve character identity and frozen palette, no text or logos.",
       "durationSeconds": 8,
+      "sourceImage": "D:\\创作\\albina-v2-complete\\dist\\albina-galgame-card\\assets\\cg\\rebuild_awakening.jpg",
       "output": "D:\\创作\\albina-v2-complete\\staging\\media\\video\\golden_bough_rebuild_scene_8.mp4",
       "validation": {
-        "minWidth": 1280,
-        "minHeight": 720,
-        "minDurationSeconds": 7,
-        "maxDurationSeconds": 31
+        "width": 1280,
+        "height": 720,
+        "fps": 24,
+        "durationSeconds": 8,
+        "tolerance": 1
       }
     },
     {
@@ -1446,12 +1468,14 @@
       "kind": "video",
       "prompt": "Albina visual novel animated CG: op. Use approved keyframe composition, restrained cinematic motion, preserve character identity and frozen palette, no text or logos.",
       "durationSeconds": 30,
+      "sourceImage": "D:\\创作\\albina-v2-complete\\dist\\albina-galgame-card\\assets\\cg\\opening_rain.jpg",
       "output": "D:\\创作\\albina-v2-complete\\staging\\media\\video\\op.mp4",
       "validation": {
-        "minWidth": 1280,
-        "minHeight": 720,
-        "minDurationSeconds": 7,
-        "maxDurationSeconds": 31
+        "width": 1280,
+        "height": 720,
+        "fps": 24,
+        "durationSeconds": 30,
+        "tolerance": 1
       }
     },
     {
@@ -1459,12 +1483,14 @@
       "kind": "video",
       "prompt": "Albina visual novel animated CG: prologue. Use approved keyframe composition, restrained cinematic motion, preserve character identity and frozen palette, no text or logos.",
       "durationSeconds": 8,
+      "sourceImage": "D:\\创作\\albina-v2-complete\\dist\\albina-galgame-card\\assets\\cg\\opening_rain.jpg",
       "output": "D:\\创作\\albina-v2-complete\\staging\\media\\video\\prologue.mp4",
       "validation": {
-        "minWidth": 1280,
-        "minHeight": 720,
-        "minDurationSeconds": 7,
-        "maxDurationSeconds": 31
+        "width": 1280,
+        "height": 720,
+        "fps": 24,
+        "durationSeconds": 8,
+        "tolerance": 1
       }
     },
     {
@@ -1472,12 +1498,14 @@
       "kind": "video",
       "prompt": "Albina visual novel animated CG: ring conspiracy ending bad. Use approved keyframe composition, restrained cinematic motion, preserve character identity and frozen palette, no text or logos.",
       "durationSeconds": 8,
+      "sourceImage": "D:\\创作\\albina-v2-complete\\dist\\albina-galgame-card\\assets\\cg\\ring_conspiracy_ending.jpg",
       "output": "D:\\创作\\albina-v2-complete\\staging\\media\\video\\ring_conspiracy_ending_bad.mp4",
       "validation": {
-        "minWidth": 1280,
-        "minHeight": 720,
-        "minDurationSeconds": 7,
-        "maxDurationSeconds": 31
+        "width": 1280,
+        "height": 720,
+        "fps": 24,
+        "durationSeconds": 8,
+        "tolerance": 1
       }
     },
     {
@@ -1485,12 +1513,14 @@
       "kind": "video",
       "prompt": "Albina visual novel animated CG: ring conspiracy ending normal. Use approved keyframe composition, restrained cinematic motion, preserve character identity and frozen palette, no text or logos.",
       "durationSeconds": 8,
+      "sourceImage": "D:\\创作\\albina-v2-complete\\dist\\albina-galgame-card\\assets\\cg\\ring_conspiracy_ending.jpg",
       "output": "D:\\创作\\albina-v2-complete\\staging\\media\\video\\ring_conspiracy_ending_normal.mp4",
       "validation": {
-        "minWidth": 1280,
-        "minHeight": 720,
-        "minDurationSeconds": 7,
-        "maxDurationSeconds": 31
+        "width": 1280,
+        "height": 720,
+        "fps": 24,
+        "durationSeconds": 8,
+        "tolerance": 1
       }
     },
     {
@@ -1498,12 +1528,14 @@
       "kind": "video",
       "prompt": "Albina visual novel animated CG: ring conspiracy ending true. Use approved keyframe composition, restrained cinematic motion, preserve character identity and frozen palette, no text or logos.",
       "durationSeconds": 8,
+      "sourceImage": "D:\\创作\\albina-v2-complete\\dist\\albina-galgame-card\\assets\\cg\\ring_conspiracy_ending.jpg",
       "output": "D:\\创作\\albina-v2-complete\\staging\\media\\video\\ring_conspiracy_ending_true.mp4",
       "validation": {
-        "minWidth": 1280,
-        "minHeight": 720,
-        "minDurationSeconds": 7,
-        "maxDurationSeconds": 31
+        "width": 1280,
+        "height": 720,
+        "fps": 24,
+        "durationSeconds": 8,
+        "tolerance": 1
       }
     },
     {
@@ -1511,12 +1543,14 @@
       "kind": "video",
       "prompt": "Albina visual novel animated CG: ring conspiracy scene 11. Use approved keyframe composition, restrained cinematic motion, preserve character identity and frozen palette, no text or logos.",
       "durationSeconds": 8,
+      "sourceImage": "D:\\创作\\albina-v2-complete\\dist\\albina-galgame-card\\assets\\cg\\conspiracy_contract.jpg",
       "output": "D:\\创作\\albina-v2-complete\\staging\\media\\video\\ring_conspiracy_scene_11.mp4",
       "validation": {
-        "minWidth": 1280,
-        "minHeight": 720,
-        "minDurationSeconds": 7,
-        "maxDurationSeconds": 31
+        "width": 1280,
+        "height": 720,
+        "fps": 24,
+        "durationSeconds": 8,
+        "tolerance": 1
       }
     },
     {
@@ -1524,12 +1558,14 @@
       "kind": "video",
       "prompt": "Albina visual novel animated CG: ring conspiracy scene 15. Use approved keyframe composition, restrained cinematic motion, preserve character identity and frozen palette, no text or logos.",
       "durationSeconds": 8,
+      "sourceImage": "D:\\创作\\albina-v2-complete\\dist\\albina-galgame-card\\assets\\cg\\conspiracy_contract.jpg",
       "output": "D:\\创作\\albina-v2-complete\\staging\\media\\video\\ring_conspiracy_scene_15.mp4",
       "validation": {
-        "minWidth": 1280,
-        "minHeight": 720,
-        "minDurationSeconds": 7,
-        "maxDurationSeconds": 31
+        "width": 1280,
+        "height": 720,
+        "fps": 24,
+        "durationSeconds": 8,
+        "tolerance": 1
       }
     },
     {
@@ -1537,12 +1573,14 @@
       "kind": "video",
       "prompt": "Albina visual novel animated CG: ring conspiracy scene 3. Use approved keyframe composition, restrained cinematic motion, preserve character identity and frozen palette, no text or logos.",
       "durationSeconds": 8,
+      "sourceImage": "D:\\创作\\albina-v2-complete\\dist\\albina-galgame-card\\assets\\cg\\conspiracy_contract.jpg",
       "output": "D:\\创作\\albina-v2-complete\\staging\\media\\video\\ring_conspiracy_scene_3.mp4",
       "validation": {
-        "minWidth": 1280,
-        "minHeight": 720,
-        "minDurationSeconds": 7,
-        "maxDurationSeconds": 31
+        "width": 1280,
+        "height": 720,
+        "fps": 24,
+        "durationSeconds": 8,
+        "tolerance": 1
       }
     },
     {
@@ -1550,12 +1588,14 @@
       "kind": "video",
       "prompt": "Albina visual novel animated CG: ring conspiracy scene 5. Use approved keyframe composition, restrained cinematic motion, preserve character identity and frozen palette, no text or logos.",
       "durationSeconds": 8,
+      "sourceImage": "D:\\创作\\albina-v2-complete\\dist\\albina-galgame-card\\assets\\cg\\conspiracy_contract.jpg",
       "output": "D:\\创作\\albina-v2-complete\\staging\\media\\video\\ring_conspiracy_scene_5.mp4",
       "validation": {
-        "minWidth": 1280,
-        "minHeight": 720,
-        "minDurationSeconds": 7,
-        "maxDurationSeconds": 31
+        "width": 1280,
+        "height": 720,
+        "fps": 24,
+        "durationSeconds": 8,
+        "tolerance": 1
       }
     },
     {
@@ -1563,12 +1603,14 @@
       "kind": "video",
       "prompt": "Albina visual novel animated CG: ring conspiracy scene 8. Use approved keyframe composition, restrained cinematic motion, preserve character identity and frozen palette, no text or logos.",
       "durationSeconds": 8,
+      "sourceImage": "D:\\创作\\albina-v2-complete\\dist\\albina-galgame-card\\assets\\cg\\conspiracy_contract.jpg",
       "output": "D:\\创作\\albina-v2-complete\\staging\\media\\video\\ring_conspiracy_scene_8.mp4",
       "validation": {
-        "minWidth": 1280,
-        "minHeight": 720,
-        "minDurationSeconds": 7,
-        "maxDurationSeconds": 31
+        "width": 1280,
+        "height": 720,
+        "fps": 24,
+        "durationSeconds": 8,
+        "tolerance": 1
       }
     },
     {
@@ -1576,12 +1618,14 @@
       "kind": "video",
       "prompt": "Albina visual novel animated CG: white canvas ending bad. Use approved keyframe composition, restrained cinematic motion, preserve character identity and frozen palette, no text or logos.",
       "durationSeconds": 8,
+      "sourceImage": "D:\\创作\\albina-v2-complete\\dist\\albina-galgame-card\\assets\\cg\\white_canvas_ending.jpg",
       "output": "D:\\创作\\albina-v2-complete\\staging\\media\\video\\white_canvas_ending_bad.mp4",
       "validation": {
-        "minWidth": 1280,
-        "minHeight": 720,
-        "minDurationSeconds": 7,
-        "maxDurationSeconds": 31
+        "width": 1280,
+        "height": 720,
+        "fps": 24,
+        "durationSeconds": 8,
+        "tolerance": 1
       }
     },
     {
@@ -1589,12 +1633,14 @@
       "kind": "video",
       "prompt": "Albina visual novel animated CG: white canvas ending normal. Use approved keyframe composition, restrained cinematic motion, preserve character identity and frozen palette, no text or logos.",
       "durationSeconds": 8,
+      "sourceImage": "D:\\创作\\albina-v2-complete\\dist\\albina-galgame-card\\assets\\cg\\white_canvas_ending.jpg",
       "output": "D:\\创作\\albina-v2-complete\\staging\\media\\video\\white_canvas_ending_normal.mp4",
       "validation": {
-        "minWidth": 1280,
-        "minHeight": 720,
-        "minDurationSeconds": 7,
-        "maxDurationSeconds": 31
+        "width": 1280,
+        "height": 720,
+        "fps": 24,
+        "durationSeconds": 8,
+        "tolerance": 1
       }
     },
     {
@@ -1602,12 +1648,14 @@
       "kind": "video",
       "prompt": "Albina visual novel animated CG: white canvas ending true. Use approved keyframe composition, restrained cinematic motion, preserve character identity and frozen palette, no text or logos.",
       "durationSeconds": 8,
+      "sourceImage": "D:\\创作\\albina-v2-complete\\dist\\albina-galgame-card\\assets\\cg\\white_canvas_ending.jpg",
       "output": "D:\\创作\\albina-v2-complete\\staging\\media\\video\\white_canvas_ending_true.mp4",
       "validation": {
-        "minWidth": 1280,
-        "minHeight": 720,
-        "minDurationSeconds": 7,
-        "maxDurationSeconds": 31
+        "width": 1280,
+        "height": 720,
+        "fps": 24,
+        "durationSeconds": 8,
+        "tolerance": 1
       }
     },
     {
@@ -1615,12 +1663,14 @@
       "kind": "video",
       "prompt": "Albina visual novel animated CG: white canvas scene 11. Use approved keyframe composition, restrained cinematic motion, preserve character identity and frozen palette, no text or logos.",
       "durationSeconds": 8,
+      "sourceImage": "D:\\创作\\albina-v2-complete\\dist\\albina-galgame-card\\assets\\cg\\white_canvas_choice.jpg",
       "output": "D:\\创作\\albina-v2-complete\\staging\\media\\video\\white_canvas_scene_11.mp4",
       "validation": {
-        "minWidth": 1280,
-        "minHeight": 720,
-        "minDurationSeconds": 7,
-        "maxDurationSeconds": 31
+        "width": 1280,
+        "height": 720,
+        "fps": 24,
+        "durationSeconds": 8,
+        "tolerance": 1
       }
     },
     {
@@ -1628,12 +1678,14 @@
       "kind": "video",
       "prompt": "Albina visual novel animated CG: white canvas scene 15. Use approved keyframe composition, restrained cinematic motion, preserve character identity and frozen palette, no text or logos.",
       "durationSeconds": 8,
+      "sourceImage": "D:\\创作\\albina-v2-complete\\dist\\albina-galgame-card\\assets\\cg\\white_canvas_choice.jpg",
       "output": "D:\\创作\\albina-v2-complete\\staging\\media\\video\\white_canvas_scene_15.mp4",
       "validation": {
-        "minWidth": 1280,
-        "minHeight": 720,
-        "minDurationSeconds": 7,
-        "maxDurationSeconds": 31
+        "width": 1280,
+        "height": 720,
+        "fps": 24,
+        "durationSeconds": 8,
+        "tolerance": 1
       }
     },
     {
@@ -1641,12 +1693,14 @@
       "kind": "video",
       "prompt": "Albina visual novel animated CG: white canvas scene 3. Use approved keyframe composition, restrained cinematic motion, preserve character identity and frozen palette, no text or logos.",
       "durationSeconds": 8,
+      "sourceImage": "D:\\创作\\albina-v2-complete\\dist\\albina-galgame-card\\assets\\cg\\white_canvas_choice.jpg",
       "output": "D:\\创作\\albina-v2-complete\\staging\\media\\video\\white_canvas_scene_3.mp4",
       "validation": {
-        "minWidth": 1280,
-        "minHeight": 720,
-        "minDurationSeconds": 7,
-        "maxDurationSeconds": 31
+        "width": 1280,
+        "height": 720,
+        "fps": 24,
+        "durationSeconds": 8,
+        "tolerance": 1
       }
     },
     {
@@ -1654,12 +1708,14 @@
       "kind": "video",
       "prompt": "Albina visual novel animated CG: white canvas scene 5. Use approved keyframe composition, restrained cinematic motion, preserve character identity and frozen palette, no text or logos.",
       "durationSeconds": 8,
+      "sourceImage": "D:\\创作\\albina-v2-complete\\dist\\albina-galgame-card\\assets\\cg\\white_canvas_choice.jpg",
       "output": "D:\\创作\\albina-v2-complete\\staging\\media\\video\\white_canvas_scene_5.mp4",
       "validation": {
-        "minWidth": 1280,
-        "minHeight": 720,
-        "minDurationSeconds": 7,
-        "maxDurationSeconds": 31
+        "width": 1280,
+        "height": 720,
+        "fps": 24,
+        "durationSeconds": 8,
+        "tolerance": 1
       }
     },
     {
@@ -1667,12 +1723,14 @@
       "kind": "video",
       "prompt": "Albina visual novel animated CG: white canvas scene 8. Use approved keyframe composition, restrained cinematic motion, preserve character identity and frozen palette, no text or logos.",
       "durationSeconds": 8,
+      "sourceImage": "D:\\创作\\albina-v2-complete\\dist\\albina-galgame-card\\assets\\cg\\white_canvas_choice.jpg",
       "output": "D:\\创作\\albina-v2-complete\\staging\\media\\video\\white_canvas_scene_8.mp4",
       "validation": {
-        "minWidth": 1280,
-        "minHeight": 720,
-        "minDurationSeconds": 7,
-        "maxDurationSeconds": 31
+        "width": 1280,
+        "height": 720,
+        "fps": 24,
+        "durationSeconds": 8,
+        "tolerance": 1
       }
     },
     {

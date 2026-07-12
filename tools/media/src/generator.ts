@@ -13,7 +13,7 @@ import { validateAudio, validateImage, validateVideo } from './validate.js';
 export interface MediaClient {
   generateImage?(input: { prompt: string; width: number; height: number }): Promise<NormalizedArtifact>;
   editImage?(input: { prompt: string; image: Uint8Array }): Promise<NormalizedArtifact>;
-  submitVideo?(input: { prompt: string; durationSeconds: number }): Promise<{ providerJobId: string; status: string }>;
+  submitVideo?(input: { prompt: string; durationSeconds: number; image: Uint8Array }): Promise<{ providerJobId: string; status: string }>;
   pollVideo?(id: string): Promise<NormalizedArtifact | { providerJobId: string; status: string }>;
   generateSpeech?(input: { input: string; voice: string }): Promise<NormalizedArtifact>;
   generateMusic?(input: { prompt: string; durationSeconds: number }): Promise<NormalizedArtifact | AmbiguousArtifact>;
@@ -38,11 +38,11 @@ export class MediaGenerator {
   }
 
   async generate(jobs: MediaJob[]): Promise<void> {
-    if (jobs.filter((job) => job.kind === 'music').length > 1) await this.options.ledger.assertMusicBulkReady();
     for (const job of jobs) await this.generateOne(job);
   }
 
   private async generateOne(job: MediaJob): Promise<void> {
+    if (job.kind === 'music' && !job.probe) await this.options.ledger.assertMusicBulkReady();
     const id = contentHashJobId(job);
     await this.options.ledger.upsertJob(id, { status: 'running' });
     try {
@@ -95,7 +95,8 @@ export class MediaGenerator {
     const persisted = (await this.options.ledger.read()).jobs[jobId]?.providerJobId;
     let providerJobId = typeof persisted === 'string' ? persisted : undefined;
     if (!providerJobId) {
-      const submitted = await retry(() => this.client.submitVideo!(job), { sleep: this.sleep });
+      const image = await readFile(job.sourceImage);
+      const submitted = await retry(() => this.client.submitVideo!({ ...job, image }), { sleep: this.sleep });
       providerJobId = submitted.providerJobId;
       await this.options.ledger.upsertJob(jobId, { status: 'polling', providerJobId });
     }

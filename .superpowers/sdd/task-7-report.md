@@ -2,6 +2,8 @@
 
 Status: NEEDS_CONTEXT.
 
+Independent-review follow-up is complete. Every video spec now has a required approved canonical keyframe; preparation fails if its mapped asset is absent. The generator reads that keyframe and Seedance submission sends it as an image data URL. Strip validation uses the validator's enforced `alpha` and `frameCount` fields, job loading rejects unknown validation keys, and video specs use exact width/height/FPS/duration fields supported by the validator. A single non-probe music job can no longer bypass the three-success stability gate.
+
 The production pipeline is prepared and reproducible, but this process did not have `PIE_API_KEY`, so no network request, paid generation, staging artifact, validation, promotion, or binary commit was attempted. Pie remains the only configured media provider; no CloseAPI path was added or used.
 
 The new `media prepare-production` command derives production specs from `content/asset-manifest-v2.json`, the authoritative dialogue files, and canonical asset paths. It freezes the character roster, canonical-source outfit rule, six-color palette, eight strip expressions, speaker-to-probed-voice mapping, and music cue sheet. Generated specs contain no credentials or provider responses.

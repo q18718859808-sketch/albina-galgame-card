@@ -2,11 +2,13 @@
   "kind": "video",
   "prompt": "Albina visual novel animated CG: ed ring conspiracy. Use approved keyframe composition, restrained cinematic motion, preserve character identity and frozen palette, no text or logos.",
   "durationSeconds": 30,
+  "sourceImage": "D:\\创作\\albina-v2-complete\\dist\\albina-galgame-card\\assets\\cg\\ring_conspiracy_ending.jpg",
   "output": "D:\\创作\\albina-v2-complete\\staging\\media\\video\\ed_ring_conspiracy.mp4",
   "validation": {
-    "minWidth": 1280,
-    "minHeight": 720,
-    "minDurationSeconds": 7,
-    "maxDurationSeconds": 31
+    "width": 1280,
+    "height": 720,
+    "fps": 24,
+    "durationSeconds": 30,
+    "tolerance": 1
   }
 }
