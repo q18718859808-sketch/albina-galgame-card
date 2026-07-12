@@ -8,3 +8,4 @@ Task 3: complete (commits c89e4f3..eca8290, review clean; deterministic 46-scene
 Task 4: complete (commits cebe546..a090f44, review clean; isolated runtime services and lifecycle-safe media state)
 Task 5: complete (commits 0410384..dca1b92, review clean; offline Pie media orchestrator and quality gates)
 Task 6: complete (commits e1e772e..fb048bb, review clean; canonical asset manifest and zero unresolved references)
+Task 7 preparation: complete (commits 6982553..a24fd53, review clean; 275 Pie-only production jobs frozen with validation, resumability, MIME-correct Seedance keyframes, and music probe gates; real generation/promotion pending)
