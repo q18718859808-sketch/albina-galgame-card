@@ -33,3 +33,11 @@ Execute music probes one at a time and validate each before continuing; only aft
 Video and non-probe music specs are complete but intentionally remain unexecuted until credentials and the music gate permit them. Every generated artifact must be validated before `media promote`; only web delivery encodes belong under `dist/albina-galgame-card/assets`, while archival masters stay outside the web tree.
 
 [Verification service unavailable, results not independently verified by the requested MCP services.]
+
+## Seedance keyframe MIME follow-up
+
+The re-review MIME issue is fixed. Seedance keyframes are now classified from their file signature before request construction: the PNG signature produces `image/png`, the JPEG SOI signature produces `image/jpeg`, and unsupported bytes fail locally before `fetch`. This matches the 29 production keyframes, which currently resolve to canonical JPEG assets, while retaining PNG support for future approved keyframes. No network request was made and no canonical or `dist` asset was modified.
+
+Focused adapter verification command: `npm --prefix tools/media test -- adapters.test.ts`. Result: one test file passed, 6/6 tests passed, including PNG, real JPEG-signature bytes, and unsupported-byte rejection.
+
+Type verification command: `npm --prefix tools/media run typecheck`. Result: passed with no diagnostics.

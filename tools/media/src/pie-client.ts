@@ -58,13 +58,14 @@ export class PieClient {
   }
 
   async submitVideo(input: { prompt: string; durationSeconds: number; image: Uint8Array }): Promise<{ providerJobId: string; status: string }> {
+    const imageMimeType = detectImageMimeType(input.image);
     const response = await this.request('/api/v1/task', {
       method: 'POST',
       headers: { 'content-type': 'application/json; charset=utf-8' },
       body: JSON.stringify({
         model: 'seedance',
         task_type: 'seedance-1.5-pro',
-        input: { prompt: input.prompt, duration: input.durationSeconds, images: [`data:image/png;base64,${Buffer.from(input.image).toString('base64')}`] },
+        input: { prompt: input.prompt, duration: input.durationSeconds, images: [`data:${imageMimeType};base64,${Buffer.from(input.image).toString('base64')}`] },
       }),
     }, [], 'x-api-key');
     const body = (await response.json()) as { data?: { task_id?: unknown; status?: unknown } };
@@ -142,6 +143,13 @@ export class PieClient {
     if (!response.ok && !allowedStatuses.includes(response.status)) throw pieApiError(response);
     return response;
   }
+}
+
+function detectImageMimeType(image: Uint8Array): 'image/png' | 'image/jpeg' {
+  const bytes = Buffer.from(image);
+  if (bytes.length >= 8 && bytes.subarray(0, 8).equals(Buffer.from([137, 80, 78, 71, 13, 10, 26, 10]))) return 'image/png';
+  if (bytes.length >= 3 && bytes[0] === 0xff && bytes[1] === 0xd8 && bytes[2] === 0xff) return 'image/jpeg';
+  throw new Error('Unsupported Seedance keyframe image format; expected PNG or JPEG bytes');
 }
 
 function imageArtifact(body: unknown): NormalizedArtifact {

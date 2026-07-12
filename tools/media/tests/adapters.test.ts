@@ -43,7 +43,7 @@ describe('PieClient', () => {
     expect(edited).toMatchObject({ kind: 'image', model: 'gpt-image-2', sourceUrl: expect.stringContaining('edited-image') });
   });
 
-  test('submits and polls recorded Seedance video jobs', async () => {
+  test('submits PNG keyframes and polls recorded Seedance video jobs', async () => {
     const fetcher = vi
       .fn<FetchLike>()
       .mockImplementationOnce(async (url, init) => {
@@ -52,18 +52,29 @@ describe('PieClient', () => {
         expect(JSON.parse(String(init?.body))).toMatchObject({
           model: 'seedance',
           task_type: 'seedance-1.5-pro',
-          input: { prompt: 'slow rain', duration: 5, images: ['data:image/png;base64,AQID'] },
+          input: { prompt: 'slow rain', duration: 5, images: ['data:image/png;base64,iVBORw0KGgo='] },
         });
         return jsonResponse(await fixture('video-submit.json'));
       })
       .mockResolvedValueOnce(jsonResponse(await fixture('video-poll.json')));
     const client = new PieClient({ env: { PIE_API_KEY: 'test-only' }, fetcher });
 
-    const submitted = await client.submitVideo({ prompt: 'slow rain', durationSeconds: 5, image: new Uint8Array([1, 2, 3]) });
+    const submitted = await client.submitVideo({ prompt: 'slow rain', durationSeconds: 5, image: new Uint8Array([137, 80, 78, 71, 13, 10, 26, 10]) });
     const completed = await client.pollVideo(submitted.providerJobId);
 
     expect(submitted).toEqual({ providerJobId: 'job_[REDACTED]', status: 'pending' });
     expect(completed).toMatchObject({ kind: 'video', model: 'seedance-1.5-pro', sourceUrl: expect.stringContaining('video.mp4') });
+  });
+
+  test('labels JPEG Seedance keyframes from their byte signature and rejects unsupported bytes', async () => {
+    const fetcher = vi.fn<FetchLike>().mockImplementation(async (_url, init) => {
+      expect(JSON.parse(String(init?.body))).toMatchObject({ input: { images: ['data:image/jpeg;base64,/9j/4AAQ'] } });
+      return jsonResponse(await fixture('video-submit.json'));
+    });
+    const client = new PieClient({ env: { PIE_API_KEY: 'test-only' }, fetcher });
+    await client.submitVideo({ prompt: 'jpeg', durationSeconds: 5, image: new Uint8Array([0xff, 0xd8, 0xff, 0xe0, 0, 16]) });
+    await expect(client.submitVideo({ prompt: 'bad', durationSeconds: 5, image: new Uint8Array([1, 2, 3]) })).rejects.toThrow(/unsupported/i);
+    expect(fetcher).toHaveBeenCalledOnce();
   });
 
   test('encodes speech JSON as UTF-8 and accepts only probed OpenAI voice IDs', async () => {
