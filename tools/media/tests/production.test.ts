@@ -22,6 +22,7 @@ describe('production job preparation', () => {
     expect(index.jobs.filter((job: { kind: string }) => job.kind === 'video').every((job: { sourceImage?: string }) => job.sourceImage)).toBe(true);
     expect(index.jobs.filter((job: { kind: string }) => job.kind === 'video').every((job: { durationSeconds: number; masterOutput?: string; desktopOutput?: string }) => job.durationSeconds === 8 && job.masterOutput && job.desktopOutput)).toBe(true);
     expect(index.jobs.filter((job: { kind: string }) => job.kind === 'image').every((job: { validation: object }) => JSON.stringify(job.validation).includes('frameCount'))).toBe(true);
+    expect(index.jobs.filter((job: { kind: string }) => job.kind === 'music').every((job: { validation: { minDurationSeconds: number; maxDurationSeconds: number } }) => job.validation.minDurationSeconds === 5 && job.validation.maxDurationSeconds === 300)).toBe(true);
   });
 
   test('is byte reproducible', async () => {

@@ -129,3 +129,13 @@ Verification commands: `npm --prefix tools/media test` passed 44/44 tests across
 The successful remote Seedance master exposed an ffmpeg muxer inference failure because normalized temporary filenames ended in `.normalized`. Runtime and desktop temporary filenames now end in `.normalized.mp4`, and both ffmpeg invocations explicitly pass `-f mp4`. Owner-specific fencing names and three-file failure cleanup remain intact. Retry continues to reuse the ledger's existing provider job ID, so this local normalization correction does not resubmit the paid remote task.
 
 The regression test captures both ffmpeg invocations and asserts an explicit MP4 muxer plus `.mp4` output suffix for runtime and desktop derivatives.
+
+## Provider-realistic music gate follow-up
+
+The locally proven `music-2.6` contract does not send a duration-control field. `durationSeconds` remains recorded in job identity and returned artifact metadata as the requested planning duration, but validation no longer assumes Pie will honor it. The three probes and all bulk cue variants now accept decodable, non-silent provider output from five to 300 seconds with the existing loudness bounds.
+
+This prevents a valid provider-default track from failing after billing solely because it differs from the nominal 15/60/90-second planning value. The concurrency claim, three-consecutive-probe gate, and fenced 504 ambiguous cooldown behavior are unchanged.
+
+A generator test submits three nominal 15-second probes whose valid audio duration is six seconds; all validate and atomically open the bulk gate. Production regeneration changed only music jobs and the index; video, speech, and image specs remain byte-identical.
+
+Verification commands: `npm --prefix tools/media test` passed 46/46 tests across five files; `npm --prefix tools/media run typecheck` passed.

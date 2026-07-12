@@ -367,6 +367,17 @@ describe('artifact generation', () => {
     await expect(new MediaGenerator({ client: { generateMusic }, ledger: new Ledger(join(directory, 'ledger.json')) }).generate([job])).rejects.toBeInstanceOf(MusicBulkNotReadyError);
     expect(generateMusic).not.toHaveBeenCalled();
   });
+
+  test('accepts valid probe audio independent of the requested duration and opens the gate', async () => {
+    const directory = await mkdtemp(join(tmpdir(), 'albina-media-realistic-probes-'));
+    const ledger = new Ledger(join(directory, 'ledger.json'));
+    const generateMusic = vi.fn(async () => ({ kind: 'audio' as const, model: 'music-2.6', bytes: wavPcm16(8_000, 48_000, 7_000) }));
+    for (let index = 1; index <= 3; index += 1) {
+      await new MediaGenerator({ client: { generateMusic }, ledger }).generate([{ kind: 'music', probe: true, prompt: `probe ${index}`, durationSeconds: 15, output: join(directory, `probe-${index}.wav`), validation: { minDurationSeconds: 5, maxDurationSeconds: 300, minLoudnessDbfs: -30, maxLoudnessDbfs: -6 } }]);
+    }
+    await expect(ledger.assertMusicBulkReady()).resolves.toBeUndefined();
+    expect(generateMusic).toHaveBeenCalledTimes(3);
+  });
 });
 
 function pngHeader(width: number, height: number, colorType: number): Buffer {
@@ -382,3 +393,4 @@ function pngHeader(width: number, height: number, colorType: number): Buffer {
 }
 async function mockVideoProcess(master: string, runtime: string, desktop: string): Promise<void> { const bytes = await readFile(master); await writeFile(runtime, bytes); await writeFile(desktop, bytes); }
 function videoJob(directory: string, sourceImage: string) { return { kind: 'video' as const, prompt: 'rain', durationSeconds: 8, sourceImage, masterOutput: join(directory, 'master.mp4'), output: join(directory, 'runtime.mp4'), desktopOutput: join(directory, 'desktop.mp4'), validation: { width: 1280, height: 720, fps: 24, durationSeconds: 8 }, desktopValidation: { width: 1920, height: 1080, fps: 24, durationSeconds: 8 }, masterValidation: { minFps: 12, maxFps: 60, minDurationSeconds: 7, maxDurationSeconds: 9 } }; }
+function wavPcm16(sampleRate: number, samples: number, amplitude: number): Buffer { const dataLength=samples*2; const b=Buffer.alloc(44+dataLength); b.write('RIFF',0); b.writeUInt32LE(36+dataLength,4); b.write('WAVEfmt ',8); b.writeUInt32LE(16,16); b.writeUInt16LE(1,20); b.writeUInt16LE(1,22); b.writeUInt32LE(sampleRate,24); b.writeUInt32LE(sampleRate*2,28); b.writeUInt16LE(2,32); b.writeUInt16LE(16,34); b.write('data',36); b.writeUInt32LE(dataLength,40); for(let i=0;i<samples;i++) b.writeInt16LE(i%2===0?amplitude:-amplitude,44+i*2); return b; }

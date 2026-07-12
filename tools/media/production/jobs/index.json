@@ -90,8 +90,8 @@
       "durationSeconds": 90,
       "output": "D:\\创作\\albina-v2-complete\\staging\\media\\music\\art_resonance\\instrumental.mp3",
       "validation": {
-        "minDurationSeconds": 50,
-        "maxDurationSeconds": 100,
+        "minDurationSeconds": 5,
+        "maxDurationSeconds": 300,
         "minLoudnessDbfs": -30,
         "maxLoudnessDbfs": -6
       }
@@ -103,8 +103,8 @@
       "durationSeconds": 60,
       "output": "D:\\创作\\albina-v2-complete\\staging\\media\\music\\art_resonance\\loop.mp3",
       "validation": {
-        "minDurationSeconds": 50,
-        "maxDurationSeconds": 100,
+        "minDurationSeconds": 5,
+        "maxDurationSeconds": 300,
         "minLoudnessDbfs": -30,
         "maxLoudnessDbfs": -6
       }
@@ -116,8 +116,8 @@
       "durationSeconds": 90,
       "output": "D:\\创作\\albina-v2-complete\\staging\\media\\music\\art_resonance\\master.mp3",
       "validation": {
-        "minDurationSeconds": 50,
-        "maxDurationSeconds": 100,
+        "minDurationSeconds": 5,
+        "maxDurationSeconds": 300,
         "minLoudnessDbfs": -30,
         "maxLoudnessDbfs": -6
       }
@@ -129,8 +129,8 @@
       "durationSeconds": 90,
       "output": "D:\\创作\\albina-v2-complete\\staging\\media\\music\\backstreets_rain\\instrumental.mp3",
       "validation": {
-        "minDurationSeconds": 50,
-        "maxDurationSeconds": 100,
+        "minDurationSeconds": 5,
+        "maxDurationSeconds": 300,
         "minLoudnessDbfs": -30,
         "maxLoudnessDbfs": -6
       }
@@ -142,8 +142,8 @@
       "durationSeconds": 60,
       "output": "D:\\创作\\albina-v2-complete\\staging\\media\\music\\backstreets_rain\\loop.mp3",
       "validation": {
-        "minDurationSeconds": 50,
-        "maxDurationSeconds": 100,
+        "minDurationSeconds": 5,
+        "maxDurationSeconds": 300,
         "minLoudnessDbfs": -30,
         "maxLoudnessDbfs": -6
       }
@@ -155,8 +155,8 @@
       "durationSeconds": 90,
       "output": "D:\\创作\\albina-v2-complete\\staging\\media\\music\\backstreets_rain\\master.mp3",
       "validation": {
-        "minDurationSeconds": 50,
-        "maxDurationSeconds": 100,
+        "minDurationSeconds": 5,
+        "maxDurationSeconds": 300,
         "minLoudnessDbfs": -30,
         "maxLoudnessDbfs": -6
       }
@@ -168,8 +168,8 @@
       "durationSeconds": 90,
       "output": "D:\\创作\\albina-v2-complete\\staging\\media\\music\\between_two_worlds\\instrumental.mp3",
       "validation": {
-        "minDurationSeconds": 50,
-        "maxDurationSeconds": 100,
+        "minDurationSeconds": 5,
+        "maxDurationSeconds": 300,
         "minLoudnessDbfs": -30,
         "maxLoudnessDbfs": -6
       }
@@ -181,8 +181,8 @@
       "durationSeconds": 60,
       "output": "D:\\创作\\albina-v2-complete\\staging\\media\\music\\between_two_worlds\\loop.mp3",
       "validation": {
-        "minDurationSeconds": 50,
-        "maxDurationSeconds": 100,
+        "minDurationSeconds": 5,
+        "maxDurationSeconds": 300,
         "minLoudnessDbfs": -30,
         "maxLoudnessDbfs": -6
       }
@@ -194,8 +194,8 @@
       "durationSeconds": 90,
       "output": "D:\\创作\\albina-v2-complete\\staging\\media\\music\\between_two_worlds\\master.mp3",
       "validation": {
-        "minDurationSeconds": 50,
-        "maxDurationSeconds": 100,
+        "minDurationSeconds": 5,
+        "maxDurationSeconds": 300,
         "minLoudnessDbfs": -30,
         "maxLoudnessDbfs": -6
       }
@@ -207,8 +207,8 @@
       "durationSeconds": 90,
       "output": "D:\\创作\\albina-v2-complete\\staging\\media\\music\\boss_kromer\\instrumental.mp3",
       "validation": {
-        "minDurationSeconds": 50,
-        "maxDurationSeconds": 100,
+        "minDurationSeconds": 5,
+        "maxDurationSeconds": 300,
         "minLoudnessDbfs": -30,
         "maxLoudnessDbfs": -6
       }
@@ -220,8 +220,8 @@
       "durationSeconds": 60,
       "output": "D:\\创作\\albina-v2-complete\\staging\\media\\music\\boss_kromer\\loop.mp3",
       "validation": {
-        "minDurationSeconds": 50,
-        "maxDurationSeconds": 100,
+        "minDurationSeconds": 5,
+        "maxDurationSeconds": 300,
         "minLoudnessDbfs": -30,
         "maxLoudnessDbfs": -6
       }
@@ -233,8 +233,8 @@
       "durationSeconds": 90,
       "output": "D:\\创作\\albina-v2-complete\\staging\\media\\music\\boss_kromer\\master.mp3",
       "validation": {
-        "minDurationSeconds": 50,
-        "maxDurationSeconds": 100,
+        "minDurationSeconds": 5,
+        "maxDurationSeconds": 300,
         "minLoudnessDbfs": -30,
         "maxLoudnessDbfs": -6
       }
@@ -246,8 +246,8 @@
       "durationSeconds": 90,
       "output": "D:\\创作\\albina-v2-complete\\staging\\media\\music\\city_rooftop\\instrumental.mp3",
       "validation": {
-        "minDurationSeconds": 50,
-        "maxDurationSeconds": 100,
+        "minDurationSeconds": 5,
+        "maxDurationSeconds": 300,
         "minLoudnessDbfs": -30,
         "maxLoudnessDbfs": -6
       }
@@ -259,8 +259,8 @@
       "durationSeconds": 60,
       "output": "D:\\创作\\albina-v2-complete\\staging\\media\\music\\city_rooftop\\loop.mp3",
       "validation": {
-        "minDurationSeconds": 50,
-        "maxDurationSeconds": 100,
+        "minDurationSeconds": 5,
+        "maxDurationSeconds": 300,
         "minLoudnessDbfs": -30,
         "maxLoudnessDbfs": -6
       }
@@ -272,8 +272,8 @@
       "durationSeconds": 90,
       "output": "D:\\创作\\albina-v2-complete\\staging\\media\\music\\city_rooftop\\master.mp3",
       "validation": {
-        "minDurationSeconds": 50,
-        "maxDurationSeconds": 100,
+        "minDurationSeconds": 5,
+        "maxDurationSeconds": 300,
         "minLoudnessDbfs": -30,
         "maxLoudnessDbfs": -6
       }
@@ -285,8 +285,8 @@
       "durationSeconds": 90,
       "output": "D:\\创作\\albina-v2-complete\\staging\\media\\music\\ed_golden_bough\\instrumental.mp3",
       "validation": {
-        "minDurationSeconds": 50,
-        "maxDurationSeconds": 100,
+        "minDurationSeconds": 5,
+        "maxDurationSeconds": 300,
         "minLoudnessDbfs": -30,
         "maxLoudnessDbfs": -6
       }
@@ -298,8 +298,8 @@
       "durationSeconds": 60,
       "output": "D:\\创作\\albina-v2-complete\\staging\\media\\music\\ed_golden_bough\\loop.mp3",
       "validation": {
-        "minDurationSeconds": 50,
-        "maxDurationSeconds": 100,
+        "minDurationSeconds": 5,
+        "maxDurationSeconds": 300,
         "minLoudnessDbfs": -30,
         "maxLoudnessDbfs": -6
       }
@@ -311,8 +311,8 @@
       "durationSeconds": 90,
       "output": "D:\\创作\\albina-v2-complete\\staging\\media\\music\\ed_golden_bough\\master.mp3",
       "validation": {
-        "minDurationSeconds": 50,
-        "maxDurationSeconds": 100,
+        "minDurationSeconds": 5,
+        "maxDurationSeconds": 300,
         "minLoudnessDbfs": -30,
         "maxLoudnessDbfs": -6
       }
@@ -324,8 +324,8 @@
       "durationSeconds": 90,
       "output": "D:\\创作\\albina-v2-complete\\staging\\media\\music\\ed_ring_conspiracy\\instrumental.mp3",
       "validation": {
-        "minDurationSeconds": 50,
-        "maxDurationSeconds": 100,
+        "minDurationSeconds": 5,
+        "maxDurationSeconds": 300,
         "minLoudnessDbfs": -30,
         "maxLoudnessDbfs": -6
       }
@@ -337,8 +337,8 @@
       "durationSeconds": 60,
       "output": "D:\\创作\\albina-v2-complete\\staging\\media\\music\\ed_ring_conspiracy\\loop.mp3",
       "validation": {
-        "minDurationSeconds": 50,
-        "maxDurationSeconds": 100,
+        "minDurationSeconds": 5,
+        "maxDurationSeconds": 300,
         "minLoudnessDbfs": -30,
         "maxLoudnessDbfs": -6
       }
@@ -350,8 +350,8 @@
       "durationSeconds": 90,
       "output": "D:\\创作\\albina-v2-complete\\staging\\media\\music\\ed_ring_conspiracy\\master.mp3",
       "validation": {
-        "minDurationSeconds": 50,
-        "maxDurationSeconds": 100,
+        "minDurationSeconds": 5,
+        "maxDurationSeconds": 300,
         "minLoudnessDbfs": -30,
         "maxLoudnessDbfs": -6
       }
@@ -363,8 +363,8 @@
       "durationSeconds": 90,
       "output": "D:\\创作\\albina-v2-complete\\staging\\media\\music\\ed_white_canvas\\instrumental.mp3",
       "validation": {
-        "minDurationSeconds": 50,
-        "maxDurationSeconds": 100,
+        "minDurationSeconds": 5,
+        "maxDurationSeconds": 300,
         "minLoudnessDbfs": -30,
         "maxLoudnessDbfs": -6
       }
@@ -376,8 +376,8 @@
       "durationSeconds": 60,
       "output": "D:\\创作\\albina-v2-complete\\staging\\media\\music\\ed_white_canvas\\loop.mp3",
       "validation": {
-        "minDurationSeconds": 50,
-        "maxDurationSeconds": 100,
+        "minDurationSeconds": 5,
+        "maxDurationSeconds": 300,
         "minLoudnessDbfs": -30,
         "maxLoudnessDbfs": -6
       }
@@ -389,8 +389,8 @@
       "durationSeconds": 90,
       "output": "D:\\创作\\albina-v2-complete\\staging\\media\\music\\ed_white_canvas\\master.mp3",
       "validation": {
-        "minDurationSeconds": 50,
-        "maxDurationSeconds": 100,
+        "minDurationSeconds": 5,
+        "maxDurationSeconds": 300,
         "minLoudnessDbfs": -30,
         "maxLoudnessDbfs": -6
       }
@@ -402,8 +402,8 @@
       "durationSeconds": 90,
       "output": "D:\\创作\\albina-v2-complete\\staging\\media\\music\\ending_gate\\instrumental.mp3",
       "validation": {
-        "minDurationSeconds": 50,
-        "maxDurationSeconds": 100,
+        "minDurationSeconds": 5,
+        "maxDurationSeconds": 300,
         "minLoudnessDbfs": -30,
         "maxLoudnessDbfs": -6
       }
@@ -415,8 +415,8 @@
       "durationSeconds": 60,
       "output": "D:\\创作\\albina-v2-complete\\staging\\media\\music\\ending_gate\\loop.mp3",
       "validation": {
-        "minDurationSeconds": 50,
-        "maxDurationSeconds": 100,
+        "minDurationSeconds": 5,
+        "maxDurationSeconds": 300,
         "minLoudnessDbfs": -30,
         "maxLoudnessDbfs": -6
       }
@@ -428,8 +428,8 @@
       "durationSeconds": 90,
       "output": "D:\\创作\\albina-v2-complete\\staging\\media\\music\\ending_gate\\master.mp3",
       "validation": {
-        "minDurationSeconds": 50,
-        "maxDurationSeconds": 100,
+        "minDurationSeconds": 5,
+        "maxDurationSeconds": 300,
         "minLoudnessDbfs": -30,
         "maxLoudnessDbfs": -6
       }
@@ -441,8 +441,8 @@
       "durationSeconds": 90,
       "output": "D:\\创作\\albina-v2-complete\\staging\\media\\music\\golden_bough\\instrumental.mp3",
       "validation": {
-        "minDurationSeconds": 50,
-        "maxDurationSeconds": 100,
+        "minDurationSeconds": 5,
+        "maxDurationSeconds": 300,
         "minLoudnessDbfs": -30,
         "maxLoudnessDbfs": -6
       }
@@ -454,8 +454,8 @@
       "durationSeconds": 60,
       "output": "D:\\创作\\albina-v2-complete\\staging\\media\\music\\golden_bough\\loop.mp3",
       "validation": {
-        "minDurationSeconds": 50,
-        "maxDurationSeconds": 100,
+        "minDurationSeconds": 5,
+        "maxDurationSeconds": 300,
         "minLoudnessDbfs": -30,
         "maxLoudnessDbfs": -6
       }
@@ -467,8 +467,8 @@
       "durationSeconds": 90,
       "output": "D:\\创作\\albina-v2-complete\\staging\\media\\music\\golden_bough\\master.mp3",
       "validation": {
-        "minDurationSeconds": 50,
-        "maxDurationSeconds": 100,
+        "minDurationSeconds": 5,
+        "maxDurationSeconds": 300,
         "minLoudnessDbfs": -30,
         "maxLoudnessDbfs": -6
       }
@@ -480,8 +480,8 @@
       "durationSeconds": 90,
       "output": "D:\\创作\\albina-v2-complete\\staging\\media\\music\\lce_lab\\instrumental.mp3",
       "validation": {
-        "minDurationSeconds": 50,
-        "maxDurationSeconds": 100,
+        "minDurationSeconds": 5,
+        "maxDurationSeconds": 300,
         "minLoudnessDbfs": -30,
         "maxLoudnessDbfs": -6
       }
@@ -493,8 +493,8 @@
       "durationSeconds": 60,
       "output": "D:\\创作\\albina-v2-complete\\staging\\media\\music\\lce_lab\\loop.mp3",
       "validation": {
-        "minDurationSeconds": 50,
-        "maxDurationSeconds": 100,
+        "minDurationSeconds": 5,
+        "maxDurationSeconds": 300,
         "minLoudnessDbfs": -30,
         "maxLoudnessDbfs": -6
       }
@@ -506,8 +506,8 @@
       "durationSeconds": 90,
       "output": "D:\\创作\\albina-v2-complete\\staging\\media\\music\\lce_lab\\master.mp3",
       "validation": {
-        "minDurationSeconds": 50,
-        "maxDurationSeconds": 100,
+        "minDurationSeconds": 5,
+        "maxDurationSeconds": 300,
         "minLoudnessDbfs": -30,
         "maxLoudnessDbfs": -6
       }
@@ -519,8 +519,8 @@
       "durationSeconds": 90,
       "output": "D:\\创作\\albina-v2-complete\\staging\\media\\music\\limbus_bus\\instrumental.mp3",
       "validation": {
-        "minDurationSeconds": 50,
-        "maxDurationSeconds": 100,
+        "minDurationSeconds": 5,
+        "maxDurationSeconds": 300,
         "minLoudnessDbfs": -30,
         "maxLoudnessDbfs": -6
       }
@@ -532,8 +532,8 @@
       "durationSeconds": 60,
       "output": "D:\\创作\\albina-v2-complete\\staging\\media\\music\\limbus_bus\\loop.mp3",
       "validation": {
-        "minDurationSeconds": 50,
-        "maxDurationSeconds": 100,
+        "minDurationSeconds": 5,
+        "maxDurationSeconds": 300,
         "minLoudnessDbfs": -30,
         "maxLoudnessDbfs": -6
       }
@@ -545,8 +545,8 @@
       "durationSeconds": 90,
       "output": "D:\\创作\\albina-v2-complete\\staging\\media\\music\\limbus_bus\\master.mp3",
       "validation": {
-        "minDurationSeconds": 50,
-        "maxDurationSeconds": 100,
+        "minDurationSeconds": 5,
+        "maxDurationSeconds": 300,
         "minLoudnessDbfs": -30,
         "maxLoudnessDbfs": -6
       }
@@ -558,8 +558,8 @@
       "durationSeconds": 90,
       "output": "D:\\创作\\albina-v2-complete\\staging\\media\\music\\main_menu\\instrumental.mp3",
       "validation": {
-        "minDurationSeconds": 50,
-        "maxDurationSeconds": 100,
+        "minDurationSeconds": 5,
+        "maxDurationSeconds": 300,
         "minLoudnessDbfs": -30,
         "maxLoudnessDbfs": -6
       }
@@ -571,8 +571,8 @@
       "durationSeconds": 60,
       "output": "D:\\创作\\albina-v2-complete\\staging\\media\\music\\main_menu\\loop.mp3",
       "validation": {
-        "minDurationSeconds": 50,
-        "maxDurationSeconds": 100,
+        "minDurationSeconds": 5,
+        "maxDurationSeconds": 300,
         "minLoudnessDbfs": -30,
         "maxLoudnessDbfs": -6
       }
@@ -584,8 +584,8 @@
       "durationSeconds": 90,
       "output": "D:\\创作\\albina-v2-complete\\staging\\media\\music\\main_menu\\master.mp3",
       "validation": {
-        "minDurationSeconds": 50,
-        "maxDurationSeconds": 100,
+        "minDurationSeconds": 5,
+        "maxDurationSeconds": 300,
         "minLoudnessDbfs": -30,
         "maxLoudnessDbfs": -6
       }
@@ -597,8 +597,8 @@
       "durationSeconds": 90,
       "output": "D:\\创作\\albina-v2-complete\\staging\\media\\music\\mirror_corridor\\instrumental.mp3",
       "validation": {
-        "minDurationSeconds": 50,
-        "maxDurationSeconds": 100,
+        "minDurationSeconds": 5,
+        "maxDurationSeconds": 300,
         "minLoudnessDbfs": -30,
         "maxLoudnessDbfs": -6
       }
@@ -610,8 +610,8 @@
       "durationSeconds": 60,
       "output": "D:\\创作\\albina-v2-complete\\staging\\media\\music\\mirror_corridor\\loop.mp3",
       "validation": {
-        "minDurationSeconds": 50,
-        "maxDurationSeconds": 100,
+        "minDurationSeconds": 5,
+        "maxDurationSeconds": 300,
         "minLoudnessDbfs": -30,
         "maxLoudnessDbfs": -6
       }
@@ -623,8 +623,8 @@
       "durationSeconds": 90,
       "output": "D:\\创作\\albina-v2-complete\\staging\\media\\music\\mirror_corridor\\master.mp3",
       "validation": {
-        "minDurationSeconds": 50,
-        "maxDurationSeconds": 100,
+        "minDurationSeconds": 5,
+        "maxDurationSeconds": 300,
         "minLoudnessDbfs": -30,
         "maxLoudnessDbfs": -6
       }
@@ -636,8 +636,8 @@
       "durationSeconds": 90,
       "output": "D:\\创作\\albina-v2-complete\\staging\\media\\music\\nest_station\\instrumental.mp3",
       "validation": {
-        "minDurationSeconds": 50,
-        "maxDurationSeconds": 100,
+        "minDurationSeconds": 5,
+        "maxDurationSeconds": 300,
         "minLoudnessDbfs": -30,
         "maxLoudnessDbfs": -6
       }
@@ -649,8 +649,8 @@
       "durationSeconds": 60,
       "output": "D:\\创作\\albina-v2-complete\\staging\\media\\music\\nest_station\\loop.mp3",
       "validation": {
-        "minDurationSeconds": 50,
-        "maxDurationSeconds": 100,
+        "minDurationSeconds": 5,
+        "maxDurationSeconds": 300,
         "minLoudnessDbfs": -30,
         "maxLoudnessDbfs": -6
       }
@@ -662,8 +662,8 @@
       "durationSeconds": 90,
       "output": "D:\\创作\\albina-v2-complete\\staging\\media\\music\\nest_station\\master.mp3",
       "validation": {
-        "minDurationSeconds": 50,
-        "maxDurationSeconds": 100,
+        "minDurationSeconds": 5,
+        "maxDurationSeconds": 300,
         "minLoudnessDbfs": -30,
         "maxLoudnessDbfs": -6
       }
@@ -675,8 +675,8 @@
       "durationSeconds": 90,
       "output": "D:\\创作\\albina-v2-complete\\staging\\media\\music\\op\\instrumental.mp3",
       "validation": {
-        "minDurationSeconds": 50,
-        "maxDurationSeconds": 100,
+        "minDurationSeconds": 5,
+        "maxDurationSeconds": 300,
         "minLoudnessDbfs": -30,
         "maxLoudnessDbfs": -6
       }
@@ -688,8 +688,8 @@
       "durationSeconds": 60,
       "output": "D:\\创作\\albina-v2-complete\\staging\\media\\music\\op\\loop.mp3",
       "validation": {
-        "minDurationSeconds": 50,
-        "maxDurationSeconds": 100,
+        "minDurationSeconds": 5,
+        "maxDurationSeconds": 300,
         "minLoudnessDbfs": -30,
         "maxLoudnessDbfs": -6
       }
@@ -701,8 +701,8 @@
       "durationSeconds": 90,
       "output": "D:\\创作\\albina-v2-complete\\staging\\media\\music\\op\\master.mp3",
       "validation": {
-        "minDurationSeconds": 50,
-        "maxDurationSeconds": 100,
+        "minDurationSeconds": 5,
+        "maxDurationSeconds": 300,
         "minLoudnessDbfs": -30,
         "maxLoudnessDbfs": -6
       }
@@ -714,8 +714,8 @@
       "durationSeconds": 90,
       "output": "D:\\创作\\albina-v2-complete\\staging\\media\\music\\opening_rain\\instrumental.mp3",
       "validation": {
-        "minDurationSeconds": 50,
-        "maxDurationSeconds": 100,
+        "minDurationSeconds": 5,
+        "maxDurationSeconds": 300,
         "minLoudnessDbfs": -30,
         "maxLoudnessDbfs": -6
       }
@@ -727,8 +727,8 @@
       "durationSeconds": 60,
       "output": "D:\\创作\\albina-v2-complete\\staging\\media\\music\\opening_rain\\loop.mp3",
       "validation": {
-        "minDurationSeconds": 50,
-        "maxDurationSeconds": 100,
+        "minDurationSeconds": 5,
+        "maxDurationSeconds": 300,
         "minLoudnessDbfs": -30,
         "maxLoudnessDbfs": -6
       }
@@ -740,8 +740,8 @@
       "durationSeconds": 90,
       "output": "D:\\创作\\albina-v2-complete\\staging\\media\\music\\opening_rain\\master.mp3",
       "validation": {
-        "minDurationSeconds": 50,
-        "maxDurationSeconds": 100,
+        "minDurationSeconds": 5,
+        "maxDurationSeconds": 300,
         "minLoudnessDbfs": -30,
         "maxLoudnessDbfs": -6
       }
@@ -753,8 +753,8 @@
       "durationSeconds": 90,
       "output": "D:\\创作\\albina-v2-complete\\staging\\media\\music\\outskirts_dawn\\instrumental.mp3",
       "validation": {
-        "minDurationSeconds": 50,
-        "maxDurationSeconds": 100,
+        "minDurationSeconds": 5,
+        "maxDurationSeconds": 300,
         "minLoudnessDbfs": -30,
         "maxLoudnessDbfs": -6
       }
@@ -766,8 +766,8 @@
       "durationSeconds": 60,
       "output": "D:\\创作\\albina-v2-complete\\staging\\media\\music\\outskirts_dawn\\loop.mp3",
       "validation": {
-        "minDurationSeconds": 50,
-        "maxDurationSeconds": 100,
+        "minDurationSeconds": 5,
+        "maxDurationSeconds": 300,
         "minLoudnessDbfs": -30,
         "maxLoudnessDbfs": -6
       }
@@ -779,8 +779,8 @@
       "durationSeconds": 90,
       "output": "D:\\创作\\albina-v2-complete\\staging\\media\\music\\outskirts_dawn\\master.mp3",
       "validation": {
-        "minDurationSeconds": 50,
-        "maxDurationSeconds": 100,
+        "minDurationSeconds": 5,
+        "maxDurationSeconds": 300,
         "minLoudnessDbfs": -30,
         "maxLoudnessDbfs": -6
       }
@@ -793,8 +793,8 @@
       "durationSeconds": 15,
       "output": "D:\\创作\\albina-v2-complete\\staging\\media\\music\\probes\\probe-1.mp3",
       "validation": {
-        "minDurationSeconds": 12,
-        "maxDurationSeconds": 18,
+        "minDurationSeconds": 5,
+        "maxDurationSeconds": 300,
         "minLoudnessDbfs": -30,
         "maxLoudnessDbfs": -6
       }
@@ -807,8 +807,8 @@
       "durationSeconds": 15,
       "output": "D:\\创作\\albina-v2-complete\\staging\\media\\music\\probes\\probe-2.mp3",
       "validation": {
-        "minDurationSeconds": 12,
-        "maxDurationSeconds": 18,
+        "minDurationSeconds": 5,
+        "maxDurationSeconds": 300,
         "minLoudnessDbfs": -30,
         "maxLoudnessDbfs": -6
       }
@@ -821,8 +821,8 @@
       "durationSeconds": 15,
       "output": "D:\\创作\\albina-v2-complete\\staging\\media\\music\\probes\\probe-3.mp3",
       "validation": {
-        "minDurationSeconds": 12,
-        "maxDurationSeconds": 18,
+        "minDurationSeconds": 5,
+        "maxDurationSeconds": 300,
         "minLoudnessDbfs": -30,
         "maxLoudnessDbfs": -6
       }
@@ -834,8 +834,8 @@
       "durationSeconds": 90,
       "output": "D:\\创作\\albina-v2-complete\\staging\\media\\music\\rain_room\\instrumental.mp3",
       "validation": {
-        "minDurationSeconds": 50,
-        "maxDurationSeconds": 100,
+        "minDurationSeconds": 5,
+        "maxDurationSeconds": 300,
         "minLoudnessDbfs": -30,
         "maxLoudnessDbfs": -6
       }
@@ -847,8 +847,8 @@
       "durationSeconds": 60,
       "output": "D:\\创作\\albina-v2-complete\\staging\\media\\music\\rain_room\\loop.mp3",
       "validation": {
-        "minDurationSeconds": 50,
-        "maxDurationSeconds": 100,
+        "minDurationSeconds": 5,
+        "maxDurationSeconds": 300,
         "minLoudnessDbfs": -30,
         "maxLoudnessDbfs": -6
       }
@@ -860,8 +860,8 @@
       "durationSeconds": 90,
       "output": "D:\\创作\\albina-v2-complete\\staging\\media\\music\\rain_room\\master.mp3",
       "validation": {
-        "minDurationSeconds": 50,
-        "maxDurationSeconds": 100,
+        "minDurationSeconds": 5,
+        "maxDurationSeconds": 300,
         "minLoudnessDbfs": -30,
         "maxLoudnessDbfs": -6
       }
@@ -873,8 +873,8 @@
       "durationSeconds": 90,
       "output": "D:\\创作\\albina-v2-complete\\staging\\media\\music\\rebuild_awakening\\instrumental.mp3",
       "validation": {
-        "minDurationSeconds": 50,
-        "maxDurationSeconds": 100,
+        "minDurationSeconds": 5,
+        "maxDurationSeconds": 300,
         "minLoudnessDbfs": -30,
         "maxLoudnessDbfs": -6
       }
@@ -886,8 +886,8 @@
       "durationSeconds": 60,
       "output": "D:\\创作\\albina-v2-complete\\staging\\media\\music\\rebuild_awakening\\loop.mp3",
       "validation": {
-        "minDurationSeconds": 50,
-        "maxDurationSeconds": 100,
+        "minDurationSeconds": 5,
+        "maxDurationSeconds": 300,
         "minLoudnessDbfs": -30,
         "maxLoudnessDbfs": -6
       }
@@ -899,8 +899,8 @@
       "durationSeconds": 90,
       "output": "D:\\创作\\albina-v2-complete\\staging\\media\\music\\rebuild_awakening\\master.mp3",
       "validation": {
-        "minDurationSeconds": 50,
-        "maxDurationSeconds": 100,
+        "minDurationSeconds": 5,
+        "maxDurationSeconds": 300,
         "minLoudnessDbfs": -30,
         "maxLoudnessDbfs": -6
       }
@@ -912,8 +912,8 @@
       "durationSeconds": 90,
       "output": "D:\\创作\\albina-v2-complete\\staging\\media\\music\\ring_atelier\\instrumental.mp3",
       "validation": {
-        "minDurationSeconds": 50,
-        "maxDurationSeconds": 100,
+        "minDurationSeconds": 5,
+        "maxDurationSeconds": 300,
         "minLoudnessDbfs": -30,
         "maxLoudnessDbfs": -6
       }
@@ -925,8 +925,8 @@
       "durationSeconds": 60,
       "output": "D:\\创作\\albina-v2-complete\\staging\\media\\music\\ring_atelier\\loop.mp3",
       "validation": {
-        "minDurationSeconds": 50,
-        "maxDurationSeconds": 100,
+        "minDurationSeconds": 5,
+        "maxDurationSeconds": 300,
         "minLoudnessDbfs": -30,
         "maxLoudnessDbfs": -6
       }
@@ -938,8 +938,8 @@
       "durationSeconds": 90,
       "output": "D:\\创作\\albina-v2-complete\\staging\\media\\music\\ring_atelier\\master.mp3",
       "validation": {
-        "minDurationSeconds": 50,
-        "maxDurationSeconds": 100,
+        "minDurationSeconds": 5,
+        "maxDurationSeconds": 300,
         "minLoudnessDbfs": -30,
         "maxLoudnessDbfs": -6
       }
@@ -951,8 +951,8 @@
       "durationSeconds": 90,
       "output": "D:\\创作\\albina-v2-complete\\staging\\media\\music\\ring_conspiracy\\instrumental.mp3",
       "validation": {
-        "minDurationSeconds": 50,
-        "maxDurationSeconds": 100,
+        "minDurationSeconds": 5,
+        "maxDurationSeconds": 300,
         "minLoudnessDbfs": -30,
         "maxLoudnessDbfs": -6
       }
@@ -964,8 +964,8 @@
       "durationSeconds": 60,
       "output": "D:\\创作\\albina-v2-complete\\staging\\media\\music\\ring_conspiracy\\loop.mp3",
       "validation": {
-        "minDurationSeconds": 50,
-        "maxDurationSeconds": 100,
+        "minDurationSeconds": 5,
+        "maxDurationSeconds": 300,
         "minLoudnessDbfs": -30,
         "maxLoudnessDbfs": -6
       }
@@ -977,8 +977,8 @@
       "durationSeconds": 90,
       "output": "D:\\创作\\albina-v2-complete\\staging\\media\\music\\ring_conspiracy\\master.mp3",
       "validation": {
-        "minDurationSeconds": 50,
-        "maxDurationSeconds": 100,
+        "minDurationSeconds": 5,
+        "maxDurationSeconds": 300,
         "minLoudnessDbfs": -30,
         "maxLoudnessDbfs": -6
       }
@@ -990,8 +990,8 @@
       "durationSeconds": 90,
       "output": "D:\\创作\\albina-v2-complete\\staging\\media\\music\\spider_gallery\\instrumental.mp3",
       "validation": {
-        "minDurationSeconds": 50,
-        "maxDurationSeconds": 100,
+        "minDurationSeconds": 5,
+        "maxDurationSeconds": 300,
         "minLoudnessDbfs": -30,
         "maxLoudnessDbfs": -6
       }
@@ -1003,8 +1003,8 @@
       "durationSeconds": 60,
       "output": "D:\\创作\\albina-v2-complete\\staging\\media\\music\\spider_gallery\\loop.mp3",
       "validation": {
-        "minDurationSeconds": 50,
-        "maxDurationSeconds": 100,
+        "minDurationSeconds": 5,
+        "maxDurationSeconds": 300,
         "minLoudnessDbfs": -30,
         "maxLoudnessDbfs": -6
       }
@@ -1016,8 +1016,8 @@
       "durationSeconds": 90,
       "output": "D:\\创作\\albina-v2-complete\\staging\\media\\music\\spider_gallery\\master.mp3",
       "validation": {
-        "minDurationSeconds": 50,
-        "maxDurationSeconds": 100,
+        "minDurationSeconds": 5,
+        "maxDurationSeconds": 300,
         "minLoudnessDbfs": -30,
         "maxLoudnessDbfs": -6
       }
@@ -1029,8 +1029,8 @@
       "durationSeconds": 90,
       "output": "D:\\创作\\albina-v2-complete\\staging\\media\\music\\surgery_of_memory\\instrumental.mp3",
       "validation": {
-        "minDurationSeconds": 50,
-        "maxDurationSeconds": 100,
+        "minDurationSeconds": 5,
+        "maxDurationSeconds": 300,
         "minLoudnessDbfs": -30,
         "maxLoudnessDbfs": -6
       }
@@ -1042,8 +1042,8 @@
       "durationSeconds": 60,
       "output": "D:\\创作\\albina-v2-complete\\staging\\media\\music\\surgery_of_memory\\loop.mp3",
       "validation": {
-        "minDurationSeconds": 50,
-        "maxDurationSeconds": 100,
+        "minDurationSeconds": 5,
+        "maxDurationSeconds": 300,
         "minLoudnessDbfs": -30,
         "maxLoudnessDbfs": -6
       }
@@ -1055,8 +1055,8 @@
       "durationSeconds": 90,
       "output": "D:\\创作\\albina-v2-complete\\staging\\media\\music\\surgery_of_memory\\master.mp3",
       "validation": {
-        "minDurationSeconds": 50,
-        "maxDurationSeconds": 100,
+        "minDurationSeconds": 5,
+        "maxDurationSeconds": 300,
         "minLoudnessDbfs": -30,
         "maxLoudnessDbfs": -6
       }
@@ -1068,8 +1068,8 @@
       "durationSeconds": 90,
       "output": "D:\\创作\\albina-v2-complete\\staging\\media\\music\\title_theme\\instrumental.mp3",
       "validation": {
-        "minDurationSeconds": 50,
-        "maxDurationSeconds": 100,
+        "minDurationSeconds": 5,
+        "maxDurationSeconds": 300,
         "minLoudnessDbfs": -30,
         "maxLoudnessDbfs": -6
       }
@@ -1081,8 +1081,8 @@
       "durationSeconds": 60,
       "output": "D:\\创作\\albina-v2-complete\\staging\\media\\music\\title_theme\\loop.mp3",
       "validation": {
-        "minDurationSeconds": 50,
-        "maxDurationSeconds": 100,
+        "minDurationSeconds": 5,
+        "maxDurationSeconds": 300,
         "minLoudnessDbfs": -30,
         "maxLoudnessDbfs": -6
       }
@@ -1094,8 +1094,8 @@
       "durationSeconds": 90,
       "output": "D:\\创作\\albina-v2-complete\\staging\\media\\music\\title_theme\\master.mp3",
       "validation": {
-        "minDurationSeconds": 50,
-        "maxDurationSeconds": 100,
+        "minDurationSeconds": 5,
+        "maxDurationSeconds": 300,
         "minLoudnessDbfs": -30,
         "maxLoudnessDbfs": -6
       }
@@ -1107,8 +1107,8 @@
       "durationSeconds": 90,
       "output": "D:\\创作\\albina-v2-complete\\staging\\media\\music\\trust_threshold\\instrumental.mp3",
       "validation": {
-        "minDurationSeconds": 50,
-        "maxDurationSeconds": 100,
+        "minDurationSeconds": 5,
+        "maxDurationSeconds": 300,
         "minLoudnessDbfs": -30,
         "maxLoudnessDbfs": -6
       }
@@ -1120,8 +1120,8 @@
       "durationSeconds": 60,
       "output": "D:\\创作\\albina-v2-complete\\staging\\media\\music\\trust_threshold\\loop.mp3",
       "validation": {
-        "minDurationSeconds": 50,
-        "maxDurationSeconds": 100,
+        "minDurationSeconds": 5,
+        "maxDurationSeconds": 300,
         "minLoudnessDbfs": -30,
         "maxLoudnessDbfs": -6
       }
@@ -1133,8 +1133,8 @@
       "durationSeconds": 90,
       "output": "D:\\创作\\albina-v2-complete\\staging\\media\\music\\trust_threshold\\master.mp3",
       "validation": {
-        "minDurationSeconds": 50,
-        "maxDurationSeconds": 100,
+        "minDurationSeconds": 5,
+        "maxDurationSeconds": 300,
         "minLoudnessDbfs": -30,
         "maxLoudnessDbfs": -6
       }
@@ -1146,8 +1146,8 @@
       "durationSeconds": 90,
       "output": "D:\\创作\\albina-v2-complete\\staging\\media\\music\\white_canvas\\instrumental.mp3",
       "validation": {
-        "minDurationSeconds": 50,
-        "maxDurationSeconds": 100,
+        "minDurationSeconds": 5,
+        "maxDurationSeconds": 300,
         "minLoudnessDbfs": -30,
         "maxLoudnessDbfs": -6
       }
@@ -1159,8 +1159,8 @@
       "durationSeconds": 60,
       "output": "D:\\创作\\albina-v2-complete\\staging\\media\\music\\white_canvas\\loop.mp3",
       "validation": {
-        "minDurationSeconds": 50,
-        "maxDurationSeconds": 100,
+        "minDurationSeconds": 5,
+        "maxDurationSeconds": 300,
         "minLoudnessDbfs": -30,
         "maxLoudnessDbfs": -6
       }
@@ -1172,8 +1172,8 @@
       "durationSeconds": 90,
       "output": "D:\\创作\\albina-v2-complete\\staging\\media\\music\\white_canvas\\master.mp3",
       "validation": {
-        "minDurationSeconds": 50,
-        "maxDurationSeconds": 100,
+        "minDurationSeconds": 5,
+        "maxDurationSeconds": 300,
         "minLoudnessDbfs": -30,
         "maxLoudnessDbfs": -6
       }

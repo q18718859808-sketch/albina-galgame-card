@@ -4,8 +4,8 @@
   "durationSeconds": 90,
   "output": "D:\\创作\\albina-v2-complete\\staging\\media\\music\\nest_station\\instrumental.mp3",
   "validation": {
-    "minDurationSeconds": 50,
-    "maxDurationSeconds": 100,
+    "minDurationSeconds": 5,
+    "maxDurationSeconds": 300,
     "minLoudnessDbfs": -30,
     "maxLoudnessDbfs": -6
   }
