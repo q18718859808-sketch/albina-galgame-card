@@ -1,7 +1,7 @@
 {
   "kind": "speech",
   "input": "白厅没有发生争吵，只剩一张过早完成的画。阿尔比娜礼貌地收回画笔与称呼；边界仍被守住，但你们没能把信任带到黎明。",
-  "voice": "coral",
+  "voice": "nova",
   "output": "D:\\创作\\albina-v2-complete\\staging\\media\\audio\\voice\\scene\\white_canvas_ending_bad.mp3",
   "validation": {
     "minDurationSeconds": 0.2,

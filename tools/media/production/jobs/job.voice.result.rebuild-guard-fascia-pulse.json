@@ -1,7 +1,7 @@
 {
   "kind": "speech",
   "input": "你选择“守住法西娅的心跳频率”。维吉利乌斯：楼顶的风把金色光尘吹成刀刃。维吉利乌斯没有劝阻，只提醒你：重构不是修好她，而是承认她有权决定哪些缺口继续存在。",
-  "voice": "sage",
+  "voice": "shimmer",
   "output": "D:\\创作\\albina-v2-complete\\staging\\media\\audio\\voice\\result\\rebuild_guard_fascia_pulse.mp3",
   "validation": {
     "minDurationSeconds": 0.2,

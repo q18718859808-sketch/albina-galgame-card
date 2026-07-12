@@ -20,7 +20,7 @@ export class PieApiError extends Error {
 }
 
 const DEFAULT_BASE_URL = 'https://api.pie-xian.com';
-const OPENAI_VOICES = new Set(['alloy', 'ash', 'ballad', 'coral', 'echo', 'fable', 'nova', 'onyx', 'sage', 'shimmer', 'verse']);
+const OPENAI_VOICES = new Set(['alloy', 'echo', 'fable', 'nova', 'onyx', 'shimmer']);
 
 interface PieClientOptions {
   env?: NodeJS.ProcessEnv | Record<string, string | undefined>;

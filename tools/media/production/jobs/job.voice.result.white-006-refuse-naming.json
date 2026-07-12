@@ -1,7 +1,7 @@
 {
   "kind": "speech",
   "input": "你选择“让轮廓保持无名，由她决定”。法西娅：法西娅的低语从镜面里渗出来：你正在画的并不是她，是一个被允许随时擦掉的你。阿尔比娜没有反驳，只是把那面镜子轻轻转开半寸。",
-  "voice": "coral",
+  "voice": "nova",
   "output": "D:\\创作\\albina-v2-complete\\staging\\media\\audio\\voice\\result\\white_006_refuse_naming.mp3",
   "validation": {
     "minDurationSeconds": 0.2,

@@ -1,7 +1,7 @@
 {
   "kind": "speech",
   "input": "你选择“只站在她视野内，不接手”。阿尔比娜：雨室的水线像无数根未被签名的画框。她让你站在她身后半步，说那个距离刚好能让两人都不必替对方回答。",
-  "voice": "coral",
+  "voice": "nova",
   "output": "D:\\创作\\albina-v2-complete\\staging\\media\\audio\\voice\\result\\white_008_stay_witness_only.mp3",
   "validation": {
     "minDurationSeconds": 0.2,

@@ -1,7 +1,7 @@
 {
   "kind": "speech",
   "input": "你选择“把笔交还给她，由她自己决定”。阿尔比娜：镜廊里同时映出\"环指版的她\"和\"现在的她\"。她让法西娅在两面镜子之间选一面，然后问你：你愿意被哪一个版本记得？",
-  "voice": "verse",
+  "voice": "echo",
   "output": "D:\\创作\\albina-v2-complete\\staging\\media\\audio\\voice\\result\\conspiracy_008_hand_pen_to_her.mp3",
   "validation": {
     "minDurationSeconds": 0.2,

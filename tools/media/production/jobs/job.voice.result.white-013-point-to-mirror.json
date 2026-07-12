@@ -1,7 +1,7 @@
 {
   "kind": "speech",
   "input": "你选择“指向墙上那面映过法西娅的镜子”。阿尔比娜：楼顶的风把她的话吹得很轻。她说：如果有一天我想把自己重新画成空白，你会替我保留这最后一层底色，还是替我重新开始？",
-  "voice": "coral",
+  "voice": "nova",
   "output": "D:\\创作\\albina-v2-complete\\staging\\media\\audio\\voice\\result\\white_013_point_to_mirror.mp3",
   "validation": {
     "minDurationSeconds": 0.2,

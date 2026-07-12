@@ -97,3 +97,9 @@ Ambiguous music handling is now one atomic claim-fenced ledger transaction. `mar
 The deterministic lost-claim test lets B reclaim the music job before A attempts its ambiguous write. A receives a lost-claim error, while B's running job, the zero cooldown, and the existing probe streak remain unchanged.
 
 Focused verification command: `npm --prefix tools/media test -- orchestration.test.ts cli.test.ts`. Result: 2 files passed, 27/27 tests passed. Type verification command: `npm --prefix tools/media run typecheck`. Result: passed.
+
+## Verified speech voice permission follow-up
+
+The speech allowlist is now exactly the six voices verified with the active Pie credential: `alloy`, `echo`, `fable`, `nova`, `onyx`, and `shimmer`. The unauthorized `ash`, `ballad`, `coral`, `sage`, and `verse` voices are rejected locally before a request.
+
+The frozen character mapping was regenerated using only verified voices while preserving differentiation: Albina uses `nova`; narration uses `onyx`; Fascia, Faust, and the golden image use `shimmer`; Vergilius and the LCE doctor use `echo`; Dante uses `alloy`; Callisto and the Ring agent use `fable`. All 154 speech job specs and the production index were deterministically regenerated. Historic failed ledger entries retain their old content hashes and do not affect the new specs.

@@ -1,7 +1,7 @@
 {
   "kind": "speech",
   "input": "你选择“要求医师删去所有所有权措辞”。阿尔比娜：巴士窗上映出她的白色义体，也映出你故意留下的空座。她说完整不是没有裂缝，而是裂缝终于有了不被展览的权利。",
-  "voice": "verse",
+  "voice": "echo",
   "output": "D:\\创作\\albina-v2-complete\\staging\\media\\audio\\voice\\result\\white_interrupt_lab_terms.mp3",
   "validation": {
     "minDurationSeconds": 0.2,

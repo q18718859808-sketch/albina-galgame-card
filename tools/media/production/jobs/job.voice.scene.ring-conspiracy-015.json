@@ -1,7 +1,7 @@
 {
   "kind": "speech",
   "input": "城郊黎明把环指的灯火远远压在身后。她停下脚步，把那柄卸下锋刃的画刀插进土里：今晚的共谋到此为止，下一次见面，我会以自己的名义邀请你。",
-  "voice": "coral",
+  "voice": "nova",
   "output": "D:\\创作\\albina-v2-complete\\staging\\media\\audio\\voice\\scene\\ring_conspiracy_015.mp3",
   "validation": {
     "minDurationSeconds": 0.2,

@@ -4,8 +4,8 @@ import { join, resolve } from 'node:path';
 type RecordValue = Record<string, any>;
 
 const voices: Record<string, string> = {
-  '阿尔比娜': 'coral', '叙事记录': 'onyx', '旁白': 'onyx', '法西娅': 'nova', '浮士德': 'sage',
-  '维吉利乌斯': 'echo', '但丁': 'alloy', '卡利斯托': 'ash', 'LCE 医师': 'verse', '环指代理人': 'fable', '金色幻影': 'shimmer',
+  '阿尔比娜': 'nova', '叙事记录': 'onyx', '旁白': 'onyx', '法西娅': 'shimmer', '浮士德': 'shimmer',
+  '维吉利乌斯': 'echo', '但丁': 'alloy', '卡利斯托': 'fable', 'LCE 医师': 'echo', '环指代理人': 'fable', '金色幻影': 'shimmer',
 };
 const palette = ['#11131a', '#6f7587', '#b9c2d0', '#d8bb72', '#7c2638', '#dbe4ea'];
 const routeNames = ['white_canvas', 'golden_bough_rebuild', 'ring_conspiracy'];

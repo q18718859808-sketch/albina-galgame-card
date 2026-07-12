@@ -1,7 +1,7 @@
 {
   "kind": "speech",
   "input": "你选择“带着未签名委托冲出画廊”。环指代理人：追兵把雨巷切成一个个展格，仿佛你们已经是可出售的连环画。阿尔比娜没有回头，只把法西娅横在你和委托书之间。",
-  "voice": "coral",
+  "voice": "nova",
   "output": "D:\\创作\\albina-v2-complete\\staging\\media\\audio\\voice\\result\\conspiracy_escape_to_backstreets.mp3",
   "validation": {
     "minDurationSeconds": 0.2,

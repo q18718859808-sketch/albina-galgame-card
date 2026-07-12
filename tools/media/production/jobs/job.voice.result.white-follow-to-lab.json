@@ -1,7 +1,7 @@
 {
   "kind": "speech",
   "input": "你选择“陪她把画布带进 LCE 临时手术室”。LCE 医师：灯光没有温度。记录员要求你签下旁观协议，阿尔比娜却先把笔推给自己：这一次，谁也不能替她同意被拆解。",
-  "voice": "coral",
+  "voice": "nova",
   "output": "D:\\创作\\albina-v2-complete\\staging\\media\\audio\\voice\\result\\white_follow_to_lab.mp3",
   "validation": {
     "minDurationSeconds": 0.2,

@@ -1,7 +1,7 @@
 {
   "kind": "speech",
   "input": "白色并不代表干净。它只是暂时还没有被决定。你也是这样，{{user}}。",
-  "voice": "coral",
+  "voice": "nova",
   "output": "D:\\创作\\albina-v2-complete\\staging\\media\\audio\\voice\\scene\\white_canvas_001.mp3",
   "validation": {
     "minDurationSeconds": 0.2,

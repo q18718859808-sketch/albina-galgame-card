@@ -1,7 +1,7 @@
 {
   "kind": "speech",
   "input": "城郊的黎明像一张终于干透的画布。她把法西娅重新放回胸口，又把画笔交到你手里：这张画布已经记住了你，但它仍然属于我。",
-  "voice": "coral",
+  "voice": "nova",
   "output": "D:\\创作\\albina-v2-complete\\staging\\media\\audio\\voice\\scene\\white_canvas_015.mp3",
   "validation": {
     "minDurationSeconds": 0.2,

@@ -1,7 +1,7 @@
 {
   "kind": "speech",
   "input": "你选择“只承诺做见证，不承诺结果”。阿尔比娜：镜廊最后一面镜子没有给倒影，只映出一枚未熄的金枝。她把镜子推向你：请你替我保管它，但不要替我点亮它。",
-  "voice": "coral",
+  "voice": "nova",
   "output": "D:\\创作\\albina-v2-complete\\staging\\media\\audio\\voice\\result\\rebuild_013_offer_witness.mp3",
   "validation": {
     "minDurationSeconds": 0.2,

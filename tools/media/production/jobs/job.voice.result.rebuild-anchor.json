@@ -1,7 +1,7 @@
 {
   "kind": "speech",
   "input": "你选择“成为她的记忆锚点”。旁白：镜面里的阿尔比娜有无数个切口，但每一道切口都避开了你替她守住的名字。",
-  "voice": "coral",
+  "voice": "nova",
   "output": "D:\\创作\\albina-v2-complete\\staging\\media\\audio\\voice\\result\\rebuild_anchor.mp3",
   "validation": {
     "minDurationSeconds": 0.2,

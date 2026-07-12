@@ -1,7 +1,7 @@
 {
   "kind": "speech",
   "input": "金枝裂隙里的回声全是她过去没说完的句子。她让法西娅在你和她之间选择一个频率，说这次她要先听见自己的节拍，再决定要不要跟上。",
-  "voice": "coral",
+  "voice": "nova",
   "output": "D:\\创作\\albina-v2-complete\\staging\\media\\audio\\voice\\scene\\golden_bough_007.mp3",
   "validation": {
     "minDurationSeconds": 0.2,

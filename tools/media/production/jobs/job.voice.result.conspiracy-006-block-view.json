@@ -1,7 +1,7 @@
 {
   "kind": "speech",
   "input": "你选择“挡在她和委托人之间”。环指代理人：雨巷的尽头被代理人堵住。他不拔武器，只是举起一面空画框，要把你们框进环指的目录。阿尔比娜低声让你选：是冲破画框，还是把它抢过来。",
-  "voice": "coral",
+  "voice": "nova",
   "output": "D:\\创作\\albina-v2-complete\\staging\\media\\audio\\voice\\result\\conspiracy_006_block_view.mp3",
   "validation": {
     "minDurationSeconds": 0.2,

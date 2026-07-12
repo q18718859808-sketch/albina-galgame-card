@@ -1,7 +1,7 @@
 {
   "kind": "speech",
   "input": "你选择“答应替她谢幕，不替她登台”。卡利斯托：蜘蛛画廊借给白画布一个临时展位。卡利斯托微笑着提议：把她最有缺陷的那一面挂出来，观众会替你们完成剩下的故事。",
-  "voice": "coral",
+  "voice": "nova",
   "output": "D:\\创作\\albina-v2-complete\\staging\\media\\audio\\voice\\result\\white_011_curtain_call.mp3",
   "validation": {
     "minDurationSeconds": 0.2,

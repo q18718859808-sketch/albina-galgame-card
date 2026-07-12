@@ -1,7 +1,7 @@
 {
   "kind": "speech",
   "input": "回到蜘蛛画廊时，所有灯都向她弯下去。她把那份委托钉在空框里，语气平静：如果他们要收藏背叛，就先学会被背叛凝视。",
-  "voice": "coral",
+  "voice": "nova",
   "output": "D:\\创作\\albina-v2-complete\\staging\\media\\audio\\voice\\scene\\ring_conspiracy_004.mp3",
   "validation": {
     "minDurationSeconds": 0.2,

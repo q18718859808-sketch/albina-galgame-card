@@ -1,7 +1,7 @@
 {
   "kind": "speech",
   "input": "你选择“当着医师反对封存记忆”。阿尔比娜：夜班巴士上，她把额头轻轻抵在窗玻璃上。她说：你今天替我守住的，不是金枝，是一个允许我继续修改自己的我。",
-  "voice": "verse",
+  "voice": "echo",
   "output": "D:\\创作\\albina-v2-complete\\staging\\media\\audio\\voice\\result\\rebuild_010_veto_sealing.mp3",
   "validation": {
     "minDurationSeconds": 0.2,

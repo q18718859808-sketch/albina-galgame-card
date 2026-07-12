@@ -1,7 +1,7 @@
 {
   "kind": "speech",
   "input": "你选择“记录金枝重构路线的暂定结局”。浮士德：记忆手术台上，金色光尘在义体接缝里像旧伤口一样反复渗出。浮士德递过一把刻度尺：她说她想重构的不是身体，是你替她记下却没敢念出来的那段。",
-  "voice": "coral",
+  "voice": "nova",
   "output": "D:\\创作\\albina-v2-complete\\staging\\media\\audio\\voice\\result\\golden_bough_route_complete.mp3",
   "validation": {
     "minDurationSeconds": 0.2,

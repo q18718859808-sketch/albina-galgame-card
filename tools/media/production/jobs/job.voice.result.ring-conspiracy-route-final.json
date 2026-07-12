@@ -1,7 +1,7 @@
 {
   "kind": "speech",
   "input": "你选择“为环指共谋路线合上最后一卷胶片”。环指共谋路线终章已封存，进入固定结局资格判定。",
-  "voice": "coral",
+  "voice": "nova",
   "output": "D:\\创作\\albina-v2-complete\\staging\\media\\audio\\voice\\result\\ring_conspiracy_route_final.mp3",
   "validation": {
     "minDurationSeconds": 0.2,

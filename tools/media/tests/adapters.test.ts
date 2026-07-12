@@ -112,6 +112,9 @@ describe('PieClient', () => {
     expect(speech).toMatchObject({ kind: 'audio', model: 'speech-2.8-hd', mimeType: 'audio/mpeg' });
     expect(speech.bytes).toEqual(new Uint8Array(Buffer.from(recorded.body_base64, 'base64')));
     await expect(client.generateSpeech({ input: 'no', voice: 'unprobed-voice' })).rejects.toThrow(/voice/i);
+    for (const voice of ['ash', 'ballad', 'coral', 'sage', 'verse']) {
+      await expect(client.generateSpeech({ input: 'unauthorized', voice })).rejects.toThrow(/unsupported or unprobed/i);
+    }
   });
 
   test('normalizes recorded music responses and treats 504 as ambiguous', async () => {

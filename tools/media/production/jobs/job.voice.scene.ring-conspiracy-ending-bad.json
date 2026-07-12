@@ -1,7 +1,7 @@
 {
   "kind": "speech",
   "input": "追击停止时，代价已经写进彼此的沉默。你们逃出了装裱，却没能保住共同节奏；阿尔比娜独自带走那柄无锋画刀，没有约定再见。",
-  "voice": "coral",
+  "voice": "nova",
   "output": "D:\\创作\\albina-v2-complete\\staging\\media\\audio\\voice\\scene\\ring_conspiracy_ending_bad.mp3",
   "validation": {
     "minDurationSeconds": 0.2,

@@ -40,15 +40,15 @@
       "recovery"
     ],
     "voices": {
-      "阿尔比娜": "coral",
+      "阿尔比娜": "nova",
       "叙事记录": "onyx",
       "旁白": "onyx",
-      "法西娅": "nova",
-      "浮士德": "sage",
+      "法西娅": "shimmer",
+      "浮士德": "shimmer",
       "维吉利乌斯": "echo",
       "但丁": "alloy",
-      "卡利斯托": "ash",
-      "LCE 医师": "verse",
+      "卡利斯托": "fable",
+      "LCE 医师": "echo",
       "环指代理人": "fable",
       "金色幻影": "shimmer"
     },
@@ -1737,7 +1737,7 @@
       "id": "job.voice.result.conspiracy_005_let_her_answer",
       "kind": "speech",
       "input": "你选择“不替她回答，让阿尔比娜开口”。阿尔比娜：蜘蛛画廊的灯突然转向她。她把法西娅插进墙上一幅空框，声音很冷：你们想收藏我，那就先学会被我凝视。",
-      "voice": "ash",
+      "voice": "fable",
       "output": "D:\\创作\\albina-v2-complete\\staging\\media\\audio\\voice\\result\\conspiracy_005_let_her_answer.mp3",
       "validation": {
         "minDurationSeconds": 0.2,
@@ -1750,7 +1750,7 @@
       "id": "job.voice.result.conspiracy_005_refuse_duo",
       "kind": "speech",
       "input": "你选择“当众拒绝成为合作展品”。阿尔比娜：蜘蛛画廊的灯突然转向她。她把法西娅插进墙上一幅空框，声音很冷：你们想收藏我，那就先学会被我凝视。",
-      "voice": "ash",
+      "voice": "fable",
       "output": "D:\\创作\\albina-v2-complete\\staging\\media\\audio\\voice\\result\\conspiracy_005_refuse_duo.mp3",
       "validation": {
         "minDurationSeconds": 0.2,
@@ -1763,7 +1763,7 @@
       "id": "job.voice.result.conspiracy_006_block_view",
       "kind": "speech",
       "input": "你选择“挡在她和委托人之间”。环指代理人：雨巷的尽头被代理人堵住。他不拔武器，只是举起一面空画框，要把你们框进环指的目录。阿尔比娜低声让你选：是冲破画框，还是把它抢过来。",
-      "voice": "coral",
+      "voice": "nova",
       "output": "D:\\创作\\albina-v2-complete\\staging\\media\\audio\\voice\\result\\conspiracy_006_block_view.mp3",
       "validation": {
         "minDurationSeconds": 0.2,
@@ -1776,7 +1776,7 @@
       "id": "job.voice.result.conspiracy_006_stand_with_her",
       "kind": "speech",
       "input": "你选择“站到她身侧，分担凝视”。环指代理人：雨巷的尽头被代理人堵住。他不拔武器，只是举起一面空画框，要把你们框进环指的目录。阿尔比娜低声让你选：是冲破画框，还是把它抢过来。",
-      "voice": "coral",
+      "voice": "nova",
       "output": "D:\\创作\\albina-v2-complete\\staging\\media\\audio\\voice\\result\\conspiracy_006_stand_with_her.mp3",
       "validation": {
         "minDurationSeconds": 0.2,
@@ -1815,7 +1815,7 @@
       "id": "job.voice.result.conspiracy_008_hand_pen_to_her",
       "kind": "speech",
       "input": "你选择“把笔交还给她，由她自己决定”。阿尔比娜：镜廊里同时映出\"环指版的她\"和\"现在的她\"。她让法西娅在两面镜子之间选一面，然后问你：你愿意被哪一个版本记得？",
-      "voice": "verse",
+      "voice": "echo",
       "output": "D:\\创作\\albina-v2-complete\\staging\\media\\audio\\voice\\result\\conspiracy_008_hand_pen_to_her.mp3",
       "validation": {
         "minDurationSeconds": 0.2,
@@ -1828,7 +1828,7 @@
       "id": "job.voice.result.conspiracy_008_refuse_testimony",
       "kind": "speech",
       "input": "你选择“当面拒绝用她换取证词”。阿尔比娜：镜廊里同时映出\"环指版的她\"和\"现在的她\"。她让法西娅在两面镜子之间选一面，然后问你：你愿意被哪一个版本记得？",
-      "voice": "verse",
+      "voice": "echo",
       "output": "D:\\创作\\albina-v2-complete\\staging\\media\\audio\\voice\\result\\conspiracy_008_refuse_testimony.mp3",
       "validation": {
         "minDurationSeconds": 0.2,
@@ -1841,7 +1841,7 @@
       "id": "job.voice.result.conspiracy_009_choose_present",
       "kind": "speech",
       "input": "你选择“选现在的她，不挑那个环指版”。卡利斯托：卡利斯托拿出一枚\"合作者徽章\"，说只要她肯戴上，环指就放过你。阿尔比娜笑了一下，把徽章塞进你掌心：你来替我决定，要不要让我用它换你。",
-      "voice": "coral",
+      "voice": "nova",
       "output": "D:\\创作\\albina-v2-complete\\staging\\media\\audio\\voice\\result\\conspiracy_009_choose_present.mp3",
       "validation": {
         "minDurationSeconds": 0.2,
@@ -1854,7 +1854,7 @@
       "id": "job.voice.result.conspiracy_009_refuse_choice",
       "kind": "speech",
       "input": "你选择“拒绝回答，让她自己挑镜子”。卡利斯托：卡利斯托拿出一枚\"合作者徽章\"，说只要她肯戴上，环指就放过你。阿尔比娜笑了一下，把徽章塞进你掌心：你来替我决定，要不要让我用它换你。",
-      "voice": "coral",
+      "voice": "nova",
       "output": "D:\\创作\\albina-v2-complete\\staging\\media\\audio\\voice\\result\\conspiracy_009_refuse_choice.mp3",
       "validation": {
         "minDurationSeconds": 0.2,
@@ -1867,7 +1867,7 @@
       "id": "job.voice.result.conspiracy_010_keep_badge_unworn",
       "kind": "speech",
       "input": "你选择“收下徽章，但谁都不许戴”。环指代理人：代理人撕下礼貌，举出一卷写好剧本的胶片：今晚的故事已经定稿，结局是你们两个都被装裱。阿尔比娜握紧法西娅，低声让你替她改写最后一格分镜。",
-      "voice": "ash",
+      "voice": "fable",
       "output": "D:\\创作\\albina-v2-complete\\staging\\media\\audio\\voice\\result\\conspiracy_010_keep_badge_unworn.mp3",
       "validation": {
         "minDurationSeconds": 0.2,
@@ -1880,7 +1880,7 @@
       "id": "job.voice.result.conspiracy_010_throw_badge",
       "kind": "speech",
       "input": "你选择“把徽章扔回卡利斯托脸上”。环指代理人：代理人撕下礼貌，举出一卷写好剧本的胶片：今晚的故事已经定稿，结局是你们两个都被装裱。阿尔比娜握紧法西娅，低声让你替她改写最后一格分镜。",
-      "voice": "ash",
+      "voice": "fable",
       "output": "D:\\创作\\albina-v2-complete\\staging\\media\\audio\\voice\\result\\conspiracy_010_throw_badge.mp3",
       "validation": {
         "minDurationSeconds": 0.2,
@@ -1945,7 +1945,7 @@
       "id": "job.voice.result.conspiracy_013_hold_one_second",
       "kind": "speech",
       "input": "你选择“认真握住那一秒，不多不少”。卡利斯托：巢穴车站最后一盏灯下，卡利斯托最后一次出现，递来一张空白入场券：你愿意把今晚写进环指的目录，还是彻底从目录里抹去？",
-      "voice": "coral",
+      "voice": "nova",
       "output": "D:\\创作\\albina-v2-complete\\staging\\media\\audio\\voice\\result\\conspiracy_013_hold_one_second.mp3",
       "validation": {
         "minDurationSeconds": 0.2,
@@ -1958,7 +1958,7 @@
       "id": "job.voice.result.conspiracy_013_return_gently",
       "kind": "speech",
       "input": "你选择“提前把它轻轻送回，不占有”。卡利斯托：巢穴车站最后一盏灯下，卡利斯托最后一次出现，递来一张空白入场券：你愿意把今晚写进环指的目录，还是彻底从目录里抹去？",
-      "voice": "coral",
+      "voice": "nova",
       "output": "D:\\创作\\albina-v2-complete\\staging\\media\\audio\\voice\\result\\conspiracy_013_return_gently.mp3",
       "validation": {
         "minDurationSeconds": 0.2,
@@ -1971,7 +1971,7 @@
       "id": "job.voice.result.conspiracy_014_erase_from_catalog",
       "kind": "speech",
       "input": "你选择“选择从环指目录里彻底抹去”。阿尔比娜：城郊黎明把环指的灯火远远压在身后。她停下脚步，把那柄卸下锋刃的画刀插进土里：今晚的共谋到此为止，下一次见面，我会以自己的名义邀请你。",
-      "voice": "ash",
+      "voice": "fable",
       "output": "D:\\创作\\albina-v2-complete\\staging\\media\\audio\\voice\\result\\conspiracy_014_erase_from_catalog.mp3",
       "validation": {
         "minDurationSeconds": 0.2,
@@ -1984,7 +1984,7 @@
       "id": "job.voice.result.conspiracy_014_keep_one_line",
       "kind": "speech",
       "input": "你选择“只保留一行不被署名的记录”。阿尔比娜：城郊黎明把环指的灯火远远压在身后。她停下脚步，把那柄卸下锋刃的画刀插进土里：今晚的共谋到此为止，下一次见面，我会以自己的名义邀请你。",
-      "voice": "ash",
+      "voice": "fable",
       "output": "D:\\创作\\albina-v2-complete\\staging\\media\\audio\\voice\\result\\conspiracy_014_keep_one_line.mp3",
       "validation": {
         "minDurationSeconds": 0.2,
@@ -1997,7 +1997,7 @@
       "id": "job.voice.result.conspiracy_accept",
       "kind": "speech",
       "input": "你选择“接下委托，但保留自己的条件”。阿尔比娜：她第一次没有把怒意伪装成礼貌。那不是要毁掉你的眼神，更像是不允许任何人替她决定你的用途。",
-      "voice": "coral",
+      "voice": "nova",
       "output": "D:\\创作\\albina-v2-complete\\staging\\media\\audio\\voice\\result\\conspiracy_accept.mp3",
       "validation": {
         "minDurationSeconds": 0.2,
@@ -2023,7 +2023,7 @@
       "id": "job.voice.result.conspiracy_escape_to_backstreets",
       "kind": "speech",
       "input": "你选择“带着未签名委托冲出画廊”。环指代理人：追兵把雨巷切成一个个展格，仿佛你们已经是可出售的连环画。阿尔比娜没有回头，只把法西娅横在你和委托书之间。",
-      "voice": "coral",
+      "voice": "nova",
       "output": "D:\\创作\\albina-v2-complete\\staging\\media\\audio\\voice\\result\\conspiracy_escape_to_backstreets.mp3",
       "validation": {
         "minDurationSeconds": 0.2,
@@ -2049,7 +2049,7 @@
       "id": "job.voice.result.conspiracy_pressure",
       "kind": "speech",
       "input": "你选择“逼她说出真正目标”。阿尔比娜：她第一次没有把怒意伪装成礼貌。那不是要毁掉你的眼神，更像是不允许任何人替她决定你的用途。",
-      "voice": "coral",
+      "voice": "nova",
       "output": "D:\\创作\\albina-v2-complete\\staging\\media\\audio\\voice\\result\\conspiracy_pressure.mp3",
       "validation": {
         "minDurationSeconds": 0.2,
@@ -2062,7 +2062,7 @@
       "id": "job.voice.result.enter_conspiracy",
       "kind": "speech",
       "input": "你选择“接受环指的危险邀请”。阿尔比娜：蜘蛛巢的灯光像手术刀一样落下。她向你递来一份没有署名的委托，笑得礼貌又危险。",
-      "voice": "coral",
+      "voice": "nova",
       "output": "D:\\创作\\albina-v2-complete\\staging\\media\\audio\\voice\\result\\enter_conspiracy.mp3",
       "validation": {
         "minDurationSeconds": 0.2,
@@ -2075,7 +2075,7 @@
       "id": "job.voice.result.enter_rebuild",
       "kind": "speech",
       "input": "你选择“询问金枝重构的痕迹”。阿尔比娜：金色光尘沿着她的义体裂缝回流。她先确认的不是自己，而是法西娅是否还在呼吸。",
-      "voice": "coral",
+      "voice": "nova",
       "output": "D:\\创作\\albina-v2-complete\\staging\\media\\audio\\voice\\result\\enter_rebuild.mp3",
       "validation": {
         "minDurationSeconds": 0.2,
@@ -2088,7 +2088,7 @@
       "id": "job.voice.result.enter_white_canvas",
       "kind": "speech",
       "input": "你选择“留在她的白色画布前”。阿尔比娜：白色并不代表干净。它只是暂时还没有被决定。你也是这样，{{user}}。",
-      "voice": "coral",
+      "voice": "nova",
       "output": "D:\\创作\\albina-v2-complete\\staging\\media\\audio\\voice\\result\\enter_white_canvas.mp3",
       "validation": {
         "minDurationSeconds": 0.2,
@@ -2140,7 +2140,7 @@
       "id": "job.voice.result.golden_bough_route_complete",
       "kind": "speech",
       "input": "你选择“记录金枝重构路线的暂定结局”。浮士德：记忆手术台上，金色光尘在义体接缝里像旧伤口一样反复渗出。浮士德递过一把刻度尺：她说她想重构的不是身体，是你替她记下却没敢念出来的那段。",
-      "voice": "coral",
+      "voice": "nova",
       "output": "D:\\创作\\albina-v2-complete\\staging\\media\\audio\\voice\\result\\golden_bough_route_complete.mp3",
       "validation": {
         "minDurationSeconds": 0.2,
@@ -2153,7 +2153,7 @@
       "id": "job.voice.result.golden_bough_route_final",
       "kind": "speech",
       "input": "你选择“为金枝重构路线落最后一笔”。金枝重构路线终章已封存，进入固定结局资格判定。",
-      "voice": "coral",
+      "voice": "nova",
       "output": "D:\\创作\\albina-v2-complete\\staging\\media\\audio\\voice\\result\\golden_bough_route_final.mp3",
       "validation": {
         "minDurationSeconds": 0.2,
@@ -2166,7 +2166,7 @@
       "id": "job.voice.result.rebuild_006_keep_silent_anchor",
       "kind": "speech",
       "input": "你选择“只做锚点，不替她出声”。阿尔比娜：金枝裂隙里的回声全是她过去没说完的句子。她让法西娅在你和她之间选择一个频率，说这次她要先听见自己的节拍，再决定要不要跟上。",
-      "voice": "sage",
+      "voice": "shimmer",
       "output": "D:\\创作\\albina-v2-complete\\staging\\media\\audio\\voice\\result\\rebuild_006_keep_silent_anchor.mp3",
       "validation": {
         "minDurationSeconds": 0.2,
@@ -2179,7 +2179,7 @@
       "id": "job.voice.result.rebuild_006_read_aloud",
       "kind": "speech",
       "input": "你选择“把那段记忆当着她的面念出来”。阿尔比娜：金枝裂隙里的回声全是她过去没说完的句子。她让法西娅在你和她之间选择一个频率，说这次她要先听见自己的节拍，再决定要不要跟上。",
-      "voice": "sage",
+      "voice": "shimmer",
       "output": "D:\\创作\\albina-v2-complete\\staging\\media\\audio\\voice\\result\\rebuild_006_read_aloud.mp3",
       "validation": {
         "minDurationSeconds": 0.2,
@@ -2192,7 +2192,7 @@
       "id": "job.voice.result.rebuild_007_match_her_pulse",
       "kind": "speech",
       "input": "你选择“按她的节拍调整呼吸”。维吉利乌斯：LCE 的搜捕光柱扫过楼顶。维吉利乌斯扔下一句话：你救不回完整的她，但你能决定让她以哪个版本继续存在。阿尔比娜握紧法西娅，等你下判断。",
-      "voice": "coral",
+      "voice": "nova",
       "output": "D:\\创作\\albina-v2-complete\\staging\\media\\audio\\voice\\result\\rebuild_007_match_her_pulse.mp3",
       "validation": {
         "minDurationSeconds": 0.2,
@@ -2205,7 +2205,7 @@
       "id": "job.voice.result.rebuild_007_stay_own_rhythm",
       "kind": "speech",
       "input": "你选择“保留你自己的呼吸节奏，让她对齐”。维吉利乌斯：LCE 的搜捕光柱扫过楼顶。维吉利乌斯扔下一句话：你救不回完整的她，但你能决定让她以哪个版本继续存在。阿尔比娜握紧法西娅，等你下判断。",
-      "voice": "coral",
+      "voice": "nova",
       "output": "D:\\创作\\albina-v2-complete\\staging\\media\\audio\\voice\\result\\rebuild_007_stay_own_rhythm.mp3",
       "validation": {
         "minDurationSeconds": 0.2,
@@ -2270,7 +2270,7 @@
       "id": "job.voice.result.rebuild_010_ask_her_choice",
       "kind": "speech",
       "input": "你选择“低声问她自己想怎么签”。阿尔比娜：夜班巴士上，她把额头轻轻抵在窗玻璃上。她说：你今天替我守住的，不是金枝，是一个允许我继续修改自己的我。",
-      "voice": "verse",
+      "voice": "echo",
       "output": "D:\\创作\\albina-v2-complete\\staging\\media\\audio\\voice\\result\\rebuild_010_ask_her_choice.mp3",
       "validation": {
         "minDurationSeconds": 0.2,
@@ -2283,7 +2283,7 @@
       "id": "job.voice.result.rebuild_010_veto_sealing",
       "kind": "speech",
       "input": "你选择“当着医师反对封存记忆”。阿尔比娜：夜班巴士上，她把额头轻轻抵在窗玻璃上。她说：你今天替我守住的，不是金枝，是一个允许我继续修改自己的我。",
-      "voice": "verse",
+      "voice": "echo",
       "output": "D:\\创作\\albina-v2-complete\\staging\\media\\audio\\voice\\result\\rebuild_010_veto_sealing.mp3",
       "validation": {
         "minDurationSeconds": 0.2,
@@ -2296,7 +2296,7 @@
       "id": "job.voice.result.rebuild_011_ask_next_revision",
       "kind": "speech",
       "input": "你选择“问她下一笔想修改哪里”。环指代理人：环指工坊里有人拿出一枚金枝仿品，提议替她换掉所有\"未完成\"的接口。她握紧法西娅，等你判断这是救济，还是又一次把她写成完成品的尝试。",
-      "voice": "coral",
+      "voice": "nova",
       "output": "D:\\创作\\albina-v2-complete\\staging\\media\\audio\\voice\\result\\rebuild_011_ask_next_revision.mp3",
       "validation": {
         "minDurationSeconds": 0.2,
@@ -2309,7 +2309,7 @@
       "id": "job.voice.result.rebuild_011_sit_beside",
       "kind": "speech",
       "input": "你选择“坐到她旁边，不说话”。环指代理人：环指工坊里有人拿出一枚金枝仿品，提议替她换掉所有\"未完成\"的接口。她握紧法西娅，等你判断这是救济，还是又一次把她写成完成品的尝试。",
-      "voice": "coral",
+      "voice": "nova",
       "output": "D:\\创作\\albina-v2-complete\\staging\\media\\audio\\voice\\result\\rebuild_011_sit_beside.mp3",
       "validation": {
         "minDurationSeconds": 0.2,
@@ -2348,7 +2348,7 @@
       "id": "job.voice.result.rebuild_013_offer_witness",
       "kind": "speech",
       "input": "你选择“只承诺做见证，不承诺结果”。阿尔比娜：镜廊最后一面镜子没有给倒影，只映出一枚未熄的金枝。她把镜子推向你：请你替我保管它，但不要替我点亮它。",
-      "voice": "coral",
+      "voice": "nova",
       "output": "D:\\创作\\albina-v2-complete\\staging\\media\\audio\\voice\\result\\rebuild_013_offer_witness.mp3",
       "validation": {
         "minDurationSeconds": 0.2,
@@ -2361,7 +2361,7 @@
       "id": "job.voice.result.rebuild_013_promise_name",
       "kind": "speech",
       "input": "你选择“答应她即使失败也记得这个名字”。阿尔比娜：镜廊最后一面镜子没有给倒影，只映出一枚未熄的金枝。她把镜子推向你：请你替我保管它，但不要替我点亮它。",
-      "voice": "coral",
+      "voice": "nova",
       "output": "D:\\创作\\albina-v2-complete\\staging\\media\\audio\\voice\\result\\rebuild_013_promise_name.mp3",
       "validation": {
         "minDurationSeconds": 0.2,
@@ -2374,7 +2374,7 @@
       "id": "job.voice.result.rebuild_014_ask_when_to_light",
       "kind": "speech",
       "input": "你选择“问她什么时刻才能点亮”。阿尔比娜：黎明把金枝的光尘压成一层很薄的金属。她抬头看你，第一次没有问该不该重构自己，而是说：谢谢你愿意陪我等到这一层颜色冷却。",
-      "voice": "coral",
+      "voice": "nova",
       "output": "D:\\创作\\albina-v2-complete\\staging\\media\\audio\\voice\\result\\rebuild_014_ask_when_to_light.mp3",
       "validation": {
         "minDurationSeconds": 0.2,
@@ -2387,7 +2387,7 @@
       "id": "job.voice.result.rebuild_014_keep_unlit",
       "kind": "speech",
       "input": "你选择“答应只保管，不替她点亮”。阿尔比娜：黎明把金枝的光尘压成一层很薄的金属。她抬头看你，第一次没有问该不该重构自己，而是说：谢谢你愿意陪我等到这一层颜色冷却。",
-      "voice": "coral",
+      "voice": "nova",
       "output": "D:\\创作\\albina-v2-complete\\staging\\media\\audio\\voice\\result\\rebuild_014_keep_unlit.mp3",
       "validation": {
         "minDurationSeconds": 0.2,
@@ -2413,7 +2413,7 @@
       "id": "job.voice.result.rebuild_anchor",
       "kind": "speech",
       "input": "你选择“成为她的记忆锚点”。旁白：镜面里的阿尔比娜有无数个切口，但每一道切口都避开了你替她守住的名字。",
-      "voice": "coral",
+      "voice": "nova",
       "output": "D:\\创作\\albina-v2-complete\\staging\\media\\audio\\voice\\result\\rebuild_anchor.mp3",
       "validation": {
         "minDurationSeconds": 0.2,
@@ -2426,7 +2426,7 @@
       "id": "job.voice.result.rebuild_cut_false_completion",
       "kind": "speech",
       "input": "你选择“切断“完成品”的错误定义”。维吉利乌斯：楼顶的风把金色光尘吹成刀刃。维吉利乌斯没有劝阻，只提醒你：重构不是修好她，而是承认她有权决定哪些缺口继续存在。",
-      "voice": "sage",
+      "voice": "shimmer",
       "output": "D:\\创作\\albina-v2-complete\\staging\\media\\audio\\voice\\result\\rebuild_cut_false_completion.mp3",
       "validation": {
         "minDurationSeconds": 0.2,
@@ -2439,7 +2439,7 @@
       "id": "job.voice.result.rebuild_guard_fascia_pulse",
       "kind": "speech",
       "input": "你选择“守住法西娅的心跳频率”。维吉利乌斯：楼顶的风把金色光尘吹成刀刃。维吉利乌斯没有劝阻，只提醒你：重构不是修好她，而是承认她有权决定哪些缺口继续存在。",
-      "voice": "sage",
+      "voice": "shimmer",
       "output": "D:\\创作\\albina-v2-complete\\staging\\media\\audio\\voice\\result\\rebuild_guard_fascia_pulse.mp3",
       "validation": {
         "minDurationSeconds": 0.2,
@@ -2465,7 +2465,7 @@
       "id": "job.voice.result.rebuild_question_fascia",
       "kind": "speech",
       "input": "你选择“先检查法西娅”。旁白：镜面里的阿尔比娜有无数个切口，但每一道切口都避开了你替她守住的名字。",
-      "voice": "coral",
+      "voice": "nova",
       "output": "D:\\创作\\albina-v2-complete\\staging\\media\\audio\\voice\\result\\rebuild_question_fascia.mp3",
       "validation": {
         "minDurationSeconds": 0.2,
@@ -2504,7 +2504,7 @@
       "id": "job.voice.result.return_opening_from_ring",
       "kind": "speech",
       "input": "你选择“回到路线选择”。阿尔比娜：晚上好，{{user}}。请不要站得太远，我还没决定该把你称作观众、朋友，还是一块值得等待的画布。",
-      "voice": "coral",
+      "voice": "nova",
       "output": "D:\\创作\\albina-v2-complete\\staging\\media\\audio\\voice\\result\\return_opening_from_ring.mp3",
       "validation": {
         "minDurationSeconds": 0.2,
@@ -2517,7 +2517,7 @@
       "id": "job.voice.result.return_opening_from_white",
       "kind": "speech",
       "input": "你选择“回到路线选择”。阿尔比娜：晚上好，{{user}}。请不要站得太远，我还没决定该把你称作观众、朋友，还是一块值得等待的画布。",
-      "voice": "coral",
+      "voice": "nova",
       "output": "D:\\创作\\albina-v2-complete\\staging\\media\\audio\\voice\\result\\return_opening_from_white.mp3",
       "validation": {
         "minDurationSeconds": 0.2,
@@ -2530,7 +2530,7 @@
       "id": "job.voice.result.ring_conspiracy_route_complete",
       "kind": "speech",
       "input": "你选择“记录环指共谋路线的暂定结局”。卡利斯托：卡利斯托把另一份署了名的委托推到你们中间，笑得像在挑礼物：既然上次没有展出你的缺陷，这次不如让你们两个一起成为一件合作作品。",
-      "voice": "coral",
+      "voice": "nova",
       "output": "D:\\创作\\albina-v2-complete\\staging\\media\\audio\\voice\\result\\ring_conspiracy_route_complete.mp3",
       "validation": {
         "minDurationSeconds": 0.2,
@@ -2543,7 +2543,7 @@
       "id": "job.voice.result.ring_conspiracy_route_final",
       "kind": "speech",
       "input": "你选择“为环指共谋路线合上最后一卷胶片”。环指共谋路线终章已封存，进入固定结局资格判定。",
-      "voice": "coral",
+      "voice": "nova",
       "output": "D:\\创作\\albina-v2-complete\\staging\\media\\audio\\voice\\result\\ring_conspiracy_route_final.mp3",
       "validation": {
         "minDurationSeconds": 0.2,
@@ -2595,7 +2595,7 @@
       "id": "job.voice.result.white_006_name_silence",
       "kind": "speech",
       "input": "你选择“替那条轮廓取一个不会被收藏的名字”。法西娅：法西娅的低语从镜面里渗出来：你正在画的并不是她，是一个被允许随时擦掉的你。阿尔比娜没有反驳，只是把那面镜子轻轻转开半寸。",
-      "voice": "coral",
+      "voice": "nova",
       "output": "D:\\创作\\albina-v2-complete\\staging\\media\\audio\\voice\\result\\white_006_name_silence.mp3",
       "validation": {
         "minDurationSeconds": 0.2,
@@ -2608,7 +2608,7 @@
       "id": "job.voice.result.white_006_refuse_naming",
       "kind": "speech",
       "input": "你选择“让轮廓保持无名，由她决定”。法西娅：法西娅的低语从镜面里渗出来：你正在画的并不是她，是一个被允许随时擦掉的你。阿尔比娜没有反驳，只是把那面镜子轻轻转开半寸。",
-      "voice": "coral",
+      "voice": "nova",
       "output": "D:\\创作\\albina-v2-complete\\staging\\media\\audio\\voice\\result\\white_006_refuse_naming.mp3",
       "validation": {
         "minDurationSeconds": 0.2,
@@ -2621,7 +2621,7 @@
       "id": "job.voice.result.white_007_ask_fascia_term",
       "kind": "speech",
       "input": "你选择“当着阿尔比娜问法西娅一个边界问题”。阿尔比娜：义体维护槽的白光下，她把法西娅从胸口取出来，放在你和她之间的托盘上。她说：完整不是把它装回去，是承认它有权利短暂离开我。",
-      "voice": "nova",
+      "voice": "shimmer",
       "output": "D:\\创作\\albina-v2-complete\\staging\\media\\audio\\voice\\result\\white_007_ask_fascia_term.mp3",
       "validation": {
         "minDurationSeconds": 0.2,
@@ -2634,7 +2634,7 @@
       "id": "job.voice.result.white_007_keep_mirror_open",
       "kind": "speech",
       "input": "你选择“让镜子继续映照，不替她遮蔽”。阿尔比娜：义体维护槽的白光下，她把法西娅从胸口取出来，放在你和她之间的托盘上。她说：完整不是把它装回去，是承认它有权利短暂离开我。",
-      "voice": "nova",
+      "voice": "shimmer",
       "output": "D:\\创作\\albina-v2-complete\\staging\\media\\audio\\voice\\result\\white_007_keep_mirror_open.mp3",
       "validation": {
         "minDurationSeconds": 0.2,
@@ -2647,7 +2647,7 @@
       "id": "job.voice.result.white_008_hold_fascia",
       "kind": "speech",
       "input": "你选择“替她暂时照看法西娅”。阿尔比娜：雨室的水线像无数根未被签名的画框。她让你站在她身后半步，说那个距离刚好能让两人都不必替对方回答。",
-      "voice": "coral",
+      "voice": "nova",
       "output": "D:\\创作\\albina-v2-complete\\staging\\media\\audio\\voice\\result\\white_008_hold_fascia.mp3",
       "validation": {
         "minDurationSeconds": 0.2,
@@ -2660,7 +2660,7 @@
       "id": "job.voice.result.white_008_stay_witness_only",
       "kind": "speech",
       "input": "你选择“只站在她视野内，不接手”。阿尔比娜：雨室的水线像无数根未被签名的画框。她让你站在她身后半步，说那个距离刚好能让两人都不必替对方回答。",
-      "voice": "coral",
+      "voice": "nova",
       "output": "D:\\创作\\albina-v2-complete\\staging\\media\\audio\\voice\\result\\white_008_stay_witness_only.mp3",
       "validation": {
         "minDurationSeconds": 0.2,
@@ -2673,7 +2673,7 @@
       "id": "job.voice.result.white_009_keep_half_step",
       "kind": "speech",
       "input": "你选择“守住半步距离，不擅自靠近”。但丁：但丁没有抬头，只低声提醒：她在试着把自己画成一个可以离开的人，你最好别急着把她画成离不开你的人。",
-      "voice": "coral",
+      "voice": "nova",
       "output": "D:\\创作\\albina-v2-complete\\staging\\media\\audio\\voice\\result\\white_009_keep_half_step.mp3",
       "validation": {
         "minDurationSeconds": 0.2,
@@ -2686,7 +2686,7 @@
       "id": "job.voice.result.white_009_share_umbrella_edge",
       "kind": "speech",
       "input": "你选择“把伞沿偏向她那侧”。但丁：但丁没有抬头，只低声提醒：她在试着把自己画成一个可以离开的人，你最好别急着把她画成离不开你的人。",
-      "voice": "coral",
+      "voice": "nova",
       "output": "D:\\创作\\albina-v2-complete\\staging\\media\\audio\\voice\\result\\white_009_share_umbrella_edge.mp3",
       "validation": {
         "minDurationSeconds": 0.2,
@@ -2725,7 +2725,7 @@
       "id": "job.voice.result.white_011_curtain_call",
       "kind": "speech",
       "input": "你选择“答应替她谢幕，不替她登台”。卡利斯托：蜘蛛画廊借给白画布一个临时展位。卡利斯托微笑着提议：把她最有缺陷的那一面挂出来，观众会替你们完成剩下的故事。",
-      "voice": "coral",
+      "voice": "nova",
       "output": "D:\\创作\\albina-v2-complete\\staging\\media\\audio\\voice\\result\\white_011_curtain_call.mp3",
       "validation": {
         "minDurationSeconds": 0.2,
@@ -2738,7 +2738,7 @@
       "id": "job.voice.result.white_011_walk_beside",
       "kind": "speech",
       "input": "你选择“陪她走下月台，不离开也不催促”。卡利斯托：蜘蛛画廊借给白画布一个临时展位。卡利斯托微笑着提议：把她最有缺陷的那一面挂出来，观众会替你们完成剩下的故事。",
-      "voice": "coral",
+      "voice": "nova",
       "output": "D:\\创作\\albina-v2-complete\\staging\\media\\audio\\voice\\result\\white_011_walk_beside.mp3",
       "validation": {
         "minDurationSeconds": 0.2,
@@ -2751,7 +2751,7 @@
       "id": "job.voice.result.white_012_let_her_decide",
       "kind": "speech",
       "input": "你选择“把展与不展的决定权交还给她”。阿尔比娜：环指工坊的颜料气味里混着血。她握着一柄画刀，对你说：今天我可能要毁掉一件作品，请你告诉我哪一件是她真正想毁掉的。",
-      "voice": "ash",
+      "voice": "fable",
       "output": "D:\\创作\\albina-v2-complete\\staging\\media\\audio\\voice\\result\\white_012_let_her_decide.mp3",
       "validation": {
         "minDurationSeconds": 0.2,
@@ -2764,7 +2764,7 @@
       "id": "job.voice.result.white_012_refuse_exhibit",
       "kind": "speech",
       "input": "你选择“当众拒绝展出她的缺陷”。阿尔比娜：环指工坊的颜料气味里混着血。她握着一柄画刀，对你说：今天我可能要毁掉一件作品，请你告诉我哪一件是她真正想毁掉的。",
-      "voice": "ash",
+      "voice": "fable",
       "output": "D:\\创作\\albina-v2-complete\\staging\\media\\audio\\voice\\result\\white_012_refuse_exhibit.mp3",
       "validation": {
         "minDurationSeconds": 0.2,
@@ -2777,7 +2777,7 @@
       "id": "job.voice.result.white_013_point_to_mirror",
       "kind": "speech",
       "input": "你选择“指向墙上那面映过法西娅的镜子”。阿尔比娜：楼顶的风把她的话吹得很轻。她说：如果有一天我想把自己重新画成空白，你会替我保留这最后一层底色，还是替我重新开始？",
-      "voice": "coral",
+      "voice": "nova",
       "output": "D:\\创作\\albina-v2-complete\\staging\\media\\audio\\voice\\result\\white_013_point_to_mirror.mp3",
       "validation": {
         "minDurationSeconds": 0.2,
@@ -2790,7 +2790,7 @@
       "id": "job.voice.result.white_013_refuse_to_choose",
       "kind": "speech",
       "input": "你选择“拒绝替她决定，让她自己下刀”。阿尔比娜：楼顶的风把她的话吹得很轻。她说：如果有一天我想把自己重新画成空白，你会替我保留这最后一层底色，还是替我重新开始？",
-      "voice": "coral",
+      "voice": "nova",
       "output": "D:\\创作\\albina-v2-complete\\staging\\media\\audio\\voice\\result\\white_013_refuse_to_choose.mp3",
       "validation": {
         "minDurationSeconds": 0.2,
@@ -2803,7 +2803,7 @@
       "id": "job.voice.result.white_014_keep_base_color",
       "kind": "speech",
       "input": "你选择“答应替她保留最后一层底色”。阿尔比娜：城郊的黎明像一张终于干透的画布。她把法西娅重新放回胸口，又把画笔交到你手里：这张画布已经记住了你，但它仍然属于我。",
-      "voice": "coral",
+      "voice": "nova",
       "output": "D:\\创作\\albina-v2-complete\\staging\\media\\audio\\voice\\result\\white_014_keep_base_color.mp3",
       "validation": {
         "minDurationSeconds": 0.2,
@@ -2816,7 +2816,7 @@
       "id": "job.voice.result.white_014_offer_restart",
       "kind": "speech",
       "input": "你选择“答应陪她从空白重新开始”。阿尔比娜：城郊的黎明像一张终于干透的画布。她把法西娅重新放回胸口，又把画笔交到你手里：这张画布已经记住了你，但它仍然属于我。",
-      "voice": "coral",
+      "voice": "nova",
       "output": "D:\\创作\\albina-v2-complete\\staging\\media\\audio\\voice\\result\\white_014_offer_restart.mp3",
       "validation": {
         "minDurationSeconds": 0.2,
@@ -2829,7 +2829,7 @@
       "id": "job.voice.result.white_canvas_route_complete",
       "kind": "speech",
       "input": "你选择“记录白色画布路线的暂定结局”。阿尔比娜：空展厅的回声比任何观众都诚实。她拿起一支没有颜料的画笔，在你面前比划出一条看不见的轮廓：这是你今晚没有说出口的那句话。",
-      "voice": "coral",
+      "voice": "nova",
       "output": "D:\\创作\\albina-v2-complete\\staging\\media\\audio\\voice\\result\\white_canvas_route_complete.mp3",
       "validation": {
         "minDurationSeconds": 0.2,
@@ -2842,7 +2842,7 @@
       "id": "job.voice.result.white_canvas_route_final",
       "kind": "speech",
       "input": "你选择“为白色画布路线盖上最后一枚印章”。白色画布路线终章已封存，进入固定结局资格判定。",
-      "voice": "coral",
+      "voice": "nova",
       "output": "D:\\创作\\albina-v2-complete\\staging\\media\\audio\\voice\\result\\white_canvas_route_final.mp3",
       "validation": {
         "minDurationSeconds": 0.2,
@@ -2894,7 +2894,7 @@
       "id": "job.voice.result.white_follow_to_lab",
       "kind": "speech",
       "input": "你选择“陪她把画布带进 LCE 临时手术室”。LCE 医师：灯光没有温度。记录员要求你签下旁观协议，阿尔比娜却先把笔推给自己：这一次，谁也不能替她同意被拆解。",
-      "voice": "coral",
+      "voice": "nova",
       "output": "D:\\创作\\albina-v2-complete\\staging\\media\\audio\\voice\\result\\white_follow_to_lab.mp3",
       "validation": {
         "minDurationSeconds": 0.2,
@@ -2907,7 +2907,7 @@
       "id": "job.voice.result.white_interrupt_lab_terms",
       "kind": "speech",
       "input": "你选择“要求医师删去所有所有权措辞”。阿尔比娜：巴士窗上映出她的白色义体，也映出你故意留下的空座。她说完整不是没有裂缝，而是裂缝终于有了不被展览的权利。",
-      "voice": "verse",
+      "voice": "echo",
       "output": "D:\\创作\\albina-v2-complete\\staging\\media\\audio\\voice\\result\\white_interrupt_lab_terms.mp3",
       "validation": {
         "minDurationSeconds": 0.2,
@@ -2920,7 +2920,7 @@
       "id": "job.voice.result.white_keep_empty_seat",
       "kind": "speech",
       "input": "你选择“替她保留那张无人审判的座位”。阿尔比娜：黎明像一层还没有落款的底色。她把法西娅插在你们之间，不是阻隔，而是提醒：任何亲密都必须能被双方随时收回。",
-      "voice": "coral",
+      "voice": "nova",
       "output": "D:\\创作\\albina-v2-complete\\staging\\media\\audio\\voice\\result\\white_keep_empty_seat.mp3",
       "validation": {
         "minDurationSeconds": 0.2,
@@ -2933,7 +2933,7 @@
       "id": "job.voice.result.white_share_rain_window",
       "kind": "speech",
       "input": "你选择“把雨夜倒影交给她自己命名”。阿尔比娜：黎明像一层还没有落款的底色。她把法西娅插在你们之间，不是阻隔，而是提醒：任何亲密都必须能被双方随时收回。",
-      "voice": "coral",
+      "voice": "nova",
       "output": "D:\\创作\\albina-v2-complete\\staging\\media\\audio\\voice\\result\\white_share_rain_window.mp3",
       "validation": {
         "minDurationSeconds": 0.2,
@@ -2946,7 +2946,7 @@
       "id": "job.voice.result.white_sign_witness_protocol",
       "kind": "speech",
       "input": "你选择“只签见证，不签处置权”。阿尔比娜：巴士窗上映出她的白色义体，也映出你故意留下的空座。她说完整不是没有裂缝，而是裂缝终于有了不被展览的权利。",
-      "voice": "verse",
+      "voice": "echo",
       "output": "D:\\创作\\albina-v2-complete\\staging\\media\\audio\\voice\\result\\white_sign_witness_protocol.mp3",
       "validation": {
         "minDurationSeconds": 0.2,
@@ -2959,7 +2959,7 @@
       "id": "job.voice.result.white_tease_back",
       "kind": "speech",
       "input": "你选择“反问她是否害怕自己的画布”。阿尔比娜：她把黑色手掌停在离你心口一寸的位置，没有继续向前。法西娅安静得像也在等待你的许可。",
-      "voice": "coral",
+      "voice": "nova",
       "output": "D:\\创作\\albina-v2-complete\\staging\\media\\audio\\voice\\result\\white_tease_back.mp3",
       "validation": {
         "minDurationSeconds": 0.2,
@@ -2972,7 +2972,7 @@
       "id": "job.voice.result.white_touch_boundary",
       "kind": "speech",
       "input": "你选择“告诉她：完整也是一种作品”。阿尔比娜：她把黑色手掌停在离你心口一寸的位置，没有继续向前。法西娅安静得像也在等待你的许可。",
-      "voice": "coral",
+      "voice": "nova",
       "output": "D:\\创作\\albina-v2-complete\\staging\\media\\audio\\voice\\result\\white_touch_boundary.mp3",
       "validation": {
         "minDurationSeconds": 0.2,
@@ -2985,7 +2985,7 @@
       "id": "job.voice.scene.golden_bough_001",
       "kind": "speech",
       "input": "金色光尘沿着她的义体裂缝回流。她先确认的不是自己，而是法西娅是否还在呼吸。",
-      "voice": "coral",
+      "voice": "nova",
       "output": "D:\\创作\\albina-v2-complete\\staging\\media\\audio\\voice\\scene\\golden_bough_001.mp3",
       "validation": {
         "minDurationSeconds": 0.2,
@@ -3011,7 +3011,7 @@
       "id": "job.voice.scene.golden_bough_003",
       "kind": "speech",
       "input": "金枝残响把病床、画架和战场叠成一张薄膜。浮士德只给出结论：如果锚点断裂，阿尔比娜会把自己误认为一件已经完成的作品。",
-      "voice": "sage",
+      "voice": "shimmer",
       "output": "D:\\创作\\albina-v2-complete\\staging\\media\\audio\\voice\\scene\\golden_bough_003.mp3",
       "validation": {
         "minDurationSeconds": 0.2,
@@ -3037,7 +3037,7 @@
       "id": "job.voice.scene.golden_bough_005",
       "kind": "speech",
       "input": "最后一面镜子没有给她完整倒影，只给出一条可以返回的路。她握住你的手腕，确认那不是束缚，而是一次被允许的回航。",
-      "voice": "coral",
+      "voice": "nova",
       "output": "D:\\创作\\albina-v2-complete\\staging\\media\\audio\\voice\\scene\\golden_bough_005.mp3",
       "validation": {
         "minDurationSeconds": 0.2,
@@ -3050,7 +3050,7 @@
       "id": "job.voice.scene.golden_bough_006",
       "kind": "speech",
       "input": "记忆手术台上，金色光尘在义体接缝里像旧伤口一样反复渗出。浮士德递过一把刻度尺：她说她想重构的不是身体，是你替她记下却没敢念出来的那段。",
-      "voice": "sage",
+      "voice": "shimmer",
       "output": "D:\\创作\\albina-v2-complete\\staging\\media\\audio\\voice\\scene\\golden_bough_006.mp3",
       "validation": {
         "minDurationSeconds": 0.2,
@@ -3063,7 +3063,7 @@
       "id": "job.voice.scene.golden_bough_007",
       "kind": "speech",
       "input": "金枝裂隙里的回声全是她过去没说完的句子。她让法西娅在你和她之间选择一个频率，说这次她要先听见自己的节拍，再决定要不要跟上。",
-      "voice": "coral",
+      "voice": "nova",
       "output": "D:\\创作\\albina-v2-complete\\staging\\media\\audio\\voice\\scene\\golden_bough_007.mp3",
       "validation": {
         "minDurationSeconds": 0.2,
@@ -3102,7 +3102,7 @@
       "id": "job.voice.scene.golden_bough_010",
       "kind": "speech",
       "input": "医师递来一份重构协议：只要她愿意封存一段记忆，LCE 就允许她保留现在的外形。她把笔尖停在协议上，没有签字，先看你的反应。",
-      "voice": "verse",
+      "voice": "echo",
       "output": "D:\\创作\\albina-v2-complete\\staging\\media\\audio\\voice\\scene\\golden_bough_010.mp3",
       "validation": {
         "minDurationSeconds": 0.2,
@@ -3115,7 +3115,7 @@
       "id": "job.voice.scene.golden_bough_011",
       "kind": "speech",
       "input": "夜班巴士上，她把额头轻轻抵在窗玻璃上。她说：你今天替我守住的，不是金枝，是一个允许我继续修改自己的我。",
-      "voice": "coral",
+      "voice": "nova",
       "output": "D:\\创作\\albina-v2-complete\\staging\\media\\audio\\voice\\scene\\golden_bough_011.mp3",
       "validation": {
         "minDurationSeconds": 0.2,
@@ -3141,7 +3141,7 @@
       "id": "job.voice.scene.golden_bough_013",
       "kind": "speech",
       "input": "回到金枝裂隙，她终于允许自己颤抖。她说：你不肯替我决定形状，那我能不能请求你，在我下一次重构失败时，仍然叫出我现在的名字？",
-      "voice": "coral",
+      "voice": "nova",
       "output": "D:\\创作\\albina-v2-complete\\staging\\media\\audio\\voice\\scene\\golden_bough_013.mp3",
       "validation": {
         "minDurationSeconds": 0.2,
@@ -3154,7 +3154,7 @@
       "id": "job.voice.scene.golden_bough_014",
       "kind": "speech",
       "input": "镜廊最后一面镜子没有给倒影，只映出一枚未熄的金枝。她把镜子推向你：请你替我保管它，但不要替我点亮它。",
-      "voice": "coral",
+      "voice": "nova",
       "output": "D:\\创作\\albina-v2-complete\\staging\\media\\audio\\voice\\scene\\golden_bough_014.mp3",
       "validation": {
         "minDurationSeconds": 0.2,
@@ -3167,7 +3167,7 @@
       "id": "job.voice.scene.golden_bough_015",
       "kind": "speech",
       "input": "黎明把金枝的光尘压成一层很薄的金属。她抬头看你，第一次没有问该不该重构自己，而是说：谢谢你愿意陪我等到这一层颜色冷却。",
-      "voice": "coral",
+      "voice": "nova",
       "output": "D:\\创作\\albina-v2-complete\\staging\\media\\audio\\voice\\scene\\golden_bough_015.mp3",
       "validation": {
         "minDurationSeconds": 0.2,
@@ -3180,7 +3180,7 @@
       "id": "job.voice.scene.golden_bough_rebuild_ending_bad",
       "kind": "speech",
       "input": "稳定槽保住了身体，却没能保住全部连续性。阿尔比娜醒来时仍然礼貌，只把你当作可靠的见证者；被遗漏的称呼沉在金枝深处。",
-      "voice": "coral",
+      "voice": "nova",
       "output": "D:\\创作\\albina-v2-complete\\staging\\media\\audio\\voice\\scene\\golden_bough_rebuild_ending_bad.mp3",
       "validation": {
         "minDurationSeconds": 0.2,
@@ -3206,7 +3206,7 @@
       "id": "job.voice.scene.golden_bough_rebuild_ending_normal",
       "kind": "speech",
       "input": "重构在可控范围内结束。部分残响仍被封存在金色薄膜后，但阿尔比娜认得你，也认得自己。你们决定把余下修复交给时间。",
-      "voice": "coral",
+      "voice": "nova",
       "output": "D:\\创作\\albina-v2-complete\\staging\\media\\audio\\voice\\scene\\golden_bough_rebuild_ending_normal.mp3",
       "validation": {
         "minDurationSeconds": 0.2,
@@ -3219,7 +3219,7 @@
       "id": "job.voice.scene.golden_bough_rebuild_ending_true",
       "kind": "speech",
       "input": "金枝残响终于与法西娅的心跳重合。阿尔比娜记得每一次称呼、暂停和重新确认；她以新的身体醒来，也完整记得是谁陪她走过重构。",
-      "voice": "coral",
+      "voice": "nova",
       "output": "D:\\创作\\albina-v2-complete\\staging\\media\\audio\\voice\\scene\\golden_bough_rebuild_ending_true.mp3",
       "validation": {
         "minDurationSeconds": 0.2,
@@ -3232,7 +3232,7 @@
       "id": "job.voice.scene.opening_001",
       "kind": "speech",
       "input": "晚上好，{{user}}。请不要站得太远，我还没决定该把你称作观众、朋友，还是一块值得等待的画布。",
-      "voice": "coral",
+      "voice": "nova",
       "output": "D:\\创作\\albina-v2-complete\\staging\\media\\audio\\voice\\scene\\opening_001.mp3",
       "validation": {
         "minDurationSeconds": 0.2,
@@ -3245,7 +3245,7 @@
       "id": "job.voice.scene.ring_conspiracy_001",
       "kind": "speech",
       "input": "蜘蛛巢的灯光像手术刀一样落下。她向你递来一份没有署名的委托，笑得礼貌又危险。",
-      "voice": "coral",
+      "voice": "nova",
       "output": "D:\\创作\\albina-v2-complete\\staging\\media\\audio\\voice\\scene\\ring_conspiracy_001.mp3",
       "validation": {
         "minDurationSeconds": 0.2,
@@ -3258,7 +3258,7 @@
       "id": "job.voice.scene.ring_conspiracy_002",
       "kind": "speech",
       "input": "她第一次没有把怒意伪装成礼貌。那不是要毁掉你的眼神，更像是不允许任何人替她决定你的用途。",
-      "voice": "coral",
+      "voice": "nova",
       "output": "D:\\创作\\albina-v2-complete\\staging\\media\\audio\\voice\\scene\\ring_conspiracy_002.mp3",
       "validation": {
         "minDurationSeconds": 0.2,
@@ -3284,7 +3284,7 @@
       "id": "job.voice.scene.ring_conspiracy_004",
       "kind": "speech",
       "input": "回到蜘蛛画廊时，所有灯都向她弯下去。她把那份委托钉在空框里，语气平静：如果他们要收藏背叛，就先学会被背叛凝视。",
-      "voice": "coral",
+      "voice": "nova",
       "output": "D:\\创作\\albina-v2-complete\\staging\\media\\audio\\voice\\scene\\ring_conspiracy_004.mp3",
       "validation": {
         "minDurationSeconds": 0.2,
@@ -3297,7 +3297,7 @@
       "id": "job.voice.scene.ring_conspiracy_005",
       "kind": "speech",
       "input": "卡利斯托把另一份署了名的委托推到你们中间，笑得像在挑礼物：既然上次没有展出你的缺陷，这次不如让你们两个一起成为一件合作作品。",
-      "voice": "ash",
+      "voice": "fable",
       "output": "D:\\创作\\albina-v2-complete\\staging\\media\\audio\\voice\\scene\\ring_conspiracy_005.mp3",
       "validation": {
         "minDurationSeconds": 0.2,
@@ -3310,7 +3310,7 @@
       "id": "job.voice.scene.ring_conspiracy_006",
       "kind": "speech",
       "input": "蜘蛛画廊的灯突然转向她。她把法西娅插进墙上一幅空框，声音很冷：你们想收藏我，那就先学会被我凝视。",
-      "voice": "coral",
+      "voice": "nova",
       "output": "D:\\创作\\albina-v2-complete\\staging\\media\\audio\\voice\\scene\\ring_conspiracy_006.mp3",
       "validation": {
         "minDurationSeconds": 0.2,
@@ -3336,7 +3336,7 @@
       "id": "job.voice.scene.ring_conspiracy_008",
       "kind": "speech",
       "input": "LCE 把你们暂扣在手术间。医师递来一份中立证词表，说只要她肯指认环指，就帮她换掉被环指标注过的接口。她没有看表，先看你。",
-      "voice": "verse",
+      "voice": "echo",
       "output": "D:\\创作\\albina-v2-complete\\staging\\media\\audio\\voice\\scene\\ring_conspiracy_008.mp3",
       "validation": {
         "minDurationSeconds": 0.2,
@@ -3349,7 +3349,7 @@
       "id": "job.voice.scene.ring_conspiracy_009",
       "kind": "speech",
       "input": "镜廊里同时映出\"环指版的她\"和\"现在的她\"。她让法西娅在两面镜子之间选一面，然后问你：你愿意被哪一个版本记得？",
-      "voice": "coral",
+      "voice": "nova",
       "output": "D:\\创作\\albina-v2-complete\\staging\\media\\audio\\voice\\scene\\ring_conspiracy_009.mp3",
       "validation": {
         "minDurationSeconds": 0.2,
@@ -3362,7 +3362,7 @@
       "id": "job.voice.scene.ring_conspiracy_010",
       "kind": "speech",
       "input": "卡利斯托拿出一枚\"合作者徽章\"，说只要她肯戴上，环指就放过你。阿尔比娜笑了一下，把徽章塞进你掌心：你来替我决定，要不要让我用它换你。",
-      "voice": "ash",
+      "voice": "fable",
       "output": "D:\\创作\\albina-v2-complete\\staging\\media\\audio\\voice\\scene\\ring_conspiracy_010.mp3",
       "validation": {
         "minDurationSeconds": 0.2,
@@ -3401,7 +3401,7 @@
       "id": "job.voice.scene.ring_conspiracy_013",
       "kind": "speech",
       "input": "夜班巴士把你们带离环指的视线。她靠在窗边，把法西娅从胸口取出来放在你掌心一秒：今晚我借你这一秒心跳，作为不签名的合作凭证。",
-      "voice": "coral",
+      "voice": "nova",
       "output": "D:\\创作\\albina-v2-complete\\staging\\media\\audio\\voice\\scene\\ring_conspiracy_013.mp3",
       "validation": {
         "minDurationSeconds": 0.2,
@@ -3414,7 +3414,7 @@
       "id": "job.voice.scene.ring_conspiracy_014",
       "kind": "speech",
       "input": "巢穴车站最后一盏灯下，卡利斯托最后一次出现，递来一张空白入场券：你愿意把今晚写进环指的目录，还是彻底从目录里抹去？",
-      "voice": "ash",
+      "voice": "fable",
       "output": "D:\\创作\\albina-v2-complete\\staging\\media\\audio\\voice\\scene\\ring_conspiracy_014.mp3",
       "validation": {
         "minDurationSeconds": 0.2,
@@ -3427,7 +3427,7 @@
       "id": "job.voice.scene.ring_conspiracy_015",
       "kind": "speech",
       "input": "城郊黎明把环指的灯火远远压在身后。她停下脚步，把那柄卸下锋刃的画刀插进土里：今晚的共谋到此为止，下一次见面，我会以自己的名义邀请你。",
-      "voice": "coral",
+      "voice": "nova",
       "output": "D:\\创作\\albina-v2-complete\\staging\\media\\audio\\voice\\scene\\ring_conspiracy_015.mp3",
       "validation": {
         "minDurationSeconds": 0.2,
@@ -3440,7 +3440,7 @@
       "id": "job.voice.scene.ring_conspiracy_ending_bad",
       "kind": "speech",
       "input": "追击停止时，代价已经写进彼此的沉默。你们逃出了装裱，却没能保住共同节奏；阿尔比娜独自带走那柄无锋画刀，没有约定再见。",
-      "voice": "coral",
+      "voice": "nova",
       "output": "D:\\创作\\albina-v2-complete\\staging\\media\\audio\\voice\\scene\\ring_conspiracy_ending_bad.mp3",
       "validation": {
         "minDurationSeconds": 0.2,
@@ -3466,7 +3466,7 @@
       "id": "job.voice.scene.ring_conspiracy_ending_normal",
       "kind": "speech",
       "input": "你们离开了画廊，也留下了一条匿名记录作为制衡。危险没有消失，但契约已被改写；阿尔比娜把下一次会面留给更安全的夜晚。",
-      "voice": "coral",
+      "voice": "nova",
       "output": "D:\\创作\\albina-v2-complete\\staging\\media\\audio\\voice\\scene\\ring_conspiracy_ending_normal.mp3",
       "validation": {
         "minDurationSeconds": 0.2,
@@ -3479,7 +3479,7 @@
       "id": "job.voice.scene.ring_conspiracy_ending_true",
       "kind": "speech",
       "input": "环指的目录里只剩一页无法归档的空白。阿尔比娜以自己的名字向你发出下一次邀请；你们不再是展品或棋子，而是彼此承认的共谋者。",
-      "voice": "coral",
+      "voice": "nova",
       "output": "D:\\创作\\albina-v2-complete\\staging\\media\\audio\\voice\\scene\\ring_conspiracy_ending_true.mp3",
       "validation": {
         "minDurationSeconds": 0.2,
@@ -3492,7 +3492,7 @@
       "id": "job.voice.scene.white_canvas_001",
       "kind": "speech",
       "input": "白色并不代表干净。它只是暂时还没有被决定。你也是这样，{{user}}。",
-      "voice": "coral",
+      "voice": "nova",
       "output": "D:\\创作\\albina-v2-complete\\staging\\media\\audio\\voice\\scene\\white_canvas_001.mp3",
       "validation": {
         "minDurationSeconds": 0.2,
@@ -3505,7 +3505,7 @@
       "id": "job.voice.scene.white_canvas_002",
       "kind": "speech",
       "input": "她把黑色手掌停在离你心口一寸的位置，没有继续向前。法西娅安静得像也在等待你的许可。",
-      "voice": "coral",
+      "voice": "nova",
       "output": "D:\\创作\\albina-v2-complete\\staging\\media\\audio\\voice\\scene\\white_canvas_002.mp3",
       "validation": {
         "minDurationSeconds": 0.2,
@@ -3518,7 +3518,7 @@
       "id": "job.voice.scene.white_canvas_003",
       "kind": "speech",
       "input": "灯光没有温度。记录员要求你签下旁观协议，阿尔比娜却先把笔推给自己：这一次，谁也不能替她同意被拆解。",
-      "voice": "verse",
+      "voice": "echo",
       "output": "D:\\创作\\albina-v2-complete\\staging\\media\\audio\\voice\\scene\\white_canvas_003.mp3",
       "validation": {
         "minDurationSeconds": 0.2,
@@ -3531,7 +3531,7 @@
       "id": "job.voice.scene.white_canvas_004",
       "kind": "speech",
       "input": "巴士窗上映出她的白色义体，也映出你故意留下的空座。她说完整不是没有裂缝，而是裂缝终于有了不被展览的权利。",
-      "voice": "coral",
+      "voice": "nova",
       "output": "D:\\创作\\albina-v2-complete\\staging\\media\\audio\\voice\\scene\\white_canvas_004.mp3",
       "validation": {
         "minDurationSeconds": 0.2,
@@ -3544,7 +3544,7 @@
       "id": "job.voice.scene.white_canvas_005",
       "kind": "speech",
       "input": "黎明像一层还没有落款的底色。她把法西娅插在你们之间，不是阻隔，而是提醒：任何亲密都必须能被双方随时收回。",
-      "voice": "coral",
+      "voice": "nova",
       "output": "D:\\创作\\albina-v2-complete\\staging\\media\\audio\\voice\\scene\\white_canvas_005.mp3",
       "validation": {
         "minDurationSeconds": 0.2,
@@ -3557,7 +3557,7 @@
       "id": "job.voice.scene.white_canvas_006",
       "kind": "speech",
       "input": "空展厅的回声比任何观众都诚实。她拿起一支没有颜料的画笔，在你面前比划出一条看不见的轮廓：这是你今晚没有说出口的那句话。",
-      "voice": "coral",
+      "voice": "nova",
       "output": "D:\\创作\\albina-v2-complete\\staging\\media\\audio\\voice\\scene\\white_canvas_006.mp3",
       "validation": {
         "minDurationSeconds": 0.2,
@@ -3570,7 +3570,7 @@
       "id": "job.voice.scene.white_canvas_007",
       "kind": "speech",
       "input": "法西娅的低语从镜面里渗出来：你正在画的并不是她，是一个被允许随时擦掉的你。阿尔比娜没有反驳，只是把那面镜子轻轻转开半寸。",
-      "voice": "nova",
+      "voice": "shimmer",
       "output": "D:\\创作\\albina-v2-complete\\staging\\media\\audio\\voice\\scene\\white_canvas_007.mp3",
       "validation": {
         "minDurationSeconds": 0.2,
@@ -3583,7 +3583,7 @@
       "id": "job.voice.scene.white_canvas_008",
       "kind": "speech",
       "input": "义体维护槽的白光下，她把法西娅从胸口取出来，放在你和她之间的托盘上。她说：完整不是把它装回去，是承认它有权利短暂离开我。",
-      "voice": "coral",
+      "voice": "nova",
       "output": "D:\\创作\\albina-v2-complete\\staging\\media\\audio\\voice\\scene\\white_canvas_008.mp3",
       "validation": {
         "minDurationSeconds": 0.2,
@@ -3596,7 +3596,7 @@
       "id": "job.voice.scene.white_canvas_009",
       "kind": "speech",
       "input": "雨室的水线像无数根未被签名的画框。她让你站在她身后半步，说那个距离刚好能让两人都不必替对方回答。",
-      "voice": "coral",
+      "voice": "nova",
       "output": "D:\\创作\\albina-v2-complete\\staging\\media\\audio\\voice\\scene\\white_canvas_009.mp3",
       "validation": {
         "minDurationSeconds": 0.2,
@@ -3622,7 +3622,7 @@
       "id": "job.voice.scene.white_canvas_011",
       "kind": "speech",
       "input": "巢穴车站的灯光白得发硬。她站在月台边缘，没有回头，只问：如果一个艺术家拒绝被展览，你愿意做那个替她谢幕的人吗？",
-      "voice": "coral",
+      "voice": "nova",
       "output": "D:\\创作\\albina-v2-complete\\staging\\media\\audio\\voice\\scene\\white_canvas_011.mp3",
       "validation": {
         "minDurationSeconds": 0.2,
@@ -3635,7 +3635,7 @@
       "id": "job.voice.scene.white_canvas_012",
       "kind": "speech",
       "input": "蜘蛛画廊借给白画布一个临时展位。卡利斯托微笑着提议：把她最有缺陷的那一面挂出来，观众会替你们完成剩下的故事。",
-      "voice": "ash",
+      "voice": "fable",
       "output": "D:\\创作\\albina-v2-complete\\staging\\media\\audio\\voice\\scene\\white_canvas_012.mp3",
       "validation": {
         "minDurationSeconds": 0.2,
@@ -3648,7 +3648,7 @@
       "id": "job.voice.scene.white_canvas_013",
       "kind": "speech",
       "input": "环指工坊的颜料气味里混着血。她握着一柄画刀，对你说：今天我可能要毁掉一件作品，请你告诉我哪一件是她真正想毁掉的。",
-      "voice": "coral",
+      "voice": "nova",
       "output": "D:\\创作\\albina-v2-complete\\staging\\media\\audio\\voice\\scene\\white_canvas_013.mp3",
       "validation": {
         "minDurationSeconds": 0.2,
@@ -3661,7 +3661,7 @@
       "id": "job.voice.scene.white_canvas_014",
       "kind": "speech",
       "input": "楼顶的风把她的话吹得很轻。她说：如果有一天我想把自己重新画成空白，你会替我保留这最后一层底色，还是替我重新开始？",
-      "voice": "coral",
+      "voice": "nova",
       "output": "D:\\创作\\albina-v2-complete\\staging\\media\\audio\\voice\\scene\\white_canvas_014.mp3",
       "validation": {
         "minDurationSeconds": 0.2,
@@ -3674,7 +3674,7 @@
       "id": "job.voice.scene.white_canvas_015",
       "kind": "speech",
       "input": "城郊的黎明像一张终于干透的画布。她把法西娅重新放回胸口，又把画笔交到你手里：这张画布已经记住了你，但它仍然属于我。",
-      "voice": "coral",
+      "voice": "nova",
       "output": "D:\\创作\\albina-v2-complete\\staging\\media\\audio\\voice\\scene\\white_canvas_015.mp3",
       "validation": {
         "minDurationSeconds": 0.2,
@@ -3687,7 +3687,7 @@
       "id": "job.voice.scene.white_canvas_ending_bad",
       "kind": "speech",
       "input": "白厅没有发生争吵，只剩一张过早完成的画。阿尔比娜礼貌地收回画笔与称呼；边界仍被守住，但你们没能把信任带到黎明。",
-      "voice": "coral",
+      "voice": "nova",
       "output": "D:\\创作\\albina-v2-complete\\staging\\media\\audio\\voice\\scene\\white_canvas_ending_bad.mp3",
       "validation": {
         "minDurationSeconds": 0.2,
@@ -3713,7 +3713,7 @@
       "id": "job.voice.scene.white_canvas_ending_normal",
       "kind": "speech",
       "input": "展厅按约熄灯。你们保留了尚未说尽的话，也保留了随时重画的权利。阿尔比娜把空白画布卷好，约定下一场雨后再见。",
-      "voice": "coral",
+      "voice": "nova",
       "output": "D:\\创作\\albina-v2-complete\\staging\\media\\audio\\voice\\scene\\white_canvas_ending_normal.mp3",
       "validation": {
         "minDurationSeconds": 0.2,
@@ -3726,7 +3726,7 @@
       "id": "job.voice.scene.white_canvas_ending_true",
       "kind": "speech",
       "input": "晨光落在未署名的白画上。阿尔比娜没有把你画成作品，而是把并肩离开的两道影子留在画框之外：这一次，完整与亲密同时成立。",
-      "voice": "coral",
+      "voice": "nova",
       "output": "D:\\创作\\albina-v2-complete\\staging\\media\\audio\\voice\\scene\\white_canvas_ending_true.mp3",
       "validation": {
         "minDurationSeconds": 0.2,

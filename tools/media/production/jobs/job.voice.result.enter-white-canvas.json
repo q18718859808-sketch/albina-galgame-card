@@ -1,7 +1,7 @@
 {
   "kind": "speech",
   "input": "你选择“留在她的白色画布前”。阿尔比娜：白色并不代表干净。它只是暂时还没有被决定。你也是这样，{{user}}。",
-  "voice": "coral",
+  "voice": "nova",
   "output": "D:\\创作\\albina-v2-complete\\staging\\media\\audio\\voice\\result\\enter_white_canvas.mp3",
   "validation": {
     "minDurationSeconds": 0.2,

@@ -1,7 +1,7 @@
 {
   "kind": "speech",
   "input": "你选择“把徽章扔回卡利斯托脸上”。环指代理人：代理人撕下礼貌，举出一卷写好剧本的胶片：今晚的故事已经定稿，结局是你们两个都被装裱。阿尔比娜握紧法西娅，低声让你替她改写最后一格分镜。",
-  "voice": "ash",
+  "voice": "fable",
   "output": "D:\\创作\\albina-v2-complete\\staging\\media\\audio\\voice\\result\\conspiracy_010_throw_badge.mp3",
   "validation": {
     "minDurationSeconds": 0.2,

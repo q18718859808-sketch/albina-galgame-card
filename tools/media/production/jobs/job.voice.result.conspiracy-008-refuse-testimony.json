@@ -1,7 +1,7 @@
 {
   "kind": "speech",
   "input": "你选择“当面拒绝用她换取证词”。阿尔比娜：镜廊里同时映出\"环指版的她\"和\"现在的她\"。她让法西娅在两面镜子之间选一面，然后问你：你愿意被哪一个版本记得？",
-  "voice": "verse",
+  "voice": "echo",
   "output": "D:\\创作\\albina-v2-complete\\staging\\media\\audio\\voice\\result\\conspiracy_008_refuse_testimony.mp3",
   "validation": {
     "minDurationSeconds": 0.2,

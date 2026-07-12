@@ -1,7 +1,7 @@
 {
   "kind": "speech",
   "input": "你选择“反问她是否害怕自己的画布”。阿尔比娜：她把黑色手掌停在离你心口一寸的位置，没有继续向前。法西娅安静得像也在等待你的许可。",
-  "voice": "coral",
+  "voice": "nova",
   "output": "D:\\创作\\albina-v2-complete\\staging\\media\\audio\\voice\\result\\white_tease_back.mp3",
   "validation": {
     "minDurationSeconds": 0.2,
