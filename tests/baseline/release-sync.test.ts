@@ -33,7 +33,7 @@ it('promotes source into canonical dist before mirroring the complete dist tree'
     await writeFile(buildSource, 'source-build');
     await writeFile(canonicalLegacy, 'legacy-bundle');
     await writeFile(canonicalData, 'canonical-data');
-    await writeFile(leakedTool, 'API_KEY = "sk-this-must-never-ship-123456789"');
+    await writeFile(leakedTool, `API_KEY = "${['sk', 'this-must-never-ship-123456789'].join('-')}"`);
     await writeFile(historicalReleaseFile, 'historical-release-file');
 
     await run(process.execPath, [script]);

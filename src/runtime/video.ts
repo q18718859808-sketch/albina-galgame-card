@@ -16,6 +16,11 @@ export interface SceneMediaSelection {
   videoUrl?: string;
 }
 
+export function chosenSceneVideoId(scene: SceneCue, policy: VideoPlaybackPolicy): string | undefined {
+  if (!policy.videoEnabled || policy.reducedMotion) return undefined;
+  return policy.desktop && scene.desktopVideoAssetId ? scene.desktopVideoAssetId : scene.videoAssetId;
+}
+
 export function selectSceneMedia(
   scene: SceneCue,
   manifest: AssetManifestV2,
@@ -25,9 +30,7 @@ export function selectSceneMedia(
   const fallbackId = scene.cgAssetId ?? scene.backgroundAssetId;
   const fallbackUrl = resolve(fallbackId);
   const backgroundUrl = resolve(scene.backgroundAssetId);
-  const videoId = policy.desktop && scene.desktopVideoAssetId ? scene.desktopVideoAssetId : scene.videoAssetId;
-  const videoUrl = policy.videoEnabled && !policy.reducedMotion
-    ? resolve(videoId)
-    : undefined;
+  const videoId = chosenSceneVideoId(scene, policy);
+  const videoUrl = videoId ? resolve(videoId) : undefined;
   return { ...(backgroundUrl ? { backgroundUrl } : {}), ...(fallbackUrl ? { fallbackUrl } : {}), ...(videoUrl ? { videoUrl } : {}) };
 }

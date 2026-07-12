@@ -13,7 +13,7 @@ import { ALBINA_CDN_BASE, resolveAssetUrl } from '../runtime/asset-resolver';
 import { createDefaultHostBindings } from '../runtime/default-host';
 import { createAlbinaRuntime } from '../runtime/host-adapter';
 import { captureSceneThumbnail } from '../runtime/thumbnail';
-import { selectSceneMedia } from '../runtime/video';
+import { chosenSceneVideoId, selectSceneMedia } from '../runtime/video';
 
 const script = parseGameScriptV2(storyJson);
 const manifest = parseAssetManifestV2(manifestJson);
@@ -37,6 +37,7 @@ export const useGameStore = defineStore('albina-game', () => {
   const videoFailed = ref(false);
   const galleryIds = ref<string[]>([]);
   const cachedUrls = ref<Record<string, string>>({});
+  const readyVideoIds = ref<Record<string, boolean>>({});
   const saveSlots = ref<SaveSlotSummary[]>([]);
   const thumbnailUrls = new Set<string>();
   const motionQuery = typeof matchMedia === 'function' ? matchMedia('(prefers-reduced-motion: reduce)') : undefined;
@@ -49,8 +50,9 @@ export const useGameStore = defineStore('albina-game', () => {
   const handleMotion = (event: MediaQueryListEvent) => {
     reducedMotion.value = event.matches;
     if (event.matches) void hydrateAsset(scene.value.cgAssetId ?? scene.value.backgroundAssetId);
+    else void prefetchChosenVideo(scene.value);
   };
-  const handleResize = () => { desktop.value = innerWidth > 800; };
+  const handleResize = () => { desktop.value = innerWidth > 800; void prefetchChosenVideo(scene.value); };
   motionQuery?.addEventListener('change', handleMotion);
   if (typeof window !== 'undefined') {
     window.addEventListener('resize', handleResize);
@@ -63,7 +65,7 @@ export const useGameStore = defineStore('albina-game', () => {
   const media = computed(() => selectSceneMedia(scene.value, manifest, {
     baseUrl, desktop: desktop.value, reducedMotion: reducedMotion.value,
     videoEnabled: videoEnabled.value && !videoFailed.value,
-  }, assetUrl));
+  }, (assetId) => assetId?.startsWith('video.') && !readyVideoIds.value[assetId] ? undefined : assetUrl(assetId)));
 
   function assetUrl(assetId: string | undefined): string | undefined {
     if (!assetId) return undefined;
@@ -77,11 +79,24 @@ export const useGameStore = defineStore('albina-game', () => {
   }
 
   async function hydrateScene(target: SceneCue): Promise<void> {
-    const ids = [target.backgroundAssetId, target.cgAssetId, target.videoAssetId, target.desktopVideoAssetId,
-      target.voiceAssetId, target.bgmAssetId, ...(target.sfxAssetIds ?? [])].filter((id): id is string => Boolean(id));
+    const ids = [target.backgroundAssetId, target.cgAssetId, target.voiceAssetId, target.bgmAssetId,
+      ...(target.sfxAssetIds ?? [])].filter((id): id is string => Boolean(id));
     const urls = await assetCache.prefetch(ids);
     if (urls.size) cachedUrls.value = { ...cachedUrls.value, ...Object.fromEntries(urls) };
     for (const portrait of target.portraits) await assetCache.cachePortrait(portrait.portraitAssetId);
+  }
+
+  function playbackPolicy() {
+    return { baseUrl, desktop: desktop.value, reducedMotion: reducedMotion.value, videoEnabled: videoEnabled.value && !videoFailed.value };
+  }
+
+  async function prefetchChosenVideo(target: SceneCue): Promise<void> {
+    const videoId = chosenSceneVideoId(target, playbackPolicy());
+    if (!videoId || readyVideoIds.value[videoId]) return;
+    const url = await assetCache.cache(videoId);
+    if (!url) return;
+    cachedUrls.value = { ...cachedUrls.value, [videoId]: url };
+    readyVideoIds.value = { ...readyVideoIds.value, [videoId]: true };
   }
 
   function prefetchNextScenes(): void {
@@ -121,6 +136,7 @@ export const useGameStore = defineStore('albina-game', () => {
       }
       galleryIds.value = await runtime.gallery.list(save.value);
     }
+    void prefetchChosenVideo(scene.value);
     prefetchNextScenes();
   }
 

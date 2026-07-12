@@ -1,27 +1,27 @@
 // @__NO_SIDE_EFFECTS__
-function Wt(e) {
+function Kt(e) {
   const t = /* @__PURE__ */ Object.create(null);
   for (const i of e.split(",")) t[i] = 1;
   return (i) => i in t;
 }
-const ue = process.env.NODE_ENV !== "production" ? Object.freeze({}) : {}, Fi = process.env.NODE_ENV !== "production" ? Object.freeze([]) : [], Re = () => {
+const ue = process.env.NODE_ENV !== "production" ? Object.freeze({}) : {}, Fi = process.env.NODE_ENV !== "production" ? Object.freeze([]) : [], Pe = () => {
 }, Cd = () => !1, Ca = (e) => e.charCodeAt(0) === 111 && e.charCodeAt(1) === 110 && // uppercase letter
-(e.charCodeAt(2) > 122 || e.charCodeAt(2) < 97), _a = (e) => e.startsWith("onUpdate:"), Oe = Object.assign, co = (e, t) => {
+(e.charCodeAt(2) > 122 || e.charCodeAt(2) < 97), _a = (e) => e.startsWith("onUpdate:"), Ae = Object.assign, co = (e, t) => {
   const i = e.indexOf(t);
   i > -1 && e.splice(i, 1);
-}, Af = Object.prototype.hasOwnProperty, ae = (e, t) => Af.call(e, t), Z = Array.isArray, mi = (e) => Da(e) === "[object Map]", jn = (e) => Da(e) === "[object Set]", Qo = (e) => Da(e) === "[object Date]", q = (e) => typeof e == "function", _e = (e) => typeof e == "string", ot = (e) => typeof e == "symbol", ne = (e) => e !== null && typeof e == "object", uo = (e) => (ne(e) || q(e)) && q(e.then) && q(e.catch), Dd = Object.prototype.toString, Da = (e) => Dd.call(e), lo = (e) => Da(e).slice(8, -1), Vd = (e) => Da(e) === "[object Object]", Fn = (e) => _e(e) && e !== "NaN" && e[0] !== "-" && "" + parseInt(e, 10) === e, la = /* @__PURE__ */ Wt(
+}, Of = Object.prototype.hasOwnProperty, ie = (e, t) => Of.call(e, t), W = Array.isArray, gi = (e) => Da(e) === "[object Map]", jn = (e) => Da(e) === "[object Set]", Qo = (e) => Da(e) === "[object Date]", G = (e) => typeof e == "function", _e = (e) => typeof e == "string", rt = (e) => typeof e == "symbol", ae = (e) => e !== null && typeof e == "object", uo = (e) => (ae(e) || G(e)) && G(e.then) && G(e.catch), Dd = Object.prototype.toString, Da = (e) => Dd.call(e), lo = (e) => Da(e).slice(8, -1), Vd = (e) => Da(e) === "[object Object]", Fn = (e) => _e(e) && e !== "NaN" && e[0] !== "-" && "" + parseInt(e, 10) === e, la = /* @__PURE__ */ Kt(
   // the leading comma is intentional so empty string "" is also included
   ",key,ref,ref_for,ref_key,onVnodeBeforeMount,onVnodeMounted,onVnodeBeforeUpdate,onVnodeUpdated,onVnodeBeforeUnmount,onVnodeUnmounted"
-), Of = /* @__PURE__ */ Wt(
+), xf = /* @__PURE__ */ Kt(
   "bind,cloak,else-if,else,for,html,if,model,on,once,pre,show,slot,text,memo"
 ), zn = (e) => {
   const t = /* @__PURE__ */ Object.create(null);
   return ((i) => t[i] || (t[i] = e(i)));
-}, xf = /-\w/g, Qe = zn(
-  (e) => e.replace(xf, (t) => t.slice(1).toUpperCase())
-), Sf = /\B([A-Z])/g, Qt = zn(
-  (e) => e.replace(Sf, "-$1").toLowerCase()
-), Un = zn((e) => e.charAt(0).toUpperCase() + e.slice(1)), ci = zn(
+}, Sf = /-\w/g, et = zn(
+  (e) => e.replace(Sf, (t) => t.slice(1).toUpperCase())
+), Nf = /\B([A-Z])/g, ei = zn(
+  (e) => e.replace(Nf, "-$1").toLowerCase()
+), Un = zn((e) => e.charAt(0).toUpperCase() + e.slice(1)), di = zn(
   (e) => e ? `on${Un(e)}` : ""
 ), xt = (e, t) => !Object.is(e, t), Di = (e, ...t) => {
   for (let i = 0; i < e.length; i++)
@@ -40,24 +40,24 @@ const ue = process.env.NODE_ENV !== "production" ? Object.freeze({}) : {}, Fi = 
 let er;
 const Va = () => er || (er = typeof globalThis < "u" ? globalThis : typeof self < "u" ? self : typeof window < "u" ? window : typeof global < "u" ? global : {});
 function Ln(e) {
-  if (Z(e)) {
+  if (W(e)) {
     const t = {};
     for (let i = 0; i < e.length; i++) {
-      const a = e[i], n = _e(a) ? Vf(a) : Ln(a);
+      const a = e[i], n = _e(a) ? Rf(a) : Ln(a);
       if (n)
         for (const s in n)
           t[s] = n[s];
     }
     return t;
-  } else if (_e(e) || ne(e))
+  } else if (_e(e) || ae(e))
     return e;
 }
-const Nf = /;(?![^(]*\))/g, Cf = /:([^]+)/, Df = /\/\*[^]*?\*\//g;
-function Vf(e) {
+const Cf = /;(?![^(]*\))/g, Df = /:([^]+)/, Vf = /\/\*[^]*?\*\//g;
+function Rf(e) {
   const t = {};
-  return e.replace(Df, "").split(Nf).forEach((i) => {
+  return e.replace(Vf, "").split(Cf).forEach((i) => {
     if (i) {
-      const a = i.split(Cf);
+      const a = i.split(Df);
       a.length > 1 && (t[a[0].trim()] = a[1].trim());
     }
   }), t;
@@ -66,21 +66,21 @@ function Mn(e) {
   let t = "";
   if (_e(e))
     t = e;
-  else if (Z(e))
+  else if (W(e))
     for (let i = 0; i < e.length; i++) {
       const a = Mn(e[i]);
       a && (t += a + " ");
     }
-  else if (ne(e))
+  else if (ae(e))
     for (const i in e)
       e[i] && (t += i + " ");
   return t.trim();
 }
-const Rf = "html,body,base,head,link,meta,style,title,address,article,aside,footer,header,hgroup,h1,h2,h3,h4,h5,h6,nav,section,div,dd,dl,dt,figcaption,figure,picture,hr,img,li,main,ol,p,pre,ul,a,b,abbr,bdi,bdo,br,cite,code,data,dfn,em,i,kbd,mark,q,rp,rt,ruby,s,samp,small,span,strong,sub,sup,time,u,var,wbr,area,audio,map,track,video,embed,object,param,source,canvas,script,noscript,del,ins,caption,col,colgroup,table,thead,tbody,td,th,tr,button,datalist,fieldset,form,input,label,legend,meter,optgroup,option,output,progress,select,textarea,details,dialog,menu,summary,template,blockquote,iframe,tfoot", Pf = "svg,animate,animateMotion,animateTransform,circle,clipPath,color-profile,defs,desc,discard,ellipse,feBlend,feColorMatrix,feComponentTransfer,feComposite,feConvolveMatrix,feDiffuseLighting,feDisplacementMap,feDistantLight,feDropShadow,feFlood,feFuncA,feFuncB,feFuncG,feFuncR,feGaussianBlur,feImage,feMerge,feMergeNode,feMorphology,feOffset,fePointLight,feSpecularLighting,feSpotLight,feTile,feTurbulence,filter,foreignObject,g,hatch,hatchpath,image,line,linearGradient,marker,mask,mesh,meshgradient,meshpatch,meshrow,metadata,mpath,path,pattern,polygon,polyline,radialGradient,rect,set,solidcolor,stop,switch,symbol,text,textPath,title,tspan,unknown,use,view", $f = "annotation,annotation-xml,maction,maligngroup,malignmark,math,menclose,merror,mfenced,mfrac,mfraction,mglyph,mi,mlabeledtr,mlongdiv,mmultiscripts,mn,mo,mover,mpadded,mphantom,mprescripts,mroot,mrow,ms,mscarries,mscarry,msgroup,msline,mspace,msqrt,msrow,mstack,mstyle,msub,msubsup,msup,mtable,mtd,mtext,mtr,munder,munderover,none,semantics", jf = /* @__PURE__ */ Wt(Rf), Ff = /* @__PURE__ */ Wt(Pf), zf = /* @__PURE__ */ Wt($f), Uf = "itemscope,allowfullscreen,formnovalidate,ismap,nomodule,novalidate,readonly", Lf = /* @__PURE__ */ Wt(Uf);
+const Pf = "html,body,base,head,link,meta,style,title,address,article,aside,footer,header,hgroup,h1,h2,h3,h4,h5,h6,nav,section,div,dd,dl,dt,figcaption,figure,picture,hr,img,li,main,ol,p,pre,ul,a,b,abbr,bdi,bdo,br,cite,code,data,dfn,em,i,kbd,mark,q,rp,rt,ruby,s,samp,small,span,strong,sub,sup,time,u,var,wbr,area,audio,map,track,video,embed,object,param,source,canvas,script,noscript,del,ins,caption,col,colgroup,table,thead,tbody,td,th,tr,button,datalist,fieldset,form,input,label,legend,meter,optgroup,option,output,progress,select,textarea,details,dialog,menu,summary,template,blockquote,iframe,tfoot", $f = "svg,animate,animateMotion,animateTransform,circle,clipPath,color-profile,defs,desc,discard,ellipse,feBlend,feColorMatrix,feComponentTransfer,feComposite,feConvolveMatrix,feDiffuseLighting,feDisplacementMap,feDistantLight,feDropShadow,feFlood,feFuncA,feFuncB,feFuncG,feFuncR,feGaussianBlur,feImage,feMerge,feMergeNode,feMorphology,feOffset,fePointLight,feSpecularLighting,feSpotLight,feTile,feTurbulence,filter,foreignObject,g,hatch,hatchpath,image,line,linearGradient,marker,mask,mesh,meshgradient,meshpatch,meshrow,metadata,mpath,path,pattern,polygon,polyline,radialGradient,rect,set,solidcolor,stop,switch,symbol,text,textPath,title,tspan,unknown,use,view", jf = "annotation,annotation-xml,maction,maligngroup,malignmark,math,menclose,merror,mfenced,mfrac,mfraction,mglyph,mi,mlabeledtr,mlongdiv,mmultiscripts,mn,mo,mover,mpadded,mphantom,mprescripts,mroot,mrow,ms,mscarries,mscarry,msgroup,msline,mspace,msqrt,msrow,mstack,mstyle,msub,msubsup,msup,mtable,mtd,mtext,mtr,munder,munderover,none,semantics", Ff = /* @__PURE__ */ Kt(Pf), zf = /* @__PURE__ */ Kt($f), Uf = /* @__PURE__ */ Kt(jf), Lf = "itemscope,allowfullscreen,formnovalidate,ismap,nomodule,novalidate,readonly", Mf = /* @__PURE__ */ Kt(Lf);
 function Rd(e) {
   return !!e || e === "";
 }
-function Mf(e, t) {
+function Bf(e, t) {
   if (e.length !== t.length) return !1;
   let i = !0;
   for (let a = 0; i && a < e.length; a++)
@@ -92,11 +92,11 @@ function Ra(e, t) {
   let i = Qo(e), a = Qo(t);
   if (i || a)
     return i && a ? e.getTime() === t.getTime() : !1;
-  if (i = ot(e), a = ot(t), i || a)
+  if (i = rt(e), a = rt(t), i || a)
     return e === t;
-  if (i = Z(e), a = Z(t), i || a)
-    return i && a ? Mf(e, t) : !1;
-  if (i = ne(e), a = ne(t), i || a) {
+  if (i = W(e), a = W(t), i || a)
+    return i && a ? Bf(e, t) : !1;
+  if (i = ae(e), a = ae(t), i || a) {
     if (!i || !a)
       return !1;
     const n = Object.keys(e).length, s = Object.keys(t).length;
@@ -113,29 +113,29 @@ function Ra(e, t) {
 function Pd(e, t) {
   return e.findIndex((i) => Ra(i, t));
 }
-const $d = (e) => !!(e && e.__v_isRef === !0), je = (e) => _e(e) ? e : e == null ? "" : Z(e) || ne(e) && (e.toString === Dd || !q(e.toString)) ? $d(e) ? je(e.value) : JSON.stringify(e, jd, 2) : String(e), jd = (e, t) => $d(t) ? jd(e, t.value) : mi(t) ? {
+const $d = (e) => !!(e && e.__v_isRef === !0), Fe = (e) => _e(e) ? e : e == null ? "" : W(e) || ae(e) && (e.toString === Dd || !G(e.toString)) ? $d(e) ? Fe(e.value) : JSON.stringify(e, jd, 2) : String(e), jd = (e, t) => $d(t) ? jd(e, t.value) : gi(t) ? {
   [`Map(${t.size})`]: [...t.entries()].reduce(
     (i, [a, n], s) => (i[ds(a, s) + " =>"] = n, i),
     {}
   )
 } : jn(t) ? {
   [`Set(${t.size})`]: [...t.values()].map((i) => ds(i))
-} : ot(t) ? ds(t) : ne(t) && !Z(t) && !Vd(t) ? String(t) : t, ds = (e, t = "") => {
+} : rt(t) ? ds(t) : ae(t) && !W(t) && !Vd(t) ? String(t) : t, ds = (e, t = "") => {
   var i;
   return (
     // Symbol.description in es2019+ so we need to cast here to pass
     // the lib: es2016 check
-    ot(e) ? `Symbol(${(i = e.description) != null ? i : t})` : e
+    rt(e) ? `Symbol(${(i = e.description) != null ? i : t})` : e
   );
 };
-function rt(e, ...t) {
+function ct(e, ...t) {
   console.warn(`[Vue warn] ${e}`, ...t);
 }
-let Ne;
+let De;
 class Fd {
   // TODO isolatedDeclarations "__v_skip"
   constructor(t = !1) {
-    this.detached = t, this._active = !0, this._on = 0, this.effects = [], this.cleanups = [], this._isPaused = !1, this._warnOnRun = !0, this.__v_skip = !0, !t && Ne && (Ne.active ? (this.parent = Ne, this.index = (Ne.scopes || (Ne.scopes = [])).push(
+    this.detached = t, this._active = !0, this._on = 0, this.effects = [], this.cleanups = [], this._isPaused = !1, this._warnOnRun = !0, this.__v_skip = !0, !t && De && (De.active ? (this.parent = De, this.index = (De.scopes || (De.scopes = [])).push(
       this
     ) - 1) : (this._active = !1, this._warnOnRun = !1));
   }
@@ -169,20 +169,20 @@ class Fd {
   }
   run(t) {
     if (this._active) {
-      const i = Ne;
+      const i = De;
       try {
-        return Ne = this, t();
+        return De = this, t();
       } finally {
-        Ne = i;
+        De = i;
       }
-    } else process.env.NODE_ENV !== "production" && this._warnOnRun && rt("cannot run an inactive effect scope.");
+    } else process.env.NODE_ENV !== "production" && this._warnOnRun && ct("cannot run an inactive effect scope.");
   }
   /**
    * This should only be called on non-detached scopes
    * @internal
    */
   on() {
-    ++this._on === 1 && (this.prevScope = Ne, Ne = this);
+    ++this._on === 1 && (this.prevScope = De, De = this);
   }
   /**
    * This should only be called on non-detached scopes
@@ -190,10 +190,10 @@ class Fd {
    */
   off() {
     if (this._on > 0 && --this._on === 0) {
-      if (Ne === this)
-        Ne = this.prevScope;
+      if (De === this)
+        De = this.prevScope;
       else {
-        let t = Ne;
+        let t = De;
         for (; t; ) {
           if (t.prevScope === this) {
             t.prevScope = this.prevScope;
@@ -230,10 +230,10 @@ function zd(e) {
   return new Fd(e);
 }
 function Ud() {
-  return Ne;
+  return De;
 }
-function Bf(e, t = !1) {
-  Ne ? Ne.cleanups.push(e) : process.env.NODE_ENV !== "production" && !t && rt(
+function Zf(e, t = !1) {
+  De ? De.cleanups.push(e) : process.env.NODE_ENV !== "production" && !t && ct(
     "onScopeDispose() is called when there is no active effect scope to be associated with."
   );
 }
@@ -241,7 +241,7 @@ let de;
 const us = /* @__PURE__ */ new WeakSet();
 class Ld {
   constructor(t) {
-    this.fn = t, this.deps = void 0, this.depsTail = void 0, this.flags = 5, this.next = void 0, this.cleanup = void 0, this.scheduler = void 0, Ne && (Ne.active ? Ne.effects.push(this) : this.flags &= -2);
+    this.fn = t, this.deps = void 0, this.depsTail = void 0, this.flags = 5, this.next = void 0, this.cleanup = void 0, this.scheduler = void 0, De && (De.active ? De.effects.push(this) : this.flags &= -2);
   }
   pause() {
     this.flags |= 64;
@@ -264,7 +264,7 @@ class Ld {
     try {
       return this.fn();
     } finally {
-      process.env.NODE_ENV !== "production" && de !== this && rt(
+      process.env.NODE_ENV !== "production" && de !== this && ct(
         "Active effect was not restored correctly - this is likely a Vue internal bug."
       ), Hd(this), de = t, bt = i, this.flags &= -3;
     }
@@ -334,7 +334,7 @@ function Hd(e) {
   let t, i = e.depsTail, a = i;
   for (; a; ) {
     const n = a.prevDep;
-    a.version === -1 ? (a === i && (i = n), go(a), Zf(a)) : t = a, a.dep.activeLink = a.prevActiveLink, a.prevActiveLink = void 0, a = n;
+    a.version === -1 ? (a === i && (i = n), go(a), Hf(a)) : t = a, a.dep.activeLink = a.prevActiveLink, a.prevActiveLink = void 0, a = n;
   }
   e.deps = t, e.depsTail = i;
 }
@@ -369,7 +369,7 @@ function go(e, t = !1) {
   }
   !t && !--i.sc && i.map && i.map.delete(i.key);
 }
-function Zf(e) {
+function Hf(e) {
   const { prevDep: t, nextDep: i } = e;
   t && (t.nextDep = i, e.prevDep = void 0), i && (i.prevDep = t, e.nextDep = void 0);
 }
@@ -395,7 +395,7 @@ function tr(e) {
   }
 }
 let va = 0;
-class Hf {
+class Kf {
   constructor(t, i) {
     this.sub = t, this.dep = i, this.version = i.version, this.nextDep = this.prevDep = this.nextSub = this.prevSub = this.prevActiveLink = void 0;
   }
@@ -410,13 +410,13 @@ class bo {
       return;
     let i = this.activeLink;
     if (i === void 0 || i.sub !== de)
-      i = this.activeLink = new Hf(de, this), de.deps ? (i.prevDep = de.depsTail, de.depsTail.nextDep = i, de.depsTail = i) : de.deps = de.depsTail = i, qd(i);
+      i = this.activeLink = new Kf(de, this), de.deps ? (i.prevDep = de.depsTail, de.depsTail.nextDep = i, de.depsTail = i) : de.deps = de.depsTail = i, qd(i);
     else if (i.version === -1 && (i.version = this.version, i.nextDep)) {
       const a = i.nextDep;
       a.prevDep = i.prevDep, i.prevDep && (i.prevDep.nextDep = a), i.prevDep = de.depsTail, i.nextDep = void 0, de.depsTail.nextDep = i, de.depsTail = i, de.deps === i && (de.deps = a);
     }
     return process.env.NODE_ENV !== "production" && de.onTrack && de.onTrack(
-      Oe(
+      Ae(
         {
           effect: de
         },
@@ -433,7 +433,7 @@ class bo {
       if (process.env.NODE_ENV !== "production")
         for (let i = this.subsHead; i; i = i.nextSub)
           i.sub.onTrigger && !(i.sub.flags & 8) && i.sub.onTrigger(
-            Oe(
+            Ae(
               {
                 effect: i.sub
               },
@@ -459,14 +459,14 @@ function qd(e) {
     i !== e && (e.prevSub = i, i && (i.nextSub = e)), process.env.NODE_ENV !== "production" && e.dep.subsHead === void 0 && (e.dep.subsHead = e), e.dep.subs = e;
   }
 }
-const hn = /* @__PURE__ */ new WeakMap(), gi = /* @__PURE__ */ Symbol(
+const hn = /* @__PURE__ */ new WeakMap(), bi = /* @__PURE__ */ Symbol(
   process.env.NODE_ENV !== "production" ? "Object iterate" : ""
 ), Cs = /* @__PURE__ */ Symbol(
   process.env.NODE_ENV !== "production" ? "Map keys iterate" : ""
 ), ya = /* @__PURE__ */ Symbol(
   process.env.NODE_ENV !== "production" ? "Array iterate" : ""
 );
-function Ve(e, t, i) {
+function Re(e, t, i) {
   if (bt && de) {
     let a = hn.get(e);
     a || hn.set(e, a = /* @__PURE__ */ new Map());
@@ -497,59 +497,59 @@ function St(e, t, i, a, n, s) {
   if (po(), t === "clear")
     o.forEach(r);
   else {
-    const c = Z(e), d = c && Fn(i);
+    const c = W(e), d = c && Fn(i);
     if (c && i === "length") {
       const l = Number(a);
       o.forEach((u, m) => {
-        (m === "length" || m === ya || !ot(m) && m >= l) && r(u);
+        (m === "length" || m === ya || !rt(m) && m >= l) && r(u);
       });
     } else
       switch ((i !== void 0 || o.has(void 0)) && r(o.get(i)), d && r(o.get(ya)), t) {
         case "add":
-          c ? d && r(o.get("length")) : (r(o.get(gi)), mi(e) && r(o.get(Cs)));
+          c ? d && r(o.get("length")) : (r(o.get(bi)), gi(e) && r(o.get(Cs)));
           break;
         case "delete":
-          c || (r(o.get(gi)), mi(e) && r(o.get(Cs)));
+          c || (r(o.get(bi)), gi(e) && r(o.get(Cs)));
           break;
         case "set":
-          mi(e) && r(o.get(gi));
+          gi(e) && r(o.get(bi));
           break;
       }
   }
   mo();
 }
-function Kf(e, t) {
+function Wf(e, t) {
   const i = hn.get(e);
   return i && i.get(t);
 }
 function Ai(e) {
   const t = /* @__PURE__ */ X(e);
-  return t === e ? t : (Ve(t, "iterate", ya), /* @__PURE__ */ Ze(e) ? t : t.map(vt));
+  return t === e ? t : (Re(t, "iterate", ya), /* @__PURE__ */ He(e) ? t : t.map(vt));
 }
 function Bn(e) {
-  return Ve(e = /* @__PURE__ */ X(e), "iterate", ya), e;
+  return Re(e = /* @__PURE__ */ X(e), "iterate", ya), e;
 }
 function Ot(e, t) {
   return /* @__PURE__ */ _t(e) ? Zi(/* @__PURE__ */ ht(e) ? vt(t) : t) : vt(t);
 }
-const Wf = {
+const qf = {
   __proto__: null,
   [Symbol.iterator]() {
     return ls(this, Symbol.iterator, (e) => Ot(this, e));
   },
   concat(...e) {
     return Ai(this).concat(
-      ...e.map((t) => Z(t) ? Ai(t) : t)
+      ...e.map((t) => W(t) ? Ai(t) : t)
     );
   },
   entries() {
     return ls(this, "entries", (e) => (e[1] = Ot(this, e[1]), e));
   },
   every(e, t) {
-    return $t(this, "every", e, t, void 0, arguments);
+    return Pt(this, "every", e, t, void 0, arguments);
   },
   filter(e, t) {
-    return $t(
+    return Pt(
       this,
       "filter",
       e,
@@ -559,7 +559,7 @@ const Wf = {
     );
   },
   find(e, t) {
-    return $t(
+    return Pt(
       this,
       "find",
       e,
@@ -569,10 +569,10 @@ const Wf = {
     );
   },
   findIndex(e, t) {
-    return $t(this, "findIndex", e, t, void 0, arguments);
+    return Pt(this, "findIndex", e, t, void 0, arguments);
   },
   findLast(e, t) {
-    return $t(
+    return Pt(
       this,
       "findLast",
       e,
@@ -582,11 +582,11 @@ const Wf = {
     );
   },
   findLastIndex(e, t) {
-    return $t(this, "findLastIndex", e, t, void 0, arguments);
+    return Pt(this, "findLastIndex", e, t, void 0, arguments);
   },
   // flat, flatMap could benefit from ARRAY_ITERATE but are not straight-forward to implement
   forEach(e, t) {
-    return $t(this, "forEach", e, t, void 0, arguments);
+    return Pt(this, "forEach", e, t, void 0, arguments);
   },
   includes(...e) {
     return fs(this, "includes", e);
@@ -602,7 +602,7 @@ const Wf = {
     return fs(this, "lastIndexOf", e);
   },
   map(e, t) {
-    return $t(this, "map", e, t, void 0, arguments);
+    return Pt(this, "map", e, t, void 0, arguments);
   },
   pop() {
     return ia(this, "pop");
@@ -621,7 +621,7 @@ const Wf = {
   },
   // slice could use ARRAY_ITERATE but also seems to beg for range tracking
   some(e, t) {
-    return $t(this, "some", e, t, void 0, arguments);
+    return Pt(this, "some", e, t, void 0, arguments);
   },
   splice(...e) {
     return ia(this, "splice", e);
@@ -644,15 +644,15 @@ const Wf = {
 };
 function ls(e, t, i) {
   const a = Bn(e), n = a[t]();
-  return a !== e && !/* @__PURE__ */ Ze(e) && (n._next = n.next, n.next = () => {
+  return a !== e && !/* @__PURE__ */ He(e) && (n._next = n.next, n.next = () => {
     const s = n._next();
     return s.done || (s.value = i(s.value)), s;
   }), n;
 }
-const qf = Array.prototype;
-function $t(e, t, i, a, n, s) {
-  const o = Bn(e), r = o !== e && !/* @__PURE__ */ Ze(e), c = o[t];
-  if (c !== qf[t]) {
+const Gf = Array.prototype;
+function Pt(e, t, i, a, n, s) {
+  const o = Bn(e), r = o !== e && !/* @__PURE__ */ He(e), c = o[t];
+  if (c !== Gf[t]) {
     const u = c.apply(e, s);
     return r ? vt(u) : u;
   }
@@ -666,7 +666,7 @@ function $t(e, t, i, a, n, s) {
   return r && n ? n(l) : l;
 }
 function ir(e, t, i, a) {
-  const n = Bn(e), s = n !== e && !/* @__PURE__ */ Ze(e);
+  const n = Bn(e), s = n !== e && !/* @__PURE__ */ He(e);
   let o = i, r = !1;
   n !== e && (s ? (r = a.length === 0, o = function(d, l, u) {
     return r && (r = !1, d = Ot(e, d)), i.call(this, d, Ot(e, l), u, e);
@@ -678,7 +678,7 @@ function ir(e, t, i, a) {
 }
 function fs(e, t, i) {
   const a = /* @__PURE__ */ X(e);
-  Ve(a, "iterate", ya);
+  Re(a, "iterate", ya);
   const n = a[t](...i);
   return (n === -1 || n === !1) && /* @__PURE__ */ Bi(i[0]) ? (i[0] = /* @__PURE__ */ X(i[0]), a[t](...i)) : n;
 }
@@ -687,13 +687,13 @@ function ia(e, t, i = []) {
   const a = (/* @__PURE__ */ X(e))[t].apply(e, i);
   return mo(), lt(), a;
 }
-const Gf = /* @__PURE__ */ Wt("__proto__,__v_isRef,__isVue"), Gd = new Set(
-  /* @__PURE__ */ Object.getOwnPropertyNames(Symbol).filter((e) => e !== "arguments" && e !== "caller").map((e) => Symbol[e]).filter(ot)
+const Jf = /* @__PURE__ */ Kt("__proto__,__v_isRef,__isVue"), Gd = new Set(
+  /* @__PURE__ */ Object.getOwnPropertyNames(Symbol).filter((e) => e !== "arguments" && e !== "caller").map((e) => Symbol[e]).filter(rt)
 );
-function Jf(e) {
-  ot(e) || (e = String(e));
+function Yf(e) {
+  rt(e) || (e = String(e));
   const t = /* @__PURE__ */ X(this);
-  return Ve(t, "has", e), t.hasOwnProperty(e);
+  return Re(t, "has", e), t.hasOwnProperty(e);
 }
 class Jd {
   constructor(t = !1, i = !1) {
@@ -712,13 +712,13 @@ class Jd {
       return a === (n ? s ? iu : tu : s ? eu : Qd).get(t) || // receiver is not the reactive proxy, but has the same prototype
       // this means the receiver is a user proxy of the reactive proxy
       Object.getPrototypeOf(t) === Object.getPrototypeOf(a) ? t : void 0;
-    const o = Z(t);
+    const o = W(t);
     if (!n) {
       let c;
-      if (o && (c = Wf[i]))
+      if (o && (c = qf[i]))
         return c;
       if (i === "hasOwnProperty")
-        return Jf;
+        return Yf;
     }
     const r = Reflect.get(
       t,
@@ -726,15 +726,15 @@ class Jd {
       // if this is a proxy wrapping a ref, return methods using the raw ref
       // as receiver so that we don't have to call `toRaw` on the ref in all
       // its class methods
-      /* @__PURE__ */ pe(t) ? t : a
+      /* @__PURE__ */ me(t) ? t : a
     );
-    if ((ot(i) ? Gd.has(i) : Gf(i)) || (n || Ve(t, "get", i), s))
+    if ((rt(i) ? Gd.has(i) : Jf(i)) || (n || Re(t, "get", i), s))
       return r;
-    if (/* @__PURE__ */ pe(r)) {
+    if (/* @__PURE__ */ me(r)) {
       const c = o && Fn(i) ? r : r.value;
-      return n && ne(c) ? /* @__PURE__ */ Vs(c) : c;
+      return n && ae(c) ? /* @__PURE__ */ Vs(c) : c;
     }
-    return ne(r) ? n ? /* @__PURE__ */ Vs(r) : /* @__PURE__ */ Hn(r) : r;
+    return ae(r) ? n ? /* @__PURE__ */ Vs(r) : /* @__PURE__ */ Hn(r) : r;
   }
 }
 class Yd extends Jd {
@@ -743,36 +743,36 @@ class Yd extends Jd {
   }
   set(t, i, a, n) {
     let s = t[i];
-    const o = Z(t) && Fn(i);
+    const o = W(t) && Fn(i);
     if (!this._isShallow) {
       const d = /* @__PURE__ */ _t(s);
-      if (!/* @__PURE__ */ Ze(a) && !/* @__PURE__ */ _t(a) && (s = /* @__PURE__ */ X(s), a = /* @__PURE__ */ X(a)), !o && /* @__PURE__ */ pe(s) && !/* @__PURE__ */ pe(a))
-        return d ? (process.env.NODE_ENV !== "production" && rt(
+      if (!/* @__PURE__ */ He(a) && !/* @__PURE__ */ _t(a) && (s = /* @__PURE__ */ X(s), a = /* @__PURE__ */ X(a)), !o && /* @__PURE__ */ me(s) && !/* @__PURE__ */ me(a))
+        return d ? (process.env.NODE_ENV !== "production" && ct(
           `Set operation on key "${String(i)}" failed: target is readonly.`,
           t[i]
         ), !0) : (s.value = a, !0);
     }
-    const r = o ? Number(i) < t.length : ae(t, i), c = Reflect.set(
+    const r = o ? Number(i) < t.length : ie(t, i), c = Reflect.set(
       t,
       i,
       a,
-      /* @__PURE__ */ pe(t) ? t : n
+      /* @__PURE__ */ me(t) ? t : n
     );
     return t === /* @__PURE__ */ X(n) && c && (r ? xt(a, s) && St(t, "set", i, a, s) : St(t, "add", i, a)), c;
   }
   deleteProperty(t, i) {
-    const a = ae(t, i), n = t[i], s = Reflect.deleteProperty(t, i);
+    const a = ie(t, i), n = t[i], s = Reflect.deleteProperty(t, i);
     return s && a && St(t, "delete", i, void 0, n), s;
   }
   has(t, i) {
     const a = Reflect.has(t, i);
-    return (!ot(i) || !Gd.has(i)) && Ve(t, "has", i), a;
+    return (!rt(i) || !Gd.has(i)) && Re(t, "has", i), a;
   }
   ownKeys(t) {
-    return Ve(
+    return Re(
       t,
       "iterate",
-      Z(t) ? "length" : gi
+      W(t) ? "length" : bi
     ), Reflect.ownKeys(t);
   }
 }
@@ -781,27 +781,27 @@ class Xd extends Jd {
     super(!0, t);
   }
   set(t, i) {
-    return process.env.NODE_ENV !== "production" && rt(
+    return process.env.NODE_ENV !== "production" && ct(
       `Set operation on key "${String(i)}" failed: target is readonly.`,
       t
     ), !0;
   }
   deleteProperty(t, i) {
-    return process.env.NODE_ENV !== "production" && rt(
+    return process.env.NODE_ENV !== "production" && ct(
       `Delete operation on key "${String(i)}" failed: target is readonly.`,
       t
     ), !0;
   }
 }
-const Yf = /* @__PURE__ */ new Yd(), Xf = /* @__PURE__ */ new Xd(), Qf = /* @__PURE__ */ new Yd(!0), ep = /* @__PURE__ */ new Xd(!0), Ds = (e) => e, Za = (e) => Reflect.getPrototypeOf(e);
-function tp(e, t, i) {
+const Xf = /* @__PURE__ */ new Yd(), Qf = /* @__PURE__ */ new Xd(), ep = /* @__PURE__ */ new Yd(!0), tp = /* @__PURE__ */ new Xd(!0), Ds = (e) => e, Za = (e) => Reflect.getPrototypeOf(e);
+function ip(e, t, i) {
   return function(...a) {
-    const n = this.__v_raw, s = /* @__PURE__ */ X(n), o = mi(s), r = e === "entries" || e === Symbol.iterator && o, c = e === "keys" && o, d = n[e](...a), l = i ? Ds : t ? Zi : vt;
-    return !t && Ve(
+    const n = this.__v_raw, s = /* @__PURE__ */ X(n), o = gi(s), r = e === "entries" || e === Symbol.iterator && o, c = e === "keys" && o, d = n[e](...a), l = i ? Ds : t ? Zi : vt;
+    return !t && Re(
       s,
       "iterate",
-      c ? Cs : gi
-    ), Oe(
+      c ? Cs : bi
+    ), Ae(
       // inheriting all iterator properties
       Object.create(d),
       {
@@ -821,7 +821,7 @@ function Ha(e) {
   return function(...t) {
     if (process.env.NODE_ENV !== "production") {
       const i = t[0] ? `on key "${t[0]}" ` : "";
-      rt(
+      ct(
         `${Un(e)} operation ${i}failed: target is readonly.`,
         /* @__PURE__ */ X(this)
       );
@@ -829,11 +829,11 @@ function Ha(e) {
     return e === "delete" ? !1 : e === "clear" ? void 0 : this;
   };
 }
-function ip(e, t) {
+function ap(e, t) {
   const i = {
     get(n) {
       const s = this.__v_raw, o = /* @__PURE__ */ X(s), r = /* @__PURE__ */ X(n);
-      e || (xt(n, r) && Ve(o, "get", n), Ve(o, "get", r));
+      e || (xt(n, r) && Re(o, "get", n), Re(o, "get", r));
       const { has: c } = Za(o), d = t ? Ds : e ? Zi : vt;
       if (c.call(o, n))
         return d(s.get(n));
@@ -843,18 +843,18 @@ function ip(e, t) {
     },
     get size() {
       const n = this.__v_raw;
-      return !e && Ve(/* @__PURE__ */ X(n), "iterate", gi), n.size;
+      return !e && Re(/* @__PURE__ */ X(n), "iterate", bi), n.size;
     },
     has(n) {
       const s = this.__v_raw, o = /* @__PURE__ */ X(s), r = /* @__PURE__ */ X(n);
-      return e || (xt(n, r) && Ve(o, "has", n), Ve(o, "has", r)), n === r ? s.has(n) : s.has(n) || s.has(r);
+      return e || (xt(n, r) && Re(o, "has", n), Re(o, "has", r)), n === r ? s.has(n) : s.has(n) || s.has(r);
     },
     forEach(n, s) {
       const o = this, r = o.__v_raw, c = /* @__PURE__ */ X(r), d = t ? Ds : e ? Zi : vt;
-      return !e && Ve(c, "iterate", gi), r.forEach((l, u) => n.call(s, d(l), d(u), o));
+      return !e && Re(c, "iterate", bi), r.forEach((l, u) => n.call(s, d(l), d(u), o));
     }
   };
-  return Oe(
+  return Ae(
     i,
     e ? {
       add: Ha("add"),
@@ -863,11 +863,11 @@ function ip(e, t) {
       clear: Ha("clear")
     } : {
       add(n) {
-        const s = /* @__PURE__ */ X(this), o = Za(s), r = /* @__PURE__ */ X(n), c = !t && !/* @__PURE__ */ Ze(n) && !/* @__PURE__ */ _t(n) ? r : n;
+        const s = /* @__PURE__ */ X(this), o = Za(s), r = /* @__PURE__ */ X(n), c = !t && !/* @__PURE__ */ He(n) && !/* @__PURE__ */ _t(n) ? r : n;
         return o.has.call(s, c) || xt(n, c) && o.has.call(s, n) || xt(r, c) && o.has.call(s, r) || (s.add(c), St(s, "add", c, c)), this;
       },
       set(n, s) {
-        !t && !/* @__PURE__ */ Ze(s) && !/* @__PURE__ */ _t(s) && (s = /* @__PURE__ */ X(s));
+        !t && !/* @__PURE__ */ He(s) && !/* @__PURE__ */ _t(s) && (s = /* @__PURE__ */ X(s));
         const o = /* @__PURE__ */ X(this), { has: r, get: c } = Za(o);
         let d = r.call(o, n);
         d ? process.env.NODE_ENV !== "production" && ar(o, r, n) : (n = /* @__PURE__ */ X(n), d = r.call(o, n));
@@ -882,7 +882,7 @@ function ip(e, t) {
         return c && St(s, "delete", n, void 0, d), l;
       },
       clear() {
-        const n = /* @__PURE__ */ X(this), s = n.size !== 0, o = process.env.NODE_ENV !== "production" ? mi(n) ? new Map(n) : new Set(n) : void 0, r = n.clear();
+        const n = /* @__PURE__ */ X(this), s = n.size !== 0, o = process.env.NODE_ENV !== "production" ? gi(n) ? new Map(n) : new Set(n) : void 0, r = n.clear();
         return s && St(
           n,
           "clear",
@@ -898,37 +898,37 @@ function ip(e, t) {
     "entries",
     Symbol.iterator
   ].forEach((n) => {
-    i[n] = tp(n, e, t);
+    i[n] = ip(n, e, t);
   }), i;
 }
 function Zn(e, t) {
-  const i = ip(e, t);
+  const i = ap(e, t);
   return (a, n, s) => n === "__v_isReactive" ? !e : n === "__v_isReadonly" ? e : n === "__v_raw" ? a : Reflect.get(
-    ae(i, n) && n in a ? i : a,
+    ie(i, n) && n in a ? i : a,
     n,
     s
   );
 }
-const ap = {
+const np = {
   get: /* @__PURE__ */ Zn(!1, !1)
-}, np = {
-  get: /* @__PURE__ */ Zn(!1, !0)
 }, sp = {
-  get: /* @__PURE__ */ Zn(!0, !1)
+  get: /* @__PURE__ */ Zn(!1, !0)
 }, op = {
+  get: /* @__PURE__ */ Zn(!0, !1)
+}, rp = {
   get: /* @__PURE__ */ Zn(!0, !0)
 };
 function ar(e, t, i) {
   const a = /* @__PURE__ */ X(i);
   if (a !== i && t.call(e, a)) {
     const n = lo(e);
-    rt(
+    ct(
       `Reactive ${n} contains both the raw and reactive versions of the same object${n === "Map" ? " as keys" : ""}, which can lead to inconsistencies. Avoid differentiating between the raw and reactive versions of an object and only use the reactive version if possible.`
     );
   }
 }
 const Qd = /* @__PURE__ */ new WeakMap(), eu = /* @__PURE__ */ new WeakMap(), tu = /* @__PURE__ */ new WeakMap(), iu = /* @__PURE__ */ new WeakMap();
-function rp(e) {
+function cp(e) {
   switch (e) {
     case "Object":
     case "Array":
@@ -947,18 +947,18 @@ function Hn(e) {
   return /* @__PURE__ */ _t(e) ? e : Kn(
     e,
     !1,
-    Yf,
-    ap,
+    Xf,
+    np,
     Qd
   );
 }
 // @__NO_SIDE_EFFECTS__
-function cp(e) {
+function dp(e) {
   return Kn(
     e,
     !1,
-    Qf,
-    np,
+    ep,
+    sp,
     eu
   );
 }
@@ -967,8 +967,8 @@ function Vs(e) {
   return Kn(
     e,
     !0,
-    Xf,
-    sp,
+    Qf,
+    op,
     tu
   );
 }
@@ -977,14 +977,14 @@ function Nt(e) {
   return Kn(
     e,
     !0,
-    ep,
-    op,
+    tp,
+    rp,
     iu
   );
 }
 function Kn(e, t, i, a, n) {
-  if (!ne(e))
-    return process.env.NODE_ENV !== "production" && rt(
+  if (!ae(e))
+    return process.env.NODE_ENV !== "production" && ct(
       `value cannot be made ${t ? "readonly" : "reactive"}: ${String(
         e
       )}`
@@ -994,7 +994,7 @@ function Kn(e, t, i, a, n) {
   const s = n.get(e);
   if (s)
     return s;
-  const o = rp(lo(e));
+  const o = cp(lo(e));
   if (o === 0)
     return e;
   const r = new Proxy(
@@ -1012,7 +1012,7 @@ function _t(e) {
   return !!(e && e.__v_isReadonly);
 }
 // @__NO_SIDE_EFFECTS__
-function Ze(e) {
+function He(e) {
   return !!(e && e.__v_isShallow);
 }
 // @__NO_SIDE_EFFECTS__
@@ -1025,25 +1025,25 @@ function X(e) {
   return t ? /* @__PURE__ */ X(t) : e;
 }
 function Ct(e) {
-  return !ae(e, "__v_skip") && Object.isExtensible(e) && bn(e, "__v_skip", !0), e;
+  return !ie(e, "__v_skip") && Object.isExtensible(e) && bn(e, "__v_skip", !0), e;
 }
-const vt = (e) => ne(e) ? /* @__PURE__ */ Hn(e) : e, Zi = (e) => ne(e) ? /* @__PURE__ */ Vs(e) : e;
+const vt = (e) => ae(e) ? /* @__PURE__ */ Hn(e) : e, Zi = (e) => ae(e) ? /* @__PURE__ */ Vs(e) : e;
 // @__NO_SIDE_EFFECTS__
-function pe(e) {
+function me(e) {
   return e ? e.__v_isRef === !0 : !1;
 }
 // @__NO_SIDE_EFFECTS__
-function Ce(e) {
+function Se(e) {
   return au(e, !1);
 }
 // @__NO_SIDE_EFFECTS__
-function dp(e) {
+function up(e) {
   return au(e, !0);
 }
 function au(e, t) {
-  return /* @__PURE__ */ pe(e) ? e : new up(e, t);
+  return /* @__PURE__ */ me(e) ? e : new lp(e, t);
 }
-class up {
+class lp {
   constructor(t, i) {
     this.dep = new bo(), this.__v_isRef = !0, this.__v_isShallow = !1, this._rawValue = i ? t : /* @__PURE__ */ X(t), this._value = i ? t : vt(t), this.__v_isShallow = i;
   }
@@ -1055,7 +1055,7 @@ class up {
     }) : this.dep.track(), this._value;
   }
   set value(t) {
-    const i = this._rawValue, a = this.__v_isShallow || /* @__PURE__ */ Ze(t) || /* @__PURE__ */ _t(t);
+    const i = this._rawValue, a = this.__v_isShallow || /* @__PURE__ */ He(t) || /* @__PURE__ */ _t(t);
     t = a ? t : /* @__PURE__ */ X(t), xt(t, i) && (this._rawValue = t, this._value = a ? t : vt(t), process.env.NODE_ENV !== "production" ? this.dep.trigger({
       target: this,
       type: "set",
@@ -1065,7 +1065,7 @@ class up {
     }) : this.dep.trigger());
   }
 }
-function lp(e) {
+function fp(e) {
   e.dep && (process.env.NODE_ENV !== "production" ? e.dep.trigger({
     target: e,
     type: "set",
@@ -1074,33 +1074,33 @@ function lp(e) {
   }) : e.dep.trigger());
 }
 function V(e) {
-  return /* @__PURE__ */ pe(e) ? e.value : e;
+  return /* @__PURE__ */ me(e) ? e.value : e;
 }
-const fp = {
+const pp = {
   get: (e, t, i) => t === "__v_raw" ? e : V(Reflect.get(e, t, i)),
   set: (e, t, i, a) => {
     const n = e[t];
-    return /* @__PURE__ */ pe(n) && !/* @__PURE__ */ pe(i) ? (n.value = i, !0) : Reflect.set(e, t, i, a);
+    return /* @__PURE__ */ me(n) && !/* @__PURE__ */ me(i) ? (n.value = i, !0) : Reflect.set(e, t, i, a);
   }
 };
 function nu(e) {
-  return /* @__PURE__ */ ht(e) ? e : new Proxy(e, fp);
+  return /* @__PURE__ */ ht(e) ? e : new Proxy(e, pp);
 }
 // @__NO_SIDE_EFFECTS__
 function nr(e) {
-  process.env.NODE_ENV !== "production" && !/* @__PURE__ */ Bi(e) && rt("toRefs() expects a reactive object but received a plain one.");
-  const t = Z(e) ? new Array(e.length) : {};
+  process.env.NODE_ENV !== "production" && !/* @__PURE__ */ Bi(e) && ct("toRefs() expects a reactive object but received a plain one.");
+  const t = W(e) ? new Array(e.length) : {};
   for (const i in e)
     t[i] = su(e, i);
   return t;
 }
-class pp {
+class mp {
   constructor(t, i, a) {
-    this._object = t, this._defaultValue = a, this.__v_isRef = !0, this._value = void 0, this._key = ot(i) ? i : String(i), this._raw = /* @__PURE__ */ X(t);
+    this._object = t, this._defaultValue = a, this.__v_isRef = !0, this._value = void 0, this._key = rt(i) ? i : String(i), this._raw = /* @__PURE__ */ X(t);
     let n = !0, s = t;
-    if (!Z(t) || ot(this._key) || !Fn(this._key))
+    if (!W(t) || rt(this._key) || !Fn(this._key))
       do
-        n = !/* @__PURE__ */ Bi(s) || /* @__PURE__ */ Ze(s);
+        n = !/* @__PURE__ */ Bi(s) || /* @__PURE__ */ He(s);
       while (n && (s = s.__v_raw));
     this._shallow = n;
   }
@@ -1109,9 +1109,9 @@ class pp {
     return this._shallow && (t = V(t)), this._value = t === void 0 ? this._defaultValue : t;
   }
   set value(t) {
-    if (this._shallow && /* @__PURE__ */ pe(this._raw[this._key])) {
+    if (this._shallow && /* @__PURE__ */ me(this._raw[this._key])) {
       const i = this._object[this._key];
-      if (/* @__PURE__ */ pe(i)) {
+      if (/* @__PURE__ */ me(i)) {
         i.value = t;
         return;
       }
@@ -1119,10 +1119,10 @@ class pp {
     this._object[this._key] = t;
   }
   get dep() {
-    return Kf(this._raw, this._key);
+    return Wf(this._raw, this._key);
   }
 }
-class mp {
+class gp {
   constructor(t) {
     this._getter = t, this.__v_isRef = !0, this.__v_isReadonly = !0, this._value = void 0;
   }
@@ -1132,12 +1132,12 @@ class mp {
 }
 // @__NO_SIDE_EFFECTS__
 function ps(e, t, i) {
-  return /* @__PURE__ */ pe(e) ? e : q(e) ? new mp(e) : ne(e) && arguments.length > 1 ? su(e, t, i) : /* @__PURE__ */ Ce(e);
+  return /* @__PURE__ */ me(e) ? e : G(e) ? new gp(e) : ae(e) && arguments.length > 1 ? su(e, t, i) : /* @__PURE__ */ Se(e);
 }
 function su(e, t, i) {
-  return new pp(e, t, i);
+  return new mp(e, t, i);
 }
-class gp {
+class bp {
   constructor(t, i, a) {
     this.fn = t, this.setter = i, this._value = void 0, this.dep = new bo(this), this.__v_isRef = !0, this.deps = void 0, this.depsTail = void 0, this.flags = 16, this.globalVersion = va - 1, this.next = void 0, this.effect = this, this.__v_isReadonly = !i, this.isSSR = a;
   }
@@ -1159,44 +1159,44 @@ class gp {
     return Kd(this), t && (t.version = this.dep.version), this._value;
   }
   set value(t) {
-    this.setter ? this.setter(t) : process.env.NODE_ENV !== "production" && rt("Write operation failed: computed value is readonly");
+    this.setter ? this.setter(t) : process.env.NODE_ENV !== "production" && ct("Write operation failed: computed value is readonly");
   }
 }
 // @__NO_SIDE_EFFECTS__
-function bp(e, t, i = !1) {
+function hp(e, t, i = !1) {
   let a, n;
-  q(e) ? a = e : (a = e.get, n = e.set);
-  const s = new gp(a, n, i);
+  G(e) ? a = e : (a = e.get, n = e.set);
+  const s = new bp(a, n, i);
   return process.env.NODE_ENV, s;
 }
 const Ka = {}, _n = /* @__PURE__ */ new WeakMap();
-let di;
-function hp(e, t = !1, i = di) {
+let ui;
+function _p(e, t = !1, i = ui) {
   if (i) {
     let a = _n.get(i);
     a || _n.set(i, a = []), a.push(e);
-  } else process.env.NODE_ENV !== "production" && !t && rt(
+  } else process.env.NODE_ENV !== "production" && !t && ct(
     "onWatcherCleanup() was called when there was no active watcher to associate with."
   );
 }
-function _p(e, t, i = ue) {
+function vp(e, t, i = ue) {
   const { immediate: a, deep: n, once: s, scheduler: o, augmentJob: r, call: c } = i, d = (N) => {
-    (i.onWarn || rt)(
+    (i.onWarn || ct)(
       "Invalid watch source: ",
       N,
       "A watch source can only be a getter/effect function, a ref, a reactive object, or an array of these types."
     );
-  }, l = (N) => n ? N : /* @__PURE__ */ Ze(N) || n === !1 || n === 0 ? Mt(N, 1) : Mt(N);
-  let u, m, p, h, k = !1, w = !1;
-  if (/* @__PURE__ */ pe(e) ? (m = () => e.value, k = /* @__PURE__ */ Ze(e)) : /* @__PURE__ */ ht(e) ? (m = () => l(e), k = !0) : Z(e) ? (w = !0, k = e.some((N) => /* @__PURE__ */ ht(N) || /* @__PURE__ */ Ze(N)), m = () => e.map((N) => {
-    if (/* @__PURE__ */ pe(N))
+  }, l = (N) => n ? N : /* @__PURE__ */ He(N) || n === !1 || n === 0 ? Lt(N, 1) : Lt(N);
+  let u, m, p, h, w = !1, E = !1;
+  if (/* @__PURE__ */ me(e) ? (m = () => e.value, w = /* @__PURE__ */ He(e)) : /* @__PURE__ */ ht(e) ? (m = () => l(e), w = !0) : W(e) ? (E = !0, w = e.some((N) => /* @__PURE__ */ ht(N) || /* @__PURE__ */ He(N)), m = () => e.map((N) => {
+    if (/* @__PURE__ */ me(N))
       return N.value;
     if (/* @__PURE__ */ ht(N))
       return l(N);
-    if (q(N))
+    if (G(N))
       return c ? c(N, 2) : N();
     process.env.NODE_ENV !== "production" && d(N);
-  })) : q(e) ? t ? m = c ? () => c(e, 2) : e : m = () => {
+  })) : G(e) ? t ? m = c ? () => c(e, 2) : e : m = () => {
     if (p) {
       ut();
       try {
@@ -1205,55 +1205,55 @@ function _p(e, t, i = ue) {
         lt();
       }
     }
-    const N = di;
-    di = u;
+    const N = ui;
+    ui = u;
     try {
       return c ? c(e, 3, [h]) : e(h);
     } finally {
-      di = N;
+      ui = N;
     }
-  } : (m = Re, process.env.NODE_ENV !== "production" && d(e)), t && n) {
+  } : (m = Pe, process.env.NODE_ENV !== "production" && d(e)), t && n) {
     const N = m, ee = n === !0 ? 1 / 0 : n;
-    m = () => Mt(N(), ee);
+    m = () => Lt(N(), ee);
   }
-  const x = Ud(), L = () => {
-    u.stop(), x && x.active && co(x.effects, u);
+  const A = Ud(), z = () => {
+    u.stop(), A && A.active && co(A.effects, u);
   };
   if (s && t) {
     const N = t;
     t = (...ee) => {
-      const z = N(...ee);
-      return L(), z;
+      const B = N(...ee);
+      return z(), B;
     };
   }
-  let D = w ? new Array(e.length).fill(Ka) : Ka;
+  let R = E ? new Array(e.length).fill(Ka) : Ka;
   const H = (N) => {
     if (!(!(u.flags & 1) || !u.dirty && !N))
       if (t) {
         const ee = u.run();
-        if (N || n || k || (w ? ee.some((z, Q) => xt(z, D[Q])) : xt(ee, D))) {
+        if (N || n || w || (E ? ee.some((B, le) => xt(B, R[le])) : xt(ee, R))) {
           p && p();
-          const z = di;
-          di = u;
+          const B = ui;
+          ui = u;
           try {
-            const Q = [
+            const le = [
               ee,
               // pass undefined as the old value when it's changed for the first time
-              D === Ka ? void 0 : w && D[0] === Ka ? [] : D,
+              R === Ka ? void 0 : E && R[0] === Ka ? [] : R,
               h
             ];
-            D = ee, c ? c(t, 3, Q) : (
+            R = ee, c ? c(t, 3, le) : (
               // @ts-expect-error
-              t(...Q)
+              t(...le)
             );
           } finally {
-            di = z;
+            ui = B;
           }
         }
       } else
         u.run();
   };
-  return r && r(H), u = new Ld(m), u.scheduler = o ? () => o(H, !1) : H, h = (N) => hp(N, !1, u), p = u.onStop = () => {
+  return r && r(H), u = new Ld(m), u.scheduler = o ? () => o(H, !1) : H, h = (N) => _p(N, !1, u), p = u.onStop = () => {
     const N = _n.get(u);
     if (N) {
       if (c)
@@ -1262,40 +1262,40 @@ function _p(e, t, i = ue) {
         for (const ee of N) ee();
       _n.delete(u);
     }
-  }, process.env.NODE_ENV !== "production" && (u.onTrack = i.onTrack, u.onTrigger = i.onTrigger), t ? a ? H(!0) : D = u.run() : o ? o(H.bind(null, !0), !0) : u.run(), L.pause = u.pause.bind(u), L.resume = u.resume.bind(u), L.stop = L, L;
+  }, process.env.NODE_ENV !== "production" && (u.onTrack = i.onTrack, u.onTrigger = i.onTrigger), t ? a ? H(!0) : R = u.run() : o ? o(H.bind(null, !0), !0) : u.run(), z.pause = u.pause.bind(u), z.resume = u.resume.bind(u), z.stop = z, z;
 }
-function Mt(e, t = 1 / 0, i) {
-  if (t <= 0 || !ne(e) || e.__v_skip || (i = i || /* @__PURE__ */ new Map(), (i.get(e) || 0) >= t))
+function Lt(e, t = 1 / 0, i) {
+  if (t <= 0 || !ae(e) || e.__v_skip || (i = i || /* @__PURE__ */ new Map(), (i.get(e) || 0) >= t))
     return e;
-  if (i.set(e, t), t--, /* @__PURE__ */ pe(e))
-    Mt(e.value, t, i);
-  else if (Z(e))
+  if (i.set(e, t), t--, /* @__PURE__ */ me(e))
+    Lt(e.value, t, i);
+  else if (W(e))
     for (let a = 0; a < e.length; a++)
-      Mt(e[a], t, i);
-  else if (jn(e) || mi(e))
+      Lt(e[a], t, i);
+  else if (jn(e) || gi(e))
     e.forEach((a) => {
-      Mt(a, t, i);
+      Lt(a, t, i);
     });
   else if (Vd(e)) {
     for (const a in e)
-      Mt(e[a], t, i);
+      Lt(e[a], t, i);
     for (const a of Object.getOwnPropertySymbols(e))
-      Object.prototype.propertyIsEnumerable.call(e, a) && Mt(e[a], t, i);
+      Object.prototype.propertyIsEnumerable.call(e, a) && Lt(e[a], t, i);
   }
   return e;
 }
-const bi = [];
+const hi = [];
 function tn(e) {
-  bi.push(e);
+  hi.push(e);
 }
 function an() {
-  bi.pop();
+  hi.pop();
 }
 let ms = !1;
 function S(e, ...t) {
   if (ms) return;
   ms = !0, ut();
-  const i = bi.length ? bi[bi.length - 1].component : null, a = i && i.appContext.config.warnHandler, n = vp();
+  const i = hi.length ? hi[hi.length - 1].component : null, a = i && i.appContext.config.warnHandler, n = yp();
   if (a)
     Ji(
       a,
@@ -1318,12 +1318,12 @@ function S(e, ...t) {
   else {
     const s = [`[Vue warn]: ${e}`, ...t];
     n.length && s.push(`
-`, ...yp(n)), console.warn(...s);
+`, ...kp(n)), console.warn(...s);
   }
   lt(), ms = !1;
 }
-function vp() {
-  let e = bi[bi.length - 1];
+function yp() {
+  let e = hi[hi.length - 1];
   if (!e)
     return [];
   const t = [];
@@ -1338,29 +1338,29 @@ function vp() {
   }
   return t;
 }
-function yp(e) {
+function kp(e) {
   const t = [];
   return e.forEach((i, a) => {
     t.push(...a === 0 ? [] : [`
-`], ...kp(i));
+`], ...wp(i));
   }), t;
 }
-function kp({ vnode: e, recurseCount: t }) {
+function wp({ vnode: e, recurseCount: t }) {
   const i = t > 0 ? `... (${t} recursive calls)` : "", a = e.component ? e.component.parent == null : !1, n = ` at <${za(
     e.component,
     e.type,
     a
   )}`, s = ">" + i;
-  return e.props ? [n, ...wp(e.props), s] : [n + s];
+  return e.props ? [n, ...Ep(e.props), s] : [n + s];
 }
-function wp(e) {
+function Ep(e) {
   const t = [], i = Object.keys(e);
   return i.slice(0, 3).forEach((a) => {
     t.push(...ou(a, e[a]));
   }), i.length > 3 && t.push(" ..."), t;
 }
 function ou(e, t, i) {
-  return _e(t) ? (t = JSON.stringify(t), i ? t : [`${e}=${t}`]) : typeof t == "number" || typeof t == "boolean" || t == null ? i ? t : [`${e}=${t}`] : /* @__PURE__ */ pe(t) ? (t = ou(e, /* @__PURE__ */ X(t.value), !0), i ? t : [`${e}=Ref<`, t, ">"]) : q(t) ? [`${e}=fn${t.name ? `<${t.name}>` : ""}`] : (t = /* @__PURE__ */ X(t), i ? t : [`${e}=`, t]);
+  return _e(t) ? (t = JSON.stringify(t), i ? t : [`${e}=${t}`]) : typeof t == "number" || typeof t == "boolean" || t == null ? i ? t : [`${e}=${t}`] : /* @__PURE__ */ me(t) ? (t = ou(e, /* @__PURE__ */ X(t.value), !0), i ? t : [`${e}=Ref<`, t, ">"]) : G(t) ? [`${e}=fn${t.name ? `<${t.name}>` : ""}`] : (t = /* @__PURE__ */ X(t), i ? t : [`${e}=`, t]);
 }
 const ho = {
   sp: "serverPrefetch hook",
@@ -1403,13 +1403,13 @@ function Ji(e, t, i, a) {
   }
 }
 function yt(e, t, i, a) {
-  if (q(e)) {
+  if (G(e)) {
     const n = Ji(e, t, i, a);
     return n && uo(n) && n.catch((s) => {
       Pa(s, t, i);
     }), n;
   }
-  if (Z(e)) {
+  if (W(e)) {
     const n = [];
     for (let s = 0; s < e.length; s++)
       n.push(yt(e[s], t, i, a));
@@ -1441,9 +1441,9 @@ function Pa(e, t, i, a = !0) {
       return;
     }
   }
-  Ep(e, i, n, a, o);
+  Ip(e, i, n, a, o);
 }
-function Ep(e, t, i, a = !0, n = !1) {
+function Ip(e, t, i, a = !0, n = !1) {
   if (process.env.NODE_ENV !== "production") {
     const s = ho[t];
     if (i && tn(i), S(`Unhandled error${s ? ` during execution of ${s}` : ""}`), i && an(), a)
@@ -1455,45 +1455,45 @@ function Ep(e, t, i, a = !0, n = !1) {
     console.error(e);
   }
 }
-const qe = [];
+const Ge = [];
 let At = -1;
 const zi = [];
-let Jt = null, Vi = 0;
+let Yt = null, Vi = 0;
 const ru = /* @__PURE__ */ Promise.resolve();
 let vn = null;
-const Ip = 100;
+const Tp = 100;
 function yn(e) {
   const t = vn || ru;
   return e ? t.then(this ? e.bind(this) : e) : t;
 }
-function Tp(e) {
-  let t = At + 1, i = qe.length;
+function Ap(e) {
+  let t = At + 1, i = Ge.length;
   for (; t < i; ) {
-    const a = t + i >>> 1, n = qe[a], s = ka(n);
+    const a = t + i >>> 1, n = Ge[a], s = ka(n);
     s < e || s === e && n.flags & 2 ? t = a + 1 : i = a;
   }
   return t;
 }
 function Wn(e) {
   if (!(e.flags & 1)) {
-    const t = ka(e), i = qe[qe.length - 1];
+    const t = ka(e), i = Ge[Ge.length - 1];
     !i || // fast path when the job id is larger than the tail
-    !(e.flags & 2) && t >= ka(i) ? qe.push(e) : qe.splice(Tp(t), 0, e), e.flags |= 1, cu();
+    !(e.flags & 2) && t >= ka(i) ? Ge.push(e) : Ge.splice(Ap(t), 0, e), e.flags |= 1, cu();
   }
 }
 function cu() {
   vn || (vn = ru.then(lu));
 }
 function du(e) {
-  Z(e) ? zi.push(...e) : Jt && e.id === -1 ? Jt.splice(Vi + 1, 0, e) : e.flags & 1 || (zi.push(e), e.flags |= 1), cu();
+  W(e) ? zi.push(...e) : Yt && e.id === -1 ? Yt.splice(Vi + 1, 0, e) : e.flags & 1 || (zi.push(e), e.flags |= 1), cu();
 }
 function sr(e, t, i = At + 1) {
-  for (process.env.NODE_ENV !== "production" && (t = t || /* @__PURE__ */ new Map()); i < qe.length; i++) {
-    const a = qe[i];
+  for (process.env.NODE_ENV !== "production" && (t = t || /* @__PURE__ */ new Map()); i < Ge.length; i++) {
+    const a = Ge[i];
     if (a && a.flags & 2) {
       if (e && a.id !== e.uid || process.env.NODE_ENV !== "production" && _o(t, a))
         continue;
-      qe.splice(i, 1), i--, a.flags & 4 && (a.flags &= -2), a(), a.flags & 4 || (a.flags &= -2);
+      Ge.splice(i, 1), i--, a.flags & 4 && (a.flags &= -2), a(), a.flags & 4 || (a.flags &= -2);
     }
   }
 }
@@ -1502,24 +1502,24 @@ function uu(e) {
     const t = [...new Set(zi)].sort(
       (i, a) => ka(i) - ka(a)
     );
-    if (zi.length = 0, Jt) {
-      Jt.push(...t);
+    if (zi.length = 0, Yt) {
+      Yt.push(...t);
       return;
     }
-    for (Jt = t, process.env.NODE_ENV !== "production" && (e = e || /* @__PURE__ */ new Map()), Vi = 0; Vi < Jt.length; Vi++) {
-      const i = Jt[Vi];
+    for (Yt = t, process.env.NODE_ENV !== "production" && (e = e || /* @__PURE__ */ new Map()), Vi = 0; Vi < Yt.length; Vi++) {
+      const i = Yt[Vi];
       process.env.NODE_ENV !== "production" && _o(e, i) || (i.flags & 4 && (i.flags &= -2), i.flags & 8 || i(), i.flags &= -2);
     }
-    Jt = null, Vi = 0;
+    Yt = null, Vi = 0;
   }
 }
 const ka = (e) => e.id == null ? e.flags & 2 ? -1 : 1 / 0 : e.id;
 function lu(e) {
   process.env.NODE_ENV !== "production" && (e = e || /* @__PURE__ */ new Map());
-  const t = process.env.NODE_ENV !== "production" ? (i) => _o(e, i) : Re;
+  const t = process.env.NODE_ENV !== "production" ? (i) => _o(e, i) : Pe;
   try {
-    for (At = 0; At < qe.length; At++) {
-      const i = qe[At];
+    for (At = 0; At < Ge.length; At++) {
+      const i = Ge[At];
       if (i && !(i.flags & 8)) {
         if (process.env.NODE_ENV !== "production" && t(i))
           continue;
@@ -1531,16 +1531,16 @@ function lu(e) {
       }
     }
   } finally {
-    for (; At < qe.length; At++) {
-      const i = qe[At];
+    for (; At < Ge.length; At++) {
+      const i = Ge[At];
       i && (i.flags &= -2);
     }
-    At = -1, qe.length = 0, uu(e), vn = null, (qe.length || zi.length) && lu(e);
+    At = -1, Ge.length = 0, uu(e), vn = null, (Ge.length || zi.length) && lu(e);
   }
 }
 function _o(e, t) {
   const i = e.get(t) || 0;
-  if (i > Ip) {
+  if (i > Tp) {
     const a = t.i, n = a && Wu(a.type);
     return Pa(
       `Maximum recursive updates exceeded${n ? ` in component <${n}>` : ""}. This means you have a reactive effect that is mutating its own dependencies and thus recursively triggering itself. Possible sources include component template, render function, updated hook or watcher source function.`,
@@ -1550,30 +1550,30 @@ function _o(e, t) {
   }
   return e.set(t, i + 1), !1;
 }
-let at = !1;
+let nt = !1;
 const or = (e) => {
   try {
-    return at;
+    return nt;
   } finally {
-    at = e;
+    nt = e;
   }
 }, nn = /* @__PURE__ */ new Map();
 process.env.NODE_ENV !== "production" && (Va().__VUE_HMR_RUNTIME__ = {
   createRecord: gs(fu),
-  rerender: gs(xp),
-  reload: gs(Sp)
+  rerender: gs(Sp),
+  reload: gs(Np)
 });
-const yi = /* @__PURE__ */ new Map();
-function Ap(e) {
-  const t = e.type.__hmrId;
-  let i = yi.get(t);
-  i || (fu(t, e.type), i = yi.get(t)), i.instances.add(e);
-}
+const ki = /* @__PURE__ */ new Map();
 function Op(e) {
-  yi.get(e.type.__hmrId).instances.delete(e);
+  const t = e.type.__hmrId;
+  let i = ki.get(t);
+  i || (fu(t, e.type), i = ki.get(t)), i.instances.add(e);
+}
+function xp(e) {
+  ki.get(e.type.__hmrId).instances.delete(e);
 }
 function fu(e, t) {
-  return yi.has(e) ? !1 : (yi.set(e, {
+  return ki.has(e) ? !1 : (ki.set(e, {
     initialDef: kn(t),
     instances: /* @__PURE__ */ new Set()
   }), !0);
@@ -1581,14 +1581,14 @@ function fu(e, t) {
 function kn(e) {
   return qu(e) ? e.__vccOpts : e;
 }
-function xp(e, t) {
-  const i = yi.get(e);
+function Sp(e, t) {
+  const i = ki.get(e);
   i && (i.initialDef.render = t, [...i.instances].forEach((a) => {
-    t && (a.render = t, kn(a.type).render = t), a.renderCache = [], at = !0, a.job.flags & 8 || a.update(), at = !1;
+    t && (a.render = t, kn(a.type).render = t), a.renderCache = [], nt = !0, a.job.flags & 8 || a.update(), nt = !1;
   }));
 }
-function Sp(e, t) {
-  const i = yi.get(e);
+function Np(e, t) {
+  const i = ki.get(e);
   if (!i) return;
   t = kn(t), rr(i.initialDef, t);
   const a = [...i.instances];
@@ -1596,7 +1596,7 @@ function Sp(e, t) {
     const s = a[n], o = kn(s.type);
     let r = nn.get(o);
     r || (o !== i.initialDef && rr(o, t), nn.set(o, r = /* @__PURE__ */ new Set())), r.add(s), s.appContext.propsCache.delete(s.type), s.appContext.emitsCache.delete(s.type), s.appContext.optionsCache.delete(s.type), s.ceReload ? (r.add(s), s.ceReload(t.styles), r.delete(s)) : s.parent ? Wn(() => {
-      s.job.flags & 8 || (at = !0, s.parent.update(), at = !1, r.delete(s));
+      s.job.flags & 8 || (nt = !0, s.parent.update(), nt = !1, r.delete(s));
     }) : s.appContext.reload ? s.appContext.reload() : typeof window < "u" ? window.location.reload() : console.warn(
       "[HMR] Root or manually mounted instance modified. Full reload required."
     ), s.root.ce && s !== s.root && s.root.ce._removeChildStyle(o);
@@ -1606,7 +1606,7 @@ function Sp(e, t) {
   });
 }
 function rr(e, t) {
-  Oe(e, t);
+  Ae(e, t);
   for (const i in e)
     i !== "__file" && !(i in t) && delete e[i];
 }
@@ -1636,29 +1636,29 @@ function vo(e, t) {
     gt || (t.__VUE_DEVTOOLS_HOOK_REPLAY__ = null, Rs = !0, sa = []);
   }, 3e3)) : (Rs = !0, sa = []);
 }
-function Np(e, t) {
+function Cp(e, t) {
   $a("app:init", e, t, {
-    Fragment: Xe,
+    Fragment: Qe,
     Text: ja,
-    Comment: st,
+    Comment: ot,
     Static: rn
   });
 }
-function Cp(e) {
+function Dp(e) {
   $a("app:unmount", e);
 }
-const Dp = /* @__PURE__ */ yo(
+const Vp = /* @__PURE__ */ yo(
   "component:added"
   /* COMPONENT_ADDED */
 ), pu = /* @__PURE__ */ yo(
   "component:updated"
   /* COMPONENT_UPDATED */
-), Vp = /* @__PURE__ */ yo(
+), Rp = /* @__PURE__ */ yo(
   "component:removed"
   /* COMPONENT_REMOVED */
-), Rp = (e) => {
+), Pp = (e) => {
   gt && typeof gt.cleanupBuffer == "function" && // remove the component if it wasn't buffered
-  !gt.cleanupBuffer(e) && Vp(e);
+  !gt.cleanupBuffer(e) && Rp(e);
 };
 // @__NO_SIDE_EFFECTS__
 function yo(e) {
@@ -1672,10 +1672,10 @@ function yo(e) {
     );
   };
 }
-const Pp = /* @__PURE__ */ mu(
+const $p = /* @__PURE__ */ mu(
   "perf:start"
   /* PERFORMANCE_START */
-), $p = /* @__PURE__ */ mu(
+), jp = /* @__PURE__ */ mu(
   "perf:end"
   /* PERFORMANCE_END */
 );
@@ -1684,7 +1684,7 @@ function mu(e) {
     $a(e, t.appContext.app, t.uid, t, i, a);
   };
 }
-function jp(e, t, i) {
+function Fp(e, t, i) {
   $a(
     "component:emit",
     e.appContext.app,
@@ -1693,12 +1693,12 @@ function jp(e, t, i) {
     i
   );
 }
-let Je = null, gu = null;
+let Ye = null, gu = null;
 function wn(e) {
-  const t = Je;
-  return Je = e, gu = e && e.type.__scopeId || null, t;
+  const t = Ye;
+  return Ye = e, gu = e && e.type.__scopeId || null, t;
 }
-function Fp(e, t = Je, i) {
+function zp(e, t = Ye, i) {
   if (!t || e._n)
     return e;
   const a = (...n) => {
@@ -1715,18 +1715,18 @@ function Fp(e, t = Je, i) {
   return a._n = !0, a._c = !0, a._d = !0, a;
 }
 function bu(e) {
-  Of(e) && S("Do not use built-in directive ids as custom directive id: " + e);
+  xf(e) && S("Do not use built-in directive ids as custom directive id: " + e);
 }
 function Wa(e, t) {
-  if (Je === null)
+  if (Ye === null)
     return process.env.NODE_ENV !== "production" && S("withDirectives can only be used inside render functions."), e;
-  const i = Xn(Je), a = e.dirs || (e.dirs = []);
+  const i = Xn(Ye), a = e.dirs || (e.dirs = []);
   for (let n = 0; n < t.length; n++) {
     let [s, o, r, c = ue] = t[n];
-    s && (q(s) && (s = {
+    s && (G(s) && (s = {
       mounted: s,
       updated: s
-    }), s.deep && Mt(o), a.push({
+    }), s.deep && Lt(o), a.push({
       dir: s,
       instance: i,
       value: o,
@@ -1737,7 +1737,7 @@ function Wa(e, t) {
   }
   return e;
 }
-function oi(e, t, i, a) {
+function ri(e, t, i, a) {
   const n = e.dirs, s = t && t.dirs;
   for (let o = 0; o < n.length; o++) {
     const r = n[o];
@@ -1751,37 +1751,37 @@ function oi(e, t, i, a) {
     ]), lt());
   }
 }
-function zp(e, t) {
-  if (process.env.NODE_ENV !== "production" && (!De || De.isMounted) && S("provide() can only be used inside setup()."), De) {
-    let i = De.provides;
-    const a = De.parent && De.parent.provides;
-    a === i && (i = De.provides = Object.create(a)), i[e] = t;
+function Up(e, t) {
+  if (process.env.NODE_ENV !== "production" && (!Ve || Ve.isMounted) && S("provide() can only be used inside setup()."), Ve) {
+    let i = Ve.provides;
+    const a = Ve.parent && Ve.parent.provides;
+    a === i && (i = Ve.provides = Object.create(a)), i[e] = t;
   }
 }
-function hi(e, t, i = !1) {
+function _i(e, t, i = !1) {
   const a = Yn();
-  if (a || vi) {
-    let n = vi ? vi._context.provides : a ? a.parent == null || a.ce ? a.vnode.appContext && a.vnode.appContext.provides : a.parent.provides : void 0;
+  if (a || yi) {
+    let n = yi ? yi._context.provides : a ? a.parent == null || a.ce ? a.vnode.appContext && a.vnode.appContext.provides : a.parent.provides : void 0;
     if (n && e in n)
       return n[e];
     if (arguments.length > 1)
-      return i && q(t) ? t.call(a && a.proxy) : t;
+      return i && G(t) ? t.call(a && a.proxy) : t;
     process.env.NODE_ENV !== "production" && S(`injection "${String(e)}" not found.`);
   } else process.env.NODE_ENV !== "production" && S("inject() can only be used inside setup() or functional components.");
 }
 function Ps() {
-  return !!(Yn() || vi);
+  return !!(Yn() || yi);
 }
-const Up = /* @__PURE__ */ Symbol.for("v-scx"), Lp = () => {
+const Lp = /* @__PURE__ */ Symbol.for("v-scx"), Mp = () => {
   {
-    const e = hi(Up);
+    const e = _i(Lp);
     return e || process.env.NODE_ENV !== "production" && S(
       "Server rendering context not provided. Make sure to only call useSSRContext() conditionally in the server build."
     ), e;
   }
 };
 function Ui(e, t, i) {
-  return process.env.NODE_ENV !== "production" && !q(t) && S(
+  return process.env.NODE_ENV !== "production" && !G(t) && S(
     "`watch(fn, options?)` signature has been moved to a separate API. Use `watchEffect(fn, options?)` instead. `watch` now only supports `watch(source, cb, options?) signature."
   ), hu(e, t, i);
 }
@@ -1794,37 +1794,37 @@ function hu(e, t, i = ue) {
   ), o !== void 0 && S(
     'watch() "once" option is only respected when using the watch(source, callback, options?) signature.'
   ));
-  const r = Oe({}, i);
+  const r = Ae({}, i);
   process.env.NODE_ENV !== "production" && (r.onWarn = S);
   const c = t && a || !t && s !== "post";
   let d;
   if (Ea) {
     if (s === "sync") {
-      const p = Lp();
+      const p = Mp();
       d = p.__watcherHandles || (p.__watcherHandles = []);
     } else if (!c) {
       const p = () => {
       };
-      return p.stop = Re, p.resume = Re, p.pause = Re, p;
+      return p.stop = Pe, p.resume = Pe, p.pause = Pe, p;
     }
   }
-  const l = De;
-  r.call = (p, h, k) => yt(p, l, h, k);
+  const l = Ve;
+  r.call = (p, h, w) => yt(p, l, h, w);
   let u = !1;
   s === "post" ? r.scheduler = (p) => {
-    Ye(p, l && l.suspense);
+    Xe(p, l && l.suspense);
   } : s !== "sync" && (u = !0, r.scheduler = (p, h) => {
     h ? p() : Wn(p);
   }), r.augmentJob = (p) => {
     t && (p.flags |= 4), u && (p.flags |= 2, l && (p.id = l.uid, p.i = l));
   };
-  const m = _p(e, t, r);
+  const m = vp(e, t, r);
   return Ea && (d ? d.push(m) : c && m()), m;
 }
-function Mp(e, t, i) {
+function Bp(e, t, i) {
   const a = this.proxy, n = _e(e) ? e.includes(".") ? _u(a, e) : () => a[e] : e.bind(a, a);
   let s;
-  q(t) ? s = t : (s = t.handler, i = t);
+  G(t) ? s = t : (s = t.handler, i = t);
   const o = Fa(this), r = hu(n, s.bind(a), i);
   return o(), r;
 }
@@ -1837,16 +1837,16 @@ function _u(e, t) {
     return a;
   };
 }
-const Bp = /* @__PURE__ */ Symbol("_vte"), Zp = (e) => e.__isTeleport, bs = /* @__PURE__ */ Symbol("_leaveCb");
+const Zp = /* @__PURE__ */ Symbol("_vte"), Hp = (e) => e.__isTeleport, bs = /* @__PURE__ */ Symbol("_leaveCb");
 function ko(e, t) {
   e.shapeFlag & 6 && e.component ? (e.transition = t, ko(e.component.subTree, t)) : e.shapeFlag & 128 ? (e.ssContent.transition = t.clone(e.ssContent), e.ssFallback.transition = t.clone(e.ssFallback)) : e.transition = t;
 }
 // @__NO_SIDE_EFFECTS__
 function vu(e, t) {
-  return q(e) ? (
+  return G(e) ? (
     // #8236: extend call and options.name access are considered side-effects
     // by Rollup, so we have to wrap it in a pure-annotated IIFE.
-    Oe({ name: e.name }, t, { setup: e })
+    Ae({ name: e.name }, t, { setup: e })
   ) : e;
 }
 function yu(e) {
@@ -1859,11 +1859,11 @@ function dr(e, t) {
 }
 const En = /* @__PURE__ */ new WeakMap();
 function ma(e, t, i, a, n = !1) {
-  if (Z(e)) {
+  if (W(e)) {
     e.forEach(
-      (k, w) => ma(
-        k,
-        t && (Z(t) ? t[w] : t),
+      (w, E) => ma(
+        w,
+        t && (W(t) ? t[E] : t),
         i,
         a,
         n
@@ -1882,18 +1882,18 @@ function ma(e, t, i, a, n = !1) {
     );
     return;
   }
-  const d = t && t.r, l = r.refs === ue ? r.refs = {} : r.refs, u = r.setupState, m = /* @__PURE__ */ X(u), p = u === ue ? Cd : (k) => process.env.NODE_ENV !== "production" && (ae(m, k) && !/* @__PURE__ */ pe(m[k]) && S(
-    `Template ref "${k}" used on a non-ref value. It will not work in the production build.`
-  ), cr.has(m[k])) || dr(l, k) ? !1 : ae(m, k), h = (k, w) => !(process.env.NODE_ENV !== "production" && cr.has(k) || w && dr(l, w));
+  const d = t && t.r, l = r.refs === ue ? r.refs = {} : r.refs, u = r.setupState, m = /* @__PURE__ */ X(u), p = u === ue ? Cd : (w) => process.env.NODE_ENV !== "production" && (ie(m, w) && !/* @__PURE__ */ me(m[w]) && S(
+    `Template ref "${w}" used on a non-ref value. It will not work in the production build.`
+  ), cr.has(m[w])) || dr(l, w) ? !1 : ie(m, w), h = (w, E) => !(process.env.NODE_ENV !== "production" && cr.has(w) || E && dr(l, E));
   if (d != null && d !== c) {
     if (ur(t), _e(d))
       l[d] = null, p(d) && (u[d] = null);
-    else if (/* @__PURE__ */ pe(d)) {
-      const k = t;
-      h(d, k.k) && (d.value = null), k.k && (l[k.k] = null);
+    else if (/* @__PURE__ */ me(d)) {
+      const w = t;
+      h(d, w.k) && (d.value = null), w.k && (l[w.k] = null);
     }
   }
-  if (q(c)) {
+  if (G(c)) {
     ut();
     try {
       Ji(c, r, 12, [o, l]);
@@ -1901,30 +1901,30 @@ function ma(e, t, i, a, n = !1) {
       lt();
     }
   } else {
-    const k = _e(c), w = /* @__PURE__ */ pe(c);
-    if (k || w) {
-      const x = () => {
+    const w = _e(c), E = /* @__PURE__ */ me(c);
+    if (w || E) {
+      const A = () => {
         if (e.f) {
-          const L = k ? p(c) ? u[c] : l[c] : h(c) || !e.k ? c.value : l[e.k];
+          const z = w ? p(c) ? u[c] : l[c] : h(c) || !e.k ? c.value : l[e.k];
           if (n)
-            Z(L) && co(L, s);
-          else if (Z(L))
-            L.includes(s) || L.push(s);
-          else if (k)
+            W(z) && co(z, s);
+          else if (W(z))
+            z.includes(s) || z.push(s);
+          else if (w)
             l[c] = [s], p(c) && (u[c] = l[c]);
           else {
-            const D = [s];
-            h(c, e.k) && (c.value = D), e.k && (l[e.k] = D);
+            const R = [s];
+            h(c, e.k) && (c.value = R), e.k && (l[e.k] = R);
           }
-        } else k ? (l[c] = o, p(c) && (u[c] = o)) : w ? (h(c, e.k) && (c.value = o), e.k && (l[e.k] = o)) : process.env.NODE_ENV !== "production" && S("Invalid template ref type:", c, `(${typeof c})`);
+        } else w ? (l[c] = o, p(c) && (u[c] = o)) : E ? (h(c, e.k) && (c.value = o), e.k && (l[e.k] = o)) : process.env.NODE_ENV !== "production" && S("Invalid template ref type:", c, `(${typeof c})`);
       };
       if (o) {
-        const L = () => {
-          x(), En.delete(e);
+        const z = () => {
+          A(), En.delete(e);
         };
-        L.id = -1, En.set(e, L), Ye(L, i);
+        z.id = -1, En.set(e, z), Xe(z, i);
       } else
-        ur(e), x();
+        ur(e), A();
     } else process.env.NODE_ENV !== "production" && S("Invalid template ref type:", c, `(${typeof c})`);
   }
 }
@@ -1935,13 +1935,13 @@ function ur(e) {
 Va().requestIdleCallback;
 Va().cancelIdleCallback;
 const ga = (e) => !!e.type.__asyncLoader, wo = (e) => e.type.__isKeepAlive;
-function Hp(e, t) {
+function Kp(e, t) {
   ku(e, "a", t);
 }
-function Kp(e, t) {
+function Wp(e, t) {
   ku(e, "da", t);
 }
-function ku(e, t, i = De) {
+function ku(e, t, i = Ve) {
   const a = e.__wdc || (e.__wdc = () => {
     let n = i;
     for (; n; ) {
@@ -1954,10 +1954,10 @@ function ku(e, t, i = De) {
   if (qn(t, a, i), i) {
     let n = i.parent;
     for (; n && n.parent; )
-      wo(n.parent.vnode) && Wp(a, t, i, n), n = n.parent;
+      wo(n.parent.vnode) && qp(a, t, i, n), n = n.parent;
   }
 }
-function Wp(e, t, i, a) {
+function qp(e, t, i, a) {
   const n = qn(
     t,
     e,
@@ -1969,7 +1969,7 @@ function Wp(e, t, i, a) {
     co(a[t], n);
   }, i);
 }
-function qn(e, t, i = De, a = !1) {
+function qn(e, t, i = Ve, a = !1) {
   if (i) {
     const n = i[e] || (i[e] = []), s = t.__weh || (t.__weh = (...o) => {
       ut();
@@ -1978,32 +1978,32 @@ function qn(e, t, i = De, a = !1) {
     });
     return a ? n.unshift(s) : n.push(s), s;
   } else if (process.env.NODE_ENV !== "production") {
-    const n = ci(ho[e].replace(/ hook$/, ""));
+    const n = di(ho[e].replace(/ hook$/, ""));
     S(
       `${n} is called when there is no active component instance to be associated with. Lifecycle injection APIs can only be used during execution of setup(). If you are using async setup(), make sure to register lifecycle hooks before the first await statement.`
     );
   }
 }
-const qt = (e) => (t, i = De) => {
+const Wt = (e) => (t, i = Ve) => {
   (!Ea || e === "sp") && qn(e, (...a) => t(...a), i);
-}, qp = qt("bm"), Gp = qt("m"), Jp = qt(
+}, Gp = Wt("bm"), Jp = Wt("m"), Yp = Wt(
   "bu"
-), Yp = qt("u"), Eo = qt(
+), Xp = Wt("u"), Eo = Wt(
   "bum"
-), wu = qt("um"), Xp = qt(
+), wu = Wt("um"), Qp = Wt(
   "sp"
-), Qp = qt("rtg"), em = qt("rtc");
-function tm(e, t = De) {
+), em = Wt("rtg"), tm = Wt("rtc");
+function im(e, t = Ve) {
   qn("ec", e, t);
 }
-const im = /* @__PURE__ */ Symbol.for("v-ndc");
+const am = /* @__PURE__ */ Symbol.for("v-ndc");
 function sn(e, t, i, a) {
   let n;
-  const s = i, o = Z(e);
+  const s = i, o = W(e);
   if (o || _e(e)) {
     const r = o && /* @__PURE__ */ ht(e);
     let c = !1, d = !1;
-    r && (c = !/* @__PURE__ */ Ze(e), d = /* @__PURE__ */ _t(e), e = Bn(e)), n = new Array(e.length);
+    r && (c = !/* @__PURE__ */ He(e), d = /* @__PURE__ */ _t(e), e = Bn(e)), n = new Array(e.length);
     for (let l = 0, u = e.length; l < u; l++)
       n[l] = t(
         c ? d ? Zi(vt(e[l])) : vt(e[l]) : e[l],
@@ -2021,7 +2021,7 @@ function sn(e, t, i, a) {
       for (let r = 0; r < e; r++)
         n[r] = t(r + 1, r, void 0, s);
     }
-  else if (ne(e))
+  else if (ae(e))
     if (e[Symbol.iterator])
       n = Array.from(
         e,
@@ -2039,10 +2039,10 @@ function sn(e, t, i, a) {
     n = [];
   return n;
 }
-const $s = (e) => e ? Hu(e) ? Xn(e) : $s(e.parent) : null, _i = (
+const $s = (e) => e ? Hu(e) ? Xn(e) : $s(e.parent) : null, vi = (
   // Move PURE marker to new line to workaround compiler discarding it
   // due to type annotation
-  /* @__PURE__ */ Oe(/* @__PURE__ */ Object.create(null), {
+  /* @__PURE__ */ Ae(/* @__PURE__ */ Object.create(null), {
     $: (e) => e,
     $el: (e) => e.vnode.el,
     $data: (e) => e.data,
@@ -2059,9 +2059,9 @@ const $s = (e) => e ? Hu(e) ? Xn(e) : $s(e.parent) : null, _i = (
       Wn(e.update);
     }),
     $nextTick: (e) => e.n || (e.n = yn.bind(e.proxy)),
-    $watch: (e) => Mp.bind(e)
+    $watch: (e) => Bp.bind(e)
   })
-), Io = (e) => e === "_" || e === "$", hs = (e, t) => e !== ue && !e.__isScriptSetup && ae(e, t), Eu = {
+), Io = (e) => e === "_" || e === "$", hs = (e, t) => e !== ue && !e.__isScriptSetup && ie(e, t), Eu = {
   get({ _: e }, t) {
     if (t === "__v_skip")
       return !0;
@@ -2084,44 +2084,44 @@ const $s = (e) => e ? Hu(e) ? Xn(e) : $s(e.parent) : null, _i = (
       else {
         if (hs(a, t))
           return o[t] = 1, a[t];
-        if (n !== ue && ae(n, t))
+        if (n !== ue && ie(n, t))
           return o[t] = 2, n[t];
-        if (ae(s, t))
+        if (ie(s, t))
           return o[t] = 3, s[t];
-        if (i !== ue && ae(i, t))
+        if (i !== ue && ie(i, t))
           return o[t] = 4, i[t];
         js && (o[t] = 0);
       }
     }
-    const d = _i[t];
+    const d = vi[t];
     let l, u;
     if (d)
-      return t === "$attrs" ? (Ve(e.attrs, "get", ""), process.env.NODE_ENV !== "production" && Tn()) : process.env.NODE_ENV !== "production" && t === "$slots" && Ve(e, "get", t), d(e);
+      return t === "$attrs" ? (Re(e.attrs, "get", ""), process.env.NODE_ENV !== "production" && Tn()) : process.env.NODE_ENV !== "production" && t === "$slots" && Re(e, "get", t), d(e);
     if (
       // css module (injected by vue-loader)
       (l = r.__cssModules) && (l = l[t])
     )
       return l;
-    if (i !== ue && ae(i, t))
+    if (i !== ue && ie(i, t))
       return o[t] = 4, i[t];
     if (
       // global properties
-      u = c.config.globalProperties, ae(u, t)
+      u = c.config.globalProperties, ie(u, t)
     )
       return u[t];
-    process.env.NODE_ENV !== "production" && Je && (!_e(t) || // #1091 avoid internal isRef/isVNode checks on component instance leading
+    process.env.NODE_ENV !== "production" && Ye && (!_e(t) || // #1091 avoid internal isRef/isVNode checks on component instance leading
     // to infinite warning loop
-    t.indexOf("__v") !== 0) && (n !== ue && Io(t[0]) && ae(n, t) ? S(
+    t.indexOf("__v") !== 0) && (n !== ue && Io(t[0]) && ie(n, t) ? S(
       `Property ${JSON.stringify(
         t
       )} must be accessed via $data because it starts with a reserved character ("$" or "_") and is not proxied on the render context.`
-    ) : e === Je && S(
+    ) : e === Ye && S(
       `Property ${JSON.stringify(t)} was accessed during render but is not defined on instance.`
     ));
   },
   set({ _: e }, t, i) {
     const { data: a, setupState: n, ctx: s } = e;
-    return hs(n, t) ? (n[t] = i, !0) : process.env.NODE_ENV !== "production" && n.__isScriptSetup && ae(n, t) ? (S(`Cannot mutate <script setup> binding "${t}" from Options API.`), !1) : a !== ue && ae(a, t) ? (a[t] = i, !0) : ae(e.props, t) ? (process.env.NODE_ENV !== "production" && S(`Attempting to mutate prop "${t}". Props are readonly.`), !1) : t[0] === "$" && t.slice(1) in e ? (process.env.NODE_ENV !== "production" && S(
+    return hs(n, t) ? (n[t] = i, !0) : process.env.NODE_ENV !== "production" && n.__isScriptSetup && ie(n, t) ? (S(`Cannot mutate <script setup> binding "${t}" from Options API.`), !1) : a !== ue && ie(a, t) ? (a[t] = i, !0) : ie(e.props, t) ? (process.env.NODE_ENV !== "production" && S(`Attempting to mutate prop "${t}". Props are readonly.`), !1) : t[0] === "$" && t.slice(1) in e ? (process.env.NODE_ENV !== "production" && S(
       `Attempting to mutate public property "${t}". Properties starting with $ are reserved and readonly.`
     ), !1) : (process.env.NODE_ENV !== "production" && t in e.appContext.config.globalProperties ? Object.defineProperty(s, t, {
       enumerable: !0,
@@ -2133,33 +2133,33 @@ const $s = (e) => e ? Hu(e) ? Xn(e) : $s(e.parent) : null, _i = (
     _: { data: e, setupState: t, accessCache: i, ctx: a, appContext: n, props: s, type: o }
   }, r) {
     let c;
-    return !!(i[r] || e !== ue && r[0] !== "$" && ae(e, r) || hs(t, r) || ae(s, r) || ae(a, r) || ae(_i, r) || ae(n.config.globalProperties, r) || (c = o.__cssModules) && c[r]);
+    return !!(i[r] || e !== ue && r[0] !== "$" && ie(e, r) || hs(t, r) || ie(s, r) || ie(a, r) || ie(vi, r) || ie(n.config.globalProperties, r) || (c = o.__cssModules) && c[r]);
   },
   defineProperty(e, t, i) {
-    return i.get != null ? e._.accessCache[t] = 0 : ae(i, "value") && this.set(e, t, i.value, null), Reflect.defineProperty(e, t, i);
+    return i.get != null ? e._.accessCache[t] = 0 : ie(i, "value") && this.set(e, t, i.value, null), Reflect.defineProperty(e, t, i);
   }
 };
 process.env.NODE_ENV !== "production" && (Eu.ownKeys = (e) => (S(
   "Avoid app logic that relies on enumerating keys on a component instance. The keys will be empty in production mode to avoid performance overhead."
 ), Reflect.ownKeys(e)));
-function am(e) {
+function nm(e) {
   const t = {};
   return Object.defineProperty(t, "_", {
     configurable: !0,
     enumerable: !1,
     get: () => e
-  }), Object.keys(_i).forEach((i) => {
+  }), Object.keys(vi).forEach((i) => {
     Object.defineProperty(t, i, {
       configurable: !0,
       enumerable: !1,
-      get: () => _i[i](e),
+      get: () => vi[i](e),
       // intercepted by the proxy so no need for implementation,
       // but needed to prevent set errors
-      set: Re
+      set: Pe
     });
   }), t;
 }
-function nm(e) {
+function sm(e) {
   const {
     ctx: t,
     propsOptions: [i]
@@ -2169,11 +2169,11 @@ function nm(e) {
       enumerable: !0,
       configurable: !0,
       get: () => e.props[a],
-      set: Re
+      set: Pe
     });
   });
 }
-function sm(e) {
+function om(e) {
   const { ctx: t, setupState: i } = e;
   Object.keys(/* @__PURE__ */ X(i)).forEach((a) => {
     if (!i.__isScriptSetup) {
@@ -2189,25 +2189,25 @@ function sm(e) {
         enumerable: !0,
         configurable: !0,
         get: () => i[a],
-        set: Re
+        set: Pe
       });
     }
   });
 }
 function lr(e) {
-  return Z(e) ? e.reduce(
+  return W(e) ? e.reduce(
     (t, i) => (t[i] = null, t),
     {}
   ) : e;
 }
-function om() {
+function rm() {
   const e = /* @__PURE__ */ Object.create(null);
   return (t, i) => {
     e[i] ? S(`${t} property "${i}" is already defined in ${e[i]}.`) : e[i] = t;
   };
 }
 let js = !0;
-function rm(e) {
+function cm(e) {
   const t = Tu(e), i = e.proxy, a = e.ctx;
   js = !1, t.beforeCreate && fr(t.beforeCreate, e, "bc");
   const {
@@ -2224,116 +2224,116 @@ function rm(e) {
     mounted: m,
     beforeUpdate: p,
     updated: h,
-    activated: k,
-    deactivated: w,
-    beforeDestroy: x,
-    beforeUnmount: L,
-    destroyed: D,
+    activated: w,
+    deactivated: E,
+    beforeDestroy: A,
+    beforeUnmount: z,
+    destroyed: R,
     unmounted: H,
     render: N,
     renderTracked: ee,
-    renderTriggered: z,
-    errorCaptured: Q,
-    serverPrefetch: te,
+    renderTriggered: B,
+    errorCaptured: le,
+    serverPrefetch: q,
     // public API
     expose: j,
     inheritAttrs: $,
     // assets
-    components: J,
-    directives: me,
-    filters: $e
-  } = t, ze = process.env.NODE_ENV !== "production" ? om() : null;
+    components: Q,
+    directives: re,
+    filters: Ce
+  } = t, je = process.env.NODE_ENV !== "production" ? rm() : null;
   if (process.env.NODE_ENV !== "production") {
-    const [R] = e.propsOptions;
-    if (R)
-      for (const G in R)
-        ze("Props", G);
+    const [P] = e.propsOptions;
+    if (P)
+      for (const J in P)
+        je("Props", J);
   }
-  if (d && cm(d, a, ze), o)
-    for (const R in o) {
-      const G = o[R];
-      q(G) ? (process.env.NODE_ENV !== "production" ? Object.defineProperty(a, R, {
-        value: G.bind(i),
+  if (d && dm(d, a, je), o)
+    for (const P in o) {
+      const J = o[P];
+      G(J) ? (process.env.NODE_ENV !== "production" ? Object.defineProperty(a, P, {
+        value: J.bind(i),
         configurable: !0,
         enumerable: !0,
         writable: !0
-      }) : a[R] = G.bind(i), process.env.NODE_ENV !== "production" && ze("Methods", R)) : process.env.NODE_ENV !== "production" && S(
-        `Method "${R}" has type "${typeof G}" in the component definition. Did you reference the function correctly?`
+      }) : a[P] = J.bind(i), process.env.NODE_ENV !== "production" && je("Methods", P)) : process.env.NODE_ENV !== "production" && S(
+        `Method "${P}" has type "${typeof J}" in the component definition. Did you reference the function correctly?`
       );
     }
   if (n) {
-    process.env.NODE_ENV !== "production" && !q(n) && S(
+    process.env.NODE_ENV !== "production" && !G(n) && S(
       "The data option must be a function. Plain object usage is no longer supported."
     );
-    const R = n.call(i, i);
-    if (process.env.NODE_ENV !== "production" && uo(R) && S(
+    const P = n.call(i, i);
+    if (process.env.NODE_ENV !== "production" && uo(P) && S(
       "data() returned a Promise - note data() cannot be async; If you intend to perform data fetching before component renders, use async setup() + <Suspense>."
-    ), !ne(R))
+    ), !ae(P))
       process.env.NODE_ENV !== "production" && S("data() should return an object.");
-    else if (e.data = /* @__PURE__ */ Hn(R), process.env.NODE_ENV !== "production")
-      for (const G in R)
-        ze("Data", G), Io(G[0]) || Object.defineProperty(a, G, {
+    else if (e.data = /* @__PURE__ */ Hn(P), process.env.NODE_ENV !== "production")
+      for (const J in P)
+        je("Data", J), Io(J[0]) || Object.defineProperty(a, J, {
           configurable: !0,
           enumerable: !0,
-          get: () => R[G],
-          set: Re
+          get: () => P[J],
+          set: Pe
         });
   }
   if (js = !0, s)
-    for (const R in s) {
-      const G = s[R], ie = q(G) ? G.bind(i, i) : q(G.get) ? G.get.bind(i, i) : Re;
-      process.env.NODE_ENV !== "production" && ie === Re && S(`Computed property "${R}" has no getter.`);
-      const ct = !q(G) && q(G.set) ? G.set.bind(i) : process.env.NODE_ENV !== "production" ? () => {
+    for (const P in s) {
+      const J = s[P], te = G(J) ? J.bind(i, i) : G(J.get) ? J.get.bind(i, i) : Pe;
+      process.env.NODE_ENV !== "production" && te === Pe && S(`Computed property "${P}" has no getter.`);
+      const Me = !G(J) && G(J.set) ? J.set.bind(i) : process.env.NODE_ENV !== "production" ? () => {
         S(
-          `Write operation failed: computed property "${R}" is readonly.`
+          `Write operation failed: computed property "${P}" is readonly.`
         );
-      } : Re, Le = Yt({
-        get: ie,
-        set: ct
+      } : Pe, Ue = Xt({
+        get: te,
+        set: Me
       });
-      Object.defineProperty(a, R, {
+      Object.defineProperty(a, P, {
         enumerable: !0,
         configurable: !0,
-        get: () => Le.value,
-        set: (Te) => Le.value = Te
-      }), process.env.NODE_ENV !== "production" && ze("Computed", R);
+        get: () => Ue.value,
+        set: (Oe) => Ue.value = Oe
+      }), process.env.NODE_ENV !== "production" && je("Computed", P);
     }
   if (r)
-    for (const R in r)
-      Iu(r[R], a, i, R);
+    for (const P in r)
+      Iu(r[P], a, i, P);
   if (c) {
-    const R = q(c) ? c.call(i) : c;
-    Reflect.ownKeys(R).forEach((G) => {
-      zp(G, R[G]);
+    const P = G(c) ? c.call(i) : c;
+    Reflect.ownKeys(P).forEach((J) => {
+      Up(J, P[J]);
     });
   }
   l && fr(l, e, "c");
-  function le(R, G) {
-    Z(G) ? G.forEach((ie) => R(ie.bind(i))) : G && R(G.bind(i));
+  function pe(P, J) {
+    W(J) ? J.forEach((te) => P(te.bind(i))) : J && P(J.bind(i));
   }
-  if (le(qp, u), le(Gp, m), le(Jp, p), le(Yp, h), le(Hp, k), le(Kp, w), le(tm, Q), le(em, ee), le(Qp, z), le(Eo, L), le(wu, H), le(Xp, te), Z(j))
+  if (pe(Gp, u), pe(Jp, m), pe(Yp, p), pe(Xp, h), pe(Kp, w), pe(Wp, E), pe(im, le), pe(tm, ee), pe(em, B), pe(Eo, z), pe(wu, H), pe(Qp, q), W(j))
     if (j.length) {
-      const R = e.exposed || (e.exposed = {});
-      j.forEach((G) => {
-        Object.defineProperty(R, G, {
-          get: () => i[G],
-          set: (ie) => i[G] = ie,
+      const P = e.exposed || (e.exposed = {});
+      j.forEach((J) => {
+        Object.defineProperty(P, J, {
+          get: () => i[J],
+          set: (te) => i[J] = te,
           enumerable: !0
         });
       });
     } else e.exposed || (e.exposed = {});
-  N && e.render === Re && (e.render = N), $ != null && (e.inheritAttrs = $), J && (e.components = J), me && (e.directives = me), te && yu(e);
+  N && e.render === Pe && (e.render = N), $ != null && (e.inheritAttrs = $), Q && (e.components = Q), re && (e.directives = re), q && yu(e);
 }
-function cm(e, t, i = Re) {
-  Z(e) && (e = Fs(e));
+function dm(e, t, i = Pe) {
+  W(e) && (e = Fs(e));
   for (const a in e) {
     const n = e[a];
     let s;
-    ne(n) ? "default" in n ? s = hi(
+    ae(n) ? "default" in n ? s = _i(
       n.from || a,
       n.default,
       !0
-    ) : s = hi(n.from || a) : s = hi(n), /* @__PURE__ */ pe(s) ? Object.defineProperty(t, a, {
+    ) : s = _i(n.from || a) : s = _i(n), /* @__PURE__ */ me(s) ? Object.defineProperty(t, a, {
       enumerable: !0,
       configurable: !0,
       get: () => s.value,
@@ -2343,7 +2343,7 @@ function cm(e, t, i = Re) {
 }
 function fr(e, t, i) {
   yt(
-    Z(e) ? e.map((a) => a.bind(t.proxy)) : e.bind(t.proxy),
+    W(e) ? e.map((a) => a.bind(t.proxy)) : e.bind(t.proxy),
     t,
     i
   );
@@ -2352,15 +2352,15 @@ function Iu(e, t, i, a) {
   let n = a.includes(".") ? _u(i, a) : () => i[a];
   if (_e(e)) {
     const s = t[e];
-    q(s) ? Ui(n, s) : process.env.NODE_ENV !== "production" && S(`Invalid watch handler specified by key "${e}"`, s);
-  } else if (q(e))
+    G(s) ? Ui(n, s) : process.env.NODE_ENV !== "production" && S(`Invalid watch handler specified by key "${e}"`, s);
+  } else if (G(e))
     Ui(n, e.bind(i));
-  else if (ne(e))
-    if (Z(e))
+  else if (ae(e))
+    if (W(e))
       e.forEach((s) => Iu(s, t, i, a));
     else {
-      const s = q(e.handler) ? e.handler.bind(i) : t[e.handler];
-      q(s) ? Ui(n, s, e) : process.env.NODE_ENV !== "production" && S(`Invalid watch handler specified by key "${e.handler}"`, s);
+      const s = G(e.handler) ? e.handler.bind(i) : t[e.handler];
+      G(s) ? Ui(n, s, e) : process.env.NODE_ENV !== "production" && S(`Invalid watch handler specified by key "${e.handler}"`, s);
     }
   else process.env.NODE_ENV !== "production" && S(`Invalid watch option: "${a}"`, e);
 }
@@ -2373,7 +2373,7 @@ function Tu(e) {
   let c;
   return r ? c = r : !n.length && !i && !a ? c = t : (c = {}, n.length && n.forEach(
     (d) => In(c, d, o, !0)
-  ), In(c, t, o)), ne(t) && s.set(t, c), c;
+  ), In(c, t, o)), ae(t) && s.set(t, c), c;
 }
 function In(e, t, i, a = !1) {
   const { mixins: n, extends: s } = t;
@@ -2386,12 +2386,12 @@ function In(e, t, i, a = !1) {
         '"expose" option is ignored when declared in mixins or extends. It should only be declared in the base component itself.'
       );
     else {
-      const r = dm[o] || i && i[o];
+      const r = um[o] || i && i[o];
       e[o] = r ? r(e[o], t[o]) : t[o];
     }
   return e;
 }
-const dm = {
+const um = {
   data: pr,
   props: mr,
   emits: mr,
@@ -2399,42 +2399,42 @@ const dm = {
   methods: oa,
   computed: oa,
   // lifecycle
-  beforeCreate: Ke,
-  created: Ke,
-  beforeMount: Ke,
-  mounted: Ke,
-  beforeUpdate: Ke,
-  updated: Ke,
-  beforeDestroy: Ke,
-  beforeUnmount: Ke,
-  destroyed: Ke,
-  unmounted: Ke,
-  activated: Ke,
-  deactivated: Ke,
-  errorCaptured: Ke,
-  serverPrefetch: Ke,
+  beforeCreate: We,
+  created: We,
+  beforeMount: We,
+  mounted: We,
+  beforeUpdate: We,
+  updated: We,
+  beforeDestroy: We,
+  beforeUnmount: We,
+  destroyed: We,
+  unmounted: We,
+  activated: We,
+  deactivated: We,
+  errorCaptured: We,
+  serverPrefetch: We,
   // assets
   components: oa,
   directives: oa,
   // watch
-  watch: lm,
+  watch: fm,
   // provide / inject
   provide: pr,
-  inject: um
+  inject: lm
 };
 function pr(e, t) {
   return t ? e ? function() {
-    return Oe(
-      q(e) ? e.call(this, this) : e,
-      q(t) ? t.call(this, this) : t
+    return Ae(
+      G(e) ? e.call(this, this) : e,
+      G(t) ? t.call(this, this) : t
     );
   } : t : e;
 }
-function um(e, t) {
+function lm(e, t) {
   return oa(Fs(e), Fs(t));
 }
 function Fs(e) {
-  if (Z(e)) {
+  if (W(e)) {
     const t = {};
     for (let i = 0; i < e.length; i++)
       t[e[i]] = e[i];
@@ -2442,25 +2442,25 @@ function Fs(e) {
   }
   return e;
 }
-function Ke(e, t) {
+function We(e, t) {
   return e ? [...new Set([].concat(e, t))] : t;
 }
 function oa(e, t) {
-  return e ? Oe(/* @__PURE__ */ Object.create(null), e, t) : t;
+  return e ? Ae(/* @__PURE__ */ Object.create(null), e, t) : t;
 }
 function mr(e, t) {
-  return e ? Z(e) && Z(t) ? [.../* @__PURE__ */ new Set([...e, ...t])] : Oe(
+  return e ? W(e) && W(t) ? [.../* @__PURE__ */ new Set([...e, ...t])] : Ae(
     /* @__PURE__ */ Object.create(null),
     lr(e),
     lr(t ?? {})
   ) : t;
 }
-function lm(e, t) {
+function fm(e, t) {
   if (!e) return t;
   if (!t) return e;
-  const i = Oe(/* @__PURE__ */ Object.create(null), e);
+  const i = Ae(/* @__PURE__ */ Object.create(null), e);
   for (const a in t)
-    i[a] = Ke(e[a], t[a]);
+    i[a] = We(e[a], t[a]);
   return i;
 }
 function Au() {
@@ -2484,14 +2484,14 @@ function Au() {
     emitsCache: /* @__PURE__ */ new WeakMap()
   };
 }
-let fm = 0;
-function pm(e, t) {
+let pm = 0;
+function mm(e, t) {
   return function(a, n = null) {
-    q(a) || (a = Oe({}, a)), n != null && !ne(n) && (process.env.NODE_ENV !== "production" && S("root props passed to app.mount() must be an object."), n = null);
+    G(a) || (a = Ae({}, a)), n != null && !ae(n) && (process.env.NODE_ENV !== "production" && S("root props passed to app.mount() must be an object."), n = null);
     const s = Au(), o = /* @__PURE__ */ new WeakSet(), r = [];
     let c = !1;
     const d = s.app = {
-      _uid: fm++,
+      _uid: pm++,
       _component: a,
       _props: n,
       _container: null,
@@ -2507,7 +2507,7 @@ function pm(e, t) {
         );
       },
       use(l, ...u) {
-        return o.has(l) ? process.env.NODE_ENV !== "production" && S("Plugin has already been applied to target app.") : l && q(l.install) ? (o.add(l), l.install(d, ...u)) : q(l) ? (o.add(l), l(d, ...u)) : process.env.NODE_ENV !== "production" && S(
+        return o.has(l) ? process.env.NODE_ENV !== "production" && S("Plugin has already been applied to target app.") : l && G(l.install) ? (o.add(l), l.install(d, ...u)) : G(l) ? (o.add(l), l(d, ...u)) : process.env.NODE_ENV !== "production" && S(
           'A plugin must either be a function or an object with an "install" function.'
         ), d;
       },
@@ -2533,9 +2533,9 @@ function pm(e, t) {
           );
           const p = d._ceVNode || Dt(a, n);
           return p.appContext = s, m === !0 ? m = "svg" : m === !1 && (m = void 0), process.env.NODE_ENV !== "production" && (s.reload = () => {
-            const h = ei(p);
+            const h = ti(p);
             h.el = null, e(h, l, m);
-          }), e(p, l, m), c = !0, d._container = l, l.__vue_app__ = d, process.env.NODE_ENV !== "production" && (d._instance = p.component, Np(d, Ar)), Xn(p.component);
+          }), e(p, l, m), c = !0, d._container = l, l.__vue_app__ = d, process.env.NODE_ENV !== "production" && (d._instance = p.component, Cp(d, Ar)), Xn(p.component);
         }
       },
       onUnmount(l) {
@@ -2548,31 +2548,31 @@ function pm(e, t) {
           r,
           d._instance,
           16
-        ), e(null, d._container), process.env.NODE_ENV !== "production" && (d._instance = null, Cp(d)), delete d._container.__vue_app__) : process.env.NODE_ENV !== "production" && S("Cannot unmount an app that is not mounted.");
+        ), e(null, d._container), process.env.NODE_ENV !== "production" && (d._instance = null, Dp(d)), delete d._container.__vue_app__) : process.env.NODE_ENV !== "production" && S("Cannot unmount an app that is not mounted.");
       },
       provide(l, u) {
-        return process.env.NODE_ENV !== "production" && l in s.provides && (ae(s.provides, l) ? S(
+        return process.env.NODE_ENV !== "production" && l in s.provides && (ie(s.provides, l) ? S(
           `App already provides property with key "${String(l)}". It will be overwritten with the new value.`
         ) : S(
           `App already provides property with key "${String(l)}" inherited from its parent element. It will be overwritten with the new value.`
         )), s.provides[l] = u, d;
       },
       runWithContext(l) {
-        const u = vi;
-        vi = d;
+        const u = yi;
+        yi = d;
         try {
           return l();
         } finally {
-          vi = u;
+          yi = u;
         }
       }
     };
     return d;
   };
 }
-let vi = null;
-const mm = (e, t) => t === "modelValue" || t === "model-value" ? e.modelModifiers : e[`${t}Modifiers`] || e[`${Qe(t)}Modifiers`] || e[`${Qt(t)}Modifiers`];
-function gm(e, t, ...i) {
+let yi = null;
+const gm = (e, t) => t === "modelValue" || t === "model-value" ? e.modelModifiers : e[`${t}Modifiers`] || e[`${et(t)}Modifiers`] || e[`${ei(t)}Modifiers`];
+function bm(e, t, ...i) {
   if (e.isUnmounted) return;
   const a = e.vnode.props || ue;
   if (process.env.NODE_ENV !== "production") {
@@ -2582,32 +2582,32 @@ function gm(e, t, ...i) {
     } = e;
     if (l)
       if (!(t in l))
-        (!u || !(ci(Qe(t)) in u)) && S(
-          `Component emitted event "${t}" but it is neither declared in the emits option nor as an "${ci(Qe(t))}" prop.`
+        (!u || !(di(et(t)) in u)) && S(
+          `Component emitted event "${t}" but it is neither declared in the emits option nor as an "${di(et(t))}" prop.`
         );
       else {
         const m = l[t];
-        q(m) && (m(...i) || S(
+        G(m) && (m(...i) || S(
           `Invalid event arguments: event validation failed for event "${t}".`
         ));
       }
   }
   let n = i;
-  const s = t.startsWith("update:"), o = s && mm(a, t.slice(7));
-  if (o && (o.trim && (n = i.map((l) => _e(l) ? l.trim() : l)), o.number && (n = i.map(fo))), process.env.NODE_ENV !== "production" && jp(e, t, n), process.env.NODE_ENV !== "production") {
+  const s = t.startsWith("update:"), o = s && gm(a, t.slice(7));
+  if (o && (o.trim && (n = i.map((l) => _e(l) ? l.trim() : l)), o.number && (n = i.map(fo))), process.env.NODE_ENV !== "production" && Fp(e, t, n), process.env.NODE_ENV !== "production") {
     const l = t.toLowerCase();
-    l !== t && a[ci(l)] && S(
+    l !== t && a[di(l)] && S(
       `Event "${l}" is emitted in component ${za(
         e,
         e.type
-      )} but the handler is registered for "${t}". Note that HTML attributes are case-insensitive and you cannot use v-on to listen to camelCase events when using in-DOM templates. You should probably use "${Qt(
+      )} but the handler is registered for "${t}". Note that HTML attributes are case-insensitive and you cannot use v-on to listen to camelCase events when using in-DOM templates. You should probably use "${ei(
         t
       )}" instead of "${t}".`
     );
   }
-  let r, c = a[r = ci(t)] || // also try camelCase event handler (#2249)
-  a[r = ci(Qe(t))];
-  !c && s && (c = a[r = ci(Qt(t))]), c && yt(
+  let r, c = a[r = di(t)] || // also try camelCase event handler (#2249)
+  a[r = di(et(t))];
+  !c && s && (c = a[r = di(ei(t))]), c && yt(
     c,
     e,
     6,
@@ -2627,24 +2627,24 @@ function gm(e, t, ...i) {
     );
   }
 }
-const bm = /* @__PURE__ */ new WeakMap();
+const hm = /* @__PURE__ */ new WeakMap();
 function Ou(e, t, i = !1) {
-  const a = i ? bm : t.emitsCache, n = a.get(e);
+  const a = i ? hm : t.emitsCache, n = a.get(e);
   if (n !== void 0)
     return n;
   const s = e.emits;
   let o = {}, r = !1;
-  if (!q(e)) {
+  if (!G(e)) {
     const c = (d) => {
       const l = Ou(d, t, !0);
-      l && (r = !0, Oe(o, l));
+      l && (r = !0, Ae(o, l));
     };
     !i && t.mixins.length && t.mixins.forEach(c), e.extends && c(e.extends), e.mixins && e.mixins.forEach(c);
   }
-  return !s && !r ? (ne(e) && a.set(e, null), null) : (Z(s) ? s.forEach((c) => o[c] = null) : Oe(o, s), ne(e) && a.set(e, o), o);
+  return !s && !r ? (ae(e) && a.set(e, null), null) : (W(s) ? s.forEach((c) => o[c] = null) : Ae(o, s), ae(e) && a.set(e, o), o);
 }
 function Gn(e, t) {
-  return !e || !Ca(t) ? !1 : (t = t.slice(2), t = t === "Once" ? t : t.replace(/Once$/, ""), ae(e, t[0].toLowerCase() + t.slice(1)) || ae(e, Qt(t)) || ae(e, t));
+  return !e || !Ca(t) ? !1 : (t = t.slice(2), t = t === "Once" ? t : t.replace(/Once$/, ""), ie(e, t[0].toLowerCase() + t.slice(1)) || ie(e, ei(t)) || ie(e, t));
 }
 let zs = !1;
 function Tn() {
@@ -2666,22 +2666,22 @@ function gr(e) {
     data: m,
     setupState: p,
     ctx: h,
-    inheritAttrs: k
-  } = e, w = wn(e);
-  let x, L;
+    inheritAttrs: w
+  } = e, E = wn(e);
+  let A, z;
   process.env.NODE_ENV !== "production" && (zs = !1);
   try {
     if (i.shapeFlag & 4) {
       const N = n || a, ee = process.env.NODE_ENV !== "production" && p.__isScriptSetup ? new Proxy(N, {
-        get(z, Q, te) {
+        get(B, le, q) {
           return S(
             `Property '${String(
-              Q
+              le
             )}' was accessed via 'this'. Avoid using 'this' in templates.`
-          ), Reflect.get(z, Q, te);
+          ), Reflect.get(B, le, q);
         }
       }) : N;
-      x = mt(
+      A = mt(
         d.call(
           ee,
           N,
@@ -2691,10 +2691,10 @@ function gr(e) {
           m,
           h
         )
-      ), L = r;
+      ), z = r;
     } else {
       const N = t;
-      process.env.NODE_ENV !== "production" && r === u && Tn(), x = mt(
+      process.env.NODE_ENV !== "production" && r === u && Tn(), A = mt(
         N.length > 1 ? N(
           process.env.NODE_ENV !== "production" ? /* @__PURE__ */ Nt(u) : u,
           process.env.NODE_ENV !== "production" ? {
@@ -2708,39 +2708,39 @@ function gr(e) {
           process.env.NODE_ENV !== "production" ? /* @__PURE__ */ Nt(u) : u,
           null
         )
-      ), L = t.props ? r : hm(r);
+      ), z = t.props ? r : _m(r);
     }
   } catch (N) {
-    ba.length = 0, Pa(N, e, 1), x = Dt(st);
+    ba.length = 0, Pa(N, e, 1), A = Dt(ot);
   }
-  let D = x, H;
-  if (process.env.NODE_ENV !== "production" && x.patchFlag > 0 && x.patchFlag & 2048 && ([D, H] = xu(x)), L && k !== !1) {
-    const N = Object.keys(L), { shapeFlag: ee } = D;
+  let R = A, H;
+  if (process.env.NODE_ENV !== "production" && A.patchFlag > 0 && A.patchFlag & 2048 && ([R, H] = xu(A)), z && w !== !1) {
+    const N = Object.keys(z), { shapeFlag: ee } = R;
     if (N.length) {
       if (ee & 7)
-        s && N.some(_a) && (L = _m(
-          L,
+        s && N.some(_a) && (z = vm(
+          z,
           s
-        )), D = ei(D, L, !1, !0);
-      else if (process.env.NODE_ENV !== "production" && !zs && D.type !== st) {
-        const z = Object.keys(r), Q = [], te = [];
-        for (let j = 0, $ = z.length; j < $; j++) {
-          const J = z[j];
-          Ca(J) ? _a(J) || Q.push(J[2].toLowerCase() + J.slice(3)) : te.push(J);
+        )), R = ti(R, z, !1, !0);
+      else if (process.env.NODE_ENV !== "production" && !zs && R.type !== ot) {
+        const B = Object.keys(r), le = [], q = [];
+        for (let j = 0, $ = B.length; j < $; j++) {
+          const Q = B[j];
+          Ca(Q) ? _a(Q) || le.push(Q[2].toLowerCase() + Q.slice(3)) : q.push(Q);
         }
-        te.length && S(
-          `Extraneous non-props attributes (${te.join(", ")}) were passed to component but could not be automatically inherited because component renders fragment or text or teleport root nodes.`
-        ), Q.length && S(
-          `Extraneous non-emits event listeners (${Q.join(", ")}) were passed to component but could not be automatically inherited because component renders fragment or text root nodes. If the listener is intended to be a component custom event listener only, declare it using the "emits" option.`
+        q.length && S(
+          `Extraneous non-props attributes (${q.join(", ")}) were passed to component but could not be automatically inherited because component renders fragment or text or teleport root nodes.`
+        ), le.length && S(
+          `Extraneous non-emits event listeners (${le.join(", ")}) were passed to component but could not be automatically inherited because component renders fragment or text root nodes. If the listener is intended to be a component custom event listener only, declare it using the "emits" option.`
         );
       }
     }
   }
-  return i.dirs && (process.env.NODE_ENV !== "production" && !br(D) && S(
+  return i.dirs && (process.env.NODE_ENV !== "production" && !br(R) && S(
     "Runtime directive used on component with non-element root node. The directives will not function as intended."
-  ), D = ei(D, null, !1, !0), D.dirs = D.dirs ? D.dirs.concat(i.dirs) : i.dirs), i.transition && (process.env.NODE_ENV !== "production" && !br(D) && S(
+  ), R = ti(R, null, !1, !0), R.dirs = R.dirs ? R.dirs.concat(i.dirs) : i.dirs), i.transition && (process.env.NODE_ENV !== "production" && !br(R) && S(
     "Component inside <Transition> renders non-element root node that cannot be animated."
-  ), ko(D, i.transition)), process.env.NODE_ENV !== "production" && H ? H(D) : x = D, wn(w), x;
+  ), ko(R, i.transition)), process.env.NODE_ENV !== "production" && H ? H(R) : A = R, wn(E), A;
 }
 const xu = (e) => {
   const t = e.children, i = e.dynamicChildren, a = To(t, !1);
@@ -2758,7 +2758,7 @@ function To(e, t = !0) {
   for (let a = 0; a < e.length; a++) {
     const n = e[a];
     if (Jn(n)) {
-      if (n.type !== st || n.children === "v-if") {
+      if (n.type !== ot || n.children === "v-if") {
         if (i)
           return;
         if (i = n, process.env.NODE_ENV !== "production" && t && i.patchFlag > 0 && i.patchFlag & 2048)
@@ -2769,20 +2769,20 @@ function To(e, t = !0) {
   }
   return i;
 }
-const hm = (e) => {
+const _m = (e) => {
   let t;
   for (const i in e)
     (i === "class" || i === "style" || Ca(i)) && ((t || (t = {}))[i] = e[i]);
   return t;
-}, _m = (e, t) => {
+}, vm = (e, t) => {
   const i = {};
   for (const a in e)
     (!_a(a) || !(a.slice(9) in t)) && (i[a] = e[a]);
   return i;
-}, br = (e) => e.shapeFlag & 7 || e.type === st;
-function vm(e, t, i) {
+}, br = (e) => e.shapeFlag & 7 || e.type === ot;
+function ym(e, t, i) {
   const { props: a, children: n, component: s } = e, { props: o, children: r, patchFlag: c } = t, d = s.emitsOptions;
-  if (process.env.NODE_ENV !== "production" && (n || r) && at || t.dirs || t.transition)
+  if (process.env.NODE_ENV !== "production" && (n || r) && nt || t.dirs || t.transition)
     return !0;
   if (i && c >= 0) {
     if (c & 1024)
@@ -2814,9 +2814,9 @@ function hr(e, t, i) {
 }
 function Su(e, t, i) {
   const a = e[i], n = t[i];
-  return i === "style" && ne(a) && ne(n) ? !Ra(a, n) : a !== n;
+  return i === "style" && ae(a) && ae(n) ? !Ra(a, n) : a !== n;
 }
-function ym({ vnode: e, parent: t, suspense: i }, a) {
+function km({ vnode: e, parent: t, suspense: i }, a) {
   for (; t; ) {
     const n = t.subTree;
     if (n.suspense && n.suspense.activeBranch === e && (n.suspense.vnode.el = n.el = a, e = n), n === e)
@@ -2827,20 +2827,20 @@ function ym({ vnode: e, parent: t, suspense: i }, a) {
   i && i.activeBranch === e && (i.vnode.el = a);
 }
 const Nu = {}, Cu = () => Object.create(Nu), Du = (e) => Object.getPrototypeOf(e) === Nu;
-function km(e, t, i, a = !1) {
+function wm(e, t, i, a = !1) {
   const n = {}, s = Cu();
   e.propsDefaults = /* @__PURE__ */ Object.create(null), Vu(e, t, n, s);
   for (const o in e.propsOptions[0])
     o in n || (n[o] = void 0);
-  process.env.NODE_ENV !== "production" && Pu(t || {}, n, e), i ? e.props = a ? n : /* @__PURE__ */ cp(n) : e.type.props ? e.props = n : e.props = s, e.attrs = s;
+  process.env.NODE_ENV !== "production" && Pu(t || {}, n, e), i ? e.props = a ? n : /* @__PURE__ */ dp(n) : e.type.props ? e.props = n : e.props = s, e.attrs = s;
 }
-function wm(e) {
+function Em(e) {
   for (; e; ) {
     if (e.type.__hmrId) return !0;
     e = e.parent;
   }
 }
-function Em(e, t, i, a) {
+function Im(e, t, i, a) {
   const {
     props: n,
     attrs: s,
@@ -2851,7 +2851,7 @@ function Em(e, t, i, a) {
     // always force full diff in dev
     // - #1942 if hmr is enabled with sfc component
     // - vite#872 non-sfc component used by sfc component
-    !(process.env.NODE_ENV !== "production" && wm(e)) && (a || o > 0) && !(o & 16)
+    !(process.env.NODE_ENV !== "production" && Em(e)) && (a || o > 0) && !(o & 16)
   ) {
     if (o & 8) {
       const l = e.vnode.dynamicProps;
@@ -2861,10 +2861,10 @@ function Em(e, t, i, a) {
           continue;
         const p = t[m];
         if (c)
-          if (ae(s, m))
+          if (ie(s, m))
             p !== s[m] && (s[m] = p, d = !0);
           else {
-            const h = Qe(m);
+            const h = et(m);
             n[h] = Us(
               c,
               r,
@@ -2883,9 +2883,9 @@ function Em(e, t, i, a) {
     let l;
     for (const u in r)
       (!t || // for camelCase
-      !ae(t, u) && // it's possible the original props was passed in as kebab-case
+      !ie(t, u) && // it's possible the original props was passed in as kebab-case
       // and converted to camelCase (#955)
-      ((l = Qt(u)) === u || !ae(t, l))) && (c ? i && // for camelCase
+      ((l = ei(u)) === u || !ie(t, l))) && (c ? i && // for camelCase
       (i[u] !== void 0 || // for kebab-case
       i[l] !== void 0) && (n[u] = Us(
         c,
@@ -2897,7 +2897,7 @@ function Em(e, t, i, a) {
       )) : delete n[u]);
     if (s !== r)
       for (const u in s)
-        (!t || !ae(t, u)) && (delete s[u], d = !0);
+        (!t || !ie(t, u)) && (delete s[u], d = !0);
   }
   d && St(e.attrs, "set", ""), process.env.NODE_ENV !== "production" && Pu(t || {}, n, e);
 }
@@ -2910,7 +2910,7 @@ function Vu(e, t, i, a) {
         continue;
       const d = t[c];
       let l;
-      n && ae(n, l = Qe(c)) ? !s || !s.includes(l) ? i[l] = d : (r || (r = {}))[l] = d : Gn(e.emitsOptions, c) || (!(c in a) || d !== a[c]) && (a[c] = d, o = !0);
+      n && ie(n, l = et(c)) ? !s || !s.includes(l) ? i[l] = d : (r || (r = {}))[l] = d : Gn(e.emitsOptions, c) || (!(c in a) || d !== a[c]) && (a[c] = d, o = !0);
     }
   if (s) {
     const c = /* @__PURE__ */ X(i), d = r || ue;
@@ -2922,7 +2922,7 @@ function Vu(e, t, i, a) {
         u,
         d[u],
         e,
-        !ae(d, u)
+        !ie(d, u)
       );
     }
   }
@@ -2931,10 +2931,10 @@ function Vu(e, t, i, a) {
 function Us(e, t, i, a, n, s) {
   const o = e[i];
   if (o != null) {
-    const r = ae(o, "default");
+    const r = ie(o, "default");
     if (r && a === void 0) {
       const c = o.default;
-      if (o.type !== Function && !o.skipFactory && q(c)) {
+      if (o.type !== Function && !o.skipFactory && G(c)) {
         const { propsDefaults: d } = n;
         if (i in d)
           a = d[i];
@@ -2955,74 +2955,74 @@ function Us(e, t, i, a, n, s) {
     ] && (s && !r ? a = !1 : o[
       1
       /* shouldCastTrue */
-    ] && (a === "" || a === Qt(i)) && (a = !0));
+    ] && (a === "" || a === ei(i)) && (a = !0));
   }
   return a;
 }
-const Im = /* @__PURE__ */ new WeakMap();
+const Tm = /* @__PURE__ */ new WeakMap();
 function Ru(e, t, i = !1) {
-  const a = i ? Im : t.propsCache, n = a.get(e);
+  const a = i ? Tm : t.propsCache, n = a.get(e);
   if (n)
     return n;
   const s = e.props, o = {}, r = [];
   let c = !1;
-  if (!q(e)) {
+  if (!G(e)) {
     const l = (u) => {
       c = !0;
       const [m, p] = Ru(u, t, !0);
-      Oe(o, m), p && r.push(...p);
+      Ae(o, m), p && r.push(...p);
     };
     !i && t.mixins.length && t.mixins.forEach(l), e.extends && l(e.extends), e.mixins && e.mixins.forEach(l);
   }
   if (!s && !c)
-    return ne(e) && a.set(e, Fi), Fi;
-  if (Z(s))
+    return ae(e) && a.set(e, Fi), Fi;
+  if (W(s))
     for (let l = 0; l < s.length; l++) {
       process.env.NODE_ENV !== "production" && !_e(s[l]) && S("props must be strings when using array syntax.", s[l]);
-      const u = Qe(s[l]);
+      const u = et(s[l]);
       _r(u) && (o[u] = ue);
     }
   else if (s) {
-    process.env.NODE_ENV !== "production" && !ne(s) && S("invalid props options", s);
+    process.env.NODE_ENV !== "production" && !ae(s) && S("invalid props options", s);
     for (const l in s) {
-      const u = Qe(l);
+      const u = et(l);
       if (_r(u)) {
-        const m = s[l], p = o[u] = Z(m) || q(m) ? { type: m } : Oe({}, m), h = p.type;
-        let k = !1, w = !0;
-        if (Z(h))
-          for (let x = 0; x < h.length; ++x) {
-            const L = h[x], D = q(L) && L.name;
-            if (D === "Boolean") {
-              k = !0;
+        const m = s[l], p = o[u] = W(m) || G(m) ? { type: m } : Ae({}, m), h = p.type;
+        let w = !1, E = !0;
+        if (W(h))
+          for (let A = 0; A < h.length; ++A) {
+            const z = h[A], R = G(z) && z.name;
+            if (R === "Boolean") {
+              w = !0;
               break;
-            } else D === "String" && (w = !1);
+            } else R === "String" && (E = !1);
           }
         else
-          k = q(h) && h.name === "Boolean";
+          w = G(h) && h.name === "Boolean";
         p[
           0
           /* shouldCast */
-        ] = k, p[
+        ] = w, p[
           1
           /* shouldCastTrue */
-        ] = w, (k || ae(p, "default")) && r.push(u);
+        ] = E, (w || ie(p, "default")) && r.push(u);
       }
     }
   }
   const d = [o, r];
-  return ne(e) && a.set(e, d), d;
+  return ae(e) && a.set(e, d), d;
 }
 function _r(e) {
   return e[0] !== "$" && !la(e) ? !0 : (process.env.NODE_ENV !== "production" && S(`Invalid prop name: "${e}" is a reserved property.`), !1);
 }
-function Tm(e) {
+function Am(e) {
   return e === null ? "null" : typeof e == "function" ? e.name || "" : typeof e == "object" && e.constructor && e.constructor.name || "";
 }
 function Pu(e, t, i) {
-  const a = /* @__PURE__ */ X(t), n = i.propsOptions[0], s = Object.keys(e).map((o) => Qe(o));
+  const a = /* @__PURE__ */ X(t), n = i.propsOptions[0], s = Object.keys(e).map((o) => et(o));
   for (const o in n) {
     let r = n[o];
-    r != null && Am(
+    r != null && Om(
       o,
       a[o],
       r,
@@ -3031,7 +3031,7 @@ function Pu(e, t, i) {
     );
   }
 }
-function Am(e, t, i, a, n) {
+function Om(e, t, i, a, n) {
   const { type: s, required: o, validator: r, skipCheck: c } = i;
   if (o && n) {
     S('Missing required prop: "' + e + '"');
@@ -3040,59 +3040,59 @@ function Am(e, t, i, a, n) {
   if (!(t == null && !o)) {
     if (s != null && s !== !0 && !c) {
       let d = !1;
-      const l = Z(s) ? s : [s], u = [];
+      const l = W(s) ? s : [s], u = [];
       for (let m = 0; m < l.length && !d; m++) {
-        const { valid: p, expectedType: h } = xm(t, l[m]);
+        const { valid: p, expectedType: h } = Sm(t, l[m]);
         u.push(h || ""), d = p;
       }
       if (!d) {
-        S(Sm(e, t, u));
+        S(Nm(e, t, u));
         return;
       }
     }
     r && !r(t, a) && S('Invalid prop: custom validator check failed for prop "' + e + '".');
   }
 }
-const Om = /* @__PURE__ */ Wt(
+const xm = /* @__PURE__ */ Kt(
   "String,Number,Boolean,Function,Symbol,BigInt"
 );
-function xm(e, t) {
+function Sm(e, t) {
   let i;
-  const a = Tm(t);
+  const a = Am(t);
   if (a === "null")
     i = e === null;
-  else if (Om(a)) {
+  else if (xm(a)) {
     const n = typeof e;
     i = n === a.toLowerCase(), !i && n === "object" && (i = e instanceof t);
-  } else a === "Object" ? i = ne(e) : a === "Array" ? i = Z(e) : i = e instanceof t;
+  } else a === "Object" ? i = ae(e) : a === "Array" ? i = W(e) : i = e instanceof t;
   return {
     valid: i,
     expectedType: a
   };
 }
-function Sm(e, t, i) {
+function Nm(e, t, i) {
   if (i.length === 0)
     return `Prop type [] for prop "${e}" won't match anything. Did you mean to use type Array instead?`;
   let a = `Invalid prop: type check failed for prop "${e}". Expected ${i.map(Un).join(" | ")}`;
   const n = i[0], s = lo(t), o = vr(t, n), r = vr(t, s);
-  return i.length === 1 && yr(n) && Nm(n, s) && (a += ` with value ${o}`), a += `, got ${s} `, yr(s) && (a += `with value ${r}.`), a;
+  return i.length === 1 && yr(n) && Cm(n, s) && (a += ` with value ${o}`), a += `, got ${s} `, yr(s) && (a += `with value ${r}.`), a;
 }
 function vr(e, t) {
-  return ot(e) ? e.toString() : t === "String" ? `"${e}"` : t === "Number" ? `${Number(e)}` : `${e}`;
+  return rt(e) ? e.toString() : t === "String" ? `"${e}"` : t === "Number" ? `${Number(e)}` : `${e}`;
 }
 function yr(e) {
   return ["string", "number", "boolean"].some((i) => e.toLowerCase() === i);
 }
-function Nm(...e) {
+function Cm(...e) {
   return e.every((t) => {
     const i = t.toLowerCase();
     return i !== "boolean" && i !== "symbol";
   });
 }
-const Ao = (e) => e === "_" || e === "_ctx" || e === "$stable", Oo = (e) => Z(e) ? e.map(mt) : [mt(e)], Cm = (e, t, i) => {
+const Ao = (e) => e === "_" || e === "_ctx" || e === "$stable", Oo = (e) => W(e) ? e.map(mt) : [mt(e)], Dm = (e, t, i) => {
   if (t._n)
     return t;
-  const a = Fp((...n) => (process.env.NODE_ENV !== "production" && De && !(i === null && Je) && !(i && i.root !== De.root) && S(
+  const a = zp((...n) => (process.env.NODE_ENV !== "production" && Ve && !(i === null && Ye) && !(i && i.root !== Ve.root) && S(
     `Slot "${e}" invoked outside of the render function: this will not track dependencies used in the slot. Invoke the slot function inside the render function instead.`
   ), Oo(t(...n))), i);
   return a._c = !1, a;
@@ -3101,8 +3101,8 @@ const Ao = (e) => e === "_" || e === "_ctx" || e === "$stable", Oo = (e) => Z(e)
   for (const n in e) {
     if (Ao(n)) continue;
     const s = e[n];
-    if (q(s))
-      t[n] = Cm(n, s, a);
+    if (G(s))
+      t[n] = Dm(n, s, a);
     else if (s != null) {
       process.env.NODE_ENV !== "production" && S(
         `Non-function value encountered for slot "${n}". Prefer function slots for better performance.`
@@ -3120,38 +3120,38 @@ const Ao = (e) => e === "_" || e === "_ctx" || e === "$stable", Oo = (e) => Z(e)
 }, Ls = (e, t, i) => {
   for (const a in t)
     (i || !Ao(a)) && (e[a] = t[a]);
-}, Dm = (e, t, i) => {
+}, Vm = (e, t, i) => {
   const a = e.slots = Cu();
   if (e.vnode.shapeFlag & 32) {
     const n = t._;
     n ? (Ls(a, t, i), i && bn(a, "_", n, !0)) : $u(t, a);
   } else t && ju(e, t);
-}, Vm = (e, t, i) => {
+}, Rm = (e, t, i) => {
   const { vnode: a, slots: n } = e;
   let s = !0, o = ue;
   if (a.shapeFlag & 32) {
     const r = t._;
-    r ? process.env.NODE_ENV !== "production" && at ? (Ls(n, t, i), St(e, "set", "$slots")) : i && r === 1 ? s = !1 : Ls(n, t, i) : (s = !t.$stable, $u(t, n)), o = t;
+    r ? process.env.NODE_ENV !== "production" && nt ? (Ls(n, t, i), St(e, "set", "$slots")) : i && r === 1 ? s = !1 : Ls(n, t, i) : (s = !t.$stable, $u(t, n)), o = t;
   } else t && (ju(e, t), o = { default: 1 });
   if (s)
     for (const r in n)
       !Ao(r) && o[r] == null && delete n[r];
 };
-let aa, Ut;
+let aa, zt;
 function Oi(e, t) {
-  e.appContext.config.performance && An() && Ut.mark(`vue-${t}-${e.uid}`), process.env.NODE_ENV !== "production" && Pp(e, t, An() ? Ut.now() : Date.now());
+  e.appContext.config.performance && An() && zt.mark(`vue-${t}-${e.uid}`), process.env.NODE_ENV !== "production" && $p(e, t, An() ? zt.now() : Date.now());
 }
 function xi(e, t) {
   if (e.appContext.config.performance && An()) {
     const i = `vue-${t}-${e.uid}`, a = i + ":end", n = `<${za(e, e.type)}> ${t}`;
-    Ut.mark(a), Ut.measure(n, i, a), Ut.clearMeasures(n), Ut.clearMarks(i), Ut.clearMarks(a);
+    zt.mark(a), zt.measure(n, i, a), zt.clearMeasures(n), zt.clearMarks(i), zt.clearMarks(a);
   }
-  process.env.NODE_ENV !== "production" && $p(e, t, An() ? Ut.now() : Date.now());
+  process.env.NODE_ENV !== "production" && jp(e, t, An() ? zt.now() : Date.now());
 }
 function An() {
-  return aa !== void 0 || (typeof window < "u" && window.performance ? (aa = !0, Ut = window.performance) : aa = !1), aa;
+  return aa !== void 0 || (typeof window < "u" && window.performance ? (aa = !0, zt = window.performance) : aa = !1), aa;
 }
-function Rm() {
+function Pm() {
   const e = [];
   if (process.env.NODE_ENV !== "production" && e.length) {
     const t = e.length > 1;
@@ -3162,12 +3162,12 @@ For more details, see https://link.vuejs.org/feature-flags.`
     );
   }
 }
-const Ye = zm;
-function Pm(e) {
-  return $m(e);
+const Xe = Um;
+function $m(e) {
+  return jm(e);
 }
-function $m(e, t) {
-  Rm();
+function jm(e, t) {
+  Pm();
   const i = Va();
   i.__VUE__ = !0, process.env.NODE_ENV !== "production" && vo(i.__VUE_DEVTOOLS_GLOBAL_HOOK__, i);
   const {
@@ -3181,866 +3181,866 @@ function $m(e, t) {
     setElementText: l,
     parentNode: u,
     nextSibling: m,
-    setScopeId: p = Re,
+    setScopeId: p = Pe,
     insertStaticContent: h
-  } = e, k = (f, g, _, O = null, E = null, b = null, y = void 0, T = null, A = process.env.NODE_ENV !== "production" && at ? !1 : !!g.dynamicChildren) => {
+  } = e, w = (f, g, v, T = null, I = null, k = null, C = void 0, x = null, b = process.env.NODE_ENV !== "production" && nt ? !1 : !!g.dynamicChildren) => {
     if (f === g)
       return;
-    f && !na(f, g) && (O = Ti(f), Me(f, E, b, !0), f = null), g.patchFlag === -2 && (A = !1, g.dynamicChildren = null);
-    const { type: I, ref: W, shapeFlag: P } = g;
-    switch (I) {
+    f && !na(f, g) && (T = Jt(f), Be(f, I, k, !0), f = null), g.patchFlag === -2 && (b = !1, g.dynamicChildren = null);
+    const { type: _, ref: F, shapeFlag: O } = g;
+    switch (_) {
       case ja:
-        w(f, g, _, O);
+        E(f, g, v, T);
         break;
-      case st:
-        x(f, g, _, O);
+      case ot:
+        A(f, g, v, T);
         break;
       case rn:
-        f == null ? L(g, _, O, y) : process.env.NODE_ENV !== "production" && D(f, g, _, y);
+        f == null ? z(g, v, T, C) : process.env.NODE_ENV !== "production" && R(f, g, v, C);
         break;
-      case Xe:
-        me(
+      case Qe:
+        re(
           f,
           g,
-          _,
-          O,
-          E,
-          b,
-          y,
+          v,
           T,
-          A
+          I,
+          k,
+          C,
+          x,
+          b
         );
         break;
       default:
-        P & 1 ? ee(
+        O & 1 ? ee(
           f,
           g,
-          _,
-          O,
-          E,
-          b,
-          y,
+          v,
           T,
-          A
-        ) : P & 6 ? $e(
+          I,
+          k,
+          C,
+          x,
+          b
+        ) : O & 6 ? Ce(
           f,
           g,
-          _,
-          O,
-          E,
-          b,
-          y,
+          v,
           T,
-          A
-        ) : P & 64 || P & 128 ? I.process(
+          I,
+          k,
+          C,
+          x,
+          b
+        ) : O & 64 || O & 128 ? _.process(
           f,
           g,
-          _,
-          O,
-          E,
-          b,
-          y,
+          v,
           T,
-          A,
-          si
-        ) : process.env.NODE_ENV !== "production" && S("Invalid VNode type:", I, `(${typeof I})`);
+          I,
+          k,
+          C,
+          x,
+          b,
+          oi
+        ) : process.env.NODE_ENV !== "production" && S("Invalid VNode type:", _, `(${typeof _})`);
     }
-    W != null && E ? ma(W, f && f.ref, b, g || f, !g) : W == null && f && f.ref != null && ma(f.ref, null, b, f, !0);
-  }, w = (f, g, _, O) => {
+    F != null && I ? ma(F, f && f.ref, k, g || f, !g) : F == null && f && f.ref != null && ma(f.ref, null, k, f, !0);
+  }, E = (f, g, v, T) => {
     if (f == null)
       a(
         g.el = r(g.children),
-        _,
-        O
+        v,
+        T
       );
     else {
-      const E = g.el = f.el;
-      g.children !== f.children && d(E, g.children);
+      const I = g.el = f.el;
+      g.children !== f.children && d(I, g.children);
     }
-  }, x = (f, g, _, O) => {
+  }, A = (f, g, v, T) => {
     f == null ? a(
       g.el = c(g.children || ""),
-      _,
-      O
+      v,
+      T
     ) : g.el = f.el;
-  }, L = (f, g, _, O) => {
+  }, z = (f, g, v, T) => {
     [f.el, f.anchor] = h(
       f.children,
       g,
-      _,
-      O,
+      v,
+      T,
       f.el,
       f.anchor
     );
-  }, D = (f, g, _, O) => {
+  }, R = (f, g, v, T) => {
     if (g.children !== f.children) {
-      const E = m(f.anchor);
+      const I = m(f.anchor);
       N(f), [g.el, g.anchor] = h(
         g.children,
-        _,
-        E,
-        O
+        v,
+        I,
+        T
       );
     } else
       g.el = f.el, g.anchor = f.anchor;
-  }, H = ({ el: f, anchor: g }, _, O) => {
-    let E;
+  }, H = ({ el: f, anchor: g }, v, T) => {
+    let I;
     for (; f && f !== g; )
-      E = m(f), a(f, _, O), f = E;
-    a(g, _, O);
+      I = m(f), a(f, v, T), f = I;
+    a(g, v, T);
   }, N = ({ el: f, anchor: g }) => {
-    let _;
+    let v;
     for (; f && f !== g; )
-      _ = m(f), n(f), f = _;
+      v = m(f), n(f), f = v;
     n(g);
-  }, ee = (f, g, _, O, E, b, y, T, A) => {
-    if (g.type === "svg" ? y = "svg" : g.type === "math" && (y = "mathml"), f == null)
-      z(
+  }, ee = (f, g, v, T, I, k, C, x, b) => {
+    if (g.type === "svg" ? C = "svg" : g.type === "math" && (C = "mathml"), f == null)
+      B(
         g,
-        _,
-        O,
-        E,
-        b,
-        y,
+        v,
         T,
-        A
+        I,
+        k,
+        C,
+        x,
+        b
       );
     else {
-      const I = f.el && f.el._isVueCE ? f.el : null;
+      const _ = f.el && f.el._isVueCE ? f.el : null;
       try {
-        I && I._beginPatch(), j(
+        _ && _._beginPatch(), j(
           f,
           g,
-          E,
-          b,
-          y,
-          T,
-          A
+          I,
+          k,
+          C,
+          x,
+          b
         );
       } finally {
-        I && I._endPatch();
+        _ && _._endPatch();
       }
     }
-  }, z = (f, g, _, O, E, b, y, T) => {
-    let A, I;
-    const { props: W, shapeFlag: P, transition: K, dirs: Y } = f;
-    if (A = f.el = o(
+  }, B = (f, g, v, T, I, k, C, x) => {
+    let b, _;
+    const { props: F, shapeFlag: O, transition: K, dirs: Y } = f;
+    if (b = f.el = o(
       f.type,
-      b,
-      W && W.is,
-      W
-    ), P & 8 ? l(A, f.children) : P & 16 && te(
+      k,
+      F && F.is,
+      F
+    ), O & 8 ? l(b, f.children) : O & 16 && q(
       f.children,
-      A,
+      b,
       null,
-      O,
-      E,
-      _s(f, b),
-      y,
-      T
-    ), Y && oi(f, null, O, "created"), Q(A, f, f.scopeId, y, O), W) {
-      for (const ce in W)
-        ce !== "value" && !la(ce) && s(A, ce, null, W[ce], b, O);
-      "value" in W && s(A, "value", null, W.value, b), (I = W.onVnodeBeforeMount) && It(I, O, f);
+      T,
+      I,
+      _s(f, k),
+      C,
+      x
+    ), Y && ri(f, null, T, "created"), le(b, f, f.scopeId, C, T), F) {
+      for (const ce in F)
+        ce !== "value" && !la(ce) && s(b, ce, null, F[ce], k, T);
+      "value" in F && s(b, "value", null, F.value, k), (_ = F.onVnodeBeforeMount) && It(_, T, f);
     }
-    process.env.NODE_ENV !== "production" && (bn(A, "__vnode", f, !0), bn(A, "__vueParentComponent", O, !0)), Y && oi(f, null, O, "beforeMount");
-    const se = jm(E, K);
-    if (se && K.beforeEnter(A), a(A, g, _), (I = W && W.onVnodeMounted) || se || Y) {
-      const ce = process.env.NODE_ENV !== "production" && at;
-      Ye(() => {
-        let re;
-        process.env.NODE_ENV !== "production" && (re = or(ce));
+    process.env.NODE_ENV !== "production" && (bn(b, "__vnode", f, !0), bn(b, "__vueParentComponent", T, !0)), Y && ri(f, null, T, "beforeMount");
+    const ne = Fm(I, K);
+    if (ne && K.beforeEnter(b), a(b, g, v), (_ = F && F.onVnodeMounted) || ne || Y) {
+      const ce = process.env.NODE_ENV !== "production" && nt;
+      Xe(() => {
+        let oe;
+        process.env.NODE_ENV !== "production" && (oe = or(ce));
         try {
-          I && It(I, O, f), se && K.enter(A), Y && oi(f, null, O, "mounted");
+          _ && It(_, T, f), ne && K.enter(b), Y && ri(f, null, T, "mounted");
         } finally {
-          process.env.NODE_ENV !== "production" && or(re);
+          process.env.NODE_ENV !== "production" && or(oe);
         }
-      }, E);
+      }, I);
     }
-  }, Q = (f, g, _, O, E) => {
-    if (_ && p(f, _), O)
-      for (let b = 0; b < O.length; b++)
-        p(f, O[b]);
-    if (E) {
-      let b = E.subTree;
-      if (process.env.NODE_ENV !== "production" && b.patchFlag > 0 && b.patchFlag & 2048 && (b = To(b.children) || b), g === b || Uu(b.type) && (b.ssContent === g || b.ssFallback === g)) {
-        const y = E.vnode;
-        Q(
+  }, le = (f, g, v, T, I) => {
+    if (v && p(f, v), T)
+      for (let k = 0; k < T.length; k++)
+        p(f, T[k]);
+    if (I) {
+      let k = I.subTree;
+      if (process.env.NODE_ENV !== "production" && k.patchFlag > 0 && k.patchFlag & 2048 && (k = To(k.children) || k), g === k || Uu(k.type) && (k.ssContent === g || k.ssFallback === g)) {
+        const C = I.vnode;
+        le(
           f,
-          y,
-          y.scopeId,
-          y.slotScopeIds,
-          E.parent
+          C,
+          C.scopeId,
+          C.slotScopeIds,
+          I.parent
         );
       }
     }
-  }, te = (f, g, _, O, E, b, y, T, A = 0) => {
-    for (let I = A; I < f.length; I++) {
-      const W = f[I] = T ? Lt(f[I]) : mt(f[I]);
-      k(
+  }, q = (f, g, v, T, I, k, C, x, b = 0) => {
+    for (let _ = b; _ < f.length; _++) {
+      const F = f[_] = x ? Ut(f[_]) : mt(f[_]);
+      w(
         null,
-        W,
+        F,
         g,
-        _,
-        O,
-        E,
-        b,
-        y,
-        T
+        v,
+        T,
+        I,
+        k,
+        C,
+        x
       );
     }
-  }, j = (f, g, _, O, E, b, y) => {
-    const T = g.el = f.el;
-    process.env.NODE_ENV !== "production" && (T.__vnode = g);
-    let { patchFlag: A, dynamicChildren: I, dirs: W } = g;
-    A |= f.patchFlag & 16;
-    const P = f.props || ue, K = g.props || ue;
+  }, j = (f, g, v, T, I, k, C) => {
+    const x = g.el = f.el;
+    process.env.NODE_ENV !== "production" && (x.__vnode = g);
+    let { patchFlag: b, dynamicChildren: _, dirs: F } = g;
+    b |= f.patchFlag & 16;
+    const O = f.props || ue, K = g.props || ue;
     let Y;
-    if (_ && ri(_, !1), (Y = K.onVnodeBeforeUpdate) && It(Y, _, g, f), W && oi(g, f, _, "beforeUpdate"), _ && ri(_, !0), // HMR updated, force full diff
-    (process.env.NODE_ENV !== "production" && at || // #6385 the old vnode may be a user-wrapped non-isomorphic block
+    if (v && ci(v, !1), (Y = K.onVnodeBeforeUpdate) && It(Y, v, g, f), F && ri(g, f, v, "beforeUpdate"), v && ci(v, !0), // HMR updated, force full diff
+    (process.env.NODE_ENV !== "production" && nt || // #6385 the old vnode may be a user-wrapped non-isomorphic block
     // Force full diff when block metadata is unstable.
-    I && (!f.dynamicChildren || f.dynamicChildren.length !== I.length)) && (A = 0, y = !1, I = null), (P.innerHTML && K.innerHTML == null || P.textContent && K.textContent == null) && l(T, ""), I ? ($(
+    _ && (!f.dynamicChildren || f.dynamicChildren.length !== _.length)) && (b = 0, C = !1, _ = null), (O.innerHTML && K.innerHTML == null || O.textContent && K.textContent == null) && l(x, ""), _ ? ($(
       f.dynamicChildren,
-      I,
-      T,
       _,
-      O,
-      _s(g, E),
-      b
-    ), process.env.NODE_ENV !== "production" && on(f, g)) : y || ie(
+      x,
+      v,
+      T,
+      _s(g, I),
+      k
+    ), process.env.NODE_ENV !== "production" && on(f, g)) : C || te(
       f,
       g,
-      T,
+      x,
       null,
-      _,
-      O,
-      _s(g, E),
-      b,
+      v,
+      T,
+      _s(g, I),
+      k,
       !1
-    ), A > 0) {
-      if (A & 16)
-        J(T, P, K, _, E);
-      else if (A & 2 && P.class !== K.class && s(T, "class", null, K.class, E), A & 4 && s(T, "style", P.style, K.style, E), A & 8) {
-        const se = g.dynamicProps;
-        for (let ce = 0; ce < se.length; ce++) {
-          const re = se[ce], xe = P[re], Ue = K[re];
-          (Ue !== xe || re === "value") && s(T, re, xe, Ue, E, _);
+    ), b > 0) {
+      if (b & 16)
+        Q(x, O, K, v, I);
+      else if (b & 2 && O.class !== K.class && s(x, "class", null, K.class, I), b & 4 && s(x, "style", O.style, K.style, I), b & 8) {
+        const ne = g.dynamicProps;
+        for (let ce = 0; ce < ne.length; ce++) {
+          const oe = ne[ce], xe = O[oe], Le = K[oe];
+          (Le !== xe || oe === "value") && s(x, oe, xe, Le, I, v);
         }
       }
-      A & 1 && f.children !== g.children && l(T, g.children);
-    } else !y && I == null && J(T, P, K, _, E);
-    ((Y = K.onVnodeUpdated) || W) && Ye(() => {
-      Y && It(Y, _, g, f), W && oi(g, f, _, "updated");
-    }, O);
-  }, $ = (f, g, _, O, E, b, y) => {
-    for (let T = 0; T < g.length; T++) {
-      const A = f[T], I = g[T], W = (
+      b & 1 && f.children !== g.children && l(x, g.children);
+    } else !C && _ == null && Q(x, O, K, v, I);
+    ((Y = K.onVnodeUpdated) || F) && Xe(() => {
+      Y && It(Y, v, g, f), F && ri(g, f, v, "updated");
+    }, T);
+  }, $ = (f, g, v, T, I, k, C) => {
+    for (let x = 0; x < g.length; x++) {
+      const b = f[x], _ = g[x], F = (
         // oldVNode may be an errored async setup() component inside Suspense
         // which will not have a mounted element
-        A.el && // - In the case of a Fragment, we need to provide the actual parent
+        b.el && // - In the case of a Fragment, we need to provide the actual parent
         // of the Fragment itself so it can move its children.
-        (A.type === Xe || // - In the case of different nodes, there is going to be a replacement
+        (b.type === Qe || // - In the case of different nodes, there is going to be a replacement
         // which also requires the correct parent container
-        !na(A, I) || // - In the case of a component, it could contain anything.
-        A.shapeFlag & 198) ? u(A.el) : (
+        !na(b, _) || // - In the case of a component, it could contain anything.
+        b.shapeFlag & 198) ? u(b.el) : (
           // In other cases, the parent container is not actually used so we
           // just pass the block element here to avoid a DOM parentNode call.
-          _
+          v
         )
       );
-      k(
-        A,
-        I,
-        W,
-        null,
-        O,
-        E,
+      w(
         b,
-        y,
+        _,
+        F,
+        null,
+        T,
+        I,
+        k,
+        C,
         !0
       );
     }
-  }, J = (f, g, _, O, E) => {
-    if (g !== _) {
+  }, Q = (f, g, v, T, I) => {
+    if (g !== v) {
       if (g !== ue)
-        for (const b in g)
-          !la(b) && !(b in _) && s(
+        for (const k in g)
+          !la(k) && !(k in v) && s(
             f,
-            b,
-            g[b],
+            k,
+            g[k],
             null,
-            E,
-            O
+            I,
+            T
           );
-      for (const b in _) {
-        if (la(b)) continue;
-        const y = _[b], T = g[b];
-        y !== T && b !== "value" && s(f, b, T, y, E, O);
+      for (const k in v) {
+        if (la(k)) continue;
+        const C = v[k], x = g[k];
+        C !== x && k !== "value" && s(f, k, x, C, I, T);
       }
-      "value" in _ && s(f, "value", g.value, _.value, E);
+      "value" in v && s(f, "value", g.value, v.value, I);
     }
-  }, me = (f, g, _, O, E, b, y, T, A) => {
-    const I = g.el = f ? f.el : r(""), W = g.anchor = f ? f.anchor : r("");
-    let { patchFlag: P, dynamicChildren: K, slotScopeIds: Y } = g;
+  }, re = (f, g, v, T, I, k, C, x, b) => {
+    const _ = g.el = f ? f.el : r(""), F = g.anchor = f ? f.anchor : r("");
+    let { patchFlag: O, dynamicChildren: K, slotScopeIds: Y } = g;
     process.env.NODE_ENV !== "production" && // #5523 dev root fragment may inherit directives
-    (at || P & 2048) && (P = 0, A = !1, K = null), Y && (T = T ? T.concat(Y) : Y), f == null ? (a(I, _, O), a(W, _, O), te(
+    (nt || O & 2048) && (O = 0, b = !1, K = null), Y && (x = x ? x.concat(Y) : Y), f == null ? (a(_, v, T), a(F, v, T), q(
       // #10007
       // such fragment like `<></>` will be compiled into
       // a fragment which doesn't have a children.
       // In this case fallback to an empty array
       g.children || [],
-      _,
-      W,
-      E,
-      b,
-      y,
-      T,
-      A
-    )) : P > 0 && P & 64 && K && // #2715 the previous fragment could've been a BAILed one as a result
+      v,
+      F,
+      I,
+      k,
+      C,
+      x,
+      b
+    )) : O > 0 && O & 64 && K && // #2715 the previous fragment could've been a BAILed one as a result
     // of renderSlot() with no valid children
     f.dynamicChildren && f.dynamicChildren.length === K.length ? ($(
       f.dynamicChildren,
       K,
-      _,
-      E,
-      b,
-      y,
-      T
+      v,
+      I,
+      k,
+      C,
+      x
     ), process.env.NODE_ENV !== "production" ? on(f, g) : (
       // #2080 if the stable fragment has a key, it's a <template v-for> that may
       //  get moved around. Make sure all root level vnodes inherit el.
       // #2134 or if it's a component root, it may also get moved around
       // as the component is being moved.
-      (g.key != null || E && g === E.subTree) && on(
+      (g.key != null || I && g === I.subTree) && on(
         f,
         g,
         !0
         /* shallow */
       )
-    )) : ie(
+    )) : te(
       f,
       g,
-      _,
-      W,
-      E,
-      b,
-      y,
+      v,
+      F,
+      I,
+      k,
+      C,
+      x,
+      b
+    );
+  }, Ce = (f, g, v, T, I, k, C, x, b) => {
+    g.slotScopeIds = x, f == null ? g.shapeFlag & 512 ? I.ctx.activate(
+      g,
+      v,
       T,
-      A
-    );
-  }, $e = (f, g, _, O, E, b, y, T, A) => {
-    g.slotScopeIds = T, f == null ? g.shapeFlag & 512 ? E.ctx.activate(
+      C,
+      b
+    ) : je(
       g,
-      _,
-      O,
-      y,
-      A
-    ) : ze(
-      g,
-      _,
-      O,
-      E,
-      b,
-      y,
-      A
-    ) : le(f, g, A);
-  }, ze = (f, g, _, O, E, b, y) => {
-    const T = f.component = Wm(
+      v,
+      T,
+      I,
+      k,
+      C,
+      b
+    ) : pe(f, g, b);
+  }, je = (f, g, v, T, I, k, C) => {
+    const x = f.component = qm(
       f,
-      O,
-      E
+      T,
+      I
     );
-    if (process.env.NODE_ENV !== "production" && T.type.__hmrId && Ap(T), process.env.NODE_ENV !== "production" && (tn(f), Oi(T, "mount")), wo(f) && (T.ctx.renderer = si), process.env.NODE_ENV !== "production" && Oi(T, "init"), Gm(T, !1, y), process.env.NODE_ENV !== "production" && xi(T, "init"), process.env.NODE_ENV !== "production" && at && (f.el = null), T.asyncDep) {
-      if (E && E.registerDep(T, R, y), !f.el) {
-        const A = T.subTree = Dt(st);
-        x(null, A, g, _), f.placeholder = A.el;
+    if (process.env.NODE_ENV !== "production" && x.type.__hmrId && Op(x), process.env.NODE_ENV !== "production" && (tn(f), Oi(x, "mount")), wo(f) && (x.ctx.renderer = oi), process.env.NODE_ENV !== "production" && Oi(x, "init"), Jm(x, !1, C), process.env.NODE_ENV !== "production" && xi(x, "init"), process.env.NODE_ENV !== "production" && nt && (f.el = null), x.asyncDep) {
+      if (I && I.registerDep(x, P, C), !f.el) {
+        const b = x.subTree = Dt(ot);
+        A(null, b, g, v), f.placeholder = b.el;
       }
     } else
-      R(
-        T,
+      P(
+        x,
         f,
         g,
-        _,
-        E,
-        b,
-        y
+        v,
+        I,
+        k,
+        C
       );
-    process.env.NODE_ENV !== "production" && (an(), xi(T, "mount"));
-  }, le = (f, g, _) => {
-    const O = g.component = f.component;
-    if (vm(f, g, _))
-      if (O.asyncDep && !O.asyncResolved) {
-        process.env.NODE_ENV !== "production" && tn(g), G(O, g, _), process.env.NODE_ENV !== "production" && an();
+    process.env.NODE_ENV !== "production" && (an(), xi(x, "mount"));
+  }, pe = (f, g, v) => {
+    const T = g.component = f.component;
+    if (ym(f, g, v))
+      if (T.asyncDep && !T.asyncResolved) {
+        process.env.NODE_ENV !== "production" && tn(g), J(T, g, v), process.env.NODE_ENV !== "production" && an();
         return;
       } else
-        O.next = g, O.update();
+        T.next = g, T.update();
     else
-      g.el = f.el, O.vnode = g;
-  }, R = (f, g, _, O, E, b, y) => {
-    const T = () => {
+      g.el = f.el, T.vnode = g;
+  }, P = (f, g, v, T, I, k, C) => {
+    const x = () => {
       if (f.isMounted) {
-        let { next: P, bu: K, u: Y, parent: se, vnode: ce } = f;
+        let { next: O, bu: K, u: Y, parent: ne, vnode: ce } = f;
         {
           const wt = Fu(f);
           if (wt) {
-            P && (P.el = ce.el, G(f, P, y)), wt.asyncDep.then(() => {
-              Ye(() => {
-                f.isUnmounted || I();
-              }, E);
+            O && (O.el = ce.el, J(f, O, C)), wt.asyncDep.then(() => {
+              Xe(() => {
+                f.isUnmounted || _();
+              }, I);
             });
             return;
           }
         }
-        let re = P, xe;
-        process.env.NODE_ENV !== "production" && tn(P || f.vnode), ri(f, !1), P ? (P.el = ce.el, G(f, P, y)) : P = ce, K && Di(K), (xe = P.props && P.props.onVnodeBeforeUpdate) && It(xe, se, P, ce), ri(f, !0), process.env.NODE_ENV !== "production" && Oi(f, "render");
-        const Ue = gr(f);
+        let oe = O, xe;
+        process.env.NODE_ENV !== "production" && tn(O || f.vnode), ci(f, !1), O ? (O.el = ce.el, J(f, O, C)) : O = ce, K && Di(K), (xe = O.props && O.props.onVnodeBeforeUpdate) && It(xe, ne, O, ce), ci(f, !0), process.env.NODE_ENV !== "production" && Oi(f, "render");
+        const Le = gr(f);
         process.env.NODE_ENV !== "production" && xi(f, "render");
         const kt = f.subTree;
-        f.subTree = Ue, process.env.NODE_ENV !== "production" && Oi(f, "patch"), k(
+        f.subTree = Le, process.env.NODE_ENV !== "production" && Oi(f, "patch"), w(
           kt,
-          Ue,
+          Le,
           // parent may have changed if it's in a teleport
           u(kt.el),
           // anchor may have changed if it's in a fragment
-          Ti(kt),
+          Jt(kt),
           f,
-          E,
-          b
-        ), process.env.NODE_ENV !== "production" && xi(f, "patch"), P.el = Ue.el, re === null && ym(f, Ue.el), Y && Ye(Y, E), (xe = P.props && P.props.onVnodeUpdated) && Ye(
-          () => It(xe, se, P, ce),
-          E
+          I,
+          k
+        ), process.env.NODE_ENV !== "production" && xi(f, "patch"), O.el = Le.el, oe === null && km(f, Le.el), Y && Xe(Y, I), (xe = O.props && O.props.onVnodeUpdated) && Xe(
+          () => It(xe, ne, O, ce),
+          I
         ), process.env.NODE_ENV !== "production" && pu(f), process.env.NODE_ENV !== "production" && an();
       } else {
-        let P;
-        const { el: K, props: Y } = g, { bm: se, m: ce, parent: re, root: xe, type: Ue } = f, kt = ga(g);
-        ri(f, !1), se && Di(se), !kt && (P = Y && Y.onVnodeBeforeMount) && It(P, re, g), ri(f, !0);
+        let O;
+        const { el: K, props: Y } = g, { bm: ne, m: ce, parent: oe, root: xe, type: Le } = f, kt = ga(g);
+        ci(f, !1), ne && Di(ne), !kt && (O = Y && Y.onVnodeBeforeMount) && It(O, oe, g), ci(f, !0);
         {
           xe.ce && xe.ce._hasShadowRoot() && xe.ce._injectChildStyle(
-            Ue,
+            Le,
             f.parent ? f.parent.type : void 0
           ), process.env.NODE_ENV !== "production" && Oi(f, "render");
           const wt = f.subTree = gr(f);
-          process.env.NODE_ENV !== "production" && xi(f, "render"), process.env.NODE_ENV !== "production" && Oi(f, "patch"), k(
+          process.env.NODE_ENV !== "production" && xi(f, "render"), process.env.NODE_ENV !== "production" && Oi(f, "patch"), w(
             null,
             wt,
-            _,
-            O,
+            v,
+            T,
             f,
-            E,
-            b
+            I,
+            k
           ), process.env.NODE_ENV !== "production" && xi(f, "patch"), g.el = wt.el;
         }
-        if (ce && Ye(ce, E), !kt && (P = Y && Y.onVnodeMounted)) {
+        if (ce && Xe(ce, I), !kt && (O = Y && Y.onVnodeMounted)) {
           const wt = g;
-          Ye(
-            () => It(P, re, wt),
-            E
+          Xe(
+            () => It(O, oe, wt),
+            I
           );
         }
-        (g.shapeFlag & 256 || re && ga(re.vnode) && re.vnode.shapeFlag & 256) && f.a && Ye(f.a, E), f.isMounted = !0, process.env.NODE_ENV !== "production" && Dp(f), g = _ = O = null;
+        (g.shapeFlag & 256 || oe && ga(oe.vnode) && oe.vnode.shapeFlag & 256) && f.a && Xe(f.a, I), f.isMounted = !0, process.env.NODE_ENV !== "production" && Vp(f), g = v = T = null;
       }
     };
     f.scope.on();
-    const A = f.effect = new Ld(T);
+    const b = f.effect = new Ld(x);
     f.scope.off();
-    const I = f.update = A.run.bind(A), W = f.job = A.runIfDirty.bind(A);
-    W.i = f, W.id = f.uid, A.scheduler = () => Wn(W), ri(f, !0), process.env.NODE_ENV !== "production" && (A.onTrack = f.rtc ? (P) => Di(f.rtc, P) : void 0, A.onTrigger = f.rtg ? (P) => Di(f.rtg, P) : void 0), I();
-  }, G = (f, g, _) => {
+    const _ = f.update = b.run.bind(b), F = f.job = b.runIfDirty.bind(b);
+    F.i = f, F.id = f.uid, b.scheduler = () => Wn(F), ci(f, !0), process.env.NODE_ENV !== "production" && (b.onTrack = f.rtc ? (O) => Di(f.rtc, O) : void 0, b.onTrigger = f.rtg ? (O) => Di(f.rtg, O) : void 0), _();
+  }, J = (f, g, v) => {
     g.component = f;
-    const O = f.vnode.props;
-    f.vnode = g, f.next = null, Em(f, g.props, O, _), Vm(f, g.children, _), ut(), sr(f), lt();
-  }, ie = (f, g, _, O, E, b, y, T, A = !1) => {
-    const I = f && f.children, W = f ? f.shapeFlag : 0, P = g.children, { patchFlag: K, shapeFlag: Y } = g;
+    const T = f.vnode.props;
+    f.vnode = g, f.next = null, Im(f, g.props, T, v), Rm(f, g.children, v), ut(), sr(f), lt();
+  }, te = (f, g, v, T, I, k, C, x, b = !1) => {
+    const _ = f && f.children, F = f ? f.shapeFlag : 0, O = g.children, { patchFlag: K, shapeFlag: Y } = g;
     if (K > 0) {
       if (K & 128) {
-        Le(
-          I,
-          P,
+        Ue(
           _,
           O,
-          E,
-          b,
-          y,
+          v,
           T,
-          A
+          I,
+          k,
+          C,
+          x,
+          b
         );
         return;
       } else if (K & 256) {
-        ct(
-          I,
-          P,
+        Me(
           _,
           O,
-          E,
-          b,
-          y,
+          v,
           T,
-          A
+          I,
+          k,
+          C,
+          x,
+          b
         );
         return;
       }
     }
-    Y & 8 ? (W & 16 && ni(I, E, b), P !== I && l(_, P)) : W & 16 ? Y & 16 ? Le(
+    Y & 8 ? (F & 16 && si(_, I, k), O !== _ && l(v, O)) : F & 16 ? Y & 16 ? Ue(
+      _,
+      O,
+      v,
+      T,
       I,
-      P,
-      _,
+      k,
+      C,
+      x,
+      b
+    ) : si(_, I, k, !0) : (F & 8 && l(v, ""), Y & 16 && q(
       O,
-      E,
-      b,
-      y,
+      v,
       T,
-      A
-    ) : ni(I, E, b, !0) : (W & 8 && l(_, ""), Y & 16 && te(
-      P,
-      _,
-      O,
-      E,
-      b,
-      y,
-      T,
-      A
+      I,
+      k,
+      C,
+      x,
+      b
     ));
-  }, ct = (f, g, _, O, E, b, y, T, A) => {
+  }, Me = (f, g, v, T, I, k, C, x, b) => {
     f = f || Fi, g = g || Fi;
-    const I = f.length, W = g.length, P = Math.min(I, W);
+    const _ = f.length, F = g.length, O = Math.min(_, F);
     let K;
-    for (K = 0; K < P; K++) {
-      const Y = g[K] = A ? Lt(g[K]) : mt(g[K]);
-      k(
+    for (K = 0; K < O; K++) {
+      const Y = g[K] = b ? Ut(g[K]) : mt(g[K]);
+      w(
         f[K],
         Y,
-        _,
+        v,
         null,
-        E,
-        b,
-        y,
-        T,
-        A
+        I,
+        k,
+        C,
+        x,
+        b
       );
     }
-    I > W ? ni(
+    _ > F ? si(
       f,
-      E,
-      b,
+      I,
+      k,
       !0,
       !1,
-      P
-    ) : te(
+      O
+    ) : q(
       g,
-      _,
-      O,
-      E,
-      b,
-      y,
+      v,
       T,
-      A,
-      P
+      I,
+      k,
+      C,
+      x,
+      b,
+      O
     );
-  }, Le = (f, g, _, O, E, b, y, T, A) => {
-    let I = 0;
-    const W = g.length;
-    let P = f.length - 1, K = W - 1;
-    for (; I <= P && I <= K; ) {
-      const Y = f[I], se = g[I] = A ? Lt(g[I]) : mt(g[I]);
-      if (na(Y, se))
-        k(
+  }, Ue = (f, g, v, T, I, k, C, x, b) => {
+    let _ = 0;
+    const F = g.length;
+    let O = f.length - 1, K = F - 1;
+    for (; _ <= O && _ <= K; ) {
+      const Y = f[_], ne = g[_] = b ? Ut(g[_]) : mt(g[_]);
+      if (na(Y, ne))
+        w(
           Y,
-          se,
-          _,
+          ne,
+          v,
           null,
-          E,
-          b,
-          y,
-          T,
-          A
+          I,
+          k,
+          C,
+          x,
+          b
         );
       else
         break;
-      I++;
+      _++;
     }
-    for (; I <= P && I <= K; ) {
-      const Y = f[P], se = g[K] = A ? Lt(g[K]) : mt(g[K]);
-      if (na(Y, se))
-        k(
+    for (; _ <= O && _ <= K; ) {
+      const Y = f[O], ne = g[K] = b ? Ut(g[K]) : mt(g[K]);
+      if (na(Y, ne))
+        w(
           Y,
-          se,
-          _,
+          ne,
+          v,
           null,
-          E,
-          b,
-          y,
-          T,
-          A
+          I,
+          k,
+          C,
+          x,
+          b
         );
       else
         break;
-      P--, K--;
+      O--, K--;
     }
-    if (I > P) {
-      if (I <= K) {
-        const Y = K + 1, se = Y < W ? g[Y].el : O;
-        for (; I <= K; )
-          k(
+    if (_ > O) {
+      if (_ <= K) {
+        const Y = K + 1, ne = Y < F ? g[Y].el : T;
+        for (; _ <= K; )
+          w(
             null,
-            g[I] = A ? Lt(g[I]) : mt(g[I]),
-            _,
-            se,
-            E,
-            b,
-            y,
-            T,
-            A
-          ), I++;
+            g[_] = b ? Ut(g[_]) : mt(g[_]),
+            v,
+            ne,
+            I,
+            k,
+            C,
+            x,
+            b
+          ), _++;
       }
-    } else if (I > K)
-      for (; I <= P; )
-        Me(f[I], E, b, !0), I++;
+    } else if (_ > K)
+      for (; _ <= O; )
+        Be(f[_], I, k, !0), _++;
     else {
-      const Y = I, se = I, ce = /* @__PURE__ */ new Map();
-      for (I = se; I <= K; I++) {
-        const He = g[I] = A ? Lt(g[I]) : mt(g[I]);
-        He.key != null && (process.env.NODE_ENV !== "production" && ce.has(He.key) && S(
+      const Y = _, ne = _, ce = /* @__PURE__ */ new Map();
+      for (_ = ne; _ <= K; _++) {
+        const Ke = g[_] = b ? Ut(g[_]) : mt(g[_]);
+        Ke.key != null && (process.env.NODE_ENV !== "production" && ce.has(Ke.key) && S(
           "Duplicate keys found during update:",
-          JSON.stringify(He.key),
+          JSON.stringify(Ke.key),
           "Make sure keys are unique."
-        ), ce.set(He.key, I));
+        ), ce.set(Ke.key, _));
       }
-      let re, xe = 0;
-      const Ue = K - se + 1;
+      let oe, xe = 0;
+      const Le = K - ne + 1;
       let kt = !1, wt = 0;
-      const ta = new Array(Ue);
-      for (I = 0; I < Ue; I++) ta[I] = 0;
-      for (I = Y; I <= P; I++) {
-        const He = f[I];
-        if (xe >= Ue) {
-          Me(He, E, b, !0);
+      const ta = new Array(Le);
+      for (_ = 0; _ < Le; _++) ta[_] = 0;
+      for (_ = Y; _ <= O; _++) {
+        const Ke = f[_];
+        if (xe >= Le) {
+          Be(Ke, I, k, !0);
           continue;
         }
         let Et;
-        if (He.key != null)
-          Et = ce.get(He.key);
+        if (Ke.key != null)
+          Et = ce.get(Ke.key);
         else
-          for (re = se; re <= K; re++)
-            if (ta[re - se] === 0 && na(He, g[re])) {
-              Et = re;
+          for (oe = ne; oe <= K; oe++)
+            if (ta[oe - ne] === 0 && na(Ke, g[oe])) {
+              Et = oe;
               break;
             }
-        Et === void 0 ? Me(He, E, b, !0) : (ta[Et - se] = I + 1, Et >= wt ? wt = Et : kt = !0, k(
-          He,
+        Et === void 0 ? Be(Ke, I, k, !0) : (ta[Et - ne] = _ + 1, Et >= wt ? wt = Et : kt = !0, w(
+          Ke,
           g[Et],
-          _,
+          v,
           null,
-          E,
-          b,
-          y,
-          T,
-          A
+          I,
+          k,
+          C,
+          x,
+          b
         ), xe++);
       }
-      const Jo = kt ? Fm(ta) : Fi;
-      for (re = Jo.length - 1, I = Ue - 1; I >= 0; I--) {
-        const He = se + I, Et = g[He], Yo = g[He + 1], Xo = He + 1 < W ? (
+      const Jo = kt ? zm(ta) : Fi;
+      for (oe = Jo.length - 1, _ = Le - 1; _ >= 0; _--) {
+        const Ke = ne + _, Et = g[Ke], Yo = g[Ke + 1], Xo = Ke + 1 < F ? (
           // #13559, #14173 fallback to el placeholder for unresolved async component
           Yo.el || zu(Yo)
-        ) : O;
-        ta[I] === 0 ? k(
+        ) : T;
+        ta[_] === 0 ? w(
           null,
           Et,
-          _,
+          v,
           Xo,
-          E,
-          b,
-          y,
-          T,
-          A
-        ) : kt && (re < 0 || I !== Jo[re] ? Te(Et, _, Xo, 2) : re--);
+          I,
+          k,
+          C,
+          x,
+          b
+        ) : kt && (oe < 0 || _ !== Jo[oe] ? Oe(Et, v, Xo, 2) : oe--);
       }
     }
-  }, Te = (f, g, _, O, E = null) => {
-    const { el: b, type: y, transition: T, children: A, shapeFlag: I } = f;
-    if (I & 6) {
-      Te(f.component.subTree, g, _, O);
+  }, Oe = (f, g, v, T, I = null) => {
+    const { el: k, type: C, transition: x, children: b, shapeFlag: _ } = f;
+    if (_ & 6) {
+      Oe(f.component.subTree, g, v, T);
       return;
     }
-    if (I & 128) {
-      f.suspense.move(g, _, O);
+    if (_ & 128) {
+      f.suspense.move(g, v, T);
       return;
     }
-    if (I & 64) {
-      y.move(f, g, _, si);
+    if (_ & 64) {
+      C.move(f, g, v, oi);
       return;
     }
-    if (y === Xe) {
-      a(b, g, _);
-      for (let P = 0; P < A.length; P++)
-        Te(A[P], g, _, O);
-      a(f.anchor, g, _);
+    if (C === Qe) {
+      a(k, g, v);
+      for (let O = 0; O < b.length; O++)
+        Oe(b[O], g, v, T);
+      a(f.anchor, g, v);
       return;
     }
-    if (y === rn) {
-      H(f, g, _);
+    if (C === rn) {
+      H(f, g, v);
       return;
     }
-    if (O !== 2 && I & 1 && T)
-      if (O === 0)
-        T.persisted && !b[bs] ? a(b, g, _) : (T.beforeEnter(b), a(b, g, _), Ye(() => T.enter(b), E));
+    if (T !== 2 && _ & 1 && x)
+      if (T === 0)
+        x.persisted && !k[bs] ? a(k, g, v) : (x.beforeEnter(k), a(k, g, v), Xe(() => x.enter(k), I));
       else {
-        const { leave: P, delayLeave: K, afterLeave: Y } = T, se = () => {
-          f.ctx.isUnmounted ? n(b) : a(b, g, _);
+        const { leave: O, delayLeave: K, afterLeave: Y } = x, ne = () => {
+          f.ctx.isUnmounted ? n(k) : a(k, g, v);
         }, ce = () => {
-          const re = b._isLeaving || !!b[bs];
-          b._isLeaving && b[bs](
+          const oe = k._isLeaving || !!k[bs];
+          k._isLeaving && k[bs](
             !0
             /* cancelled */
-          ), T.persisted && !re ? se() : P(b, () => {
-            se(), Y && Y();
+          ), x.persisted && !oe ? ne() : O(k, () => {
+            ne(), Y && Y();
           });
         };
-        K ? K(b, se, ce) : ce();
+        K ? K(k, ne, ce) : ce();
       }
     else
-      a(b, g, _);
-  }, Me = (f, g, _, O = !1, E = !1) => {
+      a(k, g, v);
+  }, Be = (f, g, v, T = !1, I = !1) => {
     const {
-      type: b,
-      props: y,
-      ref: T,
-      children: A,
-      dynamicChildren: I,
-      shapeFlag: W,
-      patchFlag: P,
+      type: k,
+      props: C,
+      ref: x,
+      children: b,
+      dynamicChildren: _,
+      shapeFlag: F,
+      patchFlag: O,
       dirs: K,
       cacheIndex: Y,
-      memo: se
+      memo: ne
     } = f;
-    if (P === -2 && (E = !1), T != null && (ut(), ma(T, null, _, f, !0), lt()), Y != null && (g.renderCache[Y] = void 0), W & 256) {
+    if (O === -2 && (I = !1), x != null && (ut(), ma(x, null, v, f, !0), lt()), Y != null && (g.renderCache[Y] = void 0), F & 256) {
       g.ctx.deactivate(f);
       return;
     }
-    const ce = W & 1 && K, re = !ga(f);
+    const ce = F & 1 && K, oe = !ga(f);
     let xe;
-    if (re && (xe = y && y.onVnodeBeforeUnmount) && It(xe, g, f), W & 6)
-      cs(f.component, _, O);
+    if (oe && (xe = C && C.onVnodeBeforeUnmount) && It(xe, g, f), F & 6)
+      cs(f.component, v, T);
     else {
-      if (W & 128) {
-        f.suspense.unmount(_, O);
+      if (F & 128) {
+        f.suspense.unmount(v, T);
         return;
       }
-      ce && oi(f, null, g, "beforeUnmount"), W & 64 ? f.type.remove(
+      ce && ri(f, null, g, "beforeUnmount"), F & 64 ? f.type.remove(
         f,
         g,
-        _,
-        si,
-        O
-      ) : I && // #5154
+        v,
+        oi,
+        T
+      ) : _ && // #5154
       // when v-once is used inside a block, setBlockTracking(-1) marks the
       // parent block with hasOnce: true
       // so that it doesn't take the fast path during unmount - otherwise
       // components nested in v-once are never unmounted.
-      !I.hasOnce && // #1153: fast path should not be taken for non-stable (v-for) fragments
-      (b !== Xe || P > 0 && P & 64) ? ni(
-        I,
-        g,
+      !_.hasOnce && // #1153: fast path should not be taken for non-stable (v-for) fragments
+      (k !== Qe || O > 0 && O & 64) ? si(
         _,
+        g,
+        v,
         !1,
         !0
-      ) : (b === Xe && P & 384 || !E && W & 16) && ni(A, g, _), O && Gt(f);
+      ) : (k === Qe && O & 384 || !I && F & 16) && si(b, g, v), T && qt(f);
     }
-    const Ue = se != null && Y == null;
-    (re && (xe = y && y.onVnodeUnmounted) || ce || Ue) && Ye(() => {
-      xe && It(xe, g, f), ce && oi(f, null, g, "unmounted"), Ue && (f.el = null);
-    }, _);
-  }, Gt = (f) => {
-    const { type: g, el: _, anchor: O, transition: E } = f;
-    if (g === Xe) {
-      process.env.NODE_ENV !== "production" && f.patchFlag > 0 && f.patchFlag & 2048 && E && !E.persisted ? f.children.forEach((y) => {
-        y.type === st ? n(y.el) : Gt(y);
-      }) : Pt(_, O);
+    const Le = ne != null && Y == null;
+    (oe && (xe = C && C.onVnodeUnmounted) || ce || Le) && Xe(() => {
+      xe && It(xe, g, f), ce && ri(f, null, g, "unmounted"), Le && (f.el = null);
+    }, v);
+  }, qt = (f) => {
+    const { type: g, el: v, anchor: T, transition: I } = f;
+    if (g === Qe) {
+      process.env.NODE_ENV !== "production" && f.patchFlag > 0 && f.patchFlag & 2048 && I && !I.persisted ? f.children.forEach((C) => {
+        C.type === ot ? n(C.el) : qt(C);
+      }) : Gt(v, T);
       return;
     }
     if (g === rn) {
       N(f);
       return;
     }
-    const b = () => {
-      n(_), E && !E.persisted && E.afterLeave && E.afterLeave();
+    const k = () => {
+      n(v), I && !I.persisted && I.afterLeave && I.afterLeave();
     };
-    if (f.shapeFlag & 1 && E && !E.persisted) {
-      const { leave: y, delayLeave: T } = E, A = () => y(_, b);
-      T ? T(f.el, b, A) : A();
+    if (f.shapeFlag & 1 && I && !I.persisted) {
+      const { leave: C, delayLeave: x } = I, b = () => C(v, k);
+      x ? x(f.el, k, b) : b();
     } else
-      b();
-  }, Pt = (f, g) => {
-    let _;
+      k();
+  }, Gt = (f, g) => {
+    let v;
     for (; f !== g; )
-      _ = m(f), n(f), f = _;
+      v = m(f), n(f), f = v;
     n(g);
-  }, cs = (f, g, _) => {
-    process.env.NODE_ENV !== "production" && f.type.__hmrId && Op(f);
-    const { bum: O, scope: E, job: b, subTree: y, um: T, m: A, a: I } = f;
-    kr(A), kr(I), O && Di(O), E.stop(), b && (b.flags |= 8, Me(y, f, g, _)), T && Ye(T, g), Ye(() => {
+  }, cs = (f, g, v) => {
+    process.env.NODE_ENV !== "production" && f.type.__hmrId && xp(f);
+    const { bum: T, scope: I, job: k, subTree: C, um: x, m: b, a: _ } = f;
+    kr(b), kr(_), T && Di(T), I.stop(), k && (k.flags |= 8, Be(C, f, g, v)), x && Xe(x, g), Xe(() => {
       f.isUnmounted = !0;
-    }, g), process.env.NODE_ENV !== "production" && Rp(f);
-  }, ni = (f, g, _, O = !1, E = !1, b = 0) => {
-    for (let y = b; y < f.length; y++)
-      Me(f[y], g, _, O, E);
-  }, Ti = (f) => {
+    }, g), process.env.NODE_ENV !== "production" && Pp(f);
+  }, si = (f, g, v, T = !1, I = !1, k = 0) => {
+    for (let C = k; C < f.length; C++)
+      Be(f[C], g, v, T, I);
+  }, Jt = (f) => {
     if (f.shapeFlag & 6)
-      return Ti(f.component.subTree);
+      return Jt(f.component.subTree);
     if (f.shapeFlag & 128)
       return f.suspense.next();
-    const g = m(f.anchor || f.el), _ = g && g[Bp];
-    return _ ? m(_) : g;
+    const g = m(f.anchor || f.el), v = g && g[Zp];
+    return v ? m(v) : g;
   };
   let ea = !1;
-  const Ba = (f, g, _) => {
-    let O;
-    f == null ? g._vnode && (Me(g._vnode, null, null, !0), O = g._vnode.component) : k(
+  const Ba = (f, g, v) => {
+    let T;
+    f == null ? g._vnode && (Be(g._vnode, null, null, !0), T = g._vnode.component) : w(
       g._vnode || null,
       f,
       g,
       null,
       null,
       null,
-      _
-    ), g._vnode = f, ea || (ea = !0, sr(O), uu(), ea = !1);
-  }, si = {
-    p: k,
-    um: Me,
-    m: Te,
-    r: Gt,
-    mt: ze,
-    mc: te,
-    pc: ie,
+      v
+    ), g._vnode = f, ea || (ea = !0, sr(T), uu(), ea = !1);
+  }, oi = {
+    p: w,
+    um: Be,
+    m: Oe,
+    r: qt,
+    mt: je,
+    mc: q,
+    pc: te,
     pbc: $,
-    n: Ti,
+    n: Jt,
     o: e
   };
   return {
     render: Ba,
     hydrate: void 0,
-    createApp: pm(Ba)
+    createApp: mm(Ba)
   };
 }
 function _s({ type: e, props: t }, i) {
   return i === "svg" && e === "foreignObject" || i === "mathml" && e === "annotation-xml" && t && t.encoding && t.encoding.includes("html") ? void 0 : i;
 }
-function ri({ effect: e, job: t }, i) {
+function ci({ effect: e, job: t }, i) {
   i ? (e.flags |= 32, t.flags |= 4) : (e.flags &= -33, t.flags &= -5);
 }
-function jm(e, t) {
+function Fm(e, t) {
   return (!e || e && !e.pendingBranch) && t && !t.persisted;
 }
 function on(e, t, i = !1) {
   const a = e.children, n = t.children;
-  if (Z(a) && Z(n))
+  if (W(a) && W(n))
     for (let s = 0; s < a.length; s++) {
       const o = a[s];
       let r = n[s];
-      r.shapeFlag & 1 && !r.dynamicChildren && ((r.patchFlag <= 0 || r.patchFlag === 32) && (r = n[s] = Lt(n[s]), r.el = o.el), !i && r.patchFlag !== -2 && on(o, r)), r.type === ja && (r.patchFlag === -1 && (r = n[s] = Lt(r)), r.el = o.el), r.type === st && !r.el && (r.el = o.el), process.env.NODE_ENV !== "production" && r.el && (r.el.__vnode = r);
+      r.shapeFlag & 1 && !r.dynamicChildren && ((r.patchFlag <= 0 || r.patchFlag === 32) && (r = n[s] = Ut(n[s]), r.el = o.el), !i && r.patchFlag !== -2 && on(o, r)), r.type === ja && (r.patchFlag === -1 && (r = n[s] = Ut(r)), r.el = o.el), r.type === ot && !r.el && (r.el = o.el), process.env.NODE_ENV !== "production" && r.el && (r.el.__vnode = r);
     }
 }
-function Fm(e) {
+function zm(e) {
   const t = e.slice(), i = [0];
   let a, n, s, o, r;
   const c = e.length;
@@ -4077,27 +4077,27 @@ function zu(e) {
   return t ? zu(t.subTree) : null;
 }
 const Uu = (e) => e.__isSuspense;
-function zm(e, t) {
-  t && t.pendingBranch ? Z(e) ? t.effects.push(...e) : t.effects.push(e) : du(e);
+function Um(e, t) {
+  t && t.pendingBranch ? W(e) ? t.effects.push(...e) : t.effects.push(e) : du(e);
 }
-const Xe = /* @__PURE__ */ Symbol.for("v-fgt"), ja = /* @__PURE__ */ Symbol.for("v-txt"), st = /* @__PURE__ */ Symbol.for("v-cmt"), rn = /* @__PURE__ */ Symbol.for("v-stc"), ba = [];
-let nt = null;
+const Qe = /* @__PURE__ */ Symbol.for("v-fgt"), ja = /* @__PURE__ */ Symbol.for("v-txt"), ot = /* @__PURE__ */ Symbol.for("v-cmt"), rn = /* @__PURE__ */ Symbol.for("v-stc"), ba = [];
+let st = null;
 function he(e = !1) {
-  ba.push(nt = e ? null : []);
+  ba.push(st = e ? null : []);
 }
-function Um() {
-  ba.pop(), nt = ba[ba.length - 1] || null;
+function Lm() {
+  ba.pop(), st = ba[ba.length - 1] || null;
 }
 let wa = 1;
 function wr(e, t = !1) {
-  wa += e, e < 0 && nt && t && (nt.hasOnce = !0);
+  wa += e, e < 0 && st && t && (st.hasOnce = !0);
 }
 function Lu(e) {
-  return e.dynamicChildren = wa > 0 ? nt || Fi : null, Um(), wa > 0 && nt && nt.push(e), e;
+  return e.dynamicChildren = wa > 0 ? st || Fi : null, Lm(), wa > 0 && st && st.push(e), e;
 }
 function ve(e, t, i, a, n, s) {
   return Lu(
-    U(
+    L(
       e,
       t,
       i,
@@ -4108,7 +4108,7 @@ function ve(e, t, i, a, n, s) {
     )
   );
 }
-function Lm(e, t, i, a, n) {
+function Mm(e, t, i, a, n) {
   return Lu(
     Dt(
       e,
@@ -4131,14 +4131,14 @@ function na(e, t) {
   }
   return e.type === t.type && e.key === t.key;
 }
-const Mm = (...e) => Bu(
+const Bm = (...e) => Bu(
   ...e
 ), Mu = ({ key: e }) => e ?? null, cn = ({
   ref: e,
   ref_key: t,
   ref_for: i
-}) => (typeof e == "number" && (e = "" + e), e != null ? _e(e) || /* @__PURE__ */ pe(e) || q(e) ? { i: Je, r: e, k: t, f: !!i } : e : null);
-function U(e, t = null, i = null, a = 0, n = null, s = e === Xe ? 0 : 1, o = !1, r = !1) {
+}) => (typeof e == "number" && (e = "" + e), e != null ? _e(e) || /* @__PURE__ */ me(e) || G(e) ? { i: Ye, r: e, k: t, f: !!i } : e : null);
+function L(e, t = null, i = null, a = 0, n = null, s = e === Qe ? 0 : 1, o = !1, r = !1) {
   const c = {
     __v_isVNode: !0,
     __v_skip: !0,
@@ -4166,41 +4166,41 @@ function U(e, t = null, i = null, a = 0, n = null, s = e === Xe ? 0 : 1, o = !1,
     dynamicProps: n,
     dynamicChildren: null,
     appContext: null,
-    ctx: Je
+    ctx: Ye
   };
   return r ? (On(c, i), s & 128 && e.normalize(c)) : i && (c.shapeFlag |= _e(i) ? 8 : 16), process.env.NODE_ENV !== "production" && c.key !== c.key && S("VNode created with invalid key (NaN). VNode type:", c.type), wa > 0 && // avoid a block node from tracking itself
   !o && // has current parent block
-  nt && // presence of a patch flag indicates this node needs patching on updates.
+  st && // presence of a patch flag indicates this node needs patching on updates.
   // component nodes also should always be patched, because even if the
   // component doesn't need to update, it needs to persist the instance on to
   // the next vnode so that it can be properly unmounted later.
   (c.patchFlag > 0 || s & 6) && // the EVENTS flag is only for hydration and if it is the only flag, the
   // vnode should not be considered dynamic due to handler caching.
-  c.patchFlag !== 32 && nt.push(c), c;
+  c.patchFlag !== 32 && st.push(c), c;
 }
-const Dt = process.env.NODE_ENV !== "production" ? Mm : Bu;
+const Dt = process.env.NODE_ENV !== "production" ? Bm : Bu;
 function Bu(e, t = null, i = null, a = 0, n = null, s = !1) {
-  if ((!e || e === im) && (process.env.NODE_ENV !== "production" && !e && S(`Invalid vnode type when creating vnode: ${e}.`), e = st), Jn(e)) {
-    const r = ei(
+  if ((!e || e === am) && (process.env.NODE_ENV !== "production" && !e && S(`Invalid vnode type when creating vnode: ${e}.`), e = ot), Jn(e)) {
+    const r = ti(
       e,
       t,
       !0
       /* mergeRef: true */
     );
-    return i && On(r, i), wa > 0 && !s && nt && (r.shapeFlag & 6 ? nt[nt.indexOf(e)] = r : nt.push(r)), r.patchFlag = -2, r;
+    return i && On(r, i), wa > 0 && !s && st && (r.shapeFlag & 6 ? st[st.indexOf(e)] = r : st.push(r)), r.patchFlag = -2, r;
   }
   if (qu(e) && (e = e.__vccOpts), t) {
-    t = Bm(t);
+    t = Zm(t);
     let { class: r, style: c } = t;
-    r && !_e(r) && (t.class = Mn(r)), ne(c) && (/* @__PURE__ */ Bi(c) && !Z(c) && (c = Oe({}, c)), t.style = Ln(c));
+    r && !_e(r) && (t.class = Mn(r)), ae(c) && (/* @__PURE__ */ Bi(c) && !W(c) && (c = Ae({}, c)), t.style = Ln(c));
   }
-  const o = _e(e) ? 1 : Uu(e) ? 128 : Zp(e) ? 64 : ne(e) ? 4 : q(e) ? 2 : 0;
+  const o = _e(e) ? 1 : Uu(e) ? 128 : Hp(e) ? 64 : ae(e) ? 4 : G(e) ? 2 : 0;
   return process.env.NODE_ENV !== "production" && o & 4 && /* @__PURE__ */ Bi(e) && (e = /* @__PURE__ */ X(e), S(
     "Vue received a Component that was made a reactive object. This can lead to unnecessary performance overhead and should be avoided by marking the component with `markRaw` or using `shallowRef` instead of `ref`.",
     `
 Component that was made reactive: `,
     e
-  )), U(
+  )), L(
     e,
     t,
     i,
@@ -4211,11 +4211,11 @@ Component that was made reactive: `,
     !0
   );
 }
-function Bm(e) {
-  return e ? /* @__PURE__ */ Bi(e) || Du(e) ? Oe({}, e) : e : null;
+function Zm(e) {
+  return e ? /* @__PURE__ */ Bi(e) || Du(e) ? Ae({}, e) : e : null;
 }
-function ei(e, t, i = !1, a = !1) {
-  const { props: n, ref: s, patchFlag: o, children: r, transition: c } = e, d = t ? Zm(n || {}, t) : n, l = {
+function ti(e, t, i = !1, a = !1) {
+  const { props: n, ref: s, patchFlag: o, children: r, transition: c } = e, d = t ? Hm(n || {}, t) : n, l = {
     __v_isVNode: !0,
     __v_skip: !0,
     type: e.type,
@@ -4225,11 +4225,11 @@ function ei(e, t, i = !1, a = !1) {
       // #2078 in the case of <component :is="vnode" ref="extra"/>
       // if the vnode itself already has a ref, cloneVNode will need to merge
       // the refs so the single vnode can be set on multiple refs
-      i && s ? Z(s) ? s.concat(cn(t)) : [s, cn(t)] : cn(t)
+      i && s ? W(s) ? s.concat(cn(t)) : [s, cn(t)] : cn(t)
     ) : s,
     scopeId: e.scopeId,
     slotScopeIds: e.slotScopeIds,
-    children: process.env.NODE_ENV !== "production" && o === -1 && Z(r) ? r.map(Zu) : r,
+    children: process.env.NODE_ENV !== "production" && o === -1 && W(r) ? r.map(Zu) : r,
     target: e.target,
     targetStart: e.targetStart,
     targetAnchor: e.targetAnchor,
@@ -4239,7 +4239,7 @@ function ei(e, t, i = !1, a = !1) {
     // existing patch flag to be reliable and need to add the FULL_PROPS flag.
     // note: preserve flag for fragments since they use the flag for children
     // fast paths only.
-    patchFlag: t && e.type !== Xe ? o === -1 ? 16 : o | 16 : o,
+    patchFlag: t && e.type !== Qe ? o === -1 ? 16 : o | 16 : o,
     dynamicProps: e.dynamicProps,
     dynamicChildren: e.dynamicChildren,
     appContext: e.appContext,
@@ -4251,8 +4251,8 @@ function ei(e, t, i = !1, a = !1) {
     // they will simply be overwritten.
     component: e.component,
     suspense: e.suspense,
-    ssContent: e.ssContent && ei(e.ssContent),
-    ssFallback: e.ssFallback && ei(e.ssFallback),
+    ssContent: e.ssContent && ti(e.ssContent),
+    ssFallback: e.ssFallback && ti(e.ssFallback),
     placeholder: e.placeholder,
     el: e.el,
     anchor: e.anchor,
@@ -4265,32 +4265,32 @@ function ei(e, t, i = !1, a = !1) {
   ), l;
 }
 function Zu(e) {
-  const t = ei(e);
-  return Z(e.children) && (t.children = e.children.map(Zu)), t;
+  const t = ti(e);
+  return W(e.children) && (t.children = e.children.map(Zu)), t;
 }
 function dn(e = " ", t = 0) {
   return Dt(ja, null, e, t);
 }
 function Si(e = "", t = !1) {
-  return t ? (he(), Lm(st, null, e)) : Dt(st, null, e);
+  return t ? (he(), Mm(ot, null, e)) : Dt(ot, null, e);
 }
 function mt(e) {
-  return e == null || typeof e == "boolean" ? Dt(st) : Z(e) ? Dt(
-    Xe,
+  return e == null || typeof e == "boolean" ? Dt(ot) : W(e) ? Dt(
+    Qe,
     null,
     // #3666, avoid reference pollution when reusing vnode
     e.slice()
-  ) : Jn(e) ? Lt(e) : Dt(ja, null, String(e));
+  ) : Jn(e) ? Ut(e) : Dt(ja, null, String(e));
 }
-function Lt(e) {
-  return e.el === null && e.patchFlag !== -1 || e.memo ? e : ei(e);
+function Ut(e) {
+  return e.el === null && e.patchFlag !== -1 || e.memo ? e : ti(e);
 }
 function On(e, t) {
   let i = 0;
   const { shapeFlag: a } = e;
   if (t == null)
     t = null;
-  else if (Z(t))
+  else if (W(t))
     i = 16;
   else if (typeof t == "object")
     if (a & 65) {
@@ -4300,19 +4300,19 @@ function On(e, t) {
     } else {
       i = 32;
       const n = t._;
-      !n && !Du(t) ? t._ctx = Je : n === 3 && Je && (Je.slots._ === 1 ? t._ = 1 : (t._ = 2, e.patchFlag |= 1024));
+      !n && !Du(t) ? t._ctx = Ye : n === 3 && Ye && (Ye.slots._ === 1 ? t._ = 1 : (t._ = 2, e.patchFlag |= 1024));
     }
-  else if (q(t)) {
+  else if (G(t)) {
     if (a & 65) {
       On(e, { default: t });
       return;
     }
-    t = { default: t, _ctx: Je }, i = 32;
+    t = { default: t, _ctx: Ye }, i = 32;
   } else
     t = String(t), a & 64 ? (i = 16, t = [dn(t)]) : i = 8;
   e.children = t, e.shapeFlag |= i;
 }
-function Zm(...e) {
+function Hm(...e) {
   const t = {};
   for (let i = 0; i < e.length; i++) {
     const a = e[i];
@@ -4323,7 +4323,7 @@ function Zm(...e) {
         t.style = Ln([t.style, a.style]);
       else if (Ca(n)) {
         const s = t[n], o = a[n];
-        o && s !== o && !(Z(s) && s.includes(o)) ? t[n] = s ? [].concat(s, o) : o : o == null && s == null && // mergeProps({ 'onUpdate:modelValue': undefined }) should not retain
+        o && s !== o && !(W(s) && s.includes(o)) ? t[n] = s ? [].concat(s, o) : o : o == null && s == null && // mergeProps({ 'onUpdate:modelValue': undefined }) should not retain
         // the model listener.
         !_a(n) && (t[n] = o);
       } else n !== "" && (t[n] = a[n]);
@@ -4336,11 +4336,11 @@ function It(e, t, i, a = null) {
     a
   ]);
 }
-const Hm = Au();
-let Km = 0;
-function Wm(e, t, i) {
-  const a = e.type, n = (t ? t.appContext : e.appContext) || Hm, s = {
-    uid: Km++,
+const Km = Au();
+let Wm = 0;
+function qm(e, t, i) {
+  const a = e.type, n = (t ? t.appContext : e.appContext) || Km, s = {
+    uid: Wm++,
     vnode: e,
     type: a,
     parent: t,
@@ -4415,10 +4415,10 @@ function Wm(e, t, i) {
     ec: null,
     sp: null
   };
-  return process.env.NODE_ENV !== "production" ? s.ctx = am(s) : s.ctx = { _: s }, s.root = t ? t.root : s, s.emit = gm.bind(null, s), e.ce && e.ce(s), s;
+  return process.env.NODE_ENV !== "production" ? s.ctx = nm(s) : s.ctx = { _: s }, s.root = t ? t.root : s, s.emit = bm.bind(null, s), e.ce && e.ce(s), s;
 }
-let De = null;
-const Yn = () => De || Je;
+let Ve = null;
+const Yn = () => Ve || Ye;
 let xn, Ms;
 {
   const e = Va(), t = (i, a) => {
@@ -4429,22 +4429,22 @@ let xn, Ms;
   };
   xn = t(
     "__VUE_INSTANCE_SETTERS__",
-    (i) => De = i
+    (i) => Ve = i
   ), Ms = t(
     "__VUE_SSR_SETTERS__",
     (i) => Ea = i
   );
 }
 const Fa = (e) => {
-  const t = De;
+  const t = Ve;
   return xn(e), e.scope.on(), () => {
     e.scope.off(), xn(t);
   };
 }, Er = () => {
-  De && De.scope.off(), xn(null);
-}, qm = /* @__PURE__ */ Wt("slot,component");
+  Ve && Ve.scope.off(), xn(null);
+}, Gm = /* @__PURE__ */ Kt("slot,component");
 function Bs(e, { isNativeTag: t }) {
-  (qm(e) || t(e)) && S(
+  (Gm(e) || t(e)) && S(
     "Do not use built-in or reserved HTML elements as component id: " + e
   );
 }
@@ -4452,14 +4452,14 @@ function Hu(e) {
   return e.vnode.shapeFlag & 4;
 }
 let Ea = !1;
-function Gm(e, t = !1, i = !1) {
+function Jm(e, t = !1, i = !1) {
   t && Ms(t);
   const { props: a, children: n } = e.vnode, s = Hu(e);
-  km(e, a, s, t), Dm(e, n, i || t);
-  const o = s ? Jm(e, t) : void 0;
+  wm(e, a, s, t), Vm(e, n, i || t);
+  const o = s ? Ym(e, t) : void 0;
   return t && Ms(!1), o;
 }
-function Jm(e, t) {
+function Ym(e, t) {
   const i = e.type;
   if (process.env.NODE_ENV !== "production") {
     if (i.name && Bs(i.name, e.appContext.config), i.components) {
@@ -4472,15 +4472,15 @@ function Jm(e, t) {
       for (let s = 0; s < n.length; s++)
         bu(n[s]);
     }
-    i.compilerOptions && Ym() && S(
+    i.compilerOptions && Xm() && S(
       '"compilerOptions" is only supported when using a build of Vue that includes the runtime compiler. Since you are using a runtime-only build, the options should be passed via your build tool config instead.'
     );
   }
-  e.accessCache = /* @__PURE__ */ Object.create(null), e.proxy = new Proxy(e.ctx, Eu), process.env.NODE_ENV !== "production" && nm(e);
+  e.accessCache = /* @__PURE__ */ Object.create(null), e.proxy = new Proxy(e.ctx, Eu), process.env.NODE_ENV !== "production" && sm(e);
   const { setup: a } = i;
   if (a) {
     ut();
-    const n = e.setupContext = a.length > 1 ? Qm(e) : null, s = Fa(e), o = Ji(
+    const n = e.setupContext = a.length > 1 ? eg(e) : null, s = Fa(e), o = Ji(
       a,
       e,
       0,
@@ -4508,32 +4508,32 @@ function Jm(e, t) {
     Ku(e, t);
 }
 function Ir(e, t, i) {
-  q(t) ? e.type.__ssrInlineRender ? e.ssrRender = t : e.render = t : ne(t) ? (process.env.NODE_ENV !== "production" && Jn(t) && S(
+  G(t) ? e.type.__ssrInlineRender ? e.ssrRender = t : e.render = t : ae(t) ? (process.env.NODE_ENV !== "production" && Jn(t) && S(
     "setup() should not return VNodes directly - return a render function instead."
-  ), process.env.NODE_ENV !== "production" && (e.devtoolsRawSetupState = t), e.setupState = nu(t), process.env.NODE_ENV !== "production" && sm(e)) : process.env.NODE_ENV !== "production" && t !== void 0 && S(
+  ), process.env.NODE_ENV !== "production" && (e.devtoolsRawSetupState = t), e.setupState = nu(t), process.env.NODE_ENV !== "production" && om(e)) : process.env.NODE_ENV !== "production" && t !== void 0 && S(
     `setup() should return an object. Received: ${t === null ? "null" : typeof t}`
   ), Ku(e, i);
 }
-const Ym = () => !0;
+const Xm = () => !0;
 function Ku(e, t, i) {
   const a = e.type;
-  e.render || (e.render = a.render || Re);
+  e.render || (e.render = a.render || Pe);
   {
     const n = Fa(e);
     ut();
     try {
-      rm(e);
+      cm(e);
     } finally {
       lt(), n();
     }
   }
-  process.env.NODE_ENV !== "production" && !a.render && e.render === Re && !t && (a.template ? S(
+  process.env.NODE_ENV !== "production" && !a.render && e.render === Pe && !t && (a.template ? S(
     'Component provided template option but runtime compilation is not supported in this build of Vue. Configure your bundler to alias "vue" to "vue/dist/vue.esm-bundler.js".'
   ) : S("Component is missing template or render function: ", a));
 }
 const Tr = process.env.NODE_ENV !== "production" ? {
   get(e, t) {
-    return Tn(), Ve(e, "get", ""), e[t];
+    return Tn(), Re(e, "get", ""), e[t];
   },
   set() {
     return S("setupContext.attrs is readonly."), !1;
@@ -4543,21 +4543,21 @@ const Tr = process.env.NODE_ENV !== "production" ? {
   }
 } : {
   get(e, t) {
-    return Ve(e, "get", ""), e[t];
+    return Re(e, "get", ""), e[t];
   }
 };
-function Xm(e) {
+function Qm(e) {
   return new Proxy(e.slots, {
     get(t, i) {
-      return Ve(e, "get", "$slots"), t[i];
+      return Re(e, "get", "$slots"), t[i];
     }
   });
 }
-function Qm(e) {
+function eg(e) {
   const t = (i) => {
     if (process.env.NODE_ENV !== "production" && (e.exposed && S("expose() should be called only once per setup()."), i != null)) {
       let a = typeof i;
-      a === "object" && (Z(i) ? a = "array" : /* @__PURE__ */ pe(i) && (a = "ref")), a !== "object" && S(
+      a === "object" && (W(i) ? a = "array" : /* @__PURE__ */ me(i) && (a = "ref")), a !== "object" && S(
         `expose() should be passed a plain object, received ${a}.`
       );
     }
@@ -4570,7 +4570,7 @@ function Qm(e) {
         return i || (i = new Proxy(e.attrs, Tr));
       },
       get slots() {
-        return a || (a = Xm(e));
+        return a || (a = Qm(e));
       },
       get emit() {
         return (n, ...s) => e.emit(n, ...s);
@@ -4590,17 +4590,17 @@ function Xn(e) {
     get(t, i) {
       if (i in t)
         return t[i];
-      if (i in _i)
-        return _i[i](e);
+      if (i in vi)
+        return vi[i](e);
     },
     has(t, i) {
-      return i in t || i in _i;
+      return i in t || i in vi;
     }
   })) : e.proxy;
 }
-const eg = /(?:^|[-_])\w/g, tg = (e) => e.replace(eg, (t) => t.toUpperCase()).replace(/[-_]/g, "");
+const tg = /(?:^|[-_])\w/g, ig = (e) => e.replace(tg, (t) => t.toUpperCase()).replace(/[-_]/g, "");
 function Wu(e, t = !0) {
-  return q(e) ? e.displayName || e.name : e.name || t && e.__name;
+  return G(e) ? e.displayName || e.name : e.name || t && e.__name;
 }
 function za(e, t, i = !1) {
   let a = Wu(t);
@@ -4618,30 +4618,30 @@ function za(e, t, i = !1) {
       e.parent.type.components
     ) || n(e.appContext.components);
   }
-  return a ? tg(a) : i ? "App" : "Anonymous";
+  return a ? ig(a) : i ? "App" : "Anonymous";
 }
 function qu(e) {
-  return q(e) && "__vccOpts" in e;
+  return G(e) && "__vccOpts" in e;
 }
-const Yt = (e, t) => {
-  const i = /* @__PURE__ */ bp(e, t, Ea);
+const Xt = (e, t) => {
+  const i = /* @__PURE__ */ hp(e, t, Ea);
   if (process.env.NODE_ENV !== "production") {
     const a = Yn();
     a && a.appContext.config.warnRecursiveComputed && (i._warnRecursive = !0);
   }
   return i;
 };
-function ig() {
+function ag() {
   if (process.env.NODE_ENV === "production" || typeof window > "u")
     return;
   const e = { style: "color:#3ba776" }, t = { style: "color:#1677ff" }, i = { style: "color:#f5222d" }, a = { style: "color:#eb2f96" }, n = {
     __vue_custom_formatter: !0,
     header(u) {
-      if (!ne(u))
+      if (!ae(u))
         return null;
       if (u.__isVue)
         return ["div", e, "VueInstance"];
-      if (/* @__PURE__ */ pe(u)) {
+      if (/* @__PURE__ */ me(u)) {
         ut();
         const m = u.value;
         return lt(), [
@@ -4657,7 +4657,7 @@ function ig() {
           return [
             "div",
             {},
-            ["span", e, /* @__PURE__ */ Ze(u) ? "ShallowReactive" : "Reactive"],
+            ["span", e, /* @__PURE__ */ He(u) ? "ShallowReactive" : "Reactive"],
             "<",
             r(u),
             `>${/* @__PURE__ */ _t(u) ? " (readonly)" : ""}`
@@ -4666,7 +4666,7 @@ function ig() {
           return [
             "div",
             {},
-            ["span", e, /* @__PURE__ */ Ze(u) ? "ShallowReadonly" : "Readonly"],
+            ["span", e, /* @__PURE__ */ He(u) ? "ShallowReadonly" : "Readonly"],
             "<",
             r(u),
             ">"
@@ -4706,7 +4706,7 @@ function ig() {
     ]), m;
   }
   function o(u, m) {
-    return m = Oe({}, m), Object.keys(m).length ? [
+    return m = Ae({}, m), Object.keys(m).length ? [
       "div",
       { style: "line-height:1.25em;margin-bottom:0.6em" },
       [
@@ -4731,28 +4731,28 @@ function ig() {
     ] : ["span", {}];
   }
   function r(u, m = !0) {
-    return typeof u == "number" ? ["span", t, u] : typeof u == "string" ? ["span", i, JSON.stringify(u)] : typeof u == "boolean" ? ["span", a, u] : ne(u) ? ["object", { object: m ? /* @__PURE__ */ X(u) : u }] : ["span", i, String(u)];
+    return typeof u == "number" ? ["span", t, u] : typeof u == "string" ? ["span", i, JSON.stringify(u)] : typeof u == "boolean" ? ["span", a, u] : ae(u) ? ["object", { object: m ? /* @__PURE__ */ X(u) : u }] : ["span", i, String(u)];
   }
   function c(u, m) {
     const p = u.type;
-    if (q(p))
+    if (G(p))
       return;
     const h = {};
-    for (const k in u.ctx)
-      d(p, k, m) && (h[k] = u.ctx[k]);
+    for (const w in u.ctx)
+      d(p, w, m) && (h[w] = u.ctx[w]);
     return h;
   }
   function d(u, m, p) {
     const h = u[p];
-    if (Z(h) && h.includes(m) || ne(h) && m in h || u.extends && d(u.extends, m, p) || u.mixins && u.mixins.some((k) => d(k, m, p)))
+    if (W(h) && h.includes(m) || ae(h) && m in h || u.extends && d(u.extends, m, p) || u.mixins && u.mixins.some((w) => d(w, m, p)))
       return !0;
   }
   function l(u) {
-    return /* @__PURE__ */ Ze(u) ? "ShallowRef" : u.effect ? "ComputedRef" : "Ref";
+    return /* @__PURE__ */ He(u) ? "ShallowRef" : u.effect ? "ComputedRef" : "Ref";
   }
   window.devtoolsFormatters ? window.devtoolsFormatters.push(n) : window.devtoolsFormatters = [n];
 }
-const Ar = "3.5.39", Zt = process.env.NODE_ENV !== "production" ? S : Re;
+const Ar = "3.5.39", Bt = process.env.NODE_ENV !== "production" ? S : Pe;
 process.env.NODE_ENV;
 process.env.NODE_ENV;
 let Zs;
@@ -4763,9 +4763,9 @@ if (Or)
       createHTML: (e) => e
     });
   } catch (e) {
-    process.env.NODE_ENV !== "production" && Zt(`Error creating trusted types policy: ${e}`);
+    process.env.NODE_ENV !== "production" && Bt(`Error creating trusted types policy: ${e}`);
   }
-const Gu = Zs ? (e) => Zs.createHTML(e) : (e) => e, ag = "http://www.w3.org/2000/svg", ng = "http://www.w3.org/1998/Math/MathML", zt = typeof document < "u" ? document : null, xr = zt && /* @__PURE__ */ zt.createElement("template"), sg = {
+const Gu = Zs ? (e) => Zs.createHTML(e) : (e) => e, ng = "http://www.w3.org/2000/svg", sg = "http://www.w3.org/1998/Math/MathML", Ft = typeof document < "u" ? document : null, xr = Ft && /* @__PURE__ */ Ft.createElement("template"), og = {
   insert: (e, t, i) => {
     t.insertBefore(e, i || null);
   },
@@ -4774,11 +4774,11 @@ const Gu = Zs ? (e) => Zs.createHTML(e) : (e) => e, ag = "http://www.w3.org/2000
     t && t.removeChild(e);
   },
   createElement: (e, t, i, a) => {
-    const n = t === "svg" ? zt.createElementNS(ag, e) : t === "mathml" ? zt.createElementNS(ng, e) : i ? zt.createElement(e, { is: i }) : zt.createElement(e);
+    const n = t === "svg" ? Ft.createElementNS(ng, e) : t === "mathml" ? Ft.createElementNS(sg, e) : i ? Ft.createElement(e, { is: i }) : Ft.createElement(e);
     return e === "select" && a && a.multiple != null && n.setAttribute("multiple", a.multiple), n;
   },
-  createText: (e) => zt.createTextNode(e),
-  createComment: (e) => zt.createComment(e),
+  createText: (e) => Ft.createTextNode(e),
+  createComment: (e) => Ft.createComment(e),
   setText: (e, t) => {
     e.nodeValue = t;
   },
@@ -4787,7 +4787,7 @@ const Gu = Zs ? (e) => Zs.createHTML(e) : (e) => e, ag = "http://www.w3.org/2000
   },
   parentNode: (e) => e.parentNode,
   nextSibling: (e) => e.nextSibling,
-  querySelector: (e) => zt.querySelector(e),
+  querySelector: (e) => Ft.querySelector(e),
   setScopeId(e, t) {
     e.setAttribute(t, "");
   },
@@ -4820,13 +4820,13 @@ const Gu = Zs ? (e) => Zs.createHTML(e) : (e) => e, ag = "http://www.w3.org/2000
       i ? i.previousSibling : t.lastChild
     ];
   }
-}, og = /* @__PURE__ */ Symbol("_vtc");
-function rg(e, t, i) {
-  const a = e[og];
+}, rg = /* @__PURE__ */ Symbol("_vtc");
+function cg(e, t, i) {
+  const a = e[rg];
   a && (t = (t ? [t, ...a] : [...a]).join(" ")), t == null ? e.removeAttribute("class") : i ? e.setAttribute("class", t) : e.className = t;
 }
-const Sr = /* @__PURE__ */ Symbol("_vod"), cg = /* @__PURE__ */ Symbol("_vsh"), dg = /* @__PURE__ */ Symbol(process.env.NODE_ENV !== "production" ? "CSS_VAR_TEXT" : ""), ug = /(?:^|;)\s*display\s*:/;
-function lg(e, t, i) {
+const Sr = /* @__PURE__ */ Symbol("_vod"), dg = /* @__PURE__ */ Symbol("_vsh"), ug = /* @__PURE__ */ Symbol(process.env.NODE_ENV !== "production" ? "CSS_VAR_TEXT" : ""), lg = /(?:^|;)\s*display\s*:/;
+function fg(e, t, i) {
   const a = e.style, n = _e(i);
   let s = !1;
   if (i && !n) {
@@ -4842,7 +4842,7 @@ function lg(e, t, i) {
     for (const o in i) {
       o === "display" && (s = !0);
       const r = i[o];
-      r != null ? mg(
+      r != null ? gg(
         e,
         o,
         !_e(t) && t ? t[o] : void 0,
@@ -4851,35 +4851,35 @@ function lg(e, t, i) {
     }
   } else if (n) {
     if (t !== i) {
-      const o = a[dg];
-      o && (i += ";" + o), a.cssText = i, s = ug.test(i);
+      const o = a[ug];
+      o && (i += ";" + o), a.cssText = i, s = lg.test(i);
     }
   } else t && e.removeAttribute("style");
-  Sr in e && (e[Sr] = s ? a.display : "", e[cg] && (a.display = "none"));
+  Sr in e && (e[Sr] = s ? a.display : "", e[dg] && (a.display = "none"));
 }
-const fg = /[^\\];\s*$/, Nr = /\s*!important$/;
+const pg = /[^\\];\s*$/, Nr = /\s*!important$/;
 function ra(e, t, i) {
-  if (Z(i))
+  if (W(i))
     i.forEach((a) => ra(e, t, a));
-  else if (i == null && (i = ""), process.env.NODE_ENV !== "production" && fg.test(i) && Zt(
+  else if (i == null && (i = ""), process.env.NODE_ENV !== "production" && pg.test(i) && Bt(
     `Unexpected semicolon at the end of '${t}' style value: '${i}'`
   ), t.startsWith("--"))
     e.setProperty(t, i);
   else {
-    const a = pg(e, t);
+    const a = mg(e, t);
     Nr.test(i) ? e.setProperty(
-      Qt(a),
+      ei(a),
       i.replace(Nr, ""),
       "important"
     ) : e[a] = i;
   }
 }
 const Cr = ["Webkit", "Moz", "ms"], vs = {};
-function pg(e, t) {
+function mg(e, t) {
   const i = vs[t];
   if (i)
     return i;
-  let a = Qe(t);
+  let a = et(t);
   if (a !== "filter" && a in e)
     return vs[t] = a;
   a = Un(a);
@@ -4890,14 +4890,14 @@ function pg(e, t) {
   }
   return t;
 }
-function mg(e, t, i, a) {
+function gg(e, t, i, a) {
   return e.tagName === "TEXTAREA" && (t === "width" || t === "height") && _e(a) && i === a;
 }
 const Dr = "http://www.w3.org/1999/xlink";
-function Vr(e, t, i, a, n, s = Lf(t)) {
+function Vr(e, t, i, a, n, s = Mf(t)) {
   a && t.startsWith("xlink:") ? i == null ? e.removeAttributeNS(Dr, t.slice(6, t.length)) : e.setAttributeNS(Dr, t, i) : i == null || s && !Rd(i) ? e.removeAttribute(t) : e.setAttribute(
     t,
-    s ? "" : ot(i) ? String(i) : i
+    s ? "" : rt(i) ? String(i) : i
   );
 }
 function Rr(e, t, i, a, n) {
@@ -4924,52 +4924,52 @@ function Rr(e, t, i, a, n) {
   try {
     e[t] = i;
   } catch (r) {
-    process.env.NODE_ENV !== "production" && !o && Zt(
+    process.env.NODE_ENV !== "production" && !o && Bt(
       `Failed setting prop "${t}" on <${s.toLowerCase()}>: value ${i} is invalid.`,
       r
     );
   }
   o && e.removeAttribute(n || t);
 }
-function li(e, t, i, a) {
+function fi(e, t, i, a) {
   e.addEventListener(t, i, a);
 }
-function gg(e, t, i, a) {
+function bg(e, t, i, a) {
   e.removeEventListener(t, i, a);
 }
 const Pr = /* @__PURE__ */ Symbol("_vei");
-function bg(e, t, i, a, n = null) {
+function hg(e, t, i, a, n = null) {
   const s = e[Pr] || (e[Pr] = {}), o = s[t];
   if (a && o)
     o.value = process.env.NODE_ENV !== "production" ? $r(a, t) : a;
   else {
-    const [r, c] = vg(t);
+    const [r, c] = yg(t);
     if (a) {
-      const d = s[t] = wg(
+      const d = s[t] = Eg(
         process.env.NODE_ENV !== "production" ? $r(a, t) : a,
         n
       );
-      li(e, r, d, c);
-    } else o && (gg(e, r, o, c), s[t] = void 0);
+      fi(e, r, d, c);
+    } else o && (bg(e, r, o, c), s[t] = void 0);
   }
 }
-const hg = /(Once|Passive|Capture)$/, _g = /^on:?(?:Once|Passive|Capture)$/;
-function vg(e) {
+const _g = /(Once|Passive|Capture)$/, vg = /^on:?(?:Once|Passive|Capture)$/;
+function yg(e) {
   let t, i;
-  for (; (i = e.match(hg)) && !_g.test(e); )
+  for (; (i = e.match(_g)) && !vg.test(e); )
     t || (t = {}), e = e.slice(0, e.length - i[1].length), t[i[1].toLowerCase()] = !0;
-  return [e[2] === ":" ? e.slice(3) : Qt(e.slice(2)), t];
+  return [e[2] === ":" ? e.slice(3) : ei(e.slice(2)), t];
 }
 let ys = 0;
-const yg = /* @__PURE__ */ Promise.resolve(), kg = () => ys || (yg.then(() => ys = 0), ys = Date.now());
-function wg(e, t) {
+const kg = /* @__PURE__ */ Promise.resolve(), wg = () => ys || (kg.then(() => ys = 0), ys = Date.now());
+function Eg(e, t) {
   const i = (a) => {
     if (!a._vts)
       a._vts = Date.now();
     else if (a._vts <= i.attached)
       return;
     const n = i.value;
-    if (Z(n)) {
+    if (W(n)) {
       const s = a.stopImmediatePropagation;
       a.stopImmediatePropagation = () => {
         s.call(a), a._stopped = !0;
@@ -4992,24 +4992,24 @@ function wg(e, t) {
         [a]
       );
   };
-  return i.value = e, i.attached = kg(), i;
+  return i.value = e, i.attached = wg(), i;
 }
 function $r(e, t) {
-  return q(e) || Z(e) ? e : (Zt(
+  return G(e) || W(e) ? e : (Bt(
     `Wrong type passed as event handler to ${t} - did you forget @ or : in front of your prop?
 Expected function or array of functions, received type ${typeof e}.`
-  ), Re);
+  ), Pe);
 }
 const jr = (e) => e.charCodeAt(0) === 111 && e.charCodeAt(1) === 110 && // lowercase letter
-e.charCodeAt(2) > 96 && e.charCodeAt(2) < 123, Eg = (e, t, i, a, n, s) => {
+e.charCodeAt(2) > 96 && e.charCodeAt(2) < 123, Ig = (e, t, i, a, n, s) => {
   const o = n === "svg";
-  t === "class" ? rg(e, a, o) : t === "style" ? lg(e, i, a) : Ca(t) ? _a(t) || bg(e, t, i, a, s) : (t[0] === "." ? (t = t.slice(1), !0) : t[0] === "^" ? (t = t.slice(1), !1) : Ig(e, t, a, o)) ? (Rr(e, t, a), !e.tagName.includes("-") && (t === "value" || t === "checked" || t === "selected") && Vr(e, t, a, o, s, t !== "value")) : /* #11081 force set props for possible async custom element */ e._isVueCE && // #12408 check if it's declared prop or it's async custom element
-  (Tg(e, t) || // @ts-expect-error _def is private
-  e._def.__asyncLoader && (/[A-Z]/.test(t) || !_e(a))) ? Rr(e, Qe(t), a, s, t) : (t === "true-value" ? e._trueValue = a : t === "false-value" && (e._falseValue = a), Vr(e, t, a, o));
+  t === "class" ? cg(e, a, o) : t === "style" ? fg(e, i, a) : Ca(t) ? _a(t) || hg(e, t, i, a, s) : (t[0] === "." ? (t = t.slice(1), !0) : t[0] === "^" ? (t = t.slice(1), !1) : Tg(e, t, a, o)) ? (Rr(e, t, a), !e.tagName.includes("-") && (t === "value" || t === "checked" || t === "selected") && Vr(e, t, a, o, s, t !== "value")) : /* #11081 force set props for possible async custom element */ e._isVueCE && // #12408 check if it's declared prop or it's async custom element
+  (Ag(e, t) || // @ts-expect-error _def is private
+  e._def.__asyncLoader && (/[A-Z]/.test(t) || !_e(a))) ? Rr(e, et(t), a, s, t) : (t === "true-value" ? e._trueValue = a : t === "false-value" && (e._falseValue = a), Vr(e, t, a, o));
 };
-function Ig(e, t, i, a) {
+function Tg(e, t, i, a) {
   if (a)
-    return !!(t === "innerHTML" || t === "textContent" || t in e && jr(t) && q(i));
+    return !!(t === "innerHTML" || t === "textContent" || t in e && jr(t) && G(i));
   if (t === "spellcheck" || t === "draggable" || t === "translate" || t === "autocorrect" || t === "sandbox" && e.tagName === "IFRAME" || t === "form" || t === "list" && e.tagName === "INPUT" || t === "type" && e.tagName === "TEXTAREA")
     return !1;
   if (t === "width" || t === "height") {
@@ -5019,21 +5019,21 @@ function Ig(e, t, i, a) {
   }
   return jr(t) && _e(i) ? !1 : t in e;
 }
-function Tg(e, t) {
+function Ag(e, t) {
   const i = (
     // @ts-expect-error _def is private
     e._def.props
   );
   if (!i)
     return !1;
-  const a = Qe(t);
-  return Array.isArray(i) ? i.some((n) => Qe(n) === a) : Object.keys(i).some((n) => Qe(n) === a);
+  const a = et(t);
+  return Array.isArray(i) ? i.some((n) => et(n) === a) : Object.keys(i).some((n) => et(n) === a);
 }
 const Sn = (e) => {
   const t = e.props["onUpdate:modelValue"] || !1;
-  return Z(t) ? (i) => Di(t, i) : t;
+  return W(t) ? (i) => Di(t, i) : t;
 };
-function Ag(e) {
+function Og(e) {
   e.target.composing = !0;
 }
 function Fr(e) {
@@ -5048,11 +5048,11 @@ const Ur = {
   created(e, { modifiers: { lazy: t, trim: i, number: a } }, n) {
     e[Li] = Sn(n);
     const s = a || n.props && n.props.type === "number";
-    li(e, t ? "change" : "input", (o) => {
+    fi(e, t ? "change" : "input", (o) => {
       o.target.composing || e[Li](zr(e.value, i, s));
-    }), (i || s) && li(e, "change", () => {
+    }), (i || s) && fi(e, "change", () => {
       e.value = zr(e.value, i, s);
-    }), t || (li(e, "compositionstart", Ag), li(e, "compositionend", Fr), li(e, "change", Fr));
+    }), t || (fi(e, "compositionstart", Og), fi(e, "compositionend", Fr), fi(e, "change", Fr));
   },
   // set value on mounted so it's after min/max for type="range"
   mounted(e, { value: t }) {
@@ -5070,9 +5070,9 @@ const Ur = {
   // #4096 array checkboxes need to be deep traversed
   deep: !0,
   created(e, t, i) {
-    e[Li] = Sn(i), li(e, "change", () => {
-      const a = e._modelValue, n = Og(e), s = e.checked, o = e[Li];
-      if (Z(a)) {
+    e[Li] = Sn(i), fi(e, "change", () => {
+      const a = e._modelValue, n = xg(e), s = e.checked, o = e[Li];
+      if (W(a)) {
         const r = Pd(a, n), c = r !== -1;
         if (s && !c)
           o(a.concat(n));
@@ -5096,7 +5096,7 @@ const Ur = {
 function Mr(e, { value: t, oldValue: i }, a) {
   e._modelValue = t;
   let n;
-  if (Z(t))
+  if (W(t))
     n = Pd(t, a.props.value) > -1;
   else if (jn(t))
     n = t.has(a.props.value);
@@ -5106,14 +5106,14 @@ function Mr(e, { value: t, oldValue: i }, a) {
   }
   e.checked !== n && (e.checked = n);
 }
-function Og(e) {
+function xg(e) {
   return "_value" in e ? e._value : e.value;
 }
 function Ju(e, t) {
   const i = t ? "_trueValue" : "_falseValue";
   return i in e ? e[i] : t;
 }
-const xg = ["ctrl", "shift", "alt", "meta"], Sg = {
+const Sg = ["ctrl", "shift", "alt", "meta"], Ng = {
   stop: (e) => e.stopPropagation(),
   prevent: (e) => e.preventDefault(),
   self: (e) => e.target !== e.currentTarget,
@@ -5124,48 +5124,48 @@ const xg = ["ctrl", "shift", "alt", "meta"], Sg = {
   left: (e) => "button" in e && e.button !== 0,
   middle: (e) => "button" in e && e.button !== 1,
   right: (e) => "button" in e && e.button !== 2,
-  exact: (e, t) => xg.some((i) => e[`${i}Key`] && !t.includes(i))
+  exact: (e, t) => Sg.some((i) => e[`${i}Key`] && !t.includes(i))
 }, Br = (e, t) => {
   if (!e) return e;
   const i = e._withMods || (e._withMods = {}), a = t.join(".");
   return i[a] || (i[a] = ((n, ...s) => {
     for (let o = 0; o < t.length; o++) {
-      const r = Sg[t[o]];
+      const r = Ng[t[o]];
       if (r && r(n, t)) return;
     }
     return e(n, ...s);
   }));
-}, Ng = /* @__PURE__ */ Oe({ patchProp: Eg }, sg);
+}, Cg = /* @__PURE__ */ Ae({ patchProp: Ig }, og);
 let Zr;
-function Cg() {
-  return Zr || (Zr = Pm(Ng));
+function Dg() {
+  return Zr || (Zr = $m(Cg));
 }
-const Dg = ((...e) => {
-  const t = Cg().createApp(...e);
-  process.env.NODE_ENV !== "production" && (Rg(t), Pg(t));
+const Vg = ((...e) => {
+  const t = Dg().createApp(...e);
+  process.env.NODE_ENV !== "production" && (Pg(t), $g(t));
   const { mount: i } = t;
   return t.mount = (a) => {
-    const n = $g(a);
+    const n = jg(a);
     if (!n) return;
     const s = t._component;
-    !q(s) && !s.render && !s.template && (s.template = n.innerHTML), n.nodeType === 1 && (n.textContent = "");
-    const o = i(n, !1, Vg(n));
+    !G(s) && !s.render && !s.template && (s.template = n.innerHTML), n.nodeType === 1 && (n.textContent = "");
+    const o = i(n, !1, Rg(n));
     return n instanceof Element && (n.removeAttribute("v-cloak"), n.setAttribute("data-v-app", "")), o;
   }, t;
 });
-function Vg(e) {
+function Rg(e) {
   if (e instanceof SVGElement)
     return "svg";
   if (typeof MathMLElement == "function" && e instanceof MathMLElement)
     return "mathml";
 }
-function Rg(e) {
+function Pg(e) {
   Object.defineProperty(e.config, "isNativeTag", {
-    value: (t) => jf(t) || Ff(t) || zf(t),
+    value: (t) => Ff(t) || zf(t) || Uf(t),
     writable: !1
   });
 }
-function Pg(e) {
+function $g(e) {
   {
     const t = e.config.isCustomElement;
     Object.defineProperty(e.config, "isCustomElement", {
@@ -5173,7 +5173,7 @@ function Pg(e) {
         return t;
       },
       set() {
-        Zt(
+        Bt(
           "The `isCustomElement` config option is deprecated. Use `compilerOptions.isCustomElement` instead."
         );
       }
@@ -5181,49 +5181,49 @@ function Pg(e) {
     const i = e.config.compilerOptions, a = 'The `compilerOptions` config option is only respected when using a build of Vue.js that includes the runtime compiler (aka "full build"). Since you are using the runtime-only build, `compilerOptions` must be passed to `@vue/compiler-dom` in the build setup instead.\n- For vue-loader: pass it via vue-loader\'s `compilerOptions` loader option.\n- For vue-cli: see https://cli.vuejs.org/guide/webpack.html#modifying-options-of-a-loader\n- For vite: pass it via @vitejs/plugin-vue options. See https://github.com/vitejs/vite-plugin-vue/tree/main/packages/plugin-vue#example-for-passing-options-to-vuecompiler-sfc';
     Object.defineProperty(e.config, "compilerOptions", {
       get() {
-        return Zt(a), i;
+        return Bt(a), i;
       },
       set() {
-        Zt(a);
+        Bt(a);
       }
     });
   }
 }
-function $g(e) {
+function jg(e) {
   if (_e(e)) {
     const t = document.querySelector(e);
-    return process.env.NODE_ENV !== "production" && !t && Zt(
+    return process.env.NODE_ENV !== "production" && !t && Bt(
       `Failed to mount app: mount target selector "${e}" returned null.`
     ), t;
   }
-  return process.env.NODE_ENV !== "production" && window.ShadowRoot && e instanceof window.ShadowRoot && e.mode === "closed" && Zt(
+  return process.env.NODE_ENV !== "production" && window.ShadowRoot && e instanceof window.ShadowRoot && e.mode === "closed" && Bt(
     'mounting on a ShadowRoot with `{mode: "closed"}` may lead to unpredictable bugs'
   ), e;
 }
-function jg() {
-  ig();
+function Fg() {
+  ag();
 }
-process.env.NODE_ENV !== "production" && jg();
-var Fg = Object.create, Yu = Object.defineProperty, zg = Object.getOwnPropertyDescriptor, xo = Object.getOwnPropertyNames, Ug = Object.getPrototypeOf, Lg = Object.prototype.hasOwnProperty, Mg = (e, t) => function() {
+process.env.NODE_ENV !== "production" && Fg();
+var zg = Object.create, Yu = Object.defineProperty, Ug = Object.getOwnPropertyDescriptor, xo = Object.getOwnPropertyNames, Lg = Object.getPrototypeOf, Mg = Object.prototype.hasOwnProperty, Bg = (e, t) => function() {
   return e && (t = (0, e[xo(e)[0]])(e = 0)), t;
-}, Bg = (e, t) => function() {
+}, Zg = (e, t) => function() {
   return t || (0, e[xo(e)[0]])((t = { exports: {} }).exports, t), t.exports;
-}, Zg = (e, t, i, a) => {
+}, Hg = (e, t, i, a) => {
   if (t && typeof t == "object" || typeof t == "function")
     for (let n of xo(t))
-      !Lg.call(e, n) && n !== i && Yu(e, n, { get: () => t[n], enumerable: !(a = zg(t, n)) || a.enumerable });
+      !Mg.call(e, n) && n !== i && Yu(e, n, { get: () => t[n], enumerable: !(a = Ug(t, n)) || a.enumerable });
   return e;
-}, Hg = (e, t, i) => (i = e != null ? Fg(Ug(e)) : {}, Zg(
+}, Kg = (e, t, i) => (i = e != null ? zg(Lg(e)) : {}, Hg(
   // If the importer is in node compatibility mode or this is not an ESM
   // file that has been converted to a CommonJS file using a Babel-
   // compatible transform (i.e. "__esModule" has not been set), then set
   // "default" to the CommonJS "module.exports" for node compatibility.
   Yu(i, "default", { value: e, enumerable: !0 }),
   e
-)), Ua = Mg({
+)), Ua = Bg({
   "../../node_modules/.pnpm/tsup@8.4.0_@microsoft+api-extractor@7.51.1_@types+node@22.13.14__jiti@2.4.2_postcss@8.5_96eb05a9d65343021e53791dd83f3773/node_modules/tsup/assets/esm_shims.js"() {
   }
-}), Kg = Bg({
+}), Wg = Zg({
   "../../node_modules/.pnpm/rfdc@1.4.1/node_modules/rfdc/index.js"(e, t) {
     Ua(), t.exports = a;
     function i(s) {
@@ -5239,9 +5239,9 @@ var Fg = Object.create, Yu = Object.defineProperty, zg = Object.getOwnPropertyDe
       return s.proto ? l : d;
       function c(u, m) {
         const p = Object.keys(u), h = new Array(p.length);
-        for (let k = 0; k < p.length; k++) {
-          const w = p[k], x = u[w];
-          typeof x != "object" || x === null ? h[w] = x : x.constructor !== Object && (r = o.get(x.constructor)) ? h[w] = r(x, m) : ArrayBuffer.isView(x) ? h[w] = i(x) : h[w] = m(x);
+        for (let w = 0; w < p.length; w++) {
+          const E = p[w], A = u[E];
+          typeof A != "object" || A === null ? h[E] = A : A.constructor !== Object && (r = o.get(A.constructor)) ? h[E] = r(A, m) : ArrayBuffer.isView(A) ? h[E] = i(A) : h[E] = m(A);
         }
         return h;
       }
@@ -5279,21 +5279,21 @@ var Fg = Object.create, Yu = Object.defineProperty, zg = Object.getOwnPropertyDe
       let d = null;
       return s.proto ? m : u;
       function l(p, h) {
-        const k = Object.keys(p), w = new Array(k.length);
-        for (let x = 0; x < k.length; x++) {
-          const L = k[x], D = p[L];
-          if (typeof D != "object" || D === null)
-            w[L] = D;
-          else if (D.constructor !== Object && (d = c.get(D.constructor)))
-            w[L] = d(D, h);
-          else if (ArrayBuffer.isView(D))
-            w[L] = i(D);
+        const w = Object.keys(p), E = new Array(w.length);
+        for (let A = 0; A < w.length; A++) {
+          const z = w[A], R = p[z];
+          if (typeof R != "object" || R === null)
+            E[z] = R;
+          else if (R.constructor !== Object && (d = c.get(R.constructor)))
+            E[z] = d(R, h);
+          else if (ArrayBuffer.isView(R))
+            E[z] = i(R);
           else {
-            const H = o.indexOf(D);
-            H !== -1 ? w[L] = r[H] : w[L] = h(D);
+            const H = o.indexOf(R);
+            H !== -1 ? E[z] = r[H] : E[z] = h(R);
           }
         }
-        return w;
+        return E;
       }
       function u(p) {
         if (typeof p != "object" || p === null) return p;
@@ -5302,18 +5302,18 @@ var Fg = Object.create, Yu = Object.defineProperty, zg = Object.getOwnPropertyDe
           return d(p, u);
         const h = {};
         o.push(p), r.push(h);
-        for (const k in p) {
-          if (Object.hasOwnProperty.call(p, k) === !1) continue;
-          const w = p[k];
-          if (typeof w != "object" || w === null)
-            h[k] = w;
-          else if (w.constructor !== Object && (d = c.get(w.constructor)))
-            h[k] = d(w, u);
-          else if (ArrayBuffer.isView(w))
-            h[k] = i(w);
+        for (const w in p) {
+          if (Object.hasOwnProperty.call(p, w) === !1) continue;
+          const E = p[w];
+          if (typeof E != "object" || E === null)
+            h[w] = E;
+          else if (E.constructor !== Object && (d = c.get(E.constructor)))
+            h[w] = d(E, u);
+          else if (ArrayBuffer.isView(E))
+            h[w] = i(E);
           else {
-            const x = o.indexOf(w);
-            x !== -1 ? h[k] = r[x] : h[k] = u(w);
+            const A = o.indexOf(E);
+            A !== -1 ? h[w] = r[A] : h[w] = u(E);
           }
         }
         return o.pop(), r.pop(), h;
@@ -5325,17 +5325,17 @@ var Fg = Object.create, Yu = Object.defineProperty, zg = Object.getOwnPropertyDe
           return d(p, m);
         const h = {};
         o.push(p), r.push(h);
-        for (const k in p) {
-          const w = p[k];
-          if (typeof w != "object" || w === null)
-            h[k] = w;
-          else if (w.constructor !== Object && (d = c.get(w.constructor)))
-            h[k] = d(w, m);
-          else if (ArrayBuffer.isView(w))
-            h[k] = i(w);
+        for (const w in p) {
+          const E = p[w];
+          if (typeof E != "object" || E === null)
+            h[w] = E;
+          else if (E.constructor !== Object && (d = c.get(E.constructor)))
+            h[w] = d(E, m);
+          else if (ArrayBuffer.isView(E))
+            h[w] = i(E);
           else {
-            const x = o.indexOf(w);
-            x !== -1 ? h[k] = r[x] : h[k] = m(w);
+            const A = o.indexOf(E);
+            A !== -1 ? h[w] = r[A] : h[w] = m(E);
           }
         }
         return o.pop(), r.pop(), h;
@@ -5346,20 +5346,20 @@ var Fg = Object.create, Yu = Object.defineProperty, zg = Object.getOwnPropertyDe
 Ua();
 Ua();
 Ua();
-var Xu = typeof navigator < "u", F = typeof window < "u" ? window : typeof globalThis < "u" ? globalThis : typeof global < "u" ? global : {};
-typeof F.chrome < "u" && F.chrome.devtools;
-Xu && (F.self, F.top);
+var Xu = typeof navigator < "u", U = typeof window < "u" ? window : typeof globalThis < "u" ? globalThis : typeof global < "u" ? global : {};
+typeof U.chrome < "u" && U.chrome.devtools;
+Xu && (U.self, U.top);
 var Hr;
 typeof navigator < "u" && ((Hr = navigator.userAgent) == null || Hr.toLowerCase().includes("electron"));
 Ua();
-var Wg = Hg(Kg()), qg = /(?:^|[-_/])(\w)/g;
-function Gg(e, t) {
+var qg = Kg(Wg()), Gg = /(?:^|[-_/])(\w)/g;
+function Jg(e, t) {
   return t ? t.toUpperCase() : "";
 }
-function Jg(e) {
-  return e && `${e}`.replace(qg, Gg);
+function Yg(e) {
+  return e && `${e}`.replace(Gg, Jg);
 }
-function Yg(e, t) {
+function Xg(e, t) {
   let i = e.replace(/^[a-z]:/i, "").replace(/\\/g, "/");
   i.endsWith(`index${t}`) && (i = i.replace(`/index${t}`, t));
   const a = i.lastIndexOf("/"), n = i.substring(a + 1);
@@ -5368,15 +5368,15 @@ function Yg(e, t) {
     return n.substring(0, s);
   }
 }
-var Kr = (0, Wg.default)({ circles: !0 });
-const Xg = {
+var Kr = (0, qg.default)({ circles: !0 });
+const Qg = {
   trailing: !0
 };
 function Hi(e, t = 25, i = {}) {
-  if (i = { ...Xg, ...i }, !Number.isFinite(t))
+  if (i = { ...Qg, ...i }, !Number.isFinite(t))
     throw new TypeError("Expected `wait` to be a finite number");
   let a, n, s = [], o, r;
-  const c = (d, l) => (o = Qg(e, d, l), o.finally(() => {
+  const c = (d, l) => (o = eb(e, d, l), o.finally(() => {
     if (o = null, i.trailing && r && !n) {
       const u = c(d, r);
       return r = null, u;
@@ -5395,7 +5395,7 @@ function Hi(e, t = 25, i = {}) {
     });
   };
 }
-async function Qg(e, t, i) {
+async function eb(e, t, i) {
   return await e.apply(t, i);
 }
 function Hs(e, t = {}, i) {
@@ -5405,15 +5405,15 @@ function Hs(e, t = {}, i) {
   }
   return t;
 }
-const eb = { run: (e) => e() }, tb = () => eb, Qu = typeof console.createTask < "u" ? console.createTask : tb;
-function ib(e, t) {
+const tb = { run: (e) => e() }, ib = () => tb, Qu = typeof console.createTask < "u" ? console.createTask : ib;
+function ab(e, t) {
   const i = t.shift(), a = Qu(i);
   return e.reduce(
     (n, s) => n.then(() => a.run(() => s(...t))),
     Promise.resolve()
   );
 }
-function ab(e, t) {
+function nb(e, t) {
   const i = t.shift(), a = Qu(i);
   return Promise.all(e.map((n) => a.run(() => n(...t))));
 }
@@ -5421,7 +5421,7 @@ function ks(e, t) {
   for (const i of [...e])
     i(t);
 }
-class nb {
+class sb {
   constructor() {
     this._hooks = {}, this._before = void 0, this._after = void 0, this._deprecatedMessages = void 0, this._deprecatedHooks = {}, this.hook = this.hook.bind(this), this.callHook = this.callHook.bind(this), this.callHookWith = this.callHookWith.bind(this);
   }
@@ -5490,10 +5490,10 @@ class nb {
       delete this._hooks[t];
   }
   callHook(t, ...i) {
-    return i.unshift(t), this.callHookWith(ib, t, ...i);
+    return i.unshift(t), this.callHookWith(ab, t, ...i);
   }
   callHookParallel(t, ...i) {
-    return i.unshift(t), this.callHookWith(ab, t, ...i);
+    return i.unshift(t), this.callHookWith(nb, t, ...i);
   }
   callHookWith(t, i, ...a) {
     const n = this._before || this._after ? { name: i, args: a, context: {} } : void 0;
@@ -5524,30 +5524,30 @@ class nb {
   }
 }
 function el() {
-  return new nb();
+  return new sb();
 }
-var sb = Object.create, tl = Object.defineProperty, ob = Object.getOwnPropertyDescriptor, So = Object.getOwnPropertyNames, rb = Object.getPrototypeOf, cb = Object.prototype.hasOwnProperty, db = (e, t) => function() {
+var ob = Object.create, tl = Object.defineProperty, rb = Object.getOwnPropertyDescriptor, So = Object.getOwnPropertyNames, cb = Object.getPrototypeOf, db = Object.prototype.hasOwnProperty, ub = (e, t) => function() {
   return e && (t = (0, e[So(e)[0]])(e = 0)), t;
 }, il = (e, t) => function() {
   return t || (0, e[So(e)[0]])((t = { exports: {} }).exports, t), t.exports;
-}, ub = (e, t, i, a) => {
+}, lb = (e, t, i, a) => {
   if (t && typeof t == "object" || typeof t == "function")
     for (let n of So(t))
-      !cb.call(e, n) && n !== i && tl(e, n, { get: () => t[n], enumerable: !(a = ob(t, n)) || a.enumerable });
+      !db.call(e, n) && n !== i && tl(e, n, { get: () => t[n], enumerable: !(a = rb(t, n)) || a.enumerable });
   return e;
-}, lb = (e, t, i) => (i = e != null ? sb(rb(e)) : {}, ub(
+}, fb = (e, t, i) => (i = e != null ? ob(cb(e)) : {}, lb(
   // If the importer is in node compatibility mode or this is not an ESM
   // file that has been converted to a CommonJS file using a Babel-
   // compatible transform (i.e. "__esModule" has not been set), then set
   // "default" to the CommonJS "module.exports" for node compatibility.
   tl(i, "default", { value: e, enumerable: !0 }),
   e
-)), C = db({
+)), D = ub({
   "../../node_modules/.pnpm/tsup@8.4.0_@microsoft+api-extractor@7.51.1_@types+node@22.13.14__jiti@2.4.2_postcss@8.5_96eb05a9d65343021e53791dd83f3773/node_modules/tsup/assets/esm_shims.js"() {
   }
-}), fb = il({
+}), pb = il({
   "../../node_modules/.pnpm/speakingurl@14.0.1/node_modules/speakingurl/lib/speakingurl.js"(e, t) {
-    C(), (function(i) {
+    D(), (function(i) {
       var a = {
         // latin
         À: "A",
@@ -6881,37 +6881,37 @@ var sb = Object.create, tl = Object.defineProperty, ob = Object.getOwnPropertyDe
           "∑": "tong",
           "¤": "tien te"
         }
-      }, c = [";", "?", ":", "@", "&", "=", "+", "$", ",", "/"].join(""), d = [";", "?", ":", "@", "&", "=", "+", "$", ","].join(""), l = [".", "!", "~", "*", "'", "(", ")"].join(""), u = function(w, x) {
-        var L = "-", D = "", H = "", N = !0, ee = {}, z, Q, te, j, $, J, me, $e, ze, le, R, G, ie, ct, Le = "";
-        if (typeof w != "string")
+      }, c = [";", "?", ":", "@", "&", "=", "+", "$", ",", "/"].join(""), d = [";", "?", ":", "@", "&", "=", "+", "$", ","].join(""), l = [".", "!", "~", "*", "'", "(", ")"].join(""), u = function(E, A) {
+        var z = "-", R = "", H = "", N = !0, ee = {}, B, le, q, j, $, Q, re, Ce, je, pe, P, J, te, Me, Ue = "";
+        if (typeof E != "string")
           return "";
-        if (typeof x == "string" && (L = x), me = r.en, $e = o.en, typeof x == "object") {
-          z = x.maintainCase || !1, ee = x.custom && typeof x.custom == "object" ? x.custom : ee, te = +x.truncate > 1 && x.truncate || !1, j = x.uric || !1, $ = x.uricNoSlash || !1, J = x.mark || !1, N = !(x.symbols === !1 || x.lang === !1), L = x.separator || L, j && (Le += c), $ && (Le += d), J && (Le += l), me = x.lang && r[x.lang] && N ? r[x.lang] : N ? r.en : {}, $e = x.lang && o[x.lang] ? o[x.lang] : x.lang === !1 || x.lang === !0 ? {} : o.en, x.titleCase && typeof x.titleCase.length == "number" && Array.prototype.toString.call(x.titleCase) ? (x.titleCase.forEach(function(Te) {
-            ee[Te + ""] = Te + "";
-          }), Q = !0) : Q = !!x.titleCase, x.custom && typeof x.custom.length == "number" && Array.prototype.toString.call(x.custom) && x.custom.forEach(function(Te) {
-            ee[Te + ""] = Te + "";
-          }), Object.keys(ee).forEach(function(Te) {
-            var Me;
-            Te.length > 1 ? Me = new RegExp("\\b" + p(Te) + "\\b", "gi") : Me = new RegExp(p(Te), "gi"), w = w.replace(Me, ee[Te]);
+        if (typeof A == "string" && (z = A), re = r.en, Ce = o.en, typeof A == "object") {
+          B = A.maintainCase || !1, ee = A.custom && typeof A.custom == "object" ? A.custom : ee, q = +A.truncate > 1 && A.truncate || !1, j = A.uric || !1, $ = A.uricNoSlash || !1, Q = A.mark || !1, N = !(A.symbols === !1 || A.lang === !1), z = A.separator || z, j && (Ue += c), $ && (Ue += d), Q && (Ue += l), re = A.lang && r[A.lang] && N ? r[A.lang] : N ? r.en : {}, Ce = A.lang && o[A.lang] ? o[A.lang] : A.lang === !1 || A.lang === !0 ? {} : o.en, A.titleCase && typeof A.titleCase.length == "number" && Array.prototype.toString.call(A.titleCase) ? (A.titleCase.forEach(function(Oe) {
+            ee[Oe + ""] = Oe + "";
+          }), le = !0) : le = !!A.titleCase, A.custom && typeof A.custom.length == "number" && Array.prototype.toString.call(A.custom) && A.custom.forEach(function(Oe) {
+            ee[Oe + ""] = Oe + "";
+          }), Object.keys(ee).forEach(function(Oe) {
+            var Be;
+            Oe.length > 1 ? Be = new RegExp("\\b" + p(Oe) + "\\b", "gi") : Be = new RegExp(p(Oe), "gi"), E = E.replace(Be, ee[Oe]);
           });
-          for (R in ee)
-            Le += R;
+          for (P in ee)
+            Ue += P;
         }
-        for (Le += L, Le = p(Le), w = w.replace(/(^\s+|\s+$)/g, ""), ie = !1, ct = !1, le = 0, G = w.length; le < G; le++)
-          R = w[le], h(R, ee) ? ie = !1 : $e[R] ? (R = ie && $e[R].match(/[A-Za-z0-9]/) ? " " + $e[R] : $e[R], ie = !1) : R in a ? (le + 1 < G && n.indexOf(w[le + 1]) >= 0 ? (H += R, R = "") : ct === !0 ? (R = s[H] + a[R], H = "") : R = ie && a[R].match(/[A-Za-z0-9]/) ? " " + a[R] : a[R], ie = !1, ct = !1) : R in s ? (H += R, R = "", le === G - 1 && (R = s[H]), ct = !0) : /* process symbol chars */ me[R] && !(j && c.indexOf(R) !== -1) && !($ && d.indexOf(R) !== -1) ? (R = ie || D.substr(-1).match(/[A-Za-z0-9]/) ? L + me[R] : me[R], R += w[le + 1] !== void 0 && w[le + 1].match(/[A-Za-z0-9]/) ? L : "", ie = !0) : (ct === !0 ? (R = s[H] + R, H = "", ct = !1) : ie && (/[A-Za-z0-9]/.test(R) || D.substr(-1).match(/A-Za-z0-9]/)) && (R = " " + R), ie = !1), D += R.replace(new RegExp("[^\\w\\s" + Le + "_-]", "g"), L);
-        return Q && (D = D.replace(/(\w)(\S*)/g, function(Te, Me, Gt) {
-          var Pt = Me.toUpperCase() + (Gt !== null ? Gt : "");
-          return Object.keys(ee).indexOf(Pt.toLowerCase()) < 0 ? Pt : Pt.toLowerCase();
-        })), D = D.replace(/\s+/g, L).replace(new RegExp("\\" + L + "+", "g"), L).replace(new RegExp("(^\\" + L + "+|\\" + L + "+$)", "g"), ""), te && D.length > te && (ze = D.charAt(te) === L, D = D.slice(0, te), ze || (D = D.slice(0, D.lastIndexOf(L)))), !z && !Q && (D = D.toLowerCase()), D;
-      }, m = function(w) {
-        return function(L) {
-          return u(L, w);
+        for (Ue += z, Ue = p(Ue), E = E.replace(/(^\s+|\s+$)/g, ""), te = !1, Me = !1, pe = 0, J = E.length; pe < J; pe++)
+          P = E[pe], h(P, ee) ? te = !1 : Ce[P] ? (P = te && Ce[P].match(/[A-Za-z0-9]/) ? " " + Ce[P] : Ce[P], te = !1) : P in a ? (pe + 1 < J && n.indexOf(E[pe + 1]) >= 0 ? (H += P, P = "") : Me === !0 ? (P = s[H] + a[P], H = "") : P = te && a[P].match(/[A-Za-z0-9]/) ? " " + a[P] : a[P], te = !1, Me = !1) : P in s ? (H += P, P = "", pe === J - 1 && (P = s[H]), Me = !0) : /* process symbol chars */ re[P] && !(j && c.indexOf(P) !== -1) && !($ && d.indexOf(P) !== -1) ? (P = te || R.substr(-1).match(/[A-Za-z0-9]/) ? z + re[P] : re[P], P += E[pe + 1] !== void 0 && E[pe + 1].match(/[A-Za-z0-9]/) ? z : "", te = !0) : (Me === !0 ? (P = s[H] + P, H = "", Me = !1) : te && (/[A-Za-z0-9]/.test(P) || R.substr(-1).match(/A-Za-z0-9]/)) && (P = " " + P), te = !1), R += P.replace(new RegExp("[^\\w\\s" + Ue + "_-]", "g"), z);
+        return le && (R = R.replace(/(\w)(\S*)/g, function(Oe, Be, qt) {
+          var Gt = Be.toUpperCase() + (qt !== null ? qt : "");
+          return Object.keys(ee).indexOf(Gt.toLowerCase()) < 0 ? Gt : Gt.toLowerCase();
+        })), R = R.replace(/\s+/g, z).replace(new RegExp("\\" + z + "+", "g"), z).replace(new RegExp("(^\\" + z + "+|\\" + z + "+$)", "g"), ""), q && R.length > q && (je = R.charAt(q) === z, R = R.slice(0, q), je || (R = R.slice(0, R.lastIndexOf(z)))), !B && !le && (R = R.toLowerCase()), R;
+      }, m = function(E) {
+        return function(z) {
+          return u(z, E);
         };
-      }, p = function(w) {
-        return w.replace(/[-\\^$*+?.()|[\]{}\/]/g, "\\$&");
-      }, h = function(k, w) {
-        for (var x in w)
-          if (w[x] === k)
+      }, p = function(E) {
+        return E.replace(/[-\\^$*+?.()|[\]{}\/]/g, "\\$&");
+      }, h = function(w, E) {
+        for (var A in E)
+          if (E[A] === w)
             return !0;
       };
       if (typeof t < "u" && t.exports)
@@ -6929,28 +6929,28 @@ var sb = Object.create, tl = Object.defineProperty, ob = Object.getOwnPropertyDe
         }
     })(e);
   }
-}), pb = il({
+}), mb = il({
   "../../node_modules/.pnpm/speakingurl@14.0.1/node_modules/speakingurl/index.js"(e, t) {
-    C(), t.exports = fb();
+    D(), t.exports = pb();
   }
 });
-C();
-C();
-C();
-C();
-C();
-C();
-C();
-C();
-function mb(e) {
+D();
+D();
+D();
+D();
+D();
+D();
+D();
+D();
+function gb(e) {
   var t;
   const i = e.name || e._componentTag || e.__VUE_DEVTOOLS_COMPONENT_GUSSED_NAME__ || e.__name;
   return i === "index" && ((t = e.__file) != null && t.endsWith("index.vue")) ? "" : i;
 }
-function gb(e) {
+function bb(e) {
   const t = e.__file;
   if (t)
-    return Jg(Yg(t, ".vue"));
+    return Yg(Xg(t, ".vue"));
 }
 function Wr(e, t) {
   return e.type.__VUE_DEVTOOLS_COMPONENT_GUSSED_NAME__ = t, t;
@@ -6968,7 +6968,7 @@ function al(e) {
 }
 function Qn(e) {
   var t, i, a;
-  const n = mb(e?.type || {});
+  const n = gb(e?.type || {});
   if (n)
     return n;
   if (e?.root === e)
@@ -6979,10 +6979,10 @@ function Qn(e) {
   for (const o in (a = e.appContext) == null ? void 0 : a.components)
     if (e.appContext.components[o] === e?.type)
       return Wr(e, o);
-  const s = gb(e?.type || {});
+  const s = bb(e?.type || {});
   return s || "Anonymous Component";
 }
-function bb(e) {
+function hb(e) {
   var t, i, a;
   const n = (a = (i = (t = e?.appContext) == null ? void 0 : t.app) == null ? void 0 : i.__VUE_DEVTOOLS_NEXT_APP_RECORD_ID__) != null ? a : 0, s = e === e?.root ? "root" : e.uid;
   return `${n}:${s}`;
@@ -6990,7 +6990,7 @@ function bb(e) {
 function Ks(e, t) {
   return t = t || `${e.id}:root`, e.instanceMap.get(t) || e.instanceMap.get(":root");
 }
-function hb() {
+function _b() {
   const e = {
     top: 0,
     bottom: 0,
@@ -7006,27 +7006,27 @@ function hb() {
   return e;
 }
 var qa;
-function _b(e) {
+function vb(e) {
   return qa || (qa = document.createRange()), qa.selectNode(e), qa.getBoundingClientRect();
 }
-function vb(e) {
-  const t = hb();
+function yb(e) {
+  const t = _b();
   if (!e.children)
     return t;
   for (let i = 0, a = e.children.length; i < a; i++) {
     const n = e.children[i];
     let s;
     if (n.component)
-      s = ki(n.component);
+      s = wi(n.component);
     else if (n.el) {
       const o = n.el;
-      o.nodeType === 1 || o.getBoundingClientRect ? s = o.getBoundingClientRect() : o.nodeType === 3 && o.data.trim() && (s = _b(o));
+      o.nodeType === 1 || o.getBoundingClientRect ? s = o.getBoundingClientRect() : o.nodeType === 3 && o.data.trim() && (s = vb(o));
     }
-    s && yb(t, s);
+    s && kb(t, s);
   }
   return t;
 }
-function yb(e, t) {
+function kb(e, t) {
   return (!e.top || t.top < e.top) && (e.top = t.top), (!e.bottom || t.bottom > e.bottom) && (e.bottom = t.bottom), (!e.left || t.left < e.left) && (e.left = t.left), (!e.right || t.right > e.right) && (e.right = t.right), e;
 }
 var qr = {
@@ -7037,15 +7037,15 @@ var qr = {
   width: 0,
   height: 0
 };
-function ki(e) {
+function wi(e) {
   const t = e.subTree.el;
-  return typeof window > "u" ? qr : al(e) ? vb(e.subTree) : t?.nodeType === 1 ? t?.getBoundingClientRect() : e.subTree.component ? ki(e.subTree.component) : qr;
+  return typeof window > "u" ? qr : al(e) ? yb(e.subTree) : t?.nodeType === 1 ? t?.getBoundingClientRect() : e.subTree.component ? wi(e.subTree.component) : qr;
 }
-C();
+D();
 function Co(e) {
-  return al(e) ? kb(e.subTree) : e.subTree ? [e.subTree.el] : [];
+  return al(e) ? wb(e.subTree) : e.subTree ? [e.subTree.el] : [];
 }
-function kb(e) {
+function wb(e) {
   if (!e.children)
     return [];
   const t = [];
@@ -7062,7 +7062,7 @@ var nl = "__vue-devtools-component-inspector__", sl = "__vue-devtools-component-
   borderRadius: "5px",
   transition: "all 0.1s ease-in",
   pointerEvents: "none"
-}, wb = {
+}, Eb = {
   fontFamily: "Arial, Helvetica, sans-serif",
   padding: "5px 8px",
   borderRadius: "4px",
@@ -7075,7 +7075,7 @@ var nl = "__vue-devtools-component-inspector__", sl = "__vue-devtools-component-
   lineHeight: "24px",
   backgroundColor: "#42b883",
   boxShadow: "0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px -1px rgba(0, 0, 0, 0.1)"
-}, Eb = {
+}, Ib = {
   display: "inline-block",
   fontWeight: 400,
   fontStyle: "normal",
@@ -7085,13 +7085,13 @@ var nl = "__vue-devtools-component-inspector__", sl = "__vue-devtools-component-
 function Yi() {
   return document.getElementById(nl);
 }
-function Ib() {
+function Tb() {
   return document.getElementById(sl);
 }
-function Tb() {
+function Ab() {
   return document.getElementById(rl);
 }
-function Ab() {
+function Ob() {
   return document.getElementById(ol);
 }
 function Do(e) {
@@ -7112,16 +7112,16 @@ function Vo(e) {
   });
   const a = document.createElement("span");
   a.id = sl, Object.assign(a.style, {
-    ...wb,
+    ...Eb,
     top: e.bounds.top < 35 ? 0 : "-35px"
   });
   const n = document.createElement("span");
   n.id = ol, n.innerHTML = `&lt;${e.name}&gt;&nbsp;&nbsp;`;
   const s = document.createElement("i");
-  return s.id = rl, s.innerHTML = `${Math.round(e.bounds.width * 100) / 100} x ${Math.round(e.bounds.height * 100) / 100}`, Object.assign(s.style, Eb), a.appendChild(n), a.appendChild(s), i.appendChild(a), document.body.appendChild(i), i;
+  return s.id = rl, s.innerHTML = `${Math.round(e.bounds.width * 100) / 100} x ${Math.round(e.bounds.height * 100) / 100}`, Object.assign(s.style, Ib), a.appendChild(n), a.appendChild(s), i.appendChild(a), document.body.appendChild(i), i;
 }
 function Ro(e) {
-  const t = Yi(), i = Ib(), a = Ab(), n = Tb();
+  const t = Yi(), i = Tb(), a = Ob(), n = Ab();
   t && (Object.assign(t.style, {
     ...cl,
     ...Do(e.bounds)
@@ -7129,8 +7129,8 @@ function Ro(e) {
     top: e.bounds.top < 35 ? 0 : "-35px"
   }), a.innerHTML = `&lt;${e.name}&gt;&nbsp;&nbsp;`, n.innerHTML = `${Math.round(e.bounds.width * 100) / 100} x ${Math.round(e.bounds.height * 100) / 100}`);
 }
-function Ob(e) {
-  const t = ki(e);
+function xb(e) {
+  const t = wi(e);
   if (!t.width && !t.height)
     return;
   const i = Qn(e);
@@ -7146,25 +7146,25 @@ function qs(e) {
   if (t) {
     const i = t.__vueParentComponent;
     if (i && (Ws = i, i.vnode.el)) {
-      const n = ki(i), s = Qn(i);
+      const n = wi(i), s = Qn(i);
       Yi() ? Ro({ bounds: n, name: s }) : Vo({ bounds: n, name: s });
     }
   }
 }
-function xb(e, t) {
+function Sb(e, t) {
   if (e.preventDefault(), e.stopPropagation(), Ws) {
-    const i = bb(Ws);
+    const i = hb(Ws);
     t(i);
   }
 }
 var Nn = null;
-function Sb() {
+function Nb() {
   dl(), window.removeEventListener("mouseover", qs), window.removeEventListener("click", Nn, !0), Nn = null;
 }
-function Nb() {
+function Cb() {
   return window.addEventListener("mouseover", qs), new Promise((e) => {
     function t(i) {
-      i.preventDefault(), i.stopPropagation(), xb(i, (a) => {
+      i.preventDefault(), i.stopPropagation(), Sb(i, (a) => {
         window.removeEventListener("click", t, !0), Nn = null, window.removeEventListener("mouseover", qs);
         const n = Yi();
         n && (n.style.display = "none"), e(JSON.stringify({ id: a }));
@@ -7173,8 +7173,8 @@ function Nb() {
     Nn = t, window.addEventListener("click", t, !0);
   });
 }
-function Cb(e) {
-  const t = Ks(Ge.value, e.id);
+function Db(e) {
+  const t = Ks(Je.value, e.id);
   if (t) {
     const [i] = Co(t);
     if (typeof i.scrollIntoView == "function")
@@ -7182,7 +7182,7 @@ function Cb(e) {
         behavior: "smooth"
       });
     else {
-      const a = ki(t), n = document.createElement("div"), s = {
+      const a = wi(t), n = document.createElement("div"), s = {
         ...Do(a),
         position: "absolute"
       };
@@ -7193,7 +7193,7 @@ function Cb(e) {
       }, 2e3);
     }
     setTimeout(() => {
-      const a = ki(t);
+      const a = wi(t);
       if (a.width || a.height) {
         const n = Qn(t), s = Yi();
         s ? Ro({ ...e, name: n, bounds: a }) : Vo({ ...e, name: n, bounds: a }), setTimeout(() => {
@@ -7203,39 +7203,39 @@ function Cb(e) {
     }, 1200);
   }
 }
-C();
+D();
 var Gr, Jr;
-(Jr = (Gr = F).__VUE_DEVTOOLS_COMPONENT_INSPECTOR_ENABLED__) != null || (Gr.__VUE_DEVTOOLS_COMPONENT_INSPECTOR_ENABLED__ = !0);
-function Db(e) {
+(Jr = (Gr = U).__VUE_DEVTOOLS_COMPONENT_INSPECTOR_ENABLED__) != null || (Gr.__VUE_DEVTOOLS_COMPONENT_INSPECTOR_ENABLED__ = !0);
+function Vb(e) {
   let t = 0;
   const i = setInterval(() => {
-    F.__VUE_INSPECTOR__ && (clearInterval(i), t += 30, e()), t >= /* 5s */
+    U.__VUE_INSPECTOR__ && (clearInterval(i), t += 30, e()), t >= /* 5s */
     5e3 && clearInterval(i);
   }, 30);
 }
-function Vb() {
-  const e = F.__VUE_INSPECTOR__, t = e.openInEditor;
+function Rb() {
+  const e = U.__VUE_INSPECTOR__, t = e.openInEditor;
   e.openInEditor = async (...i) => {
     e.disable(), t(...i);
   };
 }
-function Rb() {
+function Pb() {
   return new Promise((e) => {
     function t() {
-      Vb(), e(F.__VUE_INSPECTOR__);
+      Rb(), e(U.__VUE_INSPECTOR__);
     }
-    F.__VUE_INSPECTOR__ ? t() : Db(() => {
+    U.__VUE_INSPECTOR__ ? t() : Vb(() => {
       t();
     });
   });
 }
-C();
-C();
-function Pb(e) {
+D();
+D();
+function $b(e) {
   return !!(e && e.__v_isReadonly);
 }
 function ul(e) {
-  return Pb(e) ? ul(e.__v_raw) : !!(e && e.__v_isReactive);
+  return $b(e) ? ul(e.__v_raw) : !!(e && e.__v_isReactive);
 }
 function ws(e) {
   return !!(e && e.__v_isRef === !0);
@@ -7244,9 +7244,9 @@ function ca(e) {
   const t = e && e.__v_raw;
   return t ? ca(t) : e;
 }
-var $b = class {
+var jb = class {
   constructor() {
-    this.refEditor = new jb();
+    this.refEditor = new Fb();
   }
   set(e, t, i, a) {
     const n = Array.isArray(t) ? t : t.split(".");
@@ -7282,7 +7282,7 @@ var $b = class {
       }
     };
   }
-}, jb = class {
+}, Fb = class {
   set(e, t) {
     if (ws(e))
       e.value = t;
@@ -7312,11 +7312,11 @@ var $b = class {
     return ws(e) || ul(e);
   }
 };
-C();
-C();
-C();
-var Fb = "__VUE_DEVTOOLS_KIT_TIMELINE_LAYERS_STATE__";
-function zb() {
+D();
+D();
+D();
+var zb = "__VUE_DEVTOOLS_KIT_TIMELINE_LAYERS_STATE__";
+function Ub() {
   if (typeof window > "u" || !Xu || typeof localStorage > "u" || localStorage === null)
     return {
       recordingState: !1,
@@ -7326,7 +7326,7 @@ function zb() {
       performanceEventEnabled: !1,
       selected: ""
     };
-  const e = typeof localStorage.getItem < "u" ? localStorage.getItem(Fb) : null;
+  const e = typeof localStorage.getItem < "u" ? localStorage.getItem(zb) : null;
   return e ? JSON.parse(e) : {
     recordingState: !1,
     mouseEventEnabled: !1,
@@ -7336,33 +7336,33 @@ function zb() {
     selected: ""
   };
 }
-C();
-C();
-C();
+D();
+D();
+D();
 var Yr, Xr;
-(Xr = (Yr = F).__VUE_DEVTOOLS_KIT_TIMELINE_LAYERS) != null || (Yr.__VUE_DEVTOOLS_KIT_TIMELINE_LAYERS = []);
-var Ub = new Proxy(F.__VUE_DEVTOOLS_KIT_TIMELINE_LAYERS, {
+(Xr = (Yr = U).__VUE_DEVTOOLS_KIT_TIMELINE_LAYERS) != null || (Yr.__VUE_DEVTOOLS_KIT_TIMELINE_LAYERS = []);
+var Lb = new Proxy(U.__VUE_DEVTOOLS_KIT_TIMELINE_LAYERS, {
   get(e, t, i) {
     return Reflect.get(e, t, i);
   }
 });
-function Lb(e, t) {
-  Pe.timelineLayersState[t.id] = !1, Ub.push({
+function Mb(e, t) {
+  $e.timelineLayersState[t.id] = !1, Lb.push({
     ...e,
     descriptorId: t.id,
     appRecord: No(t.app)
   });
 }
 var Qr, ec;
-(ec = (Qr = F).__VUE_DEVTOOLS_KIT_INSPECTOR__) != null || (Qr.__VUE_DEVTOOLS_KIT_INSPECTOR__ = []);
-var Po = new Proxy(F.__VUE_DEVTOOLS_KIT_INSPECTOR__, {
+(ec = (Qr = U).__VUE_DEVTOOLS_KIT_INSPECTOR__) != null || (Qr.__VUE_DEVTOOLS_KIT_INSPECTOR__ = []);
+var Po = new Proxy(U.__VUE_DEVTOOLS_KIT_INSPECTOR__, {
   get(e, t, i) {
     return Reflect.get(e, t, i);
   }
 }), ll = Hi(() => {
   Xi.hooks.callHook("sendInspectorToClient", fl());
 });
-function Mb(e, t) {
+function Bb(e, t) {
   var i, a;
   Po.push({
     options: e,
@@ -7375,7 +7375,7 @@ function Mb(e, t) {
   }), ll();
 }
 function fl() {
-  return Po.filter((e) => e.descriptor.app === Ge.value.app).filter((e) => e.descriptor.id !== "components").map((e) => {
+  return Po.filter((e) => e.descriptor.app === Je.value.app).filter((e) => e.descriptor.id !== "components").map((e) => {
     var t;
     const i = e.descriptor, a = e.options;
     return {
@@ -7392,14 +7392,14 @@ function fl() {
 function un(e, t) {
   return Po.find((i) => i.options.id === e && (t ? i.descriptor.app === t : !0));
 }
-function Bb() {
+function Zb() {
   const e = el();
   e.hook("addInspector", ({ inspector: a, plugin: n }) => {
-    Mb(a, n.descriptor);
+    Bb(a, n.descriptor);
   });
   const t = Hi(async ({ inspectorId: a, plugin: n }) => {
     var s;
-    if (!a || !((s = n?.descriptor) != null && s.app) || Pe.highPerfModeEnabled)
+    if (!a || !((s = n?.descriptor) != null && s.app) || $e.highPerfModeEnabled)
       return;
     const o = un(a, n.descriptor.app), r = {
       app: n.descriptor.app,
@@ -7429,7 +7429,7 @@ function Bb() {
   e.hook("sendInspectorTree", t);
   const i = Hi(async ({ inspectorId: a, plugin: n }) => {
     var s;
-    if (!a || !((s = n?.descriptor) != null && s.app) || Pe.highPerfModeEnabled)
+    if (!a || !((s = n?.descriptor) != null && s.app) || $e.highPerfModeEnabled)
       return;
     const o = un(a, n.descriptor.app), r = {
       app: n.descriptor.app,
@@ -7463,11 +7463,11 @@ function Bb() {
     const o = un(a, s.descriptor.app);
     o && (o.selectedNodeId = n);
   }), e.hook("timelineLayerAdded", ({ options: a, plugin: n }) => {
-    Lb(a, n.descriptor);
+    Mb(a, n.descriptor);
   }), e.hook("timelineEventAdded", ({ options: a, plugin: n }) => {
     var s;
     const o = ["performance", "component-event", "keyboard", "mouse"];
-    Pe.highPerfModeEnabled || !((s = Pe.timelineLayersState) != null && s[n.descriptor.id]) && !o.includes(a.layerId) || e.callHookWith(
+    $e.highPerfModeEnabled || !((s = $e.timelineLayersState) != null && s[n.descriptor.id]) && !o.includes(a.layerId) || e.callHookWith(
       async (r) => {
         await Promise.all(r.map((c) => c(a)));
       },
@@ -7480,25 +7480,25 @@ function Bb() {
       return null;
     const s = n.id.toString();
     return [...n.instanceMap].filter(([r]) => r.split(":")[0] === s).map(([, r]) => r);
-  }), e.hook("getComponentBounds", async ({ instance: a }) => ki(a)), e.hook("getComponentName", ({ instance: a }) => Qn(a)), e.hook("componentHighlight", ({ uid: a }) => {
-    const n = Ge.value.instanceMap.get(a);
-    n && Ob(n);
+  }), e.hook("getComponentBounds", async ({ instance: a }) => wi(a)), e.hook("getComponentName", ({ instance: a }) => Qn(a)), e.hook("componentHighlight", ({ uid: a }) => {
+    const n = Je.value.instanceMap.get(a);
+    n && xb(n);
   }), e.hook("componentUnhighlight", () => {
     dl();
   }), e;
 }
 var tc, ic;
-(ic = (tc = F).__VUE_DEVTOOLS_KIT_APP_RECORDS__) != null || (tc.__VUE_DEVTOOLS_KIT_APP_RECORDS__ = []);
+(ic = (tc = U).__VUE_DEVTOOLS_KIT_APP_RECORDS__) != null || (tc.__VUE_DEVTOOLS_KIT_APP_RECORDS__ = []);
 var ac, nc;
-(nc = (ac = F).__VUE_DEVTOOLS_KIT_ACTIVE_APP_RECORD__) != null || (ac.__VUE_DEVTOOLS_KIT_ACTIVE_APP_RECORD__ = {});
+(nc = (ac = U).__VUE_DEVTOOLS_KIT_ACTIVE_APP_RECORD__) != null || (ac.__VUE_DEVTOOLS_KIT_ACTIVE_APP_RECORD__ = {});
 var sc, oc;
-(oc = (sc = F).__VUE_DEVTOOLS_KIT_ACTIVE_APP_RECORD_ID__) != null || (sc.__VUE_DEVTOOLS_KIT_ACTIVE_APP_RECORD_ID__ = "");
+(oc = (sc = U).__VUE_DEVTOOLS_KIT_ACTIVE_APP_RECORD_ID__) != null || (sc.__VUE_DEVTOOLS_KIT_ACTIVE_APP_RECORD_ID__ = "");
 var rc, cc;
-(cc = (rc = F).__VUE_DEVTOOLS_KIT_CUSTOM_TABS__) != null || (rc.__VUE_DEVTOOLS_KIT_CUSTOM_TABS__ = []);
+(cc = (rc = U).__VUE_DEVTOOLS_KIT_CUSTOM_TABS__) != null || (rc.__VUE_DEVTOOLS_KIT_CUSTOM_TABS__ = []);
 var dc, uc;
-(uc = (dc = F).__VUE_DEVTOOLS_KIT_CUSTOM_COMMANDS__) != null || (dc.__VUE_DEVTOOLS_KIT_CUSTOM_COMMANDS__ = []);
-var fi = "__VUE_DEVTOOLS_KIT_GLOBAL_STATE__";
-function Zb() {
+(uc = (dc = U).__VUE_DEVTOOLS_KIT_CUSTOM_COMMANDS__) != null || (dc.__VUE_DEVTOOLS_KIT_CUSTOM_COMMANDS__ = []);
+var pi = "__VUE_DEVTOOLS_KIT_GLOBAL_STATE__";
+function Hb() {
   return {
     connected: !1,
     clientConnected: !1,
@@ -7510,53 +7510,53 @@ function Zb() {
     highPerfModeEnabled: !0,
     devtoolsClientDetected: {},
     perfUniqueGroupId: 0,
-    timelineLayersState: zb()
+    timelineLayersState: Ub()
   };
 }
 var lc, fc;
-(fc = (lc = F)[fi]) != null || (lc[fi] = Zb());
-var Hb = Hi((e) => {
+(fc = (lc = U)[pi]) != null || (lc[pi] = Hb());
+var Kb = Hi((e) => {
   Xi.hooks.callHook("devtoolsStateUpdated", { state: e });
 });
 Hi((e, t) => {
   Xi.hooks.callHook("devtoolsConnectedUpdated", { state: e, oldState: t });
 });
-var es = new Proxy(F.__VUE_DEVTOOLS_KIT_APP_RECORDS__, {
+var es = new Proxy(U.__VUE_DEVTOOLS_KIT_APP_RECORDS__, {
   get(e, t, i) {
-    return t === "value" ? F.__VUE_DEVTOOLS_KIT_APP_RECORDS__ : F.__VUE_DEVTOOLS_KIT_APP_RECORDS__[t];
+    return t === "value" ? U.__VUE_DEVTOOLS_KIT_APP_RECORDS__ : U.__VUE_DEVTOOLS_KIT_APP_RECORDS__[t];
   }
-}), Ge = new Proxy(F.__VUE_DEVTOOLS_KIT_ACTIVE_APP_RECORD__, {
+}), Je = new Proxy(U.__VUE_DEVTOOLS_KIT_ACTIVE_APP_RECORD__, {
   get(e, t, i) {
-    return t === "value" ? F.__VUE_DEVTOOLS_KIT_ACTIVE_APP_RECORD__ : t === "id" ? F.__VUE_DEVTOOLS_KIT_ACTIVE_APP_RECORD_ID__ : F.__VUE_DEVTOOLS_KIT_ACTIVE_APP_RECORD__[t];
+    return t === "value" ? U.__VUE_DEVTOOLS_KIT_ACTIVE_APP_RECORD__ : t === "id" ? U.__VUE_DEVTOOLS_KIT_ACTIVE_APP_RECORD_ID__ : U.__VUE_DEVTOOLS_KIT_ACTIVE_APP_RECORD__[t];
   }
 });
 function pl() {
-  Hb({
-    ...F[fi],
+  Kb({
+    ...U[pi],
     appRecords: es.value,
-    activeAppRecordId: Ge.id,
-    tabs: F.__VUE_DEVTOOLS_KIT_CUSTOM_TABS__,
-    commands: F.__VUE_DEVTOOLS_KIT_CUSTOM_COMMANDS__
+    activeAppRecordId: Je.id,
+    tabs: U.__VUE_DEVTOOLS_KIT_CUSTOM_TABS__,
+    commands: U.__VUE_DEVTOOLS_KIT_CUSTOM_COMMANDS__
   });
 }
-function Kb(e) {
-  F.__VUE_DEVTOOLS_KIT_ACTIVE_APP_RECORD__ = e, pl();
-}
 function Wb(e) {
-  F.__VUE_DEVTOOLS_KIT_ACTIVE_APP_RECORD_ID__ = e, pl();
+  U.__VUE_DEVTOOLS_KIT_ACTIVE_APP_RECORD__ = e, pl();
 }
-var Pe = new Proxy(F[fi], {
+function qb(e) {
+  U.__VUE_DEVTOOLS_KIT_ACTIVE_APP_RECORD_ID__ = e, pl();
+}
+var $e = new Proxy(U[pi], {
   get(e, t) {
-    return t === "appRecords" ? es : t === "activeAppRecordId" ? Ge.id : t === "tabs" ? F.__VUE_DEVTOOLS_KIT_CUSTOM_TABS__ : t === "commands" ? F.__VUE_DEVTOOLS_KIT_CUSTOM_COMMANDS__ : F[fi][t];
+    return t === "appRecords" ? es : t === "activeAppRecordId" ? Je.id : t === "tabs" ? U.__VUE_DEVTOOLS_KIT_CUSTOM_TABS__ : t === "commands" ? U.__VUE_DEVTOOLS_KIT_CUSTOM_COMMANDS__ : U[pi][t];
   },
   deleteProperty(e, t) {
     return delete e[t], !0;
   },
   set(e, t, i) {
-    return { ...F[fi] }, e[t] = i, F[fi][t] = i, !0;
+    return { ...U[pi] }, e[t] = i, U[pi][t] = i, !0;
   }
 });
-function qb(e = {}) {
+function Gb(e = {}) {
   var t, i, a;
   const { file: n, host: s, baseUrl: o = window.location.origin, line: r = 0, column: c = 0 } = e;
   if (n) {
@@ -7568,20 +7568,20 @@ function qb(e = {}) {
           console.log(`%c${m}`, "color:red");
         }
       });
-    } else if (Pe.vitePluginDetected) {
-      const d = (a = F.__VUE_DEVTOOLS_OPEN_IN_EDITOR_BASE_URL__) != null ? a : o;
-      F.__VUE_INSPECTOR__.openInEditor(d, n, r, c);
+    } else if ($e.vitePluginDetected) {
+      const d = (a = U.__VUE_DEVTOOLS_OPEN_IN_EDITOR_BASE_URL__) != null ? a : o;
+      U.__VUE_INSPECTOR__.openInEditor(d, n, r, c);
     }
   }
 }
-C();
-C();
-C();
-C();
-C();
+D();
+D();
+D();
+D();
+D();
 var pc, mc;
-(mc = (pc = F).__VUE_DEVTOOLS_KIT_PLUGIN_BUFFER__) != null || (pc.__VUE_DEVTOOLS_KIT_PLUGIN_BUFFER__ = []);
-var $o = new Proxy(F.__VUE_DEVTOOLS_KIT_PLUGIN_BUFFER__, {
+(mc = (pc = U).__VUE_DEVTOOLS_KIT_PLUGIN_BUFFER__) != null || (pc.__VUE_DEVTOOLS_KIT_PLUGIN_BUFFER__ = []);
+var $o = new Proxy(U.__VUE_DEVTOOLS_KIT_PLUGIN_BUFFER__, {
   get(e, t, i) {
     return Reflect.get(e, t, i);
   }
@@ -7595,7 +7595,7 @@ function Gs(e) {
 function jo(e) {
   return `__VUE_DEVTOOLS_NEXT_PLUGIN_SETTINGS__${e}__`;
 }
-function Gb(e) {
+function Jb(e) {
   var t, i, a;
   const n = (i = (t = $o.find((s) => {
     var o;
@@ -7617,11 +7617,11 @@ function ml(e, t) {
   }
   return Gs(t);
 }
-function Jb(e, t) {
+function Yb(e, t) {
   const i = jo(e);
   localStorage.getItem(i) || localStorage.setItem(i, JSON.stringify(Gs(t)));
 }
-function Yb(e, t, i) {
+function Xb(e, t, i) {
   const a = jo(e), n = localStorage.getItem(a), s = JSON.parse(n || "{}"), o = {
     ...s,
     [t]: i
@@ -7640,44 +7640,44 @@ function Yb(e, t, i) {
     /* SET_PLUGIN_SETTINGS */
   );
 }
-C();
-var gc, bc, it = (bc = (gc = F).__VUE_DEVTOOLS_HOOK) != null ? bc : gc.__VUE_DEVTOOLS_HOOK = el(), Xb = {
+D();
+var gc, bc, at = (bc = (gc = U).__VUE_DEVTOOLS_HOOK) != null ? bc : gc.__VUE_DEVTOOLS_HOOK = el(), Qb = {
   vueAppInit(e) {
-    it.hook("app:init", e);
+    at.hook("app:init", e);
   },
   vueAppUnmount(e) {
-    it.hook("app:unmount", e);
+    at.hook("app:unmount", e);
   },
   vueAppConnected(e) {
-    it.hook("app:connected", e);
+    at.hook("app:connected", e);
   },
   componentAdded(e) {
-    return it.hook("component:added", e);
+    return at.hook("component:added", e);
   },
   componentEmit(e) {
-    return it.hook("component:emit", e);
+    return at.hook("component:emit", e);
   },
   componentUpdated(e) {
-    return it.hook("component:updated", e);
+    return at.hook("component:updated", e);
   },
   componentRemoved(e) {
-    return it.hook("component:removed", e);
+    return at.hook("component:removed", e);
   },
   setupDevtoolsPlugin(e) {
-    it.hook("devtools-plugin:setup", e);
+    at.hook("devtools-plugin:setup", e);
   },
   perfStart(e) {
-    return it.hook("perf:start", e);
+    return at.hook("perf:start", e);
   },
   perfEnd(e) {
-    return it.hook("perf:end", e);
+    return at.hook("perf:end", e);
   }
 }, gl = {
-  on: Xb,
+  on: Qb,
   setupDevToolsPlugin(e, t) {
-    return it.callHook("devtools-plugin:setup", e, t);
+    return at.callHook("devtools-plugin:setup", e, t);
   }
-}, Qb = class {
+}, eh = class {
   constructor({ plugin: e, ctx: t }) {
     this.hooks = t.hooks, this.plugin = e;
   }
@@ -7719,7 +7719,7 @@ var gc, bc, it = (bc = (gc = F).__VUE_DEVTOOLS_HOOK) != null ? bc : gc.__VUE_DEV
   // component inspector
   notifyComponentUpdate(e) {
     var t;
-    if (Pe.highPerfModeEnabled)
+    if ($e.highPerfModeEnabled)
       return;
     const i = fl().find((a) => a.packageName === this.plugin.descriptor.packageName);
     if (i?.id) {
@@ -7730,9 +7730,9 @@ var gc, bc, it = (bc = (gc = F).__VUE_DEVTOOLS_HOOK) != null ? bc : gc.__VUE_DEV
           (t = e.parent) == null ? void 0 : t.uid,
           e
         ];
-        it.callHook("component:updated", ...a);
+        at.callHook("component:updated", ...a);
       } else
-        it.callHook(
+        at.callHook(
           "component:updated"
           /* COMPONENT_UPDATED */
         );
@@ -7741,13 +7741,13 @@ var gc, bc, it = (bc = (gc = F).__VUE_DEVTOOLS_HOOK) != null ? bc : gc.__VUE_DEV
   }
   // custom inspector
   addInspector(e) {
-    this.hooks.callHook("addInspector", { inspector: e, plugin: this.plugin }), this.plugin.descriptor.settings && Jb(e.id, this.plugin.descriptor.settings);
+    this.hooks.callHook("addInspector", { inspector: e, plugin: this.plugin }), this.plugin.descriptor.settings && Yb(e.id, this.plugin.descriptor.settings);
   }
   sendInspectorTree(e) {
-    Pe.highPerfModeEnabled || this.hooks.callHook("sendInspectorTree", { inspectorId: e, plugin: this.plugin });
+    $e.highPerfModeEnabled || this.hooks.callHook("sendInspectorTree", { inspectorId: e, plugin: this.plugin });
   }
   sendInspectorState(e) {
-    Pe.highPerfModeEnabled || this.hooks.callHook("sendInspectorState", { inspectorId: e, plugin: this.plugin });
+    $e.highPerfModeEnabled || this.hooks.callHook("sendInspectorState", { inspectorId: e, plugin: this.plugin });
   }
   selectInspectorNode(e, t) {
     this.hooks.callHook("customInspectorSelectNode", { inspectorId: e, nodeId: t, plugin: this.plugin });
@@ -7757,13 +7757,13 @@ var gc, bc, it = (bc = (gc = F).__VUE_DEVTOOLS_HOOK) != null ? bc : gc.__VUE_DEV
   }
   // timeline
   now() {
-    return Pe.highPerfModeEnabled ? 0 : Date.now();
+    return $e.highPerfModeEnabled ? 0 : Date.now();
   }
   addTimelineLayer(e) {
     this.hooks.callHook("timelineLayerAdded", { options: e, plugin: this.plugin });
   }
   addTimelineEvent(e) {
-    Pe.highPerfModeEnabled || this.hooks.callHook("timelineEventAdded", { options: e, plugin: this.plugin });
+    $e.highPerfModeEnabled || this.hooks.callHook("timelineEventAdded", { options: e, plugin: this.plugin });
   }
   // settings
   getSettings(e) {
@@ -7789,36 +7789,36 @@ var gc, bc, it = (bc = (gc = F).__VUE_DEVTOOLS_HOOK) != null ? bc : gc.__VUE_DEV
       /* COMPONENT_UNHIGHLIGHT */
     );
   }
-}, eh = Qb;
-C();
-C();
-C();
-C();
-var th = "__vue_devtool_undefined__", ih = "__vue_devtool_infinity__", ah = "__vue_devtool_negative_infinity__", nh = "__vue_devtool_nan__";
-C();
-C();
-var sh = {
-  [th]: "undefined",
-  [nh]: "NaN",
-  [ih]: "Infinity",
-  [ah]: "-Infinity"
+}, th = eh;
+D();
+D();
+D();
+D();
+var ih = "__vue_devtool_undefined__", ah = "__vue_devtool_infinity__", nh = "__vue_devtool_negative_infinity__", sh = "__vue_devtool_nan__";
+D();
+D();
+var oh = {
+  [ih]: "undefined",
+  [sh]: "NaN",
+  [ah]: "Infinity",
+  [nh]: "-Infinity"
 };
-Object.entries(sh).reduce((e, [t, i]) => (e[i] = t, e), {});
-C();
-C();
-C();
-C();
-C();
+Object.entries(oh).reduce((e, [t, i]) => (e[i] = t, e), {});
+D();
+D();
+D();
+D();
+D();
 var hc, _c;
-(_c = (hc = F).__VUE_DEVTOOLS_KIT__REGISTERED_PLUGIN_APPS__) != null || (hc.__VUE_DEVTOOLS_KIT__REGISTERED_PLUGIN_APPS__ = /* @__PURE__ */ new Set());
+(_c = (hc = U).__VUE_DEVTOOLS_KIT__REGISTERED_PLUGIN_APPS__) != null || (hc.__VUE_DEVTOOLS_KIT__REGISTERED_PLUGIN_APPS__ = /* @__PURE__ */ new Set());
 function bl(e, t) {
   return gl.setupDevToolsPlugin(e, t);
 }
-function oh(e, t) {
+function rh(e, t) {
   const [i, a] = e;
   if (i.app !== t)
     return;
-  const n = new eh({
+  const n = new th({
     plugin: {
       setupFn: a,
       descriptor: i
@@ -7830,31 +7830,31 @@ function oh(e, t) {
   }), a(n);
 }
 function hl(e, t) {
-  F.__VUE_DEVTOOLS_KIT__REGISTERED_PLUGIN_APPS__.has(e) || Pe.highPerfModeEnabled && !t?.inspectingComponent || (F.__VUE_DEVTOOLS_KIT__REGISTERED_PLUGIN_APPS__.add(e), $o.forEach((i) => {
-    oh(i, e);
+  U.__VUE_DEVTOOLS_KIT__REGISTERED_PLUGIN_APPS__.has(e) || $e.highPerfModeEnabled && !t?.inspectingComponent || (U.__VUE_DEVTOOLS_KIT__REGISTERED_PLUGIN_APPS__.add(e), $o.forEach((i) => {
+    rh(i, e);
   }));
 }
-C();
-C();
+D();
+D();
 var Ia = "__VUE_DEVTOOLS_ROUTER__", Ki = "__VUE_DEVTOOLS_ROUTER_INFO__", vc, yc;
-(yc = (vc = F)[Ki]) != null || (vc[Ki] = {
+(yc = (vc = U)[Ki]) != null || (vc[Ki] = {
   currentRoute: null,
   routes: []
 });
 var kc, wc;
-(wc = (kc = F)[Ia]) != null || (kc[Ia] = {});
-new Proxy(F[Ki], {
+(wc = (kc = U)[Ia]) != null || (kc[Ia] = {});
+new Proxy(U[Ki], {
   get(e, t) {
-    return F[Ki][t];
+    return U[Ki][t];
   }
 });
-new Proxy(F[Ia], {
+new Proxy(U[Ia], {
   get(e, t) {
     if (t === "value")
-      return F[Ia];
+      return U[Ia];
   }
 });
-function rh(e) {
+function ch(e) {
   const t = /* @__PURE__ */ new Map();
   return (e?.getRoutes() || []).filter((i) => !t.has(i.path) && t.set(i.path, 1));
 }
@@ -7869,7 +7869,7 @@ function Fo(e) {
     };
   });
 }
-function ch(e) {
+function dh(e) {
   if (e) {
     const { fullPath: t, hash: i, href: a, path: n, name: s, matched: o, params: r, query: c } = e;
     return {
@@ -7885,28 +7885,28 @@ function ch(e) {
   }
   return e;
 }
-function dh(e, t) {
+function uh(e, t) {
   function i() {
     var a;
-    const n = (a = e.app) == null ? void 0 : a.config.globalProperties.$router, s = ch(n?.currentRoute.value), o = Fo(rh(n)), r = console.warn;
+    const n = (a = e.app) == null ? void 0 : a.config.globalProperties.$router, s = dh(n?.currentRoute.value), o = Fo(ch(n)), r = console.warn;
     console.warn = () => {
-    }, F[Ki] = {
+    }, U[Ki] = {
       currentRoute: s ? Kr(s) : {},
       routes: Kr(o)
-    }, F[Ia] = n, console.warn = r;
+    }, U[Ia] = n, console.warn = r;
   }
   i(), gl.on.componentUpdated(Hi(() => {
     var a;
-    ((a = t.value) == null ? void 0 : a.app) === e.app && (i(), !Pe.highPerfModeEnabled && Xi.hooks.callHook("routerInfoUpdated", { state: F[Ki] }));
+    ((a = t.value) == null ? void 0 : a.app) === e.app && (i(), !$e.highPerfModeEnabled && Xi.hooks.callHook("routerInfoUpdated", { state: U[Ki] }));
   }, 200));
 }
-function uh(e) {
+function lh(e) {
   return {
     // get inspector tree
     async getInspectorTree(t) {
       const i = {
         ...t,
-        app: Ge.value.app,
+        app: Je.value.app,
         rootNodes: []
       };
       return await new Promise((a) => {
@@ -7923,7 +7923,7 @@ function uh(e) {
     async getInspectorState(t) {
       const i = {
         ...t,
-        app: Ge.value.app,
+        app: Je.value.app,
         state: null
       }, a = {
         currentTab: `custom-inspector:${t.inspectorId}`
@@ -7940,9 +7940,9 @@ function uh(e) {
     },
     // edit inspector state
     editInspectorState(t) {
-      const i = new $b(), a = {
+      const i = new jb(), a = {
         ...t,
-        app: Ge.value.app,
+        app: Je.value.app,
         set: (n, s = t.path, o = t.state.value, r) => {
           i.set(n, s, o, r || i.createDefaultSetCallback(t.state));
         }
@@ -7965,101 +7965,101 @@ function uh(e) {
     },
     // inspect component inspector
     inspectComponentInspector() {
-      return Nb();
+      return Cb();
     },
     // cancel inspect component inspector
     cancelInspectComponentInspector() {
-      return Sb();
+      return Nb();
     },
     // get component render code
     getComponentRenderCode(t) {
-      const i = Ks(Ge.value, t);
+      const i = Ks(Je.value, t);
       if (i)
         return typeof i?.type != "function" ? i.render.toString() : i.type.toString();
     },
     // scroll to component
     scrollToComponent(t) {
-      return Cb({ id: t });
+      return Db({ id: t });
     },
     // open in editor
-    openInEditor: qb,
+    openInEditor: Gb,
     // get vue inspector
-    getVueInspector: Rb,
+    getVueInspector: Pb,
     // toggle app
     toggleApp(t, i) {
       const a = es.value.find((n) => n.id === t);
-      a && (Wb(t), Kb(a), dh(a, Ge), ll(), hl(a.app, i));
+      a && (qb(t), Wb(a), uh(a, Je), ll(), hl(a.app, i));
     },
     // inspect dom
     inspectDOM(t) {
-      const i = Ks(Ge.value, t);
+      const i = Ks(Je.value, t);
       if (i) {
         const [a] = Co(i);
-        a && (F.__VUE_DEVTOOLS_INSPECT_DOM_TARGET__ = a);
+        a && (U.__VUE_DEVTOOLS_INSPECT_DOM_TARGET__ = a);
       }
     },
     updatePluginSettings(t, i, a) {
-      Yb(t, i, a);
+      Xb(t, i, a);
     },
     getPluginSettings(t) {
       return {
-        options: Gb(t),
+        options: Jb(t),
         values: ml(t)
       };
     }
   };
 }
-C();
+D();
 var Ec, Ic;
-(Ic = (Ec = F).__VUE_DEVTOOLS_ENV__) != null || (Ec.__VUE_DEVTOOLS_ENV__ = {
+(Ic = (Ec = U).__VUE_DEVTOOLS_ENV__) != null || (Ec.__VUE_DEVTOOLS_ENV__ = {
   vitePluginDetected: !1
 });
-var Tc = Bb(), Ac, Oc;
-(Oc = (Ac = F).__VUE_DEVTOOLS_KIT_CONTEXT__) != null || (Ac.__VUE_DEVTOOLS_KIT_CONTEXT__ = {
+var Tc = Zb(), Ac, Oc;
+(Oc = (Ac = U).__VUE_DEVTOOLS_KIT_CONTEXT__) != null || (Ac.__VUE_DEVTOOLS_KIT_CONTEXT__ = {
   hooks: Tc,
   get state() {
     return {
-      ...Pe,
-      activeAppRecordId: Ge.id,
-      activeAppRecord: Ge.value,
+      ...$e,
+      activeAppRecordId: Je.id,
+      activeAppRecord: Je.value,
       appRecords: es.value
     };
   },
-  api: uh(Tc)
+  api: lh(Tc)
 });
-var Xi = F.__VUE_DEVTOOLS_KIT_CONTEXT__;
-C();
-lb(pb());
+var Xi = U.__VUE_DEVTOOLS_KIT_CONTEXT__;
+D();
+fb(mb());
 var xc, Sc;
-(Sc = (xc = F).__VUE_DEVTOOLS_NEXT_APP_RECORD_INFO__) != null || (xc.__VUE_DEVTOOLS_NEXT_APP_RECORD_INFO__ = {
+(Sc = (xc = U).__VUE_DEVTOOLS_NEXT_APP_RECORD_INFO__) != null || (xc.__VUE_DEVTOOLS_NEXT_APP_RECORD_INFO__ = {
   id: 0,
   appIds: /* @__PURE__ */ new Set()
 });
-C();
-C();
-function lh(e) {
-  Pe.highPerfModeEnabled = e ?? !Pe.highPerfModeEnabled, !e && Ge.value && hl(Ge.value.app);
-}
-C();
-C();
-C();
+D();
+D();
 function fh(e) {
-  Pe.devtoolsClientDetected = {
-    ...Pe.devtoolsClientDetected,
+  $e.highPerfModeEnabled = e ?? !$e.highPerfModeEnabled, !e && Je.value && hl(Je.value.app);
+}
+D();
+D();
+D();
+function ph(e) {
+  $e.devtoolsClientDetected = {
+    ...$e.devtoolsClientDetected,
     ...e
   };
-  const t = Object.values(Pe.devtoolsClientDetected).some(Boolean);
-  lh(!t);
+  const t = Object.values($e.devtoolsClientDetected).some(Boolean);
+  fh(!t);
 }
 var Nc, Cc;
-(Cc = (Nc = F).__VUE_DEVTOOLS_UPDATE_CLIENT_DETECTED__) != null || (Nc.__VUE_DEVTOOLS_UPDATE_CLIENT_DETECTED__ = fh);
-C();
-C();
-C();
-C();
-C();
-C();
-var ph = class {
+(Cc = (Nc = U).__VUE_DEVTOOLS_UPDATE_CLIENT_DETECTED__) != null || (Nc.__VUE_DEVTOOLS_UPDATE_CLIENT_DETECTED__ = ph);
+D();
+D();
+D();
+D();
+D();
+D();
+var mh = class {
   constructor() {
     this.keyToValue = /* @__PURE__ */ new Map(), this.valueToKey = /* @__PURE__ */ new Map();
   }
@@ -8077,7 +8077,7 @@ var ph = class {
   }
 }, _l = class {
   constructor(e) {
-    this.generateIdentifier = e, this.kv = new ph();
+    this.generateIdentifier = e, this.kv = new mh();
   }
   register(e, t) {
     this.kv.getByValue(e) || (t || (t = this.generateIdentifier(e)), this.kv.set(t, e));
@@ -8091,7 +8091,7 @@ var ph = class {
   getValue(e) {
     return this.kv.getByKey(e);
   }
-}, mh = class extends _l {
+}, gh = class extends _l {
   constructor() {
     super((e) => e.name), this.classToAllowedProps = /* @__PURE__ */ new Map();
   }
@@ -8102,9 +8102,9 @@ var ph = class {
     return this.classToAllowedProps.get(e);
   }
 };
-C();
-C();
-function gh(e) {
+D();
+D();
+function bh(e) {
   if ("values" in Object)
     return Object.values(e);
   const t = [];
@@ -8112,8 +8112,8 @@ function gh(e) {
     e.hasOwnProperty(i) && t.push(e[i]);
   return t;
 }
-function bh(e, t) {
-  const i = gh(e);
+function hh(e, t) {
+  const i = bh(e);
   if ("find" in i)
     return i.find(t);
   const a = i;
@@ -8136,7 +8136,7 @@ function Dc(e, t) {
       return a;
   }
 }
-var hh = class {
+var _h = class {
   constructor() {
     this.transfomers = {};
   }
@@ -8144,16 +8144,16 @@ var hh = class {
     this.transfomers[e.name] = e;
   }
   findApplicable(e) {
-    return bh(this.transfomers, (t) => t.isApplicable(e));
+    return hh(this.transfomers, (t) => t.isApplicable(e));
   }
   findByName(e) {
     return this.transfomers[e];
   }
 };
-C();
-C();
-var _h = (e) => Object.prototype.toString.call(e).slice(8, -1), vl = (e) => typeof e > "u", vh = (e) => e === null, Ta = (e) => typeof e != "object" || e === null || e === Object.prototype ? !1 : Object.getPrototypeOf(e) === null ? !0 : Object.getPrototypeOf(e) === Object.prototype, Js = (e) => Ta(e) && Object.keys(e).length === 0, ti = (e) => Array.isArray(e), yh = (e) => typeof e == "string", kh = (e) => typeof e == "number" && !isNaN(e), wh = (e) => typeof e == "boolean", Eh = (e) => e instanceof RegExp, Aa = (e) => e instanceof Map, Oa = (e) => e instanceof Set, yl = (e) => _h(e) === "Symbol", Ih = (e) => e instanceof Date && !isNaN(e.valueOf()), Th = (e) => e instanceof Error, Vc = (e) => typeof e == "number" && isNaN(e), Ah = (e) => wh(e) || vh(e) || vl(e) || kh(e) || yh(e) || yl(e), Oh = (e) => typeof e == "bigint", xh = (e) => e === 1 / 0 || e === -1 / 0, Sh = (e) => ArrayBuffer.isView(e) && !(e instanceof DataView), Nh = (e) => e instanceof URL;
-C();
+D();
+D();
+var vh = (e) => Object.prototype.toString.call(e).slice(8, -1), vl = (e) => typeof e > "u", yh = (e) => e === null, Ta = (e) => typeof e != "object" || e === null || e === Object.prototype ? !1 : Object.getPrototypeOf(e) === null ? !0 : Object.getPrototypeOf(e) === Object.prototype, Js = (e) => Ta(e) && Object.keys(e).length === 0, ii = (e) => Array.isArray(e), kh = (e) => typeof e == "string", wh = (e) => typeof e == "number" && !isNaN(e), Eh = (e) => typeof e == "boolean", Ih = (e) => e instanceof RegExp, Aa = (e) => e instanceof Map, Oa = (e) => e instanceof Set, yl = (e) => vh(e) === "Symbol", Th = (e) => e instanceof Date && !isNaN(e.valueOf()), Ah = (e) => e instanceof Error, Vc = (e) => typeof e == "number" && isNaN(e), Oh = (e) => Eh(e) || yh(e) || vl(e) || wh(e) || kh(e) || yl(e), xh = (e) => typeof e == "bigint", Sh = (e) => e === 1 / 0 || e === -1 / 0, Nh = (e) => ArrayBuffer.isView(e) && !(e instanceof DataView), Ch = (e) => e instanceof URL;
+D();
 var kl = (e) => e.replace(/\./g, "\\."), Es = (e) => e.map(String).map(kl).join("."), ha = (e) => {
   const t = [];
   let i = "";
@@ -8172,7 +8172,7 @@ var kl = (e) => e.replace(/\./g, "\\."), Es = (e) => e.map(String).map(kl).join(
   const a = i;
   return t.push(a), t;
 };
-C();
+D();
 function Tt(e, t, i, a) {
   return {
     isApplicable: e,
@@ -8184,9 +8184,9 @@ function Tt(e, t, i, a) {
 var wl = [
   Tt(vl, "undefined", () => null, () => {
   }),
-  Tt(Oh, "bigint", (e) => e.toString(), (e) => typeof BigInt < "u" ? BigInt(e) : (console.error("Please add a BigInt polyfill."), e)),
-  Tt(Ih, "Date", (e) => e.toISOString(), (e) => new Date(e)),
-  Tt(Th, "Error", (e, t) => {
+  Tt(xh, "bigint", (e) => e.toString(), (e) => typeof BigInt < "u" ? BigInt(e) : (console.error("Please add a BigInt polyfill."), e)),
+  Tt(Th, "Date", (e) => e.toISOString(), (e) => new Date(e)),
+  Tt(Ah, "Error", (e, t) => {
     const i = {
       name: e.name,
       message: e.message
@@ -8200,7 +8200,7 @@ var wl = [
       i[a] = e[a];
     }), i;
   }),
-  Tt(Eh, "regexp", (e) => "" + e, (e) => {
+  Tt(Ih, "regexp", (e) => "" + e, (e) => {
     const t = e.slice(1, e.lastIndexOf("/")), i = e.slice(e.lastIndexOf("/") + 1);
     return new RegExp(t, i);
   }),
@@ -8213,9 +8213,9 @@ var wl = [
     (e) => new Set(e)
   ),
   Tt(Aa, "map", (e) => [...e.entries()], (e) => new Map(e)),
-  Tt((e) => Vc(e) || xh(e), "number", (e) => Vc(e) ? "NaN" : e > 0 ? "Infinity" : "-Infinity", Number),
+  Tt((e) => Vc(e) || Sh(e), "number", (e) => Vc(e) ? "NaN" : e > 0 ? "Infinity" : "-Infinity", Number),
   Tt((e) => e === 0 && 1 / e === -1 / 0, "number", () => "-0", Number),
-  Tt(Nh, "URL", (e) => e.toString(), (e) => new URL(e))
+  Tt(Ch, "URL", (e) => e.toString(), (e) => new URL(e))
 ];
 function ts(e, t, i, a) {
   return {
@@ -8230,7 +8230,7 @@ var El = ts((e, t) => yl(e) ? !!t.symbolRegistry.getIdentifier(e) : !1, (e, t) =
   if (!a)
     throw new Error("Trying to deserialize unknown symbol");
   return a;
-}), Ch = [
+}), Dh = [
   Int8Array,
   Uint8Array,
   Int16Array,
@@ -8240,8 +8240,8 @@ var El = ts((e, t) => yl(e) ? !!t.symbolRegistry.getIdentifier(e) : !1, (e, t) =
   Float32Array,
   Float64Array,
   Uint8ClampedArray
-].reduce((e, t) => (e[t.name] = t, e), {}), Il = ts(Sh, (e) => ["typed-array", e.constructor.name], (e) => [...e], (e, t) => {
-  const i = Ch[t[1]];
+].reduce((e, t) => (e[t.name] = t, e), {}), Il = ts(Nh, (e) => ["typed-array", e.constructor.name], (e) => [...e], (e, t) => {
+  const i = Dh[t[1]];
   if (!i)
     throw new Error("Trying to deserialize unknown typed array");
   return new i(e);
@@ -8267,8 +8267,8 @@ var Al = ts(Tl, (e, t) => ["class", t.classRegistry.getIdentifier(e.constructor)
   if (!a)
     throw new Error("Trying to deserialize unknown custom value");
   return a.deserialize(e);
-}), Dh = [Al, El, Ol, Il], Rc = (e, t) => {
-  const i = Dc(Dh, (n) => n.isApplicable(e, t));
+}), Vh = [Al, El, Ol, Il], Rc = (e, t) => {
+  const i = Dc(Vh, (n) => n.isApplicable(e, t));
   if (i)
     return {
       value: i.transform(e, t),
@@ -8284,8 +8284,8 @@ var Al = ts(Tl, (e, t) => ["class", t.classRegistry.getIdentifier(e.constructor)
 wl.forEach((e) => {
   xl[e.annotation] = e;
 });
-var Vh = (e, t, i) => {
-  if (ti(t))
+var Rh = (e, t, i) => {
+  if (ii(t))
     switch (t[0]) {
       case "symbol":
         return El.untransform(e, t, i);
@@ -8305,7 +8305,7 @@ var Vh = (e, t, i) => {
     return a.untransform(e, i);
   }
 };
-C();
+D();
 var Ri = (e, t) => {
   if (t > e.size)
     throw new Error("index out of bounds");
@@ -8322,7 +8322,7 @@ function Sl(e) {
   if (ln(e, "constructor"))
     throw new Error("constructor is not allowed as a property");
 }
-var Rh = (e, t) => {
+var Ph = (e, t) => {
   Sl(t);
   for (let i = 0; i < t.length; i++) {
     const a = t[i];
@@ -8348,7 +8348,7 @@ var Rh = (e, t) => {
   let a = e;
   for (let s = 0; s < t.length - 1; s++) {
     const o = t[s];
-    if (ti(a)) {
+    if (ii(a)) {
       const r = +o;
       a = a[r];
     } else if (Ta(a))
@@ -8371,7 +8371,7 @@ var Rh = (e, t) => {
     }
   }
   const n = t[t.length - 1];
-  if (ti(a) ? a[+n] = i(a[+n]) : Ta(a) && (a[n] = i(a[n])), Oa(a)) {
+  if (ii(a) ? a[+n] = i(a[+n]) : Ta(a) && (a[n] = i(a[n])), Oa(a)) {
     const s = Ri(a, +n), o = i(s);
     s !== o && (a.delete(s), a.add(o));
   }
@@ -8394,7 +8394,7 @@ var Rh = (e, t) => {
 function Xs(e, t, i = []) {
   if (!e)
     return;
-  if (!ti(e)) {
+  if (!ii(e)) {
     Wi(e, (s, o) => Xs(s, t, [...i, ...ha(o)]));
     return;
   }
@@ -8403,19 +8403,19 @@ function Xs(e, t, i = []) {
     Xs(s, t, [...i, ...ha(o)]);
   }), t(a, i);
 }
-function Ph(e, t, i) {
+function $h(e, t, i) {
   return Xs(t, (a, n) => {
-    e = Ys(e, n, (s) => Vh(s, a, i));
+    e = Ys(e, n, (s) => Rh(s, a, i));
   }), e;
 }
-function $h(e, t) {
+function jh(e, t) {
   function i(a, n) {
-    const s = Rh(e, ha(n));
+    const s = Ph(e, ha(n));
     a.map(ha).forEach((o) => {
       e = Ys(e, o, () => s);
     });
   }
-  if (ti(t)) {
+  if (ii(t)) {
     const [a, n] = t;
     a.forEach((s) => {
       e = Ys(e, ha(s), () => e);
@@ -8424,12 +8424,12 @@ function $h(e, t) {
     Wi(t, i);
   return e;
 }
-var jh = (e, t) => Ta(e) || ti(e) || Aa(e) || Oa(e) || Tl(e, t);
-function Fh(e, t, i) {
+var Fh = (e, t) => Ta(e) || ii(e) || Aa(e) || Oa(e) || Tl(e, t);
+function zh(e, t, i) {
   const a = i.get(e);
   a ? a.push(t) : i.set(e, [t]);
 }
-function zh(e, t) {
+function Uh(e, t) {
   const i = {};
   let a;
   return e.forEach((n) => {
@@ -8442,35 +8442,35 @@ function zh(e, t) {
 }
 var Nl = (e, t, i, a, n = [], s = [], o = /* @__PURE__ */ new Map()) => {
   var r;
-  const c = Ah(e);
+  const c = Oh(e);
   if (!c) {
-    Fh(e, n, t);
+    zh(e, n, t);
     const h = o.get(e);
     if (h)
       return a ? {
         transformedValue: null
       } : h;
   }
-  if (!jh(e, i)) {
-    const h = Rc(e, i), k = h ? {
+  if (!Fh(e, i)) {
+    const h = Rc(e, i), w = h ? {
       transformedValue: h.value,
       annotations: [h.type]
     } : {
       transformedValue: e
     };
-    return c || o.set(e, k), k;
+    return c || o.set(e, w), w;
   }
   if (ln(s, e))
     return {
       transformedValue: null
     };
-  const d = Rc(e, i), l = (r = d?.value) != null ? r : e, u = ti(l) ? [] : {}, m = {};
-  Wi(l, (h, k) => {
-    if (k === "__proto__" || k === "constructor" || k === "prototype")
-      throw new Error(`Detected property ${k}. This is a prototype pollution risk, please remove it from your object.`);
-    const w = Nl(h, t, i, a, [...n, k], [...s, e], o);
-    u[k] = w.transformedValue, ti(w.annotations) ? m[k] = w.annotations : Ta(w.annotations) && Wi(w.annotations, (x, L) => {
-      m[kl(k) + "." + L] = x;
+  const d = Rc(e, i), l = (r = d?.value) != null ? r : e, u = ii(l) ? [] : {}, m = {};
+  Wi(l, (h, w) => {
+    if (w === "__proto__" || w === "constructor" || w === "prototype")
+      throw new Error(`Detected property ${w}. This is a prototype pollution risk, please remove it from your object.`);
+    const E = Nl(h, t, i, a, [...n, w], [...s, e], o);
+    u[w] = E.transformedValue, ii(E.annotations) ? m[w] = E.annotations : Ta(E.annotations) && Wi(E.annotations, (A, z) => {
+      m[kl(w) + "." + z] = A;
     });
   });
   const p = Js(m) ? {
@@ -8482,21 +8482,21 @@ var Nl = (e, t, i, a, n = [], s = [], o = /* @__PURE__ */ new Map()) => {
   };
   return c || o.set(e, p), p;
 };
-C();
-C();
+D();
+D();
 function Cl(e) {
   return Object.prototype.toString.call(e).slice(8, -1);
 }
 function Pc(e) {
   return Cl(e) === "Array";
 }
-function Uh(e) {
+function Lh(e) {
   if (Cl(e) !== "Object")
     return !1;
   const t = Object.getPrototypeOf(e);
   return !!t && t.constructor === Object && t === Object.prototype;
 }
-function Lh(e, t, i, a, n) {
+function Mh(e, t, i, a, n) {
   const s = {}.propertyIsEnumerable.call(a, t) ? "enumerable" : "nonenumerable";
   s === "enumerable" && (e[t] = i), n && s === "nonenumerable" && Object.defineProperty(e, t, {
     value: i,
@@ -8508,14 +8508,14 @@ function Lh(e, t, i, a, n) {
 function Qs(e, t = {}) {
   if (Pc(e))
     return e.map((n) => Qs(n, t));
-  if (!Uh(e))
+  if (!Lh(e))
     return e;
   const i = Object.getOwnPropertyNames(e), a = Object.getOwnPropertySymbols(e);
   return [...i, ...a].reduce((n, s) => {
     if (Pc(t.props) && !t.props.includes(s))
       return n;
     const o = e[s], r = Qs(o, t);
-    return Lh(n, s, r, e, t.nonenumerable), n;
+    return Mh(n, s, r, e, t.nonenumerable), n;
   }, {});
 }
 var be = class {
@@ -8523,10 +8523,10 @@ var be = class {
    * @param dedupeReferentialEqualities  If true, SuperJSON will make sure only one instance of referentially equal objects are serialized and the rest are replaced with `null`.
    */
   constructor({ dedupe: e = !1 } = {}) {
-    this.classRegistry = new mh(), this.symbolRegistry = new _l((t) => {
+    this.classRegistry = new gh(), this.symbolRegistry = new _l((t) => {
       var i;
       return (i = t.description) != null ? i : "";
-    }), this.customTransformerRegistry = new hh(), this.allowedErrorProps = [], this.dedupe = e;
+    }), this.customTransformerRegistry = new _h(), this.allowedErrorProps = [], this.dedupe = e;
   }
   serialize(e) {
     const t = /* @__PURE__ */ new Map(), i = Nl(e, t, this, this.dedupe), a = {
@@ -8536,7 +8536,7 @@ var be = class {
       ...a.meta,
       values: i.annotations
     });
-    const n = zh(t, this.dedupe);
+    const n = Uh(t, this.dedupe);
     return n && (a.meta = {
       ...a.meta,
       referentialEqualities: n
@@ -8545,7 +8545,7 @@ var be = class {
   deserialize(e) {
     const { json: t, meta: i } = e;
     let a = Qs(t);
-    return i?.values && (a = Ph(a, i.values, this)), i?.referentialEqualities && (a = $h(a, i.referentialEqualities)), a;
+    return i?.values && (a = $h(a, i.values, this)), i?.referentialEqualities && (a = jh(a, i.referentialEqualities)), a;
   }
   stringify(e) {
     return JSON.stringify(this.serialize(e));
@@ -8578,46 +8578,46 @@ be.registerClass = be.defaultInstance.registerClass.bind(be.defaultInstance);
 be.registerSymbol = be.defaultInstance.registerSymbol.bind(be.defaultInstance);
 be.registerCustom = be.defaultInstance.registerCustom.bind(be.defaultInstance);
 be.allowErrorProps = be.defaultInstance.allowErrorProps.bind(be.defaultInstance);
-C();
-C();
-C();
-C();
-C();
-C();
-C();
-C();
-C();
-C();
-C();
-C();
-C();
-C();
-C();
+D();
+D();
+D();
+D();
+D();
+D();
+D();
+D();
+D();
+D();
+D();
+D();
+D();
+D();
+D();
 var $c, jc;
-(jc = ($c = F).__VUE_DEVTOOLS_KIT_MESSAGE_CHANNELS__) != null || ($c.__VUE_DEVTOOLS_KIT_MESSAGE_CHANNELS__ = []);
+(jc = ($c = U).__VUE_DEVTOOLS_KIT_MESSAGE_CHANNELS__) != null || ($c.__VUE_DEVTOOLS_KIT_MESSAGE_CHANNELS__ = []);
 var Fc, zc;
-(zc = (Fc = F).__VUE_DEVTOOLS_KIT_RPC_CLIENT__) != null || (Fc.__VUE_DEVTOOLS_KIT_RPC_CLIENT__ = null);
+(zc = (Fc = U).__VUE_DEVTOOLS_KIT_RPC_CLIENT__) != null || (Fc.__VUE_DEVTOOLS_KIT_RPC_CLIENT__ = null);
 var Uc, Lc;
-(Lc = (Uc = F).__VUE_DEVTOOLS_KIT_RPC_SERVER__) != null || (Uc.__VUE_DEVTOOLS_KIT_RPC_SERVER__ = null);
+(Lc = (Uc = U).__VUE_DEVTOOLS_KIT_RPC_SERVER__) != null || (Uc.__VUE_DEVTOOLS_KIT_RPC_SERVER__ = null);
 var Mc, Bc;
-(Bc = (Mc = F).__VUE_DEVTOOLS_KIT_VITE_RPC_CLIENT__) != null || (Mc.__VUE_DEVTOOLS_KIT_VITE_RPC_CLIENT__ = null);
+(Bc = (Mc = U).__VUE_DEVTOOLS_KIT_VITE_RPC_CLIENT__) != null || (Mc.__VUE_DEVTOOLS_KIT_VITE_RPC_CLIENT__ = null);
 var Zc, Hc;
-(Hc = (Zc = F).__VUE_DEVTOOLS_KIT_VITE_RPC_SERVER__) != null || (Zc.__VUE_DEVTOOLS_KIT_VITE_RPC_SERVER__ = null);
+(Hc = (Zc = U).__VUE_DEVTOOLS_KIT_VITE_RPC_SERVER__) != null || (Zc.__VUE_DEVTOOLS_KIT_VITE_RPC_SERVER__ = null);
 var Kc, Wc;
-(Wc = (Kc = F).__VUE_DEVTOOLS_KIT_BROADCAST_RPC_SERVER__) != null || (Kc.__VUE_DEVTOOLS_KIT_BROADCAST_RPC_SERVER__ = null);
-C();
-C();
-C();
-C();
-const Bt = typeof window < "u";
-let pi;
-const xa = (e) => pi = e;
+(Wc = (Kc = U).__VUE_DEVTOOLS_KIT_BROADCAST_RPC_SERVER__) != null || (Kc.__VUE_DEVTOOLS_KIT_BROADCAST_RPC_SERVER__ = null);
+D();
+D();
+D();
+D();
+const Mt = typeof window < "u";
+let mi;
+const xa = (e) => mi = e;
 process.env.NODE_ENV;
 const Cn = process.env.NODE_ENV !== "production" ? /* @__PURE__ */ Symbol("pinia") : (
   /* istanbul ignore next */
   /* @__PURE__ */ Symbol()
 );
-function wi(e) {
+function Ei(e) {
   return e && typeof e == "object" && Object.prototype.toString.call(e) === "[object Object]" && typeof e.toJSON != "function";
 }
 var Vt;
@@ -8625,7 +8625,7 @@ var Vt;
   e.direct = "direct", e.patchObject = "patch object", e.patchFunction = "patch function";
 })(Vt || (Vt = {}));
 const qc = typeof window == "object" && window.window === window ? window : typeof self == "object" && self.self === self ? self : typeof global == "object" && global.global === global ? global : typeof globalThis == "object" ? globalThis : { HTMLElement: null };
-function Mh(e, { autoBom: t = !1 } = {}) {
+function Bh(e, { autoBom: t = !1 } = {}) {
   return t && /^\s*(?:text\/\S*|application\/xml|\S*\/\S*\+xml)\s*;.*charset\s*=\s*utf-8/i.test(e.type) ? new Blob(["\uFEFF", e], { type: e.type }) : e;
 }
 function zo(e, t, i) {
@@ -8668,18 +8668,18 @@ function fn(e) {
     e.dispatchEvent(i);
   }
 }
-const pn = typeof navigator == "object" ? navigator : { userAgent: "" }, Vl = /Macintosh/.test(pn.userAgent) && /AppleWebKit/.test(pn.userAgent) && !/Safari/.test(pn.userAgent), Rl = Bt ? (
+const pn = typeof navigator == "object" ? navigator : { userAgent: "" }, Vl = /Macintosh/.test(pn.userAgent) && /AppleWebKit/.test(pn.userAgent) && !/Safari/.test(pn.userAgent), Rl = Mt ? (
   // Use download attribute first if possible (#193 Lumia mobile) unless this is a macOS WebView or mini program
-  typeof HTMLAnchorElement < "u" && "download" in HTMLAnchorElement.prototype && !Vl ? Bh : (
+  typeof HTMLAnchorElement < "u" && "download" in HTMLAnchorElement.prototype && !Vl ? Zh : (
     // Use msSaveOrOpenBlob as a second approach
-    "msSaveOrOpenBlob" in pn ? Zh : (
+    "msSaveOrOpenBlob" in pn ? Hh : (
       // Fallback to using FileReader and a popup
-      Hh
+      Kh
     )
   )
 ) : () => {
 };
-function Bh(e, t = "download", i) {
+function Zh(e, t = "download", i) {
   const a = document.createElement("a");
   a.download = t, a.rel = "noopener", typeof e == "string" ? (a.href = e, a.origin !== location.origin ? Dl(a.href) ? zo(e, t, i) : (a.target = "_blank", fn(a)) : fn(a)) : (a.href = URL.createObjectURL(e), setTimeout(function() {
     URL.revokeObjectURL(a.href);
@@ -8687,7 +8687,7 @@ function Bh(e, t = "download", i) {
     fn(a);
   }, 0));
 }
-function Zh(e, t = "download", i) {
+function Hh(e, t = "download", i) {
   if (typeof e == "string")
     if (Dl(e))
       zo(e, t, i);
@@ -8698,9 +8698,9 @@ function Zh(e, t = "download", i) {
       });
     }
   else
-    navigator.msSaveOrOpenBlob(Mh(e, i), t);
+    navigator.msSaveOrOpenBlob(Bh(e, i), t);
 }
-function Hh(e, t, i, a) {
+function Kh(e, t, i, a) {
   if (a = a || open("", "_blank"), a && (a.document.title = a.document.body.innerText = "downloading..."), typeof e == "string")
     return zo(e, t, i);
   const n = e.type === "application/octet-stream", s = /constructor/i.test(String(qc.HTMLElement)) || "safari" in qc, o = /CriOS\/[\d]+/.test(navigator.userAgent);
@@ -8719,7 +8719,7 @@ function Hh(e, t, i, a) {
     }, 4e4);
   }
 }
-function Fe(e, t) {
+function ze(e, t) {
   const i = "🍍 " + e;
   typeof __VUE_DEVTOOLS_TOAST__ == "function" ? __VUE_DEVTOOLS_TOAST__(i, t) : t === "error" ? console.error(i) : t === "warn" ? console.warn(i) : console.log(i);
 }
@@ -8728,65 +8728,65 @@ function Uo(e) {
 }
 function Pl() {
   if (!("clipboard" in navigator))
-    return Fe("Your browser doesn't support the Clipboard API", "error"), !0;
+    return ze("Your browser doesn't support the Clipboard API", "error"), !0;
 }
 function $l(e) {
-  return e instanceof Error && e.message.toLowerCase().includes("document is not focused") ? (Fe('You need to activate the "Emulate a focused page" setting in the "Rendering" panel of devtools.', "warn"), !0) : !1;
-}
-async function Kh(e) {
-  if (!Pl())
-    try {
-      await navigator.clipboard.writeText(JSON.stringify(e.state.value)), Fe("Global state copied to clipboard.");
-    } catch (t) {
-      if ($l(t))
-        return;
-      Fe("Failed to serialize the state. Check the console for more details.", "error"), console.error(t);
-    }
+  return e instanceof Error && e.message.toLowerCase().includes("document is not focused") ? (ze('You need to activate the "Emulate a focused page" setting in the "Rendering" panel of devtools.', "warn"), !0) : !1;
 }
 async function Wh(e) {
   if (!Pl())
     try {
-      jl(e, JSON.parse(await navigator.clipboard.readText())), Fe("Global state pasted from clipboard.");
+      await navigator.clipboard.writeText(JSON.stringify(e.state.value)), ze("Global state copied to clipboard.");
     } catch (t) {
       if ($l(t))
         return;
-      Fe("Failed to deserialize the state from clipboard. Check the console for more details.", "error"), console.error(t);
+      ze("Failed to serialize the state. Check the console for more details.", "error"), console.error(t);
     }
 }
 async function qh(e) {
+  if (!Pl())
+    try {
+      jl(e, JSON.parse(await navigator.clipboard.readText())), ze("Global state pasted from clipboard.");
+    } catch (t) {
+      if ($l(t))
+        return;
+      ze("Failed to deserialize the state from clipboard. Check the console for more details.", "error"), console.error(t);
+    }
+}
+async function Gh(e) {
   try {
     Rl(new Blob([JSON.stringify(e.state.value)], {
       type: "text/plain;charset=utf-8"
     }), "pinia-state.json");
   } catch (t) {
-    Fe("Failed to export the state as JSON. Check the console for more details.", "error"), console.error(t);
+    ze("Failed to export the state as JSON. Check the console for more details.", "error"), console.error(t);
   }
 }
-let jt;
-function Gh() {
-  jt || (jt = document.createElement("input"), jt.type = "file", jt.accept = ".json");
+let $t;
+function Jh() {
+  $t || ($t = document.createElement("input"), $t.type = "file", $t.accept = ".json");
   function e() {
     return new Promise((t, i) => {
-      jt.onchange = async () => {
-        const a = jt.files;
+      $t.onchange = async () => {
+        const a = $t.files;
         if (!a)
           return t(null);
         const n = a.item(0);
         return t(n ? { text: await n.text(), file: n } : null);
-      }, jt.oncancel = () => t(null), jt.onerror = i, jt.click();
+      }, $t.oncancel = () => t(null), $t.onerror = i, $t.click();
     });
   }
   return e;
 }
-async function Jh(e) {
+async function Yh(e) {
   try {
-    const i = await Gh()();
+    const i = await Jh()();
     if (!i)
       return;
     const { text: a, file: n } = i;
-    jl(e, JSON.parse(a)), Fe(`Global state imported from "${n.name}".`);
+    jl(e, JSON.parse(a)), ze(`Global state imported from "${n.name}".`);
   } catch (t) {
-    Fe("Failed to import the state from JSON. Check the console for more details.", "error"), console.error(t);
+    ze("Failed to import the state from JSON. Check the console for more details.", "error"), console.error(t);
   }
 }
 function jl(e, t) {
@@ -8803,7 +8803,7 @@ function pt(e) {
   };
 }
 const Fl = "🍍 Pinia (root)", mn = "_root";
-function Yh(e) {
+function Xh(e) {
   return Uo(e) ? {
     id: mn,
     label: Fl
@@ -8812,7 +8812,7 @@ function Yh(e) {
     label: e.$id
   };
 }
-function Xh(e) {
+function Qh(e) {
   if (Uo(e)) {
     const i = Array.from(e._s.keys()), a = e._s;
     return {
@@ -8848,7 +8848,7 @@ function Xh(e) {
     value: e[i]
   }))), t;
 }
-function Qh(e) {
+function e_(e) {
   return e ? Array.isArray(e) ? e.reduce((t, i) => (t.keys.push(i.key), t.operations.push(i.type), t.oldValue[i.key] = i.oldValue, t.newValue[i.key] = i.newValue, t), {
     oldValue: {},
     keys: [],
@@ -8861,7 +8861,7 @@ function Qh(e) {
     newValue: e.newValue
   } : {};
 }
-function e_(e) {
+function t_(e) {
   switch (e) {
     case Vt.direct:
       return "mutation";
@@ -8874,8 +8874,8 @@ function e_(e) {
   }
 }
 let Pi = !0;
-const gn = [], ui = "pinia:mutations", Be = "pinia", { assign: t_ } = Object, Dn = (e) => "🍍 " + e;
-function i_(e, t) {
+const gn = [], li = "pinia:mutations", Ze = "pinia", { assign: i_ } = Object, Dn = (e) => "🍍 " + e;
+function a_(e, t) {
   bl({
     id: "dev.esm.pinia",
     label: "Pinia 🍍",
@@ -8885,12 +8885,12 @@ function i_(e, t) {
     componentStateTypes: gn,
     app: e
   }, (i) => {
-    typeof i.now != "function" && Fe("You seem to be using an outdated version of Vue Devtools. Are you still using the Beta release instead of the stable one? You can find the links at https://devtools.vuejs.org/guide/installation.html."), i.addTimelineLayer({
-      id: ui,
+    typeof i.now != "function" && ze("You seem to be using an outdated version of Vue Devtools. Are you still using the Beta release instead of the stable one? You can find the links at https://devtools.vuejs.org/guide/installation.html."), i.addTimelineLayer({
+      id: li,
       label: "Pinia 🍍",
       color: 15064968
     }), i.addInspector({
-      id: Be,
+      id: Ze,
       label: "Pinia 🍍",
       icon: "storage",
       treeFilterPlaceholder: "Search stores",
@@ -8898,28 +8898,28 @@ function i_(e, t) {
         {
           icon: "content_copy",
           action: () => {
-            Kh(t);
+            Wh(t);
           },
           tooltip: "Serialize and copy the state"
         },
         {
           icon: "content_paste",
           action: async () => {
-            await Wh(t), i.sendInspectorTree(Be), i.sendInspectorState(Be);
+            await qh(t), i.sendInspectorTree(Ze), i.sendInspectorState(Ze);
           },
           tooltip: "Replace the state with the content of your clipboard"
         },
         {
           icon: "save",
           action: () => {
-            qh(t);
+            Gh(t);
           },
           tooltip: "Save the state as a JSON file"
         },
         {
           icon: "folder_open",
           action: async () => {
-            await Jh(t), i.sendInspectorTree(Be), i.sendInspectorState(Be);
+            await Yh(t), i.sendInspectorTree(Ze), i.sendInspectorState(Ze);
           },
           tooltip: "Import the state from a JSON file"
         }
@@ -8930,7 +8930,7 @@ function i_(e, t) {
           tooltip: 'Reset the state (with "$reset")',
           action: (a) => {
             const n = t._s.get(a);
-            n ? typeof n.$reset != "function" ? Fe(`Cannot reset "${a}" store because it doesn't have a "$reset" method implemented.`, "warn") : (n.$reset(), Fe(`Store "${a}" reset.`)) : Fe(`Cannot reset "${a}" store because it wasn't found.`, "warn");
+            n ? typeof n.$reset != "function" ? ze(`Cannot reset "${a}" store because it doesn't have a "$reset" method implemented.`, "warn") : (n.$reset(), ze(`Store "${a}" reset.`)) : ze(`Cannot reset "${a}" store because it wasn't found.`, "warn");
           }
         }
       ]
@@ -8974,22 +8974,22 @@ function i_(e, t) {
         });
       }
     }), i.on.getInspectorTree((a) => {
-      if (a.app === e && a.inspectorId === Be) {
+      if (a.app === e && a.inspectorId === Ze) {
         let n = [t];
-        n = n.concat(Array.from(t._s.values())), a.rootNodes = (a.filter ? n.filter((s) => "$id" in s ? s.$id.toLowerCase().includes(a.filter.toLowerCase()) : Fl.toLowerCase().includes(a.filter.toLowerCase())) : n).map(Yh);
+        n = n.concat(Array.from(t._s.values())), a.rootNodes = (a.filter ? n.filter((s) => "$id" in s ? s.$id.toLowerCase().includes(a.filter.toLowerCase()) : Fl.toLowerCase().includes(a.filter.toLowerCase())) : n).map(Xh);
       }
     }), globalThis.$pinia = t, i.on.getInspectorState((a) => {
-      if (a.app === e && a.inspectorId === Be) {
+      if (a.app === e && a.inspectorId === Ze) {
         const n = a.nodeId === mn ? t : t._s.get(a.nodeId);
         if (!n)
           return;
-        n && (a.nodeId !== mn && (globalThis.$store = /* @__PURE__ */ X(n)), a.state = Xh(n));
+        n && (a.nodeId !== mn && (globalThis.$store = /* @__PURE__ */ X(n)), a.state = Qh(n));
       }
     }), i.on.editInspectorState((a) => {
-      if (a.app === e && a.inspectorId === Be) {
+      if (a.app === e && a.inspectorId === Ze) {
         const n = a.nodeId === mn ? t : t._s.get(a.nodeId);
         if (!n)
-          return Fe(`store "${a.nodeId}" not found`, "error");
+          return ze(`store "${a.nodeId}" not found`, "error");
         const { path: s } = a;
         Uo(n) ? s.unshift("state") : (s.length !== 1 || !n._customProperties.has(s[0]) || s[0] in n.$state) && s.unshift("$state"), Pi = !1, a.set(n, s, a.state.value), Pi = !0;
       }
@@ -8997,10 +8997,10 @@ function i_(e, t) {
       if (a.type.startsWith("🍍")) {
         const n = a.type.replace(/^🍍\s*/, ""), s = t._s.get(n);
         if (!s)
-          return Fe(`store "${n}" not found`, "error");
+          return ze(`store "${n}" not found`, "error");
         const { path: o } = a;
         if (o[0] !== "state")
-          return Fe(`Invalid path for store "${n}":
+          return ze(`Invalid path for store "${n}":
 ${o}
 Only state can be modified.`);
         o[0] = "$state", Pi = !1, a.set(s, o, a.state.value), Pi = !0;
@@ -9008,7 +9008,7 @@ Only state can be modified.`);
     });
   });
 }
-function a_(e, t) {
+function n_(e, t) {
   gn.includes(Dn(t.$id)) || gn.push(Dn(t.$id)), bl({
     id: "dev.esm.pinia",
     label: "Pinia 🍍",
@@ -9034,7 +9034,7 @@ function a_(e, t) {
     t.$onAction(({ after: o, onError: r, name: c, args: d }) => {
       const l = zl++;
       i.addTimelineEvent({
-        layerId: ui,
+        layerId: li,
         event: {
           time: a(),
           title: "🛫 " + c,
@@ -9047,8 +9047,8 @@ function a_(e, t) {
           groupId: l
         }
       }), o((u) => {
-        Xt = void 0, i.addTimelineEvent({
-          layerId: ui,
+        Qt = void 0, i.addTimelineEvent({
+          layerId: li,
           event: {
             time: a(),
             title: "🛬 " + c,
@@ -9063,8 +9063,8 @@ function a_(e, t) {
           }
         });
       }), r((u) => {
-        Xt = void 0, i.addTimelineEvent({
-          layerId: ui,
+        Qt = void 0, i.addTimelineEvent({
+          layerId: li,
           event: {
             time: a(),
             logType: "error",
@@ -9082,8 +9082,8 @@ function a_(e, t) {
       });
     }, !0), t._customProperties.forEach((o) => {
       Ui(() => V(t[o]), (r, c) => {
-        i.notifyComponentUpdate(), i.sendInspectorState(Be), Pi && i.addTimelineEvent({
-          layerId: ui,
+        i.notifyComponentUpdate(), i.sendInspectorState(Ze), Pi && i.addTimelineEvent({
+          layerId: li,
           event: {
             time: a(),
             title: "Change",
@@ -9092,18 +9092,18 @@ function a_(e, t) {
               newValue: r,
               oldValue: c
             },
-            groupId: Xt
+            groupId: Qt
           }
         });
       }, { deep: !0 });
     }), t.$subscribe(({ events: o, type: r }, c) => {
-      if (i.notifyComponentUpdate(), i.sendInspectorState(Be), !Pi)
+      if (i.notifyComponentUpdate(), i.sendInspectorState(Ze), !Pi)
         return;
       const d = {
         time: a(),
-        title: e_(r),
-        data: t_({ store: pt(t.$id) }, Qh(o)),
-        groupId: Xt
+        title: t_(r),
+        data: i_({ store: pt(t.$id) }, e_(o)),
+        groupId: Qt
       };
       r === Vt.patchFunction ? d.subtitle = "⤵️" : r === Vt.patchObject ? d.subtitle = "🧩" : o && !Array.isArray(o) && (d.subtitle = o.type), o && (d.data["rawEvent(s)"] = {
         _custom: {
@@ -9113,14 +9113,14 @@ function a_(e, t) {
           value: o
         }
       }), i.addTimelineEvent({
-        layerId: ui,
+        layerId: li,
         event: d
       });
     }, { detached: !0, flush: "sync" });
     const n = t._hotUpdate;
     t._hotUpdate = Ct((o) => {
       n(o), i.addTimelineEvent({
-        layerId: ui,
+        layerId: li,
         event: {
           time: a(),
           title: "🔥 " + t.$id,
@@ -9130,33 +9130,33 @@ function a_(e, t) {
             info: pt("HMR update")
           }
         }
-      }), i.notifyComponentUpdate(), i.sendInspectorTree(Be), i.sendInspectorState(Be);
+      }), i.notifyComponentUpdate(), i.sendInspectorTree(Ze), i.sendInspectorState(Ze);
     });
     const { $dispose: s } = t;
     t.$dispose = () => {
-      s(), i.notifyComponentUpdate(), i.sendInspectorTree(Be), i.sendInspectorState(Be), i.getSettings().logStoreChanges && Fe(`Disposed "${t.$id}" store 🗑`);
-    }, i.notifyComponentUpdate(), i.sendInspectorTree(Be), i.sendInspectorState(Be), i.getSettings().logStoreChanges && Fe(`"${t.$id}" store installed 🆕`);
+      s(), i.notifyComponentUpdate(), i.sendInspectorTree(Ze), i.sendInspectorState(Ze), i.getSettings().logStoreChanges && ze(`Disposed "${t.$id}" store 🗑`);
+    }, i.notifyComponentUpdate(), i.sendInspectorTree(Ze), i.sendInspectorState(Ze), i.getSettings().logStoreChanges && ze(`"${t.$id}" store installed 🆕`);
   });
 }
-let zl = 0, Xt;
+let zl = 0, Qt;
 function Gc(e, t, i) {
   const a = t.reduce((n, s) => (n[s] = (/* @__PURE__ */ X(e))[s], n), {});
   for (const n in a)
     e[n] = function() {
       const s = zl, o = i ? new Proxy(e, {
         get(...c) {
-          return Xt = s, Reflect.get(...c);
+          return Qt = s, Reflect.get(...c);
         },
         set(...c) {
-          return Xt = s, Reflect.set(...c);
+          return Qt = s, Reflect.set(...c);
         }
       }) : e;
-      Xt = s;
+      Qt = s;
       const r = a[n].apply(o, arguments);
-      return Xt = void 0, r;
+      return Qt = void 0, r;
     };
 }
-function n_({ app: e, store: t, options: i }) {
+function s_({ app: e, store: t, options: i }) {
   if (!t.$id.startsWith("__hot:")) {
     if (t._isOptionsAPI = !!i.state, !t._p._testing) {
       Gc(t, Object.keys(i.actions), t._isOptionsAPI);
@@ -9165,19 +9165,19 @@ function n_({ app: e, store: t, options: i }) {
         a.apply(this, arguments), Gc(t, Object.keys(n._hmrPayload.actions), !!t._isOptionsAPI);
       };
     }
-    a_(
+    n_(
       e,
       // FIXME: is there a way to allow the assignment from Store<Id, S, G, A> to StoreGeneric?
       t
     );
   }
 }
-function s_() {
-  const e = zd(!0), t = e.run(() => /* @__PURE__ */ Ce({}));
+function o_() {
+  const e = zd(!0), t = e.run(() => /* @__PURE__ */ Se({}));
   let i = [], a = [];
   const n = Ct({
     install(s) {
-      xa(n), n._a = s, s.provide(Cn, n), s.config.globalProperties.$pinia = n, process.env.NODE_ENV !== "production" && process.env.NODE_ENV !== "test" && Bt && i_(s, n), a.forEach((o) => i.push(o)), a = [];
+      xa(n), n._a = s, s.provide(Cn, n), s.config.globalProperties.$pinia = n, process.env.NODE_ENV !== "production" && process.env.NODE_ENV !== "test" && Mt && a_(s, n), a.forEach((o) => i.push(o)), a = [];
     },
     use(s) {
       return this._a ? i.push(s) : a.push(s), this;
@@ -9190,7 +9190,7 @@ function s_() {
     _s: /* @__PURE__ */ new Map(),
     state: t
   });
-  return process.env.NODE_ENV !== "production" && process.env.NODE_ENV !== "test" && Bt && typeof Proxy < "u" && n.use(n_), n;
+  return process.env.NODE_ENV !== "production" && process.env.NODE_ENV !== "test" && Mt && typeof Proxy < "u" && n.use(s_), n;
 }
 function Ul(e, t) {
   for (const i in t) {
@@ -9198,7 +9198,7 @@ function Ul(e, t) {
     if (!(i in e))
       continue;
     const n = e[i];
-    wi(n) && wi(a) && !/* @__PURE__ */ pe(a) && !/* @__PURE__ */ ht(a) ? e[i] = Ul(n, a) : e[i] = a;
+    Ei(n) && Ei(a) && !/* @__PURE__ */ me(a) && !/* @__PURE__ */ ht(a) ? e[i] = Ul(n, a) : e[i] = a;
   }
   return e;
 }
@@ -9209,34 +9209,34 @@ function Jc(e, t, i, a = Ll) {
   const n = () => {
     e.delete(t) && a();
   };
-  return !i && Ud() && Bf(n), n;
+  return !i && Ud() && Zf(n), n;
 }
 function Ni(e, ...t) {
   e.forEach((i) => {
     i(...t);
   });
 }
-const o_ = (e) => e(), Yc = /* @__PURE__ */ Symbol(), Is = /* @__PURE__ */ Symbol();
+const r_ = (e) => e(), Yc = /* @__PURE__ */ Symbol(), Is = /* @__PURE__ */ Symbol();
 function eo(e, t) {
   e instanceof Map && t instanceof Map ? t.forEach((i, a) => e.set(a, i)) : e instanceof Set && t instanceof Set && t.forEach(e.add, e);
   for (const i in t) {
     if (!t.hasOwnProperty(i))
       continue;
     const a = t[i], n = e[i];
-    wi(n) && wi(a) && e.hasOwnProperty(i) && !/* @__PURE__ */ pe(a) && !/* @__PURE__ */ ht(a) ? e[i] = eo(n, a) : e[i] = a;
+    Ei(n) && Ei(a) && e.hasOwnProperty(i) && !/* @__PURE__ */ me(a) && !/* @__PURE__ */ ht(a) ? e[i] = eo(n, a) : e[i] = a;
   }
   return e;
 }
-const r_ = process.env.NODE_ENV !== "production" ? /* @__PURE__ */ Symbol("pinia:skipHydration") : (
+const c_ = process.env.NODE_ENV !== "production" ? /* @__PURE__ */ Symbol("pinia:skipHydration") : (
   /* istanbul ignore next */
   /* @__PURE__ */ Symbol()
 );
-function c_(e) {
-  return !wi(e) || !Object.prototype.hasOwnProperty.call(e, r_);
+function d_(e) {
+  return !Ei(e) || !Object.prototype.hasOwnProperty.call(e, c_);
 }
 const { assign: dt } = Object;
 function Xc(e) {
-  return !!(/* @__PURE__ */ pe(e) && e.effect);
+  return !!(/* @__PURE__ */ me(e) && e.effect);
 }
 function Qc(e, t, i, a) {
   const { state: n, actions: s, getters: o } = t, r = i.state.value[e];
@@ -9245,9 +9245,9 @@ function Qc(e, t, i, a) {
     !r && (process.env.NODE_ENV === "production" || !a) && (i.state.value[e] = n ? n() : {});
     const l = process.env.NODE_ENV !== "production" && a ? (
       // use ref() to unwrap refs inside state TODO: check if this is still necessary
-      /* @__PURE__ */ nr((/* @__PURE__ */ Ce(n ? n() : {})).value)
+      /* @__PURE__ */ nr((/* @__PURE__ */ Se(n ? n() : {})).value)
     ) : /* @__PURE__ */ nr(i.state.value[e]);
-    return dt(l, s, Object.keys(o || {}).reduce((u, m) => (process.env.NODE_ENV !== "production" && m in l && console.warn(`[🍍]: A getter cannot have the same name as another state property. Rename one of them. Found with "${m}" in store "${e}".`), u[m] = Ct(Yt(() => {
+    return dt(l, s, Object.keys(o || {}).reduce((u, m) => (process.env.NODE_ENV !== "production" && m in l && console.warn(`[🍍]: A getter cannot have the same name as another state property. Rename one of them. Found with "${m}" in store "${e}".`), u[m] = Ct(Xt(() => {
       xa(i);
       const p = i._s.get(e);
       return o[m].call(p, p);
@@ -9262,14 +9262,14 @@ function to(e, t, i = {}, a, n, s) {
     throw new Error("Pinia destroyed");
   const c = { deep: !0 };
   process.env.NODE_ENV !== "production" && (c.onTrigger = (j) => {
-    d ? p = j : d == !1 && !z._hotUpdating && (Array.isArray(p) ? p.push(j) : console.error("🍍 debuggerEvents should be an array. This is most likely an internal Pinia bug."));
+    d ? p = j : d == !1 && !B._hotUpdating && (Array.isArray(p) ? p.push(j) : console.error("🍍 debuggerEvents should be an array. This is most likely an internal Pinia bug."));
   });
   let d, l, u = /* @__PURE__ */ new Set(), m = /* @__PURE__ */ new Set(), p;
   const h = a.state.value[e];
   !s && !h && (process.env.NODE_ENV === "production" || !n) && (a.state.value[e] = {});
-  const k = /* @__PURE__ */ Ce({});
-  let w;
-  function x(j) {
+  const w = /* @__PURE__ */ Se({});
+  let E;
+  function A(j) {
     let $;
     d = l = !1, process.env.NODE_ENV !== "production" && (p = []), typeof j == "function" ? (j(a.state.value[e]), $ = {
       type: Vt.patchFunction,
@@ -9281,15 +9281,15 @@ function to(e, t, i = {}, a, n, s) {
       storeId: e,
       events: p
     });
-    const J = w = /* @__PURE__ */ Symbol();
+    const Q = E = /* @__PURE__ */ Symbol();
     yn().then(() => {
-      w === J && (d = !0);
+      E === Q && (d = !0);
     }), l = !0, Ni(u, $, a.state.value[e]);
   }
-  const L = s ? function() {
-    const { state: $ } = i, J = $ ? $() : {};
-    this.$patch((me) => {
-      dt(me, J);
+  const z = s ? function() {
+    const { state: $ } = i, Q = $ ? $() : {};
+    this.$patch((re) => {
+      dt(re, Q);
     });
   } : (
     /* istanbul ignore next */
@@ -9297,61 +9297,61 @@ function to(e, t, i = {}, a, n, s) {
       throw new Error(`🍍: Store "${e}" is built using the setup syntax and does not implement $reset().`);
     } : Ll
   );
-  function D() {
+  function R() {
     o.stop(), u.clear(), m.clear(), a._s.delete(e);
   }
   const H = (j, $ = "") => {
     if (Yc in j)
       return j[Is] = $, j;
-    const J = function() {
+    const Q = function() {
       xa(a);
-      const me = Array.from(arguments), $e = /* @__PURE__ */ new Set(), ze = /* @__PURE__ */ new Set();
-      function le(ie) {
-        $e.add(ie);
+      const re = Array.from(arguments), Ce = /* @__PURE__ */ new Set(), je = /* @__PURE__ */ new Set();
+      function pe(te) {
+        Ce.add(te);
       }
-      function R(ie) {
-        ze.add(ie);
+      function P(te) {
+        je.add(te);
       }
       Ni(m, {
-        args: me,
-        name: J[Is],
-        store: z,
-        after: le,
-        onError: R
+        args: re,
+        name: Q[Is],
+        store: B,
+        after: pe,
+        onError: P
       });
-      let G;
+      let J;
       try {
-        G = j.apply(this && this.$id === e ? this : z, me);
-      } catch (ie) {
-        throw Ni(ze, ie), ie;
+        J = j.apply(this && this.$id === e ? this : B, re);
+      } catch (te) {
+        throw Ni(je, te), te;
       }
-      return G instanceof Promise ? G.then((ie) => (Ni($e, ie), ie)).catch((ie) => (Ni(ze, ie), Promise.reject(ie))) : (Ni($e, G), G);
+      return J instanceof Promise ? J.then((te) => (Ni(Ce, te), te)).catch((te) => (Ni(je, te), Promise.reject(te))) : (Ni(Ce, J), J);
     };
-    return J[Yc] = !0, J[Is] = $, J;
+    return Q[Yc] = !0, Q[Is] = $, Q;
   }, N = /* @__PURE__ */ Ct({
     actions: {},
     getters: {},
     state: [],
-    hotState: k
+    hotState: w
   }), ee = {
     _p: a,
     // _s: scope,
     $id: e,
     $onAction: Jc.bind(null, m),
-    $patch: x,
-    $reset: L,
+    $patch: A,
+    $reset: z,
     $subscribe(j, $ = {}) {
-      const J = Jc(u, j, $.detached, () => me()), me = o.run(() => Ui(() => a.state.value[e], ($e) => {
+      const Q = Jc(u, j, $.detached, () => re()), re = o.run(() => Ui(() => a.state.value[e], (Ce) => {
         ($.flush === "sync" ? l : d) && j({
           storeId: e,
           type: Vt.direct,
           events: p
-        }, $e);
+        }, Ce);
       }, dt({}, c, $)));
-      return J;
+      return Q;
     },
-    $dispose: D
-  }, z = /* @__PURE__ */ Hn(process.env.NODE_ENV !== "production" || process.env.NODE_ENV !== "production" && process.env.NODE_ENV !== "test" && Bt ? dt(
+    $dispose: R
+  }, B = /* @__PURE__ */ Hn(process.env.NODE_ENV !== "production" || process.env.NODE_ENV !== "production" && process.env.NODE_ENV !== "test" && Mt ? dt(
     {
       _hmrPayload: N,
       _customProperties: Ct(/* @__PURE__ */ new Set())
@@ -9361,61 +9361,61 @@ function to(e, t, i = {}, a, n, s) {
     // must be added later
     // setupStore
   ) : ee);
-  a._s.set(e, z);
-  const te = (a._a && a._a.runWithContext || o_)(() => a._e.run(() => (o = zd()).run(() => t({ action: H }))));
-  for (const j in te) {
-    const $ = te[j];
-    if (/* @__PURE__ */ pe($) && !Xc($) || /* @__PURE__ */ ht($))
-      process.env.NODE_ENV !== "production" && n ? k.value[j] = /* @__PURE__ */ ps(te, j) : s || (h && c_($) && (/* @__PURE__ */ pe($) ? $.value = h[j] : eo($, h[j])), a.state.value[e][j] = $), process.env.NODE_ENV !== "production" && N.state.push(j);
+  a._s.set(e, B);
+  const q = (a._a && a._a.runWithContext || r_)(() => a._e.run(() => (o = zd()).run(() => t({ action: H }))));
+  for (const j in q) {
+    const $ = q[j];
+    if (/* @__PURE__ */ me($) && !Xc($) || /* @__PURE__ */ ht($))
+      process.env.NODE_ENV !== "production" && n ? w.value[j] = /* @__PURE__ */ ps(q, j) : s || (h && d_($) && (/* @__PURE__ */ me($) ? $.value = h[j] : eo($, h[j])), a.state.value[e][j] = $), process.env.NODE_ENV !== "production" && N.state.push(j);
     else if (typeof $ == "function") {
-      const J = process.env.NODE_ENV !== "production" && n ? $ : H($, j);
-      te[j] = J, process.env.NODE_ENV !== "production" && (N.actions[j] = $), r.actions[j] = $;
+      const Q = process.env.NODE_ENV !== "production" && n ? $ : H($, j);
+      q[j] = Q, process.env.NODE_ENV !== "production" && (N.actions[j] = $), r.actions[j] = $;
     } else process.env.NODE_ENV !== "production" && Xc($) && (N.getters[j] = s ? (
       // @ts-expect-error
       i.getters[j]
-    ) : $, Bt && (te._getters || // @ts-expect-error: same
-    (te._getters = Ct([]))).push(j));
+    ) : $, Mt && (q._getters || // @ts-expect-error: same
+    (q._getters = Ct([]))).push(j));
   }
-  if (dt(z, te), dt(/* @__PURE__ */ X(z), te), Object.defineProperty(z, "$state", {
-    get: () => process.env.NODE_ENV !== "production" && n ? k.value : a.state.value[e],
+  if (dt(B, q), dt(/* @__PURE__ */ X(B), q), Object.defineProperty(B, "$state", {
+    get: () => process.env.NODE_ENV !== "production" && n ? w.value : a.state.value[e],
     set: (j) => {
       if (process.env.NODE_ENV !== "production" && n)
         throw new Error("cannot set hotState");
-      x(($) => {
+      A(($) => {
         dt($, j);
       });
     }
-  }), process.env.NODE_ENV !== "production" && (z._hotUpdate = Ct((j) => {
-    z._hotUpdating = !0, j._hmrPayload.state.forEach(($) => {
-      if ($ in z.$state) {
-        const J = j.$state[$], me = z.$state[$];
-        typeof J == "object" && wi(J) && wi(me) ? Ul(J, me) : j.$state[$] = me;
+  }), process.env.NODE_ENV !== "production" && (B._hotUpdate = Ct((j) => {
+    B._hotUpdating = !0, j._hmrPayload.state.forEach(($) => {
+      if ($ in B.$state) {
+        const Q = j.$state[$], re = B.$state[$];
+        typeof Q == "object" && Ei(Q) && Ei(re) ? Ul(Q, re) : j.$state[$] = re;
       }
-      z[$] = /* @__PURE__ */ ps(j.$state, $);
-    }), Object.keys(z.$state).forEach(($) => {
-      $ in j.$state || delete z[$];
+      B[$] = /* @__PURE__ */ ps(j.$state, $);
+    }), Object.keys(B.$state).forEach(($) => {
+      $ in j.$state || delete B[$];
     }), d = !1, l = !1, a.state.value[e] = /* @__PURE__ */ ps(j._hmrPayload, "hotState"), l = !0, yn().then(() => {
       d = !0;
     });
     for (const $ in j._hmrPayload.actions) {
-      const J = j[$];
-      z[$] = //
-      H(J, $);
+      const Q = j[$];
+      B[$] = //
+      H(Q, $);
     }
     for (const $ in j._hmrPayload.getters) {
-      const J = j._hmrPayload.getters[$], me = s ? (
+      const Q = j._hmrPayload.getters[$], re = s ? (
         // special handling of options api
-        Yt(() => (xa(a), J.call(z, z)))
-      ) : J;
-      z[$] = //
-      me;
+        Xt(() => (xa(a), Q.call(B, B)))
+      ) : Q;
+      B[$] = //
+      re;
     }
-    Object.keys(z._hmrPayload.getters).forEach(($) => {
-      $ in j._hmrPayload.getters || delete z[$];
-    }), Object.keys(z._hmrPayload.actions).forEach(($) => {
-      $ in j._hmrPayload.actions || delete z[$];
-    }), z._hmrPayload = j._hmrPayload, z._getters = j._getters, z._hotUpdating = !1;
-  })), process.env.NODE_ENV !== "production" && process.env.NODE_ENV !== "test" && Bt) {
+    Object.keys(B._hmrPayload.getters).forEach(($) => {
+      $ in j._hmrPayload.getters || delete B[$];
+    }), Object.keys(B._hmrPayload.actions).forEach(($) => {
+      $ in j._hmrPayload.actions || delete B[$];
+    }), B._hmrPayload = j._hmrPayload, B._getters = j._getters, B._hotUpdating = !1;
+  })), process.env.NODE_ENV !== "production" && process.env.NODE_ENV !== "test" && Mt) {
     const j = {
       writable: !0,
       configurable: !0,
@@ -9423,31 +9423,31 @@ function to(e, t, i = {}, a, n, s) {
       enumerable: !1
     };
     ["_p", "_hmrPayload", "_getters", "_customProperties"].forEach(($) => {
-      Object.defineProperty(z, $, dt({ value: z[$] }, j));
+      Object.defineProperty(B, $, dt({ value: B[$] }, j));
     });
   }
   return a._p.forEach((j) => {
-    if (process.env.NODE_ENV !== "production" && process.env.NODE_ENV !== "test" && Bt) {
+    if (process.env.NODE_ENV !== "production" && process.env.NODE_ENV !== "test" && Mt) {
       const $ = o.run(() => j({
-        store: z,
+        store: B,
         app: a._a,
         pinia: a,
         options: r
       }));
-      Object.keys($ || {}).forEach((J) => z._customProperties.add(J)), dt(z, $);
+      Object.keys($ || {}).forEach((Q) => B._customProperties.add(Q)), dt(B, $);
     } else
-      dt(z, o.run(() => j({
-        store: z,
+      dt(B, o.run(() => j({
+        store: B,
         app: a._a,
         pinia: a,
         options: r
       })));
-  }), process.env.NODE_ENV !== "production" && z.$state && typeof z.$state == "object" && typeof z.$state.constructor == "function" && !z.$state.constructor.toString().includes("[native code]") && console.warn(`[🍍]: The "state" must be a plain object. It cannot be
+  }), process.env.NODE_ENV !== "production" && B.$state && typeof B.$state == "object" && typeof B.$state.constructor == "function" && !B.$state.constructor.toString().includes("[native code]") && console.warn(`[🍍]: The "state" must be a plain object. It cannot be
 	state: () => new MyClass()
-Found in store "${z.$id}".`), h && s && i.hydrate && i.hydrate(z.$state, h), d = !0, l = !0, z;
+Found in store "${B.$id}".`), h && s && i.hydrate && i.hydrate(B.$state, h), d = !0, l = !0, B;
 }
 // @__NO_SIDE_EFFECTS__
-function d_(e, t, i) {
+function u_(e, t, i) {
   let a;
   const n = typeof t == "function";
   a = n ? i : t;
@@ -9455,17 +9455,17 @@ function d_(e, t, i) {
     const c = Ps();
     if (o = // in test mode, ignore the argument provided as we can always retrieve a
     // pinia instance with getActivePinia()
-    (process.env.NODE_ENV === "test" && pi && pi._testing ? null : o) || (c ? hi(Cn, null) : null), o && xa(o), process.env.NODE_ENV !== "production" && !pi)
+    (process.env.NODE_ENV === "test" && mi && mi._testing ? null : o) || (c ? _i(Cn, null) : null), o && xa(o), process.env.NODE_ENV !== "production" && !mi)
       throw new Error(`[🍍]: "getActivePinia()" was called but there was no active Pinia. Are you trying to use a store before calling "app.use(pinia)"?
 See https://pinia.vuejs.org/core-concepts/outside-component-usage.html for help.
 This will fail in production.`);
-    o = pi, o._s.has(e) || (n ? to(e, t, a, o) : Qc(e, a, o), process.env.NODE_ENV !== "production" && (s._pinia = o));
+    o = mi, o._s.has(e) || (n ? to(e, t, a, o) : Qc(e, a, o), process.env.NODE_ENV !== "production" && (s._pinia = o));
     const d = o._s.get(e);
     if (process.env.NODE_ENV !== "production" && r) {
       const l = "__hot:" + e, u = n ? to(l, t, a, o, !0) : Qc(l, dt({}, a), o, !0);
       r._hotUpdate(u), delete o.state.value[l], o._s.delete(l);
     }
-    if (process.env.NODE_ENV !== "production" && Bt) {
+    if (process.env.NODE_ENV !== "production" && Mt) {
       const l = Yn();
       if (l && l.proxy && // avoid adding stores that are just built for hot module replacement
       !r) {
@@ -9477,10 +9477,10 @@ This will fail in production.`);
   }
   return s.$id = e, s;
 }
-const u_ = {
+const l_ = {
   class: "portrait-stage",
   "aria-label": "角色立绘"
-}, l_ = /* @__PURE__ */ vu({
+}, f_ = /* @__PURE__ */ vu({
   __name: "PortraitStage",
   props: {
     portraits: {},
@@ -9499,8 +9499,8 @@ const u_ = {
     }
     return Ui(() => t.portraits, () => {
       n();
-    }, { deep: !0, immediate: !0 }), Eo(() => t.service.stopAll()), (s, o) => (he(), ve("div", u_, [
-      (he(!0), ve(Xe, null, sn(e.portraits, (r) => (he(), ve("canvas", {
+    }, { deep: !0, immediate: !0 }), Eo(() => t.service.stopAll()), (s, o) => (he(), ve("div", l_, [
+      (he(!0), ve(Qe, null, sn(e.portraits, (r) => (he(), ve("canvas", {
         key: `${r.characterId}:${r.portraitAssetId}`,
         ref_for: !0,
         ref: (c) => a(r.characterId, c),
@@ -9512,32 +9512,32 @@ const u_ = {
     ]));
   }
 }), Ml = "2.0.0", io = `https://cdn.jsdelivr.net/gh/q18718859808-sketch/albina-galgame-card@v${Ml}/dist/albina-galgame-card`;
-function f_(e, t) {
+function p_(e, t) {
   if (t)
     return e.assets.find((i) => i.id === t);
 }
 function Lo(e, t, i = io) {
-  const a = f_(e, t);
+  const a = p_(e, t);
   if (!a) return;
   const n = [e.basePath, ...a.path.split("/")].map((s) => encodeURIComponent(s)).join("/");
   return `${i.replace(/\/$/u, "")}/${n}`;
 }
-const p_ = 2, m_ = "albina-galgame-card", g_ = "assets", b_ = /* @__PURE__ */ JSON.parse('[{"id":"bg.backstreets_rain","kind":"image","path":"bg/backstreets_rain.jpg","mimeType":"image/jpeg","sha256":"7a897b01c41634b0ab05b8411f487e60712909f153aed6b866c6e724f7a05ec7","bytes":195160},{"id":"bg.city_rooftop","kind":"image","path":"bg/city_rooftop.jpg","mimeType":"image/jpeg","sha256":"4428f1f905a752eab7e4f6119f236f12767778db7f4768d2463a03ee6dcc4697","bytes":207867},{"id":"bg.golden_bough","kind":"image","path":"bg/golden_bough.jpg","mimeType":"image/jpeg","sha256":"5e6a552b04b4333ca30c001a3020168908d7867926982ca4097145fa735ee207","bytes":222682},{"id":"bg.lce_lab","kind":"image","path":"bg/lce_lab.jpg","mimeType":"image/jpeg","sha256":"b982f39f13eb87cdb59d1540ff4f7688c4b319600a7174a758288f3c4efe672d","bytes":202605},{"id":"bg.limbus_bus","kind":"image","path":"bg/limbus_bus.jpg","mimeType":"image/jpeg","sha256":"c684aba165f3d0a195d6e5b438be4bc9b2a070a4ac3364e91bef93716aab9c60","bytes":194697},{"id":"bg.mirror_corridor","kind":"image","path":"bg/mirror_corridor.jpg","mimeType":"image/jpeg","sha256":"aac5cfac5624763538d533b63914c845c266dc17845789d9c3f7d5bb408603f9","bytes":193914},{"id":"bg.nest_station","kind":"image","path":"bg/nest_station.jpg","mimeType":"image/jpeg","sha256":"732fa0c67c071560b01c536d5ed76944c60d1a0d9a5034087ca79bf5ffff9ad2","bytes":196705},{"id":"bg.outskirts_dawn","kind":"image","path":"bg/outskirts_dawn.jpg","mimeType":"image/jpeg","sha256":"4ccbdbab6a95b5d79ae476a96f8b453ed07241e599014002fdc83475f8bd092a","bytes":182100},{"id":"bg.rain_room","kind":"image","path":"bg/rain_room.jpg","mimeType":"image/jpeg","sha256":"0a4b24f02a4f9274d6691594cbfd8c1f2512c1fe4559083a22c6cf2891cb198e","bytes":198604},{"id":"bg.ring_atelier","kind":"image","path":"bg/ring_atelier.jpg","mimeType":"image/jpeg","sha256":"aed9195327ca4feef20a611b2bd0f0ed4a8fba22f12fdf685bafc5b3ed13eb10","bytes":197708},{"id":"bg.spider_gallery","kind":"image","path":"bg/spider_gallery.jpg","mimeType":"image/jpeg","sha256":"78a4336f0aa42c3ecf10667aeeb40dcdd42b271548872255c66aee716abcf024","bytes":223415},{"id":"bg.white_canvas","kind":"image","path":"bg/white_canvas.jpg","mimeType":"image/jpeg","sha256":"6551848df5f6a312cbd769356b512643b33f2b9e68c9b8da21ad98ab9ef80605","bytes":193895},{"id":"cg.araya_rooftop","kind":"image","path":"cg/araya_rooftop.jpg","mimeType":"image/jpeg","sha256":"1ecd4ffa5f53471b66b5aecbfa37a8289c603c2a5ce2212538da01cbd5d5d8e4","bytes":226727},{"id":"cg.art_resonance","kind":"image","path":"cg/art_resonance.jpg","mimeType":"image/jpeg","sha256":"da4000d606059e545bbf427451a999ea99e9fd730b71033cf61ed0e5c7ebeb1a","bytes":221527},{"id":"cg.backstreet_pursuit","kind":"image","path":"cg/backstreet_pursuit.jpg","mimeType":"image/jpeg","sha256":"ff18127cd0ae95ad91c3e85ceec047def159a58bfec852708271a65d4f53b774","bytes":208589},{"id":"cg.conspiracy_contract","kind":"image","path":"cg/conspiracy_contract.jpg","mimeType":"image/jpeg","sha256":"72922d9f7aac148fcfe1e6d7bed34fa8fd7bfc7323641b67feb5279fbe87dad1","bytes":215416},{"id":"cg.fascia_heartbeat","kind":"image","path":"cg/fascia_heartbeat.jpg","mimeType":"image/jpeg","sha256":"2640a75be54575dce6bdc1b9023b06934899cbf4b5492cf012ef1e9c7d2f71e6","bytes":204579},{"id":"cg.golden_bough_ending","kind":"image","path":"cg/golden_bough_ending.jpg","mimeType":"image/jpeg","sha256":"4700e8485eb57b194cf6878741509ddc1e323d486878114259b9405051045491","bytes":217599},{"id":"cg.hollow_torso_reveal","kind":"image","path":"cg/hollow_torso_reveal.jpg","mimeType":"image/jpeg","sha256":"46e83edaabd17b1316bd705daf1a14614c0a7ae8b6164281b9770a2e020fe3e5","bytes":212406},{"id":"cg.lce_raid","kind":"image","path":"cg/lce_raid.jpg","mimeType":"image/jpeg","sha256":"037414f5985f5d972656d297f771e4553d3c01d1d700185bea68f40723892284","bytes":191396},{"id":"cg.limbus_bus_night","kind":"image","path":"cg/limbus_bus_night.jpg","mimeType":"image/jpeg","sha256":"0b1054ef8e4b8cd99b8f234ae2abd5c5e160813b73d1e564dba47c67f8a7cd8a","bytes":202828},{"id":"cg.maestro_shadow","kind":"image","path":"cg/maestro_shadow.jpg","mimeType":"image/jpeg","sha256":"ff93dcfc2b02faf7920d1426ebdfadf86d58aa5744117a6d692d2f5f370fa5c6","bytes":223021},{"id":"cg.opening_rain","kind":"image","path":"cg/opening_rain.jpg","mimeType":"image/jpeg","sha256":"557521106b516bf35aa9b55473c6f977a80bdf8ed6f7fe3f8ecf47de6c961931","bytes":190464},{"id":"cg.rain_confession","kind":"image","path":"cg/rain_confession.jpg","mimeType":"image/jpeg","sha256":"2312880e97be851f6f2688efb07f8d1475e7e4ea1ff3de2dde2db622bee41884","bytes":233325},{"id":"cg.rebuild_awakening","kind":"image","path":"cg/rebuild_awakening.jpg","mimeType":"image/jpeg","sha256":"21c280bc65cf08f4d34b983a9731e3e231bd154a724cec0ee32dc11fc3698648","bytes":182730},{"id":"cg.ring_conspiracy_ending","kind":"image","path":"cg/ring_conspiracy_ending.jpg","mimeType":"image/jpeg","sha256":"dd57358bb86e03d8619a820ff3b0773dea49d24a760ea09593c5594652876ea3","bytes":219860},{"id":"cg.surgery_of_memory","kind":"image","path":"cg/surgery_of_memory.jpg","mimeType":"image/jpeg","sha256":"3856e752a99b3c8c4d83ae3cd2ae259ce8911b63439c3925d92d8bafc2231b68","bytes":241224},{"id":"cg.trust_threshold","kind":"image","path":"cg/trust_threshold.jpg","mimeType":"image/jpeg","sha256":"ee433f58ec08d7311b0dccee6f184d5b6235e398bbc62698455276e33db673fc","bytes":183900},{"id":"cg.white_canvas_choice","kind":"image","path":"cg/white_canvas_choice.jpg","mimeType":"image/jpeg","sha256":"ed4e27e3e480ec1bb7c3e1f400274fe8ca6277c9bd114a9edca1bcd3ad93a0d9","bytes":200807},{"id":"cg.white_canvas_ending","kind":"image","path":"cg/white_canvas_ending.jpg","mimeType":"image/jpeg","sha256":"c9c999a7eed0a02dc31fe84736e7ef8af39ecd47e288c3d99d19b9bc56b5145c","bytes":232672},{"id":"file.audio.bgm.backstreets.rain.mp3","kind":"audio","path":"audio/bgm/backstreets_rain.mp3","mimeType":"audio/mpeg","sha256":"97b5969e9379853e1cc14028fbb908d8607f71ebea87f371ad0499ef94a0a414","bytes":4192274},{"id":"file.audio.bgm.between.two.worlds.mp3","kind":"audio","path":"audio/bgm/between_two_worlds.mp3","mimeType":"audio/mpeg","sha256":"25470853676263801b044d22761e579a750db722aefbf1d8d48676f49f626184","bytes":2979130},{"id":"file.audio.bgm.boss.kromer.mp3","kind":"audio","path":"audio/bgm/boss_kromer.mp3","mimeType":"audio/mpeg","sha256":"923955f3d2091d427d9e345dd6bf9d143a5c3b37631f9ada77a7bca625aa97dd","bytes":3679463},{"id":"file.audio.bgm.main.menu.mp3","kind":"audio","path":"audio/bgm/main_menu.mp3","mimeType":"audio/mpeg","sha256":"299a5619829dbb95604531d310fd89dd190009589bdcdc2ef7881f878b1f7a60","bytes":7685141},{"id":"file.audio.bgm.title.theme.mp3","kind":"audio","path":"audio/bgm/title_theme.mp3","mimeType":"audio/mpeg","sha256":"03917669cba8086f921712e0db8c59d32e02d63e3be443d8d4458a9d2786ded3","bytes":2540613},{"id":"file.audio.se.blood.splat.wav","kind":"audio","path":"audio/se/blood_splat.wav","mimeType":"audio/wav","sha256":"87c30bfd8c336786de618759015f3ee24eee2638d406d7541c7c3fc17201bc17","bytes":17684},{"id":"file.audio.se.glass.shatter.wav","kind":"audio","path":"audio/se/glass_shatter.wav","mimeType":"audio/wav","sha256":"7f066a84a711bcdcf48abc70b07e92ee21957e25cd06765d3637226c55bddda2","bytes":15920},{"id":"file.audio.se.slash.heavy.wav","kind":"audio","path":"audio/se/slash_heavy.wav","mimeType":"audio/wav","sha256":"c93d1adea430352fd38fd9ef315c54801f9fde63350a2fa62584ad20441c7f57","bytes":15920},{"id":"file.audio.se.typing.blip.wav","kind":"audio","path":"audio/se/typing_blip.wav","mimeType":"audio/wav","sha256":"0002e7621f5dd6510cc047dbcfaee2cc7ab958dc20b1d149809958a6f14b1668","bytes":4012},{"id":"file.audio.se.ui.back.wav","kind":"audio","path":"audio/se/ui_back.wav","mimeType":"audio/wav","sha256":"c80e3b1f405a1a2c3d35c5f7b0d94839aba09bce28136b76b94b17a72eaf7f65","bytes":10628},{"id":"file.audio.se.ui.click.wav","kind":"audio","path":"audio/se/ui_click.wav","mimeType":"audio/wav","sha256":"fb67965be3a2b903b7f06c19646df9943f5607bea683798718fe2e77a188e270","bytes":2248},{"id":"file.audio.se.ui.confirm.wav","kind":"audio","path":"audio/se/ui_confirm.wav","mimeType":"audio/wav","sha256":"7fc178ebe16e5de7b62514cca74b1fdcf800dc85156c2d450079279a2446904b","bytes":17684},{"id":"file.audio.voice.result.conspiracy.005.let.her.answer.mp3","kind":"audio","path":"audio/voice/result/conspiracy_005_let_her_answer.mp3","mimeType":"audio/mpeg","sha256":"548667e2e8d97d86d68959d8c7ee94e2d81570f13ba597501c7ffeb569832526","bytes":218292},{"id":"file.audio.voice.result.conspiracy.005.refuse.duo.mp3","kind":"audio","path":"audio/voice/result/conspiracy_005_refuse_duo.mp3","mimeType":"audio/mpeg","sha256":"f03cd8e5cf332108df089065f72c50b9184de7a5724dac60ee57595047802769","bytes":225780},{"id":"file.audio.voice.result.conspiracy.006.block.view.mp3","kind":"audio","path":"audio/voice/result/conspiracy_006_block_view.mp3","mimeType":"audio/mpeg","sha256":"8b1422137db20ab49eabed7bd28bc2849dfe37ea073dd5ee6f212ff0e20a70ac","bytes":290292},{"id":"file.audio.voice.result.conspiracy.006.stand.with.her.mp3","kind":"audio","path":"audio/voice/result/conspiracy_006_stand_with_her.mp3","mimeType":"audio/mpeg","sha256":"20e2c48a0ce12a926636936548d42fbf11727ef7a000a1595eeff797a6c09f8b","bytes":300660},{"id":"file.audio.voice.result.conspiracy.007.break.frame.mp3","kind":"audio","path":"audio/voice/result/conspiracy_007_break_frame.mp3","mimeType":"audio/mpeg","sha256":"871e78d300f8278a232ba010d7b427867a64467fb8e27d365e7d4e62edfd926e","bytes":233844},{"id":"file.audio.voice.result.conspiracy.007.seize.frame.mp3","kind":"audio","path":"audio/voice/result/conspiracy_007_seize_frame.mp3","mimeType":"audio/mpeg","sha256":"d08785dfa3e8c3517977a6d6bf9c1512e010a58cf5b35eecc2eb821cc81dc33e","bytes":271284},{"id":"file.audio.voice.result.conspiracy.008.hand.pen.to.her.mp3","kind":"audio","path":"audio/voice/result/conspiracy_008_hand_pen_to_her.mp3","mimeType":"audio/mpeg","sha256":"d8e813e7ebdbeb0f6110e70a2bb7a5a52bce8da57e5f8d09f2ff372d0c30d418","bytes":242484},{"id":"file.audio.voice.result.conspiracy.008.refuse.testimony.mp3","kind":"audio","path":"audio/voice/result/conspiracy_008_refuse_testimony.mp3","mimeType":"audio/mpeg","sha256":"d5ca8cee4ee30db158d885deb2604fa78bb33c832d7743a030fbc2133d63efb7","bytes":229812},{"id":"file.audio.voice.result.conspiracy.009.choose.present.mp3","kind":"audio","path":"audio/voice/result/conspiracy_009_choose_present.mp3","mimeType":"audio/mpeg","sha256":"d255a37065cb040862cbb36fd595af444fd8506e6c351a9b0fddce3e3843caa5","bytes":287988},{"id":"file.audio.voice.result.conspiracy.009.refuse.choice.mp3","kind":"audio","path":"audio/voice/result/conspiracy_009_refuse_choice.mp3","mimeType":"audio/mpeg","sha256":"d84f22e0be4599542ae4608dbd3d6d570a23c37fbc05ec358baf82bd5866147e","bytes":306420},{"id":"file.audio.voice.result.conspiracy.010.keep.badge.unworn.mp3","kind":"audio","path":"audio/voice/result/conspiracy_010_keep_badge_unworn.mp3","mimeType":"audio/mpeg","sha256":"2ba5efee14ce0ffd8bddacac3a707d23e20f2bd2fcab2103cd3890cc11cfc33c","bytes":263796},{"id":"file.audio.voice.result.conspiracy.010.throw.badge.mp3","kind":"audio","path":"audio/voice/result/conspiracy_010_throw_badge.mp3","mimeType":"audio/mpeg","sha256":"6a78bf8c769c7296815b0eb02fb01769e0d15aa7754ed0ea72096041c683153b","bytes":260916},{"id":"file.audio.voice.result.conspiracy.011.burn.film.mp3","kind":"audio","path":"audio/voice/result/conspiracy_011_burn_film.mp3","mimeType":"audio/mpeg","sha256":"785b0204dfb11fe1882f188366acaf80f6cdd88836e81bb162d4c19c09b750b6","bytes":243636},{"id":"file.audio.voice.result.conspiracy.011.rewrite.ending.mp3","kind":"audio","path":"audio/voice/result/conspiracy_011_rewrite_ending.mp3","mimeType":"audio/mpeg","sha256":"8b9f5b34fc073979f154a9a87293de86ebaaeba56f89e568eded54a61d3ea343","bytes":238452},{"id":"file.audio.voice.result.conspiracy.012.end.tonight.mp3","kind":"audio","path":"audio/voice/result/conspiracy_012_end_tonight.mp3","mimeType":"audio/mpeg","sha256":"ce0871f2f82b8d758e989219d1951c4cd0edf1036e8fe7bca19d3ea3abcbcd86","bytes":277620},{"id":"file.audio.voice.result.conspiracy.012.keep.blade.mp3","kind":"audio","path":"audio/voice/result/conspiracy_012_keep_blade.mp3","mimeType":"audio/mpeg","sha256":"57c8336c5692d6725fa5fe110f82307674ff12f413e167b5ac3281bb0c22c554","bytes":273588},{"id":"file.audio.voice.result.conspiracy.013.hold.one.second.mp3","kind":"audio","path":"audio/voice/result/conspiracy_013_hold_one_second.mp3","mimeType":"audio/mpeg","sha256":"97ad5295330dd4e4c20f60e667c94efa825b06a06ecb6e577ac621080a5a16d9","bytes":254004},{"id":"file.audio.voice.result.conspiracy.013.return.gently.mp3","kind":"audio","path":"audio/voice/result/conspiracy_013_return_gently.mp3","mimeType":"audio/mpeg","sha256":"b0c4e5d6af73a4728f850b33cb5cb9db51e06598642b52410b2f4e2faf90d076","bytes":269556},{"id":"file.audio.voice.result.conspiracy.014.erase.from.catalog.mp3","kind":"audio","path":"audio/voice/result/conspiracy_014_erase_from_catalog.mp3","mimeType":"audio/mpeg","sha256":"f4a479901d65888eea4634ae1ea8a156024e84b705595187a28a32e4d8a008b4","bytes":283956},{"id":"file.audio.voice.result.conspiracy.014.keep.one.line.mp3","kind":"audio","path":"audio/voice/result/conspiracy_014_keep_one_line.mp3","mimeType":"audio/mpeg","sha256":"4734a1cc33e33ff06799ee86d66763782127c8ea2acaff03a12b59e86e6b0a60","bytes":289716},{"id":"file.audio.voice.result.conspiracy.accept.mp3","kind":"audio","path":"audio/voice/result/conspiracy_accept.mp3","mimeType":"audio/mpeg","sha256":"4b76303e8e34898103631f630d182d820b1c5b4f08cc19105df3778e8adfcc8f","bytes":242484},{"id":"file.audio.voice.result.conspiracy.break.pursuit.frame.mp3","kind":"audio","path":"audio/voice/result/conspiracy_break_pursuit_frame.mp3","mimeType":"audio/mpeg","sha256":"3597acb7210a208c020fb28c0fb1c7c63e595fac7b419da1355556960e70570a","bytes":237876},{"id":"file.audio.voice.result.conspiracy.escape.to.backstreets.mp3","kind":"audio","path":"audio/voice/result/conspiracy_escape_to_backstreets.mp3","mimeType":"audio/mpeg","sha256":"0fd19a0ac7085d583a8178d38c071804d60a9be3c1363b26f62e31ef34a5b15e","bytes":263796},{"id":"file.audio.voice.result.conspiracy.feed.false.signature.mp3","kind":"audio","path":"audio/voice/result/conspiracy_feed_false_signature.mp3","mimeType":"audio/mpeg","sha256":"a10423e4201744e3f64d594cb8948c4f2fca578cb88fcaa2f865839235035525","bytes":240756},{"id":"file.audio.voice.result.conspiracy.pressure.mp3","kind":"audio","path":"audio/voice/result/conspiracy_pressure.mp3","mimeType":"audio/mpeg","sha256":"0e165916d831f3aab506621939c657e90f4fa282a6fb212061143a82e6ccfebe","bytes":210804},{"id":"file.audio.voice.result.enter.conspiracy.mp3","kind":"audio","path":"audio/voice/result/enter_conspiracy.mp3","mimeType":"audio/mpeg","sha256":"f8964fe276712a75e96af70eceb75f46845ab038422a529a4ca67d6ccc168e56","bytes":204468},{"id":"file.audio.voice.result.enter.rebuild.mp3","kind":"audio","path":"audio/voice/result/enter_rebuild.mp3","mimeType":"audio/mpeg","sha256":"fa7f6c482fb449c3f7c61f2d556182e30a49d449d14fb8329213f97ba8dae9db","bytes":202740},{"id":"file.audio.voice.result.enter.white.canvas.mp3","kind":"audio","path":"audio/voice/result/enter_white_canvas.mp3","mimeType":"audio/mpeg","sha256":"5f238c579d61475995d082999f73a16d0c182f8db58a16ab8cd9d2a802277d97","bytes":164724},{"id":"file.audio.voice.result.golden.bough.rebuild.bad.ending.mp3","kind":"audio","path":"audio/voice/result/golden_bough_rebuild/bad_ending.mp3","mimeType":"audio/mpeg","sha256":"401c2bf97a19b9d9cc0a68bd7c9f9d1e85ce99d5a378d8b5f21449266fdc1417","bytes":115764},{"id":"file.audio.voice.result.golden.bough.rebuild.normal.ending.mp3","kind":"audio","path":"audio/voice/result/golden_bough_rebuild/normal_ending.mp3","mimeType":"audio/mpeg","sha256":"d1161b5a7e0cbff976cc5e32b470d3439b738c3acf20fd59eeff3086f84bbc2d","bytes":112884},{"id":"file.audio.voice.result.golden.bough.rebuild.true.ending.mp3","kind":"audio","path":"audio/voice/result/golden_bough_rebuild/true_ending.mp3","mimeType":"audio/mpeg","sha256":"148ae12e5af697470bf05597480564d896ee6084c08442ee66e368a783d965f6","bytes":105972},{"id":"file.audio.voice.result.golden.bough.route.complete.mp3","kind":"audio","path":"audio/voice/result/golden_bough_route_complete.mp3","mimeType":"audio/mpeg","sha256":"e457029e4b26e12174ecf9c30212c573f3d7693c0d73f686506bde427ba00de7","bytes":331188},{"id":"file.audio.voice.result.golden.bough.route.final.mp3","kind":"audio","path":"audio/voice/result/golden_bough_route_final.mp3","mimeType":"audio/mpeg","sha256":"ff10f8673bd0fe23c51936ce4bf55414ab4544224ca0f2d244709ae15cda54b0","bytes":143988},{"id":"file.audio.voice.result.rebuild.006.keep.silent.anchor.mp3","kind":"audio","path":"audio/voice/result/rebuild_006_keep_silent_anchor.mp3","mimeType":"audio/mpeg","sha256":"ea553da520b4f2af20f6ef09f831f0115fb3c299bca2acb125cbbba3825e6a65","bytes":269556},{"id":"file.audio.voice.result.rebuild.006.read.aloud.mp3","kind":"audio","path":"audio/voice/result/rebuild_006_read_aloud.mp3","mimeType":"audio/mpeg","sha256":"1ba8b1e99c835f51e83566218b0831472cae6f8b9bed544379008edfb98ed56e","bytes":270708},{"id":"file.audio.voice.result.rebuild.007.match.her.pulse.mp3","kind":"audio","path":"audio/voice/result/rebuild_007_match_her_pulse.mp3","mimeType":"audio/mpeg","sha256":"e6454ff8fee875b9f2634d84ab7ebce1be09e030812ccdd916aa291b8a9e69d6","bytes":295476},{"id":"file.audio.voice.result.rebuild.007.stay.own.rhythm.mp3","kind":"audio","path":"audio/voice/result/rebuild_007_stay_own_rhythm.mp3","mimeType":"audio/mpeg","sha256":"03ff1752e22f90ffd73af641d1d182688d3a349c9778079c5fb9217eee4a86d3","bytes":305268},{"id":"file.audio.voice.result.rebuild.008.protect.current.self.mp3","kind":"audio","path":"audio/voice/result/rebuild_008_protect_current_self.mp3","mimeType":"audio/mpeg","sha256":"87637a730ba4bcfaf94708a85f427bd8225fb3f123b2674df47fc6b14de306ac","bytes":274164},{"id":"file.audio.voice.result.rebuild.008.trade.old.memory.mp3","kind":"audio","path":"audio/voice/result/rebuild_008_trade_old_memory.mp3","mimeType":"audio/mpeg","sha256":"d94505f65341fd2877cdbf6ddcd0067ed716314330df879113e4d306ee5b76fd","bytes":271860},{"id":"file.audio.voice.result.rebuild.009.hand.question.back.mp3","kind":"audio","path":"audio/voice/result/rebuild_009_hand_question_back.mp3","mimeType":"audio/mpeg","sha256":"8b29cf1086c02e716ed0cff07536f363d83101916d10fa4ca5e627b649b9527b","bytes":270132},{"id":"file.audio.voice.result.rebuild.009.refuse.perfect.copy.mp3","kind":"audio","path":"audio/voice/result/rebuild_009_refuse_perfect_copy.mp3","mimeType":"audio/mpeg","sha256":"a70c9a8ad345295ae5d861bbe5dfba1f6467cc8fa60194e0bac35848edabbd97","bytes":267252},{"id":"file.audio.voice.result.rebuild.010.ask.her.choice.mp3","kind":"audio","path":"audio/voice/result/rebuild_010_ask_her_choice.mp3","mimeType":"audio/mpeg","sha256":"5cecd7509b4d42b4e7c3e7ba0309b53b302c9ee88bf2255bc793be78a802a182","bytes":226932},{"id":"file.audio.voice.result.rebuild.010.veto.sealing.mp3","kind":"audio","path":"audio/voice/result/rebuild_010_veto_sealing.mp3","mimeType":"audio/mpeg","sha256":"5f46716f6a5efc4287c341a0d2b8f02c311a8c1109bf19a519f3e391069a6eb2","bytes":232692},{"id":"file.audio.voice.result.rebuild.011.ask.next.revision.mp3","kind":"audio","path":"audio/voice/result/rebuild_011_ask_next_revision.mp3","mimeType":"audio/mpeg","sha256":"eae27a33c8bc3fe8decead1165d83cb94521f45594f102bf4e5574da3b6f09ec","bytes":292020},{"id":"file.audio.voice.result.rebuild.011.sit.beside.mp3","kind":"audio","path":"audio/voice/result/rebuild_011_sit_beside.mp3","mimeType":"audio/mpeg","sha256":"ee92eac2d9efee09aa05e29d4ff482d9631ccce9526f11a92cb55f4e6ebe155e","bytes":290868},{"id":"file.audio.voice.result.rebuild.012.break.contract.mp3","kind":"audio","path":"audio/voice/result/rebuild_012_break_contract.mp3","mimeType":"audio/mpeg","sha256":"2cb0663dd3c9d2d7b5413424443f2a9bd48002e251075355d36762b9371e3409","bytes":251700},{"id":"file.audio.voice.result.rebuild.012.negotiate.terms.mp3","kind":"audio","path":"audio/voice/result/rebuild_012_negotiate_terms.mp3","mimeType":"audio/mpeg","sha256":"ab0f098d13994e6c429414e506450988dbd84476294cbd3c3749cd7b64fd4ed3","bytes":268980},{"id":"file.audio.voice.result.rebuild.013.offer.witness.mp3","kind":"audio","path":"audio/voice/result/rebuild_013_offer_witness.mp3","mimeType":"audio/mpeg","sha256":"8d44e5907f85e91235c1eed2e9ee6ceacc12dd90599663ebe4bdec64f9fb6dfd","bytes":254004},{"id":"file.audio.voice.result.rebuild.013.promise.name.mp3","kind":"audio","path":"audio/voice/result/rebuild_013_promise_name.mp3","mimeType":"audio/mpeg","sha256":"ad4b896e8b63255b97863d25448f39d4578377b9948343a3b031f492095e3fe3","bytes":255156},{"id":"file.audio.voice.result.rebuild.014.ask.when.to.light.mp3","kind":"audio","path":"audio/voice/result/rebuild_014_ask_when_to_light.mp3","mimeType":"audio/mpeg","sha256":"1b73267ccef887754b17298559c75c4ba9df218ed3b0a3adeac6da618b622c6a","bytes":286260},{"id":"file.audio.voice.result.rebuild.014.keep.unlit.mp3","kind":"audio","path":"audio/voice/result/rebuild_014_keep_unlit.mp3","mimeType":"audio/mpeg","sha256":"22cea221f68bea9a01b9d7c8a7ea493c244207b3124736403c748cad98190ac2","bytes":292596},{"id":"file.audio.voice.result.rebuild.accept.missing.pieces.mp3","kind":"audio","path":"audio/voice/result/rebuild_accept_missing_pieces.mp3","mimeType":"audio/mpeg","sha256":"e03509c235adbf1a35a69fa967081effe4a8cb7b07a4106de677cec1454a3028","bytes":243636},{"id":"file.audio.voice.result.rebuild.anchor.mp3","kind":"audio","path":"audio/voice/result/rebuild_anchor.mp3","mimeType":"audio/mpeg","sha256":"77023f3ec1210d3f0394848656ed18629a5922d124437b97bc97733e55e6c2f7","bytes":162420},{"id":"file.audio.voice.result.rebuild.cut.false.completion.mp3","kind":"audio","path":"audio/voice/result/rebuild_cut_false_completion.mp3","mimeType":"audio/mpeg","sha256":"455fed571cb5502968a46e4404e566db5821199fb9b3140c33c1066d155144a1","bytes":250548},{"id":"file.audio.voice.result.rebuild.guard.fascia.pulse.mp3","kind":"audio","path":"audio/voice/result/rebuild_guard_fascia_pulse.mp3","mimeType":"audio/mpeg","sha256":"5d3946116f8d9d848ea408b9a1f7ef1323642158fb0f94e9a5d10c56312627e7","bytes":265524},{"id":"file.audio.voice.result.rebuild.push.into.raid.mp3","kind":"audio","path":"audio/voice/result/rebuild_push_into_raid.mp3","mimeType":"audio/mpeg","sha256":"10bb250cf7e3efa4c99fde65bf46d3ea7d6c6b9d037b1c2f6652cbbb94acd8ce","bytes":274164},{"id":"file.audio.voice.result.rebuild.question.fascia.mp3","kind":"audio","path":"audio/voice/result/rebuild_question_fascia.mp3","mimeType":"audio/mpeg","sha256":"f5e64cd027912ac0ca2b77f53770bd645c962c850f453fe35d0c5f7d6aaa9e5c","bytes":156660},{"id":"file.audio.voice.result.rebuild.use.rooftop.signal.mp3","kind":"audio","path":"audio/voice/result/rebuild_use_rooftop_signal.mp3","mimeType":"audio/mpeg","sha256":"2d30e89069b6559c1809749d8547b5e773d5af9fc86771b004fa82ff96ae8aea","bytes":237300},{"id":"file.audio.voice.result.return.opening.from.rebuild.mp3","kind":"audio","path":"audio/voice/result/return_opening_from_rebuild.mp3","mimeType":"audio/mpeg","sha256":"93831e44f51a1755332b620bab795b5a6501bd2310dfe860e65d1de97f796dde","bytes":191220},{"id":"file.audio.voice.result.return.opening.from.ring.mp3","kind":"audio","path":"audio/voice/result/return_opening_from_ring.mp3","mimeType":"audio/mpeg","sha256":"07b6250f478559c01e05511edda03d37c45df65b9e1848f22cebc16447bdc421","bytes":195252},{"id":"file.audio.voice.result.return.opening.from.white.mp3","kind":"audio","path":"audio/voice/result/return_opening_from_white.mp3","mimeType":"audio/mpeg","sha256":"f909503358a31908b759dbb172165b49e77d3800c6b5e9beb5355bbecd675c37","bytes":202164},{"id":"file.audio.voice.result.ring.conspiracy.bad.ending.mp3","kind":"audio","path":"audio/voice/result/ring_conspiracy/bad_ending.mp3","mimeType":"audio/mpeg","sha256":"07d729c94f10eff159215f464fcf8f4f7fa136caeab4696bc08649018756fb90","bytes":104820},{"id":"file.audio.voice.result.ring.conspiracy.normal.ending.mp3","kind":"audio","path":"audio/voice/result/ring_conspiracy/normal_ending.mp3","mimeType":"audio/mpeg","sha256":"38d39f3de6f911a09b947cd966e164cd61cbc8a40835bf4b9e94292efdd721e9","bytes":127284},{"id":"file.audio.voice.result.ring.conspiracy.route.complete.mp3","kind":"audio","path":"audio/voice/result/ring_conspiracy_route_complete.mp3","mimeType":"audio/mpeg","sha256":"a99d59529f481835f600f61c3114fe5cebde2048f8e411be418998a0a3787f75","bytes":283956},{"id":"file.audio.voice.result.ring.conspiracy.route.final.mp3","kind":"audio","path":"audio/voice/result/ring_conspiracy_route_final.mp3","mimeType":"audio/mpeg","sha256":"c05b719a61ea2e4fd6ce58109fc2fdb2f48f6bb14415dc64df970630a3162ac0","bytes":156660},{"id":"file.audio.voice.result.ring.conspiracy.true.ending.mp3","kind":"audio","path":"audio/voice/result/ring_conspiracy/true_ending.mp3","mimeType":"audio/mpeg","sha256":"de2fab869c900b3cadd4c282f7639c70b8e4ca137d77ec8f7edbd815e58f7257","bytes":112884},{"id":"file.audio.voice.result.white.006.name.silence.mp3","kind":"audio","path":"audio/voice/result/white_006_name_silence.mp3","mimeType":"audio/mpeg","sha256":"60f67a987b75e4212e1dc7f7c3d26cabaf7d85be1701495c9ac196717031ec70","bytes":282804},{"id":"file.audio.voice.result.white.006.refuse.naming.mp3","kind":"audio","path":"audio/voice/result/white_006_refuse_naming.mp3","mimeType":"audio/mpeg","sha256":"3b1c115c0521def49f44bd8749fcc28bb23dd6a991c51395f5eb56a01ff95510","bytes":286836},{"id":"file.audio.voice.result.white.007.ask.fascia.term.mp3","kind":"audio","path":"audio/voice/result/white_007_ask_fascia_term.mp3","mimeType":"audio/mpeg","sha256":"a0820e12083e03fd2655fe43f94addc8188a51407e91916405a7596ebb69e55e","bytes":289716},{"id":"file.audio.voice.result.white.007.keep.mirror.open.mp3","kind":"audio","path":"audio/voice/result/white_007_keep_mirror_open.mp3","mimeType":"audio/mpeg","sha256":"60711ca2e8a0be22f5c442c2abb3bdb0587f492199a6ce827fc3d8965926f79e","bytes":270132},{"id":"file.audio.voice.result.white.008.hold.fascia.mp3","kind":"audio","path":"audio/voice/result/white_008_hold_fascia.mp3","mimeType":"audio/mpeg","sha256":"36e24cb6f169556be6c28e403077d4e8fbde1e3dc93cfb98eb2087cce985aab9","bytes":226356},{"id":"file.audio.voice.result.white.008.stay.witness.only.mp3","kind":"audio","path":"audio/voice/result/white_008_stay_witness_only.mp3","mimeType":"audio/mpeg","sha256":"905d28a8268ee2379eac22f120361379b9951fb5ff172ba6d913558bb2f0278b","bytes":240756},{"id":"file.audio.voice.result.white.009.keep.half.step.mp3","kind":"audio","path":"audio/voice/result/white_009_keep_half_step.mp3","mimeType":"audio/mpeg","sha256":"b7bba180567c5f6a4417e364d5ab1379a2325e359bb495b1dcb4d2fe4c06e1ef","bytes":252852},{"id":"file.audio.voice.result.white.009.share.umbrella.edge.mp3","kind":"audio","path":"audio/voice/result/white_009_share_umbrella_edge.mp3","mimeType":"audio/mpeg","sha256":"23c3d9fe23330249c668a11e7d6bb19ca87ef9def6e0d53dcad0e618d01f03b4","bytes":218868},{"id":"file.audio.voice.result.white.010.acknowledge.leave.mp3","kind":"audio","path":"audio/voice/result/white_010_acknowledge_leave.mp3","mimeType":"audio/mpeg","sha256":"b862835afff73e64f682fd0ce83bf20689fe6e471bfce2c6551e51a6c461d537","bytes":242484},{"id":"file.audio.voice.result.white.010.offer.return.ticket.mp3","kind":"audio","path":"audio/voice/result/white_010_offer_return_ticket.mp3","mimeType":"audio/mpeg","sha256":"dd8f7ed0594e7f26d7dc6cf31b6e17a37528ad86dd8ebf032b5d4c6f93f846e8","bytes":245364},{"id":"file.audio.voice.result.white.011.curtain.call.mp3","kind":"audio","path":"audio/voice/result/white_011_curtain_call.mp3","mimeType":"audio/mpeg","sha256":"c9fdc11ebf7eed86a13aa197101432236b2f907f8b5f7ecdfaefcff31c4fec9d","bytes":259764},{"id":"file.audio.voice.result.white.011.walk.beside.mp3","kind":"audio","path":"audio/voice/result/white_011_walk_beside.mp3","mimeType":"audio/mpeg","sha256":"8f82753798f57a08b67ef3de620e76950ee7ca7d7186ac899243edc1f851d2dc","bytes":265524},{"id":"file.audio.voice.result.white.012.let.her.decide.mp3","kind":"audio","path":"audio/voice/result/white_012_let_her_decide.mp3","mimeType":"audio/mpeg","sha256":"81e36190ab884dfed8f11e605ec441b8edc88bd6c192a57f364a88f18a24781f","bytes":244788},{"id":"file.audio.voice.result.white.012.refuse.exhibit.mp3","kind":"audio","path":"audio/voice/result/white_012_refuse_exhibit.mp3","mimeType":"audio/mpeg","sha256":"0d7c983a7a112e463541d935a321e47ef95e7aa5639c4d3aeac6ef7dc7134c2b","bytes":233268},{"id":"file.audio.voice.result.white.013.point.to.mirror.mp3","kind":"audio","path":"audio/voice/result/white_013_point_to_mirror.mp3","mimeType":"audio/mpeg","sha256":"31aa7569564b6f1e2e0aded51296ba9b85e8fa6c914ffd633d9f59cdd15cd4ad","bytes":281652},{"id":"file.audio.voice.result.white.013.refuse.to.choose.mp3","kind":"audio","path":"audio/voice/result/white_013_refuse_to_choose.mp3","mimeType":"audio/mpeg","sha256":"7b3f72b69d3a1a1254a2e1c1d840040fbe3bcc319183eda77565155a97934248","bytes":283956},{"id":"file.audio.voice.result.white.014.keep.base.color.mp3","kind":"audio","path":"audio/voice/result/white_014_keep_base_color.mp3","mimeType":"audio/mpeg","sha256":"1cf0cd1f80908e5971fd27c9b52ddcbe76409e8ae583b5283a719cdbe67d7d3f","bytes":273588},{"id":"file.audio.voice.result.white.014.offer.restart.mp3","kind":"audio","path":"audio/voice/result/white_014_offer_restart.mp3","mimeType":"audio/mpeg","sha256":"7c761d521905ef96a1fe2f299ccb1521f8f3654e6888a060218734de91028944","bytes":296052},{"id":"file.audio.voice.result.white.canvas.bad.ending.mp3","kind":"audio","path":"audio/voice/result/white_canvas/bad_ending.mp3","mimeType":"audio/mpeg","sha256":"29e1de7d0ccf9bcc7b6748e099c65338e931d083381660263ea4b987bb062866","bytes":111732},{"id":"file.audio.voice.result.white.canvas.normal.ending.mp3","kind":"audio","path":"audio/voice/result/white_canvas/normal_ending.mp3","mimeType":"audio/mpeg","sha256":"c54d975a7b6e0f7b689a87ecdfbbe9021980cc7fd350b3abe1cc88ea7bf661c7","bytes":104820},{"id":"file.audio.voice.result.white.canvas.route.complete.mp3","kind":"audio","path":"audio/voice/result/white_canvas_route_complete.mp3","mimeType":"audio/mpeg","sha256":"acd2f7fbf6091e563293abfcb367af4a0a263be201f0929dba79b382523514ec","bytes":291444},{"id":"file.audio.voice.result.white.canvas.route.final.mp3","kind":"audio","path":"audio/voice/result/white_canvas_route_final.mp3","mimeType":"audio/mpeg","sha256":"337e21c026117013a657c1a6e014e9f212a5be661c6adce3ffb4eb87f83a1227","bytes":156660},{"id":"file.audio.voice.result.white.canvas.true.ending.mp3","kind":"audio","path":"audio/voice/result/white_canvas/true_ending.mp3","mimeType":"audio/mpeg","sha256":"743a641dbf799023987750b0743e032d99369f988bd08194115474b6b3cfb110","bytes":104244},{"id":"file.audio.voice.result.white.follow.to.lab.mp3","kind":"audio","path":"audio/voice/result/white_follow_to_lab.mp3","mimeType":"audio/mpeg","sha256":"8c58cf1aa1f3bc661de6f87077e5a04faf045253d75978a683a31bdbb59e7d9e","bytes":271284},{"id":"file.audio.voice.result.white.interrupt.lab.terms.mp3","kind":"audio","path":"audio/voice/result/white_interrupt_lab_terms.mp3","mimeType":"audio/mpeg","sha256":"2bfc8261224c3685ca59d5b9f766c972402109fb3defb7ee87cb33033d3d6c2f","bytes":247668},{"id":"file.audio.voice.result.white.keep.empty.seat.mp3","kind":"audio","path":"audio/voice/result/white_keep_empty_seat.mp3","mimeType":"audio/mpeg","sha256":"8262c3e938479238aceddb6c75ee1a68b4cb2d1d2e6435dcfbf735d80a3aca45","bytes":267828},{"id":"file.audio.voice.result.white.share.rain.window.mp3","kind":"audio","path":"audio/voice/result/white_share_rain_window.mp3","mimeType":"audio/mpeg","sha256":"326bafdfac66b086162069e09f1dffa9835dab37096e7f52bf0e080e9a7c18de","bytes":256884},{"id":"file.audio.voice.result.white.sign.witness.protocol.mp3","kind":"audio","path":"audio/voice/result/white_sign_witness_protocol.mp3","mimeType":"audio/mpeg","sha256":"00ab30a358041b686c878fef65bcf30d5eadba999ffa66e4d85b89260a3cfecb","bytes":233268},{"id":"file.audio.voice.result.white.tease.back.mp3","kind":"audio","path":"audio/voice/result/white_tease_back.mp3","mimeType":"audio/mpeg","sha256":"51ead297b822c76c8670d84c74cde7ede1fbfa8d8ed9bfb52970de910d428faf","bytes":210804},{"id":"file.audio.voice.result.white.touch.boundary.mp3","kind":"audio","path":"audio/voice/result/white_touch_boundary.mp3","mimeType":"audio/mpeg","sha256":"7b994d5fbc048ce1697bcf4d4f7245957b8ec8adce10897d9b8e314b83bf08d6","bytes":218868},{"id":"file.audio.voice.scene.golden.bough.001.mp3","kind":"audio","path":"audio/voice/scene/golden_bough_001.mp3","mimeType":"audio/mpeg","sha256":"4d225ee5c362970412e23aa4578ab08729c0a884916a1161c62be91254dba4ec","bytes":139380},{"id":"file.audio.voice.scene.golden.bough.002.mp3","kind":"audio","path":"audio/voice/scene/golden_bough_002.mp3","mimeType":"audio/mpeg","sha256":"07fd0776ae465d32f870d0ab6b13353199e11984b528d26602f7bfa5e6986b40","bytes":107124},{"id":"file.audio.voice.scene.golden.bough.003.mp3","kind":"audio","path":"audio/voice/scene/golden_bough_003.mp3","mimeType":"audio/mpeg","sha256":"3cdd14382faf1dce80cf0fca944feafe415c9bcdb2cbf4a8d9c81db1a52ff67a","bytes":198132},{"id":"file.audio.voice.scene.golden.bough.004.mp3","kind":"audio","path":"audio/voice/scene/golden_bough_004.mp3","mimeType":"audio/mpeg","sha256":"ce1f05be6843684bcf809c89b8789fe3806ae1a8ed70bef05502c328497ebc0c","bytes":197556},{"id":"file.audio.voice.scene.golden.bough.005.mp3","kind":"audio","path":"audio/voice/scene/golden_bough_005.mp3","mimeType":"audio/mpeg","sha256":"d65ae80a9f99d79de45b1c6de9458680c4189bdba3abedc175a4fef250adde9d","bytes":173364},{"id":"file.audio.voice.scene.golden.bough.006.mp3","kind":"audio","path":"audio/voice/scene/golden_bough_006.mp3","mimeType":"audio/mpeg","sha256":"6f250d84ff213da11a83ddeac743d1b4c820e703dd2572b60dc2b1962a500e1d","bytes":212532},{"id":"file.audio.voice.scene.golden.bough.007.mp3","kind":"audio","path":"audio/voice/scene/golden_bough_007.mp3","mimeType":"audio/mpeg","sha256":"d9e4264cf286a2be33cc37d6e3668827c835b96500919c377b52d6d2aad1a07f","bytes":221748},{"id":"file.audio.voice.scene.golden.bough.008.mp3","kind":"audio","path":"audio/voice/scene/golden_bough_008.mp3","mimeType":"audio/mpeg","sha256":"8718fc7b7301174eb00808a61f8078bed073756fec5d89fdbd3f8750ff4a8333","bytes":210228},{"id":"file.audio.voice.scene.golden.bough.009.mp3","kind":"audio","path":"audio/voice/scene/golden_bough_009.mp3","mimeType":"audio/mpeg","sha256":"160bc0f6bb3041118aa01646f34f9071ca35f69843b7d0cb7d6ef181832722a3","bytes":214836},{"id":"file.audio.voice.scene.golden.bough.010.mp3","kind":"audio","path":"audio/voice/scene/golden_bough_010.mp3","mimeType":"audio/mpeg","sha256":"6dc4896687ce4abe0bf1f9c0b815743f862faf64619b9323515b9296291efc89","bytes":206772},{"id":"file.audio.voice.scene.golden.bough.011.mp3","kind":"audio","path":"audio/voice/scene/golden_bough_011.mp3","mimeType":"audio/mpeg","sha256":"775db235acbe1c59ac8e435805367931d7138bb73a16ae2c6dbabe175ca26720","bytes":170484},{"id":"file.audio.voice.scene.golden.bough.012.mp3","kind":"audio","path":"audio/voice/scene/golden_bough_012.mp3","mimeType":"audio/mpeg","sha256":"dc1367cb35cd050e16413e99bc2732717a4dbbcb7fe2356164ec9b1e04dac5eb","bytes":207924},{"id":"file.audio.voice.scene.golden.bough.013.mp3","kind":"audio","path":"audio/voice/scene/golden_bough_013.mp3","mimeType":"audio/mpeg","sha256":"6bedf33a85fb30e81dbe986709a284b956fbb8bcba73839ff4e385662c9b5f60","bytes":208500},{"id":"file.audio.voice.scene.golden.bough.014.mp3","kind":"audio","path":"audio/voice/scene/golden_bough_014.mp3","mimeType":"audio/mpeg","sha256":"8511bbc11f6ede3c1f6d9432189f2045d07c2d6bfdb09d50f4465cf923d0de54","bytes":174516},{"id":"file.audio.voice.scene.golden.bough.015.mp3","kind":"audio","path":"audio/voice/scene/golden_bough_015.mp3","mimeType":"audio/mpeg","sha256":"a905db1c23a75a0236b09c32d89dfdfc73dd8820d98941e1ec33fdb320ab9f79","bytes":202740},{"id":"file.audio.voice.scene.golden.bough.rebuild.ending.bad.mp3","kind":"audio","path":"audio/voice/scene/golden_bough_rebuild_ending_bad.mp3","mimeType":"audio/mpeg","sha256":"d95b9a5dd47f83849cf4dcd5c2f30e6d701a4dbabb982f094f6e8174dd4b96f1","bytes":204468},{"id":"file.audio.voice.scene.golden.bough.rebuild.ending.gate.mp3","kind":"audio","path":"audio/voice/scene/golden_bough_rebuild_ending_gate.mp3","mimeType":"audio/mpeg","sha256":"043d26099df61ec1393a1a38c75a8b0b4d2f3eb66189eff11332567640f609c0","bytes":142260},{"id":"file.audio.voice.scene.golden.bough.rebuild.ending.normal.mp3","kind":"audio","path":"audio/voice/scene/golden_bough_rebuild_ending_normal.mp3","mimeType":"audio/mpeg","sha256":"be11b02627a114e3d27ddd8441000dab2e9ddd6d22615a94468dd01c7e2c10bd","bytes":195252},{"id":"file.audio.voice.scene.golden.bough.rebuild.ending.true.mp3","kind":"audio","path":"audio/voice/scene/golden_bough_rebuild_ending_true.mp3","mimeType":"audio/mpeg","sha256":"6603055d536774f9450b28a2bec4b00b405b49f90cc78b4b3c767e867f02a988","bytes":222900},{"id":"file.audio.voice.scene.opening.001.mp3","kind":"audio","path":"audio/voice/scene/opening_001.mp3","mimeType":"audio/mpeg","sha256":"497c1b3cba838f47ce02c67ddb31ebdcc49e5cb8eaa5bbfa2027f6fef3a165a8","bytes":166452},{"id":"file.audio.voice.scene.ring.conspiracy.001.mp3","kind":"audio","path":"audio/voice/scene/ring_conspiracy_001.mp3","mimeType":"audio/mpeg","sha256":"b7df0f5afaafc467cf345fc67dcf3f3f29e409feb9e93799731400125f6df064","bytes":127284},{"id":"file.audio.voice.scene.ring.conspiracy.002.mp3","kind":"audio","path":"audio/voice/scene/ring_conspiracy_002.mp3","mimeType":"audio/mpeg","sha256":"b9f1b96bed0eb609f2ec689e98ae131816c8c22b8fe811e86bb995b94d9aa597","bytes":160692},{"id":"file.audio.voice.scene.ring.conspiracy.003.mp3","kind":"audio","path":"audio/voice/scene/ring_conspiracy_003.mp3","mimeType":"audio/mpeg","sha256":"26e2b98b4ada6eb51d0e0eb30b3890081d2531fb81d9e62a86744ff5aaebe35d","bytes":167604},{"id":"file.audio.voice.scene.ring.conspiracy.004.mp3","kind":"audio","path":"audio/voice/scene/ring_conspiracy_004.mp3","mimeType":"audio/mpeg","sha256":"53ff6d65342584d4a8af3fdea7b7645397f3e150770d1560eb3a3eea945580ce","bytes":197556},{"id":"file.audio.voice.scene.ring.conspiracy.005.mp3","kind":"audio","path":"audio/voice/scene/ring_conspiracy_005.mp3","mimeType":"audio/mpeg","sha256":"fb9ba2613075784df0d47f9bcdfbaf75332e2a29879c9345a7c50509c3599600","bytes":189492},{"id":"file.audio.voice.scene.ring.conspiracy.006.mp3","kind":"audio","path":"audio/voice/scene/ring_conspiracy_006.mp3","mimeType":"audio/mpeg","sha256":"b81a93e166ea9c8c614816c041ea7716c3852fda61254125ef2c1eeac0c7ec62","bytes":175092},{"id":"file.audio.voice.scene.ring.conspiracy.007.mp3","kind":"audio","path":"audio/voice/scene/ring_conspiracy_007.mp3","mimeType":"audio/mpeg","sha256":"d96c395eb83104c3ba7af0690d2a8f50d6fb32c33371993716e0f5e2a5f57d98","bytes":183156},{"id":"file.audio.voice.scene.ring.conspiracy.008.mp3","kind":"audio","path":"audio/voice/scene/ring_conspiracy_008.mp3","mimeType":"audio/mpeg","sha256":"1697ae28055253cdc42ab315aeed973a88d6f7fc81b29cc78af58aa7f3b45c90","bytes":208500},{"id":"file.audio.voice.scene.ring.conspiracy.009.mp3","kind":"audio","path":"audio/voice/scene/ring_conspiracy_009.mp3","mimeType":"audio/mpeg","sha256":"95393977d9fd590fbf1e0e4a60e7c7cd20f3a8d127e9e093af735df0ad6ba164","bytes":162996},{"id":"file.audio.voice.scene.ring.conspiracy.010.mp3","kind":"audio","path":"audio/voice/scene/ring_conspiracy_010.mp3","mimeType":"audio/mpeg","sha256":"42fe6d31eab316f4115365b2a88d54ab3b738dc38ccbb5f66397d092020ca4ab","bytes":195828},{"id":"file.audio.voice.scene.ring.conspiracy.011.mp3","kind":"audio","path":"audio/voice/scene/ring_conspiracy_011.mp3","mimeType":"audio/mpeg","sha256":"30cdb3d7ab8be3a15f66a2e4c1a7f35f2985f792f0df7d5be26ed022bfb52096","bytes":197556},{"id":"file.audio.voice.scene.ring.conspiracy.012.mp3","kind":"audio","path":"audio/voice/scene/ring_conspiracy_012.mp3","mimeType":"audio/mpeg","sha256":"62bb96a11b5d5a9398e317a7075d632b6a45633931fb0504222ef8c1925364e7","bytes":186036},{"id":"file.audio.voice.scene.ring.conspiracy.013.mp3","kind":"audio","path":"audio/voice/scene/ring_conspiracy_013.mp3","mimeType":"audio/mpeg","sha256":"9a5bec85dac0e6238ac0a8b8d5ab52073ddb5d9068f4c73c34b717606654021c","bytes":209076},{"id":"file.audio.voice.scene.ring.conspiracy.014.mp3","kind":"audio","path":"audio/voice/scene/ring_conspiracy_014.mp3","mimeType":"audio/mpeg","sha256":"6af4fe0687540489e464f2b41f864d305b9d832455985359eb393ec1a3b67488","bytes":171636},{"id":"file.audio.voice.scene.ring.conspiracy.015.mp3","kind":"audio","path":"audio/voice/scene/ring_conspiracy_015.mp3","mimeType":"audio/mpeg","sha256":"9c5628b50d962e68b4fea11798a244552372ea92b688326d7f196828dd602537","bytes":248244},{"id":"file.audio.voice.scene.ring.conspiracy.ending.bad.mp3","kind":"audio","path":"audio/voice/scene/ring_conspiracy_ending_bad.mp3","mimeType":"audio/mpeg","sha256":"1d3033f84966c7524e526861732e591393cd63fc839ac19c8b61493e1562b24a","bytes":215412},{"id":"file.audio.voice.scene.ring.conspiracy.ending.gate.mp3","kind":"audio","path":"audio/voice/scene/ring_conspiracy_ending_gate.mp3","mimeType":"audio/mpeg","sha256":"d5ccbc97c59692526810076f6f75481c50dcdb3e6aff43e7919c3ca73a1e819f","bytes":147444},{"id":"file.audio.voice.scene.ring.conspiracy.ending.normal.mp3","kind":"audio","path":"audio/voice/scene/ring_conspiracy_ending_normal.mp3","mimeType":"audio/mpeg","sha256":"5d5d5c31eb143ae854d84f06e209e3777e84feeb910a223e3c24597f89a1f36f","bytes":184884},{"id":"file.audio.voice.scene.ring.conspiracy.ending.true.mp3","kind":"audio","path":"audio/voice/scene/ring_conspiracy_ending_true.mp3","mimeType":"audio/mpeg","sha256":"d3aa6807508e9c64c33ff1a0126ea9ddd6fdadb8ea95c1bc3ec7a79260c4d417","bytes":235572},{"id":"file.audio.voice.scene.white.canvas.001.mp3","kind":"audio","path":"audio/voice/scene/white_canvas_001.mp3","mimeType":"audio/mpeg","sha256":"f9a92c1bc7670ad7639266c595dc0fa60b8d8304a848d946aad06f72ec7f07d7","bytes":110580},{"id":"file.audio.voice.scene.white.canvas.002.mp3","kind":"audio","path":"audio/voice/scene/white_canvas_002.mp3","mimeType":"audio/mpeg","sha256":"b42bb03e8c449bd0c7c33e2e3c103e8fe9e2bd4685b2f0166fda2e65768f3d2a","bytes":142260},{"id":"file.audio.voice.scene.white.canvas.003.mp3","kind":"audio","path":"audio/voice/scene/white_canvas_003.mp3","mimeType":"audio/mpeg","sha256":"447d145ae4bfeebb0d1286275ebd3125e617bf24f5e47794f72a75af3d80110a","bytes":160692},{"id":"file.audio.voice.scene.white.canvas.004.mp3","kind":"audio","path":"audio/voice/scene/white_canvas_004.mp3","mimeType":"audio/mpeg","sha256":"632de5164bcb1666b292b1fa7c3d31a06592f95bcc6021c85fbb0ce46026b9f5","bytes":186036},{"id":"file.audio.voice.scene.white.canvas.005.mp3","kind":"audio","path":"audio/voice/scene/white_canvas_005.mp3","mimeType":"audio/mpeg","sha256":"9f29d8f0966e0a85ae8926a0fe7e5edf21404a41ca0dc7655c8700a478cba08c","bytes":181428},{"id":"file.audio.voice.scene.white.canvas.006.mp3","kind":"audio","path":"audio/voice/scene/white_canvas_006.mp3","mimeType":"audio/mpeg","sha256":"47ba7ff6a7381d865a526506acda5c892ab06c64170d0ba95720d1319dac9c05","bytes":196980},{"id":"file.audio.voice.scene.white.canvas.007.mp3","kind":"audio","path":"audio/voice/scene/white_canvas_007.mp3","mimeType":"audio/mpeg","sha256":"c8c518fe83f8e7d328add0b53d003cb70db7aaa832f18e4a268ee85d070d7f0f","bytes":199860},{"id":"file.audio.voice.scene.white.canvas.008.mp3","kind":"audio","path":"audio/voice/scene/white_canvas_008.mp3","mimeType":"audio/mpeg","sha256":"6067a7080d3720615e322e6f8d7a4870737ac5d544a6b24c556aeba0e734e586","bytes":218868},{"id":"file.audio.voice.scene.white.canvas.009.mp3","kind":"audio","path":"audio/voice/scene/white_canvas_009.mp3","mimeType":"audio/mpeg","sha256":"89794514111d1654ecdf806956448a0da5ab8da75f2ce8234746ee7550ca23c0","bytes":175668},{"id":"file.audio.voice.scene.white.canvas.010.mp3","kind":"audio","path":"audio/voice/scene/white_canvas_010.mp3","mimeType":"audio/mpeg","sha256":"4725f404be2f81e4345da50938b9bcff83cb133c642e69806a66d400168b9b49","bytes":148596},{"id":"file.audio.voice.scene.white.canvas.011.mp3","kind":"audio","path":"audio/voice/scene/white_canvas_011.mp3","mimeType":"audio/mpeg","sha256":"b246e6d83f530b4d0f4ce4860ebf37937b3a0c3dded2571d9331305fd722d185","bytes":196404},{"id":"file.audio.voice.scene.white.canvas.012.mp3","kind":"audio","path":"audio/voice/scene/white_canvas_012.mp3","mimeType":"audio/mpeg","sha256":"58fae554a047a57e6f17d0b1e8c2bd820b7707ab2c067bdc4633fff7d2f2e74d","bytes":171636},{"id":"file.audio.voice.scene.white.canvas.013.mp3","kind":"audio","path":"audio/voice/scene/white_canvas_013.mp3","mimeType":"audio/mpeg","sha256":"4ed3f251b94446c07a6d173441bb7e310659f80f492902f554290243489f8839","bytes":193524},{"id":"file.audio.voice.scene.white.canvas.014.mp3","kind":"audio","path":"audio/voice/scene/white_canvas_014.mp3","mimeType":"audio/mpeg","sha256":"8df96e708d31c6b756257d9dded40c61c383cb83cff1816a284b0bbab1a79739","bytes":188340},{"id":"file.audio.voice.scene.white.canvas.015.mp3","kind":"audio","path":"audio/voice/scene/white_canvas_015.mp3","mimeType":"audio/mpeg","sha256":"e5060d68571a05be9b5b02ee944d1e85c6e2efe670112b7d5812d5580991a42d","bytes":207924},{"id":"file.audio.voice.scene.white.canvas.ending.bad.mp3","kind":"audio","path":"audio/voice/scene/white_canvas_ending_bad.mp3","mimeType":"audio/mpeg","sha256":"f20eb38432b8005c77c929f9d11aceaddb6feaad402bf0950ce7b42f18551a82","bytes":199860},{"id":"file.audio.voice.scene.white.canvas.ending.gate.mp3","kind":"audio","path":"audio/voice/scene/white_canvas_ending_gate.mp3","mimeType":"audio/mpeg","sha256":"1b84c1c3872c4b3ed8f8f4d4ad5fea2c3ef20a434e912b114af1ba86b52bb45d","bytes":142260},{"id":"file.audio.voice.scene.white.canvas.ending.normal.mp3","kind":"audio","path":"audio/voice/scene/white_canvas_ending_normal.mp3","mimeType":"audio/mpeg","sha256":"2011fd5566f387c0b56128ded70b64a3a81cd8f03ad03e3798077266750d5694","bytes":177396},{"id":"file.audio.voice.scene.white.canvas.ending.true.mp3","kind":"audio","path":"audio/voice/scene/white_canvas_ending_true.mp3","mimeType":"audio/mpeg","sha256":"5a6106bd0b3d225bf87ba0a08b95178d0c8c0877305ac73bc8c391e2ce358296","bytes":196980},{"id":"file.avatar.albina.avatar.png","kind":"image","path":"avatar/albina-avatar.png","mimeType":"image/png","sha256":"159e7304b4bb6e364754aa2ee960851b804d9f359f07b48ac5fc9812e988e58f","bytes":408911},{"id":"file.bg.backstreets.rain.jpg","kind":"image","path":"bg/backstreets_rain.jpg","mimeType":"image/jpeg","sha256":"7a897b01c41634b0ab05b8411f487e60712909f153aed6b866c6e724f7a05ec7","bytes":195160},{"id":"file.bg.backstreets.rain.svg","kind":"image","path":"bg/backstreets_rain.svg","mimeType":"image/svg+xml","sha256":"2ca9364ada8709526e9d64a945422fb06f36da448e183295ab466a22d1cc995a","bytes":12706},{"id":"file.bg.city.rooftop.jpg","kind":"image","path":"bg/city_rooftop.jpg","mimeType":"image/jpeg","sha256":"4428f1f905a752eab7e4f6119f236f12767778db7f4768d2463a03ee6dcc4697","bytes":207867},{"id":"file.bg.city.rooftop.svg","kind":"image","path":"bg/city_rooftop.svg","mimeType":"image/svg+xml","sha256":"5eae2ee6b750ba1d93ef35eb4b7c67808e1895875d51a9e0075695a35e95a31e","bytes":12706},{"id":"file.bg.golden.bough.jpg","kind":"image","path":"bg/golden_bough.jpg","mimeType":"image/jpeg","sha256":"5e6a552b04b4333ca30c001a3020168908d7867926982ca4097145fa735ee207","bytes":222682},{"id":"file.bg.golden.bough.svg","kind":"image","path":"bg/golden_bough.svg","mimeType":"image/svg+xml","sha256":"94f087ceec5a2a42d7cd56c60d3c880e72798facff376fe1ace1627420b5e54b","bytes":12720},{"id":"file.bg.lce.lab.jpg","kind":"image","path":"bg/lce_lab.jpg","mimeType":"image/jpeg","sha256":"b982f39f13eb87cdb59d1540ff4f7688c4b319600a7174a758288f3c4efe672d","bytes":202605},{"id":"file.bg.lce.lab.svg","kind":"image","path":"bg/lce_lab.svg","mimeType":"image/svg+xml","sha256":"0cf1998d6f245face41e86d83bfab30dc5b4d1fc8a63ae1d4da7d74b16814569","bytes":12708},{"id":"file.bg.limbus.bus.jpg","kind":"image","path":"bg/limbus_bus.jpg","mimeType":"image/jpeg","sha256":"c684aba165f3d0a195d6e5b438be4bc9b2a070a4ac3364e91bef93716aab9c60","bytes":194697},{"id":"file.bg.limbus.bus.svg","kind":"image","path":"bg/limbus_bus.svg","mimeType":"image/svg+xml","sha256":"ac55a1801f59f4f6158a979f56e61edf5dea42c4ad59a9c00ca77f240fef9345","bytes":12716},{"id":"file.bg.mirror.corridor.jpg","kind":"image","path":"bg/mirror_corridor.jpg","mimeType":"image/jpeg","sha256":"aac5cfac5624763538d533b63914c845c266dc17845789d9c3f7d5bb408603f9","bytes":193914},{"id":"file.bg.mirror.corridor.svg","kind":"image","path":"bg/mirror_corridor.svg","mimeType":"image/svg+xml","sha256":"f682139293def0b42bce1f99df089252290d1b056a66876eb5ecf868fb43bfad","bytes":12716},{"id":"file.bg.nest.station.jpg","kind":"image","path":"bg/nest_station.jpg","mimeType":"image/jpeg","sha256":"732fa0c67c071560b01c536d5ed76944c60d1a0d9a5034087ca79bf5ffff9ad2","bytes":196705},{"id":"file.bg.nest.station.svg","kind":"image","path":"bg/nest_station.svg","mimeType":"image/svg+xml","sha256":"f29c2177b49dd12d1a7b98c3f1b4fd0d04c425f2668532da61c51a2ae45720bf","bytes":12697},{"id":"file.bg.outskirts.dawn.jpg","kind":"image","path":"bg/outskirts_dawn.jpg","mimeType":"image/jpeg","sha256":"4ccbdbab6a95b5d79ae476a96f8b453ed07241e599014002fdc83475f8bd092a","bytes":182100},{"id":"file.bg.outskirts.dawn.svg","kind":"image","path":"bg/outskirts_dawn.svg","mimeType":"image/svg+xml","sha256":"5f64fe26325f8d446f5ed235a1bf4e293a1fbc2fe5802b43c73cfcd57939dac7","bytes":12725},{"id":"file.bg.rain.room.jpg","kind":"image","path":"bg/rain_room.jpg","mimeType":"image/jpeg","sha256":"0a4b24f02a4f9274d6691594cbfd8c1f2512c1fe4559083a22c6cf2891cb198e","bytes":198604},{"id":"file.bg.rain.room.svg","kind":"image","path":"bg/rain_room.svg","mimeType":"image/svg+xml","sha256":"3329c56d45d54fbd27ebc7918a2287bbdb922b437815430a51d1b4c0f65a7f42","bytes":12705},{"id":"file.bg.ring.atelier.jpg","kind":"image","path":"bg/ring_atelier.jpg","mimeType":"image/jpeg","sha256":"aed9195327ca4feef20a611b2bd0f0ed4a8fba22f12fdf685bafc5b3ed13eb10","bytes":197708},{"id":"file.bg.ring.atelier.svg","kind":"image","path":"bg/ring_atelier.svg","mimeType":"image/svg+xml","sha256":"2352c7ca280b2b41a785eb0e28391cb5d69ab18b7087b985a653d28309cabdb9","bytes":12700},{"id":"file.bg.spider.gallery.jpg","kind":"image","path":"bg/spider_gallery.jpg","mimeType":"image/jpeg","sha256":"78a4336f0aa42c3ecf10667aeeb40dcdd42b271548872255c66aee716abcf024","bytes":223415},{"id":"file.bg.spider.gallery.svg","kind":"image","path":"bg/spider_gallery.svg","mimeType":"image/svg+xml","sha256":"8a0cf1a4a74e8031b34ff92efc6cd4285206a1ebf30b94f4b37d3ece83952adf","bytes":12710},{"id":"file.bg.white.canvas.jpg","kind":"image","path":"bg/white_canvas.jpg","mimeType":"image/jpeg","sha256":"6551848df5f6a312cbd769356b512643b33f2b9e68c9b8da21ad98ab9ef80605","bytes":193895},{"id":"file.bg.white.canvas.svg","kind":"image","path":"bg/white_canvas.svg","mimeType":"image/svg+xml","sha256":"cf0d8b2dfc155f8189eb37648a9ab478914bdb1055cae1aaf15ccb9bfdc812ff","bytes":12718},{"id":"file.cg.albina.key.visual.jpg","kind":"image","path":"cg/albina_key_visual.jpg","mimeType":"image/jpeg","sha256":"3cc08f61408a8e1b964dc5ca9b4d2b19d6cd30a8536d154d4fc35bed22fdcfca","bytes":779782},{"id":"file.cg.araya.rooftop.jpg","kind":"image","path":"cg/araya_rooftop.jpg","mimeType":"image/jpeg","sha256":"1ecd4ffa5f53471b66b5aecbfa37a8289c603c2a5ce2212538da01cbd5d5d8e4","bytes":226727},{"id":"file.cg.araya.rooftop.svg","kind":"image","path":"cg/araya_rooftop.svg","mimeType":"image/svg+xml","sha256":"43e4ba9ab056357d81d759009ccc8a52cd4435dceda13a2201581cf845f1ed3b","bytes":4598},{"id":"file.cg.art.resonance.jpg","kind":"image","path":"cg/art_resonance.jpg","mimeType":"image/jpeg","sha256":"da4000d606059e545bbf427451a999ea99e9fd730b71033cf61ed0e5c7ebeb1a","bytes":221527},{"id":"file.cg.art.resonance.svg","kind":"image","path":"cg/art_resonance.svg","mimeType":"image/svg+xml","sha256":"b5a5ce4b049a732f48fa745803585ab1fead1c96dcd2cc94c583a4bb79f051fc","bytes":4593},{"id":"file.cg.backstreet.pursuit.jpg","kind":"image","path":"cg/backstreet_pursuit.jpg","mimeType":"image/jpeg","sha256":"ff18127cd0ae95ad91c3e85ceec047def159a58bfec852708271a65d4f53b774","bytes":208589},{"id":"file.cg.backstreet.pursuit.svg","kind":"image","path":"cg/backstreet_pursuit.svg","mimeType":"image/svg+xml","sha256":"e07b123e0dd8010b0ccb5fb36d97a85f89373e6403b62e2f1750b2ca6a07fbae","bytes":4592},{"id":"file.cg.combat.transition.01.jpg","kind":"image","path":"cg/combat_transition_01.jpg","mimeType":"image/jpeg","sha256":"1636765ed07b103ccc5696e5c3cf4152d300c64b147f2a3b2722dd2151275209","bytes":238482},{"id":"file.cg.combat.transition.02.jpg","kind":"image","path":"cg/combat_transition_02.jpg","mimeType":"image/jpeg","sha256":"15da031ead573ecff24ecb8c7f5ac0d64b966f8e4c40c4290a18a6dd658fcbf8","bytes":231222},{"id":"file.cg.combat.transition.03.jpg","kind":"image","path":"cg/combat_transition_03.jpg","mimeType":"image/jpeg","sha256":"4c9ba8fa3d28ba90724bcb8b73a43d8978e445db277b66e35a4547e0b80ae476","bytes":220810},{"id":"file.cg.combat.transition.04.jpg","kind":"image","path":"cg/combat_transition_04.jpg","mimeType":"image/jpeg","sha256":"ef89995f67a6c3ca3f101d05019aaf4f79824462c0d76ccb2da30a1beae8e9f8","bytes":187028},{"id":"file.cg.combat.transition.05.jpg","kind":"image","path":"cg/combat_transition_05.jpg","mimeType":"image/jpeg","sha256":"e51393ad94223802f49b78be139d181d1dc89d8bf98fdf76beb195a91eb9098e","bytes":254728},{"id":"file.cg.combat.transition.06.jpg","kind":"image","path":"cg/combat_transition_06.jpg","mimeType":"image/jpeg","sha256":"7038c8301aa5b607bd7050e7c5347a0d659c8599187161d42d942ed7c3a21c44","bytes":208052},{"id":"file.cg.conspiracy.contract.jpg","kind":"image","path":"cg/conspiracy_contract.jpg","mimeType":"image/jpeg","sha256":"72922d9f7aac148fcfe1e6d7bed34fa8fd7bfc7323641b67feb5279fbe87dad1","bytes":215416},{"id":"file.cg.conspiracy.contract.svg","kind":"image","path":"cg/conspiracy_contract.svg","mimeType":"image/svg+xml","sha256":"65b88a00b4226ce0ddcb924ca7c118e5408911a933c635df30fd603363888327","bytes":4605},{"id":"file.cg.danger.threshold.jpg","kind":"image","path":"cg/danger_threshold.jpg","mimeType":"image/jpeg","sha256":"f5b5356ad2ff469f4dc77d49b54511b9cde21dfc99c52b91f54610e4545ea140","bytes":242967},{"id":"file.cg.danger.threshold.svg","kind":"image","path":"cg/danger_threshold.svg","mimeType":"image/svg+xml","sha256":"132fddc83900e0a6095e42cc22b0a6c62be3e6fa5b30248ed78bc59aa27bb19c","bytes":4596},{"id":"file.cg.fascia.heartbeat.jpg","kind":"image","path":"cg/fascia_heartbeat.jpg","mimeType":"image/jpeg","sha256":"2640a75be54575dce6bdc1b9023b06934899cbf4b5492cf012ef1e9c7d2f71e6","bytes":204579},{"id":"file.cg.fascia.heartbeat.svg","kind":"image","path":"cg/fascia_heartbeat.svg","mimeType":"image/svg+xml","sha256":"f3e00df4100539e897eeb62c251c9276722b6b4fb1c989ab7bd7889e407728c9","bytes":4594},{"id":"file.cg.first.gallery.jpg","kind":"image","path":"cg/first_gallery.jpg","mimeType":"image/jpeg","sha256":"da6961a762bd452191d1f4c0fd78b3ad0aa008a550fc873bbbd82761c498ead4","bytes":237789},{"id":"file.cg.first.gallery.svg","kind":"image","path":"cg/first_gallery.svg","mimeType":"image/svg+xml","sha256":"60840a171afe923653c08bb9e7d7d744ed27d09cc4ec8cb7d575ef3fe6322425","bytes":4594},{"id":"file.cg.golden.bough.ending.jpg","kind":"image","path":"cg/golden_bough_ending.jpg","mimeType":"image/jpeg","sha256":"4700e8485eb57b194cf6878741509ddc1e323d486878114259b9405051045491","bytes":217599},{"id":"file.cg.golden.bough.ending.svg","kind":"image","path":"cg/golden_bough_ending.svg","mimeType":"image/svg+xml","sha256":"9a28d702a7845c7f109b75e62f074614b12eb15c2a0ef939d2a372dd448e7eea","bytes":4597},{"id":"file.cg.golden.bough.rebuild.jpg","kind":"image","path":"cg/golden_bough_rebuild.jpg","mimeType":"image/jpeg","sha256":"0c8c941f77ea39f704563e02e1ed22e8619d8c335ada4215e179a8c6a1caef55","bytes":226407},{"id":"file.cg.golden.bough.rebuild.svg","kind":"image","path":"cg/golden_bough_rebuild.svg","mimeType":"image/svg+xml","sha256":"1ee378cb16da5bc913f6269f0a47bb5fe4087f9f75e0b324108c7f3e056887ab","bytes":4600},{"id":"file.cg.hollow.torso.reveal.jpg","kind":"image","path":"cg/hollow_torso_reveal.jpg","mimeType":"image/jpeg","sha256":"46e83edaabd17b1316bd705daf1a14614c0a7ae8b6164281b9770a2e020fe3e5","bytes":212406},{"id":"file.cg.hollow.torso.reveal.svg","kind":"image","path":"cg/hollow_torso_reveal.svg","mimeType":"image/svg+xml","sha256":"7b6159f5848060278c6b5d61f998ef7b946ceb70a321bcca08bc8c1d3aec0c9a","bytes":4599},{"id":"file.cg.lce.raid.jpg","kind":"image","path":"cg/lce_raid.jpg","mimeType":"image/jpeg","sha256":"037414f5985f5d972656d297f771e4553d3c01d1d700185bea68f40723892284","bytes":191396},{"id":"file.cg.lce.raid.svg","kind":"image","path":"cg/lce_raid.svg","mimeType":"image/svg+xml","sha256":"dcc9fa8598f9d638f78fc4dc44fe83b281817f2f685dd30c953d8ba57260f0c6","bytes":4591},{"id":"file.cg.limbus.bus.night.jpg","kind":"image","path":"cg/limbus_bus_night.jpg","mimeType":"image/jpeg","sha256":"0b1054ef8e4b8cd99b8f234ae2abd5c5e160813b73d1e564dba47c67f8a7cd8a","bytes":202828},{"id":"file.cg.limbus.bus.night.svg","kind":"image","path":"cg/limbus_bus_night.svg","mimeType":"image/svg+xml","sha256":"8fed7ceb727391ca5dd5876a7a04bc0d08d347152719b4429c41ada34a64d257","bytes":4599},{"id":"file.cg.maestro.shadow.jpg","kind":"image","path":"cg/maestro_shadow.jpg","mimeType":"image/jpeg","sha256":"ff93dcfc2b02faf7920d1426ebdfadf86d58aa5744117a6d692d2f5f370fa5c6","bytes":223021},{"id":"file.cg.maestro.shadow.svg","kind":"image","path":"cg/maestro_shadow.svg","mimeType":"image/svg+xml","sha256":"d136ee2ad277d4c29e285f42e2d97ccc04ddc30606b0798a5b6eebabb680708c","bytes":4597},{"id":"file.cg.opening.rain.jpg","kind":"image","path":"cg/opening_rain.jpg","mimeType":"image/jpeg","sha256":"557521106b516bf35aa9b55473c6f977a80bdf8ed6f7fe3f8ecf47de6c961931","bytes":190464},{"id":"file.cg.opening.rain.svg","kind":"image","path":"cg/opening_rain.svg","mimeType":"image/svg+xml","sha256":"660b6694c5a692daf70deb6ed839e04091d824c5b223b531cb176fd3b9d81bb3","bytes":4596},{"id":"file.cg.rain.confession.jpg","kind":"image","path":"cg/rain_confession.jpg","mimeType":"image/jpeg","sha256":"2312880e97be851f6f2688efb07f8d1475e7e4ea1ff3de2dde2db622bee41884","bytes":233325},{"id":"file.cg.rain.confession.svg","kind":"image","path":"cg/rain_confession.svg","mimeType":"image/svg+xml","sha256":"fdf4e4c642b2b1e50a5de5bf198a32c19749a4863cf5463f00107e0eede39b9c","bytes":4598},{"id":"file.cg.rebuild.awakening.jpg","kind":"image","path":"cg/rebuild_awakening.jpg","mimeType":"image/jpeg","sha256":"21c280bc65cf08f4d34b983a9731e3e231bd154a724cec0ee32dc11fc3698648","bytes":182730},{"id":"file.cg.rebuild.awakening.svg","kind":"image","path":"cg/rebuild_awakening.svg","mimeType":"image/svg+xml","sha256":"258465af59037896eee5a5a760e921ed5eb846c72e18cb52c1e393d5b4389db5","bytes":4596},{"id":"file.cg.ren.interruption.jpg","kind":"image","path":"cg/ren_interruption.jpg","mimeType":"image/jpeg","sha256":"1f69370dc412adddb7367be1f751bd720db2a1b4ab7105bc091a1f3754799083","bytes":229446},{"id":"file.cg.ren.interruption.svg","kind":"image","path":"cg/ren_interruption.svg","mimeType":"image/svg+xml","sha256":"719824c4c8223e4ea153e211007caa31f07a959c07e97bb9c72890e06d3da814","bytes":4597},{"id":"file.cg.ring.conspiracy.ending.jpg","kind":"image","path":"cg/ring_conspiracy_ending.jpg","mimeType":"image/jpeg","sha256":"dd57358bb86e03d8619a820ff3b0773dea49d24a760ea09593c5594652876ea3","bytes":219860},{"id":"file.cg.ring.conspiracy.ending.svg","kind":"image","path":"cg/ring_conspiracy_ending.svg","mimeType":"image/svg+xml","sha256":"bc17d94853829bb360d530c7074f7cebc92b05a08997eaf28f0ae51532c3780e","bytes":4600},{"id":"file.cg.ring.invitation.jpg","kind":"image","path":"cg/ring_invitation.jpg","mimeType":"image/jpeg","sha256":"ad02a44c0f89ce0a9e3a173a82bad62c6cfe94121c2e994bc91a487cdd13e5c1","bytes":206839},{"id":"file.cg.ring.invitation.svg","kind":"image","path":"cg/ring_invitation.svg","mimeType":"image/svg+xml","sha256":"4015dd820a43df8884c0e2e8a4b1a220524836933570e7cacf22c5cb02f20b22","bytes":4601},{"id":"file.cg.sinclair.flash.jpg","kind":"image","path":"cg/sinclair_flash.jpg","mimeType":"image/jpeg","sha256":"d434d887564b5ada77b2deb3ddf2b81c9d32427f55ba281ce96447dcc4f62d1e","bytes":221337},{"id":"file.cg.sinclair.flash.svg","kind":"image","path":"cg/sinclair_flash.svg","mimeType":"image/svg+xml","sha256":"a06692b7c81aa54996b2ccf9e08fe9dd98deb7094f2e82fe5495e45192d5040f","bytes":4589},{"id":"file.cg.surgery.of.memory.jpg","kind":"image","path":"cg/surgery_of_memory.jpg","mimeType":"image/jpeg","sha256":"3856e752a99b3c8c4d83ae3cd2ae259ce8911b63439c3925d92d8bafc2231b68","bytes":241224},{"id":"file.cg.surgery.of.memory.svg","kind":"image","path":"cg/surgery_of_memory.svg","mimeType":"image/svg+xml","sha256":"7b640a9324dbed3cfab52d953a3c231c620d3b205939b8726b6bf178515bfae2","bytes":4598},{"id":"file.cg.trust.threshold.jpg","kind":"image","path":"cg/trust_threshold.jpg","mimeType":"image/jpeg","sha256":"ee433f58ec08d7311b0dccee6f184d5b6235e398bbc62698455276e33db673fc","bytes":183900},{"id":"file.cg.trust.threshold.svg","kind":"image","path":"cg/trust_threshold.svg","mimeType":"image/svg+xml","sha256":"4ed32ef158df4c7ebbf7d2afede80277866b6d964ecbc8395f21c3a9e21ef3ec","bytes":4600},{"id":"file.cg.white.canvas.choice.jpg","kind":"image","path":"cg/white_canvas_choice.jpg","mimeType":"image/jpeg","sha256":"ed4e27e3e480ec1bb7c3e1f400274fe8ca6277c9bd114a9edca1bcd3ad93a0d9","bytes":200807},{"id":"file.cg.white.canvas.choice.svg","kind":"image","path":"cg/white_canvas_choice.svg","mimeType":"image/svg+xml","sha256":"9cffaefd8f010f1c0af094ede03e209dc496af0ed874cd98e5211edd41bb1c2d","bytes":4599},{"id":"file.cg.white.canvas.ending.jpg","kind":"image","path":"cg/white_canvas_ending.jpg","mimeType":"image/jpeg","sha256":"c9c999a7eed0a02dc31fe84736e7ef8af39ecd47e288c3d99d19b9bc56b5145c","bytes":232672},{"id":"file.cg.white.canvas.ending.svg","kind":"image","path":"cg/white_canvas_ending.svg","mimeType":"image/svg+xml","sha256":"c4bc0030a9ed0538c6f8feec6c0585c9bc4723dca8f9d12bb4a6867f5966de60","bytes":4602},{"id":"file.characters.albina.amused.png","kind":"image","path":"characters/albina/amused.png","mimeType":"image/png","sha256":"a0156c8d34a69b500b2882307bbe55ed77db8d049a07039f75195e864eb8c2e1","bytes":648683},{"id":"file.characters.albina.amused.svg","kind":"image","path":"characters/albina/amused.svg","mimeType":"image/svg+xml","sha256":"d944a9f1d9c6655865944af0d0ba2ae94ea761f61aae7ee0f53061e6eadaa4e1","bytes":3248},{"id":"file.characters.albina.armored.png","kind":"image","path":"characters/albina/armored.png","mimeType":"image/png","sha256":"a0192ec0071b3d2af4f3d7e38ab29e7ed4cd140b084ebc10ff47e8a42e2a36e5","bytes":1043427},{"id":"file.characters.albina.armored.svg","kind":"image","path":"characters/albina/armored.svg","mimeType":"image/svg+xml","sha256":"eb6d0341f181d58c37b0fe88aae31e993b4c88aa77906bf3645f879eab0b5de4","bytes":3249},{"id":"file.characters.albina.combat.png","kind":"image","path":"characters/albina/combat.png","mimeType":"image/png","sha256":"d253d25b615b31dbdc14b9b85a6873732fbe7f5595624a6a1f67db8e1c373833","bytes":794440},{"id":"file.characters.albina.combat.svg","kind":"image","path":"characters/albina/combat.svg","mimeType":"image/svg+xml","sha256":"e1adc354d6e1fc2a7fa2a6ae2aac4cc53c273b9bb2c6266aefd5e2f1b77c47ea","bytes":3248},{"id":"file.characters.albina.endgame.png","kind":"image","path":"characters/albina/endgame.png","mimeType":"image/png","sha256":"10ba1187d40b50910ff2183f83812dff890885b47d27d64d96fcd719b603e92a","bytes":886696},{"id":"file.characters.albina.endgame.svg","kind":"image","path":"characters/albina/endgame.svg","mimeType":"image/svg+xml","sha256":"ff345247b32c32910e63e133e2f9bdb9ab693a070633196799d00c4c49932ea2","bytes":3249},{"id":"file.characters.albina.fascia.open.png","kind":"image","path":"characters/albina/fascia-open.png","mimeType":"image/png","sha256":"794865a3149891f0562df93cf61e3671f6793283949a6cdeec60f299cf0a8c4a","bytes":226988},{"id":"file.characters.albina.fascia.open.svg","kind":"image","path":"characters/albina/fascia-open.svg","mimeType":"image/svg+xml","sha256":"68051cff6817febc6c852e576dfe2be9ef119989ddbcfa3cb9b7d81826e0d30d","bytes":3253},{"id":"file.characters.albina.focused.png","kind":"image","path":"characters/albina/focused.png","mimeType":"image/png","sha256":"1049d898e1ee6dc266385bf528c6d321fbe6ad298c5d6b9e58ac9d46fdb32c3a","bytes":752133},{"id":"file.characters.albina.focused.svg","kind":"image","path":"characters/albina/focused.svg","mimeType":"image/svg+xml","sha256":"e0f0aec562ce528c0f05d4f171cf3b139e6d06a1730fe3388896d4d5c7807c25","bytes":3249},{"id":"file.characters.albina.furious.png","kind":"image","path":"characters/albina/furious.png","mimeType":"image/png","sha256":"7df3a04ea9c87534d5d0746e98ae84adb1921d268e58f1c388c1f090b7ecfda1","bytes":157756},{"id":"file.characters.albina.furious.svg","kind":"image","path":"characters/albina/furious.svg","mimeType":"image/svg+xml","sha256":"ffbc84b7a8f991385884e1b52bc73774e908aad1482f276feb863815f169cb9e","bytes":3249},{"id":"file.characters.albina.golden.bough.png","kind":"image","path":"characters/albina/golden-bough.png","mimeType":"image/png","sha256":"7b96b2ec44022a3b8a86b2480e25bd01eb5ac32218e63382373e97c273baf831","bytes":731292},{"id":"file.characters.albina.golden.bough.svg","kind":"image","path":"characters/albina/golden-bough.svg","mimeType":"image/svg+xml","sha256":"270131e1276bf547097e47be0e18589bfa0345e8a257543bb38888052b4bd8e8","bytes":3254},{"id":"file.characters.albina.maestro.png","kind":"image","path":"characters/albina/maestro.png","mimeType":"image/png","sha256":"b148b529b7fab01184fcfa54c8b80fa9a48fcc7723fc3498bd58e504015ea0ea","bytes":434686},{"id":"file.characters.albina.maestro.svg","kind":"image","path":"characters/albina/maestro.svg","mimeType":"image/svg+xml","sha256":"63b1b5064275f5d5d4c6aeafbcafa1dfd721732e1d20b0d4460ff9a447867cb1","bytes":3249},{"id":"file.characters.albina.normal.png","kind":"image","path":"characters/albina/normal.png","mimeType":"image/png","sha256":"e68f9d04dda42e9ab86dcb686663057619c8dfbeff5f7d70078a083b0228aa55","bytes":647858},{"id":"file.characters.albina.normal.svg","kind":"image","path":"characters/albina/normal.svg","mimeType":"image/svg+xml","sha256":"906300d14804a6265b2f0189460958a3681e546d430b789952bb80e228f95fc6","bytes":3248},{"id":"file.characters.albina.rain.png","kind":"image","path":"characters/albina/rain.png","mimeType":"image/png","sha256":"a2b3fd27325ace3c20e92c441900e338b027f7cdcdb603c12dc92924e0175f06","bytes":649497},{"id":"file.characters.albina.rain.svg","kind":"image","path":"characters/albina/rain.svg","mimeType":"image/svg+xml","sha256":"2cea8476fd8a8d8b00756b2cbf391147f40e2267a9dd1ae6b9cfa80bc3050e34","bytes":3246},{"id":"file.characters.albina.ring.conspiracy.png","kind":"image","path":"characters/albina/ring-conspiracy.png","mimeType":"image/png","sha256":"a0192ec0071b3d2af4f3d7e38ab29e7ed4cd140b084ebc10ff47e8a42e2a36e5","bytes":1043427},{"id":"file.characters.albina.ring.conspiracy.svg","kind":"image","path":"characters/albina/ring-conspiracy.svg","mimeType":"image/svg+xml","sha256":"cc72d233e523b3b73dceac5c9630139967f4429eb56876dcdea50f260403d9c7","bytes":3257},{"id":"file.characters.albina.shy.png","kind":"image","path":"characters/albina/shy.png","mimeType":"image/png","sha256":"928100cc984332c9b4f769cc38dba965425a91cc1aece23e9d384fc993509247","bytes":649383},{"id":"file.characters.albina.shy.svg","kind":"image","path":"characters/albina/shy.svg","mimeType":"image/svg+xml","sha256":"7daf3a0563615f07a420b5e80dc56475ea591f47b542ba654d9a72ee21bd86cf","bytes":3245},{"id":"file.characters.albina.smile.png","kind":"image","path":"characters/albina/smile.png","mimeType":"image/png","sha256":"c35bc3e8aae3870801f75205d5b1cff67d5fe5c48876824ed14a0820414e7659","bytes":648264},{"id":"file.characters.albina.smile.svg","kind":"image","path":"characters/albina/smile.svg","mimeType":"image/svg+xml","sha256":"bbcc931251f2505b5126c3ab176fcc7f857ae4c48aab5d2750d61c06d81db20b","bytes":3247},{"id":"file.characters.albina.surgical.png","kind":"image","path":"characters/albina/surgical.png","mimeType":"image/png","sha256":"b01318b4e4677e4d6e4de6aad53149717364d36a0d66b56425100e31a6547897","bytes":360435},{"id":"file.characters.albina.surgical.svg","kind":"image","path":"characters/albina/surgical.svg","mimeType":"image/svg+xml","sha256":"1d25fd6fbbceb25c593a225db28a567cafd34710d010b5d900c78e3bbde244e0","bytes":3250},{"id":"file.characters.albina.unarmored.png","kind":"image","path":"characters/albina/unarmored.png","mimeType":"image/png","sha256":"b0a7cb32e6c114ec975d0e4dbf2ab8a756de2b86688e9bbff390e32c0dba8a34","bytes":225675},{"id":"file.characters.albina.unarmored.svg","kind":"image","path":"characters/albina/unarmored.svg","mimeType":"image/svg+xml","sha256":"57bb64084a2c1785e74f4e4df9767a903a5063f91b56f239de72ef4d0865eada","bytes":3251},{"id":"file.characters.albina.white.canvas.png","kind":"image","path":"characters/albina/white-canvas.png","mimeType":"image/png","sha256":"cbf1f679143b6ed9ceee9a12ce5bab2ce571e09cbade31b9ae673d0e6479f3aa","bytes":360278},{"id":"file.characters.albina.white.canvas.svg","kind":"image","path":"characters/albina/white-canvas.svg","mimeType":"image/svg+xml","sha256":"2ace4fd2654d28e4a37b9ca5327632b9ec1c3e2e2c45538323c89a34a5f31d48","bytes":3254},{"id":"file.characters.albina.wounded.png","kind":"image","path":"characters/albina/wounded.png","mimeType":"image/png","sha256":"6d3e49d8dc54796ab3c2fc5f114b98881f0c8ca2d12a1a81ef8f6dbcea97fe01","bytes":360844},{"id":"file.characters.albina.wounded.svg","kind":"image","path":"characters/albina/wounded.svg","mimeType":"image/svg+xml","sha256":"33af83cc546db12d0b154a16db04df73773fa8a9ff8cf8b899b798098604ef95","bytes":3249},{"id":"file.characters.araya.normal.svg","kind":"image","path":"characters/araya/normal.svg","mimeType":"image/svg+xml","sha256":"8581b9680f7eaa0ee12cdb681e03792e154b25323bc7c466541fa69914a9e668","bytes":2913},{"id":"file.characters.callisto.normal.png","kind":"image","path":"characters/callisto/normal.png","mimeType":"image/png","sha256":"7c9c806f2a9517c65648b085ec22d1b93d47effdab3d8be91d2f368c7e6039fd","bytes":377258},{"id":"file.characters.callisto.normal.svg","kind":"image","path":"characters/callisto/normal.svg","mimeType":"image/svg+xml","sha256":"9d2814ddff972ccfd9089c1c4c997b553375fa52496111719d879e176c00f8aa","bytes":2916},{"id":"file.characters.charon.normal.png","kind":"image","path":"characters/charon/normal.png","mimeType":"image/png","sha256":"7c66384703968377258e10af0e17f5cb7ebd238d13b205b832e9c389244ac819","bytes":415773},{"id":"file.characters.dante.normal.png","kind":"image","path":"characters/dante/normal.png","mimeType":"image/png","sha256":"1db98bd0ed89ce5d66c175a525907c6bee207fbe61a4bb118e41a141a2613603","bytes":788630},{"id":"file.characters.dante.normal.svg","kind":"image","path":"characters/dante/normal.svg","mimeType":"image/svg+xml","sha256":"9359c9496cea38dc4a0e9bf5ac2ad0491e3641ded1db4d15280fbe1d7a7c73e7","bytes":2913},{"id":"file.characters.faust.normal.png","kind":"image","path":"characters/faust/normal.png","mimeType":"image/png","sha256":"9e5839384ac0d57d445d14301a38abdc357a28f33d8c345255c49b2f4fb9f5c7","bytes":919963},{"id":"file.characters.fixer.informant.normal.png","kind":"image","path":"characters/fixer_informant/normal.png","mimeType":"image/png","sha256":"c276eb35ccbd7ef8dc813d5db74b9e146131f909a55c1fff3f04cf8af95db82c","bytes":485462},{"id":"file.characters.golden.apparition.normal.png","kind":"image","path":"characters/golden_apparition/normal.png","mimeType":"image/png","sha256":"fc90202b6b36e901fe0e75e9e2bcb9e07dc13ef32dc97083a01a4703c6ba9faf","bytes":633415},{"id":"file.characters.kira.normal.svg","kind":"image","path":"characters/kira/normal.svg","mimeType":"image/svg+xml","sha256":"db4e29ed314e57c624f53c7c2917166ccdc80efcbcab02b211013e7f1aaf90f8","bytes":2912},{"id":"file.characters.lcd.captain.normal.png","kind":"image","path":"characters/lcd_captain/normal.png","mimeType":"image/png","sha256":"30b6ff5afb4d0d754a52546bbc4ae467d517cbb09baf5f4633b0f2cbe5e5a959","bytes":410856},{"id":"file.characters.lce.doctor.normal.png","kind":"image","path":"characters/lce_doctor/normal.png","mimeType":"image/png","sha256":"938fdd640295fdd9c5d98e225696137f48667b140f2649961d6a504976b011f9","bytes":597985},{"id":"file.characters.lucio.normal.svg","kind":"image","path":"characters/lucio/normal.svg","mimeType":"image/svg+xml","sha256":"39f61ef72e599cef8d5e70dbcab010eba95bcc126ea60828b32cfb2dca4ee0ce","bytes":2913},{"id":"file.characters.protagonist.battle.png","kind":"image","path":"characters/protagonist/battle.png","mimeType":"image/png","sha256":"a436e968a646e580f9e6fca88ca9e82615f1a8a05cf68e1c494afe05a594d09f","bytes":656294},{"id":"file.characters.protagonist.battle.svg","kind":"image","path":"characters/protagonist/battle.svg","mimeType":"image/svg+xml","sha256":"2714036a2a99cb87401a0eddf7793708b8b6666149ed2a5b68d43c7e48feec5c","bytes":2916},{"id":"file.characters.protagonist.coat.png","kind":"image","path":"characters/protagonist/coat.png","mimeType":"image/png","sha256":"d0cdfe6a196d9454452818d2383f9b33ce8ef106ae509e532694ef3914f97e2c","bytes":701207},{"id":"file.characters.protagonist.coat.svg","kind":"image","path":"characters/protagonist/coat.svg","mimeType":"image/svg+xml","sha256":"325c15acfe95486379b88ef972deacbda05c36bf81776d5446ca8fb5d74ba07a","bytes":2914},{"id":"file.characters.protagonist.formal.png","kind":"image","path":"characters/protagonist/formal.png","mimeType":"image/png","sha256":"efebe731bf08143f2c8eec7f5ebe82b85c1fb803abe2a51f607ebe7d5da3ab69","bytes":682957},{"id":"file.characters.protagonist.formal.svg","kind":"image","path":"characters/protagonist/formal.svg","mimeType":"image/svg+xml","sha256":"ca1d3e79cebcbda034005fa85a351828355f58e68f40e41d14fe111d6ac19dd2","bytes":2916},{"id":"file.characters.protagonist.injured.png","kind":"image","path":"characters/protagonist/injured.png","mimeType":"image/png","sha256":"a1c76d3d01d85a5fb59d130d0cb6978492a39381d92ccbd050e3fa79b147877f","bytes":633632},{"id":"file.characters.protagonist.injured.svg","kind":"image","path":"characters/protagonist/injured.svg","mimeType":"image/svg+xml","sha256":"0eae48dde7a3858af53f50333970724334f258cf95b2520f3aa4b65066d1d82a","bytes":2917},{"id":"file.characters.protagonist.normal.png","kind":"image","path":"characters/protagonist/normal.png","mimeType":"image/png","sha256":"ef345aaf8817f9d42edee91b15c7593454a8aeacba015d956eb570567d93c42c","bytes":617841},{"id":"file.characters.protagonist.normal.svg","kind":"image","path":"characters/protagonist/normal.svg","mimeType":"image/svg+xml","sha256":"d3e9d5f6683d341ac85b449edc86e31ea8e4b65e809894e1f626917b866ad4f1","bytes":2916},{"id":"file.characters.protagonist.profile.png","kind":"image","path":"characters/protagonist/profile.png","mimeType":"image/png","sha256":"7bebf79d688e6c6beddff75ce5ebb0be542f1b24faf0af2dec4c889fc2f4ea6e","bytes":608664},{"id":"file.characters.protagonist.profile.svg","kind":"image","path":"characters/protagonist/profile.svg","mimeType":"image/svg+xml","sha256":"5de466e68995311d479e51333fc7cbe91a20adf52e9ca096f1e9bb2d9a2bcffc","bytes":2917},{"id":"file.characters.protagonist.resolve.png","kind":"image","path":"characters/protagonist/resolve.png","mimeType":"image/png","sha256":"f084da28bd5b55273519eab6c230bc580e069f7f302cff85d333f43f833684f3","bytes":765412},{"id":"file.characters.protagonist.resolve.svg","kind":"image","path":"characters/protagonist/resolve.svg","mimeType":"image/svg+xml","sha256":"bbd02ce4a997e9ee5beab2ded88f9dffc8306fe51041d006a7306da98affcbf1","bytes":2917},{"id":"file.characters.protagonist.serious.png","kind":"image","path":"characters/protagonist/serious.png","mimeType":"image/png","sha256":"d9fff4f95ed8513b464cd32be5735ec1a3d2b10e581c24a8232ab9a78f81a538","bytes":612296},{"id":"file.characters.protagonist.serious.svg","kind":"image","path":"characters/protagonist/serious.svg","mimeType":"image/svg+xml","sha256":"f1ef84f3803614dccaa639097dca33e17dd3a36dcb59e0d9dd658166ec5d4564","bytes":2917},{"id":"file.characters.protagonist.shadow.png","kind":"image","path":"characters/protagonist/shadow.png","mimeType":"image/png","sha256":"47579ad18953940ceaf00122676a79d3f8618a0057cc1f1f740535df4644a04e","bytes":679619},{"id":"file.characters.protagonist.shadow.svg","kind":"image","path":"characters/protagonist/shadow.svg","mimeType":"image/svg+xml","sha256":"ac87cb2d8726e88b77ae25299ac8759bf167df93e44cd429ef93916d04381e90","bytes":2916},{"id":"file.characters.protagonist.smile.png","kind":"image","path":"characters/protagonist/smile.png","mimeType":"image/png","sha256":"c040495b425c09c2044e86ee2951527dce6145ffb7d41e2c28ae390d39feef24","bytes":681742},{"id":"file.characters.protagonist.smile.svg","kind":"image","path":"characters/protagonist/smile.svg","mimeType":"image/svg+xml","sha256":"8b0900e469b604123c1aa72b0be47464908f5418013720cf5da8801ad7048b69","bytes":2915},{"id":"file.characters.protagonist.tender.png","kind":"image","path":"characters/protagonist/tender.png","mimeType":"image/png","sha256":"1e99e5724db77e7fc536d433980519121cc43740bfc17b4f810444a2681fb214","bytes":693086},{"id":"file.characters.protagonist.tender.svg","kind":"image","path":"characters/protagonist/tender.svg","mimeType":"image/svg+xml","sha256":"23737b94add6d8044d0df61bcbba15f70f3a9d996792e161a6488816c44750d7","bytes":2916},{"id":"file.characters.protagonist.wet.hair.png","kind":"image","path":"characters/protagonist/wet-hair.png","mimeType":"image/png","sha256":"ef02c60087130fba338bd9757c5ea9f045435e60d658450890c6ab5d50699dd5","bytes":702889},{"id":"file.characters.protagonist.wet.hair.svg","kind":"image","path":"characters/protagonist/wet-hair.svg","mimeType":"image/svg+xml","sha256":"b11284a46a2b5211ef413377f08ec31b80edfb80b854046f68066a0dfd369c23","bytes":2918},{"id":"file.characters.ren.normal.png","kind":"image","path":"characters/ren/normal.png","mimeType":"image/png","sha256":"0bd7caac7ae057da27bf86378d17b24ee43a48b958713ece4f8fbf6a79cba6b6","bytes":793467},{"id":"file.characters.ren.normal.svg","kind":"image","path":"characters/ren/normal.svg","mimeType":"image/svg+xml","sha256":"5b6eeb0a73be55028f1c6f349160e9d541cee9e93425d9c150a3bd2f7b791698","bytes":2911},{"id":"file.characters.ring.agent.normal.png","kind":"image","path":"characters/ring_agent/normal.png","mimeType":"image/png","sha256":"71536876e4949ff36037d647f05727bf39bb6bf843b186757aacfcc95bcfe07e","bytes":581593},{"id":"file.characters.ryoshu.normal.svg","kind":"image","path":"characters/ryoshu/normal.svg","mimeType":"image/svg+xml","sha256":"2018187b67ef8f2dfe4d3a97929c2dacc8bc8755efe2e77916cc697e9346fc93","bytes":2914},{"id":"file.characters.sinclair.normal.svg","kind":"image","path":"characters/sinclair/normal.svg","mimeType":"image/svg+xml","sha256":"b507dc70e66ddfee18a0c0fdcfe2722215c23cbbbac048bb4b774718169f5352","bytes":2916},{"id":"file.characters.sora.normal.svg","kind":"image","path":"characters/sora/normal.svg","mimeType":"image/svg+xml","sha256":"939a4d464cd7bee2a0764528981df14b9c9e948ac2673ce659d0c326f04236ad","bytes":2912},{"id":"file.characters.vergilius.normal.png","kind":"image","path":"characters/vergilius/normal.png","mimeType":"image/png","sha256":"a952f7b8042794613c6fdfe7c6e58d7675d06c9c5653ac837247c94b3ab01135","bytes":886285},{"id":"file.characters.vergilius.normal.svg","kind":"image","path":"characters/vergilius/normal.svg","mimeType":"image/svg+xml","sha256":"0c0714c38d9c295f3e8c84aecbb91c757869471fd288093b543ad4ee85da213c","bytes":2917},{"id":"file.characters.yi.sang.normal.png","kind":"image","path":"characters/yi_sang/normal.png","mimeType":"image/png","sha256":"9d18999b8e7b82e957fddd582b9605a5d46deca6bddcb45eb4930d9daaa2393d","bytes":814771},{"id":"file.generated.alpha.sheets.albina.01.png","kind":"image","path":"generated/alpha-sheets/albina_01.png","mimeType":"image/png","sha256":"2290adb83dd7e3bfb2d8cfc1cca5d0603a5d439d93a7bb2c954a190dd5e50b44","bytes":1467607},{"id":"file.generated.alpha.sheets.albina.02.png","kind":"image","path":"generated/alpha-sheets/albina_02.png","mimeType":"image/png","sha256":"687cb237c5231f3d9168196b89e0648d45ab3e57452c029ce091cd13b4ad9ff0","bytes":1494916},{"id":"file.generated.alpha.sheets.albina.03.png","kind":"image","path":"generated/alpha-sheets/albina_03.png","mimeType":"image/png","sha256":"b4959f69bb6d4ce6f45b22075c884f1a954c1b4df1754cf7e3e00b1e00924d4c","bytes":1397534},{"id":"file.generated.alpha.sheets.protagonist.01.png","kind":"image","path":"generated/alpha-sheets/protagonist_01.png","mimeType":"image/png","sha256":"439b657c685a9b21dc5eb98277f76040bda7be8b76049f79dab6852d3e6eb26e","bytes":1037169},{"id":"file.generated.alpha.sheets.protagonist.02.png","kind":"image","path":"generated/alpha-sheets/protagonist_02.png","mimeType":"image/png","sha256":"b5d417f293782cf228f2bf19b324977deda5547109401c5171ea908bfc2e9d62","bytes":1093806},{"id":"file.generated.alpha.sheets.supporting.png","kind":"image","path":"generated/alpha-sheets/supporting.png","mimeType":"image/png","sha256":"39a3570a99611e67490bc4161c97711bf0270c725aba640fffcf8df059176079","bytes":1301881},{"id":"file.original.albina.sprites.battle.png","kind":"image","path":"original_albina_sprites/battle.png","mimeType":"image/png","sha256":"b2bcaad7d5ddd3779102080b0d2081dec9941512a1afb677f5eb2392764c9bee","bytes":1793581},{"id":"file.original.albina.sprites.normal.png","kind":"image","path":"original_albina_sprites/normal.png","mimeType":"image/png","sha256":"6ee2ad5749e0a459680f14ae97e18e774e9c4b9d1aca5a353a49f2d0239270e3","bytes":2017896},{"id":"file.original.albina.sprites.sad.png","kind":"image","path":"original_albina_sprites/sad.png","mimeType":"image/png","sha256":"13edd79c92ba4230f00e8a008a565fbce60b06687bb3ed8101d2c4e63cb23240","bytes":1795574},{"id":"file.original.albina.sprites.smile.png","kind":"image","path":"original_albina_sprites/smile.png","mimeType":"image/png","sha256":"825bc4d615e5906d190b698a47e2fafad8ab51396696af5b965c66e3e098e0d2","bytes":2236822},{"id":"file.original.bg.story.library.interior.png","kind":"image","path":"original_bg_story/library_interior.png","mimeType":"image/png","sha256":"7ccd48b32fc88df3ec38ba66bf70fa490cd3c4931261a3ff13a51198c584e275","bytes":2217028},{"id":"file.original.cg.albina.debut.png","kind":"image","path":"original_cg/albina_debut.png","mimeType":"image/png","sha256":"cd69fc4291142ffac6e2609441ac32155c806431f7e5ef7c9602dafa5bd26d2b","bytes":1913934},{"id":"file.original.cg.battle.climax.png","kind":"image","path":"original_cg/battle_climax.png","mimeType":"image/png","sha256":"8f5cd613a620380fb091b2fc3cdfc645fd4e3e81864cbdf08b4e4a70a042ece6","bytes":2049868},{"id":"file.original.cg.canto.ix.opening.png","kind":"image","path":"original_cg/canto_ix_opening.png","mimeType":"image/png","sha256":"e28454287967229bfaed69c43e626330e14694d6383cfc643c6554beb7053ae2","bytes":2376570},{"id":"file.original.cg.hell.gate.png","kind":"image","path":"original_cg/hell_gate.png","mimeType":"image/png","sha256":"e2d9846c0e9a031328e92bd4532544b5f272c889fc7a7ce71675bfebb06edb3e","bytes":2306012},{"id":"file.original.cg.rain.confession.png","kind":"image","path":"original_cg/rain_confession.png","mimeType":"image/png","sha256":"b5615295563c2e30c4aea259e4a2b5bbf2a617355934902f810daf16a39d869b","bytes":2041140},{"id":"file.original.cg.ring.conspiracy.png","kind":"image","path":"original_cg/ring_conspiracy.png","mimeType":"image/png","sha256":"0df61afec53eafdf9b0abafacbedee5805f55a9664702b958abd2477be90e0ea","bytes":2074900},{"id":"file.sprite.atlas.albina.amused.strip.png","kind":"image","path":"sprite-atlas/albina/amused_strip.png","mimeType":"image/png","sha256":"598feb3ab51f6f0e7826c337e66b3f3cad71897061152e22a9096a6d00373d13","bytes":3783351},{"id":"file.sprite.atlas.albina.armored.strip.png","kind":"image","path":"sprite-atlas/albina/armored_strip.png","mimeType":"image/png","sha256":"e7556db93ffd2c4774a08cb55fd8cd37ade36f5d0a2c67122abb28958f065c0e","bytes":3502098},{"id":"file.sprite.atlas.albina.combat.strip.png","kind":"image","path":"sprite-atlas/albina/combat_strip.png","mimeType":"image/png","sha256":"34b4a9cb3ff6f77eaa187f1d884961f23d8f9e228da56165a160d9d45ac669b8","bytes":3685070},{"id":"file.sprite.atlas.albina.endgame.strip.png","kind":"image","path":"sprite-atlas/albina/endgame_strip.png","mimeType":"image/png","sha256":"9183824dde93f21acbcffd5d42ccaf5a34341612926a3d866038a7fcdcd2aa95","bytes":4114092},{"id":"file.sprite.atlas.albina.fascia.open.strip.png","kind":"image","path":"sprite-atlas/albina/fascia-open_strip.png","mimeType":"image/png","sha256":"83202a591278a6beabe854df464af772e58c2fa6d1a4d1072dba62082bcf5525","bytes":3359680},{"id":"file.sprite.atlas.albina.focused.strip.png","kind":"image","path":"sprite-atlas/albina/focused_strip.png","mimeType":"image/png","sha256":"ccf851bf3e230333846ceb4fd3cbee2e0554ebb729550026acf3ab4b08249b60","bytes":4001551},{"id":"file.sprite.atlas.albina.furious.strip.png","kind":"image","path":"sprite-atlas/albina/furious_strip.png","mimeType":"image/png","sha256":"92e05e4c2b6c45072203edce970ad083d1f98877a5aecd8eb3f4bc3871f2ddbe","bytes":3225121},{"id":"file.sprite.atlas.albina.golden.bough.strip.png","kind":"image","path":"sprite-atlas/albina/golden-bough_strip.png","mimeType":"image/png","sha256":"37acb5099f4b78fa4b43cdbf7374de92898c5fa8277a25b73187e510cb672b3f","bytes":3829701},{"id":"file.sprite.atlas.albina.maestro.strip.png","kind":"image","path":"sprite-atlas/albina/maestro_strip.png","mimeType":"image/png","sha256":"448278bd52df48c90421900511a5d3a4362c0af5890284422a665431632f0e2a","bytes":3245882},{"id":"file.sprite.atlas.albina.normal.strip.png","kind":"image","path":"sprite-atlas/albina/normal_strip.png","mimeType":"image/png","sha256":"9dd6396a5a4bb5ed031e5e6af329a7e23d43f52468b9a743fa3ccb87b96dc68f","bytes":3297901},{"id":"file.sprite.atlas.albina.rain.strip.png","kind":"image","path":"sprite-atlas/albina/rain_strip.png","mimeType":"image/png","sha256":"1dfd20241c048a6bdbf257d726242b74e3faa291aee37f19d956a3a4427b5b75","bytes":3777733},{"id":"file.sprite.atlas.albina.ring.conspiracy.strip.png","kind":"image","path":"sprite-atlas/albina/ring-conspiracy_strip.png","mimeType":"image/png","sha256":"791a8e97afe98ef66e8ff98ec4030e20e6e218178ca24525ef7c16a91e11286f","bytes":3542405},{"id":"file.sprite.atlas.albina.shy.strip.png","kind":"image","path":"sprite-atlas/albina/shy_strip.png","mimeType":"image/png","sha256":"b4fce99a14a9e49de682712c71a3420cbe98bed8cb671b08f3b39e0a6eed7efa","bytes":3529806},{"id":"file.sprite.atlas.albina.smile.strip.png","kind":"image","path":"sprite-atlas/albina/smile_strip.png","mimeType":"image/png","sha256":"edeea2c2e1176f1c84a82ed101601fcdf30b8531732a217867711c9f0beaf537","bytes":3520893},{"id":"file.sprite.atlas.albina.surgical.strip.png","kind":"image","path":"sprite-atlas/albina/surgical_strip.png","mimeType":"image/png","sha256":"fe3f8cae7d405baf2d4cdcddc7f2d1dd18826c5a0f10f835749722b41d3545df","bytes":3268222},{"id":"file.sprite.atlas.albina.unarmored.strip.png","kind":"image","path":"sprite-atlas/albina/unarmored_strip.png","mimeType":"image/png","sha256":"86d9ba8388fa7e6523b37911e3514e5746ddf19e3d61d463488df27d69032e16","bytes":3599579},{"id":"file.sprite.atlas.albina.white.canvas.strip.png","kind":"image","path":"sprite-atlas/albina/white-canvas_strip.png","mimeType":"image/png","sha256":"2ecd8aaa89e60e6a4c23463298cb0a17d39911d900064a62b933920a3ef23c16","bytes":3419321},{"id":"file.sprite.atlas.albina.wounded.strip.png","kind":"image","path":"sprite-atlas/albina/wounded_strip.png","mimeType":"image/png","sha256":"62e276c181e626f0dec0f0df427840bcd73d467948850a556e113c8718c95dae","bytes":3510714},{"id":"file.sprite.atlas.callisto.normal.strip.png","kind":"image","path":"sprite-atlas/callisto/normal_strip.png","mimeType":"image/png","sha256":"d45214594fe8048be693b4f4ef3b6dd2ff485996d260e89b82c468ef85bb66fa","bytes":3570340},{"id":"file.sprite.atlas.charon.normal.strip.png","kind":"image","path":"sprite-atlas/charon/normal_strip.png","mimeType":"image/png","sha256":"bc8875c1e57ba504ecd61f6b0952f11440829c13607290c397cc94bf0a90efc9","bytes":3129094},{"id":"file.sprite.atlas.dante.normal.strip.png","kind":"image","path":"sprite-atlas/dante/normal_strip.png","mimeType":"image/png","sha256":"1a588b00eec5b542f30e91c9b1f1be1bac50f8f79fd2ebc7ff2a9fa20e558bac","bytes":3287194},{"id":"file.sprite.atlas.faust.normal.strip.png","kind":"image","path":"sprite-atlas/faust/normal_strip.png","mimeType":"image/png","sha256":"712b5327d431689157584249798faf2cbd1dbfc42a245b0b1390207ce28a0a77","bytes":3718801},{"id":"file.sprite.atlas.fixer.informant.normal.strip.png","kind":"image","path":"sprite-atlas/fixer_informant/normal_strip.png","mimeType":"image/png","sha256":"eb32b3dffd3d4cc2bbec142662e0965ec5bde6334476b66f72be4fde65b42cc9","bytes":3222195},{"id":"file.sprite.atlas.golden.apparition.normal.strip.png","kind":"image","path":"sprite-atlas/golden_apparition/normal_strip.png","mimeType":"image/png","sha256":"fbcafb3363f6ab9d06f3f95c1337a3675737d2e0123295f87a5c8705154dee33","bytes":3927065},{"id":"file.sprite.atlas.lcd.captain.normal.strip.png","kind":"image","path":"sprite-atlas/lcd_captain/normal_strip.png","mimeType":"image/png","sha256":"38e07bfb12f420430f7240d715c7f61de84ea815576701719c8f2facd3b02166","bytes":3264020},{"id":"file.sprite.atlas.lce.doctor.normal.strip.png","kind":"image","path":"sprite-atlas/lce_doctor/normal_strip.png","mimeType":"image/png","sha256":"f05fbdcbead14511b2e34cc712715b5582504bf2af17e2e86dbbdb8d146868d1","bytes":3297944},{"id":"file.sprite.atlas.original.cg.albina.debut.strip.png","kind":"image","path":"sprite-atlas/original_cg/albina_debut_strip.png","mimeType":"image/png","sha256":"2ee88c382d413f62803f01a1a80a5743b9bf21061426cc3a16ea77a717506669","bytes":2925431},{"id":"file.sprite.atlas.original.cg.battle.climax.strip.png","kind":"image","path":"sprite-atlas/original_cg/battle_climax_strip.png","mimeType":"image/png","sha256":"db536e31152fa857e4958cc748e645eefbee8f45576ba1183a5f8ffcb43b1264","bytes":2864495},{"id":"file.sprite.atlas.protagonist.battle.strip.png","kind":"image","path":"sprite-atlas/protagonist/battle_strip.png","mimeType":"image/png","sha256":"d3286aaeff322a1267719016000ed283ea1b42badf2878f962ae136b6f8b7fb8","bytes":3165211},{"id":"file.sprite.atlas.protagonist.coat.strip.png","kind":"image","path":"sprite-atlas/protagonist/coat_strip.png","mimeType":"image/png","sha256":"b5806c2fd33ddd2335b8ecf79fe638e1c595c680cb6ad7373b82c0196f2aedbb","bytes":3023731},{"id":"file.sprite.atlas.protagonist.formal.strip.png","kind":"image","path":"sprite-atlas/protagonist/formal_strip.png","mimeType":"image/png","sha256":"89c9540a0dfe2d93dbc9e6d2cadb8bb93411e30957199488307ec9a1128677aa","bytes":2945421},{"id":"file.sprite.atlas.protagonist.injured.strip.png","kind":"image","path":"sprite-atlas/protagonist/injured_strip.png","mimeType":"image/png","sha256":"d5bcb863366b807ef4011c7f781c50c89e41aa47065464c1bcea7361c023ded3","bytes":3274205},{"id":"file.sprite.atlas.protagonist.normal.strip.png","kind":"image","path":"sprite-atlas/protagonist/normal_strip.png","mimeType":"image/png","sha256":"55484d8acc4f36587a84e4448aa8040923c8126107f5a9f8db335d1eeffe3b7f","bytes":3086501},{"id":"file.sprite.atlas.protagonist.profile.strip.png","kind":"image","path":"sprite-atlas/protagonist/profile_strip.png","mimeType":"image/png","sha256":"0620c7a13ae03657aaad952fd67d34376b52807ca50a2445fa7faecd2c34c813","bytes":3391031},{"id":"file.sprite.atlas.protagonist.resolve.strip.png","kind":"image","path":"sprite-atlas/protagonist/resolve_strip.png","mimeType":"image/png","sha256":"905698655d09de75c11fd7266298c5d9c358a7f5ef1439208ab16486765c3afc","bytes":3079167},{"id":"file.sprite.atlas.protagonist.serious.strip.png","kind":"image","path":"sprite-atlas/protagonist/serious_strip.png","mimeType":"image/png","sha256":"2fdbf141f0eeaf5770e51eccd572ccb7656d61286f11d79bd01cc5aa584d1311","bytes":2877761},{"id":"file.sprite.atlas.protagonist.shadow.strip.png","kind":"image","path":"sprite-atlas/protagonist/shadow_strip.png","mimeType":"image/png","sha256":"84afdc243de21b187237e3a2b8886f1c83b84d90bbcc913f623e32d6dc75a3a8","bytes":2881745},{"id":"file.sprite.atlas.protagonist.smile.strip.png","kind":"image","path":"sprite-atlas/protagonist/smile_strip.png","mimeType":"image/png","sha256":"ca025ac7f5d9b087296f431077c6526e578f594511ff98dc6f1b49ca67fc00b3","bytes":3054297},{"id":"file.sprite.atlas.protagonist.tender.strip.png","kind":"image","path":"sprite-atlas/protagonist/tender_strip.png","mimeType":"image/png","sha256":"cfc900db01d60e931b55c5c0921cc9dfdaf7d1f91af529ee4d96e964c4dab6b7","bytes":2946077},{"id":"file.sprite.atlas.protagonist.wet.hair.strip.png","kind":"image","path":"sprite-atlas/protagonist/wet-hair_strip.png","mimeType":"image/png","sha256":"ad2cdd374474a8fb05dc74bd47c0602b890b3e0f8ed6f42af5a6c6e9e72e55b1","bytes":3018208},{"id":"file.sprite.atlas.ren.normal.strip.png","kind":"image","path":"sprite-atlas/ren/normal_strip.png","mimeType":"image/png","sha256":"b1ab709df36557c1c92d5f7f74103050302bf274be9872bc3e53a67d811c6f20","bytes":3325824},{"id":"file.sprite.atlas.ring.agent.normal.strip.png","kind":"image","path":"sprite-atlas/ring_agent/normal_strip.png","mimeType":"image/png","sha256":"1433fcc31f67fb58731739cfec7738b3686f770b4c8f7219975003b8f0ad9280","bytes":3142702},{"id":"file.sprite.atlas.vergilius.normal.strip.png","kind":"image","path":"sprite-atlas/vergilius/normal_strip.png","mimeType":"image/png","sha256":"bc94c7bf3b146bc9171ff07633468b49c9ebeb58ca013d9e37b0ff3bec93e0f2","bytes":3721980},{"id":"file.sprite.atlas.yi.sang.normal.strip.png","kind":"image","path":"sprite-atlas/yi_sang/normal_strip.png","mimeType":"image/png","sha256":"cb35289ae216903f3c9b8727c01a37054eb8bd661edada48fe3e51e50be2edee","bytes":3081862},{"id":"file.ui.choice.button.svg","kind":"image","path":"ui/choice_button.svg","mimeType":"image/svg+xml","sha256":"6301a268c0d874185842cecba0acee7c99f4c29e8caba5203cd1ceb6e3b0cea5","bytes":1645},{"id":"file.ui.gallery.frame.svg","kind":"image","path":"ui/gallery_frame.svg","mimeType":"image/svg+xml","sha256":"19bf13a6c6a24a90a7372e98e422b5911a5eb63b870e2bd546f07d80439fc854","bytes":1646},{"id":"file.ui.menu.plate.svg","kind":"image","path":"ui/menu_plate.svg","mimeType":"image/svg+xml","sha256":"d8c0d45b6abdff52651712ec4dbb30736d61939563ccf920995d330475925d7d","bytes":1643},{"id":"file.ui.scanline.mask.svg","kind":"image","path":"ui/scanline_mask.svg","mimeType":"image/svg+xml","sha256":"8ca0f95223f6e523626d09a5e09dbca55f90687728e6fc23f15b28c3f6fdc4af","bytes":1645},{"id":"file.ui.status.panel.svg","kind":"image","path":"ui/status_panel.svg","mimeType":"image/svg+xml","sha256":"93e422a5c871f4bb7b8ec4965e04d3b5501da1117d81942f034479dd8a5dbd36","bytes":1645},{"id":"file.ui.textbox.svg","kind":"image","path":"ui/textbox.svg","mimeType":"image/svg+xml","sha256":"87eca356e01c43e6b571db16ec84b33fabe92697d62c251ffb9a0c5b33858b39","bytes":1655},{"id":"file.video.animated.desktop.ed.golden.bough.rebuild.mp4","kind":"video","path":"video/animated/desktop/ed_golden_bough_rebuild.mp4","mimeType":"video/mp4","sha256":"2fea23d2d53819f84638318e5a7c3b00da51c38703f452f946b13315faf96b00","bytes":7264295},{"id":"file.video.animated.desktop.ed.ring.conspiracy.mp4","kind":"video","path":"video/animated/desktop/ed_ring_conspiracy.mp4","mimeType":"video/mp4","sha256":"a5ccf17d2ba26bc1248b383ab669662a792a91b1776c637799cffa2b003cdac3","bytes":6393945},{"id":"file.video.animated.desktop.ed.white.canvas.mp4","kind":"video","path":"video/animated/desktop/ed_white_canvas.mp4","mimeType":"video/mp4","sha256":"be466f619c7773a06dfa5e6123e971d102a79c0df98ce9673cbd14ce332b21d2","bytes":5539601},{"id":"file.video.animated.desktop.golden.bough.rebuild.ending.bad.mp4","kind":"video","path":"video/animated/desktop/golden_bough_rebuild_ending_bad.mp4","mimeType":"video/mp4","sha256":"665342bfcf45187bc05fead1ed445b2e7f3e1fb37154aefb507009f7c9423207","bytes":5733582},{"id":"file.video.animated.desktop.golden.bough.rebuild.ending.normal.mp4","kind":"video","path":"video/animated/desktop/golden_bough_rebuild_ending_normal.mp4","mimeType":"video/mp4","sha256":"9ec5e0bd56b9b033b793f0b13f52c728ea195b162fe23159c9f2acb5c87e6ffe","bytes":5654162},{"id":"file.video.animated.desktop.golden.bough.rebuild.ending.true.mp4","kind":"video","path":"video/animated/desktop/golden_bough_rebuild_ending_true.mp4","mimeType":"video/mp4","sha256":"af8899f54f80600b8bd0ba02c30627ed2c10783a2e2a9a7aa59f82328f3fe3a2","bytes":6441698},{"id":"file.video.animated.desktop.golden.bough.rebuild.scene.11.mp4","kind":"video","path":"video/animated/desktop/golden_bough_rebuild_scene_11.mp4","mimeType":"video/mp4","sha256":"a98d68c9ee81056f22437cf0e66c78ad4cc4d6004a5365ca51110d9067ec976f","bytes":4268715},{"id":"file.video.animated.desktop.golden.bough.rebuild.scene.15.mp4","kind":"video","path":"video/animated/desktop/golden_bough_rebuild_scene_15.mp4","mimeType":"video/mp4","sha256":"510afcd7f1c27b0a4f9abc44e82bae92bd9b3436c73b261de985887a1585ee5a","bytes":4216527},{"id":"file.video.animated.desktop.golden.bough.rebuild.scene.3.mp4","kind":"video","path":"video/animated/desktop/golden_bough_rebuild_scene_3.mp4","mimeType":"video/mp4","sha256":"cb5c7a63f0e068b4d1c0b4047763f46b13b30b48f9808523c8fb67e7f6415b53","bytes":4336441},{"id":"file.video.animated.desktop.golden.bough.rebuild.scene.5.mp4","kind":"video","path":"video/animated/desktop/golden_bough_rebuild_scene_5.mp4","mimeType":"video/mp4","sha256":"f5069cb9aebe21b4bc41545e74b2f4a1c6e5aeb27f9b7f5e08b2c5fc5274cfd4","bytes":5039163},{"id":"file.video.animated.desktop.golden.bough.rebuild.scene.8.mp4","kind":"video","path":"video/animated/desktop/golden_bough_rebuild_scene_8.mp4","mimeType":"video/mp4","sha256":"56176731dc6ccc9892bfc7e7163bb736f5f662226910235a38d28117eaa817bd","bytes":5167077},{"id":"file.video.animated.desktop.op.mp4","kind":"video","path":"video/animated/desktop/op.mp4","mimeType":"video/mp4","sha256":"92774f55e85ae2933f162080916993d95fb6234a0dade047ab4a1471d846c811","bytes":5222191},{"id":"file.video.animated.desktop.prologue.mp4","kind":"video","path":"video/animated/desktop/prologue.mp4","mimeType":"video/mp4","sha256":"18768d90579f3c08b3194ef9d88c32ec77eeade557740a8c76b4596b38da42cb","bytes":4568125},{"id":"file.video.animated.desktop.ring.conspiracy.ending.bad.mp4","kind":"video","path":"video/animated/desktop/ring_conspiracy_ending_bad.mp4","mimeType":"video/mp4","sha256":"bfec2285572943ba48b8802de82715c34e734d3d7d6c8e6884a625f9f4c92778","bytes":6094767},{"id":"file.video.animated.desktop.ring.conspiracy.ending.normal.mp4","kind":"video","path":"video/animated/desktop/ring_conspiracy_ending_normal.mp4","mimeType":"video/mp4","sha256":"566ceca8679dd52192a9799090e9f886daa3bace30e412194a108a27fd3fe853","bytes":6301387},{"id":"file.video.animated.desktop.ring.conspiracy.ending.true.mp4","kind":"video","path":"video/animated/desktop/ring_conspiracy_ending_true.mp4","mimeType":"video/mp4","sha256":"c945fb3562fbec8ba6bfba6ef10a73093c23dd530a551da7e2b1cd98bbe1093f","bytes":6156384},{"id":"file.video.animated.desktop.ring.conspiracy.scene.11.mp4","kind":"video","path":"video/animated/desktop/ring_conspiracy_scene_11.mp4","mimeType":"video/mp4","sha256":"b5740b4216b387d9b6727ec3b03b74c2946c6ad1bbd0d2775693f0b73ae97177","bytes":4316911},{"id":"file.video.animated.desktop.ring.conspiracy.scene.15.mp4","kind":"video","path":"video/animated/desktop/ring_conspiracy_scene_15.mp4","mimeType":"video/mp4","sha256":"9574f17e8508b66848012e1b88e25a933cea64721d2605c806db3b59c11862ef","bytes":4755598},{"id":"file.video.animated.desktop.ring.conspiracy.scene.3.mp4","kind":"video","path":"video/animated/desktop/ring_conspiracy_scene_3.mp4","mimeType":"video/mp4","sha256":"42ec46e059405f1be4ea1b274cd521eb5f1f1c41b520314fca44bfc951b1823d","bytes":5108387},{"id":"file.video.animated.desktop.ring.conspiracy.scene.5.mp4","kind":"video","path":"video/animated/desktop/ring_conspiracy_scene_5.mp4","mimeType":"video/mp4","sha256":"3b819372d1fd9c752159286998407a266f0aafdc95195cab7eb4cd7e182fb86c","bytes":5735950},{"id":"file.video.animated.desktop.ring.conspiracy.scene.8.mp4","kind":"video","path":"video/animated/desktop/ring_conspiracy_scene_8.mp4","mimeType":"video/mp4","sha256":"732fdcda28570fb7d481767b46d4cf751e771dddab1597baeb7cb659fdaedf83","bytes":5699635},{"id":"file.video.animated.desktop.white.canvas.ending.bad.mp4","kind":"video","path":"video/animated/desktop/white_canvas_ending_bad.mp4","mimeType":"video/mp4","sha256":"93cd772af7a5e2b378b4dc0772d84a53feed7ef450c97082b431ab8802b61b80","bytes":6060788},{"id":"file.video.animated.desktop.white.canvas.ending.normal.mp4","kind":"video","path":"video/animated/desktop/white_canvas_ending_normal.mp4","mimeType":"video/mp4","sha256":"4e5f5ebd2cf3799429539538971be9fbc6936e5163271e3779dbd1383076621b","bytes":5326928},{"id":"file.video.animated.desktop.white.canvas.ending.true.mp4","kind":"video","path":"video/animated/desktop/white_canvas_ending_true.mp4","mimeType":"video/mp4","sha256":"a4422751cdf6be2191b39e7ea0d3a85e6edc215e7348d050e4f1ab63c2d5677d","bytes":7228337},{"id":"file.video.animated.desktop.white.canvas.scene.11.mp4","kind":"video","path":"video/animated/desktop/white_canvas_scene_11.mp4","mimeType":"video/mp4","sha256":"a2619096252787ec30101ba5feeaf0dda06d7f318bcdac080ab4ba0aa9568e12","bytes":5294302},{"id":"file.video.animated.desktop.white.canvas.scene.15.mp4","kind":"video","path":"video/animated/desktop/white_canvas_scene_15.mp4","mimeType":"video/mp4","sha256":"5ec29acf9df1f18494609471eddf5de221f2411acc986c6168bb9369494ad5ae","bytes":4505329},{"id":"file.video.animated.desktop.white.canvas.scene.3.mp4","kind":"video","path":"video/animated/desktop/white_canvas_scene_3.mp4","mimeType":"video/mp4","sha256":"50a48863359fff18e8f7fff87dfd808ae025d91179321688bc0353743887f1fd","bytes":5346356},{"id":"file.video.animated.desktop.white.canvas.scene.5.mp4","kind":"video","path":"video/animated/desktop/white_canvas_scene_5.mp4","mimeType":"video/mp4","sha256":"61555b7011baa029652d9304d86b7b712bab75d6f0b26b2860db578587f0a343","bytes":5230805},{"id":"file.video.animated.desktop.white.canvas.scene.8.mp4","kind":"video","path":"video/animated/desktop/white_canvas_scene_8.mp4","mimeType":"video/mp4","sha256":"8786be555709f223064e4e4853e175b1b33c8b9eb2012f0081897f59d36798df","bytes":4854170},{"id":"file.video.animated.runtime.ed.golden.bough.rebuild.mp4","kind":"video","path":"video/animated/runtime/ed_golden_bough_rebuild.mp4","mimeType":"video/mp4","sha256":"346cfd4275cf79b01a8d4fb3d4df2f79c1df433af5222debb5cdbb6369c16128","bytes":4185642},{"id":"file.video.animated.runtime.ed.ring.conspiracy.mp4","kind":"video","path":"video/animated/runtime/ed_ring_conspiracy.mp4","mimeType":"video/mp4","sha256":"3d7c1e7612c1bc376de009d85fae9159e104275678b0982296e47c10f2b89115","bytes":3545978},{"id":"file.video.animated.runtime.ed.white.canvas.mp4","kind":"video","path":"video/animated/runtime/ed_white_canvas.mp4","mimeType":"video/mp4","sha256":"c4aa0f491be3053c4b5c76e1310cf409bbe41ad0ba4d4bd22394a6af7a74e48e","bytes":3071385},{"id":"file.video.animated.runtime.golden.bough.rebuild.ending.bad.mp4","kind":"video","path":"video/animated/runtime/golden_bough_rebuild_ending_bad.mp4","mimeType":"video/mp4","sha256":"2af1ba03d1a26ef0e96260cec4474578bfc692c79d8a125fc4524ae22d3d8688","bytes":3012453},{"id":"file.video.animated.runtime.golden.bough.rebuild.ending.normal.mp4","kind":"video","path":"video/animated/runtime/golden_bough_rebuild_ending_normal.mp4","mimeType":"video/mp4","sha256":"c7b76d353c27b8b61d5b08fffbdeb96f08502f321f9f00975cb3cefc289c54a2","bytes":3238393},{"id":"file.video.animated.runtime.golden.bough.rebuild.ending.true.mp4","kind":"video","path":"video/animated/runtime/golden_bough_rebuild_ending_true.mp4","mimeType":"video/mp4","sha256":"04e46ecdbb3d51e881115671f0fe742e62268a7fced794974f15731fff8eb8f9","bytes":3603061},{"id":"file.video.animated.runtime.golden.bough.rebuild.scene.11.mp4","kind":"video","path":"video/animated/runtime/golden_bough_rebuild_scene_11.mp4","mimeType":"video/mp4","sha256":"e90196bc46e73f0a120aa895c548dc2b107f604ad300eba8c6109c287bb0f67d","bytes":2528370},{"id":"file.video.animated.runtime.golden.bough.rebuild.scene.15.mp4","kind":"video","path":"video/animated/runtime/golden_bough_rebuild_scene_15.mp4","mimeType":"video/mp4","sha256":"e08b3d96a184c441975dbf1bac7566d10e720ea82eb517c090aee948fc601dfa","bytes":2353207},{"id":"file.video.animated.runtime.golden.bough.rebuild.scene.3.mp4","kind":"video","path":"video/animated/runtime/golden_bough_rebuild_scene_3.mp4","mimeType":"video/mp4","sha256":"fc7361fdf237dd21e876149aea4950496f28f918747b0aba62713113543b3a07","bytes":2477070},{"id":"file.video.animated.runtime.golden.bough.rebuild.scene.5.mp4","kind":"video","path":"video/animated/runtime/golden_bough_rebuild_scene_5.mp4","mimeType":"video/mp4","sha256":"d901739424d56709c632bfb61b395d0874c0b279f20578e0485c1ce5697f5b95","bytes":2926949},{"id":"file.video.animated.runtime.golden.bough.rebuild.scene.8.mp4","kind":"video","path":"video/animated/runtime/golden_bough_rebuild_scene_8.mp4","mimeType":"video/mp4","sha256":"dc3b1cce4d43093e240e390a2f3209228ffa73a2041e89ae292e0790d66118ed","bytes":2797722},{"id":"file.video.animated.runtime.op.mp4","kind":"video","path":"video/animated/runtime/op.mp4","mimeType":"video/mp4","sha256":"3b0025fb8d6afce1bc68a740afdab317fd95d41144fcc48c58b85b8ea2cdab99","bytes":2777954},{"id":"file.video.animated.runtime.prologue.mp4","kind":"video","path":"video/animated/runtime/prologue.mp4","mimeType":"video/mp4","sha256":"fe51ae3b788556551e5960d1e82bacb84a7484ff3edff273872ac5ed8eec8ad0","bytes":2583756},{"id":"file.video.animated.runtime.ring.conspiracy.ending.bad.mp4","kind":"video","path":"video/animated/runtime/ring_conspiracy_ending_bad.mp4","mimeType":"video/mp4","sha256":"0cf0ac007c3e1ebd37862e02146d137117838c9530fead20611ec4b179a2d079","bytes":3519338},{"id":"file.video.animated.runtime.ring.conspiracy.ending.normal.mp4","kind":"video","path":"video/animated/runtime/ring_conspiracy_ending_normal.mp4","mimeType":"video/mp4","sha256":"78b95f376a8fe4851309af86231c18fac0d870baa6294fbc14126face05095b3","bytes":3401115},{"id":"file.video.animated.runtime.ring.conspiracy.ending.true.mp4","kind":"video","path":"video/animated/runtime/ring_conspiracy_ending_true.mp4","mimeType":"video/mp4","sha256":"986917f0fe50af48c6f7a150561e48c226f992e2429c789fc6ce4ea6e1e3f346","bytes":3567238},{"id":"file.video.animated.runtime.ring.conspiracy.scene.11.mp4","kind":"video","path":"video/animated/runtime/ring_conspiracy_scene_11.mp4","mimeType":"video/mp4","sha256":"7a4911e99e2bea1509d9cc44836a2fd1d855d0b3f0ff14713265efd5bcfcec9f","bytes":2400055},{"id":"file.video.animated.runtime.ring.conspiracy.scene.15.mp4","kind":"video","path":"video/animated/runtime/ring_conspiracy_scene_15.mp4","mimeType":"video/mp4","sha256":"115b2505bc82d8e98b236556e5b709b468346c4c197fdcbb51dd1887db9f6f69","bytes":2591243},{"id":"file.video.animated.runtime.ring.conspiracy.scene.3.mp4","kind":"video","path":"video/animated/runtime/ring_conspiracy_scene_3.mp4","mimeType":"video/mp4","sha256":"a7481f6b1a6811072cc09b1bbd5ac639f6faa11e9041531d50b220ed1442a6e8","bytes":2674192},{"id":"file.video.animated.runtime.ring.conspiracy.scene.5.mp4","kind":"video","path":"video/animated/runtime/ring_conspiracy_scene_5.mp4","mimeType":"video/mp4","sha256":"65db5a7e97fab0ccfcc26e4ae078b86f2016ad16eef0ade738f005a49969f4aa","bytes":3100461},{"id":"file.video.animated.runtime.ring.conspiracy.scene.8.mp4","kind":"video","path":"video/animated/runtime/ring_conspiracy_scene_8.mp4","mimeType":"video/mp4","sha256":"6fc2c2c0155ff68915d0ffc2a97f68d5a66b84857745826967ff64c3fbe384ac","bytes":3009439},{"id":"file.video.animated.runtime.white.canvas.ending.bad.mp4","kind":"video","path":"video/animated/runtime/white_canvas_ending_bad.mp4","mimeType":"video/mp4","sha256":"b3b101dde3f85be5b68657b66ecfc1b02d0d6c42cf70ba30e516ef1ff010473c","bytes":3336544},{"id":"file.video.animated.runtime.white.canvas.ending.normal.mp4","kind":"video","path":"video/animated/runtime/white_canvas_ending_normal.mp4","mimeType":"video/mp4","sha256":"c62b1344da7cb5a4b3fc2b3c144d815970eab741f818771bbc750f4248852f08","bytes":2756449},{"id":"file.video.animated.runtime.white.canvas.ending.true.mp4","kind":"video","path":"video/animated/runtime/white_canvas_ending_true.mp4","mimeType":"video/mp4","sha256":"454767d2595ad285ada75c920eeb5974626471930549e840669ffd2d856e9d37","bytes":3932490},{"id":"file.video.animated.runtime.white.canvas.scene.11.mp4","kind":"video","path":"video/animated/runtime/white_canvas_scene_11.mp4","mimeType":"video/mp4","sha256":"a25ef4770934afd8cc6fc6bab08167a4aa1594fdb301edd1914411438eb01b93","bytes":2890842},{"id":"file.video.animated.runtime.white.canvas.scene.15.mp4","kind":"video","path":"video/animated/runtime/white_canvas_scene_15.mp4","mimeType":"video/mp4","sha256":"f5226beecc7be5275123f7cc6a91a1b58f74e831d020a788ac52a1015c9c6c2e","bytes":2537450},{"id":"file.video.animated.runtime.white.canvas.scene.3.mp4","kind":"video","path":"video/animated/runtime/white_canvas_scene_3.mp4","mimeType":"video/mp4","sha256":"e7d8746ec4825f0f496c2106e5c1d7862b8a00246e3109574946ccbef5be5ac7","bytes":3030226},{"id":"file.video.animated.runtime.white.canvas.scene.5.mp4","kind":"video","path":"video/animated/runtime/white_canvas_scene_5.mp4","mimeType":"video/mp4","sha256":"8d154e505624dde023f61510cd6cc25337ef23f43190728e72034d85806a3569","bytes":2971914},{"id":"file.video.animated.runtime.white.canvas.scene.8.mp4","kind":"video","path":"video/animated/runtime/white_canvas_scene_8.mp4","mimeType":"video/mp4","sha256":"ba894e5efb361a9bf52c1d5b45ec2b04ed552b4024f3e8c1fd3cf54830c8f899","bytes":2685560},{"id":"file.videos.ed.mp4","kind":"video","path":"videos/ed.mp4","mimeType":"video/mp4","sha256":"01ac39c322816e6b98df0bc2fc57c952e610c19062578d4197c8685a6ba59761","bytes":13428432},{"id":"file.videos.op.mp4","kind":"video","path":"videos/op.mp4","mimeType":"video/mp4","sha256":"7d47fd8dec2fc4ac70c80c436412b084683ca2367825626a455e57ad87ed8b2b","bytes":15563758},{"id":"strip.original.albina.sprites.battle","kind":"image","path":"sprite-atlas/original_albina_sprites/battle_strip.png","mimeType":"image/png"},{"id":"strip.original.albina.sprites.normal","kind":"image","path":"sprite-atlas/original_albina_sprites/normal_strip.png","mimeType":"image/png"},{"id":"strip.original.albina.sprites.sad","kind":"image","path":"sprite-atlas/original_albina_sprites/sad_strip.png","mimeType":"image/png"},{"id":"strip.original.albina.sprites.smile","kind":"image","path":"sprite-atlas/original_albina_sprites/smile_strip.png","mimeType":"image/png"},{"id":"strip.original.cg.canto.ix.opening","kind":"image","path":"sprite-atlas/original_cg/canto_ix_opening_strip.png","mimeType":"image/png"},{"id":"strip.original.cg.hell.gate","kind":"image","path":"sprite-atlas/original_cg/hell_gate_strip.png","mimeType":"image/png"},{"id":"strip.original.cg.rain.confession","kind":"image","path":"sprite-atlas/original_cg/rain_confession_strip.png","mimeType":"image/png"},{"id":"strip.original.cg.ring.conspiracy","kind":"image","path":"sprite-atlas/original_cg/ring_conspiracy_strip.png","mimeType":"image/png"},{"id":"video.animated.desktop.ed_golden_bough_rebuild","kind":"video","path":"video/animated/desktop/ed_golden_bough_rebuild.mp4","mimeType":"video/mp4","sha256":"2fea23d2d53819f84638318e5a7c3b00da51c38703f452f946b13315faf96b00","bytes":7264295},{"id":"video.animated.desktop.ed_ring_conspiracy","kind":"video","path":"video/animated/desktop/ed_ring_conspiracy.mp4","mimeType":"video/mp4","sha256":"a5ccf17d2ba26bc1248b383ab669662a792a91b1776c637799cffa2b003cdac3","bytes":6393945},{"id":"video.animated.desktop.ed_white_canvas","kind":"video","path":"video/animated/desktop/ed_white_canvas.mp4","mimeType":"video/mp4","sha256":"be466f619c7773a06dfa5e6123e971d102a79c0df98ce9673cbd14ce332b21d2","bytes":5539601},{"id":"video.animated.desktop.golden_bough_rebuild_ending_bad","kind":"video","path":"video/animated/desktop/golden_bough_rebuild_ending_bad.mp4","mimeType":"video/mp4","sha256":"665342bfcf45187bc05fead1ed445b2e7f3e1fb37154aefb507009f7c9423207","bytes":5733582},{"id":"video.animated.desktop.golden_bough_rebuild_ending_normal","kind":"video","path":"video/animated/desktop/golden_bough_rebuild_ending_normal.mp4","mimeType":"video/mp4","sha256":"9ec5e0bd56b9b033b793f0b13f52c728ea195b162fe23159c9f2acb5c87e6ffe","bytes":5654162},{"id":"video.animated.desktop.golden_bough_rebuild_ending_true","kind":"video","path":"video/animated/desktop/golden_bough_rebuild_ending_true.mp4","mimeType":"video/mp4","sha256":"af8899f54f80600b8bd0ba02c30627ed2c10783a2e2a9a7aa59f82328f3fe3a2","bytes":6441698},{"id":"video.animated.desktop.golden_bough_rebuild_scene_11","kind":"video","path":"video/animated/desktop/golden_bough_rebuild_scene_11.mp4","mimeType":"video/mp4","sha256":"a98d68c9ee81056f22437cf0e66c78ad4cc4d6004a5365ca51110d9067ec976f","bytes":4268715},{"id":"video.animated.desktop.golden_bough_rebuild_scene_15","kind":"video","path":"video/animated/desktop/golden_bough_rebuild_scene_15.mp4","mimeType":"video/mp4","sha256":"510afcd7f1c27b0a4f9abc44e82bae92bd9b3436c73b261de985887a1585ee5a","bytes":4216527},{"id":"video.animated.desktop.golden_bough_rebuild_scene_3","kind":"video","path":"video/animated/desktop/golden_bough_rebuild_scene_3.mp4","mimeType":"video/mp4","sha256":"cb5c7a63f0e068b4d1c0b4047763f46b13b30b48f9808523c8fb67e7f6415b53","bytes":4336441},{"id":"video.animated.desktop.golden_bough_rebuild_scene_5","kind":"video","path":"video/animated/desktop/golden_bough_rebuild_scene_5.mp4","mimeType":"video/mp4","sha256":"f5069cb9aebe21b4bc41545e74b2f4a1c6e5aeb27f9b7f5e08b2c5fc5274cfd4","bytes":5039163},{"id":"video.animated.desktop.golden_bough_rebuild_scene_8","kind":"video","path":"video/animated/desktop/golden_bough_rebuild_scene_8.mp4","mimeType":"video/mp4","sha256":"56176731dc6ccc9892bfc7e7163bb736f5f662226910235a38d28117eaa817bd","bytes":5167077},{"id":"video.animated.desktop.op","kind":"video","path":"video/animated/desktop/op.mp4","mimeType":"video/mp4","sha256":"92774f55e85ae2933f162080916993d95fb6234a0dade047ab4a1471d846c811","bytes":5222191},{"id":"video.animated.desktop.prologue","kind":"video","path":"video/animated/desktop/prologue.mp4","mimeType":"video/mp4","sha256":"18768d90579f3c08b3194ef9d88c32ec77eeade557740a8c76b4596b38da42cb","bytes":4568125},{"id":"video.animated.desktop.ring_conspiracy_ending_bad","kind":"video","path":"video/animated/desktop/ring_conspiracy_ending_bad.mp4","mimeType":"video/mp4","sha256":"bfec2285572943ba48b8802de82715c34e734d3d7d6c8e6884a625f9f4c92778","bytes":6094767},{"id":"video.animated.desktop.ring_conspiracy_ending_normal","kind":"video","path":"video/animated/desktop/ring_conspiracy_ending_normal.mp4","mimeType":"video/mp4","sha256":"566ceca8679dd52192a9799090e9f886daa3bace30e412194a108a27fd3fe853","bytes":6301387},{"id":"video.animated.desktop.ring_conspiracy_ending_true","kind":"video","path":"video/animated/desktop/ring_conspiracy_ending_true.mp4","mimeType":"video/mp4","sha256":"c945fb3562fbec8ba6bfba6ef10a73093c23dd530a551da7e2b1cd98bbe1093f","bytes":6156384},{"id":"video.animated.desktop.ring_conspiracy_scene_11","kind":"video","path":"video/animated/desktop/ring_conspiracy_scene_11.mp4","mimeType":"video/mp4","sha256":"b5740b4216b387d9b6727ec3b03b74c2946c6ad1bbd0d2775693f0b73ae97177","bytes":4316911},{"id":"video.animated.desktop.ring_conspiracy_scene_15","kind":"video","path":"video/animated/desktop/ring_conspiracy_scene_15.mp4","mimeType":"video/mp4","sha256":"9574f17e8508b66848012e1b88e25a933cea64721d2605c806db3b59c11862ef","bytes":4755598},{"id":"video.animated.desktop.ring_conspiracy_scene_3","kind":"video","path":"video/animated/desktop/ring_conspiracy_scene_3.mp4","mimeType":"video/mp4","sha256":"42ec46e059405f1be4ea1b274cd521eb5f1f1c41b520314fca44bfc951b1823d","bytes":5108387},{"id":"video.animated.desktop.ring_conspiracy_scene_5","kind":"video","path":"video/animated/desktop/ring_conspiracy_scene_5.mp4","mimeType":"video/mp4","sha256":"3b819372d1fd9c752159286998407a266f0aafdc95195cab7eb4cd7e182fb86c","bytes":5735950},{"id":"video.animated.desktop.ring_conspiracy_scene_8","kind":"video","path":"video/animated/desktop/ring_conspiracy_scene_8.mp4","mimeType":"video/mp4","sha256":"732fdcda28570fb7d481767b46d4cf751e771dddab1597baeb7cb659fdaedf83","bytes":5699635},{"id":"video.animated.desktop.white_canvas_ending_bad","kind":"video","path":"video/animated/desktop/white_canvas_ending_bad.mp4","mimeType":"video/mp4","sha256":"93cd772af7a5e2b378b4dc0772d84a53feed7ef450c97082b431ab8802b61b80","bytes":6060788},{"id":"video.animated.desktop.white_canvas_ending_normal","kind":"video","path":"video/animated/desktop/white_canvas_ending_normal.mp4","mimeType":"video/mp4","sha256":"4e5f5ebd2cf3799429539538971be9fbc6936e5163271e3779dbd1383076621b","bytes":5326928},{"id":"video.animated.desktop.white_canvas_ending_true","kind":"video","path":"video/animated/desktop/white_canvas_ending_true.mp4","mimeType":"video/mp4","sha256":"a4422751cdf6be2191b39e7ea0d3a85e6edc215e7348d050e4f1ab63c2d5677d","bytes":7228337},{"id":"video.animated.desktop.white_canvas_scene_11","kind":"video","path":"video/animated/desktop/white_canvas_scene_11.mp4","mimeType":"video/mp4","sha256":"a2619096252787ec30101ba5feeaf0dda06d7f318bcdac080ab4ba0aa9568e12","bytes":5294302},{"id":"video.animated.desktop.white_canvas_scene_15","kind":"video","path":"video/animated/desktop/white_canvas_scene_15.mp4","mimeType":"video/mp4","sha256":"5ec29acf9df1f18494609471eddf5de221f2411acc986c6168bb9369494ad5ae","bytes":4505329},{"id":"video.animated.desktop.white_canvas_scene_3","kind":"video","path":"video/animated/desktop/white_canvas_scene_3.mp4","mimeType":"video/mp4","sha256":"50a48863359fff18e8f7fff87dfd808ae025d91179321688bc0353743887f1fd","bytes":5346356},{"id":"video.animated.desktop.white_canvas_scene_5","kind":"video","path":"video/animated/desktop/white_canvas_scene_5.mp4","mimeType":"video/mp4","sha256":"61555b7011baa029652d9304d86b7b712bab75d6f0b26b2860db578587f0a343","bytes":5230805},{"id":"video.animated.desktop.white_canvas_scene_8","kind":"video","path":"video/animated/desktop/white_canvas_scene_8.mp4","mimeType":"video/mp4","sha256":"8786be555709f223064e4e4853e175b1b33c8b9eb2012f0081897f59d36798df","bytes":4854170},{"id":"video.animated.runtime.ed_golden_bough_rebuild","kind":"video","path":"video/animated/runtime/ed_golden_bough_rebuild.mp4","mimeType":"video/mp4","sha256":"346cfd4275cf79b01a8d4fb3d4df2f79c1df433af5222debb5cdbb6369c16128","bytes":4185642},{"id":"video.animated.runtime.ed_ring_conspiracy","kind":"video","path":"video/animated/runtime/ed_ring_conspiracy.mp4","mimeType":"video/mp4","sha256":"3d7c1e7612c1bc376de009d85fae9159e104275678b0982296e47c10f2b89115","bytes":3545978},{"id":"video.animated.runtime.ed_white_canvas","kind":"video","path":"video/animated/runtime/ed_white_canvas.mp4","mimeType":"video/mp4","sha256":"c4aa0f491be3053c4b5c76e1310cf409bbe41ad0ba4d4bd22394a6af7a74e48e","bytes":3071385},{"id":"video.animated.runtime.golden_bough_rebuild_ending_bad","kind":"video","path":"video/animated/runtime/golden_bough_rebuild_ending_bad.mp4","mimeType":"video/mp4","sha256":"2af1ba03d1a26ef0e96260cec4474578bfc692c79d8a125fc4524ae22d3d8688","bytes":3012453},{"id":"video.animated.runtime.golden_bough_rebuild_ending_normal","kind":"video","path":"video/animated/runtime/golden_bough_rebuild_ending_normal.mp4","mimeType":"video/mp4","sha256":"c7b76d353c27b8b61d5b08fffbdeb96f08502f321f9f00975cb3cefc289c54a2","bytes":3238393},{"id":"video.animated.runtime.golden_bough_rebuild_ending_true","kind":"video","path":"video/animated/runtime/golden_bough_rebuild_ending_true.mp4","mimeType":"video/mp4","sha256":"04e46ecdbb3d51e881115671f0fe742e62268a7fced794974f15731fff8eb8f9","bytes":3603061},{"id":"video.animated.runtime.golden_bough_rebuild_scene_11","kind":"video","path":"video/animated/runtime/golden_bough_rebuild_scene_11.mp4","mimeType":"video/mp4","sha256":"e90196bc46e73f0a120aa895c548dc2b107f604ad300eba8c6109c287bb0f67d","bytes":2528370},{"id":"video.animated.runtime.golden_bough_rebuild_scene_15","kind":"video","path":"video/animated/runtime/golden_bough_rebuild_scene_15.mp4","mimeType":"video/mp4","sha256":"e08b3d96a184c441975dbf1bac7566d10e720ea82eb517c090aee948fc601dfa","bytes":2353207},{"id":"video.animated.runtime.golden_bough_rebuild_scene_3","kind":"video","path":"video/animated/runtime/golden_bough_rebuild_scene_3.mp4","mimeType":"video/mp4","sha256":"fc7361fdf237dd21e876149aea4950496f28f918747b0aba62713113543b3a07","bytes":2477070},{"id":"video.animated.runtime.golden_bough_rebuild_scene_5","kind":"video","path":"video/animated/runtime/golden_bough_rebuild_scene_5.mp4","mimeType":"video/mp4","sha256":"d901739424d56709c632bfb61b395d0874c0b279f20578e0485c1ce5697f5b95","bytes":2926949},{"id":"video.animated.runtime.golden_bough_rebuild_scene_8","kind":"video","path":"video/animated/runtime/golden_bough_rebuild_scene_8.mp4","mimeType":"video/mp4","sha256":"dc3b1cce4d43093e240e390a2f3209228ffa73a2041e89ae292e0790d66118ed","bytes":2797722},{"id":"video.animated.runtime.op","kind":"video","path":"video/animated/runtime/op.mp4","mimeType":"video/mp4","sha256":"3b0025fb8d6afce1bc68a740afdab317fd95d41144fcc48c58b85b8ea2cdab99","bytes":2777954},{"id":"video.animated.runtime.prologue","kind":"video","path":"video/animated/runtime/prologue.mp4","mimeType":"video/mp4","sha256":"fe51ae3b788556551e5960d1e82bacb84a7484ff3edff273872ac5ed8eec8ad0","bytes":2583756},{"id":"video.animated.runtime.ring_conspiracy_ending_bad","kind":"video","path":"video/animated/runtime/ring_conspiracy_ending_bad.mp4","mimeType":"video/mp4","sha256":"0cf0ac007c3e1ebd37862e02146d137117838c9530fead20611ec4b179a2d079","bytes":3519338},{"id":"video.animated.runtime.ring_conspiracy_ending_normal","kind":"video","path":"video/animated/runtime/ring_conspiracy_ending_normal.mp4","mimeType":"video/mp4","sha256":"78b95f376a8fe4851309af86231c18fac0d870baa6294fbc14126face05095b3","bytes":3401115},{"id":"video.animated.runtime.ring_conspiracy_ending_true","kind":"video","path":"video/animated/runtime/ring_conspiracy_ending_true.mp4","mimeType":"video/mp4","sha256":"986917f0fe50af48c6f7a150561e48c226f992e2429c789fc6ce4ea6e1e3f346","bytes":3567238},{"id":"video.animated.runtime.ring_conspiracy_scene_11","kind":"video","path":"video/animated/runtime/ring_conspiracy_scene_11.mp4","mimeType":"video/mp4","sha256":"7a4911e99e2bea1509d9cc44836a2fd1d855d0b3f0ff14713265efd5bcfcec9f","bytes":2400055},{"id":"video.animated.runtime.ring_conspiracy_scene_15","kind":"video","path":"video/animated/runtime/ring_conspiracy_scene_15.mp4","mimeType":"video/mp4","sha256":"115b2505bc82d8e98b236556e5b709b468346c4c197fdcbb51dd1887db9f6f69","bytes":2591243},{"id":"video.animated.runtime.ring_conspiracy_scene_3","kind":"video","path":"video/animated/runtime/ring_conspiracy_scene_3.mp4","mimeType":"video/mp4","sha256":"a7481f6b1a6811072cc09b1bbd5ac639f6faa11e9041531d50b220ed1442a6e8","bytes":2674192},{"id":"video.animated.runtime.ring_conspiracy_scene_5","kind":"video","path":"video/animated/runtime/ring_conspiracy_scene_5.mp4","mimeType":"video/mp4","sha256":"65db5a7e97fab0ccfcc26e4ae078b86f2016ad16eef0ade738f005a49969f4aa","bytes":3100461},{"id":"video.animated.runtime.ring_conspiracy_scene_8","kind":"video","path":"video/animated/runtime/ring_conspiracy_scene_8.mp4","mimeType":"video/mp4","sha256":"6fc2c2c0155ff68915d0ffc2a97f68d5a66b84857745826967ff64c3fbe384ac","bytes":3009439},{"id":"video.animated.runtime.white_canvas_ending_bad","kind":"video","path":"video/animated/runtime/white_canvas_ending_bad.mp4","mimeType":"video/mp4","sha256":"b3b101dde3f85be5b68657b66ecfc1b02d0d6c42cf70ba30e516ef1ff010473c","bytes":3336544},{"id":"video.animated.runtime.white_canvas_ending_normal","kind":"video","path":"video/animated/runtime/white_canvas_ending_normal.mp4","mimeType":"video/mp4","sha256":"c62b1344da7cb5a4b3fc2b3c144d815970eab741f818771bbc750f4248852f08","bytes":2756449},{"id":"video.animated.runtime.white_canvas_ending_true","kind":"video","path":"video/animated/runtime/white_canvas_ending_true.mp4","mimeType":"video/mp4","sha256":"454767d2595ad285ada75c920eeb5974626471930549e840669ffd2d856e9d37","bytes":3932490},{"id":"video.animated.runtime.white_canvas_scene_11","kind":"video","path":"video/animated/runtime/white_canvas_scene_11.mp4","mimeType":"video/mp4","sha256":"a25ef4770934afd8cc6fc6bab08167a4aa1594fdb301edd1914411438eb01b93","bytes":2890842},{"id":"video.animated.runtime.white_canvas_scene_15","kind":"video","path":"video/animated/runtime/white_canvas_scene_15.mp4","mimeType":"video/mp4","sha256":"f5226beecc7be5275123f7cc6a91a1b58f74e831d020a788ac52a1015c9c6c2e","bytes":2537450},{"id":"video.animated.runtime.white_canvas_scene_3","kind":"video","path":"video/animated/runtime/white_canvas_scene_3.mp4","mimeType":"video/mp4","sha256":"e7d8746ec4825f0f496c2106e5c1d7862b8a00246e3109574946ccbef5be5ac7","bytes":3030226},{"id":"video.animated.runtime.white_canvas_scene_5","kind":"video","path":"video/animated/runtime/white_canvas_scene_5.mp4","mimeType":"video/mp4","sha256":"8d154e505624dde023f61510cd6cc25337ef23f43190728e72034d85806a3569","bytes":2971914},{"id":"video.animated.runtime.white_canvas_scene_8","kind":"video","path":"video/animated/runtime/white_canvas_scene_8.mp4","mimeType":"video/mp4","sha256":"ba894e5efb361a9bf52c1d5b45ec2b04ed552b4024f3e8c1fd3cf54830c8f899","bytes":2685560},{"id":"voice.result.conspiracy_005_let_her_answer","kind":"audio","path":"audio/voice/result/conspiracy_005_let_her_answer.mp3","mimeType":"audio/mpeg","sha256":"548667e2e8d97d86d68959d8c7ee94e2d81570f13ba597501c7ffeb569832526","bytes":218292},{"id":"voice.result.conspiracy_005_refuse_duo","kind":"audio","path":"audio/voice/result/conspiracy_005_refuse_duo.mp3","mimeType":"audio/mpeg","sha256":"f03cd8e5cf332108df089065f72c50b9184de7a5724dac60ee57595047802769","bytes":225780},{"id":"voice.result.conspiracy_006_block_view","kind":"audio","path":"audio/voice/result/conspiracy_006_block_view.mp3","mimeType":"audio/mpeg","sha256":"8b1422137db20ab49eabed7bd28bc2849dfe37ea073dd5ee6f212ff0e20a70ac","bytes":290292},{"id":"voice.result.conspiracy_006_stand_with_her","kind":"audio","path":"audio/voice/result/conspiracy_006_stand_with_her.mp3","mimeType":"audio/mpeg","sha256":"20e2c48a0ce12a926636936548d42fbf11727ef7a000a1595eeff797a6c09f8b","bytes":300660},{"id":"voice.result.conspiracy_007_break_frame","kind":"audio","path":"audio/voice/result/conspiracy_007_break_frame.mp3","mimeType":"audio/mpeg","sha256":"871e78d300f8278a232ba010d7b427867a64467fb8e27d365e7d4e62edfd926e","bytes":233844},{"id":"voice.result.conspiracy_007_seize_frame","kind":"audio","path":"audio/voice/result/conspiracy_007_seize_frame.mp3","mimeType":"audio/mpeg","sha256":"d08785dfa3e8c3517977a6d6bf9c1512e010a58cf5b35eecc2eb821cc81dc33e","bytes":271284},{"id":"voice.result.conspiracy_008_hand_pen_to_her","kind":"audio","path":"audio/voice/result/conspiracy_008_hand_pen_to_her.mp3","mimeType":"audio/mpeg","sha256":"d8e813e7ebdbeb0f6110e70a2bb7a5a52bce8da57e5f8d09f2ff372d0c30d418","bytes":242484},{"id":"voice.result.conspiracy_008_refuse_testimony","kind":"audio","path":"audio/voice/result/conspiracy_008_refuse_testimony.mp3","mimeType":"audio/mpeg","sha256":"d5ca8cee4ee30db158d885deb2604fa78bb33c832d7743a030fbc2133d63efb7","bytes":229812},{"id":"voice.result.conspiracy_009_choose_present","kind":"audio","path":"audio/voice/result/conspiracy_009_choose_present.mp3","mimeType":"audio/mpeg","sha256":"d255a37065cb040862cbb36fd595af444fd8506e6c351a9b0fddce3e3843caa5","bytes":287988},{"id":"voice.result.conspiracy_009_refuse_choice","kind":"audio","path":"audio/voice/result/conspiracy_009_refuse_choice.mp3","mimeType":"audio/mpeg","sha256":"d84f22e0be4599542ae4608dbd3d6d570a23c37fbc05ec358baf82bd5866147e","bytes":306420},{"id":"voice.result.conspiracy_010_keep_badge_unworn","kind":"audio","path":"audio/voice/result/conspiracy_010_keep_badge_unworn.mp3","mimeType":"audio/mpeg","sha256":"2ba5efee14ce0ffd8bddacac3a707d23e20f2bd2fcab2103cd3890cc11cfc33c","bytes":263796},{"id":"voice.result.conspiracy_010_throw_badge","kind":"audio","path":"audio/voice/result/conspiracy_010_throw_badge.mp3","mimeType":"audio/mpeg","sha256":"6a78bf8c769c7296815b0eb02fb01769e0d15aa7754ed0ea72096041c683153b","bytes":260916},{"id":"voice.result.conspiracy_011_burn_film","kind":"audio","path":"audio/voice/result/conspiracy_011_burn_film.mp3","mimeType":"audio/mpeg","sha256":"785b0204dfb11fe1882f188366acaf80f6cdd88836e81bb162d4c19c09b750b6","bytes":243636},{"id":"voice.result.conspiracy_011_rewrite_ending","kind":"audio","path":"audio/voice/result/conspiracy_011_rewrite_ending.mp3","mimeType":"audio/mpeg","sha256":"8b9f5b34fc073979f154a9a87293de86ebaaeba56f89e568eded54a61d3ea343","bytes":238452},{"id":"voice.result.conspiracy_012_end_tonight","kind":"audio","path":"audio/voice/result/conspiracy_012_end_tonight.mp3","mimeType":"audio/mpeg","sha256":"ce0871f2f82b8d758e989219d1951c4cd0edf1036e8fe7bca19d3ea3abcbcd86","bytes":277620},{"id":"voice.result.conspiracy_012_keep_blade","kind":"audio","path":"audio/voice/result/conspiracy_012_keep_blade.mp3","mimeType":"audio/mpeg","sha256":"57c8336c5692d6725fa5fe110f82307674ff12f413e167b5ac3281bb0c22c554","bytes":273588},{"id":"voice.result.conspiracy_013_hold_one_second","kind":"audio","path":"audio/voice/result/conspiracy_013_hold_one_second.mp3","mimeType":"audio/mpeg","sha256":"97ad5295330dd4e4c20f60e667c94efa825b06a06ecb6e577ac621080a5a16d9","bytes":254004},{"id":"voice.result.conspiracy_013_return_gently","kind":"audio","path":"audio/voice/result/conspiracy_013_return_gently.mp3","mimeType":"audio/mpeg","sha256":"b0c4e5d6af73a4728f850b33cb5cb9db51e06598642b52410b2f4e2faf90d076","bytes":269556},{"id":"voice.result.conspiracy_014_erase_from_catalog","kind":"audio","path":"audio/voice/result/conspiracy_014_erase_from_catalog.mp3","mimeType":"audio/mpeg","sha256":"f4a479901d65888eea4634ae1ea8a156024e84b705595187a28a32e4d8a008b4","bytes":283956},{"id":"voice.result.conspiracy_014_keep_one_line","kind":"audio","path":"audio/voice/result/conspiracy_014_keep_one_line.mp3","mimeType":"audio/mpeg","sha256":"4734a1cc33e33ff06799ee86d66763782127c8ea2acaff03a12b59e86e6b0a60","bytes":289716},{"id":"voice.result.conspiracy_accept","kind":"audio","path":"audio/voice/result/conspiracy_accept.mp3","mimeType":"audio/mpeg","sha256":"4b76303e8e34898103631f630d182d820b1c5b4f08cc19105df3778e8adfcc8f","bytes":242484},{"id":"voice.result.conspiracy_break_pursuit_frame","kind":"audio","path":"audio/voice/result/conspiracy_break_pursuit_frame.mp3","mimeType":"audio/mpeg","sha256":"3597acb7210a208c020fb28c0fb1c7c63e595fac7b419da1355556960e70570a","bytes":237876},{"id":"voice.result.conspiracy_escape_to_backstreets","kind":"audio","path":"audio/voice/result/conspiracy_escape_to_backstreets.mp3","mimeType":"audio/mpeg","sha256":"0fd19a0ac7085d583a8178d38c071804d60a9be3c1363b26f62e31ef34a5b15e","bytes":263796},{"id":"voice.result.conspiracy_feed_false_signature","kind":"audio","path":"audio/voice/result/conspiracy_feed_false_signature.mp3","mimeType":"audio/mpeg","sha256":"a10423e4201744e3f64d594cb8948c4f2fca578cb88fcaa2f865839235035525","bytes":240756},{"id":"voice.result.conspiracy_pressure","kind":"audio","path":"audio/voice/result/conspiracy_pressure.mp3","mimeType":"audio/mpeg","sha256":"0e165916d831f3aab506621939c657e90f4fa282a6fb212061143a82e6ccfebe","bytes":210804},{"id":"voice.result.enter_conspiracy","kind":"audio","path":"audio/voice/result/enter_conspiracy.mp3","mimeType":"audio/mpeg","sha256":"f8964fe276712a75e96af70eceb75f46845ab038422a529a4ca67d6ccc168e56","bytes":204468},{"id":"voice.result.enter_rebuild","kind":"audio","path":"audio/voice/result/enter_rebuild.mp3","mimeType":"audio/mpeg","sha256":"fa7f6c482fb449c3f7c61f2d556182e30a49d449d14fb8329213f97ba8dae9db","bytes":202740},{"id":"voice.result.enter_white_canvas","kind":"audio","path":"audio/voice/result/enter_white_canvas.mp3","mimeType":"audio/mpeg","sha256":"5f238c579d61475995d082999f73a16d0c182f8db58a16ab8cd9d2a802277d97","bytes":164724},{"id":"voice.result.golden_bough_rebuild.bad_ending","kind":"audio","path":"audio/voice/result/golden_bough_rebuild/bad_ending.mp3","mimeType":"audio/mpeg","sha256":"401c2bf97a19b9d9cc0a68bd7c9f9d1e85ce99d5a378d8b5f21449266fdc1417","bytes":115764},{"id":"voice.result.golden_bough_rebuild.normal_ending","kind":"audio","path":"audio/voice/result/golden_bough_rebuild/normal_ending.mp3","mimeType":"audio/mpeg","sha256":"d1161b5a7e0cbff976cc5e32b470d3439b738c3acf20fd59eeff3086f84bbc2d","bytes":112884},{"id":"voice.result.golden_bough_rebuild.true_ending","kind":"audio","path":"audio/voice/result/golden_bough_rebuild/true_ending.mp3","mimeType":"audio/mpeg","sha256":"148ae12e5af697470bf05597480564d896ee6084c08442ee66e368a783d965f6","bytes":105972},{"id":"voice.result.golden_bough_route_complete","kind":"audio","path":"audio/voice/result/golden_bough_route_complete.mp3","mimeType":"audio/mpeg","sha256":"e457029e4b26e12174ecf9c30212c573f3d7693c0d73f686506bde427ba00de7","bytes":331188},{"id":"voice.result.golden_bough_route_final","kind":"audio","path":"audio/voice/result/golden_bough_route_final.mp3","mimeType":"audio/mpeg","sha256":"ff10f8673bd0fe23c51936ce4bf55414ab4544224ca0f2d244709ae15cda54b0","bytes":143988},{"id":"voice.result.rebuild_006_keep_silent_anchor","kind":"audio","path":"audio/voice/result/rebuild_006_keep_silent_anchor.mp3","mimeType":"audio/mpeg","sha256":"ea553da520b4f2af20f6ef09f831f0115fb3c299bca2acb125cbbba3825e6a65","bytes":269556},{"id":"voice.result.rebuild_006_read_aloud","kind":"audio","path":"audio/voice/result/rebuild_006_read_aloud.mp3","mimeType":"audio/mpeg","sha256":"1ba8b1e99c835f51e83566218b0831472cae6f8b9bed544379008edfb98ed56e","bytes":270708},{"id":"voice.result.rebuild_007_match_her_pulse","kind":"audio","path":"audio/voice/result/rebuild_007_match_her_pulse.mp3","mimeType":"audio/mpeg","sha256":"e6454ff8fee875b9f2634d84ab7ebce1be09e030812ccdd916aa291b8a9e69d6","bytes":295476},{"id":"voice.result.rebuild_007_stay_own_rhythm","kind":"audio","path":"audio/voice/result/rebuild_007_stay_own_rhythm.mp3","mimeType":"audio/mpeg","sha256":"03ff1752e22f90ffd73af641d1d182688d3a349c9778079c5fb9217eee4a86d3","bytes":305268},{"id":"voice.result.rebuild_008_protect_current_self","kind":"audio","path":"audio/voice/result/rebuild_008_protect_current_self.mp3","mimeType":"audio/mpeg","sha256":"87637a730ba4bcfaf94708a85f427bd8225fb3f123b2674df47fc6b14de306ac","bytes":274164},{"id":"voice.result.rebuild_008_trade_old_memory","kind":"audio","path":"audio/voice/result/rebuild_008_trade_old_memory.mp3","mimeType":"audio/mpeg","sha256":"d94505f65341fd2877cdbf6ddcd0067ed716314330df879113e4d306ee5b76fd","bytes":271860},{"id":"voice.result.rebuild_009_hand_question_back","kind":"audio","path":"audio/voice/result/rebuild_009_hand_question_back.mp3","mimeType":"audio/mpeg","sha256":"8b29cf1086c02e716ed0cff07536f363d83101916d10fa4ca5e627b649b9527b","bytes":270132},{"id":"voice.result.rebuild_009_refuse_perfect_copy","kind":"audio","path":"audio/voice/result/rebuild_009_refuse_perfect_copy.mp3","mimeType":"audio/mpeg","sha256":"a70c9a8ad345295ae5d861bbe5dfba1f6467cc8fa60194e0bac35848edabbd97","bytes":267252},{"id":"voice.result.rebuild_010_ask_her_choice","kind":"audio","path":"audio/voice/result/rebuild_010_ask_her_choice.mp3","mimeType":"audio/mpeg","sha256":"5cecd7509b4d42b4e7c3e7ba0309b53b302c9ee88bf2255bc793be78a802a182","bytes":226932},{"id":"voice.result.rebuild_010_veto_sealing","kind":"audio","path":"audio/voice/result/rebuild_010_veto_sealing.mp3","mimeType":"audio/mpeg","sha256":"5f46716f6a5efc4287c341a0d2b8f02c311a8c1109bf19a519f3e391069a6eb2","bytes":232692},{"id":"voice.result.rebuild_011_ask_next_revision","kind":"audio","path":"audio/voice/result/rebuild_011_ask_next_revision.mp3","mimeType":"audio/mpeg","sha256":"eae27a33c8bc3fe8decead1165d83cb94521f45594f102bf4e5574da3b6f09ec","bytes":292020},{"id":"voice.result.rebuild_011_sit_beside","kind":"audio","path":"audio/voice/result/rebuild_011_sit_beside.mp3","mimeType":"audio/mpeg","sha256":"ee92eac2d9efee09aa05e29d4ff482d9631ccce9526f11a92cb55f4e6ebe155e","bytes":290868},{"id":"voice.result.rebuild_012_break_contract","kind":"audio","path":"audio/voice/result/rebuild_012_break_contract.mp3","mimeType":"audio/mpeg","sha256":"2cb0663dd3c9d2d7b5413424443f2a9bd48002e251075355d36762b9371e3409","bytes":251700},{"id":"voice.result.rebuild_012_negotiate_terms","kind":"audio","path":"audio/voice/result/rebuild_012_negotiate_terms.mp3","mimeType":"audio/mpeg","sha256":"ab0f098d13994e6c429414e506450988dbd84476294cbd3c3749cd7b64fd4ed3","bytes":268980},{"id":"voice.result.rebuild_013_offer_witness","kind":"audio","path":"audio/voice/result/rebuild_013_offer_witness.mp3","mimeType":"audio/mpeg","sha256":"8d44e5907f85e91235c1eed2e9ee6ceacc12dd90599663ebe4bdec64f9fb6dfd","bytes":254004},{"id":"voice.result.rebuild_013_promise_name","kind":"audio","path":"audio/voice/result/rebuild_013_promise_name.mp3","mimeType":"audio/mpeg","sha256":"ad4b896e8b63255b97863d25448f39d4578377b9948343a3b031f492095e3fe3","bytes":255156},{"id":"voice.result.rebuild_014_ask_when_to_light","kind":"audio","path":"audio/voice/result/rebuild_014_ask_when_to_light.mp3","mimeType":"audio/mpeg","sha256":"1b73267ccef887754b17298559c75c4ba9df218ed3b0a3adeac6da618b622c6a","bytes":286260},{"id":"voice.result.rebuild_014_keep_unlit","kind":"audio","path":"audio/voice/result/rebuild_014_keep_unlit.mp3","mimeType":"audio/mpeg","sha256":"22cea221f68bea9a01b9d7c8a7ea493c244207b3124736403c748cad98190ac2","bytes":292596},{"id":"voice.result.rebuild_accept_missing_pieces","kind":"audio","path":"audio/voice/result/rebuild_accept_missing_pieces.mp3","mimeType":"audio/mpeg","sha256":"e03509c235adbf1a35a69fa967081effe4a8cb7b07a4106de677cec1454a3028","bytes":243636},{"id":"voice.result.rebuild_anchor","kind":"audio","path":"audio/voice/result/rebuild_anchor.mp3","mimeType":"audio/mpeg","sha256":"77023f3ec1210d3f0394848656ed18629a5922d124437b97bc97733e55e6c2f7","bytes":162420},{"id":"voice.result.rebuild_cut_false_completion","kind":"audio","path":"audio/voice/result/rebuild_cut_false_completion.mp3","mimeType":"audio/mpeg","sha256":"455fed571cb5502968a46e4404e566db5821199fb9b3140c33c1066d155144a1","bytes":250548},{"id":"voice.result.rebuild_guard_fascia_pulse","kind":"audio","path":"audio/voice/result/rebuild_guard_fascia_pulse.mp3","mimeType":"audio/mpeg","sha256":"5d3946116f8d9d848ea408b9a1f7ef1323642158fb0f94e9a5d10c56312627e7","bytes":265524},{"id":"voice.result.rebuild_push_into_raid","kind":"audio","path":"audio/voice/result/rebuild_push_into_raid.mp3","mimeType":"audio/mpeg","sha256":"10bb250cf7e3efa4c99fde65bf46d3ea7d6c6b9d037b1c2f6652cbbb94acd8ce","bytes":274164},{"id":"voice.result.rebuild_question_fascia","kind":"audio","path":"audio/voice/result/rebuild_question_fascia.mp3","mimeType":"audio/mpeg","sha256":"f5e64cd027912ac0ca2b77f53770bd645c962c850f453fe35d0c5f7d6aaa9e5c","bytes":156660},{"id":"voice.result.rebuild_use_rooftop_signal","kind":"audio","path":"audio/voice/result/rebuild_use_rooftop_signal.mp3","mimeType":"audio/mpeg","sha256":"2d30e89069b6559c1809749d8547b5e773d5af9fc86771b004fa82ff96ae8aea","bytes":237300},{"id":"voice.result.return_opening_from_rebuild","kind":"audio","path":"audio/voice/result/return_opening_from_rebuild.mp3","mimeType":"audio/mpeg","sha256":"93831e44f51a1755332b620bab795b5a6501bd2310dfe860e65d1de97f796dde","bytes":191220},{"id":"voice.result.return_opening_from_ring","kind":"audio","path":"audio/voice/result/return_opening_from_ring.mp3","mimeType":"audio/mpeg","sha256":"07b6250f478559c01e05511edda03d37c45df65b9e1848f22cebc16447bdc421","bytes":195252},{"id":"voice.result.return_opening_from_white","kind":"audio","path":"audio/voice/result/return_opening_from_white.mp3","mimeType":"audio/mpeg","sha256":"f909503358a31908b759dbb172165b49e77d3800c6b5e9beb5355bbecd675c37","bytes":202164},{"id":"voice.result.ring_conspiracy_route_complete","kind":"audio","path":"audio/voice/result/ring_conspiracy_route_complete.mp3","mimeType":"audio/mpeg","sha256":"a99d59529f481835f600f61c3114fe5cebde2048f8e411be418998a0a3787f75","bytes":283956},{"id":"voice.result.ring_conspiracy_route_final","kind":"audio","path":"audio/voice/result/ring_conspiracy_route_final.mp3","mimeType":"audio/mpeg","sha256":"c05b719a61ea2e4fd6ce58109fc2fdb2f48f6bb14415dc64df970630a3162ac0","bytes":156660},{"id":"voice.result.ring_conspiracy.bad_ending","kind":"audio","path":"audio/voice/result/ring_conspiracy/bad_ending.mp3","mimeType":"audio/mpeg","sha256":"07d729c94f10eff159215f464fcf8f4f7fa136caeab4696bc08649018756fb90","bytes":104820},{"id":"voice.result.ring_conspiracy.normal_ending","kind":"audio","path":"audio/voice/result/ring_conspiracy/normal_ending.mp3","mimeType":"audio/mpeg","sha256":"38d39f3de6f911a09b947cd966e164cd61cbc8a40835bf4b9e94292efdd721e9","bytes":127284},{"id":"voice.result.ring_conspiracy.true_ending","kind":"audio","path":"audio/voice/result/ring_conspiracy/true_ending.mp3","mimeType":"audio/mpeg","sha256":"de2fab869c900b3cadd4c282f7639c70b8e4ca137d77ec8f7edbd815e58f7257","bytes":112884},{"id":"voice.result.white_006_name_silence","kind":"audio","path":"audio/voice/result/white_006_name_silence.mp3","mimeType":"audio/mpeg","sha256":"60f67a987b75e4212e1dc7f7c3d26cabaf7d85be1701495c9ac196717031ec70","bytes":282804},{"id":"voice.result.white_006_refuse_naming","kind":"audio","path":"audio/voice/result/white_006_refuse_naming.mp3","mimeType":"audio/mpeg","sha256":"3b1c115c0521def49f44bd8749fcc28bb23dd6a991c51395f5eb56a01ff95510","bytes":286836},{"id":"voice.result.white_007_ask_fascia_term","kind":"audio","path":"audio/voice/result/white_007_ask_fascia_term.mp3","mimeType":"audio/mpeg","sha256":"a0820e12083e03fd2655fe43f94addc8188a51407e91916405a7596ebb69e55e","bytes":289716},{"id":"voice.result.white_007_keep_mirror_open","kind":"audio","path":"audio/voice/result/white_007_keep_mirror_open.mp3","mimeType":"audio/mpeg","sha256":"60711ca2e8a0be22f5c442c2abb3bdb0587f492199a6ce827fc3d8965926f79e","bytes":270132},{"id":"voice.result.white_008_hold_fascia","kind":"audio","path":"audio/voice/result/white_008_hold_fascia.mp3","mimeType":"audio/mpeg","sha256":"36e24cb6f169556be6c28e403077d4e8fbde1e3dc93cfb98eb2087cce985aab9","bytes":226356},{"id":"voice.result.white_008_stay_witness_only","kind":"audio","path":"audio/voice/result/white_008_stay_witness_only.mp3","mimeType":"audio/mpeg","sha256":"905d28a8268ee2379eac22f120361379b9951fb5ff172ba6d913558bb2f0278b","bytes":240756},{"id":"voice.result.white_009_keep_half_step","kind":"audio","path":"audio/voice/result/white_009_keep_half_step.mp3","mimeType":"audio/mpeg","sha256":"b7bba180567c5f6a4417e364d5ab1379a2325e359bb495b1dcb4d2fe4c06e1ef","bytes":252852},{"id":"voice.result.white_009_share_umbrella_edge","kind":"audio","path":"audio/voice/result/white_009_share_umbrella_edge.mp3","mimeType":"audio/mpeg","sha256":"23c3d9fe23330249c668a11e7d6bb19ca87ef9def6e0d53dcad0e618d01f03b4","bytes":218868},{"id":"voice.result.white_010_acknowledge_leave","kind":"audio","path":"audio/voice/result/white_010_acknowledge_leave.mp3","mimeType":"audio/mpeg","sha256":"b862835afff73e64f682fd0ce83bf20689fe6e471bfce2c6551e51a6c461d537","bytes":242484},{"id":"voice.result.white_010_offer_return_ticket","kind":"audio","path":"audio/voice/result/white_010_offer_return_ticket.mp3","mimeType":"audio/mpeg","sha256":"dd8f7ed0594e7f26d7dc6cf31b6e17a37528ad86dd8ebf032b5d4c6f93f846e8","bytes":245364},{"id":"voice.result.white_011_curtain_call","kind":"audio","path":"audio/voice/result/white_011_curtain_call.mp3","mimeType":"audio/mpeg","sha256":"c9fdc11ebf7eed86a13aa197101432236b2f907f8b5f7ecdfaefcff31c4fec9d","bytes":259764},{"id":"voice.result.white_011_walk_beside","kind":"audio","path":"audio/voice/result/white_011_walk_beside.mp3","mimeType":"audio/mpeg","sha256":"8f82753798f57a08b67ef3de620e76950ee7ca7d7186ac899243edc1f851d2dc","bytes":265524},{"id":"voice.result.white_012_let_her_decide","kind":"audio","path":"audio/voice/result/white_012_let_her_decide.mp3","mimeType":"audio/mpeg","sha256":"81e36190ab884dfed8f11e605ec441b8edc88bd6c192a57f364a88f18a24781f","bytes":244788},{"id":"voice.result.white_012_refuse_exhibit","kind":"audio","path":"audio/voice/result/white_012_refuse_exhibit.mp3","mimeType":"audio/mpeg","sha256":"0d7c983a7a112e463541d935a321e47ef95e7aa5639c4d3aeac6ef7dc7134c2b","bytes":233268},{"id":"voice.result.white_013_point_to_mirror","kind":"audio","path":"audio/voice/result/white_013_point_to_mirror.mp3","mimeType":"audio/mpeg","sha256":"31aa7569564b6f1e2e0aded51296ba9b85e8fa6c914ffd633d9f59cdd15cd4ad","bytes":281652},{"id":"voice.result.white_013_refuse_to_choose","kind":"audio","path":"audio/voice/result/white_013_refuse_to_choose.mp3","mimeType":"audio/mpeg","sha256":"7b3f72b69d3a1a1254a2e1c1d840040fbe3bcc319183eda77565155a97934248","bytes":283956},{"id":"voice.result.white_014_keep_base_color","kind":"audio","path":"audio/voice/result/white_014_keep_base_color.mp3","mimeType":"audio/mpeg","sha256":"1cf0cd1f80908e5971fd27c9b52ddcbe76409e8ae583b5283a719cdbe67d7d3f","bytes":273588},{"id":"voice.result.white_014_offer_restart","kind":"audio","path":"audio/voice/result/white_014_offer_restart.mp3","mimeType":"audio/mpeg","sha256":"7c761d521905ef96a1fe2f299ccb1521f8f3654e6888a060218734de91028944","bytes":296052},{"id":"voice.result.white_canvas_route_complete","kind":"audio","path":"audio/voice/result/white_canvas_route_complete.mp3","mimeType":"audio/mpeg","sha256":"acd2f7fbf6091e563293abfcb367af4a0a263be201f0929dba79b382523514ec","bytes":291444},{"id":"voice.result.white_canvas_route_final","kind":"audio","path":"audio/voice/result/white_canvas_route_final.mp3","mimeType":"audio/mpeg","sha256":"337e21c026117013a657c1a6e014e9f212a5be661c6adce3ffb4eb87f83a1227","bytes":156660},{"id":"voice.result.white_canvas.bad_ending","kind":"audio","path":"audio/voice/result/white_canvas/bad_ending.mp3","mimeType":"audio/mpeg","sha256":"29e1de7d0ccf9bcc7b6748e099c65338e931d083381660263ea4b987bb062866","bytes":111732},{"id":"voice.result.white_canvas.normal_ending","kind":"audio","path":"audio/voice/result/white_canvas/normal_ending.mp3","mimeType":"audio/mpeg","sha256":"c54d975a7b6e0f7b689a87ecdfbbe9021980cc7fd350b3abe1cc88ea7bf661c7","bytes":104820},{"id":"voice.result.white_canvas.true_ending","kind":"audio","path":"audio/voice/result/white_canvas/true_ending.mp3","mimeType":"audio/mpeg","sha256":"743a641dbf799023987750b0743e032d99369f988bd08194115474b6b3cfb110","bytes":104244},{"id":"voice.result.white_follow_to_lab","kind":"audio","path":"audio/voice/result/white_follow_to_lab.mp3","mimeType":"audio/mpeg","sha256":"8c58cf1aa1f3bc661de6f87077e5a04faf045253d75978a683a31bdbb59e7d9e","bytes":271284},{"id":"voice.result.white_interrupt_lab_terms","kind":"audio","path":"audio/voice/result/white_interrupt_lab_terms.mp3","mimeType":"audio/mpeg","sha256":"2bfc8261224c3685ca59d5b9f766c972402109fb3defb7ee87cb33033d3d6c2f","bytes":247668},{"id":"voice.result.white_keep_empty_seat","kind":"audio","path":"audio/voice/result/white_keep_empty_seat.mp3","mimeType":"audio/mpeg","sha256":"8262c3e938479238aceddb6c75ee1a68b4cb2d1d2e6435dcfbf735d80a3aca45","bytes":267828},{"id":"voice.result.white_share_rain_window","kind":"audio","path":"audio/voice/result/white_share_rain_window.mp3","mimeType":"audio/mpeg","sha256":"326bafdfac66b086162069e09f1dffa9835dab37096e7f52bf0e080e9a7c18de","bytes":256884},{"id":"voice.result.white_sign_witness_protocol","kind":"audio","path":"audio/voice/result/white_sign_witness_protocol.mp3","mimeType":"audio/mpeg","sha256":"00ab30a358041b686c878fef65bcf30d5eadba999ffa66e4d85b89260a3cfecb","bytes":233268},{"id":"voice.result.white_tease_back","kind":"audio","path":"audio/voice/result/white_tease_back.mp3","mimeType":"audio/mpeg","sha256":"51ead297b822c76c8670d84c74cde7ede1fbfa8d8ed9bfb52970de910d428faf","bytes":210804},{"id":"voice.result.white_touch_boundary","kind":"audio","path":"audio/voice/result/white_touch_boundary.mp3","mimeType":"audio/mpeg","sha256":"7b994d5fbc048ce1697bcf4d4f7245957b8ec8adce10897d9b8e314b83bf08d6","bytes":218868},{"id":"voice.scene.golden_bough_001","kind":"audio","path":"audio/voice/scene/golden_bough_001.mp3","mimeType":"audio/mpeg","sha256":"4d225ee5c362970412e23aa4578ab08729c0a884916a1161c62be91254dba4ec","bytes":139380},{"id":"voice.scene.golden_bough_002","kind":"audio","path":"audio/voice/scene/golden_bough_002.mp3","mimeType":"audio/mpeg","sha256":"07fd0776ae465d32f870d0ab6b13353199e11984b528d26602f7bfa5e6986b40","bytes":107124},{"id":"voice.scene.golden_bough_003","kind":"audio","path":"audio/voice/scene/golden_bough_003.mp3","mimeType":"audio/mpeg","sha256":"3cdd14382faf1dce80cf0fca944feafe415c9bcdb2cbf4a8d9c81db1a52ff67a","bytes":198132},{"id":"voice.scene.golden_bough_004","kind":"audio","path":"audio/voice/scene/golden_bough_004.mp3","mimeType":"audio/mpeg","sha256":"ce1f05be6843684bcf809c89b8789fe3806ae1a8ed70bef05502c328497ebc0c","bytes":197556},{"id":"voice.scene.golden_bough_005","kind":"audio","path":"audio/voice/scene/golden_bough_005.mp3","mimeType":"audio/mpeg","sha256":"d65ae80a9f99d79de45b1c6de9458680c4189bdba3abedc175a4fef250adde9d","bytes":173364},{"id":"voice.scene.golden_bough_006","kind":"audio","path":"audio/voice/scene/golden_bough_006.mp3","mimeType":"audio/mpeg","sha256":"6f250d84ff213da11a83ddeac743d1b4c820e703dd2572b60dc2b1962a500e1d","bytes":212532},{"id":"voice.scene.golden_bough_007","kind":"audio","path":"audio/voice/scene/golden_bough_007.mp3","mimeType":"audio/mpeg","sha256":"d9e4264cf286a2be33cc37d6e3668827c835b96500919c377b52d6d2aad1a07f","bytes":221748},{"id":"voice.scene.golden_bough_008","kind":"audio","path":"audio/voice/scene/golden_bough_008.mp3","mimeType":"audio/mpeg","sha256":"8718fc7b7301174eb00808a61f8078bed073756fec5d89fdbd3f8750ff4a8333","bytes":210228},{"id":"voice.scene.golden_bough_009","kind":"audio","path":"audio/voice/scene/golden_bough_009.mp3","mimeType":"audio/mpeg","sha256":"160bc0f6bb3041118aa01646f34f9071ca35f69843b7d0cb7d6ef181832722a3","bytes":214836},{"id":"voice.scene.golden_bough_010","kind":"audio","path":"audio/voice/scene/golden_bough_010.mp3","mimeType":"audio/mpeg","sha256":"6dc4896687ce4abe0bf1f9c0b815743f862faf64619b9323515b9296291efc89","bytes":206772},{"id":"voice.scene.golden_bough_011","kind":"audio","path":"audio/voice/scene/golden_bough_011.mp3","mimeType":"audio/mpeg","sha256":"775db235acbe1c59ac8e435805367931d7138bb73a16ae2c6dbabe175ca26720","bytes":170484},{"id":"voice.scene.golden_bough_012","kind":"audio","path":"audio/voice/scene/golden_bough_012.mp3","mimeType":"audio/mpeg","sha256":"dc1367cb35cd050e16413e99bc2732717a4dbbcb7fe2356164ec9b1e04dac5eb","bytes":207924},{"id":"voice.scene.golden_bough_013","kind":"audio","path":"audio/voice/scene/golden_bough_013.mp3","mimeType":"audio/mpeg","sha256":"6bedf33a85fb30e81dbe986709a284b956fbb8bcba73839ff4e385662c9b5f60","bytes":208500},{"id":"voice.scene.golden_bough_014","kind":"audio","path":"audio/voice/scene/golden_bough_014.mp3","mimeType":"audio/mpeg","sha256":"8511bbc11f6ede3c1f6d9432189f2045d07c2d6bfdb09d50f4465cf923d0de54","bytes":174516},{"id":"voice.scene.golden_bough_015","kind":"audio","path":"audio/voice/scene/golden_bough_015.mp3","mimeType":"audio/mpeg","sha256":"a905db1c23a75a0236b09c32d89dfdfc73dd8820d98941e1ec33fdb320ab9f79","bytes":202740},{"id":"voice.scene.golden_bough_rebuild_ending_bad","kind":"audio","path":"audio/voice/scene/golden_bough_rebuild_ending_bad.mp3","mimeType":"audio/mpeg","sha256":"d95b9a5dd47f83849cf4dcd5c2f30e6d701a4dbabb982f094f6e8174dd4b96f1","bytes":204468},{"id":"voice.scene.golden_bough_rebuild_ending_gate","kind":"audio","path":"audio/voice/scene/golden_bough_rebuild_ending_gate.mp3","mimeType":"audio/mpeg","sha256":"043d26099df61ec1393a1a38c75a8b0b4d2f3eb66189eff11332567640f609c0","bytes":142260},{"id":"voice.scene.golden_bough_rebuild_ending_normal","kind":"audio","path":"audio/voice/scene/golden_bough_rebuild_ending_normal.mp3","mimeType":"audio/mpeg","sha256":"be11b02627a114e3d27ddd8441000dab2e9ddd6d22615a94468dd01c7e2c10bd","bytes":195252},{"id":"voice.scene.golden_bough_rebuild_ending_true","kind":"audio","path":"audio/voice/scene/golden_bough_rebuild_ending_true.mp3","mimeType":"audio/mpeg","sha256":"6603055d536774f9450b28a2bec4b00b405b49f90cc78b4b3c767e867f02a988","bytes":222900},{"id":"voice.scene.opening_001","kind":"audio","path":"audio/voice/scene/opening_001.mp3","mimeType":"audio/mpeg","sha256":"497c1b3cba838f47ce02c67ddb31ebdcc49e5cb8eaa5bbfa2027f6fef3a165a8","bytes":166452},{"id":"voice.scene.ring_conspiracy_001","kind":"audio","path":"audio/voice/scene/ring_conspiracy_001.mp3","mimeType":"audio/mpeg","sha256":"b7df0f5afaafc467cf345fc67dcf3f3f29e409feb9e93799731400125f6df064","bytes":127284},{"id":"voice.scene.ring_conspiracy_002","kind":"audio","path":"audio/voice/scene/ring_conspiracy_002.mp3","mimeType":"audio/mpeg","sha256":"b9f1b96bed0eb609f2ec689e98ae131816c8c22b8fe811e86bb995b94d9aa597","bytes":160692},{"id":"voice.scene.ring_conspiracy_003","kind":"audio","path":"audio/voice/scene/ring_conspiracy_003.mp3","mimeType":"audio/mpeg","sha256":"26e2b98b4ada6eb51d0e0eb30b3890081d2531fb81d9e62a86744ff5aaebe35d","bytes":167604},{"id":"voice.scene.ring_conspiracy_004","kind":"audio","path":"audio/voice/scene/ring_conspiracy_004.mp3","mimeType":"audio/mpeg","sha256":"53ff6d65342584d4a8af3fdea7b7645397f3e150770d1560eb3a3eea945580ce","bytes":197556},{"id":"voice.scene.ring_conspiracy_005","kind":"audio","path":"audio/voice/scene/ring_conspiracy_005.mp3","mimeType":"audio/mpeg","sha256":"fb9ba2613075784df0d47f9bcdfbaf75332e2a29879c9345a7c50509c3599600","bytes":189492},{"id":"voice.scene.ring_conspiracy_006","kind":"audio","path":"audio/voice/scene/ring_conspiracy_006.mp3","mimeType":"audio/mpeg","sha256":"b81a93e166ea9c8c614816c041ea7716c3852fda61254125ef2c1eeac0c7ec62","bytes":175092},{"id":"voice.scene.ring_conspiracy_007","kind":"audio","path":"audio/voice/scene/ring_conspiracy_007.mp3","mimeType":"audio/mpeg","sha256":"d96c395eb83104c3ba7af0690d2a8f50d6fb32c33371993716e0f5e2a5f57d98","bytes":183156},{"id":"voice.scene.ring_conspiracy_008","kind":"audio","path":"audio/voice/scene/ring_conspiracy_008.mp3","mimeType":"audio/mpeg","sha256":"1697ae28055253cdc42ab315aeed973a88d6f7fc81b29cc78af58aa7f3b45c90","bytes":208500},{"id":"voice.scene.ring_conspiracy_009","kind":"audio","path":"audio/voice/scene/ring_conspiracy_009.mp3","mimeType":"audio/mpeg","sha256":"95393977d9fd590fbf1e0e4a60e7c7cd20f3a8d127e9e093af735df0ad6ba164","bytes":162996},{"id":"voice.scene.ring_conspiracy_010","kind":"audio","path":"audio/voice/scene/ring_conspiracy_010.mp3","mimeType":"audio/mpeg","sha256":"42fe6d31eab316f4115365b2a88d54ab3b738dc38ccbb5f66397d092020ca4ab","bytes":195828},{"id":"voice.scene.ring_conspiracy_011","kind":"audio","path":"audio/voice/scene/ring_conspiracy_011.mp3","mimeType":"audio/mpeg","sha256":"30cdb3d7ab8be3a15f66a2e4c1a7f35f2985f792f0df7d5be26ed022bfb52096","bytes":197556},{"id":"voice.scene.ring_conspiracy_012","kind":"audio","path":"audio/voice/scene/ring_conspiracy_012.mp3","mimeType":"audio/mpeg","sha256":"62bb96a11b5d5a9398e317a7075d632b6a45633931fb0504222ef8c1925364e7","bytes":186036},{"id":"voice.scene.ring_conspiracy_013","kind":"audio","path":"audio/voice/scene/ring_conspiracy_013.mp3","mimeType":"audio/mpeg","sha256":"9a5bec85dac0e6238ac0a8b8d5ab52073ddb5d9068f4c73c34b717606654021c","bytes":209076},{"id":"voice.scene.ring_conspiracy_014","kind":"audio","path":"audio/voice/scene/ring_conspiracy_014.mp3","mimeType":"audio/mpeg","sha256":"6af4fe0687540489e464f2b41f864d305b9d832455985359eb393ec1a3b67488","bytes":171636},{"id":"voice.scene.ring_conspiracy_015","kind":"audio","path":"audio/voice/scene/ring_conspiracy_015.mp3","mimeType":"audio/mpeg","sha256":"9c5628b50d962e68b4fea11798a244552372ea92b688326d7f196828dd602537","bytes":248244},{"id":"voice.scene.ring_conspiracy_ending_bad","kind":"audio","path":"audio/voice/scene/ring_conspiracy_ending_bad.mp3","mimeType":"audio/mpeg","sha256":"1d3033f84966c7524e526861732e591393cd63fc839ac19c8b61493e1562b24a","bytes":215412},{"id":"voice.scene.ring_conspiracy_ending_gate","kind":"audio","path":"audio/voice/scene/ring_conspiracy_ending_gate.mp3","mimeType":"audio/mpeg","sha256":"d5ccbc97c59692526810076f6f75481c50dcdb3e6aff43e7919c3ca73a1e819f","bytes":147444},{"id":"voice.scene.ring_conspiracy_ending_normal","kind":"audio","path":"audio/voice/scene/ring_conspiracy_ending_normal.mp3","mimeType":"audio/mpeg","sha256":"5d5d5c31eb143ae854d84f06e209e3777e84feeb910a223e3c24597f89a1f36f","bytes":184884},{"id":"voice.scene.ring_conspiracy_ending_true","kind":"audio","path":"audio/voice/scene/ring_conspiracy_ending_true.mp3","mimeType":"audio/mpeg","sha256":"d3aa6807508e9c64c33ff1a0126ea9ddd6fdadb8ea95c1bc3ec7a79260c4d417","bytes":235572},{"id":"voice.scene.white_canvas_001","kind":"audio","path":"audio/voice/scene/white_canvas_001.mp3","mimeType":"audio/mpeg","sha256":"f9a92c1bc7670ad7639266c595dc0fa60b8d8304a848d946aad06f72ec7f07d7","bytes":110580},{"id":"voice.scene.white_canvas_002","kind":"audio","path":"audio/voice/scene/white_canvas_002.mp3","mimeType":"audio/mpeg","sha256":"b42bb03e8c449bd0c7c33e2e3c103e8fe9e2bd4685b2f0166fda2e65768f3d2a","bytes":142260},{"id":"voice.scene.white_canvas_003","kind":"audio","path":"audio/voice/scene/white_canvas_003.mp3","mimeType":"audio/mpeg","sha256":"447d145ae4bfeebb0d1286275ebd3125e617bf24f5e47794f72a75af3d80110a","bytes":160692},{"id":"voice.scene.white_canvas_004","kind":"audio","path":"audio/voice/scene/white_canvas_004.mp3","mimeType":"audio/mpeg","sha256":"632de5164bcb1666b292b1fa7c3d31a06592f95bcc6021c85fbb0ce46026b9f5","bytes":186036},{"id":"voice.scene.white_canvas_005","kind":"audio","path":"audio/voice/scene/white_canvas_005.mp3","mimeType":"audio/mpeg","sha256":"9f29d8f0966e0a85ae8926a0fe7e5edf21404a41ca0dc7655c8700a478cba08c","bytes":181428},{"id":"voice.scene.white_canvas_006","kind":"audio","path":"audio/voice/scene/white_canvas_006.mp3","mimeType":"audio/mpeg","sha256":"47ba7ff6a7381d865a526506acda5c892ab06c64170d0ba95720d1319dac9c05","bytes":196980},{"id":"voice.scene.white_canvas_007","kind":"audio","path":"audio/voice/scene/white_canvas_007.mp3","mimeType":"audio/mpeg","sha256":"c8c518fe83f8e7d328add0b53d003cb70db7aaa832f18e4a268ee85d070d7f0f","bytes":199860},{"id":"voice.scene.white_canvas_008","kind":"audio","path":"audio/voice/scene/white_canvas_008.mp3","mimeType":"audio/mpeg","sha256":"6067a7080d3720615e322e6f8d7a4870737ac5d544a6b24c556aeba0e734e586","bytes":218868},{"id":"voice.scene.white_canvas_009","kind":"audio","path":"audio/voice/scene/white_canvas_009.mp3","mimeType":"audio/mpeg","sha256":"89794514111d1654ecdf806956448a0da5ab8da75f2ce8234746ee7550ca23c0","bytes":175668},{"id":"voice.scene.white_canvas_010","kind":"audio","path":"audio/voice/scene/white_canvas_010.mp3","mimeType":"audio/mpeg","sha256":"4725f404be2f81e4345da50938b9bcff83cb133c642e69806a66d400168b9b49","bytes":148596},{"id":"voice.scene.white_canvas_011","kind":"audio","path":"audio/voice/scene/white_canvas_011.mp3","mimeType":"audio/mpeg","sha256":"b246e6d83f530b4d0f4ce4860ebf37937b3a0c3dded2571d9331305fd722d185","bytes":196404},{"id":"voice.scene.white_canvas_012","kind":"audio","path":"audio/voice/scene/white_canvas_012.mp3","mimeType":"audio/mpeg","sha256":"58fae554a047a57e6f17d0b1e8c2bd820b7707ab2c067bdc4633fff7d2f2e74d","bytes":171636},{"id":"voice.scene.white_canvas_013","kind":"audio","path":"audio/voice/scene/white_canvas_013.mp3","mimeType":"audio/mpeg","sha256":"4ed3f251b94446c07a6d173441bb7e310659f80f492902f554290243489f8839","bytes":193524},{"id":"voice.scene.white_canvas_014","kind":"audio","path":"audio/voice/scene/white_canvas_014.mp3","mimeType":"audio/mpeg","sha256":"8df96e708d31c6b756257d9dded40c61c383cb83cff1816a284b0bbab1a79739","bytes":188340},{"id":"voice.scene.white_canvas_015","kind":"audio","path":"audio/voice/scene/white_canvas_015.mp3","mimeType":"audio/mpeg","sha256":"e5060d68571a05be9b5b02ee944d1e85c6e2efe670112b7d5812d5580991a42d","bytes":207924},{"id":"voice.scene.white_canvas_ending_bad","kind":"audio","path":"audio/voice/scene/white_canvas_ending_bad.mp3","mimeType":"audio/mpeg","sha256":"f20eb38432b8005c77c929f9d11aceaddb6feaad402bf0950ce7b42f18551a82","bytes":199860},{"id":"voice.scene.white_canvas_ending_gate","kind":"audio","path":"audio/voice/scene/white_canvas_ending_gate.mp3","mimeType":"audio/mpeg","sha256":"1b84c1c3872c4b3ed8f8f4d4ad5fea2c3ef20a434e912b114af1ba86b52bb45d","bytes":142260},{"id":"voice.scene.white_canvas_ending_normal","kind":"audio","path":"audio/voice/scene/white_canvas_ending_normal.mp3","mimeType":"audio/mpeg","sha256":"2011fd5566f387c0b56128ded70b64a3a81cd8f03ad03e3798077266750d5694","bytes":177396},{"id":"voice.scene.white_canvas_ending_true","kind":"audio","path":"audio/voice/scene/white_canvas_ending_true.mp3","mimeType":"audio/mpeg","sha256":"5a6106bd0b3d225bf87ba0a08b95178d0c8c0877305ac73bc8c391e2ce358296","bytes":196980}]'), h_ = /* @__PURE__ */ JSON.parse('[{"version":2,"id":"portrait.albina.amused","characterId":"albina","path":"sprite-atlas/albina/amused_strip.png","animation":{"kind":"strip","frameCount":8,"frameWidth":192,"frameHeight":1024,"fps":8},"fallbackAssetId":"file.characters.albina.amused.png"},{"version":2,"id":"portrait.albina.armored","characterId":"albina","path":"sprite-atlas/albina/armored_strip.png","animation":{"kind":"strip","frameCount":8,"frameWidth":192,"frameHeight":1024,"fps":8},"fallbackAssetId":"file.characters.albina.armored.png"},{"version":2,"id":"portrait.albina.combat","characterId":"albina","path":"sprite-atlas/albina/combat_strip.png","animation":{"kind":"strip","frameCount":8,"frameWidth":192,"frameHeight":1024,"fps":8},"fallbackAssetId":"file.characters.albina.combat.png"},{"version":2,"id":"portrait.albina.endgame","characterId":"albina","path":"sprite-atlas/albina/endgame_strip.png","animation":{"kind":"strip","frameCount":8,"frameWidth":192,"frameHeight":1024,"fps":8},"fallbackAssetId":"file.characters.albina.endgame.png"},{"version":2,"id":"portrait.albina.fascia-open","characterId":"albina","path":"sprite-atlas/albina/fascia-open_strip.png","animation":{"kind":"strip","frameCount":8,"frameWidth":192,"frameHeight":1024,"fps":8},"fallbackAssetId":"file.characters.albina.fascia.open.png"},{"version":2,"id":"portrait.albina.focused","characterId":"albina","path":"sprite-atlas/albina/focused_strip.png","animation":{"kind":"strip","frameCount":8,"frameWidth":192,"frameHeight":1024,"fps":8},"fallbackAssetId":"file.characters.albina.focused.png"},{"version":2,"id":"portrait.albina.furious","characterId":"albina","path":"sprite-atlas/albina/furious_strip.png","animation":{"kind":"strip","frameCount":8,"frameWidth":192,"frameHeight":1024,"fps":8},"fallbackAssetId":"file.characters.albina.furious.png"},{"version":2,"id":"portrait.albina.golden-bough","characterId":"albina","path":"sprite-atlas/albina/golden-bough_strip.png","animation":{"kind":"strip","frameCount":8,"frameWidth":192,"frameHeight":1024,"fps":8},"fallbackAssetId":"file.characters.albina.golden.bough.png"},{"version":2,"id":"portrait.albina.maestro","characterId":"albina","path":"sprite-atlas/albina/maestro_strip.png","animation":{"kind":"strip","frameCount":8,"frameWidth":192,"frameHeight":1024,"fps":8},"fallbackAssetId":"file.characters.albina.maestro.png"},{"version":2,"id":"portrait.albina.normal","characterId":"albina","path":"sprite-atlas/albina/normal_strip.png","animation":{"kind":"strip","frameCount":8,"frameWidth":192,"frameHeight":1024,"fps":8},"fallbackAssetId":"file.characters.albina.normal.png"},{"version":2,"id":"portrait.albina.rain","characterId":"albina","path":"sprite-atlas/albina/rain_strip.png","animation":{"kind":"strip","frameCount":8,"frameWidth":192,"frameHeight":1024,"fps":8},"fallbackAssetId":"file.characters.albina.rain.png"},{"version":2,"id":"portrait.albina.ring-conspiracy","characterId":"albina","path":"sprite-atlas/albina/ring-conspiracy_strip.png","animation":{"kind":"strip","frameCount":8,"frameWidth":192,"frameHeight":1024,"fps":8},"fallbackAssetId":"file.characters.albina.ring.conspiracy.png"},{"version":2,"id":"portrait.albina.shy","characterId":"albina","path":"sprite-atlas/albina/shy_strip.png","animation":{"kind":"strip","frameCount":8,"frameWidth":192,"frameHeight":1024,"fps":8},"fallbackAssetId":"file.characters.albina.shy.png"},{"version":2,"id":"portrait.albina.smile","characterId":"albina","path":"sprite-atlas/albina/smile_strip.png","animation":{"kind":"strip","frameCount":8,"frameWidth":192,"frameHeight":1024,"fps":8},"fallbackAssetId":"file.characters.albina.smile.png"},{"version":2,"id":"portrait.albina.surgical","characterId":"albina","path":"sprite-atlas/albina/surgical_strip.png","animation":{"kind":"strip","frameCount":8,"frameWidth":192,"frameHeight":1024,"fps":8},"fallbackAssetId":"file.characters.albina.surgical.png"},{"version":2,"id":"portrait.albina.unarmored","characterId":"albina","path":"sprite-atlas/albina/unarmored_strip.png","animation":{"kind":"strip","frameCount":8,"frameWidth":192,"frameHeight":1024,"fps":8},"fallbackAssetId":"file.characters.albina.unarmored.png"},{"version":2,"id":"portrait.albina.white-canvas","characterId":"albina","path":"sprite-atlas/albina/white-canvas_strip.png","animation":{"kind":"strip","frameCount":8,"frameWidth":192,"frameHeight":1024,"fps":8},"fallbackAssetId":"file.characters.albina.white.canvas.png"},{"version":2,"id":"portrait.albina.wounded","characterId":"albina","path":"sprite-atlas/albina/wounded_strip.png","animation":{"kind":"strip","frameCount":8,"frameWidth":192,"frameHeight":1024,"fps":8},"fallbackAssetId":"file.characters.albina.wounded.png"},{"version":2,"id":"portrait.callisto.normal","characterId":"callisto","path":"sprite-atlas/callisto/normal_strip.png","animation":{"kind":"strip","frameCount":8,"frameWidth":192,"frameHeight":1024,"fps":8},"fallbackAssetId":"file.characters.callisto.normal.png"},{"version":2,"id":"portrait.charon.normal","characterId":"charon","path":"sprite-atlas/charon/normal_strip.png","animation":{"kind":"strip","frameCount":8,"frameWidth":192,"frameHeight":1024,"fps":8},"fallbackAssetId":"file.characters.charon.normal.png"},{"version":2,"id":"portrait.dante.normal","characterId":"dante","path":"sprite-atlas/dante/normal_strip.png","animation":{"kind":"strip","frameCount":8,"frameWidth":192,"frameHeight":1024,"fps":8},"fallbackAssetId":"file.characters.dante.normal.png"},{"version":2,"id":"portrait.fascia.normal","characterId":"fascia","path":"characters/albina/fascia-open.png","animation":{"kind":"static"}},{"version":2,"id":"portrait.faust.normal","characterId":"faust","path":"sprite-atlas/faust/normal_strip.png","animation":{"kind":"strip","frameCount":8,"frameWidth":192,"frameHeight":1024,"fps":8},"fallbackAssetId":"file.characters.faust.normal.png"},{"version":2,"id":"portrait.fixer_informant.normal","characterId":"fixer_informant","path":"sprite-atlas/fixer_informant/normal_strip.png","animation":{"kind":"strip","frameCount":8,"frameWidth":192,"frameHeight":1024,"fps":8},"fallbackAssetId":"file.characters.fixer.informant.normal.png"},{"version":2,"id":"portrait.golden_apparition.normal","characterId":"golden_apparition","path":"sprite-atlas/golden_apparition/normal_strip.png","animation":{"kind":"strip","frameCount":8,"frameWidth":192,"frameHeight":1024,"fps":8},"fallbackAssetId":"file.characters.golden.apparition.normal.png"},{"version":2,"id":"portrait.lcd_captain.normal","characterId":"lcd_captain","path":"sprite-atlas/lcd_captain/normal_strip.png","animation":{"kind":"strip","frameCount":8,"frameWidth":192,"frameHeight":1024,"fps":8},"fallbackAssetId":"file.characters.lcd.captain.normal.png"},{"version":2,"id":"portrait.lce_doctor.normal","characterId":"lce_doctor","path":"sprite-atlas/lce_doctor/normal_strip.png","animation":{"kind":"strip","frameCount":8,"frameWidth":192,"frameHeight":1024,"fps":8},"fallbackAssetId":"file.characters.lce.doctor.normal.png"},{"version":2,"id":"portrait.original_cg.albina_debut","characterId":"original_cg","path":"sprite-atlas/original_cg/albina_debut_strip.png","animation":{"kind":"strip","frameCount":8,"frameWidth":192,"frameHeight":1024,"fps":8},"fallbackAssetId":"file.original.cg.albina.debut.png"},{"version":2,"id":"portrait.original_cg.battle_climax","characterId":"original_cg","path":"sprite-atlas/original_cg/battle_climax_strip.png","animation":{"kind":"strip","frameCount":8,"frameWidth":192,"frameHeight":1024,"fps":8},"fallbackAssetId":"file.original.cg.battle.climax.png"},{"version":2,"id":"portrait.protagonist.battle","characterId":"protagonist","path":"sprite-atlas/protagonist/battle_strip.png","animation":{"kind":"strip","frameCount":8,"frameWidth":192,"frameHeight":1024,"fps":8},"fallbackAssetId":"file.characters.protagonist.battle.png"},{"version":2,"id":"portrait.protagonist.coat","characterId":"protagonist","path":"sprite-atlas/protagonist/coat_strip.png","animation":{"kind":"strip","frameCount":8,"frameWidth":192,"frameHeight":1024,"fps":8},"fallbackAssetId":"file.characters.protagonist.coat.png"},{"version":2,"id":"portrait.protagonist.formal","characterId":"protagonist","path":"sprite-atlas/protagonist/formal_strip.png","animation":{"kind":"strip","frameCount":8,"frameWidth":192,"frameHeight":1024,"fps":8},"fallbackAssetId":"file.characters.protagonist.formal.png"},{"version":2,"id":"portrait.protagonist.injured","characterId":"protagonist","path":"sprite-atlas/protagonist/injured_strip.png","animation":{"kind":"strip","frameCount":8,"frameWidth":192,"frameHeight":1024,"fps":8},"fallbackAssetId":"file.characters.protagonist.injured.png"},{"version":2,"id":"portrait.protagonist.normal","characterId":"protagonist","path":"sprite-atlas/protagonist/normal_strip.png","animation":{"kind":"strip","frameCount":8,"frameWidth":192,"frameHeight":1024,"fps":8},"fallbackAssetId":"file.characters.protagonist.normal.png"},{"version":2,"id":"portrait.protagonist.profile","characterId":"protagonist","path":"sprite-atlas/protagonist/profile_strip.png","animation":{"kind":"strip","frameCount":8,"frameWidth":192,"frameHeight":1024,"fps":8},"fallbackAssetId":"file.characters.protagonist.profile.png"},{"version":2,"id":"portrait.protagonist.resolve","characterId":"protagonist","path":"sprite-atlas/protagonist/resolve_strip.png","animation":{"kind":"strip","frameCount":8,"frameWidth":192,"frameHeight":1024,"fps":8},"fallbackAssetId":"file.characters.protagonist.resolve.png"},{"version":2,"id":"portrait.protagonist.serious","characterId":"protagonist","path":"sprite-atlas/protagonist/serious_strip.png","animation":{"kind":"strip","frameCount":8,"frameWidth":192,"frameHeight":1024,"fps":8},"fallbackAssetId":"file.characters.protagonist.serious.png"},{"version":2,"id":"portrait.protagonist.shadow","characterId":"protagonist","path":"sprite-atlas/protagonist/shadow_strip.png","animation":{"kind":"strip","frameCount":8,"frameWidth":192,"frameHeight":1024,"fps":8},"fallbackAssetId":"file.characters.protagonist.shadow.png"},{"version":2,"id":"portrait.protagonist.smile","characterId":"protagonist","path":"sprite-atlas/protagonist/smile_strip.png","animation":{"kind":"strip","frameCount":8,"frameWidth":192,"frameHeight":1024,"fps":8},"fallbackAssetId":"file.characters.protagonist.smile.png"},{"version":2,"id":"portrait.protagonist.tender","characterId":"protagonist","path":"sprite-atlas/protagonist/tender_strip.png","animation":{"kind":"strip","frameCount":8,"frameWidth":192,"frameHeight":1024,"fps":8},"fallbackAssetId":"file.characters.protagonist.tender.png"},{"version":2,"id":"portrait.protagonist.wet-hair","characterId":"protagonist","path":"sprite-atlas/protagonist/wet-hair_strip.png","animation":{"kind":"strip","frameCount":8,"frameWidth":192,"frameHeight":1024,"fps":8},"fallbackAssetId":"file.characters.protagonist.wet.hair.png"},{"version":2,"id":"portrait.ren.normal","characterId":"ren","path":"sprite-atlas/ren/normal_strip.png","animation":{"kind":"strip","frameCount":8,"frameWidth":192,"frameHeight":1024,"fps":8},"fallbackAssetId":"file.characters.ren.normal.png"},{"version":2,"id":"portrait.ring_agent.normal","characterId":"ring_agent","path":"sprite-atlas/ring_agent/normal_strip.png","animation":{"kind":"strip","frameCount":8,"frameWidth":192,"frameHeight":1024,"fps":8},"fallbackAssetId":"file.characters.ring.agent.normal.png"},{"version":2,"id":"portrait.vergilius.normal","characterId":"vergilius","path":"sprite-atlas/vergilius/normal_strip.png","animation":{"kind":"strip","frameCount":8,"frameWidth":192,"frameHeight":1024,"fps":8},"fallbackAssetId":"file.characters.vergilius.normal.png"},{"version":2,"id":"portrait.yi_sang.normal","characterId":"yi_sang","path":"sprite-atlas/yi_sang/normal_strip.png","animation":{"kind":"strip","frameCount":8,"frameWidth":192,"frameHeight":1024,"fps":8},"fallbackAssetId":"file.characters.yi.sang.normal.png"}]'), __ = [{ version: 2, id: "job.strip.original.albina.sprites.battle", assetId: "strip.original.albina.sprites.battle", kind: "image-edit", model: "gpt-image-2", status: "pending", contentHash: "1f2bfd5f7b505c355c3a4aa849bfd46d667d0fe75af2ea71235cba4ea56ea1f1", inputAssetIds: ["file.original.albina.sprites.battle.png"], outputPath: "sprite-atlas/original_albina_sprites/battle_strip.png", attempts: 3, error: 'HTTP 403: {"error":{"message":"预扣费额度失败, 用户剩余额度: ＄0.050000, 需要预扣费额度: ＄0.100000 (request id: 202607091842143082986988268d9d66TROf2Up)","type":"new_api_error","param":"","code":"insufficient_user_quota"}}' }, { version: 2, id: "job.strip.original.albina.sprites.normal", assetId: "strip.original.albina.sprites.normal", kind: "image-edit", model: "gpt-image-2", status: "pending", contentHash: "b92d284a2e50aaf02ebd8b3996a50749f93a057d19bc2a7afcc7ee065306dfcb", inputAssetIds: ["file.original.albina.sprites.normal.png"], outputPath: "sprite-atlas/original_albina_sprites/normal_strip.png", attempts: 3, error: 'HTTP 403: {"error":{"message":"预扣费额度失败, 用户剩余额度: ＄0.050000, 需要预扣费额度: ＄0.100000 (request id: 202607091842477024722458268d9d6mw1xzwxB)","type":"new_api_error","param":"","code":"insufficient_user_quota"}}' }, { version: 2, id: "job.strip.original.albina.sprites.sad", assetId: "strip.original.albina.sprites.sad", kind: "image-edit", model: "gpt-image-2", status: "pending", contentHash: "ca5a1122df15a71bb788355d8ac5af627564cb97d12bdf483499fd35eee2fc97", inputAssetIds: ["file.original.albina.sprites.sad.png"], outputPath: "sprite-atlas/original_albina_sprites/sad_strip.png", attempts: 0 }, { version: 2, id: "job.strip.original.albina.sprites.smile", assetId: "strip.original.albina.sprites.smile", kind: "image-edit", model: "gpt-image-2", status: "pending", contentHash: "c1dce303e33582f94413e268abb26f0eb2ee106a84e74b63697ccba2300fb9f0", inputAssetIds: ["file.original.albina.sprites.smile.png"], outputPath: "sprite-atlas/original_albina_sprites/smile_strip.png", attempts: 0 }, { version: 2, id: "job.strip.original.cg.canto.ix.opening", assetId: "strip.original.cg.canto.ix.opening", kind: "image-edit", model: "gpt-image-2", status: "pending", contentHash: "032993f9e4c1981393e364a8b5272ca690f9dda11951a01cd83b13390ae3aab0", inputAssetIds: ["file.original.cg.canto.ix.opening.png"], outputPath: "sprite-atlas/original_cg/canto_ix_opening_strip.png", attempts: 3, error: 'HTTP 403: {"error":{"message":"预扣费额度失败, 用户剩余额度: ＄0.050000, 需要预扣费额度: ＄0.100000 (request id: 202607091839498508537008268d9d67gwnpnxM)","type":"new_api_error","param":"","code":"insufficient_user_quota"}}' }, { version: 2, id: "job.strip.original.cg.hell.gate", assetId: "strip.original.cg.hell.gate", kind: "image-edit", model: "gpt-image-2", status: "pending", contentHash: "ce3a392e94477edff91c0b734e0316700eae6e6814223106e12d8f14417f12ed", inputAssetIds: ["file.original.cg.hell.gate.png"], outputPath: "sprite-atlas/original_cg/hell_gate_strip.png", attempts: 3, error: 'HTTP 403: {"error":{"message":"预扣费额度失败, 用户剩余额度: ＄0.050000, 需要预扣费额度: ＄0.100000 (request id: 202607091840249061893478268d9d6ka0wLtJk)","type":"new_api_error","param":"","code":"insufficient_user_quota"}}' }, { version: 2, id: "job.strip.original.cg.rain.confession", assetId: "strip.original.cg.rain.confession", kind: "image-edit", model: "gpt-image-2", status: "pending", contentHash: "3df4e7b9df7a4ae8e9f7b2819bbf45ee8ef76d8a7af908a5ead09bf89602b073", inputAssetIds: ["file.original.cg.rain.confession.png"], outputPath: "sprite-atlas/original_cg/rain_confession_strip.png", attempts: 3, error: 'HTTP 403: {"error":{"message":"预扣费额度失败, 用户剩余额度: ＄0.050000, 需要预扣费额度: ＄0.100000 (request id: 202607091840546398154378268d9d6BnzkAOYB)","type":"new_api_error","param":"","code":"insufficient_user_quota"}}' }, { version: 2, id: "job.strip.original.cg.ring.conspiracy", assetId: "strip.original.cg.ring.conspiracy", kind: "image-edit", model: "gpt-image-2", status: "pending", contentHash: "572873181a31313d7b15266c864ca85d28e269394d3ae3b5101c71e279b83a91", inputAssetIds: ["file.original.cg.ring.conspiracy.png"], outputPath: "sprite-atlas/original_cg/ring_conspiracy_strip.png", attempts: 3, error: 'HTTP 403: {"error":{"message":"预扣费额度失败, 用户剩余额度: ＄0.050000, 需要预扣费额度: ＄0.100000 (request id: 202607091841379559462728268d9d67jCFuMAr)","type":"new_api_error","param":"","code":"insufficient_user_quota"}}' }], v_ = {
-  version: p_,
-  projectId: m_,
-  basePath: g_,
-  assets: b_,
-  portraits: h_,
-  mediaJobs: __
-}, y_ = 2, k_ = "albina-galgame-card", w_ = "opening_001", E_ = { white_canvas: "white_canvas_001", golden_bough_rebuild: "golden_bough_001", ring_conspiracy: "ring_conspiracy_001" }, I_ = /* @__PURE__ */ JSON.parse('[{"version":2,"id":"opening_001","chapter":1,"route":"white_canvas","locationId":"backstreets_rain","backgroundAssetId":"bg.backstreets_rain","cgAssetId":"cg.opening_rain","videoAssetId":"video.animated.runtime.prologue","desktopVideoAssetId":"video.animated.desktop.prologue","tone":"rain","portraits":[{"characterId":"protagonist","portraitAssetId":"portrait.protagonist.normal","position":"left","active":false,"scale":0.92},{"characterId":"albina","portraitAssetId":"portrait.albina.normal","position":"center","active":true,"scale":1}],"speaker":"阿尔比娜","text":"晚上好，{{user}}。请不要站得太远，我还没决定该把你称作观众、朋友，还是一块值得等待的画布。","voiceAssetId":"voice.scene.opening_001","bgmAssetId":"file.audio.bgm.backstreets.rain.mp3","choices":[{"id":"enter_white_canvas","text":"留在她的白色画布前","nextSceneId":"white_canvas_001","resultText":"你选择“留在她的白色画布前”。阿尔比娜：白色并不代表干净。它只是暂时还没有被决定。你也是这样，{{user}}。","resultVoiceAssetId":"voice.result.enter_white_canvas","effects":{"route":"white_canvas","values":{"affectionAlbina":2,"trust":2,"artResonance":1},"setFlags":["route_white_canvas_seen"],"unlockCg":["opening_rain"]}},{"id":"enter_rebuild","text":"询问金枝重构的痕迹","nextSceneId":"golden_bough_001","resultText":"你选择“询问金枝重构的痕迹”。阿尔比娜：金色光尘沿着她的义体裂缝回流。她先确认的不是自己，而是法西娅是否还在呼吸。","resultVoiceAssetId":"voice.result.enter_rebuild","effects":{"route":"golden_bough_rebuild","values":{"trust":3,"danger":1},"setFlags":["route_rebuild_seen"],"unlockCg":["golden_bough_rebuild"]}},{"id":"enter_conspiracy","text":"接受环指的危险邀请","nextSceneId":"ring_conspiracy_001","resultText":"你选择“接受环指的危险邀请”。阿尔比娜：蜘蛛巢的灯光像手术刀一样落下。她向你递来一份没有署名的委托，笑得礼貌又危险。","resultVoiceAssetId":"voice.result.enter_conspiracy","effects":{"route":"ring_conspiracy","values":{"danger":3,"artResonance":2},"setFlags":["route_conspiracy_seen"],"unlockCg":["ring_invitation"]}}]},{"version":2,"id":"white_canvas_001","chapter":1,"route":"white_canvas","locationId":"white_canvas_room","backgroundAssetId":"bg.white_canvas","cgAssetId":"cg.white_canvas_choice","tone":"quiet","portraits":[{"characterId":"protagonist","portraitAssetId":"portrait.protagonist.tender","position":"left","active":false,"scale":0.94},{"characterId":"albina","portraitAssetId":"portrait.albina.white-canvas","position":"right","active":true,"scale":1}],"speaker":"阿尔比娜","text":"白色并不代表干净。它只是暂时还没有被决定。你也是这样，{{user}}。","voiceAssetId":"voice.scene.white_canvas_001","bgmAssetId":"file.audio.bgm.between.two.worlds.mp3","choices":[{"id":"white_touch_boundary","text":"告诉她：完整也是一种作品","nextSceneId":"white_canvas_002","resultText":"你选择“告诉她：完整也是一种作品”。阿尔比娜：她把黑色手掌停在离你心口一寸的位置，没有继续向前。法西娅安静得像也在等待你的许可。","resultVoiceAssetId":"voice.result.white_touch_boundary","effects":{"values":{"affectionAlbina":3,"trust":4,"artResonance":2},"setFlags":["albina_learns_wholeness"],"unlockCg":["trust_threshold"]}},{"id":"white_tease_back","text":"反问她是否害怕自己的画布","nextSceneId":"white_canvas_002","resultText":"你选择“反问她是否害怕自己的画布”。阿尔比娜：她把黑色手掌停在离你心口一寸的位置，没有继续向前。法西娅安静得像也在等待你的许可。","resultVoiceAssetId":"voice.result.white_tease_back","effects":{"values":{"affectionAlbina":2,"danger":1,"artResonance":3},"setFlags":["player_teases_artist"],"unlockCg":["art_resonance"]}}]},{"version":2,"id":"white_canvas_002","chapter":2,"route":"white_canvas","locationId":"rain_room","backgroundAssetId":"bg.rain_room","cgAssetId":"cg.rain_confession","tone":"rain","portraits":[{"characterId":"albina","portraitAssetId":"portrait.albina.shy","position":"center","active":true,"scale":1}],"speaker":"阿尔比娜","text":"她把黑色手掌停在离你心口一寸的位置，没有继续向前。法西娅安静得像也在等待你的许可。","voiceAssetId":"voice.scene.white_canvas_002","bgmAssetId":"file.audio.bgm.between.two.worlds.mp3","choices":[{"id":"white_follow_to_lab","text":"陪她把画布带进 LCE 临时手术室","nextSceneId":"white_canvas_003","resultText":"你选择“陪她把画布带进 LCE 临时手术室”。LCE 医师：灯光没有温度。记录员要求你签下旁观协议，阿尔比娜却先把笔推给自己：这一次，谁也不能替她同意被拆解。","resultVoiceAssetId":"voice.result.white_follow_to_lab","effects":{"values":{"affectionAlbina":2,"trust":3,"artResonance":2},"setFlags":["white_lab_boundary_seen"],"unlockCg":["hollow_torso_reveal"]}},{"id":"return_opening_from_white","text":"回到路线选择","nextSceneId":"opening_001","resultText":"你选择“回到路线选择”。阿尔比娜：晚上好，{{user}}。请不要站得太远，我还没决定该把你称作观众、朋友，还是一块值得等待的画布。","resultVoiceAssetId":"voice.result.return_opening_from_white","effects":{"values":{"trust":1},"setFlags":["white_canvas_looped"]}}]},{"version":2,"id":"white_canvas_003","chapter":3,"route":"white_canvas","locationId":"lce_lab","backgroundAssetId":"bg.lce_lab","cgAssetId":"cg.hollow_torso_reveal","videoAssetId":"video.animated.runtime.white_canvas_scene_3","desktopVideoAssetId":"video.animated.desktop.white_canvas_scene_3","tone":"quiet","portraits":[{"characterId":"lce_doctor","portraitAssetId":"portrait.lce_doctor.normal","position":"left","active":false,"scale":0.86},{"characterId":"albina","portraitAssetId":"portrait.albina.surgical","position":"center","active":true,"scale":1},{"characterId":"protagonist","portraitAssetId":"portrait.protagonist.serious","position":"right","active":false,"scale":0.9}],"speaker":"LCE 医师","text":"灯光没有温度。记录员要求你签下旁观协议，阿尔比娜却先把笔推给自己：这一次，谁也不能替她同意被拆解。","voiceAssetId":"voice.scene.white_canvas_003","bgmAssetId":"file.audio.bgm.between.two.worlds.mp3","choices":[{"id":"white_sign_witness_protocol","text":"只签见证，不签处置权","nextSceneId":"white_canvas_004","resultText":"你选择“只签见证，不签处置权”。阿尔比娜：巴士窗上映出她的白色义体，也映出你故意留下的空座。她说完整不是没有裂缝，而是裂缝终于有了不被展览的权利。","resultVoiceAssetId":"voice.result.white_sign_witness_protocol","effects":{"values":{"affectionAlbina":1,"trust":4,"artResonance":2},"setFlags":["witness_not_ownership"],"unlockCg":["lce_raid"]}},{"id":"white_interrupt_lab_terms","text":"要求医师删去所有所有权措辞","nextSceneId":"white_canvas_004","resultText":"你选择“要求医师删去所有所有权措辞”。阿尔比娜：巴士窗上映出她的白色义体，也映出你故意留下的空座。她说完整不是没有裂缝，而是裂缝终于有了不被展览的权利。","resultVoiceAssetId":"voice.result.white_interrupt_lab_terms","effects":{"values":{"trust":3,"danger":1,"artResonance":3},"setFlags":["lab_terms_rewritten"],"unlockCg":["fascia_heartbeat"]}}]},{"version":2,"id":"white_canvas_004","chapter":4,"route":"white_canvas","locationId":"limbus_bus","backgroundAssetId":"bg.limbus_bus","cgAssetId":"cg.limbus_bus_night","tone":"rain","portraits":[{"characterId":"dante","portraitAssetId":"portrait.dante.normal","position":"left","active":false,"scale":0.82},{"characterId":"albina","portraitAssetId":"portrait.albina.rain","position":"center","active":true,"scale":1},{"characterId":"protagonist","portraitAssetId":"portrait.protagonist.wet-hair","position":"right","active":false,"scale":0.9}],"speaker":"阿尔比娜","text":"巴士窗上映出她的白色义体，也映出你故意留下的空座。她说完整不是没有裂缝，而是裂缝终于有了不被展览的权利。","voiceAssetId":"voice.scene.white_canvas_004","bgmAssetId":"file.audio.bgm.between.two.worlds.mp3","choices":[{"id":"white_keep_empty_seat","text":"替她保留那张无人审判的座位","nextSceneId":"white_canvas_005","resultText":"你选择“替她保留那张无人审判的座位”。阿尔比娜：黎明像一层还没有落款的底色。她把法西娅插在你们之间，不是阻隔，而是提醒：任何亲密都必须能被双方随时收回。","resultVoiceAssetId":"voice.result.white_keep_empty_seat","effects":{"values":{"affectionAlbina":4,"trust":3,"artResonance":1},"setFlags":["white_canvas_empty_seat"],"unlockCg":["white_canvas_ending"]}},{"id":"white_share_rain_window","text":"把雨夜倒影交给她自己命名","nextSceneId":"white_canvas_005","resultText":"你选择“把雨夜倒影交给她自己命名”。阿尔比娜：黎明像一层还没有落款的底色。她把法西娅插在你们之间，不是阻隔，而是提醒：任何亲密都必须能被双方随时收回。","resultVoiceAssetId":"voice.result.white_share_rain_window","effects":{"values":{"affectionAlbina":3,"trust":2,"artResonance":3},"setFlags":["rain_reflection_named"],"unlockCg":["rain_confession"]}}]},{"version":2,"id":"white_canvas_005","chapter":5,"route":"white_canvas","locationId":"outskirts_dawn","backgroundAssetId":"bg.outskirts_dawn","cgAssetId":"cg.white_canvas_ending","videoAssetId":"video.animated.runtime.white_canvas_scene_5","desktopVideoAssetId":"video.animated.desktop.white_canvas_scene_5","tone":"quiet","portraits":[{"characterId":"protagonist","portraitAssetId":"portrait.protagonist.resolve","position":"left","active":false,"scale":0.92},{"characterId":"albina","portraitAssetId":"portrait.albina.endgame","position":"center","active":true,"scale":1}],"speaker":"阿尔比娜","text":"黎明像一层还没有落款的底色。她把法西娅插在你们之间，不是阻隔，而是提醒：任何亲密都必须能被双方随时收回。","voiceAssetId":"voice.scene.white_canvas_005","bgmAssetId":"file.audio.bgm.between.two.worlds.mp3","choices":[{"id":"white_canvas_route_complete","text":"记录白色画布路线的暂定结局","nextSceneId":"white_canvas_006","resultText":"你选择“记录白色画布路线的暂定结局”。阿尔比娜：空展厅的回声比任何观众都诚实。她拿起一支没有颜料的画笔，在你面前比划出一条看不见的轮廓：这是你今晚没有说出口的那句话。","resultVoiceAssetId":"voice.result.white_canvas_route_complete","effects":{"values":{"affectionAlbina":2,"trust":2,"danger":-1,"artResonance":2},"setFlags":["white_canvas_route_complete"]}}]},{"version":2,"id":"white_canvas_006","chapter":6,"route":"white_canvas","locationId":"white_canvas_room","backgroundAssetId":"bg.white_canvas","cgAssetId":"cg.white_canvas_choice","tone":"quiet","portraits":[{"characterId":"albina","portraitAssetId":"portrait.albina.white-canvas","position":"center","active":true,"scale":1},{"characterId":"protagonist","portraitAssetId":"portrait.protagonist.tender","position":"left","active":false,"scale":0.92}],"speaker":"阿尔比娜","text":"空展厅的回声比任何观众都诚实。她拿起一支没有颜料的画笔，在你面前比划出一条看不见的轮廓：这是你今晚没有说出口的那句话。","voiceAssetId":"voice.scene.white_canvas_006","bgmAssetId":"file.audio.bgm.between.two.worlds.mp3","choices":[{"id":"white_006_name_silence","text":"替那条轮廓取一个不会被收藏的名字","nextSceneId":"white_canvas_007","resultText":"你选择“替那条轮廓取一个不会被收藏的名字”。法西娅：法西娅的低语从镜面里渗出来：你正在画的并不是她，是一个被允许随时擦掉的你。阿尔比娜没有反驳，只是把那面镜子轻轻转开半寸。","resultVoiceAssetId":"voice.result.white_006_name_silence","effects":{"values":{"affectionAlbina":3,"trust":3,"artResonance":3},"setFlags":["silhouette_named"],"unlockCg":["art_resonance"]}},{"id":"white_006_refuse_naming","text":"让轮廓保持无名，由她决定","nextSceneId":"white_canvas_007","resultText":"你选择“让轮廓保持无名，由她决定”。法西娅：法西娅的低语从镜面里渗出来：你正在画的并不是她，是一个被允许随时擦掉的你。阿尔比娜没有反驳，只是把那面镜子轻轻转开半寸。","resultVoiceAssetId":"voice.result.white_006_refuse_naming","effects":{"values":{"affectionAlbina":2,"trust":4,"artResonance":2},"setFlags":["naming_returned"],"unlockCg":["trust_threshold"]}}]},{"version":2,"id":"white_canvas_007","chapter":7,"route":"white_canvas","locationId":"mirror_corridor","backgroundAssetId":"bg.mirror_corridor","cgAssetId":"cg.fascia_heartbeat","tone":"quiet","portraits":[{"characterId":"albina","portraitAssetId":"portrait.albina.shy","position":"right","active":true,"scale":1},{"characterId":"fascia","portraitAssetId":"portrait.fascia.normal","position":"center","active":false,"scale":0.86},{"characterId":"protagonist","portraitAssetId":"portrait.protagonist.tender","position":"left","active":false,"scale":0.9}],"speaker":"法西娅","text":"法西娅的低语从镜面里渗出来：你正在画的并不是她，是一个被允许随时擦掉的你。阿尔比娜没有反驳，只是把那面镜子轻轻转开半寸。","voiceAssetId":"voice.scene.white_canvas_007","bgmAssetId":"file.audio.bgm.between.two.worlds.mp3","choices":[{"id":"white_007_keep_mirror_open","text":"让镜子继续映照，不替她遮蔽","nextSceneId":"white_canvas_008","resultText":"你选择“让镜子继续映照，不替她遮蔽”。阿尔比娜：义体维护槽的白光下，她把法西娅从胸口取出来，放在你和她之间的托盘上。她说：完整不是把它装回去，是承认它有权利短暂离开我。","resultVoiceAssetId":"voice.result.white_007_keep_mirror_open","effects":{"values":{"trust":3,"danger":1,"artResonance":4},"setFlags":["mirror_kept_open"],"unlockCg":["fascia_heartbeat"]}},{"id":"white_007_ask_fascia_term","text":"当着阿尔比娜问法西娅一个边界问题","nextSceneId":"white_canvas_008","resultText":"你选择“当着阿尔比娜问法西娅一个边界问题”。阿尔比娜：义体维护槽的白光下，她把法西娅从胸口取出来，放在你和她之间的托盘上。她说：完整不是把它装回去，是承认它有权利短暂离开我。","resultVoiceAssetId":"voice.result.white_007_ask_fascia_term","effects":{"values":{"affectionAlbina":1,"trust":2,"artResonance":3},"setFlags":["fascia_addressed_directly"],"unlockCg":["art_resonance"]}}]},{"version":2,"id":"white_canvas_008","chapter":8,"route":"white_canvas","locationId":"lce_lab","backgroundAssetId":"bg.lce_lab","cgAssetId":"cg.hollow_torso_reveal","videoAssetId":"video.animated.runtime.white_canvas_scene_8","desktopVideoAssetId":"video.animated.desktop.white_canvas_scene_8","tone":"quiet","portraits":[{"characterId":"lce_doctor","portraitAssetId":"portrait.lce_doctor.normal","position":"left","active":false,"scale":0.84},{"characterId":"albina","portraitAssetId":"portrait.albina.surgical","position":"center","active":true,"scale":1},{"characterId":"protagonist","portraitAssetId":"portrait.protagonist.serious","position":"right","active":false,"scale":0.9}],"speaker":"阿尔比娜","text":"义体维护槽的白光下，她把法西娅从胸口取出来，放在你和她之间的托盘上。她说：完整不是把它装回去，是承认它有权利短暂离开我。","voiceAssetId":"voice.scene.white_canvas_008","bgmAssetId":"file.audio.bgm.between.two.worlds.mp3","choices":[{"id":"white_008_hold_fascia","text":"替她暂时照看法西娅","nextSceneId":"white_canvas_009","resultText":"你选择“替她暂时照看法西娅”。阿尔比娜：雨室的水线像无数根未被签名的画框。她让你站在她身后半步，说那个距离刚好能让两人都不必替对方回答。","resultVoiceAssetId":"voice.result.white_008_hold_fascia","effects":{"values":{"affectionAlbina":2,"trust":5,"artResonance":2},"setFlags":["fascia_held_by_player"],"unlockCg":["fascia_heartbeat"]}},{"id":"white_008_stay_witness_only","text":"只站在她视野内，不接手","nextSceneId":"white_canvas_009","resultText":"你选择“只站在她视野内，不接手”。阿尔比娜：雨室的水线像无数根未被签名的画框。她让你站在她身后半步，说那个距离刚好能让两人都不必替对方回答。","resultVoiceAssetId":"voice.result.white_008_stay_witness_only","effects":{"values":{"affectionAlbina":1,"trust":3,"artResonance":3},"setFlags":["witness_distance_kept"],"unlockCg":["lce_raid"]}}]},{"version":2,"id":"white_canvas_009","chapter":9,"route":"white_canvas","locationId":"rain_room","backgroundAssetId":"bg.rain_room","cgAssetId":"cg.rain_confession","tone":"rain","portraits":[{"characterId":"albina","portraitAssetId":"portrait.albina.rain","position":"center","active":true,"scale":1},{"characterId":"protagonist","portraitAssetId":"portrait.protagonist.wet-hair","position":"left","active":false,"scale":0.92}],"speaker":"阿尔比娜","text":"雨室的水线像无数根未被签名的画框。她让你站在她身后半步，说那个距离刚好能让两人都不必替对方回答。","voiceAssetId":"voice.scene.white_canvas_009","bgmAssetId":"file.audio.bgm.between.two.worlds.mp3","choices":[{"id":"white_009_keep_half_step","text":"守住半步距离，不擅自靠近","nextSceneId":"white_canvas_010","resultText":"你选择“守住半步距离，不擅自靠近”。但丁：但丁没有抬头，只低声提醒：她在试着把自己画成一个可以离开的人，你最好别急着把她画成离不开你的人。","resultVoiceAssetId":"voice.result.white_009_keep_half_step","effects":{"values":{"affectionAlbina":3,"trust":4,"artResonance":2},"setFlags":["half_step_distance"],"unlockCg":["rain_confession"]}},{"id":"white_009_share_umbrella_edge","text":"把伞沿偏向她那侧","nextSceneId":"white_canvas_010","resultText":"你选择“把伞沿偏向她那侧”。但丁：但丁没有抬头，只低声提醒：她在试着把自己画成一个可以离开的人，你最好别急着把她画成离不开你的人。","resultVoiceAssetId":"voice.result.white_009_share_umbrella_edge","effects":{"values":{"affectionAlbina":4,"trust":2,"artResonance":2},"setFlags":["umbrella_shared"],"unlockCg":["rain_reflection"]}}]},{"version":2,"id":"white_canvas_010","chapter":10,"route":"white_canvas","locationId":"limbus_bus","backgroundAssetId":"bg.limbus_bus","cgAssetId":"cg.limbus_bus_night","tone":"rain","portraits":[{"characterId":"dante","portraitAssetId":"portrait.dante.normal","position":"left","active":false,"scale":0.8},{"characterId":"albina","portraitAssetId":"portrait.albina.rain","position":"center","active":true,"scale":1},{"characterId":"protagonist","portraitAssetId":"portrait.protagonist.serious","position":"right","active":false,"scale":0.9}],"speaker":"但丁","text":"但丁没有抬头，只低声提醒：她在试着把自己画成一个可以离开的人，你最好别急着把她画成离不开你的人。","voiceAssetId":"voice.scene.white_canvas_010","bgmAssetId":"file.audio.bgm.between.two.worlds.mp3","choices":[{"id":"white_010_acknowledge_leave","text":"承认她随时可以离开这张画布","nextSceneId":"white_canvas_011","resultText":"你选择“承认她随时可以离开这张画布”。阿尔比娜：巢穴车站的灯光白得发硬。她站在月台边缘，没有回头，只问：如果一个艺术家拒绝被展览，你愿意做那个替她谢幕的人吗？","resultVoiceAssetId":"voice.result.white_010_acknowledge_leave","effects":{"values":{"affectionAlbina":2,"trust":4,"artResonance":3},"setFlags":["leaving_acknowledged"],"unlockCg":["limbus_bus_night"]}},{"id":"white_010_offer_return_ticket","text":"给她一张可以返回的车票，而不是绳索","nextSceneId":"white_canvas_011","resultText":"你选择“给她一张可以返回的车票，而不是绳索”。阿尔比娜：巢穴车站的灯光白得发硬。她站在月台边缘，没有回头，只问：如果一个艺术家拒绝被展览，你愿意做那个替她谢幕的人吗？","resultVoiceAssetId":"voice.result.white_010_offer_return_ticket","effects":{"values":{"affectionAlbina":3,"trust":3,"artResonance":2},"setFlags":["return_ticket_given"],"unlockCg":["rain_reflection"]}}]},{"version":2,"id":"white_canvas_011","chapter":11,"route":"white_canvas","locationId":"nest_station","backgroundAssetId":"bg.nest_station","cgAssetId":"cg.art_resonance","videoAssetId":"video.animated.runtime.white_canvas_scene_11","desktopVideoAssetId":"video.animated.desktop.white_canvas_scene_11","tone":"quiet","portraits":[{"characterId":"albina","portraitAssetId":"portrait.albina.white-canvas","position":"center","active":true,"scale":1},{"characterId":"protagonist","portraitAssetId":"portrait.protagonist.resolve","position":"left","active":false,"scale":0.92}],"speaker":"阿尔比娜","text":"巢穴车站的灯光白得发硬。她站在月台边缘，没有回头，只问：如果一个艺术家拒绝被展览，你愿意做那个替她谢幕的人吗？","voiceAssetId":"voice.scene.white_canvas_011","bgmAssetId":"file.audio.bgm.between.two.worlds.mp3","choices":[{"id":"white_011_curtain_call","text":"答应替她谢幕，不替她登台","nextSceneId":"white_canvas_012","resultText":"你选择“答应替她谢幕，不替她登台”。卡利斯托：蜘蛛画廊借给白画布一个临时展位。卡利斯托微笑着提议：把她最有缺陷的那一面挂出来，观众会替你们完成剩下的故事。","resultVoiceAssetId":"voice.result.white_011_curtain_call","effects":{"values":{"affectionAlbina":2,"trust":5,"artResonance":3},"setFlags":["curtain_call_promised"],"unlockCg":["white_canvas_ending"]}},{"id":"white_011_walk_beside","text":"陪她走下月台，不离开也不催促","nextSceneId":"white_canvas_012","resultText":"你选择“陪她走下月台，不离开也不催促”。卡利斯托：蜘蛛画廊借给白画布一个临时展位。卡利斯托微笑着提议：把她最有缺陷的那一面挂出来，观众会替你们完成剩下的故事。","resultVoiceAssetId":"voice.result.white_011_walk_beside","effects":{"values":{"affectionAlbina":4,"trust":3,"artResonance":2},"setFlags":["platform_walked_together"],"unlockCg":["rain_confession"]}}]},{"version":2,"id":"white_canvas_012","chapter":12,"route":"white_canvas","locationId":"spider_gallery","backgroundAssetId":"bg.spider_gallery","cgAssetId":"cg.maestro_shadow","tone":"gallery","portraits":[{"characterId":"callisto","portraitAssetId":"portrait.callisto.normal","position":"left","active":false,"scale":0.84},{"characterId":"albina","portraitAssetId":"portrait.albina.ring-conspiracy","position":"center","active":true,"scale":1},{"characterId":"protagonist","portraitAssetId":"portrait.protagonist.serious","position":"right","active":false,"scale":0.9}],"speaker":"卡利斯托","text":"蜘蛛画廊借给白画布一个临时展位。卡利斯托微笑着提议：把她最有缺陷的那一面挂出来，观众会替你们完成剩下的故事。","voiceAssetId":"voice.scene.white_canvas_012","bgmAssetId":"file.audio.bgm.between.two.worlds.mp3","sfxAssetIds":["file.audio.se.glass.shatter.wav"],"choices":[{"id":"white_012_refuse_exhibit","text":"当众拒绝展出她的缺陷","nextSceneId":"white_canvas_013","resultText":"你选择“当众拒绝展出她的缺陷”。阿尔比娜：环指工坊的颜料气味里混着血。她握着一柄画刀，对你说：今天我可能要毁掉一件作品，请你告诉我哪一件是她真正想毁掉的。","resultVoiceAssetId":"voice.result.white_012_refuse_exhibit","effects":{"values":{"affectionAlbina":2,"trust":4,"danger":1,"artResonance":3},"setFlags":["defect_not_exhibited"],"unlockCg":["trust_threshold"]}},{"id":"white_012_let_her_decide","text":"把展与不展的决定权交还给她","nextSceneId":"white_canvas_013","resultText":"你选择“把展与不展的决定权交还给她”。阿尔比娜：环指工坊的颜料气味里混着血。她握着一柄画刀，对你说：今天我可能要毁掉一件作品，请你告诉我哪一件是她真正想毁掉的。","resultVoiceAssetId":"voice.result.white_012_let_her_decide","effects":{"values":{"affectionAlbina":3,"trust":5,"artResonance":4},"setFlags":["exhibit_choice_returned"],"unlockCg":["art_resonance"]}}]},{"version":2,"id":"white_canvas_013","chapter":13,"route":"white_canvas","locationId":"ring_atelier","backgroundAssetId":"bg.ring_atelier","cgAssetId":"cg.art_resonance","tone":"gallery","portraits":[{"characterId":"albina","portraitAssetId":"portrait.albina.furious","position":"right","active":true,"scale":1},{"characterId":"protagonist","portraitAssetId":"portrait.protagonist.battle","position":"left","active":false,"scale":0.92}],"speaker":"阿尔比娜","text":"环指工坊的颜料气味里混着血。她握着一柄画刀，对你说：今天我可能要毁掉一件作品，请你告诉我哪一件是她真正想毁掉的。","voiceAssetId":"voice.scene.white_canvas_013","bgmAssetId":"file.audio.bgm.between.two.worlds.mp3","sfxAssetIds":["file.audio.se.glass.shatter.wav"],"choices":[{"id":"white_013_point_to_mirror","text":"指向墙上那面映过法西娅的镜子","nextSceneId":"white_canvas_014","resultText":"你选择“指向墙上那面映过法西娅的镜子”。阿尔比娜：楼顶的风把她的话吹得很轻。她说：如果有一天我想把自己重新画成空白，你会替我保留这最后一层底色，还是替我重新开始？","resultVoiceAssetId":"voice.result.white_013_point_to_mirror","effects":{"values":{"affectionAlbina":2,"trust":3,"artResonance":5},"setFlags":["mirror_pointed_out"],"unlockCg":["mirror_broken"]}},{"id":"white_013_refuse_to_choose","text":"拒绝替她决定，让她自己下刀","nextSceneId":"white_canvas_014","resultText":"你选择“拒绝替她决定，让她自己下刀”。阿尔比娜：楼顶的风把她的话吹得很轻。她说：如果有一天我想把自己重新画成空白，你会替我保留这最后一层底色，还是替我重新开始？","resultVoiceAssetId":"voice.result.white_013_refuse_to_choose","effects":{"values":{"affectionAlbina":1,"trust":4,"artResonance":3},"setFlags":["knife_returned"],"unlockCg":["art_resonance"]}}]},{"version":2,"id":"white_canvas_014","chapter":14,"route":"white_canvas","locationId":"city_rooftop","backgroundAssetId":"bg.city_rooftop","cgAssetId":"cg.trust_threshold","tone":"quiet","portraits":[{"characterId":"albina","portraitAssetId":"portrait.albina.endgame","position":"center","active":true,"scale":1},{"characterId":"protagonist","portraitAssetId":"portrait.protagonist.resolve","position":"left","active":false,"scale":0.92}],"speaker":"阿尔比娜","text":"楼顶的风把她的话吹得很轻。她说：如果有一天我想把自己重新画成空白，你会替我保留这最后一层底色，还是替我重新开始？","voiceAssetId":"voice.scene.white_canvas_014","bgmAssetId":"file.audio.bgm.between.two.worlds.mp3","choices":[{"id":"white_014_keep_base_color","text":"答应替她保留最后一层底色","nextSceneId":"white_canvas_015","resultText":"你选择“答应替她保留最后一层底色”。阿尔比娜：城郊的黎明像一张终于干透的画布。她把法西娅重新放回胸口，又把画笔交到你手里：这张画布已经记住了你，但它仍然属于我。","resultVoiceAssetId":"voice.result.white_014_keep_base_color","effects":{"values":{"affectionAlbina":4,"trust":4,"artResonance":3},"setFlags":["base_color_kept"],"unlockCg":["white_canvas_ending"]}},{"id":"white_014_offer_restart","text":"答应陪她从空白重新开始","nextSceneId":"white_canvas_015","resultText":"你选择“答应陪她从空白重新开始”。阿尔比娜：城郊的黎明像一张终于干透的画布。她把法西娅重新放回胸口，又把画笔交到你手里：这张画布已经记住了你，但它仍然属于我。","resultVoiceAssetId":"voice.result.white_014_offer_restart","effects":{"values":{"affectionAlbina":3,"trust":5,"artResonance":4},"setFlags":["restart_offered"],"unlockCg":["art_resonance"]}}]},{"version":2,"id":"white_canvas_015","chapter":15,"route":"white_canvas","locationId":"outskirts_dawn","backgroundAssetId":"bg.outskirts_dawn","cgAssetId":"cg.white_canvas_ending","videoAssetId":"video.animated.runtime.white_canvas_scene_15","desktopVideoAssetId":"video.animated.desktop.white_canvas_scene_15","tone":"quiet","portraits":[{"characterId":"protagonist","portraitAssetId":"portrait.protagonist.resolve","position":"left","active":false,"scale":0.92},{"characterId":"albina","portraitAssetId":"portrait.albina.endgame","position":"center","active":true,"scale":1},{"characterId":"fascia","portraitAssetId":"portrait.fascia.normal","position":"right","active":false,"scale":0.84}],"speaker":"阿尔比娜","text":"城郊的黎明像一张终于干透的画布。她把法西娅重新放回胸口，又把画笔交到你手里：这张画布已经记住了你，但它仍然属于我。","voiceAssetId":"voice.scene.white_canvas_015","bgmAssetId":"file.audio.bgm.between.two.worlds.mp3","choices":[{"id":"white_canvas_route_final","text":"为白色画布路线盖上最后一枚印章","nextSceneId":"white_canvas_ending_gate","resultText":"你选择“为白色画布路线盖上最后一枚印章”。白色画布路线终章已封存，进入固定结局资格判定。","resultVoiceAssetId":"voice.result.white_canvas_route_final","effects":{"values":{"affectionAlbina":3,"trust":3,"danger":-2,"artResonance":4},"setFlags":["white_canvas_route_final"]}}]},{"version":2,"id":"white_canvas_ending_gate","chapter":16,"route":"white_canvas","locationId":"outskirts_dawn","backgroundAssetId":"bg.outskirts_dawn","cgAssetId":"cg.white_canvas_ending","tone":"quiet","portraits":[{"characterId":"protagonist","portraitAssetId":"portrait.protagonist.resolve","position":"left","active":false,"scale":0.92},{"characterId":"albina","portraitAssetId":"portrait.albina.endgame","position":"center","active":true,"scale":1},{"characterId":"fascia","portraitAssetId":"portrait.fascia.normal","position":"right","active":false,"scale":0.84}],"speaker":"叙事记录","text":"白色画布的全部选择已封存。系统将只依据持久状态判定结局，不请求任何运行时生成。","voiceAssetId":"voice.scene.white_canvas_ending_gate","bgmAssetId":"file.audio.bgm.between.two.worlds.mp3","choices":[{"id":"white_canvas_choose_true_ending","text":"确认彼此共同抵达的真结局","nextSceneId":"white_canvas_ending_true","resultText":"结局判定完成：白色画布·TRUE。资格规则与选择记录已固定写入。","resultVoiceAssetId":"voice.result.white_canvas.true_ending","availability":{"allOf":[{"kind":"flag","flag":"white_canvas_route_final","equals":true},{"kind":"value","key":"trust","operator":"gte","value":52},{"kind":"value","key":"artResonance","operator":"gte","value":44},{"kind":"value","key":"danger","operator":"lte","value":5}]},"effects":{"setFlags":["ending_white_canvas_true_qualified"]}},{"id":"white_canvas_choose_normal_ending","text":"接受仍留有余白的普通结局","nextSceneId":"white_canvas_ending_normal","resultText":"结局判定完成：白色画布·NORMAL。资格规则与选择记录已固定写入。","resultVoiceAssetId":"voice.result.white_canvas.normal_ending","availability":{"allOf":[{"kind":"flag","flag":"white_canvas_route_final","equals":true}],"fallback":true},"effects":{"setFlags":["ending_white_canvas_normal_qualified"]}},{"id":"white_canvas_choose_bad_ending","text":"承认这次未能跨过的坏结局","nextSceneId":"white_canvas_ending_bad","resultText":"结局判定完成：白色画布·BAD。资格规则与选择记录已固定写入。","resultVoiceAssetId":"voice.result.white_canvas.bad_ending","availability":{"allOf":[{"kind":"flag","flag":"white_canvas_route_final","equals":true}],"anyOf":[{"kind":"value","key":"trust","operator":"lte","value":44},{"kind":"value","key":"artResonance","operator":"lte","value":38}]},"effects":{"setFlags":["ending_white_canvas_bad_qualified"]}}]},{"version":2,"id":"white_canvas_ending_true","chapter":17,"route":"white_canvas","locationId":"outskirts_dawn","backgroundAssetId":"bg.outskirts_dawn","cgAssetId":"cg.white_canvas_ending","videoAssetId":"video.animated.runtime.white_canvas_ending_true","desktopVideoAssetId":"video.animated.desktop.white_canvas_ending_true","tone":"quiet","portraits":[{"characterId":"protagonist","portraitAssetId":"portrait.protagonist.resolve","position":"left","active":false,"scale":0.92},{"characterId":"albina","portraitAssetId":"portrait.albina.endgame","position":"center","active":true,"scale":1},{"characterId":"fascia","portraitAssetId":"portrait.fascia.normal","position":"right","active":false,"scale":0.84}],"speaker":"阿尔比娜","text":"晨光落在未署名的白画上。阿尔比娜没有把你画成作品，而是把并肩离开的两道影子留在画框之外：这一次，完整与亲密同时成立。","voiceAssetId":"voice.scene.white_canvas_ending_true","bgmAssetId":"file.audio.bgm.between.two.worlds.mp3","choices":[],"ending":{"route":"white_canvas","kind":"true","eligibility":{"allOf":[{"kind":"flag","flag":"white_canvas_route_final","equals":true},{"kind":"value","key":"trust","operator":"gte","value":52},{"kind":"value","key":"artResonance","operator":"gte","value":44},{"kind":"value","key":"danger","operator":"lte","value":5}]}}},{"version":2,"id":"white_canvas_ending_normal","chapter":17,"route":"white_canvas","locationId":"outskirts_dawn","backgroundAssetId":"bg.outskirts_dawn","cgAssetId":"cg.white_canvas_ending","videoAssetId":"video.animated.runtime.white_canvas_ending_normal","desktopVideoAssetId":"video.animated.desktop.white_canvas_ending_normal","tone":"quiet","portraits":[{"characterId":"protagonist","portraitAssetId":"portrait.protagonist.resolve","position":"left","active":false,"scale":0.92},{"characterId":"albina","portraitAssetId":"portrait.albina.endgame","position":"center","active":true,"scale":1},{"characterId":"fascia","portraitAssetId":"portrait.fascia.normal","position":"right","active":false,"scale":0.84}],"speaker":"阿尔比娜","text":"展厅按约熄灯。你们保留了尚未说尽的话，也保留了随时重画的权利。阿尔比娜把空白画布卷好，约定下一场雨后再见。","voiceAssetId":"voice.scene.white_canvas_ending_normal","bgmAssetId":"file.audio.bgm.between.two.worlds.mp3","choices":[],"ending":{"route":"white_canvas","kind":"normal","eligibility":{"allOf":[{"kind":"flag","flag":"white_canvas_route_final","equals":true}],"fallback":true}}},{"version":2,"id":"white_canvas_ending_bad","chapter":17,"route":"white_canvas","locationId":"outskirts_dawn","backgroundAssetId":"bg.outskirts_dawn","cgAssetId":"cg.white_canvas_ending","videoAssetId":"video.animated.runtime.white_canvas_ending_bad","desktopVideoAssetId":"video.animated.desktop.white_canvas_ending_bad","tone":"quiet","portraits":[{"characterId":"protagonist","portraitAssetId":"portrait.protagonist.resolve","position":"left","active":false,"scale":0.92},{"characterId":"albina","portraitAssetId":"portrait.albina.endgame","position":"center","active":true,"scale":1},{"characterId":"fascia","portraitAssetId":"portrait.fascia.normal","position":"right","active":false,"scale":0.84}],"speaker":"阿尔比娜","text":"白厅没有发生争吵，只剩一张过早完成的画。阿尔比娜礼貌地收回画笔与称呼；边界仍被守住，但你们没能把信任带到黎明。","voiceAssetId":"voice.scene.white_canvas_ending_bad","bgmAssetId":"file.audio.bgm.between.two.worlds.mp3","choices":[],"ending":{"route":"white_canvas","kind":"bad","eligibility":{"allOf":[{"kind":"flag","flag":"white_canvas_route_final","equals":true}],"anyOf":[{"kind":"value","key":"trust","operator":"lte","value":44},{"kind":"value","key":"artResonance","operator":"lte","value":38}]}}},{"version":2,"id":"golden_bough_001","chapter":1,"route":"golden_bough_rebuild","locationId":"golden_bough_fault","backgroundAssetId":"bg.golden_bough","cgAssetId":"cg.rebuild_awakening","tone":"golden","portraits":[{"characterId":"albina","portraitAssetId":"portrait.albina.golden-bough","position":"center","active":true,"scale":1},{"characterId":"protagonist","portraitAssetId":"portrait.protagonist.serious","position":"left","active":false,"scale":0.9}],"speaker":"阿尔比娜","text":"金色光尘沿着她的义体裂缝回流。她先确认的不是自己，而是法西娅是否还在呼吸。","voiceAssetId":"voice.scene.golden_bough_001","bgmAssetId":"file.audio.bgm.title.theme.mp3","choices":[{"id":"rebuild_anchor","text":"成为她的记忆锚点","nextSceneId":"golden_bough_002","resultText":"你选择“成为她的记忆锚点”。旁白：镜面里的阿尔比娜有无数个切口，但每一道切口都避开了你替她守住的名字。","resultVoiceAssetId":"voice.result.rebuild_anchor","effects":{"values":{"affectionAlbina":1,"trust":5,"artResonance":2},"setFlags":["player_memory_anchor"],"unlockCg":["surgery_of_memory"]}},{"id":"rebuild_question_fascia","text":"先检查法西娅","nextSceneId":"golden_bough_002","resultText":"你选择“先检查法西娅”。旁白：镜面里的阿尔比娜有无数个切口，但每一道切口都避开了你替她守住的名字。","resultVoiceAssetId":"voice.result.rebuild_question_fascia","effects":{"values":{"trust":2,"danger":1,"artResonance":4},"setFlags":["fascia_checked_first"],"unlockCg":["fascia_heartbeat"]}}]},{"version":2,"id":"golden_bough_002","chapter":2,"route":"golden_bough_rebuild","locationId":"mirror_corridor","backgroundAssetId":"bg.mirror_corridor","cgAssetId":"cg.golden_bough_ending","tone":"golden","portraits":[{"characterId":"albina","portraitAssetId":"portrait.albina.endgame","position":"right","active":true,"scale":1},{"characterId":"protagonist","portraitAssetId":"portrait.protagonist.resolve","position":"left","active":false,"scale":0.94}],"speaker":"旁白","text":"镜面里的阿尔比娜有无数个切口，但每一道切口都避开了你替她守住的名字。","voiceAssetId":"voice.scene.golden_bough_002","bgmAssetId":"file.audio.bgm.title.theme.mp3","choices":[{"id":"rebuild_push_into_raid","text":"带着记忆锚点突入金枝异常现场","nextSceneId":"golden_bough_003","resultText":"你选择“带着记忆锚点突入金枝异常现场”。浮士德：金枝残响把病床、画架和战场叠成一张薄膜。浮士德只给出结论：如果锚点断裂，阿尔比娜会把自己误认为一件已经完成的作品。","resultVoiceAssetId":"voice.result.rebuild_push_into_raid","effects":{"values":{"trust":3,"danger":2,"artResonance":3},"setFlags":["rebuild_raid_committed"],"unlockCg":["lce_raid"]}},{"id":"return_opening_from_rebuild","text":"回到路线选择","nextSceneId":"opening_001","resultText":"你选择“回到路线选择”。阿尔比娜：晚上好，{{user}}。请不要站得太远，我还没决定该把你称作观众、朋友，还是一块值得等待的画布。","resultVoiceAssetId":"voice.result.return_opening_from_rebuild","effects":{"values":{"trust":1},"setFlags":["rebuild_looped"]}}]},{"version":2,"id":"golden_bough_003","chapter":3,"route":"golden_bough_rebuild","locationId":"lce_lab","backgroundAssetId":"bg.lce_lab","cgAssetId":"cg.lce_raid","videoAssetId":"video.animated.runtime.golden_bough_rebuild_scene_3","desktopVideoAssetId":"video.animated.desktop.golden_bough_rebuild_scene_3","tone":"threat","portraits":[{"characterId":"faust","portraitAssetId":"portrait.faust.normal","position":"left","active":false,"scale":0.82},{"characterId":"albina","portraitAssetId":"portrait.albina.fascia-open","position":"center","active":true,"scale":1},{"characterId":"protagonist","portraitAssetId":"portrait.protagonist.battle","position":"right","active":false,"scale":0.92}],"speaker":"浮士德","text":"金枝残响把病床、画架和战场叠成一张薄膜。浮士德只给出结论：如果锚点断裂，阿尔比娜会把自己误认为一件已经完成的作品。","voiceAssetId":"voice.scene.golden_bough_003","bgmAssetId":"file.audio.bgm.title.theme.mp3","sfxAssetIds":["file.audio.se.slash.heavy.wav"],"choices":[{"id":"rebuild_cut_false_completion","text":"切断“完成品”的错误定义","nextSceneId":"golden_bough_004","resultText":"你选择“切断“完成品”的错误定义”。维吉利乌斯：楼顶的风把金色光尘吹成刀刃。维吉利乌斯没有劝阻，只提醒你：重构不是修好她，而是承认她有权决定哪些缺口继续存在。","resultVoiceAssetId":"voice.result.rebuild_cut_false_completion","effects":{"values":{"trust":4,"danger":1,"artResonance":4},"setFlags":["false_completion_cut"],"unlockCg":["surgery_of_memory"]}},{"id":"rebuild_guard_fascia_pulse","text":"守住法西娅的心跳频率","nextSceneId":"golden_bough_004","resultText":"你选择“守住法西娅的心跳频率”。维吉利乌斯：楼顶的风把金色光尘吹成刀刃。维吉利乌斯没有劝阻，只提醒你：重构不是修好她，而是承认她有权决定哪些缺口继续存在。","resultVoiceAssetId":"voice.result.rebuild_guard_fascia_pulse","effects":{"values":{"affectionAlbina":1,"trust":3,"artResonance":3},"setFlags":["fascia_pulse_guarded"],"unlockCg":["fascia_heartbeat"]}}]},{"version":2,"id":"golden_bough_004","chapter":4,"route":"golden_bough_rebuild","locationId":"city_rooftop","backgroundAssetId":"bg.city_rooftop","cgAssetId":"cg.araya_rooftop","tone":"golden","portraits":[{"characterId":"vergilius","portraitAssetId":"portrait.vergilius.normal","position":"left","active":false,"scale":0.84},{"characterId":"albina","portraitAssetId":"portrait.albina.golden-bough","position":"center","active":true,"scale":1},{"characterId":"protagonist","portraitAssetId":"portrait.protagonist.resolve","position":"right","active":false,"scale":0.92}],"speaker":"维吉利乌斯","text":"楼顶的风把金色光尘吹成刀刃。维吉利乌斯没有劝阻，只提醒你：重构不是修好她，而是承认她有权决定哪些缺口继续存在。","voiceAssetId":"voice.scene.golden_bough_004","bgmAssetId":"file.audio.bgm.title.theme.mp3","choices":[{"id":"rebuild_accept_missing_pieces","text":"承认缺口也是她的结构","nextSceneId":"golden_bough_005","resultText":"你选择“承认缺口也是她的结构”。阿尔比娜：最后一面镜子没有给她完整倒影，只给出一条可以返回的路。她握住你的手腕，确认那不是束缚，而是一次被允许的回航。","resultVoiceAssetId":"voice.result.rebuild_accept_missing_pieces","effects":{"values":{"affectionAlbina":2,"trust":4,"artResonance":2},"setFlags":["missing_pieces_accepted"],"unlockCg":["golden_bough_ending"]}},{"id":"rebuild_use_rooftop_signal","text":"用楼顶信号重排记忆顺序","nextSceneId":"golden_bough_005","resultText":"你选择“用楼顶信号重排记忆顺序”。阿尔比娜：最后一面镜子没有给她完整倒影，只给出一条可以返回的路。她握住你的手腕，确认那不是束缚，而是一次被允许的回航。","resultVoiceAssetId":"voice.result.rebuild_use_rooftop_signal","effects":{"values":{"trust":3,"danger":-1,"artResonance":4},"setFlags":["rooftop_signal_reordered"],"unlockCg":["araya_rooftop"]}}]},{"version":2,"id":"golden_bough_005","chapter":5,"route":"golden_bough_rebuild","locationId":"mirror_corridor","backgroundAssetId":"bg.mirror_corridor","cgAssetId":"cg.golden_bough_ending","videoAssetId":"video.animated.runtime.golden_bough_rebuild_scene_5","desktopVideoAssetId":"video.animated.desktop.golden_bough_rebuild_scene_5","tone":"golden","portraits":[{"characterId":"golden_apparition","portraitAssetId":"portrait.golden_apparition.normal","position":"left","active":false,"scale":0.82},{"characterId":"albina","portraitAssetId":"portrait.albina.endgame","position":"center","active":true,"scale":1},{"characterId":"protagonist","portraitAssetId":"portrait.protagonist.resolve","position":"right","active":false,"scale":0.92}],"speaker":"阿尔比娜","text":"最后一面镜子没有给她完整倒影，只给出一条可以返回的路。她握住你的手腕，确认那不是束缚，而是一次被允许的回航。","voiceAssetId":"voice.scene.golden_bough_005","bgmAssetId":"file.audio.bgm.title.theme.mp3","choices":[{"id":"golden_bough_route_complete","text":"记录金枝重构路线的暂定结局","nextSceneId":"golden_bough_006","resultText":"你选择“记录金枝重构路线的暂定结局”。浮士德：记忆手术台上，金色光尘在义体接缝里像旧伤口一样反复渗出。浮士德递过一把刻度尺：她说她想重构的不是身体，是你替她记下却没敢念出来的那段。","resultVoiceAssetId":"voice.result.golden_bough_route_complete","effects":{"values":{"affectionAlbina":1,"trust":2,"danger":-1,"artResonance":3},"setFlags":["golden_bough_route_complete"]}}]},{"version":2,"id":"golden_bough_006","chapter":6,"route":"golden_bough_rebuild","locationId":"lce_lab","backgroundAssetId":"bg.lce_lab","cgAssetId":"cg.surgery_of_memory","tone":"golden","portraits":[{"characterId":"faust","portraitAssetId":"portrait.faust.normal","position":"left","active":false,"scale":0.82},{"characterId":"albina","portraitAssetId":"portrait.albina.fascia-open","position":"center","active":true,"scale":1},{"characterId":"protagonist","portraitAssetId":"portrait.protagonist.serious","position":"right","active":false,"scale":0.9}],"speaker":"浮士德","text":"记忆手术台上，金色光尘在义体接缝里像旧伤口一样反复渗出。浮士德递过一把刻度尺：她说她想重构的不是身体，是你替她记下却没敢念出来的那段。","voiceAssetId":"voice.scene.golden_bough_006","bgmAssetId":"file.audio.bgm.title.theme.mp3","choices":[{"id":"rebuild_006_read_aloud","text":"把那段记忆当着她的面念出来","nextSceneId":"golden_bough_007","resultText":"你选择“把那段记忆当着她的面念出来”。阿尔比娜：金枝裂隙里的回声全是她过去没说完的句子。她让法西娅在你和她之间选择一个频率，说这次她要先听见自己的节拍，再决定要不要跟上。","resultVoiceAssetId":"voice.result.rebuild_006_read_aloud","effects":{"values":{"affectionAlbina":2,"trust":4,"artResonance":3},"setFlags":["memory_read_aloud"],"unlockCg":["surgery_of_memory"]}},{"id":"rebuild_006_keep_silent_anchor","text":"只做锚点，不替她出声","nextSceneId":"golden_bough_007","resultText":"你选择“只做锚点，不替她出声”。阿尔比娜：金枝裂隙里的回声全是她过去没说完的句子。她让法西娅在你和她之间选择一个频率，说这次她要先听见自己的节拍，再决定要不要跟上。","resultVoiceAssetId":"voice.result.rebuild_006_keep_silent_anchor","effects":{"values":{"affectionAlbina":1,"trust":5,"artResonance":2},"setFlags":["silent_anchor_kept"],"unlockCg":["fascia_heartbeat"]}}]},{"version":2,"id":"golden_bough_007","chapter":7,"route":"golden_bough_rebuild","locationId":"golden_bough_fault","backgroundAssetId":"bg.golden_bough","cgAssetId":"cg.rebuild_awakening","tone":"golden","portraits":[{"characterId":"albina","portraitAssetId":"portrait.albina.golden-bough","position":"center","active":true,"scale":1},{"characterId":"protagonist","portraitAssetId":"portrait.protagonist.battle","position":"left","active":false,"scale":0.92}],"speaker":"阿尔比娜","text":"金枝裂隙里的回声全是她过去没说完的句子。她让法西娅在你和她之间选择一个频率，说这次她要先听见自己的节拍，再决定要不要跟上。","voiceAssetId":"voice.scene.golden_bough_007","bgmAssetId":"file.audio.bgm.title.theme.mp3","choices":[{"id":"rebuild_007_match_her_pulse","text":"按她的节拍调整呼吸","nextSceneId":"golden_bough_008","resultText":"你选择“按她的节拍调整呼吸”。维吉利乌斯：LCE 的搜捕光柱扫过楼顶。维吉利乌斯扔下一句话：你救不回完整的她，但你能决定让她以哪个版本继续存在。阿尔比娜握紧法西娅，等你下判断。","resultVoiceAssetId":"voice.result.rebuild_007_match_her_pulse","effects":{"values":{"affectionAlbina":3,"trust":4,"artResonance":3},"setFlags":["pulse_matched"],"unlockCg":["fascia_heartbeat"]}},{"id":"rebuild_007_stay_own_rhythm","text":"保留你自己的呼吸节奏，让她对齐","nextSceneId":"golden_bough_008","resultText":"你选择“保留你自己的呼吸节奏，让她对齐”。维吉利乌斯：LCE 的搜捕光柱扫过楼顶。维吉利乌斯扔下一句话：你救不回完整的她，但你能决定让她以哪个版本继续存在。阿尔比娜握紧法西娅，等你下判断。","resultVoiceAssetId":"voice.result.rebuild_007_stay_own_rhythm","effects":{"values":{"affectionAlbina":1,"trust":3,"artResonance":4},"setFlags":["own_rhythm_kept"],"unlockCg":["surgery_of_memory"]}}]},{"version":2,"id":"golden_bough_008","chapter":8,"route":"golden_bough_rebuild","locationId":"city_rooftop","backgroundAssetId":"bg.city_rooftop","cgAssetId":"cg.araya_rooftop","videoAssetId":"video.animated.runtime.golden_bough_rebuild_scene_8","desktopVideoAssetId":"video.animated.desktop.golden_bough_rebuild_scene_8","tone":"threat","portraits":[{"characterId":"vergilius","portraitAssetId":"portrait.vergilius.normal","position":"left","active":false,"scale":0.84},{"characterId":"albina","portraitAssetId":"portrait.albina.combat","position":"center","active":true,"scale":1},{"characterId":"protagonist","portraitAssetId":"portrait.protagonist.battle","position":"right","active":false,"scale":0.92}],"speaker":"维吉利乌斯","text":"LCE 的搜捕光柱扫过楼顶。维吉利乌斯扔下一句话：你救不回完整的她，但你能决定让她以哪个版本继续存在。阿尔比娜握紧法西娅，等你下判断。","voiceAssetId":"voice.scene.golden_bough_008","bgmAssetId":"file.audio.bgm.title.theme.mp3","sfxAssetIds":["file.audio.se.slash.heavy.wav"],"choices":[{"id":"rebuild_008_protect_current_self","text":"保护此刻这个尚未完成的她","nextSceneId":"golden_bough_009","resultText":"你选择“保护此刻这个尚未完成的她”。金色幻影：镜廊深处的金色幻影模仿着她的旧姿态，问她：要不要把我装回去，省得你再做一个有缺口的自己？她抬头看你，等你回答那个不属于她的问题。","resultVoiceAssetId":"voice.result.rebuild_008_protect_current_self","effects":{"values":{"affectionAlbina":2,"trust":4,"danger":1,"artResonance":3},"setFlags":["current_self_protected"],"unlockCg":["lce_raid"]}},{"id":"rebuild_008_trade_old_memory","text":"用一段旧记忆换取撤退时间","nextSceneId":"golden_bough_009","resultText":"你选择“用一段旧记忆换取撤退时间”。金色幻影：镜廊深处的金色幻影模仿着她的旧姿态，问她：要不要把我装回去，省得你再做一个有缺口的自己？她抬头看你，等你回答那个不属于她的问题。","resultVoiceAssetId":"voice.result.rebuild_008_trade_old_memory","effects":{"values":{"trust":2,"danger":-2,"artResonance":4},"setFlags":["memory_traded"],"unlockCg":["surgery_of_memory"]}}]},{"version":2,"id":"golden_bough_009","chapter":9,"route":"golden_bough_rebuild","locationId":"mirror_corridor","backgroundAssetId":"bg.mirror_corridor","cgAssetId":"cg.golden_bough_ending","tone":"golden","portraits":[{"characterId":"golden_apparition","portraitAssetId":"portrait.golden_apparition.normal","position":"left","active":false,"scale":0.82},{"characterId":"albina","portraitAssetId":"portrait.albina.endgame","position":"center","active":true,"scale":1},{"characterId":"protagonist","portraitAssetId":"portrait.protagonist.resolve","position":"right","active":false,"scale":0.92}],"speaker":"金色幻影","text":"镜廊深处的金色幻影模仿着她的旧姿态，问她：要不要把我装回去，省得你再做一个有缺口的自己？她抬头看你，等你回答那个不属于她的问题。","voiceAssetId":"voice.scene.golden_bough_009","bgmAssetId":"file.audio.bgm.title.theme.mp3","choices":[{"id":"rebuild_009_refuse_perfect_copy","text":"替她拒绝那个完美复制品","nextSceneId":"golden_bough_010","resultText":"你选择“替她拒绝那个完美复制品”。LCE 医师：医师递来一份重构协议：只要她愿意封存一段记忆，LCE 就允许她保留现在的外形。她把笔尖停在协议上，没有签字，先看你的反应。","resultVoiceAssetId":"voice.result.rebuild_009_refuse_perfect_copy","effects":{"values":{"affectionAlbina":2,"trust":5,"artResonance":3},"setFlags":["perfect_copy_refused"],"unlockCg":["golden_bough_ending"]}},{"id":"rebuild_009_hand_question_back","text":"把问题原样交还给她","nextSceneId":"golden_bough_010","resultText":"你选择“把问题原样交还给她”。LCE 医师：医师递来一份重构协议：只要她愿意封存一段记忆，LCE 就允许她保留现在的外形。她把笔尖停在协议上，没有签字，先看你的反应。","resultVoiceAssetId":"voice.result.rebuild_009_hand_question_back","effects":{"values":{"affectionAlbina":3,"trust":3,"artResonance":4},"setFlags":["question_returned"],"unlockCg":["araya_rooftop"]}}]},{"version":2,"id":"golden_bough_010","chapter":10,"route":"golden_bough_rebuild","locationId":"lce_lab","backgroundAssetId":"bg.lce_lab","cgAssetId":"cg.lce_raid","tone":"threat","portraits":[{"characterId":"lce_doctor","portraitAssetId":"portrait.lce_doctor.normal","position":"left","active":false,"scale":0.84},{"characterId":"albina","portraitAssetId":"portrait.albina.surgical","position":"center","active":true,"scale":1},{"characterId":"protagonist","portraitAssetId":"portrait.protagonist.serious","position":"right","active":false,"scale":0.9}],"speaker":"LCE 医师","text":"医师递来一份重构协议：只要她愿意封存一段记忆，LCE 就允许她保留现在的外形。她把笔尖停在协议上，没有签字，先看你的反应。","voiceAssetId":"voice.scene.golden_bough_010","bgmAssetId":"file.audio.bgm.title.theme.mp3","sfxAssetIds":["file.audio.se.slash.heavy.wav"],"choices":[{"id":"rebuild_010_veto_sealing","text":"当着医师反对封存记忆","nextSceneId":"golden_bough_011","resultText":"你选择“当着医师反对封存记忆”。阿尔比娜：夜班巴士上，她把额头轻轻抵在窗玻璃上。她说：你今天替我守住的，不是金枝，是一个允许我继续修改自己的我。","resultVoiceAssetId":"voice.result.rebuild_010_veto_sealing","effects":{"values":{"affectionAlbina":2,"trust":4,"danger":2,"artResonance":3},"setFlags":["memory_seal_vetoed"],"unlockCg":["lce_raid"]}},{"id":"rebuild_010_ask_her_choice","text":"低声问她自己想怎么签","nextSceneId":"golden_bough_011","resultText":"你选择“低声问她自己想怎么签”。阿尔比娜：夜班巴士上，她把额头轻轻抵在窗玻璃上。她说：你今天替我守住的，不是金枝，是一个允许我继续修改自己的我。","resultVoiceAssetId":"voice.result.rebuild_010_ask_her_choice","effects":{"values":{"affectionAlbina":3,"trust":5,"artResonance":2},"setFlags":["seal_choice_hers"],"unlockCg":["surgery_of_memory"]}}]},{"version":2,"id":"golden_bough_011","chapter":11,"route":"golden_bough_rebuild","locationId":"limbus_bus","backgroundAssetId":"bg.limbus_bus","cgAssetId":"cg.limbus_bus_night","videoAssetId":"video.animated.runtime.golden_bough_rebuild_scene_11","desktopVideoAssetId":"video.animated.desktop.golden_bough_rebuild_scene_11","tone":"quiet","portraits":[{"characterId":"dante","portraitAssetId":"portrait.dante.normal","position":"left","active":false,"scale":0.8},{"characterId":"albina","portraitAssetId":"portrait.albina.rain","position":"center","active":true,"scale":1},{"characterId":"protagonist","portraitAssetId":"portrait.protagonist.tender","position":"right","active":false,"scale":0.9}],"speaker":"阿尔比娜","text":"夜班巴士上，她把额头轻轻抵在窗玻璃上。她说：你今天替我守住的，不是金枝，是一个允许我继续修改自己的我。","voiceAssetId":"voice.scene.golden_bough_011","bgmAssetId":"file.audio.bgm.title.theme.mp3","choices":[{"id":"rebuild_011_sit_beside","text":"坐到她旁边，不说话","nextSceneId":"golden_bough_012","resultText":"你选择“坐到她旁边，不说话”。环指代理人：环指工坊里有人拿出一枚金枝仿品，提议替她换掉所有\\"未完成\\"的接口。她握紧法西娅，等你判断这是救济，还是又一次把她写成完成品的尝试。","resultVoiceAssetId":"voice.result.rebuild_011_sit_beside","effects":{"values":{"affectionAlbina":4,"trust":3,"artResonance":2},"setFlags":["silent_companionship"],"unlockCg":["limbus_bus_night"]}},{"id":"rebuild_011_ask_next_revision","text":"问她下一笔想修改哪里","nextSceneId":"golden_bough_012","resultText":"你选择“问她下一笔想修改哪里”。环指代理人：环指工坊里有人拿出一枚金枝仿品，提议替她换掉所有\\"未完成\\"的接口。她握紧法西娅，等你判断这是救济，还是又一次把她写成完成品的尝试。","resultVoiceAssetId":"voice.result.rebuild_011_ask_next_revision","effects":{"values":{"affectionAlbina":2,"trust":4,"artResonance":3},"setFlags":["next_revision_asked"],"unlockCg":["araya_rooftop"]}}]},{"version":2,"id":"golden_bough_012","chapter":12,"route":"golden_bough_rebuild","locationId":"ring_atelier","backgroundAssetId":"bg.ring_atelier","cgAssetId":"cg.conspiracy_contract","tone":"gallery","portraits":[{"characterId":"ren","portraitAssetId":"portrait.ren.normal","position":"left","active":false,"scale":0.84},{"characterId":"albina","portraitAssetId":"portrait.albina.furious","position":"center","active":true,"scale":1},{"characterId":"protagonist","portraitAssetId":"portrait.protagonist.battle","position":"right","active":false,"scale":0.92}],"speaker":"环指代理人","text":"环指工坊里有人拿出一枚金枝仿品，提议替她换掉所有\\"未完成\\"的接口。她握紧法西娅，等你判断这是救济，还是又一次把她写成完成品的尝试。","voiceAssetId":"voice.scene.golden_bough_012","bgmAssetId":"file.audio.bgm.title.theme.mp3","sfxAssetIds":["file.audio.se.glass.shatter.wav"],"choices":[{"id":"rebuild_012_break_contract","text":"当面撕毁那份替换协议","nextSceneId":"golden_bough_013","resultText":"你选择“当面撕毁那份替换协议”。阿尔比娜：回到金枝裂隙，她终于允许自己颤抖。她说：你不肯替我决定形状，那我能不能请求你，在我下一次重构失败时，仍然叫出我现在的名字？","resultVoiceAssetId":"voice.result.rebuild_012_break_contract","effects":{"values":{"trust":4,"danger":2,"artResonance":3},"setFlags":["replacement_contract_torn"],"unlockCg":["conspiracy_contract"]}},{"id":"rebuild_012_negotiate_terms","text":"替她重新谈判条件，不让她独自承担","nextSceneId":"golden_bough_013","resultText":"你选择“替她重新谈判条件，不让她独自承担”。阿尔比娜：回到金枝裂隙，她终于允许自己颤抖。她说：你不肯替我决定形状，那我能不能请求你，在我下一次重构失败时，仍然叫出我现在的名字？","resultVoiceAssetId":"voice.result.rebuild_012_negotiate_terms","effects":{"values":{"affectionAlbina":2,"trust":3,"artResonance":4},"setFlags":["terms_renegotiated"],"unlockCg":["surgery_of_memory"]}}]},{"version":2,"id":"golden_bough_013","chapter":13,"route":"golden_bough_rebuild","locationId":"golden_bough_fault","backgroundAssetId":"bg.golden_bough","cgAssetId":"cg.golden_bough_ending","tone":"golden","portraits":[{"characterId":"albina","portraitAssetId":"portrait.albina.golden-bough","position":"center","active":true,"scale":1},{"characterId":"fascia","portraitAssetId":"portrait.fascia.normal","position":"right","active":false,"scale":0.84},{"characterId":"protagonist","portraitAssetId":"portrait.protagonist.resolve","position":"left","active":false,"scale":0.92}],"speaker":"阿尔比娜","text":"回到金枝裂隙，她终于允许自己颤抖。她说：你不肯替我决定形状，那我能不能请求你，在我下一次重构失败时，仍然叫出我现在的名字？","voiceAssetId":"voice.scene.golden_bough_013","bgmAssetId":"file.audio.bgm.title.theme.mp3","choices":[{"id":"rebuild_013_promise_name","text":"答应她即使失败也记得这个名字","nextSceneId":"golden_bough_014","resultText":"你选择“答应她即使失败也记得这个名字”。阿尔比娜：镜廊最后一面镜子没有给倒影，只映出一枚未熄的金枝。她把镜子推向你：请你替我保管它，但不要替我点亮它。","resultVoiceAssetId":"voice.result.rebuild_013_promise_name","effects":{"values":{"affectionAlbina":4,"trust":5,"artResonance":3},"setFlags":["name_promise_given"],"unlockCg":["golden_bough_ending"]}},{"id":"rebuild_013_offer_witness","text":"只承诺做见证，不承诺结果","nextSceneId":"golden_bough_014","resultText":"你选择“只承诺做见证，不承诺结果”。阿尔比娜：镜廊最后一面镜子没有给倒影，只映出一枚未熄的金枝。她把镜子推向你：请你替我保管它，但不要替我点亮它。","resultVoiceAssetId":"voice.result.rebuild_013_offer_witness","effects":{"values":{"affectionAlbina":2,"trust":4,"artResonance":4},"setFlags":["witness_only_promise"],"unlockCg":["surgery_of_memory"]}}]},{"version":2,"id":"golden_bough_014","chapter":14,"route":"golden_bough_rebuild","locationId":"mirror_corridor","backgroundAssetId":"bg.mirror_corridor","cgAssetId":"cg.araya_rooftop","tone":"golden","portraits":[{"characterId":"albina","portraitAssetId":"portrait.albina.endgame","position":"center","active":true,"scale":1},{"characterId":"protagonist","portraitAssetId":"portrait.protagonist.resolve","position":"left","active":false,"scale":0.92}],"speaker":"阿尔比娜","text":"镜廊最后一面镜子没有给倒影，只映出一枚未熄的金枝。她把镜子推向你：请你替我保管它，但不要替我点亮它。","voiceAssetId":"voice.scene.golden_bough_014","bgmAssetId":"file.audio.bgm.title.theme.mp3","choices":[{"id":"rebuild_014_keep_unlit","text":"答应只保管，不替她点亮","nextSceneId":"golden_bough_015","resultText":"你选择“答应只保管，不替她点亮”。阿尔比娜：黎明把金枝的光尘压成一层很薄的金属。她抬头看你，第一次没有问该不该重构自己，而是说：谢谢你愿意陪我等到这一层颜色冷却。","resultVoiceAssetId":"voice.result.rebuild_014_keep_unlit","effects":{"values":{"affectionAlbina":3,"trust":5,"artResonance":3},"setFlags":["gilded_bough_kept_unlit"],"unlockCg":["golden_bough_ending"]}},{"id":"rebuild_014_ask_when_to_light","text":"问她什么时刻才能点亮","nextSceneId":"golden_bough_015","resultText":"你选择“问她什么时刻才能点亮”。阿尔比娜：黎明把金枝的光尘压成一层很薄的金属。她抬头看你，第一次没有问该不该重构自己，而是说：谢谢你愿意陪我等到这一层颜色冷却。","resultVoiceAssetId":"voice.result.rebuild_014_ask_when_to_light","effects":{"values":{"affectionAlbina":3,"trust":3,"artResonance":4},"setFlags":["lighting_condition_asked"],"unlockCg":["araya_rooftop"]}}]},{"version":2,"id":"golden_bough_015","chapter":15,"route":"golden_bough_rebuild","locationId":"outskirts_dawn","backgroundAssetId":"bg.outskirts_dawn","cgAssetId":"cg.golden_bough_ending","videoAssetId":"video.animated.runtime.golden_bough_rebuild_scene_15","desktopVideoAssetId":"video.animated.desktop.golden_bough_rebuild_scene_15","tone":"golden","portraits":[{"characterId":"protagonist","portraitAssetId":"portrait.protagonist.resolve","position":"left","active":false,"scale":0.92},{"characterId":"albina","portraitAssetId":"portrait.albina.endgame","position":"center","active":true,"scale":1}],"speaker":"阿尔比娜","text":"黎明把金枝的光尘压成一层很薄的金属。她抬头看你，第一次没有问该不该重构自己，而是说：谢谢你愿意陪我等到这一层颜色冷却。","voiceAssetId":"voice.scene.golden_bough_015","bgmAssetId":"file.audio.bgm.title.theme.mp3","choices":[{"id":"golden_bough_route_final","text":"为金枝重构路线落最后一笔","nextSceneId":"golden_bough_rebuild_ending_gate","resultText":"你选择“为金枝重构路线落最后一笔”。金枝重构路线终章已封存，进入固定结局资格判定。","resultVoiceAssetId":"voice.result.golden_bough_route_final","effects":{"values":{"affectionAlbina":3,"trust":3,"danger":-2,"artResonance":4},"setFlags":["golden_bough_route_final"]}}]},{"version":2,"id":"golden_bough_rebuild_ending_gate","chapter":16,"route":"golden_bough_rebuild","locationId":"outskirts_dawn","backgroundAssetId":"bg.outskirts_dawn","cgAssetId":"cg.golden_bough_ending","tone":"golden","portraits":[{"characterId":"protagonist","portraitAssetId":"portrait.protagonist.resolve","position":"left","active":false,"scale":0.92},{"characterId":"albina","portraitAssetId":"portrait.albina.endgame","position":"center","active":true,"scale":1}],"speaker":"叙事记录","text":"金枝重构的全部选择已封存。系统将只依据持久状态判定结局，不请求任何运行时生成。","voiceAssetId":"voice.scene.golden_bough_rebuild_ending_gate","bgmAssetId":"file.audio.bgm.title.theme.mp3","choices":[{"id":"golden_bough_rebuild_choose_true_ending","text":"确认彼此共同抵达的真结局","nextSceneId":"golden_bough_rebuild_ending_true","resultText":"结局判定完成：金枝重构·TRUE。资格规则与选择记录已固定写入。","resultVoiceAssetId":"voice.result.golden_bough_rebuild.true_ending","availability":{"allOf":[{"kind":"flag","flag":"golden_bough_route_final","equals":true},{"kind":"value","key":"trust","operator":"gte","value":56},{"kind":"value","key":"artResonance","operator":"gte","value":50},{"kind":"value","key":"danger","operator":"lte","value":8}]},"effects":{"setFlags":["ending_golden_bough_rebuild_true_qualified"]}},{"id":"golden_bough_rebuild_choose_normal_ending","text":"接受仍留有余白的普通结局","nextSceneId":"golden_bough_rebuild_ending_normal","resultText":"结局判定完成：金枝重构·NORMAL。资格规则与选择记录已固定写入。","resultVoiceAssetId":"voice.result.golden_bough_rebuild.normal_ending","availability":{"allOf":[{"kind":"flag","flag":"golden_bough_route_final","equals":true}],"fallback":true},"effects":{"setFlags":["ending_golden_bough_rebuild_normal_qualified"]}},{"id":"golden_bough_rebuild_choose_bad_ending","text":"承认这次未能跨过的坏结局","nextSceneId":"golden_bough_rebuild_ending_bad","resultText":"结局判定完成：金枝重构·BAD。资格规则与选择记录已固定写入。","resultVoiceAssetId":"voice.result.golden_bough_rebuild.bad_ending","availability":{"allOf":[{"kind":"flag","flag":"golden_bough_route_final","equals":true}],"anyOf":[{"kind":"value","key":"trust","operator":"lte","value":49},{"kind":"value","key":"artResonance","operator":"lte","value":44}]},"effects":{"setFlags":["ending_golden_bough_rebuild_bad_qualified"]}}]},{"version":2,"id":"golden_bough_rebuild_ending_true","chapter":17,"route":"golden_bough_rebuild","locationId":"outskirts_dawn","backgroundAssetId":"bg.outskirts_dawn","cgAssetId":"cg.golden_bough_ending","videoAssetId":"video.animated.runtime.golden_bough_rebuild_ending_true","desktopVideoAssetId":"video.animated.desktop.golden_bough_rebuild_ending_true","tone":"golden","portraits":[{"characterId":"protagonist","portraitAssetId":"portrait.protagonist.resolve","position":"left","active":false,"scale":0.92},{"characterId":"albina","portraitAssetId":"portrait.albina.endgame","position":"center","active":true,"scale":1}],"speaker":"阿尔比娜","text":"金枝残响终于与法西娅的心跳重合。阿尔比娜记得每一次称呼、暂停和重新确认；她以新的身体醒来，也完整记得是谁陪她走过重构。","voiceAssetId":"voice.scene.golden_bough_rebuild_ending_true","bgmAssetId":"file.audio.bgm.title.theme.mp3","choices":[],"ending":{"route":"golden_bough_rebuild","kind":"true","eligibility":{"allOf":[{"kind":"flag","flag":"golden_bough_route_final","equals":true},{"kind":"value","key":"trust","operator":"gte","value":56},{"kind":"value","key":"artResonance","operator":"gte","value":50},{"kind":"value","key":"danger","operator":"lte","value":8}]}}},{"version":2,"id":"golden_bough_rebuild_ending_normal","chapter":17,"route":"golden_bough_rebuild","locationId":"outskirts_dawn","backgroundAssetId":"bg.outskirts_dawn","cgAssetId":"cg.golden_bough_ending","videoAssetId":"video.animated.runtime.golden_bough_rebuild_ending_normal","desktopVideoAssetId":"video.animated.desktop.golden_bough_rebuild_ending_normal","tone":"golden","portraits":[{"characterId":"protagonist","portraitAssetId":"portrait.protagonist.resolve","position":"left","active":false,"scale":0.92},{"characterId":"albina","portraitAssetId":"portrait.albina.endgame","position":"center","active":true,"scale":1}],"speaker":"阿尔比娜","text":"重构在可控范围内结束。部分残响仍被封存在金色薄膜后，但阿尔比娜认得你，也认得自己。你们决定把余下修复交给时间。","voiceAssetId":"voice.scene.golden_bough_rebuild_ending_normal","bgmAssetId":"file.audio.bgm.title.theme.mp3","choices":[],"ending":{"route":"golden_bough_rebuild","kind":"normal","eligibility":{"allOf":[{"kind":"flag","flag":"golden_bough_route_final","equals":true}],"fallback":true}}},{"version":2,"id":"golden_bough_rebuild_ending_bad","chapter":17,"route":"golden_bough_rebuild","locationId":"outskirts_dawn","backgroundAssetId":"bg.outskirts_dawn","cgAssetId":"cg.golden_bough_ending","videoAssetId":"video.animated.runtime.golden_bough_rebuild_ending_bad","desktopVideoAssetId":"video.animated.desktop.golden_bough_rebuild_ending_bad","tone":"golden","portraits":[{"characterId":"protagonist","portraitAssetId":"portrait.protagonist.resolve","position":"left","active":false,"scale":0.92},{"characterId":"albina","portraitAssetId":"portrait.albina.endgame","position":"center","active":true,"scale":1}],"speaker":"阿尔比娜","text":"稳定槽保住了身体，却没能保住全部连续性。阿尔比娜醒来时仍然礼貌，只把你当作可靠的见证者；被遗漏的称呼沉在金枝深处。","voiceAssetId":"voice.scene.golden_bough_rebuild_ending_bad","bgmAssetId":"file.audio.bgm.title.theme.mp3","choices":[],"ending":{"route":"golden_bough_rebuild","kind":"bad","eligibility":{"allOf":[{"kind":"flag","flag":"golden_bough_route_final","equals":true}],"anyOf":[{"kind":"value","key":"trust","operator":"lte","value":49},{"kind":"value","key":"artResonance","operator":"lte","value":44}]}}},{"version":2,"id":"ring_conspiracy_001","chapter":1,"route":"ring_conspiracy","locationId":"spider_gallery","backgroundAssetId":"bg.spider_gallery","cgAssetId":"cg.conspiracy_contract","tone":"threat","portraits":[{"characterId":"callisto","portraitAssetId":"portrait.callisto.normal","position":"left","active":false,"scale":0.86},{"characterId":"albina","portraitAssetId":"portrait.albina.ring-conspiracy","position":"center","active":true,"scale":1},{"characterId":"ren","portraitAssetId":"portrait.ren.normal","position":"right","active":false,"scale":0.84}],"speaker":"阿尔比娜","text":"蜘蛛巢的灯光像手术刀一样落下。她向你递来一份没有署名的委托，笑得礼貌又危险。","voiceAssetId":"voice.scene.ring_conspiracy_001","bgmAssetId":"file.audio.bgm.boss.kromer.mp3","sfxAssetIds":["file.audio.se.slash.heavy.wav"],"choices":[{"id":"conspiracy_accept","text":"接下委托，但保留自己的条件","nextSceneId":"ring_conspiracy_002","resultText":"你选择“接下委托，但保留自己的条件”。阿尔比娜：她第一次没有把怒意伪装成礼貌。那不是要毁掉你的眼神，更像是不允许任何人替她决定你的用途。","resultVoiceAssetId":"voice.result.conspiracy_accept","effects":{"values":{"trust":2,"danger":3,"artResonance":3},"setFlags":["contract_with_boundary"],"unlockCg":["conspiracy_contract"]}},{"id":"conspiracy_pressure","text":"逼她说出真正目标","nextSceneId":"ring_conspiracy_002","resultText":"你选择“逼她说出真正目标”。阿尔比娜：她第一次没有把怒意伪装成礼貌。那不是要毁掉你的眼神，更像是不允许任何人替她决定你的用途。","resultVoiceAssetId":"voice.result.conspiracy_pressure","effects":{"values":{"affectionAlbina":1,"danger":4,"artResonance":2},"setFlags":["pressed_true_goal"],"unlockCg":["maestro_shadow"]}}]},{"version":2,"id":"ring_conspiracy_002","chapter":2,"route":"ring_conspiracy","locationId":"ring_atelier","backgroundAssetId":"bg.ring_atelier","cgAssetId":"cg.ring_conspiracy_ending","tone":"gallery","portraits":[{"characterId":"albina","portraitAssetId":"portrait.albina.furious","position":"right","active":true,"scale":1},{"characterId":"protagonist","portraitAssetId":"portrait.protagonist.battle","position":"left","active":false,"scale":0.95}],"speaker":"阿尔比娜","text":"她第一次没有把怒意伪装成礼貌。那不是要毁掉你的眼神，更像是不允许任何人替她决定你的用途。","voiceAssetId":"voice.scene.ring_conspiracy_002","bgmAssetId":"file.audio.bgm.boss.kromer.mp3","sfxAssetIds":["file.audio.se.glass.shatter.wav"],"choices":[{"id":"conspiracy_escape_to_backstreets","text":"带着未签名委托冲出画廊","nextSceneId":"ring_conspiracy_003","resultText":"你选择“带着未签名委托冲出画廊”。环指代理人：追兵把雨巷切成一个个展格，仿佛你们已经是可出售的连环画。阿尔比娜没有回头，只把法西娅横在你和委托书之间。","resultVoiceAssetId":"voice.result.conspiracy_escape_to_backstreets","effects":{"values":{"trust":2,"danger":3,"artResonance":2},"setFlags":["ring_escape_committed"],"unlockCg":["backstreet_pursuit"]}},{"id":"return_opening_from_ring","text":"回到路线选择","nextSceneId":"opening_001","resultText":"你选择“回到路线选择”。阿尔比娜：晚上好，{{user}}。请不要站得太远，我还没决定该把你称作观众、朋友，还是一块值得等待的画布。","resultVoiceAssetId":"voice.result.return_opening_from_ring","effects":{"values":{"trust":1,"danger":-1},"setFlags":["conspiracy_looped"]}}]},{"version":2,"id":"ring_conspiracy_003","chapter":3,"route":"ring_conspiracy","locationId":"backstreets_rain","backgroundAssetId":"bg.backstreets_rain","cgAssetId":"cg.backstreet_pursuit","videoAssetId":"video.animated.runtime.ring_conspiracy_scene_3","desktopVideoAssetId":"video.animated.desktop.ring_conspiracy_scene_3","tone":"threat","portraits":[{"characterId":"ring_agent","portraitAssetId":"portrait.ring_agent.normal","position":"left","active":false,"scale":0.84},{"characterId":"albina","portraitAssetId":"portrait.albina.combat","position":"center","active":true,"scale":1},{"characterId":"protagonist","portraitAssetId":"portrait.protagonist.battle","position":"right","active":false,"scale":0.92}],"speaker":"环指代理人","text":"追兵把雨巷切成一个个展格，仿佛你们已经是可出售的连环画。阿尔比娜没有回头，只把法西娅横在你和委托书之间。","voiceAssetId":"voice.scene.ring_conspiracy_003","bgmAssetId":"file.audio.bgm.boss.kromer.mp3","sfxAssetIds":["file.audio.se.slash.heavy.wav"],"choices":[{"id":"conspiracy_break_pursuit_frame","text":"打碎追兵布下的取景框","nextSceneId":"ring_conspiracy_004","resultText":"你选择“打碎追兵布下的取景框”。阿尔比娜：回到蜘蛛画廊时，所有灯都向她弯下去。她把那份委托钉在空框里，语气平静：如果他们要收藏背叛，就先学会被背叛凝视。","resultVoiceAssetId":"voice.result.conspiracy_break_pursuit_frame","effects":{"values":{"trust":3,"danger":2,"artResonance":3},"setFlags":["pursuit_frame_broken"],"unlockCg":["combat_transition_01"]}},{"id":"conspiracy_feed_false_signature","text":"交出伪造签名引开视线","nextSceneId":"ring_conspiracy_004","resultText":"你选择“交出伪造签名引开视线”。阿尔比娜：回到蜘蛛画廊时，所有灯都向她弯下去。她把那份委托钉在空框里，语气平静：如果他们要收藏背叛，就先学会被背叛凝视。","resultVoiceAssetId":"voice.result.conspiracy_feed_false_signature","effects":{"values":{"trust":2,"danger":-1,"artResonance":4},"setFlags":["false_signature_planted"],"unlockCg":["ren_interruption"]}}]},{"version":2,"id":"ring_conspiracy_004","chapter":4,"route":"ring_conspiracy","locationId":"spider_gallery","backgroundAssetId":"bg.spider_gallery","cgAssetId":"cg.maestro_shadow","tone":"gallery","portraits":[{"characterId":"ren","portraitAssetId":"portrait.ren.normal","position":"left","active":false,"scale":0.82},{"characterId":"albina","portraitAssetId":"portrait.albina.maestro","position":"center","active":true,"scale":1},{"characterId":"protagonist","portraitAssetId":"portrait.protagonist.shadow","position":"right","active":false,"scale":0.9}],"speaker":"阿尔比娜","text":"回到蜘蛛画廊时，所有灯都向她弯下去。她把那份委托钉在空框里，语气平静：如果他们要收藏背叛，就先学会被背叛凝视。","voiceAssetId":"voice.scene.ring_conspiracy_004","bgmAssetId":"file.audio.bgm.boss.kromer.mp3","sfxAssetIds":["file.audio.se.glass.shatter.wav"],"choices":[{"id":"ring_conspiracy_route_complete","text":"记录环指共谋路线的暂定结局","nextSceneId":"ring_conspiracy_005","resultText":"你选择“记录环指共谋路线的暂定结局”。卡利斯托：卡利斯托把另一份署了名的委托推到你们中间，笑得像在挑礼物：既然上次没有展出你的缺陷，这次不如让你们两个一起成为一件合作作品。","resultVoiceAssetId":"voice.result.ring_conspiracy_route_complete","effects":{"values":{"affectionAlbina":1,"trust":2,"danger":-2,"artResonance":3},"setFlags":["ring_conspiracy_route_complete"],"unlockCg":["ring_conspiracy_ending"]}}]},{"version":2,"id":"ring_conspiracy_005","chapter":5,"route":"ring_conspiracy","locationId":"ring_atelier","backgroundAssetId":"bg.ring_atelier","cgAssetId":"cg.maestro_shadow","videoAssetId":"video.animated.runtime.ring_conspiracy_scene_5","desktopVideoAssetId":"video.animated.desktop.ring_conspiracy_scene_5","tone":"gallery","portraits":[{"characterId":"callisto","portraitAssetId":"portrait.callisto.normal","position":"left","active":false,"scale":0.86},{"characterId":"albina","portraitAssetId":"portrait.albina.maestro","position":"center","active":true,"scale":1},{"characterId":"protagonist","portraitAssetId":"portrait.protagonist.shadow","position":"right","active":false,"scale":0.9}],"speaker":"卡利斯托","text":"卡利斯托把另一份署了名的委托推到你们中间，笑得像在挑礼物：既然上次没有展出你的缺陷，这次不如让你们两个一起成为一件合作作品。","voiceAssetId":"voice.scene.ring_conspiracy_005","bgmAssetId":"file.audio.bgm.boss.kromer.mp3","sfxAssetIds":["file.audio.se.glass.shatter.wav"],"choices":[{"id":"conspiracy_005_refuse_duo","text":"当众拒绝成为合作展品","nextSceneId":"ring_conspiracy_006","resultText":"你选择“当众拒绝成为合作展品”。阿尔比娜：蜘蛛画廊的灯突然转向她。她把法西娅插进墙上一幅空框，声音很冷：你们想收藏我，那就先学会被我凝视。","resultVoiceAssetId":"voice.result.conspiracy_005_refuse_duo","effects":{"values":{"trust":3,"danger":2,"artResonance":3},"setFlags":["duo_exhibit_refused"],"unlockCg":["maestro_shadow"]}},{"id":"conspiracy_005_let_her_answer","text":"不替她回答，让阿尔比娜开口","nextSceneId":"ring_conspiracy_006","resultText":"你选择“不替她回答，让阿尔比娜开口”。阿尔比娜：蜘蛛画廊的灯突然转向她。她把法西娅插进墙上一幅空框，声音很冷：你们想收藏我，那就先学会被我凝视。","resultVoiceAssetId":"voice.result.conspiracy_005_let_her_answer","effects":{"values":{"affectionAlbina":2,"trust":4,"artResonance":4},"setFlags":["albina_answered_herself"],"unlockCg":["conspiracy_contract"]}}]},{"version":2,"id":"ring_conspiracy_006","chapter":6,"route":"ring_conspiracy","locationId":"spider_gallery","backgroundAssetId":"bg.spider_gallery","cgAssetId":"cg.conspiracy_contract","tone":"threat","portraits":[{"characterId":"ren","portraitAssetId":"portrait.ren.normal","position":"left","active":false,"scale":0.84},{"characterId":"albina","portraitAssetId":"portrait.albina.furious","position":"center","active":true,"scale":1},{"characterId":"protagonist","portraitAssetId":"portrait.protagonist.battle","position":"right","active":false,"scale":0.92}],"speaker":"阿尔比娜","text":"蜘蛛画廊的灯突然转向她。她把法西娅插进墙上一幅空框，声音很冷：你们想收藏我，那就先学会被我凝视。","voiceAssetId":"voice.scene.ring_conspiracy_006","bgmAssetId":"file.audio.bgm.boss.kromer.mp3","sfxAssetIds":["file.audio.se.slash.heavy.wav"],"choices":[{"id":"conspiracy_006_stand_with_her","text":"站到她身侧，分担凝视","nextSceneId":"ring_conspiracy_007","resultText":"你选择“站到她身侧，分担凝视”。环指代理人：雨巷的尽头被代理人堵住。他不拔武器，只是举起一面空画框，要把你们框进环指的目录。阿尔比娜低声让你选：是冲破画框，还是把它抢过来。","resultVoiceAssetId":"voice.result.conspiracy_006_stand_with_her","effects":{"values":{"affectionAlbina":3,"trust":4,"danger":1,"artResonance":3},"setFlags":["gaze_shared"],"unlockCg":["maestro_shadow"]}},{"id":"conspiracy_006_block_view","text":"挡在她和委托人之间","nextSceneId":"ring_conspiracy_007","resultText":"你选择“挡在她和委托人之间”。环指代理人：雨巷的尽头被代理人堵住。他不拔武器，只是举起一面空画框，要把你们框进环指的目录。阿尔比娜低声让你选：是冲破画框，还是把它抢过来。","resultVoiceAssetId":"voice.result.conspiracy_006_block_view","effects":{"values":{"affectionAlbina":2,"trust":3,"danger":3,"artResonance":2},"setFlags":["view_blocked"],"unlockCg":["combat_transition_01"]}}]},{"version":2,"id":"ring_conspiracy_007","chapter":7,"route":"ring_conspiracy","locationId":"backstreets_rain","backgroundAssetId":"bg.backstreets_rain","cgAssetId":"cg.backstreet_pursuit","tone":"threat","portraits":[{"characterId":"ring_agent","portraitAssetId":"portrait.ring_agent.normal","position":"left","active":false,"scale":0.84},{"characterId":"albina","portraitAssetId":"portrait.albina.combat","position":"center","active":true,"scale":1},{"characterId":"protagonist","portraitAssetId":"portrait.protagonist.battle","position":"right","active":false,"scale":0.92}],"speaker":"环指代理人","text":"雨巷的尽头被代理人堵住。他不拔武器，只是举起一面空画框，要把你们框进环指的目录。阿尔比娜低声让你选：是冲破画框，还是把它抢过来。","voiceAssetId":"voice.scene.ring_conspiracy_007","bgmAssetId":"file.audio.bgm.boss.kromer.mp3","sfxAssetIds":["file.audio.se.slash.heavy.wav"],"choices":[{"id":"conspiracy_007_break_frame","text":"冲破画框","nextSceneId":"ring_conspiracy_008","resultText":"你选择“冲破画框”。LCE 医师：LCE 把你们暂扣在手术间。医师递来一份中立证词表，说只要她肯指认环指，就帮她换掉被环指标注过的接口。她没有看表，先看你。","resultVoiceAssetId":"voice.result.conspiracy_007_break_frame","effects":{"values":{"trust":3,"danger":3,"artResonance":3},"setFlags":["street_frame_broken"],"unlockCg":["combat_transition_01"]}},{"id":"conspiracy_007_seize_frame","text":"把画框抢过来，反过来框住他","nextSceneId":"ring_conspiracy_008","resultText":"你选择“把画框抢过来，反过来框住他”。LCE 医师：LCE 把你们暂扣在手术间。医师递来一份中立证词表，说只要她肯指认环指，就帮她换掉被环指标注过的接口。她没有看表，先看你。","resultVoiceAssetId":"voice.result.conspiracy_007_seize_frame","effects":{"values":{"trust":4,"danger":2,"artResonance":4},"setFlags":["frame_seized"],"unlockCg":["maestro_shadow"]}}]},{"version":2,"id":"ring_conspiracy_008","chapter":8,"route":"ring_conspiracy","locationId":"lce_lab","backgroundAssetId":"bg.lce_lab","cgAssetId":"cg.lce_raid","videoAssetId":"video.animated.runtime.ring_conspiracy_scene_8","desktopVideoAssetId":"video.animated.desktop.ring_conspiracy_scene_8","tone":"threat","portraits":[{"characterId":"lce_doctor","portraitAssetId":"portrait.lce_doctor.normal","position":"left","active":false,"scale":0.84},{"characterId":"albina","portraitAssetId":"portrait.albina.surgical","position":"center","active":true,"scale":1},{"characterId":"protagonist","portraitAssetId":"portrait.protagonist.serious","position":"right","active":false,"scale":0.9}],"speaker":"LCE 医师","text":"LCE 把你们暂扣在手术间。医师递来一份中立证词表，说只要她肯指认环指，就帮她换掉被环指标注过的接口。她没有看表，先看你。","voiceAssetId":"voice.scene.ring_conspiracy_008","bgmAssetId":"file.audio.bgm.boss.kromer.mp3","sfxAssetIds":["file.audio.se.slash.heavy.wav"],"choices":[{"id":"conspiracy_008_refuse_testimony","text":"当面拒绝用她换取证词","nextSceneId":"ring_conspiracy_009","resultText":"你选择“当面拒绝用她换取证词”。阿尔比娜：镜廊里同时映出\\"环指版的她\\"和\\"现在的她\\"。她让法西娅在两面镜子之间选一面，然后问你：你愿意被哪一个版本记得？","resultVoiceAssetId":"voice.result.conspiracy_008_refuse_testimony","effects":{"values":{"affectionAlbina":2,"trust":5,"danger":2,"artResonance":2},"setFlags":["testimony_refused"],"unlockCg":["lce_raid"]}},{"id":"conspiracy_008_hand_pen_to_her","text":"把笔交还给她，由她自己决定","nextSceneId":"ring_conspiracy_009","resultText":"你选择“把笔交还给她，由她自己决定”。阿尔比娜：镜廊里同时映出\\"环指版的她\\"和\\"现在的她\\"。她让法西娅在两面镜子之间选一面，然后问你：你愿意被哪一个版本记得？","resultVoiceAssetId":"voice.result.conspiracy_008_hand_pen_to_her","effects":{"values":{"affectionAlbina":3,"trust":4,"artResonance":3},"setFlags":["pen_returned_to_albina"],"unlockCg":["conspiracy_contract"]}}]},{"version":2,"id":"ring_conspiracy_009","chapter":9,"route":"ring_conspiracy","locationId":"mirror_corridor","backgroundAssetId":"bg.mirror_corridor","cgAssetId":"cg.maestro_shadow","tone":"gallery","portraits":[{"characterId":"golden_apparition","portraitAssetId":"portrait.golden_apparition.normal","position":"left","active":false,"scale":0.82},{"characterId":"albina","portraitAssetId":"portrait.albina.maestro","position":"center","active":true,"scale":1},{"characterId":"protagonist","portraitAssetId":"portrait.protagonist.shadow","position":"right","active":false,"scale":0.9}],"speaker":"阿尔比娜","text":"镜廊里同时映出\\"环指版的她\\"和\\"现在的她\\"。她让法西娅在两面镜子之间选一面，然后问你：你愿意被哪一个版本记得？","voiceAssetId":"voice.scene.ring_conspiracy_009","bgmAssetId":"file.audio.bgm.boss.kromer.mp3","sfxAssetIds":["file.audio.se.glass.shatter.wav"],"choices":[{"id":"conspiracy_009_choose_present","text":"选现在的她，不挑那个环指版","nextSceneId":"ring_conspiracy_010","resultText":"你选择“选现在的她，不挑那个环指版”。卡利斯托：卡利斯托拿出一枚\\"合作者徽章\\"，说只要她肯戴上，环指就放过你。阿尔比娜笑了一下，把徽章塞进你掌心：你来替我决定，要不要让我用它换你。","resultVoiceAssetId":"voice.result.conspiracy_009_choose_present","effects":{"values":{"affectionAlbina":4,"trust":3,"artResonance":3},"setFlags":["present_albina_chosen"],"unlockCg":["art_resonance"]}},{"id":"conspiracy_009_refuse_choice","text":"拒绝回答，让她自己挑镜子","nextSceneId":"ring_conspiracy_010","resultText":"你选择“拒绝回答，让她自己挑镜子”。卡利斯托：卡利斯托拿出一枚\\"合作者徽章\\"，说只要她肯戴上，环指就放过你。阿尔比娜笑了一下，把徽章塞进你掌心：你来替我决定，要不要让我用它换你。","resultVoiceAssetId":"voice.result.conspiracy_009_refuse_choice","effects":{"values":{"affectionAlbina":2,"trust":4,"artResonance":4},"setFlags":["mirror_choice_returned"],"unlockCg":["maestro_shadow"]}}]},{"version":2,"id":"ring_conspiracy_010","chapter":10,"route":"ring_conspiracy","locationId":"ring_atelier","backgroundAssetId":"bg.ring_atelier","cgAssetId":"cg.conspiracy_contract","tone":"gallery","portraits":[{"characterId":"callisto","portraitAssetId":"portrait.callisto.normal","position":"left","active":false,"scale":0.84},{"characterId":"albina","portraitAssetId":"portrait.albina.furious","position":"center","active":true,"scale":1},{"characterId":"protagonist","portraitAssetId":"portrait.protagonist.battle","position":"right","active":false,"scale":0.92}],"speaker":"卡利斯托","text":"卡利斯托拿出一枚\\"合作者徽章\\"，说只要她肯戴上，环指就放过你。阿尔比娜笑了一下，把徽章塞进你掌心：你来替我决定，要不要让我用它换你。","voiceAssetId":"voice.scene.ring_conspiracy_010","bgmAssetId":"file.audio.bgm.boss.kromer.mp3","sfxAssetIds":["file.audio.se.glass.shatter.wav"],"choices":[{"id":"conspiracy_010_throw_badge","text":"把徽章扔回卡利斯托脸上","nextSceneId":"ring_conspiracy_011","resultText":"你选择“把徽章扔回卡利斯托脸上”。环指代理人：代理人撕下礼貌，举出一卷写好剧本的胶片：今晚的故事已经定稿，结局是你们两个都被装裱。阿尔比娜握紧法西娅，低声让你替她改写最后一格分镜。","resultVoiceAssetId":"voice.result.conspiracy_010_throw_badge","effects":{"values":{"affectionAlbina":3,"trust":4,"danger":3,"artResonance":2},"setFlags":["badge_thrown"],"unlockCg":["combat_transition_01"]}},{"id":"conspiracy_010_keep_badge_unworn","text":"收下徽章，但谁都不许戴","nextSceneId":"ring_conspiracy_011","resultText":"你选择“收下徽章，但谁都不许戴”。环指代理人：代理人撕下礼貌，举出一卷写好剧本的胶片：今晚的故事已经定稿，结局是你们两个都被装裱。阿尔比娜握紧法西娅，低声让你替她改写最后一格分镜。","resultVoiceAssetId":"voice.result.conspiracy_010_keep_badge_unworn","effects":{"values":{"affectionAlbina":2,"trust":3,"danger":1,"artResonance":4},"setFlags":["badge_kept_unworn"],"unlockCg":["maestro_shadow"]}}]},{"version":2,"id":"ring_conspiracy_011","chapter":11,"route":"ring_conspiracy","locationId":"spider_gallery","backgroundAssetId":"bg.spider_gallery","cgAssetId":"cg.maestro_shadow","videoAssetId":"video.animated.runtime.ring_conspiracy_scene_11","desktopVideoAssetId":"video.animated.desktop.ring_conspiracy_scene_11","tone":"threat","portraits":[{"characterId":"ren","portraitAssetId":"portrait.ren.normal","position":"left","active":false,"scale":0.82},{"characterId":"albina","portraitAssetId":"portrait.albina.combat","position":"center","active":true,"scale":1},{"characterId":"protagonist","portraitAssetId":"portrait.protagonist.battle","position":"right","active":false,"scale":0.92}],"speaker":"环指代理人","text":"代理人撕下礼貌，举出一卷写好剧本的胶片：今晚的故事已经定稿，结局是你们两个都被装裱。阿尔比娜握紧法西娅，低声让你替她改写最后一格分镜。","voiceAssetId":"voice.scene.ring_conspiracy_011","bgmAssetId":"file.audio.bgm.boss.kromer.mp3","sfxAssetIds":["file.audio.se.slash.heavy.wav"],"choices":[{"id":"conspiracy_011_rewrite_ending","text":"当众改写结局，让他们措手不及","nextSceneId":"ring_conspiracy_012","resultText":"你选择“当众改写结局，让他们措手不及”。维吉利乌斯：楼顶上，维吉利乌斯把一柄已经卸下锋刃的环指画刀扔在你们脚边：用这个结束今晚，或者用它开始下一次共谋，你们自己挑。","resultVoiceAssetId":"voice.result.conspiracy_011_rewrite_ending","effects":{"values":{"trust":4,"danger":2,"artResonance":4},"setFlags":["ending_rewritten"],"unlockCg":["ring_conspiracy_ending"]}},{"id":"conspiracy_011_burn_film","text":"直接烧掉胶片，让剧本作废","nextSceneId":"ring_conspiracy_012","resultText":"你选择“直接烧掉胶片，让剧本作废”。维吉利乌斯：楼顶上，维吉利乌斯把一柄已经卸下锋刃的环指画刀扔在你们脚边：用这个结束今晚，或者用它开始下一次共谋，你们自己挑。","resultVoiceAssetId":"voice.result.conspiracy_011_burn_film","effects":{"values":{"trust":3,"danger":4,"artResonance":3},"setFlags":["film_burned"],"unlockCg":["combat_transition_01"]}}]},{"version":2,"id":"ring_conspiracy_012","chapter":12,"route":"ring_conspiracy","locationId":"city_rooftop","backgroundAssetId":"bg.city_rooftop","cgAssetId":"cg.araya_rooftop","tone":"threat","portraits":[{"characterId":"vergilius","portraitAssetId":"portrait.vergilius.normal","position":"left","active":false,"scale":0.84},{"characterId":"albina","portraitAssetId":"portrait.albina.rain","position":"center","active":true,"scale":1},{"characterId":"protagonist","portraitAssetId":"portrait.protagonist.resolve","position":"right","active":false,"scale":0.92}],"speaker":"维吉利乌斯","text":"楼顶上，维吉利乌斯把一柄已经卸下锋刃的环指画刀扔在你们脚边：用这个结束今晚，或者用它开始下一次共谋，你们自己挑。","voiceAssetId":"voice.scene.ring_conspiracy_012","bgmAssetId":"file.audio.bgm.boss.kromer.mp3","sfxAssetIds":["file.audio.se.slash.heavy.wav"],"choices":[{"id":"conspiracy_012_end_tonight","text":"选择结束今晚的共谋","nextSceneId":"ring_conspiracy_013","resultText":"你选择“选择结束今晚的共谋”。阿尔比娜：夜班巴士把你们带离环指的视线。她靠在窗边，把法西娅从胸口取出来放在你掌心一秒：今晚我借你这一秒心跳，作为不签名的合作凭证。","resultVoiceAssetId":"voice.result.conspiracy_012_end_tonight","effects":{"values":{"affectionAlbina":2,"trust":3,"danger":-2,"artResonance":3},"setFlags":["night_ended"],"unlockCg":["ring_conspiracy_ending"]}},{"id":"conspiracy_012_keep_blade","text":"收下画刀，留给未来必要时再用","nextSceneId":"ring_conspiracy_013","resultText":"你选择“收下画刀，留给未来必要时再用”。阿尔比娜：夜班巴士把你们带离环指的视线。她靠在窗边，把法西娅从胸口取出来放在你掌心一秒：今晚我借你这一秒心跳，作为不签名的合作凭证。","resultVoiceAssetId":"voice.result.conspiracy_012_keep_blade","effects":{"values":{"affectionAlbina":1,"trust":4,"danger":1,"artResonance":4},"setFlags":["blade_kept"],"unlockCg":["maestro_shadow"]}}]},{"version":2,"id":"ring_conspiracy_013","chapter":13,"route":"ring_conspiracy","locationId":"limbus_bus","backgroundAssetId":"bg.limbus_bus","cgAssetId":"cg.limbus_bus_night","tone":"quiet","portraits":[{"characterId":"dante","portraitAssetId":"portrait.dante.normal","position":"left","active":false,"scale":0.8},{"characterId":"albina","portraitAssetId":"portrait.albina.rain","position":"center","active":true,"scale":1},{"characterId":"protagonist","portraitAssetId":"portrait.protagonist.wet-hair","position":"right","active":false,"scale":0.9}],"speaker":"阿尔比娜","text":"夜班巴士把你们带离环指的视线。她靠在窗边，把法西娅从胸口取出来放在你掌心一秒：今晚我借你这一秒心跳，作为不签名的合作凭证。","voiceAssetId":"voice.scene.ring_conspiracy_013","bgmAssetId":"file.audio.bgm.boss.kromer.mp3","choices":[{"id":"conspiracy_013_hold_one_second","text":"认真握住那一秒，不多不少","nextSceneId":"ring_conspiracy_014","resultText":"你选择“认真握住那一秒，不多不少”。卡利斯托：巢穴车站最后一盏灯下，卡利斯托最后一次出现，递来一张空白入场券：你愿意把今晚写进环指的目录，还是彻底从目录里抹去？","resultVoiceAssetId":"voice.result.conspiracy_013_hold_one_second","effects":{"values":{"affectionAlbina":4,"trust":3,"artResonance":3},"setFlags":["one_second_held"],"unlockCg":["fascia_heartbeat"]}},{"id":"conspiracy_013_return_gently","text":"提前把它轻轻送回，不占有","nextSceneId":"ring_conspiracy_014","resultText":"你选择“提前把它轻轻送回，不占有”。卡利斯托：巢穴车站最后一盏灯下，卡利斯托最后一次出现，递来一张空白入场券：你愿意把今晚写进环指的目录，还是彻底从目录里抹去？","resultVoiceAssetId":"voice.result.conspiracy_013_return_gently","effects":{"values":{"affectionAlbina":2,"trust":5,"artResonance":4},"setFlags":["heartbeat_returned_early"],"unlockCg":["rain_reflection"]}}]},{"version":2,"id":"ring_conspiracy_014","chapter":14,"route":"ring_conspiracy","locationId":"nest_station","backgroundAssetId":"bg.nest_station","cgAssetId":"cg.ring_conspiracy_ending","tone":"gallery","portraits":[{"characterId":"callisto","portraitAssetId":"portrait.callisto.normal","position":"left","active":false,"scale":0.82},{"characterId":"albina","portraitAssetId":"portrait.albina.maestro","position":"center","active":true,"scale":1},{"characterId":"protagonist","portraitAssetId":"portrait.protagonist.shadow","position":"right","active":false,"scale":0.9}],"speaker":"卡利斯托","text":"巢穴车站最后一盏灯下，卡利斯托最后一次出现，递来一张空白入场券：你愿意把今晚写进环指的目录，还是彻底从目录里抹去？","voiceAssetId":"voice.scene.ring_conspiracy_014","bgmAssetId":"file.audio.bgm.boss.kromer.mp3","sfxAssetIds":["file.audio.se.glass.shatter.wav"],"choices":[{"id":"conspiracy_014_erase_from_catalog","text":"选择从环指目录里彻底抹去","nextSceneId":"ring_conspiracy_015","resultText":"你选择“选择从环指目录里彻底抹去”。阿尔比娜：城郊黎明把环指的灯火远远压在身后。她停下脚步，把那柄卸下锋刃的画刀插进土里：今晚的共谋到此为止，下一次见面，我会以自己的名义邀请你。","resultVoiceAssetId":"voice.result.conspiracy_014_erase_from_catalog","effects":{"values":{"affectionAlbina":2,"trust":4,"danger":-2,"artResonance":3},"setFlags":["catalog_erased"],"unlockCg":["ring_conspiracy_ending"]}},{"id":"conspiracy_014_keep_one_line","text":"只保留一行不被署名的记录","nextSceneId":"ring_conspiracy_015","resultText":"你选择“只保留一行不被署名的记录”。阿尔比娜：城郊黎明把环指的灯火远远压在身后。她停下脚步，把那柄卸下锋刃的画刀插进土里：今晚的共谋到此为止，下一次见面，我会以自己的名义邀请你。","resultVoiceAssetId":"voice.result.conspiracy_014_keep_one_line","effects":{"values":{"affectionAlbina":3,"trust":3,"artResonance":4},"setFlags":["anonymous_line_kept"],"unlockCg":["maestro_shadow"]}}]},{"version":2,"id":"ring_conspiracy_015","chapter":15,"route":"ring_conspiracy","locationId":"outskirts_dawn","backgroundAssetId":"bg.outskirts_dawn","cgAssetId":"cg.ring_conspiracy_ending","videoAssetId":"video.animated.runtime.ring_conspiracy_scene_15","desktopVideoAssetId":"video.animated.desktop.ring_conspiracy_scene_15","tone":"quiet","portraits":[{"characterId":"protagonist","portraitAssetId":"portrait.protagonist.resolve","position":"left","active":false,"scale":0.92},{"characterId":"albina","portraitAssetId":"portrait.albina.endgame","position":"center","active":true,"scale":1}],"speaker":"阿尔比娜","text":"城郊黎明把环指的灯火远远压在身后。她停下脚步，把那柄卸下锋刃的画刀插进土里：今晚的共谋到此为止，下一次见面，我会以自己的名义邀请你。","voiceAssetId":"voice.scene.ring_conspiracy_015","bgmAssetId":"file.audio.bgm.boss.kromer.mp3","choices":[{"id":"ring_conspiracy_route_final","text":"为环指共谋路线合上最后一卷胶片","nextSceneId":"ring_conspiracy_ending_gate","resultText":"你选择“为环指共谋路线合上最后一卷胶片”。环指共谋路线终章已封存，进入固定结局资格判定。","resultVoiceAssetId":"voice.result.ring_conspiracy_route_final","effects":{"values":{"affectionAlbina":3,"trust":3,"danger":-2,"artResonance":4},"setFlags":["ring_conspiracy_route_final"]}}]},{"version":2,"id":"ring_conspiracy_ending_gate","chapter":16,"route":"ring_conspiracy","locationId":"outskirts_dawn","backgroundAssetId":"bg.outskirts_dawn","cgAssetId":"cg.ring_conspiracy_ending","tone":"quiet","portraits":[{"characterId":"protagonist","portraitAssetId":"portrait.protagonist.resolve","position":"left","active":false,"scale":0.92},{"characterId":"albina","portraitAssetId":"portrait.albina.endgame","position":"center","active":true,"scale":1}],"speaker":"叙事记录","text":"环指共谋的全部选择已封存。系统将只依据持久状态判定结局，不请求任何运行时生成。","voiceAssetId":"voice.scene.ring_conspiracy_ending_gate","bgmAssetId":"file.audio.bgm.boss.kromer.mp3","choices":[{"id":"ring_conspiracy_choose_true_ending","text":"确认彼此共同抵达的真结局","nextSceneId":"ring_conspiracy_ending_true","resultText":"结局判定完成：环指共谋·TRUE。资格规则与选择记录已固定写入。","resultVoiceAssetId":"voice.result.ring_conspiracy.true_ending","availability":{"allOf":[{"kind":"flag","flag":"ring_conspiracy_route_final","equals":true},{"kind":"value","key":"trust","operator":"gte","value":49},{"kind":"value","key":"artResonance","operator":"gte","value":49},{"kind":"value","key":"danger","operator":"lte","value":15}]},"effects":{"setFlags":["ending_ring_conspiracy_true_qualified"]}},{"id":"ring_conspiracy_choose_normal_ending","text":"接受仍留有余白的普通结局","nextSceneId":"ring_conspiracy_ending_normal","resultText":"结局判定完成：环指共谋·NORMAL。资格规则与选择记录已固定写入。","resultVoiceAssetId":"voice.result.ring_conspiracy.normal_ending","availability":{"allOf":[{"kind":"flag","flag":"ring_conspiracy_route_final","equals":true}],"fallback":true},"effects":{"setFlags":["ending_ring_conspiracy_normal_qualified"]}},{"id":"ring_conspiracy_choose_bad_ending","text":"承认这次未能跨过的坏结局","nextSceneId":"ring_conspiracy_ending_bad","resultText":"结局判定完成：环指共谋·BAD。资格规则与选择记录已固定写入。","resultVoiceAssetId":"voice.result.ring_conspiracy.bad_ending","availability":{"allOf":[{"kind":"flag","flag":"ring_conspiracy_route_final","equals":true}],"anyOf":[{"kind":"value","key":"trust","operator":"lte","value":44},{"kind":"value","key":"danger","operator":"gte","value":18}]},"effects":{"setFlags":["ending_ring_conspiracy_bad_qualified"]}}]},{"version":2,"id":"ring_conspiracy_ending_true","chapter":17,"route":"ring_conspiracy","locationId":"outskirts_dawn","backgroundAssetId":"bg.outskirts_dawn","cgAssetId":"cg.ring_conspiracy_ending","videoAssetId":"video.animated.runtime.ring_conspiracy_ending_true","desktopVideoAssetId":"video.animated.desktop.ring_conspiracy_ending_true","tone":"quiet","portraits":[{"characterId":"protagonist","portraitAssetId":"portrait.protagonist.resolve","position":"left","active":false,"scale":0.92},{"characterId":"albina","portraitAssetId":"portrait.albina.endgame","position":"center","active":true,"scale":1}],"speaker":"阿尔比娜","text":"环指的目录里只剩一页无法归档的空白。阿尔比娜以自己的名字向你发出下一次邀请；你们不再是展品或棋子，而是彼此承认的共谋者。","voiceAssetId":"voice.scene.ring_conspiracy_ending_true","bgmAssetId":"file.audio.bgm.boss.kromer.mp3","choices":[],"ending":{"route":"ring_conspiracy","kind":"true","eligibility":{"allOf":[{"kind":"flag","flag":"ring_conspiracy_route_final","equals":true},{"kind":"value","key":"trust","operator":"gte","value":49},{"kind":"value","key":"artResonance","operator":"gte","value":49},{"kind":"value","key":"danger","operator":"lte","value":15}]}}},{"version":2,"id":"ring_conspiracy_ending_normal","chapter":17,"route":"ring_conspiracy","locationId":"outskirts_dawn","backgroundAssetId":"bg.outskirts_dawn","cgAssetId":"cg.ring_conspiracy_ending","videoAssetId":"video.animated.runtime.ring_conspiracy_ending_normal","desktopVideoAssetId":"video.animated.desktop.ring_conspiracy_ending_normal","tone":"quiet","portraits":[{"characterId":"protagonist","portraitAssetId":"portrait.protagonist.resolve","position":"left","active":false,"scale":0.92},{"characterId":"albina","portraitAssetId":"portrait.albina.endgame","position":"center","active":true,"scale":1}],"speaker":"阿尔比娜","text":"你们离开了画廊，也留下了一条匿名记录作为制衡。危险没有消失，但契约已被改写；阿尔比娜把下一次会面留给更安全的夜晚。","voiceAssetId":"voice.scene.ring_conspiracy_ending_normal","bgmAssetId":"file.audio.bgm.boss.kromer.mp3","choices":[],"ending":{"route":"ring_conspiracy","kind":"normal","eligibility":{"allOf":[{"kind":"flag","flag":"ring_conspiracy_route_final","equals":true}],"fallback":true}}},{"version":2,"id":"ring_conspiracy_ending_bad","chapter":17,"route":"ring_conspiracy","locationId":"outskirts_dawn","backgroundAssetId":"bg.outskirts_dawn","cgAssetId":"cg.ring_conspiracy_ending","videoAssetId":"video.animated.runtime.ring_conspiracy_ending_bad","desktopVideoAssetId":"video.animated.desktop.ring_conspiracy_ending_bad","tone":"quiet","portraits":[{"characterId":"protagonist","portraitAssetId":"portrait.protagonist.resolve","position":"left","active":false,"scale":0.92},{"characterId":"albina","portraitAssetId":"portrait.albina.endgame","position":"center","active":true,"scale":1}],"speaker":"阿尔比娜","text":"追击停止时，代价已经写进彼此的沉默。你们逃出了装裱，却没能保住共同节奏；阿尔比娜独自带走那柄无锋画刀，没有约定再见。","voiceAssetId":"voice.scene.ring_conspiracy_ending_bad","bgmAssetId":"file.audio.bgm.boss.kromer.mp3","choices":[],"ending":{"route":"ring_conspiracy","kind":"bad","eligibility":{"allOf":[{"kind":"flag","flag":"ring_conspiracy_route_final","equals":true}],"anyOf":[{"kind":"value","key":"trust","operator":"lte","value":44},{"kind":"value","key":"danger","operator":"gte","value":18}]}}}]'), T_ = {
-  version: y_,
-  projectId: k_,
-  initialSceneId: w_,
-  routeEntrySceneIds: E_,
-  scenes: I_
+const m_ = 2, g_ = "albina-galgame-card", b_ = "assets", h_ = /* @__PURE__ */ JSON.parse('[{"id":"bg.backstreets_rain","kind":"image","path":"bg/backstreets_rain.jpg","mimeType":"image/jpeg","sha256":"7a897b01c41634b0ab05b8411f487e60712909f153aed6b866c6e724f7a05ec7","bytes":195160},{"id":"bg.city_rooftop","kind":"image","path":"bg/city_rooftop.jpg","mimeType":"image/jpeg","sha256":"4428f1f905a752eab7e4f6119f236f12767778db7f4768d2463a03ee6dcc4697","bytes":207867},{"id":"bg.golden_bough","kind":"image","path":"bg/golden_bough.jpg","mimeType":"image/jpeg","sha256":"5e6a552b04b4333ca30c001a3020168908d7867926982ca4097145fa735ee207","bytes":222682},{"id":"bg.lce_lab","kind":"image","path":"bg/lce_lab.jpg","mimeType":"image/jpeg","sha256":"b982f39f13eb87cdb59d1540ff4f7688c4b319600a7174a758288f3c4efe672d","bytes":202605},{"id":"bg.limbus_bus","kind":"image","path":"bg/limbus_bus.jpg","mimeType":"image/jpeg","sha256":"c684aba165f3d0a195d6e5b438be4bc9b2a070a4ac3364e91bef93716aab9c60","bytes":194697},{"id":"bg.mirror_corridor","kind":"image","path":"bg/mirror_corridor.jpg","mimeType":"image/jpeg","sha256":"aac5cfac5624763538d533b63914c845c266dc17845789d9c3f7d5bb408603f9","bytes":193914},{"id":"bg.nest_station","kind":"image","path":"bg/nest_station.jpg","mimeType":"image/jpeg","sha256":"732fa0c67c071560b01c536d5ed76944c60d1a0d9a5034087ca79bf5ffff9ad2","bytes":196705},{"id":"bg.outskirts_dawn","kind":"image","path":"bg/outskirts_dawn.jpg","mimeType":"image/jpeg","sha256":"4ccbdbab6a95b5d79ae476a96f8b453ed07241e599014002fdc83475f8bd092a","bytes":182100},{"id":"bg.rain_room","kind":"image","path":"bg/rain_room.jpg","mimeType":"image/jpeg","sha256":"0a4b24f02a4f9274d6691594cbfd8c1f2512c1fe4559083a22c6cf2891cb198e","bytes":198604},{"id":"bg.ring_atelier","kind":"image","path":"bg/ring_atelier.jpg","mimeType":"image/jpeg","sha256":"aed9195327ca4feef20a611b2bd0f0ed4a8fba22f12fdf685bafc5b3ed13eb10","bytes":197708},{"id":"bg.spider_gallery","kind":"image","path":"bg/spider_gallery.jpg","mimeType":"image/jpeg","sha256":"78a4336f0aa42c3ecf10667aeeb40dcdd42b271548872255c66aee716abcf024","bytes":223415},{"id":"bg.white_canvas","kind":"image","path":"bg/white_canvas.jpg","mimeType":"image/jpeg","sha256":"6551848df5f6a312cbd769356b512643b33f2b9e68c9b8da21ad98ab9ef80605","bytes":193895},{"id":"cg.araya_rooftop","kind":"image","path":"cg/araya_rooftop.jpg","mimeType":"image/jpeg","sha256":"1ecd4ffa5f53471b66b5aecbfa37a8289c603c2a5ce2212538da01cbd5d5d8e4","bytes":226727},{"id":"cg.art_resonance","kind":"image","path":"cg/art_resonance.jpg","mimeType":"image/jpeg","sha256":"da4000d606059e545bbf427451a999ea99e9fd730b71033cf61ed0e5c7ebeb1a","bytes":221527},{"id":"cg.backstreet_pursuit","kind":"image","path":"cg/backstreet_pursuit.jpg","mimeType":"image/jpeg","sha256":"ff18127cd0ae95ad91c3e85ceec047def159a58bfec852708271a65d4f53b774","bytes":208589},{"id":"cg.conspiracy_contract","kind":"image","path":"cg/conspiracy_contract.jpg","mimeType":"image/jpeg","sha256":"72922d9f7aac148fcfe1e6d7bed34fa8fd7bfc7323641b67feb5279fbe87dad1","bytes":215416},{"id":"cg.fascia_heartbeat","kind":"image","path":"cg/fascia_heartbeat.jpg","mimeType":"image/jpeg","sha256":"2640a75be54575dce6bdc1b9023b06934899cbf4b5492cf012ef1e9c7d2f71e6","bytes":204579},{"id":"cg.golden_bough_ending","kind":"image","path":"cg/golden_bough_ending.jpg","mimeType":"image/jpeg","sha256":"4700e8485eb57b194cf6878741509ddc1e323d486878114259b9405051045491","bytes":217599},{"id":"cg.hollow_torso_reveal","kind":"image","path":"cg/hollow_torso_reveal.jpg","mimeType":"image/jpeg","sha256":"46e83edaabd17b1316bd705daf1a14614c0a7ae8b6164281b9770a2e020fe3e5","bytes":212406},{"id":"cg.lce_raid","kind":"image","path":"cg/lce_raid.jpg","mimeType":"image/jpeg","sha256":"037414f5985f5d972656d297f771e4553d3c01d1d700185bea68f40723892284","bytes":191396},{"id":"cg.limbus_bus_night","kind":"image","path":"cg/limbus_bus_night.jpg","mimeType":"image/jpeg","sha256":"0b1054ef8e4b8cd99b8f234ae2abd5c5e160813b73d1e564dba47c67f8a7cd8a","bytes":202828},{"id":"cg.maestro_shadow","kind":"image","path":"cg/maestro_shadow.jpg","mimeType":"image/jpeg","sha256":"ff93dcfc2b02faf7920d1426ebdfadf86d58aa5744117a6d692d2f5f370fa5c6","bytes":223021},{"id":"cg.opening_rain","kind":"image","path":"cg/opening_rain.jpg","mimeType":"image/jpeg","sha256":"557521106b516bf35aa9b55473c6f977a80bdf8ed6f7fe3f8ecf47de6c961931","bytes":190464},{"id":"cg.rain_confession","kind":"image","path":"cg/rain_confession.jpg","mimeType":"image/jpeg","sha256":"2312880e97be851f6f2688efb07f8d1475e7e4ea1ff3de2dde2db622bee41884","bytes":233325},{"id":"cg.rebuild_awakening","kind":"image","path":"cg/rebuild_awakening.jpg","mimeType":"image/jpeg","sha256":"21c280bc65cf08f4d34b983a9731e3e231bd154a724cec0ee32dc11fc3698648","bytes":182730},{"id":"cg.ring_conspiracy_ending","kind":"image","path":"cg/ring_conspiracy_ending.jpg","mimeType":"image/jpeg","sha256":"dd57358bb86e03d8619a820ff3b0773dea49d24a760ea09593c5594652876ea3","bytes":219860},{"id":"cg.surgery_of_memory","kind":"image","path":"cg/surgery_of_memory.jpg","mimeType":"image/jpeg","sha256":"3856e752a99b3c8c4d83ae3cd2ae259ce8911b63439c3925d92d8bafc2231b68","bytes":241224},{"id":"cg.trust_threshold","kind":"image","path":"cg/trust_threshold.jpg","mimeType":"image/jpeg","sha256":"ee433f58ec08d7311b0dccee6f184d5b6235e398bbc62698455276e33db673fc","bytes":183900},{"id":"cg.white_canvas_choice","kind":"image","path":"cg/white_canvas_choice.jpg","mimeType":"image/jpeg","sha256":"ed4e27e3e480ec1bb7c3e1f400274fe8ca6277c9bd114a9edca1bcd3ad93a0d9","bytes":200807},{"id":"cg.white_canvas_ending","kind":"image","path":"cg/white_canvas_ending.jpg","mimeType":"image/jpeg","sha256":"c9c999a7eed0a02dc31fe84736e7ef8af39ecd47e288c3d99d19b9bc56b5145c","bytes":232672},{"id":"file.audio.bgm.backstreets.rain.mp3","kind":"audio","path":"audio/bgm/backstreets_rain.mp3","mimeType":"audio/mpeg","sha256":"97b5969e9379853e1cc14028fbb908d8607f71ebea87f371ad0499ef94a0a414","bytes":4192274},{"id":"file.audio.bgm.between.two.worlds.mp3","kind":"audio","path":"audio/bgm/between_two_worlds.mp3","mimeType":"audio/mpeg","sha256":"25470853676263801b044d22761e579a750db722aefbf1d8d48676f49f626184","bytes":2979130},{"id":"file.audio.bgm.boss.kromer.mp3","kind":"audio","path":"audio/bgm/boss_kromer.mp3","mimeType":"audio/mpeg","sha256":"923955f3d2091d427d9e345dd6bf9d143a5c3b37631f9ada77a7bca625aa97dd","bytes":3679463},{"id":"file.audio.bgm.main.menu.mp3","kind":"audio","path":"audio/bgm/main_menu.mp3","mimeType":"audio/mpeg","sha256":"299a5619829dbb95604531d310fd89dd190009589bdcdc2ef7881f878b1f7a60","bytes":7685141},{"id":"file.audio.bgm.title.theme.mp3","kind":"audio","path":"audio/bgm/title_theme.mp3","mimeType":"audio/mpeg","sha256":"03917669cba8086f921712e0db8c59d32e02d63e3be443d8d4458a9d2786ded3","bytes":2540613},{"id":"file.audio.se.blood.splat.wav","kind":"audio","path":"audio/se/blood_splat.wav","mimeType":"audio/wav","sha256":"87c30bfd8c336786de618759015f3ee24eee2638d406d7541c7c3fc17201bc17","bytes":17684},{"id":"file.audio.se.glass.shatter.wav","kind":"audio","path":"audio/se/glass_shatter.wav","mimeType":"audio/wav","sha256":"7f066a84a711bcdcf48abc70b07e92ee21957e25cd06765d3637226c55bddda2","bytes":15920},{"id":"file.audio.se.slash.heavy.wav","kind":"audio","path":"audio/se/slash_heavy.wav","mimeType":"audio/wav","sha256":"c93d1adea430352fd38fd9ef315c54801f9fde63350a2fa62584ad20441c7f57","bytes":15920},{"id":"file.audio.se.typing.blip.wav","kind":"audio","path":"audio/se/typing_blip.wav","mimeType":"audio/wav","sha256":"0002e7621f5dd6510cc047dbcfaee2cc7ab958dc20b1d149809958a6f14b1668","bytes":4012},{"id":"file.audio.se.ui.back.wav","kind":"audio","path":"audio/se/ui_back.wav","mimeType":"audio/wav","sha256":"c80e3b1f405a1a2c3d35c5f7b0d94839aba09bce28136b76b94b17a72eaf7f65","bytes":10628},{"id":"file.audio.se.ui.click.wav","kind":"audio","path":"audio/se/ui_click.wav","mimeType":"audio/wav","sha256":"fb67965be3a2b903b7f06c19646df9943f5607bea683798718fe2e77a188e270","bytes":2248},{"id":"file.audio.se.ui.confirm.wav","kind":"audio","path":"audio/se/ui_confirm.wav","mimeType":"audio/wav","sha256":"7fc178ebe16e5de7b62514cca74b1fdcf800dc85156c2d450079279a2446904b","bytes":17684},{"id":"file.audio.voice.result.conspiracy.005.let.her.answer.mp3","kind":"audio","path":"audio/voice/result/conspiracy_005_let_her_answer.mp3","mimeType":"audio/mpeg","sha256":"548667e2e8d97d86d68959d8c7ee94e2d81570f13ba597501c7ffeb569832526","bytes":218292},{"id":"file.audio.voice.result.conspiracy.005.refuse.duo.mp3","kind":"audio","path":"audio/voice/result/conspiracy_005_refuse_duo.mp3","mimeType":"audio/mpeg","sha256":"f03cd8e5cf332108df089065f72c50b9184de7a5724dac60ee57595047802769","bytes":225780},{"id":"file.audio.voice.result.conspiracy.006.block.view.mp3","kind":"audio","path":"audio/voice/result/conspiracy_006_block_view.mp3","mimeType":"audio/mpeg","sha256":"8b1422137db20ab49eabed7bd28bc2849dfe37ea073dd5ee6f212ff0e20a70ac","bytes":290292},{"id":"file.audio.voice.result.conspiracy.006.stand.with.her.mp3","kind":"audio","path":"audio/voice/result/conspiracy_006_stand_with_her.mp3","mimeType":"audio/mpeg","sha256":"20e2c48a0ce12a926636936548d42fbf11727ef7a000a1595eeff797a6c09f8b","bytes":300660},{"id":"file.audio.voice.result.conspiracy.007.break.frame.mp3","kind":"audio","path":"audio/voice/result/conspiracy_007_break_frame.mp3","mimeType":"audio/mpeg","sha256":"871e78d300f8278a232ba010d7b427867a64467fb8e27d365e7d4e62edfd926e","bytes":233844},{"id":"file.audio.voice.result.conspiracy.007.seize.frame.mp3","kind":"audio","path":"audio/voice/result/conspiracy_007_seize_frame.mp3","mimeType":"audio/mpeg","sha256":"d08785dfa3e8c3517977a6d6bf9c1512e010a58cf5b35eecc2eb821cc81dc33e","bytes":271284},{"id":"file.audio.voice.result.conspiracy.008.hand.pen.to.her.mp3","kind":"audio","path":"audio/voice/result/conspiracy_008_hand_pen_to_her.mp3","mimeType":"audio/mpeg","sha256":"d8e813e7ebdbeb0f6110e70a2bb7a5a52bce8da57e5f8d09f2ff372d0c30d418","bytes":242484},{"id":"file.audio.voice.result.conspiracy.008.refuse.testimony.mp3","kind":"audio","path":"audio/voice/result/conspiracy_008_refuse_testimony.mp3","mimeType":"audio/mpeg","sha256":"d5ca8cee4ee30db158d885deb2604fa78bb33c832d7743a030fbc2133d63efb7","bytes":229812},{"id":"file.audio.voice.result.conspiracy.009.choose.present.mp3","kind":"audio","path":"audio/voice/result/conspiracy_009_choose_present.mp3","mimeType":"audio/mpeg","sha256":"d255a37065cb040862cbb36fd595af444fd8506e6c351a9b0fddce3e3843caa5","bytes":287988},{"id":"file.audio.voice.result.conspiracy.009.refuse.choice.mp3","kind":"audio","path":"audio/voice/result/conspiracy_009_refuse_choice.mp3","mimeType":"audio/mpeg","sha256":"d84f22e0be4599542ae4608dbd3d6d570a23c37fbc05ec358baf82bd5866147e","bytes":306420},{"id":"file.audio.voice.result.conspiracy.010.keep.badge.unworn.mp3","kind":"audio","path":"audio/voice/result/conspiracy_010_keep_badge_unworn.mp3","mimeType":"audio/mpeg","sha256":"2ba5efee14ce0ffd8bddacac3a707d23e20f2bd2fcab2103cd3890cc11cfc33c","bytes":263796},{"id":"file.audio.voice.result.conspiracy.010.throw.badge.mp3","kind":"audio","path":"audio/voice/result/conspiracy_010_throw_badge.mp3","mimeType":"audio/mpeg","sha256":"6a78bf8c769c7296815b0eb02fb01769e0d15aa7754ed0ea72096041c683153b","bytes":260916},{"id":"file.audio.voice.result.conspiracy.011.burn.film.mp3","kind":"audio","path":"audio/voice/result/conspiracy_011_burn_film.mp3","mimeType":"audio/mpeg","sha256":"785b0204dfb11fe1882f188366acaf80f6cdd88836e81bb162d4c19c09b750b6","bytes":243636},{"id":"file.audio.voice.result.conspiracy.011.rewrite.ending.mp3","kind":"audio","path":"audio/voice/result/conspiracy_011_rewrite_ending.mp3","mimeType":"audio/mpeg","sha256":"8b9f5b34fc073979f154a9a87293de86ebaaeba56f89e568eded54a61d3ea343","bytes":238452},{"id":"file.audio.voice.result.conspiracy.012.end.tonight.mp3","kind":"audio","path":"audio/voice/result/conspiracy_012_end_tonight.mp3","mimeType":"audio/mpeg","sha256":"ce0871f2f82b8d758e989219d1951c4cd0edf1036e8fe7bca19d3ea3abcbcd86","bytes":277620},{"id":"file.audio.voice.result.conspiracy.012.keep.blade.mp3","kind":"audio","path":"audio/voice/result/conspiracy_012_keep_blade.mp3","mimeType":"audio/mpeg","sha256":"57c8336c5692d6725fa5fe110f82307674ff12f413e167b5ac3281bb0c22c554","bytes":273588},{"id":"file.audio.voice.result.conspiracy.013.hold.one.second.mp3","kind":"audio","path":"audio/voice/result/conspiracy_013_hold_one_second.mp3","mimeType":"audio/mpeg","sha256":"97ad5295330dd4e4c20f60e667c94efa825b06a06ecb6e577ac621080a5a16d9","bytes":254004},{"id":"file.audio.voice.result.conspiracy.013.return.gently.mp3","kind":"audio","path":"audio/voice/result/conspiracy_013_return_gently.mp3","mimeType":"audio/mpeg","sha256":"b0c4e5d6af73a4728f850b33cb5cb9db51e06598642b52410b2f4e2faf90d076","bytes":269556},{"id":"file.audio.voice.result.conspiracy.014.erase.from.catalog.mp3","kind":"audio","path":"audio/voice/result/conspiracy_014_erase_from_catalog.mp3","mimeType":"audio/mpeg","sha256":"f4a479901d65888eea4634ae1ea8a156024e84b705595187a28a32e4d8a008b4","bytes":283956},{"id":"file.audio.voice.result.conspiracy.014.keep.one.line.mp3","kind":"audio","path":"audio/voice/result/conspiracy_014_keep_one_line.mp3","mimeType":"audio/mpeg","sha256":"4734a1cc33e33ff06799ee86d66763782127c8ea2acaff03a12b59e86e6b0a60","bytes":289716},{"id":"file.audio.voice.result.conspiracy.accept.mp3","kind":"audio","path":"audio/voice/result/conspiracy_accept.mp3","mimeType":"audio/mpeg","sha256":"4b76303e8e34898103631f630d182d820b1c5b4f08cc19105df3778e8adfcc8f","bytes":242484},{"id":"file.audio.voice.result.conspiracy.break.pursuit.frame.mp3","kind":"audio","path":"audio/voice/result/conspiracy_break_pursuit_frame.mp3","mimeType":"audio/mpeg","sha256":"3597acb7210a208c020fb28c0fb1c7c63e595fac7b419da1355556960e70570a","bytes":237876},{"id":"file.audio.voice.result.conspiracy.escape.to.backstreets.mp3","kind":"audio","path":"audio/voice/result/conspiracy_escape_to_backstreets.mp3","mimeType":"audio/mpeg","sha256":"0fd19a0ac7085d583a8178d38c071804d60a9be3c1363b26f62e31ef34a5b15e","bytes":263796},{"id":"file.audio.voice.result.conspiracy.feed.false.signature.mp3","kind":"audio","path":"audio/voice/result/conspiracy_feed_false_signature.mp3","mimeType":"audio/mpeg","sha256":"a10423e4201744e3f64d594cb8948c4f2fca578cb88fcaa2f865839235035525","bytes":240756},{"id":"file.audio.voice.result.conspiracy.pressure.mp3","kind":"audio","path":"audio/voice/result/conspiracy_pressure.mp3","mimeType":"audio/mpeg","sha256":"0e165916d831f3aab506621939c657e90f4fa282a6fb212061143a82e6ccfebe","bytes":210804},{"id":"file.audio.voice.result.enter.conspiracy.mp3","kind":"audio","path":"audio/voice/result/enter_conspiracy.mp3","mimeType":"audio/mpeg","sha256":"f8964fe276712a75e96af70eceb75f46845ab038422a529a4ca67d6ccc168e56","bytes":204468},{"id":"file.audio.voice.result.enter.rebuild.mp3","kind":"audio","path":"audio/voice/result/enter_rebuild.mp3","mimeType":"audio/mpeg","sha256":"fa7f6c482fb449c3f7c61f2d556182e30a49d449d14fb8329213f97ba8dae9db","bytes":202740},{"id":"file.audio.voice.result.enter.white.canvas.mp3","kind":"audio","path":"audio/voice/result/enter_white_canvas.mp3","mimeType":"audio/mpeg","sha256":"5f238c579d61475995d082999f73a16d0c182f8db58a16ab8cd9d2a802277d97","bytes":164724},{"id":"file.audio.voice.result.golden.bough.rebuild.bad.ending.mp3","kind":"audio","path":"audio/voice/result/golden_bough_rebuild/bad_ending.mp3","mimeType":"audio/mpeg","sha256":"401c2bf97a19b9d9cc0a68bd7c9f9d1e85ce99d5a378d8b5f21449266fdc1417","bytes":115764},{"id":"file.audio.voice.result.golden.bough.rebuild.normal.ending.mp3","kind":"audio","path":"audio/voice/result/golden_bough_rebuild/normal_ending.mp3","mimeType":"audio/mpeg","sha256":"d1161b5a7e0cbff976cc5e32b470d3439b738c3acf20fd59eeff3086f84bbc2d","bytes":112884},{"id":"file.audio.voice.result.golden.bough.rebuild.true.ending.mp3","kind":"audio","path":"audio/voice/result/golden_bough_rebuild/true_ending.mp3","mimeType":"audio/mpeg","sha256":"148ae12e5af697470bf05597480564d896ee6084c08442ee66e368a783d965f6","bytes":105972},{"id":"file.audio.voice.result.golden.bough.route.complete.mp3","kind":"audio","path":"audio/voice/result/golden_bough_route_complete.mp3","mimeType":"audio/mpeg","sha256":"e457029e4b26e12174ecf9c30212c573f3d7693c0d73f686506bde427ba00de7","bytes":331188},{"id":"file.audio.voice.result.golden.bough.route.final.mp3","kind":"audio","path":"audio/voice/result/golden_bough_route_final.mp3","mimeType":"audio/mpeg","sha256":"ff10f8673bd0fe23c51936ce4bf55414ab4544224ca0f2d244709ae15cda54b0","bytes":143988},{"id":"file.audio.voice.result.rebuild.006.keep.silent.anchor.mp3","kind":"audio","path":"audio/voice/result/rebuild_006_keep_silent_anchor.mp3","mimeType":"audio/mpeg","sha256":"ea553da520b4f2af20f6ef09f831f0115fb3c299bca2acb125cbbba3825e6a65","bytes":269556},{"id":"file.audio.voice.result.rebuild.006.read.aloud.mp3","kind":"audio","path":"audio/voice/result/rebuild_006_read_aloud.mp3","mimeType":"audio/mpeg","sha256":"1ba8b1e99c835f51e83566218b0831472cae6f8b9bed544379008edfb98ed56e","bytes":270708},{"id":"file.audio.voice.result.rebuild.007.match.her.pulse.mp3","kind":"audio","path":"audio/voice/result/rebuild_007_match_her_pulse.mp3","mimeType":"audio/mpeg","sha256":"e6454ff8fee875b9f2634d84ab7ebce1be09e030812ccdd916aa291b8a9e69d6","bytes":295476},{"id":"file.audio.voice.result.rebuild.007.stay.own.rhythm.mp3","kind":"audio","path":"audio/voice/result/rebuild_007_stay_own_rhythm.mp3","mimeType":"audio/mpeg","sha256":"03ff1752e22f90ffd73af641d1d182688d3a349c9778079c5fb9217eee4a86d3","bytes":305268},{"id":"file.audio.voice.result.rebuild.008.protect.current.self.mp3","kind":"audio","path":"audio/voice/result/rebuild_008_protect_current_self.mp3","mimeType":"audio/mpeg","sha256":"87637a730ba4bcfaf94708a85f427bd8225fb3f123b2674df47fc6b14de306ac","bytes":274164},{"id":"file.audio.voice.result.rebuild.008.trade.old.memory.mp3","kind":"audio","path":"audio/voice/result/rebuild_008_trade_old_memory.mp3","mimeType":"audio/mpeg","sha256":"d94505f65341fd2877cdbf6ddcd0067ed716314330df879113e4d306ee5b76fd","bytes":271860},{"id":"file.audio.voice.result.rebuild.009.hand.question.back.mp3","kind":"audio","path":"audio/voice/result/rebuild_009_hand_question_back.mp3","mimeType":"audio/mpeg","sha256":"8b29cf1086c02e716ed0cff07536f363d83101916d10fa4ca5e627b649b9527b","bytes":270132},{"id":"file.audio.voice.result.rebuild.009.refuse.perfect.copy.mp3","kind":"audio","path":"audio/voice/result/rebuild_009_refuse_perfect_copy.mp3","mimeType":"audio/mpeg","sha256":"a70c9a8ad345295ae5d861bbe5dfba1f6467cc8fa60194e0bac35848edabbd97","bytes":267252},{"id":"file.audio.voice.result.rebuild.010.ask.her.choice.mp3","kind":"audio","path":"audio/voice/result/rebuild_010_ask_her_choice.mp3","mimeType":"audio/mpeg","sha256":"5cecd7509b4d42b4e7c3e7ba0309b53b302c9ee88bf2255bc793be78a802a182","bytes":226932},{"id":"file.audio.voice.result.rebuild.010.veto.sealing.mp3","kind":"audio","path":"audio/voice/result/rebuild_010_veto_sealing.mp3","mimeType":"audio/mpeg","sha256":"5f46716f6a5efc4287c341a0d2b8f02c311a8c1109bf19a519f3e391069a6eb2","bytes":232692},{"id":"file.audio.voice.result.rebuild.011.ask.next.revision.mp3","kind":"audio","path":"audio/voice/result/rebuild_011_ask_next_revision.mp3","mimeType":"audio/mpeg","sha256":"eae27a33c8bc3fe8decead1165d83cb94521f45594f102bf4e5574da3b6f09ec","bytes":292020},{"id":"file.audio.voice.result.rebuild.011.sit.beside.mp3","kind":"audio","path":"audio/voice/result/rebuild_011_sit_beside.mp3","mimeType":"audio/mpeg","sha256":"ee92eac2d9efee09aa05e29d4ff482d9631ccce9526f11a92cb55f4e6ebe155e","bytes":290868},{"id":"file.audio.voice.result.rebuild.012.break.contract.mp3","kind":"audio","path":"audio/voice/result/rebuild_012_break_contract.mp3","mimeType":"audio/mpeg","sha256":"2cb0663dd3c9d2d7b5413424443f2a9bd48002e251075355d36762b9371e3409","bytes":251700},{"id":"file.audio.voice.result.rebuild.012.negotiate.terms.mp3","kind":"audio","path":"audio/voice/result/rebuild_012_negotiate_terms.mp3","mimeType":"audio/mpeg","sha256":"ab0f098d13994e6c429414e506450988dbd84476294cbd3c3749cd7b64fd4ed3","bytes":268980},{"id":"file.audio.voice.result.rebuild.013.offer.witness.mp3","kind":"audio","path":"audio/voice/result/rebuild_013_offer_witness.mp3","mimeType":"audio/mpeg","sha256":"8d44e5907f85e91235c1eed2e9ee6ceacc12dd90599663ebe4bdec64f9fb6dfd","bytes":254004},{"id":"file.audio.voice.result.rebuild.013.promise.name.mp3","kind":"audio","path":"audio/voice/result/rebuild_013_promise_name.mp3","mimeType":"audio/mpeg","sha256":"ad4b896e8b63255b97863d25448f39d4578377b9948343a3b031f492095e3fe3","bytes":255156},{"id":"file.audio.voice.result.rebuild.014.ask.when.to.light.mp3","kind":"audio","path":"audio/voice/result/rebuild_014_ask_when_to_light.mp3","mimeType":"audio/mpeg","sha256":"1b73267ccef887754b17298559c75c4ba9df218ed3b0a3adeac6da618b622c6a","bytes":286260},{"id":"file.audio.voice.result.rebuild.014.keep.unlit.mp3","kind":"audio","path":"audio/voice/result/rebuild_014_keep_unlit.mp3","mimeType":"audio/mpeg","sha256":"22cea221f68bea9a01b9d7c8a7ea493c244207b3124736403c748cad98190ac2","bytes":292596},{"id":"file.audio.voice.result.rebuild.accept.missing.pieces.mp3","kind":"audio","path":"audio/voice/result/rebuild_accept_missing_pieces.mp3","mimeType":"audio/mpeg","sha256":"e03509c235adbf1a35a69fa967081effe4a8cb7b07a4106de677cec1454a3028","bytes":243636},{"id":"file.audio.voice.result.rebuild.anchor.mp3","kind":"audio","path":"audio/voice/result/rebuild_anchor.mp3","mimeType":"audio/mpeg","sha256":"77023f3ec1210d3f0394848656ed18629a5922d124437b97bc97733e55e6c2f7","bytes":162420},{"id":"file.audio.voice.result.rebuild.cut.false.completion.mp3","kind":"audio","path":"audio/voice/result/rebuild_cut_false_completion.mp3","mimeType":"audio/mpeg","sha256":"455fed571cb5502968a46e4404e566db5821199fb9b3140c33c1066d155144a1","bytes":250548},{"id":"file.audio.voice.result.rebuild.guard.fascia.pulse.mp3","kind":"audio","path":"audio/voice/result/rebuild_guard_fascia_pulse.mp3","mimeType":"audio/mpeg","sha256":"5d3946116f8d9d848ea408b9a1f7ef1323642158fb0f94e9a5d10c56312627e7","bytes":265524},{"id":"file.audio.voice.result.rebuild.push.into.raid.mp3","kind":"audio","path":"audio/voice/result/rebuild_push_into_raid.mp3","mimeType":"audio/mpeg","sha256":"10bb250cf7e3efa4c99fde65bf46d3ea7d6c6b9d037b1c2f6652cbbb94acd8ce","bytes":274164},{"id":"file.audio.voice.result.rebuild.question.fascia.mp3","kind":"audio","path":"audio/voice/result/rebuild_question_fascia.mp3","mimeType":"audio/mpeg","sha256":"f5e64cd027912ac0ca2b77f53770bd645c962c850f453fe35d0c5f7d6aaa9e5c","bytes":156660},{"id":"file.audio.voice.result.rebuild.use.rooftop.signal.mp3","kind":"audio","path":"audio/voice/result/rebuild_use_rooftop_signal.mp3","mimeType":"audio/mpeg","sha256":"2d30e89069b6559c1809749d8547b5e773d5af9fc86771b004fa82ff96ae8aea","bytes":237300},{"id":"file.audio.voice.result.return.opening.from.rebuild.mp3","kind":"audio","path":"audio/voice/result/return_opening_from_rebuild.mp3","mimeType":"audio/mpeg","sha256":"93831e44f51a1755332b620bab795b5a6501bd2310dfe860e65d1de97f796dde","bytes":191220},{"id":"file.audio.voice.result.return.opening.from.ring.mp3","kind":"audio","path":"audio/voice/result/return_opening_from_ring.mp3","mimeType":"audio/mpeg","sha256":"07b6250f478559c01e05511edda03d37c45df65b9e1848f22cebc16447bdc421","bytes":195252},{"id":"file.audio.voice.result.return.opening.from.white.mp3","kind":"audio","path":"audio/voice/result/return_opening_from_white.mp3","mimeType":"audio/mpeg","sha256":"f909503358a31908b759dbb172165b49e77d3800c6b5e9beb5355bbecd675c37","bytes":202164},{"id":"file.audio.voice.result.ring.conspiracy.bad.ending.mp3","kind":"audio","path":"audio/voice/result/ring_conspiracy/bad_ending.mp3","mimeType":"audio/mpeg","sha256":"07d729c94f10eff159215f464fcf8f4f7fa136caeab4696bc08649018756fb90","bytes":104820},{"id":"file.audio.voice.result.ring.conspiracy.normal.ending.mp3","kind":"audio","path":"audio/voice/result/ring_conspiracy/normal_ending.mp3","mimeType":"audio/mpeg","sha256":"38d39f3de6f911a09b947cd966e164cd61cbc8a40835bf4b9e94292efdd721e9","bytes":127284},{"id":"file.audio.voice.result.ring.conspiracy.route.complete.mp3","kind":"audio","path":"audio/voice/result/ring_conspiracy_route_complete.mp3","mimeType":"audio/mpeg","sha256":"a99d59529f481835f600f61c3114fe5cebde2048f8e411be418998a0a3787f75","bytes":283956},{"id":"file.audio.voice.result.ring.conspiracy.route.final.mp3","kind":"audio","path":"audio/voice/result/ring_conspiracy_route_final.mp3","mimeType":"audio/mpeg","sha256":"c05b719a61ea2e4fd6ce58109fc2fdb2f48f6bb14415dc64df970630a3162ac0","bytes":156660},{"id":"file.audio.voice.result.ring.conspiracy.true.ending.mp3","kind":"audio","path":"audio/voice/result/ring_conspiracy/true_ending.mp3","mimeType":"audio/mpeg","sha256":"de2fab869c900b3cadd4c282f7639c70b8e4ca137d77ec8f7edbd815e58f7257","bytes":112884},{"id":"file.audio.voice.result.white.006.name.silence.mp3","kind":"audio","path":"audio/voice/result/white_006_name_silence.mp3","mimeType":"audio/mpeg","sha256":"60f67a987b75e4212e1dc7f7c3d26cabaf7d85be1701495c9ac196717031ec70","bytes":282804},{"id":"file.audio.voice.result.white.006.refuse.naming.mp3","kind":"audio","path":"audio/voice/result/white_006_refuse_naming.mp3","mimeType":"audio/mpeg","sha256":"3b1c115c0521def49f44bd8749fcc28bb23dd6a991c51395f5eb56a01ff95510","bytes":286836},{"id":"file.audio.voice.result.white.007.ask.fascia.term.mp3","kind":"audio","path":"audio/voice/result/white_007_ask_fascia_term.mp3","mimeType":"audio/mpeg","sha256":"a0820e12083e03fd2655fe43f94addc8188a51407e91916405a7596ebb69e55e","bytes":289716},{"id":"file.audio.voice.result.white.007.keep.mirror.open.mp3","kind":"audio","path":"audio/voice/result/white_007_keep_mirror_open.mp3","mimeType":"audio/mpeg","sha256":"60711ca2e8a0be22f5c442c2abb3bdb0587f492199a6ce827fc3d8965926f79e","bytes":270132},{"id":"file.audio.voice.result.white.008.hold.fascia.mp3","kind":"audio","path":"audio/voice/result/white_008_hold_fascia.mp3","mimeType":"audio/mpeg","sha256":"36e24cb6f169556be6c28e403077d4e8fbde1e3dc93cfb98eb2087cce985aab9","bytes":226356},{"id":"file.audio.voice.result.white.008.stay.witness.only.mp3","kind":"audio","path":"audio/voice/result/white_008_stay_witness_only.mp3","mimeType":"audio/mpeg","sha256":"905d28a8268ee2379eac22f120361379b9951fb5ff172ba6d913558bb2f0278b","bytes":240756},{"id":"file.audio.voice.result.white.009.keep.half.step.mp3","kind":"audio","path":"audio/voice/result/white_009_keep_half_step.mp3","mimeType":"audio/mpeg","sha256":"b7bba180567c5f6a4417e364d5ab1379a2325e359bb495b1dcb4d2fe4c06e1ef","bytes":252852},{"id":"file.audio.voice.result.white.009.share.umbrella.edge.mp3","kind":"audio","path":"audio/voice/result/white_009_share_umbrella_edge.mp3","mimeType":"audio/mpeg","sha256":"23c3d9fe23330249c668a11e7d6bb19ca87ef9def6e0d53dcad0e618d01f03b4","bytes":218868},{"id":"file.audio.voice.result.white.010.acknowledge.leave.mp3","kind":"audio","path":"audio/voice/result/white_010_acknowledge_leave.mp3","mimeType":"audio/mpeg","sha256":"b862835afff73e64f682fd0ce83bf20689fe6e471bfce2c6551e51a6c461d537","bytes":242484},{"id":"file.audio.voice.result.white.010.offer.return.ticket.mp3","kind":"audio","path":"audio/voice/result/white_010_offer_return_ticket.mp3","mimeType":"audio/mpeg","sha256":"dd8f7ed0594e7f26d7dc6cf31b6e17a37528ad86dd8ebf032b5d4c6f93f846e8","bytes":245364},{"id":"file.audio.voice.result.white.011.curtain.call.mp3","kind":"audio","path":"audio/voice/result/white_011_curtain_call.mp3","mimeType":"audio/mpeg","sha256":"c9fdc11ebf7eed86a13aa197101432236b2f907f8b5f7ecdfaefcff31c4fec9d","bytes":259764},{"id":"file.audio.voice.result.white.011.walk.beside.mp3","kind":"audio","path":"audio/voice/result/white_011_walk_beside.mp3","mimeType":"audio/mpeg","sha256":"8f82753798f57a08b67ef3de620e76950ee7ca7d7186ac899243edc1f851d2dc","bytes":265524},{"id":"file.audio.voice.result.white.012.let.her.decide.mp3","kind":"audio","path":"audio/voice/result/white_012_let_her_decide.mp3","mimeType":"audio/mpeg","sha256":"81e36190ab884dfed8f11e605ec441b8edc88bd6c192a57f364a88f18a24781f","bytes":244788},{"id":"file.audio.voice.result.white.012.refuse.exhibit.mp3","kind":"audio","path":"audio/voice/result/white_012_refuse_exhibit.mp3","mimeType":"audio/mpeg","sha256":"0d7c983a7a112e463541d935a321e47ef95e7aa5639c4d3aeac6ef7dc7134c2b","bytes":233268},{"id":"file.audio.voice.result.white.013.point.to.mirror.mp3","kind":"audio","path":"audio/voice/result/white_013_point_to_mirror.mp3","mimeType":"audio/mpeg","sha256":"31aa7569564b6f1e2e0aded51296ba9b85e8fa6c914ffd633d9f59cdd15cd4ad","bytes":281652},{"id":"file.audio.voice.result.white.013.refuse.to.choose.mp3","kind":"audio","path":"audio/voice/result/white_013_refuse_to_choose.mp3","mimeType":"audio/mpeg","sha256":"7b3f72b69d3a1a1254a2e1c1d840040fbe3bcc319183eda77565155a97934248","bytes":283956},{"id":"file.audio.voice.result.white.014.keep.base.color.mp3","kind":"audio","path":"audio/voice/result/white_014_keep_base_color.mp3","mimeType":"audio/mpeg","sha256":"1cf0cd1f80908e5971fd27c9b52ddcbe76409e8ae583b5283a719cdbe67d7d3f","bytes":273588},{"id":"file.audio.voice.result.white.014.offer.restart.mp3","kind":"audio","path":"audio/voice/result/white_014_offer_restart.mp3","mimeType":"audio/mpeg","sha256":"7c761d521905ef96a1fe2f299ccb1521f8f3654e6888a060218734de91028944","bytes":296052},{"id":"file.audio.voice.result.white.canvas.bad.ending.mp3","kind":"audio","path":"audio/voice/result/white_canvas/bad_ending.mp3","mimeType":"audio/mpeg","sha256":"29e1de7d0ccf9bcc7b6748e099c65338e931d083381660263ea4b987bb062866","bytes":111732},{"id":"file.audio.voice.result.white.canvas.normal.ending.mp3","kind":"audio","path":"audio/voice/result/white_canvas/normal_ending.mp3","mimeType":"audio/mpeg","sha256":"c54d975a7b6e0f7b689a87ecdfbbe9021980cc7fd350b3abe1cc88ea7bf661c7","bytes":104820},{"id":"file.audio.voice.result.white.canvas.route.complete.mp3","kind":"audio","path":"audio/voice/result/white_canvas_route_complete.mp3","mimeType":"audio/mpeg","sha256":"acd2f7fbf6091e563293abfcb367af4a0a263be201f0929dba79b382523514ec","bytes":291444},{"id":"file.audio.voice.result.white.canvas.route.final.mp3","kind":"audio","path":"audio/voice/result/white_canvas_route_final.mp3","mimeType":"audio/mpeg","sha256":"337e21c026117013a657c1a6e014e9f212a5be661c6adce3ffb4eb87f83a1227","bytes":156660},{"id":"file.audio.voice.result.white.canvas.true.ending.mp3","kind":"audio","path":"audio/voice/result/white_canvas/true_ending.mp3","mimeType":"audio/mpeg","sha256":"743a641dbf799023987750b0743e032d99369f988bd08194115474b6b3cfb110","bytes":104244},{"id":"file.audio.voice.result.white.follow.to.lab.mp3","kind":"audio","path":"audio/voice/result/white_follow_to_lab.mp3","mimeType":"audio/mpeg","sha256":"8c58cf1aa1f3bc661de6f87077e5a04faf045253d75978a683a31bdbb59e7d9e","bytes":271284},{"id":"file.audio.voice.result.white.interrupt.lab.terms.mp3","kind":"audio","path":"audio/voice/result/white_interrupt_lab_terms.mp3","mimeType":"audio/mpeg","sha256":"2bfc8261224c3685ca59d5b9f766c972402109fb3defb7ee87cb33033d3d6c2f","bytes":247668},{"id":"file.audio.voice.result.white.keep.empty.seat.mp3","kind":"audio","path":"audio/voice/result/white_keep_empty_seat.mp3","mimeType":"audio/mpeg","sha256":"8262c3e938479238aceddb6c75ee1a68b4cb2d1d2e6435dcfbf735d80a3aca45","bytes":267828},{"id":"file.audio.voice.result.white.share.rain.window.mp3","kind":"audio","path":"audio/voice/result/white_share_rain_window.mp3","mimeType":"audio/mpeg","sha256":"326bafdfac66b086162069e09f1dffa9835dab37096e7f52bf0e080e9a7c18de","bytes":256884},{"id":"file.audio.voice.result.white.sign.witness.protocol.mp3","kind":"audio","path":"audio/voice/result/white_sign_witness_protocol.mp3","mimeType":"audio/mpeg","sha256":"00ab30a358041b686c878fef65bcf30d5eadba999ffa66e4d85b89260a3cfecb","bytes":233268},{"id":"file.audio.voice.result.white.tease.back.mp3","kind":"audio","path":"audio/voice/result/white_tease_back.mp3","mimeType":"audio/mpeg","sha256":"51ead297b822c76c8670d84c74cde7ede1fbfa8d8ed9bfb52970de910d428faf","bytes":210804},{"id":"file.audio.voice.result.white.touch.boundary.mp3","kind":"audio","path":"audio/voice/result/white_touch_boundary.mp3","mimeType":"audio/mpeg","sha256":"7b994d5fbc048ce1697bcf4d4f7245957b8ec8adce10897d9b8e314b83bf08d6","bytes":218868},{"id":"file.audio.voice.scene.golden.bough.001.mp3","kind":"audio","path":"audio/voice/scene/golden_bough_001.mp3","mimeType":"audio/mpeg","sha256":"4d225ee5c362970412e23aa4578ab08729c0a884916a1161c62be91254dba4ec","bytes":139380},{"id":"file.audio.voice.scene.golden.bough.002.mp3","kind":"audio","path":"audio/voice/scene/golden_bough_002.mp3","mimeType":"audio/mpeg","sha256":"07fd0776ae465d32f870d0ab6b13353199e11984b528d26602f7bfa5e6986b40","bytes":107124},{"id":"file.audio.voice.scene.golden.bough.003.mp3","kind":"audio","path":"audio/voice/scene/golden_bough_003.mp3","mimeType":"audio/mpeg","sha256":"3cdd14382faf1dce80cf0fca944feafe415c9bcdb2cbf4a8d9c81db1a52ff67a","bytes":198132},{"id":"file.audio.voice.scene.golden.bough.004.mp3","kind":"audio","path":"audio/voice/scene/golden_bough_004.mp3","mimeType":"audio/mpeg","sha256":"ce1f05be6843684bcf809c89b8789fe3806ae1a8ed70bef05502c328497ebc0c","bytes":197556},{"id":"file.audio.voice.scene.golden.bough.005.mp3","kind":"audio","path":"audio/voice/scene/golden_bough_005.mp3","mimeType":"audio/mpeg","sha256":"d65ae80a9f99d79de45b1c6de9458680c4189bdba3abedc175a4fef250adde9d","bytes":173364},{"id":"file.audio.voice.scene.golden.bough.006.mp3","kind":"audio","path":"audio/voice/scene/golden_bough_006.mp3","mimeType":"audio/mpeg","sha256":"6f250d84ff213da11a83ddeac743d1b4c820e703dd2572b60dc2b1962a500e1d","bytes":212532},{"id":"file.audio.voice.scene.golden.bough.007.mp3","kind":"audio","path":"audio/voice/scene/golden_bough_007.mp3","mimeType":"audio/mpeg","sha256":"d9e4264cf286a2be33cc37d6e3668827c835b96500919c377b52d6d2aad1a07f","bytes":221748},{"id":"file.audio.voice.scene.golden.bough.008.mp3","kind":"audio","path":"audio/voice/scene/golden_bough_008.mp3","mimeType":"audio/mpeg","sha256":"8718fc7b7301174eb00808a61f8078bed073756fec5d89fdbd3f8750ff4a8333","bytes":210228},{"id":"file.audio.voice.scene.golden.bough.009.mp3","kind":"audio","path":"audio/voice/scene/golden_bough_009.mp3","mimeType":"audio/mpeg","sha256":"160bc0f6bb3041118aa01646f34f9071ca35f69843b7d0cb7d6ef181832722a3","bytes":214836},{"id":"file.audio.voice.scene.golden.bough.010.mp3","kind":"audio","path":"audio/voice/scene/golden_bough_010.mp3","mimeType":"audio/mpeg","sha256":"6dc4896687ce4abe0bf1f9c0b815743f862faf64619b9323515b9296291efc89","bytes":206772},{"id":"file.audio.voice.scene.golden.bough.011.mp3","kind":"audio","path":"audio/voice/scene/golden_bough_011.mp3","mimeType":"audio/mpeg","sha256":"775db235acbe1c59ac8e435805367931d7138bb73a16ae2c6dbabe175ca26720","bytes":170484},{"id":"file.audio.voice.scene.golden.bough.012.mp3","kind":"audio","path":"audio/voice/scene/golden_bough_012.mp3","mimeType":"audio/mpeg","sha256":"dc1367cb35cd050e16413e99bc2732717a4dbbcb7fe2356164ec9b1e04dac5eb","bytes":207924},{"id":"file.audio.voice.scene.golden.bough.013.mp3","kind":"audio","path":"audio/voice/scene/golden_bough_013.mp3","mimeType":"audio/mpeg","sha256":"6bedf33a85fb30e81dbe986709a284b956fbb8bcba73839ff4e385662c9b5f60","bytes":208500},{"id":"file.audio.voice.scene.golden.bough.014.mp3","kind":"audio","path":"audio/voice/scene/golden_bough_014.mp3","mimeType":"audio/mpeg","sha256":"8511bbc11f6ede3c1f6d9432189f2045d07c2d6bfdb09d50f4465cf923d0de54","bytes":174516},{"id":"file.audio.voice.scene.golden.bough.015.mp3","kind":"audio","path":"audio/voice/scene/golden_bough_015.mp3","mimeType":"audio/mpeg","sha256":"a905db1c23a75a0236b09c32d89dfdfc73dd8820d98941e1ec33fdb320ab9f79","bytes":202740},{"id":"file.audio.voice.scene.golden.bough.rebuild.ending.bad.mp3","kind":"audio","path":"audio/voice/scene/golden_bough_rebuild_ending_bad.mp3","mimeType":"audio/mpeg","sha256":"d95b9a5dd47f83849cf4dcd5c2f30e6d701a4dbabb982f094f6e8174dd4b96f1","bytes":204468},{"id":"file.audio.voice.scene.golden.bough.rebuild.ending.gate.mp3","kind":"audio","path":"audio/voice/scene/golden_bough_rebuild_ending_gate.mp3","mimeType":"audio/mpeg","sha256":"043d26099df61ec1393a1a38c75a8b0b4d2f3eb66189eff11332567640f609c0","bytes":142260},{"id":"file.audio.voice.scene.golden.bough.rebuild.ending.normal.mp3","kind":"audio","path":"audio/voice/scene/golden_bough_rebuild_ending_normal.mp3","mimeType":"audio/mpeg","sha256":"be11b02627a114e3d27ddd8441000dab2e9ddd6d22615a94468dd01c7e2c10bd","bytes":195252},{"id":"file.audio.voice.scene.golden.bough.rebuild.ending.true.mp3","kind":"audio","path":"audio/voice/scene/golden_bough_rebuild_ending_true.mp3","mimeType":"audio/mpeg","sha256":"6603055d536774f9450b28a2bec4b00b405b49f90cc78b4b3c767e867f02a988","bytes":222900},{"id":"file.audio.voice.scene.opening.001.mp3","kind":"audio","path":"audio/voice/scene/opening_001.mp3","mimeType":"audio/mpeg","sha256":"497c1b3cba838f47ce02c67ddb31ebdcc49e5cb8eaa5bbfa2027f6fef3a165a8","bytes":166452},{"id":"file.audio.voice.scene.ring.conspiracy.001.mp3","kind":"audio","path":"audio/voice/scene/ring_conspiracy_001.mp3","mimeType":"audio/mpeg","sha256":"b7df0f5afaafc467cf345fc67dcf3f3f29e409feb9e93799731400125f6df064","bytes":127284},{"id":"file.audio.voice.scene.ring.conspiracy.002.mp3","kind":"audio","path":"audio/voice/scene/ring_conspiracy_002.mp3","mimeType":"audio/mpeg","sha256":"b9f1b96bed0eb609f2ec689e98ae131816c8c22b8fe811e86bb995b94d9aa597","bytes":160692},{"id":"file.audio.voice.scene.ring.conspiracy.003.mp3","kind":"audio","path":"audio/voice/scene/ring_conspiracy_003.mp3","mimeType":"audio/mpeg","sha256":"26e2b98b4ada6eb51d0e0eb30b3890081d2531fb81d9e62a86744ff5aaebe35d","bytes":167604},{"id":"file.audio.voice.scene.ring.conspiracy.004.mp3","kind":"audio","path":"audio/voice/scene/ring_conspiracy_004.mp3","mimeType":"audio/mpeg","sha256":"53ff6d65342584d4a8af3fdea7b7645397f3e150770d1560eb3a3eea945580ce","bytes":197556},{"id":"file.audio.voice.scene.ring.conspiracy.005.mp3","kind":"audio","path":"audio/voice/scene/ring_conspiracy_005.mp3","mimeType":"audio/mpeg","sha256":"fb9ba2613075784df0d47f9bcdfbaf75332e2a29879c9345a7c50509c3599600","bytes":189492},{"id":"file.audio.voice.scene.ring.conspiracy.006.mp3","kind":"audio","path":"audio/voice/scene/ring_conspiracy_006.mp3","mimeType":"audio/mpeg","sha256":"b81a93e166ea9c8c614816c041ea7716c3852fda61254125ef2c1eeac0c7ec62","bytes":175092},{"id":"file.audio.voice.scene.ring.conspiracy.007.mp3","kind":"audio","path":"audio/voice/scene/ring_conspiracy_007.mp3","mimeType":"audio/mpeg","sha256":"d96c395eb83104c3ba7af0690d2a8f50d6fb32c33371993716e0f5e2a5f57d98","bytes":183156},{"id":"file.audio.voice.scene.ring.conspiracy.008.mp3","kind":"audio","path":"audio/voice/scene/ring_conspiracy_008.mp3","mimeType":"audio/mpeg","sha256":"1697ae28055253cdc42ab315aeed973a88d6f7fc81b29cc78af58aa7f3b45c90","bytes":208500},{"id":"file.audio.voice.scene.ring.conspiracy.009.mp3","kind":"audio","path":"audio/voice/scene/ring_conspiracy_009.mp3","mimeType":"audio/mpeg","sha256":"95393977d9fd590fbf1e0e4a60e7c7cd20f3a8d127e9e093af735df0ad6ba164","bytes":162996},{"id":"file.audio.voice.scene.ring.conspiracy.010.mp3","kind":"audio","path":"audio/voice/scene/ring_conspiracy_010.mp3","mimeType":"audio/mpeg","sha256":"42fe6d31eab316f4115365b2a88d54ab3b738dc38ccbb5f66397d092020ca4ab","bytes":195828},{"id":"file.audio.voice.scene.ring.conspiracy.011.mp3","kind":"audio","path":"audio/voice/scene/ring_conspiracy_011.mp3","mimeType":"audio/mpeg","sha256":"30cdb3d7ab8be3a15f66a2e4c1a7f35f2985f792f0df7d5be26ed022bfb52096","bytes":197556},{"id":"file.audio.voice.scene.ring.conspiracy.012.mp3","kind":"audio","path":"audio/voice/scene/ring_conspiracy_012.mp3","mimeType":"audio/mpeg","sha256":"62bb96a11b5d5a9398e317a7075d632b6a45633931fb0504222ef8c1925364e7","bytes":186036},{"id":"file.audio.voice.scene.ring.conspiracy.013.mp3","kind":"audio","path":"audio/voice/scene/ring_conspiracy_013.mp3","mimeType":"audio/mpeg","sha256":"9a5bec85dac0e6238ac0a8b8d5ab52073ddb5d9068f4c73c34b717606654021c","bytes":209076},{"id":"file.audio.voice.scene.ring.conspiracy.014.mp3","kind":"audio","path":"audio/voice/scene/ring_conspiracy_014.mp3","mimeType":"audio/mpeg","sha256":"6af4fe0687540489e464f2b41f864d305b9d832455985359eb393ec1a3b67488","bytes":171636},{"id":"file.audio.voice.scene.ring.conspiracy.015.mp3","kind":"audio","path":"audio/voice/scene/ring_conspiracy_015.mp3","mimeType":"audio/mpeg","sha256":"9c5628b50d962e68b4fea11798a244552372ea92b688326d7f196828dd602537","bytes":248244},{"id":"file.audio.voice.scene.ring.conspiracy.ending.bad.mp3","kind":"audio","path":"audio/voice/scene/ring_conspiracy_ending_bad.mp3","mimeType":"audio/mpeg","sha256":"1d3033f84966c7524e526861732e591393cd63fc839ac19c8b61493e1562b24a","bytes":215412},{"id":"file.audio.voice.scene.ring.conspiracy.ending.gate.mp3","kind":"audio","path":"audio/voice/scene/ring_conspiracy_ending_gate.mp3","mimeType":"audio/mpeg","sha256":"d5ccbc97c59692526810076f6f75481c50dcdb3e6aff43e7919c3ca73a1e819f","bytes":147444},{"id":"file.audio.voice.scene.ring.conspiracy.ending.normal.mp3","kind":"audio","path":"audio/voice/scene/ring_conspiracy_ending_normal.mp3","mimeType":"audio/mpeg","sha256":"5d5d5c31eb143ae854d84f06e209e3777e84feeb910a223e3c24597f89a1f36f","bytes":184884},{"id":"file.audio.voice.scene.ring.conspiracy.ending.true.mp3","kind":"audio","path":"audio/voice/scene/ring_conspiracy_ending_true.mp3","mimeType":"audio/mpeg","sha256":"d3aa6807508e9c64c33ff1a0126ea9ddd6fdadb8ea95c1bc3ec7a79260c4d417","bytes":235572},{"id":"file.audio.voice.scene.white.canvas.001.mp3","kind":"audio","path":"audio/voice/scene/white_canvas_001.mp3","mimeType":"audio/mpeg","sha256":"f9a92c1bc7670ad7639266c595dc0fa60b8d8304a848d946aad06f72ec7f07d7","bytes":110580},{"id":"file.audio.voice.scene.white.canvas.002.mp3","kind":"audio","path":"audio/voice/scene/white_canvas_002.mp3","mimeType":"audio/mpeg","sha256":"b42bb03e8c449bd0c7c33e2e3c103e8fe9e2bd4685b2f0166fda2e65768f3d2a","bytes":142260},{"id":"file.audio.voice.scene.white.canvas.003.mp3","kind":"audio","path":"audio/voice/scene/white_canvas_003.mp3","mimeType":"audio/mpeg","sha256":"447d145ae4bfeebb0d1286275ebd3125e617bf24f5e47794f72a75af3d80110a","bytes":160692},{"id":"file.audio.voice.scene.white.canvas.004.mp3","kind":"audio","path":"audio/voice/scene/white_canvas_004.mp3","mimeType":"audio/mpeg","sha256":"632de5164bcb1666b292b1fa7c3d31a06592f95bcc6021c85fbb0ce46026b9f5","bytes":186036},{"id":"file.audio.voice.scene.white.canvas.005.mp3","kind":"audio","path":"audio/voice/scene/white_canvas_005.mp3","mimeType":"audio/mpeg","sha256":"9f29d8f0966e0a85ae8926a0fe7e5edf21404a41ca0dc7655c8700a478cba08c","bytes":181428},{"id":"file.audio.voice.scene.white.canvas.006.mp3","kind":"audio","path":"audio/voice/scene/white_canvas_006.mp3","mimeType":"audio/mpeg","sha256":"47ba7ff6a7381d865a526506acda5c892ab06c64170d0ba95720d1319dac9c05","bytes":196980},{"id":"file.audio.voice.scene.white.canvas.007.mp3","kind":"audio","path":"audio/voice/scene/white_canvas_007.mp3","mimeType":"audio/mpeg","sha256":"c8c518fe83f8e7d328add0b53d003cb70db7aaa832f18e4a268ee85d070d7f0f","bytes":199860},{"id":"file.audio.voice.scene.white.canvas.008.mp3","kind":"audio","path":"audio/voice/scene/white_canvas_008.mp3","mimeType":"audio/mpeg","sha256":"6067a7080d3720615e322e6f8d7a4870737ac5d544a6b24c556aeba0e734e586","bytes":218868},{"id":"file.audio.voice.scene.white.canvas.009.mp3","kind":"audio","path":"audio/voice/scene/white_canvas_009.mp3","mimeType":"audio/mpeg","sha256":"89794514111d1654ecdf806956448a0da5ab8da75f2ce8234746ee7550ca23c0","bytes":175668},{"id":"file.audio.voice.scene.white.canvas.010.mp3","kind":"audio","path":"audio/voice/scene/white_canvas_010.mp3","mimeType":"audio/mpeg","sha256":"4725f404be2f81e4345da50938b9bcff83cb133c642e69806a66d400168b9b49","bytes":148596},{"id":"file.audio.voice.scene.white.canvas.011.mp3","kind":"audio","path":"audio/voice/scene/white_canvas_011.mp3","mimeType":"audio/mpeg","sha256":"b246e6d83f530b4d0f4ce4860ebf37937b3a0c3dded2571d9331305fd722d185","bytes":196404},{"id":"file.audio.voice.scene.white.canvas.012.mp3","kind":"audio","path":"audio/voice/scene/white_canvas_012.mp3","mimeType":"audio/mpeg","sha256":"58fae554a047a57e6f17d0b1e8c2bd820b7707ab2c067bdc4633fff7d2f2e74d","bytes":171636},{"id":"file.audio.voice.scene.white.canvas.013.mp3","kind":"audio","path":"audio/voice/scene/white_canvas_013.mp3","mimeType":"audio/mpeg","sha256":"4ed3f251b94446c07a6d173441bb7e310659f80f492902f554290243489f8839","bytes":193524},{"id":"file.audio.voice.scene.white.canvas.014.mp3","kind":"audio","path":"audio/voice/scene/white_canvas_014.mp3","mimeType":"audio/mpeg","sha256":"8df96e708d31c6b756257d9dded40c61c383cb83cff1816a284b0bbab1a79739","bytes":188340},{"id":"file.audio.voice.scene.white.canvas.015.mp3","kind":"audio","path":"audio/voice/scene/white_canvas_015.mp3","mimeType":"audio/mpeg","sha256":"e5060d68571a05be9b5b02ee944d1e85c6e2efe670112b7d5812d5580991a42d","bytes":207924},{"id":"file.audio.voice.scene.white.canvas.ending.bad.mp3","kind":"audio","path":"audio/voice/scene/white_canvas_ending_bad.mp3","mimeType":"audio/mpeg","sha256":"f20eb38432b8005c77c929f9d11aceaddb6feaad402bf0950ce7b42f18551a82","bytes":199860},{"id":"file.audio.voice.scene.white.canvas.ending.gate.mp3","kind":"audio","path":"audio/voice/scene/white_canvas_ending_gate.mp3","mimeType":"audio/mpeg","sha256":"1b84c1c3872c4b3ed8f8f4d4ad5fea2c3ef20a434e912b114af1ba86b52bb45d","bytes":142260},{"id":"file.audio.voice.scene.white.canvas.ending.normal.mp3","kind":"audio","path":"audio/voice/scene/white_canvas_ending_normal.mp3","mimeType":"audio/mpeg","sha256":"2011fd5566f387c0b56128ded70b64a3a81cd8f03ad03e3798077266750d5694","bytes":177396},{"id":"file.audio.voice.scene.white.canvas.ending.true.mp3","kind":"audio","path":"audio/voice/scene/white_canvas_ending_true.mp3","mimeType":"audio/mpeg","sha256":"5a6106bd0b3d225bf87ba0a08b95178d0c8c0877305ac73bc8c391e2ce358296","bytes":196980},{"id":"file.avatar.albina.avatar.png","kind":"image","path":"avatar/albina-avatar.png","mimeType":"image/png","sha256":"159e7304b4bb6e364754aa2ee960851b804d9f359f07b48ac5fc9812e988e58f","bytes":408911},{"id":"file.bg.backstreets.rain.jpg","kind":"image","path":"bg/backstreets_rain.jpg","mimeType":"image/jpeg","sha256":"7a897b01c41634b0ab05b8411f487e60712909f153aed6b866c6e724f7a05ec7","bytes":195160},{"id":"file.bg.backstreets.rain.svg","kind":"image","path":"bg/backstreets_rain.svg","mimeType":"image/svg+xml","sha256":"2ca9364ada8709526e9d64a945422fb06f36da448e183295ab466a22d1cc995a","bytes":12706},{"id":"file.bg.city.rooftop.jpg","kind":"image","path":"bg/city_rooftop.jpg","mimeType":"image/jpeg","sha256":"4428f1f905a752eab7e4f6119f236f12767778db7f4768d2463a03ee6dcc4697","bytes":207867},{"id":"file.bg.city.rooftop.svg","kind":"image","path":"bg/city_rooftop.svg","mimeType":"image/svg+xml","sha256":"5eae2ee6b750ba1d93ef35eb4b7c67808e1895875d51a9e0075695a35e95a31e","bytes":12706},{"id":"file.bg.golden.bough.jpg","kind":"image","path":"bg/golden_bough.jpg","mimeType":"image/jpeg","sha256":"5e6a552b04b4333ca30c001a3020168908d7867926982ca4097145fa735ee207","bytes":222682},{"id":"file.bg.golden.bough.svg","kind":"image","path":"bg/golden_bough.svg","mimeType":"image/svg+xml","sha256":"94f087ceec5a2a42d7cd56c60d3c880e72798facff376fe1ace1627420b5e54b","bytes":12720},{"id":"file.bg.lce.lab.jpg","kind":"image","path":"bg/lce_lab.jpg","mimeType":"image/jpeg","sha256":"b982f39f13eb87cdb59d1540ff4f7688c4b319600a7174a758288f3c4efe672d","bytes":202605},{"id":"file.bg.lce.lab.svg","kind":"image","path":"bg/lce_lab.svg","mimeType":"image/svg+xml","sha256":"0cf1998d6f245face41e86d83bfab30dc5b4d1fc8a63ae1d4da7d74b16814569","bytes":12708},{"id":"file.bg.limbus.bus.jpg","kind":"image","path":"bg/limbus_bus.jpg","mimeType":"image/jpeg","sha256":"c684aba165f3d0a195d6e5b438be4bc9b2a070a4ac3364e91bef93716aab9c60","bytes":194697},{"id":"file.bg.limbus.bus.svg","kind":"image","path":"bg/limbus_bus.svg","mimeType":"image/svg+xml","sha256":"ac55a1801f59f4f6158a979f56e61edf5dea42c4ad59a9c00ca77f240fef9345","bytes":12716},{"id":"file.bg.mirror.corridor.jpg","kind":"image","path":"bg/mirror_corridor.jpg","mimeType":"image/jpeg","sha256":"aac5cfac5624763538d533b63914c845c266dc17845789d9c3f7d5bb408603f9","bytes":193914},{"id":"file.bg.mirror.corridor.svg","kind":"image","path":"bg/mirror_corridor.svg","mimeType":"image/svg+xml","sha256":"f682139293def0b42bce1f99df089252290d1b056a66876eb5ecf868fb43bfad","bytes":12716},{"id":"file.bg.nest.station.jpg","kind":"image","path":"bg/nest_station.jpg","mimeType":"image/jpeg","sha256":"732fa0c67c071560b01c536d5ed76944c60d1a0d9a5034087ca79bf5ffff9ad2","bytes":196705},{"id":"file.bg.nest.station.svg","kind":"image","path":"bg/nest_station.svg","mimeType":"image/svg+xml","sha256":"f29c2177b49dd12d1a7b98c3f1b4fd0d04c425f2668532da61c51a2ae45720bf","bytes":12697},{"id":"file.bg.outskirts.dawn.jpg","kind":"image","path":"bg/outskirts_dawn.jpg","mimeType":"image/jpeg","sha256":"4ccbdbab6a95b5d79ae476a96f8b453ed07241e599014002fdc83475f8bd092a","bytes":182100},{"id":"file.bg.outskirts.dawn.svg","kind":"image","path":"bg/outskirts_dawn.svg","mimeType":"image/svg+xml","sha256":"5f64fe26325f8d446f5ed235a1bf4e293a1fbc2fe5802b43c73cfcd57939dac7","bytes":12725},{"id":"file.bg.rain.room.jpg","kind":"image","path":"bg/rain_room.jpg","mimeType":"image/jpeg","sha256":"0a4b24f02a4f9274d6691594cbfd8c1f2512c1fe4559083a22c6cf2891cb198e","bytes":198604},{"id":"file.bg.rain.room.svg","kind":"image","path":"bg/rain_room.svg","mimeType":"image/svg+xml","sha256":"3329c56d45d54fbd27ebc7918a2287bbdb922b437815430a51d1b4c0f65a7f42","bytes":12705},{"id":"file.bg.ring.atelier.jpg","kind":"image","path":"bg/ring_atelier.jpg","mimeType":"image/jpeg","sha256":"aed9195327ca4feef20a611b2bd0f0ed4a8fba22f12fdf685bafc5b3ed13eb10","bytes":197708},{"id":"file.bg.ring.atelier.svg","kind":"image","path":"bg/ring_atelier.svg","mimeType":"image/svg+xml","sha256":"2352c7ca280b2b41a785eb0e28391cb5d69ab18b7087b985a653d28309cabdb9","bytes":12700},{"id":"file.bg.spider.gallery.jpg","kind":"image","path":"bg/spider_gallery.jpg","mimeType":"image/jpeg","sha256":"78a4336f0aa42c3ecf10667aeeb40dcdd42b271548872255c66aee716abcf024","bytes":223415},{"id":"file.bg.spider.gallery.svg","kind":"image","path":"bg/spider_gallery.svg","mimeType":"image/svg+xml","sha256":"8a0cf1a4a74e8031b34ff92efc6cd4285206a1ebf30b94f4b37d3ece83952adf","bytes":12710},{"id":"file.bg.white.canvas.jpg","kind":"image","path":"bg/white_canvas.jpg","mimeType":"image/jpeg","sha256":"6551848df5f6a312cbd769356b512643b33f2b9e68c9b8da21ad98ab9ef80605","bytes":193895},{"id":"file.bg.white.canvas.svg","kind":"image","path":"bg/white_canvas.svg","mimeType":"image/svg+xml","sha256":"cf0d8b2dfc155f8189eb37648a9ab478914bdb1055cae1aaf15ccb9bfdc812ff","bytes":12718},{"id":"file.cg.albina.key.visual.jpg","kind":"image","path":"cg/albina_key_visual.jpg","mimeType":"image/jpeg","sha256":"3cc08f61408a8e1b964dc5ca9b4d2b19d6cd30a8536d154d4fc35bed22fdcfca","bytes":779782},{"id":"file.cg.araya.rooftop.jpg","kind":"image","path":"cg/araya_rooftop.jpg","mimeType":"image/jpeg","sha256":"1ecd4ffa5f53471b66b5aecbfa37a8289c603c2a5ce2212538da01cbd5d5d8e4","bytes":226727},{"id":"file.cg.araya.rooftop.svg","kind":"image","path":"cg/araya_rooftop.svg","mimeType":"image/svg+xml","sha256":"43e4ba9ab056357d81d759009ccc8a52cd4435dceda13a2201581cf845f1ed3b","bytes":4598},{"id":"file.cg.art.resonance.jpg","kind":"image","path":"cg/art_resonance.jpg","mimeType":"image/jpeg","sha256":"da4000d606059e545bbf427451a999ea99e9fd730b71033cf61ed0e5c7ebeb1a","bytes":221527},{"id":"file.cg.art.resonance.svg","kind":"image","path":"cg/art_resonance.svg","mimeType":"image/svg+xml","sha256":"b5a5ce4b049a732f48fa745803585ab1fead1c96dcd2cc94c583a4bb79f051fc","bytes":4593},{"id":"file.cg.backstreet.pursuit.jpg","kind":"image","path":"cg/backstreet_pursuit.jpg","mimeType":"image/jpeg","sha256":"ff18127cd0ae95ad91c3e85ceec047def159a58bfec852708271a65d4f53b774","bytes":208589},{"id":"file.cg.backstreet.pursuit.svg","kind":"image","path":"cg/backstreet_pursuit.svg","mimeType":"image/svg+xml","sha256":"e07b123e0dd8010b0ccb5fb36d97a85f89373e6403b62e2f1750b2ca6a07fbae","bytes":4592},{"id":"file.cg.combat.transition.01.jpg","kind":"image","path":"cg/combat_transition_01.jpg","mimeType":"image/jpeg","sha256":"1636765ed07b103ccc5696e5c3cf4152d300c64b147f2a3b2722dd2151275209","bytes":238482},{"id":"file.cg.combat.transition.02.jpg","kind":"image","path":"cg/combat_transition_02.jpg","mimeType":"image/jpeg","sha256":"15da031ead573ecff24ecb8c7f5ac0d64b966f8e4c40c4290a18a6dd658fcbf8","bytes":231222},{"id":"file.cg.combat.transition.03.jpg","kind":"image","path":"cg/combat_transition_03.jpg","mimeType":"image/jpeg","sha256":"4c9ba8fa3d28ba90724bcb8b73a43d8978e445db277b66e35a4547e0b80ae476","bytes":220810},{"id":"file.cg.combat.transition.04.jpg","kind":"image","path":"cg/combat_transition_04.jpg","mimeType":"image/jpeg","sha256":"ef89995f67a6c3ca3f101d05019aaf4f79824462c0d76ccb2da30a1beae8e9f8","bytes":187028},{"id":"file.cg.combat.transition.05.jpg","kind":"image","path":"cg/combat_transition_05.jpg","mimeType":"image/jpeg","sha256":"e51393ad94223802f49b78be139d181d1dc89d8bf98fdf76beb195a91eb9098e","bytes":254728},{"id":"file.cg.combat.transition.06.jpg","kind":"image","path":"cg/combat_transition_06.jpg","mimeType":"image/jpeg","sha256":"7038c8301aa5b607bd7050e7c5347a0d659c8599187161d42d942ed7c3a21c44","bytes":208052},{"id":"file.cg.conspiracy.contract.jpg","kind":"image","path":"cg/conspiracy_contract.jpg","mimeType":"image/jpeg","sha256":"72922d9f7aac148fcfe1e6d7bed34fa8fd7bfc7323641b67feb5279fbe87dad1","bytes":215416},{"id":"file.cg.conspiracy.contract.svg","kind":"image","path":"cg/conspiracy_contract.svg","mimeType":"image/svg+xml","sha256":"65b88a00b4226ce0ddcb924ca7c118e5408911a933c635df30fd603363888327","bytes":4605},{"id":"file.cg.danger.threshold.jpg","kind":"image","path":"cg/danger_threshold.jpg","mimeType":"image/jpeg","sha256":"f5b5356ad2ff469f4dc77d49b54511b9cde21dfc99c52b91f54610e4545ea140","bytes":242967},{"id":"file.cg.danger.threshold.svg","kind":"image","path":"cg/danger_threshold.svg","mimeType":"image/svg+xml","sha256":"132fddc83900e0a6095e42cc22b0a6c62be3e6fa5b30248ed78bc59aa27bb19c","bytes":4596},{"id":"file.cg.fascia.heartbeat.jpg","kind":"image","path":"cg/fascia_heartbeat.jpg","mimeType":"image/jpeg","sha256":"2640a75be54575dce6bdc1b9023b06934899cbf4b5492cf012ef1e9c7d2f71e6","bytes":204579},{"id":"file.cg.fascia.heartbeat.svg","kind":"image","path":"cg/fascia_heartbeat.svg","mimeType":"image/svg+xml","sha256":"f3e00df4100539e897eeb62c251c9276722b6b4fb1c989ab7bd7889e407728c9","bytes":4594},{"id":"file.cg.first.gallery.jpg","kind":"image","path":"cg/first_gallery.jpg","mimeType":"image/jpeg","sha256":"da6961a762bd452191d1f4c0fd78b3ad0aa008a550fc873bbbd82761c498ead4","bytes":237789},{"id":"file.cg.first.gallery.svg","kind":"image","path":"cg/first_gallery.svg","mimeType":"image/svg+xml","sha256":"60840a171afe923653c08bb9e7d7d744ed27d09cc4ec8cb7d575ef3fe6322425","bytes":4594},{"id":"file.cg.golden.bough.ending.jpg","kind":"image","path":"cg/golden_bough_ending.jpg","mimeType":"image/jpeg","sha256":"4700e8485eb57b194cf6878741509ddc1e323d486878114259b9405051045491","bytes":217599},{"id":"file.cg.golden.bough.ending.svg","kind":"image","path":"cg/golden_bough_ending.svg","mimeType":"image/svg+xml","sha256":"9a28d702a7845c7f109b75e62f074614b12eb15c2a0ef939d2a372dd448e7eea","bytes":4597},{"id":"file.cg.golden.bough.rebuild.jpg","kind":"image","path":"cg/golden_bough_rebuild.jpg","mimeType":"image/jpeg","sha256":"0c8c941f77ea39f704563e02e1ed22e8619d8c335ada4215e179a8c6a1caef55","bytes":226407},{"id":"file.cg.golden.bough.rebuild.svg","kind":"image","path":"cg/golden_bough_rebuild.svg","mimeType":"image/svg+xml","sha256":"1ee378cb16da5bc913f6269f0a47bb5fe4087f9f75e0b324108c7f3e056887ab","bytes":4600},{"id":"file.cg.hollow.torso.reveal.jpg","kind":"image","path":"cg/hollow_torso_reveal.jpg","mimeType":"image/jpeg","sha256":"46e83edaabd17b1316bd705daf1a14614c0a7ae8b6164281b9770a2e020fe3e5","bytes":212406},{"id":"file.cg.hollow.torso.reveal.svg","kind":"image","path":"cg/hollow_torso_reveal.svg","mimeType":"image/svg+xml","sha256":"7b6159f5848060278c6b5d61f998ef7b946ceb70a321bcca08bc8c1d3aec0c9a","bytes":4599},{"id":"file.cg.lce.raid.jpg","kind":"image","path":"cg/lce_raid.jpg","mimeType":"image/jpeg","sha256":"037414f5985f5d972656d297f771e4553d3c01d1d700185bea68f40723892284","bytes":191396},{"id":"file.cg.lce.raid.svg","kind":"image","path":"cg/lce_raid.svg","mimeType":"image/svg+xml","sha256":"dcc9fa8598f9d638f78fc4dc44fe83b281817f2f685dd30c953d8ba57260f0c6","bytes":4591},{"id":"file.cg.limbus.bus.night.jpg","kind":"image","path":"cg/limbus_bus_night.jpg","mimeType":"image/jpeg","sha256":"0b1054ef8e4b8cd99b8f234ae2abd5c5e160813b73d1e564dba47c67f8a7cd8a","bytes":202828},{"id":"file.cg.limbus.bus.night.svg","kind":"image","path":"cg/limbus_bus_night.svg","mimeType":"image/svg+xml","sha256":"8fed7ceb727391ca5dd5876a7a04bc0d08d347152719b4429c41ada34a64d257","bytes":4599},{"id":"file.cg.maestro.shadow.jpg","kind":"image","path":"cg/maestro_shadow.jpg","mimeType":"image/jpeg","sha256":"ff93dcfc2b02faf7920d1426ebdfadf86d58aa5744117a6d692d2f5f370fa5c6","bytes":223021},{"id":"file.cg.maestro.shadow.svg","kind":"image","path":"cg/maestro_shadow.svg","mimeType":"image/svg+xml","sha256":"d136ee2ad277d4c29e285f42e2d97ccc04ddc30606b0798a5b6eebabb680708c","bytes":4597},{"id":"file.cg.opening.rain.jpg","kind":"image","path":"cg/opening_rain.jpg","mimeType":"image/jpeg","sha256":"557521106b516bf35aa9b55473c6f977a80bdf8ed6f7fe3f8ecf47de6c961931","bytes":190464},{"id":"file.cg.opening.rain.svg","kind":"image","path":"cg/opening_rain.svg","mimeType":"image/svg+xml","sha256":"660b6694c5a692daf70deb6ed839e04091d824c5b223b531cb176fd3b9d81bb3","bytes":4596},{"id":"file.cg.rain.confession.jpg","kind":"image","path":"cg/rain_confession.jpg","mimeType":"image/jpeg","sha256":"2312880e97be851f6f2688efb07f8d1475e7e4ea1ff3de2dde2db622bee41884","bytes":233325},{"id":"file.cg.rain.confession.svg","kind":"image","path":"cg/rain_confession.svg","mimeType":"image/svg+xml","sha256":"fdf4e4c642b2b1e50a5de5bf198a32c19749a4863cf5463f00107e0eede39b9c","bytes":4598},{"id":"file.cg.rebuild.awakening.jpg","kind":"image","path":"cg/rebuild_awakening.jpg","mimeType":"image/jpeg","sha256":"21c280bc65cf08f4d34b983a9731e3e231bd154a724cec0ee32dc11fc3698648","bytes":182730},{"id":"file.cg.rebuild.awakening.svg","kind":"image","path":"cg/rebuild_awakening.svg","mimeType":"image/svg+xml","sha256":"258465af59037896eee5a5a760e921ed5eb846c72e18cb52c1e393d5b4389db5","bytes":4596},{"id":"file.cg.ren.interruption.jpg","kind":"image","path":"cg/ren_interruption.jpg","mimeType":"image/jpeg","sha256":"1f69370dc412adddb7367be1f751bd720db2a1b4ab7105bc091a1f3754799083","bytes":229446},{"id":"file.cg.ren.interruption.svg","kind":"image","path":"cg/ren_interruption.svg","mimeType":"image/svg+xml","sha256":"719824c4c8223e4ea153e211007caa31f07a959c07e97bb9c72890e06d3da814","bytes":4597},{"id":"file.cg.ring.conspiracy.ending.jpg","kind":"image","path":"cg/ring_conspiracy_ending.jpg","mimeType":"image/jpeg","sha256":"dd57358bb86e03d8619a820ff3b0773dea49d24a760ea09593c5594652876ea3","bytes":219860},{"id":"file.cg.ring.conspiracy.ending.svg","kind":"image","path":"cg/ring_conspiracy_ending.svg","mimeType":"image/svg+xml","sha256":"bc17d94853829bb360d530c7074f7cebc92b05a08997eaf28f0ae51532c3780e","bytes":4600},{"id":"file.cg.ring.invitation.jpg","kind":"image","path":"cg/ring_invitation.jpg","mimeType":"image/jpeg","sha256":"ad02a44c0f89ce0a9e3a173a82bad62c6cfe94121c2e994bc91a487cdd13e5c1","bytes":206839},{"id":"file.cg.ring.invitation.svg","kind":"image","path":"cg/ring_invitation.svg","mimeType":"image/svg+xml","sha256":"4015dd820a43df8884c0e2e8a4b1a220524836933570e7cacf22c5cb02f20b22","bytes":4601},{"id":"file.cg.sinclair.flash.jpg","kind":"image","path":"cg/sinclair_flash.jpg","mimeType":"image/jpeg","sha256":"d434d887564b5ada77b2deb3ddf2b81c9d32427f55ba281ce96447dcc4f62d1e","bytes":221337},{"id":"file.cg.sinclair.flash.svg","kind":"image","path":"cg/sinclair_flash.svg","mimeType":"image/svg+xml","sha256":"a06692b7c81aa54996b2ccf9e08fe9dd98deb7094f2e82fe5495e45192d5040f","bytes":4589},{"id":"file.cg.surgery.of.memory.jpg","kind":"image","path":"cg/surgery_of_memory.jpg","mimeType":"image/jpeg","sha256":"3856e752a99b3c8c4d83ae3cd2ae259ce8911b63439c3925d92d8bafc2231b68","bytes":241224},{"id":"file.cg.surgery.of.memory.svg","kind":"image","path":"cg/surgery_of_memory.svg","mimeType":"image/svg+xml","sha256":"7b640a9324dbed3cfab52d953a3c231c620d3b205939b8726b6bf178515bfae2","bytes":4598},{"id":"file.cg.trust.threshold.jpg","kind":"image","path":"cg/trust_threshold.jpg","mimeType":"image/jpeg","sha256":"ee433f58ec08d7311b0dccee6f184d5b6235e398bbc62698455276e33db673fc","bytes":183900},{"id":"file.cg.trust.threshold.svg","kind":"image","path":"cg/trust_threshold.svg","mimeType":"image/svg+xml","sha256":"4ed32ef158df4c7ebbf7d2afede80277866b6d964ecbc8395f21c3a9e21ef3ec","bytes":4600},{"id":"file.cg.white.canvas.choice.jpg","kind":"image","path":"cg/white_canvas_choice.jpg","mimeType":"image/jpeg","sha256":"ed4e27e3e480ec1bb7c3e1f400274fe8ca6277c9bd114a9edca1bcd3ad93a0d9","bytes":200807},{"id":"file.cg.white.canvas.choice.svg","kind":"image","path":"cg/white_canvas_choice.svg","mimeType":"image/svg+xml","sha256":"9cffaefd8f010f1c0af094ede03e209dc496af0ed874cd98e5211edd41bb1c2d","bytes":4599},{"id":"file.cg.white.canvas.ending.jpg","kind":"image","path":"cg/white_canvas_ending.jpg","mimeType":"image/jpeg","sha256":"c9c999a7eed0a02dc31fe84736e7ef8af39ecd47e288c3d99d19b9bc56b5145c","bytes":232672},{"id":"file.cg.white.canvas.ending.svg","kind":"image","path":"cg/white_canvas_ending.svg","mimeType":"image/svg+xml","sha256":"c4bc0030a9ed0538c6f8feec6c0585c9bc4723dca8f9d12bb4a6867f5966de60","bytes":4602},{"id":"file.characters.albina.amused.png","kind":"image","path":"characters/albina/amused.png","mimeType":"image/png","sha256":"a0156c8d34a69b500b2882307bbe55ed77db8d049a07039f75195e864eb8c2e1","bytes":648683},{"id":"file.characters.albina.amused.svg","kind":"image","path":"characters/albina/amused.svg","mimeType":"image/svg+xml","sha256":"d944a9f1d9c6655865944af0d0ba2ae94ea761f61aae7ee0f53061e6eadaa4e1","bytes":3248},{"id":"file.characters.albina.armored.png","kind":"image","path":"characters/albina/armored.png","mimeType":"image/png","sha256":"a0192ec0071b3d2af4f3d7e38ab29e7ed4cd140b084ebc10ff47e8a42e2a36e5","bytes":1043427},{"id":"file.characters.albina.armored.svg","kind":"image","path":"characters/albina/armored.svg","mimeType":"image/svg+xml","sha256":"eb6d0341f181d58c37b0fe88aae31e993b4c88aa77906bf3645f879eab0b5de4","bytes":3249},{"id":"file.characters.albina.combat.png","kind":"image","path":"characters/albina/combat.png","mimeType":"image/png","sha256":"d253d25b615b31dbdc14b9b85a6873732fbe7f5595624a6a1f67db8e1c373833","bytes":794440},{"id":"file.characters.albina.combat.svg","kind":"image","path":"characters/albina/combat.svg","mimeType":"image/svg+xml","sha256":"e1adc354d6e1fc2a7fa2a6ae2aac4cc53c273b9bb2c6266aefd5e2f1b77c47ea","bytes":3248},{"id":"file.characters.albina.endgame.png","kind":"image","path":"characters/albina/endgame.png","mimeType":"image/png","sha256":"10ba1187d40b50910ff2183f83812dff890885b47d27d64d96fcd719b603e92a","bytes":886696},{"id":"file.characters.albina.endgame.svg","kind":"image","path":"characters/albina/endgame.svg","mimeType":"image/svg+xml","sha256":"ff345247b32c32910e63e133e2f9bdb9ab693a070633196799d00c4c49932ea2","bytes":3249},{"id":"file.characters.albina.fascia.open.png","kind":"image","path":"characters/albina/fascia-open.png","mimeType":"image/png","sha256":"794865a3149891f0562df93cf61e3671f6793283949a6cdeec60f299cf0a8c4a","bytes":226988},{"id":"file.characters.albina.fascia.open.svg","kind":"image","path":"characters/albina/fascia-open.svg","mimeType":"image/svg+xml","sha256":"68051cff6817febc6c852e576dfe2be9ef119989ddbcfa3cb9b7d81826e0d30d","bytes":3253},{"id":"file.characters.albina.focused.png","kind":"image","path":"characters/albina/focused.png","mimeType":"image/png","sha256":"1049d898e1ee6dc266385bf528c6d321fbe6ad298c5d6b9e58ac9d46fdb32c3a","bytes":752133},{"id":"file.characters.albina.focused.svg","kind":"image","path":"characters/albina/focused.svg","mimeType":"image/svg+xml","sha256":"e0f0aec562ce528c0f05d4f171cf3b139e6d06a1730fe3388896d4d5c7807c25","bytes":3249},{"id":"file.characters.albina.furious.png","kind":"image","path":"characters/albina/furious.png","mimeType":"image/png","sha256":"7df3a04ea9c87534d5d0746e98ae84adb1921d268e58f1c388c1f090b7ecfda1","bytes":157756},{"id":"file.characters.albina.furious.svg","kind":"image","path":"characters/albina/furious.svg","mimeType":"image/svg+xml","sha256":"ffbc84b7a8f991385884e1b52bc73774e908aad1482f276feb863815f169cb9e","bytes":3249},{"id":"file.characters.albina.golden.bough.png","kind":"image","path":"characters/albina/golden-bough.png","mimeType":"image/png","sha256":"7b96b2ec44022a3b8a86b2480e25bd01eb5ac32218e63382373e97c273baf831","bytes":731292},{"id":"file.characters.albina.golden.bough.svg","kind":"image","path":"characters/albina/golden-bough.svg","mimeType":"image/svg+xml","sha256":"270131e1276bf547097e47be0e18589bfa0345e8a257543bb38888052b4bd8e8","bytes":3254},{"id":"file.characters.albina.maestro.png","kind":"image","path":"characters/albina/maestro.png","mimeType":"image/png","sha256":"b148b529b7fab01184fcfa54c8b80fa9a48fcc7723fc3498bd58e504015ea0ea","bytes":434686},{"id":"file.characters.albina.maestro.svg","kind":"image","path":"characters/albina/maestro.svg","mimeType":"image/svg+xml","sha256":"63b1b5064275f5d5d4c6aeafbcafa1dfd721732e1d20b0d4460ff9a447867cb1","bytes":3249},{"id":"file.characters.albina.normal.png","kind":"image","path":"characters/albina/normal.png","mimeType":"image/png","sha256":"e68f9d04dda42e9ab86dcb686663057619c8dfbeff5f7d70078a083b0228aa55","bytes":647858},{"id":"file.characters.albina.normal.svg","kind":"image","path":"characters/albina/normal.svg","mimeType":"image/svg+xml","sha256":"906300d14804a6265b2f0189460958a3681e546d430b789952bb80e228f95fc6","bytes":3248},{"id":"file.characters.albina.rain.png","kind":"image","path":"characters/albina/rain.png","mimeType":"image/png","sha256":"a2b3fd27325ace3c20e92c441900e338b027f7cdcdb603c12dc92924e0175f06","bytes":649497},{"id":"file.characters.albina.rain.svg","kind":"image","path":"characters/albina/rain.svg","mimeType":"image/svg+xml","sha256":"2cea8476fd8a8d8b00756b2cbf391147f40e2267a9dd1ae6b9cfa80bc3050e34","bytes":3246},{"id":"file.characters.albina.ring.conspiracy.png","kind":"image","path":"characters/albina/ring-conspiracy.png","mimeType":"image/png","sha256":"a0192ec0071b3d2af4f3d7e38ab29e7ed4cd140b084ebc10ff47e8a42e2a36e5","bytes":1043427},{"id":"file.characters.albina.ring.conspiracy.svg","kind":"image","path":"characters/albina/ring-conspiracy.svg","mimeType":"image/svg+xml","sha256":"cc72d233e523b3b73dceac5c9630139967f4429eb56876dcdea50f260403d9c7","bytes":3257},{"id":"file.characters.albina.shy.png","kind":"image","path":"characters/albina/shy.png","mimeType":"image/png","sha256":"928100cc984332c9b4f769cc38dba965425a91cc1aece23e9d384fc993509247","bytes":649383},{"id":"file.characters.albina.shy.svg","kind":"image","path":"characters/albina/shy.svg","mimeType":"image/svg+xml","sha256":"7daf3a0563615f07a420b5e80dc56475ea591f47b542ba654d9a72ee21bd86cf","bytes":3245},{"id":"file.characters.albina.smile.png","kind":"image","path":"characters/albina/smile.png","mimeType":"image/png","sha256":"c35bc3e8aae3870801f75205d5b1cff67d5fe5c48876824ed14a0820414e7659","bytes":648264},{"id":"file.characters.albina.smile.svg","kind":"image","path":"characters/albina/smile.svg","mimeType":"image/svg+xml","sha256":"bbcc931251f2505b5126c3ab176fcc7f857ae4c48aab5d2750d61c06d81db20b","bytes":3247},{"id":"file.characters.albina.surgical.png","kind":"image","path":"characters/albina/surgical.png","mimeType":"image/png","sha256":"b01318b4e4677e4d6e4de6aad53149717364d36a0d66b56425100e31a6547897","bytes":360435},{"id":"file.characters.albina.surgical.svg","kind":"image","path":"characters/albina/surgical.svg","mimeType":"image/svg+xml","sha256":"1d25fd6fbbceb25c593a225db28a567cafd34710d010b5d900c78e3bbde244e0","bytes":3250},{"id":"file.characters.albina.unarmored.png","kind":"image","path":"characters/albina/unarmored.png","mimeType":"image/png","sha256":"b0a7cb32e6c114ec975d0e4dbf2ab8a756de2b86688e9bbff390e32c0dba8a34","bytes":225675},{"id":"file.characters.albina.unarmored.svg","kind":"image","path":"characters/albina/unarmored.svg","mimeType":"image/svg+xml","sha256":"57bb64084a2c1785e74f4e4df9767a903a5063f91b56f239de72ef4d0865eada","bytes":3251},{"id":"file.characters.albina.white.canvas.png","kind":"image","path":"characters/albina/white-canvas.png","mimeType":"image/png","sha256":"cbf1f679143b6ed9ceee9a12ce5bab2ce571e09cbade31b9ae673d0e6479f3aa","bytes":360278},{"id":"file.characters.albina.white.canvas.svg","kind":"image","path":"characters/albina/white-canvas.svg","mimeType":"image/svg+xml","sha256":"2ace4fd2654d28e4a37b9ca5327632b9ec1c3e2e2c45538323c89a34a5f31d48","bytes":3254},{"id":"file.characters.albina.wounded.png","kind":"image","path":"characters/albina/wounded.png","mimeType":"image/png","sha256":"6d3e49d8dc54796ab3c2fc5f114b98881f0c8ca2d12a1a81ef8f6dbcea97fe01","bytes":360844},{"id":"file.characters.albina.wounded.svg","kind":"image","path":"characters/albina/wounded.svg","mimeType":"image/svg+xml","sha256":"33af83cc546db12d0b154a16db04df73773fa8a9ff8cf8b899b798098604ef95","bytes":3249},{"id":"file.characters.araya.normal.svg","kind":"image","path":"characters/araya/normal.svg","mimeType":"image/svg+xml","sha256":"8581b9680f7eaa0ee12cdb681e03792e154b25323bc7c466541fa69914a9e668","bytes":2913},{"id":"file.characters.callisto.normal.png","kind":"image","path":"characters/callisto/normal.png","mimeType":"image/png","sha256":"7c9c806f2a9517c65648b085ec22d1b93d47effdab3d8be91d2f368c7e6039fd","bytes":377258},{"id":"file.characters.callisto.normal.svg","kind":"image","path":"characters/callisto/normal.svg","mimeType":"image/svg+xml","sha256":"9d2814ddff972ccfd9089c1c4c997b553375fa52496111719d879e176c00f8aa","bytes":2916},{"id":"file.characters.charon.normal.png","kind":"image","path":"characters/charon/normal.png","mimeType":"image/png","sha256":"7c66384703968377258e10af0e17f5cb7ebd238d13b205b832e9c389244ac819","bytes":415773},{"id":"file.characters.dante.normal.png","kind":"image","path":"characters/dante/normal.png","mimeType":"image/png","sha256":"1db98bd0ed89ce5d66c175a525907c6bee207fbe61a4bb118e41a141a2613603","bytes":788630},{"id":"file.characters.dante.normal.svg","kind":"image","path":"characters/dante/normal.svg","mimeType":"image/svg+xml","sha256":"9359c9496cea38dc4a0e9bf5ac2ad0491e3641ded1db4d15280fbe1d7a7c73e7","bytes":2913},{"id":"file.characters.faust.normal.png","kind":"image","path":"characters/faust/normal.png","mimeType":"image/png","sha256":"9e5839384ac0d57d445d14301a38abdc357a28f33d8c345255c49b2f4fb9f5c7","bytes":919963},{"id":"file.characters.fixer.informant.normal.png","kind":"image","path":"characters/fixer_informant/normal.png","mimeType":"image/png","sha256":"c276eb35ccbd7ef8dc813d5db74b9e146131f909a55c1fff3f04cf8af95db82c","bytes":485462},{"id":"file.characters.golden.apparition.normal.png","kind":"image","path":"characters/golden_apparition/normal.png","mimeType":"image/png","sha256":"fc90202b6b36e901fe0e75e9e2bcb9e07dc13ef32dc97083a01a4703c6ba9faf","bytes":633415},{"id":"file.characters.kira.normal.svg","kind":"image","path":"characters/kira/normal.svg","mimeType":"image/svg+xml","sha256":"db4e29ed314e57c624f53c7c2917166ccdc80efcbcab02b211013e7f1aaf90f8","bytes":2912},{"id":"file.characters.lcd.captain.normal.png","kind":"image","path":"characters/lcd_captain/normal.png","mimeType":"image/png","sha256":"30b6ff5afb4d0d754a52546bbc4ae467d517cbb09baf5f4633b0f2cbe5e5a959","bytes":410856},{"id":"file.characters.lce.doctor.normal.png","kind":"image","path":"characters/lce_doctor/normal.png","mimeType":"image/png","sha256":"938fdd640295fdd9c5d98e225696137f48667b140f2649961d6a504976b011f9","bytes":597985},{"id":"file.characters.lucio.normal.svg","kind":"image","path":"characters/lucio/normal.svg","mimeType":"image/svg+xml","sha256":"39f61ef72e599cef8d5e70dbcab010eba95bcc126ea60828b32cfb2dca4ee0ce","bytes":2913},{"id":"file.characters.protagonist.battle.png","kind":"image","path":"characters/protagonist/battle.png","mimeType":"image/png","sha256":"a436e968a646e580f9e6fca88ca9e82615f1a8a05cf68e1c494afe05a594d09f","bytes":656294},{"id":"file.characters.protagonist.battle.svg","kind":"image","path":"characters/protagonist/battle.svg","mimeType":"image/svg+xml","sha256":"2714036a2a99cb87401a0eddf7793708b8b6666149ed2a5b68d43c7e48feec5c","bytes":2916},{"id":"file.characters.protagonist.coat.png","kind":"image","path":"characters/protagonist/coat.png","mimeType":"image/png","sha256":"d0cdfe6a196d9454452818d2383f9b33ce8ef106ae509e532694ef3914f97e2c","bytes":701207},{"id":"file.characters.protagonist.coat.svg","kind":"image","path":"characters/protagonist/coat.svg","mimeType":"image/svg+xml","sha256":"325c15acfe95486379b88ef972deacbda05c36bf81776d5446ca8fb5d74ba07a","bytes":2914},{"id":"file.characters.protagonist.formal.png","kind":"image","path":"characters/protagonist/formal.png","mimeType":"image/png","sha256":"efebe731bf08143f2c8eec7f5ebe82b85c1fb803abe2a51f607ebe7d5da3ab69","bytes":682957},{"id":"file.characters.protagonist.formal.svg","kind":"image","path":"characters/protagonist/formal.svg","mimeType":"image/svg+xml","sha256":"ca1d3e79cebcbda034005fa85a351828355f58e68f40e41d14fe111d6ac19dd2","bytes":2916},{"id":"file.characters.protagonist.injured.png","kind":"image","path":"characters/protagonist/injured.png","mimeType":"image/png","sha256":"a1c76d3d01d85a5fb59d130d0cb6978492a39381d92ccbd050e3fa79b147877f","bytes":633632},{"id":"file.characters.protagonist.injured.svg","kind":"image","path":"characters/protagonist/injured.svg","mimeType":"image/svg+xml","sha256":"0eae48dde7a3858af53f50333970724334f258cf95b2520f3aa4b65066d1d82a","bytes":2917},{"id":"file.characters.protagonist.normal.png","kind":"image","path":"characters/protagonist/normal.png","mimeType":"image/png","sha256":"ef345aaf8817f9d42edee91b15c7593454a8aeacba015d956eb570567d93c42c","bytes":617841},{"id":"file.characters.protagonist.normal.svg","kind":"image","path":"characters/protagonist/normal.svg","mimeType":"image/svg+xml","sha256":"d3e9d5f6683d341ac85b449edc86e31ea8e4b65e809894e1f626917b866ad4f1","bytes":2916},{"id":"file.characters.protagonist.profile.png","kind":"image","path":"characters/protagonist/profile.png","mimeType":"image/png","sha256":"7bebf79d688e6c6beddff75ce5ebb0be542f1b24faf0af2dec4c889fc2f4ea6e","bytes":608664},{"id":"file.characters.protagonist.profile.svg","kind":"image","path":"characters/protagonist/profile.svg","mimeType":"image/svg+xml","sha256":"5de466e68995311d479e51333fc7cbe91a20adf52e9ca096f1e9bb2d9a2bcffc","bytes":2917},{"id":"file.characters.protagonist.resolve.png","kind":"image","path":"characters/protagonist/resolve.png","mimeType":"image/png","sha256":"f084da28bd5b55273519eab6c230bc580e069f7f302cff85d333f43f833684f3","bytes":765412},{"id":"file.characters.protagonist.resolve.svg","kind":"image","path":"characters/protagonist/resolve.svg","mimeType":"image/svg+xml","sha256":"bbd02ce4a997e9ee5beab2ded88f9dffc8306fe51041d006a7306da98affcbf1","bytes":2917},{"id":"file.characters.protagonist.serious.png","kind":"image","path":"characters/protagonist/serious.png","mimeType":"image/png","sha256":"d9fff4f95ed8513b464cd32be5735ec1a3d2b10e581c24a8232ab9a78f81a538","bytes":612296},{"id":"file.characters.protagonist.serious.svg","kind":"image","path":"characters/protagonist/serious.svg","mimeType":"image/svg+xml","sha256":"f1ef84f3803614dccaa639097dca33e17dd3a36dcb59e0d9dd658166ec5d4564","bytes":2917},{"id":"file.characters.protagonist.shadow.png","kind":"image","path":"characters/protagonist/shadow.png","mimeType":"image/png","sha256":"47579ad18953940ceaf00122676a79d3f8618a0057cc1f1f740535df4644a04e","bytes":679619},{"id":"file.characters.protagonist.shadow.svg","kind":"image","path":"characters/protagonist/shadow.svg","mimeType":"image/svg+xml","sha256":"ac87cb2d8726e88b77ae25299ac8759bf167df93e44cd429ef93916d04381e90","bytes":2916},{"id":"file.characters.protagonist.smile.png","kind":"image","path":"characters/protagonist/smile.png","mimeType":"image/png","sha256":"c040495b425c09c2044e86ee2951527dce6145ffb7d41e2c28ae390d39feef24","bytes":681742},{"id":"file.characters.protagonist.smile.svg","kind":"image","path":"characters/protagonist/smile.svg","mimeType":"image/svg+xml","sha256":"8b0900e469b604123c1aa72b0be47464908f5418013720cf5da8801ad7048b69","bytes":2915},{"id":"file.characters.protagonist.tender.png","kind":"image","path":"characters/protagonist/tender.png","mimeType":"image/png","sha256":"1e99e5724db77e7fc536d433980519121cc43740bfc17b4f810444a2681fb214","bytes":693086},{"id":"file.characters.protagonist.tender.svg","kind":"image","path":"characters/protagonist/tender.svg","mimeType":"image/svg+xml","sha256":"23737b94add6d8044d0df61bcbba15f70f3a9d996792e161a6488816c44750d7","bytes":2916},{"id":"file.characters.protagonist.wet.hair.png","kind":"image","path":"characters/protagonist/wet-hair.png","mimeType":"image/png","sha256":"ef02c60087130fba338bd9757c5ea9f045435e60d658450890c6ab5d50699dd5","bytes":702889},{"id":"file.characters.protagonist.wet.hair.svg","kind":"image","path":"characters/protagonist/wet-hair.svg","mimeType":"image/svg+xml","sha256":"b11284a46a2b5211ef413377f08ec31b80edfb80b854046f68066a0dfd369c23","bytes":2918},{"id":"file.characters.ren.normal.png","kind":"image","path":"characters/ren/normal.png","mimeType":"image/png","sha256":"0bd7caac7ae057da27bf86378d17b24ee43a48b958713ece4f8fbf6a79cba6b6","bytes":793467},{"id":"file.characters.ren.normal.svg","kind":"image","path":"characters/ren/normal.svg","mimeType":"image/svg+xml","sha256":"5b6eeb0a73be55028f1c6f349160e9d541cee9e93425d9c150a3bd2f7b791698","bytes":2911},{"id":"file.characters.ring.agent.normal.png","kind":"image","path":"characters/ring_agent/normal.png","mimeType":"image/png","sha256":"71536876e4949ff36037d647f05727bf39bb6bf843b186757aacfcc95bcfe07e","bytes":581593},{"id":"file.characters.ryoshu.normal.svg","kind":"image","path":"characters/ryoshu/normal.svg","mimeType":"image/svg+xml","sha256":"2018187b67ef8f2dfe4d3a97929c2dacc8bc8755efe2e77916cc697e9346fc93","bytes":2914},{"id":"file.characters.sinclair.normal.svg","kind":"image","path":"characters/sinclair/normal.svg","mimeType":"image/svg+xml","sha256":"b507dc70e66ddfee18a0c0fdcfe2722215c23cbbbac048bb4b774718169f5352","bytes":2916},{"id":"file.characters.sora.normal.svg","kind":"image","path":"characters/sora/normal.svg","mimeType":"image/svg+xml","sha256":"939a4d464cd7bee2a0764528981df14b9c9e948ac2673ce659d0c326f04236ad","bytes":2912},{"id":"file.characters.vergilius.normal.png","kind":"image","path":"characters/vergilius/normal.png","mimeType":"image/png","sha256":"a952f7b8042794613c6fdfe7c6e58d7675d06c9c5653ac837247c94b3ab01135","bytes":886285},{"id":"file.characters.vergilius.normal.svg","kind":"image","path":"characters/vergilius/normal.svg","mimeType":"image/svg+xml","sha256":"0c0714c38d9c295f3e8c84aecbb91c757869471fd288093b543ad4ee85da213c","bytes":2917},{"id":"file.characters.yi.sang.normal.png","kind":"image","path":"characters/yi_sang/normal.png","mimeType":"image/png","sha256":"9d18999b8e7b82e957fddd582b9605a5d46deca6bddcb45eb4930d9daaa2393d","bytes":814771},{"id":"file.generated.alpha.sheets.albina.01.png","kind":"image","path":"generated/alpha-sheets/albina_01.png","mimeType":"image/png","sha256":"2290adb83dd7e3bfb2d8cfc1cca5d0603a5d439d93a7bb2c954a190dd5e50b44","bytes":1467607},{"id":"file.generated.alpha.sheets.albina.02.png","kind":"image","path":"generated/alpha-sheets/albina_02.png","mimeType":"image/png","sha256":"687cb237c5231f3d9168196b89e0648d45ab3e57452c029ce091cd13b4ad9ff0","bytes":1494916},{"id":"file.generated.alpha.sheets.albina.03.png","kind":"image","path":"generated/alpha-sheets/albina_03.png","mimeType":"image/png","sha256":"b4959f69bb6d4ce6f45b22075c884f1a954c1b4df1754cf7e3e00b1e00924d4c","bytes":1397534},{"id":"file.generated.alpha.sheets.protagonist.01.png","kind":"image","path":"generated/alpha-sheets/protagonist_01.png","mimeType":"image/png","sha256":"439b657c685a9b21dc5eb98277f76040bda7be8b76049f79dab6852d3e6eb26e","bytes":1037169},{"id":"file.generated.alpha.sheets.protagonist.02.png","kind":"image","path":"generated/alpha-sheets/protagonist_02.png","mimeType":"image/png","sha256":"b5d417f293782cf228f2bf19b324977deda5547109401c5171ea908bfc2e9d62","bytes":1093806},{"id":"file.generated.alpha.sheets.supporting.png","kind":"image","path":"generated/alpha-sheets/supporting.png","mimeType":"image/png","sha256":"39a3570a99611e67490bc4161c97711bf0270c725aba640fffcf8df059176079","bytes":1301881},{"id":"file.original.albina.sprites.battle.png","kind":"image","path":"original_albina_sprites/battle.png","mimeType":"image/png","sha256":"b2bcaad7d5ddd3779102080b0d2081dec9941512a1afb677f5eb2392764c9bee","bytes":1793581},{"id":"file.original.albina.sprites.normal.png","kind":"image","path":"original_albina_sprites/normal.png","mimeType":"image/png","sha256":"6ee2ad5749e0a459680f14ae97e18e774e9c4b9d1aca5a353a49f2d0239270e3","bytes":2017896},{"id":"file.original.albina.sprites.sad.png","kind":"image","path":"original_albina_sprites/sad.png","mimeType":"image/png","sha256":"13edd79c92ba4230f00e8a008a565fbce60b06687bb3ed8101d2c4e63cb23240","bytes":1795574},{"id":"file.original.albina.sprites.smile.png","kind":"image","path":"original_albina_sprites/smile.png","mimeType":"image/png","sha256":"825bc4d615e5906d190b698a47e2fafad8ab51396696af5b965c66e3e098e0d2","bytes":2236822},{"id":"file.original.bg.story.library.interior.png","kind":"image","path":"original_bg_story/library_interior.png","mimeType":"image/png","sha256":"7ccd48b32fc88df3ec38ba66bf70fa490cd3c4931261a3ff13a51198c584e275","bytes":2217028},{"id":"file.original.cg.albina.debut.png","kind":"image","path":"original_cg/albina_debut.png","mimeType":"image/png","sha256":"cd69fc4291142ffac6e2609441ac32155c806431f7e5ef7c9602dafa5bd26d2b","bytes":1913934},{"id":"file.original.cg.battle.climax.png","kind":"image","path":"original_cg/battle_climax.png","mimeType":"image/png","sha256":"8f5cd613a620380fb091b2fc3cdfc645fd4e3e81864cbdf08b4e4a70a042ece6","bytes":2049868},{"id":"file.original.cg.canto.ix.opening.png","kind":"image","path":"original_cg/canto_ix_opening.png","mimeType":"image/png","sha256":"e28454287967229bfaed69c43e626330e14694d6383cfc643c6554beb7053ae2","bytes":2376570},{"id":"file.original.cg.hell.gate.png","kind":"image","path":"original_cg/hell_gate.png","mimeType":"image/png","sha256":"e2d9846c0e9a031328e92bd4532544b5f272c889fc7a7ce71675bfebb06edb3e","bytes":2306012},{"id":"file.original.cg.rain.confession.png","kind":"image","path":"original_cg/rain_confession.png","mimeType":"image/png","sha256":"b5615295563c2e30c4aea259e4a2b5bbf2a617355934902f810daf16a39d869b","bytes":2041140},{"id":"file.original.cg.ring.conspiracy.png","kind":"image","path":"original_cg/ring_conspiracy.png","mimeType":"image/png","sha256":"0df61afec53eafdf9b0abafacbedee5805f55a9664702b958abd2477be90e0ea","bytes":2074900},{"id":"file.sprite.atlas.albina.amused.strip.png","kind":"image","path":"sprite-atlas/albina/amused_strip.png","mimeType":"image/png","sha256":"598feb3ab51f6f0e7826c337e66b3f3cad71897061152e22a9096a6d00373d13","bytes":3783351},{"id":"file.sprite.atlas.albina.armored.strip.png","kind":"image","path":"sprite-atlas/albina/armored_strip.png","mimeType":"image/png","sha256":"e7556db93ffd2c4774a08cb55fd8cd37ade36f5d0a2c67122abb28958f065c0e","bytes":3502098},{"id":"file.sprite.atlas.albina.combat.strip.png","kind":"image","path":"sprite-atlas/albina/combat_strip.png","mimeType":"image/png","sha256":"34b4a9cb3ff6f77eaa187f1d884961f23d8f9e228da56165a160d9d45ac669b8","bytes":3685070},{"id":"file.sprite.atlas.albina.endgame.strip.png","kind":"image","path":"sprite-atlas/albina/endgame_strip.png","mimeType":"image/png","sha256":"9183824dde93f21acbcffd5d42ccaf5a34341612926a3d866038a7fcdcd2aa95","bytes":4114092},{"id":"file.sprite.atlas.albina.fascia.open.strip.png","kind":"image","path":"sprite-atlas/albina/fascia-open_strip.png","mimeType":"image/png","sha256":"83202a591278a6beabe854df464af772e58c2fa6d1a4d1072dba62082bcf5525","bytes":3359680},{"id":"file.sprite.atlas.albina.focused.strip.png","kind":"image","path":"sprite-atlas/albina/focused_strip.png","mimeType":"image/png","sha256":"ccf851bf3e230333846ceb4fd3cbee2e0554ebb729550026acf3ab4b08249b60","bytes":4001551},{"id":"file.sprite.atlas.albina.furious.strip.png","kind":"image","path":"sprite-atlas/albina/furious_strip.png","mimeType":"image/png","sha256":"92e05e4c2b6c45072203edce970ad083d1f98877a5aecd8eb3f4bc3871f2ddbe","bytes":3225121},{"id":"file.sprite.atlas.albina.golden.bough.strip.png","kind":"image","path":"sprite-atlas/albina/golden-bough_strip.png","mimeType":"image/png","sha256":"37acb5099f4b78fa4b43cdbf7374de92898c5fa8277a25b73187e510cb672b3f","bytes":3829701},{"id":"file.sprite.atlas.albina.maestro.strip.png","kind":"image","path":"sprite-atlas/albina/maestro_strip.png","mimeType":"image/png","sha256":"448278bd52df48c90421900511a5d3a4362c0af5890284422a665431632f0e2a","bytes":3245882},{"id":"file.sprite.atlas.albina.normal.strip.png","kind":"image","path":"sprite-atlas/albina/normal_strip.png","mimeType":"image/png","sha256":"9dd6396a5a4bb5ed031e5e6af329a7e23d43f52468b9a743fa3ccb87b96dc68f","bytes":3297901},{"id":"file.sprite.atlas.albina.rain.strip.png","kind":"image","path":"sprite-atlas/albina/rain_strip.png","mimeType":"image/png","sha256":"1dfd20241c048a6bdbf257d726242b74e3faa291aee37f19d956a3a4427b5b75","bytes":3777733},{"id":"file.sprite.atlas.albina.ring.conspiracy.strip.png","kind":"image","path":"sprite-atlas/albina/ring-conspiracy_strip.png","mimeType":"image/png","sha256":"791a8e97afe98ef66e8ff98ec4030e20e6e218178ca24525ef7c16a91e11286f","bytes":3542405},{"id":"file.sprite.atlas.albina.shy.strip.png","kind":"image","path":"sprite-atlas/albina/shy_strip.png","mimeType":"image/png","sha256":"b4fce99a14a9e49de682712c71a3420cbe98bed8cb671b08f3b39e0a6eed7efa","bytes":3529806},{"id":"file.sprite.atlas.albina.smile.strip.png","kind":"image","path":"sprite-atlas/albina/smile_strip.png","mimeType":"image/png","sha256":"edeea2c2e1176f1c84a82ed101601fcdf30b8531732a217867711c9f0beaf537","bytes":3520893},{"id":"file.sprite.atlas.albina.surgical.strip.png","kind":"image","path":"sprite-atlas/albina/surgical_strip.png","mimeType":"image/png","sha256":"fe3f8cae7d405baf2d4cdcddc7f2d1dd18826c5a0f10f835749722b41d3545df","bytes":3268222},{"id":"file.sprite.atlas.albina.unarmored.strip.png","kind":"image","path":"sprite-atlas/albina/unarmored_strip.png","mimeType":"image/png","sha256":"86d9ba8388fa7e6523b37911e3514e5746ddf19e3d61d463488df27d69032e16","bytes":3599579},{"id":"file.sprite.atlas.albina.white.canvas.strip.png","kind":"image","path":"sprite-atlas/albina/white-canvas_strip.png","mimeType":"image/png","sha256":"2ecd8aaa89e60e6a4c23463298cb0a17d39911d900064a62b933920a3ef23c16","bytes":3419321},{"id":"file.sprite.atlas.albina.wounded.strip.png","kind":"image","path":"sprite-atlas/albina/wounded_strip.png","mimeType":"image/png","sha256":"62e276c181e626f0dec0f0df427840bcd73d467948850a556e113c8718c95dae","bytes":3510714},{"id":"file.sprite.atlas.callisto.normal.strip.png","kind":"image","path":"sprite-atlas/callisto/normal_strip.png","mimeType":"image/png","sha256":"d45214594fe8048be693b4f4ef3b6dd2ff485996d260e89b82c468ef85bb66fa","bytes":3570340},{"id":"file.sprite.atlas.charon.normal.strip.png","kind":"image","path":"sprite-atlas/charon/normal_strip.png","mimeType":"image/png","sha256":"bc8875c1e57ba504ecd61f6b0952f11440829c13607290c397cc94bf0a90efc9","bytes":3129094},{"id":"file.sprite.atlas.dante.normal.strip.png","kind":"image","path":"sprite-atlas/dante/normal_strip.png","mimeType":"image/png","sha256":"1a588b00eec5b542f30e91c9b1f1be1bac50f8f79fd2ebc7ff2a9fa20e558bac","bytes":3287194},{"id":"file.sprite.atlas.faust.normal.strip.png","kind":"image","path":"sprite-atlas/faust/normal_strip.png","mimeType":"image/png","sha256":"712b5327d431689157584249798faf2cbd1dbfc42a245b0b1390207ce28a0a77","bytes":3718801},{"id":"file.sprite.atlas.fixer.informant.normal.strip.png","kind":"image","path":"sprite-atlas/fixer_informant/normal_strip.png","mimeType":"image/png","sha256":"eb32b3dffd3d4cc2bbec142662e0965ec5bde6334476b66f72be4fde65b42cc9","bytes":3222195},{"id":"file.sprite.atlas.golden.apparition.normal.strip.png","kind":"image","path":"sprite-atlas/golden_apparition/normal_strip.png","mimeType":"image/png","sha256":"fbcafb3363f6ab9d06f3f95c1337a3675737d2e0123295f87a5c8705154dee33","bytes":3927065},{"id":"file.sprite.atlas.lcd.captain.normal.strip.png","kind":"image","path":"sprite-atlas/lcd_captain/normal_strip.png","mimeType":"image/png","sha256":"38e07bfb12f420430f7240d715c7f61de84ea815576701719c8f2facd3b02166","bytes":3264020},{"id":"file.sprite.atlas.lce.doctor.normal.strip.png","kind":"image","path":"sprite-atlas/lce_doctor/normal_strip.png","mimeType":"image/png","sha256":"f05fbdcbead14511b2e34cc712715b5582504bf2af17e2e86dbbdb8d146868d1","bytes":3297944},{"id":"file.sprite.atlas.original.cg.albina.debut.strip.png","kind":"image","path":"sprite-atlas/original_cg/albina_debut_strip.png","mimeType":"image/png","sha256":"2ee88c382d413f62803f01a1a80a5743b9bf21061426cc3a16ea77a717506669","bytes":2925431},{"id":"file.sprite.atlas.original.cg.battle.climax.strip.png","kind":"image","path":"sprite-atlas/original_cg/battle_climax_strip.png","mimeType":"image/png","sha256":"db536e31152fa857e4958cc748e645eefbee8f45576ba1183a5f8ffcb43b1264","bytes":2864495},{"id":"file.sprite.atlas.protagonist.battle.strip.png","kind":"image","path":"sprite-atlas/protagonist/battle_strip.png","mimeType":"image/png","sha256":"d3286aaeff322a1267719016000ed283ea1b42badf2878f962ae136b6f8b7fb8","bytes":3165211},{"id":"file.sprite.atlas.protagonist.coat.strip.png","kind":"image","path":"sprite-atlas/protagonist/coat_strip.png","mimeType":"image/png","sha256":"b5806c2fd33ddd2335b8ecf79fe638e1c595c680cb6ad7373b82c0196f2aedbb","bytes":3023731},{"id":"file.sprite.atlas.protagonist.formal.strip.png","kind":"image","path":"sprite-atlas/protagonist/formal_strip.png","mimeType":"image/png","sha256":"89c9540a0dfe2d93dbc9e6d2cadb8bb93411e30957199488307ec9a1128677aa","bytes":2945421},{"id":"file.sprite.atlas.protagonist.injured.strip.png","kind":"image","path":"sprite-atlas/protagonist/injured_strip.png","mimeType":"image/png","sha256":"d5bcb863366b807ef4011c7f781c50c89e41aa47065464c1bcea7361c023ded3","bytes":3274205},{"id":"file.sprite.atlas.protagonist.normal.strip.png","kind":"image","path":"sprite-atlas/protagonist/normal_strip.png","mimeType":"image/png","sha256":"55484d8acc4f36587a84e4448aa8040923c8126107f5a9f8db335d1eeffe3b7f","bytes":3086501},{"id":"file.sprite.atlas.protagonist.profile.strip.png","kind":"image","path":"sprite-atlas/protagonist/profile_strip.png","mimeType":"image/png","sha256":"0620c7a13ae03657aaad952fd67d34376b52807ca50a2445fa7faecd2c34c813","bytes":3391031},{"id":"file.sprite.atlas.protagonist.resolve.strip.png","kind":"image","path":"sprite-atlas/protagonist/resolve_strip.png","mimeType":"image/png","sha256":"905698655d09de75c11fd7266298c5d9c358a7f5ef1439208ab16486765c3afc","bytes":3079167},{"id":"file.sprite.atlas.protagonist.serious.strip.png","kind":"image","path":"sprite-atlas/protagonist/serious_strip.png","mimeType":"image/png","sha256":"2fdbf141f0eeaf5770e51eccd572ccb7656d61286f11d79bd01cc5aa584d1311","bytes":2877761},{"id":"file.sprite.atlas.protagonist.shadow.strip.png","kind":"image","path":"sprite-atlas/protagonist/shadow_strip.png","mimeType":"image/png","sha256":"84afdc243de21b187237e3a2b8886f1c83b84d90bbcc913f623e32d6dc75a3a8","bytes":2881745},{"id":"file.sprite.atlas.protagonist.smile.strip.png","kind":"image","path":"sprite-atlas/protagonist/smile_strip.png","mimeType":"image/png","sha256":"ca025ac7f5d9b087296f431077c6526e578f594511ff98dc6f1b49ca67fc00b3","bytes":3054297},{"id":"file.sprite.atlas.protagonist.tender.strip.png","kind":"image","path":"sprite-atlas/protagonist/tender_strip.png","mimeType":"image/png","sha256":"cfc900db01d60e931b55c5c0921cc9dfdaf7d1f91af529ee4d96e964c4dab6b7","bytes":2946077},{"id":"file.sprite.atlas.protagonist.wet.hair.strip.png","kind":"image","path":"sprite-atlas/protagonist/wet-hair_strip.png","mimeType":"image/png","sha256":"ad2cdd374474a8fb05dc74bd47c0602b890b3e0f8ed6f42af5a6c6e9e72e55b1","bytes":3018208},{"id":"file.sprite.atlas.ren.normal.strip.png","kind":"image","path":"sprite-atlas/ren/normal_strip.png","mimeType":"image/png","sha256":"b1ab709df36557c1c92d5f7f74103050302bf274be9872bc3e53a67d811c6f20","bytes":3325824},{"id":"file.sprite.atlas.ring.agent.normal.strip.png","kind":"image","path":"sprite-atlas/ring_agent/normal_strip.png","mimeType":"image/png","sha256":"1433fcc31f67fb58731739cfec7738b3686f770b4c8f7219975003b8f0ad9280","bytes":3142702},{"id":"file.sprite.atlas.vergilius.normal.strip.png","kind":"image","path":"sprite-atlas/vergilius/normal_strip.png","mimeType":"image/png","sha256":"bc94c7bf3b146bc9171ff07633468b49c9ebeb58ca013d9e37b0ff3bec93e0f2","bytes":3721980},{"id":"file.sprite.atlas.yi.sang.normal.strip.png","kind":"image","path":"sprite-atlas/yi_sang/normal_strip.png","mimeType":"image/png","sha256":"cb35289ae216903f3c9b8727c01a37054eb8bd661edada48fe3e51e50be2edee","bytes":3081862},{"id":"file.ui.choice.button.svg","kind":"image","path":"ui/choice_button.svg","mimeType":"image/svg+xml","sha256":"6301a268c0d874185842cecba0acee7c99f4c29e8caba5203cd1ceb6e3b0cea5","bytes":1645},{"id":"file.ui.gallery.frame.svg","kind":"image","path":"ui/gallery_frame.svg","mimeType":"image/svg+xml","sha256":"19bf13a6c6a24a90a7372e98e422b5911a5eb63b870e2bd546f07d80439fc854","bytes":1646},{"id":"file.ui.menu.plate.svg","kind":"image","path":"ui/menu_plate.svg","mimeType":"image/svg+xml","sha256":"d8c0d45b6abdff52651712ec4dbb30736d61939563ccf920995d330475925d7d","bytes":1643},{"id":"file.ui.scanline.mask.svg","kind":"image","path":"ui/scanline_mask.svg","mimeType":"image/svg+xml","sha256":"8ca0f95223f6e523626d09a5e09dbca55f90687728e6fc23f15b28c3f6fdc4af","bytes":1645},{"id":"file.ui.status.panel.svg","kind":"image","path":"ui/status_panel.svg","mimeType":"image/svg+xml","sha256":"93e422a5c871f4bb7b8ec4965e04d3b5501da1117d81942f034479dd8a5dbd36","bytes":1645},{"id":"file.ui.textbox.svg","kind":"image","path":"ui/textbox.svg","mimeType":"image/svg+xml","sha256":"87eca356e01c43e6b571db16ec84b33fabe92697d62c251ffb9a0c5b33858b39","bytes":1655},{"id":"file.video.animated.desktop.ed.golden.bough.rebuild.mp4","kind":"video","path":"video/animated/desktop/ed_golden_bough_rebuild.mp4","mimeType":"video/mp4","sha256":"2fea23d2d53819f84638318e5a7c3b00da51c38703f452f946b13315faf96b00","bytes":7264295},{"id":"file.video.animated.desktop.ed.ring.conspiracy.mp4","kind":"video","path":"video/animated/desktop/ed_ring_conspiracy.mp4","mimeType":"video/mp4","sha256":"a5ccf17d2ba26bc1248b383ab669662a792a91b1776c637799cffa2b003cdac3","bytes":6393945},{"id":"file.video.animated.desktop.ed.white.canvas.mp4","kind":"video","path":"video/animated/desktop/ed_white_canvas.mp4","mimeType":"video/mp4","sha256":"be466f619c7773a06dfa5e6123e971d102a79c0df98ce9673cbd14ce332b21d2","bytes":5539601},{"id":"file.video.animated.desktop.golden.bough.rebuild.ending.bad.mp4","kind":"video","path":"video/animated/desktop/golden_bough_rebuild_ending_bad.mp4","mimeType":"video/mp4","sha256":"665342bfcf45187bc05fead1ed445b2e7f3e1fb37154aefb507009f7c9423207","bytes":5733582},{"id":"file.video.animated.desktop.golden.bough.rebuild.ending.normal.mp4","kind":"video","path":"video/animated/desktop/golden_bough_rebuild_ending_normal.mp4","mimeType":"video/mp4","sha256":"9ec5e0bd56b9b033b793f0b13f52c728ea195b162fe23159c9f2acb5c87e6ffe","bytes":5654162},{"id":"file.video.animated.desktop.golden.bough.rebuild.ending.true.mp4","kind":"video","path":"video/animated/desktop/golden_bough_rebuild_ending_true.mp4","mimeType":"video/mp4","sha256":"af8899f54f80600b8bd0ba02c30627ed2c10783a2e2a9a7aa59f82328f3fe3a2","bytes":6441698},{"id":"file.video.animated.desktop.golden.bough.rebuild.scene.11.mp4","kind":"video","path":"video/animated/desktop/golden_bough_rebuild_scene_11.mp4","mimeType":"video/mp4","sha256":"a98d68c9ee81056f22437cf0e66c78ad4cc4d6004a5365ca51110d9067ec976f","bytes":4268715},{"id":"file.video.animated.desktop.golden.bough.rebuild.scene.15.mp4","kind":"video","path":"video/animated/desktop/golden_bough_rebuild_scene_15.mp4","mimeType":"video/mp4","sha256":"510afcd7f1c27b0a4f9abc44e82bae92bd9b3436c73b261de985887a1585ee5a","bytes":4216527},{"id":"file.video.animated.desktop.golden.bough.rebuild.scene.3.mp4","kind":"video","path":"video/animated/desktop/golden_bough_rebuild_scene_3.mp4","mimeType":"video/mp4","sha256":"cb5c7a63f0e068b4d1c0b4047763f46b13b30b48f9808523c8fb67e7f6415b53","bytes":4336441},{"id":"file.video.animated.desktop.golden.bough.rebuild.scene.5.mp4","kind":"video","path":"video/animated/desktop/golden_bough_rebuild_scene_5.mp4","mimeType":"video/mp4","sha256":"f5069cb9aebe21b4bc41545e74b2f4a1c6e5aeb27f9b7f5e08b2c5fc5274cfd4","bytes":5039163},{"id":"file.video.animated.desktop.golden.bough.rebuild.scene.8.mp4","kind":"video","path":"video/animated/desktop/golden_bough_rebuild_scene_8.mp4","mimeType":"video/mp4","sha256":"56176731dc6ccc9892bfc7e7163bb736f5f662226910235a38d28117eaa817bd","bytes":5167077},{"id":"file.video.animated.desktop.op.mp4","kind":"video","path":"video/animated/desktop/op.mp4","mimeType":"video/mp4","sha256":"92774f55e85ae2933f162080916993d95fb6234a0dade047ab4a1471d846c811","bytes":5222191},{"id":"file.video.animated.desktop.prologue.mp4","kind":"video","path":"video/animated/desktop/prologue.mp4","mimeType":"video/mp4","sha256":"18768d90579f3c08b3194ef9d88c32ec77eeade557740a8c76b4596b38da42cb","bytes":4568125},{"id":"file.video.animated.desktop.ring.conspiracy.ending.bad.mp4","kind":"video","path":"video/animated/desktop/ring_conspiracy_ending_bad.mp4","mimeType":"video/mp4","sha256":"bfec2285572943ba48b8802de82715c34e734d3d7d6c8e6884a625f9f4c92778","bytes":6094767},{"id":"file.video.animated.desktop.ring.conspiracy.ending.normal.mp4","kind":"video","path":"video/animated/desktop/ring_conspiracy_ending_normal.mp4","mimeType":"video/mp4","sha256":"566ceca8679dd52192a9799090e9f886daa3bace30e412194a108a27fd3fe853","bytes":6301387},{"id":"file.video.animated.desktop.ring.conspiracy.ending.true.mp4","kind":"video","path":"video/animated/desktop/ring_conspiracy_ending_true.mp4","mimeType":"video/mp4","sha256":"c945fb3562fbec8ba6bfba6ef10a73093c23dd530a551da7e2b1cd98bbe1093f","bytes":6156384},{"id":"file.video.animated.desktop.ring.conspiracy.scene.11.mp4","kind":"video","path":"video/animated/desktop/ring_conspiracy_scene_11.mp4","mimeType":"video/mp4","sha256":"b5740b4216b387d9b6727ec3b03b74c2946c6ad1bbd0d2775693f0b73ae97177","bytes":4316911},{"id":"file.video.animated.desktop.ring.conspiracy.scene.15.mp4","kind":"video","path":"video/animated/desktop/ring_conspiracy_scene_15.mp4","mimeType":"video/mp4","sha256":"9574f17e8508b66848012e1b88e25a933cea64721d2605c806db3b59c11862ef","bytes":4755598},{"id":"file.video.animated.desktop.ring.conspiracy.scene.3.mp4","kind":"video","path":"video/animated/desktop/ring_conspiracy_scene_3.mp4","mimeType":"video/mp4","sha256":"42ec46e059405f1be4ea1b274cd521eb5f1f1c41b520314fca44bfc951b1823d","bytes":5108387},{"id":"file.video.animated.desktop.ring.conspiracy.scene.5.mp4","kind":"video","path":"video/animated/desktop/ring_conspiracy_scene_5.mp4","mimeType":"video/mp4","sha256":"3b819372d1fd9c752159286998407a266f0aafdc95195cab7eb4cd7e182fb86c","bytes":5735950},{"id":"file.video.animated.desktop.ring.conspiracy.scene.8.mp4","kind":"video","path":"video/animated/desktop/ring_conspiracy_scene_8.mp4","mimeType":"video/mp4","sha256":"732fdcda28570fb7d481767b46d4cf751e771dddab1597baeb7cb659fdaedf83","bytes":5699635},{"id":"file.video.animated.desktop.white.canvas.ending.bad.mp4","kind":"video","path":"video/animated/desktop/white_canvas_ending_bad.mp4","mimeType":"video/mp4","sha256":"93cd772af7a5e2b378b4dc0772d84a53feed7ef450c97082b431ab8802b61b80","bytes":6060788},{"id":"file.video.animated.desktop.white.canvas.ending.normal.mp4","kind":"video","path":"video/animated/desktop/white_canvas_ending_normal.mp4","mimeType":"video/mp4","sha256":"4e5f5ebd2cf3799429539538971be9fbc6936e5163271e3779dbd1383076621b","bytes":5326928},{"id":"file.video.animated.desktop.white.canvas.ending.true.mp4","kind":"video","path":"video/animated/desktop/white_canvas_ending_true.mp4","mimeType":"video/mp4","sha256":"a4422751cdf6be2191b39e7ea0d3a85e6edc215e7348d050e4f1ab63c2d5677d","bytes":7228337},{"id":"file.video.animated.desktop.white.canvas.scene.11.mp4","kind":"video","path":"video/animated/desktop/white_canvas_scene_11.mp4","mimeType":"video/mp4","sha256":"a2619096252787ec30101ba5feeaf0dda06d7f318bcdac080ab4ba0aa9568e12","bytes":5294302},{"id":"file.video.animated.desktop.white.canvas.scene.15.mp4","kind":"video","path":"video/animated/desktop/white_canvas_scene_15.mp4","mimeType":"video/mp4","sha256":"5ec29acf9df1f18494609471eddf5de221f2411acc986c6168bb9369494ad5ae","bytes":4505329},{"id":"file.video.animated.desktop.white.canvas.scene.3.mp4","kind":"video","path":"video/animated/desktop/white_canvas_scene_3.mp4","mimeType":"video/mp4","sha256":"50a48863359fff18e8f7fff87dfd808ae025d91179321688bc0353743887f1fd","bytes":5346356},{"id":"file.video.animated.desktop.white.canvas.scene.5.mp4","kind":"video","path":"video/animated/desktop/white_canvas_scene_5.mp4","mimeType":"video/mp4","sha256":"61555b7011baa029652d9304d86b7b712bab75d6f0b26b2860db578587f0a343","bytes":5230805},{"id":"file.video.animated.desktop.white.canvas.scene.8.mp4","kind":"video","path":"video/animated/desktop/white_canvas_scene_8.mp4","mimeType":"video/mp4","sha256":"8786be555709f223064e4e4853e175b1b33c8b9eb2012f0081897f59d36798df","bytes":4854170},{"id":"file.video.animated.runtime.ed.golden.bough.rebuild.mp4","kind":"video","path":"video/animated/runtime/ed_golden_bough_rebuild.mp4","mimeType":"video/mp4","sha256":"346cfd4275cf79b01a8d4fb3d4df2f79c1df433af5222debb5cdbb6369c16128","bytes":4185642},{"id":"file.video.animated.runtime.ed.ring.conspiracy.mp4","kind":"video","path":"video/animated/runtime/ed_ring_conspiracy.mp4","mimeType":"video/mp4","sha256":"3d7c1e7612c1bc376de009d85fae9159e104275678b0982296e47c10f2b89115","bytes":3545978},{"id":"file.video.animated.runtime.ed.white.canvas.mp4","kind":"video","path":"video/animated/runtime/ed_white_canvas.mp4","mimeType":"video/mp4","sha256":"c4aa0f491be3053c4b5c76e1310cf409bbe41ad0ba4d4bd22394a6af7a74e48e","bytes":3071385},{"id":"file.video.animated.runtime.golden.bough.rebuild.ending.bad.mp4","kind":"video","path":"video/animated/runtime/golden_bough_rebuild_ending_bad.mp4","mimeType":"video/mp4","sha256":"2af1ba03d1a26ef0e96260cec4474578bfc692c79d8a125fc4524ae22d3d8688","bytes":3012453},{"id":"file.video.animated.runtime.golden.bough.rebuild.ending.normal.mp4","kind":"video","path":"video/animated/runtime/golden_bough_rebuild_ending_normal.mp4","mimeType":"video/mp4","sha256":"c7b76d353c27b8b61d5b08fffbdeb96f08502f321f9f00975cb3cefc289c54a2","bytes":3238393},{"id":"file.video.animated.runtime.golden.bough.rebuild.ending.true.mp4","kind":"video","path":"video/animated/runtime/golden_bough_rebuild_ending_true.mp4","mimeType":"video/mp4","sha256":"04e46ecdbb3d51e881115671f0fe742e62268a7fced794974f15731fff8eb8f9","bytes":3603061},{"id":"file.video.animated.runtime.golden.bough.rebuild.scene.11.mp4","kind":"video","path":"video/animated/runtime/golden_bough_rebuild_scene_11.mp4","mimeType":"video/mp4","sha256":"e90196bc46e73f0a120aa895c548dc2b107f604ad300eba8c6109c287bb0f67d","bytes":2528370},{"id":"file.video.animated.runtime.golden.bough.rebuild.scene.15.mp4","kind":"video","path":"video/animated/runtime/golden_bough_rebuild_scene_15.mp4","mimeType":"video/mp4","sha256":"e08b3d96a184c441975dbf1bac7566d10e720ea82eb517c090aee948fc601dfa","bytes":2353207},{"id":"file.video.animated.runtime.golden.bough.rebuild.scene.3.mp4","kind":"video","path":"video/animated/runtime/golden_bough_rebuild_scene_3.mp4","mimeType":"video/mp4","sha256":"fc7361fdf237dd21e876149aea4950496f28f918747b0aba62713113543b3a07","bytes":2477070},{"id":"file.video.animated.runtime.golden.bough.rebuild.scene.5.mp4","kind":"video","path":"video/animated/runtime/golden_bough_rebuild_scene_5.mp4","mimeType":"video/mp4","sha256":"d901739424d56709c632bfb61b395d0874c0b279f20578e0485c1ce5697f5b95","bytes":2926949},{"id":"file.video.animated.runtime.golden.bough.rebuild.scene.8.mp4","kind":"video","path":"video/animated/runtime/golden_bough_rebuild_scene_8.mp4","mimeType":"video/mp4","sha256":"dc3b1cce4d43093e240e390a2f3209228ffa73a2041e89ae292e0790d66118ed","bytes":2797722},{"id":"file.video.animated.runtime.op.mp4","kind":"video","path":"video/animated/runtime/op.mp4","mimeType":"video/mp4","sha256":"3b0025fb8d6afce1bc68a740afdab317fd95d41144fcc48c58b85b8ea2cdab99","bytes":2777954},{"id":"file.video.animated.runtime.prologue.mp4","kind":"video","path":"video/animated/runtime/prologue.mp4","mimeType":"video/mp4","sha256":"fe51ae3b788556551e5960d1e82bacb84a7484ff3edff273872ac5ed8eec8ad0","bytes":2583756},{"id":"file.video.animated.runtime.ring.conspiracy.ending.bad.mp4","kind":"video","path":"video/animated/runtime/ring_conspiracy_ending_bad.mp4","mimeType":"video/mp4","sha256":"0cf0ac007c3e1ebd37862e02146d137117838c9530fead20611ec4b179a2d079","bytes":3519338},{"id":"file.video.animated.runtime.ring.conspiracy.ending.normal.mp4","kind":"video","path":"video/animated/runtime/ring_conspiracy_ending_normal.mp4","mimeType":"video/mp4","sha256":"78b95f376a8fe4851309af86231c18fac0d870baa6294fbc14126face05095b3","bytes":3401115},{"id":"file.video.animated.runtime.ring.conspiracy.ending.true.mp4","kind":"video","path":"video/animated/runtime/ring_conspiracy_ending_true.mp4","mimeType":"video/mp4","sha256":"986917f0fe50af48c6f7a150561e48c226f992e2429c789fc6ce4ea6e1e3f346","bytes":3567238},{"id":"file.video.animated.runtime.ring.conspiracy.scene.11.mp4","kind":"video","path":"video/animated/runtime/ring_conspiracy_scene_11.mp4","mimeType":"video/mp4","sha256":"7a4911e99e2bea1509d9cc44836a2fd1d855d0b3f0ff14713265efd5bcfcec9f","bytes":2400055},{"id":"file.video.animated.runtime.ring.conspiracy.scene.15.mp4","kind":"video","path":"video/animated/runtime/ring_conspiracy_scene_15.mp4","mimeType":"video/mp4","sha256":"115b2505bc82d8e98b236556e5b709b468346c4c197fdcbb51dd1887db9f6f69","bytes":2591243},{"id":"file.video.animated.runtime.ring.conspiracy.scene.3.mp4","kind":"video","path":"video/animated/runtime/ring_conspiracy_scene_3.mp4","mimeType":"video/mp4","sha256":"a7481f6b1a6811072cc09b1bbd5ac639f6faa11e9041531d50b220ed1442a6e8","bytes":2674192},{"id":"file.video.animated.runtime.ring.conspiracy.scene.5.mp4","kind":"video","path":"video/animated/runtime/ring_conspiracy_scene_5.mp4","mimeType":"video/mp4","sha256":"65db5a7e97fab0ccfcc26e4ae078b86f2016ad16eef0ade738f005a49969f4aa","bytes":3100461},{"id":"file.video.animated.runtime.ring.conspiracy.scene.8.mp4","kind":"video","path":"video/animated/runtime/ring_conspiracy_scene_8.mp4","mimeType":"video/mp4","sha256":"6fc2c2c0155ff68915d0ffc2a97f68d5a66b84857745826967ff64c3fbe384ac","bytes":3009439},{"id":"file.video.animated.runtime.white.canvas.ending.bad.mp4","kind":"video","path":"video/animated/runtime/white_canvas_ending_bad.mp4","mimeType":"video/mp4","sha256":"b3b101dde3f85be5b68657b66ecfc1b02d0d6c42cf70ba30e516ef1ff010473c","bytes":3336544},{"id":"file.video.animated.runtime.white.canvas.ending.normal.mp4","kind":"video","path":"video/animated/runtime/white_canvas_ending_normal.mp4","mimeType":"video/mp4","sha256":"c62b1344da7cb5a4b3fc2b3c144d815970eab741f818771bbc750f4248852f08","bytes":2756449},{"id":"file.video.animated.runtime.white.canvas.ending.true.mp4","kind":"video","path":"video/animated/runtime/white_canvas_ending_true.mp4","mimeType":"video/mp4","sha256":"454767d2595ad285ada75c920eeb5974626471930549e840669ffd2d856e9d37","bytes":3932490},{"id":"file.video.animated.runtime.white.canvas.scene.11.mp4","kind":"video","path":"video/animated/runtime/white_canvas_scene_11.mp4","mimeType":"video/mp4","sha256":"a25ef4770934afd8cc6fc6bab08167a4aa1594fdb301edd1914411438eb01b93","bytes":2890842},{"id":"file.video.animated.runtime.white.canvas.scene.15.mp4","kind":"video","path":"video/animated/runtime/white_canvas_scene_15.mp4","mimeType":"video/mp4","sha256":"f5226beecc7be5275123f7cc6a91a1b58f74e831d020a788ac52a1015c9c6c2e","bytes":2537450},{"id":"file.video.animated.runtime.white.canvas.scene.3.mp4","kind":"video","path":"video/animated/runtime/white_canvas_scene_3.mp4","mimeType":"video/mp4","sha256":"e7d8746ec4825f0f496c2106e5c1d7862b8a00246e3109574946ccbef5be5ac7","bytes":3030226},{"id":"file.video.animated.runtime.white.canvas.scene.5.mp4","kind":"video","path":"video/animated/runtime/white_canvas_scene_5.mp4","mimeType":"video/mp4","sha256":"8d154e505624dde023f61510cd6cc25337ef23f43190728e72034d85806a3569","bytes":2971914},{"id":"file.video.animated.runtime.white.canvas.scene.8.mp4","kind":"video","path":"video/animated/runtime/white_canvas_scene_8.mp4","mimeType":"video/mp4","sha256":"ba894e5efb361a9bf52c1d5b45ec2b04ed552b4024f3e8c1fd3cf54830c8f899","bytes":2685560},{"id":"file.videos.ed.mp4","kind":"video","path":"videos/ed.mp4","mimeType":"video/mp4","sha256":"01ac39c322816e6b98df0bc2fc57c952e610c19062578d4197c8685a6ba59761","bytes":13428432},{"id":"file.videos.op.mp4","kind":"video","path":"videos/op.mp4","mimeType":"video/mp4","sha256":"7d47fd8dec2fc4ac70c80c436412b084683ca2367825626a455e57ad87ed8b2b","bytes":15563758},{"id":"strip.original.albina.sprites.battle","kind":"image","path":"sprite-atlas/original_albina_sprites/battle_strip.png","mimeType":"image/png"},{"id":"strip.original.albina.sprites.normal","kind":"image","path":"sprite-atlas/original_albina_sprites/normal_strip.png","mimeType":"image/png"},{"id":"strip.original.albina.sprites.sad","kind":"image","path":"sprite-atlas/original_albina_sprites/sad_strip.png","mimeType":"image/png"},{"id":"strip.original.albina.sprites.smile","kind":"image","path":"sprite-atlas/original_albina_sprites/smile_strip.png","mimeType":"image/png"},{"id":"strip.original.cg.canto.ix.opening","kind":"image","path":"sprite-atlas/original_cg/canto_ix_opening_strip.png","mimeType":"image/png"},{"id":"strip.original.cg.hell.gate","kind":"image","path":"sprite-atlas/original_cg/hell_gate_strip.png","mimeType":"image/png"},{"id":"strip.original.cg.rain.confession","kind":"image","path":"sprite-atlas/original_cg/rain_confession_strip.png","mimeType":"image/png"},{"id":"strip.original.cg.ring.conspiracy","kind":"image","path":"sprite-atlas/original_cg/ring_conspiracy_strip.png","mimeType":"image/png"},{"id":"video.animated.desktop.ed_golden_bough_rebuild","kind":"video","path":"video/animated/desktop/ed_golden_bough_rebuild.mp4","mimeType":"video/mp4","sha256":"2fea23d2d53819f84638318e5a7c3b00da51c38703f452f946b13315faf96b00","bytes":7264295},{"id":"video.animated.desktop.ed_ring_conspiracy","kind":"video","path":"video/animated/desktop/ed_ring_conspiracy.mp4","mimeType":"video/mp4","sha256":"a5ccf17d2ba26bc1248b383ab669662a792a91b1776c637799cffa2b003cdac3","bytes":6393945},{"id":"video.animated.desktop.ed_white_canvas","kind":"video","path":"video/animated/desktop/ed_white_canvas.mp4","mimeType":"video/mp4","sha256":"be466f619c7773a06dfa5e6123e971d102a79c0df98ce9673cbd14ce332b21d2","bytes":5539601},{"id":"video.animated.desktop.golden_bough_rebuild_ending_bad","kind":"video","path":"video/animated/desktop/golden_bough_rebuild_ending_bad.mp4","mimeType":"video/mp4","sha256":"665342bfcf45187bc05fead1ed445b2e7f3e1fb37154aefb507009f7c9423207","bytes":5733582},{"id":"video.animated.desktop.golden_bough_rebuild_ending_normal","kind":"video","path":"video/animated/desktop/golden_bough_rebuild_ending_normal.mp4","mimeType":"video/mp4","sha256":"9ec5e0bd56b9b033b793f0b13f52c728ea195b162fe23159c9f2acb5c87e6ffe","bytes":5654162},{"id":"video.animated.desktop.golden_bough_rebuild_ending_true","kind":"video","path":"video/animated/desktop/golden_bough_rebuild_ending_true.mp4","mimeType":"video/mp4","sha256":"af8899f54f80600b8bd0ba02c30627ed2c10783a2e2a9a7aa59f82328f3fe3a2","bytes":6441698},{"id":"video.animated.desktop.golden_bough_rebuild_scene_11","kind":"video","path":"video/animated/desktop/golden_bough_rebuild_scene_11.mp4","mimeType":"video/mp4","sha256":"a98d68c9ee81056f22437cf0e66c78ad4cc4d6004a5365ca51110d9067ec976f","bytes":4268715},{"id":"video.animated.desktop.golden_bough_rebuild_scene_15","kind":"video","path":"video/animated/desktop/golden_bough_rebuild_scene_15.mp4","mimeType":"video/mp4","sha256":"510afcd7f1c27b0a4f9abc44e82bae92bd9b3436c73b261de985887a1585ee5a","bytes":4216527},{"id":"video.animated.desktop.golden_bough_rebuild_scene_3","kind":"video","path":"video/animated/desktop/golden_bough_rebuild_scene_3.mp4","mimeType":"video/mp4","sha256":"cb5c7a63f0e068b4d1c0b4047763f46b13b30b48f9808523c8fb67e7f6415b53","bytes":4336441},{"id":"video.animated.desktop.golden_bough_rebuild_scene_5","kind":"video","path":"video/animated/desktop/golden_bough_rebuild_scene_5.mp4","mimeType":"video/mp4","sha256":"f5069cb9aebe21b4bc41545e74b2f4a1c6e5aeb27f9b7f5e08b2c5fc5274cfd4","bytes":5039163},{"id":"video.animated.desktop.golden_bough_rebuild_scene_8","kind":"video","path":"video/animated/desktop/golden_bough_rebuild_scene_8.mp4","mimeType":"video/mp4","sha256":"56176731dc6ccc9892bfc7e7163bb736f5f662226910235a38d28117eaa817bd","bytes":5167077},{"id":"video.animated.desktop.op","kind":"video","path":"video/animated/desktop/op.mp4","mimeType":"video/mp4","sha256":"92774f55e85ae2933f162080916993d95fb6234a0dade047ab4a1471d846c811","bytes":5222191},{"id":"video.animated.desktop.prologue","kind":"video","path":"video/animated/desktop/prologue.mp4","mimeType":"video/mp4","sha256":"18768d90579f3c08b3194ef9d88c32ec77eeade557740a8c76b4596b38da42cb","bytes":4568125},{"id":"video.animated.desktop.ring_conspiracy_ending_bad","kind":"video","path":"video/animated/desktop/ring_conspiracy_ending_bad.mp4","mimeType":"video/mp4","sha256":"bfec2285572943ba48b8802de82715c34e734d3d7d6c8e6884a625f9f4c92778","bytes":6094767},{"id":"video.animated.desktop.ring_conspiracy_ending_normal","kind":"video","path":"video/animated/desktop/ring_conspiracy_ending_normal.mp4","mimeType":"video/mp4","sha256":"566ceca8679dd52192a9799090e9f886daa3bace30e412194a108a27fd3fe853","bytes":6301387},{"id":"video.animated.desktop.ring_conspiracy_ending_true","kind":"video","path":"video/animated/desktop/ring_conspiracy_ending_true.mp4","mimeType":"video/mp4","sha256":"c945fb3562fbec8ba6bfba6ef10a73093c23dd530a551da7e2b1cd98bbe1093f","bytes":6156384},{"id":"video.animated.desktop.ring_conspiracy_scene_11","kind":"video","path":"video/animated/desktop/ring_conspiracy_scene_11.mp4","mimeType":"video/mp4","sha256":"b5740b4216b387d9b6727ec3b03b74c2946c6ad1bbd0d2775693f0b73ae97177","bytes":4316911},{"id":"video.animated.desktop.ring_conspiracy_scene_15","kind":"video","path":"video/animated/desktop/ring_conspiracy_scene_15.mp4","mimeType":"video/mp4","sha256":"9574f17e8508b66848012e1b88e25a933cea64721d2605c806db3b59c11862ef","bytes":4755598},{"id":"video.animated.desktop.ring_conspiracy_scene_3","kind":"video","path":"video/animated/desktop/ring_conspiracy_scene_3.mp4","mimeType":"video/mp4","sha256":"42ec46e059405f1be4ea1b274cd521eb5f1f1c41b520314fca44bfc951b1823d","bytes":5108387},{"id":"video.animated.desktop.ring_conspiracy_scene_5","kind":"video","path":"video/animated/desktop/ring_conspiracy_scene_5.mp4","mimeType":"video/mp4","sha256":"3b819372d1fd9c752159286998407a266f0aafdc95195cab7eb4cd7e182fb86c","bytes":5735950},{"id":"video.animated.desktop.ring_conspiracy_scene_8","kind":"video","path":"video/animated/desktop/ring_conspiracy_scene_8.mp4","mimeType":"video/mp4","sha256":"732fdcda28570fb7d481767b46d4cf751e771dddab1597baeb7cb659fdaedf83","bytes":5699635},{"id":"video.animated.desktop.white_canvas_ending_bad","kind":"video","path":"video/animated/desktop/white_canvas_ending_bad.mp4","mimeType":"video/mp4","sha256":"93cd772af7a5e2b378b4dc0772d84a53feed7ef450c97082b431ab8802b61b80","bytes":6060788},{"id":"video.animated.desktop.white_canvas_ending_normal","kind":"video","path":"video/animated/desktop/white_canvas_ending_normal.mp4","mimeType":"video/mp4","sha256":"4e5f5ebd2cf3799429539538971be9fbc6936e5163271e3779dbd1383076621b","bytes":5326928},{"id":"video.animated.desktop.white_canvas_ending_true","kind":"video","path":"video/animated/desktop/white_canvas_ending_true.mp4","mimeType":"video/mp4","sha256":"a4422751cdf6be2191b39e7ea0d3a85e6edc215e7348d050e4f1ab63c2d5677d","bytes":7228337},{"id":"video.animated.desktop.white_canvas_scene_11","kind":"video","path":"video/animated/desktop/white_canvas_scene_11.mp4","mimeType":"video/mp4","sha256":"a2619096252787ec30101ba5feeaf0dda06d7f318bcdac080ab4ba0aa9568e12","bytes":5294302},{"id":"video.animated.desktop.white_canvas_scene_15","kind":"video","path":"video/animated/desktop/white_canvas_scene_15.mp4","mimeType":"video/mp4","sha256":"5ec29acf9df1f18494609471eddf5de221f2411acc986c6168bb9369494ad5ae","bytes":4505329},{"id":"video.animated.desktop.white_canvas_scene_3","kind":"video","path":"video/animated/desktop/white_canvas_scene_3.mp4","mimeType":"video/mp4","sha256":"50a48863359fff18e8f7fff87dfd808ae025d91179321688bc0353743887f1fd","bytes":5346356},{"id":"video.animated.desktop.white_canvas_scene_5","kind":"video","path":"video/animated/desktop/white_canvas_scene_5.mp4","mimeType":"video/mp4","sha256":"61555b7011baa029652d9304d86b7b712bab75d6f0b26b2860db578587f0a343","bytes":5230805},{"id":"video.animated.desktop.white_canvas_scene_8","kind":"video","path":"video/animated/desktop/white_canvas_scene_8.mp4","mimeType":"video/mp4","sha256":"8786be555709f223064e4e4853e175b1b33c8b9eb2012f0081897f59d36798df","bytes":4854170},{"id":"video.animated.runtime.ed_golden_bough_rebuild","kind":"video","path":"video/animated/runtime/ed_golden_bough_rebuild.mp4","mimeType":"video/mp4","sha256":"346cfd4275cf79b01a8d4fb3d4df2f79c1df433af5222debb5cdbb6369c16128","bytes":4185642},{"id":"video.animated.runtime.ed_ring_conspiracy","kind":"video","path":"video/animated/runtime/ed_ring_conspiracy.mp4","mimeType":"video/mp4","sha256":"3d7c1e7612c1bc376de009d85fae9159e104275678b0982296e47c10f2b89115","bytes":3545978},{"id":"video.animated.runtime.ed_white_canvas","kind":"video","path":"video/animated/runtime/ed_white_canvas.mp4","mimeType":"video/mp4","sha256":"c4aa0f491be3053c4b5c76e1310cf409bbe41ad0ba4d4bd22394a6af7a74e48e","bytes":3071385},{"id":"video.animated.runtime.golden_bough_rebuild_ending_bad","kind":"video","path":"video/animated/runtime/golden_bough_rebuild_ending_bad.mp4","mimeType":"video/mp4","sha256":"2af1ba03d1a26ef0e96260cec4474578bfc692c79d8a125fc4524ae22d3d8688","bytes":3012453},{"id":"video.animated.runtime.golden_bough_rebuild_ending_normal","kind":"video","path":"video/animated/runtime/golden_bough_rebuild_ending_normal.mp4","mimeType":"video/mp4","sha256":"c7b76d353c27b8b61d5b08fffbdeb96f08502f321f9f00975cb3cefc289c54a2","bytes":3238393},{"id":"video.animated.runtime.golden_bough_rebuild_ending_true","kind":"video","path":"video/animated/runtime/golden_bough_rebuild_ending_true.mp4","mimeType":"video/mp4","sha256":"04e46ecdbb3d51e881115671f0fe742e62268a7fced794974f15731fff8eb8f9","bytes":3603061},{"id":"video.animated.runtime.golden_bough_rebuild_scene_11","kind":"video","path":"video/animated/runtime/golden_bough_rebuild_scene_11.mp4","mimeType":"video/mp4","sha256":"e90196bc46e73f0a120aa895c548dc2b107f604ad300eba8c6109c287bb0f67d","bytes":2528370},{"id":"video.animated.runtime.golden_bough_rebuild_scene_15","kind":"video","path":"video/animated/runtime/golden_bough_rebuild_scene_15.mp4","mimeType":"video/mp4","sha256":"e08b3d96a184c441975dbf1bac7566d10e720ea82eb517c090aee948fc601dfa","bytes":2353207},{"id":"video.animated.runtime.golden_bough_rebuild_scene_3","kind":"video","path":"video/animated/runtime/golden_bough_rebuild_scene_3.mp4","mimeType":"video/mp4","sha256":"fc7361fdf237dd21e876149aea4950496f28f918747b0aba62713113543b3a07","bytes":2477070},{"id":"video.animated.runtime.golden_bough_rebuild_scene_5","kind":"video","path":"video/animated/runtime/golden_bough_rebuild_scene_5.mp4","mimeType":"video/mp4","sha256":"d901739424d56709c632bfb61b395d0874c0b279f20578e0485c1ce5697f5b95","bytes":2926949},{"id":"video.animated.runtime.golden_bough_rebuild_scene_8","kind":"video","path":"video/animated/runtime/golden_bough_rebuild_scene_8.mp4","mimeType":"video/mp4","sha256":"dc3b1cce4d43093e240e390a2f3209228ffa73a2041e89ae292e0790d66118ed","bytes":2797722},{"id":"video.animated.runtime.op","kind":"video","path":"video/animated/runtime/op.mp4","mimeType":"video/mp4","sha256":"3b0025fb8d6afce1bc68a740afdab317fd95d41144fcc48c58b85b8ea2cdab99","bytes":2777954},{"id":"video.animated.runtime.prologue","kind":"video","path":"video/animated/runtime/prologue.mp4","mimeType":"video/mp4","sha256":"fe51ae3b788556551e5960d1e82bacb84a7484ff3edff273872ac5ed8eec8ad0","bytes":2583756},{"id":"video.animated.runtime.ring_conspiracy_ending_bad","kind":"video","path":"video/animated/runtime/ring_conspiracy_ending_bad.mp4","mimeType":"video/mp4","sha256":"0cf0ac007c3e1ebd37862e02146d137117838c9530fead20611ec4b179a2d079","bytes":3519338},{"id":"video.animated.runtime.ring_conspiracy_ending_normal","kind":"video","path":"video/animated/runtime/ring_conspiracy_ending_normal.mp4","mimeType":"video/mp4","sha256":"78b95f376a8fe4851309af86231c18fac0d870baa6294fbc14126face05095b3","bytes":3401115},{"id":"video.animated.runtime.ring_conspiracy_ending_true","kind":"video","path":"video/animated/runtime/ring_conspiracy_ending_true.mp4","mimeType":"video/mp4","sha256":"986917f0fe50af48c6f7a150561e48c226f992e2429c789fc6ce4ea6e1e3f346","bytes":3567238},{"id":"video.animated.runtime.ring_conspiracy_scene_11","kind":"video","path":"video/animated/runtime/ring_conspiracy_scene_11.mp4","mimeType":"video/mp4","sha256":"7a4911e99e2bea1509d9cc44836a2fd1d855d0b3f0ff14713265efd5bcfcec9f","bytes":2400055},{"id":"video.animated.runtime.ring_conspiracy_scene_15","kind":"video","path":"video/animated/runtime/ring_conspiracy_scene_15.mp4","mimeType":"video/mp4","sha256":"115b2505bc82d8e98b236556e5b709b468346c4c197fdcbb51dd1887db9f6f69","bytes":2591243},{"id":"video.animated.runtime.ring_conspiracy_scene_3","kind":"video","path":"video/animated/runtime/ring_conspiracy_scene_3.mp4","mimeType":"video/mp4","sha256":"a7481f6b1a6811072cc09b1bbd5ac639f6faa11e9041531d50b220ed1442a6e8","bytes":2674192},{"id":"video.animated.runtime.ring_conspiracy_scene_5","kind":"video","path":"video/animated/runtime/ring_conspiracy_scene_5.mp4","mimeType":"video/mp4","sha256":"65db5a7e97fab0ccfcc26e4ae078b86f2016ad16eef0ade738f005a49969f4aa","bytes":3100461},{"id":"video.animated.runtime.ring_conspiracy_scene_8","kind":"video","path":"video/animated/runtime/ring_conspiracy_scene_8.mp4","mimeType":"video/mp4","sha256":"6fc2c2c0155ff68915d0ffc2a97f68d5a66b84857745826967ff64c3fbe384ac","bytes":3009439},{"id":"video.animated.runtime.white_canvas_ending_bad","kind":"video","path":"video/animated/runtime/white_canvas_ending_bad.mp4","mimeType":"video/mp4","sha256":"b3b101dde3f85be5b68657b66ecfc1b02d0d6c42cf70ba30e516ef1ff010473c","bytes":3336544},{"id":"video.animated.runtime.white_canvas_ending_normal","kind":"video","path":"video/animated/runtime/white_canvas_ending_normal.mp4","mimeType":"video/mp4","sha256":"c62b1344da7cb5a4b3fc2b3c144d815970eab741f818771bbc750f4248852f08","bytes":2756449},{"id":"video.animated.runtime.white_canvas_ending_true","kind":"video","path":"video/animated/runtime/white_canvas_ending_true.mp4","mimeType":"video/mp4","sha256":"454767d2595ad285ada75c920eeb5974626471930549e840669ffd2d856e9d37","bytes":3932490},{"id":"video.animated.runtime.white_canvas_scene_11","kind":"video","path":"video/animated/runtime/white_canvas_scene_11.mp4","mimeType":"video/mp4","sha256":"a25ef4770934afd8cc6fc6bab08167a4aa1594fdb301edd1914411438eb01b93","bytes":2890842},{"id":"video.animated.runtime.white_canvas_scene_15","kind":"video","path":"video/animated/runtime/white_canvas_scene_15.mp4","mimeType":"video/mp4","sha256":"f5226beecc7be5275123f7cc6a91a1b58f74e831d020a788ac52a1015c9c6c2e","bytes":2537450},{"id":"video.animated.runtime.white_canvas_scene_3","kind":"video","path":"video/animated/runtime/white_canvas_scene_3.mp4","mimeType":"video/mp4","sha256":"e7d8746ec4825f0f496c2106e5c1d7862b8a00246e3109574946ccbef5be5ac7","bytes":3030226},{"id":"video.animated.runtime.white_canvas_scene_5","kind":"video","path":"video/animated/runtime/white_canvas_scene_5.mp4","mimeType":"video/mp4","sha256":"8d154e505624dde023f61510cd6cc25337ef23f43190728e72034d85806a3569","bytes":2971914},{"id":"video.animated.runtime.white_canvas_scene_8","kind":"video","path":"video/animated/runtime/white_canvas_scene_8.mp4","mimeType":"video/mp4","sha256":"ba894e5efb361a9bf52c1d5b45ec2b04ed552b4024f3e8c1fd3cf54830c8f899","bytes":2685560},{"id":"voice.result.conspiracy_005_let_her_answer","kind":"audio","path":"audio/voice/result/conspiracy_005_let_her_answer.mp3","mimeType":"audio/mpeg","sha256":"548667e2e8d97d86d68959d8c7ee94e2d81570f13ba597501c7ffeb569832526","bytes":218292},{"id":"voice.result.conspiracy_005_refuse_duo","kind":"audio","path":"audio/voice/result/conspiracy_005_refuse_duo.mp3","mimeType":"audio/mpeg","sha256":"f03cd8e5cf332108df089065f72c50b9184de7a5724dac60ee57595047802769","bytes":225780},{"id":"voice.result.conspiracy_006_block_view","kind":"audio","path":"audio/voice/result/conspiracy_006_block_view.mp3","mimeType":"audio/mpeg","sha256":"8b1422137db20ab49eabed7bd28bc2849dfe37ea073dd5ee6f212ff0e20a70ac","bytes":290292},{"id":"voice.result.conspiracy_006_stand_with_her","kind":"audio","path":"audio/voice/result/conspiracy_006_stand_with_her.mp3","mimeType":"audio/mpeg","sha256":"20e2c48a0ce12a926636936548d42fbf11727ef7a000a1595eeff797a6c09f8b","bytes":300660},{"id":"voice.result.conspiracy_007_break_frame","kind":"audio","path":"audio/voice/result/conspiracy_007_break_frame.mp3","mimeType":"audio/mpeg","sha256":"871e78d300f8278a232ba010d7b427867a64467fb8e27d365e7d4e62edfd926e","bytes":233844},{"id":"voice.result.conspiracy_007_seize_frame","kind":"audio","path":"audio/voice/result/conspiracy_007_seize_frame.mp3","mimeType":"audio/mpeg","sha256":"d08785dfa3e8c3517977a6d6bf9c1512e010a58cf5b35eecc2eb821cc81dc33e","bytes":271284},{"id":"voice.result.conspiracy_008_hand_pen_to_her","kind":"audio","path":"audio/voice/result/conspiracy_008_hand_pen_to_her.mp3","mimeType":"audio/mpeg","sha256":"d8e813e7ebdbeb0f6110e70a2bb7a5a52bce8da57e5f8d09f2ff372d0c30d418","bytes":242484},{"id":"voice.result.conspiracy_008_refuse_testimony","kind":"audio","path":"audio/voice/result/conspiracy_008_refuse_testimony.mp3","mimeType":"audio/mpeg","sha256":"d5ca8cee4ee30db158d885deb2604fa78bb33c832d7743a030fbc2133d63efb7","bytes":229812},{"id":"voice.result.conspiracy_009_choose_present","kind":"audio","path":"audio/voice/result/conspiracy_009_choose_present.mp3","mimeType":"audio/mpeg","sha256":"d255a37065cb040862cbb36fd595af444fd8506e6c351a9b0fddce3e3843caa5","bytes":287988},{"id":"voice.result.conspiracy_009_refuse_choice","kind":"audio","path":"audio/voice/result/conspiracy_009_refuse_choice.mp3","mimeType":"audio/mpeg","sha256":"d84f22e0be4599542ae4608dbd3d6d570a23c37fbc05ec358baf82bd5866147e","bytes":306420},{"id":"voice.result.conspiracy_010_keep_badge_unworn","kind":"audio","path":"audio/voice/result/conspiracy_010_keep_badge_unworn.mp3","mimeType":"audio/mpeg","sha256":"2ba5efee14ce0ffd8bddacac3a707d23e20f2bd2fcab2103cd3890cc11cfc33c","bytes":263796},{"id":"voice.result.conspiracy_010_throw_badge","kind":"audio","path":"audio/voice/result/conspiracy_010_throw_badge.mp3","mimeType":"audio/mpeg","sha256":"6a78bf8c769c7296815b0eb02fb01769e0d15aa7754ed0ea72096041c683153b","bytes":260916},{"id":"voice.result.conspiracy_011_burn_film","kind":"audio","path":"audio/voice/result/conspiracy_011_burn_film.mp3","mimeType":"audio/mpeg","sha256":"785b0204dfb11fe1882f188366acaf80f6cdd88836e81bb162d4c19c09b750b6","bytes":243636},{"id":"voice.result.conspiracy_011_rewrite_ending","kind":"audio","path":"audio/voice/result/conspiracy_011_rewrite_ending.mp3","mimeType":"audio/mpeg","sha256":"8b9f5b34fc073979f154a9a87293de86ebaaeba56f89e568eded54a61d3ea343","bytes":238452},{"id":"voice.result.conspiracy_012_end_tonight","kind":"audio","path":"audio/voice/result/conspiracy_012_end_tonight.mp3","mimeType":"audio/mpeg","sha256":"ce0871f2f82b8d758e989219d1951c4cd0edf1036e8fe7bca19d3ea3abcbcd86","bytes":277620},{"id":"voice.result.conspiracy_012_keep_blade","kind":"audio","path":"audio/voice/result/conspiracy_012_keep_blade.mp3","mimeType":"audio/mpeg","sha256":"57c8336c5692d6725fa5fe110f82307674ff12f413e167b5ac3281bb0c22c554","bytes":273588},{"id":"voice.result.conspiracy_013_hold_one_second","kind":"audio","path":"audio/voice/result/conspiracy_013_hold_one_second.mp3","mimeType":"audio/mpeg","sha256":"97ad5295330dd4e4c20f60e667c94efa825b06a06ecb6e577ac621080a5a16d9","bytes":254004},{"id":"voice.result.conspiracy_013_return_gently","kind":"audio","path":"audio/voice/result/conspiracy_013_return_gently.mp3","mimeType":"audio/mpeg","sha256":"b0c4e5d6af73a4728f850b33cb5cb9db51e06598642b52410b2f4e2faf90d076","bytes":269556},{"id":"voice.result.conspiracy_014_erase_from_catalog","kind":"audio","path":"audio/voice/result/conspiracy_014_erase_from_catalog.mp3","mimeType":"audio/mpeg","sha256":"f4a479901d65888eea4634ae1ea8a156024e84b705595187a28a32e4d8a008b4","bytes":283956},{"id":"voice.result.conspiracy_014_keep_one_line","kind":"audio","path":"audio/voice/result/conspiracy_014_keep_one_line.mp3","mimeType":"audio/mpeg","sha256":"4734a1cc33e33ff06799ee86d66763782127c8ea2acaff03a12b59e86e6b0a60","bytes":289716},{"id":"voice.result.conspiracy_accept","kind":"audio","path":"audio/voice/result/conspiracy_accept.mp3","mimeType":"audio/mpeg","sha256":"4b76303e8e34898103631f630d182d820b1c5b4f08cc19105df3778e8adfcc8f","bytes":242484},{"id":"voice.result.conspiracy_break_pursuit_frame","kind":"audio","path":"audio/voice/result/conspiracy_break_pursuit_frame.mp3","mimeType":"audio/mpeg","sha256":"3597acb7210a208c020fb28c0fb1c7c63e595fac7b419da1355556960e70570a","bytes":237876},{"id":"voice.result.conspiracy_escape_to_backstreets","kind":"audio","path":"audio/voice/result/conspiracy_escape_to_backstreets.mp3","mimeType":"audio/mpeg","sha256":"0fd19a0ac7085d583a8178d38c071804d60a9be3c1363b26f62e31ef34a5b15e","bytes":263796},{"id":"voice.result.conspiracy_feed_false_signature","kind":"audio","path":"audio/voice/result/conspiracy_feed_false_signature.mp3","mimeType":"audio/mpeg","sha256":"a10423e4201744e3f64d594cb8948c4f2fca578cb88fcaa2f865839235035525","bytes":240756},{"id":"voice.result.conspiracy_pressure","kind":"audio","path":"audio/voice/result/conspiracy_pressure.mp3","mimeType":"audio/mpeg","sha256":"0e165916d831f3aab506621939c657e90f4fa282a6fb212061143a82e6ccfebe","bytes":210804},{"id":"voice.result.enter_conspiracy","kind":"audio","path":"audio/voice/result/enter_conspiracy.mp3","mimeType":"audio/mpeg","sha256":"f8964fe276712a75e96af70eceb75f46845ab038422a529a4ca67d6ccc168e56","bytes":204468},{"id":"voice.result.enter_rebuild","kind":"audio","path":"audio/voice/result/enter_rebuild.mp3","mimeType":"audio/mpeg","sha256":"fa7f6c482fb449c3f7c61f2d556182e30a49d449d14fb8329213f97ba8dae9db","bytes":202740},{"id":"voice.result.enter_white_canvas","kind":"audio","path":"audio/voice/result/enter_white_canvas.mp3","mimeType":"audio/mpeg","sha256":"5f238c579d61475995d082999f73a16d0c182f8db58a16ab8cd9d2a802277d97","bytes":164724},{"id":"voice.result.golden_bough_rebuild.bad_ending","kind":"audio","path":"audio/voice/result/golden_bough_rebuild/bad_ending.mp3","mimeType":"audio/mpeg","sha256":"401c2bf97a19b9d9cc0a68bd7c9f9d1e85ce99d5a378d8b5f21449266fdc1417","bytes":115764},{"id":"voice.result.golden_bough_rebuild.normal_ending","kind":"audio","path":"audio/voice/result/golden_bough_rebuild/normal_ending.mp3","mimeType":"audio/mpeg","sha256":"d1161b5a7e0cbff976cc5e32b470d3439b738c3acf20fd59eeff3086f84bbc2d","bytes":112884},{"id":"voice.result.golden_bough_rebuild.true_ending","kind":"audio","path":"audio/voice/result/golden_bough_rebuild/true_ending.mp3","mimeType":"audio/mpeg","sha256":"148ae12e5af697470bf05597480564d896ee6084c08442ee66e368a783d965f6","bytes":105972},{"id":"voice.result.golden_bough_route_complete","kind":"audio","path":"audio/voice/result/golden_bough_route_complete.mp3","mimeType":"audio/mpeg","sha256":"e457029e4b26e12174ecf9c30212c573f3d7693c0d73f686506bde427ba00de7","bytes":331188},{"id":"voice.result.golden_bough_route_final","kind":"audio","path":"audio/voice/result/golden_bough_route_final.mp3","mimeType":"audio/mpeg","sha256":"ff10f8673bd0fe23c51936ce4bf55414ab4544224ca0f2d244709ae15cda54b0","bytes":143988},{"id":"voice.result.rebuild_006_keep_silent_anchor","kind":"audio","path":"audio/voice/result/rebuild_006_keep_silent_anchor.mp3","mimeType":"audio/mpeg","sha256":"ea553da520b4f2af20f6ef09f831f0115fb3c299bca2acb125cbbba3825e6a65","bytes":269556},{"id":"voice.result.rebuild_006_read_aloud","kind":"audio","path":"audio/voice/result/rebuild_006_read_aloud.mp3","mimeType":"audio/mpeg","sha256":"1ba8b1e99c835f51e83566218b0831472cae6f8b9bed544379008edfb98ed56e","bytes":270708},{"id":"voice.result.rebuild_007_match_her_pulse","kind":"audio","path":"audio/voice/result/rebuild_007_match_her_pulse.mp3","mimeType":"audio/mpeg","sha256":"e6454ff8fee875b9f2634d84ab7ebce1be09e030812ccdd916aa291b8a9e69d6","bytes":295476},{"id":"voice.result.rebuild_007_stay_own_rhythm","kind":"audio","path":"audio/voice/result/rebuild_007_stay_own_rhythm.mp3","mimeType":"audio/mpeg","sha256":"03ff1752e22f90ffd73af641d1d182688d3a349c9778079c5fb9217eee4a86d3","bytes":305268},{"id":"voice.result.rebuild_008_protect_current_self","kind":"audio","path":"audio/voice/result/rebuild_008_protect_current_self.mp3","mimeType":"audio/mpeg","sha256":"87637a730ba4bcfaf94708a85f427bd8225fb3f123b2674df47fc6b14de306ac","bytes":274164},{"id":"voice.result.rebuild_008_trade_old_memory","kind":"audio","path":"audio/voice/result/rebuild_008_trade_old_memory.mp3","mimeType":"audio/mpeg","sha256":"d94505f65341fd2877cdbf6ddcd0067ed716314330df879113e4d306ee5b76fd","bytes":271860},{"id":"voice.result.rebuild_009_hand_question_back","kind":"audio","path":"audio/voice/result/rebuild_009_hand_question_back.mp3","mimeType":"audio/mpeg","sha256":"8b29cf1086c02e716ed0cff07536f363d83101916d10fa4ca5e627b649b9527b","bytes":270132},{"id":"voice.result.rebuild_009_refuse_perfect_copy","kind":"audio","path":"audio/voice/result/rebuild_009_refuse_perfect_copy.mp3","mimeType":"audio/mpeg","sha256":"a70c9a8ad345295ae5d861bbe5dfba1f6467cc8fa60194e0bac35848edabbd97","bytes":267252},{"id":"voice.result.rebuild_010_ask_her_choice","kind":"audio","path":"audio/voice/result/rebuild_010_ask_her_choice.mp3","mimeType":"audio/mpeg","sha256":"5cecd7509b4d42b4e7c3e7ba0309b53b302c9ee88bf2255bc793be78a802a182","bytes":226932},{"id":"voice.result.rebuild_010_veto_sealing","kind":"audio","path":"audio/voice/result/rebuild_010_veto_sealing.mp3","mimeType":"audio/mpeg","sha256":"5f46716f6a5efc4287c341a0d2b8f02c311a8c1109bf19a519f3e391069a6eb2","bytes":232692},{"id":"voice.result.rebuild_011_ask_next_revision","kind":"audio","path":"audio/voice/result/rebuild_011_ask_next_revision.mp3","mimeType":"audio/mpeg","sha256":"eae27a33c8bc3fe8decead1165d83cb94521f45594f102bf4e5574da3b6f09ec","bytes":292020},{"id":"voice.result.rebuild_011_sit_beside","kind":"audio","path":"audio/voice/result/rebuild_011_sit_beside.mp3","mimeType":"audio/mpeg","sha256":"ee92eac2d9efee09aa05e29d4ff482d9631ccce9526f11a92cb55f4e6ebe155e","bytes":290868},{"id":"voice.result.rebuild_012_break_contract","kind":"audio","path":"audio/voice/result/rebuild_012_break_contract.mp3","mimeType":"audio/mpeg","sha256":"2cb0663dd3c9d2d7b5413424443f2a9bd48002e251075355d36762b9371e3409","bytes":251700},{"id":"voice.result.rebuild_012_negotiate_terms","kind":"audio","path":"audio/voice/result/rebuild_012_negotiate_terms.mp3","mimeType":"audio/mpeg","sha256":"ab0f098d13994e6c429414e506450988dbd84476294cbd3c3749cd7b64fd4ed3","bytes":268980},{"id":"voice.result.rebuild_013_offer_witness","kind":"audio","path":"audio/voice/result/rebuild_013_offer_witness.mp3","mimeType":"audio/mpeg","sha256":"8d44e5907f85e91235c1eed2e9ee6ceacc12dd90599663ebe4bdec64f9fb6dfd","bytes":254004},{"id":"voice.result.rebuild_013_promise_name","kind":"audio","path":"audio/voice/result/rebuild_013_promise_name.mp3","mimeType":"audio/mpeg","sha256":"ad4b896e8b63255b97863d25448f39d4578377b9948343a3b031f492095e3fe3","bytes":255156},{"id":"voice.result.rebuild_014_ask_when_to_light","kind":"audio","path":"audio/voice/result/rebuild_014_ask_when_to_light.mp3","mimeType":"audio/mpeg","sha256":"1b73267ccef887754b17298559c75c4ba9df218ed3b0a3adeac6da618b622c6a","bytes":286260},{"id":"voice.result.rebuild_014_keep_unlit","kind":"audio","path":"audio/voice/result/rebuild_014_keep_unlit.mp3","mimeType":"audio/mpeg","sha256":"22cea221f68bea9a01b9d7c8a7ea493c244207b3124736403c748cad98190ac2","bytes":292596},{"id":"voice.result.rebuild_accept_missing_pieces","kind":"audio","path":"audio/voice/result/rebuild_accept_missing_pieces.mp3","mimeType":"audio/mpeg","sha256":"e03509c235adbf1a35a69fa967081effe4a8cb7b07a4106de677cec1454a3028","bytes":243636},{"id":"voice.result.rebuild_anchor","kind":"audio","path":"audio/voice/result/rebuild_anchor.mp3","mimeType":"audio/mpeg","sha256":"77023f3ec1210d3f0394848656ed18629a5922d124437b97bc97733e55e6c2f7","bytes":162420},{"id":"voice.result.rebuild_cut_false_completion","kind":"audio","path":"audio/voice/result/rebuild_cut_false_completion.mp3","mimeType":"audio/mpeg","sha256":"455fed571cb5502968a46e4404e566db5821199fb9b3140c33c1066d155144a1","bytes":250548},{"id":"voice.result.rebuild_guard_fascia_pulse","kind":"audio","path":"audio/voice/result/rebuild_guard_fascia_pulse.mp3","mimeType":"audio/mpeg","sha256":"5d3946116f8d9d848ea408b9a1f7ef1323642158fb0f94e9a5d10c56312627e7","bytes":265524},{"id":"voice.result.rebuild_push_into_raid","kind":"audio","path":"audio/voice/result/rebuild_push_into_raid.mp3","mimeType":"audio/mpeg","sha256":"10bb250cf7e3efa4c99fde65bf46d3ea7d6c6b9d037b1c2f6652cbbb94acd8ce","bytes":274164},{"id":"voice.result.rebuild_question_fascia","kind":"audio","path":"audio/voice/result/rebuild_question_fascia.mp3","mimeType":"audio/mpeg","sha256":"f5e64cd027912ac0ca2b77f53770bd645c962c850f453fe35d0c5f7d6aaa9e5c","bytes":156660},{"id":"voice.result.rebuild_use_rooftop_signal","kind":"audio","path":"audio/voice/result/rebuild_use_rooftop_signal.mp3","mimeType":"audio/mpeg","sha256":"2d30e89069b6559c1809749d8547b5e773d5af9fc86771b004fa82ff96ae8aea","bytes":237300},{"id":"voice.result.return_opening_from_rebuild","kind":"audio","path":"audio/voice/result/return_opening_from_rebuild.mp3","mimeType":"audio/mpeg","sha256":"93831e44f51a1755332b620bab795b5a6501bd2310dfe860e65d1de97f796dde","bytes":191220},{"id":"voice.result.return_opening_from_ring","kind":"audio","path":"audio/voice/result/return_opening_from_ring.mp3","mimeType":"audio/mpeg","sha256":"07b6250f478559c01e05511edda03d37c45df65b9e1848f22cebc16447bdc421","bytes":195252},{"id":"voice.result.return_opening_from_white","kind":"audio","path":"audio/voice/result/return_opening_from_white.mp3","mimeType":"audio/mpeg","sha256":"f909503358a31908b759dbb172165b49e77d3800c6b5e9beb5355bbecd675c37","bytes":202164},{"id":"voice.result.ring_conspiracy_route_complete","kind":"audio","path":"audio/voice/result/ring_conspiracy_route_complete.mp3","mimeType":"audio/mpeg","sha256":"a99d59529f481835f600f61c3114fe5cebde2048f8e411be418998a0a3787f75","bytes":283956},{"id":"voice.result.ring_conspiracy_route_final","kind":"audio","path":"audio/voice/result/ring_conspiracy_route_final.mp3","mimeType":"audio/mpeg","sha256":"c05b719a61ea2e4fd6ce58109fc2fdb2f48f6bb14415dc64df970630a3162ac0","bytes":156660},{"id":"voice.result.ring_conspiracy.bad_ending","kind":"audio","path":"audio/voice/result/ring_conspiracy/bad_ending.mp3","mimeType":"audio/mpeg","sha256":"07d729c94f10eff159215f464fcf8f4f7fa136caeab4696bc08649018756fb90","bytes":104820},{"id":"voice.result.ring_conspiracy.normal_ending","kind":"audio","path":"audio/voice/result/ring_conspiracy/normal_ending.mp3","mimeType":"audio/mpeg","sha256":"38d39f3de6f911a09b947cd966e164cd61cbc8a40835bf4b9e94292efdd721e9","bytes":127284},{"id":"voice.result.ring_conspiracy.true_ending","kind":"audio","path":"audio/voice/result/ring_conspiracy/true_ending.mp3","mimeType":"audio/mpeg","sha256":"de2fab869c900b3cadd4c282f7639c70b8e4ca137d77ec8f7edbd815e58f7257","bytes":112884},{"id":"voice.result.white_006_name_silence","kind":"audio","path":"audio/voice/result/white_006_name_silence.mp3","mimeType":"audio/mpeg","sha256":"60f67a987b75e4212e1dc7f7c3d26cabaf7d85be1701495c9ac196717031ec70","bytes":282804},{"id":"voice.result.white_006_refuse_naming","kind":"audio","path":"audio/voice/result/white_006_refuse_naming.mp3","mimeType":"audio/mpeg","sha256":"3b1c115c0521def49f44bd8749fcc28bb23dd6a991c51395f5eb56a01ff95510","bytes":286836},{"id":"voice.result.white_007_ask_fascia_term","kind":"audio","path":"audio/voice/result/white_007_ask_fascia_term.mp3","mimeType":"audio/mpeg","sha256":"a0820e12083e03fd2655fe43f94addc8188a51407e91916405a7596ebb69e55e","bytes":289716},{"id":"voice.result.white_007_keep_mirror_open","kind":"audio","path":"audio/voice/result/white_007_keep_mirror_open.mp3","mimeType":"audio/mpeg","sha256":"60711ca2e8a0be22f5c442c2abb3bdb0587f492199a6ce827fc3d8965926f79e","bytes":270132},{"id":"voice.result.white_008_hold_fascia","kind":"audio","path":"audio/voice/result/white_008_hold_fascia.mp3","mimeType":"audio/mpeg","sha256":"36e24cb6f169556be6c28e403077d4e8fbde1e3dc93cfb98eb2087cce985aab9","bytes":226356},{"id":"voice.result.white_008_stay_witness_only","kind":"audio","path":"audio/voice/result/white_008_stay_witness_only.mp3","mimeType":"audio/mpeg","sha256":"905d28a8268ee2379eac22f120361379b9951fb5ff172ba6d913558bb2f0278b","bytes":240756},{"id":"voice.result.white_009_keep_half_step","kind":"audio","path":"audio/voice/result/white_009_keep_half_step.mp3","mimeType":"audio/mpeg","sha256":"b7bba180567c5f6a4417e364d5ab1379a2325e359bb495b1dcb4d2fe4c06e1ef","bytes":252852},{"id":"voice.result.white_009_share_umbrella_edge","kind":"audio","path":"audio/voice/result/white_009_share_umbrella_edge.mp3","mimeType":"audio/mpeg","sha256":"23c3d9fe23330249c668a11e7d6bb19ca87ef9def6e0d53dcad0e618d01f03b4","bytes":218868},{"id":"voice.result.white_010_acknowledge_leave","kind":"audio","path":"audio/voice/result/white_010_acknowledge_leave.mp3","mimeType":"audio/mpeg","sha256":"b862835afff73e64f682fd0ce83bf20689fe6e471bfce2c6551e51a6c461d537","bytes":242484},{"id":"voice.result.white_010_offer_return_ticket","kind":"audio","path":"audio/voice/result/white_010_offer_return_ticket.mp3","mimeType":"audio/mpeg","sha256":"dd8f7ed0594e7f26d7dc6cf31b6e17a37528ad86dd8ebf032b5d4c6f93f846e8","bytes":245364},{"id":"voice.result.white_011_curtain_call","kind":"audio","path":"audio/voice/result/white_011_curtain_call.mp3","mimeType":"audio/mpeg","sha256":"c9fdc11ebf7eed86a13aa197101432236b2f907f8b5f7ecdfaefcff31c4fec9d","bytes":259764},{"id":"voice.result.white_011_walk_beside","kind":"audio","path":"audio/voice/result/white_011_walk_beside.mp3","mimeType":"audio/mpeg","sha256":"8f82753798f57a08b67ef3de620e76950ee7ca7d7186ac899243edc1f851d2dc","bytes":265524},{"id":"voice.result.white_012_let_her_decide","kind":"audio","path":"audio/voice/result/white_012_let_her_decide.mp3","mimeType":"audio/mpeg","sha256":"81e36190ab884dfed8f11e605ec441b8edc88bd6c192a57f364a88f18a24781f","bytes":244788},{"id":"voice.result.white_012_refuse_exhibit","kind":"audio","path":"audio/voice/result/white_012_refuse_exhibit.mp3","mimeType":"audio/mpeg","sha256":"0d7c983a7a112e463541d935a321e47ef95e7aa5639c4d3aeac6ef7dc7134c2b","bytes":233268},{"id":"voice.result.white_013_point_to_mirror","kind":"audio","path":"audio/voice/result/white_013_point_to_mirror.mp3","mimeType":"audio/mpeg","sha256":"31aa7569564b6f1e2e0aded51296ba9b85e8fa6c914ffd633d9f59cdd15cd4ad","bytes":281652},{"id":"voice.result.white_013_refuse_to_choose","kind":"audio","path":"audio/voice/result/white_013_refuse_to_choose.mp3","mimeType":"audio/mpeg","sha256":"7b3f72b69d3a1a1254a2e1c1d840040fbe3bcc319183eda77565155a97934248","bytes":283956},{"id":"voice.result.white_014_keep_base_color","kind":"audio","path":"audio/voice/result/white_014_keep_base_color.mp3","mimeType":"audio/mpeg","sha256":"1cf0cd1f80908e5971fd27c9b52ddcbe76409e8ae583b5283a719cdbe67d7d3f","bytes":273588},{"id":"voice.result.white_014_offer_restart","kind":"audio","path":"audio/voice/result/white_014_offer_restart.mp3","mimeType":"audio/mpeg","sha256":"7c761d521905ef96a1fe2f299ccb1521f8f3654e6888a060218734de91028944","bytes":296052},{"id":"voice.result.white_canvas_route_complete","kind":"audio","path":"audio/voice/result/white_canvas_route_complete.mp3","mimeType":"audio/mpeg","sha256":"acd2f7fbf6091e563293abfcb367af4a0a263be201f0929dba79b382523514ec","bytes":291444},{"id":"voice.result.white_canvas_route_final","kind":"audio","path":"audio/voice/result/white_canvas_route_final.mp3","mimeType":"audio/mpeg","sha256":"337e21c026117013a657c1a6e014e9f212a5be661c6adce3ffb4eb87f83a1227","bytes":156660},{"id":"voice.result.white_canvas.bad_ending","kind":"audio","path":"audio/voice/result/white_canvas/bad_ending.mp3","mimeType":"audio/mpeg","sha256":"29e1de7d0ccf9bcc7b6748e099c65338e931d083381660263ea4b987bb062866","bytes":111732},{"id":"voice.result.white_canvas.normal_ending","kind":"audio","path":"audio/voice/result/white_canvas/normal_ending.mp3","mimeType":"audio/mpeg","sha256":"c54d975a7b6e0f7b689a87ecdfbbe9021980cc7fd350b3abe1cc88ea7bf661c7","bytes":104820},{"id":"voice.result.white_canvas.true_ending","kind":"audio","path":"audio/voice/result/white_canvas/true_ending.mp3","mimeType":"audio/mpeg","sha256":"743a641dbf799023987750b0743e032d99369f988bd08194115474b6b3cfb110","bytes":104244},{"id":"voice.result.white_follow_to_lab","kind":"audio","path":"audio/voice/result/white_follow_to_lab.mp3","mimeType":"audio/mpeg","sha256":"8c58cf1aa1f3bc661de6f87077e5a04faf045253d75978a683a31bdbb59e7d9e","bytes":271284},{"id":"voice.result.white_interrupt_lab_terms","kind":"audio","path":"audio/voice/result/white_interrupt_lab_terms.mp3","mimeType":"audio/mpeg","sha256":"2bfc8261224c3685ca59d5b9f766c972402109fb3defb7ee87cb33033d3d6c2f","bytes":247668},{"id":"voice.result.white_keep_empty_seat","kind":"audio","path":"audio/voice/result/white_keep_empty_seat.mp3","mimeType":"audio/mpeg","sha256":"8262c3e938479238aceddb6c75ee1a68b4cb2d1d2e6435dcfbf735d80a3aca45","bytes":267828},{"id":"voice.result.white_share_rain_window","kind":"audio","path":"audio/voice/result/white_share_rain_window.mp3","mimeType":"audio/mpeg","sha256":"326bafdfac66b086162069e09f1dffa9835dab37096e7f52bf0e080e9a7c18de","bytes":256884},{"id":"voice.result.white_sign_witness_protocol","kind":"audio","path":"audio/voice/result/white_sign_witness_protocol.mp3","mimeType":"audio/mpeg","sha256":"00ab30a358041b686c878fef65bcf30d5eadba999ffa66e4d85b89260a3cfecb","bytes":233268},{"id":"voice.result.white_tease_back","kind":"audio","path":"audio/voice/result/white_tease_back.mp3","mimeType":"audio/mpeg","sha256":"51ead297b822c76c8670d84c74cde7ede1fbfa8d8ed9bfb52970de910d428faf","bytes":210804},{"id":"voice.result.white_touch_boundary","kind":"audio","path":"audio/voice/result/white_touch_boundary.mp3","mimeType":"audio/mpeg","sha256":"7b994d5fbc048ce1697bcf4d4f7245957b8ec8adce10897d9b8e314b83bf08d6","bytes":218868},{"id":"voice.scene.golden_bough_001","kind":"audio","path":"audio/voice/scene/golden_bough_001.mp3","mimeType":"audio/mpeg","sha256":"4d225ee5c362970412e23aa4578ab08729c0a884916a1161c62be91254dba4ec","bytes":139380},{"id":"voice.scene.golden_bough_002","kind":"audio","path":"audio/voice/scene/golden_bough_002.mp3","mimeType":"audio/mpeg","sha256":"07fd0776ae465d32f870d0ab6b13353199e11984b528d26602f7bfa5e6986b40","bytes":107124},{"id":"voice.scene.golden_bough_003","kind":"audio","path":"audio/voice/scene/golden_bough_003.mp3","mimeType":"audio/mpeg","sha256":"3cdd14382faf1dce80cf0fca944feafe415c9bcdb2cbf4a8d9c81db1a52ff67a","bytes":198132},{"id":"voice.scene.golden_bough_004","kind":"audio","path":"audio/voice/scene/golden_bough_004.mp3","mimeType":"audio/mpeg","sha256":"ce1f05be6843684bcf809c89b8789fe3806ae1a8ed70bef05502c328497ebc0c","bytes":197556},{"id":"voice.scene.golden_bough_005","kind":"audio","path":"audio/voice/scene/golden_bough_005.mp3","mimeType":"audio/mpeg","sha256":"d65ae80a9f99d79de45b1c6de9458680c4189bdba3abedc175a4fef250adde9d","bytes":173364},{"id":"voice.scene.golden_bough_006","kind":"audio","path":"audio/voice/scene/golden_bough_006.mp3","mimeType":"audio/mpeg","sha256":"6f250d84ff213da11a83ddeac743d1b4c820e703dd2572b60dc2b1962a500e1d","bytes":212532},{"id":"voice.scene.golden_bough_007","kind":"audio","path":"audio/voice/scene/golden_bough_007.mp3","mimeType":"audio/mpeg","sha256":"d9e4264cf286a2be33cc37d6e3668827c835b96500919c377b52d6d2aad1a07f","bytes":221748},{"id":"voice.scene.golden_bough_008","kind":"audio","path":"audio/voice/scene/golden_bough_008.mp3","mimeType":"audio/mpeg","sha256":"8718fc7b7301174eb00808a61f8078bed073756fec5d89fdbd3f8750ff4a8333","bytes":210228},{"id":"voice.scene.golden_bough_009","kind":"audio","path":"audio/voice/scene/golden_bough_009.mp3","mimeType":"audio/mpeg","sha256":"160bc0f6bb3041118aa01646f34f9071ca35f69843b7d0cb7d6ef181832722a3","bytes":214836},{"id":"voice.scene.golden_bough_010","kind":"audio","path":"audio/voice/scene/golden_bough_010.mp3","mimeType":"audio/mpeg","sha256":"6dc4896687ce4abe0bf1f9c0b815743f862faf64619b9323515b9296291efc89","bytes":206772},{"id":"voice.scene.golden_bough_011","kind":"audio","path":"audio/voice/scene/golden_bough_011.mp3","mimeType":"audio/mpeg","sha256":"775db235acbe1c59ac8e435805367931d7138bb73a16ae2c6dbabe175ca26720","bytes":170484},{"id":"voice.scene.golden_bough_012","kind":"audio","path":"audio/voice/scene/golden_bough_012.mp3","mimeType":"audio/mpeg","sha256":"dc1367cb35cd050e16413e99bc2732717a4dbbcb7fe2356164ec9b1e04dac5eb","bytes":207924},{"id":"voice.scene.golden_bough_013","kind":"audio","path":"audio/voice/scene/golden_bough_013.mp3","mimeType":"audio/mpeg","sha256":"6bedf33a85fb30e81dbe986709a284b956fbb8bcba73839ff4e385662c9b5f60","bytes":208500},{"id":"voice.scene.golden_bough_014","kind":"audio","path":"audio/voice/scene/golden_bough_014.mp3","mimeType":"audio/mpeg","sha256":"8511bbc11f6ede3c1f6d9432189f2045d07c2d6bfdb09d50f4465cf923d0de54","bytes":174516},{"id":"voice.scene.golden_bough_015","kind":"audio","path":"audio/voice/scene/golden_bough_015.mp3","mimeType":"audio/mpeg","sha256":"a905db1c23a75a0236b09c32d89dfdfc73dd8820d98941e1ec33fdb320ab9f79","bytes":202740},{"id":"voice.scene.golden_bough_rebuild_ending_bad","kind":"audio","path":"audio/voice/scene/golden_bough_rebuild_ending_bad.mp3","mimeType":"audio/mpeg","sha256":"d95b9a5dd47f83849cf4dcd5c2f30e6d701a4dbabb982f094f6e8174dd4b96f1","bytes":204468},{"id":"voice.scene.golden_bough_rebuild_ending_gate","kind":"audio","path":"audio/voice/scene/golden_bough_rebuild_ending_gate.mp3","mimeType":"audio/mpeg","sha256":"043d26099df61ec1393a1a38c75a8b0b4d2f3eb66189eff11332567640f609c0","bytes":142260},{"id":"voice.scene.golden_bough_rebuild_ending_normal","kind":"audio","path":"audio/voice/scene/golden_bough_rebuild_ending_normal.mp3","mimeType":"audio/mpeg","sha256":"be11b02627a114e3d27ddd8441000dab2e9ddd6d22615a94468dd01c7e2c10bd","bytes":195252},{"id":"voice.scene.golden_bough_rebuild_ending_true","kind":"audio","path":"audio/voice/scene/golden_bough_rebuild_ending_true.mp3","mimeType":"audio/mpeg","sha256":"6603055d536774f9450b28a2bec4b00b405b49f90cc78b4b3c767e867f02a988","bytes":222900},{"id":"voice.scene.opening_001","kind":"audio","path":"audio/voice/scene/opening_001.mp3","mimeType":"audio/mpeg","sha256":"497c1b3cba838f47ce02c67ddb31ebdcc49e5cb8eaa5bbfa2027f6fef3a165a8","bytes":166452},{"id":"voice.scene.ring_conspiracy_001","kind":"audio","path":"audio/voice/scene/ring_conspiracy_001.mp3","mimeType":"audio/mpeg","sha256":"b7df0f5afaafc467cf345fc67dcf3f3f29e409feb9e93799731400125f6df064","bytes":127284},{"id":"voice.scene.ring_conspiracy_002","kind":"audio","path":"audio/voice/scene/ring_conspiracy_002.mp3","mimeType":"audio/mpeg","sha256":"b9f1b96bed0eb609f2ec689e98ae131816c8c22b8fe811e86bb995b94d9aa597","bytes":160692},{"id":"voice.scene.ring_conspiracy_003","kind":"audio","path":"audio/voice/scene/ring_conspiracy_003.mp3","mimeType":"audio/mpeg","sha256":"26e2b98b4ada6eb51d0e0eb30b3890081d2531fb81d9e62a86744ff5aaebe35d","bytes":167604},{"id":"voice.scene.ring_conspiracy_004","kind":"audio","path":"audio/voice/scene/ring_conspiracy_004.mp3","mimeType":"audio/mpeg","sha256":"53ff6d65342584d4a8af3fdea7b7645397f3e150770d1560eb3a3eea945580ce","bytes":197556},{"id":"voice.scene.ring_conspiracy_005","kind":"audio","path":"audio/voice/scene/ring_conspiracy_005.mp3","mimeType":"audio/mpeg","sha256":"fb9ba2613075784df0d47f9bcdfbaf75332e2a29879c9345a7c50509c3599600","bytes":189492},{"id":"voice.scene.ring_conspiracy_006","kind":"audio","path":"audio/voice/scene/ring_conspiracy_006.mp3","mimeType":"audio/mpeg","sha256":"b81a93e166ea9c8c614816c041ea7716c3852fda61254125ef2c1eeac0c7ec62","bytes":175092},{"id":"voice.scene.ring_conspiracy_007","kind":"audio","path":"audio/voice/scene/ring_conspiracy_007.mp3","mimeType":"audio/mpeg","sha256":"d96c395eb83104c3ba7af0690d2a8f50d6fb32c33371993716e0f5e2a5f57d98","bytes":183156},{"id":"voice.scene.ring_conspiracy_008","kind":"audio","path":"audio/voice/scene/ring_conspiracy_008.mp3","mimeType":"audio/mpeg","sha256":"1697ae28055253cdc42ab315aeed973a88d6f7fc81b29cc78af58aa7f3b45c90","bytes":208500},{"id":"voice.scene.ring_conspiracy_009","kind":"audio","path":"audio/voice/scene/ring_conspiracy_009.mp3","mimeType":"audio/mpeg","sha256":"95393977d9fd590fbf1e0e4a60e7c7cd20f3a8d127e9e093af735df0ad6ba164","bytes":162996},{"id":"voice.scene.ring_conspiracy_010","kind":"audio","path":"audio/voice/scene/ring_conspiracy_010.mp3","mimeType":"audio/mpeg","sha256":"42fe6d31eab316f4115365b2a88d54ab3b738dc38ccbb5f66397d092020ca4ab","bytes":195828},{"id":"voice.scene.ring_conspiracy_011","kind":"audio","path":"audio/voice/scene/ring_conspiracy_011.mp3","mimeType":"audio/mpeg","sha256":"30cdb3d7ab8be3a15f66a2e4c1a7f35f2985f792f0df7d5be26ed022bfb52096","bytes":197556},{"id":"voice.scene.ring_conspiracy_012","kind":"audio","path":"audio/voice/scene/ring_conspiracy_012.mp3","mimeType":"audio/mpeg","sha256":"62bb96a11b5d5a9398e317a7075d632b6a45633931fb0504222ef8c1925364e7","bytes":186036},{"id":"voice.scene.ring_conspiracy_013","kind":"audio","path":"audio/voice/scene/ring_conspiracy_013.mp3","mimeType":"audio/mpeg","sha256":"9a5bec85dac0e6238ac0a8b8d5ab52073ddb5d9068f4c73c34b717606654021c","bytes":209076},{"id":"voice.scene.ring_conspiracy_014","kind":"audio","path":"audio/voice/scene/ring_conspiracy_014.mp3","mimeType":"audio/mpeg","sha256":"6af4fe0687540489e464f2b41f864d305b9d832455985359eb393ec1a3b67488","bytes":171636},{"id":"voice.scene.ring_conspiracy_015","kind":"audio","path":"audio/voice/scene/ring_conspiracy_015.mp3","mimeType":"audio/mpeg","sha256":"9c5628b50d962e68b4fea11798a244552372ea92b688326d7f196828dd602537","bytes":248244},{"id":"voice.scene.ring_conspiracy_ending_bad","kind":"audio","path":"audio/voice/scene/ring_conspiracy_ending_bad.mp3","mimeType":"audio/mpeg","sha256":"1d3033f84966c7524e526861732e591393cd63fc839ac19c8b61493e1562b24a","bytes":215412},{"id":"voice.scene.ring_conspiracy_ending_gate","kind":"audio","path":"audio/voice/scene/ring_conspiracy_ending_gate.mp3","mimeType":"audio/mpeg","sha256":"d5ccbc97c59692526810076f6f75481c50dcdb3e6aff43e7919c3ca73a1e819f","bytes":147444},{"id":"voice.scene.ring_conspiracy_ending_normal","kind":"audio","path":"audio/voice/scene/ring_conspiracy_ending_normal.mp3","mimeType":"audio/mpeg","sha256":"5d5d5c31eb143ae854d84f06e209e3777e84feeb910a223e3c24597f89a1f36f","bytes":184884},{"id":"voice.scene.ring_conspiracy_ending_true","kind":"audio","path":"audio/voice/scene/ring_conspiracy_ending_true.mp3","mimeType":"audio/mpeg","sha256":"d3aa6807508e9c64c33ff1a0126ea9ddd6fdadb8ea95c1bc3ec7a79260c4d417","bytes":235572},{"id":"voice.scene.white_canvas_001","kind":"audio","path":"audio/voice/scene/white_canvas_001.mp3","mimeType":"audio/mpeg","sha256":"f9a92c1bc7670ad7639266c595dc0fa60b8d8304a848d946aad06f72ec7f07d7","bytes":110580},{"id":"voice.scene.white_canvas_002","kind":"audio","path":"audio/voice/scene/white_canvas_002.mp3","mimeType":"audio/mpeg","sha256":"b42bb03e8c449bd0c7c33e2e3c103e8fe9e2bd4685b2f0166fda2e65768f3d2a","bytes":142260},{"id":"voice.scene.white_canvas_003","kind":"audio","path":"audio/voice/scene/white_canvas_003.mp3","mimeType":"audio/mpeg","sha256":"447d145ae4bfeebb0d1286275ebd3125e617bf24f5e47794f72a75af3d80110a","bytes":160692},{"id":"voice.scene.white_canvas_004","kind":"audio","path":"audio/voice/scene/white_canvas_004.mp3","mimeType":"audio/mpeg","sha256":"632de5164bcb1666b292b1fa7c3d31a06592f95bcc6021c85fbb0ce46026b9f5","bytes":186036},{"id":"voice.scene.white_canvas_005","kind":"audio","path":"audio/voice/scene/white_canvas_005.mp3","mimeType":"audio/mpeg","sha256":"9f29d8f0966e0a85ae8926a0fe7e5edf21404a41ca0dc7655c8700a478cba08c","bytes":181428},{"id":"voice.scene.white_canvas_006","kind":"audio","path":"audio/voice/scene/white_canvas_006.mp3","mimeType":"audio/mpeg","sha256":"47ba7ff6a7381d865a526506acda5c892ab06c64170d0ba95720d1319dac9c05","bytes":196980},{"id":"voice.scene.white_canvas_007","kind":"audio","path":"audio/voice/scene/white_canvas_007.mp3","mimeType":"audio/mpeg","sha256":"c8c518fe83f8e7d328add0b53d003cb70db7aaa832f18e4a268ee85d070d7f0f","bytes":199860},{"id":"voice.scene.white_canvas_008","kind":"audio","path":"audio/voice/scene/white_canvas_008.mp3","mimeType":"audio/mpeg","sha256":"6067a7080d3720615e322e6f8d7a4870737ac5d544a6b24c556aeba0e734e586","bytes":218868},{"id":"voice.scene.white_canvas_009","kind":"audio","path":"audio/voice/scene/white_canvas_009.mp3","mimeType":"audio/mpeg","sha256":"89794514111d1654ecdf806956448a0da5ab8da75f2ce8234746ee7550ca23c0","bytes":175668},{"id":"voice.scene.white_canvas_010","kind":"audio","path":"audio/voice/scene/white_canvas_010.mp3","mimeType":"audio/mpeg","sha256":"4725f404be2f81e4345da50938b9bcff83cb133c642e69806a66d400168b9b49","bytes":148596},{"id":"voice.scene.white_canvas_011","kind":"audio","path":"audio/voice/scene/white_canvas_011.mp3","mimeType":"audio/mpeg","sha256":"b246e6d83f530b4d0f4ce4860ebf37937b3a0c3dded2571d9331305fd722d185","bytes":196404},{"id":"voice.scene.white_canvas_012","kind":"audio","path":"audio/voice/scene/white_canvas_012.mp3","mimeType":"audio/mpeg","sha256":"58fae554a047a57e6f17d0b1e8c2bd820b7707ab2c067bdc4633fff7d2f2e74d","bytes":171636},{"id":"voice.scene.white_canvas_013","kind":"audio","path":"audio/voice/scene/white_canvas_013.mp3","mimeType":"audio/mpeg","sha256":"4ed3f251b94446c07a6d173441bb7e310659f80f492902f554290243489f8839","bytes":193524},{"id":"voice.scene.white_canvas_014","kind":"audio","path":"audio/voice/scene/white_canvas_014.mp3","mimeType":"audio/mpeg","sha256":"8df96e708d31c6b756257d9dded40c61c383cb83cff1816a284b0bbab1a79739","bytes":188340},{"id":"voice.scene.white_canvas_015","kind":"audio","path":"audio/voice/scene/white_canvas_015.mp3","mimeType":"audio/mpeg","sha256":"e5060d68571a05be9b5b02ee944d1e85c6e2efe670112b7d5812d5580991a42d","bytes":207924},{"id":"voice.scene.white_canvas_ending_bad","kind":"audio","path":"audio/voice/scene/white_canvas_ending_bad.mp3","mimeType":"audio/mpeg","sha256":"f20eb38432b8005c77c929f9d11aceaddb6feaad402bf0950ce7b42f18551a82","bytes":199860},{"id":"voice.scene.white_canvas_ending_gate","kind":"audio","path":"audio/voice/scene/white_canvas_ending_gate.mp3","mimeType":"audio/mpeg","sha256":"1b84c1c3872c4b3ed8f8f4d4ad5fea2c3ef20a434e912b114af1ba86b52bb45d","bytes":142260},{"id":"voice.scene.white_canvas_ending_normal","kind":"audio","path":"audio/voice/scene/white_canvas_ending_normal.mp3","mimeType":"audio/mpeg","sha256":"2011fd5566f387c0b56128ded70b64a3a81cd8f03ad03e3798077266750d5694","bytes":177396},{"id":"voice.scene.white_canvas_ending_true","kind":"audio","path":"audio/voice/scene/white_canvas_ending_true.mp3","mimeType":"audio/mpeg","sha256":"5a6106bd0b3d225bf87ba0a08b95178d0c8c0877305ac73bc8c391e2ce358296","bytes":196980}]'), __ = /* @__PURE__ */ JSON.parse('[{"version":2,"id":"portrait.albina.amused","characterId":"albina","path":"sprite-atlas/albina/amused_strip.png","animation":{"kind":"strip","frameCount":8,"frameWidth":192,"frameHeight":1024,"fps":8},"fallbackAssetId":"file.characters.albina.amused.png"},{"version":2,"id":"portrait.albina.armored","characterId":"albina","path":"sprite-atlas/albina/armored_strip.png","animation":{"kind":"strip","frameCount":8,"frameWidth":192,"frameHeight":1024,"fps":8},"fallbackAssetId":"file.characters.albina.armored.png"},{"version":2,"id":"portrait.albina.combat","characterId":"albina","path":"sprite-atlas/albina/combat_strip.png","animation":{"kind":"strip","frameCount":8,"frameWidth":192,"frameHeight":1024,"fps":8},"fallbackAssetId":"file.characters.albina.combat.png"},{"version":2,"id":"portrait.albina.endgame","characterId":"albina","path":"sprite-atlas/albina/endgame_strip.png","animation":{"kind":"strip","frameCount":8,"frameWidth":192,"frameHeight":1024,"fps":8},"fallbackAssetId":"file.characters.albina.endgame.png"},{"version":2,"id":"portrait.albina.fascia-open","characterId":"albina","path":"sprite-atlas/albina/fascia-open_strip.png","animation":{"kind":"strip","frameCount":8,"frameWidth":192,"frameHeight":1024,"fps":8},"fallbackAssetId":"file.characters.albina.fascia.open.png"},{"version":2,"id":"portrait.albina.focused","characterId":"albina","path":"sprite-atlas/albina/focused_strip.png","animation":{"kind":"strip","frameCount":8,"frameWidth":192,"frameHeight":1024,"fps":8},"fallbackAssetId":"file.characters.albina.focused.png"},{"version":2,"id":"portrait.albina.furious","characterId":"albina","path":"sprite-atlas/albina/furious_strip.png","animation":{"kind":"strip","frameCount":8,"frameWidth":192,"frameHeight":1024,"fps":8},"fallbackAssetId":"file.characters.albina.furious.png"},{"version":2,"id":"portrait.albina.golden-bough","characterId":"albina","path":"sprite-atlas/albina/golden-bough_strip.png","animation":{"kind":"strip","frameCount":8,"frameWidth":192,"frameHeight":1024,"fps":8},"fallbackAssetId":"file.characters.albina.golden.bough.png"},{"version":2,"id":"portrait.albina.maestro","characterId":"albina","path":"sprite-atlas/albina/maestro_strip.png","animation":{"kind":"strip","frameCount":8,"frameWidth":192,"frameHeight":1024,"fps":8},"fallbackAssetId":"file.characters.albina.maestro.png"},{"version":2,"id":"portrait.albina.normal","characterId":"albina","path":"sprite-atlas/albina/normal_strip.png","animation":{"kind":"strip","frameCount":8,"frameWidth":192,"frameHeight":1024,"fps":8},"fallbackAssetId":"file.characters.albina.normal.png"},{"version":2,"id":"portrait.albina.rain","characterId":"albina","path":"sprite-atlas/albina/rain_strip.png","animation":{"kind":"strip","frameCount":8,"frameWidth":192,"frameHeight":1024,"fps":8},"fallbackAssetId":"file.characters.albina.rain.png"},{"version":2,"id":"portrait.albina.ring-conspiracy","characterId":"albina","path":"sprite-atlas/albina/ring-conspiracy_strip.png","animation":{"kind":"strip","frameCount":8,"frameWidth":192,"frameHeight":1024,"fps":8},"fallbackAssetId":"file.characters.albina.ring.conspiracy.png"},{"version":2,"id":"portrait.albina.shy","characterId":"albina","path":"sprite-atlas/albina/shy_strip.png","animation":{"kind":"strip","frameCount":8,"frameWidth":192,"frameHeight":1024,"fps":8},"fallbackAssetId":"file.characters.albina.shy.png"},{"version":2,"id":"portrait.albina.smile","characterId":"albina","path":"sprite-atlas/albina/smile_strip.png","animation":{"kind":"strip","frameCount":8,"frameWidth":192,"frameHeight":1024,"fps":8},"fallbackAssetId":"file.characters.albina.smile.png"},{"version":2,"id":"portrait.albina.surgical","characterId":"albina","path":"sprite-atlas/albina/surgical_strip.png","animation":{"kind":"strip","frameCount":8,"frameWidth":192,"frameHeight":1024,"fps":8},"fallbackAssetId":"file.characters.albina.surgical.png"},{"version":2,"id":"portrait.albina.unarmored","characterId":"albina","path":"sprite-atlas/albina/unarmored_strip.png","animation":{"kind":"strip","frameCount":8,"frameWidth":192,"frameHeight":1024,"fps":8},"fallbackAssetId":"file.characters.albina.unarmored.png"},{"version":2,"id":"portrait.albina.white-canvas","characterId":"albina","path":"sprite-atlas/albina/white-canvas_strip.png","animation":{"kind":"strip","frameCount":8,"frameWidth":192,"frameHeight":1024,"fps":8},"fallbackAssetId":"file.characters.albina.white.canvas.png"},{"version":2,"id":"portrait.albina.wounded","characterId":"albina","path":"sprite-atlas/albina/wounded_strip.png","animation":{"kind":"strip","frameCount":8,"frameWidth":192,"frameHeight":1024,"fps":8},"fallbackAssetId":"file.characters.albina.wounded.png"},{"version":2,"id":"portrait.callisto.normal","characterId":"callisto","path":"sprite-atlas/callisto/normal_strip.png","animation":{"kind":"strip","frameCount":8,"frameWidth":192,"frameHeight":1024,"fps":8},"fallbackAssetId":"file.characters.callisto.normal.png"},{"version":2,"id":"portrait.charon.normal","characterId":"charon","path":"sprite-atlas/charon/normal_strip.png","animation":{"kind":"strip","frameCount":8,"frameWidth":192,"frameHeight":1024,"fps":8},"fallbackAssetId":"file.characters.charon.normal.png"},{"version":2,"id":"portrait.dante.normal","characterId":"dante","path":"sprite-atlas/dante/normal_strip.png","animation":{"kind":"strip","frameCount":8,"frameWidth":192,"frameHeight":1024,"fps":8},"fallbackAssetId":"file.characters.dante.normal.png"},{"version":2,"id":"portrait.fascia.normal","characterId":"fascia","path":"characters/albina/fascia-open.png","animation":{"kind":"static"}},{"version":2,"id":"portrait.faust.normal","characterId":"faust","path":"sprite-atlas/faust/normal_strip.png","animation":{"kind":"strip","frameCount":8,"frameWidth":192,"frameHeight":1024,"fps":8},"fallbackAssetId":"file.characters.faust.normal.png"},{"version":2,"id":"portrait.fixer_informant.normal","characterId":"fixer_informant","path":"sprite-atlas/fixer_informant/normal_strip.png","animation":{"kind":"strip","frameCount":8,"frameWidth":192,"frameHeight":1024,"fps":8},"fallbackAssetId":"file.characters.fixer.informant.normal.png"},{"version":2,"id":"portrait.golden_apparition.normal","characterId":"golden_apparition","path":"sprite-atlas/golden_apparition/normal_strip.png","animation":{"kind":"strip","frameCount":8,"frameWidth":192,"frameHeight":1024,"fps":8},"fallbackAssetId":"file.characters.golden.apparition.normal.png"},{"version":2,"id":"portrait.lcd_captain.normal","characterId":"lcd_captain","path":"sprite-atlas/lcd_captain/normal_strip.png","animation":{"kind":"strip","frameCount":8,"frameWidth":192,"frameHeight":1024,"fps":8},"fallbackAssetId":"file.characters.lcd.captain.normal.png"},{"version":2,"id":"portrait.lce_doctor.normal","characterId":"lce_doctor","path":"sprite-atlas/lce_doctor/normal_strip.png","animation":{"kind":"strip","frameCount":8,"frameWidth":192,"frameHeight":1024,"fps":8},"fallbackAssetId":"file.characters.lce.doctor.normal.png"},{"version":2,"id":"portrait.original_cg.albina_debut","characterId":"original_cg","path":"sprite-atlas/original_cg/albina_debut_strip.png","animation":{"kind":"strip","frameCount":8,"frameWidth":192,"frameHeight":1024,"fps":8},"fallbackAssetId":"file.original.cg.albina.debut.png"},{"version":2,"id":"portrait.original_cg.battle_climax","characterId":"original_cg","path":"sprite-atlas/original_cg/battle_climax_strip.png","animation":{"kind":"strip","frameCount":8,"frameWidth":192,"frameHeight":1024,"fps":8},"fallbackAssetId":"file.original.cg.battle.climax.png"},{"version":2,"id":"portrait.protagonist.battle","characterId":"protagonist","path":"sprite-atlas/protagonist/battle_strip.png","animation":{"kind":"strip","frameCount":8,"frameWidth":192,"frameHeight":1024,"fps":8},"fallbackAssetId":"file.characters.protagonist.battle.png"},{"version":2,"id":"portrait.protagonist.coat","characterId":"protagonist","path":"sprite-atlas/protagonist/coat_strip.png","animation":{"kind":"strip","frameCount":8,"frameWidth":192,"frameHeight":1024,"fps":8},"fallbackAssetId":"file.characters.protagonist.coat.png"},{"version":2,"id":"portrait.protagonist.formal","characterId":"protagonist","path":"sprite-atlas/protagonist/formal_strip.png","animation":{"kind":"strip","frameCount":8,"frameWidth":192,"frameHeight":1024,"fps":8},"fallbackAssetId":"file.characters.protagonist.formal.png"},{"version":2,"id":"portrait.protagonist.injured","characterId":"protagonist","path":"sprite-atlas/protagonist/injured_strip.png","animation":{"kind":"strip","frameCount":8,"frameWidth":192,"frameHeight":1024,"fps":8},"fallbackAssetId":"file.characters.protagonist.injured.png"},{"version":2,"id":"portrait.protagonist.normal","characterId":"protagonist","path":"sprite-atlas/protagonist/normal_strip.png","animation":{"kind":"strip","frameCount":8,"frameWidth":192,"frameHeight":1024,"fps":8},"fallbackAssetId":"file.characters.protagonist.normal.png"},{"version":2,"id":"portrait.protagonist.profile","characterId":"protagonist","path":"sprite-atlas/protagonist/profile_strip.png","animation":{"kind":"strip","frameCount":8,"frameWidth":192,"frameHeight":1024,"fps":8},"fallbackAssetId":"file.characters.protagonist.profile.png"},{"version":2,"id":"portrait.protagonist.resolve","characterId":"protagonist","path":"sprite-atlas/protagonist/resolve_strip.png","animation":{"kind":"strip","frameCount":8,"frameWidth":192,"frameHeight":1024,"fps":8},"fallbackAssetId":"file.characters.protagonist.resolve.png"},{"version":2,"id":"portrait.protagonist.serious","characterId":"protagonist","path":"sprite-atlas/protagonist/serious_strip.png","animation":{"kind":"strip","frameCount":8,"frameWidth":192,"frameHeight":1024,"fps":8},"fallbackAssetId":"file.characters.protagonist.serious.png"},{"version":2,"id":"portrait.protagonist.shadow","characterId":"protagonist","path":"sprite-atlas/protagonist/shadow_strip.png","animation":{"kind":"strip","frameCount":8,"frameWidth":192,"frameHeight":1024,"fps":8},"fallbackAssetId":"file.characters.protagonist.shadow.png"},{"version":2,"id":"portrait.protagonist.smile","characterId":"protagonist","path":"sprite-atlas/protagonist/smile_strip.png","animation":{"kind":"strip","frameCount":8,"frameWidth":192,"frameHeight":1024,"fps":8},"fallbackAssetId":"file.characters.protagonist.smile.png"},{"version":2,"id":"portrait.protagonist.tender","characterId":"protagonist","path":"sprite-atlas/protagonist/tender_strip.png","animation":{"kind":"strip","frameCount":8,"frameWidth":192,"frameHeight":1024,"fps":8},"fallbackAssetId":"file.characters.protagonist.tender.png"},{"version":2,"id":"portrait.protagonist.wet-hair","characterId":"protagonist","path":"sprite-atlas/protagonist/wet-hair_strip.png","animation":{"kind":"strip","frameCount":8,"frameWidth":192,"frameHeight":1024,"fps":8},"fallbackAssetId":"file.characters.protagonist.wet.hair.png"},{"version":2,"id":"portrait.ren.normal","characterId":"ren","path":"sprite-atlas/ren/normal_strip.png","animation":{"kind":"strip","frameCount":8,"frameWidth":192,"frameHeight":1024,"fps":8},"fallbackAssetId":"file.characters.ren.normal.png"},{"version":2,"id":"portrait.ring_agent.normal","characterId":"ring_agent","path":"sprite-atlas/ring_agent/normal_strip.png","animation":{"kind":"strip","frameCount":8,"frameWidth":192,"frameHeight":1024,"fps":8},"fallbackAssetId":"file.characters.ring.agent.normal.png"},{"version":2,"id":"portrait.vergilius.normal","characterId":"vergilius","path":"sprite-atlas/vergilius/normal_strip.png","animation":{"kind":"strip","frameCount":8,"frameWidth":192,"frameHeight":1024,"fps":8},"fallbackAssetId":"file.characters.vergilius.normal.png"},{"version":2,"id":"portrait.yi_sang.normal","characterId":"yi_sang","path":"sprite-atlas/yi_sang/normal_strip.png","animation":{"kind":"strip","frameCount":8,"frameWidth":192,"frameHeight":1024,"fps":8},"fallbackAssetId":"file.characters.yi.sang.normal.png"}]'), v_ = [{ version: 2, id: "job.strip.original.albina.sprites.battle", assetId: "strip.original.albina.sprites.battle", kind: "image-edit", model: "gpt-image-2", status: "pending", contentHash: "1f2bfd5f7b505c355c3a4aa849bfd46d667d0fe75af2ea71235cba4ea56ea1f1", inputAssetIds: ["file.original.albina.sprites.battle.png"], outputPath: "sprite-atlas/original_albina_sprites/battle_strip.png", attempts: 3, error: 'HTTP 403: {"error":{"message":"预扣费额度失败, 用户剩余额度: ＄0.050000, 需要预扣费额度: ＄0.100000 (request id: 202607091842143082986988268d9d66TROf2Up)","type":"new_api_error","param":"","code":"insufficient_user_quota"}}' }, { version: 2, id: "job.strip.original.albina.sprites.normal", assetId: "strip.original.albina.sprites.normal", kind: "image-edit", model: "gpt-image-2", status: "pending", contentHash: "b92d284a2e50aaf02ebd8b3996a50749f93a057d19bc2a7afcc7ee065306dfcb", inputAssetIds: ["file.original.albina.sprites.normal.png"], outputPath: "sprite-atlas/original_albina_sprites/normal_strip.png", attempts: 3, error: 'HTTP 403: {"error":{"message":"预扣费额度失败, 用户剩余额度: ＄0.050000, 需要预扣费额度: ＄0.100000 (request id: 202607091842477024722458268d9d6mw1xzwxB)","type":"new_api_error","param":"","code":"insufficient_user_quota"}}' }, { version: 2, id: "job.strip.original.albina.sprites.sad", assetId: "strip.original.albina.sprites.sad", kind: "image-edit", model: "gpt-image-2", status: "pending", contentHash: "ca5a1122df15a71bb788355d8ac5af627564cb97d12bdf483499fd35eee2fc97", inputAssetIds: ["file.original.albina.sprites.sad.png"], outputPath: "sprite-atlas/original_albina_sprites/sad_strip.png", attempts: 0 }, { version: 2, id: "job.strip.original.albina.sprites.smile", assetId: "strip.original.albina.sprites.smile", kind: "image-edit", model: "gpt-image-2", status: "pending", contentHash: "c1dce303e33582f94413e268abb26f0eb2ee106a84e74b63697ccba2300fb9f0", inputAssetIds: ["file.original.albina.sprites.smile.png"], outputPath: "sprite-atlas/original_albina_sprites/smile_strip.png", attempts: 0 }, { version: 2, id: "job.strip.original.cg.canto.ix.opening", assetId: "strip.original.cg.canto.ix.opening", kind: "image-edit", model: "gpt-image-2", status: "pending", contentHash: "032993f9e4c1981393e364a8b5272ca690f9dda11951a01cd83b13390ae3aab0", inputAssetIds: ["file.original.cg.canto.ix.opening.png"], outputPath: "sprite-atlas/original_cg/canto_ix_opening_strip.png", attempts: 3, error: 'HTTP 403: {"error":{"message":"预扣费额度失败, 用户剩余额度: ＄0.050000, 需要预扣费额度: ＄0.100000 (request id: 202607091839498508537008268d9d67gwnpnxM)","type":"new_api_error","param":"","code":"insufficient_user_quota"}}' }, { version: 2, id: "job.strip.original.cg.hell.gate", assetId: "strip.original.cg.hell.gate", kind: "image-edit", model: "gpt-image-2", status: "pending", contentHash: "ce3a392e94477edff91c0b734e0316700eae6e6814223106e12d8f14417f12ed", inputAssetIds: ["file.original.cg.hell.gate.png"], outputPath: "sprite-atlas/original_cg/hell_gate_strip.png", attempts: 3, error: 'HTTP 403: {"error":{"message":"预扣费额度失败, 用户剩余额度: ＄0.050000, 需要预扣费额度: ＄0.100000 (request id: 202607091840249061893478268d9d6ka0wLtJk)","type":"new_api_error","param":"","code":"insufficient_user_quota"}}' }, { version: 2, id: "job.strip.original.cg.rain.confession", assetId: "strip.original.cg.rain.confession", kind: "image-edit", model: "gpt-image-2", status: "pending", contentHash: "3df4e7b9df7a4ae8e9f7b2819bbf45ee8ef76d8a7af908a5ead09bf89602b073", inputAssetIds: ["file.original.cg.rain.confession.png"], outputPath: "sprite-atlas/original_cg/rain_confession_strip.png", attempts: 3, error: 'HTTP 403: {"error":{"message":"预扣费额度失败, 用户剩余额度: ＄0.050000, 需要预扣费额度: ＄0.100000 (request id: 202607091840546398154378268d9d6BnzkAOYB)","type":"new_api_error","param":"","code":"insufficient_user_quota"}}' }, { version: 2, id: "job.strip.original.cg.ring.conspiracy", assetId: "strip.original.cg.ring.conspiracy", kind: "image-edit", model: "gpt-image-2", status: "pending", contentHash: "572873181a31313d7b15266c864ca85d28e269394d3ae3b5101c71e279b83a91", inputAssetIds: ["file.original.cg.ring.conspiracy.png"], outputPath: "sprite-atlas/original_cg/ring_conspiracy_strip.png", attempts: 3, error: 'HTTP 403: {"error":{"message":"预扣费额度失败, 用户剩余额度: ＄0.050000, 需要预扣费额度: ＄0.100000 (request id: 202607091841379559462728268d9d67jCFuMAr)","type":"new_api_error","param":"","code":"insufficient_user_quota"}}' }], y_ = {
+  version: m_,
+  projectId: g_,
+  basePath: b_,
+  assets: h_,
+  portraits: __,
+  mediaJobs: v_
+}, k_ = 2, w_ = "albina-galgame-card", E_ = "opening_001", I_ = { white_canvas: "white_canvas_001", golden_bough_rebuild: "golden_bough_001", ring_conspiracy: "ring_conspiracy_001" }, T_ = /* @__PURE__ */ JSON.parse('[{"version":2,"id":"opening_001","chapter":1,"route":"white_canvas","locationId":"backstreets_rain","backgroundAssetId":"bg.backstreets_rain","cgAssetId":"cg.opening_rain","videoAssetId":"video.animated.runtime.prologue","desktopVideoAssetId":"video.animated.desktop.prologue","tone":"rain","portraits":[{"characterId":"protagonist","portraitAssetId":"portrait.protagonist.normal","position":"left","active":false,"scale":0.92},{"characterId":"albina","portraitAssetId":"portrait.albina.normal","position":"center","active":true,"scale":1}],"speaker":"阿尔比娜","text":"晚上好，{{user}}。请不要站得太远，我还没决定该把你称作观众、朋友，还是一块值得等待的画布。","voiceAssetId":"voice.scene.opening_001","bgmAssetId":"file.audio.bgm.backstreets.rain.mp3","choices":[{"id":"enter_white_canvas","text":"留在她的白色画布前","nextSceneId":"white_canvas_001","resultText":"你选择“留在她的白色画布前”。阿尔比娜：白色并不代表干净。它只是暂时还没有被决定。你也是这样，{{user}}。","resultVoiceAssetId":"voice.result.enter_white_canvas","effects":{"route":"white_canvas","values":{"affectionAlbina":2,"trust":2,"artResonance":1},"setFlags":["route_white_canvas_seen"],"unlockCg":["opening_rain"]}},{"id":"enter_rebuild","text":"询问金枝重构的痕迹","nextSceneId":"golden_bough_001","resultText":"你选择“询问金枝重构的痕迹”。阿尔比娜：金色光尘沿着她的义体裂缝回流。她先确认的不是自己，而是法西娅是否还在呼吸。","resultVoiceAssetId":"voice.result.enter_rebuild","effects":{"route":"golden_bough_rebuild","values":{"trust":3,"danger":1},"setFlags":["route_rebuild_seen"],"unlockCg":["golden_bough_rebuild"]}},{"id":"enter_conspiracy","text":"接受环指的危险邀请","nextSceneId":"ring_conspiracy_001","resultText":"你选择“接受环指的危险邀请”。阿尔比娜：蜘蛛巢的灯光像手术刀一样落下。她向你递来一份没有署名的委托，笑得礼貌又危险。","resultVoiceAssetId":"voice.result.enter_conspiracy","effects":{"route":"ring_conspiracy","values":{"danger":3,"artResonance":2},"setFlags":["route_conspiracy_seen"],"unlockCg":["ring_invitation"]}}]},{"version":2,"id":"white_canvas_001","chapter":1,"route":"white_canvas","locationId":"white_canvas_room","backgroundAssetId":"bg.white_canvas","cgAssetId":"cg.white_canvas_choice","tone":"quiet","portraits":[{"characterId":"protagonist","portraitAssetId":"portrait.protagonist.tender","position":"left","active":false,"scale":0.94},{"characterId":"albina","portraitAssetId":"portrait.albina.white-canvas","position":"right","active":true,"scale":1}],"speaker":"阿尔比娜","text":"白色并不代表干净。它只是暂时还没有被决定。你也是这样，{{user}}。","voiceAssetId":"voice.scene.white_canvas_001","bgmAssetId":"file.audio.bgm.between.two.worlds.mp3","choices":[{"id":"white_touch_boundary","text":"告诉她：完整也是一种作品","nextSceneId":"white_canvas_002","resultText":"你选择“告诉她：完整也是一种作品”。阿尔比娜：她把黑色手掌停在离你心口一寸的位置，没有继续向前。法西娅安静得像也在等待你的许可。","resultVoiceAssetId":"voice.result.white_touch_boundary","effects":{"values":{"affectionAlbina":3,"trust":4,"artResonance":2},"setFlags":["albina_learns_wholeness"],"unlockCg":["trust_threshold"]}},{"id":"white_tease_back","text":"反问她是否害怕自己的画布","nextSceneId":"white_canvas_002","resultText":"你选择“反问她是否害怕自己的画布”。阿尔比娜：她把黑色手掌停在离你心口一寸的位置，没有继续向前。法西娅安静得像也在等待你的许可。","resultVoiceAssetId":"voice.result.white_tease_back","effects":{"values":{"affectionAlbina":2,"danger":1,"artResonance":3},"setFlags":["player_teases_artist"],"unlockCg":["art_resonance"]}}]},{"version":2,"id":"white_canvas_002","chapter":2,"route":"white_canvas","locationId":"rain_room","backgroundAssetId":"bg.rain_room","cgAssetId":"cg.rain_confession","tone":"rain","portraits":[{"characterId":"albina","portraitAssetId":"portrait.albina.shy","position":"center","active":true,"scale":1}],"speaker":"阿尔比娜","text":"她把黑色手掌停在离你心口一寸的位置，没有继续向前。法西娅安静得像也在等待你的许可。","voiceAssetId":"voice.scene.white_canvas_002","bgmAssetId":"file.audio.bgm.between.two.worlds.mp3","choices":[{"id":"white_follow_to_lab","text":"陪她把画布带进 LCE 临时手术室","nextSceneId":"white_canvas_003","resultText":"你选择“陪她把画布带进 LCE 临时手术室”。LCE 医师：灯光没有温度。记录员要求你签下旁观协议，阿尔比娜却先把笔推给自己：这一次，谁也不能替她同意被拆解。","resultVoiceAssetId":"voice.result.white_follow_to_lab","effects":{"values":{"affectionAlbina":2,"trust":3,"artResonance":2},"setFlags":["white_lab_boundary_seen"],"unlockCg":["hollow_torso_reveal"]}},{"id":"return_opening_from_white","text":"回到路线选择","nextSceneId":"opening_001","resultText":"你选择“回到路线选择”。阿尔比娜：晚上好，{{user}}。请不要站得太远，我还没决定该把你称作观众、朋友，还是一块值得等待的画布。","resultVoiceAssetId":"voice.result.return_opening_from_white","effects":{"values":{"trust":1},"setFlags":["white_canvas_looped"]}}]},{"version":2,"id":"white_canvas_003","chapter":3,"route":"white_canvas","locationId":"lce_lab","backgroundAssetId":"bg.lce_lab","cgAssetId":"cg.hollow_torso_reveal","videoAssetId":"video.animated.runtime.white_canvas_scene_3","desktopVideoAssetId":"video.animated.desktop.white_canvas_scene_3","tone":"quiet","portraits":[{"characterId":"lce_doctor","portraitAssetId":"portrait.lce_doctor.normal","position":"left","active":false,"scale":0.86},{"characterId":"albina","portraitAssetId":"portrait.albina.surgical","position":"center","active":true,"scale":1},{"characterId":"protagonist","portraitAssetId":"portrait.protagonist.serious","position":"right","active":false,"scale":0.9}],"speaker":"LCE 医师","text":"灯光没有温度。记录员要求你签下旁观协议，阿尔比娜却先把笔推给自己：这一次，谁也不能替她同意被拆解。","voiceAssetId":"voice.scene.white_canvas_003","bgmAssetId":"file.audio.bgm.between.two.worlds.mp3","choices":[{"id":"white_sign_witness_protocol","text":"只签见证，不签处置权","nextSceneId":"white_canvas_004","resultText":"你选择“只签见证，不签处置权”。阿尔比娜：巴士窗上映出她的白色义体，也映出你故意留下的空座。她说完整不是没有裂缝，而是裂缝终于有了不被展览的权利。","resultVoiceAssetId":"voice.result.white_sign_witness_protocol","effects":{"values":{"affectionAlbina":1,"trust":4,"artResonance":2},"setFlags":["witness_not_ownership"],"unlockCg":["lce_raid"]}},{"id":"white_interrupt_lab_terms","text":"要求医师删去所有所有权措辞","nextSceneId":"white_canvas_004","resultText":"你选择“要求医师删去所有所有权措辞”。阿尔比娜：巴士窗上映出她的白色义体，也映出你故意留下的空座。她说完整不是没有裂缝，而是裂缝终于有了不被展览的权利。","resultVoiceAssetId":"voice.result.white_interrupt_lab_terms","effects":{"values":{"trust":3,"danger":1,"artResonance":3},"setFlags":["lab_terms_rewritten"],"unlockCg":["fascia_heartbeat"]}}]},{"version":2,"id":"white_canvas_004","chapter":4,"route":"white_canvas","locationId":"limbus_bus","backgroundAssetId":"bg.limbus_bus","cgAssetId":"cg.limbus_bus_night","tone":"rain","portraits":[{"characterId":"dante","portraitAssetId":"portrait.dante.normal","position":"left","active":false,"scale":0.82},{"characterId":"albina","portraitAssetId":"portrait.albina.rain","position":"center","active":true,"scale":1},{"characterId":"protagonist","portraitAssetId":"portrait.protagonist.wet-hair","position":"right","active":false,"scale":0.9}],"speaker":"阿尔比娜","text":"巴士窗上映出她的白色义体，也映出你故意留下的空座。她说完整不是没有裂缝，而是裂缝终于有了不被展览的权利。","voiceAssetId":"voice.scene.white_canvas_004","bgmAssetId":"file.audio.bgm.between.two.worlds.mp3","choices":[{"id":"white_keep_empty_seat","text":"替她保留那张无人审判的座位","nextSceneId":"white_canvas_005","resultText":"你选择“替她保留那张无人审判的座位”。阿尔比娜：黎明像一层还没有落款的底色。她把法西娅插在你们之间，不是阻隔，而是提醒：任何亲密都必须能被双方随时收回。","resultVoiceAssetId":"voice.result.white_keep_empty_seat","effects":{"values":{"affectionAlbina":4,"trust":3,"artResonance":1},"setFlags":["white_canvas_empty_seat"],"unlockCg":["white_canvas_ending"]}},{"id":"white_share_rain_window","text":"把雨夜倒影交给她自己命名","nextSceneId":"white_canvas_005","resultText":"你选择“把雨夜倒影交给她自己命名”。阿尔比娜：黎明像一层还没有落款的底色。她把法西娅插在你们之间，不是阻隔，而是提醒：任何亲密都必须能被双方随时收回。","resultVoiceAssetId":"voice.result.white_share_rain_window","effects":{"values":{"affectionAlbina":3,"trust":2,"artResonance":3},"setFlags":["rain_reflection_named"],"unlockCg":["rain_confession"]}}]},{"version":2,"id":"white_canvas_005","chapter":5,"route":"white_canvas","locationId":"outskirts_dawn","backgroundAssetId":"bg.outskirts_dawn","cgAssetId":"cg.white_canvas_ending","videoAssetId":"video.animated.runtime.white_canvas_scene_5","desktopVideoAssetId":"video.animated.desktop.white_canvas_scene_5","tone":"quiet","portraits":[{"characterId":"protagonist","portraitAssetId":"portrait.protagonist.resolve","position":"left","active":false,"scale":0.92},{"characterId":"albina","portraitAssetId":"portrait.albina.endgame","position":"center","active":true,"scale":1}],"speaker":"阿尔比娜","text":"黎明像一层还没有落款的底色。她把法西娅插在你们之间，不是阻隔，而是提醒：任何亲密都必须能被双方随时收回。","voiceAssetId":"voice.scene.white_canvas_005","bgmAssetId":"file.audio.bgm.between.two.worlds.mp3","choices":[{"id":"white_canvas_route_complete","text":"记录白色画布路线的暂定结局","nextSceneId":"white_canvas_006","resultText":"你选择“记录白色画布路线的暂定结局”。阿尔比娜：空展厅的回声比任何观众都诚实。她拿起一支没有颜料的画笔，在你面前比划出一条看不见的轮廓：这是你今晚没有说出口的那句话。","resultVoiceAssetId":"voice.result.white_canvas_route_complete","effects":{"values":{"affectionAlbina":2,"trust":2,"danger":-1,"artResonance":2},"setFlags":["white_canvas_route_complete"]}}]},{"version":2,"id":"white_canvas_006","chapter":6,"route":"white_canvas","locationId":"white_canvas_room","backgroundAssetId":"bg.white_canvas","cgAssetId":"cg.white_canvas_choice","tone":"quiet","portraits":[{"characterId":"albina","portraitAssetId":"portrait.albina.white-canvas","position":"center","active":true,"scale":1},{"characterId":"protagonist","portraitAssetId":"portrait.protagonist.tender","position":"left","active":false,"scale":0.92}],"speaker":"阿尔比娜","text":"空展厅的回声比任何观众都诚实。她拿起一支没有颜料的画笔，在你面前比划出一条看不见的轮廓：这是你今晚没有说出口的那句话。","voiceAssetId":"voice.scene.white_canvas_006","bgmAssetId":"file.audio.bgm.between.two.worlds.mp3","choices":[{"id":"white_006_name_silence","text":"替那条轮廓取一个不会被收藏的名字","nextSceneId":"white_canvas_007","resultText":"你选择“替那条轮廓取一个不会被收藏的名字”。法西娅：法西娅的低语从镜面里渗出来：你正在画的并不是她，是一个被允许随时擦掉的你。阿尔比娜没有反驳，只是把那面镜子轻轻转开半寸。","resultVoiceAssetId":"voice.result.white_006_name_silence","effects":{"values":{"affectionAlbina":3,"trust":3,"artResonance":3},"setFlags":["silhouette_named"],"unlockCg":["art_resonance"]}},{"id":"white_006_refuse_naming","text":"让轮廓保持无名，由她决定","nextSceneId":"white_canvas_007","resultText":"你选择“让轮廓保持无名，由她决定”。法西娅：法西娅的低语从镜面里渗出来：你正在画的并不是她，是一个被允许随时擦掉的你。阿尔比娜没有反驳，只是把那面镜子轻轻转开半寸。","resultVoiceAssetId":"voice.result.white_006_refuse_naming","effects":{"values":{"affectionAlbina":2,"trust":4,"artResonance":2},"setFlags":["naming_returned"],"unlockCg":["trust_threshold"]}}]},{"version":2,"id":"white_canvas_007","chapter":7,"route":"white_canvas","locationId":"mirror_corridor","backgroundAssetId":"bg.mirror_corridor","cgAssetId":"cg.fascia_heartbeat","tone":"quiet","portraits":[{"characterId":"albina","portraitAssetId":"portrait.albina.shy","position":"right","active":true,"scale":1},{"characterId":"fascia","portraitAssetId":"portrait.fascia.normal","position":"center","active":false,"scale":0.86},{"characterId":"protagonist","portraitAssetId":"portrait.protagonist.tender","position":"left","active":false,"scale":0.9}],"speaker":"法西娅","text":"法西娅的低语从镜面里渗出来：你正在画的并不是她，是一个被允许随时擦掉的你。阿尔比娜没有反驳，只是把那面镜子轻轻转开半寸。","voiceAssetId":"voice.scene.white_canvas_007","bgmAssetId":"file.audio.bgm.between.two.worlds.mp3","choices":[{"id":"white_007_keep_mirror_open","text":"让镜子继续映照，不替她遮蔽","nextSceneId":"white_canvas_008","resultText":"你选择“让镜子继续映照，不替她遮蔽”。阿尔比娜：义体维护槽的白光下，她把法西娅从胸口取出来，放在你和她之间的托盘上。她说：完整不是把它装回去，是承认它有权利短暂离开我。","resultVoiceAssetId":"voice.result.white_007_keep_mirror_open","effects":{"values":{"trust":3,"danger":1,"artResonance":4},"setFlags":["mirror_kept_open"],"unlockCg":["fascia_heartbeat"]}},{"id":"white_007_ask_fascia_term","text":"当着阿尔比娜问法西娅一个边界问题","nextSceneId":"white_canvas_008","resultText":"你选择“当着阿尔比娜问法西娅一个边界问题”。阿尔比娜：义体维护槽的白光下，她把法西娅从胸口取出来，放在你和她之间的托盘上。她说：完整不是把它装回去，是承认它有权利短暂离开我。","resultVoiceAssetId":"voice.result.white_007_ask_fascia_term","effects":{"values":{"affectionAlbina":1,"trust":2,"artResonance":3},"setFlags":["fascia_addressed_directly"],"unlockCg":["art_resonance"]}}]},{"version":2,"id":"white_canvas_008","chapter":8,"route":"white_canvas","locationId":"lce_lab","backgroundAssetId":"bg.lce_lab","cgAssetId":"cg.hollow_torso_reveal","videoAssetId":"video.animated.runtime.white_canvas_scene_8","desktopVideoAssetId":"video.animated.desktop.white_canvas_scene_8","tone":"quiet","portraits":[{"characterId":"lce_doctor","portraitAssetId":"portrait.lce_doctor.normal","position":"left","active":false,"scale":0.84},{"characterId":"albina","portraitAssetId":"portrait.albina.surgical","position":"center","active":true,"scale":1},{"characterId":"protagonist","portraitAssetId":"portrait.protagonist.serious","position":"right","active":false,"scale":0.9}],"speaker":"阿尔比娜","text":"义体维护槽的白光下，她把法西娅从胸口取出来，放在你和她之间的托盘上。她说：完整不是把它装回去，是承认它有权利短暂离开我。","voiceAssetId":"voice.scene.white_canvas_008","bgmAssetId":"file.audio.bgm.between.two.worlds.mp3","choices":[{"id":"white_008_hold_fascia","text":"替她暂时照看法西娅","nextSceneId":"white_canvas_009","resultText":"你选择“替她暂时照看法西娅”。阿尔比娜：雨室的水线像无数根未被签名的画框。她让你站在她身后半步，说那个距离刚好能让两人都不必替对方回答。","resultVoiceAssetId":"voice.result.white_008_hold_fascia","effects":{"values":{"affectionAlbina":2,"trust":5,"artResonance":2},"setFlags":["fascia_held_by_player"],"unlockCg":["fascia_heartbeat"]}},{"id":"white_008_stay_witness_only","text":"只站在她视野内，不接手","nextSceneId":"white_canvas_009","resultText":"你选择“只站在她视野内，不接手”。阿尔比娜：雨室的水线像无数根未被签名的画框。她让你站在她身后半步，说那个距离刚好能让两人都不必替对方回答。","resultVoiceAssetId":"voice.result.white_008_stay_witness_only","effects":{"values":{"affectionAlbina":1,"trust":3,"artResonance":3},"setFlags":["witness_distance_kept"],"unlockCg":["lce_raid"]}}]},{"version":2,"id":"white_canvas_009","chapter":9,"route":"white_canvas","locationId":"rain_room","backgroundAssetId":"bg.rain_room","cgAssetId":"cg.rain_confession","tone":"rain","portraits":[{"characterId":"albina","portraitAssetId":"portrait.albina.rain","position":"center","active":true,"scale":1},{"characterId":"protagonist","portraitAssetId":"portrait.protagonist.wet-hair","position":"left","active":false,"scale":0.92}],"speaker":"阿尔比娜","text":"雨室的水线像无数根未被签名的画框。她让你站在她身后半步，说那个距离刚好能让两人都不必替对方回答。","voiceAssetId":"voice.scene.white_canvas_009","bgmAssetId":"file.audio.bgm.between.two.worlds.mp3","choices":[{"id":"white_009_keep_half_step","text":"守住半步距离，不擅自靠近","nextSceneId":"white_canvas_010","resultText":"你选择“守住半步距离，不擅自靠近”。但丁：但丁没有抬头，只低声提醒：她在试着把自己画成一个可以离开的人，你最好别急着把她画成离不开你的人。","resultVoiceAssetId":"voice.result.white_009_keep_half_step","effects":{"values":{"affectionAlbina":3,"trust":4,"artResonance":2},"setFlags":["half_step_distance"],"unlockCg":["rain_confession"]}},{"id":"white_009_share_umbrella_edge","text":"把伞沿偏向她那侧","nextSceneId":"white_canvas_010","resultText":"你选择“把伞沿偏向她那侧”。但丁：但丁没有抬头，只低声提醒：她在试着把自己画成一个可以离开的人，你最好别急着把她画成离不开你的人。","resultVoiceAssetId":"voice.result.white_009_share_umbrella_edge","effects":{"values":{"affectionAlbina":4,"trust":2,"artResonance":2},"setFlags":["umbrella_shared"],"unlockCg":["rain_reflection"]}}]},{"version":2,"id":"white_canvas_010","chapter":10,"route":"white_canvas","locationId":"limbus_bus","backgroundAssetId":"bg.limbus_bus","cgAssetId":"cg.limbus_bus_night","tone":"rain","portraits":[{"characterId":"dante","portraitAssetId":"portrait.dante.normal","position":"left","active":false,"scale":0.8},{"characterId":"albina","portraitAssetId":"portrait.albina.rain","position":"center","active":true,"scale":1},{"characterId":"protagonist","portraitAssetId":"portrait.protagonist.serious","position":"right","active":false,"scale":0.9}],"speaker":"但丁","text":"但丁没有抬头，只低声提醒：她在试着把自己画成一个可以离开的人，你最好别急着把她画成离不开你的人。","voiceAssetId":"voice.scene.white_canvas_010","bgmAssetId":"file.audio.bgm.between.two.worlds.mp3","choices":[{"id":"white_010_acknowledge_leave","text":"承认她随时可以离开这张画布","nextSceneId":"white_canvas_011","resultText":"你选择“承认她随时可以离开这张画布”。阿尔比娜：巢穴车站的灯光白得发硬。她站在月台边缘，没有回头，只问：如果一个艺术家拒绝被展览，你愿意做那个替她谢幕的人吗？","resultVoiceAssetId":"voice.result.white_010_acknowledge_leave","effects":{"values":{"affectionAlbina":2,"trust":4,"artResonance":3},"setFlags":["leaving_acknowledged"],"unlockCg":["limbus_bus_night"]}},{"id":"white_010_offer_return_ticket","text":"给她一张可以返回的车票，而不是绳索","nextSceneId":"white_canvas_011","resultText":"你选择“给她一张可以返回的车票，而不是绳索”。阿尔比娜：巢穴车站的灯光白得发硬。她站在月台边缘，没有回头，只问：如果一个艺术家拒绝被展览，你愿意做那个替她谢幕的人吗？","resultVoiceAssetId":"voice.result.white_010_offer_return_ticket","effects":{"values":{"affectionAlbina":3,"trust":3,"artResonance":2},"setFlags":["return_ticket_given"],"unlockCg":["rain_reflection"]}}]},{"version":2,"id":"white_canvas_011","chapter":11,"route":"white_canvas","locationId":"nest_station","backgroundAssetId":"bg.nest_station","cgAssetId":"cg.art_resonance","videoAssetId":"video.animated.runtime.white_canvas_scene_11","desktopVideoAssetId":"video.animated.desktop.white_canvas_scene_11","tone":"quiet","portraits":[{"characterId":"albina","portraitAssetId":"portrait.albina.white-canvas","position":"center","active":true,"scale":1},{"characterId":"protagonist","portraitAssetId":"portrait.protagonist.resolve","position":"left","active":false,"scale":0.92}],"speaker":"阿尔比娜","text":"巢穴车站的灯光白得发硬。她站在月台边缘，没有回头，只问：如果一个艺术家拒绝被展览，你愿意做那个替她谢幕的人吗？","voiceAssetId":"voice.scene.white_canvas_011","bgmAssetId":"file.audio.bgm.between.two.worlds.mp3","choices":[{"id":"white_011_curtain_call","text":"答应替她谢幕，不替她登台","nextSceneId":"white_canvas_012","resultText":"你选择“答应替她谢幕，不替她登台”。卡利斯托：蜘蛛画廊借给白画布一个临时展位。卡利斯托微笑着提议：把她最有缺陷的那一面挂出来，观众会替你们完成剩下的故事。","resultVoiceAssetId":"voice.result.white_011_curtain_call","effects":{"values":{"affectionAlbina":2,"trust":5,"artResonance":3},"setFlags":["curtain_call_promised"],"unlockCg":["white_canvas_ending"]}},{"id":"white_011_walk_beside","text":"陪她走下月台，不离开也不催促","nextSceneId":"white_canvas_012","resultText":"你选择“陪她走下月台，不离开也不催促”。卡利斯托：蜘蛛画廊借给白画布一个临时展位。卡利斯托微笑着提议：把她最有缺陷的那一面挂出来，观众会替你们完成剩下的故事。","resultVoiceAssetId":"voice.result.white_011_walk_beside","effects":{"values":{"affectionAlbina":4,"trust":3,"artResonance":2},"setFlags":["platform_walked_together"],"unlockCg":["rain_confession"]}}]},{"version":2,"id":"white_canvas_012","chapter":12,"route":"white_canvas","locationId":"spider_gallery","backgroundAssetId":"bg.spider_gallery","cgAssetId":"cg.maestro_shadow","tone":"gallery","portraits":[{"characterId":"callisto","portraitAssetId":"portrait.callisto.normal","position":"left","active":false,"scale":0.84},{"characterId":"albina","portraitAssetId":"portrait.albina.ring-conspiracy","position":"center","active":true,"scale":1},{"characterId":"protagonist","portraitAssetId":"portrait.protagonist.serious","position":"right","active":false,"scale":0.9}],"speaker":"卡利斯托","text":"蜘蛛画廊借给白画布一个临时展位。卡利斯托微笑着提议：把她最有缺陷的那一面挂出来，观众会替你们完成剩下的故事。","voiceAssetId":"voice.scene.white_canvas_012","bgmAssetId":"file.audio.bgm.between.two.worlds.mp3","sfxAssetIds":["file.audio.se.glass.shatter.wav"],"choices":[{"id":"white_012_refuse_exhibit","text":"当众拒绝展出她的缺陷","nextSceneId":"white_canvas_013","resultText":"你选择“当众拒绝展出她的缺陷”。阿尔比娜：环指工坊的颜料气味里混着血。她握着一柄画刀，对你说：今天我可能要毁掉一件作品，请你告诉我哪一件是她真正想毁掉的。","resultVoiceAssetId":"voice.result.white_012_refuse_exhibit","effects":{"values":{"affectionAlbina":2,"trust":4,"danger":1,"artResonance":3},"setFlags":["defect_not_exhibited"],"unlockCg":["trust_threshold"]}},{"id":"white_012_let_her_decide","text":"把展与不展的决定权交还给她","nextSceneId":"white_canvas_013","resultText":"你选择“把展与不展的决定权交还给她”。阿尔比娜：环指工坊的颜料气味里混着血。她握着一柄画刀，对你说：今天我可能要毁掉一件作品，请你告诉我哪一件是她真正想毁掉的。","resultVoiceAssetId":"voice.result.white_012_let_her_decide","effects":{"values":{"affectionAlbina":3,"trust":5,"artResonance":4},"setFlags":["exhibit_choice_returned"],"unlockCg":["art_resonance"]}}]},{"version":2,"id":"white_canvas_013","chapter":13,"route":"white_canvas","locationId":"ring_atelier","backgroundAssetId":"bg.ring_atelier","cgAssetId":"cg.art_resonance","tone":"gallery","portraits":[{"characterId":"albina","portraitAssetId":"portrait.albina.furious","position":"right","active":true,"scale":1},{"characterId":"protagonist","portraitAssetId":"portrait.protagonist.battle","position":"left","active":false,"scale":0.92}],"speaker":"阿尔比娜","text":"环指工坊的颜料气味里混着血。她握着一柄画刀，对你说：今天我可能要毁掉一件作品，请你告诉我哪一件是她真正想毁掉的。","voiceAssetId":"voice.scene.white_canvas_013","bgmAssetId":"file.audio.bgm.between.two.worlds.mp3","sfxAssetIds":["file.audio.se.glass.shatter.wav"],"choices":[{"id":"white_013_point_to_mirror","text":"指向墙上那面映过法西娅的镜子","nextSceneId":"white_canvas_014","resultText":"你选择“指向墙上那面映过法西娅的镜子”。阿尔比娜：楼顶的风把她的话吹得很轻。她说：如果有一天我想把自己重新画成空白，你会替我保留这最后一层底色，还是替我重新开始？","resultVoiceAssetId":"voice.result.white_013_point_to_mirror","effects":{"values":{"affectionAlbina":2,"trust":3,"artResonance":5},"setFlags":["mirror_pointed_out"],"unlockCg":["mirror_broken"]}},{"id":"white_013_refuse_to_choose","text":"拒绝替她决定，让她自己下刀","nextSceneId":"white_canvas_014","resultText":"你选择“拒绝替她决定，让她自己下刀”。阿尔比娜：楼顶的风把她的话吹得很轻。她说：如果有一天我想把自己重新画成空白，你会替我保留这最后一层底色，还是替我重新开始？","resultVoiceAssetId":"voice.result.white_013_refuse_to_choose","effects":{"values":{"affectionAlbina":1,"trust":4,"artResonance":3},"setFlags":["knife_returned"],"unlockCg":["art_resonance"]}}]},{"version":2,"id":"white_canvas_014","chapter":14,"route":"white_canvas","locationId":"city_rooftop","backgroundAssetId":"bg.city_rooftop","cgAssetId":"cg.trust_threshold","tone":"quiet","portraits":[{"characterId":"albina","portraitAssetId":"portrait.albina.endgame","position":"center","active":true,"scale":1},{"characterId":"protagonist","portraitAssetId":"portrait.protagonist.resolve","position":"left","active":false,"scale":0.92}],"speaker":"阿尔比娜","text":"楼顶的风把她的话吹得很轻。她说：如果有一天我想把自己重新画成空白，你会替我保留这最后一层底色，还是替我重新开始？","voiceAssetId":"voice.scene.white_canvas_014","bgmAssetId":"file.audio.bgm.between.two.worlds.mp3","choices":[{"id":"white_014_keep_base_color","text":"答应替她保留最后一层底色","nextSceneId":"white_canvas_015","resultText":"你选择“答应替她保留最后一层底色”。阿尔比娜：城郊的黎明像一张终于干透的画布。她把法西娅重新放回胸口，又把画笔交到你手里：这张画布已经记住了你，但它仍然属于我。","resultVoiceAssetId":"voice.result.white_014_keep_base_color","effects":{"values":{"affectionAlbina":4,"trust":4,"artResonance":3},"setFlags":["base_color_kept"],"unlockCg":["white_canvas_ending"]}},{"id":"white_014_offer_restart","text":"答应陪她从空白重新开始","nextSceneId":"white_canvas_015","resultText":"你选择“答应陪她从空白重新开始”。阿尔比娜：城郊的黎明像一张终于干透的画布。她把法西娅重新放回胸口，又把画笔交到你手里：这张画布已经记住了你，但它仍然属于我。","resultVoiceAssetId":"voice.result.white_014_offer_restart","effects":{"values":{"affectionAlbina":3,"trust":5,"artResonance":4},"setFlags":["restart_offered"],"unlockCg":["art_resonance"]}}]},{"version":2,"id":"white_canvas_015","chapter":15,"route":"white_canvas","locationId":"outskirts_dawn","backgroundAssetId":"bg.outskirts_dawn","cgAssetId":"cg.white_canvas_ending","videoAssetId":"video.animated.runtime.white_canvas_scene_15","desktopVideoAssetId":"video.animated.desktop.white_canvas_scene_15","tone":"quiet","portraits":[{"characterId":"protagonist","portraitAssetId":"portrait.protagonist.resolve","position":"left","active":false,"scale":0.92},{"characterId":"albina","portraitAssetId":"portrait.albina.endgame","position":"center","active":true,"scale":1},{"characterId":"fascia","portraitAssetId":"portrait.fascia.normal","position":"right","active":false,"scale":0.84}],"speaker":"阿尔比娜","text":"城郊的黎明像一张终于干透的画布。她把法西娅重新放回胸口，又把画笔交到你手里：这张画布已经记住了你，但它仍然属于我。","voiceAssetId":"voice.scene.white_canvas_015","bgmAssetId":"file.audio.bgm.between.two.worlds.mp3","choices":[{"id":"white_canvas_route_final","text":"为白色画布路线盖上最后一枚印章","nextSceneId":"white_canvas_ending_gate","resultText":"你选择“为白色画布路线盖上最后一枚印章”。白色画布路线终章已封存，进入固定结局资格判定。","resultVoiceAssetId":"voice.result.white_canvas_route_final","effects":{"values":{"affectionAlbina":3,"trust":3,"danger":-2,"artResonance":4},"setFlags":["white_canvas_route_final"]}}]},{"version":2,"id":"white_canvas_ending_gate","chapter":16,"route":"white_canvas","locationId":"outskirts_dawn","backgroundAssetId":"bg.outskirts_dawn","cgAssetId":"cg.white_canvas_ending","tone":"quiet","portraits":[{"characterId":"protagonist","portraitAssetId":"portrait.protagonist.resolve","position":"left","active":false,"scale":0.92},{"characterId":"albina","portraitAssetId":"portrait.albina.endgame","position":"center","active":true,"scale":1},{"characterId":"fascia","portraitAssetId":"portrait.fascia.normal","position":"right","active":false,"scale":0.84}],"speaker":"叙事记录","text":"白色画布的全部选择已封存。系统将只依据持久状态判定结局，不请求任何运行时生成。","voiceAssetId":"voice.scene.white_canvas_ending_gate","bgmAssetId":"file.audio.bgm.between.two.worlds.mp3","choices":[{"id":"white_canvas_choose_true_ending","text":"确认彼此共同抵达的真结局","nextSceneId":"white_canvas_ending_true","resultText":"结局判定完成：白色画布·TRUE。资格规则与选择记录已固定写入。","resultVoiceAssetId":"voice.result.white_canvas.true_ending","availability":{"allOf":[{"kind":"flag","flag":"white_canvas_route_final","equals":true},{"kind":"value","key":"trust","operator":"gte","value":52},{"kind":"value","key":"artResonance","operator":"gte","value":44},{"kind":"value","key":"danger","operator":"lte","value":5}]},"effects":{"setFlags":["ending_white_canvas_true_qualified"]}},{"id":"white_canvas_choose_normal_ending","text":"接受仍留有余白的普通结局","nextSceneId":"white_canvas_ending_normal","resultText":"结局判定完成：白色画布·NORMAL。资格规则与选择记录已固定写入。","resultVoiceAssetId":"voice.result.white_canvas.normal_ending","availability":{"allOf":[{"kind":"flag","flag":"white_canvas_route_final","equals":true}],"fallback":true},"effects":{"setFlags":["ending_white_canvas_normal_qualified"]}},{"id":"white_canvas_choose_bad_ending","text":"承认这次未能跨过的坏结局","nextSceneId":"white_canvas_ending_bad","resultText":"结局判定完成：白色画布·BAD。资格规则与选择记录已固定写入。","resultVoiceAssetId":"voice.result.white_canvas.bad_ending","availability":{"allOf":[{"kind":"flag","flag":"white_canvas_route_final","equals":true}],"anyOf":[{"kind":"value","key":"trust","operator":"lte","value":44},{"kind":"value","key":"artResonance","operator":"lte","value":38}]},"effects":{"setFlags":["ending_white_canvas_bad_qualified"]}}]},{"version":2,"id":"white_canvas_ending_true","chapter":17,"route":"white_canvas","locationId":"outskirts_dawn","backgroundAssetId":"bg.outskirts_dawn","cgAssetId":"cg.white_canvas_ending","videoAssetId":"video.animated.runtime.white_canvas_ending_true","desktopVideoAssetId":"video.animated.desktop.white_canvas_ending_true","tone":"quiet","portraits":[{"characterId":"protagonist","portraitAssetId":"portrait.protagonist.resolve","position":"left","active":false,"scale":0.92},{"characterId":"albina","portraitAssetId":"portrait.albina.endgame","position":"center","active":true,"scale":1},{"characterId":"fascia","portraitAssetId":"portrait.fascia.normal","position":"right","active":false,"scale":0.84}],"speaker":"阿尔比娜","text":"晨光落在未署名的白画上。阿尔比娜没有把你画成作品，而是把并肩离开的两道影子留在画框之外：这一次，完整与亲密同时成立。","voiceAssetId":"voice.scene.white_canvas_ending_true","bgmAssetId":"file.audio.bgm.between.two.worlds.mp3","choices":[],"ending":{"route":"white_canvas","kind":"true","eligibility":{"allOf":[{"kind":"flag","flag":"white_canvas_route_final","equals":true},{"kind":"value","key":"trust","operator":"gte","value":52},{"kind":"value","key":"artResonance","operator":"gte","value":44},{"kind":"value","key":"danger","operator":"lte","value":5}]}}},{"version":2,"id":"white_canvas_ending_normal","chapter":17,"route":"white_canvas","locationId":"outskirts_dawn","backgroundAssetId":"bg.outskirts_dawn","cgAssetId":"cg.white_canvas_ending","videoAssetId":"video.animated.runtime.white_canvas_ending_normal","desktopVideoAssetId":"video.animated.desktop.white_canvas_ending_normal","tone":"quiet","portraits":[{"characterId":"protagonist","portraitAssetId":"portrait.protagonist.resolve","position":"left","active":false,"scale":0.92},{"characterId":"albina","portraitAssetId":"portrait.albina.endgame","position":"center","active":true,"scale":1},{"characterId":"fascia","portraitAssetId":"portrait.fascia.normal","position":"right","active":false,"scale":0.84}],"speaker":"阿尔比娜","text":"展厅按约熄灯。你们保留了尚未说尽的话，也保留了随时重画的权利。阿尔比娜把空白画布卷好，约定下一场雨后再见。","voiceAssetId":"voice.scene.white_canvas_ending_normal","bgmAssetId":"file.audio.bgm.between.two.worlds.mp3","choices":[],"ending":{"route":"white_canvas","kind":"normal","eligibility":{"allOf":[{"kind":"flag","flag":"white_canvas_route_final","equals":true}],"fallback":true}}},{"version":2,"id":"white_canvas_ending_bad","chapter":17,"route":"white_canvas","locationId":"outskirts_dawn","backgroundAssetId":"bg.outskirts_dawn","cgAssetId":"cg.white_canvas_ending","videoAssetId":"video.animated.runtime.white_canvas_ending_bad","desktopVideoAssetId":"video.animated.desktop.white_canvas_ending_bad","tone":"quiet","portraits":[{"characterId":"protagonist","portraitAssetId":"portrait.protagonist.resolve","position":"left","active":false,"scale":0.92},{"characterId":"albina","portraitAssetId":"portrait.albina.endgame","position":"center","active":true,"scale":1},{"characterId":"fascia","portraitAssetId":"portrait.fascia.normal","position":"right","active":false,"scale":0.84}],"speaker":"阿尔比娜","text":"白厅没有发生争吵，只剩一张过早完成的画。阿尔比娜礼貌地收回画笔与称呼；边界仍被守住，但你们没能把信任带到黎明。","voiceAssetId":"voice.scene.white_canvas_ending_bad","bgmAssetId":"file.audio.bgm.between.two.worlds.mp3","choices":[],"ending":{"route":"white_canvas","kind":"bad","eligibility":{"allOf":[{"kind":"flag","flag":"white_canvas_route_final","equals":true}],"anyOf":[{"kind":"value","key":"trust","operator":"lte","value":44},{"kind":"value","key":"artResonance","operator":"lte","value":38}]}}},{"version":2,"id":"golden_bough_001","chapter":1,"route":"golden_bough_rebuild","locationId":"golden_bough_fault","backgroundAssetId":"bg.golden_bough","cgAssetId":"cg.rebuild_awakening","tone":"golden","portraits":[{"characterId":"albina","portraitAssetId":"portrait.albina.golden-bough","position":"center","active":true,"scale":1},{"characterId":"protagonist","portraitAssetId":"portrait.protagonist.serious","position":"left","active":false,"scale":0.9}],"speaker":"阿尔比娜","text":"金色光尘沿着她的义体裂缝回流。她先确认的不是自己，而是法西娅是否还在呼吸。","voiceAssetId":"voice.scene.golden_bough_001","bgmAssetId":"file.audio.bgm.title.theme.mp3","choices":[{"id":"rebuild_anchor","text":"成为她的记忆锚点","nextSceneId":"golden_bough_002","resultText":"你选择“成为她的记忆锚点”。旁白：镜面里的阿尔比娜有无数个切口，但每一道切口都避开了你替她守住的名字。","resultVoiceAssetId":"voice.result.rebuild_anchor","effects":{"values":{"affectionAlbina":1,"trust":5,"artResonance":2},"setFlags":["player_memory_anchor"],"unlockCg":["surgery_of_memory"]}},{"id":"rebuild_question_fascia","text":"先检查法西娅","nextSceneId":"golden_bough_002","resultText":"你选择“先检查法西娅”。旁白：镜面里的阿尔比娜有无数个切口，但每一道切口都避开了你替她守住的名字。","resultVoiceAssetId":"voice.result.rebuild_question_fascia","effects":{"values":{"trust":2,"danger":1,"artResonance":4},"setFlags":["fascia_checked_first"],"unlockCg":["fascia_heartbeat"]}}]},{"version":2,"id":"golden_bough_002","chapter":2,"route":"golden_bough_rebuild","locationId":"mirror_corridor","backgroundAssetId":"bg.mirror_corridor","cgAssetId":"cg.golden_bough_ending","tone":"golden","portraits":[{"characterId":"albina","portraitAssetId":"portrait.albina.endgame","position":"right","active":true,"scale":1},{"characterId":"protagonist","portraitAssetId":"portrait.protagonist.resolve","position":"left","active":false,"scale":0.94}],"speaker":"旁白","text":"镜面里的阿尔比娜有无数个切口，但每一道切口都避开了你替她守住的名字。","voiceAssetId":"voice.scene.golden_bough_002","bgmAssetId":"file.audio.bgm.title.theme.mp3","choices":[{"id":"rebuild_push_into_raid","text":"带着记忆锚点突入金枝异常现场","nextSceneId":"golden_bough_003","resultText":"你选择“带着记忆锚点突入金枝异常现场”。浮士德：金枝残响把病床、画架和战场叠成一张薄膜。浮士德只给出结论：如果锚点断裂，阿尔比娜会把自己误认为一件已经完成的作品。","resultVoiceAssetId":"voice.result.rebuild_push_into_raid","effects":{"values":{"trust":3,"danger":2,"artResonance":3},"setFlags":["rebuild_raid_committed"],"unlockCg":["lce_raid"]}},{"id":"return_opening_from_rebuild","text":"回到路线选择","nextSceneId":"opening_001","resultText":"你选择“回到路线选择”。阿尔比娜：晚上好，{{user}}。请不要站得太远，我还没决定该把你称作观众、朋友，还是一块值得等待的画布。","resultVoiceAssetId":"voice.result.return_opening_from_rebuild","effects":{"values":{"trust":1},"setFlags":["rebuild_looped"]}}]},{"version":2,"id":"golden_bough_003","chapter":3,"route":"golden_bough_rebuild","locationId":"lce_lab","backgroundAssetId":"bg.lce_lab","cgAssetId":"cg.lce_raid","videoAssetId":"video.animated.runtime.golden_bough_rebuild_scene_3","desktopVideoAssetId":"video.animated.desktop.golden_bough_rebuild_scene_3","tone":"threat","portraits":[{"characterId":"faust","portraitAssetId":"portrait.faust.normal","position":"left","active":false,"scale":0.82},{"characterId":"albina","portraitAssetId":"portrait.albina.fascia-open","position":"center","active":true,"scale":1},{"characterId":"protagonist","portraitAssetId":"portrait.protagonist.battle","position":"right","active":false,"scale":0.92}],"speaker":"浮士德","text":"金枝残响把病床、画架和战场叠成一张薄膜。浮士德只给出结论：如果锚点断裂，阿尔比娜会把自己误认为一件已经完成的作品。","voiceAssetId":"voice.scene.golden_bough_003","bgmAssetId":"file.audio.bgm.title.theme.mp3","sfxAssetIds":["file.audio.se.slash.heavy.wav"],"choices":[{"id":"rebuild_cut_false_completion","text":"切断“完成品”的错误定义","nextSceneId":"golden_bough_004","resultText":"你选择“切断“完成品”的错误定义”。维吉利乌斯：楼顶的风把金色光尘吹成刀刃。维吉利乌斯没有劝阻，只提醒你：重构不是修好她，而是承认她有权决定哪些缺口继续存在。","resultVoiceAssetId":"voice.result.rebuild_cut_false_completion","effects":{"values":{"trust":4,"danger":1,"artResonance":4},"setFlags":["false_completion_cut"],"unlockCg":["surgery_of_memory"]}},{"id":"rebuild_guard_fascia_pulse","text":"守住法西娅的心跳频率","nextSceneId":"golden_bough_004","resultText":"你选择“守住法西娅的心跳频率”。维吉利乌斯：楼顶的风把金色光尘吹成刀刃。维吉利乌斯没有劝阻，只提醒你：重构不是修好她，而是承认她有权决定哪些缺口继续存在。","resultVoiceAssetId":"voice.result.rebuild_guard_fascia_pulse","effects":{"values":{"affectionAlbina":1,"trust":3,"artResonance":3},"setFlags":["fascia_pulse_guarded"],"unlockCg":["fascia_heartbeat"]}}]},{"version":2,"id":"golden_bough_004","chapter":4,"route":"golden_bough_rebuild","locationId":"city_rooftop","backgroundAssetId":"bg.city_rooftop","cgAssetId":"cg.araya_rooftop","tone":"golden","portraits":[{"characterId":"vergilius","portraitAssetId":"portrait.vergilius.normal","position":"left","active":false,"scale":0.84},{"characterId":"albina","portraitAssetId":"portrait.albina.golden-bough","position":"center","active":true,"scale":1},{"characterId":"protagonist","portraitAssetId":"portrait.protagonist.resolve","position":"right","active":false,"scale":0.92}],"speaker":"维吉利乌斯","text":"楼顶的风把金色光尘吹成刀刃。维吉利乌斯没有劝阻，只提醒你：重构不是修好她，而是承认她有权决定哪些缺口继续存在。","voiceAssetId":"voice.scene.golden_bough_004","bgmAssetId":"file.audio.bgm.title.theme.mp3","choices":[{"id":"rebuild_accept_missing_pieces","text":"承认缺口也是她的结构","nextSceneId":"golden_bough_005","resultText":"你选择“承认缺口也是她的结构”。阿尔比娜：最后一面镜子没有给她完整倒影，只给出一条可以返回的路。她握住你的手腕，确认那不是束缚，而是一次被允许的回航。","resultVoiceAssetId":"voice.result.rebuild_accept_missing_pieces","effects":{"values":{"affectionAlbina":2,"trust":4,"artResonance":2},"setFlags":["missing_pieces_accepted"],"unlockCg":["golden_bough_ending"]}},{"id":"rebuild_use_rooftop_signal","text":"用楼顶信号重排记忆顺序","nextSceneId":"golden_bough_005","resultText":"你选择“用楼顶信号重排记忆顺序”。阿尔比娜：最后一面镜子没有给她完整倒影，只给出一条可以返回的路。她握住你的手腕，确认那不是束缚，而是一次被允许的回航。","resultVoiceAssetId":"voice.result.rebuild_use_rooftop_signal","effects":{"values":{"trust":3,"danger":-1,"artResonance":4},"setFlags":["rooftop_signal_reordered"],"unlockCg":["araya_rooftop"]}}]},{"version":2,"id":"golden_bough_005","chapter":5,"route":"golden_bough_rebuild","locationId":"mirror_corridor","backgroundAssetId":"bg.mirror_corridor","cgAssetId":"cg.golden_bough_ending","videoAssetId":"video.animated.runtime.golden_bough_rebuild_scene_5","desktopVideoAssetId":"video.animated.desktop.golden_bough_rebuild_scene_5","tone":"golden","portraits":[{"characterId":"golden_apparition","portraitAssetId":"portrait.golden_apparition.normal","position":"left","active":false,"scale":0.82},{"characterId":"albina","portraitAssetId":"portrait.albina.endgame","position":"center","active":true,"scale":1},{"characterId":"protagonist","portraitAssetId":"portrait.protagonist.resolve","position":"right","active":false,"scale":0.92}],"speaker":"阿尔比娜","text":"最后一面镜子没有给她完整倒影，只给出一条可以返回的路。她握住你的手腕，确认那不是束缚，而是一次被允许的回航。","voiceAssetId":"voice.scene.golden_bough_005","bgmAssetId":"file.audio.bgm.title.theme.mp3","choices":[{"id":"golden_bough_route_complete","text":"记录金枝重构路线的暂定结局","nextSceneId":"golden_bough_006","resultText":"你选择“记录金枝重构路线的暂定结局”。浮士德：记忆手术台上，金色光尘在义体接缝里像旧伤口一样反复渗出。浮士德递过一把刻度尺：她说她想重构的不是身体，是你替她记下却没敢念出来的那段。","resultVoiceAssetId":"voice.result.golden_bough_route_complete","effects":{"values":{"affectionAlbina":1,"trust":2,"danger":-1,"artResonance":3},"setFlags":["golden_bough_route_complete"]}}]},{"version":2,"id":"golden_bough_006","chapter":6,"route":"golden_bough_rebuild","locationId":"lce_lab","backgroundAssetId":"bg.lce_lab","cgAssetId":"cg.surgery_of_memory","tone":"golden","portraits":[{"characterId":"faust","portraitAssetId":"portrait.faust.normal","position":"left","active":false,"scale":0.82},{"characterId":"albina","portraitAssetId":"portrait.albina.fascia-open","position":"center","active":true,"scale":1},{"characterId":"protagonist","portraitAssetId":"portrait.protagonist.serious","position":"right","active":false,"scale":0.9}],"speaker":"浮士德","text":"记忆手术台上，金色光尘在义体接缝里像旧伤口一样反复渗出。浮士德递过一把刻度尺：她说她想重构的不是身体，是你替她记下却没敢念出来的那段。","voiceAssetId":"voice.scene.golden_bough_006","bgmAssetId":"file.audio.bgm.title.theme.mp3","choices":[{"id":"rebuild_006_read_aloud","text":"把那段记忆当着她的面念出来","nextSceneId":"golden_bough_007","resultText":"你选择“把那段记忆当着她的面念出来”。阿尔比娜：金枝裂隙里的回声全是她过去没说完的句子。她让法西娅在你和她之间选择一个频率，说这次她要先听见自己的节拍，再决定要不要跟上。","resultVoiceAssetId":"voice.result.rebuild_006_read_aloud","effects":{"values":{"affectionAlbina":2,"trust":4,"artResonance":3},"setFlags":["memory_read_aloud"],"unlockCg":["surgery_of_memory"]}},{"id":"rebuild_006_keep_silent_anchor","text":"只做锚点，不替她出声","nextSceneId":"golden_bough_007","resultText":"你选择“只做锚点，不替她出声”。阿尔比娜：金枝裂隙里的回声全是她过去没说完的句子。她让法西娅在你和她之间选择一个频率，说这次她要先听见自己的节拍，再决定要不要跟上。","resultVoiceAssetId":"voice.result.rebuild_006_keep_silent_anchor","effects":{"values":{"affectionAlbina":1,"trust":5,"artResonance":2},"setFlags":["silent_anchor_kept"],"unlockCg":["fascia_heartbeat"]}}]},{"version":2,"id":"golden_bough_007","chapter":7,"route":"golden_bough_rebuild","locationId":"golden_bough_fault","backgroundAssetId":"bg.golden_bough","cgAssetId":"cg.rebuild_awakening","tone":"golden","portraits":[{"characterId":"albina","portraitAssetId":"portrait.albina.golden-bough","position":"center","active":true,"scale":1},{"characterId":"protagonist","portraitAssetId":"portrait.protagonist.battle","position":"left","active":false,"scale":0.92}],"speaker":"阿尔比娜","text":"金枝裂隙里的回声全是她过去没说完的句子。她让法西娅在你和她之间选择一个频率，说这次她要先听见自己的节拍，再决定要不要跟上。","voiceAssetId":"voice.scene.golden_bough_007","bgmAssetId":"file.audio.bgm.title.theme.mp3","choices":[{"id":"rebuild_007_match_her_pulse","text":"按她的节拍调整呼吸","nextSceneId":"golden_bough_008","resultText":"你选择“按她的节拍调整呼吸”。维吉利乌斯：LCE 的搜捕光柱扫过楼顶。维吉利乌斯扔下一句话：你救不回完整的她，但你能决定让她以哪个版本继续存在。阿尔比娜握紧法西娅，等你下判断。","resultVoiceAssetId":"voice.result.rebuild_007_match_her_pulse","effects":{"values":{"affectionAlbina":3,"trust":4,"artResonance":3},"setFlags":["pulse_matched"],"unlockCg":["fascia_heartbeat"]}},{"id":"rebuild_007_stay_own_rhythm","text":"保留你自己的呼吸节奏，让她对齐","nextSceneId":"golden_bough_008","resultText":"你选择“保留你自己的呼吸节奏，让她对齐”。维吉利乌斯：LCE 的搜捕光柱扫过楼顶。维吉利乌斯扔下一句话：你救不回完整的她，但你能决定让她以哪个版本继续存在。阿尔比娜握紧法西娅，等你下判断。","resultVoiceAssetId":"voice.result.rebuild_007_stay_own_rhythm","effects":{"values":{"affectionAlbina":1,"trust":3,"artResonance":4},"setFlags":["own_rhythm_kept"],"unlockCg":["surgery_of_memory"]}}]},{"version":2,"id":"golden_bough_008","chapter":8,"route":"golden_bough_rebuild","locationId":"city_rooftop","backgroundAssetId":"bg.city_rooftop","cgAssetId":"cg.araya_rooftop","videoAssetId":"video.animated.runtime.golden_bough_rebuild_scene_8","desktopVideoAssetId":"video.animated.desktop.golden_bough_rebuild_scene_8","tone":"threat","portraits":[{"characterId":"vergilius","portraitAssetId":"portrait.vergilius.normal","position":"left","active":false,"scale":0.84},{"characterId":"albina","portraitAssetId":"portrait.albina.combat","position":"center","active":true,"scale":1},{"characterId":"protagonist","portraitAssetId":"portrait.protagonist.battle","position":"right","active":false,"scale":0.92}],"speaker":"维吉利乌斯","text":"LCE 的搜捕光柱扫过楼顶。维吉利乌斯扔下一句话：你救不回完整的她，但你能决定让她以哪个版本继续存在。阿尔比娜握紧法西娅，等你下判断。","voiceAssetId":"voice.scene.golden_bough_008","bgmAssetId":"file.audio.bgm.title.theme.mp3","sfxAssetIds":["file.audio.se.slash.heavy.wav"],"choices":[{"id":"rebuild_008_protect_current_self","text":"保护此刻这个尚未完成的她","nextSceneId":"golden_bough_009","resultText":"你选择“保护此刻这个尚未完成的她”。金色幻影：镜廊深处的金色幻影模仿着她的旧姿态，问她：要不要把我装回去，省得你再做一个有缺口的自己？她抬头看你，等你回答那个不属于她的问题。","resultVoiceAssetId":"voice.result.rebuild_008_protect_current_self","effects":{"values":{"affectionAlbina":2,"trust":4,"danger":1,"artResonance":3},"setFlags":["current_self_protected"],"unlockCg":["lce_raid"]}},{"id":"rebuild_008_trade_old_memory","text":"用一段旧记忆换取撤退时间","nextSceneId":"golden_bough_009","resultText":"你选择“用一段旧记忆换取撤退时间”。金色幻影：镜廊深处的金色幻影模仿着她的旧姿态，问她：要不要把我装回去，省得你再做一个有缺口的自己？她抬头看你，等你回答那个不属于她的问题。","resultVoiceAssetId":"voice.result.rebuild_008_trade_old_memory","effects":{"values":{"trust":2,"danger":-2,"artResonance":4},"setFlags":["memory_traded"],"unlockCg":["surgery_of_memory"]}}]},{"version":2,"id":"golden_bough_009","chapter":9,"route":"golden_bough_rebuild","locationId":"mirror_corridor","backgroundAssetId":"bg.mirror_corridor","cgAssetId":"cg.golden_bough_ending","tone":"golden","portraits":[{"characterId":"golden_apparition","portraitAssetId":"portrait.golden_apparition.normal","position":"left","active":false,"scale":0.82},{"characterId":"albina","portraitAssetId":"portrait.albina.endgame","position":"center","active":true,"scale":1},{"characterId":"protagonist","portraitAssetId":"portrait.protagonist.resolve","position":"right","active":false,"scale":0.92}],"speaker":"金色幻影","text":"镜廊深处的金色幻影模仿着她的旧姿态，问她：要不要把我装回去，省得你再做一个有缺口的自己？她抬头看你，等你回答那个不属于她的问题。","voiceAssetId":"voice.scene.golden_bough_009","bgmAssetId":"file.audio.bgm.title.theme.mp3","choices":[{"id":"rebuild_009_refuse_perfect_copy","text":"替她拒绝那个完美复制品","nextSceneId":"golden_bough_010","resultText":"你选择“替她拒绝那个完美复制品”。LCE 医师：医师递来一份重构协议：只要她愿意封存一段记忆，LCE 就允许她保留现在的外形。她把笔尖停在协议上，没有签字，先看你的反应。","resultVoiceAssetId":"voice.result.rebuild_009_refuse_perfect_copy","effects":{"values":{"affectionAlbina":2,"trust":5,"artResonance":3},"setFlags":["perfect_copy_refused"],"unlockCg":["golden_bough_ending"]}},{"id":"rebuild_009_hand_question_back","text":"把问题原样交还给她","nextSceneId":"golden_bough_010","resultText":"你选择“把问题原样交还给她”。LCE 医师：医师递来一份重构协议：只要她愿意封存一段记忆，LCE 就允许她保留现在的外形。她把笔尖停在协议上，没有签字，先看你的反应。","resultVoiceAssetId":"voice.result.rebuild_009_hand_question_back","effects":{"values":{"affectionAlbina":3,"trust":3,"artResonance":4},"setFlags":["question_returned"],"unlockCg":["araya_rooftop"]}}]},{"version":2,"id":"golden_bough_010","chapter":10,"route":"golden_bough_rebuild","locationId":"lce_lab","backgroundAssetId":"bg.lce_lab","cgAssetId":"cg.lce_raid","tone":"threat","portraits":[{"characterId":"lce_doctor","portraitAssetId":"portrait.lce_doctor.normal","position":"left","active":false,"scale":0.84},{"characterId":"albina","portraitAssetId":"portrait.albina.surgical","position":"center","active":true,"scale":1},{"characterId":"protagonist","portraitAssetId":"portrait.protagonist.serious","position":"right","active":false,"scale":0.9}],"speaker":"LCE 医师","text":"医师递来一份重构协议：只要她愿意封存一段记忆，LCE 就允许她保留现在的外形。她把笔尖停在协议上，没有签字，先看你的反应。","voiceAssetId":"voice.scene.golden_bough_010","bgmAssetId":"file.audio.bgm.title.theme.mp3","sfxAssetIds":["file.audio.se.slash.heavy.wav"],"choices":[{"id":"rebuild_010_veto_sealing","text":"当着医师反对封存记忆","nextSceneId":"golden_bough_011","resultText":"你选择“当着医师反对封存记忆”。阿尔比娜：夜班巴士上，她把额头轻轻抵在窗玻璃上。她说：你今天替我守住的，不是金枝，是一个允许我继续修改自己的我。","resultVoiceAssetId":"voice.result.rebuild_010_veto_sealing","effects":{"values":{"affectionAlbina":2,"trust":4,"danger":2,"artResonance":3},"setFlags":["memory_seal_vetoed"],"unlockCg":["lce_raid"]}},{"id":"rebuild_010_ask_her_choice","text":"低声问她自己想怎么签","nextSceneId":"golden_bough_011","resultText":"你选择“低声问她自己想怎么签”。阿尔比娜：夜班巴士上，她把额头轻轻抵在窗玻璃上。她说：你今天替我守住的，不是金枝，是一个允许我继续修改自己的我。","resultVoiceAssetId":"voice.result.rebuild_010_ask_her_choice","effects":{"values":{"affectionAlbina":3,"trust":5,"artResonance":2},"setFlags":["seal_choice_hers"],"unlockCg":["surgery_of_memory"]}}]},{"version":2,"id":"golden_bough_011","chapter":11,"route":"golden_bough_rebuild","locationId":"limbus_bus","backgroundAssetId":"bg.limbus_bus","cgAssetId":"cg.limbus_bus_night","videoAssetId":"video.animated.runtime.golden_bough_rebuild_scene_11","desktopVideoAssetId":"video.animated.desktop.golden_bough_rebuild_scene_11","tone":"quiet","portraits":[{"characterId":"dante","portraitAssetId":"portrait.dante.normal","position":"left","active":false,"scale":0.8},{"characterId":"albina","portraitAssetId":"portrait.albina.rain","position":"center","active":true,"scale":1},{"characterId":"protagonist","portraitAssetId":"portrait.protagonist.tender","position":"right","active":false,"scale":0.9}],"speaker":"阿尔比娜","text":"夜班巴士上，她把额头轻轻抵在窗玻璃上。她说：你今天替我守住的，不是金枝，是一个允许我继续修改自己的我。","voiceAssetId":"voice.scene.golden_bough_011","bgmAssetId":"file.audio.bgm.title.theme.mp3","choices":[{"id":"rebuild_011_sit_beside","text":"坐到她旁边，不说话","nextSceneId":"golden_bough_012","resultText":"你选择“坐到她旁边，不说话”。环指代理人：环指工坊里有人拿出一枚金枝仿品，提议替她换掉所有\\"未完成\\"的接口。她握紧法西娅，等你判断这是救济，还是又一次把她写成完成品的尝试。","resultVoiceAssetId":"voice.result.rebuild_011_sit_beside","effects":{"values":{"affectionAlbina":4,"trust":3,"artResonance":2},"setFlags":["silent_companionship"],"unlockCg":["limbus_bus_night"]}},{"id":"rebuild_011_ask_next_revision","text":"问她下一笔想修改哪里","nextSceneId":"golden_bough_012","resultText":"你选择“问她下一笔想修改哪里”。环指代理人：环指工坊里有人拿出一枚金枝仿品，提议替她换掉所有\\"未完成\\"的接口。她握紧法西娅，等你判断这是救济，还是又一次把她写成完成品的尝试。","resultVoiceAssetId":"voice.result.rebuild_011_ask_next_revision","effects":{"values":{"affectionAlbina":2,"trust":4,"artResonance":3},"setFlags":["next_revision_asked"],"unlockCg":["araya_rooftop"]}}]},{"version":2,"id":"golden_bough_012","chapter":12,"route":"golden_bough_rebuild","locationId":"ring_atelier","backgroundAssetId":"bg.ring_atelier","cgAssetId":"cg.conspiracy_contract","tone":"gallery","portraits":[{"characterId":"ren","portraitAssetId":"portrait.ren.normal","position":"left","active":false,"scale":0.84},{"characterId":"albina","portraitAssetId":"portrait.albina.furious","position":"center","active":true,"scale":1},{"characterId":"protagonist","portraitAssetId":"portrait.protagonist.battle","position":"right","active":false,"scale":0.92}],"speaker":"环指代理人","text":"环指工坊里有人拿出一枚金枝仿品，提议替她换掉所有\\"未完成\\"的接口。她握紧法西娅，等你判断这是救济，还是又一次把她写成完成品的尝试。","voiceAssetId":"voice.scene.golden_bough_012","bgmAssetId":"file.audio.bgm.title.theme.mp3","sfxAssetIds":["file.audio.se.glass.shatter.wav"],"choices":[{"id":"rebuild_012_break_contract","text":"当面撕毁那份替换协议","nextSceneId":"golden_bough_013","resultText":"你选择“当面撕毁那份替换协议”。阿尔比娜：回到金枝裂隙，她终于允许自己颤抖。她说：你不肯替我决定形状，那我能不能请求你，在我下一次重构失败时，仍然叫出我现在的名字？","resultVoiceAssetId":"voice.result.rebuild_012_break_contract","effects":{"values":{"trust":4,"danger":2,"artResonance":3},"setFlags":["replacement_contract_torn"],"unlockCg":["conspiracy_contract"]}},{"id":"rebuild_012_negotiate_terms","text":"替她重新谈判条件，不让她独自承担","nextSceneId":"golden_bough_013","resultText":"你选择“替她重新谈判条件，不让她独自承担”。阿尔比娜：回到金枝裂隙，她终于允许自己颤抖。她说：你不肯替我决定形状，那我能不能请求你，在我下一次重构失败时，仍然叫出我现在的名字？","resultVoiceAssetId":"voice.result.rebuild_012_negotiate_terms","effects":{"values":{"affectionAlbina":2,"trust":3,"artResonance":4},"setFlags":["terms_renegotiated"],"unlockCg":["surgery_of_memory"]}}]},{"version":2,"id":"golden_bough_013","chapter":13,"route":"golden_bough_rebuild","locationId":"golden_bough_fault","backgroundAssetId":"bg.golden_bough","cgAssetId":"cg.golden_bough_ending","tone":"golden","portraits":[{"characterId":"albina","portraitAssetId":"portrait.albina.golden-bough","position":"center","active":true,"scale":1},{"characterId":"fascia","portraitAssetId":"portrait.fascia.normal","position":"right","active":false,"scale":0.84},{"characterId":"protagonist","portraitAssetId":"portrait.protagonist.resolve","position":"left","active":false,"scale":0.92}],"speaker":"阿尔比娜","text":"回到金枝裂隙，她终于允许自己颤抖。她说：你不肯替我决定形状，那我能不能请求你，在我下一次重构失败时，仍然叫出我现在的名字？","voiceAssetId":"voice.scene.golden_bough_013","bgmAssetId":"file.audio.bgm.title.theme.mp3","choices":[{"id":"rebuild_013_promise_name","text":"答应她即使失败也记得这个名字","nextSceneId":"golden_bough_014","resultText":"你选择“答应她即使失败也记得这个名字”。阿尔比娜：镜廊最后一面镜子没有给倒影，只映出一枚未熄的金枝。她把镜子推向你：请你替我保管它，但不要替我点亮它。","resultVoiceAssetId":"voice.result.rebuild_013_promise_name","effects":{"values":{"affectionAlbina":4,"trust":5,"artResonance":3},"setFlags":["name_promise_given"],"unlockCg":["golden_bough_ending"]}},{"id":"rebuild_013_offer_witness","text":"只承诺做见证，不承诺结果","nextSceneId":"golden_bough_014","resultText":"你选择“只承诺做见证，不承诺结果”。阿尔比娜：镜廊最后一面镜子没有给倒影，只映出一枚未熄的金枝。她把镜子推向你：请你替我保管它，但不要替我点亮它。","resultVoiceAssetId":"voice.result.rebuild_013_offer_witness","effects":{"values":{"affectionAlbina":2,"trust":4,"artResonance":4},"setFlags":["witness_only_promise"],"unlockCg":["surgery_of_memory"]}}]},{"version":2,"id":"golden_bough_014","chapter":14,"route":"golden_bough_rebuild","locationId":"mirror_corridor","backgroundAssetId":"bg.mirror_corridor","cgAssetId":"cg.araya_rooftop","tone":"golden","portraits":[{"characterId":"albina","portraitAssetId":"portrait.albina.endgame","position":"center","active":true,"scale":1},{"characterId":"protagonist","portraitAssetId":"portrait.protagonist.resolve","position":"left","active":false,"scale":0.92}],"speaker":"阿尔比娜","text":"镜廊最后一面镜子没有给倒影，只映出一枚未熄的金枝。她把镜子推向你：请你替我保管它，但不要替我点亮它。","voiceAssetId":"voice.scene.golden_bough_014","bgmAssetId":"file.audio.bgm.title.theme.mp3","choices":[{"id":"rebuild_014_keep_unlit","text":"答应只保管，不替她点亮","nextSceneId":"golden_bough_015","resultText":"你选择“答应只保管，不替她点亮”。阿尔比娜：黎明把金枝的光尘压成一层很薄的金属。她抬头看你，第一次没有问该不该重构自己，而是说：谢谢你愿意陪我等到这一层颜色冷却。","resultVoiceAssetId":"voice.result.rebuild_014_keep_unlit","effects":{"values":{"affectionAlbina":3,"trust":5,"artResonance":3},"setFlags":["gilded_bough_kept_unlit"],"unlockCg":["golden_bough_ending"]}},{"id":"rebuild_014_ask_when_to_light","text":"问她什么时刻才能点亮","nextSceneId":"golden_bough_015","resultText":"你选择“问她什么时刻才能点亮”。阿尔比娜：黎明把金枝的光尘压成一层很薄的金属。她抬头看你，第一次没有问该不该重构自己，而是说：谢谢你愿意陪我等到这一层颜色冷却。","resultVoiceAssetId":"voice.result.rebuild_014_ask_when_to_light","effects":{"values":{"affectionAlbina":3,"trust":3,"artResonance":4},"setFlags":["lighting_condition_asked"],"unlockCg":["araya_rooftop"]}}]},{"version":2,"id":"golden_bough_015","chapter":15,"route":"golden_bough_rebuild","locationId":"outskirts_dawn","backgroundAssetId":"bg.outskirts_dawn","cgAssetId":"cg.golden_bough_ending","videoAssetId":"video.animated.runtime.golden_bough_rebuild_scene_15","desktopVideoAssetId":"video.animated.desktop.golden_bough_rebuild_scene_15","tone":"golden","portraits":[{"characterId":"protagonist","portraitAssetId":"portrait.protagonist.resolve","position":"left","active":false,"scale":0.92},{"characterId":"albina","portraitAssetId":"portrait.albina.endgame","position":"center","active":true,"scale":1}],"speaker":"阿尔比娜","text":"黎明把金枝的光尘压成一层很薄的金属。她抬头看你，第一次没有问该不该重构自己，而是说：谢谢你愿意陪我等到这一层颜色冷却。","voiceAssetId":"voice.scene.golden_bough_015","bgmAssetId":"file.audio.bgm.title.theme.mp3","choices":[{"id":"golden_bough_route_final","text":"为金枝重构路线落最后一笔","nextSceneId":"golden_bough_rebuild_ending_gate","resultText":"你选择“为金枝重构路线落最后一笔”。金枝重构路线终章已封存，进入固定结局资格判定。","resultVoiceAssetId":"voice.result.golden_bough_route_final","effects":{"values":{"affectionAlbina":3,"trust":3,"danger":-2,"artResonance":4},"setFlags":["golden_bough_route_final"]}}]},{"version":2,"id":"golden_bough_rebuild_ending_gate","chapter":16,"route":"golden_bough_rebuild","locationId":"outskirts_dawn","backgroundAssetId":"bg.outskirts_dawn","cgAssetId":"cg.golden_bough_ending","tone":"golden","portraits":[{"characterId":"protagonist","portraitAssetId":"portrait.protagonist.resolve","position":"left","active":false,"scale":0.92},{"characterId":"albina","portraitAssetId":"portrait.albina.endgame","position":"center","active":true,"scale":1}],"speaker":"叙事记录","text":"金枝重构的全部选择已封存。系统将只依据持久状态判定结局，不请求任何运行时生成。","voiceAssetId":"voice.scene.golden_bough_rebuild_ending_gate","bgmAssetId":"file.audio.bgm.title.theme.mp3","choices":[{"id":"golden_bough_rebuild_choose_true_ending","text":"确认彼此共同抵达的真结局","nextSceneId":"golden_bough_rebuild_ending_true","resultText":"结局判定完成：金枝重构·TRUE。资格规则与选择记录已固定写入。","resultVoiceAssetId":"voice.result.golden_bough_rebuild.true_ending","availability":{"allOf":[{"kind":"flag","flag":"golden_bough_route_final","equals":true},{"kind":"value","key":"trust","operator":"gte","value":56},{"kind":"value","key":"artResonance","operator":"gte","value":50},{"kind":"value","key":"danger","operator":"lte","value":8}]},"effects":{"setFlags":["ending_golden_bough_rebuild_true_qualified"]}},{"id":"golden_bough_rebuild_choose_normal_ending","text":"接受仍留有余白的普通结局","nextSceneId":"golden_bough_rebuild_ending_normal","resultText":"结局判定完成：金枝重构·NORMAL。资格规则与选择记录已固定写入。","resultVoiceAssetId":"voice.result.golden_bough_rebuild.normal_ending","availability":{"allOf":[{"kind":"flag","flag":"golden_bough_route_final","equals":true}],"fallback":true},"effects":{"setFlags":["ending_golden_bough_rebuild_normal_qualified"]}},{"id":"golden_bough_rebuild_choose_bad_ending","text":"承认这次未能跨过的坏结局","nextSceneId":"golden_bough_rebuild_ending_bad","resultText":"结局判定完成：金枝重构·BAD。资格规则与选择记录已固定写入。","resultVoiceAssetId":"voice.result.golden_bough_rebuild.bad_ending","availability":{"allOf":[{"kind":"flag","flag":"golden_bough_route_final","equals":true}],"anyOf":[{"kind":"value","key":"trust","operator":"lte","value":49},{"kind":"value","key":"artResonance","operator":"lte","value":44}]},"effects":{"setFlags":["ending_golden_bough_rebuild_bad_qualified"]}}]},{"version":2,"id":"golden_bough_rebuild_ending_true","chapter":17,"route":"golden_bough_rebuild","locationId":"outskirts_dawn","backgroundAssetId":"bg.outskirts_dawn","cgAssetId":"cg.golden_bough_ending","videoAssetId":"video.animated.runtime.golden_bough_rebuild_ending_true","desktopVideoAssetId":"video.animated.desktop.golden_bough_rebuild_ending_true","tone":"golden","portraits":[{"characterId":"protagonist","portraitAssetId":"portrait.protagonist.resolve","position":"left","active":false,"scale":0.92},{"characterId":"albina","portraitAssetId":"portrait.albina.endgame","position":"center","active":true,"scale":1}],"speaker":"阿尔比娜","text":"金枝残响终于与法西娅的心跳重合。阿尔比娜记得每一次称呼、暂停和重新确认；她以新的身体醒来，也完整记得是谁陪她走过重构。","voiceAssetId":"voice.scene.golden_bough_rebuild_ending_true","bgmAssetId":"file.audio.bgm.title.theme.mp3","choices":[],"ending":{"route":"golden_bough_rebuild","kind":"true","eligibility":{"allOf":[{"kind":"flag","flag":"golden_bough_route_final","equals":true},{"kind":"value","key":"trust","operator":"gte","value":56},{"kind":"value","key":"artResonance","operator":"gte","value":50},{"kind":"value","key":"danger","operator":"lte","value":8}]}}},{"version":2,"id":"golden_bough_rebuild_ending_normal","chapter":17,"route":"golden_bough_rebuild","locationId":"outskirts_dawn","backgroundAssetId":"bg.outskirts_dawn","cgAssetId":"cg.golden_bough_ending","videoAssetId":"video.animated.runtime.golden_bough_rebuild_ending_normal","desktopVideoAssetId":"video.animated.desktop.golden_bough_rebuild_ending_normal","tone":"golden","portraits":[{"characterId":"protagonist","portraitAssetId":"portrait.protagonist.resolve","position":"left","active":false,"scale":0.92},{"characterId":"albina","portraitAssetId":"portrait.albina.endgame","position":"center","active":true,"scale":1}],"speaker":"阿尔比娜","text":"重构在可控范围内结束。部分残响仍被封存在金色薄膜后，但阿尔比娜认得你，也认得自己。你们决定把余下修复交给时间。","voiceAssetId":"voice.scene.golden_bough_rebuild_ending_normal","bgmAssetId":"file.audio.bgm.title.theme.mp3","choices":[],"ending":{"route":"golden_bough_rebuild","kind":"normal","eligibility":{"allOf":[{"kind":"flag","flag":"golden_bough_route_final","equals":true}],"fallback":true}}},{"version":2,"id":"golden_bough_rebuild_ending_bad","chapter":17,"route":"golden_bough_rebuild","locationId":"outskirts_dawn","backgroundAssetId":"bg.outskirts_dawn","cgAssetId":"cg.golden_bough_ending","videoAssetId":"video.animated.runtime.golden_bough_rebuild_ending_bad","desktopVideoAssetId":"video.animated.desktop.golden_bough_rebuild_ending_bad","tone":"golden","portraits":[{"characterId":"protagonist","portraitAssetId":"portrait.protagonist.resolve","position":"left","active":false,"scale":0.92},{"characterId":"albina","portraitAssetId":"portrait.albina.endgame","position":"center","active":true,"scale":1}],"speaker":"阿尔比娜","text":"稳定槽保住了身体，却没能保住全部连续性。阿尔比娜醒来时仍然礼貌，只把你当作可靠的见证者；被遗漏的称呼沉在金枝深处。","voiceAssetId":"voice.scene.golden_bough_rebuild_ending_bad","bgmAssetId":"file.audio.bgm.title.theme.mp3","choices":[],"ending":{"route":"golden_bough_rebuild","kind":"bad","eligibility":{"allOf":[{"kind":"flag","flag":"golden_bough_route_final","equals":true}],"anyOf":[{"kind":"value","key":"trust","operator":"lte","value":49},{"kind":"value","key":"artResonance","operator":"lte","value":44}]}}},{"version":2,"id":"ring_conspiracy_001","chapter":1,"route":"ring_conspiracy","locationId":"spider_gallery","backgroundAssetId":"bg.spider_gallery","cgAssetId":"cg.conspiracy_contract","tone":"threat","portraits":[{"characterId":"callisto","portraitAssetId":"portrait.callisto.normal","position":"left","active":false,"scale":0.86},{"characterId":"albina","portraitAssetId":"portrait.albina.ring-conspiracy","position":"center","active":true,"scale":1},{"characterId":"ren","portraitAssetId":"portrait.ren.normal","position":"right","active":false,"scale":0.84}],"speaker":"阿尔比娜","text":"蜘蛛巢的灯光像手术刀一样落下。她向你递来一份没有署名的委托，笑得礼貌又危险。","voiceAssetId":"voice.scene.ring_conspiracy_001","bgmAssetId":"file.audio.bgm.boss.kromer.mp3","sfxAssetIds":["file.audio.se.slash.heavy.wav"],"choices":[{"id":"conspiracy_accept","text":"接下委托，但保留自己的条件","nextSceneId":"ring_conspiracy_002","resultText":"你选择“接下委托，但保留自己的条件”。阿尔比娜：她第一次没有把怒意伪装成礼貌。那不是要毁掉你的眼神，更像是不允许任何人替她决定你的用途。","resultVoiceAssetId":"voice.result.conspiracy_accept","effects":{"values":{"trust":2,"danger":3,"artResonance":3},"setFlags":["contract_with_boundary"],"unlockCg":["conspiracy_contract"]}},{"id":"conspiracy_pressure","text":"逼她说出真正目标","nextSceneId":"ring_conspiracy_002","resultText":"你选择“逼她说出真正目标”。阿尔比娜：她第一次没有把怒意伪装成礼貌。那不是要毁掉你的眼神，更像是不允许任何人替她决定你的用途。","resultVoiceAssetId":"voice.result.conspiracy_pressure","effects":{"values":{"affectionAlbina":1,"danger":4,"artResonance":2},"setFlags":["pressed_true_goal"],"unlockCg":["maestro_shadow"]}}]},{"version":2,"id":"ring_conspiracy_002","chapter":2,"route":"ring_conspiracy","locationId":"ring_atelier","backgroundAssetId":"bg.ring_atelier","cgAssetId":"cg.ring_conspiracy_ending","tone":"gallery","portraits":[{"characterId":"albina","portraitAssetId":"portrait.albina.furious","position":"right","active":true,"scale":1},{"characterId":"protagonist","portraitAssetId":"portrait.protagonist.battle","position":"left","active":false,"scale":0.95}],"speaker":"阿尔比娜","text":"她第一次没有把怒意伪装成礼貌。那不是要毁掉你的眼神，更像是不允许任何人替她决定你的用途。","voiceAssetId":"voice.scene.ring_conspiracy_002","bgmAssetId":"file.audio.bgm.boss.kromer.mp3","sfxAssetIds":["file.audio.se.glass.shatter.wav"],"choices":[{"id":"conspiracy_escape_to_backstreets","text":"带着未签名委托冲出画廊","nextSceneId":"ring_conspiracy_003","resultText":"你选择“带着未签名委托冲出画廊”。环指代理人：追兵把雨巷切成一个个展格，仿佛你们已经是可出售的连环画。阿尔比娜没有回头，只把法西娅横在你和委托书之间。","resultVoiceAssetId":"voice.result.conspiracy_escape_to_backstreets","effects":{"values":{"trust":2,"danger":3,"artResonance":2},"setFlags":["ring_escape_committed"],"unlockCg":["backstreet_pursuit"]}},{"id":"return_opening_from_ring","text":"回到路线选择","nextSceneId":"opening_001","resultText":"你选择“回到路线选择”。阿尔比娜：晚上好，{{user}}。请不要站得太远，我还没决定该把你称作观众、朋友，还是一块值得等待的画布。","resultVoiceAssetId":"voice.result.return_opening_from_ring","effects":{"values":{"trust":1,"danger":-1},"setFlags":["conspiracy_looped"]}}]},{"version":2,"id":"ring_conspiracy_003","chapter":3,"route":"ring_conspiracy","locationId":"backstreets_rain","backgroundAssetId":"bg.backstreets_rain","cgAssetId":"cg.backstreet_pursuit","videoAssetId":"video.animated.runtime.ring_conspiracy_scene_3","desktopVideoAssetId":"video.animated.desktop.ring_conspiracy_scene_3","tone":"threat","portraits":[{"characterId":"ring_agent","portraitAssetId":"portrait.ring_agent.normal","position":"left","active":false,"scale":0.84},{"characterId":"albina","portraitAssetId":"portrait.albina.combat","position":"center","active":true,"scale":1},{"characterId":"protagonist","portraitAssetId":"portrait.protagonist.battle","position":"right","active":false,"scale":0.92}],"speaker":"环指代理人","text":"追兵把雨巷切成一个个展格，仿佛你们已经是可出售的连环画。阿尔比娜没有回头，只把法西娅横在你和委托书之间。","voiceAssetId":"voice.scene.ring_conspiracy_003","bgmAssetId":"file.audio.bgm.boss.kromer.mp3","sfxAssetIds":["file.audio.se.slash.heavy.wav"],"choices":[{"id":"conspiracy_break_pursuit_frame","text":"打碎追兵布下的取景框","nextSceneId":"ring_conspiracy_004","resultText":"你选择“打碎追兵布下的取景框”。阿尔比娜：回到蜘蛛画廊时，所有灯都向她弯下去。她把那份委托钉在空框里，语气平静：如果他们要收藏背叛，就先学会被背叛凝视。","resultVoiceAssetId":"voice.result.conspiracy_break_pursuit_frame","effects":{"values":{"trust":3,"danger":2,"artResonance":3},"setFlags":["pursuit_frame_broken"],"unlockCg":["combat_transition_01"]}},{"id":"conspiracy_feed_false_signature","text":"交出伪造签名引开视线","nextSceneId":"ring_conspiracy_004","resultText":"你选择“交出伪造签名引开视线”。阿尔比娜：回到蜘蛛画廊时，所有灯都向她弯下去。她把那份委托钉在空框里，语气平静：如果他们要收藏背叛，就先学会被背叛凝视。","resultVoiceAssetId":"voice.result.conspiracy_feed_false_signature","effects":{"values":{"trust":2,"danger":-1,"artResonance":4},"setFlags":["false_signature_planted"],"unlockCg":["ren_interruption"]}}]},{"version":2,"id":"ring_conspiracy_004","chapter":4,"route":"ring_conspiracy","locationId":"spider_gallery","backgroundAssetId":"bg.spider_gallery","cgAssetId":"cg.maestro_shadow","tone":"gallery","portraits":[{"characterId":"ren","portraitAssetId":"portrait.ren.normal","position":"left","active":false,"scale":0.82},{"characterId":"albina","portraitAssetId":"portrait.albina.maestro","position":"center","active":true,"scale":1},{"characterId":"protagonist","portraitAssetId":"portrait.protagonist.shadow","position":"right","active":false,"scale":0.9}],"speaker":"阿尔比娜","text":"回到蜘蛛画廊时，所有灯都向她弯下去。她把那份委托钉在空框里，语气平静：如果他们要收藏背叛，就先学会被背叛凝视。","voiceAssetId":"voice.scene.ring_conspiracy_004","bgmAssetId":"file.audio.bgm.boss.kromer.mp3","sfxAssetIds":["file.audio.se.glass.shatter.wav"],"choices":[{"id":"ring_conspiracy_route_complete","text":"记录环指共谋路线的暂定结局","nextSceneId":"ring_conspiracy_005","resultText":"你选择“记录环指共谋路线的暂定结局”。卡利斯托：卡利斯托把另一份署了名的委托推到你们中间，笑得像在挑礼物：既然上次没有展出你的缺陷，这次不如让你们两个一起成为一件合作作品。","resultVoiceAssetId":"voice.result.ring_conspiracy_route_complete","effects":{"values":{"affectionAlbina":1,"trust":2,"danger":-2,"artResonance":3},"setFlags":["ring_conspiracy_route_complete"],"unlockCg":["ring_conspiracy_ending"]}}]},{"version":2,"id":"ring_conspiracy_005","chapter":5,"route":"ring_conspiracy","locationId":"ring_atelier","backgroundAssetId":"bg.ring_atelier","cgAssetId":"cg.maestro_shadow","videoAssetId":"video.animated.runtime.ring_conspiracy_scene_5","desktopVideoAssetId":"video.animated.desktop.ring_conspiracy_scene_5","tone":"gallery","portraits":[{"characterId":"callisto","portraitAssetId":"portrait.callisto.normal","position":"left","active":false,"scale":0.86},{"characterId":"albina","portraitAssetId":"portrait.albina.maestro","position":"center","active":true,"scale":1},{"characterId":"protagonist","portraitAssetId":"portrait.protagonist.shadow","position":"right","active":false,"scale":0.9}],"speaker":"卡利斯托","text":"卡利斯托把另一份署了名的委托推到你们中间，笑得像在挑礼物：既然上次没有展出你的缺陷，这次不如让你们两个一起成为一件合作作品。","voiceAssetId":"voice.scene.ring_conspiracy_005","bgmAssetId":"file.audio.bgm.boss.kromer.mp3","sfxAssetIds":["file.audio.se.glass.shatter.wav"],"choices":[{"id":"conspiracy_005_refuse_duo","text":"当众拒绝成为合作展品","nextSceneId":"ring_conspiracy_006","resultText":"你选择“当众拒绝成为合作展品”。阿尔比娜：蜘蛛画廊的灯突然转向她。她把法西娅插进墙上一幅空框，声音很冷：你们想收藏我，那就先学会被我凝视。","resultVoiceAssetId":"voice.result.conspiracy_005_refuse_duo","effects":{"values":{"trust":3,"danger":2,"artResonance":3},"setFlags":["duo_exhibit_refused"],"unlockCg":["maestro_shadow"]}},{"id":"conspiracy_005_let_her_answer","text":"不替她回答，让阿尔比娜开口","nextSceneId":"ring_conspiracy_006","resultText":"你选择“不替她回答，让阿尔比娜开口”。阿尔比娜：蜘蛛画廊的灯突然转向她。她把法西娅插进墙上一幅空框，声音很冷：你们想收藏我，那就先学会被我凝视。","resultVoiceAssetId":"voice.result.conspiracy_005_let_her_answer","effects":{"values":{"affectionAlbina":2,"trust":4,"artResonance":4},"setFlags":["albina_answered_herself"],"unlockCg":["conspiracy_contract"]}}]},{"version":2,"id":"ring_conspiracy_006","chapter":6,"route":"ring_conspiracy","locationId":"spider_gallery","backgroundAssetId":"bg.spider_gallery","cgAssetId":"cg.conspiracy_contract","tone":"threat","portraits":[{"characterId":"ren","portraitAssetId":"portrait.ren.normal","position":"left","active":false,"scale":0.84},{"characterId":"albina","portraitAssetId":"portrait.albina.furious","position":"center","active":true,"scale":1},{"characterId":"protagonist","portraitAssetId":"portrait.protagonist.battle","position":"right","active":false,"scale":0.92}],"speaker":"阿尔比娜","text":"蜘蛛画廊的灯突然转向她。她把法西娅插进墙上一幅空框，声音很冷：你们想收藏我，那就先学会被我凝视。","voiceAssetId":"voice.scene.ring_conspiracy_006","bgmAssetId":"file.audio.bgm.boss.kromer.mp3","sfxAssetIds":["file.audio.se.slash.heavy.wav"],"choices":[{"id":"conspiracy_006_stand_with_her","text":"站到她身侧，分担凝视","nextSceneId":"ring_conspiracy_007","resultText":"你选择“站到她身侧，分担凝视”。环指代理人：雨巷的尽头被代理人堵住。他不拔武器，只是举起一面空画框，要把你们框进环指的目录。阿尔比娜低声让你选：是冲破画框，还是把它抢过来。","resultVoiceAssetId":"voice.result.conspiracy_006_stand_with_her","effects":{"values":{"affectionAlbina":3,"trust":4,"danger":1,"artResonance":3},"setFlags":["gaze_shared"],"unlockCg":["maestro_shadow"]}},{"id":"conspiracy_006_block_view","text":"挡在她和委托人之间","nextSceneId":"ring_conspiracy_007","resultText":"你选择“挡在她和委托人之间”。环指代理人：雨巷的尽头被代理人堵住。他不拔武器，只是举起一面空画框，要把你们框进环指的目录。阿尔比娜低声让你选：是冲破画框，还是把它抢过来。","resultVoiceAssetId":"voice.result.conspiracy_006_block_view","effects":{"values":{"affectionAlbina":2,"trust":3,"danger":3,"artResonance":2},"setFlags":["view_blocked"],"unlockCg":["combat_transition_01"]}}]},{"version":2,"id":"ring_conspiracy_007","chapter":7,"route":"ring_conspiracy","locationId":"backstreets_rain","backgroundAssetId":"bg.backstreets_rain","cgAssetId":"cg.backstreet_pursuit","tone":"threat","portraits":[{"characterId":"ring_agent","portraitAssetId":"portrait.ring_agent.normal","position":"left","active":false,"scale":0.84},{"characterId":"albina","portraitAssetId":"portrait.albina.combat","position":"center","active":true,"scale":1},{"characterId":"protagonist","portraitAssetId":"portrait.protagonist.battle","position":"right","active":false,"scale":0.92}],"speaker":"环指代理人","text":"雨巷的尽头被代理人堵住。他不拔武器，只是举起一面空画框，要把你们框进环指的目录。阿尔比娜低声让你选：是冲破画框，还是把它抢过来。","voiceAssetId":"voice.scene.ring_conspiracy_007","bgmAssetId":"file.audio.bgm.boss.kromer.mp3","sfxAssetIds":["file.audio.se.slash.heavy.wav"],"choices":[{"id":"conspiracy_007_break_frame","text":"冲破画框","nextSceneId":"ring_conspiracy_008","resultText":"你选择“冲破画框”。LCE 医师：LCE 把你们暂扣在手术间。医师递来一份中立证词表，说只要她肯指认环指，就帮她换掉被环指标注过的接口。她没有看表，先看你。","resultVoiceAssetId":"voice.result.conspiracy_007_break_frame","effects":{"values":{"trust":3,"danger":3,"artResonance":3},"setFlags":["street_frame_broken"],"unlockCg":["combat_transition_01"]}},{"id":"conspiracy_007_seize_frame","text":"把画框抢过来，反过来框住他","nextSceneId":"ring_conspiracy_008","resultText":"你选择“把画框抢过来，反过来框住他”。LCE 医师：LCE 把你们暂扣在手术间。医师递来一份中立证词表，说只要她肯指认环指，就帮她换掉被环指标注过的接口。她没有看表，先看你。","resultVoiceAssetId":"voice.result.conspiracy_007_seize_frame","effects":{"values":{"trust":4,"danger":2,"artResonance":4},"setFlags":["frame_seized"],"unlockCg":["maestro_shadow"]}}]},{"version":2,"id":"ring_conspiracy_008","chapter":8,"route":"ring_conspiracy","locationId":"lce_lab","backgroundAssetId":"bg.lce_lab","cgAssetId":"cg.lce_raid","videoAssetId":"video.animated.runtime.ring_conspiracy_scene_8","desktopVideoAssetId":"video.animated.desktop.ring_conspiracy_scene_8","tone":"threat","portraits":[{"characterId":"lce_doctor","portraitAssetId":"portrait.lce_doctor.normal","position":"left","active":false,"scale":0.84},{"characterId":"albina","portraitAssetId":"portrait.albina.surgical","position":"center","active":true,"scale":1},{"characterId":"protagonist","portraitAssetId":"portrait.protagonist.serious","position":"right","active":false,"scale":0.9}],"speaker":"LCE 医师","text":"LCE 把你们暂扣在手术间。医师递来一份中立证词表，说只要她肯指认环指，就帮她换掉被环指标注过的接口。她没有看表，先看你。","voiceAssetId":"voice.scene.ring_conspiracy_008","bgmAssetId":"file.audio.bgm.boss.kromer.mp3","sfxAssetIds":["file.audio.se.slash.heavy.wav"],"choices":[{"id":"conspiracy_008_refuse_testimony","text":"当面拒绝用她换取证词","nextSceneId":"ring_conspiracy_009","resultText":"你选择“当面拒绝用她换取证词”。阿尔比娜：镜廊里同时映出\\"环指版的她\\"和\\"现在的她\\"。她让法西娅在两面镜子之间选一面，然后问你：你愿意被哪一个版本记得？","resultVoiceAssetId":"voice.result.conspiracy_008_refuse_testimony","effects":{"values":{"affectionAlbina":2,"trust":5,"danger":2,"artResonance":2},"setFlags":["testimony_refused"],"unlockCg":["lce_raid"]}},{"id":"conspiracy_008_hand_pen_to_her","text":"把笔交还给她，由她自己决定","nextSceneId":"ring_conspiracy_009","resultText":"你选择“把笔交还给她，由她自己决定”。阿尔比娜：镜廊里同时映出\\"环指版的她\\"和\\"现在的她\\"。她让法西娅在两面镜子之间选一面，然后问你：你愿意被哪一个版本记得？","resultVoiceAssetId":"voice.result.conspiracy_008_hand_pen_to_her","effects":{"values":{"affectionAlbina":3,"trust":4,"artResonance":3},"setFlags":["pen_returned_to_albina"],"unlockCg":["conspiracy_contract"]}}]},{"version":2,"id":"ring_conspiracy_009","chapter":9,"route":"ring_conspiracy","locationId":"mirror_corridor","backgroundAssetId":"bg.mirror_corridor","cgAssetId":"cg.maestro_shadow","tone":"gallery","portraits":[{"characterId":"golden_apparition","portraitAssetId":"portrait.golden_apparition.normal","position":"left","active":false,"scale":0.82},{"characterId":"albina","portraitAssetId":"portrait.albina.maestro","position":"center","active":true,"scale":1},{"characterId":"protagonist","portraitAssetId":"portrait.protagonist.shadow","position":"right","active":false,"scale":0.9}],"speaker":"阿尔比娜","text":"镜廊里同时映出\\"环指版的她\\"和\\"现在的她\\"。她让法西娅在两面镜子之间选一面，然后问你：你愿意被哪一个版本记得？","voiceAssetId":"voice.scene.ring_conspiracy_009","bgmAssetId":"file.audio.bgm.boss.kromer.mp3","sfxAssetIds":["file.audio.se.glass.shatter.wav"],"choices":[{"id":"conspiracy_009_choose_present","text":"选现在的她，不挑那个环指版","nextSceneId":"ring_conspiracy_010","resultText":"你选择“选现在的她，不挑那个环指版”。卡利斯托：卡利斯托拿出一枚\\"合作者徽章\\"，说只要她肯戴上，环指就放过你。阿尔比娜笑了一下，把徽章塞进你掌心：你来替我决定，要不要让我用它换你。","resultVoiceAssetId":"voice.result.conspiracy_009_choose_present","effects":{"values":{"affectionAlbina":4,"trust":3,"artResonance":3},"setFlags":["present_albina_chosen"],"unlockCg":["art_resonance"]}},{"id":"conspiracy_009_refuse_choice","text":"拒绝回答，让她自己挑镜子","nextSceneId":"ring_conspiracy_010","resultText":"你选择“拒绝回答，让她自己挑镜子”。卡利斯托：卡利斯托拿出一枚\\"合作者徽章\\"，说只要她肯戴上，环指就放过你。阿尔比娜笑了一下，把徽章塞进你掌心：你来替我决定，要不要让我用它换你。","resultVoiceAssetId":"voice.result.conspiracy_009_refuse_choice","effects":{"values":{"affectionAlbina":2,"trust":4,"artResonance":4},"setFlags":["mirror_choice_returned"],"unlockCg":["maestro_shadow"]}}]},{"version":2,"id":"ring_conspiracy_010","chapter":10,"route":"ring_conspiracy","locationId":"ring_atelier","backgroundAssetId":"bg.ring_atelier","cgAssetId":"cg.conspiracy_contract","tone":"gallery","portraits":[{"characterId":"callisto","portraitAssetId":"portrait.callisto.normal","position":"left","active":false,"scale":0.84},{"characterId":"albina","portraitAssetId":"portrait.albina.furious","position":"center","active":true,"scale":1},{"characterId":"protagonist","portraitAssetId":"portrait.protagonist.battle","position":"right","active":false,"scale":0.92}],"speaker":"卡利斯托","text":"卡利斯托拿出一枚\\"合作者徽章\\"，说只要她肯戴上，环指就放过你。阿尔比娜笑了一下，把徽章塞进你掌心：你来替我决定，要不要让我用它换你。","voiceAssetId":"voice.scene.ring_conspiracy_010","bgmAssetId":"file.audio.bgm.boss.kromer.mp3","sfxAssetIds":["file.audio.se.glass.shatter.wav"],"choices":[{"id":"conspiracy_010_throw_badge","text":"把徽章扔回卡利斯托脸上","nextSceneId":"ring_conspiracy_011","resultText":"你选择“把徽章扔回卡利斯托脸上”。环指代理人：代理人撕下礼貌，举出一卷写好剧本的胶片：今晚的故事已经定稿，结局是你们两个都被装裱。阿尔比娜握紧法西娅，低声让你替她改写最后一格分镜。","resultVoiceAssetId":"voice.result.conspiracy_010_throw_badge","effects":{"values":{"affectionAlbina":3,"trust":4,"danger":3,"artResonance":2},"setFlags":["badge_thrown"],"unlockCg":["combat_transition_01"]}},{"id":"conspiracy_010_keep_badge_unworn","text":"收下徽章，但谁都不许戴","nextSceneId":"ring_conspiracy_011","resultText":"你选择“收下徽章，但谁都不许戴”。环指代理人：代理人撕下礼貌，举出一卷写好剧本的胶片：今晚的故事已经定稿，结局是你们两个都被装裱。阿尔比娜握紧法西娅，低声让你替她改写最后一格分镜。","resultVoiceAssetId":"voice.result.conspiracy_010_keep_badge_unworn","effects":{"values":{"affectionAlbina":2,"trust":3,"danger":1,"artResonance":4},"setFlags":["badge_kept_unworn"],"unlockCg":["maestro_shadow"]}}]},{"version":2,"id":"ring_conspiracy_011","chapter":11,"route":"ring_conspiracy","locationId":"spider_gallery","backgroundAssetId":"bg.spider_gallery","cgAssetId":"cg.maestro_shadow","videoAssetId":"video.animated.runtime.ring_conspiracy_scene_11","desktopVideoAssetId":"video.animated.desktop.ring_conspiracy_scene_11","tone":"threat","portraits":[{"characterId":"ren","portraitAssetId":"portrait.ren.normal","position":"left","active":false,"scale":0.82},{"characterId":"albina","portraitAssetId":"portrait.albina.combat","position":"center","active":true,"scale":1},{"characterId":"protagonist","portraitAssetId":"portrait.protagonist.battle","position":"right","active":false,"scale":0.92}],"speaker":"环指代理人","text":"代理人撕下礼貌，举出一卷写好剧本的胶片：今晚的故事已经定稿，结局是你们两个都被装裱。阿尔比娜握紧法西娅，低声让你替她改写最后一格分镜。","voiceAssetId":"voice.scene.ring_conspiracy_011","bgmAssetId":"file.audio.bgm.boss.kromer.mp3","sfxAssetIds":["file.audio.se.slash.heavy.wav"],"choices":[{"id":"conspiracy_011_rewrite_ending","text":"当众改写结局，让他们措手不及","nextSceneId":"ring_conspiracy_012","resultText":"你选择“当众改写结局，让他们措手不及”。维吉利乌斯：楼顶上，维吉利乌斯把一柄已经卸下锋刃的环指画刀扔在你们脚边：用这个结束今晚，或者用它开始下一次共谋，你们自己挑。","resultVoiceAssetId":"voice.result.conspiracy_011_rewrite_ending","effects":{"values":{"trust":4,"danger":2,"artResonance":4},"setFlags":["ending_rewritten"],"unlockCg":["ring_conspiracy_ending"]}},{"id":"conspiracy_011_burn_film","text":"直接烧掉胶片，让剧本作废","nextSceneId":"ring_conspiracy_012","resultText":"你选择“直接烧掉胶片，让剧本作废”。维吉利乌斯：楼顶上，维吉利乌斯把一柄已经卸下锋刃的环指画刀扔在你们脚边：用这个结束今晚，或者用它开始下一次共谋，你们自己挑。","resultVoiceAssetId":"voice.result.conspiracy_011_burn_film","effects":{"values":{"trust":3,"danger":4,"artResonance":3},"setFlags":["film_burned"],"unlockCg":["combat_transition_01"]}}]},{"version":2,"id":"ring_conspiracy_012","chapter":12,"route":"ring_conspiracy","locationId":"city_rooftop","backgroundAssetId":"bg.city_rooftop","cgAssetId":"cg.araya_rooftop","tone":"threat","portraits":[{"characterId":"vergilius","portraitAssetId":"portrait.vergilius.normal","position":"left","active":false,"scale":0.84},{"characterId":"albina","portraitAssetId":"portrait.albina.rain","position":"center","active":true,"scale":1},{"characterId":"protagonist","portraitAssetId":"portrait.protagonist.resolve","position":"right","active":false,"scale":0.92}],"speaker":"维吉利乌斯","text":"楼顶上，维吉利乌斯把一柄已经卸下锋刃的环指画刀扔在你们脚边：用这个结束今晚，或者用它开始下一次共谋，你们自己挑。","voiceAssetId":"voice.scene.ring_conspiracy_012","bgmAssetId":"file.audio.bgm.boss.kromer.mp3","sfxAssetIds":["file.audio.se.slash.heavy.wav"],"choices":[{"id":"conspiracy_012_end_tonight","text":"选择结束今晚的共谋","nextSceneId":"ring_conspiracy_013","resultText":"你选择“选择结束今晚的共谋”。阿尔比娜：夜班巴士把你们带离环指的视线。她靠在窗边，把法西娅从胸口取出来放在你掌心一秒：今晚我借你这一秒心跳，作为不签名的合作凭证。","resultVoiceAssetId":"voice.result.conspiracy_012_end_tonight","effects":{"values":{"affectionAlbina":2,"trust":3,"danger":-2,"artResonance":3},"setFlags":["night_ended"],"unlockCg":["ring_conspiracy_ending"]}},{"id":"conspiracy_012_keep_blade","text":"收下画刀，留给未来必要时再用","nextSceneId":"ring_conspiracy_013","resultText":"你选择“收下画刀，留给未来必要时再用”。阿尔比娜：夜班巴士把你们带离环指的视线。她靠在窗边，把法西娅从胸口取出来放在你掌心一秒：今晚我借你这一秒心跳，作为不签名的合作凭证。","resultVoiceAssetId":"voice.result.conspiracy_012_keep_blade","effects":{"values":{"affectionAlbina":1,"trust":4,"danger":1,"artResonance":4},"setFlags":["blade_kept"],"unlockCg":["maestro_shadow"]}}]},{"version":2,"id":"ring_conspiracy_013","chapter":13,"route":"ring_conspiracy","locationId":"limbus_bus","backgroundAssetId":"bg.limbus_bus","cgAssetId":"cg.limbus_bus_night","tone":"quiet","portraits":[{"characterId":"dante","portraitAssetId":"portrait.dante.normal","position":"left","active":false,"scale":0.8},{"characterId":"albina","portraitAssetId":"portrait.albina.rain","position":"center","active":true,"scale":1},{"characterId":"protagonist","portraitAssetId":"portrait.protagonist.wet-hair","position":"right","active":false,"scale":0.9}],"speaker":"阿尔比娜","text":"夜班巴士把你们带离环指的视线。她靠在窗边，把法西娅从胸口取出来放在你掌心一秒：今晚我借你这一秒心跳，作为不签名的合作凭证。","voiceAssetId":"voice.scene.ring_conspiracy_013","bgmAssetId":"file.audio.bgm.boss.kromer.mp3","choices":[{"id":"conspiracy_013_hold_one_second","text":"认真握住那一秒，不多不少","nextSceneId":"ring_conspiracy_014","resultText":"你选择“认真握住那一秒，不多不少”。卡利斯托：巢穴车站最后一盏灯下，卡利斯托最后一次出现，递来一张空白入场券：你愿意把今晚写进环指的目录，还是彻底从目录里抹去？","resultVoiceAssetId":"voice.result.conspiracy_013_hold_one_second","effects":{"values":{"affectionAlbina":4,"trust":3,"artResonance":3},"setFlags":["one_second_held"],"unlockCg":["fascia_heartbeat"]}},{"id":"conspiracy_013_return_gently","text":"提前把它轻轻送回，不占有","nextSceneId":"ring_conspiracy_014","resultText":"你选择“提前把它轻轻送回，不占有”。卡利斯托：巢穴车站最后一盏灯下，卡利斯托最后一次出现，递来一张空白入场券：你愿意把今晚写进环指的目录，还是彻底从目录里抹去？","resultVoiceAssetId":"voice.result.conspiracy_013_return_gently","effects":{"values":{"affectionAlbina":2,"trust":5,"artResonance":4},"setFlags":["heartbeat_returned_early"],"unlockCg":["rain_reflection"]}}]},{"version":2,"id":"ring_conspiracy_014","chapter":14,"route":"ring_conspiracy","locationId":"nest_station","backgroundAssetId":"bg.nest_station","cgAssetId":"cg.ring_conspiracy_ending","tone":"gallery","portraits":[{"characterId":"callisto","portraitAssetId":"portrait.callisto.normal","position":"left","active":false,"scale":0.82},{"characterId":"albina","portraitAssetId":"portrait.albina.maestro","position":"center","active":true,"scale":1},{"characterId":"protagonist","portraitAssetId":"portrait.protagonist.shadow","position":"right","active":false,"scale":0.9}],"speaker":"卡利斯托","text":"巢穴车站最后一盏灯下，卡利斯托最后一次出现，递来一张空白入场券：你愿意把今晚写进环指的目录，还是彻底从目录里抹去？","voiceAssetId":"voice.scene.ring_conspiracy_014","bgmAssetId":"file.audio.bgm.boss.kromer.mp3","sfxAssetIds":["file.audio.se.glass.shatter.wav"],"choices":[{"id":"conspiracy_014_erase_from_catalog","text":"选择从环指目录里彻底抹去","nextSceneId":"ring_conspiracy_015","resultText":"你选择“选择从环指目录里彻底抹去”。阿尔比娜：城郊黎明把环指的灯火远远压在身后。她停下脚步，把那柄卸下锋刃的画刀插进土里：今晚的共谋到此为止，下一次见面，我会以自己的名义邀请你。","resultVoiceAssetId":"voice.result.conspiracy_014_erase_from_catalog","effects":{"values":{"affectionAlbina":2,"trust":4,"danger":-2,"artResonance":3},"setFlags":["catalog_erased"],"unlockCg":["ring_conspiracy_ending"]}},{"id":"conspiracy_014_keep_one_line","text":"只保留一行不被署名的记录","nextSceneId":"ring_conspiracy_015","resultText":"你选择“只保留一行不被署名的记录”。阿尔比娜：城郊黎明把环指的灯火远远压在身后。她停下脚步，把那柄卸下锋刃的画刀插进土里：今晚的共谋到此为止，下一次见面，我会以自己的名义邀请你。","resultVoiceAssetId":"voice.result.conspiracy_014_keep_one_line","effects":{"values":{"affectionAlbina":3,"trust":3,"artResonance":4},"setFlags":["anonymous_line_kept"],"unlockCg":["maestro_shadow"]}}]},{"version":2,"id":"ring_conspiracy_015","chapter":15,"route":"ring_conspiracy","locationId":"outskirts_dawn","backgroundAssetId":"bg.outskirts_dawn","cgAssetId":"cg.ring_conspiracy_ending","videoAssetId":"video.animated.runtime.ring_conspiracy_scene_15","desktopVideoAssetId":"video.animated.desktop.ring_conspiracy_scene_15","tone":"quiet","portraits":[{"characterId":"protagonist","portraitAssetId":"portrait.protagonist.resolve","position":"left","active":false,"scale":0.92},{"characterId":"albina","portraitAssetId":"portrait.albina.endgame","position":"center","active":true,"scale":1}],"speaker":"阿尔比娜","text":"城郊黎明把环指的灯火远远压在身后。她停下脚步，把那柄卸下锋刃的画刀插进土里：今晚的共谋到此为止，下一次见面，我会以自己的名义邀请你。","voiceAssetId":"voice.scene.ring_conspiracy_015","bgmAssetId":"file.audio.bgm.boss.kromer.mp3","choices":[{"id":"ring_conspiracy_route_final","text":"为环指共谋路线合上最后一卷胶片","nextSceneId":"ring_conspiracy_ending_gate","resultText":"你选择“为环指共谋路线合上最后一卷胶片”。环指共谋路线终章已封存，进入固定结局资格判定。","resultVoiceAssetId":"voice.result.ring_conspiracy_route_final","effects":{"values":{"affectionAlbina":3,"trust":3,"danger":-2,"artResonance":4},"setFlags":["ring_conspiracy_route_final"]}}]},{"version":2,"id":"ring_conspiracy_ending_gate","chapter":16,"route":"ring_conspiracy","locationId":"outskirts_dawn","backgroundAssetId":"bg.outskirts_dawn","cgAssetId":"cg.ring_conspiracy_ending","tone":"quiet","portraits":[{"characterId":"protagonist","portraitAssetId":"portrait.protagonist.resolve","position":"left","active":false,"scale":0.92},{"characterId":"albina","portraitAssetId":"portrait.albina.endgame","position":"center","active":true,"scale":1}],"speaker":"叙事记录","text":"环指共谋的全部选择已封存。系统将只依据持久状态判定结局，不请求任何运行时生成。","voiceAssetId":"voice.scene.ring_conspiracy_ending_gate","bgmAssetId":"file.audio.bgm.boss.kromer.mp3","choices":[{"id":"ring_conspiracy_choose_true_ending","text":"确认彼此共同抵达的真结局","nextSceneId":"ring_conspiracy_ending_true","resultText":"结局判定完成：环指共谋·TRUE。资格规则与选择记录已固定写入。","resultVoiceAssetId":"voice.result.ring_conspiracy.true_ending","availability":{"allOf":[{"kind":"flag","flag":"ring_conspiracy_route_final","equals":true},{"kind":"value","key":"trust","operator":"gte","value":49},{"kind":"value","key":"artResonance","operator":"gte","value":49},{"kind":"value","key":"danger","operator":"lte","value":15}]},"effects":{"setFlags":["ending_ring_conspiracy_true_qualified"]}},{"id":"ring_conspiracy_choose_normal_ending","text":"接受仍留有余白的普通结局","nextSceneId":"ring_conspiracy_ending_normal","resultText":"结局判定完成：环指共谋·NORMAL。资格规则与选择记录已固定写入。","resultVoiceAssetId":"voice.result.ring_conspiracy.normal_ending","availability":{"allOf":[{"kind":"flag","flag":"ring_conspiracy_route_final","equals":true}],"fallback":true},"effects":{"setFlags":["ending_ring_conspiracy_normal_qualified"]}},{"id":"ring_conspiracy_choose_bad_ending","text":"承认这次未能跨过的坏结局","nextSceneId":"ring_conspiracy_ending_bad","resultText":"结局判定完成：环指共谋·BAD。资格规则与选择记录已固定写入。","resultVoiceAssetId":"voice.result.ring_conspiracy.bad_ending","availability":{"allOf":[{"kind":"flag","flag":"ring_conspiracy_route_final","equals":true}],"anyOf":[{"kind":"value","key":"trust","operator":"lte","value":44},{"kind":"value","key":"danger","operator":"gte","value":18}]},"effects":{"setFlags":["ending_ring_conspiracy_bad_qualified"]}}]},{"version":2,"id":"ring_conspiracy_ending_true","chapter":17,"route":"ring_conspiracy","locationId":"outskirts_dawn","backgroundAssetId":"bg.outskirts_dawn","cgAssetId":"cg.ring_conspiracy_ending","videoAssetId":"video.animated.runtime.ring_conspiracy_ending_true","desktopVideoAssetId":"video.animated.desktop.ring_conspiracy_ending_true","tone":"quiet","portraits":[{"characterId":"protagonist","portraitAssetId":"portrait.protagonist.resolve","position":"left","active":false,"scale":0.92},{"characterId":"albina","portraitAssetId":"portrait.albina.endgame","position":"center","active":true,"scale":1}],"speaker":"阿尔比娜","text":"环指的目录里只剩一页无法归档的空白。阿尔比娜以自己的名字向你发出下一次邀请；你们不再是展品或棋子，而是彼此承认的共谋者。","voiceAssetId":"voice.scene.ring_conspiracy_ending_true","bgmAssetId":"file.audio.bgm.boss.kromer.mp3","choices":[],"ending":{"route":"ring_conspiracy","kind":"true","eligibility":{"allOf":[{"kind":"flag","flag":"ring_conspiracy_route_final","equals":true},{"kind":"value","key":"trust","operator":"gte","value":49},{"kind":"value","key":"artResonance","operator":"gte","value":49},{"kind":"value","key":"danger","operator":"lte","value":15}]}}},{"version":2,"id":"ring_conspiracy_ending_normal","chapter":17,"route":"ring_conspiracy","locationId":"outskirts_dawn","backgroundAssetId":"bg.outskirts_dawn","cgAssetId":"cg.ring_conspiracy_ending","videoAssetId":"video.animated.runtime.ring_conspiracy_ending_normal","desktopVideoAssetId":"video.animated.desktop.ring_conspiracy_ending_normal","tone":"quiet","portraits":[{"characterId":"protagonist","portraitAssetId":"portrait.protagonist.resolve","position":"left","active":false,"scale":0.92},{"characterId":"albina","portraitAssetId":"portrait.albina.endgame","position":"center","active":true,"scale":1}],"speaker":"阿尔比娜","text":"你们离开了画廊，也留下了一条匿名记录作为制衡。危险没有消失，但契约已被改写；阿尔比娜把下一次会面留给更安全的夜晚。","voiceAssetId":"voice.scene.ring_conspiracy_ending_normal","bgmAssetId":"file.audio.bgm.boss.kromer.mp3","choices":[],"ending":{"route":"ring_conspiracy","kind":"normal","eligibility":{"allOf":[{"kind":"flag","flag":"ring_conspiracy_route_final","equals":true}],"fallback":true}}},{"version":2,"id":"ring_conspiracy_ending_bad","chapter":17,"route":"ring_conspiracy","locationId":"outskirts_dawn","backgroundAssetId":"bg.outskirts_dawn","cgAssetId":"cg.ring_conspiracy_ending","videoAssetId":"video.animated.runtime.ring_conspiracy_ending_bad","desktopVideoAssetId":"video.animated.desktop.ring_conspiracy_ending_bad","tone":"quiet","portraits":[{"characterId":"protagonist","portraitAssetId":"portrait.protagonist.resolve","position":"left","active":false,"scale":0.92},{"characterId":"albina","portraitAssetId":"portrait.albina.endgame","position":"center","active":true,"scale":1}],"speaker":"阿尔比娜","text":"追击停止时，代价已经写进彼此的沉默。你们逃出了装裱，却没能保住共同节奏；阿尔比娜独自带走那柄无锋画刀，没有约定再见。","voiceAssetId":"voice.scene.ring_conspiracy_ending_bad","bgmAssetId":"file.audio.bgm.boss.kromer.mp3","choices":[],"ending":{"route":"ring_conspiracy","kind":"bad","eligibility":{"allOf":[{"kind":"flag","flag":"ring_conspiracy_route_final","equals":true}],"anyOf":[{"kind":"value","key":"trust","operator":"lte","value":44},{"kind":"value","key":"danger","operator":"gte","value":18}]}}}]'), A_ = {
+  version: k_,
+  projectId: w_,
+  initialSceneId: E_,
+  routeEntrySceneIds: I_,
+  scenes: T_
 };
 var ed;
-function v(e, t, i) {
+function y(e, t, i) {
   function a(r, c) {
     if (r._zod || Object.defineProperty(r, "_zod", {
       value: {
@@ -9583,7 +9583,7 @@ class Bl extends Error {
 }
 (ed = globalThis).__zod_globalConfig ?? (ed.__zod_globalConfig = {});
 const Mo = globalThis.__zod_globalConfig;
-function Ht(e) {
+function Zt(e) {
   return Mo;
 }
 function Zl(e) {
@@ -9610,7 +9610,7 @@ function Zo(e) {
   const t = e.startsWith("^") ? 1 : 0, i = e.endsWith("$") ? e.length - 1 : e.length;
   return e.slice(t, i);
 }
-function A_(e, t) {
+function O_(e, t) {
   const i = e / t, a = Math.round(i), n = Number.EPSILON * Math.max(Math.abs(i), 1);
   return Math.abs(i - a) < n ? 0 : i - a;
 }
@@ -9631,7 +9631,7 @@ function fe(e, t, i) {
     configurable: !0
   });
 }
-function Ei(e, t, i) {
+function Ii(e, t, i) {
   Object.defineProperty(e, t, {
     value: i,
     writable: !0,
@@ -9639,7 +9639,7 @@ function Ei(e, t, i) {
     configurable: !0
   });
 }
-function ii(...e) {
+function ai(...e) {
   const t = {};
   for (const i of e) {
     const a = Object.getOwnPropertyDescriptors(i);
@@ -9650,7 +9650,7 @@ function ii(...e) {
 function id(e) {
   return JSON.stringify(e);
 }
-function O_(e) {
+function x_(e) {
   return e.toLowerCase().trim().replace(/[^\w\s-]/g, "").replace(/[\s_-]+/g, "-").replace(/^-+|-+$/g, "");
 }
 const Hl = "captureStackTrace" in Error ? Error.captureStackTrace : (...e) => {
@@ -9658,7 +9658,7 @@ const Hl = "captureStackTrace" in Error ? Error.captureStackTrace : (...e) => {
 function Sa(e) {
   return typeof e == "object" && e !== null && !Array.isArray(e);
 }
-const x_ = /* @__PURE__ */ is(() => {
+const S_ = /* @__PURE__ */ is(() => {
   if (Mo.jitless || typeof navigator < "u" && navigator?.userAgent?.includes("Cloudflare"))
     return !1;
   try {
@@ -9680,15 +9680,15 @@ function qi(e) {
 function Kl(e) {
   return qi(e) ? { ...e } : Array.isArray(e) ? [...e] : e instanceof Map ? new Map(e) : e instanceof Set ? new Set(e) : e;
 }
-const S_ = /* @__PURE__ */ new Set(["string", "number", "symbol"]);
+const N_ = /* @__PURE__ */ new Set(["string", "number", "symbol"]);
 function Gi(e) {
   return e.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
 }
-function ai(e, t, i) {
+function ni(e, t, i) {
   const a = new e._zod.constr(t ?? e._zod.def);
   return (!t || i?.parent) && (a._zod.parent = e), a;
 }
-function B(e) {
+function Z(e) {
   const t = e;
   if (!t)
     return {};
@@ -9701,21 +9701,21 @@ function B(e) {
   }
   return delete t.message, typeof t.error == "string" ? { ...t, error: () => t.error } : t;
 }
-function N_(e) {
+function C_(e) {
   return Object.keys(e).filter((t) => e[t]._zod.optin === "optional" && e[t]._zod.optout === "optional");
 }
-const C_ = {
+const D_ = {
   safeint: [Number.MIN_SAFE_INTEGER, Number.MAX_SAFE_INTEGER],
   int32: [-2147483648, 2147483647],
   uint32: [0, 4294967295],
   float32: [-34028234663852886e22, 34028234663852886e22],
   float64: [-Number.MAX_VALUE, Number.MAX_VALUE]
 };
-function D_(e, t) {
+function V_(e, t) {
   const i = e._zod.def, a = i.checks;
   if (a && a.length > 0)
     throw new Error(".pick() cannot be used on object schemas containing refinements");
-  const s = ii(e._zod.def, {
+  const s = ai(e._zod.def, {
     get shape() {
       const o = {};
       for (const r in t) {
@@ -9723,17 +9723,17 @@ function D_(e, t) {
           throw new Error(`Unrecognized key: "${r}"`);
         t[r] && (o[r] = i.shape[r]);
       }
-      return Ei(this, "shape", o), o;
+      return Ii(this, "shape", o), o;
     },
     checks: []
   });
-  return ai(e, s);
+  return ni(e, s);
 }
-function V_(e, t) {
+function R_(e, t) {
   const i = e._zod.def, a = i.checks;
   if (a && a.length > 0)
     throw new Error(".omit() cannot be used on object schemas containing refinements");
-  const s = ii(e._zod.def, {
+  const s = ai(e._zod.def, {
     get shape() {
       const o = { ...e._zod.def.shape };
       for (const r in t) {
@@ -9741,13 +9741,13 @@ function V_(e, t) {
           throw new Error(`Unrecognized key: "${r}"`);
         t[r] && delete o[r];
       }
-      return Ei(this, "shape", o), o;
+      return Ii(this, "shape", o), o;
     },
     checks: []
   });
-  return ai(e, s);
+  return ni(e, s);
 }
-function R_(e, t) {
+function P_(e, t) {
   if (!qi(t))
     throw new Error("Invalid input to extend: expected a plain object");
   const i = e._zod.def.checks;
@@ -9757,45 +9757,45 @@ function R_(e, t) {
       if (Object.getOwnPropertyDescriptor(s, o) !== void 0)
         throw new Error("Cannot overwrite keys on object schemas containing refinements. Use `.safeExtend()` instead.");
   }
-  const n = ii(e._zod.def, {
+  const n = ai(e._zod.def, {
     get shape() {
       const s = { ...e._zod.def.shape, ...t };
-      return Ei(this, "shape", s), s;
+      return Ii(this, "shape", s), s;
     }
   });
-  return ai(e, n);
-}
-function P_(e, t) {
-  if (!qi(t))
-    throw new Error("Invalid input to safeExtend: expected a plain object");
-  const i = ii(e._zod.def, {
-    get shape() {
-      const a = { ...e._zod.def.shape, ...t };
-      return Ei(this, "shape", a), a;
-    }
-  });
-  return ai(e, i);
+  return ni(e, n);
 }
 function $_(e, t) {
+  if (!qi(t))
+    throw new Error("Invalid input to safeExtend: expected a plain object");
+  const i = ai(e._zod.def, {
+    get shape() {
+      const a = { ...e._zod.def.shape, ...t };
+      return Ii(this, "shape", a), a;
+    }
+  });
+  return ni(e, i);
+}
+function j_(e, t) {
   if (e._zod.def.checks?.length)
     throw new Error(".merge() cannot be used on object schemas containing refinements. Use .safeExtend() instead.");
-  const i = ii(e._zod.def, {
+  const i = ai(e._zod.def, {
     get shape() {
       const a = { ...e._zod.def.shape, ...t._zod.def.shape };
-      return Ei(this, "shape", a), a;
+      return Ii(this, "shape", a), a;
     },
     get catchall() {
       return t._zod.def.catchall;
     },
     checks: t._zod.def.checks ?? []
   });
-  return ai(e, i);
+  return ni(e, i);
 }
-function j_(e, t, i) {
+function F_(e, t, i) {
   const n = t._zod.def.checks;
   if (n && n.length > 0)
     throw new Error(".partial() cannot be used on object schemas containing refinements");
-  const o = ii(t._zod.def, {
+  const o = ai(t._zod.def, {
     get shape() {
       const r = t._zod.def.shape, c = { ...r };
       if (i)
@@ -9813,14 +9813,14 @@ function j_(e, t, i) {
             type: "optional",
             innerType: r[d]
           }) : r[d];
-      return Ei(this, "shape", c), c;
+      return Ii(this, "shape", c), c;
     },
     checks: []
   });
-  return ai(t, o);
+  return ni(t, o);
 }
-function F_(e, t, i) {
-  const a = ii(t._zod.def, {
+function z_(e, t, i) {
+  const a = ai(t._zod.def, {
     get shape() {
       const n = t._zod.def.shape, s = { ...n };
       if (i)
@@ -9838,10 +9838,10 @@ function F_(e, t, i) {
             type: "nonoptional",
             innerType: n[o]
           });
-      return Ei(this, "shape", s), s;
+      return Ii(this, "shape", s), s;
     }
   });
-  return ai(t, a);
+  return ni(t, a);
 }
 function $i(e, t = 0) {
   if (e.aborted === !0)
@@ -9851,7 +9851,7 @@ function $i(e, t = 0) {
       return !0;
   return !1;
 }
-function z_(e, t = 0) {
+function U_(e, t = 0) {
   if (e.aborted === !0)
     return !0;
   for (let i = t; i < e.issues.length; i++)
@@ -9868,7 +9868,7 @@ function ji(e, t) {
 function Ga(e) {
   return typeof e == "string" ? e : e?.message;
 }
-function Kt(e, t, i) {
+function Ht(e, t, i) {
   const a = e.message ? e.message : Ga(e.inst?._zod.def?.error?.(e)) ?? Ga(t?.error?.(e)) ?? Ga(i.customError?.(e)) ?? Ga(i.localeError?.(e)) ?? "Invalid input", { inst: n, continue: s, input: o, ...r } = e;
   return r.path ?? (r.path = []), r.message = a, t?.reportInput && (r.input = o), r;
 }
@@ -9895,14 +9895,14 @@ const Wl = (e, t) => {
     value: () => e.message,
     enumerable: !1
   });
-}, ql = v("$ZodError", Wl), Gl = v("$ZodError", Wl, { Parent: Error });
-function U_(e, t = (i) => i.message) {
+}, ql = y("$ZodError", Wl), Gl = y("$ZodError", Wl, { Parent: Error });
+function L_(e, t = (i) => i.message) {
   const i = {}, a = [];
   for (const n of e.issues)
     n.path.length > 0 ? (i[n.path[0]] = i[n.path[0]] || [], i[n.path[0]].push(t(n))) : a.push(t(n));
   return { formErrors: a, fieldErrors: i };
 }
-function L_(e, t = (i) => i.message) {
+function M_(e, t = (i) => i.message) {
   const i = { _errors: [] }, a = (n, s = []) => {
     for (const o of n.issues)
       if (o.code === "invalid_union" && o.errors.length)
@@ -9931,7 +9931,7 @@ const Ko = (e) => (t, i, a, n) => {
   if (o instanceof Promise)
     throw new Mi();
   if (o.issues.length) {
-    const r = new (n?.Err ?? e)(o.issues.map((c) => Kt(c, s, Ht())));
+    const r = new (n?.Err ?? e)(o.issues.map((c) => Ht(c, s, Zt())));
     throw Hl(r, n?.callee), r;
   }
   return o.value;
@@ -9939,7 +9939,7 @@ const Ko = (e) => (t, i, a, n) => {
   const s = a ? { ...a, async: !0 } : { async: !0 };
   let o = t._zod.run({ value: i, issues: [] }, s);
   if (o instanceof Promise && (o = await o), o.issues.length) {
-    const r = new (n?.Err ?? e)(o.issues.map((c) => Kt(c, s, Ht())));
+    const r = new (n?.Err ?? e)(o.issues.map((c) => Ht(c, s, Zt())));
     throw Hl(r, n?.callee), r;
   }
   return o.value;
@@ -9949,57 +9949,57 @@ const Ko = (e) => (t, i, a, n) => {
     throw new Mi();
   return s.issues.length ? {
     success: !1,
-    error: new (e ?? ql)(s.issues.map((o) => Kt(o, n, Ht())))
+    error: new (e ?? ql)(s.issues.map((o) => Ht(o, n, Zt())))
   } : { success: !0, data: s.value };
-}, M_ = /* @__PURE__ */ as(Gl), ns = (e) => async (t, i, a) => {
+}, B_ = /* @__PURE__ */ as(Gl), ns = (e) => async (t, i, a) => {
   const n = a ? { ...a, async: !0 } : { async: !0 };
   let s = t._zod.run({ value: i, issues: [] }, n);
   return s instanceof Promise && (s = await s), s.issues.length ? {
     success: !1,
-    error: new e(s.issues.map((o) => Kt(o, n, Ht())))
+    error: new e(s.issues.map((o) => Ht(o, n, Zt())))
   } : { success: !0, data: s.value };
-}, B_ = /* @__PURE__ */ ns(Gl), Z_ = (e) => (t, i, a) => {
+}, Z_ = /* @__PURE__ */ ns(Gl), H_ = (e) => (t, i, a) => {
   const n = a ? { ...a, direction: "backward" } : { direction: "backward" };
   return Ko(e)(t, i, n);
-}, H_ = (e) => (t, i, a) => Ko(e)(t, i, a), K_ = (e) => async (t, i, a) => {
+}, K_ = (e) => (t, i, a) => Ko(e)(t, i, a), W_ = (e) => async (t, i, a) => {
   const n = a ? { ...a, direction: "backward" } : { direction: "backward" };
   return Wo(e)(t, i, n);
-}, W_ = (e) => async (t, i, a) => Wo(e)(t, i, a), q_ = (e) => (t, i, a) => {
+}, q_ = (e) => async (t, i, a) => Wo(e)(t, i, a), G_ = (e) => (t, i, a) => {
   const n = a ? { ...a, direction: "backward" } : { direction: "backward" };
   return as(e)(t, i, n);
-}, G_ = (e) => (t, i, a) => as(e)(t, i, a), J_ = (e) => async (t, i, a) => {
+}, J_ = (e) => (t, i, a) => as(e)(t, i, a), Y_ = (e) => async (t, i, a) => {
   const n = a ? { ...a, direction: "backward" } : { direction: "backward" };
   return ns(e)(t, i, n);
-}, Y_ = (e) => async (t, i, a) => ns(e)(t, i, a), X_ = /^[cC][0-9a-z]{6,}$/, Q_ = /^[0-9a-z]+$/, e0 = /^[0-9A-HJKMNP-TV-Za-hjkmnp-tv-z]{26}$/, t0 = /^[0-9a-vA-V]{20}$/, i0 = /^[A-Za-z0-9]{27}$/, a0 = /^[a-zA-Z0-9_-]{21}$/, n0 = /^P(?:(\d+W)|(?!.*W)(?=\d|T\d)(\d+Y)?(\d+M)?(\d+D)?(T(?=\d)(\d+H)?(\d+M)?(\d+([.,]\d+)?S)?)?)$/, s0 = /^([0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12})$/, ad = (e) => e ? new RegExp(`^([0-9a-fA-F]{8}-[0-9a-fA-F]{4}-${e}[0-9a-fA-F]{3}-[89abAB][0-9a-fA-F]{3}-[0-9a-fA-F]{12})$`) : /^([0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[1-8][0-9a-fA-F]{3}-[89abAB][0-9a-fA-F]{3}-[0-9a-fA-F]{12}|00000000-0000-0000-0000-000000000000|ffffffff-ffff-ffff-ffff-ffffffffffff)$/, o0 = /^(?!\.)(?!.*\.\.)([A-Za-z0-9_'+\-\.]*)[A-Za-z0-9_+-]@([A-Za-z0-9][A-Za-z0-9\-]*\.)+[A-Za-z]{2,}$/, r0 = "^(\\p{Extended_Pictographic}|\\p{Emoji_Component})+$";
-function c0() {
-  return new RegExp(r0, "u");
+}, X_ = (e) => async (t, i, a) => ns(e)(t, i, a), Q_ = /^[cC][0-9a-z]{6,}$/, e0 = /^[0-9a-z]+$/, t0 = /^[0-9A-HJKMNP-TV-Za-hjkmnp-tv-z]{26}$/, i0 = /^[0-9a-vA-V]{20}$/, a0 = /^[A-Za-z0-9]{27}$/, n0 = /^[a-zA-Z0-9_-]{21}$/, s0 = /^P(?:(\d+W)|(?!.*W)(?=\d|T\d)(\d+Y)?(\d+M)?(\d+D)?(T(?=\d)(\d+H)?(\d+M)?(\d+([.,]\d+)?S)?)?)$/, o0 = /^([0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12})$/, ad = (e) => e ? new RegExp(`^([0-9a-fA-F]{8}-[0-9a-fA-F]{4}-${e}[0-9a-fA-F]{3}-[89abAB][0-9a-fA-F]{3}-[0-9a-fA-F]{12})$`) : /^([0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[1-8][0-9a-fA-F]{3}-[89abAB][0-9a-fA-F]{3}-[0-9a-fA-F]{12}|00000000-0000-0000-0000-000000000000|ffffffff-ffff-ffff-ffff-ffffffffffff)$/, r0 = /^(?!\.)(?!.*\.\.)([A-Za-z0-9_'+\-\.]*)[A-Za-z0-9_+-]@([A-Za-z0-9][A-Za-z0-9\-]*\.)+[A-Za-z]{2,}$/, c0 = "^(\\p{Extended_Pictographic}|\\p{Emoji_Component})+$";
+function d0() {
+  return new RegExp(c0, "u");
 }
-const d0 = /^(?:(?:25[0-5]|2[0-4][0-9]|1[0-9][0-9]|[1-9][0-9]|[0-9])\.){3}(?:25[0-5]|2[0-4][0-9]|1[0-9][0-9]|[1-9][0-9]|[0-9])$/, u0 = /^(([0-9a-fA-F]{1,4}:){7}[0-9a-fA-F]{1,4}|([0-9a-fA-F]{1,4}:){1,7}:|([0-9a-fA-F]{1,4}:){1,6}:[0-9a-fA-F]{1,4}|([0-9a-fA-F]{1,4}:){1,5}(:[0-9a-fA-F]{1,4}){1,2}|([0-9a-fA-F]{1,4}:){1,4}(:[0-9a-fA-F]{1,4}){1,3}|([0-9a-fA-F]{1,4}:){1,3}(:[0-9a-fA-F]{1,4}){1,4}|([0-9a-fA-F]{1,4}:){1,2}(:[0-9a-fA-F]{1,4}){1,5}|[0-9a-fA-F]{1,4}:((:[0-9a-fA-F]{1,4}){1,6})|:((:[0-9a-fA-F]{1,4}){1,7}|:))$/, l0 = /^((25[0-5]|2[0-4][0-9]|1[0-9][0-9]|[1-9][0-9]|[0-9])\.){3}(25[0-5]|2[0-4][0-9]|1[0-9][0-9]|[1-9][0-9]|[0-9])\/([0-9]|[1-2][0-9]|3[0-2])$/, f0 = /^(([0-9a-fA-F]{1,4}:){7}[0-9a-fA-F]{1,4}|::|([0-9a-fA-F]{1,4})?::([0-9a-fA-F]{1,4}:?){0,6})\/(12[0-8]|1[01][0-9]|[1-9]?[0-9])$/, p0 = /^$|^(?:[0-9a-zA-Z+/]{4})*(?:(?:[0-9a-zA-Z+/]{2}==)|(?:[0-9a-zA-Z+/]{3}=))?$/, Jl = /^[A-Za-z0-9_-]*$/, m0 = /^https?$/, g0 = /^\+[1-9]\d{6,14}$/, Yl = "(?:(?:\\d\\d[2468][048]|\\d\\d[13579][26]|\\d\\d0[48]|[02468][048]00|[13579][26]00)-02-29|\\d{4}-(?:(?:0[13578]|1[02])-(?:0[1-9]|[12]\\d|3[01])|(?:0[469]|11)-(?:0[1-9]|[12]\\d|30)|(?:02)-(?:0[1-9]|1\\d|2[0-8])))", b0 = /* @__PURE__ */ new RegExp(`^${Yl}$`);
+const u0 = /^(?:(?:25[0-5]|2[0-4][0-9]|1[0-9][0-9]|[1-9][0-9]|[0-9])\.){3}(?:25[0-5]|2[0-4][0-9]|1[0-9][0-9]|[1-9][0-9]|[0-9])$/, l0 = /^(([0-9a-fA-F]{1,4}:){7}[0-9a-fA-F]{1,4}|([0-9a-fA-F]{1,4}:){1,7}:|([0-9a-fA-F]{1,4}:){1,6}:[0-9a-fA-F]{1,4}|([0-9a-fA-F]{1,4}:){1,5}(:[0-9a-fA-F]{1,4}){1,2}|([0-9a-fA-F]{1,4}:){1,4}(:[0-9a-fA-F]{1,4}){1,3}|([0-9a-fA-F]{1,4}:){1,3}(:[0-9a-fA-F]{1,4}){1,4}|([0-9a-fA-F]{1,4}:){1,2}(:[0-9a-fA-F]{1,4}){1,5}|[0-9a-fA-F]{1,4}:((:[0-9a-fA-F]{1,4}){1,6})|:((:[0-9a-fA-F]{1,4}){1,7}|:))$/, f0 = /^((25[0-5]|2[0-4][0-9]|1[0-9][0-9]|[1-9][0-9]|[0-9])\.){3}(25[0-5]|2[0-4][0-9]|1[0-9][0-9]|[1-9][0-9]|[0-9])\/([0-9]|[1-2][0-9]|3[0-2])$/, p0 = /^(([0-9a-fA-F]{1,4}:){7}[0-9a-fA-F]{1,4}|::|([0-9a-fA-F]{1,4})?::([0-9a-fA-F]{1,4}:?){0,6})\/(12[0-8]|1[01][0-9]|[1-9]?[0-9])$/, m0 = /^$|^(?:[0-9a-zA-Z+/]{4})*(?:(?:[0-9a-zA-Z+/]{2}==)|(?:[0-9a-zA-Z+/]{3}=))?$/, Jl = /^[A-Za-z0-9_-]*$/, g0 = /^https?$/, b0 = /^\+[1-9]\d{6,14}$/, Yl = "(?:(?:\\d\\d[2468][048]|\\d\\d[13579][26]|\\d\\d0[48]|[02468][048]00|[13579][26]00)-02-29|\\d{4}-(?:(?:0[13578]|1[02])-(?:0[1-9]|[12]\\d|3[01])|(?:0[469]|11)-(?:0[1-9]|[12]\\d|30)|(?:02)-(?:0[1-9]|1\\d|2[0-8])))", h0 = /* @__PURE__ */ new RegExp(`^${Yl}$`);
 function Xl(e) {
   const t = "(?:[01]\\d|2[0-3]):[0-5]\\d";
   return typeof e.precision == "number" ? e.precision === -1 ? `${t}` : e.precision === 0 ? `${t}:[0-5]\\d` : `${t}:[0-5]\\d\\.\\d{${e.precision}}` : `${t}(?::[0-5]\\d(?:\\.\\d+)?)?`;
 }
-function h0(e) {
+function _0(e) {
   return new RegExp(`^${Xl(e)}$`);
 }
-function _0(e) {
+function v0(e) {
   const t = Xl({ precision: e.precision }), i = ["Z"];
   e.local && i.push(""), e.offset && i.push("([+-](?:[01]\\d|2[0-3]):[0-5]\\d)");
   const a = `${t}(?:${i.join("|")})`;
   return new RegExp(`^${Yl}T(?:${a})$`);
 }
-const v0 = (e) => {
+const y0 = (e) => {
   const t = e ? `[\\s\\S]{${e?.minimum ?? 0},${e?.maximum ?? ""}}` : "[\\s\\S]*";
   return new RegExp(`^${t}$`);
-}, y0 = /^-?\d+$/, Ql = /^-?\d+(?:\.\d+)?$/, k0 = /^(?:true|false)$/i, w0 = /^[^A-Z]*$/, E0 = /^[^a-z]*$/, tt = /* @__PURE__ */ v("$ZodCheck", (e, t) => {
+}, k0 = /^-?\d+$/, Ql = /^-?\d+(?:\.\d+)?$/, w0 = /^(?:true|false)$/i, E0 = /^[^A-Z]*$/, I0 = /^[^a-z]*$/, it = /* @__PURE__ */ y("$ZodCheck", (e, t) => {
   var i;
   e._zod ?? (e._zod = {}), e._zod.def = t, (i = e._zod).onattach ?? (i.onattach = []);
 }), ef = {
   number: "number",
   bigint: "bigint",
   object: "date"
-}, tf = /* @__PURE__ */ v("$ZodCheckLessThan", (e, t) => {
-  tt.init(e, t);
+}, tf = /* @__PURE__ */ y("$ZodCheckLessThan", (e, t) => {
+  it.init(e, t);
   const i = ef[typeof t.value];
   e._zod.onattach.push((a) => {
     const n = a._zod.bag, s = (t.inclusive ? n.maximum : n.exclusiveMaximum) ?? Number.POSITIVE_INFINITY;
@@ -10015,8 +10015,8 @@ const v0 = (e) => {
       continue: !t.abort
     });
   };
-}), af = /* @__PURE__ */ v("$ZodCheckGreaterThan", (e, t) => {
-  tt.init(e, t);
+}), af = /* @__PURE__ */ y("$ZodCheckGreaterThan", (e, t) => {
+  it.init(e, t);
   const i = ef[typeof t.value];
   e._zod.onattach.push((a) => {
     const n = a._zod.bag, s = (t.inclusive ? n.minimum : n.exclusiveMinimum) ?? Number.NEGATIVE_INFINITY;
@@ -10032,14 +10032,14 @@ const v0 = (e) => {
       continue: !t.abort
     });
   };
-}), I0 = /* @__PURE__ */ v("$ZodCheckMultipleOf", (e, t) => {
-  tt.init(e, t), e._zod.onattach.push((i) => {
+}), T0 = /* @__PURE__ */ y("$ZodCheckMultipleOf", (e, t) => {
+  it.init(e, t), e._zod.onattach.push((i) => {
     var a;
     (a = i._zod.bag).multipleOf ?? (a.multipleOf = t.value);
   }), e._zod.check = (i) => {
     if (typeof i.value != typeof t.value)
       throw new Error("Cannot mix number and bigint in multiple_of check.");
-    (typeof i.value == "bigint" ? i.value % t.value === BigInt(0) : A_(i.value, t.value) === 0) || i.issues.push({
+    (typeof i.value == "bigint" ? i.value % t.value === BigInt(0) : O_(i.value, t.value) === 0) || i.issues.push({
       origin: typeof i.value,
       code: "not_multiple_of",
       divisor: t.value,
@@ -10048,12 +10048,12 @@ const v0 = (e) => {
       continue: !t.abort
     });
   };
-}), T0 = /* @__PURE__ */ v("$ZodCheckNumberFormat", (e, t) => {
-  tt.init(e, t), t.format = t.format || "float64";
-  const i = t.format?.includes("int"), a = i ? "int" : "number", [n, s] = C_[t.format];
+}), A0 = /* @__PURE__ */ y("$ZodCheckNumberFormat", (e, t) => {
+  it.init(e, t), t.format = t.format || "float64";
+  const i = t.format?.includes("int"), a = i ? "int" : "number", [n, s] = D_[t.format];
   e._zod.onattach.push((o) => {
     const r = o._zod.bag;
-    r.format = t.format, r.minimum = n, r.maximum = s, i && (r.pattern = y0);
+    r.format = t.format, r.minimum = n, r.maximum = s, i && (r.pattern = k0);
   }), e._zod.check = (o) => {
     const r = o.value;
     if (i) {
@@ -10109,9 +10109,9 @@ const v0 = (e) => {
       continue: !t.abort
     });
   };
-}), A0 = /* @__PURE__ */ v("$ZodCheckMaxLength", (e, t) => {
+}), O0 = /* @__PURE__ */ y("$ZodCheckMaxLength", (e, t) => {
   var i;
-  tt.init(e, t), (i = e._zod.def).when ?? (i.when = (a) => {
+  it.init(e, t), (i = e._zod.def).when ?? (i.when = (a) => {
     const n = a.value;
     return !Bo(n) && n.length !== void 0;
   }), e._zod.onattach.push((a) => {
@@ -10132,9 +10132,9 @@ const v0 = (e) => {
       continue: !t.abort
     });
   };
-}), O0 = /* @__PURE__ */ v("$ZodCheckMinLength", (e, t) => {
+}), x0 = /* @__PURE__ */ y("$ZodCheckMinLength", (e, t) => {
   var i;
-  tt.init(e, t), (i = e._zod.def).when ?? (i.when = (a) => {
+  it.init(e, t), (i = e._zod.def).when ?? (i.when = (a) => {
     const n = a.value;
     return !Bo(n) && n.length !== void 0;
   }), e._zod.onattach.push((a) => {
@@ -10155,9 +10155,9 @@ const v0 = (e) => {
       continue: !t.abort
     });
   };
-}), x0 = /* @__PURE__ */ v("$ZodCheckLengthEquals", (e, t) => {
+}), S0 = /* @__PURE__ */ y("$ZodCheckLengthEquals", (e, t) => {
   var i;
-  tt.init(e, t), (i = e._zod.def).when ?? (i.when = (a) => {
+  it.init(e, t), (i = e._zod.def).when ?? (i.when = (a) => {
     const n = a.value;
     return !Bo(n) && n.length !== void 0;
   }), e._zod.onattach.push((a) => {
@@ -10178,9 +10178,9 @@ const v0 = (e) => {
       continue: !t.abort
     });
   };
-}), ss = /* @__PURE__ */ v("$ZodCheckStringFormat", (e, t) => {
+}), ss = /* @__PURE__ */ y("$ZodCheckStringFormat", (e, t) => {
   var i, a;
-  tt.init(e, t), e._zod.onattach.push((n) => {
+  it.init(e, t), e._zod.onattach.push((n) => {
     const s = n._zod.bag;
     s.format = t.format, t.pattern && (s.patterns ?? (s.patterns = /* @__PURE__ */ new Set()), s.patterns.add(t.pattern));
   }), t.pattern ? (i = e._zod).check ?? (i.check = (n) => {
@@ -10195,7 +10195,7 @@ const v0 = (e) => {
     });
   }) : (a = e._zod).check ?? (a.check = () => {
   });
-}), S0 = /* @__PURE__ */ v("$ZodCheckRegex", (e, t) => {
+}), N0 = /* @__PURE__ */ y("$ZodCheckRegex", (e, t) => {
   ss.init(e, t), e._zod.check = (i) => {
     t.pattern.lastIndex = 0, !t.pattern.test(i.value) && i.issues.push({
       origin: "string",
@@ -10207,12 +10207,12 @@ const v0 = (e) => {
       continue: !t.abort
     });
   };
-}), N0 = /* @__PURE__ */ v("$ZodCheckLowerCase", (e, t) => {
-  t.pattern ?? (t.pattern = w0), ss.init(e, t);
-}), C0 = /* @__PURE__ */ v("$ZodCheckUpperCase", (e, t) => {
+}), C0 = /* @__PURE__ */ y("$ZodCheckLowerCase", (e, t) => {
   t.pattern ?? (t.pattern = E0), ss.init(e, t);
-}), D0 = /* @__PURE__ */ v("$ZodCheckIncludes", (e, t) => {
-  tt.init(e, t);
+}), D0 = /* @__PURE__ */ y("$ZodCheckUpperCase", (e, t) => {
+  t.pattern ?? (t.pattern = I0), ss.init(e, t);
+}), V0 = /* @__PURE__ */ y("$ZodCheckIncludes", (e, t) => {
+  it.init(e, t);
   const i = Gi(t.includes), a = new RegExp(typeof t.position == "number" ? `^.{${t.position}}${i}` : i);
   t.pattern = a, e._zod.onattach.push((n) => {
     const s = n._zod.bag;
@@ -10228,8 +10228,8 @@ const v0 = (e) => {
       continue: !t.abort
     });
   };
-}), V0 = /* @__PURE__ */ v("$ZodCheckStartsWith", (e, t) => {
-  tt.init(e, t);
+}), R0 = /* @__PURE__ */ y("$ZodCheckStartsWith", (e, t) => {
+  it.init(e, t);
   const i = new RegExp(`^${Gi(t.prefix)}.*`);
   t.pattern ?? (t.pattern = i), e._zod.onattach.push((a) => {
     const n = a._zod.bag;
@@ -10245,8 +10245,8 @@ const v0 = (e) => {
       continue: !t.abort
     });
   };
-}), R0 = /* @__PURE__ */ v("$ZodCheckEndsWith", (e, t) => {
-  tt.init(e, t);
+}), P0 = /* @__PURE__ */ y("$ZodCheckEndsWith", (e, t) => {
+  it.init(e, t);
   const i = new RegExp(`.*${Gi(t.suffix)}$`);
   t.pattern ?? (t.pattern = i), e._zod.onattach.push((a) => {
     const n = a._zod.bag;
@@ -10262,12 +10262,12 @@ const v0 = (e) => {
       continue: !t.abort
     });
   };
-}), P0 = /* @__PURE__ */ v("$ZodCheckOverwrite", (e, t) => {
-  tt.init(e, t), e._zod.check = (i) => {
+}), $0 = /* @__PURE__ */ y("$ZodCheckOverwrite", (e, t) => {
+  it.init(e, t), e._zod.check = (i) => {
     i.value = t.tx(i.value);
   };
 });
-class $0 {
+class j0 {
   constructor(t = []) {
     this.content = [], this.indent = 0, this && (this.args = t);
   }
@@ -10290,13 +10290,13 @@ class $0 {
 `));
   }
 }
-const j0 = {
+const F0 = {
   major: 4,
   minor: 4,
   patch: 3
-}, ke = /* @__PURE__ */ v("$ZodType", (e, t) => {
+}, ke = /* @__PURE__ */ y("$ZodType", (e, t) => {
   var i;
-  e ?? (e = {}), e._zod.def = t, e._zod.bag = e._zod.bag || {}, e._zod.version = j0;
+  e ?? (e = {}), e._zod.def = t, e._zod.bag = e._zod.bag || {}, e._zod.version = F0;
   const a = [...e._zod.def.checks ?? []];
   e._zod.traits.has("$ZodCheck") && a.unshift(e);
   for (const n of a)
@@ -10311,7 +10311,7 @@ const j0 = {
       let d = $i(o), l;
       for (const u of r) {
         if (u._zod.def.when) {
-          if (z_(o) || !u._zod.def.when(o))
+          if (U_(o) || !u._zod.def.when(o))
             continue;
         } else if (d)
           continue;
@@ -10359,17 +10359,17 @@ const j0 = {
   fe(e, "~standard", () => ({
     validate: (n) => {
       try {
-        const s = M_(e, n);
+        const s = B_(e, n);
         return s.success ? { value: s.data } : { issues: s.error?.issues };
       } catch {
-        return B_(e, n).then((o) => o.success ? { value: o.data } : { issues: o.error?.issues });
+        return Z_(e, n).then((o) => o.success ? { value: o.data } : { issues: o.error?.issues });
       }
     },
     vendor: "zod",
     version: 1
   }));
-}), qo = /* @__PURE__ */ v("$ZodString", (e, t) => {
-  ke.init(e, t), e._zod.pattern = [...e?._zod.bag?.patterns ?? []].pop() ?? v0(e._zod.bag), e._zod.parse = (i, a) => {
+}), qo = /* @__PURE__ */ y("$ZodString", (e, t) => {
+  ke.init(e, t), e._zod.pattern = [...e?._zod.bag?.patterns ?? []].pop() ?? y0(e._zod.bag), e._zod.parse = (i, a) => {
     if (t.coerce)
       try {
         i.value = String(i.value);
@@ -10382,11 +10382,11 @@ const j0 = {
       inst: e
     }), i;
   };
-}), ye = /* @__PURE__ */ v("$ZodStringFormat", (e, t) => {
+}), ye = /* @__PURE__ */ y("$ZodStringFormat", (e, t) => {
   ss.init(e, t), qo.init(e, t);
-}), F0 = /* @__PURE__ */ v("$ZodGUID", (e, t) => {
-  t.pattern ?? (t.pattern = s0), ye.init(e, t);
-}), z0 = /* @__PURE__ */ v("$ZodUUID", (e, t) => {
+}), z0 = /* @__PURE__ */ y("$ZodGUID", (e, t) => {
+  t.pattern ?? (t.pattern = o0), ye.init(e, t);
+}), U0 = /* @__PURE__ */ y("$ZodUUID", (e, t) => {
   if (t.version) {
     const a = {
       v1: 1,
@@ -10404,13 +10404,13 @@ const j0 = {
   } else
     t.pattern ?? (t.pattern = ad());
   ye.init(e, t);
-}), U0 = /* @__PURE__ */ v("$ZodEmail", (e, t) => {
-  t.pattern ?? (t.pattern = o0), ye.init(e, t);
-}), L0 = /* @__PURE__ */ v("$ZodURL", (e, t) => {
+}), L0 = /* @__PURE__ */ y("$ZodEmail", (e, t) => {
+  t.pattern ?? (t.pattern = r0), ye.init(e, t);
+}), M0 = /* @__PURE__ */ y("$ZodURL", (e, t) => {
   ye.init(e, t), e._zod.check = (i) => {
     try {
       const a = i.value.trim();
-      if (!t.normalize && t.protocol?.source === m0.source && !/^https?:\/\//i.test(a)) {
+      if (!t.normalize && t.protocol?.source === g0.source && !/^https?:\/\//i.test(a)) {
         i.issues.push({
           code: "invalid_format",
           format: "url",
@@ -10450,32 +10450,32 @@ const j0 = {
       });
     }
   };
-}), M0 = /* @__PURE__ */ v("$ZodEmoji", (e, t) => {
-  t.pattern ?? (t.pattern = c0()), ye.init(e, t);
-}), B0 = /* @__PURE__ */ v("$ZodNanoID", (e, t) => {
-  t.pattern ?? (t.pattern = a0), ye.init(e, t);
-}), Z0 = /* @__PURE__ */ v("$ZodCUID", (e, t) => {
-  t.pattern ?? (t.pattern = X_), ye.init(e, t);
-}), H0 = /* @__PURE__ */ v("$ZodCUID2", (e, t) => {
-  t.pattern ?? (t.pattern = Q_), ye.init(e, t);
-}), K0 = /* @__PURE__ */ v("$ZodULID", (e, t) => {
-  t.pattern ?? (t.pattern = e0), ye.init(e, t);
-}), W0 = /* @__PURE__ */ v("$ZodXID", (e, t) => {
-  t.pattern ?? (t.pattern = t0), ye.init(e, t);
-}), q0 = /* @__PURE__ */ v("$ZodKSUID", (e, t) => {
-  t.pattern ?? (t.pattern = i0), ye.init(e, t);
-}), G0 = /* @__PURE__ */ v("$ZodISODateTime", (e, t) => {
-  t.pattern ?? (t.pattern = _0(t)), ye.init(e, t);
-}), J0 = /* @__PURE__ */ v("$ZodISODate", (e, t) => {
-  t.pattern ?? (t.pattern = b0), ye.init(e, t);
-}), Y0 = /* @__PURE__ */ v("$ZodISOTime", (e, t) => {
-  t.pattern ?? (t.pattern = h0(t)), ye.init(e, t);
-}), X0 = /* @__PURE__ */ v("$ZodISODuration", (e, t) => {
+}), B0 = /* @__PURE__ */ y("$ZodEmoji", (e, t) => {
+  t.pattern ?? (t.pattern = d0()), ye.init(e, t);
+}), Z0 = /* @__PURE__ */ y("$ZodNanoID", (e, t) => {
   t.pattern ?? (t.pattern = n0), ye.init(e, t);
-}), Q0 = /* @__PURE__ */ v("$ZodIPv4", (e, t) => {
-  t.pattern ?? (t.pattern = d0), ye.init(e, t), e._zod.bag.format = "ipv4";
-}), e1 = /* @__PURE__ */ v("$ZodIPv6", (e, t) => {
-  t.pattern ?? (t.pattern = u0), ye.init(e, t), e._zod.bag.format = "ipv6", e._zod.check = (i) => {
+}), H0 = /* @__PURE__ */ y("$ZodCUID", (e, t) => {
+  t.pattern ?? (t.pattern = Q_), ye.init(e, t);
+}), K0 = /* @__PURE__ */ y("$ZodCUID2", (e, t) => {
+  t.pattern ?? (t.pattern = e0), ye.init(e, t);
+}), W0 = /* @__PURE__ */ y("$ZodULID", (e, t) => {
+  t.pattern ?? (t.pattern = t0), ye.init(e, t);
+}), q0 = /* @__PURE__ */ y("$ZodXID", (e, t) => {
+  t.pattern ?? (t.pattern = i0), ye.init(e, t);
+}), G0 = /* @__PURE__ */ y("$ZodKSUID", (e, t) => {
+  t.pattern ?? (t.pattern = a0), ye.init(e, t);
+}), J0 = /* @__PURE__ */ y("$ZodISODateTime", (e, t) => {
+  t.pattern ?? (t.pattern = v0(t)), ye.init(e, t);
+}), Y0 = /* @__PURE__ */ y("$ZodISODate", (e, t) => {
+  t.pattern ?? (t.pattern = h0), ye.init(e, t);
+}), X0 = /* @__PURE__ */ y("$ZodISOTime", (e, t) => {
+  t.pattern ?? (t.pattern = _0(t)), ye.init(e, t);
+}), Q0 = /* @__PURE__ */ y("$ZodISODuration", (e, t) => {
+  t.pattern ?? (t.pattern = s0), ye.init(e, t);
+}), e1 = /* @__PURE__ */ y("$ZodIPv4", (e, t) => {
+  t.pattern ?? (t.pattern = u0), ye.init(e, t), e._zod.bag.format = "ipv4";
+}), t1 = /* @__PURE__ */ y("$ZodIPv6", (e, t) => {
+  t.pattern ?? (t.pattern = l0), ye.init(e, t), e._zod.bag.format = "ipv6", e._zod.check = (i) => {
     try {
       new URL(`http://[${i.value}]`);
     } catch {
@@ -10488,10 +10488,10 @@ const j0 = {
       });
     }
   };
-}), t1 = /* @__PURE__ */ v("$ZodCIDRv4", (e, t) => {
-  t.pattern ?? (t.pattern = l0), ye.init(e, t);
-}), i1 = /* @__PURE__ */ v("$ZodCIDRv6", (e, t) => {
-  t.pattern ?? (t.pattern = f0), ye.init(e, t), e._zod.check = (i) => {
+}), i1 = /* @__PURE__ */ y("$ZodCIDRv4", (e, t) => {
+  t.pattern ?? (t.pattern = f0), ye.init(e, t);
+}), a1 = /* @__PURE__ */ y("$ZodCIDRv6", (e, t) => {
+  t.pattern ?? (t.pattern = p0), ye.init(e, t), e._zod.check = (i) => {
     const a = i.value.split("/");
     try {
       if (a.length !== 2)
@@ -10527,8 +10527,8 @@ function nf(e) {
     return !1;
   }
 }
-const a1 = /* @__PURE__ */ v("$ZodBase64", (e, t) => {
-  t.pattern ?? (t.pattern = p0), ye.init(e, t), e._zod.bag.contentEncoding = "base64", e._zod.check = (i) => {
+const n1 = /* @__PURE__ */ y("$ZodBase64", (e, t) => {
+  t.pattern ?? (t.pattern = m0), ye.init(e, t), e._zod.bag.contentEncoding = "base64", e._zod.check = (i) => {
     nf(i.value) || i.issues.push({
       code: "invalid_format",
       format: "base64",
@@ -10538,15 +10538,15 @@ const a1 = /* @__PURE__ */ v("$ZodBase64", (e, t) => {
     });
   };
 });
-function n1(e) {
+function s1(e) {
   if (!Jl.test(e))
     return !1;
   const t = e.replace(/[-_]/g, (a) => a === "-" ? "+" : "/"), i = t.padEnd(Math.ceil(t.length / 4) * 4, "=");
   return nf(i);
 }
-const s1 = /* @__PURE__ */ v("$ZodBase64URL", (e, t) => {
+const o1 = /* @__PURE__ */ y("$ZodBase64URL", (e, t) => {
   t.pattern ?? (t.pattern = Jl), ye.init(e, t), e._zod.bag.contentEncoding = "base64url", e._zod.check = (i) => {
-    n1(i.value) || i.issues.push({
+    s1(i.value) || i.issues.push({
       code: "invalid_format",
       format: "base64url",
       input: i.value,
@@ -10554,10 +10554,10 @@ const s1 = /* @__PURE__ */ v("$ZodBase64URL", (e, t) => {
       continue: !t.abort
     });
   };
-}), o1 = /* @__PURE__ */ v("$ZodE164", (e, t) => {
-  t.pattern ?? (t.pattern = g0), ye.init(e, t);
+}), r1 = /* @__PURE__ */ y("$ZodE164", (e, t) => {
+  t.pattern ?? (t.pattern = b0), ye.init(e, t);
 });
-function r1(e, t = null) {
+function c1(e, t = null) {
   try {
     const i = e.split(".");
     if (i.length !== 3)
@@ -10571,9 +10571,9 @@ function r1(e, t = null) {
     return !1;
   }
 }
-const c1 = /* @__PURE__ */ v("$ZodJWT", (e, t) => {
+const d1 = /* @__PURE__ */ y("$ZodJWT", (e, t) => {
   ye.init(e, t), e._zod.check = (i) => {
-    r1(i.value, t.alg) || i.issues.push({
+    c1(i.value, t.alg) || i.issues.push({
       code: "invalid_format",
       format: "jwt",
       input: i.value,
@@ -10581,7 +10581,7 @@ const c1 = /* @__PURE__ */ v("$ZodJWT", (e, t) => {
       continue: !t.abort
     });
   };
-}), sf = /* @__PURE__ */ v("$ZodNumber", (e, t) => {
+}), sf = /* @__PURE__ */ y("$ZodNumber", (e, t) => {
   ke.init(e, t), e._zod.pattern = e._zod.bag.pattern ?? Ql, e._zod.parse = (i, a) => {
     if (t.coerce)
       try {
@@ -10600,10 +10600,10 @@ const c1 = /* @__PURE__ */ v("$ZodJWT", (e, t) => {
       ...s ? { received: s } : {}
     }), i;
   };
-}), d1 = /* @__PURE__ */ v("$ZodNumberFormat", (e, t) => {
-  T0.init(e, t), sf.init(e, t);
-}), u1 = /* @__PURE__ */ v("$ZodBoolean", (e, t) => {
-  ke.init(e, t), e._zod.pattern = k0, e._zod.parse = (i, a) => {
+}), u1 = /* @__PURE__ */ y("$ZodNumberFormat", (e, t) => {
+  A0.init(e, t), sf.init(e, t);
+}), l1 = /* @__PURE__ */ y("$ZodBoolean", (e, t) => {
+  ke.init(e, t), e._zod.pattern = w0, e._zod.parse = (i, a) => {
     if (t.coerce)
       try {
         i.value = !!i.value;
@@ -10617,9 +10617,9 @@ const c1 = /* @__PURE__ */ v("$ZodJWT", (e, t) => {
       inst: e
     }), i;
   };
-}), l1 = /* @__PURE__ */ v("$ZodUnknown", (e, t) => {
+}), f1 = /* @__PURE__ */ y("$ZodUnknown", (e, t) => {
   ke.init(e, t), e._zod.parse = (i) => i;
-}), f1 = /* @__PURE__ */ v("$ZodNever", (e, t) => {
+}), p1 = /* @__PURE__ */ y("$ZodNever", (e, t) => {
   ke.init(e, t), e._zod.parse = (i, a) => (i.issues.push({
     expected: "never",
     code: "invalid_type",
@@ -10630,7 +10630,7 @@ const c1 = /* @__PURE__ */ v("$ZodJWT", (e, t) => {
 function nd(e, t, i) {
   e.issues.length && t.issues.push(...ji(i, e.issues)), t.value[i] = e.value;
 }
-const p1 = /* @__PURE__ */ v("$ZodArray", (e, t) => {
+const m1 = /* @__PURE__ */ y("$ZodArray", (e, t) => {
   ke.init(e, t), e._zod.parse = (i, a) => {
     const n = i.value;
     if (!Array.isArray(n))
@@ -10675,7 +10675,7 @@ function of(e) {
   for (const a of t)
     if (!e.shape?.[a]?._zod?.traits?.has("$ZodType"))
       throw new Error(`Invalid element at key "${a}": expected a Zod schema`);
-  const i = N_(e.shape);
+  const i = C_(e.shape);
   return {
     ...e,
     keys: t,
@@ -10703,7 +10703,7 @@ function rf(e, t, i, a, n, s) {
     inst: s
   }), e.length ? Promise.all(e).then(() => i) : i;
 }
-const m1 = /* @__PURE__ */ v("$ZodObject", (e, t) => {
+const g1 = /* @__PURE__ */ y("$ZodObject", (e, t) => {
   if (ke.init(e, t), !Object.getOwnPropertyDescriptor(t, "shape")?.get) {
     const r = t.shape;
     Object.defineProperty(t, "shape", {
@@ -10743,27 +10743,27 @@ const m1 = /* @__PURE__ */ v("$ZodObject", (e, t) => {
     r.value = {};
     const l = [], u = o.shape;
     for (const m of o.keys) {
-      const p = u[m], h = p._zod.optin === "optional", k = p._zod.optout === "optional", w = p._zod.run({ value: d[m], issues: [] }, c);
-      w instanceof Promise ? l.push(w.then((x) => Vn(x, r, m, d, h, k))) : Vn(w, r, m, d, h, k);
+      const p = u[m], h = p._zod.optin === "optional", w = p._zod.optout === "optional", E = p._zod.run({ value: d[m], issues: [] }, c);
+      E instanceof Promise ? l.push(E.then((A) => Vn(A, r, m, d, h, w))) : Vn(E, r, m, d, h, w);
     }
     return s ? rf(l, d, r, c, a.value, e) : l.length ? Promise.all(l).then(() => r) : r;
   };
-}), g1 = /* @__PURE__ */ v("$ZodObjectJIT", (e, t) => {
-  m1.init(e, t);
+}), b1 = /* @__PURE__ */ y("$ZodObjectJIT", (e, t) => {
+  g1.init(e, t);
   const i = e._zod.parse, a = is(() => of(t)), n = (m) => {
-    const p = new $0(["shape", "payload", "ctx"]), h = a.value, k = (D) => {
-      const H = id(D);
+    const p = new j0(["shape", "payload", "ctx"]), h = a.value, w = (R) => {
+      const H = id(R);
       return `shape[${H}]._zod.run({ value: input[${H}], issues: [] }, ctx)`;
     };
     p.write("const input = payload.value;");
-    const w = /* @__PURE__ */ Object.create(null);
-    let x = 0;
-    for (const D of h.keys)
-      w[D] = `key_${x++}`;
+    const E = /* @__PURE__ */ Object.create(null);
+    let A = 0;
+    for (const R of h.keys)
+      E[R] = `key_${A++}`;
     p.write("const newResult = {};");
-    for (const D of h.keys) {
-      const H = w[D], N = id(D), ee = m[D], z = ee?._zod?.optin === "optional", Q = ee?._zod?.optout === "optional";
-      p.write(`const ${H} = ${k(D)};`), z && Q ? p.write(`
+    for (const R of h.keys) {
+      const H = E[R], N = id(R), ee = m[R], B = ee?._zod?.optin === "optional", le = ee?._zod?.optout === "optional";
+      p.write(`const ${H} = ${w(R)};`), B && le ? p.write(`
         if (${H}.issues.length) {
           if (${N} in input) {
             payload.issues = payload.issues.concat(${H}.issues.map(iss => ({
@@ -10781,7 +10781,7 @@ const m1 = /* @__PURE__ */ v("$ZodObject", (e, t) => {
           newResult[${N}] = ${H}.value;
         }
 
-      `) : z ? p.write(`
+      `) : B ? p.write(`
         if (${H}.issues.length) {
           payload.issues = payload.issues.concat(${H}.issues.map(iss => ({
             ...iss,
@@ -10825,11 +10825,11 @@ const m1 = /* @__PURE__ */ v("$ZodObject", (e, t) => {
       `);
     }
     p.write("payload.value = newResult;"), p.write("return payload;");
-    const L = p.compile();
-    return (D, H) => L(m, D, H);
+    const z = p.compile();
+    return (R, H) => z(m, R, H);
   };
   let s;
-  const o = Sa, r = !Mo.jitless, d = r && x_.value, l = t.catchall;
+  const o = Sa, r = !Mo.jitless, d = r && S_.value, l = t.catchall;
   let u;
   e._zod.parse = (m, p) => {
     u ?? (u = a.value);
@@ -10851,10 +10851,10 @@ function sd(e, t, i, a) {
     code: "invalid_union",
     input: t.value,
     inst: i,
-    errors: e.map((s) => s.issues.map((o) => Kt(o, a, Ht())))
+    errors: e.map((s) => s.issues.map((o) => Ht(o, a, Zt())))
   }), t);
 }
-const cf = /* @__PURE__ */ v("$ZodUnion", (e, t) => {
+const cf = /* @__PURE__ */ y("$ZodUnion", (e, t) => {
   ke.init(e, t), fe(e._zod, "optin", () => t.options.some((a) => a._zod.optin === "optional") ? "optional" : void 0), fe(e._zod, "optout", () => t.options.some((a) => a._zod.optout === "optional") ? "optional" : void 0), fe(e._zod, "values", () => {
     if (t.options.every((a) => a._zod.values))
       return new Set(t.options.flatMap((a) => Array.from(a._zod.values)));
@@ -10885,7 +10885,7 @@ const cf = /* @__PURE__ */ v("$ZodUnion", (e, t) => {
     }
     return s ? Promise.all(o).then((r) => sd(r, a, e, n)) : sd(o, a, e, n);
   };
-}), b1 = /* @__PURE__ */ v("$ZodDiscriminatedUnion", (e, t) => {
+}), h1 = /* @__PURE__ */ y("$ZodDiscriminatedUnion", (e, t) => {
   t.inclusive = !1, cf.init(e, t);
   const i = e._zod.parse;
   fe(e._zod, "propValues", () => {
@@ -10937,7 +10937,7 @@ const cf = /* @__PURE__ */ v("$ZodUnion", (e, t) => {
       inst: e
     }), n);
   };
-}), h1 = /* @__PURE__ */ v("$ZodIntersection", (e, t) => {
+}), _1 = /* @__PURE__ */ y("$ZodIntersection", (e, t) => {
   ke.init(e, t), e._zod.parse = (i, a) => {
     const n = i.value, s = t.left._zod.run({ value: n, issues: [] }, a), o = t.right._zod.run({ value: n, issues: [] }, a);
     return s instanceof Promise || o instanceof Promise ? Promise.all([s, o]).then(([c, d]) => od(i, c, d)) : od(i, s, o);
@@ -11002,7 +11002,7 @@ function od(e, t, i) {
     throw new Error(`Unmergable intersection. Error path: ${JSON.stringify(o.mergeErrorPath)}`);
   return e.value = o.data, e;
 }
-const _1 = /* @__PURE__ */ v("$ZodRecord", (e, t) => {
+const v1 = /* @__PURE__ */ y("$ZodRecord", (e, t) => {
   ke.init(e, t), e._zod.parse = (i, a) => {
     const n = i.value;
     if (!qi(n))
@@ -11026,7 +11026,7 @@ const _1 = /* @__PURE__ */ v("$ZodRecord", (e, t) => {
             i.issues.push({
               code: "invalid_key",
               origin: "record",
-              issues: l.issues.map((p) => Kt(p, a, Ht())),
+              issues: l.issues.map((p) => Ht(p, a, Zt())),
               input: d,
               path: [d],
               inst: e
@@ -11065,7 +11065,7 @@ const _1 = /* @__PURE__ */ v("$ZodRecord", (e, t) => {
           t.mode === "loose" ? i.value[r] = n[r] : i.issues.push({
             code: "invalid_key",
             origin: "record",
-            issues: c.issues.map((u) => Kt(u, a, Ht())),
+            issues: c.issues.map((u) => Ht(u, a, Zt())),
             input: r,
             path: [r],
             inst: e
@@ -11080,10 +11080,10 @@ const _1 = /* @__PURE__ */ v("$ZodRecord", (e, t) => {
     }
     return s.length ? Promise.all(s).then(() => i) : i;
   };
-}), v1 = /* @__PURE__ */ v("$ZodEnum", (e, t) => {
+}), y1 = /* @__PURE__ */ y("$ZodEnum", (e, t) => {
   ke.init(e, t);
   const i = Zl(t.entries), a = new Set(i);
-  e._zod.values = a, e._zod.pattern = new RegExp(`^(${i.filter((n) => S_.has(typeof n)).map((n) => typeof n == "string" ? Gi(n) : n.toString()).join("|")})$`), e._zod.parse = (n, s) => {
+  e._zod.values = a, e._zod.pattern = new RegExp(`^(${i.filter((n) => N_.has(typeof n)).map((n) => typeof n == "string" ? Gi(n) : n.toString()).join("|")})$`), e._zod.parse = (n, s) => {
     const o = n.value;
     return a.has(o) || n.issues.push({
       code: "invalid_value",
@@ -11092,7 +11092,7 @@ const _1 = /* @__PURE__ */ v("$ZodRecord", (e, t) => {
       inst: e
     }), n;
   };
-}), y1 = /* @__PURE__ */ v("$ZodLiteral", (e, t) => {
+}), k1 = /* @__PURE__ */ y("$ZodLiteral", (e, t) => {
   if (ke.init(e, t), t.values.length === 0)
     throw new Error("Cannot create literal schema with no valid values");
   const i = new Set(t.values);
@@ -11105,7 +11105,7 @@ const _1 = /* @__PURE__ */ v("$ZodRecord", (e, t) => {
       inst: e
     }), a;
   };
-}), k1 = /* @__PURE__ */ v("$ZodTransform", (e, t) => {
+}), w1 = /* @__PURE__ */ y("$ZodTransform", (e, t) => {
   ke.init(e, t), e._zod.optin = "optional", e._zod.parse = (i, a) => {
     if (a.direction === "backward")
       throw new Bl(e.constructor.name);
@@ -11120,7 +11120,7 @@ const _1 = /* @__PURE__ */ v("$ZodRecord", (e, t) => {
 function rd(e, t) {
   return t === void 0 && (e.issues.length || e.fallback) ? { issues: [], value: void 0 } : e;
 }
-const df = /* @__PURE__ */ v("$ZodOptional", (e, t) => {
+const df = /* @__PURE__ */ y("$ZodOptional", (e, t) => {
   ke.init(e, t), e._zod.optin = "optional", e._zod.optout = "optional", fe(e._zod, "values", () => t.innerType._zod.values ? /* @__PURE__ */ new Set([...t.innerType._zod.values, void 0]) : void 0), fe(e._zod, "pattern", () => {
     const i = t.innerType._zod.pattern;
     return i ? new RegExp(`^(${Zo(i.source)})?$`) : void 0;
@@ -11131,14 +11131,14 @@ const df = /* @__PURE__ */ v("$ZodOptional", (e, t) => {
     }
     return i.value === void 0 ? i : t.innerType._zod.run(i, a);
   };
-}), w1 = /* @__PURE__ */ v("$ZodExactOptional", (e, t) => {
+}), E1 = /* @__PURE__ */ y("$ZodExactOptional", (e, t) => {
   df.init(e, t), fe(e._zod, "values", () => t.innerType._zod.values), fe(e._zod, "pattern", () => t.innerType._zod.pattern), e._zod.parse = (i, a) => t.innerType._zod.run(i, a);
-}), E1 = /* @__PURE__ */ v("$ZodNullable", (e, t) => {
+}), I1 = /* @__PURE__ */ y("$ZodNullable", (e, t) => {
   ke.init(e, t), fe(e._zod, "optin", () => t.innerType._zod.optin), fe(e._zod, "optout", () => t.innerType._zod.optout), fe(e._zod, "pattern", () => {
     const i = t.innerType._zod.pattern;
     return i ? new RegExp(`^(${Zo(i.source)}|null)$`) : void 0;
   }), fe(e._zod, "values", () => t.innerType._zod.values ? /* @__PURE__ */ new Set([...t.innerType._zod.values, null]) : void 0), e._zod.parse = (i, a) => i.value === null ? i : t.innerType._zod.run(i, a);
-}), I1 = /* @__PURE__ */ v("$ZodDefault", (e, t) => {
+}), T1 = /* @__PURE__ */ y("$ZodDefault", (e, t) => {
   ke.init(e, t), e._zod.optin = "optional", fe(e._zod, "values", () => t.innerType._zod.values), e._zod.parse = (i, a) => {
     if (a.direction === "backward")
       return t.innerType._zod.run(i, a);
@@ -11151,9 +11151,9 @@ const df = /* @__PURE__ */ v("$ZodOptional", (e, t) => {
 function cd(e, t) {
   return e.value === void 0 && (e.value = t.defaultValue), e;
 }
-const T1 = /* @__PURE__ */ v("$ZodPrefault", (e, t) => {
+const A1 = /* @__PURE__ */ y("$ZodPrefault", (e, t) => {
   ke.init(e, t), e._zod.optin = "optional", fe(e._zod, "values", () => t.innerType._zod.values), e._zod.parse = (i, a) => (a.direction === "backward" || i.value === void 0 && (i.value = t.defaultValue), t.innerType._zod.run(i, a));
-}), A1 = /* @__PURE__ */ v("$ZodNonOptional", (e, t) => {
+}), O1 = /* @__PURE__ */ y("$ZodNonOptional", (e, t) => {
   ke.init(e, t), fe(e._zod, "values", () => {
     const i = t.innerType._zod.values;
     return i ? new Set([...i].filter((a) => a !== void 0)) : void 0;
@@ -11170,7 +11170,7 @@ function dd(e, t) {
     inst: t
   }), e;
 }
-const O1 = /* @__PURE__ */ v("$ZodCatch", (e, t) => {
+const x1 = /* @__PURE__ */ y("$ZodCatch", (e, t) => {
   ke.init(e, t), e._zod.optin = "optional", fe(e._zod, "optout", () => t.innerType._zod.optout), fe(e._zod, "values", () => t.innerType._zod.values), e._zod.parse = (i, a) => {
     if (a.direction === "backward")
       return t.innerType._zod.run(i, a);
@@ -11178,18 +11178,18 @@ const O1 = /* @__PURE__ */ v("$ZodCatch", (e, t) => {
     return n instanceof Promise ? n.then((s) => (i.value = s.value, s.issues.length && (i.value = t.catchValue({
       ...i,
       error: {
-        issues: s.issues.map((o) => Kt(o, a, Ht()))
+        issues: s.issues.map((o) => Ht(o, a, Zt()))
       },
       input: i.value
     }), i.issues = [], i.fallback = !0), i)) : (i.value = n.value, n.issues.length && (i.value = t.catchValue({
       ...i,
       error: {
-        issues: n.issues.map((s) => Kt(s, a, Ht()))
+        issues: n.issues.map((s) => Ht(s, a, Zt()))
       },
       input: i.value
     }), i.issues = [], i.fallback = !0), i);
   };
-}), x1 = /* @__PURE__ */ v("$ZodPipe", (e, t) => {
+}), S1 = /* @__PURE__ */ y("$ZodPipe", (e, t) => {
   ke.init(e, t), fe(e._zod, "values", () => t.in._zod.values), fe(e._zod, "optin", () => t.in._zod.optin), fe(e._zod, "optout", () => t.out._zod.optout), fe(e._zod, "propValues", () => t.in._zod.propValues), e._zod.parse = (i, a) => {
     if (a.direction === "backward") {
       const s = t.out._zod.run(i, a);
@@ -11202,7 +11202,7 @@ const O1 = /* @__PURE__ */ v("$ZodCatch", (e, t) => {
 function Ja(e, t, i) {
   return e.issues.length ? (e.aborted = !0, e) : t._zod.run({ value: e.value, issues: e.issues, fallback: e.fallback }, i);
 }
-const S1 = /* @__PURE__ */ v("$ZodReadonly", (e, t) => {
+const N1 = /* @__PURE__ */ y("$ZodReadonly", (e, t) => {
   ke.init(e, t), fe(e._zod, "propValues", () => t.innerType._zod.propValues), fe(e._zod, "values", () => t.innerType._zod.values), fe(e._zod, "optin", () => t.innerType?._zod?.optin), fe(e._zod, "optout", () => t.innerType?._zod?.optout), e._zod.parse = (i, a) => {
     if (a.direction === "backward")
       return t.innerType._zod.run(i, a);
@@ -11213,8 +11213,8 @@ const S1 = /* @__PURE__ */ v("$ZodReadonly", (e, t) => {
 function ud(e) {
   return e.value = Object.freeze(e.value), e;
 }
-const N1 = /* @__PURE__ */ v("$ZodCustom", (e, t) => {
-  tt.init(e, t), ke.init(e, t), e._zod.parse = (i, a) => i, e._zod.check = (i) => {
+const C1 = /* @__PURE__ */ y("$ZodCustom", (e, t) => {
+  it.init(e, t), ke.init(e, t), e._zod.parse = (i, a) => i, e._zod.check = (i) => {
     const a = i.value, n = t.fn(a);
     if (n instanceof Promise)
       return n.then((s) => ld(s, i, a, e));
@@ -11237,7 +11237,7 @@ function ld(e, t, i, a) {
   }
 }
 var fd;
-class C1 {
+class D1 {
   constructor() {
     this._map = /* @__PURE__ */ new WeakMap(), this._idmap = /* @__PURE__ */ new Map();
   }
@@ -11266,26 +11266,26 @@ class C1 {
     return this._map.has(t);
   }
 }
-function D1() {
-  return new C1();
+function V1() {
+  return new D1();
 }
-(fd = globalThis).__zod_globalRegistry ?? (fd.__zod_globalRegistry = D1());
+(fd = globalThis).__zod_globalRegistry ?? (fd.__zod_globalRegistry = V1());
 const da = globalThis.__zod_globalRegistry;
 // @__NO_SIDE_EFFECTS__
-function V1(e, t) {
+function R1(e, t) {
   return new e({
     type: "string",
-    ...B(t)
+    ...Z(t)
   });
 }
 // @__NO_SIDE_EFFECTS__
-function R1(e, t) {
+function P1(e, t) {
   return new e({
     type: "string",
     format: "email",
     check: "string_format",
     abort: !1,
-    ...B(t)
+    ...Z(t)
   });
 }
 // @__NO_SIDE_EFFECTS__
@@ -11295,17 +11295,7 @@ function pd(e, t) {
     format: "guid",
     check: "string_format",
     abort: !1,
-    ...B(t)
-  });
-}
-// @__NO_SIDE_EFFECTS__
-function P1(e, t) {
-  return new e({
-    type: "string",
-    format: "uuid",
-    check: "string_format",
-    abort: !1,
-    ...B(t)
+    ...Z(t)
   });
 }
 // @__NO_SIDE_EFFECTS__
@@ -11315,8 +11305,7 @@ function $1(e, t) {
     format: "uuid",
     check: "string_format",
     abort: !1,
-    version: "v4",
-    ...B(t)
+    ...Z(t)
   });
 }
 // @__NO_SIDE_EFFECTS__
@@ -11326,8 +11315,8 @@ function j1(e, t) {
     format: "uuid",
     check: "string_format",
     abort: !1,
-    version: "v6",
-    ...B(t)
+    version: "v4",
+    ...Z(t)
   });
 }
 // @__NO_SIDE_EFFECTS__
@@ -11337,172 +11326,183 @@ function F1(e, t) {
     format: "uuid",
     check: "string_format",
     abort: !1,
-    version: "v7",
-    ...B(t)
+    version: "v6",
+    ...Z(t)
   });
 }
 // @__NO_SIDE_EFFECTS__
 function z1(e, t) {
   return new e({
     type: "string",
-    format: "url",
+    format: "uuid",
     check: "string_format",
     abort: !1,
-    ...B(t)
+    version: "v7",
+    ...Z(t)
   });
 }
 // @__NO_SIDE_EFFECTS__
 function U1(e, t) {
   return new e({
     type: "string",
-    format: "emoji",
+    format: "url",
     check: "string_format",
     abort: !1,
-    ...B(t)
+    ...Z(t)
   });
 }
 // @__NO_SIDE_EFFECTS__
 function L1(e, t) {
   return new e({
     type: "string",
-    format: "nanoid",
+    format: "emoji",
     check: "string_format",
     abort: !1,
-    ...B(t)
+    ...Z(t)
   });
 }
 // @__NO_SIDE_EFFECTS__
 function M1(e, t) {
   return new e({
     type: "string",
-    format: "cuid",
+    format: "nanoid",
     check: "string_format",
     abort: !1,
-    ...B(t)
+    ...Z(t)
   });
 }
 // @__NO_SIDE_EFFECTS__
 function B1(e, t) {
   return new e({
     type: "string",
-    format: "cuid2",
+    format: "cuid",
     check: "string_format",
     abort: !1,
-    ...B(t)
+    ...Z(t)
   });
 }
 // @__NO_SIDE_EFFECTS__
 function Z1(e, t) {
   return new e({
     type: "string",
-    format: "ulid",
+    format: "cuid2",
     check: "string_format",
     abort: !1,
-    ...B(t)
+    ...Z(t)
   });
 }
 // @__NO_SIDE_EFFECTS__
 function H1(e, t) {
   return new e({
     type: "string",
-    format: "xid",
+    format: "ulid",
     check: "string_format",
     abort: !1,
-    ...B(t)
+    ...Z(t)
   });
 }
 // @__NO_SIDE_EFFECTS__
 function K1(e, t) {
   return new e({
     type: "string",
-    format: "ksuid",
+    format: "xid",
     check: "string_format",
     abort: !1,
-    ...B(t)
+    ...Z(t)
   });
 }
 // @__NO_SIDE_EFFECTS__
 function W1(e, t) {
   return new e({
     type: "string",
-    format: "ipv4",
+    format: "ksuid",
     check: "string_format",
     abort: !1,
-    ...B(t)
+    ...Z(t)
   });
 }
 // @__NO_SIDE_EFFECTS__
 function q1(e, t) {
   return new e({
     type: "string",
-    format: "ipv6",
+    format: "ipv4",
     check: "string_format",
     abort: !1,
-    ...B(t)
+    ...Z(t)
   });
 }
 // @__NO_SIDE_EFFECTS__
 function G1(e, t) {
   return new e({
     type: "string",
-    format: "cidrv4",
+    format: "ipv6",
     check: "string_format",
     abort: !1,
-    ...B(t)
+    ...Z(t)
   });
 }
 // @__NO_SIDE_EFFECTS__
 function J1(e, t) {
   return new e({
     type: "string",
-    format: "cidrv6",
+    format: "cidrv4",
     check: "string_format",
     abort: !1,
-    ...B(t)
+    ...Z(t)
   });
 }
 // @__NO_SIDE_EFFECTS__
 function Y1(e, t) {
   return new e({
     type: "string",
-    format: "base64",
+    format: "cidrv6",
     check: "string_format",
     abort: !1,
-    ...B(t)
+    ...Z(t)
   });
 }
 // @__NO_SIDE_EFFECTS__
 function X1(e, t) {
   return new e({
     type: "string",
-    format: "base64url",
+    format: "base64",
     check: "string_format",
     abort: !1,
-    ...B(t)
+    ...Z(t)
   });
 }
 // @__NO_SIDE_EFFECTS__
 function Q1(e, t) {
   return new e({
     type: "string",
-    format: "e164",
+    format: "base64url",
     check: "string_format",
     abort: !1,
-    ...B(t)
+    ...Z(t)
   });
 }
 // @__NO_SIDE_EFFECTS__
 function e2(e, t) {
   return new e({
     type: "string",
-    format: "jwt",
+    format: "e164",
     check: "string_format",
     abort: !1,
-    ...B(t)
+    ...Z(t)
   });
 }
 // @__NO_SIDE_EFFECTS__
 function t2(e, t) {
+  return new e({
+    type: "string",
+    format: "jwt",
+    check: "string_format",
+    abort: !1,
+    ...Z(t)
+  });
+}
+// @__NO_SIDE_EFFECTS__
+function i2(e, t) {
   return new e({
     type: "string",
     format: "datetime",
@@ -11510,80 +11510,80 @@ function t2(e, t) {
     offset: !1,
     local: !1,
     precision: null,
-    ...B(t)
-  });
-}
-// @__NO_SIDE_EFFECTS__
-function i2(e, t) {
-  return new e({
-    type: "string",
-    format: "date",
-    check: "string_format",
-    ...B(t)
+    ...Z(t)
   });
 }
 // @__NO_SIDE_EFFECTS__
 function a2(e, t) {
   return new e({
     type: "string",
-    format: "time",
+    format: "date",
     check: "string_format",
-    precision: null,
-    ...B(t)
+    ...Z(t)
   });
 }
 // @__NO_SIDE_EFFECTS__
 function n2(e, t) {
   return new e({
     type: "string",
-    format: "duration",
+    format: "time",
     check: "string_format",
-    ...B(t)
+    precision: null,
+    ...Z(t)
   });
 }
 // @__NO_SIDE_EFFECTS__
 function s2(e, t) {
   return new e({
-    type: "number",
-    checks: [],
-    ...B(t)
+    type: "string",
+    format: "duration",
+    check: "string_format",
+    ...Z(t)
   });
 }
 // @__NO_SIDE_EFFECTS__
 function o2(e, t) {
   return new e({
     type: "number",
-    check: "number_format",
-    abort: !1,
-    format: "safeint",
-    ...B(t)
+    checks: [],
+    ...Z(t)
   });
 }
 // @__NO_SIDE_EFFECTS__
 function r2(e, t) {
   return new e({
-    type: "boolean",
-    ...B(t)
+    type: "number",
+    check: "number_format",
+    abort: !1,
+    format: "safeint",
+    ...Z(t)
   });
 }
 // @__NO_SIDE_EFFECTS__
-function c2(e) {
+function c2(e, t) {
+  return new e({
+    type: "boolean",
+    ...Z(t)
+  });
+}
+// @__NO_SIDE_EFFECTS__
+function d2(e) {
   return new e({
     type: "unknown"
   });
 }
 // @__NO_SIDE_EFFECTS__
-function d2(e, t) {
+function u2(e, t) {
   return new e({
     type: "never",
-    ...B(t)
+    ...Z(t)
   });
 }
 // @__NO_SIDE_EFFECTS__
 function md(e, t) {
   return new tf({
     check: "less_than",
-    ...B(t),
+    ...Z(t),
     value: e,
     inclusive: !1
   });
@@ -11592,7 +11592,7 @@ function md(e, t) {
 function Ts(e, t) {
   return new tf({
     check: "less_than",
-    ...B(t),
+    ...Z(t),
     value: e,
     inclusive: !0
   });
@@ -11601,7 +11601,7 @@ function Ts(e, t) {
 function gd(e, t) {
   return new af({
     check: "greater_than",
-    ...B(t),
+    ...Z(t),
     value: e,
     inclusive: !1
   });
@@ -11610,136 +11610,136 @@ function gd(e, t) {
 function As(e, t) {
   return new af({
     check: "greater_than",
-    ...B(t),
+    ...Z(t),
     value: e,
     inclusive: !0
   });
 }
 // @__NO_SIDE_EFFECTS__
 function bd(e, t) {
-  return new I0({
+  return new T0({
     check: "multiple_of",
-    ...B(t),
+    ...Z(t),
     value: e
   });
 }
 // @__NO_SIDE_EFFECTS__
 function uf(e, t) {
-  return new A0({
+  return new O0({
     check: "max_length",
-    ...B(t),
+    ...Z(t),
     maximum: e
   });
 }
 // @__NO_SIDE_EFFECTS__
 function Rn(e, t) {
-  return new O0({
+  return new x0({
     check: "min_length",
-    ...B(t),
+    ...Z(t),
     minimum: e
   });
 }
 // @__NO_SIDE_EFFECTS__
 function lf(e, t) {
-  return new x0({
+  return new S0({
     check: "length_equals",
-    ...B(t),
+    ...Z(t),
     length: e
   });
 }
 // @__NO_SIDE_EFFECTS__
-function u2(e, t) {
-  return new S0({
-    check: "string_format",
-    format: "regex",
-    ...B(t),
-    pattern: e
-  });
-}
-// @__NO_SIDE_EFFECTS__
-function l2(e) {
+function l2(e, t) {
   return new N0({
     check: "string_format",
-    format: "lowercase",
-    ...B(e)
+    format: "regex",
+    ...Z(t),
+    pattern: e
   });
 }
 // @__NO_SIDE_EFFECTS__
 function f2(e) {
   return new C0({
     check: "string_format",
-    format: "uppercase",
-    ...B(e)
+    format: "lowercase",
+    ...Z(e)
   });
 }
 // @__NO_SIDE_EFFECTS__
-function p2(e, t) {
+function p2(e) {
   return new D0({
     check: "string_format",
-    format: "includes",
-    ...B(t),
-    includes: e
+    format: "uppercase",
+    ...Z(e)
   });
 }
 // @__NO_SIDE_EFFECTS__
 function m2(e, t) {
   return new V0({
     check: "string_format",
-    format: "starts_with",
-    ...B(t),
-    prefix: e
+    format: "includes",
+    ...Z(t),
+    includes: e
   });
 }
 // @__NO_SIDE_EFFECTS__
 function g2(e, t) {
   return new R0({
     check: "string_format",
+    format: "starts_with",
+    ...Z(t),
+    prefix: e
+  });
+}
+// @__NO_SIDE_EFFECTS__
+function b2(e, t) {
+  return new P0({
+    check: "string_format",
     format: "ends_with",
-    ...B(t),
+    ...Z(t),
     suffix: e
   });
 }
 // @__NO_SIDE_EFFECTS__
 function Qi(e) {
-  return new P0({
+  return new $0({
     check: "overwrite",
     tx: e
   });
 }
 // @__NO_SIDE_EFFECTS__
-function b2(e) {
+function h2(e) {
   return /* @__PURE__ */ Qi((t) => t.normalize(e));
 }
 // @__NO_SIDE_EFFECTS__
-function h2() {
+function _2() {
   return /* @__PURE__ */ Qi((e) => e.trim());
 }
 // @__NO_SIDE_EFFECTS__
-function _2() {
+function v2() {
   return /* @__PURE__ */ Qi((e) => e.toLowerCase());
 }
 // @__NO_SIDE_EFFECTS__
-function v2() {
+function y2() {
   return /* @__PURE__ */ Qi((e) => e.toUpperCase());
 }
 // @__NO_SIDE_EFFECTS__
-function y2() {
-  return /* @__PURE__ */ Qi((e) => O_(e));
+function k2() {
+  return /* @__PURE__ */ Qi((e) => x_(e));
 }
 // @__NO_SIDE_EFFECTS__
-function k2(e, t, i) {
+function w2(e, t, i) {
   return new e({
     type: "array",
     element: t,
     // get element() {
     //   return element;
     // },
-    ...B(i)
+    ...Z(i)
   });
 }
 // @__NO_SIDE_EFFECTS__
-function w2(e, t, i) {
-  const a = B(i);
+function E2(e, t, i) {
+  const a = Z(i);
   return a.abort ?? (a.abort = !0), new e({
     type: "custom",
     check: "custom",
@@ -11748,17 +11748,17 @@ function w2(e, t, i) {
   });
 }
 // @__NO_SIDE_EFFECTS__
-function E2(e, t, i) {
+function I2(e, t, i) {
   return new e({
     type: "custom",
     check: "custom",
     fn: t,
-    ...B(i)
+    ...Z(i)
   });
 }
 // @__NO_SIDE_EFFECTS__
-function I2(e, t) {
-  const i = /* @__PURE__ */ T2((a) => (a.addIssue = (n) => {
+function T2(e, t) {
+  const i = /* @__PURE__ */ A2((a) => (a.addIssue = (n) => {
     if (typeof n == "string")
       a.issues.push(Na(n, a.value, i._zod.def));
     else {
@@ -11769,10 +11769,10 @@ function I2(e, t) {
   return i;
 }
 // @__NO_SIDE_EFFECTS__
-function T2(e, t) {
-  const i = new tt({
+function A2(e, t) {
+  const i = new it({
     check: "custom",
-    ...B(t)
+    ...Z(t)
   });
   return i._zod.check = e, i;
 }
@@ -11793,7 +11793,7 @@ function ff(e) {
     external: e?.external ?? void 0
   };
 }
-function Se(e, t, i = { path: [], schemaPath: [] }) {
+function Ne(e, t, i = { path: [], schemaPath: [] }) {
   var a;
   const n = e._zod.def, s = t.seen.get(e);
   if (s)
@@ -11818,10 +11818,10 @@ function Se(e, t, i = { path: [], schemaPath: [] }) {
       p(e, t, m, l);
     }
     const u = e._zod.parent;
-    u && (o.ref || (o.ref = u), Se(u, t, l), t.seen.get(u).isParent = !0);
+    u && (o.ref || (o.ref = u), Ne(u, t, l), t.seen.get(u).isParent = !0);
   }
   const c = t.metadataRegistry.get(e);
-  return c && Object.assign(o.schema, c), t.io === "input" && We(e) && (delete o.schema.examples, delete o.schema.default), t.io === "input" && "_prefault" in o.schema && ((a = o.schema).default ?? (a.default = o.schema._prefault)), delete o.schema._prefault, t.seen.get(e).schema;
+  return c && Object.assign(o.schema, c), t.io === "input" && qe(e) && (delete o.schema.examples, delete o.schema.default), t.io === "input" && "_prefault" in o.schema && ((a = o.schema).default ?? (a.default = o.schema._prefault)), delete o.schema._prefault, t.seen.get(e).schema;
 }
 function pf(e, t) {
   const i = e.seen.get(t);
@@ -11908,11 +11908,11 @@ function mf(e, t) {
       a(u);
       const p = e.seen.get(u), h = p.schema;
       if (h.$ref && (e.target === "draft-07" || e.target === "draft-04" || e.target === "openapi-3.0") ? (d.allOf = d.allOf ?? [], d.allOf.push(h)) : Object.assign(d, h), Object.assign(d, l), r._zod.parent === u)
-        for (const w in d)
-          w === "$ref" || w === "allOf" || w in l || delete d[w];
+        for (const E in d)
+          E === "$ref" || E === "allOf" || E in l || delete d[E];
       if (h.$ref && p.def)
-        for (const w in d)
-          w === "$ref" || w === "allOf" || w in p.def && JSON.stringify(d[w]) === JSON.stringify(p.def[w]) && delete d[w];
+        for (const E in d)
+          E === "$ref" || E === "allOf" || E in p.def && JSON.stringify(d[E]) === JSON.stringify(p.def[E]) && delete d[E];
     }
     const m = r._zod.parent;
     if (m && m !== u) {
@@ -11963,7 +11963,7 @@ function mf(e, t) {
     throw new Error("Error converting schema to JSON.");
   }
 }
-function We(e, t) {
+function qe(e, t) {
   const i = t ?? { seen: /* @__PURE__ */ new Set() };
   if (i.seen.has(e))
     return !1;
@@ -11972,57 +11972,57 @@ function We(e, t) {
   if (a.type === "transform")
     return !0;
   if (a.type === "array")
-    return We(a.element, i);
+    return qe(a.element, i);
   if (a.type === "set")
-    return We(a.valueType, i);
+    return qe(a.valueType, i);
   if (a.type === "lazy")
-    return We(a.getter(), i);
+    return qe(a.getter(), i);
   if (a.type === "promise" || a.type === "optional" || a.type === "nonoptional" || a.type === "nullable" || a.type === "readonly" || a.type === "default" || a.type === "prefault")
-    return We(a.innerType, i);
+    return qe(a.innerType, i);
   if (a.type === "intersection")
-    return We(a.left, i) || We(a.right, i);
+    return qe(a.left, i) || qe(a.right, i);
   if (a.type === "record" || a.type === "map")
-    return We(a.keyType, i) || We(a.valueType, i);
+    return qe(a.keyType, i) || qe(a.valueType, i);
   if (a.type === "pipe")
-    return e._zod.traits.has("$ZodCodec") ? !0 : We(a.in, i) || We(a.out, i);
+    return e._zod.traits.has("$ZodCodec") ? !0 : qe(a.in, i) || qe(a.out, i);
   if (a.type === "object") {
     for (const n in a.shape)
-      if (We(a.shape[n], i))
+      if (qe(a.shape[n], i))
         return !0;
     return !1;
   }
   if (a.type === "union") {
     for (const n of a.options)
-      if (We(n, i))
+      if (qe(n, i))
         return !0;
     return !1;
   }
   if (a.type === "tuple") {
     for (const n of a.items)
-      if (We(n, i))
+      if (qe(n, i))
         return !0;
-    return !!(a.rest && We(a.rest, i));
+    return !!(a.rest && qe(a.rest, i));
   }
   return !1;
 }
-const A2 = (e, t = {}) => (i) => {
+const O2 = (e, t = {}) => (i) => {
   const a = ff({ ...i, processors: t });
-  return Se(e, a), pf(a, e), mf(a, e);
+  return Ne(e, a), pf(a, e), mf(a, e);
 }, Pn = (e, t, i = {}) => (a) => {
   const { libraryOptions: n, target: s } = a ?? {}, o = ff({ ...n ?? {}, target: s, io: t, processors: i });
-  return Se(e, o), pf(o, e), mf(o, e);
-}, O2 = {
+  return Ne(e, o), pf(o, e), mf(o, e);
+}, x2 = {
   guid: "uuid",
   url: "uri",
   datetime: "date-time",
   json_string: "json-string",
   regex: ""
   // do not set
-}, x2 = (e, t, i, a) => {
+}, S2 = (e, t, i, a) => {
   const n = i;
   n.type = "string";
   const { minimum: s, maximum: o, format: r, patterns: c, contentEncoding: d } = e._zod.bag;
-  if (typeof s == "number" && (n.minLength = s), typeof o == "number" && (n.maxLength = o), r && (n.format = O2[r] ?? r, n.format === "" && delete n.format, r === "time" && delete n.format), d && (n.contentEncoding = d), c && c.size > 0) {
+  if (typeof s == "number" && (n.minLength = s), typeof o == "number" && (n.maxLength = o), r && (n.format = x2[r] ?? r, n.format === "" && delete n.format, r === "time" && delete n.format), d && (n.contentEncoding = d), c && c.size > 0) {
     const l = [...c];
     l.length === 1 ? n.pattern = l[0].source : l.length > 1 && (n.allOf = [
       ...l.map((u) => ({
@@ -12031,20 +12031,20 @@ const A2 = (e, t = {}) => (i) => {
       }))
     ]);
   }
-}, S2 = (e, t, i, a) => {
+}, N2 = (e, t, i, a) => {
   const n = i, { minimum: s, maximum: o, format: r, multipleOf: c, exclusiveMaximum: d, exclusiveMinimum: l } = e._zod.bag;
   typeof r == "string" && r.includes("int") ? n.type = "integer" : n.type = "number";
   const u = typeof l == "number" && l >= (s ?? Number.NEGATIVE_INFINITY), m = typeof d == "number" && d <= (o ?? Number.POSITIVE_INFINITY), p = t.target === "draft-04" || t.target === "openapi-3.0";
   u ? p ? (n.minimum = l, n.exclusiveMinimum = !0) : n.exclusiveMinimum = l : typeof s == "number" && (n.minimum = s), m ? p ? (n.maximum = d, n.exclusiveMaximum = !0) : n.exclusiveMaximum = d : typeof o == "number" && (n.maximum = o), typeof c == "number" && (n.multipleOf = c);
-}, N2 = (e, t, i, a) => {
-  i.type = "boolean";
 }, C2 = (e, t, i, a) => {
-  i.not = {};
+  i.type = "boolean";
 }, D2 = (e, t, i, a) => {
+  i.not = {};
 }, V2 = (e, t, i, a) => {
+}, R2 = (e, t, i, a) => {
   const n = e._zod.def, s = Zl(n.entries);
   s.every((o) => typeof o == "number") && (i.type = "number"), s.every((o) => typeof o == "string") && (i.type = "string"), i.enum = s;
-}, R2 = (e, t, i, a) => {
+}, P2 = (e, t, i, a) => {
   const n = e._zod.def, s = [];
   for (const o of n.values)
     if (o === void 0) {
@@ -12061,24 +12061,24 @@ const A2 = (e, t = {}) => (i) => {
     i.type = o === null ? "null" : typeof o, t.target === "draft-04" || t.target === "openapi-3.0" ? i.enum = [o] : i.const = o;
   } else
     s.every((o) => typeof o == "number") && (i.type = "number"), s.every((o) => typeof o == "string") && (i.type = "string"), s.every((o) => typeof o == "boolean") && (i.type = "boolean"), s.every((o) => o === null) && (i.type = "null"), i.enum = s;
-}, P2 = (e, t, i, a) => {
-  if (t.unrepresentable === "throw")
-    throw new Error("Custom types cannot be represented in JSON Schema");
 }, $2 = (e, t, i, a) => {
   if (t.unrepresentable === "throw")
-    throw new Error("Transforms cannot be represented in JSON Schema");
+    throw new Error("Custom types cannot be represented in JSON Schema");
 }, j2 = (e, t, i, a) => {
+  if (t.unrepresentable === "throw")
+    throw new Error("Transforms cannot be represented in JSON Schema");
+}, F2 = (e, t, i, a) => {
   const n = i, s = e._zod.def, { minimum: o, maximum: r } = e._zod.bag;
-  typeof o == "number" && (n.minItems = o), typeof r == "number" && (n.maxItems = r), n.type = "array", n.items = Se(s.element, t, {
+  typeof o == "number" && (n.minItems = o), typeof r == "number" && (n.maxItems = r), n.type = "array", n.items = Ne(s.element, t, {
     ...a,
     path: [...a.path, "items"]
   });
-}, F2 = (e, t, i, a) => {
+}, z2 = (e, t, i, a) => {
   const n = i, s = e._zod.def;
   n.type = "object", n.properties = {};
   const o = s.shape;
   for (const d in o)
-    n.properties[d] = Se(o[d], t, {
+    n.properties[d] = Ne(o[d], t, {
       ...a,
       path: [...a.path, "properties", d]
     });
@@ -12086,21 +12086,21 @@ const A2 = (e, t = {}) => (i) => {
     const l = s.shape[d]._zod;
     return t.io === "input" ? l.optin === void 0 : l.optout === void 0;
   }));
-  c.size > 0 && (n.required = Array.from(c)), s.catchall?._zod.def.type === "never" ? n.additionalProperties = !1 : s.catchall ? s.catchall && (n.additionalProperties = Se(s.catchall, t, {
+  c.size > 0 && (n.required = Array.from(c)), s.catchall?._zod.def.type === "never" ? n.additionalProperties = !1 : s.catchall ? s.catchall && (n.additionalProperties = Ne(s.catchall, t, {
     ...a,
     path: [...a.path, "additionalProperties"]
   })) : t.io === "output" && (n.additionalProperties = !1);
-}, z2 = (e, t, i, a) => {
-  const n = e._zod.def, s = n.inclusive === !1, o = n.options.map((r, c) => Se(r, t, {
+}, U2 = (e, t, i, a) => {
+  const n = e._zod.def, s = n.inclusive === !1, o = n.options.map((r, c) => Ne(r, t, {
     ...a,
     path: [...a.path, s ? "oneOf" : "anyOf", c]
   }));
   s ? i.oneOf = o : i.anyOf = o;
-}, U2 = (e, t, i, a) => {
-  const n = e._zod.def, s = Se(n.left, t, {
+}, L2 = (e, t, i, a) => {
+  const n = e._zod.def, s = Ne(n.left, t, {
     ...a,
     path: [...a.path, "allOf", 0]
-  }), o = Se(n.right, t, {
+  }), o = Ne(n.right, t, {
     ...a,
     path: [...a.path, "allOf", 1]
   }), r = (d) => "allOf" in d && Object.keys(d).length === 1, c = [
@@ -12108,12 +12108,12 @@ const A2 = (e, t = {}) => (i) => {
     ...r(o) ? o.allOf : [o]
   ];
   i.allOf = c;
-}, L2 = (e, t, i, a) => {
+}, M2 = (e, t, i, a) => {
   const n = i, s = e._zod.def;
   n.type = "object";
   const o = s.keyType, c = o._zod.bag?.patterns;
   if (s.mode === "loose" && c && c.size > 0) {
-    const l = Se(s.valueType, t, {
+    const l = Ne(s.valueType, t, {
       ...a,
       path: [...a.path, "patternProperties", "*"]
     });
@@ -12121,10 +12121,10 @@ const A2 = (e, t = {}) => (i) => {
     for (const u of c)
       n.patternProperties[u.source] = l;
   } else
-    (t.target === "draft-07" || t.target === "draft-2020-12") && (n.propertyNames = Se(s.keyType, t, {
+    (t.target === "draft-07" || t.target === "draft-2020-12") && (n.propertyNames = Ne(s.keyType, t, {
       ...a,
       path: [...a.path, "propertyNames"]
-    })), n.additionalProperties = Se(s.valueType, t, {
+    })), n.additionalProperties = Ne(s.valueType, t, {
       ...a,
       path: [...a.path, "additionalProperties"]
     });
@@ -12133,27 +12133,27 @@ const A2 = (e, t = {}) => (i) => {
     const l = [...d].filter((u) => typeof u == "string" || typeof u == "number");
     l.length > 0 && (n.required = l);
   }
-}, M2 = (e, t, i, a) => {
-  const n = e._zod.def, s = Se(n.innerType, t, a), o = t.seen.get(e);
-  t.target === "openapi-3.0" ? (o.ref = n.innerType, i.nullable = !0) : i.anyOf = [s, { type: "null" }];
 }, B2 = (e, t, i, a) => {
-  const n = e._zod.def;
-  Se(n.innerType, t, a);
-  const s = t.seen.get(e);
-  s.ref = n.innerType;
+  const n = e._zod.def, s = Ne(n.innerType, t, a), o = t.seen.get(e);
+  t.target === "openapi-3.0" ? (o.ref = n.innerType, i.nullable = !0) : i.anyOf = [s, { type: "null" }];
 }, Z2 = (e, t, i, a) => {
   const n = e._zod.def;
-  Se(n.innerType, t, a);
+  Ne(n.innerType, t, a);
   const s = t.seen.get(e);
-  s.ref = n.innerType, i.default = JSON.parse(JSON.stringify(n.defaultValue));
+  s.ref = n.innerType;
 }, H2 = (e, t, i, a) => {
   const n = e._zod.def;
-  Se(n.innerType, t, a);
+  Ne(n.innerType, t, a);
   const s = t.seen.get(e);
-  s.ref = n.innerType, t.io === "input" && (i._prefault = JSON.parse(JSON.stringify(n.defaultValue)));
+  s.ref = n.innerType, i.default = JSON.parse(JSON.stringify(n.defaultValue));
 }, K2 = (e, t, i, a) => {
   const n = e._zod.def;
-  Se(n.innerType, t, a);
+  Ne(n.innerType, t, a);
+  const s = t.seen.get(e);
+  s.ref = n.innerType, t.io === "input" && (i._prefault = JSON.parse(JSON.stringify(n.defaultValue)));
+}, W2 = (e, t, i, a) => {
+  const n = e._zod.def;
+  Ne(n.innerType, t, a);
   const s = t.seen.get(e);
   s.ref = n.innerType;
   let o;
@@ -12163,53 +12163,53 @@ const A2 = (e, t = {}) => (i) => {
     throw new Error("Dynamic catch values are not supported in JSON Schema");
   }
   i.default = o;
-}, W2 = (e, t, i, a) => {
+}, q2 = (e, t, i, a) => {
   const n = e._zod.def, s = n.in._zod.traits.has("$ZodTransform"), o = t.io === "input" ? s ? n.out : n.in : n.out;
-  Se(o, t, a);
+  Ne(o, t, a);
   const r = t.seen.get(e);
   r.ref = o;
-}, q2 = (e, t, i, a) => {
+}, G2 = (e, t, i, a) => {
   const n = e._zod.def;
-  Se(n.innerType, t, a);
+  Ne(n.innerType, t, a);
   const s = t.seen.get(e);
   s.ref = n.innerType, i.readOnly = !0;
 }, gf = (e, t, i, a) => {
   const n = e._zod.def;
-  Se(n.innerType, t, a);
+  Ne(n.innerType, t, a);
   const s = t.seen.get(e);
   s.ref = n.innerType;
-}, G2 = /* @__PURE__ */ v("ZodISODateTime", (e, t) => {
-  G0.init(e, t), Ee.init(e, t);
-});
-function J2(e) {
-  return /* @__PURE__ */ t2(G2, e);
-}
-const Y2 = /* @__PURE__ */ v("ZodISODate", (e, t) => {
+}, J2 = /* @__PURE__ */ y("ZodISODateTime", (e, t) => {
   J0.init(e, t), Ee.init(e, t);
 });
-function X2(e) {
-  return /* @__PURE__ */ i2(Y2, e);
+function Y2(e) {
+  return /* @__PURE__ */ i2(J2, e);
 }
-const Q2 = /* @__PURE__ */ v("ZodISOTime", (e, t) => {
+const X2 = /* @__PURE__ */ y("ZodISODate", (e, t) => {
   Y0.init(e, t), Ee.init(e, t);
 });
-function ev(e) {
-  return /* @__PURE__ */ a2(Q2, e);
+function Q2(e) {
+  return /* @__PURE__ */ a2(X2, e);
 }
-const tv = /* @__PURE__ */ v("ZodISODuration", (e, t) => {
+const ev = /* @__PURE__ */ y("ZodISOTime", (e, t) => {
   X0.init(e, t), Ee.init(e, t);
 });
-function iv(e) {
-  return /* @__PURE__ */ n2(tv, e);
+function tv(e) {
+  return /* @__PURE__ */ n2(ev, e);
 }
-const av = (e, t) => {
+const iv = /* @__PURE__ */ y("ZodISODuration", (e, t) => {
+  Q0.init(e, t), Ee.init(e, t);
+});
+function av(e) {
+  return /* @__PURE__ */ s2(iv, e);
+}
+const nv = (e, t) => {
   ql.init(e, t), e.name = "ZodError", Object.defineProperties(e, {
     format: {
-      value: (i) => L_(e, i)
+      value: (i) => M_(e, i)
       // enumerable: false,
     },
     flatten: {
-      value: (i) => U_(e, i)
+      value: (i) => L_(e, i)
       // enumerable: false,
     },
     addIssue: {
@@ -12231,9 +12231,9 @@ const av = (e, t) => {
       // enumerable: false,
     }
   });
-}, ft = /* @__PURE__ */ v("ZodError", av, {
+}, ft = /* @__PURE__ */ y("ZodError", nv, {
   Parent: Error
-}), nv = /* @__PURE__ */ Ko(ft), sv = /* @__PURE__ */ Wo(ft), ov = /* @__PURE__ */ as(ft), rv = /* @__PURE__ */ ns(ft), cv = /* @__PURE__ */ Z_(ft), dv = /* @__PURE__ */ H_(ft), uv = /* @__PURE__ */ K_(ft), lv = /* @__PURE__ */ W_(ft), fv = /* @__PURE__ */ q_(ft), pv = /* @__PURE__ */ G_(ft), mv = /* @__PURE__ */ J_(ft), gv = /* @__PURE__ */ Y_(ft), hd = /* @__PURE__ */ new WeakMap();
+}), sv = /* @__PURE__ */ Ko(ft), ov = /* @__PURE__ */ Wo(ft), rv = /* @__PURE__ */ as(ft), cv = /* @__PURE__ */ ns(ft), dv = /* @__PURE__ */ H_(ft), uv = /* @__PURE__ */ K_(ft), lv = /* @__PURE__ */ W_(ft), fv = /* @__PURE__ */ q_(ft), pv = /* @__PURE__ */ G_(ft), mv = /* @__PURE__ */ J_(ft), gv = /* @__PURE__ */ Y_(ft), bv = /* @__PURE__ */ X_(ft), hd = /* @__PURE__ */ new WeakMap();
 function La(e, t, i) {
   const a = Object.getPrototypeOf(e);
   let n = hd.get(a);
@@ -12265,15 +12265,15 @@ function La(e, t, i) {
     }
   }
 }
-const we = /* @__PURE__ */ v("ZodType", (e, t) => (ke.init(e, t), Object.assign(e["~standard"], {
+const we = /* @__PURE__ */ y("ZodType", (e, t) => (ke.init(e, t), Object.assign(e["~standard"], {
   jsonSchema: {
     input: Pn(e, "input"),
     output: Pn(e, "output")
   }
-}), e.toJSONSchema = A2(e, {}), e.def = t, e.type = t.type, Object.defineProperty(e, "_def", { value: t }), e.parse = (i, a) => nv(e, i, a, { callee: e.parse }), e.safeParse = (i, a) => ov(e, i, a), e.parseAsync = async (i, a) => sv(e, i, a, { callee: e.parseAsync }), e.safeParseAsync = async (i, a) => rv(e, i, a), e.spa = e.safeParseAsync, e.encode = (i, a) => cv(e, i, a), e.decode = (i, a) => dv(e, i, a), e.encodeAsync = async (i, a) => uv(e, i, a), e.decodeAsync = async (i, a) => lv(e, i, a), e.safeEncode = (i, a) => fv(e, i, a), e.safeDecode = (i, a) => pv(e, i, a), e.safeEncodeAsync = async (i, a) => mv(e, i, a), e.safeDecodeAsync = async (i, a) => gv(e, i, a), La(e, "ZodType", {
+}), e.toJSONSchema = O2(e, {}), e.def = t, e.type = t.type, Object.defineProperty(e, "_def", { value: t }), e.parse = (i, a) => sv(e, i, a, { callee: e.parse }), e.safeParse = (i, a) => rv(e, i, a), e.parseAsync = async (i, a) => ov(e, i, a, { callee: e.parseAsync }), e.safeParseAsync = async (i, a) => cv(e, i, a), e.spa = e.safeParseAsync, e.encode = (i, a) => dv(e, i, a), e.decode = (i, a) => uv(e, i, a), e.encodeAsync = async (i, a) => lv(e, i, a), e.decodeAsync = async (i, a) => fv(e, i, a), e.safeEncode = (i, a) => pv(e, i, a), e.safeDecode = (i, a) => mv(e, i, a), e.safeEncodeAsync = async (i, a) => gv(e, i, a), e.safeDecodeAsync = async (i, a) => bv(e, i, a), La(e, "ZodType", {
   check(...i) {
     const a = this.def;
-    return this.clone(ii(a, {
+    return this.clone(ai(a, {
       checks: [
         ...a.checks ?? [],
         ...i.map((n) => typeof n == "function" ? { _zod: { check: n, def: { check: "custom" }, onattach: [] } } : n)
@@ -12284,7 +12284,7 @@ const we = /* @__PURE__ */ v("ZodType", (e, t) => (ke.init(e, t), Object.assign(
     return this.check(...i);
   },
   clone(i, a) {
-    return ai(this, i, a);
+    return ni(this, i, a);
   },
   brand() {
     return this;
@@ -12293,10 +12293,10 @@ const we = /* @__PURE__ */ v("ZodType", (e, t) => (ke.init(e, t), Object.assign(
     return i.add(this, a), this;
   },
   refine(i, a) {
-    return this.check(d6(i, a));
+    return this.check(u6(i, a));
   },
   superRefine(i, a) {
-    return this.check(u6(i, a));
+    return this.check(l6(i, a));
   },
   overwrite(i) {
     return this.check(/* @__PURE__ */ Qi(i));
@@ -12305,7 +12305,7 @@ const we = /* @__PURE__ */ v("ZodType", (e, t) => (ke.init(e, t), Object.assign(
     return wd(this);
   },
   exactOptional() {
-    return Jv(this);
+    return Yv(this);
   },
   nullable() {
     return Ed(this);
@@ -12314,34 +12314,34 @@ const we = /* @__PURE__ */ v("ZodType", (e, t) => (ke.init(e, t), Object.assign(
     return wd(Ed(this));
   },
   nonoptional(i) {
-    return i6(this, i);
+    return a6(this, i);
   },
   array() {
-    return Ae(this);
+    return Te(this);
   },
   or(i) {
-    return Lv([this, i]);
+    return Mv([this, i]);
   },
   and(i) {
-    return Zv(this, i);
+    return Hv(this, i);
   },
   transform(i) {
-    return Id(this, qv(i));
+    return Id(this, Gv(i));
   },
   default(i) {
-    return Qv(this, i);
+    return e6(this, i);
   },
   prefault(i) {
-    return t6(this, i);
+    return i6(this, i);
   },
   catch(i) {
-    return n6(this, i);
+    return s6(this, i);
   },
   pipe(i) {
     return Id(this, i);
   },
   readonly() {
-    return r6(this);
+    return c6(this);
   },
   describe(i) {
     const a = this.clone();
@@ -12367,21 +12367,21 @@ const we = /* @__PURE__ */ v("ZodType", (e, t) => (ke.init(e, t), Object.assign(
     return da.get(e)?.description;
   },
   configurable: !0
-}), e)), bf = /* @__PURE__ */ v("_ZodString", (e, t) => {
-  qo.init(e, t), we.init(e, t), e._zod.processJSONSchema = (a, n, s) => x2(e, a, n);
+}), e)), bf = /* @__PURE__ */ y("_ZodString", (e, t) => {
+  qo.init(e, t), we.init(e, t), e._zod.processJSONSchema = (a, n, s) => S2(e, a, n);
   const i = e._zod.bag;
   e.format = i.format ?? null, e.minLength = i.minimum ?? null, e.maxLength = i.maximum ?? null, La(e, "_ZodString", {
     regex(...a) {
-      return this.check(/* @__PURE__ */ u2(...a));
+      return this.check(/* @__PURE__ */ l2(...a));
     },
     includes(...a) {
-      return this.check(/* @__PURE__ */ p2(...a));
-    },
-    startsWith(...a) {
       return this.check(/* @__PURE__ */ m2(...a));
     },
-    endsWith(...a) {
+    startsWith(...a) {
       return this.check(/* @__PURE__ */ g2(...a));
+    },
+    endsWith(...a) {
+      return this.check(/* @__PURE__ */ b2(...a));
     },
     min(...a) {
       return this.check(/* @__PURE__ */ Rn(...a));
@@ -12396,75 +12396,75 @@ const we = /* @__PURE__ */ v("ZodType", (e, t) => (ke.init(e, t), Object.assign(
       return this.check(/* @__PURE__ */ Rn(1, ...a));
     },
     lowercase(a) {
-      return this.check(/* @__PURE__ */ l2(a));
-    },
-    uppercase(a) {
       return this.check(/* @__PURE__ */ f2(a));
     },
+    uppercase(a) {
+      return this.check(/* @__PURE__ */ p2(a));
+    },
     trim() {
-      return this.check(/* @__PURE__ */ h2());
-    },
-    normalize(...a) {
-      return this.check(/* @__PURE__ */ b2(...a));
-    },
-    toLowerCase() {
       return this.check(/* @__PURE__ */ _2());
     },
-    toUpperCase() {
+    normalize(...a) {
+      return this.check(/* @__PURE__ */ h2(...a));
+    },
+    toLowerCase() {
       return this.check(/* @__PURE__ */ v2());
     },
-    slugify() {
+    toUpperCase() {
       return this.check(/* @__PURE__ */ y2());
+    },
+    slugify() {
+      return this.check(/* @__PURE__ */ k2());
     }
   });
-}), bv = /* @__PURE__ */ v("ZodString", (e, t) => {
-  qo.init(e, t), bf.init(e, t), e.email = (i) => e.check(/* @__PURE__ */ R1(hv, i)), e.url = (i) => e.check(/* @__PURE__ */ z1(_v, i)), e.jwt = (i) => e.check(/* @__PURE__ */ e2(Vv, i)), e.emoji = (i) => e.check(/* @__PURE__ */ U1(vv, i)), e.guid = (i) => e.check(/* @__PURE__ */ pd(_d, i)), e.uuid = (i) => e.check(/* @__PURE__ */ P1(Ya, i)), e.uuidv4 = (i) => e.check(/* @__PURE__ */ $1(Ya, i)), e.uuidv6 = (i) => e.check(/* @__PURE__ */ j1(Ya, i)), e.uuidv7 = (i) => e.check(/* @__PURE__ */ F1(Ya, i)), e.nanoid = (i) => e.check(/* @__PURE__ */ L1(yv, i)), e.guid = (i) => e.check(/* @__PURE__ */ pd(_d, i)), e.cuid = (i) => e.check(/* @__PURE__ */ M1(kv, i)), e.cuid2 = (i) => e.check(/* @__PURE__ */ B1(wv, i)), e.ulid = (i) => e.check(/* @__PURE__ */ Z1(Ev, i)), e.base64 = (i) => e.check(/* @__PURE__ */ Y1(Nv, i)), e.base64url = (i) => e.check(/* @__PURE__ */ X1(Cv, i)), e.xid = (i) => e.check(/* @__PURE__ */ H1(Iv, i)), e.ksuid = (i) => e.check(/* @__PURE__ */ K1(Tv, i)), e.ipv4 = (i) => e.check(/* @__PURE__ */ W1(Av, i)), e.ipv6 = (i) => e.check(/* @__PURE__ */ q1(Ov, i)), e.cidrv4 = (i) => e.check(/* @__PURE__ */ G1(xv, i)), e.cidrv6 = (i) => e.check(/* @__PURE__ */ J1(Sv, i)), e.e164 = (i) => e.check(/* @__PURE__ */ Q1(Dv, i)), e.datetime = (i) => e.check(J2(i)), e.date = (i) => e.check(X2(i)), e.time = (i) => e.check(ev(i)), e.duration = (i) => e.check(iv(i));
+}), hv = /* @__PURE__ */ y("ZodString", (e, t) => {
+  qo.init(e, t), bf.init(e, t), e.email = (i) => e.check(/* @__PURE__ */ P1(_v, i)), e.url = (i) => e.check(/* @__PURE__ */ U1(vv, i)), e.jwt = (i) => e.check(/* @__PURE__ */ t2(Rv, i)), e.emoji = (i) => e.check(/* @__PURE__ */ L1(yv, i)), e.guid = (i) => e.check(/* @__PURE__ */ pd(_d, i)), e.uuid = (i) => e.check(/* @__PURE__ */ $1(Ya, i)), e.uuidv4 = (i) => e.check(/* @__PURE__ */ j1(Ya, i)), e.uuidv6 = (i) => e.check(/* @__PURE__ */ F1(Ya, i)), e.uuidv7 = (i) => e.check(/* @__PURE__ */ z1(Ya, i)), e.nanoid = (i) => e.check(/* @__PURE__ */ M1(kv, i)), e.guid = (i) => e.check(/* @__PURE__ */ pd(_d, i)), e.cuid = (i) => e.check(/* @__PURE__ */ B1(wv, i)), e.cuid2 = (i) => e.check(/* @__PURE__ */ Z1(Ev, i)), e.ulid = (i) => e.check(/* @__PURE__ */ H1(Iv, i)), e.base64 = (i) => e.check(/* @__PURE__ */ X1(Cv, i)), e.base64url = (i) => e.check(/* @__PURE__ */ Q1(Dv, i)), e.xid = (i) => e.check(/* @__PURE__ */ K1(Tv, i)), e.ksuid = (i) => e.check(/* @__PURE__ */ W1(Av, i)), e.ipv4 = (i) => e.check(/* @__PURE__ */ q1(Ov, i)), e.ipv6 = (i) => e.check(/* @__PURE__ */ G1(xv, i)), e.cidrv4 = (i) => e.check(/* @__PURE__ */ J1(Sv, i)), e.cidrv6 = (i) => e.check(/* @__PURE__ */ Y1(Nv, i)), e.e164 = (i) => e.check(/* @__PURE__ */ e2(Vv, i)), e.datetime = (i) => e.check(Y2(i)), e.date = (i) => e.check(Q2(i)), e.time = (i) => e.check(tv(i)), e.duration = (i) => e.check(av(i));
 });
 function M(e) {
-  return /* @__PURE__ */ V1(bv, e);
+  return /* @__PURE__ */ R1(hv, e);
 }
-const Ee = /* @__PURE__ */ v("ZodStringFormat", (e, t) => {
+const Ee = /* @__PURE__ */ y("ZodStringFormat", (e, t) => {
   ye.init(e, t), bf.init(e, t);
-}), hv = /* @__PURE__ */ v("ZodEmail", (e, t) => {
-  U0.init(e, t), Ee.init(e, t);
-}), _d = /* @__PURE__ */ v("ZodGUID", (e, t) => {
-  F0.init(e, t), Ee.init(e, t);
-}), Ya = /* @__PURE__ */ v("ZodUUID", (e, t) => {
-  z0.init(e, t), Ee.init(e, t);
-}), _v = /* @__PURE__ */ v("ZodURL", (e, t) => {
+}), _v = /* @__PURE__ */ y("ZodEmail", (e, t) => {
   L0.init(e, t), Ee.init(e, t);
-}), vv = /* @__PURE__ */ v("ZodEmoji", (e, t) => {
+}), _d = /* @__PURE__ */ y("ZodGUID", (e, t) => {
+  z0.init(e, t), Ee.init(e, t);
+}), Ya = /* @__PURE__ */ y("ZodUUID", (e, t) => {
+  U0.init(e, t), Ee.init(e, t);
+}), vv = /* @__PURE__ */ y("ZodURL", (e, t) => {
   M0.init(e, t), Ee.init(e, t);
-}), yv = /* @__PURE__ */ v("ZodNanoID", (e, t) => {
+}), yv = /* @__PURE__ */ y("ZodEmoji", (e, t) => {
   B0.init(e, t), Ee.init(e, t);
-}), kv = /* @__PURE__ */ v("ZodCUID", (e, t) => {
+}), kv = /* @__PURE__ */ y("ZodNanoID", (e, t) => {
   Z0.init(e, t), Ee.init(e, t);
-}), wv = /* @__PURE__ */ v("ZodCUID2", (e, t) => {
+}), wv = /* @__PURE__ */ y("ZodCUID", (e, t) => {
   H0.init(e, t), Ee.init(e, t);
-}), Ev = /* @__PURE__ */ v("ZodULID", (e, t) => {
+}), Ev = /* @__PURE__ */ y("ZodCUID2", (e, t) => {
   K0.init(e, t), Ee.init(e, t);
-}), Iv = /* @__PURE__ */ v("ZodXID", (e, t) => {
+}), Iv = /* @__PURE__ */ y("ZodULID", (e, t) => {
   W0.init(e, t), Ee.init(e, t);
-}), Tv = /* @__PURE__ */ v("ZodKSUID", (e, t) => {
+}), Tv = /* @__PURE__ */ y("ZodXID", (e, t) => {
   q0.init(e, t), Ee.init(e, t);
-}), Av = /* @__PURE__ */ v("ZodIPv4", (e, t) => {
-  Q0.init(e, t), Ee.init(e, t);
-}), Ov = /* @__PURE__ */ v("ZodIPv6", (e, t) => {
+}), Av = /* @__PURE__ */ y("ZodKSUID", (e, t) => {
+  G0.init(e, t), Ee.init(e, t);
+}), Ov = /* @__PURE__ */ y("ZodIPv4", (e, t) => {
   e1.init(e, t), Ee.init(e, t);
-}), xv = /* @__PURE__ */ v("ZodCIDRv4", (e, t) => {
+}), xv = /* @__PURE__ */ y("ZodIPv6", (e, t) => {
   t1.init(e, t), Ee.init(e, t);
-}), Sv = /* @__PURE__ */ v("ZodCIDRv6", (e, t) => {
+}), Sv = /* @__PURE__ */ y("ZodCIDRv4", (e, t) => {
   i1.init(e, t), Ee.init(e, t);
-}), Nv = /* @__PURE__ */ v("ZodBase64", (e, t) => {
+}), Nv = /* @__PURE__ */ y("ZodCIDRv6", (e, t) => {
   a1.init(e, t), Ee.init(e, t);
-}), Cv = /* @__PURE__ */ v("ZodBase64URL", (e, t) => {
-  s1.init(e, t), Ee.init(e, t);
-}), Dv = /* @__PURE__ */ v("ZodE164", (e, t) => {
+}), Cv = /* @__PURE__ */ y("ZodBase64", (e, t) => {
+  n1.init(e, t), Ee.init(e, t);
+}), Dv = /* @__PURE__ */ y("ZodBase64URL", (e, t) => {
   o1.init(e, t), Ee.init(e, t);
-}), Vv = /* @__PURE__ */ v("ZodJWT", (e, t) => {
-  c1.init(e, t), Ee.init(e, t);
-}), hf = /* @__PURE__ */ v("ZodNumber", (e, t) => {
-  sf.init(e, t), we.init(e, t), e._zod.processJSONSchema = (a, n, s) => S2(e, a, n), La(e, "ZodNumber", {
+}), Vv = /* @__PURE__ */ y("ZodE164", (e, t) => {
+  r1.init(e, t), Ee.init(e, t);
+}), Rv = /* @__PURE__ */ y("ZodJWT", (e, t) => {
+  d1.init(e, t), Ee.init(e, t);
+}), hf = /* @__PURE__ */ y("ZodNumber", (e, t) => {
+  sf.init(e, t), we.init(e, t), e._zod.processJSONSchema = (a, n, s) => N2(e, a, n), La(e, "ZodNumber", {
     gt(a, n) {
       return this.check(/* @__PURE__ */ gd(a, n));
     },
@@ -12514,35 +12514,35 @@ const Ee = /* @__PURE__ */ v("ZodStringFormat", (e, t) => {
   const i = e._zod.bag;
   e.minValue = Math.max(i.minimum ?? Number.NEGATIVE_INFINITY, i.exclusiveMinimum ?? Number.NEGATIVE_INFINITY) ?? null, e.maxValue = Math.min(i.maximum ?? Number.POSITIVE_INFINITY, i.exclusiveMaximum ?? Number.POSITIVE_INFINITY) ?? null, e.isInt = (i.format ?? "").includes("int") || Number.isSafeInteger(i.multipleOf ?? 0.5), e.isFinite = !0, e.format = i.format ?? null;
 });
-function oe(e) {
-  return /* @__PURE__ */ s2(hf, e);
+function se(e) {
+  return /* @__PURE__ */ o2(hf, e);
 }
-const Rv = /* @__PURE__ */ v("ZodNumberFormat", (e, t) => {
-  d1.init(e, t), hf.init(e, t);
+const Pv = /* @__PURE__ */ y("ZodNumberFormat", (e, t) => {
+  u1.init(e, t), hf.init(e, t);
 });
 function vd(e) {
-  return /* @__PURE__ */ o2(Rv, e);
-}
-const Pv = /* @__PURE__ */ v("ZodBoolean", (e, t) => {
-  u1.init(e, t), we.init(e, t), e._zod.processJSONSchema = (i, a, n) => N2(e, i, a);
-});
-function os(e) {
   return /* @__PURE__ */ r2(Pv, e);
 }
-const $v = /* @__PURE__ */ v("ZodUnknown", (e, t) => {
-  l1.init(e, t), we.init(e, t), e._zod.processJSONSchema = (i, a, n) => D2();
+const $v = /* @__PURE__ */ y("ZodBoolean", (e, t) => {
+  l1.init(e, t), we.init(e, t), e._zod.processJSONSchema = (i, a, n) => C2(e, i, a);
+});
+function os(e) {
+  return /* @__PURE__ */ c2($v, e);
+}
+const jv = /* @__PURE__ */ y("ZodUnknown", (e, t) => {
+  f1.init(e, t), we.init(e, t), e._zod.processJSONSchema = (i, a, n) => V2();
 });
 function yd() {
-  return /* @__PURE__ */ c2($v);
+  return /* @__PURE__ */ d2(jv);
 }
-const jv = /* @__PURE__ */ v("ZodNever", (e, t) => {
-  f1.init(e, t), we.init(e, t), e._zod.processJSONSchema = (i, a, n) => C2(e, i, a);
+const Fv = /* @__PURE__ */ y("ZodNever", (e, t) => {
+  p1.init(e, t), we.init(e, t), e._zod.processJSONSchema = (i, a, n) => D2(e, i, a);
 });
-function Fv(e) {
-  return /* @__PURE__ */ d2(jv, e);
+function zv(e) {
+  return /* @__PURE__ */ u2(Fv, e);
 }
-const zv = /* @__PURE__ */ v("ZodArray", (e, t) => {
-  p1.init(e, t), we.init(e, t), e._zod.processJSONSchema = (i, a, n) => j2(e, i, a, n), e.element = t.element, La(e, "ZodArray", {
+const Uv = /* @__PURE__ */ y("ZodArray", (e, t) => {
+  m1.init(e, t), we.init(e, t), e._zod.processJSONSchema = (i, a, n) => F2(e, i, a, n), e.element = t.element, La(e, "ZodArray", {
     min(i, a) {
       return this.check(/* @__PURE__ */ Rn(i, a));
     },
@@ -12560,11 +12560,11 @@ const zv = /* @__PURE__ */ v("ZodArray", (e, t) => {
     }
   });
 });
-function Ae(e, t) {
-  return /* @__PURE__ */ k2(zv, e, t);
+function Te(e, t) {
+  return /* @__PURE__ */ w2(Uv, e, t);
 }
-const Uv = /* @__PURE__ */ v("ZodObject", (e, t) => {
-  g1.init(e, t), we.init(e, t), e._zod.processJSONSchema = (i, a, n) => F2(e, i, a, n), fe(e, "shape", () => t.shape), La(e, "ZodObject", {
+const Lv = /* @__PURE__ */ y("ZodObject", (e, t) => {
+  b1.init(e, t), we.init(e, t), e._zod.processJSONSchema = (i, a, n) => z2(e, i, a, n), fe(e, "shape", () => t.shape), La(e, "ZodObject", {
     keyof() {
       return Rt(Object.keys(this._zod.def.shape));
     },
@@ -12578,31 +12578,31 @@ const Uv = /* @__PURE__ */ v("ZodObject", (e, t) => {
       return this.clone({ ...this._zod.def, catchall: yd() });
     },
     strict() {
-      return this.clone({ ...this._zod.def, catchall: Fv() });
+      return this.clone({ ...this._zod.def, catchall: zv() });
     },
     strip() {
       return this.clone({ ...this._zod.def, catchall: void 0 });
     },
     extend(i) {
-      return R_(this, i);
-    },
-    safeExtend(i) {
       return P_(this, i);
     },
-    merge(i) {
+    safeExtend(i) {
       return $_(this, i);
     },
-    pick(i) {
-      return D_(this, i);
+    merge(i) {
+      return j_(this, i);
     },
-    omit(i) {
+    pick(i) {
       return V_(this, i);
     },
+    omit(i) {
+      return R_(this, i);
+    },
     partial(...i) {
-      return j_(yf, this, i[0]);
+      return F_(yf, this, i[0]);
     },
     required(...i) {
-      return F_(kf, this, i[0]);
+      return z_(kf, this, i[0]);
     }
   });
 });
@@ -12610,59 +12610,59 @@ function ge(e, t) {
   const i = {
     type: "object",
     shape: e ?? {},
-    ...B(t)
+    ...Z(t)
   };
-  return new Uv(i);
+  return new Lv(i);
 }
-const _f = /* @__PURE__ */ v("ZodUnion", (e, t) => {
-  cf.init(e, t), we.init(e, t), e._zod.processJSONSchema = (i, a, n) => z2(e, i, a, n), e.options = t.options;
+const _f = /* @__PURE__ */ y("ZodUnion", (e, t) => {
+  cf.init(e, t), we.init(e, t), e._zod.processJSONSchema = (i, a, n) => U2(e, i, a, n), e.options = t.options;
 });
-function Lv(e, t) {
+function Mv(e, t) {
   return new _f({
     type: "union",
     options: e,
-    ...B(t)
+    ...Z(t)
   });
 }
-const Mv = /* @__PURE__ */ v("ZodDiscriminatedUnion", (e, t) => {
-  _f.init(e, t), b1.init(e, t);
+const Bv = /* @__PURE__ */ y("ZodDiscriminatedUnion", (e, t) => {
+  _f.init(e, t), h1.init(e, t);
 });
 function vf(e, t, i) {
-  return new Mv({
+  return new Bv({
     type: "union",
     options: t,
     discriminator: e,
-    ...B(i)
+    ...Z(i)
   });
 }
-const Bv = /* @__PURE__ */ v("ZodIntersection", (e, t) => {
-  h1.init(e, t), we.init(e, t), e._zod.processJSONSchema = (i, a, n) => U2(e, i, a, n);
+const Zv = /* @__PURE__ */ y("ZodIntersection", (e, t) => {
+  _1.init(e, t), we.init(e, t), e._zod.processJSONSchema = (i, a, n) => L2(e, i, a, n);
 });
-function Zv(e, t) {
-  return new Bv({
+function Hv(e, t) {
+  return new Zv({
     type: "intersection",
     left: e,
     right: t
   });
 }
-const kd = /* @__PURE__ */ v("ZodRecord", (e, t) => {
-  _1.init(e, t), we.init(e, t), e._zod.processJSONSchema = (i, a, n) => L2(e, i, a, n), e.keyType = t.keyType, e.valueType = t.valueType;
+const kd = /* @__PURE__ */ y("ZodRecord", (e, t) => {
+  v1.init(e, t), we.init(e, t), e._zod.processJSONSchema = (i, a, n) => M2(e, i, a, n), e.keyType = t.keyType, e.valueType = t.valueType;
 });
-function Hv(e, t, i) {
+function Kv(e, t, i) {
   return !t || !t._zod ? new kd({
     type: "record",
     keyType: M(),
     valueType: e,
-    ...B(t)
+    ...Z(t)
   }) : new kd({
     type: "record",
     keyType: e,
     valueType: t,
-    ...B(i)
+    ...Z(i)
   });
 }
-const so = /* @__PURE__ */ v("ZodEnum", (e, t) => {
-  v1.init(e, t), we.init(e, t), e._zod.processJSONSchema = (a, n, s) => V2(e, a, n), e.enum = t.entries, e.options = Object.values(t.entries);
+const so = /* @__PURE__ */ y("ZodEnum", (e, t) => {
+  y1.init(e, t), we.init(e, t), e._zod.processJSONSchema = (a, n, s) => R2(e, a, n), e.enum = t.entries, e.options = Object.values(t.entries);
   const i = new Set(Object.keys(t.entries));
   e.extract = (a, n) => {
     const s = {};
@@ -12674,7 +12674,7 @@ const so = /* @__PURE__ */ v("ZodEnum", (e, t) => {
     return new so({
       ...t,
       checks: [],
-      ...B(n),
+      ...Z(n),
       entries: s
     });
   }, e.exclude = (a, n) => {
@@ -12687,7 +12687,7 @@ const so = /* @__PURE__ */ v("ZodEnum", (e, t) => {
     return new so({
       ...t,
       checks: [],
-      ...B(n),
+      ...Z(n),
       entries: s
     });
   };
@@ -12697,11 +12697,11 @@ function Rt(e, t) {
   return new so({
     type: "enum",
     entries: i,
-    ...B(t)
+    ...Z(t)
   });
 }
-const Kv = /* @__PURE__ */ v("ZodLiteral", (e, t) => {
-  y1.init(e, t), we.init(e, t), e._zod.processJSONSchema = (i, a, n) => R2(e, i, a), e.values = new Set(t.values), Object.defineProperty(e, "value", {
+const Wv = /* @__PURE__ */ y("ZodLiteral", (e, t) => {
+  k1.init(e, t), we.init(e, t), e._zod.processJSONSchema = (i, a, n) => P2(e, i, a), e.values = new Set(t.values), Object.defineProperty(e, "value", {
     get() {
       if (t.values.length > 1)
         throw new Error("This schema contains multiple valid literal values. Use `.values` instead.");
@@ -12709,15 +12709,15 @@ const Kv = /* @__PURE__ */ v("ZodLiteral", (e, t) => {
     }
   });
 });
-function et(e, t) {
-  return new Kv({
+function tt(e, t) {
+  return new Wv({
     type: "literal",
     values: Array.isArray(e) ? e : [e],
-    ...B(t)
+    ...Z(t)
   });
 }
-const Wv = /* @__PURE__ */ v("ZodTransform", (e, t) => {
-  k1.init(e, t), we.init(e, t), e._zod.processJSONSchema = (i, a, n) => $2(e, i), e._zod.parse = (i, a) => {
+const qv = /* @__PURE__ */ y("ZodTransform", (e, t) => {
+  w1.init(e, t), we.init(e, t), e._zod.processJSONSchema = (i, a, n) => j2(e, i), e._zod.parse = (i, a) => {
     if (a.direction === "backward")
       throw new Bl(e.constructor.name);
     i.addIssue = (s) => {
@@ -12732,13 +12732,13 @@ const Wv = /* @__PURE__ */ v("ZodTransform", (e, t) => {
     return n instanceof Promise ? n.then((s) => (i.value = s, i.fallback = !0, i)) : (i.value = n, i.fallback = !0, i);
   };
 });
-function qv(e) {
-  return new Wv({
+function Gv(e) {
+  return new qv({
     type: "transform",
     transform: e
   });
 }
-const yf = /* @__PURE__ */ v("ZodOptional", (e, t) => {
+const yf = /* @__PURE__ */ y("ZodOptional", (e, t) => {
   df.init(e, t), we.init(e, t), e._zod.processJSONSchema = (i, a, n) => gf(e, i, a, n), e.unwrap = () => e._zod.def.innerType;
 });
 function wd(e) {
@@ -12747,29 +12747,29 @@ function wd(e) {
     innerType: e
   });
 }
-const Gv = /* @__PURE__ */ v("ZodExactOptional", (e, t) => {
-  w1.init(e, t), we.init(e, t), e._zod.processJSONSchema = (i, a, n) => gf(e, i, a, n), e.unwrap = () => e._zod.def.innerType;
+const Jv = /* @__PURE__ */ y("ZodExactOptional", (e, t) => {
+  E1.init(e, t), we.init(e, t), e._zod.processJSONSchema = (i, a, n) => gf(e, i, a, n), e.unwrap = () => e._zod.def.innerType;
 });
-function Jv(e) {
-  return new Gv({
+function Yv(e) {
+  return new Jv({
     type: "optional",
     innerType: e
   });
 }
-const Yv = /* @__PURE__ */ v("ZodNullable", (e, t) => {
-  E1.init(e, t), we.init(e, t), e._zod.processJSONSchema = (i, a, n) => M2(e, i, a, n), e.unwrap = () => e._zod.def.innerType;
+const Xv = /* @__PURE__ */ y("ZodNullable", (e, t) => {
+  I1.init(e, t), we.init(e, t), e._zod.processJSONSchema = (i, a, n) => B2(e, i, a, n), e.unwrap = () => e._zod.def.innerType;
 });
 function Ed(e) {
-  return new Yv({
+  return new Xv({
     type: "nullable",
     innerType: e
   });
 }
-const Xv = /* @__PURE__ */ v("ZodDefault", (e, t) => {
-  I1.init(e, t), we.init(e, t), e._zod.processJSONSchema = (i, a, n) => Z2(e, i, a, n), e.unwrap = () => e._zod.def.innerType, e.removeDefault = e.unwrap;
+const Qv = /* @__PURE__ */ y("ZodDefault", (e, t) => {
+  T1.init(e, t), we.init(e, t), e._zod.processJSONSchema = (i, a, n) => H2(e, i, a, n), e.unwrap = () => e._zod.def.innerType, e.removeDefault = e.unwrap;
 });
-function Qv(e, t) {
-  return new Xv({
+function e6(e, t) {
+  return new Qv({
     type: "default",
     innerType: e,
     get defaultValue() {
@@ -12777,11 +12777,11 @@ function Qv(e, t) {
     }
   });
 }
-const e6 = /* @__PURE__ */ v("ZodPrefault", (e, t) => {
-  T1.init(e, t), we.init(e, t), e._zod.processJSONSchema = (i, a, n) => H2(e, i, a, n), e.unwrap = () => e._zod.def.innerType;
+const t6 = /* @__PURE__ */ y("ZodPrefault", (e, t) => {
+  A1.init(e, t), we.init(e, t), e._zod.processJSONSchema = (i, a, n) => K2(e, i, a, n), e.unwrap = () => e._zod.def.innerType;
 });
-function t6(e, t) {
-  return new e6({
+function i6(e, t) {
+  return new t6({
     type: "prefault",
     innerType: e,
     get defaultValue() {
@@ -12789,124 +12789,124 @@ function t6(e, t) {
     }
   });
 }
-const kf = /* @__PURE__ */ v("ZodNonOptional", (e, t) => {
-  A1.init(e, t), we.init(e, t), e._zod.processJSONSchema = (i, a, n) => B2(e, i, a, n), e.unwrap = () => e._zod.def.innerType;
+const kf = /* @__PURE__ */ y("ZodNonOptional", (e, t) => {
+  O1.init(e, t), we.init(e, t), e._zod.processJSONSchema = (i, a, n) => Z2(e, i, a, n), e.unwrap = () => e._zod.def.innerType;
 });
-function i6(e, t) {
+function a6(e, t) {
   return new kf({
     type: "nonoptional",
     innerType: e,
-    ...B(t)
+    ...Z(t)
   });
 }
-const a6 = /* @__PURE__ */ v("ZodCatch", (e, t) => {
-  O1.init(e, t), we.init(e, t), e._zod.processJSONSchema = (i, a, n) => K2(e, i, a, n), e.unwrap = () => e._zod.def.innerType, e.removeCatch = e.unwrap;
+const n6 = /* @__PURE__ */ y("ZodCatch", (e, t) => {
+  x1.init(e, t), we.init(e, t), e._zod.processJSONSchema = (i, a, n) => W2(e, i, a, n), e.unwrap = () => e._zod.def.innerType, e.removeCatch = e.unwrap;
 });
-function n6(e, t) {
-  return new a6({
+function s6(e, t) {
+  return new n6({
     type: "catch",
     innerType: e,
     catchValue: typeof t == "function" ? t : () => t
   });
 }
-const s6 = /* @__PURE__ */ v("ZodPipe", (e, t) => {
-  x1.init(e, t), we.init(e, t), e._zod.processJSONSchema = (i, a, n) => W2(e, i, a, n), e.in = t.in, e.out = t.out;
+const o6 = /* @__PURE__ */ y("ZodPipe", (e, t) => {
+  S1.init(e, t), we.init(e, t), e._zod.processJSONSchema = (i, a, n) => q2(e, i, a, n), e.in = t.in, e.out = t.out;
 });
 function Id(e, t) {
-  return new s6({
+  return new o6({
     type: "pipe",
     in: e,
     out: t
     // ...util.normalizeParams(params),
   });
 }
-const o6 = /* @__PURE__ */ v("ZodReadonly", (e, t) => {
-  S1.init(e, t), we.init(e, t), e._zod.processJSONSchema = (i, a, n) => q2(e, i, a, n), e.unwrap = () => e._zod.def.innerType;
+const r6 = /* @__PURE__ */ y("ZodReadonly", (e, t) => {
+  N1.init(e, t), we.init(e, t), e._zod.processJSONSchema = (i, a, n) => G2(e, i, a, n), e.unwrap = () => e._zod.def.innerType;
 });
-function r6(e) {
-  return new o6({
+function c6(e) {
+  return new r6({
     type: "readonly",
     innerType: e
   });
 }
-const wf = /* @__PURE__ */ v("ZodCustom", (e, t) => {
-  N1.init(e, t), we.init(e, t), e._zod.processJSONSchema = (i, a, n) => P2(e, i);
+const wf = /* @__PURE__ */ y("ZodCustom", (e, t) => {
+  C1.init(e, t), we.init(e, t), e._zod.processJSONSchema = (i, a, n) => $2(e, i);
 });
-function c6(e, t) {
-  return /* @__PURE__ */ w2(wf, e ?? (() => !0), t);
+function d6(e, t) {
+  return /* @__PURE__ */ E2(wf, e ?? (() => !0), t);
 }
-function d6(e, t = {}) {
-  return /* @__PURE__ */ E2(wf, e, t);
+function u6(e, t = {}) {
+  return /* @__PURE__ */ I2(wf, e, t);
 }
-function u6(e, t) {
-  return /* @__PURE__ */ I2(e, t);
+function l6(e, t) {
+  return /* @__PURE__ */ T2(e, t);
 }
-const Ii = 2, Ma = Rt([
+const Ti = 2, Ma = Rt([
   "white_canvas",
   "golden_bough_rebuild",
   "ring_conspiracy"
-]), l6 = ge({
-  affectionAlbina: oe().finite().optional(),
-  trust: oe().finite().optional(),
-  danger: oe().finite().optional(),
-  artResonance: oe().finite().optional(),
-  composure: oe().finite().optional(),
-  materials: oe().finite().optional(),
-  leverage: oe().finite().optional(),
-  exposure: oe().finite().optional()
-}).strict(), f6 = ge({
+]), f6 = ge({
+  affectionAlbina: se().finite().optional(),
+  trust: se().finite().optional(),
+  danger: se().finite().optional(),
+  artResonance: se().finite().optional(),
+  composure: se().finite().optional(),
+  materials: se().finite().optional(),
+  leverage: se().finite().optional(),
+  exposure: se().finite().optional()
+}).strict(), p6 = ge({
   route: Ma.optional(),
-  values: l6.optional(),
-  setFlags: Ae(M().min(1)).optional(),
-  clearFlags: Ae(M().min(1)).optional(),
-  unlockCg: Ae(M().min(1)).optional(),
-  grantItems: Ae(M().min(1)).optional(),
-  completeQuests: Ae(M().min(1)).optional()
-}).strict(), p6 = Rt([
+  values: f6.optional(),
+  setFlags: Te(M().min(1)).optional(),
+  clearFlags: Te(M().min(1)).optional(),
+  unlockCg: Te(M().min(1)).optional(),
+  grantItems: Te(M().min(1)).optional(),
+  completeQuests: Te(M().min(1)).optional()
+}).strict(), m6 = Rt([
   "affectionAlbina",
   "trust",
   "danger",
   "artResonance"
 ]), Td = vf("kind", [
   ge({
-    kind: et("value"),
-    key: p6,
+    kind: tt("value"),
+    key: m6,
     operator: Rt(["gte", "lte", "eq"]),
-    value: oe().finite()
+    value: se().finite()
   }).strict(),
   ge({
-    kind: et("flag"),
+    kind: tt("flag"),
     flag: M().min(1),
     equals: os()
   }).strict()
 ]), Ef = ge({
-  allOf: Ae(Td).min(1).optional(),
-  anyOf: Ae(Td).min(1).optional(),
+  allOf: Te(Td).min(1).optional(),
+  anyOf: Te(Td).min(1).optional(),
   fallback: os().optional()
 }).strict().refine((e) => e.allOf || e.anyOf || e.fallback === !0, {
   message: "Choice availability must declare predicates or a fallback"
-}), m6 = ge({
+}), g6 = ge({
   route: Ma,
   kind: Rt(["true", "normal", "bad"]),
   eligibility: Ef
-}).strict(), g6 = ge({
+}).strict(), b6 = ge({
   id: M().min(1),
   text: M().min(1),
   nextSceneId: M().min(1),
   resultText: M().min(1).optional(),
   resultVoiceAssetId: M().min(1).optional(),
   availability: Ef.optional(),
-  effects: f6
-}).strict(), b6 = ge({
+  effects: p6
+}).strict(), h6 = ge({
   characterId: M().min(1),
   portraitAssetId: M().min(1),
   position: Rt(["far-left", "left", "center", "right", "far-right"]),
   active: os(),
-  scale: oe().positive().finite()
-}).strict(), h6 = ge({
-  version: et(Ii),
+  scale: se().positive().finite()
+}).strict(), _6 = ge({
+  version: tt(Ti),
   id: M().min(1),
-  chapter: oe().int().nonnegative(),
+  chapter: se().int().nonnegative(),
   route: Ma,
   locationId: M().min(1),
   backgroundAssetId: M().min(1),
@@ -12914,67 +12914,67 @@ const Ii = 2, Ma = Rt([
   videoAssetId: M().min(1).optional(),
   desktopVideoAssetId: M().min(1).optional(),
   tone: M().min(1),
-  portraits: Ae(b6),
+  portraits: Te(h6),
   speaker: M().min(1),
   text: M(),
   voiceAssetId: M().min(1).optional(),
   bgmAssetId: M().min(1).optional(),
-  sfxAssetIds: Ae(M().min(1)).optional(),
-  choices: Ae(g6),
-  ending: m6.optional()
+  sfxAssetIds: Te(M().min(1)).optional(),
+  choices: Te(b6),
+  ending: g6.optional()
 }).strict();
-function _6(e) {
+function v6(e) {
   return e.startsWith("/") || e.endsWith("/") || e.includes("\\") || e.includes(":") ? !1 : e.split("/").every((t) => t.length > 0 && t !== "." && t !== "..");
 }
-const rs = M().min(1).refine(_6, {
+const rs = M().min(1).refine(v6, {
   message: "Asset paths must be relative to the canonical asset root"
-}), v6 = ge({
+}), y6 = ge({
   id: M().min(1),
   kind: Rt(["image", "video", "audio", "json"]),
   path: rs,
   mimeType: M().min(1).optional(),
   sha256: M().regex(/^[a-f0-9]{64}$/i).optional(),
-  bytes: oe().int().nonnegative().optional()
-}).strict(), y6 = vf("kind", [
-  ge({ kind: et("static") }).strict(),
+  bytes: se().int().nonnegative().optional()
+}).strict(), k6 = vf("kind", [
+  ge({ kind: tt("static") }).strict(),
   ge({
-    kind: et("strip"),
-    frameCount: et(8),
-    frameWidth: oe().int().positive(),
-    frameHeight: oe().int().positive(),
-    fps: oe().positive().finite()
+    kind: tt("strip"),
+    frameCount: tt(8),
+    frameWidth: se().int().positive(),
+    frameHeight: se().int().positive(),
+    fps: se().positive().finite()
   }).strict()
-]), k6 = ge({
-  version: et(Ii),
+]), w6 = ge({
+  version: tt(Ti),
   id: M().min(1),
   characterId: M().min(1),
   path: rs,
-  animation: y6,
+  animation: k6,
   fallbackAssetId: M().min(1).optional()
-}).strict(), w6 = ge({
-  version: et(Ii),
+}).strict(), E6 = ge({
+  version: tt(Ti),
   id: M().min(1),
   assetId: M().min(1),
   kind: Rt(["image", "image-edit", "video", "speech", "music"]),
   model: Rt(["gpt-image-2", "seedance-1.5-pro", "speech-2.8-hd", "music-2.6"]),
   status: Rt(["pending", "running", "completed", "failed"]),
   contentHash: M().regex(/^[a-f0-9]{64}$/i),
-  inputAssetIds: Ae(M().min(1)),
+  inputAssetIds: Te(M().min(1)),
   outputPath: rs,
-  attempts: oe().int().nonnegative(),
+  attempts: se().int().nonnegative(),
   error: M().optional()
-}).strict(), E6 = ge({
-  version: et(Ii),
-  projectId: et("albina-galgame-card"),
+}).strict(), I6 = ge({
+  version: tt(Ti),
+  projectId: tt("albina-galgame-card"),
   basePath: rs,
-  assets: Ae(v6),
-  portraits: Ae(k6),
-  mediaJobs: Ae(w6)
+  assets: Te(y6),
+  portraits: Te(w6),
+  mediaJobs: Te(E6)
 }).strict();
 function Os(e, t, i) {
   e.addIssue({ code: "custom", path: t, message: `Unknown asset reference: ${i}` });
 }
-const I6 = E6.superRefine((e, t) => {
+const T6 = I6.superRefine((e, t) => {
   const i = /* @__PURE__ */ new Set();
   e.assets.forEach((a, n) => {
     i.has(a.id) && t.addIssue({ code: "custom", path: ["assets", n, "id"], message: `Duplicate asset id: ${a.id}` }), i.add(a.id);
@@ -12986,19 +12986,19 @@ const I6 = E6.superRefine((e, t) => {
     });
   });
 });
-function T6(e) {
-  return I6.parse(e);
+function A6(e) {
+  return T6.parse(e);
 }
-const A6 = ge({
+const O6 = ge({
   white_canvas: M().min(1),
   golden_bough_rebuild: M().min(1),
   ring_conspiracy: M().min(1)
-}).strict(), O6 = ge({
-  version: et(Ii),
-  projectId: et("albina-galgame-card"),
+}).strict(), x6 = ge({
+  version: tt(Ti),
+  projectId: tt("albina-galgame-card"),
   initialSceneId: M().min(1),
-  routeEntrySceneIds: A6,
-  scenes: Ae(h6).min(1)
+  routeEntrySceneIds: O6,
+  scenes: Te(_6).min(1)
 }).strict();
 function xs(e, t, i) {
   e.addIssue({
@@ -13007,7 +13007,7 @@ function xs(e, t, i) {
     message: `Unknown scene reference: ${i}`
   });
 }
-const x6 = O6.superRefine((e, t) => {
+const S6 = x6.superRefine((e, t) => {
   const i = /* @__PURE__ */ new Set(), a = /* @__PURE__ */ new Set();
   e.scenes.forEach((n, s) => {
     i.has(n.id) && t.addIssue({ code: "custom", path: ["scenes", s, "id"], message: `Duplicate scene id: ${n.id}` }), i.add(n.id), n.choices.forEach((o, r) => {
@@ -13021,18 +13021,18 @@ const x6 = O6.superRefine((e, t) => {
     });
   });
 });
-function S6(e, t) {
-  return x6.parse(e);
+function N6(e, t) {
+  return S6.parse(e);
 }
-const N6 = ge({ intimacy: oe().finite(), reliance: oe().finite(), obsession: oe().finite(), suspicion: oe().finite() }).strict(), C6 = ge({ composure: oe().finite(), materials: oe().finite(), leverage: oe().finite(), exposure: oe().finite() }).strict(), D6 = ge({ blade: oe().finite(), boundary: oe().finite(), analysis: oe().finite(), resonance: oe().finite() }).strict(), V6 = ge({
-  affectionAlbina: oe().finite(),
-  trust: oe().finite(),
-  danger: oe().finite(),
-  artResonance: oe().finite(),
-  relationshipVectors: N6,
-  routeEconomy: C6,
-  conflictMastery: D6
-}).strict(), R6 = ge({
+const C6 = ge({ intimacy: se().finite(), reliance: se().finite(), obsession: se().finite(), suspicion: se().finite() }).strict(), D6 = ge({ composure: se().finite(), materials: se().finite(), leverage: se().finite(), exposure: se().finite() }).strict(), V6 = ge({ blade: se().finite(), boundary: se().finite(), analysis: se().finite(), resonance: se().finite() }).strict(), R6 = ge({
+  affectionAlbina: se().finite(),
+  trust: se().finite(),
+  danger: se().finite(),
+  artResonance: se().finite(),
+  relationshipVectors: C6,
+  routeEconomy: D6,
+  conflictMastery: V6
+}).strict(), P6 = ge({
   name: M(),
   gender: M(),
   appearance: M(),
@@ -13040,15 +13040,15 @@ const N6 = ge({ intimacy: oe().finite(), reliance: oe().finite(), obsession: oe(
   addressName: M(),
   boundaries: M(),
   routePreference: Ma
-}).strict(), P6 = ge({
-  ownedIds: Ae(M().min(1)),
+}).strict(), $6 = ge({
+  ownedIds: Te(M().min(1)),
   equipped: ge({
     weapon: M().min(1).optional(),
     armor: M().min(1).optional(),
     accessory: M().min(1).optional(),
     tool: M().min(1).optional()
   }).strict(),
-  outfitIds: Ae(M().min(1)),
+  outfitIds: Te(M().min(1)),
   activeOutfitId: M()
 }).strict();
 function oo(e, t) {
@@ -13059,7 +13059,7 @@ function oo(e, t) {
   const i = Array.isArray(e) ? e.every((a) => oo(a, t)) : (Object.getPrototypeOf(e) === Object.prototype || Object.getPrototypeOf(e) === null) && Object.values(e).every((a) => oo(a, t));
   return t.delete(e), i;
 }
-const $6 = c6((e) => e !== null && typeof e == "object" && !Array.isArray(e) && oo(e, /* @__PURE__ */ new WeakSet()), { message: "Log entries must contain only finite JSON values" }), Ie = Ae($6), j6 = ge({
+const j6 = d6((e) => e !== null && typeof e == "object" && !Array.isArray(e) && oo(e, /* @__PURE__ */ new WeakSet()), { message: "Log entries must contain only finite JSON values" }), Ie = Te(j6), F6 = ge({
   history: Ie,
   timeline: Ie,
   routeActions: Ie,
@@ -13082,28 +13082,28 @@ const $6 = c6((e) => e !== null && typeof e == "object" && !Array.isArray(e) && 
   storySummaries: Ie,
   dynamicMemories: Ie
 }).strict(), If = ge({
-  version: et(Ii),
-  projectId: et("albina-galgame-card"),
+  version: tt(Ti),
+  projectId: tt("albina-galgame-card"),
   saveId: M().min(1),
   createdAt: M().min(1),
   updatedAt: M().min(1),
-  playerProfile: R6,
+  playerProfile: P6,
   route: Ma,
-  chapter: oe().int().nonnegative(),
+  chapter: se().int().nonnegative(),
   sceneId: M().min(1),
   locationId: M(),
-  values: V6,
-  flags: Hv(M().min(1), os()),
-  inventory: P6,
+  values: R6,
+  flags: Kv(M().min(1), os()),
+  inventory: $6,
   quests: ge({
-    completedNodeIds: Ae(M().min(1)),
+    completedNodeIds: Te(M().min(1)),
     currentMapNodeId: M(),
     progressLog: Ie
   }).strict(),
-  unlockedCg: Ae(M().min(1)),
-  logs: j6
+  unlockedCg: Te(M().min(1)),
+  logs: F6
 }).strict(), Ad = "1970-01-01T00:00:00.000Z";
-function F6() {
+function z6() {
   return {
     history: [],
     timeline: [],
@@ -13128,9 +13128,9 @@ function F6() {
     dynamicMemories: []
   };
 }
-function z6() {
+function U6() {
   return {
-    version: Ii,
+    version: Ti,
     projectId: "albina-galgame-card",
     saveId: "albina-v2-recovered",
     createdAt: Ad,
@@ -13161,13 +13161,13 @@ function z6() {
     inventory: { ownedIds: [], equipped: {}, outfitIds: [], activeOutfitId: "" },
     quests: { completedNodeIds: [], currentMapNodeId: "", progressLog: [] },
     unlockedCg: ["opening_rain"],
-    logs: F6()
+    logs: z6()
   };
 }
 function ro(e) {
   return Array.isArray(e) ? e.map(ro) : e && typeof e == "object" ? Object.fromEntries(Object.entries(e).sort(([t], [i]) => t < i ? -1 : t > i ? 1 : 0).map(([t, i]) => [t, ro(i)])) : e;
 }
-function U6(e) {
+function L6(e) {
   return JSON.stringify(ro(If.parse(e)), null, 2);
 }
 function $n(e) {
@@ -13178,14 +13178,14 @@ function Od(e, t) {
   const i = t.values[e.key];
   return e.operator === "gte" ? i >= e.value : e.operator === "lte" ? i <= e.value : i === e.value;
 }
-function L6(e, t) {
+function M6(e, t) {
   if (!e) return !0;
   const i = e.allOf?.every((n) => Od(n, t)) ?? !0, a = e.anyOf?.some((n) => Od(n, t)) ?? !0;
   return e.fallback === !0 || i && a;
 }
 class Xa {
   constructor(t, i = {}) {
-    this.script = t, this.sceneById = new Map(t.scenes.map((a) => [a.id, a])), this.now = i.now ?? (() => (/* @__PURE__ */ new Date()).toISOString()), this.save = structuredClone(i.save ?? z6()), this.sceneById.has(this.save.sceneId) || (this.save.sceneId = t.initialSceneId);
+    this.script = t, this.sceneById = new Map(t.scenes.map((a) => [a.id, a])), this.now = i.now ?? (() => (/* @__PURE__ */ new Date()).toISOString()), this.save = structuredClone(i.save ?? U6()), this.sceneById.has(this.save.sceneId) || (this.save.sceneId = t.initialSceneId);
   }
   script;
   sceneById;
@@ -13197,7 +13197,7 @@ class Xa {
     return t;
   }
   get choices() {
-    return this.scene.choices.filter((t) => L6(t.availability, this.save));
+    return this.scene.choices.filter((t) => M6(t.availability, this.save));
   }
   replaceSave(t) {
     if (!this.sceneById.has(t.sceneId)) throw new Error(`Save references unknown scene: ${t.sceneId}`);
@@ -13236,7 +13236,7 @@ class Xa {
     return t.replaceAll("{{user}}", this.save.playerProfile.name || "你");
   }
 }
-class M6 {
+class B6 {
   constructor(t, i, a, n = (s, o) => fetch(s, o)) {
     this.manifest = t, this.storage = i, this.baseUrl = a, this.fetchAsset = n;
   }
@@ -13285,7 +13285,7 @@ const xd = "albina-v2-save";
 function Ss() {
   return typeof window > "u" ? void 0 : window.TavernHelper;
 }
-function B6() {
+function Z6() {
   return {
     getChatId: () => Ss()?.getChatId?.() ?? "standalone",
     async loadSave() {
@@ -13309,14 +13309,14 @@ function B6() {
     }
   };
 }
-function Z6(e) {
+function H6(e) {
   return new Audio(e);
 }
-function Ft(e) {
+function jt(e) {
   e && (e.pause(), e.currentTime = 0, e.src = "");
 }
-class H6 {
-  constructor(t = Z6) {
+class K6 {
+  constructor(t = H6) {
     this.createAudio = t;
   }
   createAudio;
@@ -13338,7 +13338,7 @@ class H6 {
     const a = this.lifecycleGeneration, n = ++this.bgmGeneration, s = this.takePreviousBgm(), o = this.createAudio(t);
     o.src = t, o.loop = !0, o.volume = i > 0 ? 0 : this.bgmVolume(), this.bgm = o, this.pendingBgmPrevious = s;
     const r = () => this.isCurrentBgm(o, a, n);
-    return await this.tryPlay(o, r) ? (this.pendingBgmPrevious = void 0, !s || i <= 0 ? (Ft(s), o.volume = this.bgmVolume(), !0) : (await this.crossfade(s, o, i), r())) : (r(), !1);
+    return await this.tryPlay(o, r) ? (this.pendingBgmPrevious = void 0, !s || i <= 0 ? (jt(s), o.volume = this.bgmVolume(), !0) : (await this.crossfade(s, o, i), r())) : (r(), !1);
   }
   enqueueVoice(t) {
     const i = new Promise((a) => this.voiceQueue.push({ source: t, resolve: a }));
@@ -13348,7 +13348,7 @@ class H6 {
     const i = this.createAudio(t);
     i.src = t, i.loop = !1;
     const a = () => {
-      i.removeEventListener("ended", a), this.sfx.delete(i), Ft(i);
+      i.removeEventListener("ended", a), this.sfx.delete(i), jt(i);
     };
     i.addEventListener("ended", a), this.sfx.add(i);
     try {
@@ -13362,7 +13362,7 @@ class H6 {
     if (!t) return !0;
     const i = this.lifecycleGeneration;
     try {
-      return await t.play(), this.isCurrentBlocked(t, i) ? (this.blocked = void 0, t === this.bgm && this.pendingBgmPrevious && (Ft(this.pendingBgmPrevious), this.pendingBgmPrevious = void 0, t.volume = this.bgmVolume()), !0) : !1;
+      return await t.play(), this.isCurrentBlocked(t, i) ? (this.blocked = void 0, t === this.bgm && this.pendingBgmPrevious && (jt(this.pendingBgmPrevious), this.pendingBgmPrevious = void 0, t.volume = this.bgmVolume()), !0) : !1;
     } catch {
       return !1;
     }
@@ -13370,7 +13370,7 @@ class H6 {
   stopAll() {
     this.lifecycleGeneration += 1, this.bgmGeneration += 1, this.cancelFade(), this.finishVoice(!1), this.voiceQueue.splice(0).forEach((i) => i.resolve(!1));
     const t = /* @__PURE__ */ new Set([this.bgm, this.blocked, this.pendingBgmPrevious, this.fadingOut]);
-    this.sfx.forEach((i) => t.add(i)), t.forEach(Ft), this.sfx.clear(), this.bgm = void 0, this.blocked = void 0, this.pendingBgmPrevious = void 0, this.fadingOut = void 0;
+    this.sfx.forEach((i) => t.add(i)), t.forEach(jt), this.sfx.clear(), this.bgm = void 0, this.blocked = void 0, this.pendingBgmPrevious = void 0, this.fadingOut = void 0;
   }
   dispose() {
     this.stopAll();
@@ -13398,7 +13398,7 @@ class H6 {
   }
   finishVoice(t) {
     const i = this.voice;
-    i && this.voiceEnded && i.removeEventListener("ended", this.voiceEnded), Ft(i), this.blocked === i && (this.blocked = void 0), this.voice = void 0, this.voiceEnded = void 0;
+    i && this.voiceEnded && i.removeEventListener("ended", this.voiceEnded), jt(i), this.blocked === i && (this.blocked = void 0), this.voice = void 0, this.voiceEnded = void 0;
     const a = this.activeVoiceJob;
     this.activeVoiceJob = void 0, i && this.bgm && (this.bgm.volume = 1), a?.resolve(t);
   }
@@ -13408,21 +13408,21 @@ class H6 {
     return new Promise((c) => {
       this.fadingOut = t, this.fadeFinish = c;
       const d = () => {
-        r += 1, t.volume = Math.max(0, o * (1 - r / 10)), i.volume = this.bgmVolume() * Math.min(1, r / 10), r >= 10 ? (Ft(t), this.fadingOut = void 0, this.fadeTimer = void 0, this.fadeFinish = void 0, c()) : this.fadeTimer = setTimeout(d, s);
+        r += 1, t.volume = Math.max(0, o * (1 - r / 10)), i.volume = this.bgmVolume() * Math.min(1, r / 10), r >= 10 ? (jt(t), this.fadingOut = void 0, this.fadeTimer = void 0, this.fadeFinish = void 0, c()) : this.fadeTimer = setTimeout(d, s);
       };
       this.fadeTimer = setTimeout(d, s);
     });
   }
   cancelFade() {
-    this.fadeTimer !== void 0 && clearTimeout(this.fadeTimer), this.fadeTimer = void 0, Ft(this.fadingOut), this.fadingOut = void 0, this.fadeFinish?.(), this.fadeFinish = void 0;
+    this.fadeTimer !== void 0 && clearTimeout(this.fadeTimer), this.fadeTimer = void 0, jt(this.fadingOut), this.fadingOut = void 0, this.fadeFinish?.(), this.fadeFinish = void 0;
   }
   takePreviousBgm() {
     if (this.pendingBgmPrevious) {
       const t = this.pendingBgmPrevious;
-      return this.pendingBgmPrevious = void 0, this.blocked === this.bgm && (this.blocked = void 0), Ft(this.bgm), t;
+      return this.pendingBgmPrevious = void 0, this.blocked === this.bgm && (this.blocked = void 0), jt(this.bgm), t;
     }
     if (this.blocked === this.bgm) {
-      this.blocked = void 0, Ft(this.bgm);
+      this.blocked = void 0, jt(this.bgm);
       return;
     }
     return this.bgm;
@@ -13435,7 +13435,7 @@ class H6 {
     return this.lifecycleGeneration === i && this.blocked === t && a;
   }
 }
-class K6 {
+class W6 {
   constructor(t) {
     this.storage = t;
   }
@@ -13452,7 +13452,7 @@ class K6 {
     return [...i];
   }
 }
-function W6() {
+function q6() {
   return {
     loadImage: (e) => new Promise((t, i) => {
       const a = new Image();
@@ -13463,9 +13463,9 @@ function W6() {
     reducedMotion: () => matchMedia("(prefers-reduced-motion: reduce)").matches
   };
 }
-class q6 {
+class G6 {
   constructor(t, i, a = "") {
-    this.manifest = t, this.baseUrl = a, this.environment = i ?? W6();
+    this.manifest = t, this.baseUrl = a, this.environment = i ?? q6();
   }
   manifest;
   baseUrl;
@@ -13560,7 +13560,7 @@ class q6 {
   }
 }
 const Qa = "queue";
-class G6 {
+class J6 {
   constructor(t) {
     this.storage = t;
   }
@@ -13594,13 +13594,13 @@ class G6 {
     }), i;
   }
 }
-const J6 = ["assets", "gallery", "specialCg", "saves"];
+const Y6 = ["assets", "gallery", "specialCg", "saves"];
 function en(e) {
   return new Promise((t, i) => {
     e.onsuccess = () => t(e.result), e.onerror = () => i(e.error ?? new Error("IndexedDB request failed"));
   });
 }
-class Y6 {
+class X6 {
   constructor(t = indexedDB, i = "albina-runtime-v2") {
     this.factory = t, this.databaseName = i;
   }
@@ -13630,19 +13630,19 @@ class Y6 {
     return this.database ??= new Promise((t, i) => {
       const a = this.factory.open(this.databaseName, 1);
       a.onupgradeneeded = () => {
-        for (const n of J6)
+        for (const n of Y6)
           a.result.objectStoreNames.contains(n) || a.result.createObjectStore(n);
       }, a.onsuccess = () => t(a.result), a.onerror = () => i(a.error ?? new Error("Unable to open IndexedDB"));
     }), this.database;
   }
 }
-function X6() {
+function Q6() {
   if (typeof URL.createObjectURL == "function")
     return { createObjectURL: (e) => URL.createObjectURL(e), revokeObjectURL: (e) => URL.revokeObjectURL(e) };
 }
-class Q6 {
-  constructor(t = new Y6(), i) {
-    this.backend = t, this.urlApi = i ?? X6();
+class e5 {
+  constructor(t = new X6(), i) {
+    this.backend = t, this.urlApi = i ?? Q6();
   }
   backend;
   objectUrls = /* @__PURE__ */ new Map();
@@ -13707,7 +13707,7 @@ class Q6 {
     return this.objectUrls.set(t, s), s;
   }
 }
-class e5 {
+class t5 {
   active;
   write(t, i, a = 24) {
     return this.cancel(), t.length === 0 ? (i(""), Promise.resolve("")) : new Promise((n) => {
@@ -13733,7 +13733,7 @@ class e5 {
     this.active === t && (t.timer !== void 0 && clearTimeout(t.timer), this.active = void 0, t.resolve(i));
   }
 }
-class t5 {
+class i5 {
   constructor(t) {
     this.bindings = t;
   }
@@ -13751,18 +13751,18 @@ class t5 {
     return this.bindings.subscribe(t, i);
   }
 }
-class i5 {
+class a5 {
   host;
   audio;
   portraits;
   gallery;
   storage;
   specialCg;
-  typewriter = new e5();
+  typewriter = new t5();
   subscriptions = [];
   mounted = !1;
   constructor(t) {
-    this.host = new t5(t.host), this.audio = new H6(t.audioFactory), this.storage = new Q6(t.storageBackend, t.objectUrls), this.portraits = new q6(t.manifest, t.portraits, t.assetBaseUrl), this.gallery = new K6(this.storage), this.specialCg = new G6(this.storage);
+    this.host = new i5(t.host), this.audio = new K6(t.audioFactory), this.storage = new e5(t.storageBackend, t.objectUrls), this.portraits = new G6(t.manifest, t.portraits, t.assetBaseUrl), this.gallery = new W6(this.storage), this.specialCg = new J6(this.storage);
   }
   mount() {
     this.mounted || (this.mounted = !0, this.subscriptions = [
@@ -13778,8 +13778,8 @@ class i5 {
     this.releaseTransientResources(), this.subscriptions.splice(0).forEach((t) => t()), this.storage.dispose(), this.mounted = !1;
   }
 }
-function a5(e) {
-  return new i5(e);
+function n5(e) {
+  return new a5(e);
 }
 function Tf(e) {
   return new Promise((t) => {
@@ -13790,7 +13790,7 @@ function Tf(e) {
     }
   });
 }
-async function n5() {
+async function s5() {
   const e = document.createElement("canvas");
   e.width = 480, e.height = 270;
   const t = e.getContext("2d");
@@ -13816,162 +13816,173 @@ async function Sd(e = document) {
     o.addColorStop(0, "#050812"), o.addColorStop(1, "#3a2b13"), i.fillStyle = o, i.fillRect(0, 0, t.width, t.height), i.fillStyle = "#e2c46e", i.font = "28px serif", i.fillText("ALBINA", 28, 54);
   }
   const s = await Tf(t);
-  return { blob: s ?? await n5(), capturedMedia: !!(s && n) };
+  return { blob: s ?? await s5(), capturedMedia: !!(s && n) };
 }
-function s5(e, t, i, a = (n) => Lo(t, n, i.baseUrl)) {
-  const n = e.cgAssetId ?? e.backgroundAssetId, s = a(n), o = a(e.backgroundAssetId), r = i.desktop && e.desktopVideoAssetId ? e.desktopVideoAssetId : e.videoAssetId, c = i.videoEnabled && !i.reducedMotion ? a(r) : void 0;
+function Af(e, t) {
+  if (!(!t.videoEnabled || t.reducedMotion))
+    return t.desktop && e.desktopVideoAssetId ? e.desktopVideoAssetId : e.videoAssetId;
+}
+function o5(e, t, i, a = (n) => Lo(t, n, i.baseUrl)) {
+  const n = e.cgAssetId ?? e.backgroundAssetId, s = a(n), o = a(e.backgroundAssetId), r = Af(e, i), c = r ? a(r) : void 0;
   return { ...o ? { backgroundUrl: o } : {}, ...s ? { fallbackUrl: s } : {}, ...c ? { videoUrl: c } : {} };
 }
-const ua = S6(T_), Ci = T6(v_), o5 = new Map(ua.scenes.map((e) => [e.id, e])), r5 = /* @__PURE__ */ d_("albina-game", () => {
-  const e = typeof window < "u" ? window.__ALBINA_BASE_URL__ ?? io : io, t = Ct(a5({ manifest: Ci, host: B6(), assetBaseUrl: e })), i = Ct(new M6(Ci, t.storage, e));
-  t.portraits.setUrlResolver(async (b) => Ci.portraits.some((y) => y.id === b) ? i.cachePortrait(b) : i.cache(b));
-  const a = /* @__PURE__ */ dp(new Xa(ua)), n = /* @__PURE__ */ Ce("title"), s = /* @__PURE__ */ Ce(""), o = /* @__PURE__ */ Ce(), r = /* @__PURE__ */ Ce(!1), c = /* @__PURE__ */ Ce(!1), d = /* @__PURE__ */ Ce(!0), l = /* @__PURE__ */ Ce(!1), u = /* @__PURE__ */ Ce(!1), m = /* @__PURE__ */ Ce([]), p = /* @__PURE__ */ Ce({}), h = /* @__PURE__ */ Ce([]), k = /* @__PURE__ */ new Set(), w = typeof matchMedia == "function" ? matchMedia("(prefers-reduced-motion: reduce)") : void 0, x = /* @__PURE__ */ Ce(w?.matches ?? !1), L = /* @__PURE__ */ Ce(typeof innerWidth == "number" ? innerWidth > 800 : !0);
-  let D, H, N;
-  const ee = (b) => {
-    x.value = b.matches, b.matches && me(Q.value.cgAssetId ?? Q.value.backgroundAssetId);
-  }, z = () => {
-    L.value = innerWidth > 800;
+const ua = N6(A_), Ci = A6(y_), r5 = new Map(ua.scenes.map((e) => [e.id, e])), c5 = /* @__PURE__ */ u_("albina-game", () => {
+  const e = typeof window < "u" ? window.__ALBINA_BASE_URL__ ?? io : io, t = Ct(n5({ manifest: Ci, host: Z6(), assetBaseUrl: e })), i = Ct(new B6(Ci, t.storage, e));
+  t.portraits.setUrlResolver(async (b) => Ci.portraits.some((_) => _.id === b) ? i.cachePortrait(b) : i.cache(b));
+  const a = /* @__PURE__ */ up(new Xa(ua)), n = /* @__PURE__ */ Se("title"), s = /* @__PURE__ */ Se(""), o = /* @__PURE__ */ Se(), r = /* @__PURE__ */ Se(!1), c = /* @__PURE__ */ Se(!1), d = /* @__PURE__ */ Se(!0), l = /* @__PURE__ */ Se(!1), u = /* @__PURE__ */ Se(!1), m = /* @__PURE__ */ Se([]), p = /* @__PURE__ */ Se({}), h = /* @__PURE__ */ Se({}), w = /* @__PURE__ */ Se([]), E = /* @__PURE__ */ new Set(), A = typeof matchMedia == "function" ? matchMedia("(prefers-reduced-motion: reduce)") : void 0, z = /* @__PURE__ */ Se(A?.matches ?? !1), R = /* @__PURE__ */ Se(typeof innerWidth == "number" ? innerWidth > 800 : !0);
+  let H, N, ee;
+  const B = (b) => {
+    z.value = b.matches, b.matches ? Ce(q.value.cgAssetId ?? q.value.backgroundAssetId) : P(q.value);
+  }, le = () => {
+    R.value = innerWidth > 800, P(q.value);
   };
-  w?.addEventListener("change", ee), typeof window < "u" && (window.addEventListener("resize", z), window.addEventListener("orientationchange", z));
-  const Q = Yt(() => a.value.scene), te = Yt(() => a.value.save), j = Yt(() => a.value.choices), $ = Yt(() => s5(Q.value, Ci, {
+  A?.addEventListener("change", B), typeof window < "u" && (window.addEventListener("resize", le), window.addEventListener("orientationchange", le));
+  const q = Xt(() => a.value.scene), j = Xt(() => a.value.save), $ = Xt(() => a.value.choices), Q = Xt(() => o5(q.value, Ci, {
     baseUrl: e,
-    desktop: L.value,
-    reducedMotion: x.value,
+    desktop: R.value,
+    reducedMotion: z.value,
     videoEnabled: d.value && !u.value
-  }, J));
-  function J(b) {
+  }, (b) => b?.startsWith("video.") && !h.value[b] ? void 0 : re(b)));
+  function re(b) {
     if (b)
       return p.value[b] ?? Lo(Ci, b, e);
   }
-  async function me(b) {
+  async function Ce(b) {
     if (!b) return;
-    const y = await i.cache(b);
-    y && (p.value = { ...p.value, [b]: y });
+    const _ = await i.cache(b);
+    _ && (p.value = { ...p.value, [b]: _ });
   }
-  async function $e(b) {
-    const y = [
+  async function je(b) {
+    const _ = [
       b.backgroundAssetId,
       b.cgAssetId,
-      b.videoAssetId,
-      b.desktopVideoAssetId,
       b.voiceAssetId,
       b.bgmAssetId,
       ...b.sfxAssetIds ?? []
-    ].filter((A) => !!A), T = await i.prefetch(y);
-    T.size && (p.value = { ...p.value, ...Object.fromEntries(T) });
-    for (const A of b.portraits) await i.cachePortrait(A.portraitAssetId);
+    ].filter((O) => !!O), F = await i.prefetch(_);
+    F.size && (p.value = { ...p.value, ...Object.fromEntries(F) });
+    for (const O of b.portraits) await i.cachePortrait(O.portraitAssetId);
   }
-  function ze() {
-    const b = Q.value.choices.map((y) => o5.get(y.nextSceneId)).filter((y) => !!y);
+  function pe() {
+    return { baseUrl: e, desktop: R.value, reducedMotion: z.value, videoEnabled: d.value && !u.value };
+  }
+  async function P(b) {
+    const _ = Af(b, pe());
+    if (!_ || h.value[_]) return;
+    const F = await i.cache(_);
+    F && (p.value = { ...p.value, [_]: F }, h.value = { ...h.value, [_]: !0 });
+  }
+  function J() {
+    const b = q.value.choices.map((_) => r5.get(_.nextSceneId)).filter((_) => !!_);
     (async () => {
-      for (const y of b) await $e(y);
+      for (const _ of b) await je(_);
     })();
   }
-  async function le() {
+  async function te() {
     if (!c.value) {
-      if (Q.value.bgmAssetId && D !== Q.value.bgmAssetId) {
-        D = Q.value.bgmAssetId;
-        const b = J(D);
+      if (q.value.bgmAssetId && H !== q.value.bgmAssetId) {
+        H = q.value.bgmAssetId;
+        const b = re(H);
         b && (l.value = !await t.audio.playBgm(b));
       }
-      for (const b of Q.value.sfxAssetIds ?? []) {
-        const y = J(b);
-        y && t.audio.playSfx(y);
+      for (const b of q.value.sfxAssetIds ?? []) {
+        const _ = re(b);
+        _ && t.audio.playSfx(_);
       }
-      if (Q.value.voiceAssetId) {
-        const b = J(Q.value.voiceAssetId);
+      if (q.value.voiceAssetId) {
+        const b = re(q.value.voiceAssetId);
         b && t.audio.enqueueVoice(b);
       }
     }
   }
-  async function R() {
-    u.value = !1, await $e(Q.value), s.value = "";
-    const b = a.value.interpolate(Q.value.text);
-    t.typewriter.write(b, (y) => {
-      s.value = y;
-    }, x.value ? 0 : 18), le(), Q.value.cgAssetId && (await t.gallery.unlock(Q.value.cgAssetId, te.value), H !== Q.value.id && (H = Q.value.id, await t.specialCg.enqueue({ id: Q.value.id, assetId: Q.value.cgAssetId })), m.value = await t.gallery.list(te.value)), ze();
+  async function Me() {
+    u.value = !1, await je(q.value), s.value = "";
+    const b = a.value.interpolate(q.value.text);
+    t.typewriter.write(b, (_) => {
+      s.value = _;
+    }, z.value ? 0 : 18), te(), q.value.cgAssetId && (await t.gallery.unlock(q.value.cgAssetId, j.value), N !== q.value.id && (N = q.value.id, await t.specialCg.enqueue({ id: q.value.id, assetId: q.value.cgAssetId })), m.value = await t.gallery.list(j.value)), P(q.value), J();
   }
-  async function G() {
-    t.mount(), n.value = "game", await R();
+  async function Ue() {
+    t.mount(), n.value = "game", await Me();
   }
-  async function ie() {
+  async function Oe() {
     r.value = !0;
     try {
       const b = await t.host.loadSave();
-      return b ? (a.value = new Xa(ua, { save: b }), await G(), !0) : !1;
+      return b ? (a.value = new Xa(ua, { save: b }), await Ue(), !0) : !1;
     } finally {
       r.value = !1;
     }
   }
-  async function ct(b) {
+  async function Be(b) {
     t.typewriter.completeNow();
-    const y = a.value.choose(b);
-    lp(a), o.value = y.resultText ? a.value.interpolate(y.resultText) : void 0;
-    const T = y.choice.resultVoiceAssetId;
-    await me(T);
-    const A = J(T);
-    !c.value && A && t.audio.enqueueVoice(A), o.value || await R();
+    const _ = a.value.choose(b);
+    fp(a), o.value = _.resultText ? a.value.interpolate(_.resultText) : void 0;
+    const F = _.choice.resultVoiceAssetId;
+    await Ce(F);
+    const O = re(F);
+    !c.value && O && t.audio.enqueueVoice(O), o.value || await Me();
   }
-  async function Le() {
-    o.value = void 0, await R();
+  async function qt() {
+    o.value = void 0, await Me();
   }
-  async function Te(b, y) {
-    const T = (/* @__PURE__ */ new Date()).toISOString(), A = { ...structuredClone(te.value), saveId: b, updatedAt: T }, I = N ?? (await Sd()).blob;
-    await t.storage.saveSnapshot(A, I), y && await t.host.saveSave(A), await Pt();
-  }
-  async function Me() {
-    await Te("quick-save", !0);
-  }
-  async function Gt(b) {
-    await Te(`slot-${b}`, !1);
-  }
-  async function Pt() {
-    k.forEach((y) => URL.revokeObjectURL(y)), k.clear();
-    const b = [];
-    for (const y of await t.storage.keys("saves")) {
-      const T = await t.storage.loadSnapshot(y);
-      if (!T) continue;
-      const A = T.thumbnail.type.startsWith("image/") ? URL.createObjectURL(T.thumbnail) : void 0;
-      A && k.add(A), b.push({ id: y, sceneId: T.save.sceneId, updatedAt: T.save.updatedAt, ...A ? { thumbnailUrl: A } : {} });
-    }
-    h.value = b.sort((y, T) => T.updatedAt.localeCompare(y.updatedAt));
+  async function Gt(b, _) {
+    const F = (/* @__PURE__ */ new Date()).toISOString(), O = { ...structuredClone(j.value), saveId: b, updatedAt: F }, K = ee ?? (await Sd()).blob;
+    await t.storage.saveSnapshot(O, K), _ && await t.host.saveSave(O), await Jt();
   }
   async function cs() {
-    n.value === "game" && (N = (await Sd()).blob), await Pt(), n.value = "saves";
+    await Gt("quick-save", !0);
   }
-  async function ni(b) {
-    const y = await t.storage.loadSnapshot(b);
-    y && (a.value = new Xa(ua, { save: $n(y.save) }), n.value = "game", await R());
+  async function si(b) {
+    await Gt(`slot-${b}`, !1);
   }
-  async function Ti(b) {
-    await t.storage.deleteValue("saves", b), await Pt();
+  async function Jt() {
+    E.forEach((_) => URL.revokeObjectURL(_)), E.clear();
+    const b = [];
+    for (const _ of await t.storage.keys("saves")) {
+      const F = await t.storage.loadSnapshot(_);
+      if (!F) continue;
+      const O = F.thumbnail.type.startsWith("image/") ? URL.createObjectURL(F.thumbnail) : void 0;
+      O && E.add(O), b.push({ id: _, sceneId: F.save.sceneId, updatedAt: F.save.updatedAt, ...O ? { thumbnailUrl: O } : {} });
+    }
+    w.value = b.sort((_, F) => F.updatedAt.localeCompare(_.updatedAt));
   }
-  function ea() {
-    return U6(te.value);
+  async function ea() {
+    n.value === "game" && (ee = (await Sd()).blob), await Jt(), n.value = "saves";
   }
   async function Ba(b) {
-    a.value = new Xa(ua, { save: $n(JSON.parse(b)) }), n.value = "game", await R();
+    const _ = await t.storage.loadSnapshot(b);
+    _ && (a.value = new Xa(ua, { save: $n(_.save) }), n.value = "game", await Me());
   }
-  async function si() {
-    m.value = await t.gallery.list(te.value), await Promise.all(m.value.map(me)), n.value = "gallery";
+  async function oi(b) {
+    await t.storage.deleteValue("saves", b), await Jt();
   }
   function Go() {
+    return L6(j.value);
+  }
+  async function f(b) {
+    a.value = new Xa(ua, { save: $n(JSON.parse(b)) }), n.value = "game", await Me();
+  }
+  async function g() {
+    m.value = await t.gallery.list(j.value), await Promise.all(m.value.map(Ce)), n.value = "gallery";
+  }
+  function v() {
     n.value = "game";
   }
-  async function f() {
+  async function T() {
     l.value = !await t.audio.recoverAutoplay();
   }
-  function g() {
+  function I() {
     t.typewriter.completeNow();
   }
-  function _() {
+  function k() {
     u.value = !0;
   }
-  function O() {
-    c.value = !c.value, c.value ? (t.audio.stopAll(), D = void 0) : le();
+  function C() {
+    c.value = !c.value, c.value ? (t.audio.stopAll(), H = void 0) : te();
   }
-  function E() {
-    w?.removeEventListener("change", ee), typeof window < "u" && (window.removeEventListener("resize", z), window.removeEventListener("orientationchange", z)), k.forEach((b) => URL.revokeObjectURL(b)), k.clear();
+  function x() {
+    A?.removeEventListener("change", B), typeof window < "u" && (window.removeEventListener("resize", le), window.removeEventListener("orientationchange", le)), E.forEach((b) => URL.revokeObjectURL(b)), E.clear();
   }
   return {
     runtime: t,
@@ -13982,67 +13993,67 @@ const ua = S6(T_), Ci = T6(v_), o5 = new Map(ua.scenes.map((e) => [e.id, e])), r
     loading: r,
     muted: c,
     videoEnabled: d,
-    reducedMotion: x,
+    reducedMotion: z,
     autoplayBlocked: l,
     galleryIds: m,
-    saveSlots: h,
-    scene: Q,
-    save: te,
-    choices: j,
-    media: $,
-    assetUrl: J,
-    start: G,
-    continueGame: ie,
-    choose: ct,
-    dismissResult: Le,
-    quickSave: Me,
-    saveSlot: Gt,
-    openSaves: cs,
-    restoreSlot: ni,
-    deleteSlot: Ti,
-    exportSave: ea,
-    importSave: Ba,
-    openGallery: si,
-    backToGame: Go,
-    recoverAutoplay: f,
-    completeText: g,
-    setVideoFailed: _,
-    toggleMute: O,
-    disposeUiListeners: E
+    saveSlots: w,
+    scene: q,
+    save: j,
+    choices: $,
+    media: Q,
+    assetUrl: re,
+    start: Ue,
+    continueGame: Oe,
+    choose: Be,
+    dismissResult: qt,
+    quickSave: cs,
+    saveSlot: si,
+    openSaves: ea,
+    restoreSlot: Ba,
+    deleteSlot: oi,
+    exportSave: Go,
+    importSave: f,
+    openGallery: g,
+    backToGame: v,
+    recoverAutoplay: T,
+    completeText: I,
+    setVideoFailed: k,
+    toggleMute: C,
+    disposeUiListeners: x
   };
-}), c5 = ["data-screen"], d5 = {
+}), d5 = ["data-screen"], u5 = {
   key: 0,
   class: "title-screen",
   "data-testid": "title-screen"
-}, u5 = { class: "title-screen__content" }, l5 = {
+}, l5 = { class: "title-screen__content" }, f5 = {
   class: "title-actions",
   "aria-label": "主菜单"
-}, f5 = ["disabled"], p5 = { class: "build-state" }, m5 = {
+}, p5 = ["disabled"], m5 = { class: "build-state" }, g5 = {
   key: 1,
   class: "panel-screen",
   "data-testid": "saves-screen"
-}, g5 = { class: "slot-actions" }, b5 = { class: "save-slot-grid" }, h5 = ["data-save-id"], _5 = ["src"], v5 = ["onClick"], y5 = ["onClick"], k5 = { key: 0 }, w5 = {
+}, b5 = { class: "slot-actions" }, h5 = { class: "save-slot-grid" }, _5 = ["data-save-id"], v5 = ["src"], y5 = ["onClick"], k5 = ["onClick"], w5 = { key: 0 }, E5 = {
   key: 2,
   class: "panel-screen",
   "data-testid": "gallery-screen"
-}, E5 = { class: "gallery-grid" }, I5 = ["src", "alt"], T5 = { key: 0 }, A5 = {
+}, I5 = { class: "gallery-grid" }, T5 = ["src", "alt"], A5 = { key: 0 }, O5 = {
   key: 3,
   class: "panel-screen",
   "data-testid": "settings-screen"
-}, O5 = ["checked"], x5 = ["data-scene-id"], S5 = ["src"], N5 = ["src", "poster"], C5 = ["src"], D5 = { class: "game-hud" }, V5 = {
+}, x5 = ["checked"], S5 = ["data-scene-id"], N5 = ["src"], C5 = ["src", "poster"], D5 = ["src"], V5 = { class: "game-hud" }, R5 = {
   key: 0,
   class: "result-overlay",
   "data-testid": "choice-result"
-}, R5 = {
+}, P5 = {
   key: 1,
   class: "choice-list"
-}, P5 = ["data-choice-id", "onClick"], $5 = {
+}, $5 = ["data-choice-id", "onClick"], j5 = {
   key: 0,
   class: "ending-mark"
-}, j5 = { class: "save-tools" }, F5 = /* @__PURE__ */ vu({
+}, F5 = { class: "save-tools" }, z5 = /* @__PURE__ */ vu({
   __name: "App",
   setup(e) {
-    const t = r5(), i = /* @__PURE__ */ Ce(""), a = /* @__PURE__ */ Ce(""), n = Yt(() => t.galleryIds.map((r) => ({ id: r, url: t.assetUrl(r) })).filter((r) => r.url));
+    const t = c5(), i = /* @__PURE__ */ Se(""), a = /* @__PURE__ */ Se(""), n = Xt(() => t.galleryIds.map((r) => ({ id: r, url: t.assetUrl(r) })).filter((r) => r.url));
     function s() {
       a.value = t.exportSave();
     }
@@ -14056,61 +14067,61 @@ const ua = S6(T_), Ci = T6(v_), o5 = new Map(ua.scenes.map((e) => [e.id, e])), r
       "data-albina-application": "",
       "data-screen": V(t).screen
     }, [
-      V(t).screen === "title" ? (he(), ve("section", d5, [
-        c[28] || (c[28] = U("div", { class: "title-screen__veil" }, null, -1)),
-        U("div", u5, [
-          c[25] || (c[25] = U("p", { class: "eyebrow" }, "Canto IX · 独立前端卡", -1)),
-          c[26] || (c[26] = U("h1", null, "ALBINA", -1)),
-          c[27] || (c[27] = U("p", { class: "subtitle" }, "白色画布上的残响", -1)),
-          U("nav", l5, [
-            U("button", {
+      V(t).screen === "title" ? (he(), ve("section", u5, [
+        c[28] || (c[28] = L("div", { class: "title-screen__veil" }, null, -1)),
+        L("div", l5, [
+          c[25] || (c[25] = L("p", { class: "eyebrow" }, "Canto IX · 独立前端卡", -1)),
+          c[26] || (c[26] = L("h1", null, "ALBINA", -1)),
+          c[27] || (c[27] = L("p", { class: "subtitle" }, "白色画布上的残响", -1)),
+          L("nav", f5, [
+            L("button", {
               "data-testid": "new-game",
               onClick: c[0] || (c[0] = //@ts-ignore
               (...d) => V(t).start && V(t).start(...d))
             }, "开始新篇"),
-            U("button", {
+            L("button", {
               "data-testid": "continue-game",
               disabled: V(t).loading,
               onClick: c[1] || (c[1] = //@ts-ignore
               (...d) => V(t).continueGame && V(t).continueGame(...d))
-            }, "继续", 8, f5),
-            U("button", {
+            }, "继续", 8, p5),
+            L("button", {
               "data-testid": "title-saves",
               onClick: c[2] || (c[2] = //@ts-ignore
               (...d) => V(t).openSaves && V(t).openSaves(...d))
             }, "存档"),
-            U("button", {
+            L("button", {
               onClick: c[3] || (c[3] = //@ts-ignore
               (...d) => V(t).openGallery && V(t).openGallery(...d))
             }, "CG 图鉴"),
-            U("button", {
+            L("button", {
               "data-testid": "title-settings",
               onClick: c[4] || (c[4] = (d) => V(t).screen = "settings")
             }, "设置")
           ]),
-          U("p", p5, "v" + je(V(Ml)) + " · 确定性主剧情 · 运行时零媒体 API", 1)
+          L("p", m5, "v" + Fe(V(Ml)) + " · 确定性主剧情 · 运行时零媒体 API", 1)
         ])
-      ])) : V(t).screen === "saves" ? (he(), ve("section", m5, [
-        U("header", null, [
-          U("button", {
+      ])) : V(t).screen === "saves" ? (he(), ve("section", g5, [
+        L("header", null, [
+          L("button", {
             onClick: c[5] || (c[5] = (d) => V(t).screen = "title")
           }, "返回"),
-          c[29] || (c[29] = U("h2", null, "存档管理", -1))
+          c[29] || (c[29] = L("h2", null, "存档管理", -1))
         ]),
-        U("div", g5, [
-          U("button", {
+        L("div", b5, [
+          L("button", {
             "data-testid": "save-slot-1",
             onClick: c[6] || (c[6] = (d) => V(t).saveSlot(1))
           }, "保存到槽位 1"),
-          U("button", {
+          L("button", {
             onClick: c[7] || (c[7] = (d) => V(t).saveSlot(2))
           }, "保存到槽位 2"),
-          U("button", {
+          L("button", {
             onClick: c[8] || (c[8] = (d) => V(t).saveSlot(3))
           }, "保存到槽位 3")
         ]),
-        U("div", b5, [
-          (he(!0), ve(Xe, null, sn(V(t).saveSlots, (d) => (he(), ve("article", {
+        L("div", h5, [
+          (he(!0), ve(Qe, null, sn(V(t).saveSlots, (d) => (he(), ve("article", {
             key: d.id,
             class: "save-slot",
             "data-save-id": d.id
@@ -14119,51 +14130,51 @@ const ua = S6(T_), Ci = T6(v_), o5 = new Map(ua.scenes.map((e) => [e.id, e])), r
               key: 0,
               src: d.thumbnailUrl,
               alt: "存档缩略图"
-            }, null, 8, _5)) : Si("", !0),
-            U("div", null, [
-              U("strong", null, je(d.id), 1),
-              U("p", null, je(d.sceneId), 1),
-              U("time", null, je(d.updatedAt), 1)
+            }, null, 8, v5)) : Si("", !0),
+            L("div", null, [
+              L("strong", null, Fe(d.id), 1),
+              L("p", null, Fe(d.sceneId), 1),
+              L("time", null, Fe(d.updatedAt), 1)
             ]),
-            U("button", {
+            L("button", {
               onClick: (l) => V(t).restoreSlot(d.id)
-            }, "读取", 8, v5),
-            U("button", {
+            }, "读取", 8, y5),
+            L("button", {
               onClick: (l) => V(t).deleteSlot(d.id)
-            }, "删除", 8, y5)
-          ], 8, h5))), 128)),
-          V(t).saveSlots.length === 0 ? (he(), ve("p", k5, "暂无普通存档。")) : Si("", !0)
+            }, "删除", 8, k5)
+          ], 8, _5))), 128)),
+          V(t).saveSlots.length === 0 ? (he(), ve("p", w5, "暂无普通存档。")) : Si("", !0)
         ])
-      ])) : V(t).screen === "gallery" ? (he(), ve("section", w5, [
-        U("header", null, [
-          U("button", {
+      ])) : V(t).screen === "gallery" ? (he(), ve("section", E5, [
+        L("header", null, [
+          L("button", {
             onClick: c[9] || (c[9] = //@ts-ignore
             (...d) => V(t).backToGame && V(t).backToGame(...d))
           }, "返回"),
-          c[30] || (c[30] = U("h2", null, "CG 图鉴", -1))
+          c[30] || (c[30] = L("h2", null, "CG 图鉴", -1))
         ]),
-        U("div", E5, [
-          (he(!0), ve(Xe, null, sn(n.value, (d) => (he(), ve("figure", {
+        L("div", I5, [
+          (he(!0), ve(Qe, null, sn(n.value, (d) => (he(), ve("figure", {
             key: d.id
           }, [
-            U("img", {
+            L("img", {
               src: d.url,
               alt: d.id,
               crossorigin: "anonymous"
-            }, null, 8, I5),
-            U("figcaption", null, je(d.id), 1)
+            }, null, 8, T5),
+            L("figcaption", null, Fe(d.id), 1)
           ]))), 128)),
-          n.value.length === 0 ? (he(), ve("p", T5, "尚未解锁 CG。")) : Si("", !0)
+          n.value.length === 0 ? (he(), ve("p", A5, "尚未解锁 CG。")) : Si("", !0)
         ])
-      ])) : V(t).screen === "settings" ? (he(), ve("section", A5, [
-        U("header", null, [
-          U("button", {
+      ])) : V(t).screen === "settings" ? (he(), ve("section", O5, [
+        L("header", null, [
+          L("button", {
             onClick: c[10] || (c[10] = (d) => V(t).screen = "title")
           }, "返回"),
-          c[31] || (c[31] = U("h2", null, "演出设置", -1))
+          c[31] || (c[31] = L("h2", null, "演出设置", -1))
         ]),
-        U("label", null, [
-          Wa(U("input", {
+        L("label", null, [
+          Wa(L("input", {
             "onUpdate:modelValue": c[11] || (c[11] = (d) => V(t).videoEnabled = d),
             type: "checkbox"
           }, null, 512), [
@@ -14171,8 +14182,8 @@ const ua = S6(T_), Ci = T6(v_), o5 = new Map(ua.scenes.map((e) => [e.id, e])), r
           ]),
           c[32] || (c[32] = dn(" 启用动画 CG（移动端可关闭）", -1))
         ]),
-        U("label", null, [
-          Wa(U("input", {
+        L("label", null, [
+          Wa(L("input", {
             "onUpdate:modelValue": c[12] || (c[12] = (d) => V(t).reducedMotion = d),
             type: "checkbox"
           }, null, 512), [
@@ -14180,21 +14191,21 @@ const ua = S6(T_), Ci = T6(v_), o5 = new Map(ua.scenes.map((e) => [e.id, e])), r
           ]),
           c[33] || (c[33] = dn(" 减少动态效果", -1))
         ]),
-        U("label", null, [
-          U("input", {
+        L("label", null, [
+          L("input", {
             checked: V(t).muted,
             type: "checkbox",
             onChange: c[13] || (c[13] = //@ts-ignore
             (...d) => V(t).toggleMute && V(t).toggleMute(...d))
-          }, null, 40, O5),
+          }, null, 40, x5),
           c[34] || (c[34] = dn(" 静音", -1))
         ]),
-        U("button", {
+        L("button", {
           "data-testid": "autoplay-recovery",
           onClick: c[14] || (c[14] = //@ts-ignore
           (...d) => V(t).recoverAutoplay && V(t).recoverAutoplay(...d))
         }, "恢复音频播放"),
-        c[35] || (c[35] = U("p", { class: "asset-status" }, "图像条带仍有 8 项等待 Pie 恢复；Music 2.6 已观察到两次 504，批量生产因稳定性门槛暂停。本预览版不会在游玩时请求生成接口，也不宣称 Complete Edition 已完成。", -1))
+        c[35] || (c[35] = L("p", { class: "asset-status" }, "图像条带仍有 8 项等待 Pie 恢复；Music 2.6 已观察到两次 504，批量生产因稳定性门槛暂停。本预览版不会在游玩时请求生成接口，也不宣称 Complete Edition 已完成。", -1))
       ])) : (he(), ve("section", {
         key: 4,
         class: "game-screen",
@@ -14207,7 +14218,7 @@ const ua = S6(T_), Ci = T6(v_), o5 = new Map(ua.scenes.map((e) => [e.id, e])), r
           src: V(t).media.backgroundUrl,
           alt: "",
           crossorigin: "anonymous"
-        }, null, 8, S5)) : Si("", !0),
+        }, null, 8, N5)) : Si("", !0),
         V(t).media.videoUrl ? (he(), ve("video", {
           key: 1,
           class: "game-screen__video",
@@ -14221,103 +14232,103 @@ const ua = S6(T_), Ci = T6(v_), o5 = new Map(ua.scenes.map((e) => [e.id, e])), r
           "data-testid": "scene-video",
           onError: c[15] || (c[15] = //@ts-ignore
           (...d) => V(t).setVideoFailed && V(t).setVideoFailed(...d))
-        }, null, 40, N5)) : V(t).media.fallbackUrl ? (he(), ve("img", {
+        }, null, 40, C5)) : V(t).media.fallbackUrl ? (he(), ve("img", {
           key: 2,
           class: "game-screen__cg",
           src: V(t).media.fallbackUrl,
           alt: "剧情 CG",
           "data-testid": "static-fallback",
           crossorigin: "anonymous"
-        }, null, 8, C5)) : Si("", !0),
-        Dt(l_, {
+        }, null, 8, D5)) : Si("", !0),
+        Dt(f_, {
           portraits: V(t).scene.portraits,
           service: V(t).runtime.portraits
         }, null, 8, ["portraits", "service"]),
-        U("header", D5, [
-          U("span", null, "CH." + je(V(t).scene.chapter) + " · " + je(V(t).scene.locationId), 1),
-          U("span", null, "信任 " + je(V(t).save.values.trust) + " / 危险 " + je(V(t).save.values.danger) + " / 共鸣 " + je(V(t).save.values.artResonance), 1),
-          U("nav", null, [
-            U("button", {
+        L("header", V5, [
+          L("span", null, "CH." + Fe(V(t).scene.chapter) + " · " + Fe(V(t).scene.locationId), 1),
+          L("span", null, "信任 " + Fe(V(t).save.values.trust) + " / 危险 " + Fe(V(t).save.values.danger) + " / 共鸣 " + Fe(V(t).save.values.artResonance), 1),
+          L("nav", null, [
+            L("button", {
               onClick: c[16] || (c[16] = //@ts-ignore
               (...d) => V(t).quickSave && V(t).quickSave(...d))
             }, "快速存档"),
-            U("button", {
+            L("button", {
               "data-testid": "game-saves",
               onClick: c[17] || (c[17] = //@ts-ignore
               (...d) => V(t).openSaves && V(t).openSaves(...d))
             }, "存档"),
-            U("button", {
+            L("button", {
               onClick: c[18] || (c[18] = //@ts-ignore
               (...d) => V(t).openGallery && V(t).openGallery(...d))
             }, "图鉴"),
-            U("button", {
+            L("button", {
               "data-testid": "game-settings",
               onClick: c[19] || (c[19] = (d) => V(t).screen = "settings")
             }, "设置"),
-            U("button", {
+            L("button", {
               onClick: c[20] || (c[20] = //@ts-ignore
               (...d) => V(t).toggleMute && V(t).toggleMute(...d))
-            }, je(V(t).muted ? "启音" : "静音"), 1)
+            }, Fe(V(t).muted ? "启音" : "静音"), 1)
           ])
         ]),
-        U("article", {
+        L("article", {
           class: "dialogue-box",
           "data-testid": "dialogue-box",
           onClick: c[22] || (c[22] = //@ts-ignore
           (...d) => V(t).completeText && V(t).completeText(...d))
         }, [
-          U("h2", null, je(V(t).scene.speaker), 1),
-          U("p", null, je(V(t).visibleText), 1),
-          V(t).resultText ? (he(), ve("div", V5, [
-            U("p", null, je(V(t).resultText), 1),
-            U("button", {
+          L("h2", null, Fe(V(t).scene.speaker), 1),
+          L("p", null, Fe(V(t).visibleText), 1),
+          V(t).resultText ? (he(), ve("div", R5, [
+            L("p", null, Fe(V(t).resultText), 1),
+            L("button", {
               onClick: c[21] || (c[21] = Br(
                 //@ts-ignore
                 (...d) => V(t).dismissResult && V(t).dismissResult(...d),
                 ["stop"]
               ))
             }, "继续")
-          ])) : (he(), ve("div", R5, [
-            (he(!0), ve(Xe, null, sn(V(t).choices, (d) => (he(), ve("button", {
+          ])) : (he(), ve("div", P5, [
+            (he(!0), ve(Qe, null, sn(V(t).choices, (d) => (he(), ve("button", {
               key: d.id,
               "data-choice-id": d.id,
               onClick: Br((l) => V(t).choose(d.id), ["stop"])
-            }, je(d.text), 9, P5))), 128)),
-            V(t).scene.ending ? (he(), ve("p", $5, je(V(t).scene.ending.route) + " · " + je(V(t).scene.ending.kind) + " END", 1)) : Si("", !0)
+            }, Fe(d.text), 9, $5))), 128)),
+            V(t).scene.ending ? (he(), ve("p", j5, Fe(V(t).scene.ending.route) + " · " + Fe(V(t).scene.ending.kind) + " END", 1)) : Si("", !0)
           ]))
         ]),
-        U("details", j5, [
-          c[36] || (c[36] = U("summary", null, "存档导入 / 导出", -1)),
-          U("button", { onClick: s }, "导出当前存档"),
-          Wa(U("textarea", {
+        L("details", F5, [
+          c[36] || (c[36] = L("summary", null, "存档导入 / 导出", -1)),
+          L("button", { onClick: s }, "导出当前存档"),
+          Wa(L("textarea", {
             "onUpdate:modelValue": c[23] || (c[23] = (d) => a.value = d),
             readonly: "",
             "aria-label": "导出存档"
           }, null, 512), [
             [Ur, a.value]
           ]),
-          Wa(U("textarea", {
+          Wa(L("textarea", {
             "onUpdate:modelValue": c[24] || (c[24] = (d) => i.value = d),
             "aria-label": "导入存档",
             placeholder: "粘贴 SaveV2 JSON"
           }, null, 512), [
             [Ur, i.value]
           ]),
-          U("button", { onClick: o }, "导入")
+          L("button", { onClick: o }, "导入")
         ])
-      ], 8, x5))
-    ], 8, c5));
+      ], 8, S5))
+    ], 8, d5));
   }
-}), L5 = "1.0.44", M5 = "dist/albina-galgame-card/console/index.js", z5 = "https://cdn.jsdelivr.net/gh/q18718859808-sketch/albina-galgame-card@v2.0.0/dist/albina-galgame-card";
-function B5(e) {
+}), M5 = "1.0.44", B5 = "dist/albina-galgame-card/console/index.js", U5 = "https://cdn.jsdelivr.net/gh/q18718859808-sketch/albina-galgame-card@v2.0.0/dist/albina-galgame-card";
+function Z5(e) {
   if (!e) return "";
   if (/^https?:\/\//u.test(e)) return e;
   const t = e.replace(/^\//u, "").split("/").map((i) => encodeURIComponent(i)).join("/");
-  return `${z5}/assets/${t}`;
+  return `${U5}/assets/${t}`;
 }
-function U5(e) {
-  const t = Dg(F5);
-  return t.use(s_()), t.mount(e), t;
+function L5(e) {
+  const t = Vg(z5);
+  return t.use(o_()), t.mount(e), t;
 }
 function Nd() {
   if (typeof document > "u" || document.querySelector("[data-albina-launcher]")) return;
@@ -14338,7 +14349,7 @@ function Nd() {
       i.type = "button", i.textContent = "关闭", Object.assign(i.style, { position: "absolute", right: "12px", top: "12px", zIndex: "4" });
       const a = document.createElement("div");
       a.id = "albina-v2-root", t.append(a, i), document.body.append(t);
-      const n = U5(a);
+      const n = L5(a);
       i.addEventListener("click", () => {
         n.unmount(), t?.remove();
       });
@@ -14349,10 +14360,10 @@ typeof window < "u" && !window.__ALBINA_DISABLE_AUTOINSTALL__ && (document.ready
 export {
   io as ALBINA_CDN_BASE,
   Ml as ALBINA_RELEASE_VERSION,
-  z5 as CANONICAL_CDN_BASE,
-  M5 as LEGACY_BUNDLE_PATH,
-  L5 as LEGACY_BUNDLE_VERSION,
+  U5 as CANONICAL_CDN_BASE,
+  B5 as LEGACY_BUNDLE_PATH,
+  M5 as LEGACY_BUNDLE_VERSION,
   Nd as installAlbinaOneClick,
-  U5 as mountAlbinaApplication,
-  B5 as resolveCanonicalCdnAsset
+  L5 as mountAlbinaApplication,
+  Z5 as resolveCanonicalCdnAsset
 };

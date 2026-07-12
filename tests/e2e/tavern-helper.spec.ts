@@ -94,6 +94,8 @@ test('wires gallery unlock, special-CG queue, and cached asset URLs', async ({ p
 
 test('mobile users can disable video independently of reduced-motion', async ({ page }, testInfo) => {
   test.skip(testInfo.project.name !== 'mobile', 'mobile policy only');
+  const videoRequests: string[] = [];
+  page.on('request', (request) => { if (request.url().includes('/assets/video/')) videoRequests.push(request.url()); });
   await expect(page.getByTestId('title-screen')).toBeVisible();
   await page.getByTestId('title-settings').click();
   await page.getByLabel(/启用动画 CG/u).uncheck();
@@ -101,9 +103,13 @@ test('mobile users can disable video independently of reduced-motion', async ({ 
   await page.getByTestId('new-game').click();
   await expect(page.getByTestId('scene-video')).toHaveCount(0);
   await expect(page.getByTestId('static-fallback')).toBeVisible();
+  await page.waitForTimeout(300);
+  expect(videoRequests).toEqual([]);
 });
 
 test('mobile and reduced-motion policy use a static fallback instead of scene video', async ({ page }) => {
+  const videoRequests: string[] = [];
+  page.on('request', (request) => { if (request.url().includes('/assets/video/')) videoRequests.push(request.url()); });
   await page.emulateMedia({ reducedMotion: 'reduce' });
   await page.getByTestId('new-game').click();
   await page.locator('[data-choice-id="enter_white_canvas"]').click();
@@ -114,4 +120,18 @@ test('mobile and reduced-motion policy use a static fallback instead of scene vi
   }
   await expect(page.getByTestId('scene-video')).toHaveCount(0);
   await expect(page.getByTestId('static-fallback')).toBeVisible();
+  expect(videoRequests).toEqual([]);
+});
+
+test('enabled video requests only the delivery profile selected for the viewport', async ({ page }, testInfo) => {
+  const videoRequests: string[] = [];
+  page.on('request', (request) => { if (request.url().includes('/assets/video/')) videoRequests.push(request.url()); });
+  await page.getByTestId('new-game').click();
+  await expect(page.getByTestId('static-fallback')).toBeVisible();
+  await expect(page.getByTestId('scene-video')).toBeVisible();
+  await expect.poll(() => videoRequests.length).toBe(1);
+  const expected = testInfo.project.name === 'desktop' ? '/desktop/prologue.mp4' : '/runtime/prologue.mp4';
+  const forbidden = testInfo.project.name === 'desktop' ? '/runtime/' : '/desktop/';
+  expect(videoRequests[0]).toContain(expected);
+  expect(videoRequests.some((url) => url.includes(forbidden))).toBe(false);
 });
