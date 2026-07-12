@@ -114,9 +114,10 @@ export class AlbinaStorage {
     const generation = this.objectUrlGeneration;
     const lookup = this.createAssetUrl(assetId, generation);
     this.pendingObjectUrls.set(assetId, lookup);
-    void lookup.finally(() => {
+    const cleanup = () => {
       if (this.pendingObjectUrls.get(assetId) === lookup) this.pendingObjectUrls.delete(assetId);
-    });
+    };
+    void lookup.then(cleanup, cleanup);
     return lookup;
   }
 

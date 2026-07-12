@@ -6,6 +6,8 @@ import type { AlbinaStorage } from './storage';
 export type FetchAsset = (input: RequestInfo | URL, init?: RequestInit) => Promise<Response>;
 
 export class RuntimeAssetCache {
+  private readonly inflight = new Map<string, Promise<string | undefined>>();
+
   constructor(
     private readonly manifest: AssetManifestV2,
     private readonly storage: AlbinaStorage,
@@ -15,7 +17,11 @@ export class RuntimeAssetCache {
 
   remoteUrl(assetId: string): string | undefined { return resolveAssetUrl(this.manifest, assetId, this.baseUrl); }
 
-  async cache(assetId: string): Promise<string | undefined> {
+  cache(assetId: string): Promise<string | undefined> {
+    return this.singleFlight(`asset:${assetId}`, () => this.cacheAssetOnce(assetId));
+  }
+
+  private async cacheAssetOnce(assetId: string): Promise<string | undefined> {
     const cached = await this.storage.getAssetUrl(assetId);
     if (cached) return cached;
     const remote = this.remoteUrl(assetId);
@@ -30,7 +36,11 @@ export class RuntimeAssetCache {
     }
   }
 
-  async cachePortrait(portraitId: string): Promise<string | undefined> {
+  cachePortrait(portraitId: string): Promise<string | undefined> {
+    return this.singleFlight(`portrait:${portraitId}`, () => this.cachePortraitOnce(portraitId));
+  }
+
+  private async cachePortraitOnce(portraitId: string): Promise<string | undefined> {
     const portrait = this.manifest.portraits.find((candidate) => candidate.id === portraitId);
     if (!portrait) return undefined;
     const cached = await this.storage.getAssetUrl(portraitId);
@@ -44,6 +54,24 @@ export class RuntimeAssetCache {
     } catch {
       return remote;
     }
+  }
+
+  private singleFlight(key: string, operation: () => Promise<string | undefined>): Promise<string | undefined> {
+    const existing = this.inflight.get(key);
+    if (existing) return existing;
+    const source = operation();
+    const pending = source.then(
+      (value) => {
+        if (this.inflight.get(key) === pending) this.inflight.delete(key);
+        return value;
+      },
+      (error: unknown) => {
+        if (this.inflight.get(key) === pending) this.inflight.delete(key);
+        throw error;
+      },
+    );
+    this.inflight.set(key, pending);
+    return pending;
   }
 
   async prefetch(assetIds: Iterable<string>): Promise<Map<string, string>> {
