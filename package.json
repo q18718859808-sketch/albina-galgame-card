@@ -7,11 +7,13 @@
     "assets:generate": "node scripts/audit-assets.mjs --write",
     "assets:audit": "node scripts/audit-assets.mjs",
     "build": "vite build",
+    "card:sync": "node scripts/sync-character-card-png.mjs --write",
+    "card:check": "node scripts/sync-character-card-png.mjs",
     "typecheck": "vue-tsc --noEmit",
     "test": "vitest run",
     "test:e2e": "playwright test",
     "security:scan": "node scripts/security-scan.mjs",
-    "verify": "npm run typecheck && npm test && npm run release:sync && npm run security:scan",
+    "verify": "npm run card:check && npm run typecheck && npm test && npm run release:sync && npm run security:scan",
     "release:sync": "npm run build && npm run assets:generate && node scripts/build-release.mjs && npm run assets:audit"
   },
   "dependencies": {

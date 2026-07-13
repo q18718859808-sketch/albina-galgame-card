@@ -2,6 +2,8 @@ import { describe, expect, it } from 'vitest';
 
 type SourceEntry = {
   CANONICAL_CDN_BASE?: unknown;
+  LEGACY_BUNDLE_PATH?: unknown;
+  LEGACY_BUNDLE_VERSION?: unknown;
   mountAlbinaApplication?: unknown;
   resolveCanonicalCdnAsset?: unknown;
 };
@@ -17,20 +19,12 @@ describe('reproducible source baseline', () => {
     expect(source.mountAlbinaApplication).toBeTypeOf('function');
   });
 
-  it('keeps the legacy bundle path while resolving assets through the canonical v2 CDN', async () => {
+  it('does not export the removed legacy runtime compatibility surface', async () => {
     const source = await loadSourceEntry();
 
-    expect(source.CANONICAL_CDN_BASE).toBe(
-      'https://cdn.jsdelivr.net/gh/q18718859808-sketch/albina-galgame-card@v2.0.0/dist/albina-galgame-card',
-    );
-    expect(source.resolveCanonicalCdnAsset).toBeTypeOf('function');
-
-    const resolveAsset = source.resolveCanonicalCdnAsset as (path: string) => string;
-    expect(resolveAsset('cg/opening rain.jpg')).toBe(
-      `${source.CANONICAL_CDN_BASE}/assets/cg/opening%20rain.jpg`,
-    );
-    expect(resolveAsset('https://example.com/albina.png')).toBe(
-      'https://example.com/albina.png',
-    );
+    expect(source.CANONICAL_CDN_BASE).toBeUndefined();
+    expect(source.LEGACY_BUNDLE_PATH).toBeUndefined();
+    expect(source.LEGACY_BUNDLE_VERSION).toBeUndefined();
+    expect(source.resolveCanonicalCdnAsset).toBeUndefined();
   });
 });

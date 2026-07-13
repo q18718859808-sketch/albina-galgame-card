@@ -42,16 +42,27 @@ describe('v2 release completeness with explicit blocked channels', () => {
     expect(status.blocked.music26.count).toBe(81);
   });
 
-  it('makes the v2 source UI the only enabled Tavern Helper script', async () => {
-    const card = await json('card/albina.card.json') as { data: { extensions: { tavern_helper: { scripts: Array<{ enabled: boolean; content: string }> } } } };
-    const enabled = card.data.extensions.tavern_helper.scripts.filter((script) => script.enabled);
-    expect(enabled).toHaveLength(1);
-    expect(enabled[0]?.content).toContain('@v2.0.0/dist/albina-galgame-card/source/albina-classic-loader.js');
-    expect(enabled[0]?.content).not.toMatch(/^\s*import\s/mu);
-    expect(enabled[0]?.content).not.toContain('/console/index.js');
+  it('keeps one identical approved Tavern Helper loader in card JSON and template', async () => {
+    type Card = { data: { extensions: { tavern_helper: { scripts: Array<{ enabled: boolean; content: string }> } } } };
+    const card = await json('card/albina.card.json') as Card;
+    const template = await json('card/character-card.template.json') as Card;
+    const scripts = card.data.extensions.tavern_helper.scripts;
+    expect(scripts).toHaveLength(1);
+    expect(scripts).toEqual(template.data.extensions.tavern_helper.scripts);
+    expect(scripts[0]?.enabled).toBe(true);
+    expect(scripts[0]?.content).toContain('@v2.0.0/dist/albina-galgame-card/source/albina-classic-loader.js');
+    expect(scripts[0]?.content).not.toContain('/console/index.js');
     expect(existsSync('dist/albina-galgame-card/source/albina-classic-loader.js')).toBe(true);
     const loader = await readFile('public/albina-classic-loader.js', 'utf8');
-    expect(loader).not.toMatch(/^\s*import\s/mu);
+    expect(loader).toContain('import.meta.url');
     expect(loader).toContain('import(sourceUrl)');
+    expect(loader).not.toContain('__ALBINA_BASE_URL__');
+    expect(loader).not.toContain('cdn.jsdelivr.net');
+  });
+
+  it('marks the current build as an unpublished local preview', async () => {
+    const status = await json('dist/albina-galgame-card/release-status.json') as { completeEdition: boolean; version: string };
+    expect(status.completeEdition).toBe(false);
+    expect(status.version).toContain('preview');
   });
 });

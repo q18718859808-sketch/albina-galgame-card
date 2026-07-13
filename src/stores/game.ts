@@ -9,7 +9,7 @@ import { parseSaveV2, serializeSaveV2, type SaveV2 } from '../domain/save';
 import type { SceneCue } from '../domain/scene-cue';
 import { GameSession } from '../game/session';
 import { RuntimeAssetCache } from '../runtime/asset-cache';
-import { ALBINA_CDN_BASE, resolveAssetUrl } from '../runtime/asset-resolver';
+import { resolveAssetUrl } from '../runtime/asset-resolver';
 import { createDefaultHostBindings } from '../runtime/default-host';
 import { createAlbinaRuntime } from '../runtime/host-adapter';
 import { captureSceneThumbnail } from '../runtime/thumbnail';
@@ -19,10 +19,17 @@ const manifest = parseAssetManifestV2(manifestJson);
 const script = parseGameScriptV2(storyJson, manifest);
 const sceneIndex = new Map(script.scenes.map((scene) => [scene.id, scene]));
 
+function runtimeAssetBaseUrl(): string {
+  if (import.meta.env.DEV && typeof location !== 'undefined') {
+    return new URL('/dist/albina-galgame-card/', location.origin).href;
+  }
+  return new URL('../', import.meta.url).href;
+}
+
 export interface SaveSlotSummary { id: string; sceneId: string; updatedAt: string; thumbnailUrl?: string }
 
 export const useGameStore = defineStore('albina-game', () => {
-  const baseUrl = typeof window !== 'undefined' ? window.__ALBINA_BASE_URL__ ?? ALBINA_CDN_BASE : ALBINA_CDN_BASE;
+  const baseUrl = runtimeAssetBaseUrl();
   const runtime = markRaw(createAlbinaRuntime({ manifest, host: createDefaultHostBindings(), assetBaseUrl: baseUrl }));
   const assetCache = markRaw(new RuntimeAssetCache(manifest, runtime.storage, baseUrl));
   runtime.portraits.setUrlResolver(async (id) => manifest.portraits.some((portrait) => portrait.id === id) ? assetCache.cachePortrait(id) : assetCache.cache(id));

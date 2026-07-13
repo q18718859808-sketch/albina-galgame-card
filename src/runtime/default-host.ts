@@ -12,7 +12,6 @@ interface TavernHelperLike {
 declare global {
   interface Window {
     TavernHelper?: TavernHelperLike;
-    __ALBINA_BASE_URL__?: string;
     __ALBINA_DISABLE_AUTOINSTALL__?: boolean;
   }
 }

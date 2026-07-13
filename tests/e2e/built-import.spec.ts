@@ -35,7 +35,8 @@ test('executes the published Tavern Helper module, injects CSS, mounts, recovers
   await page.goto('/built-harness.html');
   await page.evaluate(() => {
     const duplicate = document.createElement('script');
-    duplicate.src = '/albina-classic-loader.js';
+    duplicate.type = 'module';
+    duplicate.src = '/dist/albina-galgame-card/source/albina-classic-loader.js';
     document.head.append(duplicate);
   });
   const launcher = page.locator('[data-albina-launcher]');
