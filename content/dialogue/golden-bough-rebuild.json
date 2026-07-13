@@ -44,7 +44,7 @@
             "player_memory_anchor"
           ],
           "unlockCg": [
-            "surgery_of_memory"
+            "cg.surgery_of_memory"
           ]
         }
       },
@@ -64,7 +64,7 @@
             "fascia_checked_first"
           ],
           "unlockCg": [
-            "fascia_heartbeat"
+            "cg.fascia_heartbeat"
           ]
         }
       }
@@ -115,7 +115,7 @@
             "rebuild_raid_committed"
           ],
           "unlockCg": [
-            "lce_raid"
+            "cg.lce_raid"
           ]
         }
       },
@@ -188,7 +188,7 @@
             "false_completion_cut"
           ],
           "unlockCg": [
-            "surgery_of_memory"
+            "cg.surgery_of_memory"
           ]
         }
       },
@@ -208,7 +208,7 @@
             "fascia_pulse_guarded"
           ],
           "unlockCg": [
-            "fascia_heartbeat"
+            "cg.fascia_heartbeat"
           ]
         }
       }
@@ -266,7 +266,7 @@
             "missing_pieces_accepted"
           ],
           "unlockCg": [
-            "golden_bough_ending"
+            "cg.golden_bough_ending"
           ]
         }
       },
@@ -286,7 +286,7 @@
             "rooftop_signal_reordered"
           ],
           "unlockCg": [
-            "araya_rooftop"
+            "cg.araya_rooftop"
           ]
         }
       }
@@ -400,7 +400,7 @@
             "memory_read_aloud"
           ],
           "unlockCg": [
-            "surgery_of_memory"
+            "cg.surgery_of_memory"
           ]
         }
       },
@@ -420,7 +420,7 @@
             "silent_anchor_kept"
           ],
           "unlockCg": [
-            "fascia_heartbeat"
+            "cg.fascia_heartbeat"
           ]
         }
       }
@@ -471,7 +471,7 @@
             "pulse_matched"
           ],
           "unlockCg": [
-            "fascia_heartbeat"
+            "cg.fascia_heartbeat"
           ]
         }
       },
@@ -491,7 +491,7 @@
             "own_rhythm_kept"
           ],
           "unlockCg": [
-            "surgery_of_memory"
+            "cg.surgery_of_memory"
           ]
         }
       }
@@ -550,7 +550,7 @@
             "current_self_protected"
           ],
           "unlockCg": [
-            "lce_raid"
+            "cg.lce_raid"
           ]
         }
       },
@@ -570,7 +570,7 @@
             "memory_traded"
           ],
           "unlockCg": [
-            "surgery_of_memory"
+            "cg.surgery_of_memory"
           ]
         }
       }
@@ -628,7 +628,7 @@
             "perfect_copy_refused"
           ],
           "unlockCg": [
-            "golden_bough_ending"
+            "cg.golden_bough_ending"
           ]
         }
       },
@@ -648,7 +648,7 @@
             "question_returned"
           ],
           "unlockCg": [
-            "araya_rooftop"
+            "cg.araya_rooftop"
           ]
         }
       }
@@ -707,7 +707,7 @@
             "memory_seal_vetoed"
           ],
           "unlockCg": [
-            "lce_raid"
+            "cg.lce_raid"
           ]
         }
       },
@@ -727,7 +727,7 @@
             "seal_choice_hers"
           ],
           "unlockCg": [
-            "surgery_of_memory"
+            "cg.surgery_of_memory"
           ]
         }
       }
@@ -785,7 +785,7 @@
             "silent_companionship"
           ],
           "unlockCg": [
-            "limbus_bus_night"
+            "cg.limbus_bus_night"
           ]
         }
       },
@@ -805,7 +805,7 @@
             "next_revision_asked"
           ],
           "unlockCg": [
-            "araya_rooftop"
+            "cg.araya_rooftop"
           ]
         }
       }
@@ -863,7 +863,7 @@
             "replacement_contract_torn"
           ],
           "unlockCg": [
-            "conspiracy_contract"
+            "cg.conspiracy_contract"
           ]
         }
       },
@@ -883,7 +883,7 @@
             "terms_renegotiated"
           ],
           "unlockCg": [
-            "surgery_of_memory"
+            "cg.surgery_of_memory"
           ]
         }
       }
@@ -941,7 +941,7 @@
             "name_promise_given"
           ],
           "unlockCg": [
-            "golden_bough_ending"
+            "cg.golden_bough_ending"
           ]
         }
       },
@@ -961,7 +961,7 @@
             "witness_only_promise"
           ],
           "unlockCg": [
-            "surgery_of_memory"
+            "cg.surgery_of_memory"
           ]
         }
       }
@@ -1012,7 +1012,7 @@
             "gilded_bough_kept_unlit"
           ],
           "unlockCg": [
-            "golden_bough_ending"
+            "cg.golden_bough_ending"
           ]
         }
       },
@@ -1032,7 +1032,7 @@
             "lighting_condition_asked"
           ],
           "unlockCg": [
-            "araya_rooftop"
+            "cg.araya_rooftop"
           ]
         }
       }

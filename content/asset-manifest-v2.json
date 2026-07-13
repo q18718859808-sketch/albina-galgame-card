@@ -124,6 +124,14 @@
       "bytes": 208589
     },
     {
+      "id": "cg.combat_transition_01",
+      "kind": "image",
+      "path": "cg/combat_transition_01.jpg",
+      "mimeType": "image/jpeg",
+      "sha256": "1636765ed07b103ccc5696e5c3cf4152d300c64b147f2a3b2722dd2151275209",
+      "bytes": 238482
+    },
+    {
       "id": "cg.conspiracy_contract",
       "kind": "image",
       "path": "cg/conspiracy_contract.jpg",
@@ -146,6 +154,14 @@
       "mimeType": "image/jpeg",
       "sha256": "4700e8485eb57b194cf6878741509ddc1e323d486878114259b9405051045491",
       "bytes": 217599
+    },
+    {
+      "id": "cg.golden_bough_rebuild",
+      "kind": "image",
+      "path": "cg/golden_bough_rebuild.jpg",
+      "mimeType": "image/jpeg",
+      "sha256": "0c8c941f77ea39f704563e02e1ed22e8619d8c335ada4215e179a8c6a1caef55",
+      "bytes": 226407
     },
     {
       "id": "cg.hollow_torso_reveal",
@@ -180,6 +196,12 @@
       "bytes": 223021
     },
     {
+      "id": "cg.mirror_broken",
+      "kind": "image",
+      "path": "cg/mirror_broken.png",
+      "mimeType": "image/png"
+    },
+    {
       "id": "cg.opening_rain",
       "kind": "image",
       "path": "cg/opening_rain.jpg",
@@ -196,6 +218,12 @@
       "bytes": 233325
     },
     {
+      "id": "cg.rain_reflection",
+      "kind": "image",
+      "path": "cg/rain_reflection.png",
+      "mimeType": "image/png"
+    },
+    {
       "id": "cg.rebuild_awakening",
       "kind": "image",
       "path": "cg/rebuild_awakening.jpg",
@@ -204,12 +232,28 @@
       "bytes": 182730
     },
     {
+      "id": "cg.ren_interruption",
+      "kind": "image",
+      "path": "cg/ren_interruption.jpg",
+      "mimeType": "image/jpeg",
+      "sha256": "1f69370dc412adddb7367be1f751bd720db2a1b4ab7105bc091a1f3754799083",
+      "bytes": 229446
+    },
+    {
       "id": "cg.ring_conspiracy_ending",
       "kind": "image",
       "path": "cg/ring_conspiracy_ending.jpg",
       "mimeType": "image/jpeg",
       "sha256": "dd57358bb86e03d8619a820ff3b0773dea49d24a760ea09593c5594652876ea3",
       "bytes": 219860
+    },
+    {
+      "id": "cg.ring_invitation",
+      "kind": "image",
+      "path": "cg/ring_invitation.jpg",
+      "mimeType": "image/jpeg",
+      "sha256": "ad02a44c0f89ce0a9e3a173a82bad62c6cfe94121c2e994bc91a487cdd13e5c1",
+      "bytes": 206839
     },
     {
       "id": "cg.surgery_of_memory",
@@ -6256,6 +6300,34 @@
     }
   ],
   "mediaJobs": [
+    {
+      "version": 2,
+      "id": "job.cg.mirror_broken",
+      "assetId": "cg.mirror_broken",
+      "kind": "image-edit",
+      "model": "gpt-image-2",
+      "status": "pending",
+      "contentHash": "e5712718c58921a33f66f79120485926682a183d7445286abe8547624784b77e",
+      "inputAssetIds": [
+        "cg.art_resonance"
+      ],
+      "outputPath": "cg/mirror_broken.png",
+      "attempts": 0
+    },
+    {
+      "version": 2,
+      "id": "job.cg.rain_reflection",
+      "assetId": "cg.rain_reflection",
+      "kind": "image-edit",
+      "model": "gpt-image-2",
+      "status": "pending",
+      "contentHash": "7a9867eab82e7242ee694cb446d18864759bcc0558b1e80a60b4428ee13b2a94",
+      "inputAssetIds": [
+        "cg.rain_confession"
+      ],
+      "outputPath": "cg/rain_reflection.png",
+      "attempts": 0
+    },
     {
       "version": 2,
       "id": "job.strip.original.albina.sprites.battle",

@@ -45,7 +45,7 @@
             "route_white_canvas_seen"
           ],
           "unlockCg": [
-            "opening_rain"
+            "cg.opening_rain"
           ]
         }
       },
@@ -65,7 +65,7 @@
             "route_rebuild_seen"
           ],
           "unlockCg": [
-            "golden_bough_rebuild"
+            "cg.golden_bough_rebuild"
           ]
         }
       },
@@ -85,7 +85,7 @@
             "route_conspiracy_seen"
           ],
           "unlockCg": [
-            "ring_invitation"
+            "cg.ring_invitation"
           ]
         }
       }

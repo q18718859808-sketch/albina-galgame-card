@@ -6,11 +6,15 @@ import { promisify } from 'node:util';
 
 import { describe, expect, it } from 'vitest';
 
-import { GameScriptV2Schema } from '../../src/domain/game-script';
+import { parseAssetManifestV2 } from '../../src/domain/assets';
+import { GameScriptV2Schema, parseGameScriptV2 } from '../../src/domain/game-script';
+import type { SaveV2 } from '../../src/domain/save';
+import { GameSession } from '../../src/game/session';
 
 const run = promisify(execFile);
 const projectRoot = resolve(import.meta.dirname, '../..');
 const sourceManifestPath = resolve(projectRoot, 'content/game-script-v2.json');
+const assetManifestPath = resolve(projectRoot, 'content/asset-manifest-v2.json');
 const compiledPath = resolve(projectRoot, 'dist/albina-galgame-card/data/game-script-v2.json');
 const compilerPath = resolve(projectRoot, 'scripts/compile-story.mjs');
 const extractorPath = resolve(projectRoot, 'scripts/extract-legacy-story.mjs');
@@ -163,4 +167,53 @@ describe('compiled story graph', () => {
       }
     }
   });
+
+  it('reaches all nine endings through choices available from authoritative save state', () => {
+    const compiled = loadJson<unknown>(compiledPath);
+    const assetManifest = loadJson<unknown>(assetManifestPath);
+    expect(compiled).toBeDefined();
+    expect(assetManifest).toBeDefined();
+    if (!compiled || !assetManifest) return;
+
+    const manifest = parseAssetManifestV2(assetManifest);
+    const script = parseGameScriptV2(compiled, manifest);
+    const relevantFlags = new Set(script.scenes.flatMap((scene) => scene.choices.flatMap((choice) => [
+      ...(choice.availability?.allOf ?? []),
+      ...(choice.availability?.anyOf ?? []),
+    ])).filter((predicate) => predicate.kind === 'flag').map((predicate) => predicate.flag));
+    const start = new GameSession(script);
+    const queue: Array<{ save: SaveV2; path: string[] }> = [{ save: structuredClone(start.save), path: [] }];
+    const visited = new Set<string>();
+    const endingPaths = new Map<string, string[]>();
+
+    for (let cursor = 0; cursor < queue.length && endingPaths.size < 9; cursor += 1) {
+      const current = queue[cursor]!;
+      const currentSession = new GameSession(script, { save: current.save });
+      for (const choice of currentSession.choices) {
+        const branch = new GameSession(script, { save: current.save });
+        const result = branch.choose(choice.id);
+        const path = [...current.path, choice.id];
+        if (result.scene.ending) {
+          endingPaths.set(`${result.scene.ending.route}.${result.scene.ending.kind}`, path);
+          continue;
+        }
+        if (result.scene.id === script.initialSceneId && path.length > 1) continue;
+        const values = branch.save.values;
+        const flags = [...relevantFlags].sort().map((flag) => `${flag}:${branch.save.flags[flag] === true}`).join(',');
+        const signature = [branch.save.sceneId, branch.save.route, values.affectionAlbina, values.trust, values.danger, values.artResonance, flags].join('|');
+        if (visited.has(signature)) continue;
+        visited.add(signature);
+        queue.push({ save: structuredClone(branch.save), path });
+      }
+    }
+
+    const expected = ['golden_bough_rebuild', 'ring_conspiracy', 'white_canvas']
+      .flatMap((route) => ['bad', 'normal', 'true'].map((kind) => `${route}.${kind}`))
+      .sort();
+    expect([...endingPaths.keys()].sort()).toEqual(expected);
+    for (const [ending, path] of endingPaths) {
+      expect(path.length, ending).toBeGreaterThan(1);
+      expect(path.at(-1), ending).toMatch(/ending/u);
+    }
+  }, 20_000);
 });

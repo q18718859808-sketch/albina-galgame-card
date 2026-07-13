@@ -105,7 +105,18 @@ describe('GameScriptV2Schema', () => {
       voiceAssetId: 'voice.opening.albina',
       bgmAssetId: 'audio.bgm.title',
       sfxAssetIds: ['audio.sfx.rain'],
+      videoAssetId: 'video.runtime.opening',
+      desktopVideoAssetId: 'video.desktop.opening',
+      choices: [{
+        ...openingScene.choices[0],
+        nextSceneId: 'opening_001',
+        resultVoiceAssetId: 'voice.result.opening',
+        effects: { ...openingScene.choices[0].effects, unlockCg: ['cg.gallery.unlock'] },
+      }],
     };
+    const choice = scene.choices[0]!;
+    const resultVoiceAssetId = choice.resultVoiceAssetId;
+    const unlockAssetId = choice.effects.unlockCg[0]!;
     const script = {
       version: 2,
       projectId: 'albina-galgame-card',
@@ -127,6 +138,10 @@ describe('GameScriptV2Schema', () => {
         { id: scene.voiceAssetId, kind: 'audio', path: 'voice/opening.ogg' },
         { id: scene.bgmAssetId, kind: 'audio', path: 'bgm/title.ogg' },
         { id: scene.sfxAssetIds[0], kind: 'audio', path: 'sfx/rain.ogg' },
+        { id: scene.videoAssetId, kind: 'video', path: 'video/opening.mp4' },
+        { id: scene.desktopVideoAssetId, kind: 'video', path: 'video/opening-desktop.mp4' },
+        { id: resultVoiceAssetId, kind: 'audio', path: 'voice/result.ogg' },
+        { id: unlockAssetId, kind: 'image', path: 'cg/unlock.png' },
       ],
       portraits: [{
         version: 2,
@@ -146,6 +161,10 @@ describe('GameScriptV2Schema', () => {
       scene.voiceAssetId,
       scene.bgmAssetId,
       scene.sfxAssetIds[0],
+      scene.videoAssetId,
+      scene.desktopVideoAssetId,
+      resultVoiceAssetId,
+      unlockAssetId,
     ]) {
       const incomplete = {
         ...manifest,
@@ -154,5 +173,11 @@ describe('GameScriptV2Schema', () => {
       };
       expect(() => parseGameScriptV2(script, incomplete)).toThrow(/asset reference/i);
     }
+
+    const wrongKind = {
+      ...manifest,
+      assets: manifest.assets.map((asset) => asset.id === unlockAssetId ? { ...asset, kind: 'audio' } : asset),
+    };
+    expect(() => parseGameScriptV2(script, wrongKind)).toThrow(/must be image/i);
   });
 });

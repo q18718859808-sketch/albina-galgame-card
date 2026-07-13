@@ -6,6 +6,7 @@ import { parseGameScriptV2 } from '../src/domain/game-script.ts';
 
 const projectRoot = resolve(dirname(fileURLToPath(import.meta.url)), '..');
 const manifestPath = resolve(projectRoot, 'content/game-script-v2.json');
+const assetManifestPath = resolve(projectRoot, 'content/asset-manifest-v2.json');
 const outputPath = resolve(projectRoot, 'dist/albina-galgame-card/data/game-script-v2.json');
 
 async function readJson(path) {
@@ -66,6 +67,7 @@ function addVideoCues(scenes) {
 
 async function compileStory() {
   const manifest = await readJson(manifestPath);
+  const assets = await readJson(assetManifestPath);
   const scenes = addVideoCues(await loadDialogueFiles(manifest.dialogueFiles));
   assertLegacyOracle(scenes, manifest.legacyOracle);
   const compiled = parseGameScriptV2({
@@ -74,7 +76,7 @@ async function compileStory() {
     initialSceneId: manifest.initialSceneId,
     routeEntrySceneIds: manifest.routeEntrySceneIds,
     scenes,
-  });
+  }, assets);
   await mkdir(dirname(outputPath), { recursive: true });
   await writeFile(outputPath, `${JSON.stringify(compiled, null, 2)}\n`, 'utf8');
 }

@@ -11,6 +11,7 @@ const assetRoot = resolve(canonicalRoot, 'assets');
 const releaseRoot = resolve(projectRoot, 'release/github-cdn-root');
 const releaseMirrorRoot = resolve(releaseRoot, 'dist/albina-galgame-card');
 const contentManifestPath = resolve(projectRoot, 'content/asset-manifest-v2.json');
+const pendingGalleryCgsPath = resolve(projectRoot, 'content/pending-gallery-cgs.json');
 const releaseVersion = '2.0.0';
 const cdnBase = `https://cdn.jsdelivr.net/gh/q18718859808-sketch/albina-galgame-card@v${releaseVersion}/dist/albina-galgame-card`;
 const mediaExtensions = new Set(['.jpg', '.json', '.mp3', '.mp4', '.png', '.svg', '.wav']);
@@ -86,10 +87,13 @@ async function readStory() {
 function collectStoryReferences(scenes) {
   const references = new Set();
   for (const scene of scenes) {
-    ['backgroundAssetId', 'cgAssetId', 'voiceAssetId', 'bgmAssetId'].forEach((key) => scene[key] && references.add(scene[key]));
+    ['backgroundAssetId', 'cgAssetId', 'videoAssetId', 'desktopVideoAssetId', 'voiceAssetId', 'bgmAssetId'].forEach((key) => scene[key] && references.add(scene[key]));
     scene.portraits.forEach((portrait) => references.add(portrait.portraitAssetId));
     (scene.sfxAssetIds ?? []).forEach((id) => references.add(id));
-    scene.choices.forEach((choice) => choice.resultVoiceAssetId && references.add(choice.resultVoiceAssetId));
+    scene.choices.forEach((choice) => {
+      if (choice.resultVoiceAssetId) references.add(choice.resultVoiceAssetId);
+      (choice.effects.unlockCg ?? []).forEach((id) => references.add(id));
+    });
   }
   return [...references].sort();
 }
@@ -156,6 +160,28 @@ function stripJobs(progress) {
   return { assets, jobs };
 }
 
+async function pendingGalleryCgs() {
+  const plan = await readJson(pendingGalleryCgsPath);
+  if (plan.version !== 1 || !Array.isArray(plan.assets)) throw new Error('Invalid pending gallery CG registry');
+  const assets = [];
+  const jobs = [];
+  for (const entry of plan.assets) {
+    if (!entry || typeof entry.id !== 'string' || typeof entry.path !== 'string' || typeof entry.sourceAssetId !== 'string'
+      || !Number.isInteger(entry.width) || !Number.isInteger(entry.height) || typeof entry.promptVersion !== 'string') {
+      throw new Error('Invalid pending gallery CG entry');
+    }
+    if (await pathExists(resolve(assetRoot, entry.path))) continue;
+    const inputAssetIds = [entry.sourceAssetId];
+    assets.push({ id: entry.id, kind: 'image', path: entry.path, mimeType: 'image/png' });
+    jobs.push({
+      version: 2, id: `job.${entry.id}`, assetId: entry.id, kind: 'image-edit', model: 'gpt-image-2', status: 'pending',
+      contentHash: hash(JSON.stringify({ assetId: entry.id, inputAssetIds, outputPath: entry.path, width: entry.width, height: entry.height, promptVersion: entry.promptVersion })),
+      inputAssetIds, outputPath: entry.path, attempts: 0,
+    });
+  }
+  return { assets, jobs };
+}
+
 async function voiceAssets(references) {
   const assets = [];
   const jobs = [];
@@ -194,10 +220,11 @@ async function buildManifest() {
   const progress = await readJson(resolve(assetRoot, 'sprite-atlas/_progress.json'));
   const references = collectStoryReferences(await readStory());
   const strips = stripJobs(progress);
+  const galleryCgs = await pendingGalleryCgs();
   const voices = await voiceAssets(references);
-  const assets = [...await physicalAssets(), ...await semanticAssets(references), ...await videoAssets(), ...strips.assets, ...voices.assets];
+  const assets = [...await physicalAssets(), ...await semanticAssets(references), ...await videoAssets(), ...strips.assets, ...galleryCgs.assets, ...voices.assets];
   assets.sort((a, b) => a.id.localeCompare(b.id));
-  return { version: 2, projectId: 'albina-galgame-card', basePath: 'assets', assets, portraits: await completedPortraits(progress), mediaJobs: [...strips.jobs, ...voices.jobs].sort((a, b) => a.id.localeCompare(b.id)) };
+  return { version: 2, projectId: 'albina-galgame-card', basePath: 'assets', assets, portraits: await completedPortraits(progress), mediaJobs: [...strips.jobs, ...galleryCgs.jobs, ...voices.jobs].sort((a, b) => a.id.localeCompare(b.id)) };
 }
 
 function runtimeUrl(basePath, path) {
@@ -363,8 +390,9 @@ async function audit() {
 }
 
 const arguments_ = new Set(process.argv.slice(2));
-if (arguments_.has('--write')) await writeGeneratedArtifacts();
+const writeMode = arguments_.has('--write');
+if (writeMode) await writeGeneratedArtifacts();
 const report = await audit();
 if (arguments_.has('--json')) process.stdout.write(`${JSON.stringify(report)}\n`);
 else console.log(`Asset audit: ${report.unresolved.length} unresolved; release missing=${report.release.missing.length}, mismatch=${report.release.mismatch.length}, stale=${report.release.stale.length}`);
-if (report.unresolved.length > 0 || hasReleaseDifferences(report.release)) process.exitCode = 1;
+if (report.unresolved.length > 0 || (!writeMode && hasReleaseDifferences(report.release))) process.exitCode = 1;

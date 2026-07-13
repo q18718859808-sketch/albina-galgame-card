@@ -20,11 +20,14 @@ describe('canonical asset release', () => {
     const progress = await readJson('dist/albina-galgame-card/assets/sprite-atlas/_progress.json') as Record<string, { status: string }>;
     const completed = Object.entries(progress).filter(([, entry]) => entry.status === 'done');
     const pendingStripJobs = manifest.mediaJobs.filter((job) => job.id.startsWith('job.strip.'));
+    const pendingGalleryJobs = manifest.mediaJobs.filter((job) => job.id.startsWith('job.cg.'));
 
     expect(manifest.portraits).toHaveLength(completed.length + 1);
     expect(manifest.portraits.map((portrait) => portrait.id)).toContain('portrait.fascia.normal');
     expect(pendingStripJobs).toHaveLength(8);
     expect(pendingStripJobs.every((job) => job.status === 'pending')).toBe(true);
+    expect(pendingGalleryJobs.map((job) => job.assetId).sort()).toEqual(['cg.mirror_broken', 'cg.rain_reflection']);
+    expect(pendingGalleryJobs.every((job) => job.status === 'pending')).toBe(true);
   });
 
   it('resolves every story asset id through the generated runtime lookup', async () => {
@@ -39,13 +42,14 @@ describe('canonical asset release', () => {
     for (const dialogueFile of index.dialogueFiles) {
       const scenes = await readJson(join('content', dialogueFile)) as Array<Record<string, unknown>>;
       for (const scene of scenes) {
-        for (const key of ['backgroundAssetId', 'cgAssetId', 'voiceAssetId', 'bgmAssetId']) {
+        for (const key of ['backgroundAssetId', 'cgAssetId', 'videoAssetId', 'desktopVideoAssetId', 'voiceAssetId', 'bgmAssetId']) {
           if (typeof scene[key] === 'string') references.add(scene[key] as string);
         }
         for (const portrait of (scene.portraits ?? []) as Array<{ portraitAssetId: string }>) references.add(portrait.portraitAssetId);
         for (const assetId of (scene.sfxAssetIds ?? []) as string[]) references.add(assetId);
-        for (const choice of (scene.choices ?? []) as Array<{ resultVoiceAssetId?: string }>) {
+        for (const choice of (scene.choices ?? []) as Array<{ resultVoiceAssetId?: string; effects?: { unlockCg?: string[] } }>) {
           if (choice.resultVoiceAssetId) references.add(choice.resultVoiceAssetId);
+          for (const assetId of choice.effects?.unlockCg ?? []) references.add(assetId);
         }
       }
     }

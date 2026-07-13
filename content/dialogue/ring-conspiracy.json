@@ -51,7 +51,7 @@
             "contract_with_boundary"
           ],
           "unlockCg": [
-            "conspiracy_contract"
+            "cg.conspiracy_contract"
           ]
         }
       },
@@ -71,7 +71,7 @@
             "pressed_true_goal"
           ],
           "unlockCg": [
-            "maestro_shadow"
+            "cg.maestro_shadow"
           ]
         }
       }
@@ -122,7 +122,7 @@
             "ring_escape_committed"
           ],
           "unlockCg": [
-            "backstreet_pursuit"
+            "cg.backstreet_pursuit"
           ]
         }
       },
@@ -196,7 +196,7 @@
             "pursuit_frame_broken"
           ],
           "unlockCg": [
-            "combat_transition_01"
+            "cg.combat_transition_01"
           ]
         }
       },
@@ -216,7 +216,7 @@
             "false_signature_planted"
           ],
           "unlockCg": [
-            "ren_interruption"
+            "cg.ren_interruption"
           ]
         }
       }
@@ -275,7 +275,7 @@
             "ring_conspiracy_route_complete"
           ],
           "unlockCg": [
-            "ring_conspiracy_ending"
+            "cg.ring_conspiracy_ending"
           ]
         }
       }
@@ -333,7 +333,7 @@
             "duo_exhibit_refused"
           ],
           "unlockCg": [
-            "maestro_shadow"
+            "cg.maestro_shadow"
           ]
         }
       },
@@ -353,7 +353,7 @@
             "albina_answered_herself"
           ],
           "unlockCg": [
-            "conspiracy_contract"
+            "cg.conspiracy_contract"
           ]
         }
       }
@@ -412,7 +412,7 @@
             "gaze_shared"
           ],
           "unlockCg": [
-            "maestro_shadow"
+            "cg.maestro_shadow"
           ]
         }
       },
@@ -433,7 +433,7 @@
             "view_blocked"
           ],
           "unlockCg": [
-            "combat_transition_01"
+            "cg.combat_transition_01"
           ]
         }
       }
@@ -491,7 +491,7 @@
             "street_frame_broken"
           ],
           "unlockCg": [
-            "combat_transition_01"
+            "cg.combat_transition_01"
           ]
         }
       },
@@ -511,7 +511,7 @@
             "frame_seized"
           ],
           "unlockCg": [
-            "maestro_shadow"
+            "cg.maestro_shadow"
           ]
         }
       }
@@ -570,7 +570,7 @@
             "testimony_refused"
           ],
           "unlockCg": [
-            "lce_raid"
+            "cg.lce_raid"
           ]
         }
       },
@@ -590,7 +590,7 @@
             "pen_returned_to_albina"
           ],
           "unlockCg": [
-            "conspiracy_contract"
+            "cg.conspiracy_contract"
           ]
         }
       }
@@ -648,7 +648,7 @@
             "present_albina_chosen"
           ],
           "unlockCg": [
-            "art_resonance"
+            "cg.art_resonance"
           ]
         }
       },
@@ -668,7 +668,7 @@
             "mirror_choice_returned"
           ],
           "unlockCg": [
-            "maestro_shadow"
+            "cg.maestro_shadow"
           ]
         }
       }
@@ -727,7 +727,7 @@
             "badge_thrown"
           ],
           "unlockCg": [
-            "combat_transition_01"
+            "cg.combat_transition_01"
           ]
         }
       },
@@ -748,7 +748,7 @@
             "badge_kept_unworn"
           ],
           "unlockCg": [
-            "maestro_shadow"
+            "cg.maestro_shadow"
           ]
         }
       }
@@ -806,7 +806,7 @@
             "ending_rewritten"
           ],
           "unlockCg": [
-            "ring_conspiracy_ending"
+            "cg.ring_conspiracy_ending"
           ]
         }
       },
@@ -826,7 +826,7 @@
             "film_burned"
           ],
           "unlockCg": [
-            "combat_transition_01"
+            "cg.combat_transition_01"
           ]
         }
       }
@@ -885,7 +885,7 @@
             "night_ended"
           ],
           "unlockCg": [
-            "ring_conspiracy_ending"
+            "cg.ring_conspiracy_ending"
           ]
         }
       },
@@ -906,7 +906,7 @@
             "blade_kept"
           ],
           "unlockCg": [
-            "maestro_shadow"
+            "cg.maestro_shadow"
           ]
         }
       }
@@ -964,7 +964,7 @@
             "one_second_held"
           ],
           "unlockCg": [
-            "fascia_heartbeat"
+            "cg.fascia_heartbeat"
           ]
         }
       },
@@ -984,7 +984,7 @@
             "heartbeat_returned_early"
           ],
           "unlockCg": [
-            "rain_reflection"
+            "cg.rain_reflection"
           ]
         }
       }
@@ -1043,7 +1043,7 @@
             "catalog_erased"
           ],
           "unlockCg": [
-            "ring_conspiracy_ending"
+            "cg.ring_conspiracy_ending"
           ]
         }
       },
@@ -1063,7 +1063,7 @@
             "anonymous_line_kept"
           ],
           "unlockCg": [
-            "maestro_shadow"
+            "cg.maestro_shadow"
           ]
         }
       }

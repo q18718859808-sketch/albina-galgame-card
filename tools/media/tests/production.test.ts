@@ -10,7 +10,7 @@ describe('production job preparation', () => {
     const root = resolve(import.meta.dirname, '../../..');
     const output = await mkdtemp(join(tmpdir(), 'albina-production-'));
     const summary = await prepareProduction(root, output);
-    expect(summary).toEqual({ image: 8, speech: 154, video: 29, musicProbe: 3, music: 81, total: 275 });
+    expect(summary).toEqual({ image: 10, speech: 154, video: 29, musicProbe: 3, music: 81, total: 277 });
     const index = JSON.parse(await readFile(join(output, 'index.json'), 'utf8'));
     const manifest = JSON.parse(await readFile(join(root, 'content/asset-manifest-v2.json'), 'utf8'));
     const script = JSON.parse(await readFile(join(root, 'content/game-script-v2.json'), 'utf8'));
@@ -21,9 +21,11 @@ describe('production job preparation', () => {
     ].filter((id): id is string => Boolean(id))))].sort((a, b) => a.localeCompare(b));
     // Speech must be planned from the fixed script, even after all manifest jobs are approved.
     expect(manifest.mediaJobs.filter((job: { kind: string }) => job.kind === 'speech')).toHaveLength(0);
-    expect(index.jobs).toHaveLength(275);
+    expect(index.jobs).toHaveLength(277);
     expect(index.freeze.voices).toMatchObject({ '阿尔比娜': 'nova', '叙事记录': 'onyx' });
-    expect(index.jobs.filter((job: { kind: string }) => job.kind === 'image')).toHaveLength(8);
+    const imageJobs = index.jobs.filter((job: { kind: string }) => job.kind === 'image');
+    expect(imageJobs).toHaveLength(10);
+    expect(imageJobs.filter((job: { id: string }) => job.id.startsWith('job.cg.'))).toHaveLength(2);
     expect(index.jobs.filter((job: { kind: string }) => job.kind === 'speech')).toHaveLength(154);
     expect(index.jobs.filter((job: { kind: string }) => job.kind === 'speech').map((job: { id: string }) => job.id)).toEqual(expectedSpeechIds.map((id) => `job.speech.${id}`));
     const allowedVoices = new Set(['alloy', 'echo', 'fable', 'nova', 'onyx', 'shimmer']);
@@ -31,7 +33,8 @@ describe('production job preparation', () => {
     expect(Object.values(index.freeze.voices).every((voice) => allowedVoices.has(String(voice)))).toBe(true);
     expect(index.jobs.filter((job: { kind: string }) => job.kind === 'video').every((job: { sourceImage?: string }) => job.sourceImage)).toBe(true);
     expect(index.jobs.filter((job: { kind: string }) => job.kind === 'video').every((job: { durationSeconds: number; masterOutput?: string; desktopOutput?: string }) => job.durationSeconds === 8 && job.masterOutput && job.desktopOutput)).toBe(true);
-    expect(index.jobs.filter((job: { kind: string }) => job.kind === 'image').every((job: { validation: object }) => JSON.stringify(job.validation).includes('frameCount'))).toBe(true);
+    expect(imageJobs.filter((job: { id: string }) => job.id.startsWith('job.strip.')).every((job: { validation: object }) => JSON.stringify(job.validation).includes('frameCount'))).toBe(true);
+    expect(imageJobs.filter((job: { id: string }) => job.id.startsWith('job.cg.')).every((job: { validation: object }) => !JSON.stringify(job.validation).includes('frameCount'))).toBe(true);
     expect(index.jobs.filter((job: { kind: string }) => job.kind === 'music').every((job: { validation: { minDurationSeconds: number; maxDurationSeconds: number } }) => job.validation.minDurationSeconds === 5 && job.validation.maxDurationSeconds === 300)).toBe(true);
   });
 

@@ -12,6 +12,7 @@
   },
   "blocked": {
     "portraitStrips": { "count": 8, "reason": "Pie gpt-image-2 returned HTTP 503 / unavailable model access" },
+    "staticCgs": { "count": 2, "reason": "Choice gallery assets mirror_broken and rain_reflection are registered but not generated" },
     "music26": { "count": 81, "reason": "Pie music-2.6 produced two observed HTTP 504 failures; the three-success bulk gate remains closed" }
   }
 }

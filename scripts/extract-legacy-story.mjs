@@ -70,7 +70,7 @@ function normalizeEffects(effects = {}) {
     ...(effects.route ? { route: effects.route } : {}),
     ...(Object.keys(values).length ? { values } : {}),
     ...(effects.flag ? { setFlags: [effects.flag] } : {}),
-    ...(effects.unlockCg ? { unlockCg: [effects.unlockCg] } : {}),
+    ...(effects.unlockCg ? { unlockCg: [effects.unlockCg.startsWith('cg.') ? effects.unlockCg : `cg.${effects.unlockCg}`] } : {}),
   };
 }
 

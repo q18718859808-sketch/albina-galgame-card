@@ -13,15 +13,22 @@ const musicCues = ['main_menu','title_theme','backstreets_rain','between_two_wor
 
 export async function prepareProduction(root: string, outputDirectory: string) {
   const manifest = await json(resolve(root, 'content/asset-manifest-v2.json'));
+  const pendingGallery = await json(resolve(root, 'content/pending-gallery-cgs.json'));
   const script = await json(resolve(root, 'content/game-script-v2.json'));
   const scenes = (await Promise.all(script.dialogueFiles.map((file: string) => json(resolve(root, 'content', file))))).flat();
   const assetPaths = new Map(manifest.assets.map((asset: RecordValue) => [asset.id, asset.path]));
+  const galleryById = new Map((pendingGallery.assets as RecordValue[]).map((asset) => [asset.id, asset]));
   const speechLines = collectSpeechLines(scenes);
   const jobs: RecordValue[] = [];
   for (const pending of manifest.mediaJobs.filter((job: RecordValue) => job.kind === 'image-edit')) {
     const source = assetPaths.get(pending.inputAssetIds[0]);
     if (typeof source !== 'string') throw new Error(`Missing source asset for ${pending.id}`);
-    jobs.push({ id: pending.id, kind: 'image', prompt: 'Edit the supplied canonical reference into one transparent horizontal strip of exactly eight equal square frames. Preserve identity, outfit, palette, silhouette and line style. Frames: neutral, blink, speak, smile, sad, tense, action, recovery. No text, no borders, no extra subjects.', width: 4096, height: 512, sourceImage: resolve(root, 'dist/albina-galgame-card/assets', source), output: resolve(root, 'staging/media', pending.outputPath), validation: { width: 4096, height: 512, alpha: true, frameCount: 8 } });
+    const gallery = galleryById.get(pending.assetId);
+    if (gallery) {
+      jobs.push({ id: pending.id, kind: 'image', prompt: galleryCgPrompt(pending.assetId), width: gallery.width, height: gallery.height, sourceImage: resolve(root, 'dist/albina-galgame-card/assets', source), output: resolve(root, 'staging/media', pending.outputPath), validation: { width: gallery.width, height: gallery.height } });
+    } else {
+      jobs.push({ id: pending.id, kind: 'image', prompt: 'Edit the supplied canonical reference into one transparent horizontal strip of exactly eight equal square frames. Preserve identity, outfit, palette, silhouette and line style. Frames: neutral, blink, speak, smile, sad, tense, action, recovery. No text, no borders, no extra subjects.', width: 4096, height: 512, sourceImage: resolve(root, 'dist/albina-galgame-card/assets', source), output: resolve(root, 'staging/media', pending.outputPath), validation: { width: 4096, height: 512, alpha: true, frameCount: 8 } });
+    }
   }
   for (const [assetId, line] of speechLines) {
     const outputPath = assetPaths.get(assetId);
@@ -43,7 +50,7 @@ export async function prepareProduction(root: string, outputDirectory: string) {
   await mkdir(outputDirectory, { recursive: true });
   await writeFile(join(outputDirectory, 'index.json'), `${JSON.stringify(index, null, 2)}\n`);
   for (const job of jobs) await writeFile(join(outputDirectory, `${safe(job.id)}.json`), `${JSON.stringify(stripId(job), null, 2)}\n`);
-  return { image: 8, speech: 154, video: 29, musicProbe: 3, music: 81, total: jobs.length };
+  return { image: jobs.filter((job) => job.kind === 'image').length, speech: 154, video: 29, musicProbe: 3, music: 81, total: jobs.length };
 }
 
 async function json(path: string) { return JSON.parse(await readFile(path, 'utf8')); }
@@ -64,6 +71,11 @@ function collectSpeechLines(scenes: RecordValue[]): [string, { text: string; spe
 }
 function safe(id: string) { return id.replaceAll(/[^a-z0-9.-]/giu, '-'); }
 function stripId(job: RecordValue) { const { id: _id, ...spec } = job; return spec; }
+function galleryCgPrompt(assetId: string): string {
+  if (assetId === 'cg.mirror_broken') return 'Albina visual novel static CG: a fractured mirror reflecting Albina and Fascia in the Ring atelier. Preserve the supplied approved art identity, palette, linework, costume, composition language, and mature restrained horror mood. No text, no logo, no additional characters.';
+  if (assetId === 'cg.rain_reflection') return 'Albina visual novel static CG: rain-soaked window reflection of Albina and Fascia after a quiet confession. Preserve the supplied approved art identity, palette, linework, costume, composition language, and subdued nocturnal mood. No text, no logo, no additional characters.';
+  throw new Error(`Unknown pending gallery CG: ${assetId}`);
+}
 function videoKeyframe(id: string): string {
   if (id === 'prologue' || id === 'op') return 'cg.opening_rain';
   if (id.includes('white_canvas')) return id.includes('ending') || id.startsWith('ed_') ? 'cg.white_canvas_ending' : 'cg.white_canvas_choice';

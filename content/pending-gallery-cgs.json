@@ -1,0 +1,21 @@
+{
+  "version": 1,
+  "assets": [
+    {
+      "id": "cg.mirror_broken",
+      "path": "cg/mirror_broken.png",
+      "sourceAssetId": "cg.art_resonance",
+      "width": 1536,
+      "height": 1024,
+      "promptVersion": "gallery-cg-v1"
+    },
+    {
+      "id": "cg.rain_reflection",
+      "path": "cg/rain_reflection.png",
+      "sourceAssetId": "cg.rain_confession",
+      "width": 1536,
+      "height": 1024,
+      "promptVersion": "gallery-cg-v1"
+    }
+  ]
+}

@@ -44,7 +44,7 @@
             "albina_learns_wholeness"
           ],
           "unlockCg": [
-            "trust_threshold"
+            "cg.trust_threshold"
           ]
         }
       },
@@ -64,7 +64,7 @@
             "player_teases_artist"
           ],
           "unlockCg": [
-            "art_resonance"
+            "cg.art_resonance"
           ]
         }
       }
@@ -108,7 +108,7 @@
             "white_lab_boundary_seen"
           ],
           "unlockCg": [
-            "hollow_torso_reveal"
+            "cg.hollow_torso_reveal"
           ]
         }
       },
@@ -181,7 +181,7 @@
             "witness_not_ownership"
           ],
           "unlockCg": [
-            "lce_raid"
+            "cg.lce_raid"
           ]
         }
       },
@@ -201,7 +201,7 @@
             "lab_terms_rewritten"
           ],
           "unlockCg": [
-            "fascia_heartbeat"
+            "cg.fascia_heartbeat"
           ]
         }
       }
@@ -259,7 +259,7 @@
             "white_canvas_empty_seat"
           ],
           "unlockCg": [
-            "white_canvas_ending"
+            "cg.white_canvas_ending"
           ]
         }
       },
@@ -279,7 +279,7 @@
             "rain_reflection_named"
           ],
           "unlockCg": [
-            "rain_confession"
+            "cg.rain_confession"
           ]
         }
       }
@@ -379,7 +379,7 @@
             "silhouette_named"
           ],
           "unlockCg": [
-            "art_resonance"
+            "cg.art_resonance"
           ]
         }
       },
@@ -399,7 +399,7 @@
             "naming_returned"
           ],
           "unlockCg": [
-            "trust_threshold"
+            "cg.trust_threshold"
           ]
         }
       }
@@ -457,7 +457,7 @@
             "mirror_kept_open"
           ],
           "unlockCg": [
-            "fascia_heartbeat"
+            "cg.fascia_heartbeat"
           ]
         }
       },
@@ -477,7 +477,7 @@
             "fascia_addressed_directly"
           ],
           "unlockCg": [
-            "art_resonance"
+            "cg.art_resonance"
           ]
         }
       }
@@ -535,7 +535,7 @@
             "fascia_held_by_player"
           ],
           "unlockCg": [
-            "fascia_heartbeat"
+            "cg.fascia_heartbeat"
           ]
         }
       },
@@ -555,7 +555,7 @@
             "witness_distance_kept"
           ],
           "unlockCg": [
-            "lce_raid"
+            "cg.lce_raid"
           ]
         }
       }
@@ -606,7 +606,7 @@
             "half_step_distance"
           ],
           "unlockCg": [
-            "rain_confession"
+            "cg.rain_confession"
           ]
         }
       },
@@ -626,7 +626,7 @@
             "umbrella_shared"
           ],
           "unlockCg": [
-            "rain_reflection"
+            "cg.rain_reflection"
           ]
         }
       }
@@ -684,7 +684,7 @@
             "leaving_acknowledged"
           ],
           "unlockCg": [
-            "limbus_bus_night"
+            "cg.limbus_bus_night"
           ]
         }
       },
@@ -704,7 +704,7 @@
             "return_ticket_given"
           ],
           "unlockCg": [
-            "rain_reflection"
+            "cg.rain_reflection"
           ]
         }
       }
@@ -755,7 +755,7 @@
             "curtain_call_promised"
           ],
           "unlockCg": [
-            "white_canvas_ending"
+            "cg.white_canvas_ending"
           ]
         }
       },
@@ -775,7 +775,7 @@
             "platform_walked_together"
           ],
           "unlockCg": [
-            "rain_confession"
+            "cg.rain_confession"
           ]
         }
       }
@@ -834,7 +834,7 @@
             "defect_not_exhibited"
           ],
           "unlockCg": [
-            "trust_threshold"
+            "cg.trust_threshold"
           ]
         }
       },
@@ -854,7 +854,7 @@
             "exhibit_choice_returned"
           ],
           "unlockCg": [
-            "art_resonance"
+            "cg.art_resonance"
           ]
         }
       }
@@ -905,7 +905,7 @@
             "mirror_pointed_out"
           ],
           "unlockCg": [
-            "mirror_broken"
+            "cg.mirror_broken"
           ]
         }
       },
@@ -925,7 +925,7 @@
             "knife_returned"
           ],
           "unlockCg": [
-            "art_resonance"
+            "cg.art_resonance"
           ]
         }
       }
@@ -976,7 +976,7 @@
             "base_color_kept"
           ],
           "unlockCg": [
-            "white_canvas_ending"
+            "cg.white_canvas_ending"
           ]
         }
       },
@@ -996,7 +996,7 @@
             "restart_offered"
           ],
           "unlockCg": [
-            "art_resonance"
+            "cg.art_resonance"
           ]
         }
       }

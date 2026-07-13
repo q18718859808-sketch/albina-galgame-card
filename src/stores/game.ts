@@ -15,8 +15,8 @@ import { createAlbinaRuntime } from '../runtime/host-adapter';
 import { captureSceneThumbnail } from '../runtime/thumbnail';
 import { chosenSceneVideoId, selectSceneMedia } from '../runtime/video';
 
-const script = parseGameScriptV2(storyJson);
 const manifest = parseAssetManifestV2(manifestJson);
+const script = parseGameScriptV2(storyJson, manifest);
 const sceneIndex = new Map(script.scenes.map((scene) => [scene.id, scene]));
 
 export interface SaveSlotSummary { id: string; sceneId: string; updatedAt: string; thumbnailUrl?: string }
