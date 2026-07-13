@@ -44,7 +44,7 @@
       "单女主",
       "RP"
     ],
-    "character_version": "1.0.0",
+    "character_version": "1.0.23",
     "extensions": {
       "talkativeness": "0.65",
       "fav": false,
@@ -52,7 +52,7 @@
       "albina_galgame_card": {
         "project_id": "albina-galgame-card",
         "save_key": "albinaGalgameCardGameSaveV1",
-        "cdn_import": "import 'https://cdn.jsdelivr.net/gh/q18718859808-sketch/albina-galgame-card@v1.0.28/release/github-cdn-root/dist/albina-galgame-card/console/index.js'",
+        "cdn_import": "import 'https://cdn.jsdelivr.net/gh/q18718859808-sketch/albina-galgame-card@v1.0.23/release/github-cdn-root/dist/albina-galgame-card/console/index.js'",
         "routes": [
           "white_canvas",
           "golden_bough_rebuild",
@@ -66,7 +66,7 @@
             "enabled": true,
             "name": "Albina",
             "id": "7f664fa2-7123-484f-bafb-bc812ae1103f",
-            "content": "import 'https://cdn.jsdelivr.net/gh/q18718859808-sketch/albina-galgame-card@v1.0.28/release/github-cdn-root/dist/albina-galgame-card/console/index.js'\n",
+            "content": "import 'https://cdn.jsdelivr.net/gh/q18718859808-sketch/albina-galgame-card@v1.0.23/release/github-cdn-root/dist/albina-galgame-card/console/index.js'\n",
             "info": "",
             "button": {
               "enabled": true,
