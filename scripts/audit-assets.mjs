@@ -4,6 +4,7 @@ import { extname, relative, resolve } from 'node:path';
 
 import { validateAssetIntegrity } from './lib/asset-integrity.mjs';
 import { hasReleaseDifferences } from './lib/release-integrity.mjs';
+import { collectStoryAssetReferences, findUnresolvedStoryReferences, materializeStoryMedia } from './lib/story-media.mjs';
 
 const projectRoot = resolve(import.meta.dirname, '..');
 const canonicalRoot = resolve(projectRoot, 'dist/albina-galgame-card');
@@ -81,21 +82,7 @@ async function readStory() {
   for (const dialogueFile of index.dialogueFiles) {
     scenes.push(...await readJson(resolve(projectRoot, 'content', dialogueFile)));
   }
-  return scenes;
-}
-
-function collectStoryReferences(scenes) {
-  const references = new Set();
-  for (const scene of scenes) {
-    ['backgroundAssetId', 'cgAssetId', 'videoAssetId', 'desktopVideoAssetId', 'voiceAssetId', 'bgmAssetId'].forEach((key) => scene[key] && references.add(scene[key]));
-    scene.portraits.forEach((portrait) => references.add(portrait.portraitAssetId));
-    (scene.sfxAssetIds ?? []).forEach((id) => references.add(id));
-    scene.choices.forEach((choice) => {
-      if (choice.resultVoiceAssetId) references.add(choice.resultVoiceAssetId);
-      (choice.effects.unlockCg ?? []).forEach((id) => references.add(id));
-    });
-  }
-  return [...references].sort();
+  return materializeStoryMedia(scenes);
 }
 
 async function semanticAssets(references) {
@@ -218,7 +205,7 @@ async function videoAssets() {
 
 async function buildManifest() {
   const progress = await readJson(resolve(assetRoot, 'sprite-atlas/_progress.json'));
-  const references = collectStoryReferences(await readStory());
+  const references = collectStoryAssetReferences(await readStory());
   const strips = stripJobs(progress);
   const galleryCgs = await pendingGalleryCgs();
   const voices = await voiceAssets(references);
@@ -367,8 +354,7 @@ async function auditLegacyManifest() {
 }
 
 async function auditStory(lookup) {
-  const resolvable = new Set([...Object.keys(lookup.assetsById), ...Object.keys(lookup.portraitsById), ...Object.keys(lookup.pendingById)]);
-  return collectStoryReferences(await readStory()).filter((id) => !resolvable.has(id)).map((id) => `missing story reference: ${id}`);
+  return findUnresolvedStoryReferences(await readStory(), lookup).map((id) => `missing story reference: ${id}`);
 }
 
 async function auditMutableLoaders() {

@@ -5,14 +5,57 @@ import { promisify } from 'node:util';
 
 import { describe, expect, it } from 'vitest';
 
+import { collectStoryAssetReferences, findUnresolvedStoryReferences, materializeStoryMedia } from '../../scripts/lib/story-media.mjs';
 import { parseAssetManifestV2 } from '../../src/domain/assets';
 
 const run = promisify(execFile);
 const projectRoot = process.cwd();
 
+interface RuntimeLookup {
+  assetsById: Record<string, string>;
+  portraitsById: Record<string, string>;
+  pendingById: Record<string, string>;
+}
+
 async function readJson(path: string): Promise<unknown> {
   return JSON.parse(await readFile(join(projectRoot, path), 'utf8'));
 }
+
+async function readStoryScenes(): Promise<Array<Record<string, unknown>>> {
+  const index = await readJson('content/game-script-v2.json') as { dialogueFiles: string[] };
+  const chunks = await Promise.all(index.dialogueFiles.map(async (path) => (
+    await readJson(join('content', path)) as Array<Record<string, unknown>>
+  )));
+  return chunks.flat();
+}
+
+const synthesizedVideoNames = [
+  'prologue',
+  'golden_bough_rebuild_scene_3',
+  'golden_bough_rebuild_scene_5',
+  'golden_bough_rebuild_scene_8',
+  'golden_bough_rebuild_scene_11',
+  'golden_bough_rebuild_scene_15',
+  'ring_conspiracy_scene_3',
+  'ring_conspiracy_scene_5',
+  'ring_conspiracy_scene_8',
+  'ring_conspiracy_scene_11',
+  'ring_conspiracy_scene_15',
+  'white_canvas_scene_3',
+  'white_canvas_scene_5',
+  'white_canvas_scene_8',
+  'white_canvas_scene_11',
+  'white_canvas_scene_15',
+  'golden_bough_rebuild_ending_bad',
+  'golden_bough_rebuild_ending_normal',
+  'golden_bough_rebuild_ending_true',
+  'ring_conspiracy_ending_bad',
+  'ring_conspiracy_ending_normal',
+  'ring_conspiracy_ending_true',
+  'white_canvas_ending_bad',
+  'white_canvas_ending_normal',
+  'white_canvas_ending_true',
+];
 
 describe('canonical asset release', () => {
   it('registers every completed strip and preserves eight unfinished strips as pending jobs', async () => {
@@ -30,36 +73,26 @@ describe('canonical asset release', () => {
     expect(pendingGalleryJobs.every((job) => job.status === 'pending')).toBe(true);
   });
 
-  it('resolves every story asset id through the generated runtime lookup', async () => {
-    const lookup = await readJson('dist/albina-galgame-card/assets/runtime-lookup.json') as {
-      assetsById: Record<string, string>;
-      portraitsById: Record<string, string>;
-      pendingById: Record<string, string>;
-    };
-    const index = await readJson('content/game-script-v2.json') as { dialogueFiles: string[] };
-    const references = new Set<string>();
+  it('collects and validates every synthesized runtime and desktop video reference', async () => {
+    const lookup = await readJson('dist/albina-galgame-card/assets/runtime-lookup.json') as RuntimeLookup;
+    const scenes = materializeStoryMedia(await readStoryScenes());
+    const references = collectStoryAssetReferences(scenes);
+    const videoReferences = references.filter((id) => id.startsWith('video.animated.'));
+    const expected = ['desktop', 'runtime']
+      .flatMap((profile) => synthesizedVideoNames.map((name) => `video.animated.${profile}.${name}`))
+      .sort();
 
-    for (const dialogueFile of index.dialogueFiles) {
-      const scenes = await readJson(join('content', dialogueFile)) as Array<Record<string, unknown>>;
-      for (const scene of scenes) {
-        for (const key of ['backgroundAssetId', 'cgAssetId', 'videoAssetId', 'desktopVideoAssetId', 'voiceAssetId', 'bgmAssetId']) {
-          if (typeof scene[key] === 'string') references.add(scene[key] as string);
-        }
-        for (const portrait of (scene.portraits ?? []) as Array<{ portraitAssetId: string }>) references.add(portrait.portraitAssetId);
-        for (const assetId of (scene.sfxAssetIds ?? []) as string[]) references.add(assetId);
-        for (const choice of (scene.choices ?? []) as Array<{ resultVoiceAssetId?: string; effects?: { unlockCg?: string[] } }>) {
-          if (choice.resultVoiceAssetId) references.add(choice.resultVoiceAssetId);
-          for (const assetId of choice.effects?.unlockCg ?? []) references.add(assetId);
-        }
-      }
-    }
+    expect(videoReferences).toEqual(expected);
+    expect(findUnresolvedStoryReferences(scenes, lookup)).toEqual([]);
+  });
 
-    const resolvable = new Set([
-      ...Object.keys(lookup.assetsById),
-      ...Object.keys(lookup.portraitsById),
-      ...Object.keys(lookup.pendingById),
-    ]);
-    expect([...references].filter((id) => !resolvable.has(id))).toEqual([]);
+  it('reports a missing synthesized video asset as an unresolved story reference', async () => {
+    const lookup = structuredClone(await readJson('dist/albina-galgame-card/assets/runtime-lookup.json') as RuntimeLookup);
+    const scenes = materializeStoryMedia(await readStoryScenes());
+    const missingAssetId = 'video.animated.runtime.prologue';
+    delete lookup.assetsById[missingAssetId];
+
+    expect(findUnresolvedStoryReferences(scenes, lookup)).toEqual([missingAssetId]);
   });
 
   it('audits the canonical manifest with zero unresolved references', async () => {

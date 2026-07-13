@@ -3,6 +3,7 @@ import { dirname, resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
 
 import { parseGameScriptV2 } from '../src/domain/game-script.ts';
+import { materializeStoryMedia } from './lib/story-media.mjs';
 
 const projectRoot = resolve(dirname(fileURLToPath(import.meta.url)), '..');
 const manifestPath = resolve(projectRoot, 'content/game-script-v2.json');
@@ -29,46 +30,10 @@ function assertLegacyOracle(scenes, oracle) {
   }
 }
 
-function videoNameForScene(scene) {
-  if (scene.id === 'opening_001') return 'prologue';
-  if (scene.ending) return scene.id.replaceAll('-', '_');
-  const match = /^(white_canvas|golden_bough|ring_conspiracy)_(003|005|008|011|015)$/u.exec(scene.id);
-  if (!match) return undefined;
-  const route = match[1] === 'golden_bough' ? 'golden_bough_rebuild' : match[1];
-  return `${route}_scene_${Number(match[2])}`;
-}
-
-function addVideoCues(scenes) {
-  return scenes.map((scene) => {
-    const name = videoNameForScene(scene);
-    const bgmAssetId = scene.route === 'ring_conspiracy'
-      ? 'file.audio.bgm.boss.kromer.mp3'
-      : scene.route === 'golden_bough_rebuild'
-        ? 'file.audio.bgm.title.theme.mp3'
-        : scene.locationId === 'backstreets_rain'
-          ? 'file.audio.bgm.backstreets.rain.mp3'
-          : 'file.audio.bgm.between.two.worlds.mp3';
-    const sfxAssetIds = scene.tone === 'threat'
-      ? ['file.audio.se.slash.heavy.wav']
-      : scene.tone === 'gallery'
-        ? ['file.audio.se.glass.shatter.wav']
-        : undefined;
-    const media = {
-      ...scene, bgmAssetId, ...(sfxAssetIds ? { sfxAssetIds } : {}),
-    };
-    if (!name) return media;
-    return {
-      ...media,
-      videoAssetId: `video.animated.runtime.${name}`,
-      desktopVideoAssetId: `video.animated.desktop.${name}`,
-    };
-  });
-}
-
 async function compileStory() {
   const manifest = await readJson(manifestPath);
   const assets = await readJson(assetManifestPath);
-  const scenes = addVideoCues(await loadDialogueFiles(manifest.dialogueFiles));
+  const scenes = materializeStoryMedia(await loadDialogueFiles(manifest.dialogueFiles));
   assertLegacyOracle(scenes, manifest.legacyOracle);
   const compiled = parseGameScriptV2({
     version: manifest.version,

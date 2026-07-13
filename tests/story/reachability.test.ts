@@ -76,9 +76,19 @@ describe('deterministic story compilation', () => {
 
   it('re-extracts byte-identical authoring content from the legacy oracle', async () => {
     if (!existsSync(extractorPath) || !existsSync(sourceManifestPath)) return;
-    const first = readFileSync(sourceManifestPath, 'utf8');
+    const manifestBefore = readFileSync(sourceManifestPath);
+    const manifest = JSON.parse(manifestBefore.toString('utf8')) as StoryManifest;
+    const dialogueBefore = new Map(manifest.dialogueFiles.map((relativePath) => [
+      relativePath,
+      readFileSync(resolve(projectRoot, 'content', relativePath)),
+    ]));
+
     await run(process.execPath, [extractorPath], { cwd: projectRoot });
-    expect(readFileSync(sourceManifestPath, 'utf8')).toBe(first);
+
+    expect(readFileSync(sourceManifestPath)).toEqual(manifestBefore);
+    for (const [relativePath, bytes] of dialogueBefore) {
+      expect(readFileSync(resolve(projectRoot, 'content', relativePath)), relativePath).toEqual(bytes);
+    }
   });
 
   it('compiles byte-identical output on repeated runs', async () => {
