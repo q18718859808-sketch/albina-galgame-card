@@ -3,7 +3,7 @@ import { access, mkdir, readFile, readdir, stat, writeFile } from 'node:fs/promi
 import { extname, relative, resolve } from 'node:path';
 
 import { validateAssetIntegrity } from './lib/asset-integrity.mjs';
-import { hasReleaseDifferences } from './lib/release-integrity.mjs';
+import { hasReleaseDifferences, isLegacyPublishablePath } from './lib/release-integrity.mjs';
 import { collectStoryAssetReferences, findUnresolvedStoryReferences, materializeStoryMedia } from './lib/story-media.mjs';
 
 const projectRoot = resolve(import.meta.dirname, '..');
@@ -265,6 +265,7 @@ async function updateLegacyManifest() {
   const path = resolve(canonicalRoot, 'manifest.json');
   const legacy = await readJson(path);
   for (const key of Object.keys(legacy)) if (/^_v\d/u.test(key)) delete legacy[key];
+  for (const key of ['bridge', 'sfe', 'cinema']) delete legacy[key];
   legacy.base = cdnBase;
   legacy.version = releaseVersion;
   legacy.asset_manifest_v2 = 'assets/asset-manifest-v2.json';
@@ -312,7 +313,7 @@ async function classifyRelease() {
 }
 
 function collectLocalReferences(value, references = []) {
-  if (typeof value === 'string' && /^(?:assets|albina-bridge|cinema|sfe)\//u.test(value)) references.push(value);
+  if (typeof value === 'string' && /^assets\//u.test(value)) references.push(value);
   else if (Array.isArray(value)) value.forEach((item) => collectLocalReferences(item, references));
   else if (value && typeof value === 'object') Object.values(value).forEach((item) => collectLocalReferences(item, references));
   return references;
@@ -338,6 +339,7 @@ async function auditNoWebGenerationTools() {
   for (const root of [canonicalRoot, releaseMirrorRoot]) {
     for (const path of await walkFiles(root)) {
       const relativePath = toPosix(relative(root, path));
+      if (isLegacyPublishablePath(relativePath)) findings.push(`legacy path in web release: ${relativePath}`);
       if (/(?:^|\/)(?:tools?|scripts?)(?:\/|$)/iu.test(relativePath) || /\.(?:bat|cmd|ps1|py|sh)$/iu.test(relativePath)) {
         findings.push(`generation tool in web release: ${relativePath}`);
       }
@@ -349,6 +351,7 @@ async function auditNoWebGenerationTools() {
 async function auditLegacyManifest() {
   const legacy = await readJson(resolve(canonicalRoot, 'manifest.json'));
   const unresolved = [];
+  for (const key of ['bridge', 'sfe', 'cinema']) if (key in legacy) unresolved.push(`legacy manifest key: ${key}`);
   for (const path of collectLocalReferences(legacy)) if (!(await pathExists(resolve(canonicalRoot, path)))) unresolved.push(`missing legacy reference: ${path}`);
   return unresolved;
 }
@@ -358,7 +361,7 @@ async function auditStory(lookup) {
 }
 
 async function auditMutableLoaders() {
-  const files = ['card/albina.card.json', 'card/character-card.template.json', 'card/card-protocol.md', 'card/character_card_protocol.md', 'dist/albina-galgame-card/albina-bridge/albina-bridge.js', 'dist/albina-galgame-card/albina-bridge/albina-sprite-atlas.js', 'dist/albina-galgame-card/sfe/sfe-director.js', 'dist/albina-galgame-card/video-injector.js'];
+  const files = ['card/albina.card.json', 'card/character-card.template.json', 'card/card-protocol.md', 'card/character_card_protocol.md', 'public/albina-classic-loader.js', 'built-harness.html', 'index.html'];
   const text = (await Promise.all(files.map((path) => readFile(resolve(projectRoot, path), 'utf8')))).join('\n');
   const unresolved = [];
   if (/@v(?!2\.0\.0\b)\d+\.\d+\.\d+/u.test(text)) unresolved.push('mixed CDN version tags');

@@ -1,20 +1,6 @@
 {
   "base": "https://cdn.jsdelivr.net/gh/q18718859808-sketch/albina-galgame-card@v2.0.0/dist/albina-galgame-card",
   "version": "2.0.0",
-  "bridge": {
-    "css": "albina-bridge/albina-bridge.css",
-    "js": "albina-bridge/albina-bridge.js"
-  },
-  "sfe": {
-    "css": "sfe/sfe-engine.css",
-    "js": "sfe/sfe-engine.js",
-    "director": "sfe/sfe-director.js"
-  },
-  "cinema": {
-    "css": "cinema/cinematic-engine.css",
-    "js": "cinema/cinematic-engine.js",
-    "bridge": "cinema/cinema-iframe-bridge.js"
-  },
   "bg": {
     "backstreets_rain": "assets/bg/backstreets_rain.jpg",
     "city_rooftop": "assets/bg/city_rooftop.jpg",

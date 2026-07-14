@@ -18,7 +18,7 @@ const assetManifestPath = resolve(projectRoot, 'content/asset-manifest-v2.json')
 const compiledPath = resolve(projectRoot, 'dist/albina-galgame-card/data/game-script-v2.json');
 const compilerPath = resolve(projectRoot, 'scripts/compile-story.mjs');
 const extractorPath = resolve(projectRoot, 'scripts/extract-legacy-story.mjs');
-const legacyBundlePath = resolve(projectRoot, 'dist/albina-galgame-card/console/index.js');
+const legacyBundlePath = resolve(projectRoot, 'tests/fixtures/legacy-console/index.js');
 
 interface StoryManifest {
   dialogueFiles: string[];

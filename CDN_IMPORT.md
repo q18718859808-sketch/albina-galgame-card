@@ -1,15 +1,7 @@
-# Albina v2.0.0 CDN 导入
+# Albina v2 Local Preview
 
-在 Tavern Helper 的经典脚本环境中粘贴下面的入口。它只注入一次经典加载器；加载器随后以动态 `import()` 载入 `albina-source.js`，因此不会把 ESM 静态导入交给经典脚本解析器。
+There is no live public CDN import for the current build. The immutable `v2.0.0` CDN location is reserved until the complete edition is reviewed, tagged, and independently verified.
 
-```js
-(function(){var src='https://cdn.jsdelivr.net/gh/q18718859808-sketch/albina-galgame-card@v2.0.0/dist/albina-galgame-card/source/albina-classic-loader.js';if(document.querySelector('script[data-albina-classic-loader="v2"]'))return;var script=document.createElement('script');script.src=src;script.async=true;script.dataset.albinaClassicLoader='v2';document.head.appendChild(script)}());
-```
+For local preview, run the repository development server and open `built-harness.html`. The harness loads the built module from the local `dist/albina-galgame-card/source` tree and exercises the same Tavern Helper loader contract without pretending that a public tag exists.
 
-公开发布根只有 `dist/albina-galgame-card`。运行时不调用任何媒体生成 API，也不包含生成凭据。
-
-用于本地验证的路径为：
-
-```text
-http://localhost:4173/albina-classic-loader.js
-```
+The runtime does not call media-generation APIs and contains no provider credentials.

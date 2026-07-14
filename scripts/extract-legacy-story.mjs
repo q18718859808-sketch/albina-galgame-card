@@ -4,7 +4,7 @@ import { fileURLToPath } from 'node:url';
 import vm from 'node:vm';
 
 const projectRoot = resolve(dirname(fileURLToPath(import.meta.url)), '..');
-const bundlePath = resolve(projectRoot, 'dist/albina-galgame-card/console/index.js');
+const bundlePath = resolve(projectRoot, 'tests/fixtures/legacy-console/index.js');
 const contentRoot = resolve(projectRoot, 'content');
 
 const routeConfig = {

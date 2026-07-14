@@ -6,6 +6,10 @@ node_modules/
 build/
 test-results/
 playwright-report/
+.env
+.env.*
+!.env.example
+!**/.env.example
 /tools/media/dist/
 /tools/media/artifacts/
 /tools/media/jobs/.ledger.json*

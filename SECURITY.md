@@ -1,9 +1,9 @@
-# Security policy
+# Security Policy
 
-Albina v2.0.0 is an offline-asset runtime. The importable card and CDN tree never contain Pie or other provider credentials and never call image, video, music, or speech generation APIs while playing.
+Albina v2 is an offline-asset runtime. The importable card and publishable Web tree contain no media-provider credentials, provider endpoints, generation calls, proxy services, arbitrary remote script sources, or generation tools.
 
-Report a suspected credential, unsafe remote-script loader, path traversal, or save-import issue privately to the repository owner. Do not include working credentials in a report. Before release, run `npm run security:scan`, `npm run assets:audit`, and `node scripts/verify-release.mjs`.
+The v1.0.44 console bundle is retained only under `tests/fixtures` as a deterministic extraction oracle. Bridge, SFE, Cinema, console, and the legacy video injector are forbidden from both generated Web trees.
 
-The legacy v1.0.44 bundle remains only as a compatibility fallback. The primary v2 frontend does not take over parent-window DOM, execute arbitrary HTML skins, or expose a `window.galgame` singleton.
+Report suspected credentials, unsafe loaders, path traversal, or save-import issues privately to the repository owner without including a working secret. Before release, run `npm run verify`, `npm run card:check`, and `node scripts/verify-release.mjs`.
 
-An historical CloseAPI credential was discovered in a generation helper that had accidentally been published under the v1 bridge tools directory. The helper and every generation script are removed from both canonical and mirrored Web trees in v2.0.0. The exposed credential must be revoked and rotated by its provider/account owner; repository cleanup cannot invalidate an external secret.
+This checkout remains a local preview. The public `v2.0.0` target is reserved until `completeEdition` is true and the immutable tag has been verified.

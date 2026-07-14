@@ -23,7 +23,7 @@ function runtimeAssetBaseUrl(): string {
   if (import.meta.env.DEV && typeof location !== 'undefined') {
     return new URL('/dist/albina-galgame-card/', location.origin).href;
   }
-  return new URL('../', import.meta.url).href;
+  return new URL(/* @vite-ignore */ '../', import.meta.url).href;
 }
 
 export interface SaveSlotSummary { id: string; sceneId: string; updatedAt: string; thumbnailUrl?: string }

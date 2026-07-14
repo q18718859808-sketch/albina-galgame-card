@@ -1,7 +1,7 @@
 import { describe, expect, it } from 'vitest';
 
 // @ts-expect-error JavaScript release gate is consumed by the Node audit script.
-import { hasReleaseDifferences } from '../../scripts/lib/release-integrity.mjs';
+import { hasReleaseDifferences, isLegacyPublishablePath } from '../../scripts/lib/release-integrity.mjs';
 
 describe('release audit failure gate', () => {
   it.each([
@@ -14,5 +14,19 @@ describe('release audit failure gate', () => {
 
   it('accepts an exact release mirror', () => {
     expect(hasReleaseDifferences({ missing: [], mismatch: [], stale: [] })).toBe(false);
+  });
+
+  it.each([
+    'albina-bridge/albina-bridge.js',
+    'cinema/cinematic-engine.js',
+    'console/index.js',
+    'sfe/sfe-director.js',
+    'video-injector.js',
+  ])('identifies %s as a forbidden legacy publishable path', (path) => {
+    expect(isLegacyPublishablePath(path)).toBe(true);
+  });
+
+  it.each(['assets/cg/opening_rain.jpg', 'data/game-script-v2.json', 'source/albina-source.js'])('allows %s in the v2 release surface', (path) => {
+    expect(isLegacyPublishablePath(path)).toBe(false);
   });
 });

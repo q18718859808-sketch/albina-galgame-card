@@ -7,6 +7,7 @@ const canonicalRoot = resolve(projectRoot, 'dist/albina-galgame-card');
 const canonicalSourceRoot = resolve(canonicalRoot, 'source');
 const releaseTreeRoot = resolve(projectRoot, 'release/github-cdn-root');
 const releaseRoot = resolve(releaseTreeRoot, 'dist/albina-galgame-card');
+const approvedRootEntries = new Set(['assets', 'data', 'manifest.json', 'release-status.json', 'source', 'worldbooks']);
 
 async function copyTree(source, destination) {
   await mkdir(destination, { recursive: true });
@@ -45,9 +46,17 @@ async function removeWebGenerationTools(root) {
   }
 }
 
+async function enforceApprovedReleaseSurface(root) {
+  for (const entry of await readdir(root, { withFileTypes: true })) {
+    if (approvedRootEntries.has(entry.name)) continue;
+    await rm(resolve(root, entry.name), { recursive: entry.isDirectory(), force: true });
+  }
+}
+
 await rm(canonicalSourceRoot, { recursive: true, force: true });
 await copyTree(buildRoot, canonicalSourceRoot);
 await normalizeGeneratedText(canonicalSourceRoot);
+await enforceApprovedReleaseSurface(canonicalRoot);
 await removeWebGenerationTools(canonicalRoot);
 console.log(`Promoted source build to ${canonicalSourceRoot}`);
 

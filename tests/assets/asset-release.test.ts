@@ -107,16 +107,12 @@ describe('canonical asset release', () => {
   // Keep this as a full integrity check, but allow slower CI disks to finish.
   }, 60_000);
 
-  it('uses one versioned CDN root in card and mutable bridge loaders', async () => {
+  it('uses one reserved immutable CDN root only in the approved card loader', async () => {
     const files = [
       'card/albina.card.json',
       'card/character-card.template.json',
       'card/card-protocol.md',
       'card/character_card_protocol.md',
-      'dist/albina-galgame-card/albina-bridge/albina-bridge.js',
-      'dist/albina-galgame-card/albina-bridge/albina-sprite-atlas.js',
-      'dist/albina-galgame-card/sfe/sfe-director.js',
-      'dist/albina-galgame-card/video-injector.js',
     ];
     const text = (await Promise.all(files.map((file) => readFile(join(projectRoot, file), 'utf8')))).join('\n');
 
@@ -126,11 +122,4 @@ describe('canonical asset release', () => {
     expect(text).not.toMatch(/["'`]\/assets\/audio\//u);
   });
 
-  it('lets the bridge register every generated portrait strip lookup', async () => {
-    const loader = await readFile(join(projectRoot, 'dist/albina-galgame-card/albina-bridge/albina-sprite-atlas.js'), 'utf8');
-
-    expect(loader).toContain('assets/runtime-lookup.json');
-    expect(loader).toContain('portrait.original_cg.albina_debut');
-    expect(loader).toContain('img[src*="characters/"]');
-  });
 });
