@@ -13,8 +13,8 @@ const releaseRoot = resolve(projectRoot, 'release/github-cdn-root');
 const releaseMirrorRoot = resolve(releaseRoot, 'dist/albina-galgame-card');
 const contentManifestPath = resolve(projectRoot, 'content/asset-manifest-v2.json');
 const pendingGalleryCgsPath = resolve(projectRoot, 'content/pending-gallery-cgs.json');
-const releaseVersion = '2.0.0';
-const cdnBase = `https://cdn.jsdelivr.net/gh/q18718859808-sketch/albina-galgame-card@v${releaseVersion}/dist/albina-galgame-card`;
+const releaseVersion = '2.0.0-preview';
+const previewBase = '.';
 const mediaExtensions = new Set(['.jpg', '.json', '.mp3', '.mp4', '.png', '.svg', '.wav']);
 
 const toPosix = (path) => path.replaceAll('\\', '/');
@@ -215,7 +215,7 @@ async function buildManifest() {
 }
 
 function runtimeUrl(basePath, path) {
-  return `${cdnBase}/${basePath}/${path.split('/').map(encodeURIComponent).join('/')}`;
+  return `${basePath}/${path.split('/').map(encodeURIComponent).join('/')}`;
 }
 
 function buildLookup(manifest) {
@@ -229,7 +229,7 @@ function buildLookup(manifest) {
     else assetsById[asset.id] = url;
   }
   for (const portrait of manifest.portraits) portraitsById[portrait.id] = runtimeUrl(manifest.basePath, portrait.path);
-  return { version: 2, projectId: manifest.projectId, base: cdnBase, assetsById, portraitsById, pendingById };
+  return { version: 2, projectId: manifest.projectId, base: previewBase, assetsById, portraitsById, pendingById };
 }
 
 async function directoryMap(folder, prefix, extensions) {
@@ -266,7 +266,7 @@ async function updateLegacyManifest() {
   const legacy = await readJson(path);
   for (const key of Object.keys(legacy)) if (/^_v\d/u.test(key)) delete legacy[key];
   for (const key of ['bridge', 'sfe', 'cinema']) delete legacy[key];
-  legacy.base = cdnBase;
+  legacy.base = previewBase;
   legacy.version = releaseVersion;
   legacy.asset_manifest_v2 = 'assets/asset-manifest-v2.json';
   legacy.runtime_lookup = 'assets/runtime-lookup.json';

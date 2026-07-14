@@ -42,17 +42,16 @@
       "Albina",
       "阿尔比娜",
       "单女主",
-      "RP",
-      "v2.0.0"
+      "RP"
     ],
-    "character_version": "1.0.0",
+    "character_version": "2.0.0-preview",
     "extensions": {
       "talkativeness": "0.65",
       "fav": false,
       "world": "阿尔比娜 RP 静态背景包",
       "albina_galgame_card": {
         "project_id": "albina-galgame-card",
-        "save_key": "albinaGalgameCardSaveV2",
+        "save_key": "albinaSaveV2",
         "cdn_import": "Reserved for the immutable v2.0.0 release; unavailable during local preview.",
         "routes": [
           "white_canvas",
@@ -64,7 +63,7 @@
         "scripts": [
           {
             "type": "script",
-            "enabled": true,
+            "enabled": false,
             "name": "Albina",
             "id": "7f664fa2-7123-484f-bafb-bc812ae1103f",
             "content": "(function(){var src='https://cdn.jsdelivr.net/gh/q18718859808-sketch/albina-galgame-card@v2.0.0/dist/albina-galgame-card/source/albina-classic-loader.js';if(document.querySelector('script[data-albina-classic-loader=\\\"v2\\\"]'))return;var script=document.createElement('script');script.type=\"module\";script.src=src;script.async=true;script.dataset.albinaClassicLoader='v2';document.head.appendChild(script)}());\n",
@@ -1061,7 +1060,7 @@
         }
       ]
     },
-    "creator_notes": "【Albina v2.0.0 预览版导入须知】\n1. 需要 SillyTavern + 酒馆助手（TavernHelper），导入后由唯一启用脚本加载独立 Vue/Pinia 前端。\n2. 点击「打开阿尔比娜前端」进入确定性主剧情；路线、数值、选择、存档和图库均以前端 GameScriptV2 / SaveV2 为权威。\n3. 已交付 154 条固定剧情语音与 29 组动画 CG 的桌面/移动 Web 编码，运行时不调用任何媒体生成 API，也不携带密钥。\n4. 旧 SFE、父窗口 Cinematic Overlay 与旧 OP/ED injector 已从 Web 发布树和卡脚本中删除，不存在运行时兼容回退；所有媒体生成工具保持离线。\n5. 此版本不是 Complete Edition：8 个 gpt-image-2 动态立绘条带仍待补齐；Music 2.6 已观察到两次 504，81 个音乐变体批次保持暂停，不伪报完成。\n",
+    "creator_notes": "【Albina v2.0.0 预览版导入须知】\n1. 当前预览卡保留但禁用远程加载脚本，不会连接尚未发布的 v2.0.0 CDN；本地预览请使用仓库构建，Complete Edition 门禁通过后才启用酒馆助手一键加载。\n2. 前端路线、数值、选择、存档和图库均以 GameScriptV2 / SaveV2 为权威。\n3. 已交付 154 条固定剧情语音与 29 组动画 CG 的桌面/移动 Web 编码，运行时不调用任何媒体生成 API，也不携带密钥。\n4. 旧 SFE、父窗口 Cinematic Overlay 与旧 OP/ED injector 已从 Web 发布树和卡脚本中删除，不存在运行时兼容回退；所有媒体生成工具保持离线。\n5. 此版本不是 Complete Edition：8 个 gpt-image-2 动态立绘条带仍待补齐；Music 2.6 已观察到两次 504，81 个音乐变体批次保持暂停，不伪报完成。\n",
     "cdn_import": "Reserved for the immutable v2.0.0 release; unavailable during local preview."
   }
 }

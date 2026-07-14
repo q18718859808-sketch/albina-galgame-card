@@ -1,6 +1,8 @@
 import { copyFile, mkdir, readFile, readdir, rm, writeFile } from 'node:fs/promises';
 import { resolve } from 'node:path';
 
+import { isLegacyPublishablePath } from './lib/release-integrity.mjs';
+
 const projectRoot = resolve(import.meta.dirname, '..');
 const buildRoot = resolve(projectRoot, 'build/source');
 const canonicalRoot = resolve(projectRoot, 'dist/albina-galgame-card');
@@ -36,13 +38,16 @@ async function normalizeGeneratedText(root) {
   }
 }
 
-async function removeWebGenerationTools(root) {
+async function removeForbiddenWebContent(root) {
   for (const entry of await readdir(root, { withFileTypes: true })) {
     const path = resolve(root, entry.name);
     if (entry.isDirectory()) {
-      if (/^(?:tools?|scripts?)$/iu.test(entry.name)) await rm(path, { recursive: true, force: true });
-      else await removeWebGenerationTools(path);
-    } else if (/\.(?:bat|cmd|ps1|py|sh)$/iu.test(entry.name)) await rm(path, { force: true });
+      if (/^(?:tools?|scripts?)$/iu.test(entry.name) || isLegacyPublishablePath(entry.name)) {
+        await rm(path, { recursive: true, force: true });
+      } else await removeForbiddenWebContent(path);
+    } else if (/\.(?:bat|cmd|ps1|py|sh)$/iu.test(entry.name) || isLegacyPublishablePath(entry.name)) {
+      await rm(path, { force: true });
+    }
   }
 }
 
@@ -57,7 +62,7 @@ await rm(canonicalSourceRoot, { recursive: true, force: true });
 await copyTree(buildRoot, canonicalSourceRoot);
 await normalizeGeneratedText(canonicalSourceRoot);
 await enforceApprovedReleaseSurface(canonicalRoot);
-await removeWebGenerationTools(canonicalRoot);
+await removeForbiddenWebContent(canonicalRoot);
 console.log(`Promoted source build to ${canonicalSourceRoot}`);
 
 await rm(releaseTreeRoot, { recursive: true, force: true });

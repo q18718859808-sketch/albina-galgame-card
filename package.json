@@ -14,7 +14,7 @@
     "test:e2e": "playwright test",
     "security:scan": "node scripts/security-scan.mjs",
     "verify": "npm run card:check && npm run typecheck && npm test && npm run release:sync && npm run security:scan",
-    "release:sync": "npm run build && npm run assets:generate && node scripts/build-release.mjs && npm run assets:audit"
+    "release:sync": "node scripts/release-sync.mjs"
   },
   "dependencies": {
     "pinia": "^3.0.3",

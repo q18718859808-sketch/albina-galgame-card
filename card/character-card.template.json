@@ -44,14 +44,14 @@
       "单女主",
       "RP"
     ],
-    "character_version": "1.0.0",
+    "character_version": "2.0.0-preview",
     "extensions": {
       "talkativeness": "0.65",
       "fav": false,
       "world": "阿尔比娜 RP 静态背景包",
       "albina_galgame_card": {
         "project_id": "albina-galgame-card",
-        "save_key": "albinaGalgameCardSaveV2",
+        "save_key": "albinaSaveV2",
         "cdn_import": "Reserved for the immutable v2.0.0 release; unavailable during local preview.",
         "routes": [
           "white_canvas",
@@ -63,7 +63,7 @@
         "scripts": [
           {
             "type": "script",
-            "enabled": true,
+            "enabled": false,
             "name": "Albina",
             "id": "7f664fa2-7123-484f-bafb-bc812ae1103f",
             "content": "(function(){var src='https://cdn.jsdelivr.net/gh/q18718859808-sketch/albina-galgame-card@v2.0.0/dist/albina-galgame-card/source/albina-classic-loader.js';if(document.querySelector('script[data-albina-classic-loader=\\\"v2\\\"]'))return;var script=document.createElement('script');script.type=\"module\";script.src=src;script.async=true;script.dataset.albinaClassicLoader='v2';document.head.appendChild(script)}());\n",

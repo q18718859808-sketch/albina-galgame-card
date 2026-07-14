@@ -22,6 +22,10 @@ describe('release audit failure gate', () => {
     'console/index.js',
     'sfe/sfe-director.js',
     'video-injector.js',
+    'source/nested/cinema/engine.js',
+    'source/plugins/albina-bridge/bridge.js',
+    'assets/legacy/sfe/director.js',
+    'source/compat/video-injector.js',
   ])('identifies %s as a forbidden legacy publishable path', (path) => {
     expect(isLegacyPublishablePath(path)).toBe(true);
   });

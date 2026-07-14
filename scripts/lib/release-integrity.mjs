@@ -4,5 +4,5 @@ export function hasReleaseDifferences(release) {
 
 export function isLegacyPublishablePath(path) {
   const normalized = path.replaceAll('\\', '/').replace(/^\.\//u, '');
-  return /^(?:albina-bridge|cinema|console|sfe)(?:\/|$)|^video-injector\.js$/iu.test(normalized);
+  return /(?:^|\/)(?:albina-bridge|cinema|console|sfe)(?:\/|$)|(?:^|\/)video-injector\.js$/iu.test(normalized);
 }

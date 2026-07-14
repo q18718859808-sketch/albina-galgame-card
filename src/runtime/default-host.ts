@@ -1,7 +1,8 @@
 import { parseSaveV2, type SaveV2 } from '../domain/save';
 import type { HostLifecycleEvent, TavernHelperBindings } from './host-adapter';
 
-const SAVE_KEY = 'albina-v2-save';
+const LOCAL_STORAGE_SAVE_KEY = 'albina-v2-save';
+export const TAVERN_HELPER_SAVE_KEY = 'albinaSaveV2';
 
 interface TavernHelperLike {
   getChatId?: () => string | undefined;
@@ -25,15 +26,15 @@ export function createDefaultHostBindings(): TavernHelperBindings {
       const active = helper();
       if (active?.getVariables) {
         const variables = await active.getVariables({ type: 'chat' });
-        if (variables.albinaSaveV2) return parseSaveV2(variables.albinaSaveV2);
+        if (variables[TAVERN_HELPER_SAVE_KEY]) return parseSaveV2(variables[TAVERN_HELPER_SAVE_KEY]);
       }
-      const raw = typeof localStorage === 'undefined' ? null : localStorage.getItem(SAVE_KEY);
+      const raw = typeof localStorage === 'undefined' ? null : localStorage.getItem(LOCAL_STORAGE_SAVE_KEY);
       return raw ? parseSaveV2(JSON.parse(raw)) : undefined;
     },
     async saveSave(save: SaveV2) {
       const active = helper();
-      if (active?.setVariables) await active.setVariables({ albinaSaveV2: save }, { type: 'chat' });
-      if (typeof localStorage !== 'undefined') localStorage.setItem(SAVE_KEY, JSON.stringify(save));
+      if (active?.setVariables) await active.setVariables({ [TAVERN_HELPER_SAVE_KEY]: save }, { type: 'chat' });
+      if (typeof localStorage !== 'undefined') localStorage.setItem(LOCAL_STORAGE_SAVE_KEY, JSON.stringify(save));
     },
     subscribe(event: HostLifecycleEvent, listener: () => void) {
       if (typeof window === 'undefined') return () => undefined;

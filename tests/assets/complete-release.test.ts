@@ -6,6 +6,7 @@ import { describe, expect, it } from 'vitest';
 
 import { parseAssetManifestV2 } from '../../src/domain/assets';
 import { parseGameScriptV2 } from '../../src/domain/game-script';
+import { TAVERN_HELPER_SAVE_KEY } from '../../src/runtime/default-host';
 
 async function json(path: string): Promise<unknown> { return JSON.parse(await readFile(join(process.cwd(), path), 'utf8')); }
 
@@ -43,13 +44,21 @@ describe('v2 release completeness with explicit blocked channels', () => {
   });
 
   it('keeps one identical approved Tavern Helper loader in card JSON and template', async () => {
-    type Card = { data: { extensions: { tavern_helper: { scripts: Array<{ enabled: boolean; content: string }> } } } };
+    type Card = { data: { character_version: string; creator_notes?: string; tags: string[]; extensions: { albina_galgame_card: { save_key: string }; tavern_helper: { scripts: Array<{ enabled: boolean; content: string }> } } } };
     const card = await json('card/albina.card.json') as Card;
     const template = await json('card/character-card.template.json') as Card;
     const scripts = card.data.extensions.tavern_helper.scripts;
+    expect(card.data.character_version).toBe('2.0.0-preview');
+    expect(template.data.character_version).toBe('2.0.0-preview');
+    expect(card.data.tags).not.toContain('v2.0.0');
+    expect(template.data.tags).not.toContain('v2.0.0');
+    expect(card.data.extensions.albina_galgame_card.save_key).toBe(TAVERN_HELPER_SAVE_KEY);
+    expect(template.data.extensions.albina_galgame_card.save_key).toBe(TAVERN_HELPER_SAVE_KEY);
     expect(scripts).toHaveLength(1);
     expect(scripts).toEqual(template.data.extensions.tavern_helper.scripts);
-    expect(scripts[0]?.enabled).toBe(true);
+    expect(scripts[0]?.enabled).toBe(false);
+    expect(card.data.creator_notes).toContain('禁用远程加载脚本');
+    expect(card.data.creator_notes).not.toContain('唯一启用脚本');
     expect(scripts[0]?.content).toContain('@v2.0.0/dist/albina-galgame-card/source/albina-classic-loader.js');
     expect(scripts[0]?.content).not.toContain('/console/index.js');
     expect(existsSync('dist/albina-galgame-card/source/albina-classic-loader.js')).toBe(true);

@@ -37,7 +37,7 @@ describe('offline release boundary', () => {
     const entries = await readdir(join(projectRoot, root), { recursive: true });
     const normalized = entries.map((path) => path.replaceAll('\\', '/'));
     expect(normalized).not.toContain('video-injector.js');
-    expect(normalized.every((path) => !/^(?:albina-bridge|cinema|console|sfe)(?:\/|$)/u.test(path))).toBe(true);
+    expect(normalized.every((path) => !/(?:^|\/)(?:albina-bridge|cinema|console|sfe)(?:\/|$)|(?:^|\/)video-injector\.js$/u.test(path))).toBe(true);
   });
 
   it.each(releaseRoots)('removes bridge, SFE, and cinema keys from %s/manifest.json', async (root) => {
@@ -79,6 +79,18 @@ describe('offline release boundary', () => {
     const values = [card.data.cdn_import, card.data.extensions.albina_galgame_card.cdn_import].filter(Boolean).join('\n');
     expect(values).toMatch(/(?:reserved|保留)/iu);
     expect(values).not.toMatch(/import\s+['"]https:/iu);
+  });
+
+  it('keeps generated preview metadata import-relative until the complete release gate', async () => {
+    const manifest = await json('dist/albina-galgame-card/manifest.json');
+    const lookup = await json('dist/albina-galgame-card/assets/runtime-lookup.json') as {
+      base: string; assetsById: Record<string, string>; portraitsById: Record<string, string>;
+    };
+    expect(manifest.version).toBe('2.0.0-preview');
+    expect(manifest.base).toBe('.');
+    expect(lookup.base).toBe('.');
+    expect([...Object.values(lookup.assetsById), ...Object.values(lookup.portraitsById)]
+      .every((path) => path.startsWith('assets/') && !path.includes('://'))).toBe(true);
   });
 
   it('does not instruct removed cinematic engines or claim a compatibility fallback', async () => {

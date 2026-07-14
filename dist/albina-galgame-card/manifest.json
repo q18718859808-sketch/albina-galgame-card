@@ -1,6 +1,6 @@
 {
-  "base": "https://cdn.jsdelivr.net/gh/q18718859808-sketch/albina-galgame-card@v2.0.0/dist/albina-galgame-card",
-  "version": "2.0.0",
+  "base": ".",
+  "version": "2.0.0-preview",
   "bg": {
     "backstreets_rain": "assets/bg/backstreets_rain.jpg",
     "city_rooftop": "assets/bg/city_rooftop.jpg",

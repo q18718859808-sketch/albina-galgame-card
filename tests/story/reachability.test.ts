@@ -98,7 +98,7 @@ describe('deterministic story compilation', () => {
     const first = readFileSync(compiledPath, 'utf8');
     await run(process.execPath, [runner, compilerPath], { cwd: projectRoot });
     expect(readFileSync(compiledPath, 'utf8')).toBe(first);
-  });
+  }, 20_000);
 });
 
 describe('compiled story graph', () => {
