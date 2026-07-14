@@ -10,3 +10,5 @@ Task 5: complete (commits 0410384..dca1b92, review clean; offline Pie media orch
 Task 6: complete (commits e1e772e..fb048bb, review clean; canonical asset manifest and zero unresolved references)
 Task 7 preparation: complete (commits 6982553..af877f4, review clean; 275 Pie-only jobs, fenced resumability, exact Pie Xian origin, MIME/size-correct media requests, and six verified speech voices)
 Task 7 speech: complete (154/154 generated, validated, promoted to canonical dist and mirrored release; zero failures; gpt-image-2 remains blocked by Pie HTTP 503 on the only active credential)
+Re-anchor Task 1: complete (commits 1bf28e8..0efb046, review clean; authoritative gallery references plus source-materialized BGM/SFX/runtime/desktop video auditing and byte-stable extraction coverage)
+Re-anchor Task 2: complete (commits 0efb046..0058347, three reviews clean; fail-closed preview card and metadata, recursive release hygiene, strict PNG/security parsing, and self-contained reproducible release sync)
