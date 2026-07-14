@@ -8,7 +8,7 @@ import { promisify } from 'node:util';
 
 import { expect, it } from 'vitest';
 
-import { RELEASE_STEPS, runReleasePipeline } from '../../scripts/release-sync.mjs';
+import { RELEASE_STEPS } from '../../scripts/release-sync.mjs';
 
 const run = promisify(execFile);
 
@@ -28,6 +28,7 @@ it('promotes only the approved v2 release surface before mirroring it', async ()
     'source/compat/video-injector.js',
     'assets/legacy/sfe/director.js',
     'worldbooks/archive/console/index.json',
+    'assets/config/.env.production',
   ];
   const leakedTool = join(projectRoot, 'dist/albina-galgame-card/source/tools/leak.py');
   const historicalReleaseFile = join(projectRoot, 'release/github-cdn-root/docs/install.md');
@@ -72,22 +73,33 @@ it('promotes only the approved v2 release surface before mirroring it', async ()
   }
 });
 
-it('regenerates authoritative assets and story before bundling a release', async () => {
-  const observed: string[] = [];
-  let manifest = 'stale';
-  let story = 'stale';
-  let bundle = 'missing';
+async function writeModule(root: string, path: string, source: string): Promise<void> {
+  const target = join(root, path);
+  await mkdir(dirname(target), { recursive: true });
+  await writeFile(target, source);
+}
 
-  await runReleasePipeline(async (step) => {
-    observed.push(step.id);
-    if (step.id === 'assets:generate') manifest = 'fresh';
-    if (step.id === 'story:compile') {
-      expect(manifest).toBe('fresh');
-      story = 'fresh';
-    }
-    if (step.id === 'source:build') bundle = story;
-    if (step.id === 'release:promote') expect(bundle).toBe('fresh');
-  });
+it('regenerates real stale inputs before bundling and promoting a release', async () => {
+  const root = await mkdtemp(join(tmpdir(), 'albina-release-pipeline-'));
+  const statePath = join(root, 'state.json');
+  const releaseSyncPath = join(root, 'scripts/release-sync.mjs');
+  const stateModule = `import { readFile, writeFile } from 'node:fs/promises';\nimport { resolve } from 'node:path';\nconst statePath = resolve(import.meta.dirname, '../state.json');\nconst state = JSON.parse(await readFile(statePath, 'utf8'));\n`;
 
-  expect(observed).toEqual(RELEASE_STEPS.map((step) => step.id));
-});
+  try {
+    await mkdir(dirname(releaseSyncPath), { recursive: true });
+    await copyFile(fileURLToPath(new URL('../../scripts/release-sync.mjs', import.meta.url)), releaseSyncPath);
+    await writeFile(statePath, JSON.stringify({ manifest: 'stale', story: 'stale', bundle: 'stale', promoted: 'stale', audited: 'stale' }));
+    await writeModule(root, 'scripts/audit-assets.mjs', `${stateModule}if (process.argv.includes('--write')) state.manifest = 'fresh'; else { if (state.promoted !== 'fresh') throw new Error('promoted output is stale'); state.audited = 'fresh'; }\nawait writeFile(statePath, JSON.stringify(state));\n`);
+    await writeModule(root, 'scripts/compile-story.mjs', `${stateModule}if (state.manifest !== 'fresh') throw new Error('manifest is stale');\nstate.story = 'fresh';\nawait writeFile(statePath, JSON.stringify(state));\n`);
+    await writeModule(root, 'scripts/build-release.mjs', `${stateModule}if (state.bundle !== 'fresh') throw new Error('bundle is stale');\nstate.promoted = 'fresh';\nawait writeFile(statePath, JSON.stringify(state));\n`);
+    await writeModule(root, 'node_modules/vite-node/vite-node.mjs', "import { pathToFileURL } from 'node:url';\nawait import(pathToFileURL(process.argv[2]).href);\n");
+    await writeModule(root, 'node_modules/vite/bin/vite.js', "import { readFile, writeFile } from 'node:fs/promises';\nimport { resolve } from 'node:path';\nif (process.argv[2] !== 'build') throw new Error('missing build argument');\nconst statePath = resolve(import.meta.dirname, '../../../state.json');\nconst state = JSON.parse(await readFile(statePath, 'utf8'));\nif (state.story !== 'fresh') throw new Error('story is stale');\nstate.bundle = 'fresh';\nawait writeFile(statePath, JSON.stringify(state));\n");
+
+    await run(process.execPath, [releaseSyncPath], { cwd: root });
+
+    expect(JSON.parse(await readFile(statePath, 'utf8'))).toEqual({ manifest: 'fresh', story: 'fresh', bundle: 'fresh', promoted: 'fresh', audited: 'fresh' });
+    expect(RELEASE_STEPS.map((step) => step.id)).toEqual(['assets:generate', 'story:compile', 'source:build', 'release:promote', 'assets:audit']);
+  } finally {
+    await rm(root, { recursive: true, force: true });
+  }
+}, 15_000);

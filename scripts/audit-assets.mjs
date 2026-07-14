@@ -3,7 +3,7 @@ import { access, mkdir, readFile, readdir, stat, writeFile } from 'node:fs/promi
 import { extname, relative, resolve } from 'node:path';
 
 import { validateAssetIntegrity } from './lib/asset-integrity.mjs';
-import { hasReleaseDifferences, isLegacyPublishablePath } from './lib/release-integrity.mjs';
+import { hasReleaseDifferences, isLegacyPublishablePath, isPrivateEnvironmentPath } from './lib/release-integrity.mjs';
 import { collectStoryAssetReferences, findUnresolvedStoryReferences, materializeStoryMedia } from './lib/story-media.mjs';
 
 const projectRoot = resolve(import.meta.dirname, '..');
@@ -340,6 +340,7 @@ async function auditNoWebGenerationTools() {
     for (const path of await walkFiles(root)) {
       const relativePath = toPosix(relative(root, path));
       if (isLegacyPublishablePath(relativePath)) findings.push(`legacy path in web release: ${relativePath}`);
+      if (isPrivateEnvironmentPath(relativePath)) findings.push(`private environment file in web release: ${relativePath}`);
       if (/(?:^|\/)(?:tools?|scripts?)(?:\/|$)/iu.test(relativePath) || /\.(?:bat|cmd|ps1|py|sh)$/iu.test(relativePath)) {
         findings.push(`generation tool in web release: ${relativePath}`);
       }

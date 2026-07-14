@@ -16,6 +16,8 @@ const remoteSinkPatterns = [
   /\bimport\s*(?:\(\s*)?["']((?:https?:)?\/\/[^"']+)["']/giu,
   /\b(?:importScripts|Worker|SharedWorker)\s*\(\s*["']((?:https?:)?\/\/[^"']+)["']/giu,
   /\b[a-z_$][\w$]*\.src\s*=\s*["']((?:https?:)?\/\/[^"']+)["']/giu,
+  /\b(?:document\.)?createElement\s*\(\s*["']script["']\s*\)\s*\.src\s*=\s*["']((?:https?:)?\/\/[^"']+)["']/giu,
+  /\.setAttribute\s*\(\s*["']src["']\s*,\s*["']((?:https?:)?\/\/[^"']+)["']\s*\)/giu,
   /<script\b[^>]*\bsrc\s*=\s*["']((?:https?:)?\/\/[^"']+)["']/giu,
 ];
 

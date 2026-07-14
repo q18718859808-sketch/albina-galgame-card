@@ -5,6 +5,8 @@ import { promisify } from 'node:util';
 
 import { describe, expect, it } from 'vitest';
 
+import { ALBINA_CDN_BASE, ALBINA_RELEASE_VERSION } from '../../src/runtime/asset-resolver';
+
 const run = promisify(execFile);
 const projectRoot = process.cwd();
 const releaseRoots = [
@@ -72,6 +74,15 @@ describe('offline release boundary', () => {
     expect(joined).not.toMatch(/git\s+tag\s+v2\.0\.0/iu);
   });
 
+  it('defines an executable tag-then-public-verification release protocol', async () => {
+    const tagging = await readFile(join(projectRoot, 'TAGGING.md'), 'utf8');
+    const phases = ['Pre-tag gate', 'Immutable tag', 'Public verification', 'Release attestation'];
+    const positions = phases.map((phase) => tagging.indexOf(phase));
+    expect(positions.every((position) => position >= 0)).toBe(true);
+    expect(positions).toEqual([...positions].sort((left, right) => left - right));
+    expect(tagging).toContain('does not permit moving the tag');
+  });
+
   it.each(['card/albina.card.json', 'card/character-card.template.json'])('keeps stale CDN metadata fail-closed in %s', async (path) => {
     const card = await json(path) as {
       data: { cdn_import?: string; extensions: { albina_galgame_card: { cdn_import?: string } } };
@@ -91,6 +102,8 @@ describe('offline release boundary', () => {
     expect(lookup.base).toBe('.');
     expect([...Object.values(lookup.assetsById), ...Object.values(lookup.portraitsById)]
       .every((path) => path.startsWith('assets/') && !path.includes('://'))).toBe(true);
+    expect(ALBINA_RELEASE_VERSION).toBe('2.0.0-preview');
+    expect(ALBINA_CDN_BASE).toBe('.');
   });
 
   it('does not instruct removed cinematic engines or claim a compatibility fallback', async () => {

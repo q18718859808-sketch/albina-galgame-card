@@ -1,7 +1,7 @@
 import { copyFile, mkdir, readFile, readdir, rm, writeFile } from 'node:fs/promises';
 import { resolve } from 'node:path';
 
-import { isLegacyPublishablePath } from './lib/release-integrity.mjs';
+import { isLegacyPublishablePath, isPrivateEnvironmentPath } from './lib/release-integrity.mjs';
 
 const projectRoot = resolve(import.meta.dirname, '..');
 const buildRoot = resolve(projectRoot, 'build/source');
@@ -45,7 +45,7 @@ async function removeForbiddenWebContent(root) {
       if (/^(?:tools?|scripts?)$/iu.test(entry.name) || isLegacyPublishablePath(entry.name)) {
         await rm(path, { recursive: true, force: true });
       } else await removeForbiddenWebContent(path);
-    } else if (/\.(?:bat|cmd|ps1|py|sh)$/iu.test(entry.name) || isLegacyPublishablePath(entry.name)) {
+    } else if (/\.(?:bat|cmd|ps1|py|sh)$/iu.test(entry.name) || isLegacyPublishablePath(entry.name) || isPrivateEnvironmentPath(entry.name)) {
       await rm(path, { force: true });
     }
   }

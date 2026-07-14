@@ -1,7 +1,7 @@
 import { describe, expect, it } from 'vitest';
 
 // @ts-expect-error JavaScript release gate is consumed by the Node audit script.
-import { hasReleaseDifferences, isLegacyPublishablePath } from '../../scripts/lib/release-integrity.mjs';
+import { hasReleaseDifferences, isLegacyPublishablePath, isPrivateEnvironmentPath } from '../../scripts/lib/release-integrity.mjs';
 
 describe('release audit failure gate', () => {
   it.each([
@@ -32,5 +32,13 @@ describe('release audit failure gate', () => {
 
   it.each(['assets/cg/opening_rain.jpg', 'data/game-script-v2.json', 'source/albina-source.js'])('allows %s in the v2 release surface', (path) => {
     expect(isLegacyPublishablePath(path)).toBe(false);
+  });
+
+  it.each(['assets/.env', 'assets/config/.env.production', 'source/nested/.ENV.local'])('identifies %s as a private environment file', (path) => {
+    expect(isPrivateEnvironmentPath(path)).toBe(true);
+  });
+
+  it('retains only the redacted environment example name', () => {
+    expect(isPrivateEnvironmentPath('docs/.env.example')).toBe(false);
   });
 });
