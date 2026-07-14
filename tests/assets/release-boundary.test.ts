@@ -80,4 +80,10 @@ describe('offline release boundary', () => {
     expect(values).toMatch(/(?:reserved|保留)/iu);
     expect(values).not.toMatch(/import\s+['"]https:/iu);
   });
+
+  it('does not instruct removed cinematic engines or claim a compatibility fallback', async () => {
+    const card = await readFile(join(projectRoot, 'card/albina.card.json'), 'utf8');
+    expect(card).not.toMatch(/\[cinema:[^\]]+\]/iu);
+    expect(card).not.toContain('文件级兼容回退');
+  });
 });
