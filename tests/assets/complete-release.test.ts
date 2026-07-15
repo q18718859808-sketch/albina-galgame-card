@@ -10,12 +10,12 @@ import { TAVERN_HELPER_SAVE_KEY } from '../../src/runtime/default-host';
 
 async function json(path: string): Promise<unknown> { return JSON.parse(await readFile(join(process.cwd(), path), 'utf8')); }
 
-describe('v2 release completeness with explicit blocked channels', () => {
+describe('v2 release-candidate completeness with explicit limitations', () => {
   it('ships all fixed dialogue voices as hashed assets, not pending jobs', async () => {
     const manifest = parseAssetManifestV2(await json('content/asset-manifest-v2.json'));
     const story = parseGameScriptV2(await json('dist/albina-galgame-card/data/game-script-v2.json'));
     const voiceIds = new Set(story.scenes.flatMap((scene) => [scene.voiceAssetId, ...scene.choices.map((choice) => choice.resultVoiceAssetId)]).filter((id): id is string => Boolean(id)));
-    expect(voiceIds.size).toBe(154);
+    expect(voiceIds.size).toBe(150);
     for (const id of voiceIds) {
       const asset = manifest.assets.find((candidate) => candidate.id === id);
       expect(asset?.sha256, id).toMatch(/^[a-f0-9]{64}$/u);
@@ -24,23 +24,32 @@ describe('v2 release completeness with explicit blocked channels', () => {
     expect(manifest.mediaJobs.filter((job) => job.kind === 'speech')).toEqual([]);
   });
 
-  it('registers both web encodes for all 29 animations and cues every applicable scene', async () => {
+  it('registers both web encodes for all 24 reachable animations and cues every applicable scene', async () => {
     const manifest = parseAssetManifestV2(await json('content/asset-manifest-v2.json'));
     const story = parseGameScriptV2(await json('dist/albina-galgame-card/data/game-script-v2.json'));
     const runtime = manifest.assets.filter((asset) => asset.id.startsWith('video.animated.runtime.'));
     const desktop = manifest.assets.filter((asset) => asset.id.startsWith('video.animated.desktop.'));
-    expect(runtime).toHaveLength(29);
-    expect(desktop).toHaveLength(29);
-    expect(story.scenes.filter((scene) => scene.videoAssetId && scene.desktopVideoAssetId)).toHaveLength(25);
+    expect(runtime).toHaveLength(24);
+    expect(desktop).toHaveLength(24);
+    expect(story.scenes.filter((scene) => scene.videoAssetId && scene.desktopVideoAssetId)).toHaveLength(24);
+    expect(story.scenes.find((scene) => scene.id === 'opening_001')).not.toHaveProperty('videoAssetId');
     expect(story.scenes.every((scene) => Boolean(scene.bgmAssetId))).toBe(true);
     expect(story.scenes.filter((scene) => scene.tone === 'threat').every((scene) => (scene.sfxAssetIds?.length ?? 0) > 0)).toBe(true);
   });
 
-  it('publishes blocked production channels without pretending completion', async () => {
-    const status = await json('dist/albina-galgame-card/release-status.json') as { runtimeMediaApis: boolean; blocked: { portraitStrips: { count: number }; music26: { count: number } } };
+  it('documents retired production routes and remaining limitations without pretending completion', async () => {
+    const status = await json('dist/albina-galgame-card/release-status.json') as {
+      runtimeMediaApis: boolean;
+      completeEdition: boolean;
+      substitutions: { music: string; portraitMotion: string };
+      knownLimitations: { officialOst: string; canonDialogue: string };
+    };
     expect(status.runtimeMediaApis).toBe(false);
-    expect(status.blocked.portraitStrips.count).toBe(8);
-    expect(status.blocked.music26.count).toBe(81);
+    expect(status.completeEdition).toBe(false);
+    expect(status.substitutions.music).toContain('Music 2.6 production is retired');
+    expect(status.substitutions.portraitMotion).toContain('Invalid sprite strips are retired');
+    expect(status.knownLimitations.officialOst).toContain('not a redistribution license');
+    expect(status.knownLimitations.canonDialogue).toContain('paraphrases');
   });
 
   it('keeps one identical approved Tavern Helper loader in card JSON and template', async () => {
@@ -48,18 +57,19 @@ describe('v2 release completeness with explicit blocked channels', () => {
     const card = await json('card/albina.card.json') as Card;
     const template = await json('card/character-card.template.json') as Card;
     const scripts = card.data.extensions.tavern_helper.scripts;
-    expect(card.data.character_version).toBe('2.0.0-preview');
-    expect(template.data.character_version).toBe('2.0.0-preview');
+    expect(card.data.character_version).toBe('2.0.0-rc.1');
+    expect(template.data.character_version).toBe('2.0.0-rc.1');
+    expect(card.data.tags).toContain('v2.0.0-rc.1');
+    expect(template.data.tags).toContain('v2.0.0-rc.1');
     expect(card.data.tags).not.toContain('v2.0.0');
     expect(template.data.tags).not.toContain('v2.0.0');
     expect(card.data.extensions.albina_galgame_card.save_key).toBe(TAVERN_HELPER_SAVE_KEY);
     expect(template.data.extensions.albina_galgame_card.save_key).toBe(TAVERN_HELPER_SAVE_KEY);
     expect(scripts).toHaveLength(1);
     expect(scripts).toEqual(template.data.extensions.tavern_helper.scripts);
-    expect(scripts[0]?.enabled).toBe(false);
-    expect(card.data.creator_notes).toContain('禁用远程加载脚本');
-    expect(card.data.creator_notes).not.toContain('唯一启用脚本');
-    expect(scripts[0]?.content).toContain('@v2.0.0/dist/albina-galgame-card/source/albina-classic-loader.js');
+    expect(scripts[0]?.enabled).toBe(true);
+    expect(card.data.creator_notes).toContain('v2.0.0-rc.1');
+    expect(scripts[0]?.content).toContain('@v2.0.0-rc.1/dist/albina-galgame-card/source/albina-classic-loader.js');
     expect(scripts[0]?.content).not.toContain('/console/index.js');
     expect(existsSync('dist/albina-galgame-card/source/albina-classic-loader.js')).toBe(true);
     const loader = await readFile('public/albina-classic-loader.js', 'utf8');
@@ -69,9 +79,10 @@ describe('v2 release completeness with explicit blocked channels', () => {
     expect(loader).not.toContain('cdn.jsdelivr.net');
   });
 
-  it('marks the current build as an unpublished local preview', async () => {
-    const status = await json('dist/albina-galgame-card/release-status.json') as { completeEdition: boolean; version: string };
+  it('marks the current build as a non-final release candidate', async () => {
+    const status = await json('dist/albina-galgame-card/release-status.json') as { completeEdition: boolean; releaseCandidate: boolean; version: string };
     expect(status.completeEdition).toBe(false);
-    expect(status.version).toContain('preview');
+    expect(status.releaseCandidate).toBe(true);
+    expect(status.version).toBe('2.0.0-rc.1');
   });
 });

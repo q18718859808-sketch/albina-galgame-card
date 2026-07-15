@@ -30,7 +30,6 @@ async function readStoryScenes(): Promise<Array<Record<string, unknown>>> {
 }
 
 const synthesizedVideoNames = [
-  'prologue',
   'golden_bough_rebuild_scene_3',
   'golden_bough_rebuild_scene_5',
   'golden_bough_rebuild_scene_8',
@@ -58,19 +57,53 @@ const synthesizedVideoNames = [
 ];
 
 describe('canonical asset release', () => {
-  it('registers every completed strip and preserves eight unfinished strips as pending jobs', async () => {
+  it('retires all 18 Albina strips and the false Fascia portrait in favor of static portraits', async () => {
     const manifest = parseAssetManifestV2(await readJson('content/asset-manifest-v2.json'));
-    const progress = await readJson('dist/albina-galgame-card/assets/sprite-atlas/_progress.json') as Record<string, { status: string }>;
-    const completed = Object.entries(progress).filter(([, entry]) => entry.status === 'done');
+    const albinaPortraits = manifest.portraits.filter((portrait) => portrait.characterId === 'albina');
     const pendingStripJobs = manifest.mediaJobs.filter((job) => job.id.startsWith('job.strip.'));
     const pendingGalleryJobs = manifest.mediaJobs.filter((job) => job.id.startsWith('job.cg.'));
 
-    expect(manifest.portraits).toHaveLength(completed.length + 1);
-    expect(manifest.portraits.map((portrait) => portrait.id)).toContain('portrait.fascia.normal');
-    expect(pendingStripJobs).toHaveLength(8);
-    expect(pendingStripJobs.every((job) => job.status === 'pending')).toBe(true);
-    expect(pendingGalleryJobs.map((job) => job.assetId).sort()).toEqual(['cg.mirror_broken', 'cg.rain_reflection']);
-    expect(pendingGalleryJobs.every((job) => job.status === 'pending')).toBe(true);
+    expect(albinaPortraits).toHaveLength(18);
+    expect(albinaPortraits.every((portrait) => portrait.animation.kind === 'static')).toBe(true);
+    expect(albinaPortraits.every((portrait) => portrait.path.startsWith('characters/albina/'))).toBe(true);
+    expect(manifest.portraits.some((portrait) => portrait.id === 'portrait.fascia.normal')).toBe(false);
+    expect(manifest.assets.some((asset) => asset.path.startsWith('sprite-atlas/albina/'))).toBe(false);
+    expect(pendingStripJobs).toHaveLength(0);
+    expect(pendingGalleryJobs).toEqual([]);
+  });
+
+  it('uses only verified static Albina art in the canon recap and no Fascia portrait anywhere', async () => {
+    const manifest = parseAssetManifestV2(await readJson('content/asset-manifest-v2.json'));
+    const canonScenes = await readJson('content/dialogue/canon-recap.json') as Array<{
+      portraits: Array<{ characterId: string; portraitAssetId: string }>;
+    }>;
+    const storyScenes = await readStoryScenes() as Array<{
+      portraits?: Array<{ characterId: string; portraitAssetId: string }>;
+    }>;
+    const canonAlbinaIds = canonScenes.flatMap((scene) => scene.portraits)
+      .filter((portrait) => portrait.characterId === 'albina')
+      .map((portrait) => portrait.portraitAssetId);
+    const portraitPaths = new Map(manifest.portraits.map((portrait) => [portrait.id, portrait.path]));
+
+    expect(new Set(canonAlbinaIds)).toEqual(new Set(['portrait.albina.normal', 'portrait.albina.armored']));
+    expect(new Set(canonAlbinaIds.map((id) => portraitPaths.get(id)))).toEqual(new Set([
+      'characters/albina/normal.png',
+      'characters/albina/armored.png',
+    ]));
+    expect(storyScenes.flatMap((scene) => scene.portraits ?? [])
+      .some((portrait) => portrait.characterId === 'fascia' || portrait.portraitAssetId === 'portrait.fascia.normal')).toBe(false);
+  });
+
+  it('reuses approved gallery CGs without pending aliases', async () => {
+    const scenes = await readStoryScenes();
+    const references = collectStoryAssetReferences(scenes);
+    const pending = await readJson('content/pending-gallery-cgs.json') as { assets: unknown[] };
+
+    expect(references).not.toContain('cg.mirror_broken');
+    expect(references).not.toContain('cg.rain_reflection');
+    expect(references).toContain('cg.art_resonance');
+    expect(references).toContain('cg.rain_confession');
+    expect(pending.assets).toEqual([]);
   });
 
   it('collects and validates every synthesized runtime and desktop video reference', async () => {
@@ -86,10 +119,10 @@ describe('canonical asset release', () => {
     expect(findUnresolvedStoryReferences(scenes, lookup)).toEqual([]);
   });
 
-  it('reports a missing synthesized video asset as an unresolved story reference', async () => {
+  it('reports a missing referenced AU animation as an unresolved story reference', async () => {
     const lookup = structuredClone(await readJson('dist/albina-galgame-card/assets/runtime-lookup.json') as RuntimeLookup);
     const scenes = materializeStoryMedia(await readStoryScenes());
-    const missingAssetId = 'video.animated.runtime.prologue';
+    const missingAssetId = 'video.animated.runtime.white_canvas_scene_3';
     delete lookup.assetsById[missingAssetId];
 
     expect(findUnresolvedStoryReferences(scenes, lookup)).toEqual([missingAssetId]);

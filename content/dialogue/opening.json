@@ -3,19 +3,12 @@
     "version": 2,
     "id": "opening_001",
     "chapter": 1,
-    "route": "white_canvas",
+    "route": null,
     "locationId": "backstreets_rain",
     "backgroundAssetId": "bg.backstreets_rain",
     "cgAssetId": "cg.opening_rain",
-    "tone": "rain",
+    "tone": "AU-boundary",
     "portraits": [
-      {
-        "characterId": "protagonist",
-        "portraitAssetId": "portrait.protagonist.normal",
-        "position": "left",
-        "active": false,
-        "scale": 0.92
-      },
       {
         "characterId": "albina",
         "portraitAssetId": "portrait.albina.normal",
@@ -24,16 +17,14 @@
         "scale": 1
       }
     ],
-    "speaker": "阿尔比娜",
-    "text": "晚上好，{{user}}。请不要站得太远，我还没决定该把你称作观众、朋友，还是一块值得等待的画布。",
-    "voiceAssetId": "voice.scene.opening_001",
+    "speaker": "AU/IF 分歧",
+    "text": "【本卡原创 AU/IF，不是原作后续】9-43《Hatching》的正史结局已经复盘完毕。从这一刻开始，Albina 的存活、玩家 {{user}} 的出现、三条路线与九个结局均为本卡原创，不代表原作事实或隐藏结局。",
     "choices": [
       {
         "id": "enter_white_canvas",
-        "text": "留在她的白色画布前",
+        "text": "进入 white_canvas AU",
         "nextSceneId": "white_canvas_001",
-        "resultText": "你选择“留在她的白色画布前”。阿尔比娜：白色并不代表干净。它只是暂时还没有被决定。你也是这样，{{user}}。",
-        "resultVoiceAssetId": "voice.result.enter_white_canvas",
+        "resultText": "【AU/IF】你进入以关系边界与自我选择为核心的 white_canvas 原创路线。",
         "effects": {
           "route": "white_canvas",
           "values": {
@@ -51,10 +42,9 @@
       },
       {
         "id": "enter_rebuild",
-        "text": "询问金枝重构的痕迹",
+        "text": "进入 golden_bough_rebuild AU",
         "nextSceneId": "golden_bough_001",
-        "resultText": "你选择“询问金枝重构的痕迹”。阿尔比娜：金色光尘沿着她的义体裂缝回流。她先确认的不是自己，而是法西娅是否还在呼吸。",
-        "resultVoiceAssetId": "voice.result.enter_rebuild",
+        "resultText": "【AU/IF】这条路线假设 Albina 在 9-43 死亡后被重构；该前提与全部后续均非正史。",
         "effects": {
           "route": "golden_bough_rebuild",
           "values": {
@@ -71,10 +61,9 @@
       },
       {
         "id": "enter_conspiracy",
-        "text": "接受环指的危险邀请",
+        "text": "进入 ring_conspiracy AU",
         "nextSceneId": "ring_conspiracy_001",
-        "resultText": "你选择“接受环指的危险邀请”。阿尔比娜：蜘蛛巢的灯光像手术刀一样落下。她向你递来一份没有署名的委托，笑得礼貌又危险。",
-        "resultVoiceAssetId": "voice.result.enter_conspiracy",
+        "resultText": "【AU/IF】这条路线主动改写 9-43 后续因果；其中的委托、关系和结局均为本卡原创。",
         "effects": {
           "route": "ring_conspiracy",
           "values": {

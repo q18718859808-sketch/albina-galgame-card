@@ -1,7 +1,7 @@
 import { copyFile, mkdir, readFile, readdir, rm, writeFile } from 'node:fs/promises';
-import { resolve } from 'node:path';
+import { relative, resolve } from 'node:path';
 
-import { isLegacyPublishablePath, isPrivateEnvironmentPath } from './lib/release-integrity.mjs';
+import { isExcludedReleaseAssetPath, isLegacyPublishablePath, isPrivateEnvironmentPath } from './lib/release-integrity.mjs';
 
 const projectRoot = resolve(import.meta.dirname, '..');
 const buildRoot = resolve(projectRoot, 'build/source');
@@ -38,14 +38,16 @@ async function normalizeGeneratedText(root) {
   }
 }
 
-async function removeForbiddenWebContent(root) {
+async function removeForbiddenWebContent(root, boundaryRoot = root) {
   for (const entry of await readdir(root, { withFileTypes: true })) {
     const path = resolve(root, entry.name);
+    const releasePath = relative(boundaryRoot, path).replaceAll('\\', '/');
     if (entry.isDirectory()) {
-      if (/^(?:tools?|scripts?)$/iu.test(entry.name) || isLegacyPublishablePath(entry.name)) {
+      if (/^(?:tools?|scripts?)$/iu.test(entry.name) || isLegacyPublishablePath(releasePath) || isExcludedReleaseAssetPath(releasePath)) {
         await rm(path, { recursive: true, force: true });
-      } else await removeForbiddenWebContent(path);
-    } else if (/\.(?:bat|cmd|ps1|py|sh)$/iu.test(entry.name) || isLegacyPublishablePath(entry.name) || isPrivateEnvironmentPath(entry.name)) {
+      } else await removeForbiddenWebContent(path, boundaryRoot);
+    } else if (/\.(?:bat|cmd|ps1|py|sh)$/iu.test(entry.name) || isLegacyPublishablePath(releasePath)
+      || isExcludedReleaseAssetPath(releasePath) || isPrivateEnvironmentPath(entry.name)) {
       await rm(path, { force: true });
     }
   }
@@ -58,11 +60,33 @@ async function enforceApprovedReleaseSurface(root) {
   }
 }
 
+async function sanitizeRootManifest(root) {
+  const path = resolve(root, 'manifest.json');
+  let source;
+  try {
+    source = await readFile(path, 'utf8');
+  } catch (error) {
+    if (error?.code === 'ENOENT') return;
+    throw error;
+  }
+  const manifest = JSON.parse(source);
+  for (const key of [
+    'original_cg',
+    'original_albina_sprites',
+    'original_bg_story',
+    'original_bg_battle',
+    'bgm_metadata',
+    '_removed_official_resources_note',
+  ]) delete manifest[key];
+  await writeFile(path, JSON.stringify(manifest, null, 2) + '\n', 'utf8');
+}
+
 await rm(canonicalSourceRoot, { recursive: true, force: true });
 await copyTree(buildRoot, canonicalSourceRoot);
 await normalizeGeneratedText(canonicalSourceRoot);
 await enforceApprovedReleaseSurface(canonicalRoot);
 await removeForbiddenWebContent(canonicalRoot);
+await sanitizeRootManifest(canonicalRoot);
 console.log(`Promoted source build to ${canonicalSourceRoot}`);
 
 await rm(releaseTreeRoot, { recursive: true, force: true });

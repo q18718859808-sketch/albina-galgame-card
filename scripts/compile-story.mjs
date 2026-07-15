@@ -2,13 +2,19 @@ import { mkdir, readFile, writeFile } from 'node:fs/promises';
 import { dirname, resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
 
+import { materializeSceneProvenance } from '../src/domain/canon.ts';
 import { parseGameScriptV2 } from '../src/domain/game-script.ts';
 import { materializeStoryMedia } from './lib/story-media.mjs';
 
 const projectRoot = resolve(dirname(fileURLToPath(import.meta.url)), '..');
 const manifestPath = resolve(projectRoot, 'content/game-script-v2.json');
 const assetManifestPath = resolve(projectRoot, 'content/asset-manifest-v2.json');
-const outputPath = resolve(projectRoot, 'dist/albina-galgame-card/data/game-script-v2.json');
+const canonSourcesPath = resolve(projectRoot, 'content/canon-sources-v1.json');
+const canonClaimsPath = resolve(projectRoot, 'content/canon-claims-v1.json');
+const storyProvenancePath = resolve(projectRoot, 'content/story-provenance-v1.json');
+const outputPath = process.env.ALBINA_STORY_OUTPUT_PATH
+  ? resolve(projectRoot, process.env.ALBINA_STORY_OUTPUT_PATH)
+  : resolve(projectRoot, 'dist/albina-galgame-card/data/game-script-v2.json');
 
 async function readJson(path) {
   return JSON.parse(await readFile(path, 'utf8'));
@@ -22,19 +28,16 @@ async function loadDialogueFiles(paths) {
   return chunks.flat();
 }
 
-function assertLegacyOracle(scenes, oracle) {
-  const anchors = scenes.filter((scene) => !scene.ending && !scene.id.endsWith('_ending_gate'));
-  const choices = anchors.flatMap((scene) => scene.choices);
-  if (anchors.length !== oracle.sceneAnchors || choices.length !== oracle.choices) {
-    throw new Error(`Legacy oracle mismatch: expected ${oracle.sceneAnchors}/${oracle.choices}, got ${anchors.length}/${choices.length}`);
-  }
-}
-
 async function compileStory() {
-  const manifest = await readJson(manifestPath);
-  const assets = await readJson(assetManifestPath);
-  const scenes = materializeStoryMedia(await loadDialogueFiles(manifest.dialogueFiles));
-  assertLegacyOracle(scenes, manifest.legacyOracle);
+  const [manifest, assets, sources, claims, provenance] = await Promise.all([
+    readJson(manifestPath),
+    readJson(assetManifestPath),
+    readJson(canonSourcesPath),
+    readJson(canonClaimsPath),
+    readJson(storyProvenancePath),
+  ]);
+  const authoredScenes = materializeStoryMedia(await loadDialogueFiles(manifest.dialogueFiles));
+  const scenes = materializeSceneProvenance(authoredScenes, sources, claims, provenance);
   const compiled = parseGameScriptV2({
     version: manifest.version,
     projectId: manifest.projectId,

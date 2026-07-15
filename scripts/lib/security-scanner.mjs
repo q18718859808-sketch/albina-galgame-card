@@ -1,7 +1,7 @@
 import { extname } from 'node:path';
 
 const textExtensions = new Set(['.cjs', '.conf', '.css', '.env', '.html', '.ini', '.js', '.json', '.jsx', '.md', '.mjs', '.mts', '.ps1', '.py', '.sh', '.toml', '.ts', '.tsx', '.txt', '.vue', '.xml', '.yaml', '.yml']);
-const canonicalBase = 'https://cdn.jsdelivr.net/gh/q18718859808-sketch/albina-galgame-card@v2.0.0/dist/albina-galgame-card';
+const canonicalBase = 'https://cdn.jsdelivr.net/gh/q18718859808-sketch/albina-galgame-card@v2.0.0-rc.1/dist/albina-galgame-card';
 const approvedRemoteScripts = new Set([`${canonicalBase}/source/albina-classic-loader.js`]);
 const secretPatterns = [
   /["']?(?:api[_-]?key|authorization|token|secret|credential)["']?\s*[:=][ \t]*["'`](?:bearer\s+)?(?!\$\{|<|your[_-]|example|replace|test|fake|redacted)[a-z0-9._+/=-]{16,}["'`]/iu,
@@ -9,7 +9,7 @@ const secretPatterns = [
   /\bbearer\s+(?!\$\{|<|your[_-]|example|replace|test|fake|redacted)[a-z0-9._+/=-]{16,}/iu,
   /\bsk-[a-z0-9_-]{20,}\b/iu,
 ];
-const endpointPattern = /(?:api\.pie-xian\.com|closeapi\.top|api\.piapi\.ai|ai\.hhhl\.cc|216\.195\.211\.206(?::8317)?|grok-responses|wallhaven\.cc|corsproxy\.io|api\.allorigins\.win|api\.codetabs\.com|\bhhhlclient\b)/iu;
+const endpointPattern = /(?:api\.pie-xian\.com|closeapi\.top|api\.piapi\.ai|ai\.hhhl\.cc|216\.195\.211\.206(?::8317)?|grok-responses\.[a-z0-9.-]+|wallhaven\.cc|corsproxy\.io|api\.allorigins\.win|api\.codetabs\.com|\bhhhlclient\b)/iu;
 const generationPattern = /(?:\/v1\/(?:images\/(?:generations|edits)|videos(?:\/|\b)|audio\/speech|music_generation|responses)|\b(?:generateImage|createVideoGeneration|daydream_generate_image|novelai|comfyui)\s*\()/iu;
 const remoteModulePattern = /(?:https?:)?\/\/[^\s"'`<>()[\]{},;]+\/[^\s"'`<>()[\]{},;]*\.(?:m?js)(?:[?#][^\s"'`<>()[\]{},;]*)?(?=$|[\s"'`<>()[\]{},;])/giu;
 const remoteSinkPatterns = [
@@ -57,6 +57,9 @@ export function scanText(path, text) {
   }
   if (/^(?:dist|release)\//iu.test(normalized) && (/(?:^|\/)(?:tools?|scripts?)(?:\/|$)/iu.test(normalized) || /\.(?:bat|cmd|ps1|py|sh)$/iu.test(normalized))) {
     findings.push(`${normalized}: generation tool in web release`);
+  }
+  if (/^(?:dist|release)\//iu.test(normalized) && /(?:^|\/)sprite-atlas\/_progress\.json$/iu.test(normalized)) {
+    findings.push(`${normalized}: production progress in web release`);
   }
   return [...new Set(findings)];
 }

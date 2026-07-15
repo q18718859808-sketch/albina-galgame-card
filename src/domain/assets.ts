@@ -14,6 +14,72 @@ export const RelativeAssetPathSchema = z
     message: 'Asset paths must be relative to the canonical asset root',
   });
 
+const ProviderIdSchema = z.literal('pie');
+const MediaModelSchema = z.enum(['gpt-image-2', 'seedance-1.5-pro', 'speech-2.8-hd']);
+const PromptVersionSchema = z.string().regex(/^[a-z0-9][a-z0-9._-]*$/iu);
+
+export const AssetLicenseSchema = z
+  .object({
+    cueAlias: z.string().regex(/^[a-z0-9][a-z0-9_]*$/u),
+    title: z.string().min(1),
+    creator: z.string().min(1),
+    isrc: z.string().regex(/^[A-Z]{2}[A-Z0-9]{3}\d{7}$/u),
+    sourceUrl: z.string().url(),
+    licenseId: z.literal('CC-BY-4.0'),
+    licenseUrl: z.literal('https://creativecommons.org/licenses/by/4.0/'),
+    attribution: z.string().min(1),
+  })
+  .strict();
+
+export const AudioLicenseRegistrySchema = z
+  .object({
+    version: z.literal(1),
+    projectId: z.literal('albina-galgame-card'),
+    packagedNotice: z.string().min(1),
+    tracks: z.array(AssetLicenseSchema.extend({
+      assetId: z.string().min(1),
+      path: RelativeAssetPathSchema.refine((path) => path.startsWith('audio/bgm/'), {
+        message: 'Licensed music paths must be inside audio/bgm',
+      }),
+      sha256: z.string().regex(/^[a-f0-9]{64}$/u),
+    }).strict()).length(5),
+    officialSoundtrack: z.object({
+      publisher: z.literal('ProjectMoon'),
+      bundled: z.literal(false),
+      cached: z.literal(false),
+      notice: z.string().min(1),
+      links: z.array(z.object({ label: z.string().min(1), url: z.string().url() }).strict()).length(2),
+      termsUrl: z.literal('https://limbuscompany.com/terms-of-service/'),
+    }).strict(),
+  })
+  .strict()
+  .superRefine((registry, context) => {
+    registry.tracks.forEach((track, index) => {
+      if (track.creator !== 'Kevin MacLeod') {
+        context.addIssue({ code: 'custom', path: ['tracks', index, 'creator'], message: 'Packaged BGM creator must be Kevin MacLeod' });
+      }
+      const source = new URL(track.sourceUrl);
+      if (source.protocol !== 'https:' || source.hostname !== 'incompetech.com' || source.pathname !== '/music/royalty-free/index.html' || source.searchParams.get('isrc') !== track.isrc) {
+        context.addIssue({ code: 'custom', path: ['tracks', index, 'sourceUrl'], message: 'Track source must be its HTTPS Incompetech ISRC page' });
+      }
+    });
+  });
+
+const AssetProvenanceSchema = z
+  .object({
+    provider: ProviderIdSchema,
+    model: MediaModelSchema,
+    promptVersion: PromptVersionSchema,
+    sourceJobHash: z.string().regex(/^[a-f0-9]{64}$/iu),
+    review: z.object({
+      status: z.literal('approved'),
+      reviewer: z.string().min(1),
+      reviewedAt: z.string().datetime(),
+    }).strict(),
+  })
+  .strict()
+  .superRefine((value, context) => addProviderModelIssue(context, [], value.provider, value.model));
+
 export const AssetRecordSchema = z
   .object({
     id: z.string().min(1),
@@ -22,8 +88,18 @@ export const AssetRecordSchema = z
     mimeType: z.string().min(1).optional(),
     sha256: z.string().regex(/^[a-f0-9]{64}$/i).optional(),
     bytes: z.number().int().nonnegative().optional(),
+    provenance: AssetProvenanceSchema.optional(),
+    license: AssetLicenseSchema.optional(),
   })
-  .strict();
+  .strict()
+  .superRefine((asset, context) => {
+    if (asset.path.startsWith('audio/bgm/') && !asset.license) {
+      context.addIssue({ code: 'custom', path: ['license'], message: 'Packaged BGM requires registered license metadata' });
+    }
+    if (asset.license && asset.kind !== 'audio') {
+      context.addIssue({ code: 'custom', path: ['license'], message: 'License metadata is only supported on audio assets' });
+    }
+  });
 
 const PortraitAnimationSchema = z.discriminatedUnion('kind', [
   z.object({ kind: z.literal('static') }).strict(),
@@ -54,8 +130,10 @@ export const MediaJobSchema = z
     version: z.literal(DOMAIN_VERSION),
     id: z.string().min(1),
     assetId: z.string().min(1),
-    kind: z.enum(['image', 'image-edit', 'video', 'speech', 'music']),
-    model: z.enum(['gpt-image-2', 'seedance-1.5-pro', 'speech-2.8-hd', 'music-2.6']),
+    kind: z.enum(['image', 'image-edit', 'video', 'speech']),
+    provider: ProviderIdSchema,
+    model: MediaModelSchema,
+    promptVersion: PromptVersionSchema,
     status: z.enum(['pending', 'running', 'completed', 'failed']),
     contentHash: z.string().regex(/^[a-f0-9]{64}$/i),
     inputAssetIds: z.array(z.string().min(1)),
@@ -63,7 +141,25 @@ export const MediaJobSchema = z
     attempts: z.number().int().nonnegative(),
     error: z.string().optional(),
   })
-  .strict();
+  .strict()
+  .superRefine((value, context) => {
+    const kind = value.kind === 'image-edit' ? 'image' : value.kind;
+    addProviderModelIssue(context, ['model'], value.provider, value.model, kind);
+  });
+
+function addProviderModelIssue(
+  context: z.RefinementCtx,
+  path: PropertyKey[],
+  provider: string,
+  model: string,
+  kind?: 'image' | 'video' | 'speech',
+): void {
+  const allowed = ['gpt-image-2', 'seedance-1.5-pro', 'speech-2.8-hd'];
+  const kindMatches = kind === undefined || ({ image: ['gpt-image-2'], video: ['seedance-1.5-pro'], speech: ['speech-2.8-hd'] })[kind].includes(model);
+  if (provider !== 'pie' || !allowed.includes(model) || !kindMatches) {
+    context.addIssue({ code: 'custom', path, message: `Unsupported provider/model pair: ${provider}/${model}` });
+  }
+}
 
 const AssetManifestV2BaseSchema = z
   .object({
@@ -106,6 +202,8 @@ export const AssetManifestV2Schema = AssetManifestV2BaseSchema.superRefine((mani
 });
 
 export type AssetRecord = z.infer<typeof AssetRecordSchema>;
+export type AssetLicense = z.infer<typeof AssetLicenseSchema>;
+export type AudioLicenseRegistry = z.infer<typeof AudioLicenseRegistrySchema>;
 export type PortraitAsset = z.infer<typeof PortraitAssetSchema>;
 export type MediaJob = z.infer<typeof MediaJobSchema>;
 export type AssetManifestV2 = z.infer<typeof AssetManifestV2Schema>;

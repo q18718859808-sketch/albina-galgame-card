@@ -1,0 +1,89 @@
+{
+  "version": 1,
+  "projectId": "albina-galgame-card",
+  "packagedNotice": "本包内的五首配乐均为 Kevin MacLeod 以 CC BY 4.0 发布的作品，不是 ProjectMoon 官方 OST。",
+  "tracks": [
+    {
+      "assetId": "file.audio.bgm.backstreets.rain.mp3",
+      "path": "audio/bgm/backstreets_rain.mp3",
+      "sha256": "97b5969e9379853e1cc14028fbb908d8607f71ebea87f371ad0499ef94a0a414",
+      "cueAlias": "backstreets_rain",
+      "title": "SCP-x6x (Hopes)",
+      "creator": "Kevin MacLeod",
+      "isrc": "USUAN2000012",
+      "sourceUrl": "https://incompetech.com/music/royalty-free/index.html?isrc=USUAN2000012",
+      "licenseId": "CC-BY-4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+      "attribution": "SCP-x6x (Hopes) by Kevin MacLeod (incompetech.com), licensed under CC BY 4.0."
+    },
+    {
+      "assetId": "file.audio.bgm.between.two.worlds.mp3",
+      "path": "audio/bgm/between_two_worlds.mp3",
+      "sha256": "25470853676263801b044d22761e579a750db722aefbf1d8d48676f49f626184",
+      "cueAlias": "between_two_worlds",
+      "title": "Mesmerizing Galaxy",
+      "creator": "Kevin MacLeod",
+      "isrc": "USUAN2300011",
+      "sourceUrl": "https://incompetech.com/music/royalty-free/index.html?isrc=USUAN2300011",
+      "licenseId": "CC-BY-4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+      "attribution": "Mesmerizing Galaxy by Kevin MacLeod (incompetech.com), licensed under CC BY 4.0."
+    },
+    {
+      "assetId": "file.audio.bgm.boss.kromer.mp3",
+      "path": "audio/bgm/boss_kromer.mp3",
+      "sha256": "923955f3d2091d427d9e345dd6bf9d143a5c3b37631f9ada77a7bca625aa97dd",
+      "cueAlias": "boss_kromer",
+      "title": "Burnt Spirit",
+      "creator": "Kevin MacLeod",
+      "isrc": "USUAN1700053",
+      "sourceUrl": "https://incompetech.com/music/royalty-free/index.html?isrc=USUAN1700053",
+      "licenseId": "CC-BY-4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+      "attribution": "Burnt Spirit by Kevin MacLeod (incompetech.com), licensed under CC BY 4.0."
+    },
+    {
+      "assetId": "file.audio.bgm.main.menu.mp3",
+      "path": "audio/bgm/main_menu.mp3",
+      "sha256": "299a5619829dbb95604531d310fd89dd190009589bdcdc2ef7881f878b1f7a60",
+      "cueAlias": "main_menu",
+      "title": "Magistar",
+      "creator": "Kevin MacLeod",
+      "isrc": "USUAN1900003",
+      "sourceUrl": "https://incompetech.com/music/royalty-free/index.html?isrc=USUAN1900003",
+      "licenseId": "CC-BY-4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+      "attribution": "Magistar by Kevin MacLeod (incompetech.com), licensed under CC BY 4.0."
+    },
+    {
+      "assetId": "file.audio.bgm.title.theme.mp3",
+      "path": "audio/bgm/title_theme.mp3",
+      "sha256": "03917669cba8086f921712e0db8c59d32e02d63e3be443d8d4458a9d2786ded3",
+      "cueAlias": "title_theme",
+      "title": "Achilles",
+      "creator": "Kevin MacLeod",
+      "isrc": "USUAN1100463",
+      "sourceUrl": "https://incompetech.com/music/royalty-free/index.html?isrc=USUAN1100463",
+      "licenseId": "CC-BY-4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+      "attribution": "Achilles by Kevin MacLeod (incompetech.com), licensed under CC BY 4.0."
+    }
+  ],
+  "officialSoundtrack": {
+    "publisher": "ProjectMoon",
+    "bundled": false,
+    "cached": false,
+    "notice": "ProjectMoon 官方 OST 仅提供外部试听链接；本卡不下载、缓存或再分发这些音频。",
+    "links": [
+      {
+        "label": "ProjectMoon 官方 OST 播放列表",
+        "url": "https://www.youtube.com/playlist?list=PL9-RBacZ4KMzFjhRY4zD7_GbwL1LgNWXD"
+      },
+      {
+        "label": "Canto IX 官方曲目",
+        "url": "https://www.youtube.com/watch?v=n5GI6EkCXCo"
+      }
+    ],
+    "termsUrl": "https://limbuscompany.com/terms-of-service/"
+  }
+}

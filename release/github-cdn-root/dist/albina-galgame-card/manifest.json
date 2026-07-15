@@ -1,6 +1,6 @@
 {
   "base": ".",
-  "version": "2.0.0-preview",
+  "version": "2.0.0-rc.1",
   "bg": {
     "backstreets_rain": "assets/bg/backstreets_rain.jpg",
     "city_rooftop": "assets/bg/city_rooftop.jpg",
@@ -15,24 +15,6 @@
     "spider_gallery": "assets/bg/spider_gallery.jpg",
     "white_canvas": "assets/bg/white_canvas.jpg"
   },
-  "original_cg": {
-    "canto_ix_opening": "assets/original_cg/canto_ix_opening.png",
-    "albina_debut": "assets/original_cg/albina_debut.png",
-    "rain_confession": "assets/original_cg/rain_confession.png",
-    "battle_climax": "assets/original_cg/battle_climax.png",
-    "hell_gate": "assets/original_cg/hell_gate.png",
-    "ring_conspiracy": "assets/original_cg/ring_conspiracy.png"
-  },
-  "original_albina_sprites": {
-    "normal": "assets/original_albina_sprites/normal.png",
-    "smile": "assets/original_albina_sprites/smile.png",
-    "sad": "assets/original_albina_sprites/sad.png",
-    "battle": "assets/original_albina_sprites/battle.png"
-  },
-  "original_bg_story": {
-    "library_interior": "assets/original_bg_story/library_interior.png"
-  },
-  "original_bg_battle": {},
   "characters": {
     "albina": {
       "amused": "assets/characters/albina/amused.png",
@@ -164,10 +146,7 @@
     "status_panel": "assets/ui/status_panel.svg",
     "textbox": "assets/ui/textbox.svg"
   },
-  "videos": {
-    "ed": "assets/videos/ed.mp4",
-    "op": "assets/videos/op.mp4"
-  },
+  "videos": {},
   "audio": {
     "backstreets_rain": "assets/audio/bgm/backstreets_rain.mp3",
     "between_two_worlds": "assets/audio/bgm/between_two_worlds.mp3",
@@ -182,49 +161,6 @@
     "ui_click": "assets/audio/se/ui_click.wav",
     "ui_confirm": "assets/audio/se/ui_confirm.wav"
   },
-  "bgm_metadata": {
-    "title_theme": {
-      "official": "SAIKAI",
-      "source": "Canto IX Title"
-    },
-    "main_menu": {
-      "official": "Aka no Ito (Red Thread)",
-      "source": "Canto IX Menu"
-    },
-    "story_serious": {
-      "official": "Inheritage",
-      "source": "Canto IX Dramatic"
-    },
-    "story_gloomy": {
-      "official": "Dirge for the Ring",
-      "source": "Canto IX Lament"
-    },
-    "battle_canto_1": {
-      "official": "The Point at World's End",
-      "source": "Canto IX Battle 1"
-    },
-    "battle_canto_2": {
-      "official": "Spider Blossom",
-      "source": "Canto IX Battle 2"
-    },
-    "boss_ahab": {
-      "official": "Ahab's Wrath",
-      "source": "Canto IX Boss"
-    },
-    "boss_cassetti": {
-      "official": "Cassetti's Crescendo",
-      "source": "Canto IX Boss"
-    },
-    "boss_erlkonig": {
-      "official": "Erlkonig Procession",
-      "source": "Canto IX Boss"
-    },
-    "victory_fanfare": {
-      "official": "Crown of the Ring",
-      "source": "Canto IX Victory"
-    }
-  },
-  "_removed_official_resources_note": "v1.0.38: Removed 125+ references to non-existent official Limbus Company resources (assets/limbus_official_albina/, assets/canto_ix_official/cg/, assets/canto_ix_official/bg_story/, assets/canto_ix_official/bg_battle/, assets/canto_ix_official/sprites/) due to copyright concerns and missing files. v1.0.40: Replaced with AI-generated original resources using our house art style.",
   "asset_manifest_v2": "assets/asset-manifest-v2.json",
   "runtime_lookup": "assets/runtime-lookup.json"
 }

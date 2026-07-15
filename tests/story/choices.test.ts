@@ -28,6 +28,9 @@ interface StoryScene {
   id: string;
   text: string;
   voiceAssetId?: string;
+  videoAssetId?: string;
+  desktopVideoAssetId?: string;
+  provenance: { scope: 'canon_recap' | 'AU_boundary' | 'route' };
   choices: StoryChoice[];
   ending?: unknown;
 }
@@ -55,19 +58,29 @@ function changesPersistentState(choice: StoryChoice): boolean {
 }
 
 describe('deterministic dialogue', () => {
-  it('stores fixed voiced dialogue and voiced choice-result text for the main story', () => {
+  it('stores fixed dialogue while keeping stale voices out of the recap and AU boundary', () => {
     const story = loadStory();
     expect(story).toBeDefined();
     if (!story) return;
 
     for (const scene of story.scenes) {
       expect(scene.text.trim().length, scene.id).toBeGreaterThan(0);
-      expect(scene.voiceAssetId, scene.id).toMatch(/^voice\.scene\./u);
+      const retainsLegacyVoice = scene.provenance.scope === 'route' && scene.id !== 'opening_001';
+      if (retainsLegacyVoice) expect(scene.voiceAssetId, scene.id).toMatch(/^voice\.scene\./u);
+      else expect(scene.voiceAssetId, scene.id).toBeUndefined();
       for (const choice of scene.choices) {
         expect(choice.resultText?.trim().length, choice.id).toBeGreaterThan(0);
-        expect(choice.resultVoiceAssetId, choice.id).toMatch(/^voice\.result\./u);
+        if (retainsLegacyVoice) expect(choice.resultVoiceAssetId, choice.id).toMatch(/^voice\.result\./u);
+        else expect(choice.resultVoiceAssetId, choice.id).toBeUndefined();
       }
     }
+  });
+
+  it('does not attach the retired prologue video cue to the AU route selector', () => {
+    const opening = loadStory()?.scenes.find((scene) => scene.id === 'opening_001');
+    expect(opening).toBeDefined();
+    expect(opening?.videoAssetId).toBeUndefined();
+    expect(opening?.desktopVideoAssetId).toBeUndefined();
   });
 
   it('does not contain runtime generation or network calls in the story compiler', () => {

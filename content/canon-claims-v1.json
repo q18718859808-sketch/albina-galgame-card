@@ -1,0 +1,204 @@
+{
+  "version": 1,
+  "claims": [
+    {
+      "id": "canon.term.corporism",
+      "classification": "canon_exact",
+      "statement": "Corporism is the source-game name used for the Ring art movement discussed in 9-14 and practised by Albina in 9-37.",
+      "evidence": [
+        {
+          "sourceId": "source.official.canto-ix.9-14",
+          "locator": "9-14 pre-battle terminology"
+        },
+        {
+          "sourceId": "source.official.canto-ix.9-37",
+          "locator": "9-37 Albina self-introduction"
+        }
+      ]
+    },
+    {
+      "id": "canon.9-14.corporism-context",
+      "classification": "canon_paraphrase",
+      "statement": "在 9-14 的 LCE 研究区走廊，众人遭遇环指制造的人体作品；浮士德据骨骼、肌肉及其运动方式将其辨认为 Corporism，随后发现环指 Nursefather 留给女儿的创作指示。",
+      "evidence": [
+        {
+          "sourceId": "source.official.canto-ix.9-14",
+          "locator": "9-14 pre-battle, LCE Research Team Hallway"
+        },
+        {
+          "sourceId": "source.wiki.canto-ix-part-i.172275",
+          "locator": "section 14, rows before the 9-14 battle"
+        }
+      ]
+    },
+    {
+      "id": "canon.9-18.albina-first-appearance",
+      "classification": "canon_paraphrase",
+      "statement": "在 9-18 的 LCE 研究区实验室，Albina 与 Ren 接替 Shiomi Yoru 阻挡罪人，为后者接近并带走金枝争取时间。战斗中 Albina 的上半装甲与 Fascia 侧板打开，露出活体组织；她想让 Fascia 继续行动，Ren 则以服从计划为由制止并攻击她。",
+      "evidence": [
+        {
+          "sourceId": "source.official.canto-ix.9-18",
+          "locator": "9-18 pre-battle entrance and post-battle sequence"
+        },
+        {
+          "sourceId": "source.wiki.canto-ix-part-i.172275",
+          "locator": "9-18 pre-battle and post-battle rows around Albina and Ren"
+        }
+      ]
+    },
+    {
+      "id": "canon.9-37.encounter",
+      "classification": "canon_paraphrase",
+      "statement": "Operation Spider Pyre 期间，辛克莱、以实玛利、浮士德、Hohenheim 与 Alyssa 在 Ring Corridor 遭遇 Albina；玩家 {{user}} 不属于该正史参与者名单。",
+      "evidence": [
+        {
+          "sourceId": "source.official.canto-ix.9-37",
+          "locator": "9-37 pre-battle encounter"
+        },
+        {
+          "sourceId": "source.wiki.canto-ix-part-iii.177602",
+          "locator": "section 2, 9-37 pre-battle speaker sequence"
+        },
+        {
+          "sourceId": "source.bilibili.BV1rsi8B5ED2.p37",
+          "locator": "P37 opening and pre-battle sequence"
+        }
+      ]
+    },
+    {
+      "id": "canon.albina.identity-and-disposition",
+      "classification": "canon_paraphrase",
+      "statement": "Albina 自称是 Callisto 门下的 Corporism 学徒，并属于 House of Spiders；她语气温和、过度诚实且不擅长社交。",
+      "evidence": [
+        {
+          "sourceId": "source.official.canto-ix.9-37",
+          "locator": "9-37 pre-battle self-introduction and conversation"
+        },
+        {
+          "sourceId": "source.wiki.canto-ix-part-iii.177602",
+          "locator": "section 2, Albina introduction and brain-tissue explanation"
+        },
+        {
+          "sourceId": "source.wiki.albina.173286",
+          "locator": "personality and affiliation summaries"
+        }
+      ]
+    },
+    {
+      "id": "canon.albina.appearance",
+      "classification": "canon_paraphrase",
+      "statement": "Albina 使用白色全身义体，有浅灰色人工质感高马尾、左白右黑的双眼，以及白黄金配色的铁处女式装甲。",
+      "evidence": [
+        {
+          "sourceId": "source.official.canto-ix.9-37",
+          "locator": "9-37 character art and battle presentation"
+        },
+        {
+          "sourceId": "source.wiki.albina.173286",
+          "locator": "appearance summary"
+        },
+        {
+          "sourceId": "source.bilibili.BV1rsi8B5ED2.p37",
+          "locator": "P37 character sprite and battle visuals"
+        }
+      ]
+    },
+    {
+      "id": "canon.albina-fascia.anatomy-and-friends",
+      "classification": "canon_paraphrase",
+      "statement": "Fascia 是以 Albina 原本肉体构成的活体巨剑；Albina 主要保留脑，Fascia 缺少脑。Albina 把成为朋友与成为唤醒或补全 Fascia 的材料联系在一起。",
+      "evidence": [
+        {
+          "sourceId": "source.official.canto-ix.9-37",
+          "locator": "9-37 pre-battle explanation and battle context"
+        },
+        {
+          "sourceId": "source.wiki.canto-ix-part-iii.177602",
+          "locator": "section 2, Fascia and friendship explanation"
+        },
+        {
+          "sourceId": "source.bilibili.BV1brvbBDE84.p33-p34",
+          "locator": "P33 pre-battle translated sequence"
+        }
+      ]
+    },
+    {
+      "id": "canon.9-37.escalation",
+      "classification": "canon_paraphrase",
+      "statement": "9-37 中 Callisto 加入战斗后，师徒二人逐步压制 Sinclair 一行；Alyssa 随后反击。该场景并未在此结束 Albina、Fascia 与 Callisto 的正史链。",
+      "evidence": [
+        {
+          "sourceId": "source.official.canto-ix.9-37",
+          "locator": "9-37 mid-battle through Alyssa's counterattack"
+        },
+        {
+          "sourceId": "source.wiki.canto-ix-part-iii.177602",
+          "locator": "9-37 rows from Callisto joining through Alyssa's counterattack"
+        }
+      ]
+    },
+    {
+      "id": "canon.9-43.outcome",
+      "classification": "canon_paraphrase",
+      "statement": "9-43《Hatching》的既定结果是 Future Sinclair 先摧毁 Fascia，再杀死 Albina，并在之后杀死 Callisto。",
+      "evidence": [
+        {
+          "sourceId": "source.official.canto-ix.9-43",
+          "locator": "9-43 battle conclusion and post-battle"
+        },
+        {
+          "sourceId": "source.wiki.canto-ix-part-iii.177602",
+          "locator": "9-43 Hatching battle conclusion and post-battle rows"
+        },
+        {
+          "sourceId": "source.bilibili.BV1rsi8B5ED2.p43",
+          "locator": "P43, CID 35474441014, 9-43 Hatching"
+        }
+      ]
+    },
+    {
+      "id": "inference.visual-reference-lock",
+      "classification": "supported_inference",
+      "statement": "Any new visual intended to represent source-game Albina should preserve the white prosthetic body, asymmetric eyes and white-yellow-gold armor rather than the legacy human gothic-dress design.",
+      "evidence": [
+        {
+          "sourceId": "source.official.canto-ix.9-37",
+          "locator": "9-37 character art and battle presentation"
+        },
+        {
+          "sourceId": "source.bilibili.BV1rsi8B5ED2.p37",
+          "locator": "P37 character sprite and battle visuals"
+        }
+      ],
+      "rationale": "This is a production constraint inferred from directly observable canon appearance, not a new story fact."
+    },
+    {
+      "id": "boundary.routes-and-player.are-AU",
+      "classification": "AU_extension",
+      "statement": "opening_001、white_canvas、golden_bough_rebuild、ring_conspiracy、九个结局及玩家 {{user}} 的参与全部是本卡原创 AU，不是原作隐藏剧情或正史后续。",
+      "evidence": [
+        {
+          "sourceId": "source.official.canto-ix.9-43",
+          "locator": "canon outcome that precedes the card divergence"
+        },
+        {
+          "sourceId": "source.project.legacy-v1.0.44",
+          "locator": "project-authored opening and three-route story object"
+        }
+      ],
+      "rationale": "The source game fixes the 9-43 outcome; the surviving route graph is an authored extension recovered from this project."
+    },
+    {
+      "id": "rejected.legacy-opening-as-canon",
+      "classification": "rejected",
+      "statement": "The rain encounter between Albina and {{user}} is an official source-game scene or quotation.",
+      "evidence": [
+        {
+          "sourceId": "source.project.legacy-v1.0.44",
+          "locator": "legacy opening_001"
+        }
+      ],
+      "rejectionReason": "The text exists only in this project's legacy bundle and has no source-game locator; it may remain only as explicitly labelled AU_extension content."
+    }
+  ]
+}

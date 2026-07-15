@@ -1,0 +1,204 @@
+{
+  "version": 1,
+  "entries": [
+    {
+      "sceneIds": [
+        "canon_recap_9_14"
+      ],
+      "provenance": {
+        "classification": "canon_paraphrase",
+        "scope": "canon_recap",
+        "claimIds": [
+          "canon.9-14.corporism-context"
+        ],
+        "sourceIds": [
+          "source.official.canto-ix.9-14",
+          "source.wiki.canto-ix-part-i.172275"
+        ],
+        "note": "Short zh-CN event paraphrase; not a quotation or transcript replacement."
+      }
+    },
+    {
+      "sceneIds": [
+        "canon_recap_9_18"
+      ],
+      "provenance": {
+        "classification": "canon_paraphrase",
+        "scope": "canon_recap",
+        "claimIds": [
+          "canon.9-18.albina-first-appearance"
+        ],
+        "sourceIds": [
+          "source.official.canto-ix.9-18",
+          "source.wiki.canto-ix-part-i.172275"
+        ],
+        "note": "Short zh-CN first-appearance paraphrase from the pinned 9-18 pre/post-battle sequence."
+      }
+    },
+    {
+      "sceneIds": [
+        "canon_recap_9_37"
+      ],
+      "provenance": {
+        "classification": "canon_paraphrase",
+        "scope": "canon_recap",
+        "claimIds": [
+          "canon.9-37.encounter"
+        ],
+        "sourceIds": [
+          "source.official.canto-ix.9-37",
+          "source.wiki.canto-ix-part-iii.177602",
+          "source.bilibili.BV1rsi8B5ED2.p37"
+        ],
+        "note": "Short zh-CN encounter paraphrase cross-checked against the source-game scene order."
+      }
+    },
+    {
+      "sceneIds": [
+        "canon_recap_albina_fascia"
+      ],
+      "provenance": {
+        "classification": "canon_paraphrase",
+        "scope": "canon_recap",
+        "claimIds": [
+          "canon.albina.identity-and-disposition",
+          "canon.albina.appearance",
+          "canon.albina-fascia.anatomy-and-friends"
+        ],
+        "sourceIds": [
+          "source.official.canto-ix.9-37",
+          "source.wiki.canto-ix-part-iii.177602",
+          "source.wiki.albina.173286",
+          "source.bilibili.BV1rsi8B5ED2.p37",
+          "source.bilibili.BV1brvbBDE84.p33-p34"
+        ],
+        "note": "Short zh-CN character and anatomy paraphrase; no source dialogue is reproduced."
+      }
+    },
+    {
+      "sceneIds": [
+        "canon_recap_9_37_battle"
+      ],
+      "provenance": {
+        "classification": "canon_paraphrase",
+        "scope": "canon_recap",
+        "claimIds": [
+          "canon.9-37.escalation"
+        ],
+        "sourceIds": [
+          "source.official.canto-ix.9-37",
+          "source.wiki.canto-ix-part-iii.177602"
+        ],
+        "note": "Short zh-CN battle escalation paraphrase; no source dialogue is reproduced."
+      }
+    },
+    {
+      "sceneIds": [
+        "canon_recap_9_43_outcome"
+      ],
+      "provenance": {
+        "classification": "canon_paraphrase",
+        "scope": "canon_recap",
+        "claimIds": [
+          "canon.9-43.outcome"
+        ],
+        "sourceIds": [
+          "source.official.canto-ix.9-43",
+          "source.wiki.canto-ix-part-iii.177602",
+          "source.bilibili.BV1rsi8B5ED2.p43"
+        ],
+        "note": "Short zh-CN 9-43 outcome paraphrase followed by an explicit canon/AU boundary."
+      }
+    },
+    {
+      "sceneIds": [
+        "opening_001"
+      ],
+      "provenance": {
+        "classification": "AU_extension",
+        "scope": "AU_boundary",
+        "claimIds": [
+          "boundary.routes-and-player.are-AU"
+        ],
+        "sourceIds": [
+          "source.official.canto-ix.9-43",
+          "source.project.legacy-v1.0.44"
+        ],
+        "note": "Explicit continuity boundary shown before the player selects an author-created AU route."
+      }
+    },
+    {
+      "sceneIds": [
+        "white_canvas_001",
+        "white_canvas_002",
+        "white_canvas_003",
+        "white_canvas_004",
+        "white_canvas_005",
+        "white_canvas_006",
+        "white_canvas_007",
+        "white_canvas_008",
+        "white_canvas_009",
+        "white_canvas_010",
+        "white_canvas_011",
+        "white_canvas_012",
+        "white_canvas_013",
+        "white_canvas_014",
+        "white_canvas_015",
+        "white_canvas_ending_gate",
+        "white_canvas_ending_true",
+        "white_canvas_ending_normal",
+        "white_canvas_ending_bad",
+        "golden_bough_001",
+        "golden_bough_002",
+        "golden_bough_003",
+        "golden_bough_004",
+        "golden_bough_005",
+        "golden_bough_006",
+        "golden_bough_007",
+        "golden_bough_008",
+        "golden_bough_009",
+        "golden_bough_010",
+        "golden_bough_011",
+        "golden_bough_012",
+        "golden_bough_013",
+        "golden_bough_014",
+        "golden_bough_015",
+        "golden_bough_rebuild_ending_gate",
+        "golden_bough_rebuild_ending_true",
+        "golden_bough_rebuild_ending_normal",
+        "golden_bough_rebuild_ending_bad",
+        "ring_conspiracy_001",
+        "ring_conspiracy_002",
+        "ring_conspiracy_003",
+        "ring_conspiracy_004",
+        "ring_conspiracy_005",
+        "ring_conspiracy_006",
+        "ring_conspiracy_007",
+        "ring_conspiracy_008",
+        "ring_conspiracy_009",
+        "ring_conspiracy_010",
+        "ring_conspiracy_011",
+        "ring_conspiracy_012",
+        "ring_conspiracy_013",
+        "ring_conspiracy_014",
+        "ring_conspiracy_015",
+        "ring_conspiracy_ending_gate",
+        "ring_conspiracy_ending_true",
+        "ring_conspiracy_ending_normal",
+        "ring_conspiracy_ending_bad"
+      ],
+      "provenance": {
+        "classification": "AU_extension",
+        "scope": "route",
+        "claimIds": [
+          "boundary.routes-and-player.are-AU"
+        ],
+        "sourceIds": [
+          "source.official.canto-ix.9-43",
+          "source.project.legacy-v1.0.44"
+        ],
+        "note": "Project-authored route content after the explicit 9-37 divergence; never source-game canon."
+      }
+    }
+  ]
+}

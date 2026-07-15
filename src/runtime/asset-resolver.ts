@@ -1,6 +1,6 @@
 import type { AssetManifestV2, AssetRecord } from '../domain/assets';
 
-export const ALBINA_RELEASE_VERSION = '2.0.0-preview';
+export const ALBINA_RELEASE_VERSION = '2.0.0-rc.1';
 export const ALBINA_CDN_BASE = '.';
 
 export function findAsset(manifest: AssetManifestV2, assetId: string | undefined): AssetRecord | undefined {

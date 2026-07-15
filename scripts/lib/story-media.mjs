@@ -1,5 +1,4 @@
 export function videoNameForScene(scene) {
-  if (scene.id === 'opening_001') return 'prologue';
   if (scene.ending) return scene.id.replaceAll('-', '_');
   const match = /^(white_canvas|golden_bough|ring_conspiracy)_(003|005|008|011|015)$/u.exec(scene.id);
   if (!match) return undefined;

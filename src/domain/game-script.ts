@@ -36,6 +36,7 @@ function addReferenceIssue(context: z.RefinementCtx, path: PropertyKey[], id: st
 export const GameScriptV2Schema = GameScriptV2BaseSchema.superRefine((script, context) => {
   const ids = new Set<string>();
   const choiceIds = new Set<string>();
+  const scenesById = new Map(script.scenes.map((scene) => [scene.id, scene]));
 
   script.scenes.forEach((scene, sceneIndex) => {
     if (ids.has(scene.id)) {
@@ -51,8 +52,16 @@ export const GameScriptV2Schema = GameScriptV2BaseSchema.superRefine((script, co
   });
 
   if (!ids.has(script.initialSceneId)) addReferenceIssue(context, ['initialSceneId'], script.initialSceneId);
+  const initialScene = scenesById.get(script.initialSceneId);
+  if (initialScene && initialScene.provenance.scope !== 'canon_recap') {
+    context.addIssue({ code: 'custom', path: ['initialSceneId'], message: 'Initial scene must begin the canon recap' });
+  }
   Object.entries(script.routeEntrySceneIds).forEach(([route, id]) => {
     if (!ids.has(id)) addReferenceIssue(context, ['routeEntrySceneIds', route], id);
+    const scene = scenesById.get(id);
+    if (scene && (scene.route !== route || scene.provenance.classification !== 'AU_extension')) {
+      context.addIssue({ code: 'custom', path: ['routeEntrySceneIds', route], message: `Route entry must be AU_extension content for ${route}` });
+    }
   });
   script.scenes.forEach((scene, sceneIndex) => {
     scene.choices.forEach((choice, choiceIndex) => {

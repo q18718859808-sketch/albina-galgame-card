@@ -72,7 +72,7 @@ describe('security scanner', () => {
   });
 
   it('allows only the exact immutable Albina loader and canonical asset URLs in runtime files', () => {
-    const base = 'https://cdn.jsdelivr.net/gh/q18718859808-sketch/albina-galgame-card@v2.0.0/dist/albina-galgame-card';
+    const base = 'https://cdn.jsdelivr.net/gh/q18718859808-sketch/albina-galgame-card@v2.0.0-rc.1/dist/albina-galgame-card';
     expect(scanText('card/albina.card.json', `script.src='${base}/source/albina-classic-loader.js'`)).toEqual([]);
     expect(scanText('src/media.ts', `image.src='${base}/assets/cg/opening_rain.jpg'; audio.src='${base}/assets/audio/bgm/title.mp3'`)).toEqual([]);
     expect(scanText('dist/albina-galgame-card/manifest.json', `{"asset":"${base}/assets/cg/opening_rain.jpg"}`)).toEqual([]);
@@ -87,5 +87,14 @@ describe('security scanner', () => {
     'src/Makefile',
   ])('scans credential-capable text path %s', (path) => {
     expect(isScannableTextPath(path)).toBe(true);
+  });
+
+  it('rejects production progress metadata from either release tree', () => {
+    for (const path of [
+      'dist/albina-galgame-card/assets/sprite-atlas/_progress.json',
+      'release/github-cdn-root/dist/albina-galgame-card/assets/sprite-atlas/_progress.json',
+    ]) {
+      expect(scanText(path, '{}')).toContain(`${path}: production progress in web release`);
+    }
   });
 });

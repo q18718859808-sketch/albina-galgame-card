@@ -196,12 +196,6 @@
       "bytes": 223021
     },
     {
-      "id": "cg.mirror_broken",
-      "kind": "image",
-      "path": "cg/mirror_broken.png",
-      "mimeType": "image/png"
-    },
-    {
       "id": "cg.opening_rain",
       "kind": "image",
       "path": "cg/opening_rain.jpg",
@@ -216,12 +210,6 @@
       "mimeType": "image/jpeg",
       "sha256": "2312880e97be851f6f2688efb07f8d1475e7e4ea1ff3de2dde2db622bee41884",
       "bytes": 233325
-    },
-    {
-      "id": "cg.rain_reflection",
-      "kind": "image",
-      "path": "cg/rain_reflection.png",
-      "mimeType": "image/png"
     },
     {
       "id": "cg.rebuild_awakening",
@@ -293,7 +281,17 @@
       "path": "audio/bgm/backstreets_rain.mp3",
       "mimeType": "audio/mpeg",
       "sha256": "97b5969e9379853e1cc14028fbb908d8607f71ebea87f371ad0499ef94a0a414",
-      "bytes": 4192274
+      "bytes": 4192274,
+      "license": {
+        "cueAlias": "backstreets_rain",
+        "title": "SCP-x6x (Hopes)",
+        "creator": "Kevin MacLeod",
+        "isrc": "USUAN2000012",
+        "sourceUrl": "https://incompetech.com/music/royalty-free/index.html?isrc=USUAN2000012",
+        "licenseId": "CC-BY-4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+        "attribution": "SCP-x6x (Hopes) by Kevin MacLeod (incompetech.com), licensed under CC BY 4.0."
+      }
     },
     {
       "id": "file.audio.bgm.between.two.worlds.mp3",
@@ -301,7 +299,17 @@
       "path": "audio/bgm/between_two_worlds.mp3",
       "mimeType": "audio/mpeg",
       "sha256": "25470853676263801b044d22761e579a750db722aefbf1d8d48676f49f626184",
-      "bytes": 2979130
+      "bytes": 2979130,
+      "license": {
+        "cueAlias": "between_two_worlds",
+        "title": "Mesmerizing Galaxy",
+        "creator": "Kevin MacLeod",
+        "isrc": "USUAN2300011",
+        "sourceUrl": "https://incompetech.com/music/royalty-free/index.html?isrc=USUAN2300011",
+        "licenseId": "CC-BY-4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+        "attribution": "Mesmerizing Galaxy by Kevin MacLeod (incompetech.com), licensed under CC BY 4.0."
+      }
     },
     {
       "id": "file.audio.bgm.boss.kromer.mp3",
@@ -309,7 +317,17 @@
       "path": "audio/bgm/boss_kromer.mp3",
       "mimeType": "audio/mpeg",
       "sha256": "923955f3d2091d427d9e345dd6bf9d143a5c3b37631f9ada77a7bca625aa97dd",
-      "bytes": 3679463
+      "bytes": 3679463,
+      "license": {
+        "cueAlias": "boss_kromer",
+        "title": "Burnt Spirit",
+        "creator": "Kevin MacLeod",
+        "isrc": "USUAN1700053",
+        "sourceUrl": "https://incompetech.com/music/royalty-free/index.html?isrc=USUAN1700053",
+        "licenseId": "CC-BY-4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+        "attribution": "Burnt Spirit by Kevin MacLeod (incompetech.com), licensed under CC BY 4.0."
+      }
     },
     {
       "id": "file.audio.bgm.main.menu.mp3",
@@ -317,7 +335,17 @@
       "path": "audio/bgm/main_menu.mp3",
       "mimeType": "audio/mpeg",
       "sha256": "299a5619829dbb95604531d310fd89dd190009589bdcdc2ef7881f878b1f7a60",
-      "bytes": 7685141
+      "bytes": 7685141,
+      "license": {
+        "cueAlias": "main_menu",
+        "title": "Magistar",
+        "creator": "Kevin MacLeod",
+        "isrc": "USUAN1900003",
+        "sourceUrl": "https://incompetech.com/music/royalty-free/index.html?isrc=USUAN1900003",
+        "licenseId": "CC-BY-4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+        "attribution": "Magistar by Kevin MacLeod (incompetech.com), licensed under CC BY 4.0."
+      }
     },
     {
       "id": "file.audio.bgm.title.theme.mp3",
@@ -325,7 +353,25 @@
       "path": "audio/bgm/title_theme.mp3",
       "mimeType": "audio/mpeg",
       "sha256": "03917669cba8086f921712e0db8c59d32e02d63e3be443d8d4458a9d2786ded3",
-      "bytes": 2540613
+      "bytes": 2540613,
+      "license": {
+        "cueAlias": "title_theme",
+        "title": "Achilles",
+        "creator": "Kevin MacLeod",
+        "isrc": "USUAN1100463",
+        "sourceUrl": "https://incompetech.com/music/royalty-free/index.html?isrc=USUAN1100463",
+        "licenseId": "CC-BY-4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+        "attribution": "Achilles by Kevin MacLeod (incompetech.com), licensed under CC BY 4.0."
+      }
+    },
+    {
+      "id": "file.audio.credits.json",
+      "kind": "json",
+      "path": "audio/CREDITS.json",
+      "mimeType": "application/json",
+      "sha256": "9ece421fb01008b3b62563f2e74e0a8108b95893cddaae04584bfafb24b004ef",
+      "bytes": 3889
     },
     {
       "id": "file.audio.se.blood.splat.wav",
@@ -2960,238 +3006,6 @@
       "bytes": 1301881
     },
     {
-      "id": "file.original.albina.sprites.battle.png",
-      "kind": "image",
-      "path": "original_albina_sprites/battle.png",
-      "mimeType": "image/png",
-      "sha256": "b2bcaad7d5ddd3779102080b0d2081dec9941512a1afb677f5eb2392764c9bee",
-      "bytes": 1793581
-    },
-    {
-      "id": "file.original.albina.sprites.normal.png",
-      "kind": "image",
-      "path": "original_albina_sprites/normal.png",
-      "mimeType": "image/png",
-      "sha256": "6ee2ad5749e0a459680f14ae97e18e774e9c4b9d1aca5a353a49f2d0239270e3",
-      "bytes": 2017896
-    },
-    {
-      "id": "file.original.albina.sprites.sad.png",
-      "kind": "image",
-      "path": "original_albina_sprites/sad.png",
-      "mimeType": "image/png",
-      "sha256": "13edd79c92ba4230f00e8a008a565fbce60b06687bb3ed8101d2c4e63cb23240",
-      "bytes": 1795574
-    },
-    {
-      "id": "file.original.albina.sprites.smile.png",
-      "kind": "image",
-      "path": "original_albina_sprites/smile.png",
-      "mimeType": "image/png",
-      "sha256": "825bc4d615e5906d190b698a47e2fafad8ab51396696af5b965c66e3e098e0d2",
-      "bytes": 2236822
-    },
-    {
-      "id": "file.original.bg.story.library.interior.png",
-      "kind": "image",
-      "path": "original_bg_story/library_interior.png",
-      "mimeType": "image/png",
-      "sha256": "7ccd48b32fc88df3ec38ba66bf70fa490cd3c4931261a3ff13a51198c584e275",
-      "bytes": 2217028
-    },
-    {
-      "id": "file.original.cg.albina.debut.png",
-      "kind": "image",
-      "path": "original_cg/albina_debut.png",
-      "mimeType": "image/png",
-      "sha256": "cd69fc4291142ffac6e2609441ac32155c806431f7e5ef7c9602dafa5bd26d2b",
-      "bytes": 1913934
-    },
-    {
-      "id": "file.original.cg.battle.climax.png",
-      "kind": "image",
-      "path": "original_cg/battle_climax.png",
-      "mimeType": "image/png",
-      "sha256": "8f5cd613a620380fb091b2fc3cdfc645fd4e3e81864cbdf08b4e4a70a042ece6",
-      "bytes": 2049868
-    },
-    {
-      "id": "file.original.cg.canto.ix.opening.png",
-      "kind": "image",
-      "path": "original_cg/canto_ix_opening.png",
-      "mimeType": "image/png",
-      "sha256": "e28454287967229bfaed69c43e626330e14694d6383cfc643c6554beb7053ae2",
-      "bytes": 2376570
-    },
-    {
-      "id": "file.original.cg.hell.gate.png",
-      "kind": "image",
-      "path": "original_cg/hell_gate.png",
-      "mimeType": "image/png",
-      "sha256": "e2d9846c0e9a031328e92bd4532544b5f272c889fc7a7ce71675bfebb06edb3e",
-      "bytes": 2306012
-    },
-    {
-      "id": "file.original.cg.rain.confession.png",
-      "kind": "image",
-      "path": "original_cg/rain_confession.png",
-      "mimeType": "image/png",
-      "sha256": "b5615295563c2e30c4aea259e4a2b5bbf2a617355934902f810daf16a39d869b",
-      "bytes": 2041140
-    },
-    {
-      "id": "file.original.cg.ring.conspiracy.png",
-      "kind": "image",
-      "path": "original_cg/ring_conspiracy.png",
-      "mimeType": "image/png",
-      "sha256": "0df61afec53eafdf9b0abafacbedee5805f55a9664702b958abd2477be90e0ea",
-      "bytes": 2074900
-    },
-    {
-      "id": "file.sprite.atlas.albina.amused.strip.png",
-      "kind": "image",
-      "path": "sprite-atlas/albina/amused_strip.png",
-      "mimeType": "image/png",
-      "sha256": "598feb3ab51f6f0e7826c337e66b3f3cad71897061152e22a9096a6d00373d13",
-      "bytes": 3783351
-    },
-    {
-      "id": "file.sprite.atlas.albina.armored.strip.png",
-      "kind": "image",
-      "path": "sprite-atlas/albina/armored_strip.png",
-      "mimeType": "image/png",
-      "sha256": "e7556db93ffd2c4774a08cb55fd8cd37ade36f5d0a2c67122abb28958f065c0e",
-      "bytes": 3502098
-    },
-    {
-      "id": "file.sprite.atlas.albina.combat.strip.png",
-      "kind": "image",
-      "path": "sprite-atlas/albina/combat_strip.png",
-      "mimeType": "image/png",
-      "sha256": "34b4a9cb3ff6f77eaa187f1d884961f23d8f9e228da56165a160d9d45ac669b8",
-      "bytes": 3685070
-    },
-    {
-      "id": "file.sprite.atlas.albina.endgame.strip.png",
-      "kind": "image",
-      "path": "sprite-atlas/albina/endgame_strip.png",
-      "mimeType": "image/png",
-      "sha256": "9183824dde93f21acbcffd5d42ccaf5a34341612926a3d866038a7fcdcd2aa95",
-      "bytes": 4114092
-    },
-    {
-      "id": "file.sprite.atlas.albina.fascia.open.strip.png",
-      "kind": "image",
-      "path": "sprite-atlas/albina/fascia-open_strip.png",
-      "mimeType": "image/png",
-      "sha256": "83202a591278a6beabe854df464af772e58c2fa6d1a4d1072dba62082bcf5525",
-      "bytes": 3359680
-    },
-    {
-      "id": "file.sprite.atlas.albina.focused.strip.png",
-      "kind": "image",
-      "path": "sprite-atlas/albina/focused_strip.png",
-      "mimeType": "image/png",
-      "sha256": "ccf851bf3e230333846ceb4fd3cbee2e0554ebb729550026acf3ab4b08249b60",
-      "bytes": 4001551
-    },
-    {
-      "id": "file.sprite.atlas.albina.furious.strip.png",
-      "kind": "image",
-      "path": "sprite-atlas/albina/furious_strip.png",
-      "mimeType": "image/png",
-      "sha256": "92e05e4c2b6c45072203edce970ad083d1f98877a5aecd8eb3f4bc3871f2ddbe",
-      "bytes": 3225121
-    },
-    {
-      "id": "file.sprite.atlas.albina.golden.bough.strip.png",
-      "kind": "image",
-      "path": "sprite-atlas/albina/golden-bough_strip.png",
-      "mimeType": "image/png",
-      "sha256": "37acb5099f4b78fa4b43cdbf7374de92898c5fa8277a25b73187e510cb672b3f",
-      "bytes": 3829701
-    },
-    {
-      "id": "file.sprite.atlas.albina.maestro.strip.png",
-      "kind": "image",
-      "path": "sprite-atlas/albina/maestro_strip.png",
-      "mimeType": "image/png",
-      "sha256": "448278bd52df48c90421900511a5d3a4362c0af5890284422a665431632f0e2a",
-      "bytes": 3245882
-    },
-    {
-      "id": "file.sprite.atlas.albina.normal.strip.png",
-      "kind": "image",
-      "path": "sprite-atlas/albina/normal_strip.png",
-      "mimeType": "image/png",
-      "sha256": "9dd6396a5a4bb5ed031e5e6af329a7e23d43f52468b9a743fa3ccb87b96dc68f",
-      "bytes": 3297901
-    },
-    {
-      "id": "file.sprite.atlas.albina.rain.strip.png",
-      "kind": "image",
-      "path": "sprite-atlas/albina/rain_strip.png",
-      "mimeType": "image/png",
-      "sha256": "1dfd20241c048a6bdbf257d726242b74e3faa291aee37f19d956a3a4427b5b75",
-      "bytes": 3777733
-    },
-    {
-      "id": "file.sprite.atlas.albina.ring.conspiracy.strip.png",
-      "kind": "image",
-      "path": "sprite-atlas/albina/ring-conspiracy_strip.png",
-      "mimeType": "image/png",
-      "sha256": "791a8e97afe98ef66e8ff98ec4030e20e6e218178ca24525ef7c16a91e11286f",
-      "bytes": 3542405
-    },
-    {
-      "id": "file.sprite.atlas.albina.shy.strip.png",
-      "kind": "image",
-      "path": "sprite-atlas/albina/shy_strip.png",
-      "mimeType": "image/png",
-      "sha256": "b4fce99a14a9e49de682712c71a3420cbe98bed8cb671b08f3b39e0a6eed7efa",
-      "bytes": 3529806
-    },
-    {
-      "id": "file.sprite.atlas.albina.smile.strip.png",
-      "kind": "image",
-      "path": "sprite-atlas/albina/smile_strip.png",
-      "mimeType": "image/png",
-      "sha256": "edeea2c2e1176f1c84a82ed101601fcdf30b8531732a217867711c9f0beaf537",
-      "bytes": 3520893
-    },
-    {
-      "id": "file.sprite.atlas.albina.surgical.strip.png",
-      "kind": "image",
-      "path": "sprite-atlas/albina/surgical_strip.png",
-      "mimeType": "image/png",
-      "sha256": "fe3f8cae7d405baf2d4cdcddc7f2d1dd18826c5a0f10f835749722b41d3545df",
-      "bytes": 3268222
-    },
-    {
-      "id": "file.sprite.atlas.albina.unarmored.strip.png",
-      "kind": "image",
-      "path": "sprite-atlas/albina/unarmored_strip.png",
-      "mimeType": "image/png",
-      "sha256": "86d9ba8388fa7e6523b37911e3514e5746ddf19e3d61d463488df27d69032e16",
-      "bytes": 3599579
-    },
-    {
-      "id": "file.sprite.atlas.albina.white.canvas.strip.png",
-      "kind": "image",
-      "path": "sprite-atlas/albina/white-canvas_strip.png",
-      "mimeType": "image/png",
-      "sha256": "2ecd8aaa89e60e6a4c23463298cb0a17d39911d900064a62b933920a3ef23c16",
-      "bytes": 3419321
-    },
-    {
-      "id": "file.sprite.atlas.albina.wounded.strip.png",
-      "kind": "image",
-      "path": "sprite-atlas/albina/wounded_strip.png",
-      "mimeType": "image/png",
-      "sha256": "62e276c181e626f0dec0f0df427840bcd73d467948850a556e113c8718c95dae",
-      "bytes": 3510714
-    },
-    {
       "id": "file.sprite.atlas.callisto.normal.strip.png",
       "kind": "image",
       "path": "sprite-atlas/callisto/normal_strip.png",
@@ -3254,22 +3068,6 @@
       "mimeType": "image/png",
       "sha256": "f05fbdcbead14511b2e34cc712715b5582504bf2af17e2e86dbbdb8d146868d1",
       "bytes": 3297944
-    },
-    {
-      "id": "file.sprite.atlas.original.cg.albina.debut.strip.png",
-      "kind": "image",
-      "path": "sprite-atlas/original_cg/albina_debut_strip.png",
-      "mimeType": "image/png",
-      "sha256": "2ee88c382d413f62803f01a1a80a5743b9bf21061426cc3a16ea77a717506669",
-      "bytes": 2925431
-    },
-    {
-      "id": "file.sprite.atlas.original.cg.battle.climax.strip.png",
-      "kind": "image",
-      "path": "sprite-atlas/original_cg/battle_climax_strip.png",
-      "mimeType": "image/png",
-      "sha256": "db536e31152fa857e4958cc748e645eefbee8f45576ba1183a5f8ffcb43b1264",
-      "bytes": 2864495
     },
     {
       "id": "file.sprite.atlas.protagonist.battle.strip.png",
@@ -3448,30 +3246,6 @@
       "bytes": 1655
     },
     {
-      "id": "file.video.animated.desktop.ed.golden.bough.rebuild.mp4",
-      "kind": "video",
-      "path": "video/animated/desktop/ed_golden_bough_rebuild.mp4",
-      "mimeType": "video/mp4",
-      "sha256": "2fea23d2d53819f84638318e5a7c3b00da51c38703f452f946b13315faf96b00",
-      "bytes": 7264295
-    },
-    {
-      "id": "file.video.animated.desktop.ed.ring.conspiracy.mp4",
-      "kind": "video",
-      "path": "video/animated/desktop/ed_ring_conspiracy.mp4",
-      "mimeType": "video/mp4",
-      "sha256": "a5ccf17d2ba26bc1248b383ab669662a792a91b1776c637799cffa2b003cdac3",
-      "bytes": 6393945
-    },
-    {
-      "id": "file.video.animated.desktop.ed.white.canvas.mp4",
-      "kind": "video",
-      "path": "video/animated/desktop/ed_white_canvas.mp4",
-      "mimeType": "video/mp4",
-      "sha256": "be466f619c7773a06dfa5e6123e971d102a79c0df98ce9673cbd14ce332b21d2",
-      "bytes": 5539601
-    },
-    {
       "id": "file.video.animated.desktop.golden.bough.rebuild.ending.bad.mp4",
       "kind": "video",
       "path": "video/animated/desktop/golden_bough_rebuild_ending_bad.mp4",
@@ -3534,22 +3308,6 @@
       "mimeType": "video/mp4",
       "sha256": "56176731dc6ccc9892bfc7e7163bb736f5f662226910235a38d28117eaa817bd",
       "bytes": 5167077
-    },
-    {
-      "id": "file.video.animated.desktop.op.mp4",
-      "kind": "video",
-      "path": "video/animated/desktop/op.mp4",
-      "mimeType": "video/mp4",
-      "sha256": "92774f55e85ae2933f162080916993d95fb6234a0dade047ab4a1471d846c811",
-      "bytes": 5222191
-    },
-    {
-      "id": "file.video.animated.desktop.prologue.mp4",
-      "kind": "video",
-      "path": "video/animated/desktop/prologue.mp4",
-      "mimeType": "video/mp4",
-      "sha256": "18768d90579f3c08b3194ef9d88c32ec77eeade557740a8c76b4596b38da42cb",
-      "bytes": 4568125
     },
     {
       "id": "file.video.animated.desktop.ring.conspiracy.ending.bad.mp4",
@@ -3680,30 +3438,6 @@
       "bytes": 4854170
     },
     {
-      "id": "file.video.animated.runtime.ed.golden.bough.rebuild.mp4",
-      "kind": "video",
-      "path": "video/animated/runtime/ed_golden_bough_rebuild.mp4",
-      "mimeType": "video/mp4",
-      "sha256": "346cfd4275cf79b01a8d4fb3d4df2f79c1df433af5222debb5cdbb6369c16128",
-      "bytes": 4185642
-    },
-    {
-      "id": "file.video.animated.runtime.ed.ring.conspiracy.mp4",
-      "kind": "video",
-      "path": "video/animated/runtime/ed_ring_conspiracy.mp4",
-      "mimeType": "video/mp4",
-      "sha256": "3d7c1e7612c1bc376de009d85fae9159e104275678b0982296e47c10f2b89115",
-      "bytes": 3545978
-    },
-    {
-      "id": "file.video.animated.runtime.ed.white.canvas.mp4",
-      "kind": "video",
-      "path": "video/animated/runtime/ed_white_canvas.mp4",
-      "mimeType": "video/mp4",
-      "sha256": "c4aa0f491be3053c4b5c76e1310cf409bbe41ad0ba4d4bd22394a6af7a74e48e",
-      "bytes": 3071385
-    },
-    {
       "id": "file.video.animated.runtime.golden.bough.rebuild.ending.bad.mp4",
       "kind": "video",
       "path": "video/animated/runtime/golden_bough_rebuild_ending_bad.mp4",
@@ -3766,22 +3500,6 @@
       "mimeType": "video/mp4",
       "sha256": "dc3b1cce4d43093e240e390a2f3209228ffa73a2041e89ae292e0790d66118ed",
       "bytes": 2797722
-    },
-    {
-      "id": "file.video.animated.runtime.op.mp4",
-      "kind": "video",
-      "path": "video/animated/runtime/op.mp4",
-      "mimeType": "video/mp4",
-      "sha256": "3b0025fb8d6afce1bc68a740afdab317fd95d41144fcc48c58b85b8ea2cdab99",
-      "bytes": 2777954
-    },
-    {
-      "id": "file.video.animated.runtime.prologue.mp4",
-      "kind": "video",
-      "path": "video/animated/runtime/prologue.mp4",
-      "mimeType": "video/mp4",
-      "sha256": "fe51ae3b788556551e5960d1e82bacb84a7484ff3edff273872ac5ed8eec8ad0",
-      "bytes": 2583756
     },
     {
       "id": "file.video.animated.runtime.ring.conspiracy.ending.bad.mp4",
@@ -3912,94 +3630,6 @@
       "bytes": 2685560
     },
     {
-      "id": "file.videos.ed.mp4",
-      "kind": "video",
-      "path": "videos/ed.mp4",
-      "mimeType": "video/mp4",
-      "sha256": "01ac39c322816e6b98df0bc2fc57c952e610c19062578d4197c8685a6ba59761",
-      "bytes": 13428432
-    },
-    {
-      "id": "file.videos.op.mp4",
-      "kind": "video",
-      "path": "videos/op.mp4",
-      "mimeType": "video/mp4",
-      "sha256": "7d47fd8dec2fc4ac70c80c436412b084683ca2367825626a455e57ad87ed8b2b",
-      "bytes": 15563758
-    },
-    {
-      "id": "strip.original.albina.sprites.battle",
-      "kind": "image",
-      "path": "sprite-atlas/original_albina_sprites/battle_strip.png",
-      "mimeType": "image/png"
-    },
-    {
-      "id": "strip.original.albina.sprites.normal",
-      "kind": "image",
-      "path": "sprite-atlas/original_albina_sprites/normal_strip.png",
-      "mimeType": "image/png"
-    },
-    {
-      "id": "strip.original.albina.sprites.sad",
-      "kind": "image",
-      "path": "sprite-atlas/original_albina_sprites/sad_strip.png",
-      "mimeType": "image/png"
-    },
-    {
-      "id": "strip.original.albina.sprites.smile",
-      "kind": "image",
-      "path": "sprite-atlas/original_albina_sprites/smile_strip.png",
-      "mimeType": "image/png"
-    },
-    {
-      "id": "strip.original.cg.canto.ix.opening",
-      "kind": "image",
-      "path": "sprite-atlas/original_cg/canto_ix_opening_strip.png",
-      "mimeType": "image/png"
-    },
-    {
-      "id": "strip.original.cg.hell.gate",
-      "kind": "image",
-      "path": "sprite-atlas/original_cg/hell_gate_strip.png",
-      "mimeType": "image/png"
-    },
-    {
-      "id": "strip.original.cg.rain.confession",
-      "kind": "image",
-      "path": "sprite-atlas/original_cg/rain_confession_strip.png",
-      "mimeType": "image/png"
-    },
-    {
-      "id": "strip.original.cg.ring.conspiracy",
-      "kind": "image",
-      "path": "sprite-atlas/original_cg/ring_conspiracy_strip.png",
-      "mimeType": "image/png"
-    },
-    {
-      "id": "video.animated.desktop.ed_golden_bough_rebuild",
-      "kind": "video",
-      "path": "video/animated/desktop/ed_golden_bough_rebuild.mp4",
-      "mimeType": "video/mp4",
-      "sha256": "2fea23d2d53819f84638318e5a7c3b00da51c38703f452f946b13315faf96b00",
-      "bytes": 7264295
-    },
-    {
-      "id": "video.animated.desktop.ed_ring_conspiracy",
-      "kind": "video",
-      "path": "video/animated/desktop/ed_ring_conspiracy.mp4",
-      "mimeType": "video/mp4",
-      "sha256": "a5ccf17d2ba26bc1248b383ab669662a792a91b1776c637799cffa2b003cdac3",
-      "bytes": 6393945
-    },
-    {
-      "id": "video.animated.desktop.ed_white_canvas",
-      "kind": "video",
-      "path": "video/animated/desktop/ed_white_canvas.mp4",
-      "mimeType": "video/mp4",
-      "sha256": "be466f619c7773a06dfa5e6123e971d102a79c0df98ce9673cbd14ce332b21d2",
-      "bytes": 5539601
-    },
-    {
       "id": "video.animated.desktop.golden_bough_rebuild_ending_bad",
       "kind": "video",
       "path": "video/animated/desktop/golden_bough_rebuild_ending_bad.mp4",
@@ -4062,22 +3692,6 @@
       "mimeType": "video/mp4",
       "sha256": "56176731dc6ccc9892bfc7e7163bb736f5f662226910235a38d28117eaa817bd",
       "bytes": 5167077
-    },
-    {
-      "id": "video.animated.desktop.op",
-      "kind": "video",
-      "path": "video/animated/desktop/op.mp4",
-      "mimeType": "video/mp4",
-      "sha256": "92774f55e85ae2933f162080916993d95fb6234a0dade047ab4a1471d846c811",
-      "bytes": 5222191
-    },
-    {
-      "id": "video.animated.desktop.prologue",
-      "kind": "video",
-      "path": "video/animated/desktop/prologue.mp4",
-      "mimeType": "video/mp4",
-      "sha256": "18768d90579f3c08b3194ef9d88c32ec77eeade557740a8c76b4596b38da42cb",
-      "bytes": 4568125
     },
     {
       "id": "video.animated.desktop.ring_conspiracy_ending_bad",
@@ -4208,30 +3822,6 @@
       "bytes": 4854170
     },
     {
-      "id": "video.animated.runtime.ed_golden_bough_rebuild",
-      "kind": "video",
-      "path": "video/animated/runtime/ed_golden_bough_rebuild.mp4",
-      "mimeType": "video/mp4",
-      "sha256": "346cfd4275cf79b01a8d4fb3d4df2f79c1df433af5222debb5cdbb6369c16128",
-      "bytes": 4185642
-    },
-    {
-      "id": "video.animated.runtime.ed_ring_conspiracy",
-      "kind": "video",
-      "path": "video/animated/runtime/ed_ring_conspiracy.mp4",
-      "mimeType": "video/mp4",
-      "sha256": "3d7c1e7612c1bc376de009d85fae9159e104275678b0982296e47c10f2b89115",
-      "bytes": 3545978
-    },
-    {
-      "id": "video.animated.runtime.ed_white_canvas",
-      "kind": "video",
-      "path": "video/animated/runtime/ed_white_canvas.mp4",
-      "mimeType": "video/mp4",
-      "sha256": "c4aa0f491be3053c4b5c76e1310cf409bbe41ad0ba4d4bd22394a6af7a74e48e",
-      "bytes": 3071385
-    },
-    {
       "id": "video.animated.runtime.golden_bough_rebuild_ending_bad",
       "kind": "video",
       "path": "video/animated/runtime/golden_bough_rebuild_ending_bad.mp4",
@@ -4294,22 +3884,6 @@
       "mimeType": "video/mp4",
       "sha256": "dc3b1cce4d43093e240e390a2f3209228ffa73a2041e89ae292e0790d66118ed",
       "bytes": 2797722
-    },
-    {
-      "id": "video.animated.runtime.op",
-      "kind": "video",
-      "path": "video/animated/runtime/op.mp4",
-      "mimeType": "video/mp4",
-      "sha256": "3b0025fb8d6afce1bc68a740afdab317fd95d41144fcc48c58b85b8ea2cdab99",
-      "bytes": 2777954
-    },
-    {
-      "id": "video.animated.runtime.prologue",
-      "kind": "video",
-      "path": "video/animated/runtime/prologue.mp4",
-      "mimeType": "video/mp4",
-      "sha256": "fe51ae3b788556551e5960d1e82bacb84a7484ff3edff273872ac5ed8eec8ad0",
-      "bytes": 2583756
     },
     {
       "id": "video.animated.runtime.ring_conspiracy_ending_bad",
@@ -4638,30 +4212,6 @@
       "mimeType": "audio/mpeg",
       "sha256": "0e165916d831f3aab506621939c657e90f4fa282a6fb212061143a82e6ccfebe",
       "bytes": 210804
-    },
-    {
-      "id": "voice.result.enter_conspiracy",
-      "kind": "audio",
-      "path": "audio/voice/result/enter_conspiracy.mp3",
-      "mimeType": "audio/mpeg",
-      "sha256": "f8964fe276712a75e96af70eceb75f46845ab038422a529a4ca67d6ccc168e56",
-      "bytes": 204468
-    },
-    {
-      "id": "voice.result.enter_rebuild",
-      "kind": "audio",
-      "path": "audio/voice/result/enter_rebuild.mp3",
-      "mimeType": "audio/mpeg",
-      "sha256": "fa7f6c482fb449c3f7c61f2d556182e30a49d449d14fb8329213f97ba8dae9db",
-      "bytes": 202740
-    },
-    {
-      "id": "voice.result.enter_white_canvas",
-      "kind": "audio",
-      "path": "audio/voice/result/enter_white_canvas.mp3",
-      "mimeType": "audio/mpeg",
-      "sha256": "5f238c579d61475995d082999f73a16d0c182f8db58a16ab8cd9d2a802277d97",
-      "bytes": 164724
     },
     {
       "id": "voice.result.golden_bough_rebuild.bad_ending",
@@ -5360,14 +4910,6 @@
       "bytes": 222900
     },
     {
-      "id": "voice.scene.opening_001",
-      "kind": "audio",
-      "path": "audio/voice/scene/opening_001.mp3",
-      "mimeType": "audio/mpeg",
-      "sha256": "497c1b3cba838f47ce02c67ddb31ebdcc49e5cb8eaa5bbfa2027f6fef3a165a8",
-      "bytes": 166452
-    },
-    {
       "id": "voice.scene.ring_conspiracy_001",
       "kind": "audio",
       "path": "audio/voice/scene/ring_conspiracy_001.mp3",
@@ -5677,253 +5219,163 @@
       "version": 2,
       "id": "portrait.albina.amused",
       "characterId": "albina",
-      "path": "sprite-atlas/albina/amused_strip.png",
+      "path": "characters/albina/amused.png",
       "animation": {
-        "kind": "strip",
-        "frameCount": 8,
-        "frameWidth": 192,
-        "frameHeight": 1024,
-        "fps": 8
-      },
-      "fallbackAssetId": "file.characters.albina.amused.png"
+        "kind": "static"
+      }
     },
     {
       "version": 2,
       "id": "portrait.albina.armored",
       "characterId": "albina",
-      "path": "sprite-atlas/albina/armored_strip.png",
+      "path": "characters/albina/armored.png",
       "animation": {
-        "kind": "strip",
-        "frameCount": 8,
-        "frameWidth": 192,
-        "frameHeight": 1024,
-        "fps": 8
-      },
-      "fallbackAssetId": "file.characters.albina.armored.png"
+        "kind": "static"
+      }
     },
     {
       "version": 2,
       "id": "portrait.albina.combat",
       "characterId": "albina",
-      "path": "sprite-atlas/albina/combat_strip.png",
+      "path": "characters/albina/combat.png",
       "animation": {
-        "kind": "strip",
-        "frameCount": 8,
-        "frameWidth": 192,
-        "frameHeight": 1024,
-        "fps": 8
-      },
-      "fallbackAssetId": "file.characters.albina.combat.png"
+        "kind": "static"
+      }
     },
     {
       "version": 2,
       "id": "portrait.albina.endgame",
       "characterId": "albina",
-      "path": "sprite-atlas/albina/endgame_strip.png",
+      "path": "characters/albina/endgame.png",
       "animation": {
-        "kind": "strip",
-        "frameCount": 8,
-        "frameWidth": 192,
-        "frameHeight": 1024,
-        "fps": 8
-      },
-      "fallbackAssetId": "file.characters.albina.endgame.png"
+        "kind": "static"
+      }
     },
     {
       "version": 2,
       "id": "portrait.albina.fascia-open",
       "characterId": "albina",
-      "path": "sprite-atlas/albina/fascia-open_strip.png",
+      "path": "characters/albina/fascia-open.png",
       "animation": {
-        "kind": "strip",
-        "frameCount": 8,
-        "frameWidth": 192,
-        "frameHeight": 1024,
-        "fps": 8
-      },
-      "fallbackAssetId": "file.characters.albina.fascia.open.png"
+        "kind": "static"
+      }
     },
     {
       "version": 2,
       "id": "portrait.albina.focused",
       "characterId": "albina",
-      "path": "sprite-atlas/albina/focused_strip.png",
+      "path": "characters/albina/focused.png",
       "animation": {
-        "kind": "strip",
-        "frameCount": 8,
-        "frameWidth": 192,
-        "frameHeight": 1024,
-        "fps": 8
-      },
-      "fallbackAssetId": "file.characters.albina.focused.png"
+        "kind": "static"
+      }
     },
     {
       "version": 2,
       "id": "portrait.albina.furious",
       "characterId": "albina",
-      "path": "sprite-atlas/albina/furious_strip.png",
+      "path": "characters/albina/furious.png",
       "animation": {
-        "kind": "strip",
-        "frameCount": 8,
-        "frameWidth": 192,
-        "frameHeight": 1024,
-        "fps": 8
-      },
-      "fallbackAssetId": "file.characters.albina.furious.png"
+        "kind": "static"
+      }
     },
     {
       "version": 2,
       "id": "portrait.albina.golden-bough",
       "characterId": "albina",
-      "path": "sprite-atlas/albina/golden-bough_strip.png",
+      "path": "characters/albina/golden-bough.png",
       "animation": {
-        "kind": "strip",
-        "frameCount": 8,
-        "frameWidth": 192,
-        "frameHeight": 1024,
-        "fps": 8
-      },
-      "fallbackAssetId": "file.characters.albina.golden.bough.png"
+        "kind": "static"
+      }
     },
     {
       "version": 2,
       "id": "portrait.albina.maestro",
       "characterId": "albina",
-      "path": "sprite-atlas/albina/maestro_strip.png",
+      "path": "characters/albina/maestro.png",
       "animation": {
-        "kind": "strip",
-        "frameCount": 8,
-        "frameWidth": 192,
-        "frameHeight": 1024,
-        "fps": 8
-      },
-      "fallbackAssetId": "file.characters.albina.maestro.png"
+        "kind": "static"
+      }
     },
     {
       "version": 2,
       "id": "portrait.albina.normal",
       "characterId": "albina",
-      "path": "sprite-atlas/albina/normal_strip.png",
+      "path": "characters/albina/normal.png",
       "animation": {
-        "kind": "strip",
-        "frameCount": 8,
-        "frameWidth": 192,
-        "frameHeight": 1024,
-        "fps": 8
-      },
-      "fallbackAssetId": "file.characters.albina.normal.png"
+        "kind": "static"
+      }
     },
     {
       "version": 2,
       "id": "portrait.albina.rain",
       "characterId": "albina",
-      "path": "sprite-atlas/albina/rain_strip.png",
+      "path": "characters/albina/rain.png",
       "animation": {
-        "kind": "strip",
-        "frameCount": 8,
-        "frameWidth": 192,
-        "frameHeight": 1024,
-        "fps": 8
-      },
-      "fallbackAssetId": "file.characters.albina.rain.png"
+        "kind": "static"
+      }
     },
     {
       "version": 2,
       "id": "portrait.albina.ring-conspiracy",
       "characterId": "albina",
-      "path": "sprite-atlas/albina/ring-conspiracy_strip.png",
+      "path": "characters/albina/ring-conspiracy.png",
       "animation": {
-        "kind": "strip",
-        "frameCount": 8,
-        "frameWidth": 192,
-        "frameHeight": 1024,
-        "fps": 8
-      },
-      "fallbackAssetId": "file.characters.albina.ring.conspiracy.png"
+        "kind": "static"
+      }
     },
     {
       "version": 2,
       "id": "portrait.albina.shy",
       "characterId": "albina",
-      "path": "sprite-atlas/albina/shy_strip.png",
+      "path": "characters/albina/shy.png",
       "animation": {
-        "kind": "strip",
-        "frameCount": 8,
-        "frameWidth": 192,
-        "frameHeight": 1024,
-        "fps": 8
-      },
-      "fallbackAssetId": "file.characters.albina.shy.png"
+        "kind": "static"
+      }
     },
     {
       "version": 2,
       "id": "portrait.albina.smile",
       "characterId": "albina",
-      "path": "sprite-atlas/albina/smile_strip.png",
+      "path": "characters/albina/smile.png",
       "animation": {
-        "kind": "strip",
-        "frameCount": 8,
-        "frameWidth": 192,
-        "frameHeight": 1024,
-        "fps": 8
-      },
-      "fallbackAssetId": "file.characters.albina.smile.png"
+        "kind": "static"
+      }
     },
     {
       "version": 2,
       "id": "portrait.albina.surgical",
       "characterId": "albina",
-      "path": "sprite-atlas/albina/surgical_strip.png",
+      "path": "characters/albina/surgical.png",
       "animation": {
-        "kind": "strip",
-        "frameCount": 8,
-        "frameWidth": 192,
-        "frameHeight": 1024,
-        "fps": 8
-      },
-      "fallbackAssetId": "file.characters.albina.surgical.png"
+        "kind": "static"
+      }
     },
     {
       "version": 2,
       "id": "portrait.albina.unarmored",
       "characterId": "albina",
-      "path": "sprite-atlas/albina/unarmored_strip.png",
+      "path": "characters/albina/unarmored.png",
       "animation": {
-        "kind": "strip",
-        "frameCount": 8,
-        "frameWidth": 192,
-        "frameHeight": 1024,
-        "fps": 8
-      },
-      "fallbackAssetId": "file.characters.albina.unarmored.png"
+        "kind": "static"
+      }
     },
     {
       "version": 2,
       "id": "portrait.albina.white-canvas",
       "characterId": "albina",
-      "path": "sprite-atlas/albina/white-canvas_strip.png",
+      "path": "characters/albina/white-canvas.png",
       "animation": {
-        "kind": "strip",
-        "frameCount": 8,
-        "frameWidth": 192,
-        "frameHeight": 1024,
-        "fps": 8
-      },
-      "fallbackAssetId": "file.characters.albina.white.canvas.png"
+        "kind": "static"
+      }
     },
     {
       "version": 2,
       "id": "portrait.albina.wounded",
       "characterId": "albina",
-      "path": "sprite-atlas/albina/wounded_strip.png",
+      "path": "characters/albina/wounded.png",
       "animation": {
-        "kind": "strip",
-        "frameCount": 8,
-        "frameWidth": 192,
-        "frameHeight": 1024,
-        "fps": 8
-      },
-      "fallbackAssetId": "file.characters.albina.wounded.png"
+        "kind": "static"
+      }
     },
     {
       "version": 2,
@@ -5966,15 +5418,6 @@
         "fps": 8
       },
       "fallbackAssetId": "file.characters.dante.normal.png"
-    },
-    {
-      "version": 2,
-      "id": "portrait.fascia.normal",
-      "characterId": "fascia",
-      "path": "characters/albina/fascia-open.png",
-      "animation": {
-        "kind": "static"
-      }
     },
     {
       "version": 2,
@@ -6045,34 +5488,6 @@
         "fps": 8
       },
       "fallbackAssetId": "file.characters.lce.doctor.normal.png"
-    },
-    {
-      "version": 2,
-      "id": "portrait.original_cg.albina_debut",
-      "characterId": "original_cg",
-      "path": "sprite-atlas/original_cg/albina_debut_strip.png",
-      "animation": {
-        "kind": "strip",
-        "frameCount": 8,
-        "frameWidth": 192,
-        "frameHeight": 1024,
-        "fps": 8
-      },
-      "fallbackAssetId": "file.original.cg.albina.debut.png"
-    },
-    {
-      "version": 2,
-      "id": "portrait.original_cg.battle_climax",
-      "characterId": "original_cg",
-      "path": "sprite-atlas/original_cg/battle_climax_strip.png",
-      "animation": {
-        "kind": "strip",
-        "frameCount": 8,
-        "frameWidth": 192,
-        "frameHeight": 1024,
-        "fps": 8
-      },
-      "fallbackAssetId": "file.original.cg.battle.climax.png"
     },
     {
       "version": 2,
@@ -6299,152 +5714,5 @@
       "fallbackAssetId": "file.characters.yi.sang.normal.png"
     }
   ],
-  "mediaJobs": [
-    {
-      "version": 2,
-      "id": "job.cg.mirror_broken",
-      "assetId": "cg.mirror_broken",
-      "kind": "image-edit",
-      "model": "gpt-image-2",
-      "status": "pending",
-      "contentHash": "e5712718c58921a33f66f79120485926682a183d7445286abe8547624784b77e",
-      "inputAssetIds": [
-        "cg.art_resonance"
-      ],
-      "outputPath": "cg/mirror_broken.png",
-      "attempts": 0
-    },
-    {
-      "version": 2,
-      "id": "job.cg.rain_reflection",
-      "assetId": "cg.rain_reflection",
-      "kind": "image-edit",
-      "model": "gpt-image-2",
-      "status": "pending",
-      "contentHash": "7a9867eab82e7242ee694cb446d18864759bcc0558b1e80a60b4428ee13b2a94",
-      "inputAssetIds": [
-        "cg.rain_confession"
-      ],
-      "outputPath": "cg/rain_reflection.png",
-      "attempts": 0
-    },
-    {
-      "version": 2,
-      "id": "job.strip.original.albina.sprites.battle",
-      "assetId": "strip.original.albina.sprites.battle",
-      "kind": "image-edit",
-      "model": "gpt-image-2",
-      "status": "pending",
-      "contentHash": "1f2bfd5f7b505c355c3a4aa849bfd46d667d0fe75af2ea71235cba4ea56ea1f1",
-      "inputAssetIds": [
-        "file.original.albina.sprites.battle.png"
-      ],
-      "outputPath": "sprite-atlas/original_albina_sprites/battle_strip.png",
-      "attempts": 3,
-      "error": "HTTP 403: {\"error\":{\"message\":\"预扣费额度失败, 用户剩余额度: ＄0.050000, 需要预扣费额度: ＄0.100000 (request id: 202607091842143082986988268d9d66TROf2Up)\",\"type\":\"new_api_error\",\"param\":\"\",\"code\":\"insufficient_user_quota\"}}"
-    },
-    {
-      "version": 2,
-      "id": "job.strip.original.albina.sprites.normal",
-      "assetId": "strip.original.albina.sprites.normal",
-      "kind": "image-edit",
-      "model": "gpt-image-2",
-      "status": "pending",
-      "contentHash": "b92d284a2e50aaf02ebd8b3996a50749f93a057d19bc2a7afcc7ee065306dfcb",
-      "inputAssetIds": [
-        "file.original.albina.sprites.normal.png"
-      ],
-      "outputPath": "sprite-atlas/original_albina_sprites/normal_strip.png",
-      "attempts": 3,
-      "error": "HTTP 403: {\"error\":{\"message\":\"预扣费额度失败, 用户剩余额度: ＄0.050000, 需要预扣费额度: ＄0.100000 (request id: 202607091842477024722458268d9d6mw1xzwxB)\",\"type\":\"new_api_error\",\"param\":\"\",\"code\":\"insufficient_user_quota\"}}"
-    },
-    {
-      "version": 2,
-      "id": "job.strip.original.albina.sprites.sad",
-      "assetId": "strip.original.albina.sprites.sad",
-      "kind": "image-edit",
-      "model": "gpt-image-2",
-      "status": "pending",
-      "contentHash": "ca5a1122df15a71bb788355d8ac5af627564cb97d12bdf483499fd35eee2fc97",
-      "inputAssetIds": [
-        "file.original.albina.sprites.sad.png"
-      ],
-      "outputPath": "sprite-atlas/original_albina_sprites/sad_strip.png",
-      "attempts": 0
-    },
-    {
-      "version": 2,
-      "id": "job.strip.original.albina.sprites.smile",
-      "assetId": "strip.original.albina.sprites.smile",
-      "kind": "image-edit",
-      "model": "gpt-image-2",
-      "status": "pending",
-      "contentHash": "c1dce303e33582f94413e268abb26f0eb2ee106a84e74b63697ccba2300fb9f0",
-      "inputAssetIds": [
-        "file.original.albina.sprites.smile.png"
-      ],
-      "outputPath": "sprite-atlas/original_albina_sprites/smile_strip.png",
-      "attempts": 0
-    },
-    {
-      "version": 2,
-      "id": "job.strip.original.cg.canto.ix.opening",
-      "assetId": "strip.original.cg.canto.ix.opening",
-      "kind": "image-edit",
-      "model": "gpt-image-2",
-      "status": "pending",
-      "contentHash": "032993f9e4c1981393e364a8b5272ca690f9dda11951a01cd83b13390ae3aab0",
-      "inputAssetIds": [
-        "file.original.cg.canto.ix.opening.png"
-      ],
-      "outputPath": "sprite-atlas/original_cg/canto_ix_opening_strip.png",
-      "attempts": 3,
-      "error": "HTTP 403: {\"error\":{\"message\":\"预扣费额度失败, 用户剩余额度: ＄0.050000, 需要预扣费额度: ＄0.100000 (request id: 202607091839498508537008268d9d67gwnpnxM)\",\"type\":\"new_api_error\",\"param\":\"\",\"code\":\"insufficient_user_quota\"}}"
-    },
-    {
-      "version": 2,
-      "id": "job.strip.original.cg.hell.gate",
-      "assetId": "strip.original.cg.hell.gate",
-      "kind": "image-edit",
-      "model": "gpt-image-2",
-      "status": "pending",
-      "contentHash": "ce3a392e94477edff91c0b734e0316700eae6e6814223106e12d8f14417f12ed",
-      "inputAssetIds": [
-        "file.original.cg.hell.gate.png"
-      ],
-      "outputPath": "sprite-atlas/original_cg/hell_gate_strip.png",
-      "attempts": 3,
-      "error": "HTTP 403: {\"error\":{\"message\":\"预扣费额度失败, 用户剩余额度: ＄0.050000, 需要预扣费额度: ＄0.100000 (request id: 202607091840249061893478268d9d6ka0wLtJk)\",\"type\":\"new_api_error\",\"param\":\"\",\"code\":\"insufficient_user_quota\"}}"
-    },
-    {
-      "version": 2,
-      "id": "job.strip.original.cg.rain.confession",
-      "assetId": "strip.original.cg.rain.confession",
-      "kind": "image-edit",
-      "model": "gpt-image-2",
-      "status": "pending",
-      "contentHash": "3df4e7b9df7a4ae8e9f7b2819bbf45ee8ef76d8a7af908a5ead09bf89602b073",
-      "inputAssetIds": [
-        "file.original.cg.rain.confession.png"
-      ],
-      "outputPath": "sprite-atlas/original_cg/rain_confession_strip.png",
-      "attempts": 3,
-      "error": "HTTP 403: {\"error\":{\"message\":\"预扣费额度失败, 用户剩余额度: ＄0.050000, 需要预扣费额度: ＄0.100000 (request id: 202607091840546398154378268d9d6BnzkAOYB)\",\"type\":\"new_api_error\",\"param\":\"\",\"code\":\"insufficient_user_quota\"}}"
-    },
-    {
-      "version": 2,
-      "id": "job.strip.original.cg.ring.conspiracy",
-      "assetId": "strip.original.cg.ring.conspiracy",
-      "kind": "image-edit",
-      "model": "gpt-image-2",
-      "status": "pending",
-      "contentHash": "572873181a31313d7b15266c864ca85d28e269394d3ae3b5101c71e279b83a91",
-      "inputAssetIds": [
-        "file.original.cg.ring.conspiracy.png"
-      ],
-      "outputPath": "sprite-atlas/original_cg/ring_conspiracy_strip.png",
-      "attempts": 3,
-      "error": "HTTP 403: {\"error\":{\"message\":\"预扣费额度失败, 用户剩余额度: ＄0.050000, 需要预扣费额度: ＄0.100000 (request id: 202607091841379559462728268d9d67jCFuMAr)\",\"type\":\"new_api_error\",\"param\":\"\",\"code\":\"insufficient_user_quota\"}}"
-    }
-  ]
+  "mediaJobs": []
 }

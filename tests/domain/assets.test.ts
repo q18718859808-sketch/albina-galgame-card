@@ -1,7 +1,9 @@
 import { describe, expect, it } from 'vitest';
 
 import {
+  AssetLicenseSchema,
   AssetManifestV2Schema,
+  AssetRecordSchema,
   MediaJobSchema,
   PortraitAssetSchema,
 } from '../../src/domain/assets';
@@ -26,7 +28,9 @@ const mediaJob = {
   id: 'job.portrait.albina.normal',
   assetId: 'portrait.albina.normal',
   kind: 'image',
+  provider: 'pie',
   model: 'gpt-image-2',
+  promptVersion: 'test-image-v1',
   status: 'completed',
   contentHash: 'a'.repeat(64),
   inputAssetIds: ['portrait.albina.normal.static'],
@@ -54,6 +58,33 @@ describe('asset schemas', () => {
     ]) {
       expect(() => PortraitAssetSchema.parse({ ...portrait, path })).toThrow(/relative/i);
     }
+  });
+
+  it('enforces provider/model pairs and rejects secret production provenance', () => {
+    expect(() => MediaJobSchema.parse({ ...mediaJob, provider: 'grok-responses' })).toThrow(/pie|invalid/iu);
+    expect(() => MediaJobSchema.parse({ ...mediaJob, provider: 'hhhl' })).toThrow(/provider|invalid/iu);
+    expect(() => MediaJobSchema.parse({ ...mediaJob, kind: 'music', model: 'music-2.6' })).toThrow();
+    expect(() => MediaJobSchema.parse({ ...mediaJob, promptVersion: '' })).toThrow();
+    expect(() => AssetRecordSchema.parse({ id: 'cg.test', kind: 'image', path: 'cg/test.png', provenance: {
+      provider: 'pie', model: 'gpt-image-2', promptVersion: 'test-image-v1', sourceJobHash: 'a'.repeat(64),
+      review: { status: 'approved', reviewer: 'reviewer', reviewedAt: '2026-07-15T00:00:00.000Z' }, remoteJobId: 'secret',
+    } })).toThrow();
+  });
+
+  it('requires strict license metadata for packaged BGM assets', () => {
+    const license = {
+      cueAlias: 'title_theme', title: 'Achilles', creator: 'Kevin MacLeod', isrc: 'USUAN1100463',
+      sourceUrl: 'https://incompetech.com/music/royalty-free/index.html?isrc=USUAN1100463',
+      licenseId: 'CC-BY-4.0', licenseUrl: 'https://creativecommons.org/licenses/by/4.0/',
+      attribution: 'Achilles by Kevin MacLeod, licensed under CC BY 4.0.',
+    } as const;
+    const asset = { id: 'file.audio.bgm.title.theme.mp3', kind: 'audio', path: 'audio/bgm/title_theme.mp3', license } as const;
+
+    expect(AssetLicenseSchema.parse(license)).toEqual(license);
+    expect(AssetRecordSchema.parse(asset)).toEqual(asset);
+    expect(() => AssetRecordSchema.parse({ ...asset, license: undefined })).toThrow(/requires registered license/iu);
+    expect(() => AssetRecordSchema.parse({ ...asset, license: { ...license, downloadedFrom: 'unknown' } })).toThrow();
+    expect(() => AssetRecordSchema.parse({ ...asset, kind: 'image' })).toThrow(/only supported on audio/iu);
   });
 
   it('accepts a complete manifest with resolvable references', () => {

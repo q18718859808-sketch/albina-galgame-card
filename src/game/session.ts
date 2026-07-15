@@ -28,7 +28,14 @@ export class GameSession {
     this.sceneById = new Map(script.scenes.map((scene) => [scene.id, scene]));
     this.now = options.now ?? (() => new Date().toISOString());
     this.save = structuredClone(options.save ?? createDefaultSaveV2());
-    if (!this.sceneById.has(this.save.sceneId)) this.save.sceneId = script.initialSceneId;
+    if (!options.save || !this.sceneById.has(this.save.sceneId)) {
+      const initialScene = this.sceneById.get(script.initialSceneId);
+      if (!initialScene) throw new Error(`Unknown initial scene: ${script.initialSceneId}`);
+      this.save.sceneId = initialScene.id;
+      this.save.chapter = initialScene.chapter;
+      this.save.locationId = initialScene.locationId;
+      if (initialScene.route !== null) this.save.route = initialScene.route;
+    }
   }
 
   get scene(): SceneCue {
@@ -68,7 +75,7 @@ export class GameSession {
     if (!next) throw new Error(`Choice references unknown scene: ${choice.nextSceneId}`);
     this.save.sceneId = next.id;
     this.save.chapter = next.chapter;
-    this.save.route = next.route;
+    if (next.route !== null) this.save.route = next.route;
     this.save.locationId = next.locationId;
     this.save.updatedAt = this.now();
     this.save.logs.sceneBranches.push({ choiceId, sceneId: next.id, at: this.save.updatedAt });

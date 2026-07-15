@@ -19,12 +19,16 @@ it('uses generated video only when policy allows and always keeps a static fallb
   expect(reduced.fallbackUrl).toBe(animated.fallbackUrl);
 });
 
-it('chooses exactly one profile and chooses none when video policy is disabled', () => {
-  const scene = parseGameScriptV2(storyJson).scenes.find((candidate) => candidate.id === 'opening_001');
-  expect(scene).toBeDefined();
-  if (!scene) return;
-  expect(chosenSceneVideoId(scene, { desktop: true, reducedMotion: false, videoEnabled: true })).toBe('video.animated.desktop.prologue');
-  expect(chosenSceneVideoId(scene, { desktop: false, reducedMotion: false, videoEnabled: true })).toBe('video.animated.runtime.prologue');
-  expect(chosenSceneVideoId(scene, { desktop: true, reducedMotion: true, videoEnabled: true })).toBeUndefined();
-  expect(chosenSceneVideoId(scene, { desktop: true, reducedMotion: false, videoEnabled: false })).toBeUndefined();
+it('chooses exactly one delivery profile only for an AU scene with an approved animation', () => {
+  const story = parseGameScriptV2(storyJson);
+  const animatedScene = story.scenes.find((candidate) => candidate.id === 'white_canvas_003');
+  const boundaryScene = story.scenes.find((candidate) => candidate.id === 'opening_001');
+  expect(animatedScene).toBeDefined();
+  expect(boundaryScene).toBeDefined();
+  if (!animatedScene || !boundaryScene) return;
+  expect(chosenSceneVideoId(animatedScene, { desktop: true, reducedMotion: false, videoEnabled: true })).toBe('video.animated.desktop.white_canvas_scene_3');
+  expect(chosenSceneVideoId(animatedScene, { desktop: false, reducedMotion: false, videoEnabled: true })).toBe('video.animated.runtime.white_canvas_scene_3');
+  expect(chosenSceneVideoId(animatedScene, { desktop: true, reducedMotion: true, videoEnabled: true })).toBeUndefined();
+  expect(chosenSceneVideoId(animatedScene, { desktop: true, reducedMotion: false, videoEnabled: false })).toBeUndefined();
+  expect(chosenSceneVideoId(boundaryScene, { desktop: true, reducedMotion: false, videoEnabled: true })).toBeUndefined();
 });

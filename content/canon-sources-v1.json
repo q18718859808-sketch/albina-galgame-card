@@ -1,0 +1,140 @@
+{
+  "version": 1,
+  "sources": [
+    {
+      "id": "source.official.canto-ix.9-14",
+      "kind": "official-game",
+      "title": "Limbus Company - Canto IX, 9-14: Roseate Desire",
+      "url": "https://limbuscompany.com/",
+      "locator": "Canto IX / 9-14 / pre-battle / LCE Research Team Hallway",
+      "language": "ko/en/ja/zh",
+      "checkedAt": "2026-07-15",
+      "redistribution": "metadata-only",
+      "note": "Primary canon anchor; the release stores only a short Chinese paraphrase."
+    },
+    {
+      "id": "source.official.canto-ix.9-18",
+      "kind": "official-game",
+      "title": "Limbus Company - Canto IX, 9-18: Cigarettes & The Nursefather",
+      "url": "https://limbuscompany.com/",
+      "locator": "Canto IX / 9-18 / pre-battle and post-battle / LCE Research Team Laboratory",
+      "language": "ko/en/ja/zh",
+      "checkedAt": "2026-07-15",
+      "redistribution": "metadata-only",
+      "note": "Primary anchor for Albina's first story appearance; only a short event paraphrase is stored."
+    },
+    {
+      "id": "source.official.canto-ix.9-37",
+      "kind": "official-game",
+      "title": "Limbus Company - Canto IX, 9-37: The Ring",
+      "url": "https://limbuscompany.com/",
+      "locator": "Canto IX / 9-37 / pre-battle, mid-battle and post-battle",
+      "language": "ko/en/ja/zh",
+      "checkedAt": "2026-07-15",
+      "redistribution": "metadata-only",
+      "note": "Primary canon anchor; no original audio, video or long transcript is redistributed."
+    },
+    {
+      "id": "source.official.canto-ix.9-43",
+      "kind": "official-game",
+      "title": "Limbus Company - Canto IX, 9-43: Hatching",
+      "url": "https://limbuscompany.com/",
+      "locator": "Canto IX / 9-43 / pre-battle, battle conclusion and post-battle",
+      "language": "ko/en/ja/zh",
+      "checkedAt": "2026-07-15",
+      "redistribution": "metadata-only",
+      "note": "Primary anchor for the destruction of Fascia and the deaths of Albina and Callisto; only a short event paraphrase is stored."
+    },
+    {
+      "id": "source.wiki.canto-ix-part-i.172275",
+      "kind": "community-transcript",
+      "title": "Canto IX: The Unsevering/Story Episodes/Part I",
+      "url": "https://limbuscompany.wiki.gg/wiki/Canto_IX:_The_Unsevering/Story_Episodes/Part_I",
+      "locator": "sections 14 and 18; 9-14 Corporism context and 9-18 Albina pre/post-battle",
+      "language": "en",
+      "checkedAt": "2026-07-15",
+      "revisionId": 172275,
+      "revisionTimestamp": "2026-05-31T12:32:04Z",
+      "redistribution": "metadata-only"
+    },
+    {
+      "id": "source.wiki.canto-ix-part-iii.177602",
+      "kind": "community-transcript",
+      "title": "Canto IX: The Unsevering/Story Episodes/Part III",
+      "url": "https://limbuscompany.wiki.gg/wiki/Canto_IX:_The_Unsevering/Story_Episodes/Part_III",
+      "locator": "9-37: The Ring and 9-43: Hatching",
+      "language": "en",
+      "checkedAt": "2026-07-15",
+      "revisionId": 177602,
+      "revisionTimestamp": "2026-07-12T13:48:23Z",
+      "redistribution": "metadata-only"
+    },
+    {
+      "id": "source.wiki.albina.173286",
+      "kind": "community-reference",
+      "title": "Albina",
+      "url": "https://limbuscompany.wiki.gg/wiki/Albina",
+      "locator": "appearance, personality, story and trivia sections",
+      "language": "en",
+      "checkedAt": "2026-07-15",
+      "revisionId": 173286,
+      "revisionTimestamp": "2026-06-09T20:44:33Z",
+      "redistribution": "metadata-only"
+    },
+    {
+      "id": "source.bilibili.BV1rsi8B5ED2.p37",
+      "kind": "gameplay-recording",
+      "title": "边狱巴士主线第九章无割舍者主线剧情（已完结）",
+      "url": "https://www.bilibili.com/video/BV1rsi8B5ED2?p=37",
+      "locator": "P37, CID 35474245945, 9-37 环指, duration 2403 seconds",
+      "language": "zh-CN",
+      "checkedAt": "2026-07-15",
+      "redistribution": "no-reprint",
+      "note": "Browser automation verified the public P37 page, part list, CID, duration, no subtitle track and rights.no_reprint=1. No media is copied."
+    },
+    {
+      "id": "source.bilibili.BV1rsi8B5ED2.p43",
+      "kind": "gameplay-recording",
+      "title": "边狱巴士主线第九章无割舍者主线剧情（已完结）",
+      "url": "https://www.bilibili.com/video/BV1rsi8B5ED2?p=43",
+      "locator": "P43, CID 35474441014, 9-43 孵化, duration 2103 seconds",
+      "language": "zh-CN",
+      "checkedAt": "2026-07-15",
+      "redistribution": "no-reprint",
+      "note": "Public API metadata locator only; rights.no_reprint=1. Plot facts are anchored to the official scene and pinned wiki revision."
+    },
+    {
+      "id": "source.bilibili.BV1rsi8B5ED2.p18",
+      "kind": "gameplay-recording",
+      "title": "边狱巴士主线第九章无割舍者主线剧情（已完结）",
+      "url": "https://www.bilibili.com/video/BV1rsi8B5ED2?p=18",
+      "locator": "P18, CID 35168059468, 9-18 香烟与父辈, duration 1597 seconds",
+      "language": "zh-CN",
+      "checkedAt": "2026-07-15",
+      "redistribution": "no-reprint",
+      "note": "Public page metadata locator only; rights.no_reprint=1. Plot facts are anchored to the official scene and pinned wiki revision."
+    },
+    {
+      "id": "source.bilibili.BV1brvbBDE84.p33-p34",
+      "kind": "gameplay-recording",
+      "title": "边狱巴士第九章剧情汉化合集",
+      "url": "https://www.bilibili.com/video/BV1brvbBDE84?p=33",
+      "locator": "P33 CID 35395013510 and P34 CID 35395600475, 9-37 pre/post-battle",
+      "language": "zh-CN",
+      "checkedAt": "2026-07-15",
+      "redistribution": "no-reprint",
+      "note": "Translation cross-check only; no recording media is copied into the release."
+    },
+    {
+      "id": "source.project.legacy-v1.0.44",
+      "kind": "project-artifact",
+      "title": "Albina v1.0.44 recovered story oracle",
+      "localPath": "tests/fixtures/legacy-console/index.js",
+      "locator": "recovered jl story object and its three original card routes",
+      "language": "zh-CN",
+      "checkedAt": "2026-07-15",
+      "redistribution": "project-internal",
+      "note": "Evidence of project authorship only, never evidence of source-game canon."
+    }
+  ]
+}

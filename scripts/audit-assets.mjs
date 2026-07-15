@@ -3,7 +3,8 @@ import { access, mkdir, readFile, readdir, stat, writeFile } from 'node:fs/promi
 import { extname, relative, resolve } from 'node:path';
 
 import { validateAssetIntegrity } from './lib/asset-integrity.mjs';
-import { hasReleaseDifferences, isLegacyPublishablePath, isPrivateEnvironmentPath } from './lib/release-integrity.mjs';
+import { attachPromotionProvenance, loadPromotionReceipts } from './lib/promotion-receipts.mjs';
+import { hasReleaseDifferences, isExcludedReleaseAssetPath, isLegacyPublishablePath, isPrivateEnvironmentPath } from './lib/release-integrity.mjs';
 import { collectStoryAssetReferences, findUnresolvedStoryReferences, materializeStoryMedia } from './lib/story-media.mjs';
 
 const projectRoot = resolve(import.meta.dirname, '..');
@@ -13,17 +14,94 @@ const releaseRoot = resolve(projectRoot, 'release/github-cdn-root');
 const releaseMirrorRoot = resolve(releaseRoot, 'dist/albina-galgame-card');
 const contentManifestPath = resolve(projectRoot, 'content/asset-manifest-v2.json');
 const pendingGalleryCgsPath = resolve(projectRoot, 'content/pending-gallery-cgs.json');
-const releaseVersion = '2.0.0-preview';
+const audioLicenseRegistryPath = resolve(projectRoot, 'content/audio-licenses-v1.json');
+const promotionReceiptsRoot = resolve(projectRoot, 'tools/media/production/receipts');
+const audioCreditsPath = resolve(assetRoot, 'audio/CREDITS.json');
+const bgmRoot = resolve(assetRoot, 'audio/bgm');
+const releaseVersion = '2.0.0-rc.1';
 const previewBase = '.';
 const mediaExtensions = new Set(['.jpg', '.json', '.mp3', '.mp4', '.png', '.svg', '.wav']);
 
 const toPosix = (path) => path.replaceAll('\\', '/');
 const hash = (value) => createHash('sha256').update(value).digest('hex');
 const fileId = (path) => `file.${path.toLowerCase().replace(/[^a-z0-9]+/gu, '.').replace(/^\.|\.$/gu, '')}`;
-const stripId = (path) => `strip.${path.replace(/_strip\.png$/u, '').replace(/[^a-z0-9-]+/giu, '.').replace(/^\.|\.$/gu, '')}`;
 
 async function readJson(path) {
   return JSON.parse((await readFile(path, 'utf8')).replace(/^\uFEFF/u, ''));
+}
+
+function assertHttpsUrl(value, label) {
+  let url;
+  try { url = new URL(value); } catch { throw new Error(`${label} must be a valid URL`); }
+  if (url.protocol !== 'https:') throw new Error(`${label} must use HTTPS`);
+}
+
+function validateAudioTrack(track, index) {
+  const label = `Audio license track ${index}`;
+  const required = ['assetId', 'path', 'sha256', 'cueAlias', 'title', 'creator', 'isrc', 'sourceUrl', 'licenseId', 'licenseUrl', 'attribution'];
+  if (!track || typeof track !== 'object' || required.some((key) => typeof track[key] !== 'string' || !track[key])) {
+    throw new Error(`${label} is missing required metadata`);
+  }
+  if (!/^audio\/bgm\/[a-z0-9_]+\.(?:mp3|wav)$/u.test(track.path)) throw new Error(`${label} has an invalid BGM path`);
+  if (track.cueAlias !== track.path.replace(/^audio\/bgm\//u, '').replace(/\.(?:mp3|wav)$/u, '')) throw new Error(`${label} cue alias does not match its file`);
+  if (track.assetId !== fileId(track.path)) throw new Error(`${label} asset id does not match its path`);
+  if (!/^[a-f0-9]{64}$/u.test(track.sha256)) throw new Error(`${label} has an invalid SHA-256`);
+  if (!/^[A-Z]{2}[A-Z0-9]{3}\d{7}$/u.test(track.isrc)) throw new Error(`${label} has an invalid ISRC`);
+  if (track.licenseId !== 'CC-BY-4.0' || track.licenseUrl !== 'https://creativecommons.org/licenses/by/4.0/') {
+    throw new Error(`${label} must use the registered CC BY 4.0 license`);
+  }
+  if (track.creator !== 'Kevin MacLeod') throw new Error(`${label} must identify Kevin MacLeod as creator`);
+  assertHttpsUrl(track.sourceUrl, `${label} source URL`);
+  assertHttpsUrl(track.licenseUrl, `${label} license URL`);
+  const source = new URL(track.sourceUrl);
+  if (source.hostname !== 'incompetech.com' || source.pathname !== '/music/royalty-free/index.html' || source.searchParams.get('isrc') !== track.isrc) {
+    throw new Error(`${label} source URL must be its Incompetech ISRC page`);
+  }
+  if (![track.title, track.creator, 'CC BY 4.0'].every((value) => track.attribution.includes(value))) {
+    throw new Error(`${label} attribution must identify title, creator, and license`);
+  }
+}
+
+async function loadAudioLicenseRegistry() {
+  const registry = await readJson(audioLicenseRegistryPath);
+  if (registry.version !== 1 || registry.projectId !== 'albina-galgame-card' || typeof registry.packagedNotice !== 'string' || !Array.isArray(registry.tracks) || registry.tracks.length !== 5) {
+    throw new Error('Invalid audio license registry');
+  }
+  registry.tracks.forEach(validateAudioTrack);
+  for (const key of ['assetId', 'path', 'sha256', 'cueAlias', 'isrc']) {
+    if (new Set(registry.tracks.map((track) => track[key])).size !== registry.tracks.length) throw new Error(`Duplicate audio license ${key}`);
+  }
+  const official = registry.officialSoundtrack;
+  if (!official || official.publisher !== 'ProjectMoon' || official.bundled !== false || official.cached !== false || !Array.isArray(official.links) || official.links.length !== 2) {
+    throw new Error('Official soundtrack links must remain external-only');
+  }
+  official.links.forEach((link, index) => assertHttpsUrl(link?.url, `Official soundtrack link ${index}`));
+  const officialUrls = new Set(official.links.map((link) => link.url));
+  if (!officialUrls.has('https://www.youtube.com/playlist?list=PL9-RBacZ4KMzFjhRY4zD7_GbwL1LgNWXD') || !officialUrls.has('https://www.youtube.com/watch?v=n5GI6EkCXCo')) {
+    throw new Error('Official soundtrack links must include the ProjectMoon playlist and Canto IX video');
+  }
+  if (official.termsUrl !== 'https://limbuscompany.com/terms-of-service/') throw new Error('Unexpected ProjectMoon terms URL');
+  return registry;
+}
+
+function licenseForTrack(track) {
+  return Object.fromEntries(['cueAlias', 'title', 'creator', 'isrc', 'sourceUrl', 'licenseId', 'licenseUrl', 'attribution'].map((key) => [key, track[key]]));
+}
+
+function attachAudioLicenses(assets, registry) {
+  const tracks = new Map(registry.tracks.map((track) => [track.path, track]));
+  return assets.map((asset) => {
+    if (!asset.path.startsWith('audio/bgm/')) return asset;
+    const track = tracks.get(asset.path);
+    if (!track) throw new Error(`Unregistered packaged BGM: ${asset.path}`);
+    if (asset.id !== track.assetId || asset.sha256 !== track.sha256) throw new Error(`Packaged BGM identity mismatch: ${asset.path}`);
+    return { ...asset, license: licenseForTrack(track) };
+  });
+}
+
+async function writeAudioCredits(registry) {
+  await mkdir(resolve(assetRoot, 'audio'), { recursive: true });
+  await writeFile(audioCreditsPath, `${JSON.stringify(registry, null, 2)}\n`);
 }
 
 async function pathExists(path) {
@@ -61,7 +139,7 @@ async function physicalAssets() {
   const records = [];
   for (const path of await walkFiles(assetRoot)) {
     const relativePath = toPosix(relative(assetRoot, path));
-    if (!mediaExtensions.has(extname(path).toLowerCase()) || ignored.has(relativePath)) continue;
+    if (!mediaExtensions.has(extname(path).toLowerCase()) || ignored.has(relativePath) || isExcludedReleaseAssetPath(relativePath)) continue;
     const bytes = await readFile(path);
     records.push({ id: fileId(relativePath), kind: kindFor(relativePath), path: relativePath, mimeType: mimeFor(relativePath), sha256: hash(bytes), bytes: bytes.length });
   }
@@ -103,48 +181,44 @@ function pngDimensions(bytes) {
   return { width: bytes.readUInt32BE(16), height: bytes.readUInt32BE(20) };
 }
 
-async function completedPortraits(progress) {
+async function staticAlbinaPortraits() {
+  const root = resolve(assetRoot, 'characters/albina');
   const portraits = [];
-  for (const [key, entry] of Object.entries(progress).filter(([, value]) => value.status === 'done').sort()) {
-    const path = toPosix(entry.output).replace(/^assets\//u, '');
-    const source = toPosix(entry.source).replace(/^assets\//u, '');
-    const bytes = await readFile(resolve(assetRoot, path));
-    const dimensions = pngDimensions(bytes);
-    const name = key.replace(/_strip\.png$/u, '');
-    const [characterId, ...expressionParts] = name.split('/');
+  for (const path of await walkFiles(root)) {
+    if (extname(path).toLowerCase() !== '.png') continue;
+    const expression = relative(root, path).replaceAll('\\', '/').replace(/\.png$/u, '');
+    if (expression.includes('/')) continue;
     portraits.push({
-      version: 2, id: `portrait.${characterId}.${expressionParts.join('.')}`, characterId, path,
+      version: 2, id: `portrait.albina.${expression}`, characterId: 'albina',
+      path: `characters/albina/${expression}.png`, animation: { kind: 'static' },
+    });
+  }
+  return portraits;
+}
+
+async function completedStripPortraits() {
+  const root = resolve(assetRoot, 'sprite-atlas');
+  const portraits = [];
+  for (const path of await walkFiles(root)) {
+    const outputPath = toPosix(relative(assetRoot, path));
+    if (!outputPath.endsWith('_strip.png') || isExcludedReleaseAssetPath(outputPath)) continue;
+    const name = toPosix(relative(root, path)).replace(/_strip\.png$/u, '');
+    const [characterId, ...expressionParts] = name.split('/');
+    const expression = expressionParts.join('.');
+    const source = `characters/${characterId}/${expression}.png`;
+    const dimensions = pngDimensions(await readFile(path));
+    portraits.push({
+      version: 2, id: `portrait.${characterId}.${expression}`, characterId, path: outputPath,
       animation: { kind: 'strip', frameCount: 8, frameWidth: dimensions.width / 8, frameHeight: dimensions.height, fps: 8 },
       fallbackAssetId: fileId(source),
     });
   }
-  portraits.push({ version: 2, id: 'portrait.fascia.normal', characterId: 'fascia', path: 'characters/albina/fascia-open.png', animation: { kind: 'static' } });
+  return portraits;
+}
+
+async function approvedPortraits() {
+  const portraits = [...await staticAlbinaPortraits(), ...await completedStripPortraits()];
   return portraits.sort((a, b) => a.id.localeCompare(b.id));
-}
-
-function pendingStripEntries(progress) {
-  const failed = Object.entries(progress).filter(([, entry]) => entry.status === 'failed');
-  const unattempted = ['original_albina_sprites/sad_strip.png', 'original_albina_sprites/smile_strip.png'].map((key) => [key, {
-    source: `assets/${key.replace('_strip.png', '.png')}`, output: `assets/sprite-atlas/${key}`, attempts: 0,
-  }]);
-  return [...failed, ...unattempted].sort(([left], [right]) => left.localeCompare(right));
-}
-
-function stripJobs(progress) {
-  const assets = [];
-  const jobs = [];
-  for (const [key, entry] of pendingStripEntries(progress)) {
-    const outputPath = toPosix(entry.output).replace(/^assets\//u, '');
-    const inputPath = toPosix(entry.source).replace(/^assets\//u, '');
-    const assetId = stripId(key);
-    assets.push({ id: assetId, kind: 'image', path: outputPath, mimeType: 'image/png' });
-    jobs.push({
-      version: 2, id: `job.${assetId}`, assetId, kind: 'image-edit', model: 'gpt-image-2', status: 'pending',
-      contentHash: hash(JSON.stringify({ assetId, inputPath, outputPath })), inputAssetIds: [fileId(inputPath)], outputPath,
-      attempts: entry.attempts ?? 0, ...(entry.error ? { error: entry.error } : {}),
-    });
-  }
-  return { assets, jobs };
 }
 
 async function pendingGalleryCgs() {
@@ -161,8 +235,8 @@ async function pendingGalleryCgs() {
     const inputAssetIds = [entry.sourceAssetId];
     assets.push({ id: entry.id, kind: 'image', path: entry.path, mimeType: 'image/png' });
     jobs.push({
-      version: 2, id: `job.${entry.id}`, assetId: entry.id, kind: 'image-edit', model: 'gpt-image-2', status: 'pending',
-      contentHash: hash(JSON.stringify({ assetId: entry.id, inputAssetIds, outputPath: entry.path, width: entry.width, height: entry.height, promptVersion: entry.promptVersion })),
+      version: 2, id: `job.${entry.id}`, assetId: entry.id, kind: 'image-edit', provider: 'pie', model: 'gpt-image-2', promptVersion: entry.promptVersion, status: 'pending',
+      contentHash: hash(JSON.stringify({ assetId: entry.id, inputAssetIds, outputPath: entry.path, width: entry.width, height: entry.height, provider: 'pie', model: 'gpt-image-2', promptVersion: entry.promptVersion })),
       inputAssetIds, outputPath: entry.path, attempts: 0,
     });
   }
@@ -180,8 +254,8 @@ async function voiceAssets(references) {
     } else {
       assets.push({ id: assetId, kind: 'audio', path: outputPath, mimeType: 'audio/mpeg' });
       jobs.push({
-        version: 2, id: `job.${assetId}`, assetId, kind: 'speech', model: 'speech-2.8-hd', status: 'pending',
-        contentHash: hash(JSON.stringify({ assetId, outputPath })), inputAssetIds: [], outputPath, attempts: 0,
+        version: 2, id: `job.${assetId}`, assetId, kind: 'speech', provider: 'pie', model: 'speech-2.8-hd', promptVersion: 'albina-speech-v1', status: 'pending',
+        contentHash: hash(JSON.stringify({ assetId, outputPath, provider: 'pie', model: 'speech-2.8-hd', promptVersion: 'albina-speech-v1' })), inputAssetIds: [], outputPath, attempts: 0,
       });
     }
   }
@@ -196,6 +270,7 @@ async function videoAssets() {
       if (extname(path).toLowerCase() !== '.mp4') continue;
       const name = relative(root, path).replaceAll('\\', '/').replace(/\.mp4$/u, '');
       const outputPath = `video/animated/${profile}/${name}.mp4`;
+      if (isExcludedReleaseAssetPath(outputPath)) continue;
       const bytes = await readFile(path);
       assets.push({ id: `video.animated.${profile}.${name}`, kind: 'video', path: outputPath, mimeType: 'video/mp4', sha256: hash(bytes), bytes: bytes.length });
     }
@@ -203,15 +278,16 @@ async function videoAssets() {
   return assets;
 }
 
-async function buildManifest() {
-  const progress = await readJson(resolve(assetRoot, 'sprite-atlas/_progress.json'));
+async function buildManifest(audioLicenseRegistry) {
   const references = collectStoryAssetReferences(await readStory());
-  const strips = stripJobs(progress);
   const galleryCgs = await pendingGalleryCgs();
   const voices = await voiceAssets(references);
-  const assets = [...await physicalAssets(), ...await semanticAssets(references), ...await videoAssets(), ...strips.assets, ...galleryCgs.assets, ...voices.assets];
+  const assets = [...await physicalAssets(), ...await semanticAssets(references), ...await videoAssets(), ...galleryCgs.assets, ...voices.assets];
   assets.sort((a, b) => a.id.localeCompare(b.id));
-  return { version: 2, projectId: 'albina-galgame-card', basePath: 'assets', assets, portraits: await completedPortraits(progress), mediaJobs: [...strips.jobs, ...galleryCgs.jobs, ...voices.jobs].sort((a, b) => a.id.localeCompare(b.id)) };
+  const licensedAssets = attachAudioLicenses(assets, audioLicenseRegistry);
+  const receiptPaths = (await walkFiles(promotionReceiptsRoot)).filter((path) => extname(path).toLowerCase() === '.json');
+  const assetsWithProvenance = attachPromotionProvenance(licensedAssets, await loadPromotionReceipts(receiptPaths));
+  return { version: 2, projectId: 'albina-galgame-card', basePath: 'assets', assets: assetsWithProvenance, portraits: await approvedPortraits(), mediaJobs: [...galleryCgs.jobs, ...voices.jobs].sort((a, b) => a.id.localeCompare(b.id)) };
 }
 
 function runtimeUrl(basePath, path) {
@@ -274,13 +350,15 @@ async function updateLegacyManifest() {
   legacy.cg = await directoryMap('cg', 'cg', ['.jpg', '.png', '.svg']);
   legacy.characters = await characterMap();
   legacy.ui = await directoryMap('ui', 'ui', ['.png', '.svg']);
-  legacy.videos = await directoryMap('videos', 'video', ['.mp4']);
+  legacy.videos = {};
   legacy.audio = { ...await directoryMap('audio/bgm', 'audio.bgm', ['.mp3', '.wav']), ...await directoryMap('audio/se', 'audio.se', ['.mp3', '.wav']) };
   await writeFile(path, `${JSON.stringify(legacy, null, 2)}\n`);
 }
 
 async function writeGeneratedArtifacts() {
-  const manifest = await buildManifest();
+  const audioLicenseRegistry = await loadAudioLicenseRegistry();
+  await writeAudioCredits(audioLicenseRegistry);
+  const manifest = await buildManifest(audioLicenseRegistry);
   const lookup = buildLookup(manifest);
   await mkdir(resolve(canonicalRoot, 'assets'), { recursive: true });
   await writeFile(contentManifestPath, `${JSON.stringify(manifest, null, 2)}\n`);
@@ -334,6 +412,35 @@ async function auditManifest(manifest, lookup) {
   return unresolved;
 }
 
+function sameJson(left, right) {
+  return JSON.stringify(left) === JSON.stringify(right);
+}
+
+async function auditAudioLicenses(manifest) {
+  const registry = await loadAudioLicenseRegistry();
+  const unresolved = [];
+  const tracksByPath = new Map(registry.tracks.map((track) => [track.path, track]));
+  const manifestBgm = manifest.assets.filter((asset) => asset.path.startsWith('audio/bgm/'));
+  const bgmFiles = (await walkFiles(bgmRoot)).filter((path) => ['.mp3', '.wav'].includes(extname(path).toLowerCase()));
+  if (!(await pathExists(audioCreditsPath))) unresolved.push('missing packaged audio credits: audio/CREDITS.json');
+  else if (!sameJson(await readJson(audioCreditsPath), registry)) unresolved.push('packaged audio credits differ from registry');
+  for (const path of bgmFiles) {
+    const relativePath = toPosix(relative(assetRoot, path));
+    const track = tracksByPath.get(relativePath);
+    if (!track) { unresolved.push(`unregistered packaged BGM: ${relativePath}`); continue; }
+    if (hash(await readFile(path)) !== track.sha256) unresolved.push(`registered BGM hash mismatch: ${relativePath}`);
+  }
+  for (const asset of manifestBgm) if (!tracksByPath.has(asset.path)) unresolved.push(`manifest contains unregistered BGM: ${asset.path}`);
+  for (const track of registry.tracks) {
+    if (!(await pathExists(resolve(assetRoot, track.path)))) unresolved.push(`registered BGM is missing: ${track.path}`);
+    const asset = manifestBgm.find((candidate) => candidate.path === track.path);
+    if (!asset) { unresolved.push(`registered BGM missing from manifest: ${track.path}`); continue; }
+    if (asset.id !== track.assetId || asset.sha256 !== track.sha256) unresolved.push(`manifest BGM identity mismatch: ${track.path}`);
+    if (!sameJson(asset.license, licenseForTrack(track))) unresolved.push(`manifest BGM license mismatch: ${track.path}`);
+  }
+  return unresolved;
+}
+
 async function auditNoWebGenerationTools() {
   const findings = [];
   for (const root of [canonicalRoot, releaseMirrorRoot]) {
@@ -375,7 +482,7 @@ async function auditMutableLoaders() {
 async function audit() {
   const manifest = await readJson(contentManifestPath);
   const lookup = await readJson(resolve(assetRoot, 'runtime-lookup.json'));
-  const unresolved = [...await auditManifest(manifest, lookup), ...await auditLegacyManifest(), ...await auditStory(lookup), ...await auditMutableLoaders(), ...await auditNoWebGenerationTools()];
+  const unresolved = [...await auditManifest(manifest, lookup), ...await auditAudioLicenses(manifest), ...await auditLegacyManifest(), ...await auditStory(lookup), ...await auditMutableLoaders(), ...await auditNoWebGenerationTools()];
   return { unresolved, release: await classifyRelease(), inventory: { canonicalFiles: (await walkFiles(canonicalRoot)).length, releaseFiles: (await walkFiles(releaseRoot)).length } };
 }
 

@@ -54,15 +54,16 @@ function logEntries(value: unknown): JsonObject[] {
   return value.map((entry) => sanitizeJson(entry, new WeakSet())).filter(isJsonObject);
 }
 
-function inferRoute(value: unknown, sceneId: unknown): RouteId {
+function inferRoute(value: unknown, sceneId: unknown): RouteId | null {
   const parsed = RouteIdSchema.safeParse(value);
   if (parsed.success) return parsed.data;
   if (typeof sceneId === 'string' && sceneId.startsWith('golden_bough_')) return 'golden_bough_rebuild';
   if (typeof sceneId === 'string' && sceneId.startsWith('ring_conspiracy_')) return 'ring_conspiracy';
-  return 'white_canvas';
+  if (typeof sceneId === 'string' && sceneId.startsWith('white_canvas_')) return 'white_canvas';
+  return null;
 }
 
-function migrateProfile(record: UnknownRecord, route: RouteId, defaults: SaveV2['playerProfile']): SaveV2['playerProfile'] {
+function migrateProfile(record: UnknownRecord, route: RouteId | null, defaults: SaveV2['playerProfile']): SaveV2['playerProfile'] {
   const source = asRecord(record.playerProfile) ?? {};
   const preferredRoute = RouteIdSchema.safeParse(source.routePreference);
   return {
@@ -72,7 +73,7 @@ function migrateProfile(record: UnknownRecord, route: RouteId, defaults: SaveV2[
     background: stringValue(source.background, defaults.background),
     addressName: stringValue(source.addressName, defaults.addressName),
     boundaries: stringValue(source.boundaries, defaults.boundaries),
-    routePreference: preferredRoute.success ? preferredRoute.data : route,
+    routePreference: preferredRoute.success ? preferredRoute.data : route ?? defaults.routePreference,
   };
 }
 

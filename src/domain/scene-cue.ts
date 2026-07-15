@@ -1,5 +1,7 @@
 import { z } from 'zod';
 
+import { SceneProvenanceSchema } from './canon';
+
 export const DOMAIN_VERSION = 2 as const;
 
 export const RouteIdSchema = z.enum([
@@ -99,12 +101,13 @@ export const PortraitCueSchema = z
   })
   .strict();
 
-export const SceneCueSchema = z
+const SceneCueBaseSchema = z
   .object({
     version: z.literal(DOMAIN_VERSION),
     id: z.string().min(1),
     chapter: z.number().int().nonnegative(),
-    route: RouteIdSchema,
+    route: RouteIdSchema.nullable(),
+    provenance: SceneProvenanceSchema,
     locationId: z.string().min(1),
     backgroundAssetId: z.string().min(1),
     cgAssetId: z.string().min(1).optional(),
@@ -121,6 +124,15 @@ export const SceneCueSchema = z
     ending: EndingDescriptorSchema.optional(),
   })
   .strict();
+
+export const SceneCueSchema = SceneCueBaseSchema.superRefine((scene, context) => {
+  if (scene.provenance.scope !== 'route' && scene.route !== null) {
+    context.addIssue({ code: 'custom', path: ['route'], message: 'Canon recap and AU boundary scenes must use a null route' });
+  }
+  if (scene.provenance.scope === 'route' && scene.route === null) {
+    context.addIssue({ code: 'custom', path: ['route'], message: 'Only canon recap and AU boundary scenes may use a null route' });
+  }
+});
 
 export type RouteId = z.infer<typeof RouteIdSchema>;
 export type ChoiceEffects = z.infer<typeof ChoiceEffectsSchema>;

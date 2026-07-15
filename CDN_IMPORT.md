@@ -1,9 +1,11 @@
-# Albina v2 Local Preview
+# Albina v2 Release Candidate
 
-There is no live public CDN import for the current build. The immutable `v2.0.0` CDN location is reserved until the complete edition is reviewed, tagged, and independently verified.
+The installable release candidate is pinned to `v2.0.0-rc.1`. Import the tagged card PNG into SillyTavern:
 
-Public CDN and real Tavern Helper checks are post-tag verification, not prerequisites for creating an address that does not yet exist. `TAGGING.md` defines the ordered pre-tag gate, immutable tag, public verification, and release-attestation phases. Import instructions remain undistributed until the final phase.
+`https://cdn.jsdelivr.net/gh/q18718859808-sketch/albina-galgame-card@v2.0.0-rc.1/card/albina.card.png`
 
-For local preview, run the repository development server and open `built-harness.html`. The harness loads the built module from the local `dist/albina-galgame-card/source` tree and exercises the same Tavern Helper loader contract without pretending that a public tag exists.
+Tavern Helper runs the card's single enabled script, which loads:
 
-The runtime does not call media-generation APIs and contains no provider credentials.
+`https://cdn.jsdelivr.net/gh/q18718859808-sketch/albina-galgame-card@v2.0.0-rc.1/dist/albina-galgame-card/source/albina-classic-loader.js`
+
+The runtime resolves all media relative to that immutable tag and calls no generation API. The final `v2.0.0` address remains reserved until `completeEdition` is true and the final public verification protocol in `TAGGING.md` passes.

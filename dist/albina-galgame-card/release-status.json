@@ -1,18 +1,30 @@
 {
-  "version": "2.0.0-preview",
+  "version": "2.0.0-rc.1",
+  "releaseCandidate": true,
   "completeEdition": false,
   "runtimeMediaApis": false,
-  "completed": {
-    "deterministicScenes": 58,
-    "endings": 9,
-    "fixedVoiceAssets": 154,
-    "animatedCgRuntime": 29,
-    "animatedCgDesktop": 29,
-    "portraitStrips": 44
+  "content": {
+    "canonContextScenes": 1,
+    "canonAlbinaScenes": 5,
+    "auScenes": 58,
+    "endings": 9
   },
-  "blocked": {
-    "portraitStrips": { "count": 8, "reason": "Pie gpt-image-2 returned HTTP 503 / unavailable model access" },
-    "staticCgs": { "count": 2, "reason": "Choice gallery assets mirror_broken and rain_reflection are registered but not generated" },
-    "music26": { "count": 81, "reason": "Pie music-2.6 produced two observed HTTP 504 failures; the three-success bulk gate remains closed" }
+  "completed": {
+    "deterministicScenes": 64,
+    "endings": 9,
+    "fixedVoiceAssets": 150,
+    "animatedCgRuntime": 24,
+    "animatedCgDesktop": 24,
+    "staticAlbinaPortraits": 18,
+    "licensedBgm": 5
+  },
+  "substitutions": {
+    "music": "Music 2.6 production is retired. The package uses five hash-locked CC BY 4.0 tracks; official OST remains external-only.",
+    "portraitMotion": "Invalid sprite strips are retired. Static portraits are paired with 24 reachable dual-profile AU videos and reduced-motion fallbacks."
+  },
+  "knownLimitations": {
+    "officialOst": "Free streaming is not a redistribution license, so ProjectMoon, Mili, and Studio EIM recordings are not bundled.",
+    "canonDialogue": "Canon scenes are sourced Chinese paraphrases, not a verbatim transcript or a replacement for the source game.",
+    "finalTag": "v2.0.0 remains reserved until complete-edition requirements and public CDN verification are satisfied."
   }
 }

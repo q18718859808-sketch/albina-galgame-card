@@ -1,12 +1,12 @@
 # Release Tagging
 
-Public tagging is disabled while `dist/albina-galgame-card/release-status.json` reports a local preview or `completeEdition` is false.
+`v2.0.0-rc.1` is an immutable release-candidate tag. It may be published while `completeEdition` is false because the card and status file identify it as an RC and disclose its remaining limits. Never move or overwrite a published tag.
 
-The `v2.0.0` name is reserved for the first immutable complete-edition release. Promotion uses four ordered phases against one reviewed commit:
+The final `v2.0.0` name remains reserved and uses four ordered phases against one reviewed commit:
 
-1. **Pre-tag gate:** finish every production channel, set `completeEdition` true, stamp the release card, and pass local tests, the local Tavern Helper harness, asset hashes, and the canonical/release mirror check.
+1. **Pre-tag gate:** finish every complete-edition requirement, set `completeEdition` true, and pass local tests, Tavern Helper E2E, asset hashes, security scan, and canonical/release mirror checks.
 2. **Immutable tag:** create `v2.0.0` once, pointing at that exact reviewed commit.
-3. **Public verification:** after jsDelivr can resolve the tag, compare CDN bytes and hashes with the tagged tree and run the real SillyTavern + Tavern Helper import check.
-4. **Release attestation:** publish the import instructions and release proof only after public verification passes. A failed public check does not permit moving the tag; any corrected artifact receives a new version.
+3. **Public verification:** after jsDelivr resolves the tag, compare CDN bytes and hashes with the tagged tree and run a real SillyTavern plus Tavern Helper import check.
+4. **Release attestation:** publish final import instructions and proof only after public verification passes.
 
-Never move or overwrite a published version tag.
+A failed public check does not permit moving the tag; corrected artifacts receive a new version.

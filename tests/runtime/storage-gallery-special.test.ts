@@ -57,7 +57,7 @@ describe('runtime persistence services', () => {
     await gallery.unlock('cg.secret', save);
 
     expect(save.unlockedCg).not.toContain('cg.secret');
-    await expect(gallery.list(save)).resolves.toEqual(['opening_rain', 'cg.secret']);
+    await expect(gallery.list(save)).resolves.toEqual(['cg.secret']);
   });
 
   it('persists a FIFO special-CG queue', async () => {

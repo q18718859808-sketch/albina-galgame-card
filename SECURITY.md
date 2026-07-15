@@ -6,4 +6,4 @@ The v1.0.44 console bundle is retained only under `tests/fixtures` as a determin
 
 Report suspected credentials, unsafe loaders, path traversal, or save-import issues privately to the repository owner without including a working secret. Before release, run `npm run verify`, `npm run card:check`, and `node scripts/verify-release.mjs`.
 
-This checkout remains a local preview. The public `v2.0.0` target is reserved until `completeEdition` is true and the immutable tag has been verified.
+This checkout publishes the immutable `v2.0.0-rc.1` release candidate. The final `v2.0.0` target remains reserved until `completeEdition` is true and the immutable final tag has been verified.

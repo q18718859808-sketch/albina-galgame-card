@@ -1,11 +1,14 @@
 <script setup lang="ts">
 import { computed, onBeforeUnmount, ref } from 'vue';
 
+import audioLicensesJson from '../content/audio-licenses-v1.json';
 import PortraitStage from './components/PortraitStage.vue';
+import { AudioLicenseRegistrySchema } from './domain/assets';
 import { ALBINA_RELEASE_VERSION } from './runtime/asset-resolver';
 import { useGameStore } from './stores/game';
 
 const game = useGameStore();
+const audioCredits = AudioLicenseRegistrySchema.parse(audioLicensesJson);
 const importText = ref('');
 const exportText = ref('');
 const galleryAssets = computed(() => game.galleryIds.map((id) => ({ id, url: game.assetUrl(id) })).filter((asset) => asset.url));
@@ -29,6 +32,7 @@ onBeforeUnmount(() => { game.disposeUiListeners(); game.runtime.unmount(); });
           <button data-testid="title-saves" @click="game.openSaves">存档</button>
           <button @click="game.openGallery">CG 图鉴</button>
           <button data-testid="title-settings" @click="game.screen = 'settings'">设置</button>
+          <button data-testid="title-credits" @click="game.screen = 'credits'">版权与鸣谢</button>
         </nav>
         <p class="build-state">v{{ ALBINA_RELEASE_VERSION }} · 确定性主剧情 · 运行时零媒体 API</p>
       </div>
@@ -61,7 +65,32 @@ onBeforeUnmount(() => { game.disposeUiListeners(); game.runtime.unmount(); });
       <label><input v-model="game.reducedMotion" type="checkbox"> 减少动态效果</label>
       <label><input :checked="game.muted" type="checkbox" @change="game.toggleMute"> 静音</label>
       <button data-testid="autoplay-recovery" @click="game.recoverAutoplay">恢复音频播放</button>
-      <p class="asset-status">图像条带仍有 8 项等待 Pie 恢复；Music 2.6 已观察到两次 504，批量生产因稳定性门槛暂停。本预览版不会在游玩时请求生成接口，也不宣称 Complete Edition 已完成。</p>
+      <button data-testid="settings-credits" @click="game.screen = 'credits'">查看版权与鸣谢</button>
+      <p class="asset-status">运行时不请求媒体生成接口。包内配乐均已登记来源、文件校验值与再分发许可。</p>
+    </section>
+
+    <section v-else-if="game.screen === 'credits'" class="panel-screen credits-screen" data-testid="credits-screen">
+      <header><button @click="game.screen = 'title'">返回</button><h2>版权与鸣谢</h2></header>
+      <p class="credits-notice">{{ audioCredits.packagedNotice }}</p>
+      <ol class="credits-list" aria-label="包内配乐">
+        <li v-for="track in audioCredits.tracks" :key="track.assetId">
+          <h3>{{ track.title }}</h3>
+          <p>{{ track.creator }} · ISRC {{ track.isrc }} · cue: {{ track.cueAlias }}</p>
+          <p>{{ track.attribution }}</p>
+          <nav aria-label="曲目版权链接">
+            <a :href="track.sourceUrl" target="_blank" rel="noopener noreferrer">曲目来源</a>
+            <a :href="track.licenseUrl" target="_blank" rel="noopener noreferrer">CC BY 4.0 许可</a>
+          </nav>
+        </li>
+      </ol>
+      <section class="official-listening" aria-labelledby="official-soundtrack-title">
+        <h3 id="official-soundtrack-title">ProjectMoon 官方 OST</h3>
+        <p>{{ audioCredits.officialSoundtrack.notice }}</p>
+        <nav aria-label="官方 OST 外部试听">
+          <a v-for="link in audioCredits.officialSoundtrack.links" :key="link.url" :href="link.url" target="_blank" rel="noopener noreferrer">{{ link.label }}</a>
+          <a :href="audioCredits.officialSoundtrack.termsUrl" target="_blank" rel="noopener noreferrer">ProjectMoon 服务条款</a>
+        </nav>
+      </section>
     </section>
 
     <section v-else class="game-screen" data-testid="game-screen" :data-scene-id="game.scene.id">

@@ -11,17 +11,40 @@ async function installHarness(page: Page): Promise<void> {
   });
 }
 
+async function chooseAndContinue(page: Page, choiceId: string, nextSceneId: string): Promise<void> {
+  await page.locator(`[data-choice-id="${choiceId}"]`).click();
+  await expect(page.getByTestId('choice-result')).toBeVisible();
+  await page.getByTestId('choice-result').getByRole('button').click();
+  await expect(page.getByTestId('game-screen')).toHaveAttribute('data-scene-id', nextSceneId);
+}
+
+async function advanceCanonRecapToAuBoundary(page: Page): Promise<void> {
+  const steps = [
+    ['canon_recap_9_14', 'canon_recap_continue_9_18', 'canon_recap_9_18'],
+    ['canon_recap_9_18', 'canon_recap_continue_9_37', 'canon_recap_9_37'],
+    ['canon_recap_9_37', 'canon_recap_continue_albina_fascia', 'canon_recap_albina_fascia'],
+    ['canon_recap_albina_fascia', 'canon_recap_continue_9_37_battle', 'canon_recap_9_37_battle'],
+    ['canon_recap_9_37_battle', 'canon_recap_continue_9_43', 'canon_recap_9_43_outcome'],
+    ['canon_recap_9_43_outcome', 'canon_recap_enter_AU', 'opening_001'],
+  ] as const;
+
+  for (const [sceneId, choiceId, nextSceneId] of steps) {
+    await expect(page.getByTestId('game-screen')).toHaveAttribute('data-scene-id', sceneId);
+    await expect(page.locator('[data-choice-id^="enter_"]')).toHaveCount(0);
+    await chooseAndContinue(page, choiceId, nextSceneId);
+  }
+
+  await expect(page.locator('[data-choice-id^="enter_"]')).toHaveCount(3);
+}
+
 test.beforeEach(async ({ page }) => { await installHarness(page); await page.goto('/'); });
 
 test('imports into a Tavern Helper harness and follows an authoritative route choice', async ({ page }) => {
   await expect(page.getByTestId('title-screen')).toBeVisible();
   await page.getByTestId('new-game').click();
-  await expect(page.getByTestId('game-screen')).toHaveAttribute('data-scene-id', 'opening_001');
-  await expect(page.getByTestId('scene-video')).toBeVisible();
-  await page.locator('[data-choice-id="enter_white_canvas"]').click();
-  await expect(page.getByTestId('choice-result')).toBeVisible();
-  await page.getByTestId('choice-result').getByRole('button', { name: '继续' }).click();
-  await expect(page.getByTestId('game-screen')).toHaveAttribute('data-scene-id', 'white_canvas_001');
+  await advanceCanonRecapToAuBoundary(page);
+  await expect(page.getByTestId('scene-video')).toHaveCount(0);
+  await chooseAndContinue(page, 'enter_white_canvas', 'white_canvas_001');
   await page.getByRole('button', { name: '快速存档' }).click();
   await page.reload();
   await page.getByTestId('continue-game').click();
@@ -35,20 +58,22 @@ test('opens gallery and settings with honest media controls', async ({ page }) =
   await page.getByRole('button', { name: '返回' }).click();
   await page.reload();
   await page.getByRole('button', { name: '设置' }).click();
-  await expect(page.getByText(/8 项等待 Pie/u)).toBeVisible();
+  await expect(page.getByText(/运行时不请求媒体生成接口/u)).toBeVisible();
+  await expect(page.getByText(/包内配乐.*再分发许可/u)).toBeVisible();
   await page.getByLabel(/减少动态效果/u).check();
   await page.getByTestId('autoplay-recovery').click();
 });
 
 test('keeps the UI usable offline after first load', async ({ page, context }) => {
   await page.getByTestId('new-game').click();
+  await advanceCanonRecapToAuBoundary(page);
+  await chooseAndContinue(page, 'enter_white_canvas', 'white_canvas_001');
+  await chooseAndContinue(page, 'white_touch_boundary', 'white_canvas_002');
+  await chooseAndContinue(page, 'white_follow_to_lab', 'white_canvas_003');
   await expect.poll(async () => page.getByTestId('scene-video').getAttribute('src'), { timeout: 15_000 }).toMatch(/^blob:/u);
-  await page.emulateMedia({ reducedMotion: 'reduce' });
-  await expect.poll(async () => page.getByTestId('static-fallback').getAttribute('src'), { timeout: 15_000 }).toMatch(/^blob:/u);
   await context.setOffline(true);
-  await page.locator('[data-choice-id="enter_rebuild"]').click();
-  await expect(page.getByTestId('choice-result')).toBeVisible();
-  await expect(page.getByTestId('game-screen')).toBeVisible();
+  await chooseAndContinue(page, 'white_sign_witness_protocol', 'white_canvas_004');
+  await expect.poll(async () => page.getByTestId('static-fallback').getAttribute('src'), { timeout: 15_000 }).toMatch(/^blob:/u);
 });
 
 test('creates, restores, and deletes a normal save slot with an image thumbnail', async ({ page }) => {
@@ -67,7 +92,8 @@ test('creates, restores, and deletes a normal save slot with an image thumbnail'
 
 test('wires gallery unlock, special-CG queue, and cached asset URLs', async ({ page }) => {
   await page.getByTestId('new-game').click();
-  await expect.poll(async () => page.getByTestId('scene-video').getAttribute('src'), { timeout: 15_000 }).toMatch(/^blob:/u);
+  await advanceCanonRecapToAuBoundary(page);
+  await chooseAndContinue(page, 'enter_white_canvas', 'white_canvas_001');
   await page.getByRole('button', { name: '图鉴' }).click();
   await expect(page.getByTestId('gallery-screen').locator('img').first()).toHaveAttribute('src', /^blob:/u);
   const queued = await page.evaluate(async () => new Promise<number>((resolve, reject) => {
@@ -101,6 +127,10 @@ test('mobile users can disable video independently of reduced-motion', async ({ 
   await page.getByLabel(/启用动画 CG/u).uncheck();
   await page.getByRole('button', { name: '返回' }).click();
   await page.getByTestId('new-game').click();
+  await advanceCanonRecapToAuBoundary(page);
+  await chooseAndContinue(page, 'enter_white_canvas', 'white_canvas_001');
+  await chooseAndContinue(page, 'white_touch_boundary', 'white_canvas_002');
+  await chooseAndContinue(page, 'white_follow_to_lab', 'white_canvas_003');
   await expect(page.getByTestId('scene-video')).toHaveCount(0);
   await expect(page.getByTestId('static-fallback')).toBeVisible();
   await page.waitForTimeout(300);
@@ -112,11 +142,11 @@ test('mobile and reduced-motion policy use a static fallback instead of scene vi
   page.on('request', (request) => { if (request.url().includes('/assets/video/')) videoRequests.push(request.url()); });
   await page.emulateMedia({ reducedMotion: 'reduce' });
   await page.getByTestId('new-game').click();
-  await page.locator('[data-choice-id="enter_white_canvas"]').click();
-  await page.getByTestId('choice-result').getByRole('button', { name: '继续' }).click();
+  await advanceCanonRecapToAuBoundary(page);
+  await chooseAndContinue(page, 'enter_white_canvas', 'white_canvas_001');
   for (const choiceId of ['white_touch_boundary', 'white_follow_to_lab']) {
-    await page.locator(`[data-choice-id="${choiceId}"]`).click();
-    await page.getByTestId('choice-result').getByRole('button', { name: '继续' }).click();
+    const nextSceneId = choiceId === 'white_touch_boundary' ? 'white_canvas_002' : 'white_canvas_003';
+    await chooseAndContinue(page, choiceId, nextSceneId);
   }
   await expect(page.getByTestId('scene-video')).toHaveCount(0);
   await expect(page.getByTestId('static-fallback')).toBeVisible();
@@ -127,11 +157,17 @@ test('enabled video requests only the delivery profile selected for the viewport
   const videoRequests: string[] = [];
   page.on('request', (request) => { if (request.url().includes('/assets/video/')) videoRequests.push(request.url()); });
   await page.getByTestId('new-game').click();
-  await expect(page.getByTestId('static-fallback')).toBeVisible();
-  await expect(page.getByTestId('scene-video')).toBeVisible();
-  await expect.poll(() => videoRequests.length).toBe(1);
-  const expected = testInfo.project.name === 'desktop' ? '/desktop/prologue.mp4' : '/runtime/prologue.mp4';
+  await advanceCanonRecapToAuBoundary(page);
+  await chooseAndContinue(page, 'enter_white_canvas', 'white_canvas_001');
+  await chooseAndContinue(page, 'white_touch_boundary', 'white_canvas_002');
+  await chooseAndContinue(page, 'white_follow_to_lab', 'white_canvas_003');
+  const video = page.getByTestId('scene-video');
+  await expect(video).toBeVisible();
+  await expect.poll(() => video.getAttribute('poster')).toMatch(/^blob:/u);
+  await expect(page.getByTestId('static-fallback')).toHaveCount(0);
+  await expect.poll(() => videoRequests.length).toBeGreaterThan(0);
+  const expected = testInfo.project.name === 'desktop' ? '/desktop/white_canvas_scene_3.mp4' : '/runtime/white_canvas_scene_3.mp4';
   const forbidden = testInfo.project.name === 'desktop' ? '/runtime/' : '/desktop/';
-  expect(videoRequests[0]).toContain(expected);
+  expect(videoRequests.every((url) => url.includes(expected))).toBe(true);
   expect(videoRequests.some((url) => url.includes(forbidden))).toBe(false);
 });

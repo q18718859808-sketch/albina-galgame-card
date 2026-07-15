@@ -34,7 +34,7 @@ export const useGameStore = defineStore('albina-game', () => {
   const assetCache = markRaw(new RuntimeAssetCache(manifest, runtime.storage, baseUrl));
   runtime.portraits.setUrlResolver(async (id) => manifest.portraits.some((portrait) => portrait.id === id) ? assetCache.cachePortrait(id) : assetCache.cache(id));
   const session = shallowRef(new GameSession(script));
-  const screen = ref<'title' | 'game' | 'gallery' | 'settings' | 'saves'>('title');
+  const screen = ref<'title' | 'game' | 'gallery' | 'settings' | 'credits' | 'saves'>('title');
   const visibleText = ref('');
   const resultText = ref<string>();
   const loading = ref(false);

@@ -42,11 +42,26 @@ describe('offline release boundary', () => {
     expect(normalized.every((path) => !/(?:^|\/)(?:albina-bridge|cinema|console|sfe)(?:\/|$)|(?:^|\/)video-injector\.js$/u.test(path))).toBe(true);
   });
 
+  it.each(releaseRoots)('excludes production progress, retired source art, Albina strips, and unreferenced opening or ED videos in %s', async (root) => {
+    const entries = await readdir(join(projectRoot, root), { recursive: true });
+    const normalized = entries.map((path) => path.replaceAll('\\', '/'));
+    const forbidden = /(?:^|\/)assets\/(?:original_albina_sprites|original_bg_story|original_cg|videos)(?:\/|$)|(?:^|\/)assets\/sprite-atlas\/(?:_progress\.json|(?:albina|original_[^/]+)(?:\/|$))|(?:^|\/)assets\/video\/animated\/(?:desktop|runtime)\/(?:ed_[^/]+|op|prologue)\.mp4$/u;
+
+    expect(normalized.filter((path) => forbidden.test(path))).toEqual([]);
+  });
+
+  it.each(releaseRoots)('publishes only the source-backed canon worldbook in %s', async (root) => {
+    const worldbooks = await readdir(join(projectRoot, root, 'worldbooks'), { recursive: true });
+    expect(worldbooks.map((path) => path.replaceAll('\\', '/'))).toEqual(['albina_canon_worldbook_v1.json']);
+  });
+
   it.each(releaseRoots)('removes bridge, SFE, and cinema keys from %s/manifest.json', async (root) => {
     const manifest = await json(join(root, 'manifest.json'));
-    expect(manifest).not.toHaveProperty('bridge');
-    expect(manifest).not.toHaveProperty('sfe');
-    expect(manifest).not.toHaveProperty('cinema');
+    for (const key of [
+      'bridge', 'sfe', 'cinema',
+      'original_cg', 'original_albina_sprites', 'original_bg_story', 'original_bg_battle',
+      'bgm_metadata', '_removed_official_resources_note',
+    ]) expect(manifest).not.toHaveProperty(key);
   });
 
   it('ignores environment files at every depth while retaining examples', async () => {
@@ -57,7 +72,7 @@ describe('offline release boundary', () => {
     await expect(isIgnored('nested/.env.example')).resolves.toBe(false);
   });
 
-  it('documents an unpublished preview without a runnable public CDN snippet', async () => {
+  it('documents an immutable release candidate while reserving the final tag', async () => {
     const documentation = await Promise.all([
       'README.md',
       'TAGGING.md',
@@ -67,9 +82,10 @@ describe('offline release boundary', () => {
       'card/character_card_protocol.md',
     ].map((path) => readFile(join(projectRoot, path), 'utf8')));
     const joined = documentation.join('\n');
-    expect(joined).toMatch(/(?:local preview|本地预览)/iu);
+    expect(joined).toMatch(/release candidate/iu);
     expect(joined).toMatch(/(?:reserved|保留)/iu);
-    expect(joined).not.toMatch(/import\s+['"]https:\/\/cdn\.jsdelivr\.net/iu);
+    expect(joined).toContain('@v2.0.0-rc.1/');
+    expect(joined).not.toContain('@v2.0.0/');
     expect(joined).not.toMatch(/document\.createElement\(['"]script['"]\)/iu);
     expect(joined).not.toMatch(/git\s+tag\s+v2\.0\.0/iu);
   });
@@ -83,26 +99,26 @@ describe('offline release boundary', () => {
     expect(tagging).toContain('does not permit moving the tag');
   });
 
-  it.each(['card/albina.card.json', 'card/character-card.template.json'])('keeps stale CDN metadata fail-closed in %s', async (path) => {
+  it.each(['card/albina.card.json', 'card/character-card.template.json'])('pins CDN metadata to the immutable RC in %s', async (path) => {
     const card = await json(path) as {
       data: { cdn_import?: string; extensions: { albina_galgame_card: { cdn_import?: string } } };
     };
     const values = [card.data.cdn_import, card.data.extensions.albina_galgame_card.cdn_import].filter(Boolean).join('\n');
-    expect(values).toMatch(/(?:reserved|保留)/iu);
-    expect(values).not.toMatch(/import\s+['"]https:/iu);
+    expect(values).toContain('@v2.0.0-rc.1/');
+    expect(values).not.toContain('@v2.0.0/');
   });
 
-  it('keeps generated preview metadata import-relative until the complete release gate', async () => {
+  it('keeps generated RC metadata import-relative for tag-portable assets', async () => {
     const manifest = await json('dist/albina-galgame-card/manifest.json');
     const lookup = await json('dist/albina-galgame-card/assets/runtime-lookup.json') as {
       base: string; assetsById: Record<string, string>; portraitsById: Record<string, string>;
     };
-    expect(manifest.version).toBe('2.0.0-preview');
+    expect(manifest.version).toBe('2.0.0-rc.1');
     expect(manifest.base).toBe('.');
     expect(lookup.base).toBe('.');
     expect([...Object.values(lookup.assetsById), ...Object.values(lookup.portraitsById)]
       .every((path) => path.startsWith('assets/') && !path.includes('://'))).toBe(true);
-    expect(ALBINA_RELEASE_VERSION).toBe('2.0.0-preview');
+    expect(ALBINA_RELEASE_VERSION).toBe('2.0.0-rc.1');
     expect(ALBINA_CDN_BASE).toBe('.');
   });
 

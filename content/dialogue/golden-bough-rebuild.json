@@ -907,13 +907,6 @@
         "scale": 1
       },
       {
-        "characterId": "fascia",
-        "portraitAssetId": "portrait.fascia.normal",
-        "position": "right",
-        "active": false,
-        "scale": 0.84
-      },
-      {
         "characterId": "protagonist",
         "portraitAssetId": "portrait.protagonist.resolve",
         "position": "left",

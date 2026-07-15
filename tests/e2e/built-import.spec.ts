@@ -48,6 +48,7 @@ test('executes the published Tavern Helper module, injects CSS, mounts, recovers
   await expect(page.getByTestId('title-screen')).toBeVisible();
   await page.getByTestId('new-game').click();
   await page.getByRole('button', { name: '设置' }).click();
+  await expect.poll(() => page.evaluate(() => (window as unknown as { __mediaCounts: { plays: number } }).__mediaCounts.plays)).toBeGreaterThanOrEqual(1);
   await page.getByTestId('autoplay-recovery').click();
   await expect.poll(() => page.evaluate(() => (window as unknown as { __mediaCounts: { plays: number } }).__mediaCounts.plays)).toBeGreaterThanOrEqual(2);
   await page.getByRole('button', { name: '关闭' }).click();

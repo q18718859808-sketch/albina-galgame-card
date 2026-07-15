@@ -1,0 +1,186 @@
+[
+  {
+    "version": 2,
+    "id": "canon_recap_9_14",
+    "chapter": 0,
+    "route": null,
+    "locationId": "lce_research_hallway",
+    "backgroundAssetId": "bg.lce_lab",
+    "tone": "canon-recap",
+    "portraits": [],
+    "speaker": "正史复盘",
+    "text": "【正史中文意译·9-14】在 LCE 研究区走廊，众人遭遇被环指加工的人体作品。浮士德从骨骼、肌肉及其运动方式辨认出 Corporism；现场还留有环指 Nursefather 写给女儿的创作指示。此处只概括事件，不是原作台词转录。",
+    "choices": [
+      {
+        "id": "canon_recap_continue_9_18",
+        "text": "继续复盘 Albina 的首次登场",
+        "nextSceneId": "canon_recap_9_18",
+        "resultText": "时间推进到 9-18 的 LCE 研究区实验室。",
+        "effects": {
+          "setFlags": [
+            "canon_recap_9_14_seen"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "version": 2,
+    "id": "canon_recap_9_18",
+    "chapter": 0,
+    "route": null,
+    "locationId": "lce_research_lab",
+    "backgroundAssetId": "bg.lce_lab",
+    "tone": "canon-recap",
+    "portraits": [
+      {
+        "characterId": "albina",
+        "portraitAssetId": "portrait.albina.armored",
+        "position": "center",
+        "active": true,
+        "scale": 1
+      }
+    ],
+    "speaker": "正史复盘",
+    "text": "【正史中文意译·9-18】Albina 首次实质登场时，与 Ren 接替 Shiomi Yoru 阻挡罪人，为后者接近并带走金枝争取时间。战斗中，她的上半装甲与 Fascia 侧板打开，露出活体组织；Albina 想让 Fascia 继续行动，Ren 则以不得偏离计划为由制止并攻击她。",
+    "choices": [
+      {
+        "id": "canon_recap_continue_9_37",
+        "text": "继续复盘 9-37",
+        "nextSceneId": "canon_recap_9_37",
+        "resultText": "时间推进到 Operation Spider Pyre 期间的 Ring Corridor。",
+        "effects": {
+          "setFlags": [
+            "canon_recap_9_18_seen"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "version": 2,
+    "id": "canon_recap_9_37",
+    "chapter": 0,
+    "route": null,
+    "locationId": "ring_corridor",
+    "backgroundAssetId": "bg.mirror_corridor",
+    "tone": "canon-recap",
+    "portraits": [
+      {
+        "characterId": "albina",
+        "portraitAssetId": "portrait.albina.normal",
+        "position": "center",
+        "active": true,
+        "scale": 1
+      }
+    ],
+    "speaker": "正史复盘",
+    "text": "【正史中文意译·9-37】Operation Spider Pyre 期间，辛克莱、以实玛利、浮士德、Hohenheim 与 Alyssa 在 Ring Corridor 遭遇 Albina。Albina 解释自己为唤醒 Fascia 而迟到，并自称是 Callisto 门下的 Corporism 学徒。玩家 {{user}} 不在这段正史事件中。",
+    "choices": [
+      {
+        "id": "canon_recap_continue_albina_fascia",
+        "text": "核对 Albina 与 Fascia",
+        "nextSceneId": "canon_recap_albina_fascia",
+        "resultText": "复盘转向两者的身份与身体关系。",
+        "effects": {
+          "setFlags": [
+            "canon_recap_9_37_seen"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "version": 2,
+    "id": "canon_recap_albina_fascia",
+    "chapter": 0,
+    "route": null,
+    "locationId": "ring_corridor",
+    "backgroundAssetId": "bg.ring_atelier",
+    "tone": "canon-recap",
+    "portraits": [
+      {
+        "characterId": "albina",
+        "portraitAssetId": "portrait.albina.armored",
+        "position": "left",
+        "active": true,
+        "scale": 1
+      }
+    ],
+    "speaker": "正史复盘",
+    "text": "【正史中文意译·Albina / Fascia】Albina 是 Callisto 门下的 Corporism 学徒，也是 House of Spiders 的成员。她使用白色全身义体与白、黄、金配色的铁处女式装甲。Fascia 是以她原本肉体构成的活体巨剑：Albina 主要保留脑，Fascia 则缺少脑。她语气温和、过度诚实，却把“成为朋友”与成为唤醒或补全 Fascia 的材料联系在一起。",
+    "choices": [
+      {
+        "id": "canon_recap_continue_9_37_battle",
+        "text": "继续复盘 9-37 的战斗升级",
+        "nextSceneId": "canon_recap_9_37_battle",
+        "resultText": "复盘转向 Callisto 加入后的最后阶段。",
+        "effects": {
+          "setFlags": [
+            "canon_recap_albina_fascia_seen"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "version": 2,
+    "id": "canon_recap_9_37_battle",
+    "chapter": 0,
+    "route": null,
+    "locationId": "ring_corridor",
+    "backgroundAssetId": "bg.mirror_corridor",
+    "tone": "canon-recap",
+    "portraits": [
+      {
+        "characterId": "albina",
+        "portraitAssetId": "portrait.albina.armored",
+        "position": "center",
+        "active": true,
+        "scale": 1
+      }
+    ],
+    "speaker": "正史复盘",
+    "text": "【正史中文意译·9-37 战斗升级】Callisto 加入后，师徒二人逐步压制 Sinclair 一行；Alyssa 随后反击。9-37 并未在此结束 Albina、Fascia 与 Callisto 的正史链，其最终结果发生在后续 9-43《Hatching》。",
+    "choices": [
+      {
+        "id": "canon_recap_continue_9_43",
+        "text": "继续复盘 9-43《Hatching》",
+        "nextSceneId": "canon_recap_9_43_outcome",
+        "resultText": "时间推进到 9-43；接下来才是不能被路线文本改写为正史的既定结果。",
+        "effects": {
+          "setFlags": [
+            "canon_recap_9_37_battle_seen"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "version": 2,
+    "id": "canon_recap_9_43_outcome",
+    "chapter": 0,
+    "route": null,
+    "locationId": "ring_corridor",
+    "backgroundAssetId": "bg.mirror_corridor",
+    "tone": "canon-recap-outcome",
+    "portraits": [],
+    "speaker": "正史复盘",
+    "text": "【正史中文意译·9-43《Hatching》既定结果】Future Sinclair 先摧毁 Fascia，再杀死 Albina，并在之后杀死 Callisto。正史复盘到此结束；后续任何让 Albina 存活、与玩家相遇或进入九个结局的内容，都只能是本卡原创 AU。",
+    "choices": [
+      {
+        "id": "canon_recap_enter_AU",
+        "text": "确认边界并进入 AU/IF 分歧",
+        "nextSceneId": "opening_001",
+        "resultText": "正史复盘已结束。以下三条路线全部是本卡原创 AU/IF。",
+        "effects": {
+          "setFlags": [
+            "canon_recap_9_43_seen",
+            "canon_recap_complete",
+            "AU_boundary_acknowledged"
+          ]
+        }
+      }
+    ]
+  }
+]

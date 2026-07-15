@@ -423,13 +423,6 @@
         "scale": 1
       },
       {
-        "characterId": "fascia",
-        "portraitAssetId": "portrait.fascia.normal",
-        "position": "center",
-        "active": false,
-        "scale": 0.86
-      },
-      {
         "characterId": "protagonist",
         "portraitAssetId": "portrait.protagonist.tender",
         "position": "left",
@@ -626,7 +619,7 @@
             "umbrella_shared"
           ],
           "unlockCg": [
-            "cg.rain_reflection"
+            "cg.rain_confession"
           ]
         }
       }
@@ -704,7 +697,7 @@
             "return_ticket_given"
           ],
           "unlockCg": [
-            "cg.rain_reflection"
+            "cg.rain_confession"
           ]
         }
       }
@@ -905,7 +898,7 @@
             "mirror_pointed_out"
           ],
           "unlockCg": [
-            "cg.mirror_broken"
+            "cg.art_resonance"
           ]
         }
       },
@@ -1025,13 +1018,6 @@
         "position": "center",
         "active": true,
         "scale": 1
-      },
-      {
-        "characterId": "fascia",
-        "portraitAssetId": "portrait.fascia.normal",
-        "position": "right",
-        "active": false,
-        "scale": 0.84
       }
     ],
     "speaker": "阿尔比娜",
@@ -1081,13 +1067,6 @@
         "position": "center",
         "active": true,
         "scale": 1
-      },
-      {
-        "characterId": "fascia",
-        "portraitAssetId": "portrait.fascia.normal",
-        "position": "right",
-        "active": false,
-        "scale": 0.84
       }
     ],
     "speaker": "叙事记录",
@@ -1215,13 +1194,6 @@
         "position": "center",
         "active": true,
         "scale": 1
-      },
-      {
-        "characterId": "fascia",
-        "portraitAssetId": "portrait.fascia.normal",
-        "position": "right",
-        "active": false,
-        "scale": 0.84
       }
     ],
     "speaker": "阿尔比娜",
@@ -1283,13 +1255,6 @@
         "position": "center",
         "active": true,
         "scale": 1
-      },
-      {
-        "characterId": "fascia",
-        "portraitAssetId": "portrait.fascia.normal",
-        "position": "right",
-        "active": false,
-        "scale": 0.84
       }
     ],
     "speaker": "阿尔比娜",
@@ -1334,13 +1299,6 @@
         "position": "center",
         "active": true,
         "scale": 1
-      },
-      {
-        "characterId": "fascia",
-        "portraitAssetId": "portrait.fascia.normal",
-        "position": "right",
-        "active": false,
-        "scale": 0.84
       }
     ],
     "speaker": "阿尔比娜",
