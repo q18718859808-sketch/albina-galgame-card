@@ -4,14 +4,15 @@ import { resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
 
 import { buildCurrentReleaseStatus } from './release-status.mjs';
-import { buildReleaseCommands } from './lib/release-gate.mjs';
+import { buildReleaseCommands, hasPublishableWorktreeChanges } from './lib/release-gate.mjs';
 
 const run = promisify(execFile);
 const projectRoot = resolve(import.meta.dirname, '..');
 
 async function git(args, options = {}) {
-  const result = await run('git', args, { cwd: projectRoot, maxBuffer: 4 * 1024 * 1024, ...options });
-  return result.stdout.trim();
+  const { trim = true, ...execOptions } = options;
+  const result = await run('git', args, { cwd: projectRoot, maxBuffer: 4 * 1024 * 1024, ...execOptions });
+  return trim ? result.stdout.trim() : result.stdout.replace(/(?:\r?\n)+$/u, '');
 }
 
 async function optionalGit(args) {
@@ -20,7 +21,7 @@ async function optionalGit(args) {
 
 async function repositoryState(remote, channel) {
   const [porcelain, branch, head, localFinalTagCommit] = await Promise.all([
-    git(['status', '--porcelain=v1', '--untracked-files=all']),
+    git(['status', '--porcelain=v1', '--untracked-files=all'], { trim: false }),
     optionalGit(['symbolic-ref', '--quiet', '--short', 'HEAD']),
     optionalGit(['rev-parse', 'HEAD']),
     optionalGit(['rev-parse', 'refs/tags/v2.0.0^{commit}']),
@@ -29,7 +30,7 @@ async function repositoryState(remote, channel) {
     ? await git(['ls-remote', '--tags', remote, 'refs/tags/v2.0.0', 'refs/tags/v2.0.0^{}'])
     : '';
   return {
-    workingTreeClean: porcelain.length === 0,
+    workingTreeClean: !hasPublishableWorktreeChanges(porcelain),
     branch,
     head,
     localFinalTagCommit,

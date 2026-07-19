@@ -4,7 +4,7 @@ import { join } from 'node:path';
 import { describe, expect, it } from 'vitest';
 
 import { deriveReleaseStatus, summarizeReleaseArtifacts } from '../../scripts/lib/release-status.mjs';
-import { buildReleaseCommands, evaluateReleaseGate } from '../../scripts/lib/release-gate.mjs';
+import { buildReleaseCommands, evaluateReleaseGate, hasPublishableWorktreeChanges } from '../../scripts/lib/release-gate.mjs';
 
 const imageProbe = (available: boolean) => ({
   provider: 'x666-openai-compatible',
@@ -32,6 +32,21 @@ const completeCounts = {
 const completeReadiness = { total: 109, ready: 109, blocked: 0, byRoot: {}, blockers: [] };
 
 describe('release status and publication gate', () => {
+  it('ignores only protected local production state when checking publishable changes', () => {
+    const localOnly = [
+      ' M tools/media/production/.ledger.json',
+      '?? tools/media/production/jobs/new.json',
+      '?? staging/media/visual-v2/ledger.json',
+      '?? tmp/provider-response.json',
+      '?? .codex/tasks/task/manifest.json',
+    ].join('\n');
+    expect(hasPublishableWorktreeChanges(localOnly)).toBe(false);
+    expect(hasPublishableWorktreeChanges('M tools/media/jobs/example.image.json')).toBe(false);
+    expect(hasPublishableWorktreeChanges(`${localOnly}\n M src/App.vue`)).toBe(true);
+    expect(hasPublishableWorktreeChanges('M src/App.vue')).toBe(true);
+    expect(hasPublishableWorktreeChanges('R  tools/old.json -> src/leak.json')).toBe(true);
+  });
+
   it('derives incomplete status from blocked media and unavailable production provider', () => {
     const status = deriveReleaseStatus({
       version: '2.0.0-rc.1',

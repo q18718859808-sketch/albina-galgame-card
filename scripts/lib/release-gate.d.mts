@@ -21,6 +21,7 @@ export interface ReleaseGateResult {
 }
 
 export function isPrereleaseVersion(version: string): boolean;
+export function hasPublishableWorktreeChanges(porcelain: string): boolean;
 export function evaluateReleaseGate(input: {
   channel: 'rc' | 'final';
   status: ReleaseGateStatus;

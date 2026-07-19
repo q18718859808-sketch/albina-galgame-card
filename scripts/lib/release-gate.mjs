@@ -1,7 +1,18 @@
 const FINAL_VERSION = '2.0.0';
+const localOnlyRoots = new Set(['.codex', 'staging', 'tmp', 'tools']);
 
 export function isPrereleaseVersion(version) {
   return typeof version === 'string' && version.includes('-');
+}
+
+export function hasPublishableWorktreeChanges(porcelain) {
+  if (typeof porcelain !== 'string') throw new Error('Git porcelain status must be a string');
+  return porcelain.split(/\r?\n/u).filter(Boolean).some((line) => {
+    const pathOffset = line.length >= 4 && line[2] === ' ' ? 3 : line.length >= 3 && line[1] === ' ' ? 2 : -1;
+    if (pathOffset < 0 || line.slice(pathOffset).includes(' -> ')) return true;
+    const path = line.slice(pathOffset).replaceAll('\\', '/');
+    return !localOnlyRoots.has(path.split('/')[0]);
+  });
 }
 
 export function evaluateReleaseGate({ channel, status, repository } = {}) {
