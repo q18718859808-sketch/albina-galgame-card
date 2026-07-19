@@ -1,0 +1,26 @@
+{
+  "version": 1,
+  "assetId": "voice.result.canon_recap_continue_9_37_battle",
+  "artifactSha256": "86a766b774def49b6ded10b24608646f954866fdefa589f72d99f7fe3d29d102",
+  "provenance": {
+    "provider": "pie",
+    "model": "speech-2.8-hd",
+    "promptVersion": "albina-speech-v2",
+    "sourceJobHash": "37ea19fb902336b0c4d96a263f91162b7e686f4335f1a5a51f3d9b16a610df65",
+    "review": {
+      "status": "approved",
+      "reviewer": "automated-audio-qc",
+      "reviewedAt": "2026-07-15T17:56:46.814Z"
+    }
+  },
+  "lineage": {
+    "kind": "conversion",
+    "processVersion": "speech-loudnorm-v2",
+    "inputs": [
+      {
+        "sha256": "910f33bc6df9539dfceab2db2f8b0043eaf3482bbdd0ab2c83e7b3a3119397f8",
+        "role": "pie-speech-api-output"
+      }
+    ]
+  }
+}

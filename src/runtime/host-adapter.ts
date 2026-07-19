@@ -1,4 +1,5 @@
 import type { AssetManifestV2 } from '../domain/assets';
+import { decodeSaveV2OrV1 } from '../domain/migrate-save-v1';
 import type { SaveV2 } from '../domain/save';
 
 import { AudioService, type AudioFactory } from './audio';
@@ -12,7 +13,7 @@ export type HostLifecycleEvent = 'chatChanged' | 'load' | 'unmount';
 
 export interface TavernHelperBindings {
   getChatId(): string | undefined;
-  loadSave(): Promise<SaveV2 | undefined>;
+  loadSave(): Promise<unknown>;
   saveSave(save: SaveV2): Promise<void>;
   subscribe(event: HostLifecycleEvent, listener: () => void): () => void;
 }
@@ -21,7 +22,13 @@ export class TavernHostAdapter {
   constructor(private readonly bindings: TavernHelperBindings) {}
 
   getChatId(): string | undefined { return this.bindings.getChatId(); }
-  loadSave(): Promise<SaveV2 | undefined> { return this.bindings.loadSave(); }
+  async loadSave(): Promise<SaveV2 | undefined> {
+    const input = await this.bindings.loadSave();
+    if (input === undefined) return undefined;
+    const decoded = decodeSaveV2OrV1(input);
+    if (!decoded.ok) throw decoded.error;
+    return decoded.save;
+  }
   saveSave(save: SaveV2): Promise<void> { return this.bindings.saveSave(save); }
   subscribe(event: HostLifecycleEvent, listener: () => void): () => void {
     return this.bindings.subscribe(event, listener);

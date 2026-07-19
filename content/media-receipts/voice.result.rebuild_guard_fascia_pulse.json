@@ -1,0 +1,26 @@
+{
+  "version": 1,
+  "assetId": "voice.result.rebuild_guard_fascia_pulse",
+  "artifactSha256": "f11f541a1544a54ba6d13f6adb0d93344ab451bd099d2005a5ac8c3a8cfe6369",
+  "provenance": {
+    "provider": "pie",
+    "model": "speech-2.8-hd",
+    "promptVersion": "albina-speech-legacy-v1",
+    "sourceJobHash": "df42cb1ad7931603b5bd0cfe411166767c59fbeb3761fb3e019337fba982e582",
+    "review": {
+      "status": "approved",
+      "reviewer": "automated-audio-qc",
+      "reviewedAt": "2026-07-15T18:52:20.649Z"
+    }
+  },
+  "lineage": {
+    "kind": "conversion",
+    "processVersion": "speech-loudnorm-v1",
+    "inputs": [
+      {
+        "sha256": "5d3946116f8d9d848ea408b9a1f7ef1323642158fb0f94e9a5d10c56312627e7",
+        "role": "validated-pie-speech-output"
+      }
+    ]
+  }
+}

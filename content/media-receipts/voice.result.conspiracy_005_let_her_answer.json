@@ -1,0 +1,26 @@
+{
+  "version": 1,
+  "assetId": "voice.result.conspiracy_005_let_her_answer",
+  "artifactSha256": "c3eeb96169e86d6d32bd24fcc1716f1b4b6169c24241a4a3785ad6e35bd0499b",
+  "provenance": {
+    "provider": "pie",
+    "model": "speech-2.8-hd",
+    "promptVersion": "albina-speech-legacy-v1",
+    "sourceJobHash": "05da30b1f408abe988a03c1b859ad87ed8697a9588dfd0a01063074bca08695a",
+    "review": {
+      "status": "approved",
+      "reviewer": "automated-audio-qc",
+      "reviewedAt": "2026-07-15T18:51:50.999Z"
+    }
+  },
+  "lineage": {
+    "kind": "conversion",
+    "processVersion": "speech-loudnorm-v1",
+    "inputs": [
+      {
+        "sha256": "548667e2e8d97d86d68959d8c7ee94e2d81570f13ba597501c7ffeb569832526",
+        "role": "validated-pie-speech-output"
+      }
+    ]
+  }
+}

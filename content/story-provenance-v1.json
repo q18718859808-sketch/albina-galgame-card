@@ -26,13 +26,14 @@
         "classification": "canon_paraphrase",
         "scope": "canon_recap",
         "claimIds": [
-          "canon.9-18.albina-first-appearance"
+          "canon.9-18.first-appearance"
         ],
         "sourceIds": [
           "source.official.canto-ix.9-18",
-          "source.wiki.canto-ix-part-i.172275"
+          "source.wiki.canto-ix-part-i.172275",
+          "source.wiki.albina.173286"
         ],
-        "note": "Short zh-CN first-appearance paraphrase from the pinned 9-18 pre/post-battle sequence."
+        "note": "Reviewed zh-CN first-appearance paraphrase covering the complete Albina-related 9-18 event sequence."
       }
     },
     {
@@ -43,14 +44,14 @@
         "classification": "canon_paraphrase",
         "scope": "canon_recap",
         "claimIds": [
-          "canon.9-37.encounter"
+          "canon.9-37.encounter-and-method"
         ],
         "sourceIds": [
           "source.official.canto-ix.9-37",
           "source.wiki.canto-ix-part-iii.177602",
-          "source.bilibili.BV1rsi8B5ED2.p37"
+          "source.wiki.albina.173286"
         ],
-        "note": "Short zh-CN encounter paraphrase cross-checked against the source-game scene order."
+        "note": "Reviewed zh-CN 9-37 arrival, method and friendship paraphrase; player boundary text is kept out of this canon scene."
       }
     },
     {
@@ -61,18 +62,25 @@
         "classification": "canon_paraphrase",
         "scope": "canon_recap",
         "claimIds": [
-          "canon.albina.identity-and-disposition",
-          "canon.albina.appearance",
-          "canon.albina-fascia.anatomy-and-friends"
+          "canon.profile.identity",
+          "canon.appearance.prosthetic-body",
+          "canon.appearance.armor-and-fascia",
+          "canon.personality.fascia-attachment",
+          "canon.personality.social-and-ambition",
+          "canon.story.pre-canto-fascia"
         ],
         "sourceIds": [
+          "source.official.canto-ix.9-18",
           "source.official.canto-ix.9-37",
-          "source.wiki.canto-ix-part-iii.177602",
+          "source.official.canto-ix.9-43",
+          "source.wiki.albina-enemy.175660",
           "source.wiki.albina.173286",
-          "source.bilibili.BV1rsi8B5ED2.p37",
-          "source.bilibili.BV1brvbBDE84.p33-p34"
+          "source.wiki.callisto.177757",
+          "source.wiki.canto-ix-part-i.172275",
+          "source.wiki.canto-ix-part-iii.177602",
+          "source.wiki.house-of-spiders.177075"
         ],
-        "note": "Short zh-CN character and anatomy paraphrase; no source dialogue is reproduced."
+        "note": "Atomic profile, appearance, personality and pre-Canto facts rendered from the reviewed claim ledger; no source dialogue is reproduced."
       }
     },
     {
@@ -87,9 +95,10 @@
         ],
         "sourceIds": [
           "source.official.canto-ix.9-37",
+          "source.official.canto-ix.9-43",
           "source.wiki.canto-ix-part-iii.177602"
         ],
-        "note": "Short zh-CN battle escalation paraphrase; no source dialogue is reproduced."
+        "note": "Reviewed 9-37 ending boundary contrasted with the later 9-43 outcome."
       }
     },
     {
@@ -100,14 +109,15 @@
         "classification": "canon_paraphrase",
         "scope": "canon_recap",
         "claimIds": [
+          "canon.9-43.sign-awakening",
           "canon.9-43.outcome"
         ],
         "sourceIds": [
           "source.official.canto-ix.9-43",
           "source.wiki.canto-ix-part-iii.177602",
-          "source.bilibili.BV1rsi8B5ED2.p43"
+          "source.wiki.albina.173286"
         ],
-        "note": "Short zh-CN 9-43 outcome paraphrase followed by an explicit canon/AU boundary."
+        "note": "Reviewed 9-43 pressure, Sign awakening and outcome paraphrase; the AU boundary remains a separate scene."
       }
     },
     {
@@ -197,7 +207,7 @@
           "source.official.canto-ix.9-43",
           "source.project.legacy-v1.0.44"
         ],
-        "note": "Project-authored route content after the explicit 9-37 divergence; never source-game canon."
+        "note": "Project-authored route content after the explicit 9-43 divergence; never source-game canon."
       }
     }
   ]

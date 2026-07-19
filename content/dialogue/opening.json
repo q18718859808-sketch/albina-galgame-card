@@ -19,12 +19,14 @@
     ],
     "speaker": "AU/IF 分歧",
     "text": "【本卡原创 AU/IF，不是原作后续】9-43《Hatching》的正史结局已经复盘完毕。从这一刻开始，Albina 的存活、玩家 {{user}} 的出现、三条路线与九个结局均为本卡原创，不代表原作事实或隐藏结局。",
+    "voiceAssetId": "voice.scene.opening_001",
     "choices": [
       {
         "id": "enter_white_canvas",
         "text": "进入 white_canvas AU",
         "nextSceneId": "white_canvas_001",
         "resultText": "【AU/IF】你进入以关系边界与自我选择为核心的 white_canvas 原创路线。",
+        "resultVoiceAssetId": "voice.result.enter_white_canvas",
         "effects": {
           "route": "white_canvas",
           "values": {
@@ -45,6 +47,7 @@
         "text": "进入 golden_bough_rebuild AU",
         "nextSceneId": "golden_bough_001",
         "resultText": "【AU/IF】这条路线假设 Albina 在 9-43 死亡后被重构；该前提与全部后续均非正史。",
+        "resultVoiceAssetId": "voice.result.enter_rebuild",
         "effects": {
           "route": "golden_bough_rebuild",
           "values": {
@@ -64,6 +67,7 @@
         "text": "进入 ring_conspiracy AU",
         "nextSceneId": "ring_conspiracy_001",
         "resultText": "【AU/IF】这条路线主动改写 9-43 后续因果；其中的委托、关系和结局均为本卡原创。",
+        "resultVoiceAssetId": "voice.result.enter_conspiracy",
         "effects": {
           "route": "ring_conspiracy",
           "values": {

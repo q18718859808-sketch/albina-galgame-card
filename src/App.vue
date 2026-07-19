@@ -1,7 +1,8 @@
 <script setup lang="ts">
-import { computed, onBeforeUnmount, ref } from 'vue';
+import { computed, nextTick, onBeforeUnmount, ref } from 'vue';
 
 import audioLicensesJson from '../content/audio-licenses-v1.json';
+import GameplayPanel from './components/GameplayPanel.vue';
 import PortraitStage from './components/PortraitStage.vue';
 import { AudioLicenseRegistrySchema } from './domain/assets';
 import { ALBINA_RELEASE_VERSION } from './runtime/asset-resolver';
@@ -11,15 +12,22 @@ const game = useGameStore();
 const audioCredits = AudioLicenseRegistrySchema.parse(audioLicensesJson);
 const importText = ref('');
 const exportText = ref('');
+const gameplayOpen = ref(false);
+const gameplayButton = ref<HTMLButtonElement>();
 const galleryAssets = computed(() => game.galleryIds.map((id) => ({ id, url: game.assetUrl(id) })).filter((asset) => asset.url));
 
 function exportCurrentSave(): void { exportText.value = game.exportSave(); }
 async function importCurrentSave(): Promise<void> { if (importText.value.trim()) await game.importSave(importText.value); }
+function closeGameplay(): void {
+  gameplayOpen.value = false;
+  void nextTick(() => gameplayButton.value?.focus());
+}
 onBeforeUnmount(() => { game.disposeUiListeners(); game.runtime.unmount(); });
 </script>
 
 <template>
   <main class="albina-app" data-albina-application :data-screen="game.screen">
+    <p v-if="game.saveError" class="save-error" role="alert" data-testid="save-error">{{ game.saveError.message }}</p>
     <section v-if="game.screen === 'title'" class="title-screen" data-testid="title-screen">
       <div class="title-screen__veil" />
       <div class="title-screen__content">
@@ -85,7 +93,9 @@ onBeforeUnmount(() => { game.disposeUiListeners(); game.runtime.unmount(); });
       </ol>
       <section class="official-listening" aria-labelledby="official-soundtrack-title">
         <h3 id="official-soundtrack-title">ProjectMoon 官方 OST</h3>
+        <p><strong>{{ audioCredits.officialSoundtrack.playlistTitle }}</strong> · {{ audioCredits.officialSoundtrack.channel }} · {{ audioCredits.officialSoundtrack.playlistTrackCount }} 首</p>
         <p>{{ audioCredits.officialSoundtrack.notice }}</p>
+        <p>{{ audioCredits.officialSoundtrack.rightsNotice }}</p>
         <nav aria-label="官方 OST 外部试听">
           <a v-for="link in audioCredits.officialSoundtrack.links" :key="link.url" :href="link.url" target="_blank" rel="noopener noreferrer">{{ link.label }}</a>
           <a :href="audioCredits.officialSoundtrack.termsUrl" target="_blank" rel="noopener noreferrer">ProjectMoon 服务条款</a>
@@ -110,9 +120,21 @@ onBeforeUnmount(() => { game.disposeUiListeners(); game.runtime.unmount(); });
 
       <header class="game-hud">
         <span>CH.{{ game.scene.chapter }} · {{ game.scene.locationId }}</span>
-        <span>信任 {{ game.save.values.trust }} / 危险 {{ game.save.values.danger }} / 共鸣 {{ game.save.values.artResonance }}</span>
-        <nav><button @click="game.quickSave">快速存档</button><button data-testid="game-saves" @click="game.openSaves">存档</button><button @click="game.openGallery">图鉴</button><button data-testid="game-settings" @click="game.screen = 'settings'">设置</button><button @click="game.toggleMute">{{ game.muted ? '启音' : '静音' }}</button></nav>
+        <span class="game-hud__values">好感 {{ game.effectiveValues.affectionAlbina }} / 信任 {{ game.effectiveValues.trust }} / 危险 {{ game.effectiveValues.danger }} / 共鸣 {{ game.effectiveValues.artResonance }}</span>
+        <nav><button ref="gameplayButton" data-testid="gameplay-open" @click="gameplayOpen = true">状态</button><button @click="game.quickSave">快速存档</button><button data-testid="game-saves" @click="game.openSaves">存档</button><button @click="game.openGallery">图鉴</button><button data-testid="game-settings" @click="game.screen = 'settings'">设置</button><button @click="game.toggleMute">{{ game.muted ? '启音' : '静音' }}</button></nav>
       </header>
+
+      <GameplayPanel
+        v-if="gameplayOpen"
+        :gameplay="game.gameplay"
+        :save="game.save"
+        :effective-values="game.effectiveValues"
+        :interaction-error="game.gameplayError"
+        @close="closeGameplay"
+        @equip="game.equip"
+        @wear-outfit="game.wearOutfit"
+        @select-profession="game.selectProfession"
+      />
 
       <article class="dialogue-box" data-testid="dialogue-box" @click="game.completeText">
         <h2>{{ game.scene.speaker }}</h2>

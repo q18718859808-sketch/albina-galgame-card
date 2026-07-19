@@ -57,17 +57,18 @@ const synthesizedVideoNames = [
 ];
 
 describe('canonical asset release', () => {
-  it('retires all 18 Albina strips and the false Fascia portrait in favor of static portraits', async () => {
+  it('retires all strips, unused portraits, and the false Fascia portrait in favor of reachable static portraits', async () => {
     const manifest = parseAssetManifestV2(await readJson('content/asset-manifest-v2.json'));
     const albinaPortraits = manifest.portraits.filter((portrait) => portrait.characterId === 'albina');
     const pendingStripJobs = manifest.mediaJobs.filter((job) => job.id.startsWith('job.strip.'));
     const pendingGalleryJobs = manifest.mediaJobs.filter((job) => job.id.startsWith('job.cg.'));
 
-    expect(albinaPortraits).toHaveLength(18);
-    expect(albinaPortraits.every((portrait) => portrait.animation.kind === 'static')).toBe(true);
+    expect(albinaPortraits).toHaveLength(13);
+    expect(manifest.portraits).toHaveLength(27);
+    expect(manifest.portraits.every((portrait) => portrait.animation.kind === 'static')).toBe(true);
     expect(albinaPortraits.every((portrait) => portrait.path.startsWith('characters/albina/'))).toBe(true);
     expect(manifest.portraits.some((portrait) => portrait.id === 'portrait.fascia.normal')).toBe(false);
-    expect(manifest.assets.some((asset) => asset.path.startsWith('sprite-atlas/albina/'))).toBe(false);
+    expect(manifest.assets.some((asset) => asset.path.startsWith('sprite-atlas/'))).toBe(false);
     expect(pendingStripJobs).toHaveLength(0);
     expect(pendingGalleryJobs).toEqual([]);
   });

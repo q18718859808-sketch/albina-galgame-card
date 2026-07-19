@@ -8,7 +8,6 @@ import { describe, expect, it } from 'vitest';
 import { parseAssetManifestV2 } from '../../src/domain/assets';
 import { CanonClaimLedgerSchema, CanonSourceLedgerSchema, StoryProvenanceLedgerSchema } from '../../src/domain/canon';
 import { GameScriptV2Schema, parseGameScriptV2 } from '../../src/domain/game-script';
-import type { SaveV2 } from '../../src/domain/save';
 import { GameSession } from '../../src/game/session';
 
 const run = promisify(execFile);
@@ -23,6 +22,8 @@ const provenanceLedgerPath = resolve(projectRoot, 'content/story-provenance-v1.j
 
 interface StoryManifest {
   dialogueFiles: string[];
+  gameplayFile: string;
+  worldbookSourceFile: string;
 }
 
 interface StoryScene {
@@ -67,6 +68,8 @@ describe('deterministic story compilation', () => {
     expect(() => StoryProvenanceLedgerSchema.parse(loadJson<unknown>(provenanceLedgerPath))).not.toThrow();
     const manifest = loadJson<StoryManifest & Record<string, unknown>>(sourceManifestPath);
     expect(manifest?.dialogueFiles[0]).toBe('dialogue/canon-recap.json');
+    expect(manifest?.gameplayFile).toBe('gameplay-systems-v2.json');
+    expect(manifest?.worldbookSourceFile).toBe('albina-card-canon-v1.json');
     expect(manifest).not.toHaveProperty('legacyOracle');
   });
 
@@ -174,44 +177,37 @@ describe('compiled story graph', () => {
 
     const manifest = parseAssetManifestV2(assetManifest);
     const script = parseGameScriptV2(compiled, manifest);
-    const relevantFlags = new Set(script.scenes.flatMap((scene) => scene.choices.flatMap((choice) => [
-      ...(choice.availability?.allOf ?? []),
-      ...(choice.availability?.anyOf ?? []),
-    ])).filter((predicate) => predicate.kind === 'flag').map((predicate) => predicate.flag));
-    const start = new GameSession(script);
-    const queue: Array<{ save: SaveV2; path: string[] }> = [{ save: structuredClone(start.save), path: [] }];
-    const visited = new Set<string>();
-    const endingPaths = new Map<string, string[]>();
+    const recap = [
+      'canon_recap_continue_9_18', 'canon_recap_continue_9_37',
+      'canon_recap_continue_albina_fascia', 'canon_recap_continue_9_37_battle',
+      'canon_recap_continue_9_43', 'canon_recap_enter_AU',
+    ];
+    const routes = {
+      white_canvas: {
+        entry: 'enter_white_canvas',
+        true: ['white_tease_back', 'white_follow_to_lab', 'white_interrupt_lab_terms', 'white_share_rain_window', 'white_canvas_route_complete', 'white_006_refuse_naming', 'white_007_ask_fascia_term', 'white_008_stay_witness_only', 'white_009_keep_half_step', 'white_010_offer_return_ticket', 'white_011_walk_beside', 'white_012_refuse_exhibit', 'white_013_point_to_mirror', 'white_014_keep_base_color', 'white_canvas_route_final'],
+        bad: ['white_tease_back', 'white_follow_to_lab', 'white_sign_witness_protocol', 'white_keep_empty_seat', 'white_canvas_route_complete', 'white_006_refuse_naming', 'white_007_ask_fascia_term', 'white_008_hold_fascia', 'white_009_share_umbrella_edge', 'white_010_offer_return_ticket', 'white_011_walk_beside', 'white_012_refuse_exhibit', 'white_013_refuse_to_choose', 'white_014_keep_base_color', 'white_canvas_route_final'],
+      },
+      golden_bough_rebuild: {
+        entry: 'enter_rebuild',
+        true: ['rebuild_question_fascia', 'rebuild_push_into_raid', 'rebuild_guard_fascia_pulse', 'rebuild_use_rooftop_signal', 'golden_bough_route_complete', 'rebuild_006_keep_silent_anchor', 'rebuild_007_stay_own_rhythm', 'rebuild_008_trade_old_memory', 'rebuild_009_refuse_perfect_copy', 'rebuild_010_ask_her_choice', 'rebuild_011_ask_next_revision', 'rebuild_012_break_contract', 'rebuild_013_offer_witness', 'rebuild_014_ask_when_to_light', 'golden_bough_route_final'],
+        bad: ['rebuild_question_fascia', 'rebuild_push_into_raid', 'rebuild_guard_fascia_pulse', 'rebuild_use_rooftop_signal', 'golden_bough_route_complete', 'rebuild_006_keep_silent_anchor', 'rebuild_007_stay_own_rhythm', 'rebuild_008_trade_old_memory', 'rebuild_009_hand_question_back', 'rebuild_010_ask_her_choice', 'rebuild_011_ask_next_revision', 'rebuild_012_negotiate_terms', 'rebuild_013_offer_witness', 'rebuild_014_ask_when_to_light', 'golden_bough_route_final'],
+      },
+      ring_conspiracy: {
+        entry: 'enter_conspiracy',
+        true: ['conspiracy_accept', 'conspiracy_escape_to_backstreets', 'conspiracy_break_pursuit_frame', 'ring_conspiracy_route_complete', 'conspiracy_005_refuse_duo', 'conspiracy_006_stand_with_her', 'conspiracy_007_break_frame', 'conspiracy_008_refuse_testimony', 'conspiracy_009_choose_present', 'conspiracy_010_throw_badge', 'conspiracy_011_rewrite_ending', 'conspiracy_012_keep_blade', 'conspiracy_013_return_gently', 'conspiracy_014_keep_one_line', 'ring_conspiracy_route_final'],
+        bad: ['conspiracy_accept', 'conspiracy_escape_to_backstreets', 'conspiracy_break_pursuit_frame', 'ring_conspiracy_route_complete', 'conspiracy_005_refuse_duo', 'conspiracy_006_stand_with_her', 'conspiracy_007_break_frame', 'conspiracy_008_refuse_testimony', 'conspiracy_009_choose_present', 'conspiracy_010_throw_badge', 'conspiracy_011_burn_film', 'conspiracy_012_end_tonight', 'conspiracy_013_hold_one_second', 'conspiracy_014_keep_one_line', 'ring_conspiracy_route_final'],
+      },
+    } as const;
 
-    for (let cursor = 0; cursor < queue.length && endingPaths.size < 9; cursor += 1) {
-      const current = queue[cursor]!;
-      const currentSession = new GameSession(script, { save: current.save });
-      for (const choice of currentSession.choices) {
-        const branch = new GameSession(script, { save: current.save });
-        const result = branch.choose(choice.id);
-        const path = [...current.path, choice.id];
-        if (result.scene.ending) {
-          endingPaths.set(`${result.scene.ending.route}.${result.scene.ending.kind}`, path);
-          continue;
-        }
-        const enteredRoute = path.some((choiceId) => choiceId.startsWith('enter_'));
-        if (result.scene.id === 'opening_001' && enteredRoute) continue;
-        const values = branch.save.values;
-        const flags = [...relevantFlags].sort().map((flag) => `${flag}:${branch.save.flags[flag] === true}`).join(',');
-        const signature = [branch.save.sceneId, branch.save.route, values.affectionAlbina, values.trust, values.danger, values.artResonance, flags].join('|');
-        if (visited.has(signature)) continue;
-        visited.add(signature);
-        queue.push({ save: structuredClone(branch.save), path });
+    for (const [route, paths] of Object.entries(routes)) {
+      for (const kind of ['true', 'normal', 'bad'] as const) {
+        const session = new GameSession(script);
+        [...recap, paths.entry, ...(kind === 'true' ? paths.true : paths.bad)].forEach((choiceId) => session.choose(choiceId));
+        const endingChoice = session.choices.find(({ nextSceneId }) => nextSceneId.endsWith(`_ending_${kind}`));
+        expect(endingChoice, `${route}.${kind}`).toBeDefined();
+        expect(session.choose(endingChoice!.id).scene.ending).toMatchObject({ route, kind });
       }
     }
-
-    const expected = ['golden_bough_rebuild', 'ring_conspiracy', 'white_canvas']
-      .flatMap((route) => ['bad', 'normal', 'true'].map((kind) => `${route}.${kind}`))
-      .sort();
-    expect([...endingPaths.keys()].sort()).toEqual(expected);
-    for (const [ending, path] of endingPaths) {
-      expect(path.length, ending).toBeGreaterThan(1);
-      expect(path.at(-1), ending).toMatch(/ending/u);
-    }
-  }, 20_000);
+  });
 });

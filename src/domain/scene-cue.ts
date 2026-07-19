@@ -1,64 +1,44 @@
 import { z } from 'zod';
 
 import { SceneProvenanceSchema } from './canon';
+import {
+  BattleResolutionEffectSchema,
+  ConflictMasteryEffectsSchema,
+  GameplayStatEffectsSchema,
+  RelationshipVectorEffectsSchema,
+  StatePredicateSchema,
+} from './gameplay';
+import { RouteIdSchema } from './scene-cue-route';
 
 export const DOMAIN_VERSION = 2 as const;
 
-export const RouteIdSchema = z.enum([
-  'white_canvas',
-  'golden_bough_rebuild',
-  'ring_conspiracy',
-]);
+export { RouteIdSchema } from './scene-cue-route';
 
-export const AuthoritativeValueEffectsSchema = z
-  .object({
-    affectionAlbina: z.number().finite().optional(),
-    trust: z.number().finite().optional(),
-    danger: z.number().finite().optional(),
-    artResonance: z.number().finite().optional(),
-    composure: z.number().finite().optional(),
-    materials: z.number().finite().optional(),
-    leverage: z.number().finite().optional(),
-    exposure: z.number().finite().optional(),
-  })
-  .strict();
+export const AuthoritativeValueEffectsSchema = GameplayStatEffectsSchema;
 
 export const ChoiceEffectsSchema = z
   .object({
     route: RouteIdSchema.optional(),
     values: AuthoritativeValueEffectsSchema.optional(),
+    relationshipVectors: RelationshipVectorEffectsSchema.optional(),
+    conflictMastery: ConflictMasteryEffectsSchema.optional(),
     setFlags: z.array(z.string().min(1)).optional(),
     clearFlags: z.array(z.string().min(1)).optional(),
     unlockCg: z.array(z.string().min(1)).optional(),
     grantItems: z.array(z.string().min(1)).optional(),
+    equipItems: z.array(z.string().min(1)).optional(),
+    unlockOutfits: z.array(z.string().min(1)).optional(),
+    activateOutfit: z.string().min(1).optional(),
+    startQuests: z.array(z.string().min(1)).optional(),
     completeQuests: z.array(z.string().min(1)).optional(),
+    resolveBattles: z.array(BattleResolutionEffectSchema).optional(),
+    professionXp: z.record(z.string().min(1), z.number().int().positive()).optional(),
+    activateProfession: z.string().min(1).optional(),
   })
   .strict();
 
-export const StoryValueKeySchema = z.enum([
-  'affectionAlbina',
-  'trust',
-  'danger',
-  'artResonance',
-]);
-
-export const EligibilityPredicateSchema = z.discriminatedUnion('kind', [
-  z
-    .object({
-      kind: z.literal('value'),
-      key: StoryValueKeySchema,
-      operator: z.enum(['gte', 'lte', 'eq']),
-      value: z.number().finite(),
-    })
-    .strict(),
-  z
-    .object({
-      kind: z.literal('flag'),
-      flag: z.string().min(1),
-      equals: z.boolean(),
-    })
-    .strict(),
-]);
+export { StoryValueKeySchema } from './gameplay';
+export const EligibilityPredicateSchema = StatePredicateSchema;
 
 export const ChoiceAvailabilitySchema = z
   .object({
@@ -134,7 +114,7 @@ export const SceneCueSchema = SceneCueBaseSchema.superRefine((scene, context) =>
   }
 });
 
-export type RouteId = z.infer<typeof RouteIdSchema>;
+export type { RouteId } from './scene-cue-route';
 export type ChoiceEffects = z.infer<typeof ChoiceEffectsSchema>;
 export type EligibilityPredicate = z.infer<typeof EligibilityPredicateSchema>;
 export type ChoiceAvailability = z.infer<typeof ChoiceAvailabilitySchema>;

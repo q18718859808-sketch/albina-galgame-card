@@ -1,0 +1,26 @@
+{
+  "version": 1,
+  "assetId": "voice.result.conspiracy_008_refuse_testimony",
+  "artifactSha256": "5e39100ad58ff26de7201dc277ecc8a8f050f8fe377f891cada6bc4eca38dcb4",
+  "provenance": {
+    "provider": "pie",
+    "model": "speech-2.8-hd",
+    "promptVersion": "albina-speech-legacy-v1",
+    "sourceJobHash": "62706d3b23d90aa75b04522ae440512160303b762c7f1df9d0947dcdb9936c5c",
+    "review": {
+      "status": "approved",
+      "reviewer": "automated-audio-qc",
+      "reviewedAt": "2026-07-15T18:51:54.818Z"
+    }
+  },
+  "lineage": {
+    "kind": "conversion",
+    "processVersion": "speech-loudnorm-v1",
+    "inputs": [
+      {
+        "sha256": "d5ca8cee4ee30db158d885deb2604fa78bb33c832d7743a030fbc2133d63efb7",
+        "role": "validated-pie-speech-output"
+      }
+    ]
+  }
+}

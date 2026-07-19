@@ -1,0 +1,26 @@
+{
+  "version": 1,
+  "assetId": "voice.result.rebuild_008_trade_old_memory",
+  "artifactSha256": "9ddad23ff662681ba22e7e3c0a569ce229853bdf73c03cd752b4c697bd79ac21",
+  "provenance": {
+    "provider": "pie",
+    "model": "speech-2.8-hd",
+    "promptVersion": "albina-speech-legacy-v1",
+    "sourceJobHash": "f72de26d73c073ec876653b2b71c303cd15bfe9291f9f5b53f9d4c636a5f42fa",
+    "review": {
+      "status": "approved",
+      "reviewer": "automated-audio-qc",
+      "reviewedAt": "2026-07-15T18:52:10.799Z"
+    }
+  },
+  "lineage": {
+    "kind": "conversion",
+    "processVersion": "speech-loudnorm-v1",
+    "inputs": [
+      {
+        "sha256": "d94505f65341fd2877cdbf6ddcd0067ed716314330df879113e4d306ee5b76fd",
+        "role": "validated-pie-speech-output"
+      }
+    ]
+  }
+}

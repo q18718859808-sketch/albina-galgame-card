@@ -1,0 +1,26 @@
+{
+  "version": 1,
+  "assetId": "voice.result.rebuild_007_stay_own_rhythm",
+  "artifactSha256": "87aec6c173a73614256d9ff98e2598dbec41e0e0d850b9fbcc59efa75f35b4b4",
+  "provenance": {
+    "provider": "pie",
+    "model": "speech-2.8-hd",
+    "promptVersion": "albina-speech-legacy-v1",
+    "sourceJobHash": "9767aab6b5811639cebce5f63907934bac559b281fd23f0c3d36260d84160959",
+    "review": {
+      "status": "approved",
+      "reviewer": "automated-audio-qc",
+      "reviewedAt": "2026-07-15T18:52:09.637Z"
+    }
+  },
+  "lineage": {
+    "kind": "conversion",
+    "processVersion": "speech-loudnorm-v1",
+    "inputs": [
+      {
+        "sha256": "03ff1752e22f90ffd73af641d1d182688d3a349c9778079c5fb9217eee4a86d3",
+        "role": "validated-pie-speech-output"
+      }
+    ]
+  }
+}

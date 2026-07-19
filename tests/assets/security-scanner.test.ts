@@ -25,6 +25,7 @@ describe('security scanner', () => {
 
   it.each([
     'https://api.pie-xian.com/v1/videos',
+    'https://x666.me/v1/images/generations',
     'https://closeapi.top/v1/images/generations',
     'https://api.piapi.ai/v1/videos',
     'const adapter = HHHlClient',

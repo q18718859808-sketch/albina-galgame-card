@@ -16,11 +16,20 @@ interface StoryChoice {
   effects: {
     route?: string;
     values?: Record<string, number>;
+    relationshipVectors?: Record<string, number>;
+    conflictMastery?: Record<string, number>;
     setFlags?: string[];
     clearFlags?: string[];
     unlockCg?: string[];
     grantItems?: string[];
+    equipItems?: string[];
+    unlockOutfits?: string[];
+    activateOutfit?: string;
+    startQuests?: string[];
     completeQuests?: string[];
+    resolveBattles?: Array<{ battleId: string; outcome: string }>;
+    professionXp?: Record<string, number>;
+    activateProfession?: string;
   };
 }
 
@@ -49,29 +58,35 @@ function changesPersistentState(choice: StoryChoice): boolean {
   return Boolean(
     effects.route
       || Object.keys(effects.values ?? {}).length
+      || Object.keys(effects.relationshipVectors ?? {}).length
+      || Object.keys(effects.conflictMastery ?? {}).length
       || effects.setFlags?.length
       || effects.clearFlags?.length
       || effects.unlockCg?.length
       || effects.grantItems?.length
-      || effects.completeQuests?.length,
+      || effects.equipItems?.length
+      || effects.unlockOutfits?.length
+      || effects.activateOutfit
+      || effects.startQuests?.length
+      || effects.completeQuests?.length
+      || effects.resolveBattles?.length
+      || Object.keys(effects.professionXp ?? {}).length
+      || effects.activateProfession,
   );
 }
 
 describe('deterministic dialogue', () => {
-  it('stores fixed dialogue while keeping stale voices out of the recap and AU boundary', () => {
+  it('stores fixed dialogue with a voice for every scene and choice result', () => {
     const story = loadStory();
     expect(story).toBeDefined();
     if (!story) return;
 
     for (const scene of story.scenes) {
       expect(scene.text.trim().length, scene.id).toBeGreaterThan(0);
-      const retainsLegacyVoice = scene.provenance.scope === 'route' && scene.id !== 'opening_001';
-      if (retainsLegacyVoice) expect(scene.voiceAssetId, scene.id).toMatch(/^voice\.scene\./u);
-      else expect(scene.voiceAssetId, scene.id).toBeUndefined();
+      expect(scene.voiceAssetId, scene.id).toMatch(/^voice\.scene\./u);
       for (const choice of scene.choices) {
         expect(choice.resultText?.trim().length, choice.id).toBeGreaterThan(0);
-        if (retainsLegacyVoice) expect(choice.resultVoiceAssetId, choice.id).toMatch(/^voice\.result\./u);
-        else expect(choice.resultVoiceAssetId, choice.id).toBeUndefined();
+        expect(choice.resultVoiceAssetId, choice.id).toMatch(/^voice\.result\./u);
       }
     }
   });

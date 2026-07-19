@@ -10,131 +10,205 @@
       "language": "ko/en/ja/zh",
       "checkedAt": "2026-07-15",
       "redistribution": "metadata-only",
-      "note": "Primary canon anchor; the release stores only a short Chinese paraphrase."
+      "note": "Manual primary-game anchor. The public URL does not expose the scene text; reproducible text locators use the pinned community transcript."
     },
     {
       "id": "source.official.canto-ix.9-18",
       "kind": "official-game",
       "title": "Limbus Company - Canto IX, 9-18: Cigarettes & The Nursefather",
       "url": "https://limbuscompany.com/",
-      "locator": "Canto IX / 9-18 / pre-battle and post-battle / LCE Research Team Laboratory",
+      "locator": "Canto IX / 9-18 / pre-battle, mid-battle and post-battle / LCE Research Team Laboratory",
       "language": "ko/en/ja/zh",
       "checkedAt": "2026-07-15",
       "redistribution": "metadata-only",
-      "note": "Primary anchor for Albina's first story appearance; only a short event paraphrase is stored."
+      "note": "Manual primary-game anchor; the release stores only short factual paraphrases."
     },
     {
       "id": "source.official.canto-ix.9-37",
       "kind": "official-game",
       "title": "Limbus Company - Canto IX, 9-37: The Ring",
       "url": "https://limbuscompany.com/",
-      "locator": "Canto IX / 9-37 / pre-battle, mid-battle and post-battle",
+      "locator": "Canto IX / 9-37 / pre-battle, mid-battle and post-battle / Corridor of the Ring",
       "language": "ko/en/ja/zh",
       "checkedAt": "2026-07-15",
       "redistribution": "metadata-only",
-      "note": "Primary canon anchor; no original audio, video or long transcript is redistributed."
+      "note": "Manual primary-game anchor; no original dialogue, image, audio or video is reproduced by the canon ledger."
     },
     {
       "id": "source.official.canto-ix.9-43",
       "kind": "official-game",
       "title": "Limbus Company - Canto IX, 9-43: Hatching",
       "url": "https://limbuscompany.com/",
-      "locator": "Canto IX / 9-43 / pre-battle, battle conclusion and post-battle",
+      "locator": "Canto IX / 9-43 / pre-battle, mid-battle, battle conclusion and post-battle",
       "language": "ko/en/ja/zh",
       "checkedAt": "2026-07-15",
       "redistribution": "metadata-only",
-      "note": "Primary anchor for the destruction of Fascia and the deaths of Albina and Callisto; only a short event paraphrase is stored."
+      "note": "Manual primary-game anchor for Fascia's destruction and the deaths of Albina and Callisto."
     },
     {
       "id": "source.wiki.canto-ix-part-i.172275",
       "kind": "community-transcript",
       "title": "Canto IX: The Unsevering/Story Episodes/Part I",
-      "url": "https://limbuscompany.wiki.gg/wiki/Canto_IX:_The_Unsevering/Story_Episodes/Part_I",
-      "locator": "sections 14 and 18; 9-14 Corporism context and 9-18 Albina pre/post-battle",
+      "url": "https://limbuscompany.wiki.gg/wiki/Canto_IX:_The_Unsevering/Story_Episodes/Part_I?oldid=172275",
+      "locator": "sections 9-14 and 9-18; section indexes 14 and 19",
       "language": "en",
       "checkedAt": "2026-07-15",
       "revisionId": 172275,
       "revisionTimestamp": "2026-05-31T12:32:04Z",
-      "redistribution": "metadata-only"
+      "redistribution": "metadata-only",
+      "note": "Pinned reproducible text locator. Only short Chinese factual paraphrases are stored."
     },
     {
       "id": "source.wiki.canto-ix-part-iii.177602",
       "kind": "community-transcript",
       "title": "Canto IX: The Unsevering/Story Episodes/Part III",
-      "url": "https://limbuscompany.wiki.gg/wiki/Canto_IX:_The_Unsevering/Story_Episodes/Part_III",
-      "locator": "9-37: The Ring and 9-43: Hatching",
+      "url": "https://limbuscompany.wiki.gg/wiki/Canto_IX:_The_Unsevering/Story_Episodes/Part_III?oldid=177602",
+      "locator": "sections 9-37 and 9-43; section indexes 2 and 16",
       "language": "en",
       "checkedAt": "2026-07-15",
       "revisionId": 177602,
       "revisionTimestamp": "2026-07-12T13:48:23Z",
-      "redistribution": "metadata-only"
+      "redistribution": "metadata-only",
+      "note": "Pinned reproducible text locator. A full-section search places Albina only in 9-37 and 9-43."
     },
     {
       "id": "source.wiki.albina.173286",
       "kind": "community-reference",
       "title": "Albina",
-      "url": "https://limbuscompany.wiki.gg/wiki/Albina",
-      "locator": "appearance, personality, story and trivia sections",
+      "url": "https://limbuscompany.wiki.gg/wiki/Albina?oldid=173286",
+      "locator": "infobox; Appearance; Personality; Story; revision lines 1-44",
       "language": "en",
       "checkedAt": "2026-07-15",
       "revisionId": 173286,
       "revisionTimestamp": "2026-06-09T20:44:33Z",
+      "redistribution": "metadata-only",
+      "note": "Structured character cross-check; claims retain atomic factual paraphrases rather than page prose."
+    },
+    {
+      "id": "source.wiki.albina-enemy.175660",
+      "kind": "community-reference",
+      "title": "Albina/Enemy",
+      "url": "https://limbuscompany.wiki.gg/wiki/Albina/Enemy?oldid=175660",
+      "locator": "9-18, 9-37, 9-43 and Mirror Dungeon enemy records; behavior, passives and status sections",
+      "language": "en",
+      "checkedAt": "2026-07-15",
+      "revisionId": 175660,
+      "revisionTimestamp": "2026-06-20T12:56:03Z",
+      "redistribution": "metadata-only",
+      "note": "Gameplay-data cross-check. Exact skill dialogue is not copied into the card."
+    },
+    {
+      "id": "source.wiki.callisto.177757",
+      "kind": "community-reference",
+      "title": "Callisto",
+      "url": "https://limbuscompany.wiki.gg/wiki/Callisto?oldid=177757",
+      "locator": "relationship to Albina and Canto IX story summary",
+      "language": "en",
+      "checkedAt": "2026-07-15",
+      "revisionId": 177757,
+      "revisionTimestamp": "2026-07-15T12:04:39Z",
+      "redistribution": "metadata-only",
+      "note": "Current revision replaces the previously cited 176447 locator."
+    },
+    {
+      "id": "source.wiki.house-of-spiders.177075",
+      "kind": "community-reference",
+      "title": "The House of Spiders",
+      "url": "https://limbuscompany.wiki.gg/wiki/The_House_of_Spiders?oldid=177075",
+      "locator": "membership and Canto IX raid context",
+      "language": "en",
+      "checkedAt": "2026-07-15",
+      "revisionId": 177075,
+      "revisionTimestamp": "2026-07-08T17:17:13Z",
       "redistribution": "metadata-only"
     },
     {
-      "id": "source.bilibili.BV1rsi8B5ED2.p37",
+      "id": "source.bilibili.BV1rsi8B5ED2.p14",
       "kind": "gameplay-recording",
       "title": "边狱巴士主线第九章无割舍者主线剧情（已完结）",
-      "url": "https://www.bilibili.com/video/BV1rsi8B5ED2?p=37",
-      "locator": "P37, CID 35474245945, 9-37 环指, duration 2403 seconds",
+      "url": "https://www.bilibili.com/video/BV1rsi8B5ED2?p=14",
+      "locator": "P14; CID 35167602692; part 9-14粉红欲望; duration 438 seconds; subtitle tracks 0",
       "language": "zh-CN",
       "checkedAt": "2026-07-15",
       "redistribution": "no-reprint",
-      "note": "Browser automation verified the public P37 page, part list, CID, duration, no subtitle track and rights.no_reprint=1. No media is copied."
-    },
-    {
-      "id": "source.bilibili.BV1rsi8B5ED2.p43",
-      "kind": "gameplay-recording",
-      "title": "边狱巴士主线第九章无割舍者主线剧情（已完结）",
-      "url": "https://www.bilibili.com/video/BV1rsi8B5ED2?p=43",
-      "locator": "P43, CID 35474441014, 9-43 孵化, duration 2103 seconds",
-      "language": "zh-CN",
-      "checkedAt": "2026-07-15",
-      "redistribution": "no-reprint",
-      "note": "Public API metadata locator only; rights.no_reprint=1. Plot facts are anchored to the official scene and pinned wiki revision."
+      "note": "Bilibili public API metadata only; rights.no_reprint=1. Browser playback was unavailable, so this is not plot evidence."
     },
     {
       "id": "source.bilibili.BV1rsi8B5ED2.p18",
       "kind": "gameplay-recording",
       "title": "边狱巴士主线第九章无割舍者主线剧情（已完结）",
       "url": "https://www.bilibili.com/video/BV1rsi8B5ED2?p=18",
-      "locator": "P18, CID 35168059468, 9-18 香烟与父辈, duration 1597 seconds",
+      "locator": "P18; CID 35168059468; part 9-18香烟与父辈; duration 1597 seconds; subtitle tracks 0",
       "language": "zh-CN",
       "checkedAt": "2026-07-15",
       "redistribution": "no-reprint",
-      "note": "Public page metadata locator only; rights.no_reprint=1. Plot facts are anchored to the official scene and pinned wiki revision."
+      "note": "Bilibili public API metadata only; rights.no_reprint=1. No recording media is downloaded or treated as textual evidence."
     },
     {
-      "id": "source.bilibili.BV1brvbBDE84.p33-p34",
+      "id": "source.bilibili.BV1rsi8B5ED2.p37",
       "kind": "gameplay-recording",
-      "title": "边狱巴士第九章剧情汉化合集",
-      "url": "https://www.bilibili.com/video/BV1brvbBDE84?p=33",
-      "locator": "P33 CID 35395013510 and P34 CID 35395600475, 9-37 pre/post-battle",
+      "title": "边狱巴士主线第九章无割舍者主线剧情（已完结）",
+      "url": "https://www.bilibili.com/video/BV1rsi8B5ED2?p=37",
+      "locator": "P37; CID 35474245945; part 9-37环指; duration 2403 seconds; subtitle tracks 0",
       "language": "zh-CN",
       "checkedAt": "2026-07-15",
       "redistribution": "no-reprint",
-      "note": "Translation cross-check only; no recording media is copied into the release."
+      "note": "Public API metadata was rechecked. A prior browser reached page metadata, but no frame-by-frame review completed; not plot evidence."
+    },
+    {
+      "id": "source.bilibili.BV1rsi8B5ED2.p43",
+      "kind": "gameplay-recording",
+      "title": "边狱巴士主线第九章无割舍者主线剧情（已完结）",
+      "url": "https://www.bilibili.com/video/BV1rsi8B5ED2?p=43",
+      "locator": "P43; CID 35474441014; part 9-43孵化; duration 2103 seconds; subtitle tracks 0",
+      "language": "zh-CN",
+      "checkedAt": "2026-07-15",
+      "redistribution": "no-reprint",
+      "note": "Bilibili public API metadata only; rights.no_reprint=1. Outcome claims rely on the game anchor and pinned transcript, not this locator."
+    },
+    {
+      "id": "source.bilibili.BV1brvbBDE84.9-14-9-18",
+      "kind": "gameplay-recording",
+      "title": "【边狱巴士】我们的女儿啊... 欢迎回家 —— 主线第9章剧情汉化（完）",
+      "url": "https://www.bilibili.com/video/BV1brvbBDE84?p=12",
+      "locator": "P12 CID 35099971579 (9-14, 200 seconds); P15 CID 35102264684 (9-18, 814 seconds); subtitle tracks 0",
+      "language": "zh-CN",
+      "checkedAt": "2026-07-15",
+      "redistribution": "no-reprint",
+      "note": "Secondary translation recording metadata only; rights.no_reprint=1."
+    },
+    {
+      "id": "source.bilibili.BV1brvbBDE84.9-37",
+      "kind": "gameplay-recording",
+      "title": "【边狱巴士】我们的女儿啊... 欢迎回家 —— 主线第9章剧情汉化（完）",
+      "url": "https://www.bilibili.com/video/BV1brvbBDE84?p=33",
+      "locator": "P33 CID 35395013510 (9-37 pre-battle, 494 seconds); P34 CID 35395600475 (9-37 post-battle, 216 seconds); subtitle tracks 0",
+      "language": "zh-CN",
+      "checkedAt": "2026-07-15",
+      "redistribution": "no-reprint",
+      "note": "Secondary translation recording metadata only; rights.no_reprint=1."
+    },
+    {
+      "id": "source.bilibili.BV1brvbBDE84.9-43",
+      "kind": "gameplay-recording",
+      "title": "【边狱巴士】我们的女儿啊... 欢迎回家 —— 主线第9章剧情汉化（完）",
+      "url": "https://www.bilibili.com/video/BV1brvbBDE84?p=44",
+      "locator": "P44 CID 35399469047 (9-43 pre-battle, 1314 seconds); P45 CID 35399795424 (mid-battle, 160 seconds); P46 CID 35399929810 (post-battle, 389 seconds); subtitle tracks 0",
+      "language": "zh-CN",
+      "checkedAt": "2026-07-15",
+      "redistribution": "no-reprint",
+      "note": "Secondary translation recording metadata only; rights.no_reprint=1."
     },
     {
       "id": "source.project.legacy-v1.0.44",
       "kind": "project-artifact",
       "title": "Albina v1.0.44 recovered story oracle",
       "localPath": "tests/fixtures/legacy-console/index.js",
-      "locator": "recovered jl story object and its three original card routes",
+      "locator": "recovered project-authored opening and three-route story object",
       "language": "zh-CN",
       "checkedAt": "2026-07-15",
       "redistribution": "project-internal",
-      "note": "Evidence of project authorship only, never evidence of source-game canon."
+      "note": "Evidence of this card's prior authorship only; never evidence of source-game canon."
     }
   ]
 }

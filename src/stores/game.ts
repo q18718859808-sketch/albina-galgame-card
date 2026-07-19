@@ -5,7 +5,12 @@ import manifestJson from '../../content/asset-manifest-v2.json';
 import storyJson from '../../dist/albina-galgame-card/data/game-script-v2.json';
 import { parseAssetManifestV2 } from '../domain/assets';
 import { parseGameScriptV2 } from '../domain/game-script';
-import { parseSaveV2, serializeSaveV2, type SaveV2 } from '../domain/save';
+import {
+  decodeSaveJson,
+  SaveRecoveryError,
+  type SaveRecoveryCode,
+} from '../domain/migrate-save-v1';
+import { serializeSaveV2, type SaveV2 } from '../domain/save';
 import type { SceneCue } from '../domain/scene-cue';
 import { GameSession } from '../game/session';
 import { RuntimeAssetCache } from '../runtime/asset-cache';
@@ -18,6 +23,8 @@ import { chosenSceneVideoId, selectSceneMedia } from '../runtime/video';
 const manifest = parseAssetManifestV2(manifestJson);
 const script = parseGameScriptV2(storyJson, manifest);
 const sceneIndex = new Map(script.scenes.map((scene) => [scene.id, scene]));
+const outfitPortraitIds = new Set(script.gameplay.outfits.map((outfit) => outfit.portraitAssetId));
+const replaceableOutfitPortraitIds = new Set(['portrait.albina.normal', ...outfitPortraitIds]);
 
 function runtimeAssetBaseUrl(): string {
   if (import.meta.env.DEV && typeof location !== 'undefined') {
@@ -27,6 +34,7 @@ function runtimeAssetBaseUrl(): string {
 }
 
 export interface SaveSlotSummary { id: string; sceneId: string; updatedAt: string; thumbnailUrl?: string }
+export interface SaveOperationError { code: SaveRecoveryCode | 'unexpected'; message: string; recoverable: true }
 
 export const useGameStore = defineStore('albina-game', () => {
   const baseUrl = runtimeAssetBaseUrl();
@@ -46,6 +54,8 @@ export const useGameStore = defineStore('albina-game', () => {
   const cachedUrls = ref<Record<string, string>>({});
   const readyVideoIds = ref<Record<string, boolean>>({});
   const saveSlots = ref<SaveSlotSummary[]>([]);
+  const saveError = ref<SaveOperationError>();
+  const gameplayError = ref<string>();
   const thumbnailUrls = new Set<string>();
   const motionQuery = typeof matchMedia === 'function' ? matchMedia('(prefers-reduced-motion: reduce)') : undefined;
   const reducedMotion = ref(motionQuery?.matches ?? false);
@@ -66,13 +76,46 @@ export const useGameStore = defineStore('albina-game', () => {
     window.addEventListener('orientationchange', handleResize);
   }
 
-  const scene = computed(() => session.value.scene);
+  const scene = computed<SceneCue>(() => {
+    const authored = session.value.scene;
+    const outfitPortraitId = session.value.outfitPortraitAssetId;
+    if (!outfitPortraitId) return authored;
+    return {
+      ...authored,
+      portraits: authored.portraits.map((portrait) => portrait.characterId === 'albina'
+        && replaceableOutfitPortraitIds.has(portrait.portraitAssetId)
+        ? { ...portrait, portraitAssetId: outfitPortraitId }
+        : portrait),
+    };
+  });
   const save = computed(() => session.value.save);
+  const effectiveValues = computed(() => session.value.effectiveValues);
   const choices = computed(() => session.value.choices);
   const media = computed(() => selectSceneMedia(scene.value, manifest, {
     baseUrl, desktop: desktop.value, reducedMotion: reducedMotion.value,
     videoEnabled: videoEnabled.value && !videoFailed.value,
   }, (assetId) => assetId?.startsWith('video.') && !readyVideoIds.value[assetId] ? undefined : assetUrl(assetId)));
+
+  function reportSaveError(operation: string, error: unknown): void {
+    const known = error instanceof SaveRecoveryError;
+    saveError.value = {
+      code: known ? error.code : 'unexpected',
+      message: `${operation}: ${known ? error.message : 'The save operation could not be completed.'}`,
+      recoverable: true,
+    };
+  }
+
+  function validateSaveScene(candidate: SaveV2): SaveV2 {
+    if (!sceneIndex.has(candidate.sceneId)) {
+      throw new SaveRecoveryError('unknown-scene', `The save references unavailable scene "${candidate.sceneId}".`);
+    }
+    return candidate;
+  }
+
+  function replaceSession(candidate: SaveV2): void {
+    session.value = new GameSession(script, { save: validateSaveScene(candidate) });
+    saveError.value = undefined;
+  }
 
   function assetUrl(assetId: string | undefined): string | undefined {
     if (!assetId) return undefined;
@@ -147,16 +190,43 @@ export const useGameStore = defineStore('albina-game', () => {
     prefetchNextScenes();
   }
 
-  async function start(): Promise<void> { runtime.mount(); screen.value = 'game'; await presentScene(); }
+  async function start(): Promise<void> {
+    saveError.value = undefined;
+    runtime.mount();
+    screen.value = 'game';
+    await presentScene();
+  }
+
+  async function loadContinueSave(): Promise<SaveV2 | undefined> {
+    let failure: unknown;
+    try {
+      const hostSave = await runtime.host.loadSave();
+      if (hostSave) return validateSaveScene(hostSave);
+    } catch (error) {
+      failure = error;
+    }
+    try {
+      const quick = await runtime.storage.loadSnapshot('quick-save');
+      if (quick) return validateSaveScene(quick.save);
+    } catch (error) {
+      failure ??= error;
+    }
+    if (failure !== undefined) throw failure;
+    return undefined;
+  }
 
   async function continueGame(): Promise<boolean> {
     loading.value = true;
+    saveError.value = undefined;
     try {
-      const loaded = await runtime.host.loadSave();
+      const loaded = await loadContinueSave();
       if (!loaded) return false;
-      session.value = new GameSession(script, { save: loaded });
+      replaceSession(loaded);
       await start();
       return true;
+    } catch (error) {
+      reportSaveError('Unable to continue', error);
+      return false;
     } finally { loading.value = false; }
   }
 
@@ -181,6 +251,7 @@ export const useGameStore = defineStore('albina-game', () => {
     await runtime.storage.saveSnapshot(stored, thumbnail);
     if (persistHost) await runtime.host.saveSave(stored);
     await refreshSaveSlots();
+    saveError.value = undefined;
   }
 
   async function quickSave(): Promise<void> { await snapshot('quick-save', true); }
@@ -190,14 +261,31 @@ export const useGameStore = defineStore('albina-game', () => {
     thumbnailUrls.forEach((url) => URL.revokeObjectURL(url));
     thumbnailUrls.clear();
     const summaries: SaveSlotSummary[] = [];
-    for (const id of await runtime.storage.keys('saves')) {
-      const stored = await runtime.storage.loadSnapshot(id);
+    let failure: unknown;
+    let ids: string[];
+    try {
+      ids = await runtime.storage.keys('saves');
+    } catch (error) {
+      saveSlots.value = [];
+      reportSaveError('Save slots could not be listed', error);
+      return;
+    }
+    for (const id of ids) {
+      let stored;
+      try {
+        stored = await runtime.storage.loadSnapshot(id);
+      } catch (error) {
+        failure ??= error;
+        continue;
+      }
       if (!stored) continue;
       const thumbnailUrl = stored.thumbnail.type.startsWith('image/') ? URL.createObjectURL(stored.thumbnail) : undefined;
       if (thumbnailUrl) thumbnailUrls.add(thumbnailUrl);
       summaries.push({ id, sceneId: stored.save.sceneId, updatedAt: stored.save.updatedAt, ...(thumbnailUrl ? { thumbnailUrl } : {}) });
     }
     saveSlots.value = summaries.sort((left, right) => right.updatedAt.localeCompare(left.updatedAt));
+    if (failure !== undefined) reportSaveError('Some save slots could not be read', failure);
+    else saveError.value = undefined;
   }
 
   async function openSaves(): Promise<void> {
@@ -205,20 +293,37 @@ export const useGameStore = defineStore('albina-game', () => {
     await refreshSaveSlots();
     screen.value = 'saves';
   }
-  async function restoreSlot(id: string): Promise<void> {
-    const stored = await runtime.storage.loadSnapshot(id);
-    if (!stored) return;
-    session.value = new GameSession(script, { save: parseSaveV2(stored.save) });
-    screen.value = 'game';
-    await presentScene();
+  async function restoreSlot(id: string): Promise<boolean> {
+    try {
+      const stored = await runtime.storage.loadSnapshot(id);
+      if (!stored) return false;
+      replaceSession(stored.save);
+      screen.value = 'game';
+      await presentScene();
+      return true;
+    } catch (error) {
+      reportSaveError(`Unable to load ${id}`, error);
+      return false;
+    }
   }
   async function deleteSlot(id: string): Promise<void> { await runtime.storage.deleteValue('saves', id); await refreshSaveSlots(); }
 
   function exportSave(): string { return serializeSaveV2(save.value); }
-  async function importSave(text: string): Promise<void> {
-    session.value = new GameSession(script, { save: parseSaveV2(JSON.parse(text)) });
-    screen.value = 'game';
-    await presentScene();
+  async function importSave(text: string): Promise<boolean> {
+    const decoded = decodeSaveJson(text);
+    if (!decoded.ok) {
+      reportSaveError('Unable to import save', decoded.error);
+      return false;
+    }
+    try {
+      replaceSession(decoded.save);
+      screen.value = 'game';
+      await presentScene();
+      return true;
+    } catch (error) {
+      reportSaveError('Unable to import save', error);
+      return false;
+    }
   }
 
   async function openGallery(): Promise<void> {
@@ -231,6 +336,29 @@ export const useGameStore = defineStore('albina-game', () => {
   function completeText(): void { runtime.typewriter.completeNow(); }
   function setVideoFailed(): void { videoFailed.value = true; }
   function toggleMute(): void { muted.value = !muted.value; if (muted.value) { runtime.audio.stopAll(); currentBgmId = undefined; } else void playSceneAudio(); }
+  function gameplayActionMessage(error: unknown): string {
+    if (!(error instanceof Error)) return '玩法状态无法更新。';
+    if (/not owned|not unlocked/iu.test(error.message)) return '尚未获得或解锁该项目。';
+    if (/unavailable on route/iu.test(error.message)) return '当前路线不能使用该项目。';
+    if (/unknown/iu.test(error.message)) return '该项目不存在于当前版本。';
+    return '玩法状态无法更新。';
+  }
+
+  function runGameplayAction(action: () => void): boolean {
+    gameplayError.value = undefined;
+    try {
+      action();
+      triggerRef(session);
+      return true;
+    } catch (error) {
+      gameplayError.value = gameplayActionMessage(error);
+      return false;
+    }
+  }
+
+  function equip(equipmentId: string): boolean { return runGameplayAction(() => session.value.equip(equipmentId)); }
+  function wearOutfit(outfitId: string): boolean { return runGameplayAction(() => session.value.wearOutfit(outfitId)); }
+  function selectProfession(professionId: string): boolean { return runGameplayAction(() => session.value.selectProfession(professionId)); }
   function disposeUiListeners(): void {
     motionQuery?.removeEventListener('change', handleMotion);
     if (typeof window !== 'undefined') {
@@ -242,9 +370,10 @@ export const useGameStore = defineStore('albina-game', () => {
   }
 
   return {
-    runtime, manifest, screen, visibleText, resultText, loading, muted, videoEnabled, reducedMotion,
-    autoplayBlocked, galleryIds, saveSlots, scene, save, choices, media, assetUrl, start, continueGame,
+    runtime, manifest, gameplay: script.gameplay, screen, visibleText, resultText, loading, muted, videoEnabled, reducedMotion,
+    autoplayBlocked, galleryIds, saveSlots, saveError, scene, save, effectiveValues, choices, media, assetUrl, start, continueGame,
     choose, dismissResult, quickSave, saveSlot, openSaves, restoreSlot, deleteSlot, exportSave, importSave,
-    openGallery, backToGame, recoverAutoplay, completeText, setVideoFailed, toggleMute, disposeUiListeners,
+    openGallery, backToGame, recoverAutoplay, completeText, setVideoFailed, toggleMute, equip, wearOutfit,
+    selectProfession, gameplayError, disposeUiListeners,
   };
 });

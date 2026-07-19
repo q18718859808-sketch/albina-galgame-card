@@ -1,0 +1,26 @@
+{
+  "version": 1,
+  "assetId": "voice.result.white_009_keep_half_step",
+  "artifactSha256": "eb273061a887f8ea4796b2804cde9e109aed783bc88853b2592e3f4ced0e241e",
+  "provenance": {
+    "provider": "pie",
+    "model": "speech-2.8-hd",
+    "promptVersion": "albina-speech-legacy-v1",
+    "sourceJobHash": "af68caf1ab696236f7c77808519845396728c3e02c58e7f634d8721132a757eb",
+    "review": {
+      "status": "approved",
+      "reviewer": "automated-audio-qc",
+      "reviewedAt": "2026-07-15T18:52:28.765Z"
+    }
+  },
+  "lineage": {
+    "kind": "conversion",
+    "processVersion": "speech-loudnorm-v1",
+    "inputs": [
+      {
+        "sha256": "b7bba180567c5f6a4417e364d5ab1379a2325e359bb495b1dcb4d2fe4c06e1ef",
+        "role": "validated-pie-speech-output"
+      }
+    ]
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "version": 1,
+  "assetId": "voice.result.conspiracy_009_refuse_choice",
+  "artifactSha256": "579736096170a0afb00017791b093021e59651844116fa3b46fcd527896ade75",
+  "provenance": {
+    "provider": "pie",
+    "model": "speech-2.8-hd",
+    "promptVersion": "albina-speech-legacy-v1",
+    "sourceJobHash": "f2772e0340d7dbf631599fa8bdf3c1e44a73673edfa1e901eab38c85f4179aec",
+    "review": {
+      "status": "approved",
+      "reviewer": "automated-audio-qc",
+      "reviewedAt": "2026-07-15T18:51:55.994Z"
+    }
+  },
+  "lineage": {
+    "kind": "conversion",
+    "processVersion": "speech-loudnorm-v1",
+    "inputs": [
+      {
+        "sha256": "d84f22e0be4599542ae4608dbd3d6d570a23c37fbc05ec358baf82bd5866147e",
+        "role": "validated-pie-speech-output"
+      }
+    ]
+  }
+}

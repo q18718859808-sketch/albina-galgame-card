@@ -1,0 +1,26 @@
+{
+  "version": 1,
+  "assetId": "voice.scene.golden_bough_010",
+  "artifactSha256": "5ea795c0fd6273b40f187838c3ab9129a255d1dca1f7e65f155ee7c2b56c2972",
+  "provenance": {
+    "provider": "pie",
+    "model": "speech-2.8-hd",
+    "promptVersion": "albina-speech-legacy-v1",
+    "sourceJobHash": "f35d42e880288e82e6e6e49993b4c37bf4d626482e32d08f99a93309b735bc10",
+    "review": {
+      "status": "approved",
+      "reviewer": "automated-audio-qc",
+      "reviewedAt": "2026-07-15T18:52:46.198Z"
+    }
+  },
+  "lineage": {
+    "kind": "conversion",
+    "processVersion": "speech-loudnorm-v1",
+    "inputs": [
+      {
+        "sha256": "6dc4896687ce4abe0bf1f9c0b815743f862faf64619b9323515b9296291efc89",
+        "role": "validated-pie-speech-output"
+      }
+    ]
+  }
+}

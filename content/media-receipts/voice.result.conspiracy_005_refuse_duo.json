@@ -1,0 +1,26 @@
+{
+  "version": 1,
+  "assetId": "voice.result.conspiracy_005_refuse_duo",
+  "artifactSha256": "2188bc6032b768b6711d3163bdb45adbe7deec31d451ce74cf2b6af85785d93c",
+  "provenance": {
+    "provider": "pie",
+    "model": "speech-2.8-hd",
+    "promptVersion": "albina-speech-legacy-v1",
+    "sourceJobHash": "9ff57569b4ca94c725c68e3f3802c12fcb574f39995ccd8f9227aff0e8184a1e",
+    "review": {
+      "status": "approved",
+      "reviewer": "automated-audio-qc",
+      "reviewedAt": "2026-07-15T18:51:51.496Z"
+    }
+  },
+  "lineage": {
+    "kind": "conversion",
+    "processVersion": "speech-loudnorm-v1",
+    "inputs": [
+      {
+        "sha256": "f03cd8e5cf332108df089065f72c50b9184de7a5724dac60ee57595047802769",
+        "role": "validated-pie-speech-output"
+      }
+    ]
+  }
+}

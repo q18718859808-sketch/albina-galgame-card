@@ -1,0 +1,26 @@
+{
+  "version": 1,
+  "assetId": "voice.result.white_keep_empty_seat",
+  "artifactSha256": "8a76f675d5ea394277777e38529d1862f21dd62a5b2685da635ed0527df7e052",
+  "provenance": {
+    "provider": "pie",
+    "model": "speech-2.8-hd",
+    "promptVersion": "albina-speech-legacy-v1",
+    "sourceJobHash": "d0ce8b649faa4958ec85553a4ce355f9331e839f822484a3eaa8e24f88e62042",
+    "review": {
+      "status": "approved",
+      "reviewer": "automated-audio-qc",
+      "reviewedAt": "2026-07-15T18:52:39.217Z"
+    }
+  },
+  "lineage": {
+    "kind": "conversion",
+    "processVersion": "speech-loudnorm-v1",
+    "inputs": [
+      {
+        "sha256": "8262c3e938479238aceddb6c75ee1a68b4cb2d1d2e6435dcfbf735d80a3aca45",
+        "role": "validated-pie-speech-output"
+      }
+    ]
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "version": 1,
+  "assetId": "voice.scene.ring_conspiracy_001",
+  "artifactSha256": "f4535e60e9ebfe3a9f50940530ec05a38ca9e7dd665e2f7064ad0d52811753c2",
+  "provenance": {
+    "provider": "pie",
+    "model": "speech-2.8-hd",
+    "promptVersion": "albina-speech-legacy-v1",
+    "sourceJobHash": "44469f1bbcc8fc18552a04bb1752643d7ed72aaa58d0b17bffd74b4d6754973f",
+    "review": {
+      "status": "approved",
+      "reviewer": "automated-audio-qc",
+      "reviewedAt": "2026-07-15T18:52:50.522Z"
+    }
+  },
+  "lineage": {
+    "kind": "conversion",
+    "processVersion": "speech-loudnorm-v1",
+    "inputs": [
+      {
+        "sha256": "b7df0f5afaafc467cf345fc67dcf3f3f29e409feb9e93799731400125f6df064",
+        "role": "validated-pie-speech-output"
+      }
+    ]
+  }
+}

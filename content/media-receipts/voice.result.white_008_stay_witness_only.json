@@ -1,0 +1,26 @@
+{
+  "version": 1,
+  "assetId": "voice.result.white_008_stay_witness_only",
+  "artifactSha256": "c6c37b0dae21ed498ef7c5c7671ed8429861fd5027ed8de840f27fa65c1d49b2",
+  "provenance": {
+    "provider": "pie",
+    "model": "speech-2.8-hd",
+    "promptVersion": "albina-speech-legacy-v1",
+    "sourceJobHash": "b9bc5d5844db20e8f622cf1d2dbedbbe00581c9dcf92859103c6d6d3e85866ff",
+    "review": {
+      "status": "approved",
+      "reviewer": "automated-audio-qc",
+      "reviewedAt": "2026-07-15T18:52:28.206Z"
+    }
+  },
+  "lineage": {
+    "kind": "conversion",
+    "processVersion": "speech-loudnorm-v1",
+    "inputs": [
+      {
+        "sha256": "905d28a8268ee2379eac22f120361379b9951fb5ff172ba6d913558bb2f0278b",
+        "role": "validated-pie-speech-output"
+      }
+    ]
+  }
+}

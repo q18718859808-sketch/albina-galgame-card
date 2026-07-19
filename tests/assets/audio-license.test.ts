@@ -41,6 +41,12 @@ describe('packaged music licensing', () => {
     expect(credits).toEqual(registry);
     expect(registry.officialSoundtrack.bundled).toBe(false);
     expect(registry.officialSoundtrack.cached).toBe(false);
+    expect(registry.officialSoundtrack.redistributionAllowed).toBe(false);
+    expect(registry.officialSoundtrack.channel).toBe('ProjectMoon Official');
+    expect(registry.officialSoundtrack.playlistTitle).toBe('LCB OST');
+    expect(registry.officialSoundtrack.playlistTrackCount).toBe(35);
+    expect(registry.officialSoundtrack.verifiedOn).toBe('2026-07-15');
+    expect(registry.officialSoundtrack.rightsNotice).toContain('未授予');
     expect(registry.officialSoundtrack.links).toHaveLength(2);
     expect(registry.officialSoundtrack.links.map((link) => link.url)).toEqual(expect.arrayContaining([
       'https://www.youtube.com/playlist?list=PL9-RBacZ4KMzFjhRY4zD7_GbwL1LgNWXD',

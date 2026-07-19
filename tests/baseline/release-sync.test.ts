@@ -88,7 +88,7 @@ it('regenerates real stale inputs before bundling and promoting a release', asyn
   try {
     await mkdir(dirname(releaseSyncPath), { recursive: true });
     await copyFile(fileURLToPath(new URL('../../scripts/release-sync.mjs', import.meta.url)), releaseSyncPath);
-    await writeFile(statePath, JSON.stringify({ manifest: 'stale', story: 'stale', bundle: 'stale', promoted: 'stale', audited: 'stale' }));
+    await writeFile(statePath, JSON.stringify({ manifest: 'stale', story: 'stale', bundle: 'stale', status: 'stale', promoted: 'stale', audited: 'stale' }));
     await writeModule(root, 'scripts/sync-canon-card.mjs', "// fixture no-op\n");
     await writeModule(root, 'scripts/sync-character-card-png.mjs', "// fixture no-op\n");
     await writeModule(root, 'scripts/audit-assets.mjs', `${stateModule}if (process.argv.includes('--write')) state.manifest = 'fresh'; else { if (state.promoted !== 'fresh') throw new Error('promoted output is stale'); state.audited = 'fresh'; }\nawait writeFile(statePath, JSON.stringify(state));\n`);
@@ -96,16 +96,18 @@ it('regenerates real stale inputs before bundling and promoting a release', asyn
     await writeModule(root, 'scripts/build-release.mjs', `${stateModule}if (state.bundle !== 'fresh') throw new Error('bundle is stale');\nstate.promoted = 'fresh';\nawait writeFile(statePath, JSON.stringify(state));\n`);
     await writeModule(root, 'node_modules/vite-node/vite-node.mjs', "import { pathToFileURL } from 'node:url';\nawait import(pathToFileURL(process.argv[2]).href);\n");
     await writeModule(root, 'node_modules/vite/bin/vite.js', "import { readFile, writeFile } from 'node:fs/promises';\nimport { resolve } from 'node:path';\nif (process.argv[2] !== 'build') throw new Error('missing build argument');\nconst statePath = resolve(import.meta.dirname, '../../../state.json');\nconst state = JSON.parse(await readFile(statePath, 'utf8'));\nif (state.story !== 'fresh') throw new Error('story is stale');\nstate.bundle = 'fresh';\nawait writeFile(statePath, JSON.stringify(state));\n");
+    await writeModule(root, 'scripts/release-status.mjs', `${stateModule}if (state.bundle !== 'fresh') throw new Error('bundle is stale');\nstate.status = 'fresh';\nawait writeFile(statePath, JSON.stringify(state));\n`);
 
     await run(process.execPath, [releaseSyncPath], { cwd: root });
 
-    expect(JSON.parse(await readFile(statePath, 'utf8'))).toEqual({ manifest: 'fresh', story: 'fresh', bundle: 'fresh', promoted: 'fresh', audited: 'fresh' });
+    expect(JSON.parse(await readFile(statePath, 'utf8'))).toEqual({ manifest: 'fresh', story: 'fresh', bundle: 'fresh', status: 'fresh', promoted: 'fresh', audited: 'fresh' });
     expect(RELEASE_STEPS.map((step) => step.id)).toEqual([
       'canon:sync',
       'card:sync',
       'assets:generate',
       'story:compile',
       'source:build',
+      'release:status',
       'release:promote',
       'assets:audit',
     ]);

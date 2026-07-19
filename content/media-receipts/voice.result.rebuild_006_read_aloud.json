@@ -1,0 +1,26 @@
+{
+  "version": 1,
+  "assetId": "voice.result.rebuild_006_read_aloud",
+  "artifactSha256": "94cbc15ffad0d60de661ad72f8f46068442a75679d48014e17805f34c0c7b975",
+  "provenance": {
+    "provider": "pie",
+    "model": "speech-2.8-hd",
+    "promptVersion": "albina-speech-legacy-v1",
+    "sourceJobHash": "397931ba98e29f075c25aa8e8d3f5650d6fa5aa0539de2fc442f588773878f4e",
+    "review": {
+      "status": "approved",
+      "reviewer": "automated-audio-qc",
+      "reviewedAt": "2026-07-15T18:52:08.406Z"
+    }
+  },
+  "lineage": {
+    "kind": "conversion",
+    "processVersion": "speech-loudnorm-v1",
+    "inputs": [
+      {
+        "sha256": "1ba8b1e99c835f51e83566218b0831472cae6f8b9bed544379008edfb98ed56e",
+        "role": "validated-pie-speech-output"
+      }
+    ]
+  }
+}

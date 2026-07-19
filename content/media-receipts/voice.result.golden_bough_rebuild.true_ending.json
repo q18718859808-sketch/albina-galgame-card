@@ -1,0 +1,26 @@
+{
+  "version": 1,
+  "assetId": "voice.result.golden_bough_rebuild.true_ending",
+  "artifactSha256": "2cefdaae2ccccd65e997733ccc076bab546212ccd50a7ceaab6b6e07f2bf4b24",
+  "provenance": {
+    "provider": "pie",
+    "model": "speech-2.8-hd",
+    "promptVersion": "albina-speech-legacy-v1",
+    "sourceJobHash": "a4344581ecaf8271e2e7166934449e770aaa28663b5b4556e118f7c2af31bf9b",
+    "review": {
+      "status": "approved",
+      "reviewer": "automated-audio-qc",
+      "reviewedAt": "2026-07-15T18:52:06.008Z"
+    }
+  },
+  "lineage": {
+    "kind": "conversion",
+    "processVersion": "speech-loudnorm-v1",
+    "inputs": [
+      {
+        "sha256": "148ae12e5af697470bf05597480564d896ee6084c08442ee66e368a783d965f6",
+        "role": "validated-pie-speech-output"
+      }
+    ]
+  }
+}

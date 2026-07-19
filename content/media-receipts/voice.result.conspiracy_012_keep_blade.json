@@ -1,0 +1,26 @@
+{
+  "version": 1,
+  "assetId": "voice.result.conspiracy_012_keep_blade",
+  "artifactSha256": "f7132cd47552bc59b54ad3c7b73d1640f3fb2f215e9f315ab3b4251afd77a7ff",
+  "provenance": {
+    "provider": "pie",
+    "model": "speech-2.8-hd",
+    "promptVersion": "albina-speech-legacy-v1",
+    "sourceJobHash": "00c2934ce4763d5f84bddbce0a6c5d0601fb127879aa37090f53d8447cfd85c8",
+    "review": {
+      "status": "approved",
+      "reviewer": "automated-audio-qc",
+      "reviewedAt": "2026-07-15T18:51:59.820Z"
+    }
+  },
+  "lineage": {
+    "kind": "conversion",
+    "processVersion": "speech-loudnorm-v1",
+    "inputs": [
+      {
+        "sha256": "57c8336c5692d6725fa5fe110f82307674ff12f413e167b5ac3281bb0c22c554",
+        "role": "validated-pie-speech-output"
+      }
+    ]
+  }
+}

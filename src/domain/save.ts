@@ -52,6 +52,38 @@ export const InventorySchema = z
   })
   .strict();
 
+const BattleStateSchema = z
+  .object({
+    resolvedIds: z.array(z.string().min(1)),
+    outcomes: z.record(z.string().min(1), z.enum(['victory', 'setback'])),
+  })
+  .strict();
+
+const ProfessionProgressSchema = z
+  .object({
+    xp: z.number().int().nonnegative(),
+    level: z.number().int().positive(),
+  })
+  .strict();
+
+const ProfessionStateSchema = z
+  .object({
+    activeId: z.string(),
+    progress: z.record(z.string().min(1), ProfessionProgressSchema),
+  })
+  .strict();
+
+const AchievementStateSchema = z
+  .object({ unlockedIds: z.array(z.string().min(1)) })
+  .strict();
+
+const WorldbookStateSchema = z
+  .object({
+    activeEntryIds: z.array(z.string().min(1)),
+    seenEntryIds: z.array(z.string().min(1)),
+  })
+  .strict();
+
 export type JsonValue = null | boolean | number | string | JsonValue[] | { [key: string]: JsonValue };
 export type JsonObject = { [key: string]: JsonValue };
 
@@ -117,11 +149,16 @@ export const SaveV2Schema = z
     inventory: InventorySchema,
     quests: z
       .object({
+        activeNodeIds: z.array(z.string().min(1)).default([]),
         completedNodeIds: z.array(z.string().min(1)),
         currentMapNodeId: z.string(),
         progressLog: LogArraySchema,
       })
       .strict(),
+    battles: BattleStateSchema.default({ resolvedIds: [], outcomes: {} }),
+    professions: ProfessionStateSchema.default({ activeId: '', progress: {} }),
+    achievements: AchievementStateSchema.default({ unlockedIds: [] }),
+    worldbook: WorldbookStateSchema.default({ activeEntryIds: [], seenEntryIds: [] }),
     unlockedCg: z.array(z.string().min(1)),
     logs: SaveLogsSchema,
   })
@@ -162,7 +199,19 @@ export function createDefaultSaveV2(): SaveV2 {
     },
     flags: {},
     inventory: { ownedIds: [], equipped: {}, outfitIds: [], activeOutfitId: '' },
-    quests: { completedNodeIds: [], currentMapNodeId: '', progressLog: [] },
+    quests: { activeNodeIds: [], completedNodeIds: [], currentMapNodeId: '', progressLog: [] },
+    battles: { resolvedIds: [], outcomes: {} },
+    professions: {
+      activeId: 'narrative_curator',
+      progress: {
+        narrative_curator: { xp: 0, level: 1 },
+        boundary_mediator: { xp: 0, level: 1 },
+        memory_surgeon: { xp: 0, level: 1 },
+        ring_counterforger: { xp: 0, level: 1 },
+      },
+    },
+    achievements: { unlockedIds: [] },
+    worldbook: { activeEntryIds: [], seenEntryIds: [] },
     unlockedCg: [],
     logs: createDefaultLogs(),
   };

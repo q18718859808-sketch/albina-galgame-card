@@ -1,0 +1,26 @@
+{
+  "version": 1,
+  "assetId": "voice.result.canon_recap_continue_9_37",
+  "artifactSha256": "ef041d6a2aaf372b440caad96e3f34bb2191ec52acef42d2e42186de67303304",
+  "provenance": {
+    "provider": "pie",
+    "model": "speech-2.8-hd",
+    "promptVersion": "albina-speech-v2",
+    "sourceJobHash": "82b878dd3c284b1ebc599d775f1dbb074983d971551bdcca0d86efb3405569f0",
+    "review": {
+      "status": "approved",
+      "reviewer": "automated-audio-qc",
+      "reviewedAt": "2026-07-15T17:56:38.907Z"
+    }
+  },
+  "lineage": {
+    "kind": "conversion",
+    "processVersion": "speech-loudnorm-v2",
+    "inputs": [
+      {
+        "sha256": "bd8d5647773be2698ca9eb3fa5d82bc4015feb661597d8d7e1d75b7347f9edc6",
+        "role": "pie-speech-api-output"
+      }
+    ]
+  }
+}

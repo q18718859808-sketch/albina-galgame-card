@@ -1,21 +1,24 @@
 import type { GameScriptV2 } from '../domain/game-script';
 import { createDefaultSaveV2, type SaveV2 } from '../domain/save';
-import type { ChoiceAvailability, EligibilityPredicate, SceneChoice, SceneCue } from '../domain/scene-cue';
+import type { ChoiceAvailability, SceneChoice, SceneCue } from '../domain/scene-cue';
+import {
+  activateOutfit,
+  activateProfession,
+  activeOutfitPortraitId,
+  applyChoiceEffects,
+  effectiveStoryValue,
+  equipItem,
+  evaluateAchievements,
+  statePredicateMatches,
+  syncWorldbookState,
+} from './progression';
 
 export interface GameSessionOptions { now?: () => string; save?: SaveV2 }
 
-function predicateMatches(predicate: EligibilityPredicate, save: SaveV2): boolean {
-  if (predicate.kind === 'flag') return (save.flags[predicate.flag] ?? false) === predicate.equals;
-  const value = save.values[predicate.key];
-  if (predicate.operator === 'gte') return value >= predicate.value;
-  if (predicate.operator === 'lte') return value <= predicate.value;
-  return value === predicate.value;
-}
-
-export function isChoiceAvailable(condition: ChoiceAvailability | undefined, save: SaveV2): boolean {
+export function isChoiceAvailable(condition: ChoiceAvailability | undefined, save: SaveV2, script: GameScriptV2): boolean {
   if (!condition) return true;
-  const all = condition.allOf?.every((predicate) => predicateMatches(predicate, save)) ?? true;
-  const any = condition.anyOf?.some((predicate) => predicateMatches(predicate, save)) ?? true;
+  const all = condition.allOf?.every((predicate) => statePredicateMatches(script, save, predicate)) ?? true;
+  const any = condition.anyOf?.some((predicate) => statePredicateMatches(script, save, predicate)) ?? true;
   return condition.fallback === true || (all && any);
 }
 
@@ -36,6 +39,8 @@ export class GameSession {
       this.save.locationId = initialScene.locationId;
       if (initialScene.route !== null) this.save.route = initialScene.route;
     }
+    syncWorldbookState(this.script, this.save, this.scene);
+    evaluateAchievements(this.script, this.save, this.now());
   }
 
   get scene(): SceneCue {
@@ -44,42 +49,60 @@ export class GameSession {
     return scene;
   }
 
-  get choices(): SceneChoice[] { return this.scene.choices.filter((choice) => isChoiceAvailable(choice.availability, this.save)); }
+  get choices(): SceneChoice[] { return this.scene.choices.filter((choice) => isChoiceAvailable(choice.availability, this.save, this.script)); }
+
+  get effectiveValues(): Pick<SaveV2['values'], 'affectionAlbina' | 'trust' | 'danger' | 'artResonance'> {
+    return {
+      affectionAlbina: effectiveStoryValue(this.script, this.save, 'affectionAlbina'),
+      trust: effectiveStoryValue(this.script, this.save, 'trust'),
+      danger: effectiveStoryValue(this.script, this.save, 'danger'),
+      artResonance: effectiveStoryValue(this.script, this.save, 'artResonance'),
+    };
+  }
+
+  get outfitPortraitAssetId(): string | undefined { return activeOutfitPortraitId(this.script, this.save); }
 
   replaceSave(save: SaveV2): void {
     if (!this.sceneById.has(save.sceneId)) throw new Error(`Save references unknown scene: ${save.sceneId}`);
     this.save = structuredClone(save);
+    syncWorldbookState(this.script, this.save, this.scene);
+    evaluateAchievements(this.script, this.save, this.now());
   }
 
   choose(choiceId: string): { choice: SceneChoice; resultText?: string; scene: SceneCue } {
     const choice = this.choices.find((candidate) => candidate.id === choiceId);
     if (!choice) throw new Error(`Choice is unavailable: ${choiceId}`);
-    const effects = choice.effects;
-    if (effects.route) this.save.route = effects.route;
-    for (const [key, delta] of Object.entries(effects.values ?? {})) {
-      if (delta === undefined) continue;
-      if (key in this.save.values) {
-        const valueKey = key as 'affectionAlbina' | 'trust' | 'danger' | 'artResonance';
-        this.save.values[valueKey] += delta;
-      } else {
-        const economyKey = key as keyof SaveV2['values']['routeEconomy'];
-        this.save.values.routeEconomy[economyKey] += delta;
-      }
-    }
-    effects.setFlags?.forEach((flag) => { this.save.flags[flag] = true; });
-    effects.clearFlags?.forEach((flag) => { this.save.flags[flag] = false; });
-    effects.unlockCg?.forEach((assetId) => { if (!this.save.unlockedCg.includes(assetId)) this.save.unlockedCg.push(assetId); });
-    effects.grantItems?.forEach((itemId) => { if (!this.save.inventory.ownedIds.includes(itemId)) this.save.inventory.ownedIds.push(itemId); });
-    effects.completeQuests?.forEach((questId) => { if (!this.save.quests.completedNodeIds.includes(questId)) this.save.quests.completedNodeIds.push(questId); });
+    const at = this.now();
+    applyChoiceEffects(this.script, this.save, choice.effects, at);
     const next = this.sceneById.get(choice.nextSceneId);
     if (!next) throw new Error(`Choice references unknown scene: ${choice.nextSceneId}`);
     this.save.sceneId = next.id;
     this.save.chapter = next.chapter;
     if (next.route !== null) this.save.route = next.route;
     this.save.locationId = next.locationId;
-    this.save.updatedAt = this.now();
+    this.save.updatedAt = at;
     this.save.logs.sceneBranches.push({ choiceId, sceneId: next.id, at: this.save.updatedAt });
+    syncWorldbookState(this.script, this.save, next);
+    evaluateAchievements(this.script, this.save, at);
     return { choice, ...(choice.resultText ? { resultText: choice.resultText } : {}), scene: next };
+  }
+
+  equip(equipmentId: string): void {
+    const at = this.now();
+    equipItem(this.script, this.save, equipmentId, at);
+    this.save.updatedAt = at;
+  }
+
+  wearOutfit(outfitId: string): void {
+    const at = this.now();
+    activateOutfit(this.script, this.save, outfitId, at);
+    this.save.updatedAt = at;
+  }
+
+  selectProfession(professionId: string): void {
+    const at = this.now();
+    activateProfession(this.script, this.save, professionId, at);
+    this.save.updatedAt = at;
   }
 
   interpolate(text: string): string { return text.replaceAll('{{user}}', this.save.playerProfile.name || '你'); }

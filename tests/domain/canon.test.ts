@@ -1,11 +1,14 @@
 import { describe, expect, it } from 'vitest';
 
 import claimsJson from '../../content/canon-claims-v1.json';
+import coverageJson from '../../content/canon-coverage-v1.json';
 import provenanceJson from '../../content/story-provenance-v1.json';
 import sourcesJson from '../../content/canon-sources-v1.json';
+import cardProfileJson from '../../content/albina-card-canon-v1.json';
 import {
   CanonClassificationSchema,
   CanonClaimLedgerSchema,
+  CanonCoverageLedgerSchema,
   CanonSourceLedgerSchema,
   materializeSceneProvenance,
   SceneProvenanceSchema,
@@ -36,8 +39,8 @@ describe('canon provenance domain', () => {
     const outcome = claims.claims.find((claim) => claim.id === 'canon.9-43.outcome');
     expect(outcome?.statement).toContain('9-43');
     expect(outcome?.evidence.map((item) => item.sourceId).sort()).toEqual([
-      'source.bilibili.BV1rsi8B5ED2.p43',
       'source.official.canto-ix.9-43',
+      'source.wiki.albina.173286',
       'source.wiki.canto-ix-part-iii.177602',
     ]);
     expect(claims.claims.some((claim) => claim.id === 'canon.9-37.outcome')).toBe(false);
@@ -68,7 +71,8 @@ describe('canon provenance domain', () => {
     const claims = {
       version: 1,
       claims: [{
-        id: 'canon.scene', classification: 'canon_paraphrase', statement: 'Short paraphrase.',
+        id: 'canon.scene', classification: 'canon_paraphrase', scope: 'story', statement: 'Short paraphrase.',
+        recapText: 'Short paraphrase.', reviewedAt: '2026-07-15',
         evidence: [{ sourceId: 'source.official', locator: '9-37' }],
       }],
     };
@@ -82,11 +86,37 @@ describe('canon provenance domain', () => {
         },
       }],
     };
-    const result = materializeSceneProvenance([{ id: 'scene_001', text: '复盘' }], sources, claims, provenance);
+    const result = materializeSceneProvenance([{ id: 'scene_001', text: 'Short paraphrase.' }], sources, claims, provenance);
     expect(result[0]?.provenance.claimIds).toEqual(['canon.scene']);
+    expect(() => materializeSceneProvenance([{ id: 'scene_001', text: 'Unsupported prose.' }], sources, claims, provenance)).toThrow(/reviewed claim text/i);
     expect(() => materializeSceneProvenance([{ id: 'missing' }], sources, claims, provenance)).toThrow(/unknown scene/i);
     const wrongSources = structuredClone(provenance);
     wrongSources.entries[0]!.provenance.sourceIds = ['source.other'];
     expect(() => materializeSceneProvenance([{ id: 'scene_001' }], sources, claims, wrongSources)).toThrow(/exactly match/i);
+  });
+
+  it('accounts for every claim and prevents metadata-only recordings from becoming plot evidence', () => {
+    const sources = CanonSourceLedgerSchema.parse(sourcesJson);
+    const claims = CanonClaimLedgerSchema.parse(claimsJson);
+    const provenance = StoryProvenanceLedgerSchema.parse(provenanceJson);
+    const coverage = CanonCoverageLedgerSchema.parse(coverageJson);
+    const sourceKinds = new Map(sources.sources.map((source) => [source.id, source.kind]));
+    expect(coverage.entries.map((entry) => entry.claimId).sort()).toEqual(
+      claims.claims.map((claim) => claim.id).sort(),
+    );
+    for (const claim of claims.claims.filter((item) => item.classification.startsWith('canon_'))) {
+      expect(claim.evidence.every((item) => sourceKinds.get(item.sourceId) !== 'gameplay-recording'), claim.id).toBe(true);
+    }
+    const provenanceByScene = new Map(
+      provenance.entries.flatMap((entry) => entry.sceneIds.map((sceneId) => [sceneId, entry.provenance] as const)),
+    );
+    const bookEntries = new Map(cardProfileJson.card.character_book.entries.map((entry) => [entry.id, entry]));
+    const claimsById = new Map(claims.claims.map((claim) => [claim.id, claim]));
+    for (const entry of coverage.entries) {
+      const claim = claimsById.get(entry.claimId)!;
+      expect(entry.disposition === 'rejected', entry.claimId).toBe(claim.classification === 'rejected');
+      for (const sceneId of entry.sceneIds) expect(provenanceByScene.get(sceneId)?.claimIds, sceneId).toContain(entry.claimId);
+      for (const worldbookId of entry.worldbookEntryIds) expect(bookEntries.get(worldbookId)?.claimIds, worldbookId).toContain(entry.claimId);
+    }
   });
 });

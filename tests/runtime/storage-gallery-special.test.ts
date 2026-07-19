@@ -3,7 +3,7 @@ import { describe, expect, it, vi } from 'vitest';
 import { createDefaultSaveV2 } from '../../src/domain/save';
 import { GalleryService } from '../../src/runtime/gallery';
 import { SpecialCgService } from '../../src/runtime/special-cg';
-import { AlbinaStorage, type StorageBackend } from '../../src/runtime/storage';
+import { AlbinaStorage, MemoryStorageBackend, ResilientStorageBackend, type StorageBackend } from '../../src/runtime/storage';
 
 class MemoryBackend implements StorageBackend {
   readonly values = new Map<string, unknown>();
@@ -22,6 +22,15 @@ class MemoryBackend implements StorageBackend {
   close(): void { this.closed = true; }
 }
 
+class UnavailableBackend implements StorageBackend {
+  closed = false;
+  async get<T>(): Promise<T | undefined> { throw new Error('IndexedDB unavailable'); }
+  async put<_T>(): Promise<void> { throw new Error('IndexedDB unavailable'); }
+  async delete(): Promise<void> { throw new Error('IndexedDB unavailable'); }
+  async keys(): Promise<string[]> { throw new Error('IndexedDB unavailable'); }
+  close(): void { this.closed = true; }
+}
+
 class DeferredAssetBackend extends MemoryBackend {
   resolveAsset!: (blob: Blob | undefined) => void;
   private readonly asset = new Promise<Blob | undefined>((resolve) => { this.resolveAsset = resolve; });
@@ -33,6 +42,18 @@ class DeferredAssetBackend extends MemoryBackend {
 }
 
 describe('runtime persistence services', () => {
+  it('falls back to in-memory persistence when IndexedDB is unavailable', async () => {
+    const primary = new UnavailableBackend();
+    const backend = new ResilientStorageBackend(primary, new MemoryStorageBackend());
+
+    await backend.put('saves', 'slot-1', { sceneId: 'canon_recap_9_14' });
+    await expect(backend.get('saves', 'slot-1')).resolves.toEqual({ sceneId: 'canon_recap_9_14' });
+    await expect(backend.keys('saves')).resolves.toEqual(['slot-1']);
+    await backend.delete('saves', 'slot-1');
+    await expect(backend.get('saves', 'slot-1')).resolves.toBeUndefined();
+    expect(primary.closed).toBe(true);
+  });
+
   it('caches assets in storage and revokes created Blob URLs', async () => {
     const backend = new MemoryBackend();
     const revokeObjectURL = vi.fn();
@@ -80,6 +101,46 @@ describe('runtime persistence services', () => {
     await storage.saveSnapshot(save, thumbnail);
 
     await expect(storage.loadSnapshot(save.saveId)).resolves.toEqual({ save, thumbnail });
+  });
+
+  it('migrates v1.0.44 snapshots in place and preserves their thumbnails', async () => {
+    const backend = new MemoryBackend();
+    const storage = new AlbinaStorage(backend);
+    const thumbnail = new Blob(['legacy-thumb'], { type: 'image/webp' });
+    backend.values.set('saves:slot-1', structuredClone({
+      save: {
+        schemaVersion: 10,
+        projectId: 'albina-galgame-card',
+        saveId: 'slot-1',
+        sceneId: 'ring_conspiracy_006',
+        route: 'ring_conspiracy',
+        trust: 29,
+      },
+      thumbnail,
+    }));
+
+    await expect(storage.loadSnapshot('slot-1')).resolves.toMatchObject({
+      save: { version: 2, saveId: 'slot-1', sceneId: 'ring_conspiracy_006', values: { trust: 29 } },
+      thumbnail,
+    });
+    expect(backend.values.get('saves:slot-1')).toMatchObject({ save: { version: 2, saveId: 'slot-1' } });
+  });
+
+  it('recovers a missing thumbnail but rejects an unknown snapshot save', async () => {
+    const backend = new MemoryBackend();
+    const storage = new AlbinaStorage(backend);
+    const save = createDefaultSaveV2();
+    backend.values.set('saves:quick-save', { save });
+    backend.values.set('saves:broken', { save: { unrelated: true }, thumbnail: new Blob() });
+
+    const recovered = await storage.loadSnapshot('quick-save');
+    expect(recovered?.save).toEqual(save);
+    expect(recovered?.thumbnail).toBeInstanceOf(Blob);
+    expect(recovered?.thumbnail.size).toBe(0);
+    await expect(storage.loadSnapshot('broken')).rejects.toMatchObject({
+      code: 'unknown-format',
+      recoverable: true,
+    });
   });
 
   it('closes IndexedDB-compatible storage during disposal', () => {

@@ -43,6 +43,14 @@ describe('authoritative game session', () => {
     expect(session.save.values.trust).toBe(3);
     expect(session.save.flags.route_rebuild_seen).toBe(true);
     expect(session.save.unlockedCg).toContain('cg.golden_bough_rebuild');
+    expect(session.save.quests.activeNodeIds).toContain('quest.golden.memory_continuity');
+    expect(session.save.professions.activeId).toBe('memory_surgeon');
+    expect(session.save.professions.progress.memory_surgeon).toEqual({ xp: 4, level: 1 });
+    expect(session.save.inventory.ownedIds).toContain('item.rain_room_badge');
+    expect(session.save.inventory.equipped.accessory).toBe('equipment.rain_room_badge');
+    expect(session.save.inventory.activeOutfitId).toBe('outfit.albina.rain');
+    expect(session.save.achievements.unlockedIds).toContain('ach_au_boundary_witness');
+    expect(session.save.worldbook.seenEntryIds).toContain('albina_routes_endings_au_if');
     expect(manifest.assets.find((asset) => asset.id === 'cg.golden_bough_rebuild')?.kind).toBe('image');
     expect(session.save.logs.sceneBranches.map(({ choiceId, sceneId }) => ({ choiceId, sceneId }))).toEqual([
       { choiceId: 'canon_recap_continue_9_18', sceneId: 'canon_recap_9_18' },

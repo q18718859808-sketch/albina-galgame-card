@@ -15,11 +15,28 @@ describe('v2 release-candidate completeness with explicit limitations', () => {
     const manifest = parseAssetManifestV2(await json('content/asset-manifest-v2.json'));
     const story = parseGameScriptV2(await json('dist/albina-galgame-card/data/game-script-v2.json'));
     const voiceIds = new Set(story.scenes.flatMap((scene) => [scene.voiceAssetId, ...scene.choices.map((choice) => choice.resultVoiceAssetId)]).filter((id): id is string => Boolean(id)));
-    expect(voiceIds.size).toBe(150);
+    expect(voiceIds.size).toBe(166);
     for (const id of voiceIds) {
       const asset = manifest.assets.find((candidate) => candidate.id === id);
       expect(asset?.sha256, id).toMatch(/^[a-f0-9]{64}$/u);
       expect(asset?.bytes, id).toBeGreaterThan(0);
+      expect(asset?.provenance, id).toMatchObject({ provider: 'pie', model: 'speech-2.8-hd', review: { status: 'approved' } });
+      expect(asset?.lineage, id).toMatchObject({ kind: 'conversion', inputs: [{ sha256: expect.stringMatching(/^[a-f0-9]{64}$/u) }] });
+    }
+    const boundaryVoiceIds = [...voiceIds].filter((id) => id.includes('canon_recap') || id === 'voice.scene.opening_001' || id.startsWith('voice.result.enter_'));
+    expect(boundaryVoiceIds).toHaveLength(16);
+    for (const id of boundaryVoiceIds) {
+      const asset = manifest.assets.find((candidate) => candidate.id === id);
+      expect(asset?.provenance, id).toMatchObject({ provider: 'pie', model: 'speech-2.8-hd', promptVersion: 'albina-speech-v2', review: { status: 'approved' } });
+    }
+    const placeholderVoiceIds = story.scenes.flatMap((scene) => [
+      ...(scene.text.includes('{{user}}') && scene.voiceAssetId ? [scene.voiceAssetId] : []),
+      ...scene.choices.filter((choice) => choice.resultText?.includes('{{user}}') && choice.resultVoiceAssetId).map((choice) => choice.resultVoiceAssetId as string),
+    ]);
+    expect(placeholderVoiceIds).toHaveLength(5);
+    for (const id of placeholderVoiceIds) {
+      const asset = manifest.assets.find((candidate) => candidate.id === id);
+      expect(asset?.provenance?.promptVersion, id).toBe('albina-speech-v2');
     }
     expect(manifest.mediaJobs.filter((job) => job.kind === 'speech')).toEqual([]);
   });
@@ -42,14 +59,17 @@ describe('v2 release-candidate completeness with explicit limitations', () => {
       runtimeMediaApis: boolean;
       completeEdition: boolean;
       substitutions: { music: string; portraitMotion: string };
-      knownLimitations: { officialOst: string; canonDialogue: string };
+      knownLimitations: { officialOst: string; canonDialogue: string; visualProvenance: string };
+      completed: { fixedVoiceAssets: number; pieProvenancedVoiceAssets: number; staticCharacterPortraits: number; staticAlbinaPortraits: number };
     };
     expect(status.runtimeMediaApis).toBe(false);
     expect(status.completeEdition).toBe(false);
     expect(status.substitutions.music).toContain('Music 2.6 production is retired');
-    expect(status.substitutions.portraitMotion).toContain('Invalid sprite strips are retired');
+    expect(status.substitutions.portraitMotion).toContain('All legacy portrait strips are retired');
     expect(status.knownLimitations.officialOst).toContain('not a redistribution license');
     expect(status.knownLimitations.canonDialogue).toContain('paraphrases');
+    expect(status.knownLimitations.visualProvenance).toContain('media:readiness:strict');
+    expect(status.completed).toMatchObject({ fixedVoiceAssets: 166, pieProvenancedVoiceAssets: 166, staticCharacterPortraits: 27, staticAlbinaPortraits: 13 });
   });
 
   it('keeps one identical approved Tavern Helper loader in card JSON and template', async () => {

@@ -1,0 +1,164 @@
+{
+  "version": 1,
+  "scope": "Albina 的可核验角色资料、主线直接出场、主线敌人机制与本卡 AU 边界；不复制原作台词，也不把镜像世界玩法变体当作主线事件。",
+  "exclusions": [
+    {
+      "scope": "Canto IX 中与 Albina 无直接关系的完整章节复述",
+      "reason": "本卡以 Albina 为角色主体；9-14 只保留理解 Corporism 所需的最小背景。"
+    },
+    {
+      "scope": "原作逐句台词、录播画面、音频与字幕全文",
+      "reason": "只发布事实释义与精确定位；B站录播 no_reprint=1 且无公开字幕轨。"
+    },
+    {
+      "scope": "Mirror Dungeon 与 Refracted 变体作为主线剧情",
+      "reason": "玩法记录可以进入战斗档案，但必须明确不属于 9-18、9-37、9-43 的主线事件。"
+    }
+  ],
+  "entries": [
+    {
+      "claimId": "canon.term.corporism",
+      "sceneIds": [],
+      "worldbookEntryIds": ["albina_canon_term_corporism"],
+      "cardFields": ["description", "scenario", "first_mes"],
+      "disposition": "published",
+      "note": "术语单独登记，避免与事件释义混为同一分类。"
+    },
+    {
+      "claimId": "canon.profile.identity",
+      "sceneIds": ["canon_recap_albina_fascia"],
+      "worldbookEntryIds": ["albina_identity_status"],
+      "cardFields": ["description"],
+      "disposition": "published",
+      "note": "人物元数据进入正史复盘与世界书。"
+    },
+    {
+      "claimId": "canon.appearance.prosthetic-body",
+      "sceneIds": ["canon_recap_albina_fascia"],
+      "worldbookEntryIds": ["albina_prosthetic_appearance"],
+      "cardFields": ["description"],
+      "disposition": "published",
+      "note": "义体、眼睛、线路、骨架和前臂工具均有独立外观锚点。"
+    },
+    {
+      "claimId": "canon.appearance.armor-and-fascia",
+      "sceneIds": ["canon_recap_albina_fascia"],
+      "worldbookEntryIds": ["albina_armor_fascia_visual"],
+      "cardFields": ["description"],
+      "disposition": "published",
+      "note": "装甲与 Fascia 外观独立于身体来源。"
+    },
+    {
+      "claimId": "canon.personality.fascia-attachment",
+      "sceneIds": ["canon_recap_albina_fascia"],
+      "worldbookEntryIds": ["albina_fascia_attachment"],
+      "cardFields": ["description", "personality"],
+      "disposition": "published",
+      "note": "只保留可观察的依恋和保护行为。"
+    },
+    {
+      "claimId": "canon.personality.social-and-ambition",
+      "sceneIds": ["canon_recap_albina_fascia"],
+      "worldbookEntryIds": ["albina_social_ambition"],
+      "cardFields": ["description", "personality"],
+      "disposition": "published",
+      "note": "朋友逻辑、诚实表现和超越师父的志向分别有场景定位。"
+    },
+    {
+      "claimId": "canon.story.pre-canto-fascia",
+      "sceneIds": ["canon_recap_albina_fascia"],
+      "worldbookEntryIds": ["fascia_body_origin"],
+      "cardFields": ["description"],
+      "disposition": "published",
+      "note": "身体来源与手臂练习来自角色页、敌人被动和 9-37 交叉定位。"
+    },
+    {
+      "claimId": "canon.9-14.corporism-context",
+      "sceneIds": ["canon_recap_9_14"],
+      "worldbookEntryIds": ["canto_ix_9_14_context"],
+      "cardFields": ["scenario", "first_mes"],
+      "disposition": "published",
+      "note": "明确标注为背景且说明 Albina 没有直接出场。"
+    },
+    {
+      "claimId": "canon.9-18.first-appearance",
+      "sceneIds": ["canon_recap_9_18"],
+      "worldbookEntryIds": ["canto_ix_9_18_first_appearance"],
+      "cardFields": ["description", "scenario", "first_mes"],
+      "disposition": "published",
+      "note": "覆盖参与者、掩护目标、金枝、装甲展开、Ren 冲突与追击结果。"
+    },
+    {
+      "claimId": "canon.9-37.encounter-and-method",
+      "sceneIds": ["canon_recap_9_37"],
+      "worldbookEntryIds": ["canto_ix_9_37_encounter"],
+      "cardFields": ["description", "scenario", "first_mes"],
+      "disposition": "published",
+      "note": "覆盖指派、参与者、素材处理、朋友请求和师承自述。"
+    },
+    {
+      "claimId": "canon.9-37.escalation",
+      "sceneIds": ["canon_recap_9_37_battle"],
+      "worldbookEntryIds": ["canto_ix_9_37_escalation"],
+      "cardFields": ["scenario"],
+      "disposition": "published",
+      "note": "明确把 9-37 终点与 9-43 死亡结果分开。"
+    },
+    {
+      "claimId": "canon.9-43.sign-awakening",
+      "sceneIds": ["canon_recap_9_43_outcome"],
+      "worldbookEntryIds": ["canto_ix_9_43_turn_and_outcome"],
+      "cardFields": ["scenario"],
+      "disposition": "published",
+      "note": "补齐 Hohenheim 反击、Albina 阻截、未来话题与 The Sign 的因果上下文。"
+    },
+    {
+      "claimId": "canon.9-43.outcome",
+      "sceneIds": ["canon_recap_9_43_outcome"],
+      "worldbookEntryIds": ["canto_ix_9_43_turn_and_outcome"],
+      "cardFields": ["description", "scenario", "first_mes"],
+      "disposition": "published",
+      "note": "固定 Fascia、Albina、Callisto 的死亡顺序与章节归属。"
+    },
+    {
+      "claimId": "canon.combat.story-variants",
+      "sceneIds": [],
+      "worldbookEntryIds": ["albina_combat_profile"],
+      "cardFields": [],
+      "disposition": "published",
+      "note": "玩法形态进入可选世界书，不延长主剧情复盘。"
+    },
+    {
+      "claimId": "canon.combat.mechanics",
+      "sceneIds": [],
+      "worldbookEntryIds": ["albina_combat_profile"],
+      "cardFields": [],
+      "disposition": "published",
+      "note": "只记录稳定的战斗身份、核心资源和阶段机制，不复制技能台词。"
+    },
+    {
+      "claimId": "inference.visual-reference-lock",
+      "sceneIds": [],
+      "worldbookEntryIds": ["albina_visual_reference_lock"],
+      "cardFields": [],
+      "disposition": "production-constraint",
+      "note": "用于资产验收，不冒充新的剧情事实。"
+    },
+    {
+      "claimId": "boundary.routes-and-player.are-AU",
+      "sceneIds": ["opening_001"],
+      "worldbookEntryIds": ["albina_routes_endings_au_if"],
+      "cardFields": ["description", "scenario", "first_mes", "system_prompt"],
+      "disposition": "published",
+      "note": "所有路线场景通过 story provenance 继承同一边界；入口在 9-43 结果之后。"
+    },
+    {
+      "claimId": "rejected.legacy-opening-as-canon",
+      "sceneIds": [],
+      "worldbookEntryIds": [],
+      "cardFields": [],
+      "disposition": "rejected",
+      "note": "旧雨夜相遇只能作为 AU 内容，禁止作为原作事实发布。"
+    }
+  ]
+}

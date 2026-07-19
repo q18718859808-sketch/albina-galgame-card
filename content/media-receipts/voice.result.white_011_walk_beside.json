@@ -1,0 +1,26 @@
+{
+  "version": 1,
+  "assetId": "voice.result.white_011_walk_beside",
+  "artifactSha256": "5364cd974fd319a09968ea5dd8d47bacb304bc918dc1a8180d9b905bfec6d4e3",
+  "provenance": {
+    "provider": "pie",
+    "model": "speech-2.8-hd",
+    "promptVersion": "albina-speech-legacy-v1",
+    "sourceJobHash": "55cf6176bd61869a0ce31f9dcb73655f7f1f47a97ed93d883fb1d45c361a12bf",
+    "review": {
+      "status": "approved",
+      "reviewer": "automated-audio-qc",
+      "reviewedAt": "2026-07-15T18:52:31.596Z"
+    }
+  },
+  "lineage": {
+    "kind": "conversion",
+    "processVersion": "speech-loudnorm-v1",
+    "inputs": [
+      {
+        "sha256": "8f82753798f57a08b67ef3de620e76950ee7ca7d7186ac899243edc1f851d2dc",
+        "role": "validated-pie-speech-output"
+      }
+    ]
+  }
+}

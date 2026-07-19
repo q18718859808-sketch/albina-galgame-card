@@ -1,0 +1,842 @@
+{
+  "version": 2,
+  "relationshipTracks": [
+    {
+      "id": "intimacy",
+      "label": "亲密",
+      "minimum": 0,
+      "maximum": 100
+    },
+    {
+      "id": "reliance",
+      "label": "信赖",
+      "minimum": 0,
+      "maximum": 100
+    },
+    {
+      "id": "obsession",
+      "label": "执着",
+      "minimum": 0,
+      "maximum": 100
+    },
+    {
+      "id": "suspicion",
+      "label": "戒备",
+      "minimum": 0,
+      "maximum": 100
+    }
+  ],
+  "quests": [
+    {
+      "id": "quest.white.boundary_protocol",
+      "route": "white_canvas",
+      "label": "白色画布边界协议",
+      "description": "在见证、处置权和展出决定之间建立可撤回的边界。"
+    },
+    {
+      "id": "quest.golden.memory_continuity",
+      "route": "golden_bough_rebuild",
+      "label": "金枝记忆连续性",
+      "description": "在重构过程中保住称谓、选择权与法西娅的心跳锚点。"
+    },
+    {
+      "id": "quest.ring.counter_contract",
+      "route": "ring_conspiracy",
+      "label": "环指反制契约",
+      "description": "保留自身条件并把敌对委托改写为可追踪的反制条款。"
+    }
+  ],
+  "battles": [
+    {
+      "id": "battle.white.gallery_pressure",
+      "route": "white_canvas",
+      "label": "画廊展出压力",
+      "description": "决定是否把阿尔比娜作为作品展出的制度性冲突。",
+      "recommendedMastery": "boundary"
+    },
+    {
+      "id": "battle.golden.replacement_protocol",
+      "route": "golden_bough_rebuild",
+      "label": "替换协议冲突",
+      "description": "围绕记忆封存和替换协议发生的确定性规则冲突。",
+      "recommendedMastery": "analysis"
+    },
+    {
+      "id": "battle.ring.authorship_frame",
+      "route": "ring_conspiracy",
+      "label": "署名权取景框",
+      "description": "在环指剧本、胶片和署名权之间争夺叙事控制。",
+      "recommendedMastery": "blade"
+    }
+  ],
+  "items": [
+    {
+      "id": "item.rain_room_badge",
+      "label": "雨室观测徽记",
+      "description": "进入 AU/IF 后由前端保存的身份与见证锚点。"
+    },
+    {
+      "id": "item.white.boundary_contract",
+      "route": "white_canvas",
+      "label": "边界契约钥",
+      "description": "证明处置权、撤回权和展出决定已写入权威状态。"
+    },
+    {
+      "id": "item.golden.memory_anchor",
+      "route": "golden_bough_rebuild",
+      "label": "称谓锚定镜片",
+      "description": "用于稳定重构后的称谓和人格连续性。"
+    },
+    {
+      "id": "item.ring.counter_signet",
+      "route": "ring_conspiracy",
+      "label": "反制环印",
+      "description": "记录玩家保留条件和反写条款的装备凭据。"
+    }
+  ],
+  "equipment": [
+    {
+      "id": "equipment.rain_room_badge",
+      "itemId": "item.rain_room_badge",
+      "slot": "accessory",
+      "label": "雨室观测徽记",
+      "modifiers": {
+        "trust": 1,
+        "composure": 2
+      }
+    },
+    {
+      "id": "equipment.white.boundary_charm",
+      "itemId": "item.white.boundary_contract",
+      "route": "white_canvas",
+      "slot": "accessory",
+      "label": "边界契约护符",
+      "modifiers": {
+        "trust": 3,
+        "danger": -2
+      }
+    },
+    {
+      "id": "equipment.golden.memory_lens",
+      "itemId": "item.golden.memory_anchor",
+      "route": "golden_bough_rebuild",
+      "slot": "accessory",
+      "label": "称谓锚定镜片",
+      "modifiers": {
+        "trust": 2,
+        "artResonance": 4
+      }
+    },
+    {
+      "id": "equipment.ring.counter_signet",
+      "itemId": "item.ring.counter_signet",
+      "route": "ring_conspiracy",
+      "slot": "accessory",
+      "label": "反制环印",
+      "modifiers": {
+        "leverage": 3,
+        "danger": -3
+      }
+    }
+  ],
+  "professions": [
+    {
+      "id": "narrative_curator",
+      "label": "剧情索引师",
+      "xpThresholds": [0, 8, 20, 36],
+      "modifiersPerLevel": {
+        "artResonance": 1
+      }
+    },
+    {
+      "id": "boundary_mediator",
+      "route": "white_canvas",
+      "label": "边界调停者",
+      "xpThresholds": [0, 8, 20, 36],
+      "modifiersPerLevel": {
+        "trust": 1,
+        "danger": -1
+      }
+    },
+    {
+      "id": "memory_surgeon",
+      "route": "golden_bough_rebuild",
+      "label": "记忆修复师",
+      "xpThresholds": [0, 8, 20, 36],
+      "modifiersPerLevel": {
+        "artResonance": 2
+      }
+    },
+    {
+      "id": "ring_counterforger",
+      "route": "ring_conspiracy",
+      "label": "契约反写者",
+      "xpThresholds": [0, 8, 20, 36],
+      "modifiersPerLevel": {
+        "trust": 1,
+        "danger": -1,
+        "leverage": 1
+      }
+    }
+  ],
+  "achievements": [
+    {
+      "id": "ach_au_boundary_witness",
+      "label": "AU 边界见证",
+      "description": "完成正史复盘并确认本卡路线属于原创 AU/IF。",
+      "eligibility": [
+        {
+          "kind": "flag",
+          "flag": "AU_boundary_acknowledged",
+          "equals": true
+        },
+        {
+          "kind": "worldbook",
+          "entryId": "albina_routes_endings_au_if",
+          "status": "seen"
+        }
+      ],
+      "reward": {
+        "values": {
+          "artResonance": 1
+        },
+        "professionXp": {
+          "narrative_curator": 2
+        },
+        "setFlags": [
+          "achievement_au_boundary_witness"
+        ]
+      }
+    },
+    {
+      "id": "ach_white_boundary_archivist",
+      "route": "white_canvas",
+      "label": "白厅边界档案",
+      "description": "完成边界任务并解决画廊展出压力。",
+      "eligibility": [
+        {
+          "kind": "quest",
+          "questId": "quest.white.boundary_protocol",
+          "status": "completed"
+        },
+        {
+          "kind": "battle",
+          "battleId": "battle.white.gallery_pressure",
+          "outcome": "victory"
+        },
+        {
+          "kind": "profession",
+          "professionId": "boundary_mediator",
+          "levelGte": 2
+        }
+      ],
+      "reward": {
+        "values": {
+          "trust": 2,
+          "danger": -2
+        },
+        "professionXp": {
+          "boundary_mediator": 2
+        },
+        "setFlags": [
+          "achievement_white_boundary_archivist"
+        ]
+      }
+    },
+    {
+      "id": "ach_golden_memory_protocol",
+      "route": "golden_bough_rebuild",
+      "label": "重构称谓协议",
+      "description": "完成连续性任务并解决替换协议冲突。",
+      "eligibility": [
+        {
+          "kind": "quest",
+          "questId": "quest.golden.memory_continuity",
+          "status": "completed"
+        },
+        {
+          "kind": "battle",
+          "battleId": "battle.golden.replacement_protocol",
+          "outcome": "victory"
+        },
+        {
+          "kind": "profession",
+          "professionId": "memory_surgeon",
+          "levelGte": 2
+        }
+      ],
+      "reward": {
+        "values": {
+          "artResonance": 3
+        },
+        "professionXp": {
+          "memory_surgeon": 2
+        },
+        "setFlags": [
+          "achievement_golden_memory_protocol"
+        ]
+      }
+    },
+    {
+      "id": "ach_ring_counter_clause",
+      "route": "ring_conspiracy",
+      "label": "反写条款生效",
+      "description": "完成反制任务并夺回署名权。",
+      "eligibility": [
+        {
+          "kind": "quest",
+          "questId": "quest.ring.counter_contract",
+          "status": "completed"
+        },
+        {
+          "kind": "battle",
+          "battleId": "battle.ring.authorship_frame",
+          "outcome": "victory"
+        },
+        {
+          "kind": "profession",
+          "professionId": "ring_counterforger",
+          "levelGte": 2
+        }
+      ],
+      "reward": {
+        "values": {
+          "trust": 2,
+          "danger": -2
+        },
+        "professionXp": {
+          "ring_counterforger": 2
+        },
+        "setFlags": [
+          "achievement_ring_counter_clause"
+        ]
+      }
+    }
+  ],
+  "outfits": [
+    {
+      "id": "outfit.albina.rain",
+      "label": "雨室外套",
+      "portraitAssetId": "portrait.albina.rain"
+    },
+    {
+      "id": "outfit.albina.white_canvas",
+      "route": "white_canvas",
+      "label": "白色画布装束",
+      "portraitAssetId": "portrait.albina.white-canvas"
+    },
+    {
+      "id": "outfit.albina.golden_bough",
+      "route": "golden_bough_rebuild",
+      "label": "金枝重构装束",
+      "portraitAssetId": "portrait.albina.golden-bough"
+    },
+    {
+      "id": "outfit.albina.ring_disguise",
+      "route": "ring_conspiracy",
+      "label": "环指潜入装束",
+      "portraitAssetId": "portrait.albina.ring-conspiracy"
+    }
+  ],
+  "choicePatches": {
+    "canon_recap_enter_AU": {
+      "effects": {
+        "professionXp": {
+          "narrative_curator": 2
+        },
+        "activateProfession": "narrative_curator"
+      }
+    },
+    "enter_white_canvas": {
+      "effects": {
+        "relationshipVectors": {
+          "intimacy": 2,
+          "reliance": 2
+        },
+        "startQuests": [
+          "quest.white.boundary_protocol"
+        ],
+        "grantItems": [
+          "item.rain_room_badge"
+        ],
+        "equipItems": [
+          "equipment.rain_room_badge"
+        ],
+        "unlockOutfits": [
+          "outfit.albina.rain"
+        ],
+        "activateOutfit": "outfit.albina.rain",
+        "professionXp": {
+          "boundary_mediator": 4
+        },
+        "activateProfession": "boundary_mediator"
+      }
+    },
+    "enter_rebuild": {
+      "effects": {
+        "relationshipVectors": {
+          "reliance": 2,
+          "suspicion": 1
+        },
+        "startQuests": [
+          "quest.golden.memory_continuity"
+        ],
+        "grantItems": [
+          "item.rain_room_badge"
+        ],
+        "equipItems": [
+          "equipment.rain_room_badge"
+        ],
+        "unlockOutfits": [
+          "outfit.albina.rain"
+        ],
+        "activateOutfit": "outfit.albina.rain",
+        "professionXp": {
+          "memory_surgeon": 4
+        },
+        "activateProfession": "memory_surgeon"
+      }
+    },
+    "enter_conspiracy": {
+      "effects": {
+        "relationshipVectors": {
+          "reliance": 1,
+          "suspicion": 2
+        },
+        "startQuests": [
+          "quest.ring.counter_contract"
+        ],
+        "grantItems": [
+          "item.rain_room_badge"
+        ],
+        "equipItems": [
+          "equipment.rain_room_badge"
+        ],
+        "unlockOutfits": [
+          "outfit.albina.rain"
+        ],
+        "activateOutfit": "outfit.albina.rain",
+        "professionXp": {
+          "ring_counterforger": 4
+        },
+        "activateProfession": "ring_counterforger"
+      }
+    },
+    "white_sign_witness_protocol": {
+      "effects": {
+        "relationshipVectors": {
+          "intimacy": 2,
+          "reliance": 3
+        },
+        "conflictMastery": {
+          "boundary": 1
+        },
+        "completeQuests": [
+          "quest.white.boundary_protocol"
+        ],
+        "grantItems": [
+          "item.white.boundary_contract"
+        ],
+        "equipItems": [
+          "equipment.white.boundary_charm"
+        ],
+        "unlockOutfits": [
+          "outfit.albina.white_canvas"
+        ],
+        "activateOutfit": "outfit.albina.white_canvas",
+        "professionXp": {
+          "boundary_mediator": 6
+        }
+      }
+    },
+    "white_interrupt_lab_terms": {
+      "effects": {
+        "relationshipVectors": {
+          "reliance": 4,
+          "suspicion": -1
+        },
+        "conflictMastery": {
+          "boundary": 1
+        },
+        "completeQuests": [
+          "quest.white.boundary_protocol"
+        ],
+        "grantItems": [
+          "item.white.boundary_contract"
+        ],
+        "equipItems": [
+          "equipment.white.boundary_charm"
+        ],
+        "unlockOutfits": [
+          "outfit.albina.white_canvas"
+        ],
+        "activateOutfit": "outfit.albina.white_canvas",
+        "professionXp": {
+          "boundary_mediator": 6
+        }
+      }
+    },
+    "rebuild_cut_false_completion": {
+      "effects": {
+        "relationshipVectors": {
+          "intimacy": 1,
+          "reliance": 4
+        },
+        "conflictMastery": {
+          "analysis": 1
+        },
+        "completeQuests": [
+          "quest.golden.memory_continuity"
+        ],
+        "grantItems": [
+          "item.golden.memory_anchor"
+        ],
+        "equipItems": [
+          "equipment.golden.memory_lens"
+        ],
+        "unlockOutfits": [
+          "outfit.albina.golden_bough"
+        ],
+        "activateOutfit": "outfit.albina.golden_bough",
+        "professionXp": {
+          "memory_surgeon": 6
+        }
+      }
+    },
+    "rebuild_guard_fascia_pulse": {
+      "effects": {
+        "relationshipVectors": {
+          "reliance": 3,
+          "obsession": 1
+        },
+        "conflictMastery": {
+          "resonance": 1
+        },
+        "completeQuests": [
+          "quest.golden.memory_continuity"
+        ],
+        "grantItems": [
+          "item.golden.memory_anchor"
+        ],
+        "equipItems": [
+          "equipment.golden.memory_lens"
+        ],
+        "unlockOutfits": [
+          "outfit.albina.golden_bough"
+        ],
+        "activateOutfit": "outfit.albina.golden_bough",
+        "professionXp": {
+          "memory_surgeon": 6
+        }
+      }
+    },
+    "conspiracy_break_pursuit_frame": {
+      "effects": {
+        "relationshipVectors": {
+          "intimacy": 1,
+          "reliance": 4
+        },
+        "conflictMastery": {
+          "blade": 1
+        },
+        "completeQuests": [
+          "quest.ring.counter_contract"
+        ],
+        "grantItems": [
+          "item.ring.counter_signet"
+        ],
+        "equipItems": [
+          "equipment.ring.counter_signet"
+        ],
+        "unlockOutfits": [
+          "outfit.albina.ring_disguise"
+        ],
+        "activateOutfit": "outfit.albina.ring_disguise",
+        "professionXp": {
+          "ring_counterforger": 6
+        }
+      }
+    },
+    "conspiracy_feed_false_signature": {
+      "effects": {
+        "relationshipVectors": {
+          "reliance": 3,
+          "suspicion": 1
+        },
+        "conflictMastery": {
+          "analysis": 1
+        },
+        "completeQuests": [
+          "quest.ring.counter_contract"
+        ],
+        "grantItems": [
+          "item.ring.counter_signet"
+        ],
+        "equipItems": [
+          "equipment.ring.counter_signet"
+        ],
+        "unlockOutfits": [
+          "outfit.albina.ring_disguise"
+        ],
+        "activateOutfit": "outfit.albina.ring_disguise",
+        "professionXp": {
+          "ring_counterforger": 6
+        }
+      }
+    },
+    "white_012_refuse_exhibit": {
+      "effects": {
+        "values": {
+          "danger": -2
+        },
+        "relationshipVectors": {
+          "reliance": 3
+        },
+        "conflictMastery": {
+          "boundary": 3
+        },
+        "resolveBattles": [
+          {
+            "battleId": "battle.white.gallery_pressure",
+            "outcome": "victory"
+          }
+        ],
+        "professionXp": {
+          "boundary_mediator": 6
+        }
+      }
+    },
+    "white_012_let_her_decide": {
+      "effects": {
+        "values": {
+          "danger": 3
+        },
+        "relationshipVectors": {
+          "suspicion": 3
+        },
+        "conflictMastery": {
+          "boundary": 1
+        },
+        "resolveBattles": [
+          {
+            "battleId": "battle.white.gallery_pressure",
+            "outcome": "setback"
+          }
+        ],
+        "professionXp": {
+          "boundary_mediator": 3
+        }
+      }
+    },
+    "rebuild_012_break_contract": {
+      "effects": {
+        "values": {
+          "danger": -2
+        },
+        "relationshipVectors": {
+          "reliance": 3
+        },
+        "conflictMastery": {
+          "analysis": 3
+        },
+        "resolveBattles": [
+          {
+            "battleId": "battle.golden.replacement_protocol",
+            "outcome": "victory"
+          }
+        ],
+        "professionXp": {
+          "memory_surgeon": 6
+        }
+      }
+    },
+    "rebuild_012_negotiate_terms": {
+      "effects": {
+        "values": {
+          "trust": -8,
+          "danger": 3,
+          "artResonance": -8
+        },
+        "relationshipVectors": {
+          "suspicion": 3
+        },
+        "conflictMastery": {
+          "analysis": 1
+        },
+        "resolveBattles": [
+          {
+            "battleId": "battle.golden.replacement_protocol",
+            "outcome": "setback"
+          }
+        ],
+        "professionXp": {
+          "memory_surgeon": 3
+        }
+      }
+    },
+    "conspiracy_011_rewrite_ending": {
+      "effects": {
+        "values": {
+          "danger": -2
+        },
+        "relationshipVectors": {
+          "reliance": 3
+        },
+        "conflictMastery": {
+          "blade": 3
+        },
+        "resolveBattles": [
+          {
+            "battleId": "battle.ring.authorship_frame",
+            "outcome": "victory"
+          }
+        ],
+        "professionXp": {
+          "ring_counterforger": 6
+        }
+      }
+    },
+    "conspiracy_011_burn_film": {
+      "effects": {
+        "values": {
+          "danger": 3
+        },
+        "relationshipVectors": {
+          "suspicion": 3
+        },
+        "conflictMastery": {
+          "blade": 1
+        },
+        "resolveBattles": [
+          {
+            "battleId": "battle.ring.authorship_frame",
+            "outcome": "setback"
+          }
+        ],
+        "professionXp": {
+          "ring_counterforger": 3
+        }
+      }
+    },
+    "white_canvas_choose_true_ending": {
+      "availability": {
+        "allOf": [
+          {
+            "kind": "quest",
+            "questId": "quest.white.boundary_protocol",
+            "status": "completed"
+          },
+          {
+            "kind": "battle",
+            "battleId": "battle.white.gallery_pressure",
+            "outcome": "victory"
+          },
+          {
+            "kind": "equipment",
+            "equipmentId": "equipment.white.boundary_charm"
+          },
+          {
+            "kind": "outfit",
+            "outfitId": "outfit.albina.white_canvas"
+          },
+          {
+            "kind": "profession",
+            "professionId": "boundary_mediator",
+            "levelGte": 2
+          },
+          {
+            "kind": "relationship",
+            "key": "reliance",
+            "operator": "gte",
+            "value": 7
+          },
+          {
+            "kind": "worldbook",
+            "entryId": "albina_routes_endings_au_if",
+            "status": "seen"
+          }
+        ]
+      }
+    },
+    "golden_bough_rebuild_choose_true_ending": {
+      "availability": {
+        "allOf": [
+          {
+            "kind": "quest",
+            "questId": "quest.golden.memory_continuity",
+            "status": "completed"
+          },
+          {
+            "kind": "battle",
+            "battleId": "battle.golden.replacement_protocol",
+            "outcome": "victory"
+          },
+          {
+            "kind": "equipment",
+            "equipmentId": "equipment.golden.memory_lens"
+          },
+          {
+            "kind": "outfit",
+            "outfitId": "outfit.albina.golden_bough"
+          },
+          {
+            "kind": "profession",
+            "professionId": "memory_surgeon",
+            "levelGte": 2
+          },
+          {
+            "kind": "relationship",
+            "key": "reliance",
+            "operator": "gte",
+            "value": 7
+          },
+          {
+            "kind": "worldbook",
+            "entryId": "albina_routes_endings_au_if",
+            "status": "seen"
+          }
+        ]
+      }
+    },
+    "ring_conspiracy_choose_true_ending": {
+      "availability": {
+        "allOf": [
+          {
+            "kind": "quest",
+            "questId": "quest.ring.counter_contract",
+            "status": "completed"
+          },
+          {
+            "kind": "battle",
+            "battleId": "battle.ring.authorship_frame",
+            "outcome": "victory"
+          },
+          {
+            "kind": "equipment",
+            "equipmentId": "equipment.ring.counter_signet"
+          },
+          {
+            "kind": "outfit",
+            "outfitId": "outfit.albina.ring_disguise"
+          },
+          {
+            "kind": "profession",
+            "professionId": "ring_counterforger",
+            "levelGte": 2
+          },
+          {
+            "kind": "relationship",
+            "key": "reliance",
+            "operator": "gte",
+            "value": 7
+          },
+          {
+            "kind": "worldbook",
+            "entryId": "albina_routes_endings_au_if",
+            "status": "seen"
+          }
+        ]
+      }
+    }
+  }
+}

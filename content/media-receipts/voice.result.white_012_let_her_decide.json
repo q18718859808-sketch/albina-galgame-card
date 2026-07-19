@@ -1,0 +1,26 @@
+{
+  "version": 1,
+  "assetId": "voice.result.white_012_let_her_decide",
+  "artifactSha256": "8d92faf82d8e23de74356dea4233451838b0cf1ee0a41ab884f8407fc2ecb97d",
+  "provenance": {
+    "provider": "pie",
+    "model": "speech-2.8-hd",
+    "promptVersion": "albina-speech-legacy-v1",
+    "sourceJobHash": "d215db86e72780c1ff375940ffbd3791e787abe30ffbfc6740cff502a6d6114c",
+    "review": {
+      "status": "approved",
+      "reviewer": "automated-audio-qc",
+      "reviewedAt": "2026-07-15T18:52:32.188Z"
+    }
+  },
+  "lineage": {
+    "kind": "conversion",
+    "processVersion": "speech-loudnorm-v1",
+    "inputs": [
+      {
+        "sha256": "81e36190ab884dfed8f11e605ec441b8edc88bd6c192a57f364a88f18a24781f",
+        "role": "validated-pie-speech-output"
+      }
+    ]
+  }
+}

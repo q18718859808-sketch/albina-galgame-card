@@ -4,7 +4,8 @@
     {
       "id": "canon.term.corporism",
       "classification": "canon_exact",
-      "statement": "Corporism is the source-game name used for the Ring art movement discussed in 9-14 and practised by Albina in 9-37.",
+      "scope": "terminology",
+      "statement": "Corporism 是第九章 9-14 与 9-37 明确使用的环指艺术流派名称。",
       "evidence": [
         {
           "sourceId": "source.official.canto-ix.9-14",
@@ -13,13 +14,176 @@
         {
           "sourceId": "source.official.canto-ix.9-37",
           "locator": "9-37 Albina self-introduction"
+        },
+        {
+          "sourceId": "source.wiki.canto-ix-part-i.172275",
+          "locator": "section 9-14"
+        },
+        {
+          "sourceId": "source.wiki.canto-ix-part-iii.177602",
+          "locator": "section 9-37 pre-battle"
         }
-      ]
+      ],
+      "reviewedAt": "2026-07-15"
+    },
+    {
+      "id": "canon.profile.identity",
+      "classification": "canon_paraphrase",
+      "scope": "profile",
+      "statement": "Albina（韩文 알비나，日文 アルビナ）是女性环指 Corporism 学徒、House of Spiders 成员与 Callisto 的弟子；她在 Canto IX 中作为敌对角色登场，韩语配音为 Kim Do-hee，正史状态为死亡。",
+      "recapText": "【身份】Albina（韩文 알비나，日文 アルビナ）是女性环指 Corporism 学徒、House of Spiders 成员与 Callisto 的弟子。她在 Canto IX 中作为敌对角色登场，韩语配音为 Kim Do-hee；9-43 之后的正史状态为死亡。",
+      "evidence": [
+        {
+          "sourceId": "source.official.canto-ix.9-37",
+          "locator": "Albina self-introduction and faction presentation"
+        },
+        {
+          "sourceId": "source.official.canto-ix.9-43",
+          "locator": "battle conclusion"
+        },
+        {
+          "sourceId": "source.wiki.albina.173286",
+          "locator": "infobox and lead, revision lines 3-21"
+        },
+        {
+          "sourceId": "source.wiki.callisto.177757",
+          "locator": "Albina relationship and Canto IX story summary"
+        },
+        {
+          "sourceId": "source.wiki.house-of-spiders.177075",
+          "locator": "membership list and raid context"
+        }
+      ],
+      "reviewedAt": "2026-07-15"
+    },
+    {
+      "id": "canon.appearance.prosthetic-body",
+      "classification": "canon_paraphrase",
+      "scope": "appearance",
+      "statement": "Albina 使用带金色点缀的白色全身义体；浅灰色人工质感高马尾近似线缆，脸与关节处有分界线，颈胸与大腿可见黑色机械和线路，躯干中央近似骨架，右眼黑、左眼白，前臂可展开多种医疗与切割工具。",
+      "recapText": "【外观】她使用带金色点缀的白色全身义体：浅灰色人工质感高马尾近似线缆，脸与关节处有分界线，颈胸与大腿可见黑色机械和线路，躯干中央近似骨架。她右眼黑、左眼白，前臂还能展开剪刀、锯、手术刀、三爪与牵开器等工具。",
+      "evidence": [
+        {
+          "sourceId": "source.official.canto-ix.9-37",
+          "locator": "unarmored character art and battle presentation"
+        },
+        {
+          "sourceId": "source.wiki.albina.173286",
+          "locator": "Appearance, revision line 24"
+        }
+      ],
+      "reviewedAt": "2026-07-15"
+    },
+    {
+      "id": "canon.appearance.armor-and-fascia",
+      "classification": "canon_paraphrase",
+      "scope": "appearance",
+      "statement": "Albina 的铁处女式全身装甲以白、亮黄与金色为主，具有长裙、尖刺头环、垂链、尖刺裙甲和绘有金色锐眼的面具；Fascia 是同色系巨剑，侧板打开后可见暗色骨架、肋骨与内脏组织。",
+      "recapText": "【装甲与武器】她的铁处女式全身装甲以白、亮黄与金色为主，具有长裙、尖刺头环、垂链、尖刺裙甲和绘有金色锐眼的面具。Fascia 是同色系巨剑，侧板打开后会露出暗色骨架、肋骨与内脏组织。",
+      "evidence": [
+        {
+          "sourceId": "source.official.canto-ix.9-18",
+          "locator": "mid-battle armor and Fascia reveal"
+        },
+        {
+          "sourceId": "source.official.canto-ix.9-37",
+          "locator": "armored and unarmored presentation"
+        },
+        {
+          "sourceId": "source.wiki.albina.173286",
+          "locator": "Appearance, revision lines 26-28"
+        }
+      ],
+      "reviewedAt": "2026-07-15"
+    },
+    {
+      "id": "canon.personality.fascia-attachment",
+      "classification": "canon_paraphrase",
+      "scope": "personality",
+      "statement": "Albina 对 Fascia 有强烈依恋，会与它交谈、用他人血肉喂养它，并在它可能受损时优先保护它；她甚至会为让 Fascia 继续行动而违背同伴要求。",
+      "recapText": "【Fascia】Albina 对 Fascia 有强烈依恋，会与它交谈、用他人血肉喂养它，并在它可能受损时优先保护它；9-18 中她甚至为让 Fascia 继续行动而违背 Ren 对计划的要求。",
+      "evidence": [
+        {
+          "sourceId": "source.official.canto-ix.9-18",
+          "locator": "mid-battle and post-battle conflict with Ren"
+        },
+        {
+          "sourceId": "source.official.canto-ix.9-43",
+          "locator": "Albina reaction after Fascia is destroyed"
+        },
+        {
+          "sourceId": "source.wiki.canto-ix-part-i.172275",
+          "locator": "section 9-18 post-battle"
+        },
+        {
+          "sourceId": "source.wiki.canto-ix-part-iii.177602",
+          "locator": "section 9-43 mid-battle"
+        },
+        {
+          "sourceId": "source.wiki.albina.173286",
+          "locator": "Personality, revision line 31"
+        }
+      ],
+      "reviewedAt": "2026-07-15"
+    },
+    {
+      "id": "canon.personality.social-and-ambition",
+      "classification": "canon_paraphrase",
+      "scope": "personality",
+      "statement": "Albina 通常平静轻声、专注艺术，却难以理解他人的情绪；她将朋友与可用于 Fascia 的素材联系起来，因把部分脑组织交给 Fascia 而自称不善说谎，并敬仰且希望有朝一日超越 Callisto。",
+      "recapText": "【人格与关系】她通常平静轻声、专注艺术，却难以理解他人的情绪；她将“朋友”与可用于 Fascia 的素材联系起来。她表示自己把部分脑组织交给 Fascia 后变得很不善说谎，同时敬仰 Callisto，并希望未来成为超越师父的 Maestro。",
+      "evidence": [
+        {
+          "sourceId": "source.official.canto-ix.9-37",
+          "locator": "pre-battle conversation"
+        },
+        {
+          "sourceId": "source.official.canto-ix.9-43",
+          "locator": "pre-battle ambition statement"
+        },
+        {
+          "sourceId": "source.wiki.canto-ix-part-iii.177602",
+          "locator": "9-37 pre-battle and 9-43 pre-battle"
+        },
+        {
+          "sourceId": "source.wiki.albina.173286",
+          "locator": "Personality, revision line 33"
+        }
+      ],
+      "reviewedAt": "2026-07-15"
+    },
+    {
+      "id": "canon.story.pre-canto-fascia",
+      "classification": "canon_paraphrase",
+      "scope": "story",
+      "statement": "Albina 主动切分原本肉体并将其制作成 Fascia，随后用全身义体替换身体、主要保留脑；Fascia 缺少脑。她也曾先以自己的手臂练习如何处理创作素材。",
+      "recapText": "【身体关系】Albina 主动切分原本肉体并将其制作成 Fascia，随后用全身义体替换身体、主要保留脑；Fascia 则缺少脑。她还曾先以自己的手臂练习如何处理创作素材。",
+      "evidence": [
+        {
+          "sourceId": "source.official.canto-ix.9-37",
+          "locator": "pre-battle self-description and Fascia context"
+        },
+        {
+          "sourceId": "source.wiki.canto-ix-part-iii.177602",
+          "locator": "9-37 pre-battle, Albina's training explanation"
+        },
+        {
+          "sourceId": "source.wiki.albina.173286",
+          "locator": "Story before Limbus Company, revision line 37"
+        },
+        {
+          "sourceId": "source.wiki.albina-enemy.175660",
+          "locator": "The Pulse and Beat of Corpus-turned-Ingredient passive flavor"
+        }
+      ],
+      "reviewedAt": "2026-07-15"
     },
     {
       "id": "canon.9-14.corporism-context",
       "classification": "canon_paraphrase",
-      "statement": "在 9-14 的 LCE 研究区走廊，众人遭遇环指制造的人体作品；浮士德据骨骼、肌肉及其运动方式将其辨认为 Corporism，随后发现环指 Nursefather 留给女儿的创作指示。",
+      "scope": "story",
+      "statement": "9-14 的 LCE 研究区走廊出现环指加工的人体作品；Faust 根据骨骼、肌肉与运动方式将其辨认为 Corporism，并发现 Nursefather 留给女儿的创作指示。Albina 本人没有在该节直接出场。",
+      "recapText": "【正史中文意译·9-14 背景】在 LCE 研究区走廊，众人遭遇环指加工的人体作品。Faust 根据骨骼、肌肉与运动方式将其辨认为 Corporism，并发现 Nursefather 留给女儿的创作指示。固定转录全文没有在 9-14 直接写到 Albina；本节只提供她所属艺术流派的背景。",
       "evidence": [
         {
           "sourceId": "source.official.canto-ix.9-14",
@@ -27,178 +191,196 @@
         },
         {
           "sourceId": "source.wiki.canto-ix-part-i.172275",
-          "locator": "section 14, rows before the 9-14 battle"
+          "locator": "section 9-14 and full-revision Albina occurrence index"
         }
-      ]
+      ],
+      "reviewedAt": "2026-07-15"
     },
     {
-      "id": "canon.9-18.albina-first-appearance",
+      "id": "canon.9-18.first-appearance",
       "classification": "canon_paraphrase",
-      "statement": "在 9-18 的 LCE 研究区实验室，Albina 与 Ren 接替 Shiomi Yoru 阻挡罪人，为后者接近并带走金枝争取时间。战斗中 Albina 的上半装甲与 Fascia 侧板打开，露出活体组织；她想让 Fascia 继续行动，Ren 则以服从计划为由制止并攻击她。",
+      "scope": "story",
+      "statement": "9-18 是 Albina 首次直接出场。她与 Ren 接替 Shiomi Yoru 阻挡 Dante、Ryōshū、Gregor、Meursault 与 Yi Sang，为 Yoru 接近并带走嫁接的 Golden Boughs 争取时间；战斗中 Albina 的上半装甲和 Fascia 侧板打开，Ren 因她坚持让 Fascia 继续行动而出手制止，争执使罪人得以继续追赶 Yoru。",
+      "recapText": "【正史中文意译·9-18 首次出场】Dante、Ryōshū、Gregor、Meursault 与 Yi Sang 在 LCE 研究区实验室追查 Golden Boughs。Albina 与 Ren 接替 Shiomi Yoru 阻挡他们，让 Yoru 接近并带走嫁接的金枝。战斗推进到两人受创后，Albina 的上半装甲与 Fascia 侧板打开，露出搏动组织；她坚持让 Fascia 继续行动，Ren 则要求服从各自师父的计划，并出手制止她。两人的争执也给了罪人继续追赶 Yoru 的机会。",
       "evidence": [
         {
           "sourceId": "source.official.canto-ix.9-18",
-          "locator": "9-18 pre-battle entrance and post-battle sequence"
+          "locator": "pre-battle, mid-battle and post-battle"
         },
         {
           "sourceId": "source.wiki.canto-ix-part-i.172275",
-          "locator": "9-18 pre-battle and post-battle rows around Albina and Ren"
-        }
-      ]
-    },
-    {
-      "id": "canon.9-37.encounter",
-      "classification": "canon_paraphrase",
-      "statement": "Operation Spider Pyre 期间，辛克莱、以实玛利、浮士德、Hohenheim 与 Alyssa 在 Ring Corridor 遭遇 Albina；玩家 {{user}} 不属于该正史参与者名单。",
-      "evidence": [
-        {
-          "sourceId": "source.official.canto-ix.9-37",
-          "locator": "9-37 pre-battle encounter"
-        },
-        {
-          "sourceId": "source.wiki.canto-ix-part-iii.177602",
-          "locator": "section 2, 9-37 pre-battle speaker sequence"
-        },
-        {
-          "sourceId": "source.bilibili.BV1rsi8B5ED2.p37",
-          "locator": "P37 opening and pre-battle sequence"
-        }
-      ]
-    },
-    {
-      "id": "canon.albina.identity-and-disposition",
-      "classification": "canon_paraphrase",
-      "statement": "Albina 自称是 Callisto 门下的 Corporism 学徒，并属于 House of Spiders；她语气温和、过度诚实且不擅长社交。",
-      "evidence": [
-        {
-          "sourceId": "source.official.canto-ix.9-37",
-          "locator": "9-37 pre-battle self-introduction and conversation"
-        },
-        {
-          "sourceId": "source.wiki.canto-ix-part-iii.177602",
-          "locator": "section 2, Albina introduction and brain-tissue explanation"
+          "locator": "section 9-18, including post-battle lines 328-379"
         },
         {
           "sourceId": "source.wiki.albina.173286",
-          "locator": "personality and affiliation summaries"
+          "locator": "Story, revision line 40"
         }
-      ]
+      ],
+      "reviewedAt": "2026-07-15"
     },
     {
-      "id": "canon.albina.appearance",
+      "id": "canon.9-37.encounter-and-method",
       "classification": "canon_paraphrase",
-      "statement": "Albina 使用白色全身义体，有浅灰色人工质感高马尾、左白右黑的双眼，以及白黄金配色的铁处女式装甲。",
+      "scope": "story",
+      "statement": "Operation Spider Pyre 期间，Callisto 派 Albina 到 Corridor of the Ring 迎接 Sinclair、Ishmael、Faust、Hohenheim 与 Alyssa。她因唤醒 Fascia 而迟到，谈到收集未受损素材的困难、以自己手臂练习、与陌生人成为朋友的愿望，以及自己是 Callisto 门下 Corporism 学徒。",
+      "recapText": "【正史中文意译·9-37 相遇】Operation Spider Pyre 期间，Sinclair、Ishmael、Faust、Hohenheim 与 Alyssa 抵达 Corridor of the Ring；Callisto 派 Albina 前来“迎接”他们。她因唤醒沉睡的 Fascia 而迟到，并说明自己仍不擅长在不损坏素材的情况下完成作品，所以先用自己的手臂练习。她礼貌地请求众人与自己成为朋友，却把了解彼此与挑选 Fascia 的素材混在一起；遭到 Sinclair 拒绝后，双方开战。Albina 随后自报姓名，并说明自己是 Callisto 门下的 Corporism 学徒。",
       "evidence": [
         {
           "sourceId": "source.official.canto-ix.9-37",
-          "locator": "9-37 character art and battle presentation"
-        },
-        {
-          "sourceId": "source.wiki.albina.173286",
-          "locator": "appearance summary"
-        },
-        {
-          "sourceId": "source.bilibili.BV1rsi8B5ED2.p37",
-          "locator": "P37 character sprite and battle visuals"
-        }
-      ]
-    },
-    {
-      "id": "canon.albina-fascia.anatomy-and-friends",
-      "classification": "canon_paraphrase",
-      "statement": "Fascia 是以 Albina 原本肉体构成的活体巨剑；Albina 主要保留脑，Fascia 缺少脑。Albina 把成为朋友与成为唤醒或补全 Fascia 的材料联系在一起。",
-      "evidence": [
-        {
-          "sourceId": "source.official.canto-ix.9-37",
-          "locator": "9-37 pre-battle explanation and battle context"
+          "locator": "pre-battle encounter"
         },
         {
           "sourceId": "source.wiki.canto-ix-part-iii.177602",
-          "locator": "section 2, Fascia and friendship explanation"
+          "locator": "section 9-37 pre-battle lines 145-206"
         },
         {
-          "sourceId": "source.bilibili.BV1brvbBDE84.p33-p34",
-          "locator": "P33 pre-battle translated sequence"
+          "sourceId": "source.wiki.albina.173286",
+          "locator": "Story, revision line 42"
         }
-      ]
+      ],
+      "reviewedAt": "2026-07-15"
     },
     {
       "id": "canon.9-37.escalation",
       "classification": "canon_paraphrase",
-      "statement": "9-37 中 Callisto 加入战斗后，师徒二人逐步压制 Sinclair 一行；Alyssa 随后反击。该场景并未在此结束 Albina、Fascia 与 Callisto 的正史链。",
+      "scope": "story",
+      "statement": "9-37 中 Callisto 加入后与 Albina 一同压制 Limbus Company 一行；该节结束于 Callisto 以骨肉尖桩制住除 Alyssa 外的众人、Alyssa 将 Ardor Blossom Star 调至最高同调并发动反击。Fascia 被毁与师徒死亡不发生在 9-37。",
+      "recapText": "【正史中文意译·9-37 战斗升级】Callisto 加入战斗后，与 Albina 一同逐步压制 Limbus Company 一行。该节最后，Callisto 以骨肉尖桩制住除 Alyssa 外的众人，Alyssa 则将 Ardor Blossom Star 调至最高同调并发动反击。9-37 到此结束；Fascia 被毁、Albina 与 Callisto 死亡都不属于这一节，而发生在后续 9-43《Hatching》。",
       "evidence": [
         {
           "sourceId": "source.official.canto-ix.9-37",
-          "locator": "9-37 mid-battle through Alyssa's counterattack"
+          "locator": "mid-battle through post-battle"
+        },
+        {
+          "sourceId": "source.official.canto-ix.9-43",
+          "locator": "later battle conclusion"
         },
         {
           "sourceId": "source.wiki.canto-ix-part-iii.177602",
-          "locator": "9-37 rows from Callisto joining through Alyssa's counterattack"
+          "locator": "9-37 lines 215-292 contrasted with 9-43 lines 522-571"
         }
-      ]
+      ],
+      "reviewedAt": "2026-07-15"
+    },
+    {
+      "id": "canon.9-43.sign-awakening",
+      "classification": "canon_paraphrase",
+      "scope": "story",
+      "statement": "9-43 中 Hohenheim 用 Diffraction 突袭 Callisto，Albina 阻止 Faust 与 Ishmael 乘机追击，并与 Callisto 将严重受创的众人逼入绝境。她要求 Sinclair 留下成为自己与 Fascia 的朋友，又谈到未来超越师父的梦想；“未来”使 Sinclair 完全觉醒 The Sign，并显现一个未来版本。",
+      "recapText": "【正史中文意译·9-43《Hatching》转折】Hohenheim 用 Diffraction 突袭 Callisto 后，Albina 阻止 Faust 与 Ishmael 乘机追击；师徒仍将严重受创的众人逼入绝境。她要求 Sinclair 留下成为自己与 Fascia 的朋友，并在旁观 Callisto 对 Hohenheim 下手时谈到未来超越师父的梦想。她提出“未来”后，Sinclair 完全觉醒 The Sign，并显现一个来自未来的自己。",
+      "evidence": [
+        {
+          "sourceId": "source.official.canto-ix.9-43",
+          "locator": "pre-battle through transformation sequence"
+        },
+        {
+          "sourceId": "source.wiki.canto-ix-part-iii.177602",
+          "locator": "9-43 lines 400-516"
+        },
+        {
+          "sourceId": "source.wiki.albina.173286",
+          "locator": "Story, revision line 44"
+        }
+      ],
+      "reviewedAt": "2026-07-15"
     },
     {
       "id": "canon.9-43.outcome",
       "classification": "canon_paraphrase",
-      "statement": "9-43《Hatching》的既定结果是 Future Sinclair 先摧毁 Fascia，再杀死 Albina，并在之后杀死 Callisto。",
+      "scope": "story",
+      "statement": "Faust 与 Ishmael 制造开口后，Future Sinclair 先摧毁 Fascia，再杀死 Albina，并随后杀死 Callisto；这是 9-43 而不是 9-37 的既定结果。",
+      "recapText": "【正史中文意译·9-43 既定结果】Faust 与 Ishmael 的同步攻击制造开口后，Future Sinclair 首先摧毁 Fascia。Albina 因 Fascia 被毁而失措，随后也被 Future Sinclair 杀死；Callisto 在之后被杀。Albina 的正史直接出场链至此结束，顺序是 9-18、9-37、9-43。",
       "evidence": [
         {
           "sourceId": "source.official.canto-ix.9-43",
-          "locator": "9-43 battle conclusion and post-battle"
+          "locator": "mid-battle and battle conclusion"
         },
         {
           "sourceId": "source.wiki.canto-ix-part-iii.177602",
-          "locator": "9-43 Hatching battle conclusion and post-battle rows"
+          "locator": "9-43 lines 522-571"
         },
         {
-          "sourceId": "source.bilibili.BV1rsi8B5ED2.p43",
-          "locator": "P43, CID 35474441014, 9-43 Hatching"
+          "sourceId": "source.wiki.albina.173286",
+          "locator": "Story, revision line 44"
         }
-      ]
+      ],
+      "reviewedAt": "2026-07-15"
+    },
+    {
+      "id": "canon.combat.story-variants",
+      "classification": "canon_paraphrase",
+      "scope": "combat",
+      "statement": "Albina 的正史敌人记录包含 9-18 的装甲形态（ID 1319）、9-37 的装甲转无装甲阶段（ID 1336）与 9-43 的无装甲形态（ID 1346）；另有 Mirror Dungeon EXTREME（ID 1417）和 Refracted 变体（ID 9555），后两者不是主线正史事件。",
+      "evidence": [
+        {
+          "sourceId": "source.wiki.albina-enemy.175660",
+          "locator": "enemy record headings and IDs for 9-18, 9-37, 9-43, Mirror Dungeon and Refracted"
+        }
+      ],
+      "reviewedAt": "2026-07-15"
+    },
+    {
+      "id": "canon.combat.mechanics",
+      "classification": "canon_paraphrase",
+      "scope": "combat",
+      "statement": "主线敌人记录把 Albina 设为 65 级、Lust 倾向、以 Bleed 为核心的 Boss；Fascia 通过 Corpus Ingredient 转为 Artwork - Fascia 并启用强力攻击，装甲与反击机制围绕保护、压制、尖刺伤害及阶段转换。",
+      "evidence": [
+        {
+          "sourceId": "source.wiki.albina-enemy.175660",
+          "locator": "general info, skills, passives, unique statuses and behavior for story variants"
+        }
+      ],
+      "reviewedAt": "2026-07-15"
     },
     {
       "id": "inference.visual-reference-lock",
       "classification": "supported_inference",
-      "statement": "Any new visual intended to represent source-game Albina should preserve the white prosthetic body, asymmetric eyes and white-yellow-gold armor rather than the legacy human gothic-dress design.",
+      "scope": "production",
+      "statement": "任何代表正史 Albina 的新视觉资产都应保留白色全身义体、右黑左白双眼、白黄金币铁处女式装甲与具有骨骼内脏结构的 Fascia；路线服装变化必须明确属于 AU。",
       "evidence": [
         {
           "sourceId": "source.official.canto-ix.9-37",
-          "locator": "9-37 character art and battle presentation"
+          "locator": "character art and battle presentation"
         },
         {
-          "sourceId": "source.bilibili.BV1rsi8B5ED2.p37",
-          "locator": "P37 character sprite and battle visuals"
+          "sourceId": "source.wiki.albina.173286",
+          "locator": "Appearance, revision lines 23-28"
         }
       ],
-      "rationale": "This is a production constraint inferred from directly observable canon appearance, not a new story fact."
+      "reviewedAt": "2026-07-15",
+      "rationale": "This is a production constraint inferred from observable canon appearance, not a new story event."
     },
     {
       "id": "boundary.routes-and-player.are-AU",
       "classification": "AU_extension",
-      "statement": "opening_001、white_canvas、golden_bough_rebuild、ring_conspiracy、九个结局及玩家 {{user}} 的参与全部是本卡原创 AU，不是原作隐藏剧情或正史后续。",
+      "scope": "boundary",
+      "statement": "opening_001、white_canvas、golden_bough_rebuild、ring_conspiracy、九个结局以及玩家 {{user}} 的参与全部是本卡原创 AU/IF；分歧点位于 9-43 正史结果之后。",
       "evidence": [
         {
           "sourceId": "source.official.canto-ix.9-43",
-          "locator": "canon outcome that precedes the card divergence"
+          "locator": "canon outcome before the card divergence"
         },
         {
           "sourceId": "source.project.legacy-v1.0.44",
           "locator": "project-authored opening and three-route story object"
         }
       ],
-      "rationale": "The source game fixes the 9-43 outcome; the surviving route graph is an authored extension recovered from this project."
+      "reviewedAt": "2026-07-15",
+      "rationale": "The game fixes Albina's death in 9-43; all surviving route content is project-authored."
     },
     {
       "id": "rejected.legacy-opening-as-canon",
       "classification": "rejected",
-      "statement": "The rain encounter between Albina and {{user}} is an official source-game scene or quotation.",
+      "scope": "boundary",
+      "statement": "雨夜中 Albina 与 {{user}} 相遇是原作场景或原作引文。",
       "evidence": [
         {
           "sourceId": "source.project.legacy-v1.0.44",
           "locator": "legacy opening_001"
         }
       ],
-      "rejectionReason": "The text exists only in this project's legacy bundle and has no source-game locator; it may remain only as explicitly labelled AU_extension content."
+      "reviewedAt": "2026-07-15",
+      "rejectionReason": "该文本只存在于本项目旧 bundle，没有原作定位；它只能作为明确标注的 AU_extension。"
     }
   ]
 }

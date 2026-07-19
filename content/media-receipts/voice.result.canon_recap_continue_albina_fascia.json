@@ -1,0 +1,26 @@
+{
+  "version": 1,
+  "assetId": "voice.result.canon_recap_continue_albina_fascia",
+  "artifactSha256": "a329c02dcac7c7c700b02e8cd20ae50b7e9f5cf992542b9396c3773c169240c3",
+  "provenance": {
+    "provider": "pie",
+    "model": "speech-2.8-hd",
+    "promptVersion": "albina-speech-v2",
+    "sourceJobHash": "7b43dcd6f0d29fc39ee5a4f0f463eeb3ee4f237883dfa507b2e13ea09d6489f6",
+    "review": {
+      "status": "approved",
+      "reviewer": "automated-audio-qc",
+      "reviewedAt": "2026-07-15T17:56:55.359Z"
+    }
+  },
+  "lineage": {
+    "kind": "conversion",
+    "processVersion": "speech-loudnorm-v2",
+    "inputs": [
+      {
+        "sha256": "5be9c86a564959a6bdca015504f72c2b25563e747fa8748c9598f3cf29c9d6fb",
+        "role": "pie-speech-api-output"
+      }
+    ]
+  }
+}

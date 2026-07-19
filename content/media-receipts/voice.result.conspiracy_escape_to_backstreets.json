@@ -1,0 +1,26 @@
+{
+  "version": 1,
+  "assetId": "voice.result.conspiracy_escape_to_backstreets",
+  "artifactSha256": "529885d362546fee041fb9daee874070b414eacfbaa0f0b0e202eec1f8848847",
+  "provenance": {
+    "provider": "pie",
+    "model": "speech-2.8-hd",
+    "promptVersion": "albina-speech-legacy-v1",
+    "sourceJobHash": "4c13cdc061b4c19834479e9d64b936cc6c01d8fac8b3e265888334a79e1eee68",
+    "review": {
+      "status": "approved",
+      "reviewer": "automated-audio-qc",
+      "reviewedAt": "2026-07-15T18:52:03.994Z"
+    }
+  },
+  "lineage": {
+    "kind": "conversion",
+    "processVersion": "speech-loudnorm-v1",
+    "inputs": [
+      {
+        "sha256": "0fd19a0ac7085d583a8178d38c071804d60a9be3c1363b26f62e31ef34a5b15e",
+        "role": "validated-pie-speech-output"
+      }
+    ]
+  }
+}

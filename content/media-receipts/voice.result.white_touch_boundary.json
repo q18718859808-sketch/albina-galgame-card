@@ -1,0 +1,26 @@
+{
+  "version": 1,
+  "assetId": "voice.result.white_touch_boundary",
+  "artifactSha256": "367db6cdbaa418ed281c5d5e32d56c6fb59c82f8ac911913ecd1be2b6f7938ad",
+  "provenance": {
+    "provider": "pie",
+    "model": "speech-2.8-hd",
+    "promptVersion": "albina-speech-legacy-v1",
+    "sourceJobHash": "42065c9ccacea71646dccbdb21fa65e678b161de7f7bfa18d593f38aac9ae7bf",
+    "review": {
+      "status": "approved",
+      "reviewer": "automated-audio-qc",
+      "reviewedAt": "2026-07-15T18:52:41.497Z"
+    }
+  },
+  "lineage": {
+    "kind": "conversion",
+    "processVersion": "speech-loudnorm-v1",
+    "inputs": [
+      {
+        "sha256": "7b994d5fbc048ce1697bcf4d4f7245957b8ec8adce10897d9b8e314b83bf08d6",
+        "role": "validated-pie-speech-output"
+      }
+    ]
+  }
+}

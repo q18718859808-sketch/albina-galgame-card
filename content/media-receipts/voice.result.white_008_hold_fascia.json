@@ -1,0 +1,26 @@
+{
+  "version": 1,
+  "assetId": "voice.result.white_008_hold_fascia",
+  "artifactSha256": "41c2e3016510dd00c492632d8189788d79fc6e54b3383550412f1e057f071bfb",
+  "provenance": {
+    "provider": "pie",
+    "model": "speech-2.8-hd",
+    "promptVersion": "albina-speech-legacy-v1",
+    "sourceJobHash": "0cc1384b75daebd7d68f11cee5974eb3f488ac250457c40e8353e553c94e0982",
+    "review": {
+      "status": "approved",
+      "reviewer": "automated-audio-qc",
+      "reviewedAt": "2026-07-15T18:52:27.574Z"
+    }
+  },
+  "lineage": {
+    "kind": "conversion",
+    "processVersion": "speech-loudnorm-v1",
+    "inputs": [
+      {
+        "sha256": "36e24cb6f169556be6c28e403077d4e8fbde1e3dc93cfb98eb2087cce985aab9",
+        "role": "validated-pie-speech-output"
+      }
+    ]
+  }
+}

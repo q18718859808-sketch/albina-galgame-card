@@ -1,4 +1,5 @@
-import type { SaveV2 } from '../domain/save';
+import { decodeSaveV2OrV1 } from '../domain/migrate-save-v1';
+import { parseSaveV2, type SaveV2 } from '../domain/save';
 
 export const RUNTIME_STORES = ['assets', 'gallery', 'specialCg', 'saves'] as const;
 export type RuntimeStore = typeof RUNTIME_STORES[number];
@@ -20,6 +21,60 @@ export interface SaveSnapshot {
   save: SaveV2;
   thumbnail: Blob;
 }
+
+export class MemoryStorageBackend implements StorageBackend {
+  private readonly stores = new Map<string, Map<string, unknown>>();
+
+  async get<T>(store: string, key: string): Promise<T | undefined> {
+    return this.stores.get(store)?.get(key) as T | undefined;
+  }
+
+  async put<T>(store: string, key: string, value: T): Promise<void> {
+    const values = this.stores.get(store) ?? new Map<string, unknown>();
+    values.set(key, value);
+    this.stores.set(store, values);
+  }
+
+  async delete(store: string, key: string): Promise<void> { this.stores.get(store)?.delete(key); }
+  async keys(store: string): Promise<string[]> { return [...(this.stores.get(store)?.keys() ?? [])]; }
+  close(): void { this.stores.clear(); }
+}
+
+export class ResilientStorageBackend implements StorageBackend {
+  private primaryFailed = false;
+
+  constructor(
+    private readonly primary: StorageBackend = new IndexedDbBackend(),
+    private readonly fallback: StorageBackend = new MemoryStorageBackend(),
+  ) {}
+
+  get<T>(store: string, key: string): Promise<T | undefined> { return this.run((backend) => backend.get<T>(store, key)); }
+  put<T>(store: string, key: string, value: T): Promise<void> { return this.run((backend) => backend.put(store, key, value)); }
+  delete(store: string, key: string): Promise<void> { return this.run((backend) => backend.delete(store, key)); }
+  keys(store: string): Promise<string[]> { return this.run((backend) => backend.keys(store)); }
+  close(): void { this.primary.close(); this.fallback.close(); }
+
+  private async run<T>(operation: (backend: StorageBackend) => Promise<T>): Promise<T> {
+    if (this.primaryFailed) return operation(this.fallback);
+    try {
+      return await operation(this.primary);
+    } catch {
+      this.primaryFailed = true;
+      this.primary.close();
+      return operation(this.fallback);
+    }
+  }
+}
+
+type UnknownRecord = Record<string, unknown>;
+
+function asRecord(value: unknown): UnknownRecord | undefined {
+  if (value === null || typeof value !== 'object' || Array.isArray(value)) return undefined;
+  const prototype = Object.getPrototypeOf(value);
+  return prototype === Object.prototype || prototype === null ? value as UnknownRecord : undefined;
+}
+
+function emptyThumbnail(): Blob { return new Blob([], { type: 'application/octet-stream' }); }
 
 function requestResult<T>(request: IDBRequest<T>): Promise<T> {
   return new Promise((resolve, reject) => {
@@ -58,7 +113,7 @@ export class IndexedDbBackend implements StorageBackend {
   }
 
   close(): void {
-    void this.database?.then((database) => database.close());
+    void this.database?.then((database) => database.close(), () => undefined);
     this.database = undefined;
   }
 
@@ -89,7 +144,7 @@ export class AlbinaStorage {
   private objectUrlGeneration = 0;
 
   constructor(
-    private readonly backend: StorageBackend = new IndexedDbBackend(),
+    private readonly backend: StorageBackend = new ResilientStorageBackend(),
     objectUrls?: ObjectUrlApi,
   ) {
     this.urlApi = objectUrls ?? defaultObjectUrls();
@@ -122,11 +177,23 @@ export class AlbinaStorage {
   }
 
   async saveSnapshot(save: SaveV2, thumbnail: Blob): Promise<void> {
-    await this.backend.put<SaveSnapshot>('saves', save.saveId, { save, thumbnail });
+    const validated = parseSaveV2(save);
+    await this.backend.put<SaveSnapshot>('saves', validated.saveId, { save: validated, thumbnail });
   }
 
   async loadSnapshot(saveId: string): Promise<SaveSnapshot | undefined> {
-    return this.backend.get('saves', saveId);
+    const stored = await this.backend.get<unknown>('saves', saveId);
+    if (stored === undefined) return undefined;
+    const record = asRecord(stored);
+    const wrapped = record && Object.prototype.hasOwnProperty.call(record, 'save');
+    const candidate = wrapped ? record.save : stored;
+    const decoded = decodeSaveV2OrV1(candidate);
+    if (!decoded.ok) throw decoded.error;
+    const thumbnail = wrapped && record.thumbnail instanceof Blob ? record.thumbnail : emptyThumbnail();
+    if (decoded.source === 'v1.0.44' || !wrapped || !(record.thumbnail instanceof Blob)) {
+      await this.backend.put<SaveSnapshot>('saves', saveId, { save: decoded.save, thumbnail });
+    }
+    return { save: decoded.save, thumbnail };
   }
 
   getValue<T>(store: RuntimeStore, key: string): Promise<T | undefined> {

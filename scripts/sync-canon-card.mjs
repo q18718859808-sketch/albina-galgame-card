@@ -5,6 +5,8 @@ import { fileURLToPath } from 'node:url';
 
 const projectRoot = resolve(import.meta.dirname, '..');
 const sourcePath = resolve(projectRoot, 'content/albina-card-canon-v1.json');
+const canonSourcesPath = resolve(projectRoot, 'content/canon-sources-v1.json');
+const canonClaimsPath = resolve(projectRoot, 'content/canon-claims-v1.json');
 const cardPaths = [
   resolve(projectRoot, 'card/albina.card.json'),
   resolve(projectRoot, 'card/character-card.template.json'),
@@ -42,28 +44,50 @@ function stringArray(value, label) {
   for (const [index, item] of value.entries()) nonEmptyString(item, `${label}[${index}]`);
 }
 
-function validateSource(source) {
+function sourceRefsForClaims(claimIds, claimsById) {
+  const sourceRefs = new Set();
+  for (const claimId of claimIds) {
+    const claim = claimsById.get(claimId);
+    assert(claim, `references unknown claim ${claimId}`);
+    claim.evidence.forEach((evidence) => sourceRefs.add(evidence.sourceId));
+  }
+  return [...sourceRefs].sort();
+}
+
+function normalizedEntry(entry, claimsById) {
+  stringArray(entry.claimIds, `${entry.id}.claimIds`);
+  const claims = entry.claimIds.map((claimId) => claimsById.get(claimId));
+  assert(claims.every(Boolean), `${entry.id} references an unknown claim`);
+  const entryClasses = new Set(claims.map((claim) => claim.classification));
+  assert(entryClasses.size === 1, `${entry.id} must not mix claim classifications`);
+  const contentClassification = [...entryClasses][0];
+  assert(contentClassification !== 'rejected', `${entry.id} cannot publish rejected claims`);
+  return {
+    ...entry,
+    contentClassification,
+    sourceRefs: sourceRefsForClaims(entry.claimIds, claimsById),
+  };
+}
+
+function validateSource(source, sourceLedger, claimLedger) {
   assert(source?.schemaVersion === 1, 'schemaVersion must be 1');
   assert(source?.id === 'albina-card-canon-v1', 'unexpected source id');
-  assert(Array.isArray(source.sources) && source.sources.length > 0, 'sources are required');
-  assert(Array.isArray(source.claims) && source.claims.length > 0, 'claims are required');
+  assert(source.sources === undefined, 'sources must come from content/canon-sources-v1.json');
+  assert(source.claims === undefined, 'claims must come from content/canon-claims-v1.json');
+  assert(sourceLedger?.version === 1 && Array.isArray(sourceLedger.sources), 'canonical sources are required');
+  assert(claimLedger?.version === 1 && Array.isArray(claimLedger.claims), 'canonical claims are required');
   assert(source.card && typeof source.card === 'object', 'card is required');
   for (const field of dataFields) {
     if (field === 'alternate_greetings') stringArray(source.card[field], `card.${field}`);
     else nonEmptyString(source.card[field], `card.${field}`);
   }
 
-  const sourceIds = new Set(source.sources.map((sourceItem) => sourceItem.id));
-  const claimIds = new Set(source.claims.map((claim) => claim.id));
-  assert(sourceIds.size === source.sources.length, 'source ids must be unique');
-  assert(claimIds.size === source.claims.length, 'claim ids must be unique');
-  for (const claim of source.claims) {
-    nonEmptyString(claim.id, 'claim.id');
-    nonEmptyString(claim.statement, `${claim.id}.statement`);
-    stringArray(claim.sourceRefs, `${claim.id}.sourceRefs`);
-    for (const sourceRef of claim.sourceRefs) {
-      assert(sourceIds.has(sourceRef), `${claim.id} references unknown source ${sourceRef}`);
-    }
+  const sourceIds = new Set(sourceLedger.sources.map((sourceItem) => sourceItem.id));
+  const claimsById = new Map(claimLedger.claims.map((claim) => [claim.id, claim]));
+  assert(sourceIds.size === sourceLedger.sources.length, 'source ids must be unique');
+  assert(claimsById.size === claimLedger.claims.length, 'claim ids must be unique');
+  for (const claim of claimLedger.claims) for (const evidence of claim.evidence) {
+    assert(sourceIds.has(evidence.sourceId), `${claim.id} references unknown source ${evidence.sourceId}`);
   }
 
   const book = source.card.character_book;
@@ -71,8 +95,9 @@ function validateSource(source) {
   nonEmptyString(book.name, 'card.character_book.name');
   nonEmptyString(book.description, 'card.character_book.description');
   assert(Number.isInteger(book.scanDepth) && book.scanDepth > 0, 'character_book.scanDepth must be positive');
-  assert(Array.isArray(book.entries) && book.entries.length === 10, 'character_book must contain exactly 10 entries');
+  assert(Array.isArray(book.entries) && book.entries.length >= 10, 'character_book must contain at least 10 entries');
   const entryIds = new Set();
+  const entries = [];
   for (const entry of book.entries) {
     nonEmptyString(entry.id, 'character_book entry id');
     assert(!entryIds.has(entry.id), `duplicate character_book entry id ${entry.id}`);
@@ -84,17 +109,24 @@ function validateSource(source) {
     assert(typeof entry.constant === 'boolean', `${entry.id}.constant must be boolean`);
     assert(typeof entry.selective === 'boolean', `${entry.id}.selective must be boolean`);
     assert(Number.isInteger(entry.order), `${entry.id}.order must be an integer`);
-    assert(classifications.has(entry.contentClassification), `${entry.id} has an invalid classification`);
     stringArray(entry.claimIds, `${entry.id}.claimIds`);
-    stringArray(entry.sourceRefs, `${entry.id}.sourceRefs`);
-    for (const claimId of entry.claimIds) {
-      assert(claimIds.has(claimId), `${entry.id} references unknown claim ${claimId}`);
-    }
-    for (const sourceRef of entry.sourceRefs) {
-      assert(sourceIds.has(sourceRef), `${entry.id} references unknown source ${sourceRef}`);
-    }
+    assert(entry.contentClassification === undefined, `${entry.id}.contentClassification must be derived from canonical claims`);
+    assert(entry.sourceRefs === undefined, `${entry.id}.sourceRefs must be derived from canonical claims`);
+    const normalized = normalizedEntry(entry, claimsById);
+    assert(classifications.has(normalized.contentClassification), `${entry.id} has an invalid classification`);
+    entries.push(normalized);
   }
-  return source;
+  return {
+    ...source,
+    sources: sourceLedger.sources,
+    claims: claimLedger.claims.map((claim) => ({
+      id: claim.id,
+      classification: claim.classification,
+      statement: claim.statement,
+      sourceRefs: [...new Set(claim.evidence.map((evidence) => evidence.sourceId))].sort(),
+    })),
+    card: { ...source.card, character_book: { ...book, entries } },
+  };
 }
 
 function cardEntry(entry, scanDepth) {
@@ -136,7 +168,7 @@ function standaloneBook(source) {
   return {
     schemaVersion: 1,
     id: 'albina-canon-worldbook-v1',
-    generatedFrom: 'content/albina-card-canon-v1.json',
+    generatedFrom: 'content/albina-card-canon-v1.json + content/canon-claims-v1.json',
     copyrightPolicy: source.copyrightPolicy,
     name: book.name,
     description: book.description,
@@ -176,7 +208,12 @@ async function readJson(path) {
 }
 
 async function synchronize(writeMode) {
-  const source = validateSource(await readJson(sourcePath));
+  const [profile, sourceLedger, claimLedger] = await Promise.all([
+    readJson(sourcePath),
+    readJson(canonSourcesPath),
+    readJson(canonClaimsPath),
+  ]);
+  const source = validateSource(profile, sourceLedger, claimLedger);
   const changes = [];
   for (const path of cardPaths) {
     const current = await readJson(path);

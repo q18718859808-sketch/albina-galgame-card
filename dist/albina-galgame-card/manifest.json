@@ -17,12 +17,10 @@
   },
   "characters": {
     "albina": {
-      "amused": "assets/characters/albina/amused.png",
       "armored": "assets/characters/albina/armored.png",
       "combat": "assets/characters/albina/combat.png",
       "endgame": "assets/characters/albina/endgame.png",
       "fascia-open": "assets/characters/albina/fascia-open.png",
-      "focused": "assets/characters/albina/focused.png",
       "furious": "assets/characters/albina/furious.png",
       "golden-bough": "assets/characters/albina/golden-bough.png",
       "maestro": "assets/characters/albina/maestro.png",
@@ -30,20 +28,11 @@
       "rain": "assets/characters/albina/rain.png",
       "ring-conspiracy": "assets/characters/albina/ring-conspiracy.png",
       "shy": "assets/characters/albina/shy.png",
-      "smile": "assets/characters/albina/smile.png",
       "surgical": "assets/characters/albina/surgical.png",
-      "unarmored": "assets/characters/albina/unarmored.png",
-      "white-canvas": "assets/characters/albina/white-canvas.png",
-      "wounded": "assets/characters/albina/wounded.png"
-    },
-    "araya": {
-      "normal": "assets/characters/araya/normal.svg"
+      "white-canvas": "assets/characters/albina/white-canvas.png"
     },
     "callisto": {
       "normal": "assets/characters/callisto/normal.png"
-    },
-    "charon": {
-      "normal": "assets/characters/charon/normal.png"
     },
     "dante": {
       "normal": "assets/characters/dante/normal.png"
@@ -51,35 +40,17 @@
     "faust": {
       "normal": "assets/characters/faust/normal.png"
     },
-    "fixer_informant": {
-      "normal": "assets/characters/fixer_informant/normal.png"
-    },
     "golden_apparition": {
       "normal": "assets/characters/golden_apparition/normal.png"
-    },
-    "kira": {
-      "normal": "assets/characters/kira/normal.svg"
-    },
-    "lcd_captain": {
-      "normal": "assets/characters/lcd_captain/normal.png"
     },
     "lce_doctor": {
       "normal": "assets/characters/lce_doctor/normal.png"
     },
-    "lucio": {
-      "normal": "assets/characters/lucio/normal.svg"
-    },
     "protagonist": {
       "battle": "assets/characters/protagonist/battle.png",
-      "coat": "assets/characters/protagonist/coat.png",
-      "formal": "assets/characters/protagonist/formal.png",
-      "injured": "assets/characters/protagonist/injured.png",
-      "normal": "assets/characters/protagonist/normal.png",
-      "profile": "assets/characters/protagonist/profile.png",
       "resolve": "assets/characters/protagonist/resolve.png",
       "serious": "assets/characters/protagonist/serious.png",
       "shadow": "assets/characters/protagonist/shadow.png",
-      "smile": "assets/characters/protagonist/smile.png",
       "tender": "assets/characters/protagonist/tender.png",
       "wet-hair": "assets/characters/protagonist/wet-hair.png"
     },
@@ -89,37 +60,17 @@
     "ring_agent": {
       "normal": "assets/characters/ring_agent/normal.png"
     },
-    "ryoshu": {
-      "normal": "assets/characters/ryoshu/normal.svg"
-    },
-    "sinclair": {
-      "normal": "assets/characters/sinclair/normal.svg"
-    },
-    "sora": {
-      "normal": "assets/characters/sora/normal.svg"
-    },
     "vergilius": {
       "normal": "assets/characters/vergilius/normal.png"
-    },
-    "yi_sang": {
-      "normal": "assets/characters/yi_sang/normal.png"
     }
   },
   "cg": {
-    "albina_key_visual": "assets/cg/albina_key_visual.jpg",
     "araya_rooftop": "assets/cg/araya_rooftop.jpg",
     "art_resonance": "assets/cg/art_resonance.jpg",
     "backstreet_pursuit": "assets/cg/backstreet_pursuit.jpg",
     "combat_transition_01": "assets/cg/combat_transition_01.jpg",
-    "combat_transition_02": "assets/cg/combat_transition_02.jpg",
-    "combat_transition_03": "assets/cg/combat_transition_03.jpg",
-    "combat_transition_04": "assets/cg/combat_transition_04.jpg",
-    "combat_transition_05": "assets/cg/combat_transition_05.jpg",
-    "combat_transition_06": "assets/cg/combat_transition_06.jpg",
     "conspiracy_contract": "assets/cg/conspiracy_contract.jpg",
-    "danger_threshold": "assets/cg/danger_threshold.jpg",
     "fascia_heartbeat": "assets/cg/fascia_heartbeat.jpg",
-    "first_gallery": "assets/cg/first_gallery.jpg",
     "golden_bough_ending": "assets/cg/golden_bough_ending.jpg",
     "golden_bough_rebuild": "assets/cg/golden_bough_rebuild.jpg",
     "hollow_torso_reveal": "assets/cg/hollow_torso_reveal.jpg",
@@ -132,20 +83,12 @@
     "ren_interruption": "assets/cg/ren_interruption.jpg",
     "ring_conspiracy_ending": "assets/cg/ring_conspiracy_ending.jpg",
     "ring_invitation": "assets/cg/ring_invitation.jpg",
-    "sinclair_flash": "assets/cg/sinclair_flash.jpg",
     "surgery_of_memory": "assets/cg/surgery_of_memory.jpg",
     "trust_threshold": "assets/cg/trust_threshold.jpg",
     "white_canvas_choice": "assets/cg/white_canvas_choice.jpg",
     "white_canvas_ending": "assets/cg/white_canvas_ending.jpg"
   },
-  "ui": {
-    "choice_button": "assets/ui/choice_button.svg",
-    "gallery_frame": "assets/ui/gallery_frame.svg",
-    "menu_plate": "assets/ui/menu_plate.svg",
-    "scanline_mask": "assets/ui/scanline_mask.svg",
-    "status_panel": "assets/ui/status_panel.svg",
-    "textbox": "assets/ui/textbox.svg"
-  },
+  "ui": {},
   "videos": {},
   "audio": {
     "backstreets_rain": "assets/audio/bgm/backstreets_rain.mp3",

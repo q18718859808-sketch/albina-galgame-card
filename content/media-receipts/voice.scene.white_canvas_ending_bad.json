@@ -1,0 +1,26 @@
+{
+  "version": 1,
+  "assetId": "voice.scene.white_canvas_ending_bad",
+  "artifactSha256": "4a724974ac526d8bb95a3b999fc0a4d04dd8fe645433f89b677d8df29c3c5bd4",
+  "provenance": {
+    "provider": "pie",
+    "model": "speech-2.8-hd",
+    "promptVersion": "albina-speech-legacy-v1",
+    "sourceJobHash": "67f5e512a7de5e1ed132ff7fa75d83af0532acf5b4169dc2b5506d160f6f1942",
+    "review": {
+      "status": "approved",
+      "reviewer": "automated-audio-qc",
+      "reviewedAt": "2026-07-15T18:53:06.135Z"
+    }
+  },
+  "lineage": {
+    "kind": "conversion",
+    "processVersion": "speech-loudnorm-v1",
+    "inputs": [
+      {
+        "sha256": "f20eb38432b8005c77c929f9d11aceaddb6feaad402bf0950ce7b42f18551a82",
+        "role": "validated-pie-speech-output"
+      }
+    ]
+  }
+}

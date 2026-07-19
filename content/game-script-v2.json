@@ -7,6 +7,8 @@
     "golden_bough_rebuild": "golden_bough_001",
     "ring_conspiracy": "ring_conspiracy_001"
   },
+  "gameplayFile": "gameplay-systems-v2.json",
+  "worldbookSourceFile": "albina-card-canon-v1.json",
   "dialogueFiles": [
     "dialogue/canon-recap.json",
     "dialogue/opening.json",

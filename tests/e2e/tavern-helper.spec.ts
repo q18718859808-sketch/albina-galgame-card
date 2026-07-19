@@ -64,6 +64,74 @@ test('opens gallery and settings with honest media controls', async ({ page }) =
   await page.getByTestId('autoplay-recovery').click();
 });
 
+test('exposes the authoritative gameplay state and safe loadout controls', async ({ page }) => {
+  test.setTimeout(90_000);
+  await page.getByTestId('new-game').click();
+  await advanceCanonRecapToAuBoundary(page);
+  await chooseAndContinue(page, 'enter_white_canvas', 'white_canvas_001');
+
+  const hudText = await page.locator('.game-hud__values').textContent();
+  const shownTrust = Number(hudText?.match(/信任 (\d+)/u)?.[1]);
+  expect(Number.isFinite(shownTrust)).toBe(true);
+  await expect(page.locator('.game-hud__values')).toBeVisible();
+
+  const openButton = page.getByTestId('gameplay-open');
+  await openButton.click();
+  const panel = page.getByTestId('gameplay-panel');
+  await expect(panel).toBeVisible();
+  await expect(panel.getByRole('tab')).toHaveCount(5);
+  await expect(page.getByTestId('gameplay-page-status').getByText('信赖')).toBeVisible();
+  const trustStat = page.locator('[data-stat-key="trust"]');
+  await expect(trustStat).toHaveText(String(shownTrust));
+  await expect(trustStat.locator('..')).toContainText(/基础 .*修正 \+/u);
+
+  const statusTab = page.getByTestId('gameplay-tab-status');
+  await statusTab.focus();
+  await statusTab.press('ArrowRight');
+  await expect(page.getByTestId('gameplay-tab-objectives')).toHaveAttribute('aria-selected', 'true');
+  await expect(page.locator('[data-quest-id="quest.white.boundary_protocol"]')).toContainText('进行中');
+  await expect(page.locator('[data-battle-id="battle.white.gallery_pressure"]')).toContainText('未解决');
+
+  await page.getByTestId('gameplay-tab-progression').click();
+  await expect(page.locator('[data-profession-id="boundary_mediator"]')).toContainText('当前职业');
+  await expect(page.locator('[data-achievement-id="ach_au_boundary_witness"]')).toContainText('已解锁');
+
+  await page.getByTestId('gameplay-tab-codex').click();
+  await expect(page.locator('[data-worldbook-id="albina_routes_endings_au_if"]')).toContainText(/当前激活|已阅/u);
+  const scrolling = await page.locator('.gameplay-panel__content').evaluate((element) => {
+    const style = getComputedStyle(element);
+    return { overflowY: style.overflowY, scrollHeight: element.scrollHeight, clientHeight: element.clientHeight };
+  });
+  expect(scrolling.overflowY).toBe('auto');
+  expect(scrolling.scrollHeight).toBeGreaterThanOrEqual(scrolling.clientHeight);
+
+  await panel.getByRole('button', { name: '关闭状态档案' }).click();
+  await expect(openButton).toBeFocused();
+  await chooseAndContinue(page, 'white_touch_boundary', 'white_canvas_002');
+  await chooseAndContinue(page, 'white_follow_to_lab', 'white_canvas_003');
+  await chooseAndContinue(page, 'white_sign_witness_protocol', 'white_canvas_004');
+
+  await openButton.click();
+  await page.getByTestId('gameplay-tab-objectives').click();
+  await expect(page.locator('[data-quest-id="quest.white.boundary_protocol"]')).toContainText('已完成');
+
+  await page.getByTestId('gameplay-tab-loadout').click();
+  const boundaryCharm = page.locator('[data-equipment-id="equipment.white.boundary_charm"]');
+  await expect(boundaryCharm).toContainText('装备中');
+  const rainBadge = page.locator('[data-equipment-id="equipment.rain_room_badge"]');
+  await rainBadge.getByRole('button', { name: '装备' }).click();
+  await expect(rainBadge).toContainText('装备中');
+
+  const rainOutfit = page.locator('[data-outfit-id="outfit.albina.rain"]');
+  await rainOutfit.getByRole('button', { name: '更换' }).click();
+  await expect(rainOutfit).toContainText('穿着中');
+
+  await page.getByTestId('gameplay-tab-progression').click();
+  const curator = page.locator('[data-profession-id="narrative_curator"]');
+  await curator.getByRole('button', { name: '设为当前' }).click();
+  await expect(curator).toContainText('当前职业');
+});
+
 test('keeps the UI usable offline after first load', async ({ page, context }) => {
   await page.getByTestId('new-game').click();
   await advanceCanonRecapToAuBoundary(page);
@@ -118,8 +186,7 @@ test('wires gallery unlock, special-CG queue, and cached asset URLs', async ({ p
   expect(portraitCached).toBe(true);
 });
 
-test('mobile users can disable video independently of reduced-motion', async ({ page }, testInfo) => {
-  test.skip(testInfo.project.name !== 'mobile', 'mobile policy only');
+test('users can disable video for low-performance mode independently of reduced-motion', async ({ page }) => {
   const videoRequests: string[] = [];
   page.on('request', (request) => { if (request.url().includes('/assets/video/')) videoRequests.push(request.url()); });
   await expect(page.getByTestId('title-screen')).toBeVisible();
@@ -170,4 +237,15 @@ test('enabled video requests only the delivery profile selected for the viewport
   const forbidden = testInfo.project.name === 'desktop' ? '/runtime/' : '/desktop/';
   expect(videoRequests.every((url) => url.includes(expected))).toBe(true);
   expect(videoRequests.some((url) => url.includes(forbidden))).toBe(false);
+});
+
+test('falls back to the approved poster when a video asset fails to load', async ({ page }) => {
+  await page.route('**/assets/video/**', async (route) => route.abort('failed'));
+  await page.getByTestId('new-game').click();
+  await advanceCanonRecapToAuBoundary(page);
+  await chooseAndContinue(page, 'enter_white_canvas', 'white_canvas_001');
+  await chooseAndContinue(page, 'white_touch_boundary', 'white_canvas_002');
+  await chooseAndContinue(page, 'white_follow_to_lab', 'white_canvas_003');
+  await expect(page.getByTestId('scene-video')).toHaveCount(0);
+  await expect(page.getByTestId('static-fallback')).toBeVisible();
 });

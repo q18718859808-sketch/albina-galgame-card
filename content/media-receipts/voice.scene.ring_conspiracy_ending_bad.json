@@ -1,0 +1,26 @@
+{
+  "version": 1,
+  "assetId": "voice.scene.ring_conspiracy_ending_bad",
+  "artifactSha256": "9e16b3ccefac5a327e73e53fbd9dc45c88d12cb71b0b1129b696de7c1e957c05",
+  "provenance": {
+    "provider": "pie",
+    "model": "speech-2.8-hd",
+    "promptVersion": "albina-speech-legacy-v1",
+    "sourceJobHash": "abe2f0895a2e8088d3a498d8e9b4f6d0e336811a58bfdff3a09922a0815a8183",
+    "review": {
+      "status": "approved",
+      "reviewer": "automated-audio-qc",
+      "reviewedAt": "2026-07-15T18:52:57.673Z"
+    }
+  },
+  "lineage": {
+    "kind": "conversion",
+    "processVersion": "speech-loudnorm-v1",
+    "inputs": [
+      {
+        "sha256": "1d3033f84966c7524e526861732e591393cd63fc839ac19c8b61493e1562b24a",
+        "role": "validated-pie-speech-output"
+      }
+    ]
+  }
+}

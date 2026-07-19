@@ -1,0 +1,26 @@
+{
+  "version": 1,
+  "assetId": "voice.scene.white_canvas_ending_gate",
+  "artifactSha256": "7b3659054aae442107a743730580dfee2084a7b9ef612e5de43300774412ed49",
+  "provenance": {
+    "provider": "pie",
+    "model": "speech-2.8-hd",
+    "promptVersion": "albina-speech-legacy-v1",
+    "sourceJobHash": "cc12ba29eabb3d82fb02190b2c2746e2cf2889ee8cfbb1eca2a9100c67f4d5ac",
+    "review": {
+      "status": "approved",
+      "reviewer": "automated-audio-qc",
+      "reviewedAt": "2026-07-15T18:53:06.500Z"
+    }
+  },
+  "lineage": {
+    "kind": "conversion",
+    "processVersion": "speech-loudnorm-v1",
+    "inputs": [
+      {
+        "sha256": "1b84c1c3872c4b3ed8f8f4d4ad5fea2c3ef20a434e912b114af1ba86b52bb45d",
+        "role": "validated-pie-speech-output"
+      }
+    ]
+  }
+}

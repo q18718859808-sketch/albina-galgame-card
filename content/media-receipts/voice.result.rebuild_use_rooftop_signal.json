@@ -1,0 +1,26 @@
+{
+  "version": 1,
+  "assetId": "voice.result.rebuild_use_rooftop_signal",
+  "artifactSha256": "ab251367e6459f692c3477dcd584be69f0f3c43ea3912d22748e065d36987151",
+  "provenance": {
+    "provider": "pie",
+    "model": "speech-2.8-hd",
+    "promptVersion": "albina-speech-legacy-v1",
+    "sourceJobHash": "8254bcb6688fe8c3ee6c6fef17ae80d3802c96a5c2f573d5ed6fafac87c181af",
+    "review": {
+      "status": "approved",
+      "reviewer": "automated-audio-qc",
+      "reviewedAt": "2026-07-15T18:52:22.191Z"
+    }
+  },
+  "lineage": {
+    "kind": "conversion",
+    "processVersion": "speech-loudnorm-v1",
+    "inputs": [
+      {
+        "sha256": "2d30e89069b6559c1809749d8547b5e773d5af9fc86771b004fa82ff96ae8aea",
+        "role": "validated-pie-speech-output"
+      }
+    ]
+  }
+}

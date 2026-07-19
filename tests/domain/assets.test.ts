@@ -2,8 +2,10 @@ import { describe, expect, it } from 'vitest';
 
 import {
   AssetLicenseSchema,
+  AssetLineageSchema,
   AssetManifestV2Schema,
   AssetRecordSchema,
+  AssetRightsSchema,
   MediaJobSchema,
   PortraitAssetSchema,
 } from '../../src/domain/assets';
@@ -28,8 +30,9 @@ const mediaJob = {
   id: 'job.portrait.albina.normal',
   assetId: 'portrait.albina.normal',
   kind: 'image',
-  provider: 'pie',
+  provider: 'x666-openai-compatible',
   model: 'gpt-image-2',
+  upstreamPieVerified: false,
   promptVersion: 'test-image-v1',
   status: 'completed',
   contentHash: 'a'.repeat(64),
@@ -63,10 +66,19 @@ describe('asset schemas', () => {
   it('enforces provider/model pairs and rejects secret production provenance', () => {
     expect(() => MediaJobSchema.parse({ ...mediaJob, provider: 'grok-responses' })).toThrow(/pie|invalid/iu);
     expect(() => MediaJobSchema.parse({ ...mediaJob, provider: 'hhhl' })).toThrow(/provider|invalid/iu);
+    expect(() => MediaJobSchema.parse({ ...mediaJob, provider: 'pie', upstreamPieVerified: undefined })).toThrow(/provider|model/iu);
+    expect(() => MediaJobSchema.parse({ ...mediaJob, upstreamPieVerified: undefined })).toThrow(/upstream pie/iu);
+    expect(() => MediaJobSchema.parse({ ...mediaJob, upstreamPieVerified: true })).toThrow();
+    expect(MediaJobSchema.parse({
+      ...mediaJob, kind: 'speech', provider: 'pie', model: 'speech-2.8-hd', upstreamPieVerified: undefined,
+    }).provider).toBe('pie');
+    expect(MediaJobSchema.parse({
+      ...mediaJob, kind: 'video', provider: 'pie', model: 'seedance-1.5-pro', upstreamPieVerified: undefined,
+    }).provider).toBe('pie');
     expect(() => MediaJobSchema.parse({ ...mediaJob, kind: 'music', model: 'music-2.6' })).toThrow();
     expect(() => MediaJobSchema.parse({ ...mediaJob, promptVersion: '' })).toThrow();
     expect(() => AssetRecordSchema.parse({ id: 'cg.test', kind: 'image', path: 'cg/test.png', provenance: {
-      provider: 'pie', model: 'gpt-image-2', promptVersion: 'test-image-v1', sourceJobHash: 'a'.repeat(64),
+      provider: 'x666-openai-compatible', model: 'gpt-image-2', upstreamPieVerified: false, promptVersion: 'test-image-v1', sourceJobHash: 'a'.repeat(64),
       review: { status: 'approved', reviewer: 'reviewer', reviewedAt: '2026-07-15T00:00:00.000Z' }, remoteJobId: 'secret',
     } })).toThrow();
   });
@@ -85,6 +97,22 @@ describe('asset schemas', () => {
     expect(() => AssetRecordSchema.parse({ ...asset, license: undefined })).toThrow(/requires registered license/iu);
     expect(() => AssetRecordSchema.parse({ ...asset, license: { ...license, downloadedFrom: 'unknown' } })).toThrow();
     expect(() => AssetRecordSchema.parse({ ...asset, kind: 'image' })).toThrow(/only supported on audio/iu);
+  });
+
+  it('records redistribution rights and hash-bound media lineage', () => {
+    const rights = {
+      status: 'verified', sourceType: 'model-output', redistribution: 'allowed',
+      rightsBasis: 'Provider output terms verified for this production.', holder: 'Albina Galgame Card project',
+      sourceUrl: 'https://example.com/terms',
+    } as const;
+    const lineage = {
+      kind: 'derivative', processVersion: 'video-transcode-v1',
+      inputs: [{ assetId: 'cg.parent', sha256: 'a'.repeat(64), role: 'approved-keyframe' }],
+    } as const;
+    expect(AssetRightsSchema.parse(rights)).toEqual(rights);
+    expect(AssetLineageSchema.parse(lineage)).toEqual(lineage);
+    expect(() => AssetRightsSchema.parse({ ...rights, redistribution: 'unverified' })).toThrow(/allow redistribution/iu);
+    expect(() => AssetLineageSchema.parse({ ...lineage, inputs: [] })).toThrow(/parent/iu);
   });
 
   it('accepts a complete manifest with resolvable references', () => {
@@ -123,6 +151,23 @@ describe('asset schemas', () => {
     };
 
     expect(() => AssetManifestV2Schema.parse(manifest)).toThrow(/asset reference/i);
+  });
+
+  it('rejects lineage whose declared parent hash does not match the manifest', () => {
+    const manifest = {
+      version: 2,
+      projectId: 'albina-galgame-card',
+      basePath: 'assets',
+      assets: [
+        { id: 'cg.parent', kind: 'image', path: 'cg/parent.png', sha256: 'a'.repeat(64) },
+        { id: 'video.child', kind: 'video', path: 'video/child.mp4', lineage: {
+          kind: 'derivative', processVersion: 'seedance-v1', inputs: [{ assetId: 'cg.parent', sha256: 'b'.repeat(64), role: 'keyframe' }],
+        } },
+      ],
+      portraits: [],
+      mediaJobs: [],
+    };
+    expect(() => AssetManifestV2Schema.parse(manifest)).toThrow(/lineage hash mismatch/iu);
   });
 
   it('rejects duplicate asset identifiers', () => {

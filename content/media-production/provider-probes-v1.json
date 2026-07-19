@@ -1,0 +1,133 @@
+{
+  "version": 1,
+  "probes": [
+    {
+      "provider": "pie",
+      "baseUrl": "https://api.pie-xian.com/v1",
+      "testedAt": "2026-07-16T00:00:00+08:00",
+      "modelListHttp": 200,
+      "modelCount": 148,
+      "models": {
+        "gpt-image-2": false,
+        "speech-2.8-hd": true,
+        "seedance-1.5-pro": true
+      }
+    },
+    {
+      "provider": "x666-openai-compatible",
+      "baseUrl": "https://x666.me/v1",
+      "testedAt": "2026-07-15T23:36:49+08:00",
+      "modelListHttp": 200,
+      "modelCount": 2,
+      "gatewayEvidence": {
+        "homepageGenerator": "new-api",
+        "homepageDescription": "AI model aggregation and OpenAI-compatible distribution gateway",
+        "responseHeader": "X-Oneapi-Request-Id",
+        "publicPieAttribution": false
+      },
+      "models": {
+        "gpt-image-2": true
+      },
+      "generation": {
+        "http": 200,
+        "width": 1024,
+        "height": 1024,
+        "bytes": 342713,
+        "sha256": "a13895f54d2ed8d033e369715e1177eb2f4a01010ec0d5016f1f6775e37786db",
+        "visuallyNonBlank": true
+      },
+      "currentAvailability": {
+        "available": false,
+        "checkedAt": "2026-07-19T00:48:15.7793914+08:00",
+        "modelList": {
+          "http": 200,
+          "modelCount": 0,
+          "responseSha256": "951aa46524df5a52b49cef657244f2a8218810ad0f7b3d3f7cbd6ed9552c65a7"
+        },
+        "generationAttempt": {
+          "http": 503,
+          "errorCode": "model_not_found",
+          "group": "huatu",
+          "responseSha256": "8292a5d36526f6a0521d70deb91ccbc857cca6d0f3184fa2fbbef5ef980450e7"
+        }
+      },
+      "upstreamPieVerified": false,
+      "productionAuthorization": {
+        "authorized": true,
+        "scope": "albina-v2-image-batch",
+        "source": "direct-user-instruction",
+        "recordedOn": "2026-07-16"
+      },
+      "publicUsageNotice": {
+        "sourceUrl": "https://x666.me/api/about",
+        "checkedOn": "2026-07-16",
+        "requiresOpenSourceRelease": true,
+        "grantsUnderlyingIpRights": false
+      }
+    }
+  ],
+  "compatibilityProbes": [
+    {
+      "provider": "abrdns-openai-compatible",
+      "baseUrl": "https://new-api.abrdns.com/v1",
+      "testedAt": "2026-07-19T14:54:00+08:00",
+      "modelList": {
+        "http": 200,
+        "modelCount": 1,
+        "models": {
+          "gpt-image-2": true
+        },
+        "responseSha256": "cfb944a05215142df2e3268055a6b950f55e24a347fff6ad1bc94abf199298c0"
+      },
+      "generation": {
+        "model": "gpt-image-2",
+        "outcome": "ambiguous-timeout",
+        "artifactVerified": false,
+        "automaticResubmissionAllowed": false
+      },
+      "productionAuthorized": false
+    },
+    {
+      "provider": "huibaolinks-openai-compatible",
+      "baseUrl": "https://ai.huibaolinks.com/v1",
+      "testedAt": "2026-07-19T15:08:26+08:00",
+      "modelList": {
+        "http": 200,
+        "modelCount": 16,
+        "models": {
+          "gpt-image-2": true
+        },
+        "responseSha256": "42f5a639c5a7f581147cf41e6e2dc60a2e063b3629cf28071e42afee697b2684"
+      },
+      "generation": {
+        "model": "gpt-image-2",
+        "http": 400,
+        "requestId": "20260719070826676045999z8JX26Ah",
+        "errorCode": "bad_response_status_code",
+        "errorType": "bad_response_status_code",
+        "artifactVerified": false,
+        "responseSha256": "d222c27250fc1ccbb9e0c1a4f49aa2a8c54d596d602fed9b512dfa07fe8d72e2"
+      },
+      "productionAuthorized": false
+    },
+    {
+      "provider": "asaiuta-openai-compatible",
+      "baseUrl": "https://api.asaiuta.me/v1",
+      "testedAt": "2026-07-19T14:54:00+08:00",
+      "modelList": {
+        "http": 200,
+        "modelCount": 4,
+        "models": {
+          "gpt-image-2": false
+        },
+        "responseSha256": "8effbb904c073ac23e77c17b641f8e82e4368b862d0117f4202bcf18027e84cf"
+      },
+      "generation": {
+        "model": "gpt-image-2",
+        "outcome": "not-attempted-model-not-listed",
+        "artifactVerified": false
+      },
+      "productionAuthorized": false
+    }
+  ]
+}

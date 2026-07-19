@@ -1,6 +1,11 @@
 import { describe, expect, it } from 'vitest';
 
-import { migrateSaveV1 } from '../../src/domain/migrate-save-v1';
+import {
+  decodeSaveJson,
+  decodeSaveV2OrV1,
+  isKnownSaveV1,
+  migrateSaveV1,
+} from '../../src/domain/migrate-save-v1';
 import {
   SaveV2Schema,
   createDefaultSaveV2,
@@ -26,6 +31,11 @@ describe('migrateSaveV1', () => {
       relationshipVectors: { intimacy: 47, reliance: 31, obsession: 71, suspicion: 54 },
       routeEconomy: { composure: 45, materials: 7, leverage: 3, exposure: 9 },
       conflictMastery: { blade: 2, boundary: 4, analysis: 6, resonance: 8 },
+      clearedConflictIds: ['ring_contract_enforcer'],
+      unlockedAchievementIds: ['ach_ring_counter_clause'],
+      activeProfessionId: 'ring_counterforger',
+      professionProgress: { ring_counterforger: { id: 'ring_counterforger', xp: 17, level: 2 } },
+      worldbookMemory: { records: [{ id: 'albina_routes_endings_au_if' }] },
       flags: { met_albina: true, signed_contract: true },
       inventoryItemIds: ['ring_guest_list', 'fascia_fragment'],
       equippedItemIds: { weapon: 'fascia_fragment', tool: 'ring_guest_list' },
@@ -81,10 +91,21 @@ describe('migrateSaveV1', () => {
         activeOutfitId: 'albina_raincoat',
       },
       quests: {
+        activeNodeIds: [],
         completedNodeIds: ['ring_accept_terms'],
         currentMapNodeId: 'spider_gallery',
         progressLog: [{ id: 'quest-log', status: 'completed' }],
       },
+      battles: {
+        resolvedIds: ['ring_contract_enforcer'],
+        outcomes: { ring_contract_enforcer: 'victory' },
+      },
+      professions: {
+        activeId: 'ring_counterforger',
+        progress: { ring_counterforger: { xp: 17, level: 2 } },
+      },
+      achievements: { unlockedIds: ['ach_ring_counter_clause'] },
+      worldbook: { activeEntryIds: [], seenEntryIds: ['albina_routes_endings_au_if'] },
       unlockedCg: ['opening_rain', 'ring_invitation'],
       logs: {
         history: [{ id: 'history-1', text: '选择已确认' }],
@@ -156,6 +177,24 @@ describe('SaveV2 serialization', () => {
     expect(serializeSaveV2(first)).toBe(serializeSaveV2(second));
   });
 
+  it('upgrades early SaveV2 payloads with deterministic gameplay-state defaults', () => {
+    const current = createDefaultSaveV2();
+    const early = structuredClone(current) as Partial<typeof current>;
+    delete early.battles;
+    delete early.professions;
+    delete early.achievements;
+    delete early.worldbook;
+    if (early.quests) delete (early.quests as Partial<typeof current.quests>).activeNodeIds;
+
+    expect(SaveV2Schema.parse(early)).toMatchObject({
+      quests: { activeNodeIds: [] },
+      battles: { resolvedIds: [], outcomes: {} },
+      professions: { activeId: '', progress: {} },
+      achievements: { unlockedIds: [] },
+      worldbook: { activeEntryIds: [], seenEntryIds: [] },
+    });
+  });
+
   it('rejects non-JSON log state before serialization', () => {
     const invalidValues: unknown[] = [BigInt(1), Number.NaN, new Date(), () => undefined];
     for (const value of invalidValues) {
@@ -169,5 +208,48 @@ describe('SaveV2 serialization', () => {
     const save = createDefaultSaveV2() as unknown as Record<string, unknown>;
     (save.logs as Record<string, unknown>).history = [cycle];
     expect(() => serializeSaveV2(save as never)).toThrow();
+  });
+});
+
+describe('safe save decoding', () => {
+  it('accepts SaveV2 before considering legacy migration', () => {
+    const save = createDefaultSaveV2();
+    save.saveId = 'current-save';
+
+    expect(decodeSaveV2OrV1(save)).toEqual({ ok: true, save, source: 'v2' });
+  });
+
+  it('recognizes only the Albina v1.0.44 schema marker for migration', () => {
+    const legacy = {
+      schemaVersion: 10,
+      projectId: 'albina-galgame-card',
+      saveId: 'legacy-decoded',
+      sceneId: 'white_canvas_004',
+      route: 'white_canvas',
+      trust: 17,
+    };
+
+    expect(isKnownSaveV1(legacy)).toBe(true);
+    expect(decodeSaveV2OrV1(legacy)).toMatchObject({
+      ok: true,
+      source: 'v1.0.44',
+      save: { saveId: 'legacy-decoded', sceneId: 'white_canvas_004', values: { trust: 17 } },
+    });
+    expect(isKnownSaveV1({ ...legacy, schemaVersion: 9 })).toBe(false);
+    expect(isKnownSaveV1({ ...legacy, projectId: 'another-project' })).toBe(false);
+  });
+
+  it.each([
+    [{ arbitrary: true }, 'unknown-format'],
+    [{ ...createDefaultSaveV2(), values: undefined }, 'invalid-v2'],
+    [{ version: 3, projectId: 'albina-galgame-card' }, 'unsupported-version'],
+    [{ schemaVersion: 11, projectId: 'albina-galgame-card' }, 'unsupported-version'],
+  ] as const)('returns a recoverable error for unsupported input %#', (input, code) => {
+    expect(decodeSaveV2OrV1(input)).toMatchObject({ ok: false, error: { code, recoverable: true } });
+  });
+
+  it('distinguishes malformed JSON from an unknown JSON save format', () => {
+    expect(decodeSaveJson('{')).toMatchObject({ ok: false, error: { code: 'invalid-json' } });
+    expect(decodeSaveJson('{"unrelated":true}')).toMatchObject({ ok: false, error: { code: 'unknown-format' } });
   });
 });

@@ -1,0 +1,26 @@
+{
+  "version": 1,
+  "assetId": "voice.result.conspiracy_008_hand_pen_to_her",
+  "artifactSha256": "20aa52feaa8fdba93ea122e4264a5eb06266a253371186bcb28cd255427c0cdb",
+  "provenance": {
+    "provider": "pie",
+    "model": "speech-2.8-hd",
+    "promptVersion": "albina-speech-legacy-v1",
+    "sourceJobHash": "825e743cb275a4dbdc3c5f6272a0f9d6dd61f53e6f869ca11597b2681e6e5bc0",
+    "review": {
+      "status": "approved",
+      "reviewer": "automated-audio-qc",
+      "reviewedAt": "2026-07-15T18:51:54.308Z"
+    }
+  },
+  "lineage": {
+    "kind": "conversion",
+    "processVersion": "speech-loudnorm-v1",
+    "inputs": [
+      {
+        "sha256": "d8e813e7ebdbeb0f6110e70a2bb7a5a52bce8da57e5f8d09f2ff372d0c30d418",
+        "role": "validated-pie-speech-output"
+      }
+    ]
+  }
+}

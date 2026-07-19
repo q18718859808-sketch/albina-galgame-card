@@ -9,7 +9,7 @@ const secretPatterns = [
   /\bbearer\s+(?!\$\{|<|your[_-]|example|replace|test|fake|redacted)[a-z0-9._+/=-]{16,}/iu,
   /\bsk-[a-z0-9_-]{20,}\b/iu,
 ];
-const endpointPattern = /(?:api\.pie-xian\.com|closeapi\.top|api\.piapi\.ai|ai\.hhhl\.cc|216\.195\.211\.206(?::8317)?|grok-responses\.[a-z0-9.-]+|wallhaven\.cc|corsproxy\.io|api\.allorigins\.win|api\.codetabs\.com|\bhhhlclient\b)/iu;
+const endpointPattern = /(?:api\.pie-xian\.com|x666\.me|closeapi\.top|api\.piapi\.ai|ai\.hhhl\.cc|216\.195\.211\.206(?::8317)?|grok-responses\.[a-z0-9.-]+|wallhaven\.cc|corsproxy\.io|api\.allorigins\.win|api\.codetabs\.com|\bhhhlclient\b)/iu;
 const generationPattern = /(?:\/v1\/(?:images\/(?:generations|edits)|videos(?:\/|\b)|audio\/speech|music_generation|responses)|\b(?:generateImage|createVideoGeneration|daydream_generate_image|novelai|comfyui)\s*\()/iu;
 const remoteModulePattern = /(?:https?:)?\/\/[^\s"'`<>()[\]{},;]+\/[^\s"'`<>()[\]{},;]*\.(?:m?js)(?:[?#][^\s"'`<>()[\]{},;]*)?(?=$|[\s"'`<>()[\]{},;])/giu;
 const remoteSinkPatterns = [

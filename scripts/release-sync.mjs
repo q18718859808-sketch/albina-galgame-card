@@ -12,6 +12,7 @@ export const RELEASE_STEPS = Object.freeze([
   { id: 'assets:generate', path: 'scripts/audit-assets.mjs', args: ['--write'] },
   { id: 'story:compile', path: 'node_modules/vite-node/vite-node.mjs', args: ['scripts/compile-story.mjs'] },
   { id: 'source:build', path: 'node_modules/vite/bin/vite.js', args: ['build'] },
+  { id: 'release:status', path: 'scripts/release-status.mjs', args: ['--write'] },
   { id: 'release:promote', path: 'scripts/build-release.mjs', args: [] },
   { id: 'assets:audit', path: 'scripts/audit-assets.mjs', args: [] },
 ]);

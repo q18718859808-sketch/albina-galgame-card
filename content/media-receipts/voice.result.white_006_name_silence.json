@@ -1,0 +1,26 @@
+{
+  "version": 1,
+  "assetId": "voice.result.white_006_name_silence",
+  "artifactSha256": "052bdd2c9ad58dc357d4a8e2efa1c775e719bfa0df5cc6a5b7ac5b5f2af548f9",
+  "provenance": {
+    "provider": "pie",
+    "model": "speech-2.8-hd",
+    "promptVersion": "albina-speech-legacy-v1",
+    "sourceJobHash": "ef8af18ff8b5fd3e7d0683394bf8720ad32da1f487b3de6580de8cc498759b23",
+    "review": {
+      "status": "approved",
+      "reviewer": "automated-audio-qc",
+      "reviewedAt": "2026-07-15T18:52:25.026Z"
+    }
+  },
+  "lineage": {
+    "kind": "conversion",
+    "processVersion": "speech-loudnorm-v1",
+    "inputs": [
+      {
+        "sha256": "60f67a987b75e4212e1dc7f7c3d26cabaf7d85be1701495c9ac196717031ec70",
+        "role": "validated-pie-speech-output"
+      }
+    ]
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "version": 1,
+  "assetId": "voice.scene.ring_conspiracy_ending_gate",
+  "artifactSha256": "b8b574bf431cc9bdbadfe73fc3a0622a16f7d27433c7d3d38cb1fdc0655b6682",
+  "provenance": {
+    "provider": "pie",
+    "model": "speech-2.8-hd",
+    "promptVersion": "albina-speech-legacy-v1",
+    "sourceJobHash": "2488b54c1291c1d8b9051bb44e3bf6e8c5c67bc4dda433eb28326551aee9cbd9",
+    "review": {
+      "status": "approved",
+      "reviewer": "automated-audio-qc",
+      "reviewedAt": "2026-07-15T18:52:58.104Z"
+    }
+  },
+  "lineage": {
+    "kind": "conversion",
+    "processVersion": "speech-loudnorm-v1",
+    "inputs": [
+      {
+        "sha256": "d5ccbc97c59692526810076f6f75481c50dcdb3e6aff43e7919c3ca73a1e819f",
+        "role": "validated-pie-speech-output"
+      }
+    ]
+  }
+}

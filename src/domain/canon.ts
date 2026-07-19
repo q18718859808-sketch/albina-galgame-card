@@ -8,6 +8,17 @@ export const CanonClassificationSchema = z.enum([
   'rejected',
 ]);
 
+export const CanonClaimScopeSchema = z.enum([
+  'terminology',
+  'profile',
+  'appearance',
+  'personality',
+  'story',
+  'combat',
+  'boundary',
+  'production',
+]);
+
 const CanonSourceKindSchema = z.enum([
   'official-game',
   'community-transcript',
@@ -53,8 +64,11 @@ export const CanonClaimSchema = z
   .object({
     id: z.string().min(1),
     classification: CanonClassificationSchema,
+    scope: CanonClaimScopeSchema,
     statement: z.string().min(1),
+    recapText: z.string().min(1).optional(),
     evidence: z.array(CanonEvidenceSchema).min(1),
+    reviewedAt: z.string().regex(/^\d{4}-\d{2}-\d{2}$/u),
     rationale: z.string().min(1).optional(),
     rejectionReason: z.string().min(1).optional(),
   })
@@ -96,6 +110,26 @@ const StoryProvenanceEntrySchema = z
   })
   .strict();
 
+const CanonCoverageEntrySchema = z
+  .object({
+    claimId: z.string().min(1),
+    sceneIds: z.array(z.string().min(1)),
+    worldbookEntryIds: z.array(z.string().min(1)),
+    cardFields: z.array(z.string().min(1)),
+    disposition: z.enum(['published', 'production-constraint', 'rejected']),
+    note: z.string().min(1),
+  })
+  .strict()
+  .superRefine((entry, context) => {
+    const consumers = entry.sceneIds.length + entry.worldbookEntryIds.length + entry.cardFields.length;
+    if (entry.disposition !== 'rejected' && consumers === 0) {
+      context.addIssue({ code: 'custom', path: ['sceneIds'], message: 'Published claims require at least one consumer' });
+    }
+    if (entry.disposition === 'rejected' && consumers !== 0) {
+      context.addIssue({ code: 'custom', path: ['sceneIds'], message: 'Rejected claims cannot have published consumers' });
+    }
+  });
+
 function addDuplicateIssues(
   context: z.RefinementCtx,
   values: Array<{ id: string }>,
@@ -131,11 +165,28 @@ export const StoryProvenanceLedgerSchema = z
     }));
   });
 
+export const CanonCoverageLedgerSchema = z
+  .object({
+    version: z.literal(1),
+    scope: z.string().min(1),
+    exclusions: z.array(z.object({ scope: z.string().min(1), reason: z.string().min(1) }).strict()),
+    entries: z.array(CanonCoverageEntrySchema).min(1),
+  })
+  .strict()
+  .superRefine((ledger, context) => {
+    const ids = new Set<string>();
+    ledger.entries.forEach((entry, index) => {
+      if (ids.has(entry.claimId)) context.addIssue({ code: 'custom', path: ['entries', index, 'claimId'], message: `Duplicate claim coverage: ${entry.claimId}` });
+      ids.add(entry.claimId);
+    });
+  });
+
 export type CanonClassification = z.infer<typeof CanonClassificationSchema>;
 export type CanonSourceLedger = z.infer<typeof CanonSourceLedgerSchema>;
 export type CanonClaimLedger = z.infer<typeof CanonClaimLedgerSchema>;
 export type SceneProvenance = z.infer<typeof SceneProvenanceSchema>;
 export type StoryProvenanceLedger = z.infer<typeof StoryProvenanceLedgerSchema>;
+export type CanonCoverageLedger = z.infer<typeof CanonCoverageLedgerSchema>;
 
 function validateClaimSources(claims: CanonClaimLedger, sources: CanonSourceLedger): void {
   const sourceIds = new Set(sources.sources.map((source) => source.id));
@@ -172,11 +223,23 @@ function validateSceneProvenance(
   if (JSON.stringify(actual) !== JSON.stringify(expected)) throw new Error('Scene provenance sourceIds must exactly match claim evidence');
 }
 
+function expectedRecapText(
+  provenance: SceneProvenance,
+  claimsById: Map<string, CanonClaimLedger['claims'][number]>,
+): string | undefined {
+  if (provenance.scope !== 'canon_recap') return undefined;
+  return provenance.claimIds.map((claimId) => {
+    const claim = claimsById.get(claimId);
+    if (!claim?.recapText) throw new Error(`Canon recap claim is missing recapText: ${claimId}`);
+    return claim.recapText;
+  }).join('\n\n');
+}
+
 function provenanceByScene(ledger: StoryProvenanceLedger): Map<string, SceneProvenance> {
   return new Map(ledger.entries.flatMap((entry) => entry.sceneIds.map((sceneId) => [sceneId, entry.provenance] as const)));
 }
 
-export function materializeSceneProvenance<T extends { id: string }>(
+export function materializeSceneProvenance<T extends { id: string; text?: string }>(
   scenes: T[],
   sourceInput: unknown,
   claimInput: unknown,
@@ -195,6 +258,10 @@ export function materializeSceneProvenance<T extends { id: string }>(
   return scenes.map((scene) => {
     const provenance = byScene.get(scene.id);
     if (!provenance) throw new Error(`Scene is missing provenance: ${scene.id}`);
+    const recapText = expectedRecapText(provenance, claimsById);
+    if (recapText !== undefined && scene.text !== recapText) {
+      throw new Error(`Canon recap scene text must exactly match reviewed claim text: ${scene.id}`);
+    }
     return { ...scene, provenance };
   });
 }

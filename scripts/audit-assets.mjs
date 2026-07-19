@@ -15,12 +15,15 @@ const releaseMirrorRoot = resolve(releaseRoot, 'dist/albina-galgame-card');
 const contentManifestPath = resolve(projectRoot, 'content/asset-manifest-v2.json');
 const pendingGalleryCgsPath = resolve(projectRoot, 'content/pending-gallery-cgs.json');
 const audioLicenseRegistryPath = resolve(projectRoot, 'content/audio-licenses-v1.json');
-const promotionReceiptsRoot = resolve(projectRoot, 'tools/media/production/receipts');
+const promotionReceiptRoots = [
+  resolve(projectRoot, 'content/media-receipts'),
+  resolve(projectRoot, 'tools/media/production/receipts'),
+];
 const audioCreditsPath = resolve(assetRoot, 'audio/CREDITS.json');
 const bgmRoot = resolve(assetRoot, 'audio/bgm');
 const releaseVersion = '2.0.0-rc.1';
 const previewBase = '.';
-const mediaExtensions = new Set(['.jpg', '.json', '.mp3', '.mp4', '.png', '.svg', '.wav']);
+const mediaExtensions = new Set(['.jpeg', '.jpg', '.json', '.mp3', '.mp4', '.png', '.svg', '.wav', '.webp']);
 
 const toPosix = (path) => path.replaceAll('\\', '/');
 const hash = (value) => createHash('sha256').update(value).digest('hex');
@@ -72,7 +75,7 @@ async function loadAudioLicenseRegistry() {
     if (new Set(registry.tracks.map((track) => track[key])).size !== registry.tracks.length) throw new Error(`Duplicate audio license ${key}`);
   }
   const official = registry.officialSoundtrack;
-  if (!official || official.publisher !== 'ProjectMoon' || official.bundled !== false || official.cached !== false || !Array.isArray(official.links) || official.links.length !== 2) {
+  if (!official || official.publisher !== 'ProjectMoon' || official.channel !== 'ProjectMoon Official' || official.playlistTitle !== 'LCB OST' || official.playlistTrackCount !== 35 || official.verifiedOn !== '2026-07-15' || official.bundled !== false || official.cached !== false || official.redistributionAllowed !== false || typeof official.rightsNotice !== 'string' || !official.rightsNotice || !Array.isArray(official.links) || official.links.length !== 2) {
     throw new Error('Official soundtrack links must remain external-only');
   }
   official.links.forEach((link, index) => assertHttpsUrl(link?.url, `Official soundtrack link ${index}`));
@@ -121,7 +124,7 @@ async function walkFiles(root) {
 
 function kindFor(path) {
   const extension = extname(path).toLowerCase();
-  if (['.jpg', '.png', '.svg'].includes(extension)) return 'image';
+  if (['.jpeg', '.jpg', '.png', '.svg', '.webp'].includes(extension)) return 'image';
   if (extension === '.mp4') return 'video';
   if (['.mp3', '.wav'].includes(extension)) return 'audio';
   return 'json';
@@ -129,8 +132,8 @@ function kindFor(path) {
 
 function mimeFor(path) {
   return ({
-    '.jpg': 'image/jpeg', '.json': 'application/json', '.mp3': 'audio/mpeg', '.mp4': 'video/mp4',
-    '.png': 'image/png', '.svg': 'image/svg+xml', '.wav': 'audio/wav',
+    '.jpeg': 'image/jpeg', '.jpg': 'image/jpeg', '.json': 'application/json', '.mp3': 'audio/mpeg', '.mp4': 'video/mp4',
+    '.png': 'image/png', '.svg': 'image/svg+xml', '.wav': 'audio/wav', '.webp': 'image/webp',
   })[extname(path).toLowerCase()];
 }
 
@@ -168,7 +171,7 @@ async function semanticAssets(references) {
   for (const id of references) {
     const [family, ...parts] = id.split('.');
     if (!['bg', 'cg'].includes(family)) continue;
-    const path = await preferredPath(family, parts.join('.'), ['.jpg', '.png', '.svg']);
+    const path = await preferredPath(family, parts.join('.'), ['.jpg', '.jpeg', '.png', '.webp', '.svg']);
     if (!path) continue;
     const bytes = await readFile(resolve(assetRoot, path));
     records.push({ id, kind: 'image', path, mimeType: mimeFor(path), sha256: hash(bytes), bytes: bytes.length });
@@ -176,48 +179,24 @@ async function semanticAssets(references) {
   return records;
 }
 
-function pngDimensions(bytes) {
-  if (bytes.toString('ascii', 1, 4) !== 'PNG') throw new Error('Strip is not a PNG');
-  return { width: bytes.readUInt32BE(16), height: bytes.readUInt32BE(20) };
-}
-
-async function staticAlbinaPortraits() {
-  const root = resolve(assetRoot, 'characters/albina');
+async function staticCharacterPortraits() {
+  const root = resolve(assetRoot, 'characters');
   const portraits = [];
   for (const path of await walkFiles(root)) {
     if (extname(path).toLowerCase() !== '.png') continue;
-    const expression = relative(root, path).replaceAll('\\', '/').replace(/\.png$/u, '');
-    if (expression.includes('/')) continue;
+    const [characterId, file, ...extra] = toPosix(relative(root, path)).split('/');
+    if (!characterId || !file || extra.length > 0) continue;
+    const expression = file.replace(/\.png$/u, '');
     portraits.push({
-      version: 2, id: `portrait.albina.${expression}`, characterId: 'albina',
-      path: `characters/albina/${expression}.png`, animation: { kind: 'static' },
-    });
-  }
-  return portraits;
-}
-
-async function completedStripPortraits() {
-  const root = resolve(assetRoot, 'sprite-atlas');
-  const portraits = [];
-  for (const path of await walkFiles(root)) {
-    const outputPath = toPosix(relative(assetRoot, path));
-    if (!outputPath.endsWith('_strip.png') || isExcludedReleaseAssetPath(outputPath)) continue;
-    const name = toPosix(relative(root, path)).replace(/_strip\.png$/u, '');
-    const [characterId, ...expressionParts] = name.split('/');
-    const expression = expressionParts.join('.');
-    const source = `characters/${characterId}/${expression}.png`;
-    const dimensions = pngDimensions(await readFile(path));
-    portraits.push({
-      version: 2, id: `portrait.${characterId}.${expression}`, characterId, path: outputPath,
-      animation: { kind: 'strip', frameCount: 8, frameWidth: dimensions.width / 8, frameHeight: dimensions.height, fps: 8 },
-      fallbackAssetId: fileId(source),
+      version: 2, id: `portrait.${characterId}.${expression}`, characterId,
+      path: `characters/${characterId}/${file}`, animation: { kind: 'static' },
     });
   }
   return portraits;
 }
 
 async function approvedPortraits() {
-  const portraits = [...await staticAlbinaPortraits(), ...await completedStripPortraits()];
+  const portraits = await staticCharacterPortraits();
   return portraits.sort((a, b) => a.id.localeCompare(b.id));
 }
 
@@ -235,8 +214,8 @@ async function pendingGalleryCgs() {
     const inputAssetIds = [entry.sourceAssetId];
     assets.push({ id: entry.id, kind: 'image', path: entry.path, mimeType: 'image/png' });
     jobs.push({
-      version: 2, id: `job.${entry.id}`, assetId: entry.id, kind: 'image-edit', provider: 'pie', model: 'gpt-image-2', promptVersion: entry.promptVersion, status: 'pending',
-      contentHash: hash(JSON.stringify({ assetId: entry.id, inputAssetIds, outputPath: entry.path, width: entry.width, height: entry.height, provider: 'pie', model: 'gpt-image-2', promptVersion: entry.promptVersion })),
+      version: 2, id: `job.${entry.id}`, assetId: entry.id, kind: 'image-edit', provider: 'x666-openai-compatible', model: 'gpt-image-2', upstreamPieVerified: false, promptVersion: entry.promptVersion, status: 'pending',
+      contentHash: hash(JSON.stringify({ assetId: entry.id, inputAssetIds, outputPath: entry.path, width: entry.width, height: entry.height, provider: 'x666-openai-compatible', model: 'gpt-image-2', upstreamPieVerified: false, promptVersion: entry.promptVersion })),
       inputAssetIds, outputPath: entry.path, attempts: 0,
     });
   }
@@ -285,7 +264,9 @@ async function buildManifest(audioLicenseRegistry) {
   const assets = [...await physicalAssets(), ...await semanticAssets(references), ...await videoAssets(), ...galleryCgs.assets, ...voices.assets];
   assets.sort((a, b) => a.id.localeCompare(b.id));
   const licensedAssets = attachAudioLicenses(assets, audioLicenseRegistry);
-  const receiptPaths = (await walkFiles(promotionReceiptsRoot)).filter((path) => extname(path).toLowerCase() === '.json');
+  const receiptPaths = (await Promise.all(promotionReceiptRoots.map((root) => walkFiles(root))))
+    .flat()
+    .filter((path) => extname(path).toLowerCase() === '.json');
   const assetsWithProvenance = attachPromotionProvenance(licensedAssets, await loadPromotionReceipts(receiptPaths));
   return { version: 2, projectId: 'albina-galgame-card', basePath: 'assets', assets: assetsWithProvenance, portraits: await approvedPortraits(), mediaJobs: [...galleryCgs.jobs, ...voices.jobs].sort((a, b) => a.id.localeCompare(b.id)) };
 }
@@ -324,15 +305,19 @@ async function directoryMap(folder, prefix, extensions) {
 
 async function characterMap() {
   const result = {};
+  const imagePriority = new Map([['.svg', 0], ['.webp', 1], ['.png', 2]]);
   const root = resolve(assetRoot, 'characters');
   for (const path of await walkFiles(root)) {
     const extension = extname(path).toLowerCase();
-    if (!['.png', '.svg'].includes(extension)) continue;
+    if (!imagePriority.has(extension)) continue;
     const [character, file] = toPosix(relative(root, path)).split('/');
     if (!character || !file) continue;
     const expression = file.slice(0, -extension.length);
     result[character] ??= {};
-    if (!result[character][expression] || extension === '.png') result[character][expression] = `assets/characters/${character}/${file}`;
+    const currentExtension = extname(result[character][expression] ?? '').toLowerCase();
+    if (!result[character][expression] || imagePriority.get(extension) > imagePriority.get(currentExtension)) {
+      result[character][expression] = `assets/characters/${character}/${file}`;
+    }
   }
   return result;
 }
@@ -346,10 +331,10 @@ async function updateLegacyManifest() {
   legacy.version = releaseVersion;
   legacy.asset_manifest_v2 = 'assets/asset-manifest-v2.json';
   legacy.runtime_lookup = 'assets/runtime-lookup.json';
-  legacy.bg = await directoryMap('bg', 'bg', ['.jpg', '.png', '.svg']);
-  legacy.cg = await directoryMap('cg', 'cg', ['.jpg', '.png', '.svg']);
+  legacy.bg = await directoryMap('bg', 'bg', ['.jpg', '.jpeg', '.png', '.webp', '.svg']);
+  legacy.cg = await directoryMap('cg', 'cg', ['.jpg', '.jpeg', '.png', '.webp', '.svg']);
   legacy.characters = await characterMap();
-  legacy.ui = await directoryMap('ui', 'ui', ['.png', '.svg']);
+  legacy.ui = {};
   legacy.videos = {};
   legacy.audio = { ...await directoryMap('audio/bgm', 'audio.bgm', ['.mp3', '.wav']), ...await directoryMap('audio/se', 'audio.se', ['.mp3', '.wav']) };
   await writeFile(path, `${JSON.stringify(legacy, null, 2)}\n`);

@@ -1,0 +1,26 @@
+{
+  "version": 1,
+  "assetId": "voice.result.rebuild_007_match_her_pulse",
+  "artifactSha256": "596b9c870c33cf5251c74a86de0b633a13fd58220e38d4e68f4e190e74fab424",
+  "provenance": {
+    "provider": "pie",
+    "model": "speech-2.8-hd",
+    "promptVersion": "albina-speech-legacy-v1",
+    "sourceJobHash": "70e182c15d2c985147b1c9c3e51b389ed210917c6f9c7f87e58484ba71f7d794",
+    "review": {
+      "status": "approved",
+      "reviewer": "automated-audio-qc",
+      "reviewedAt": "2026-07-15T18:52:09.037Z"
+    }
+  },
+  "lineage": {
+    "kind": "conversion",
+    "processVersion": "speech-loudnorm-v1",
+    "inputs": [
+      {
+        "sha256": "e6454ff8fee875b9f2634d84ab7ebce1be09e030812ccdd916aa291b8a9e69d6",
+        "role": "validated-pie-speech-output"
+      }
+    ]
+  }
+}

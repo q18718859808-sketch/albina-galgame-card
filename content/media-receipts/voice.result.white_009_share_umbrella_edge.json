@@ -1,0 +1,26 @@
+{
+  "version": 1,
+  "assetId": "voice.result.white_009_share_umbrella_edge",
+  "artifactSha256": "a4f1748e8858f3adf850f0b3c2c6b38e65fe9b23edd557966889b071f0b09c9b",
+  "provenance": {
+    "provider": "pie",
+    "model": "speech-2.8-hd",
+    "promptVersion": "albina-speech-legacy-v1",
+    "sourceJobHash": "c130f724c6383773363fe3e9247eaf8ffe274e7e114ec50ba6691eb4e698c3ae",
+    "review": {
+      "status": "approved",
+      "reviewer": "automated-audio-qc",
+      "reviewedAt": "2026-07-15T18:52:29.304Z"
+    }
+  },
+  "lineage": {
+    "kind": "conversion",
+    "processVersion": "speech-loudnorm-v1",
+    "inputs": [
+      {
+        "sha256": "23c3d9fe23330249c668a11e7d6bb19ca87ef9def6e0d53dcad0e618d01f03b4",
+        "role": "validated-pie-speech-output"
+      }
+    ]
+  }
+}

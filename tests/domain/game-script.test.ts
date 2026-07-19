@@ -25,6 +25,18 @@ const boundaryProvenance = {
   note: 'Explicit continuity boundary before route selection.',
 } as const;
 
+const emptyGameplay = {
+  relationshipTracks: [],
+  quests: [],
+  battles: [],
+  items: [],
+  equipment: [],
+  professions: [],
+  achievements: [],
+  outfits: [],
+  worldbookEntries: [],
+} as const;
+
 const recapScene = {
   version: 2,
   id: 'canon_recap_001',
@@ -107,6 +119,7 @@ function validScript(scenes: unknown[] = [recapScene, openingScene, whiteRouteSc
       golden_bough_rebuild: 'golden_bough_001',
       ring_conspiracy: 'ring_conspiracy_001',
     },
+    gameplay: emptyGameplay,
     scenes,
   };
 }
@@ -154,6 +167,21 @@ describe('GameScriptV2Schema', () => {
       ...script,
       routeEntrySceneIds: { ...script.routeEntrySceneIds, ring_conspiracy: 'white_canvas_001' },
     })).toThrow(/route entry/i);
+  });
+
+  it('rejects unknown gameplay references from choice effects and eligibility', () => {
+    const scene = {
+      ...whiteRouteScene,
+      choices: [{
+        ...openingScene.choices[0],
+        id: 'gameplay-reference-choice',
+        nextSceneId: 'white_canvas_001',
+        availability: { allOf: [{ kind: 'quest', questId: 'missing.quest', status: 'completed' }] },
+        effects: { startQuests: ['missing.quest'], equipItems: ['missing.equipment'] },
+      }],
+    } as const;
+    expect(() => GameScriptV2Schema.parse(validScript([recapScene, openingScene, scene, goldenRouteScene, ringRouteScene])))
+      .toThrow(/unknown (quest|equipment) reference/iu);
   });
 
   it('rejects scene media references missing from the asset manifest', () => {

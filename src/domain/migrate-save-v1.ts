@@ -9,10 +9,54 @@ import {
 
 type UnknownRecord = Record<string, unknown>;
 
+export const LEGACY_SAVE_V1_SCHEMA_VERSION = 10;
+
+export type SaveDecodeSource = 'v2' | 'v1.0.44';
+export type SaveRecoveryCode =
+  | 'corrupt-input'
+  | 'invalid-json'
+  | 'invalid-v2'
+  | 'storage-read-failed'
+  | 'unknown-format'
+  | 'unknown-scene'
+  | 'unsupported-version';
+
+export class SaveRecoveryError extends Error {
+  readonly recoverable = true;
+
+  constructor(
+    readonly code: SaveRecoveryCode,
+    message: string,
+    options?: ErrorOptions,
+  ) {
+    super(message, options);
+    this.name = 'SaveRecoveryError';
+  }
+}
+
+export type SaveDecodeResult =
+  | { ok: true; save: SaveV2; source: SaveDecodeSource }
+  | { ok: false; error: SaveRecoveryError };
+
 function asRecord(value: unknown): UnknownRecord | undefined {
   if (value === null || typeof value !== 'object' || Array.isArray(value)) return undefined;
   const prototype = Object.getPrototypeOf(value);
   return prototype === Object.prototype || prototype === null ? value as UnknownRecord : undefined;
+}
+
+function decodeFailure(code: SaveRecoveryCode, message: string, cause?: unknown): SaveDecodeResult {
+  const options = cause === undefined ? undefined : { cause };
+  return { ok: false, error: new SaveRecoveryError(code, message, options) };
+}
+
+export function isKnownSaveV1(input: unknown): boolean {
+  try {
+    const record = asRecord(input);
+    if (!record || record.schemaVersion !== LEGACY_SAVE_V1_SCHEMA_VERSION) return false;
+    return record.projectId === undefined || record.projectId === 'albina-galgame-card';
+  } catch {
+    return false;
+  }
 }
 
 function finiteNumber(value: unknown, fallback: number): number {
@@ -123,6 +167,30 @@ function migrateFlags(value: unknown, fallback: SaveV2['flags']): SaveV2['flags'
   return Object.fromEntries(Object.entries(record).filter((entry): entry is [string, boolean] => entry[0].length > 0 && typeof entry[1] === 'boolean'));
 }
 
+function migrateBattles(record: UnknownRecord): SaveV2['battles'] {
+  const resolvedIds = stringIds(record.clearedConflictIds);
+  return { resolvedIds, outcomes: Object.fromEntries(resolvedIds.map((id) => [id, 'victory' as const])) };
+}
+
+function migrateProfessionProgress(value: unknown, defaults: SaveV2['professions']['progress']): SaveV2['professions']['progress'] {
+  const source = asRecord(value) ?? {};
+  const ids = new Set([...Object.keys(defaults), ...Object.keys(source)]);
+  return Object.fromEntries([...ids].map((id) => {
+    const progress = asRecord(source[id]) ?? {};
+    const fallback = defaults[id] ?? { xp: 0, level: 1 };
+    return [id, {
+      xp: Math.max(0, Math.trunc(finiteNumber(progress.xp, fallback.xp))),
+      level: Math.max(1, Math.trunc(finiteNumber(progress.level, fallback.level))),
+    }];
+  }));
+}
+
+function migrateWorldbookSeen(value: unknown): string[] {
+  const memory = asRecord(value) ?? {};
+  if (!Array.isArray(memory.records)) return [];
+  return stringIds(memory.records.map((record) => asRecord(record)?.id));
+}
+
 function migrateLogs(record: UnknownRecord): SaveV2['logs'] {
   return {
     history: logEntries(record.history), timeline: logEntries(record.timeline),
@@ -141,7 +209,7 @@ function migrateLogs(record: UnknownRecord): SaveV2['logs'] {
 
 function migrateRecord(record: UnknownRecord): SaveV2 {
   const defaults = createDefaultSaveV2();
-  if (typeof record.schemaVersion === 'number' && record.schemaVersion > 10) return defaults;
+  if (typeof record.schemaVersion === 'number' && record.schemaVersion > LEGACY_SAVE_V1_SCHEMA_VERSION) return defaults;
   const route = inferRoute(record.route, record.sceneId);
   const sceneId = typeof record.sceneId === 'string' && record.sceneId.length > 0 ? record.sceneId : defaults.sceneId;
   return SaveV2Schema.parse({
@@ -161,9 +229,17 @@ function migrateRecord(record: UnknownRecord): SaveV2 {
       outfitIds: stringIds(record.wardrobeOutfitIds), activeOutfitId: stringValue(record.activeWardrobeOutfitId, ''),
     },
     quests: {
+      activeNodeIds: [],
       completedNodeIds: stringIds(record.completedQuestNodeIds),
       currentMapNodeId: stringValue(record.currentMapNodeId, ''), progressLog: logEntries(record.questProgressLog),
     },
+    battles: migrateBattles(record),
+    professions: {
+      activeId: stringValue(record.activeProfessionId, defaults.professions.activeId),
+      progress: migrateProfessionProgress(record.professionProgress, defaults.professions.progress),
+    },
+    achievements: { unlockedIds: stringIds(record.unlockedAchievementIds) },
+    worldbook: { activeEntryIds: [], seenEntryIds: migrateWorldbookSeen(record.worldbookMemory) },
     unlockedCg: stringIds(record.unlockedCg, defaults.unlockedCg),
     logs: migrateLogs(record),
   });
@@ -177,5 +253,37 @@ export function migrateSaveV1(input: unknown): SaveV2 {
     return record ? migrateRecord(record) : createDefaultSaveV2();
   } catch {
     return createDefaultSaveV2();
+  }
+}
+
+export function decodeSaveV2OrV1(input: unknown): SaveDecodeResult {
+  try {
+    const existing = SaveV2Schema.safeParse(input);
+    if (existing.success) return { ok: true, save: existing.data, source: 'v2' };
+    const record = asRecord(input);
+    if (!record) return decodeFailure('unknown-format', 'The value is not an Albina save object.');
+    if (typeof record.version === 'number' && record.version > 2) {
+      return decodeFailure('unsupported-version', `SaveV${record.version} is newer than this runtime.`);
+    }
+    if (typeof record.schemaVersion === 'number' && record.schemaVersion > LEGACY_SAVE_V1_SCHEMA_VERSION) {
+      return decodeFailure('unsupported-version', `Legacy schema ${record.schemaVersion} is newer than v1.0.44.`);
+    }
+    if (record.version === 2) {
+      return decodeFailure('invalid-v2', 'The SaveV2 payload is damaged or incomplete.');
+    }
+    if (!isKnownSaveV1(record)) {
+      return decodeFailure('unknown-format', 'The value is neither SaveV2 nor a recognized v1.0.44 save.');
+    }
+    return { ok: true, save: migrateSaveV1(record), source: 'v1.0.44' };
+  } catch (error) {
+    return decodeFailure('corrupt-input', 'The save payload could not be inspected safely.', error);
+  }
+}
+
+export function decodeSaveJson(text: string): SaveDecodeResult {
+  try {
+    return decodeSaveV2OrV1(JSON.parse(text));
+  } catch (error) {
+    return decodeFailure('invalid-json', 'The imported save is not valid JSON.', error);
   }
 }

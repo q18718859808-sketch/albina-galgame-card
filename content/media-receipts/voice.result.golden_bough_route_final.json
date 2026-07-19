@@ -1,0 +1,26 @@
+{
+  "version": 1,
+  "assetId": "voice.result.golden_bough_route_final",
+  "artifactSha256": "ee88fbcd046d6a69a5fde950904bb78bb78ac8590de0464d4bd9759e19ae5fa6",
+  "provenance": {
+    "provider": "pie",
+    "model": "speech-2.8-hd",
+    "promptVersion": "albina-speech-legacy-v1",
+    "sourceJobHash": "0ab0d6ce09012765ab6201775321628d03c2055884166a388220847a0b3c8d16",
+    "review": {
+      "status": "approved",
+      "reviewer": "automated-audio-qc",
+      "reviewedAt": "2026-07-15T18:52:07.152Z"
+    }
+  },
+  "lineage": {
+    "kind": "conversion",
+    "processVersion": "speech-loudnorm-v1",
+    "inputs": [
+      {
+        "sha256": "ff10f8673bd0fe23c51936ce4bf55414ab4544224ca0f2d244709ae15cda54b0",
+        "role": "validated-pie-speech-output"
+      }
+    ]
+  }
+}

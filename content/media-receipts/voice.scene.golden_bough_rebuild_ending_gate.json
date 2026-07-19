@@ -1,0 +1,26 @@
+{
+  "version": 1,
+  "assetId": "voice.scene.golden_bough_rebuild_ending_gate",
+  "artifactSha256": "7d0130d4db06b824850c69ce95c00de02af01fccaca56854c850e0284c9f29ae",
+  "provenance": {
+    "provider": "pie",
+    "model": "speech-2.8-hd",
+    "promptVersion": "albina-speech-legacy-v1",
+    "sourceJobHash": "298db686f42cc340c95f6304a5a9bb2268d197ac97f1344f48ea9bfee1332b28",
+    "review": {
+      "status": "approved",
+      "reviewer": "automated-audio-qc",
+      "reviewedAt": "2026-07-15T18:52:49.160Z"
+    }
+  },
+  "lineage": {
+    "kind": "conversion",
+    "processVersion": "speech-loudnorm-v1",
+    "inputs": [
+      {
+        "sha256": "043d26099df61ec1393a1a38c75a8b0b4d2f3eb66189eff11332567640f609c0",
+        "role": "validated-pie-speech-output"
+      }
+    ]
+  }
+}

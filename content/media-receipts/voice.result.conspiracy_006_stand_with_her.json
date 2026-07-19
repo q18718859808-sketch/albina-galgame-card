@@ -1,0 +1,26 @@
+{
+  "version": 1,
+  "assetId": "voice.result.conspiracy_006_stand_with_her",
+  "artifactSha256": "d162f239d7d33996b43d4c9d2d517bff741e93b46293fcc55a00bfb778166ff9",
+  "provenance": {
+    "provider": "pie",
+    "model": "speech-2.8-hd",
+    "promptVersion": "albina-speech-legacy-v1",
+    "sourceJobHash": "4fd14203fd6a19ea74f32228474c4b515167af36aeb9ee411a1bdeb863457a68",
+    "review": {
+      "status": "approved",
+      "reviewer": "automated-audio-qc",
+      "reviewedAt": "2026-07-15T18:51:52.779Z"
+    }
+  },
+  "lineage": {
+    "kind": "conversion",
+    "processVersion": "speech-loudnorm-v1",
+    "inputs": [
+      {
+        "sha256": "20e2c48a0ce12a926636936548d42fbf11727ef7a000a1595eeff797a6c09f8b",
+        "role": "validated-pie-speech-output"
+      }
+    ]
+  }
+}

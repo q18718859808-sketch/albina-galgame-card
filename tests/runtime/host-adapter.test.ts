@@ -67,6 +67,31 @@ describe('TavernHostAdapter and AlbinaRuntime lifecycle', () => {
     expect(bindings.saveSave).toHaveBeenCalledWith(save);
   });
 
+  it('validates injected host data and migrates recognized v1.0.44 saves', async () => {
+    const bindings = createBindings();
+    bindings.loadSave = vi.fn(async () => ({
+      schemaVersion: 10,
+      projectId: 'albina-galgame-card',
+      saveId: 'legacy-host',
+      sceneId: 'opening_001',
+      trust: 23,
+    }));
+    const host = new TavernHostAdapter(bindings);
+
+    await expect(host.loadSave()).resolves.toMatchObject({
+      version: 2,
+      saveId: 'legacy-host',
+      sceneId: 'opening_001',
+      values: { trust: 23 },
+    });
+
+    bindings.loadSave = vi.fn(async () => ({ version: 2, projectId: 'albina-galgame-card' }));
+    await expect(new TavernHostAdapter(bindings).loadSave()).rejects.toMatchObject({
+      code: 'invalid-v2',
+      recoverable: true,
+    });
+  });
+
   it('uses no parent-page DOM selectors or jQuery', async () => {
     const runtimeDir = fileURLToPath(new URL('../../src/runtime/', import.meta.url));
     const filenames = ['host-adapter.ts', 'typewriter.ts', 'audio.ts', 'portraits.ts', 'gallery.ts', 'storage.ts', 'special-cg.ts'];

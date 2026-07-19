@@ -1,0 +1,26 @@
+{
+  "version": 1,
+  "assetId": "voice.result.conspiracy_011_burn_film",
+  "artifactSha256": "a6264c49431dbde54ff1eaa4d8d3a7011fc931b07ff3d1fd020388c8ba4cb79c",
+  "provenance": {
+    "provider": "pie",
+    "model": "speech-2.8-hd",
+    "promptVersion": "albina-speech-legacy-v1",
+    "sourceJobHash": "0a070e89dcb6d3d102a574758dcc8d2ad6cfcc5b96d1383b93b43c576e7cd317",
+    "review": {
+      "status": "approved",
+      "reviewer": "automated-audio-qc",
+      "reviewedAt": "2026-07-15T18:51:57.812Z"
+    }
+  },
+  "lineage": {
+    "kind": "conversion",
+    "processVersion": "speech-loudnorm-v1",
+    "inputs": [
+      {
+        "sha256": "785b0204dfb11fe1882f188366acaf80f6cdd88836e81bb162d4c19c09b750b6",
+        "role": "validated-pie-speech-output"
+      }
+    ]
+  }
+}

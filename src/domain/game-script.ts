@@ -1,6 +1,7 @@
 import { z } from 'zod';
 
 import { AssetManifestV2Schema, type AssetRecord } from './assets';
+import { GameplaySystemsSchema, type GameplaySystems, type StatePredicate } from './gameplay';
 import {
   DOMAIN_VERSION,
   RouteIdSchema,
@@ -21,6 +22,7 @@ const GameScriptV2BaseSchema = z
     projectId: z.literal('albina-galgame-card'),
     initialSceneId: z.string().min(1),
     routeEntrySceneIds: RouteEntrySceneIdsSchema,
+    gameplay: GameplaySystemsSchema,
     scenes: z.array(SceneCueSchema).min(1),
   })
   .strict();
@@ -30,6 +32,112 @@ function addReferenceIssue(context: z.RefinementCtx, path: PropertyKey[], id: st
     code: 'custom',
     path,
     message: `Unknown scene reference: ${id}`,
+  });
+}
+
+interface GameplayReferenceSets {
+  quests: Set<string>;
+  battles: Set<string>;
+  items: Set<string>;
+  equipment: Set<string>;
+  professions: Set<string>;
+  outfits: Set<string>;
+  worldbook: Set<string>;
+}
+
+function gameplayReferenceSets(gameplay: GameplaySystems): GameplayReferenceSets {
+  return {
+    quests: new Set(gameplay.quests.map(({ id }) => id)),
+    battles: new Set(gameplay.battles.map(({ id }) => id)),
+    items: new Set(gameplay.items.map(({ id }) => id)),
+    equipment: new Set(gameplay.equipment.map(({ id }) => id)),
+    professions: new Set(gameplay.professions.map(({ id }) => id)),
+    outfits: new Set(gameplay.outfits.map(({ id }) => id)),
+    worldbook: new Set(gameplay.worldbookEntries.map(({ id }) => id)),
+  };
+}
+
+function addGameplayReferenceIssue(context: z.RefinementCtx, path: PropertyKey[], kind: string, id: string): void {
+  context.addIssue({ code: 'custom', path, message: `Unknown ${kind} reference: ${id}` });
+}
+
+function validatePredicateReference(
+  predicate: StatePredicate,
+  refs: GameplayReferenceSets,
+  context: z.RefinementCtx,
+  path: PropertyKey[],
+): void {
+  const reference = predicate.kind === 'quest' ? ['quest', predicate.questId, refs.quests]
+    : predicate.kind === 'battle' ? ['battle', predicate.battleId, refs.battles]
+      : predicate.kind === 'item' ? ['item', predicate.itemId, refs.items]
+        : predicate.kind === 'equipment' ? ['equipment', predicate.equipmentId, refs.equipment]
+          : predicate.kind === 'outfit' ? ['outfit', predicate.outfitId, refs.outfits]
+            : predicate.kind === 'profession' ? ['profession', predicate.professionId, refs.professions]
+              : predicate.kind === 'worldbook' ? ['worldbook', predicate.entryId, refs.worldbook]
+                : undefined;
+  if (reference && !(reference[2] as Set<string>).has(reference[1] as string)) {
+    addGameplayReferenceIssue(context, path, reference[0] as string, reference[1] as string);
+  }
+}
+
+function validateChoiceEffectReferences(
+  effects: z.infer<typeof SceneCueSchema>['choices'][number]['effects'],
+  refs: GameplayReferenceSets,
+  context: z.RefinementCtx,
+  path: PropertyKey[],
+): void {
+  const groups: Array<[string[] | undefined, Set<string>, string, string]> = [
+    [effects.startQuests, refs.quests, 'quest', 'startQuests'],
+    [effects.completeQuests, refs.quests, 'quest', 'completeQuests'],
+    [effects.grantItems, refs.items, 'item', 'grantItems'],
+    [effects.equipItems, refs.equipment, 'equipment', 'equipItems'],
+    [effects.unlockOutfits, refs.outfits, 'outfit', 'unlockOutfits'],
+  ];
+  groups.forEach(([ids, known, kind, field]) => ids?.forEach((id, index) => {
+    if (!known.has(id)) addGameplayReferenceIssue(context, [...path, field, index], kind, id);
+  }));
+  effects.resolveBattles?.forEach(({ battleId }, index) => {
+    if (!refs.battles.has(battleId)) addGameplayReferenceIssue(context, [...path, 'resolveBattles', index, 'battleId'], 'battle', battleId);
+  });
+  Object.keys(effects.professionXp ?? {}).forEach((id) => {
+    if (!refs.professions.has(id)) addGameplayReferenceIssue(context, [...path, 'professionXp', id], 'profession', id);
+  });
+  if (effects.activateOutfit && !refs.outfits.has(effects.activateOutfit)) addGameplayReferenceIssue(context, [...path, 'activateOutfit'], 'outfit', effects.activateOutfit);
+  if (effects.activateProfession && !refs.professions.has(effects.activateProfession)) addGameplayReferenceIssue(context, [...path, 'activateProfession'], 'profession', effects.activateProfession);
+}
+
+function validateAchievementReferences(
+  achievement: GameplaySystems['achievements'][number],
+  refs: GameplayReferenceSets,
+  context: z.RefinementCtx,
+  path: PropertyKey[],
+): void {
+  achievement.eligibility.forEach((item, index) => validatePredicateReference(item, refs, context, [...path, 'eligibility', index]));
+  Object.keys(achievement.reward.professionXp ?? {}).forEach((id) => {
+    if (!refs.professions.has(id)) addGameplayReferenceIssue(context, [...path, 'reward', 'professionXp', id], 'profession', id);
+  });
+  achievement.reward.grantItems?.forEach((id, index) => {
+    if (!refs.items.has(id)) addGameplayReferenceIssue(context, [...path, 'reward', 'grantItems', index], 'item', id);
+  });
+  achievement.reward.unlockOutfits?.forEach((id, index) => {
+    if (!refs.outfits.has(id)) addGameplayReferenceIssue(context, [...path, 'reward', 'unlockOutfits', index], 'outfit', id);
+  });
+}
+
+function validateGameplayReferences(script: z.infer<typeof GameScriptV2BaseSchema>, context: z.RefinementCtx): void {
+  const refs = gameplayReferenceSets(script.gameplay);
+  script.scenes.forEach((scene, sceneIndex) => scene.choices.forEach((choice, choiceIndex) => {
+    const root = ['scenes', sceneIndex, 'choices', choiceIndex] as PropertyKey[];
+    validateChoiceEffectReferences(choice.effects, refs, context, [...root, 'effects']);
+    choice.availability?.allOf?.forEach((item, index) => validatePredicateReference(item, refs, context, [...root, 'availability', 'allOf', index]));
+    choice.availability?.anyOf?.forEach((item, index) => validatePredicateReference(item, refs, context, [...root, 'availability', 'anyOf', index]));
+  }));
+  script.scenes.forEach((scene, sceneIndex) => {
+    scene.ending?.eligibility.allOf?.forEach((item, index) => validatePredicateReference(item, refs, context, ['scenes', sceneIndex, 'ending', 'eligibility', 'allOf', index]));
+    scene.ending?.eligibility.anyOf?.forEach((item, index) => validatePredicateReference(item, refs, context, ['scenes', sceneIndex, 'ending', 'eligibility', 'anyOf', index]));
+  });
+  script.gameplay.achievements.forEach((achievement, achievementIndex) => {
+    validateAchievementReferences(achievement, refs, context, ['gameplay', 'achievements', achievementIndex]);
   });
 }
 
@@ -68,6 +176,7 @@ export const GameScriptV2Schema = GameScriptV2BaseSchema.superRefine((script, co
       if (!ids.has(choice.nextSceneId)) addReferenceIssue(context, ['scenes', sceneIndex, 'choices', choiceIndex, 'nextSceneId'], choice.nextSceneId);
     });
   });
+  validateGameplayReferences(script, context);
 });
 
 export type GameScriptV2 = z.infer<typeof GameScriptV2Schema>;
@@ -104,6 +213,11 @@ export function createGameScriptV2Schema(manifestInput: unknown): typeof GameScr
         if (choice.resultVoiceAssetId) assertAssetKind(context, assets, choice.resultVoiceAssetId, 'audio', ['scenes', sceneIndex, 'choices', choiceIndex, 'resultVoiceAssetId']);
         choice.effects.unlockCg?.forEach((id, unlockIndex) => assertAssetKind(context, assets, id, 'image', ['scenes', sceneIndex, 'choices', choiceIndex, 'effects', 'unlockCg', unlockIndex]));
       });
+    });
+    script.gameplay.outfits.forEach((outfit, outfitIndex) => {
+      if (!portraits.has(outfit.portraitAssetId)) {
+        addAssetReferenceIssue(context, ['gameplay', 'outfits', outfitIndex, 'portraitAssetId'], outfit.portraitAssetId);
+      }
     });
   });
 }

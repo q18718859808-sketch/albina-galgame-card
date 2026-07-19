@@ -7,6 +7,505 @@
     "golden_bough_rebuild": "golden_bough_001",
     "ring_conspiracy": "ring_conspiracy_001"
   },
+  "gameplay": {
+    "relationshipTracks": [
+      {
+        "id": "intimacy",
+        "label": "亲密",
+        "minimum": 0,
+        "maximum": 100
+      },
+      {
+        "id": "reliance",
+        "label": "信赖",
+        "minimum": 0,
+        "maximum": 100
+      },
+      {
+        "id": "obsession",
+        "label": "执着",
+        "minimum": 0,
+        "maximum": 100
+      },
+      {
+        "id": "suspicion",
+        "label": "戒备",
+        "minimum": 0,
+        "maximum": 100
+      }
+    ],
+    "quests": [
+      {
+        "id": "quest.white.boundary_protocol",
+        "route": "white_canvas",
+        "label": "白色画布边界协议",
+        "description": "在见证、处置权和展出决定之间建立可撤回的边界。"
+      },
+      {
+        "id": "quest.golden.memory_continuity",
+        "route": "golden_bough_rebuild",
+        "label": "金枝记忆连续性",
+        "description": "在重构过程中保住称谓、选择权与法西娅的心跳锚点。"
+      },
+      {
+        "id": "quest.ring.counter_contract",
+        "route": "ring_conspiracy",
+        "label": "环指反制契约",
+        "description": "保留自身条件并把敌对委托改写为可追踪的反制条款。"
+      }
+    ],
+    "battles": [
+      {
+        "id": "battle.white.gallery_pressure",
+        "route": "white_canvas",
+        "label": "画廊展出压力",
+        "description": "决定是否把阿尔比娜作为作品展出的制度性冲突。",
+        "recommendedMastery": "boundary"
+      },
+      {
+        "id": "battle.golden.replacement_protocol",
+        "route": "golden_bough_rebuild",
+        "label": "替换协议冲突",
+        "description": "围绕记忆封存和替换协议发生的确定性规则冲突。",
+        "recommendedMastery": "analysis"
+      },
+      {
+        "id": "battle.ring.authorship_frame",
+        "route": "ring_conspiracy",
+        "label": "署名权取景框",
+        "description": "在环指剧本、胶片和署名权之间争夺叙事控制。",
+        "recommendedMastery": "blade"
+      }
+    ],
+    "items": [
+      {
+        "id": "item.rain_room_badge",
+        "label": "雨室观测徽记",
+        "description": "进入 AU/IF 后由前端保存的身份与见证锚点。"
+      },
+      {
+        "id": "item.white.boundary_contract",
+        "route": "white_canvas",
+        "label": "边界契约钥",
+        "description": "证明处置权、撤回权和展出决定已写入权威状态。"
+      },
+      {
+        "id": "item.golden.memory_anchor",
+        "route": "golden_bough_rebuild",
+        "label": "称谓锚定镜片",
+        "description": "用于稳定重构后的称谓和人格连续性。"
+      },
+      {
+        "id": "item.ring.counter_signet",
+        "route": "ring_conspiracy",
+        "label": "反制环印",
+        "description": "记录玩家保留条件和反写条款的装备凭据。"
+      }
+    ],
+    "equipment": [
+      {
+        "id": "equipment.rain_room_badge",
+        "itemId": "item.rain_room_badge",
+        "slot": "accessory",
+        "label": "雨室观测徽记",
+        "modifiers": {
+          "trust": 1,
+          "composure": 2
+        }
+      },
+      {
+        "id": "equipment.white.boundary_charm",
+        "itemId": "item.white.boundary_contract",
+        "route": "white_canvas",
+        "slot": "accessory",
+        "label": "边界契约护符",
+        "modifiers": {
+          "trust": 3,
+          "danger": -2
+        }
+      },
+      {
+        "id": "equipment.golden.memory_lens",
+        "itemId": "item.golden.memory_anchor",
+        "route": "golden_bough_rebuild",
+        "slot": "accessory",
+        "label": "称谓锚定镜片",
+        "modifiers": {
+          "trust": 2,
+          "artResonance": 4
+        }
+      },
+      {
+        "id": "equipment.ring.counter_signet",
+        "itemId": "item.ring.counter_signet",
+        "route": "ring_conspiracy",
+        "slot": "accessory",
+        "label": "反制环印",
+        "modifiers": {
+          "danger": -3,
+          "leverage": 3
+        }
+      }
+    ],
+    "professions": [
+      {
+        "id": "narrative_curator",
+        "label": "剧情索引师",
+        "xpThresholds": [
+          0,
+          8,
+          20,
+          36
+        ],
+        "modifiersPerLevel": {
+          "artResonance": 1
+        }
+      },
+      {
+        "id": "boundary_mediator",
+        "route": "white_canvas",
+        "label": "边界调停者",
+        "xpThresholds": [
+          0,
+          8,
+          20,
+          36
+        ],
+        "modifiersPerLevel": {
+          "trust": 1,
+          "danger": -1
+        }
+      },
+      {
+        "id": "memory_surgeon",
+        "route": "golden_bough_rebuild",
+        "label": "记忆修复师",
+        "xpThresholds": [
+          0,
+          8,
+          20,
+          36
+        ],
+        "modifiersPerLevel": {
+          "artResonance": 2
+        }
+      },
+      {
+        "id": "ring_counterforger",
+        "route": "ring_conspiracy",
+        "label": "契约反写者",
+        "xpThresholds": [
+          0,
+          8,
+          20,
+          36
+        ],
+        "modifiersPerLevel": {
+          "trust": 1,
+          "danger": -1,
+          "leverage": 1
+        }
+      }
+    ],
+    "achievements": [
+      {
+        "id": "ach_au_boundary_witness",
+        "label": "AU 边界见证",
+        "description": "完成正史复盘并确认本卡路线属于原创 AU/IF。",
+        "eligibility": [
+          {
+            "kind": "flag",
+            "flag": "AU_boundary_acknowledged",
+            "equals": true
+          },
+          {
+            "kind": "worldbook",
+            "entryId": "albina_routes_endings_au_if",
+            "status": "seen"
+          }
+        ],
+        "reward": {
+          "values": {
+            "artResonance": 1
+          },
+          "professionXp": {
+            "narrative_curator": 2
+          },
+          "setFlags": [
+            "achievement_au_boundary_witness"
+          ]
+        }
+      },
+      {
+        "id": "ach_white_boundary_archivist",
+        "route": "white_canvas",
+        "label": "白厅边界档案",
+        "description": "完成边界任务并解决画廊展出压力。",
+        "eligibility": [
+          {
+            "kind": "quest",
+            "questId": "quest.white.boundary_protocol",
+            "status": "completed"
+          },
+          {
+            "kind": "battle",
+            "battleId": "battle.white.gallery_pressure",
+            "outcome": "victory"
+          },
+          {
+            "kind": "profession",
+            "professionId": "boundary_mediator",
+            "levelGte": 2
+          }
+        ],
+        "reward": {
+          "values": {
+            "trust": 2,
+            "danger": -2
+          },
+          "professionXp": {
+            "boundary_mediator": 2
+          },
+          "setFlags": [
+            "achievement_white_boundary_archivist"
+          ]
+        }
+      },
+      {
+        "id": "ach_golden_memory_protocol",
+        "route": "golden_bough_rebuild",
+        "label": "重构称谓协议",
+        "description": "完成连续性任务并解决替换协议冲突。",
+        "eligibility": [
+          {
+            "kind": "quest",
+            "questId": "quest.golden.memory_continuity",
+            "status": "completed"
+          },
+          {
+            "kind": "battle",
+            "battleId": "battle.golden.replacement_protocol",
+            "outcome": "victory"
+          },
+          {
+            "kind": "profession",
+            "professionId": "memory_surgeon",
+            "levelGte": 2
+          }
+        ],
+        "reward": {
+          "values": {
+            "artResonance": 3
+          },
+          "professionXp": {
+            "memory_surgeon": 2
+          },
+          "setFlags": [
+            "achievement_golden_memory_protocol"
+          ]
+        }
+      },
+      {
+        "id": "ach_ring_counter_clause",
+        "route": "ring_conspiracy",
+        "label": "反写条款生效",
+        "description": "完成反制任务并夺回署名权。",
+        "eligibility": [
+          {
+            "kind": "quest",
+            "questId": "quest.ring.counter_contract",
+            "status": "completed"
+          },
+          {
+            "kind": "battle",
+            "battleId": "battle.ring.authorship_frame",
+            "outcome": "victory"
+          },
+          {
+            "kind": "profession",
+            "professionId": "ring_counterforger",
+            "levelGte": 2
+          }
+        ],
+        "reward": {
+          "values": {
+            "trust": 2,
+            "danger": -2
+          },
+          "professionXp": {
+            "ring_counterforger": 2
+          },
+          "setFlags": [
+            "achievement_ring_counter_clause"
+          ]
+        }
+      }
+    ],
+    "outfits": [
+      {
+        "id": "outfit.albina.rain",
+        "label": "雨室外套",
+        "portraitAssetId": "portrait.albina.rain"
+      },
+      {
+        "id": "outfit.albina.white_canvas",
+        "route": "white_canvas",
+        "label": "白色画布装束",
+        "portraitAssetId": "portrait.albina.white-canvas"
+      },
+      {
+        "id": "outfit.albina.golden_bough",
+        "route": "golden_bough_rebuild",
+        "label": "金枝重构装束",
+        "portraitAssetId": "portrait.albina.golden-bough"
+      },
+      {
+        "id": "outfit.albina.ring_disguise",
+        "route": "ring_conspiracy",
+        "label": "环指潜入装束",
+        "portraitAssetId": "portrait.albina.ring-conspiracy"
+      }
+    ],
+    "worldbookEntries": [
+      {
+        "id": "albina_canon_term_corporism",
+        "claimIds": [
+          "canon.term.corporism"
+        ],
+        "constant": false,
+        "selective": true,
+        "content": "Corporism 是 Canto IX 9-14 与 9-37 明确使用的环指艺术流派名称。本卡保留英文术语，避免无来源扩写其教义。"
+      },
+      {
+        "id": "albina_identity_status",
+        "claimIds": [
+          "canon.profile.identity"
+        ],
+        "constant": false,
+        "selective": true,
+        "content": "阿尔比娜是女性环指 Corporism 学徒、House of Spiders 成员与卡利斯托的弟子，在 Canto IX 作为敌对角色登场；韩语配音为 Kim Do-hee，9-43 后的正史状态为死亡。"
+      },
+      {
+        "id": "albina_prosthetic_appearance",
+        "claimIds": [
+          "canon.appearance.prosthetic-body"
+        ],
+        "constant": false,
+        "selective": true,
+        "content": "阿尔比娜使用带金色点缀的白色全身义体；浅灰色人工高马尾近似线缆，脸与关节处有分界线，黑色机械和线路在颈胸与大腿处裸露，中央结构近似骨架。她右眼黑、左眼白，前臂可展开多种医疗与切割工具。"
+      },
+      {
+        "id": "albina_armor_fascia_visual",
+        "claimIds": [
+          "canon.appearance.armor-and-fascia"
+        ],
+        "constant": false,
+        "selective": true,
+        "content": "白、亮黄、金色的铁处女式装甲具有长裙、尖刺头环、垂链、尖刺裙甲和绘有金色锐眼的面具。Fascia 是同色系巨剑，侧板打开后可见暗色骨架、肋骨与内脏组织。"
+      },
+      {
+        "id": "fascia_body_origin",
+        "claimIds": [
+          "canon.story.pre-canto-fascia"
+        ],
+        "constant": false,
+        "selective": true,
+        "content": "阿尔比娜主动切分原本肉体并将其制作成 Fascia，之后以全身义体替换身体、主要保留脑；Fascia 则缺少脑。她也曾先用自己的手臂练习如何处理创作素材。"
+      },
+      {
+        "id": "albina_fascia_attachment",
+        "claimIds": [
+          "canon.personality.fascia-attachment"
+        ],
+        "constant": false,
+        "selective": true,
+        "content": "阿尔比娜会与 Fascia 交谈、用他人血肉喂养它，并在它可能受损时优先保护它；她甚至会为让 Fascia 继续行动而违背同伴要求。"
+      },
+      {
+        "id": "albina_social_ambition",
+        "claimIds": [
+          "canon.personality.social-and-ambition"
+        ],
+        "constant": false,
+        "selective": true,
+        "content": "阿尔比娜通常平静轻声，却难以理解他人情绪；她把朋友与可用于 Fascia 的素材联系起来，并说自己因把部分脑组织交给 Fascia 而不善说谎。她敬仰卡利斯托，也希望未来成为超越师父的 Maestro。"
+      },
+      {
+        "id": "canto_ix_9_14_context",
+        "claimIds": [
+          "canon.9-14.corporism-context"
+        ],
+        "constant": false,
+        "selective": true,
+        "content": "9-14 展示了环指加工的人体作品、Faust 对 Corporism 的辨认和 Nursefather 留给女儿的创作指示。阿尔比娜本人没有在这一节直接出场。"
+      },
+      {
+        "id": "canto_ix_9_18_first_appearance",
+        "claimIds": [
+          "canon.9-18.first-appearance"
+        ],
+        "constant": false,
+        "selective": true,
+        "content": "9-18 是阿尔比娜首次直接出场。她与 Ren 接替 Shiomi Yoru 阻挡 Dante、Ryōshū、Gregor、Meursault 与 Yi Sang，为 Yoru 带走嫁接的 Golden Boughs 争取时间。战斗中装甲与 Fascia 侧板打开；她坚持让 Fascia 继续行动，Ren 出手制止，争执使罪人得以继续追赶 Yoru。"
+      },
+      {
+        "id": "canto_ix_9_37_encounter",
+        "claimIds": [
+          "canon.9-37.encounter-and-method"
+        ],
+        "constant": false,
+        "selective": true,
+        "content": "Callisto 派阿尔比娜迎接抵达 Corridor of the Ring 的 Sinclair、Ishmael、Faust、Hohenheim 与 Alyssa。她谈到唤醒 Fascia、用自己手臂练习素材处理和交朋友的愿望；遭到 Sinclair 拒绝后开战，并自称是 Callisto 门下的 Corporism 学徒。"
+      },
+      {
+        "id": "canto_ix_9_37_escalation",
+        "claimIds": [
+          "canon.9-37.escalation"
+        ],
+        "constant": false,
+        "selective": true,
+        "content": "Callisto 加入后与阿尔比娜一同压制众人。9-37 最后是 Callisto 以骨肉尖桩制住除 Alyssa 外的成员、Alyssa 以 Ardor Blossom Star 全力反击；Fascia 被毁和师徒死亡不发生在这一节。"
+      },
+      {
+        "id": "canto_ix_9_43_turn_and_outcome",
+        "claimIds": [
+          "canon.9-43.sign-awakening",
+          "canon.9-43.outcome"
+        ],
+        "constant": true,
+        "selective": false,
+        "content": "9-43 中 Hohenheim 突袭 Callisto 后，阿尔比娜阻止追击并谈到未来；Sinclair 完全觉醒 The Sign，显现未来版本。Faust 与 Ishmael 制造开口后，Future Sinclair 先摧毁 Fascia，再杀死阿尔比娜，并随后杀死 Callisto。"
+      },
+      {
+        "id": "albina_combat_profile",
+        "claimIds": [
+          "canon.combat.story-variants",
+          "canon.combat.mechanics"
+        ],
+        "constant": false,
+        "selective": true,
+        "content": "主线敌人记录包含 9-18 装甲形态、9-37 的装甲转无装甲阶段和 9-43 无装甲形态。她是 65 级、Lust 倾向、以 Bleed 为核心的 Boss；Corpus Ingredient 会转为 Artwork - Fascia 并启用强力攻击。Mirror Dungeon 与 Refracted 记录属于玩法变体，不是主线事件。"
+      },
+      {
+        "id": "albina_visual_reference_lock",
+        "claimIds": [
+          "inference.visual-reference-lock"
+        ],
+        "constant": true,
+        "selective": false,
+        "content": "代表正史阿尔比娜的视觉必须保留白色全身义体、右黑左白双眼、白黄金铁处女式装甲和具有骨骼内脏结构的 Fascia。路线服装变化只能作为明确标注的 AU 视觉。"
+      },
+      {
+        "id": "albina_routes_endings_au_if",
+        "claimIds": [
+          "boundary.routes-and-player.are-AU"
+        ],
+        "constant": true,
+        "selective": false,
+        "content": "opening_001、white_canvas、golden_bough_rebuild、ring_conspiracy、九个结局以及 {{user}} 的身份、能力和关系全部是本卡原创 AU/IF。分歧点位于 9-43 正史结果之后，不能称为原作后续或隐藏结局。"
+      }
+    ]
+  },
   "scenes": [
     {
       "version": 2,
@@ -30,7 +529,8 @@
       "tone": "canon-recap",
       "portraits": [],
       "speaker": "正史复盘",
-      "text": "【正史中文意译·9-14】在 LCE 研究区走廊，众人遭遇被环指加工的人体作品。浮士德从骨骼、肌肉及其运动方式辨认出 Corporism；现场还留有环指 Nursefather 写给女儿的创作指示。此处只概括事件，不是原作台词转录。",
+      "text": "【正史中文意译·9-14 背景】在 LCE 研究区走廊，众人遭遇环指加工的人体作品。Faust 根据骨骼、肌肉与运动方式将其辨认为 Corporism，并发现 Nursefather 留给女儿的创作指示。固定转录全文没有在 9-14 直接写到 Albina；本节只提供她所属艺术流派的背景。",
+      "voiceAssetId": "voice.scene.canon_recap_9_14",
       "bgmAssetId": "file.audio.bgm.between.two.worlds.mp3",
       "choices": [
         {
@@ -38,6 +538,7 @@
           "text": "继续复盘 Albina 的首次登场",
           "nextSceneId": "canon_recap_9_18",
           "resultText": "时间推进到 9-18 的 LCE 研究区实验室。",
+          "resultVoiceAssetId": "voice.result.canon_recap_continue_9_18",
           "effects": {
             "setFlags": [
               "canon_recap_9_14_seen"
@@ -55,13 +556,14 @@
         "classification": "canon_paraphrase",
         "scope": "canon_recap",
         "claimIds": [
-          "canon.9-18.albina-first-appearance"
+          "canon.9-18.first-appearance"
         ],
         "sourceIds": [
           "source.official.canto-ix.9-18",
-          "source.wiki.canto-ix-part-i.172275"
+          "source.wiki.canto-ix-part-i.172275",
+          "source.wiki.albina.173286"
         ],
-        "note": "Short zh-CN first-appearance paraphrase from the pinned 9-18 pre/post-battle sequence."
+        "note": "Reviewed zh-CN first-appearance paraphrase covering the complete Albina-related 9-18 event sequence."
       },
       "locationId": "lce_research_lab",
       "backgroundAssetId": "bg.lce_lab",
@@ -76,7 +578,8 @@
         }
       ],
       "speaker": "正史复盘",
-      "text": "【正史中文意译·9-18】Albina 首次实质登场时，与 Ren 接替 Shiomi Yoru 阻挡罪人，为后者接近并带走金枝争取时间。战斗中，她的上半装甲与 Fascia 侧板打开，露出活体组织；Albina 想让 Fascia 继续行动，Ren 则以不得偏离计划为由制止并攻击她。",
+      "text": "【正史中文意译·9-18 首次出场】Dante、Ryōshū、Gregor、Meursault 与 Yi Sang 在 LCE 研究区实验室追查 Golden Boughs。Albina 与 Ren 接替 Shiomi Yoru 阻挡他们，让 Yoru 接近并带走嫁接的金枝。战斗推进到两人受创后，Albina 的上半装甲与 Fascia 侧板打开，露出搏动组织；她坚持让 Fascia 继续行动，Ren 则要求服从各自师父的计划，并出手制止她。两人的争执也给了罪人继续追赶 Yoru 的机会。",
+      "voiceAssetId": "voice.scene.canon_recap_9_18",
       "bgmAssetId": "file.audio.bgm.between.two.worlds.mp3",
       "choices": [
         {
@@ -84,6 +587,7 @@
           "text": "继续复盘 9-37",
           "nextSceneId": "canon_recap_9_37",
           "resultText": "时间推进到 Operation Spider Pyre 期间的 Ring Corridor。",
+          "resultVoiceAssetId": "voice.result.canon_recap_continue_9_37",
           "effects": {
             "setFlags": [
               "canon_recap_9_18_seen"
@@ -101,14 +605,14 @@
         "classification": "canon_paraphrase",
         "scope": "canon_recap",
         "claimIds": [
-          "canon.9-37.encounter"
+          "canon.9-37.encounter-and-method"
         ],
         "sourceIds": [
           "source.official.canto-ix.9-37",
           "source.wiki.canto-ix-part-iii.177602",
-          "source.bilibili.BV1rsi8B5ED2.p37"
+          "source.wiki.albina.173286"
         ],
-        "note": "Short zh-CN encounter paraphrase cross-checked against the source-game scene order."
+        "note": "Reviewed zh-CN 9-37 arrival, method and friendship paraphrase; player boundary text is kept out of this canon scene."
       },
       "locationId": "ring_corridor",
       "backgroundAssetId": "bg.mirror_corridor",
@@ -123,7 +627,8 @@
         }
       ],
       "speaker": "正史复盘",
-      "text": "【正史中文意译·9-37】Operation Spider Pyre 期间，辛克莱、以实玛利、浮士德、Hohenheim 与 Alyssa 在 Ring Corridor 遭遇 Albina。Albina 解释自己为唤醒 Fascia 而迟到，并自称是 Callisto 门下的 Corporism 学徒。玩家 {{user}} 不在这段正史事件中。",
+      "text": "【正史中文意译·9-37 相遇】Operation Spider Pyre 期间，Sinclair、Ishmael、Faust、Hohenheim 与 Alyssa 抵达 Corridor of the Ring；Callisto 派 Albina 前来“迎接”他们。她因唤醒沉睡的 Fascia 而迟到，并说明自己仍不擅长在不损坏素材的情况下完成作品，所以先用自己的手臂练习。她礼貌地请求众人与自己成为朋友，却把了解彼此与挑选 Fascia 的素材混在一起；遭到 Sinclair 拒绝后，双方开战。Albina 随后自报姓名，并说明自己是 Callisto 门下的 Corporism 学徒。",
+      "voiceAssetId": "voice.scene.canon_recap_9_37",
       "bgmAssetId": "file.audio.bgm.between.two.worlds.mp3",
       "choices": [
         {
@@ -131,6 +636,7 @@
           "text": "核对 Albina 与 Fascia",
           "nextSceneId": "canon_recap_albina_fascia",
           "resultText": "复盘转向两者的身份与身体关系。",
+          "resultVoiceAssetId": "voice.result.canon_recap_continue_albina_fascia",
           "effects": {
             "setFlags": [
               "canon_recap_9_37_seen"
@@ -148,18 +654,25 @@
         "classification": "canon_paraphrase",
         "scope": "canon_recap",
         "claimIds": [
-          "canon.albina.identity-and-disposition",
-          "canon.albina.appearance",
-          "canon.albina-fascia.anatomy-and-friends"
+          "canon.profile.identity",
+          "canon.appearance.prosthetic-body",
+          "canon.appearance.armor-and-fascia",
+          "canon.personality.fascia-attachment",
+          "canon.personality.social-and-ambition",
+          "canon.story.pre-canto-fascia"
         ],
         "sourceIds": [
+          "source.official.canto-ix.9-18",
           "source.official.canto-ix.9-37",
-          "source.wiki.canto-ix-part-iii.177602",
+          "source.official.canto-ix.9-43",
+          "source.wiki.albina-enemy.175660",
           "source.wiki.albina.173286",
-          "source.bilibili.BV1rsi8B5ED2.p37",
-          "source.bilibili.BV1brvbBDE84.p33-p34"
+          "source.wiki.callisto.177757",
+          "source.wiki.canto-ix-part-i.172275",
+          "source.wiki.canto-ix-part-iii.177602",
+          "source.wiki.house-of-spiders.177075"
         ],
-        "note": "Short zh-CN character and anatomy paraphrase; no source dialogue is reproduced."
+        "note": "Atomic profile, appearance, personality and pre-Canto facts rendered from the reviewed claim ledger; no source dialogue is reproduced."
       },
       "locationId": "ring_corridor",
       "backgroundAssetId": "bg.ring_atelier",
@@ -174,7 +687,8 @@
         }
       ],
       "speaker": "正史复盘",
-      "text": "【正史中文意译·Albina / Fascia】Albina 是 Callisto 门下的 Corporism 学徒，也是 House of Spiders 的成员。她使用白色全身义体与白、黄、金配色的铁处女式装甲。Fascia 是以她原本肉体构成的活体巨剑：Albina 主要保留脑，Fascia 则缺少脑。她语气温和、过度诚实，却把“成为朋友”与成为唤醒或补全 Fascia 的材料联系在一起。",
+      "text": "【身份】Albina（韩文 알비나，日文 アルビナ）是女性环指 Corporism 学徒、House of Spiders 成员与 Callisto 的弟子。她在 Canto IX 中作为敌对角色登场，韩语配音为 Kim Do-hee；9-43 之后的正史状态为死亡。\n\n【外观】她使用带金色点缀的白色全身义体：浅灰色人工质感高马尾近似线缆，脸与关节处有分界线，颈胸与大腿可见黑色机械和线路，躯干中央近似骨架。她右眼黑、左眼白，前臂还能展开剪刀、锯、手术刀、三爪与牵开器等工具。\n\n【装甲与武器】她的铁处女式全身装甲以白、亮黄与金色为主，具有长裙、尖刺头环、垂链、尖刺裙甲和绘有金色锐眼的面具。Fascia 是同色系巨剑，侧板打开后会露出暗色骨架、肋骨与内脏组织。\n\n【Fascia】Albina 对 Fascia 有强烈依恋，会与它交谈、用他人血肉喂养它，并在它可能受损时优先保护它；9-18 中她甚至为让 Fascia 继续行动而违背 Ren 对计划的要求。\n\n【人格与关系】她通常平静轻声、专注艺术，却难以理解他人的情绪；她将“朋友”与可用于 Fascia 的素材联系起来。她表示自己把部分脑组织交给 Fascia 后变得很不善说谎，同时敬仰 Callisto，并希望未来成为超越师父的 Maestro。\n\n【身体关系】Albina 主动切分原本肉体并将其制作成 Fascia，随后用全身义体替换身体、主要保留脑；Fascia 则缺少脑。她还曾先以自己的手臂练习如何处理创作素材。",
+      "voiceAssetId": "voice.scene.canon_recap_albina_fascia",
       "bgmAssetId": "file.audio.bgm.between.two.worlds.mp3",
       "choices": [
         {
@@ -182,6 +696,7 @@
           "text": "继续复盘 9-37 的战斗升级",
           "nextSceneId": "canon_recap_9_37_battle",
           "resultText": "复盘转向 Callisto 加入后的最后阶段。",
+          "resultVoiceAssetId": "voice.result.canon_recap_continue_9_37_battle",
           "effects": {
             "setFlags": [
               "canon_recap_albina_fascia_seen"
@@ -203,9 +718,10 @@
         ],
         "sourceIds": [
           "source.official.canto-ix.9-37",
+          "source.official.canto-ix.9-43",
           "source.wiki.canto-ix-part-iii.177602"
         ],
-        "note": "Short zh-CN battle escalation paraphrase; no source dialogue is reproduced."
+        "note": "Reviewed 9-37 ending boundary contrasted with the later 9-43 outcome."
       },
       "locationId": "ring_corridor",
       "backgroundAssetId": "bg.mirror_corridor",
@@ -220,7 +736,8 @@
         }
       ],
       "speaker": "正史复盘",
-      "text": "【正史中文意译·9-37 战斗升级】Callisto 加入后，师徒二人逐步压制 Sinclair 一行；Alyssa 随后反击。9-37 并未在此结束 Albina、Fascia 与 Callisto 的正史链，其最终结果发生在后续 9-43《Hatching》。",
+      "text": "【正史中文意译·9-37 战斗升级】Callisto 加入战斗后，与 Albina 一同逐步压制 Limbus Company 一行。该节最后，Callisto 以骨肉尖桩制住除 Alyssa 外的众人，Alyssa 则将 Ardor Blossom Star 调至最高同调并发动反击。9-37 到此结束；Fascia 被毁、Albina 与 Callisto 死亡都不属于这一节，而发生在后续 9-43《Hatching》。",
+      "voiceAssetId": "voice.scene.canon_recap_9_37_battle",
       "bgmAssetId": "file.audio.bgm.between.two.worlds.mp3",
       "choices": [
         {
@@ -228,6 +745,7 @@
           "text": "继续复盘 9-43《Hatching》",
           "nextSceneId": "canon_recap_9_43_outcome",
           "resultText": "时间推进到 9-43；接下来才是不能被路线文本改写为正史的既定结果。",
+          "resultVoiceAssetId": "voice.result.canon_recap_continue_9_43",
           "effects": {
             "setFlags": [
               "canon_recap_9_37_battle_seen"
@@ -245,21 +763,23 @@
         "classification": "canon_paraphrase",
         "scope": "canon_recap",
         "claimIds": [
+          "canon.9-43.sign-awakening",
           "canon.9-43.outcome"
         ],
         "sourceIds": [
           "source.official.canto-ix.9-43",
           "source.wiki.canto-ix-part-iii.177602",
-          "source.bilibili.BV1rsi8B5ED2.p43"
+          "source.wiki.albina.173286"
         ],
-        "note": "Short zh-CN 9-43 outcome paraphrase followed by an explicit canon/AU boundary."
+        "note": "Reviewed 9-43 pressure, Sign awakening and outcome paraphrase; the AU boundary remains a separate scene."
       },
       "locationId": "ring_corridor",
       "backgroundAssetId": "bg.mirror_corridor",
       "tone": "canon-recap-outcome",
       "portraits": [],
       "speaker": "正史复盘",
-      "text": "【正史中文意译·9-43《Hatching》既定结果】Future Sinclair 先摧毁 Fascia，再杀死 Albina，并在之后杀死 Callisto。正史复盘到此结束；后续任何让 Albina 存活、与玩家相遇或进入九个结局的内容，都只能是本卡原创 AU。",
+      "text": "【正史中文意译·9-43《Hatching》转折】Hohenheim 用 Diffraction 突袭 Callisto 后，Albina 阻止 Faust 与 Ishmael 乘机追击；师徒仍将严重受创的众人逼入绝境。她要求 Sinclair 留下成为自己与 Fascia 的朋友，并在旁观 Callisto 对 Hohenheim 下手时谈到未来超越师父的梦想。她提出“未来”后，Sinclair 完全觉醒 The Sign，并显现一个来自未来的自己。\n\n【正史中文意译·9-43 既定结果】Faust 与 Ishmael 的同步攻击制造开口后，Future Sinclair 首先摧毁 Fascia。Albina 因 Fascia 被毁而失措，随后也被 Future Sinclair 杀死；Callisto 在之后被杀。Albina 的正史直接出场链至此结束，顺序是 9-18、9-37、9-43。",
+      "voiceAssetId": "voice.scene.canon_recap_9_43_outcome",
       "bgmAssetId": "file.audio.bgm.between.two.worlds.mp3",
       "choices": [
         {
@@ -267,12 +787,17 @@
           "text": "确认边界并进入 AU/IF 分歧",
           "nextSceneId": "opening_001",
           "resultText": "正史复盘已结束。以下三条路线全部是本卡原创 AU/IF。",
+          "resultVoiceAssetId": "voice.result.canon_recap_enter_AU",
           "effects": {
             "setFlags": [
               "canon_recap_9_43_seen",
               "canon_recap_complete",
               "AU_boundary_acknowledged"
-            ]
+            ],
+            "professionXp": {
+              "narrative_curator": 2
+            },
+            "activateProfession": "narrative_curator"
           }
         }
       ]
@@ -309,6 +834,7 @@
       ],
       "speaker": "AU/IF 分歧",
       "text": "【本卡原创 AU/IF，不是原作后续】9-43《Hatching》的正史结局已经复盘完毕。从这一刻开始，Albina 的存活、玩家 {{user}} 的出现、三条路线与九个结局均为本卡原创，不代表原作事实或隐藏结局。",
+      "voiceAssetId": "voice.scene.opening_001",
       "bgmAssetId": "file.audio.bgm.backstreets.rain.mp3",
       "choices": [
         {
@@ -316,6 +842,7 @@
           "text": "进入 white_canvas AU",
           "nextSceneId": "white_canvas_001",
           "resultText": "【AU/IF】你进入以关系边界与自我选择为核心的 white_canvas 原创路线。",
+          "resultVoiceAssetId": "voice.result.enter_white_canvas",
           "effects": {
             "route": "white_canvas",
             "values": {
@@ -323,12 +850,33 @@
               "trust": 2,
               "artResonance": 1
             },
+            "relationshipVectors": {
+              "intimacy": 2,
+              "reliance": 2
+            },
             "setFlags": [
               "route_white_canvas_seen"
             ],
             "unlockCg": [
               "cg.opening_rain"
-            ]
+            ],
+            "grantItems": [
+              "item.rain_room_badge"
+            ],
+            "equipItems": [
+              "equipment.rain_room_badge"
+            ],
+            "unlockOutfits": [
+              "outfit.albina.rain"
+            ],
+            "activateOutfit": "outfit.albina.rain",
+            "startQuests": [
+              "quest.white.boundary_protocol"
+            ],
+            "professionXp": {
+              "boundary_mediator": 4
+            },
+            "activateProfession": "boundary_mediator"
           }
         },
         {
@@ -336,18 +884,40 @@
           "text": "进入 golden_bough_rebuild AU",
           "nextSceneId": "golden_bough_001",
           "resultText": "【AU/IF】这条路线假设 Albina 在 9-43 死亡后被重构；该前提与全部后续均非正史。",
+          "resultVoiceAssetId": "voice.result.enter_rebuild",
           "effects": {
             "route": "golden_bough_rebuild",
             "values": {
               "trust": 3,
               "danger": 1
             },
+            "relationshipVectors": {
+              "reliance": 2,
+              "suspicion": 1
+            },
             "setFlags": [
               "route_rebuild_seen"
             ],
             "unlockCg": [
               "cg.golden_bough_rebuild"
-            ]
+            ],
+            "grantItems": [
+              "item.rain_room_badge"
+            ],
+            "equipItems": [
+              "equipment.rain_room_badge"
+            ],
+            "unlockOutfits": [
+              "outfit.albina.rain"
+            ],
+            "activateOutfit": "outfit.albina.rain",
+            "startQuests": [
+              "quest.golden.memory_continuity"
+            ],
+            "professionXp": {
+              "memory_surgeon": 4
+            },
+            "activateProfession": "memory_surgeon"
           }
         },
         {
@@ -355,18 +925,40 @@
           "text": "进入 ring_conspiracy AU",
           "nextSceneId": "ring_conspiracy_001",
           "resultText": "【AU/IF】这条路线主动改写 9-43 后续因果；其中的委托、关系和结局均为本卡原创。",
+          "resultVoiceAssetId": "voice.result.enter_conspiracy",
           "effects": {
             "route": "ring_conspiracy",
             "values": {
               "danger": 3,
               "artResonance": 2
             },
+            "relationshipVectors": {
+              "reliance": 1,
+              "suspicion": 2
+            },
             "setFlags": [
               "route_conspiracy_seen"
             ],
             "unlockCg": [
               "cg.ring_invitation"
-            ]
+            ],
+            "grantItems": [
+              "item.rain_room_badge"
+            ],
+            "equipItems": [
+              "equipment.rain_room_badge"
+            ],
+            "unlockOutfits": [
+              "outfit.albina.rain"
+            ],
+            "activateOutfit": "outfit.albina.rain",
+            "startQuests": [
+              "quest.ring.counter_contract"
+            ],
+            "professionXp": {
+              "ring_counterforger": 4
+            },
+            "activateProfession": "ring_counterforger"
           }
         }
       ]
@@ -386,7 +978,7 @@
           "source.official.canto-ix.9-43",
           "source.project.legacy-v1.0.44"
         ],
-        "note": "Project-authored route content after the explicit 9-37 divergence; never source-game canon."
+        "note": "Project-authored route content after the explicit 9-43 divergence; never source-game canon."
       },
       "locationId": "white_canvas_room",
       "backgroundAssetId": "bg.white_canvas",
@@ -470,7 +1062,7 @@
           "source.official.canto-ix.9-43",
           "source.project.legacy-v1.0.44"
         ],
-        "note": "Project-authored route content after the explicit 9-37 divergence; never source-game canon."
+        "note": "Project-authored route content after the explicit 9-43 divergence; never source-game canon."
       },
       "locationId": "rain_room",
       "backgroundAssetId": "bg.rain_room",
@@ -542,7 +1134,7 @@
           "source.official.canto-ix.9-43",
           "source.project.legacy-v1.0.44"
         ],
-        "note": "Project-authored route content after the explicit 9-37 divergence; never source-game canon."
+        "note": "Project-authored route content after the explicit 9-43 divergence; never source-game canon."
       },
       "locationId": "lce_lab",
       "backgroundAssetId": "bg.lce_lab",
@@ -590,12 +1182,35 @@
               "trust": 4,
               "artResonance": 2
             },
+            "relationshipVectors": {
+              "intimacy": 2,
+              "reliance": 3
+            },
+            "conflictMastery": {
+              "boundary": 1
+            },
             "setFlags": [
               "witness_not_ownership"
             ],
             "unlockCg": [
               "cg.lce_raid"
-            ]
+            ],
+            "grantItems": [
+              "item.white.boundary_contract"
+            ],
+            "equipItems": [
+              "equipment.white.boundary_charm"
+            ],
+            "unlockOutfits": [
+              "outfit.albina.white_canvas"
+            ],
+            "activateOutfit": "outfit.albina.white_canvas",
+            "completeQuests": [
+              "quest.white.boundary_protocol"
+            ],
+            "professionXp": {
+              "boundary_mediator": 6
+            }
           }
         },
         {
@@ -610,12 +1225,35 @@
               "danger": 1,
               "artResonance": 3
             },
+            "relationshipVectors": {
+              "reliance": 4,
+              "suspicion": -1
+            },
+            "conflictMastery": {
+              "boundary": 1
+            },
             "setFlags": [
               "lab_terms_rewritten"
             ],
             "unlockCg": [
               "cg.fascia_heartbeat"
-            ]
+            ],
+            "grantItems": [
+              "item.white.boundary_contract"
+            ],
+            "equipItems": [
+              "equipment.white.boundary_charm"
+            ],
+            "unlockOutfits": [
+              "outfit.albina.white_canvas"
+            ],
+            "activateOutfit": "outfit.albina.white_canvas",
+            "completeQuests": [
+              "quest.white.boundary_protocol"
+            ],
+            "professionXp": {
+              "boundary_mediator": 6
+            }
           }
         }
       ]
@@ -635,7 +1273,7 @@
           "source.official.canto-ix.9-43",
           "source.project.legacy-v1.0.44"
         ],
-        "note": "Project-authored route content after the explicit 9-37 divergence; never source-game canon."
+        "note": "Project-authored route content after the explicit 9-43 divergence; never source-game canon."
       },
       "locationId": "limbus_bus",
       "backgroundAssetId": "bg.limbus_bus",
@@ -726,7 +1364,7 @@
           "source.official.canto-ix.9-43",
           "source.project.legacy-v1.0.44"
         ],
-        "note": "Project-authored route content after the explicit 9-37 divergence; never source-game canon."
+        "note": "Project-authored route content after the explicit 9-43 divergence; never source-game canon."
       },
       "locationId": "outskirts_dawn",
       "backgroundAssetId": "bg.outskirts_dawn",
@@ -790,7 +1428,7 @@
           "source.official.canto-ix.9-43",
           "source.project.legacy-v1.0.44"
         ],
-        "note": "Project-authored route content after the explicit 9-37 divergence; never source-game canon."
+        "note": "Project-authored route content after the explicit 9-43 divergence; never source-game canon."
       },
       "locationId": "white_canvas_room",
       "backgroundAssetId": "bg.white_canvas",
@@ -874,7 +1512,7 @@
           "source.official.canto-ix.9-43",
           "source.project.legacy-v1.0.44"
         ],
-        "note": "Project-authored route content after the explicit 9-37 divergence; never source-game canon."
+        "note": "Project-authored route content after the explicit 9-43 divergence; never source-game canon."
       },
       "locationId": "mirror_corridor",
       "backgroundAssetId": "bg.mirror_corridor",
@@ -958,7 +1596,7 @@
           "source.official.canto-ix.9-43",
           "source.project.legacy-v1.0.44"
         ],
-        "note": "Project-authored route content after the explicit 9-37 divergence; never source-game canon."
+        "note": "Project-authored route content after the explicit 9-43 divergence; never source-game canon."
       },
       "locationId": "lce_lab",
       "backgroundAssetId": "bg.lce_lab",
@@ -1051,7 +1689,7 @@
           "source.official.canto-ix.9-43",
           "source.project.legacy-v1.0.44"
         ],
-        "note": "Project-authored route content after the explicit 9-37 divergence; never source-game canon."
+        "note": "Project-authored route content after the explicit 9-43 divergence; never source-game canon."
       },
       "locationId": "rain_room",
       "backgroundAssetId": "bg.rain_room",
@@ -1135,7 +1773,7 @@
           "source.official.canto-ix.9-43",
           "source.project.legacy-v1.0.44"
         ],
-        "note": "Project-authored route content after the explicit 9-37 divergence; never source-game canon."
+        "note": "Project-authored route content after the explicit 9-43 divergence; never source-game canon."
       },
       "locationId": "limbus_bus",
       "backgroundAssetId": "bg.limbus_bus",
@@ -1226,7 +1864,7 @@
           "source.official.canto-ix.9-43",
           "source.project.legacy-v1.0.44"
         ],
-        "note": "Project-authored route content after the explicit 9-37 divergence; never source-game canon."
+        "note": "Project-authored route content after the explicit 9-43 divergence; never source-game canon."
       },
       "locationId": "nest_station",
       "backgroundAssetId": "bg.nest_station",
@@ -1312,7 +1950,7 @@
           "source.official.canto-ix.9-43",
           "source.project.legacy-v1.0.44"
         ],
-        "note": "Project-authored route content after the explicit 9-37 divergence; never source-game canon."
+        "note": "Project-authored route content after the explicit 9-43 divergence; never source-game canon."
       },
       "locationId": "spider_gallery",
       "backgroundAssetId": "bg.spider_gallery",
@@ -1359,15 +1997,30 @@
             "values": {
               "affectionAlbina": 2,
               "trust": 4,
-              "danger": 1,
+              "danger": -1,
               "artResonance": 3
+            },
+            "relationshipVectors": {
+              "reliance": 3
+            },
+            "conflictMastery": {
+              "boundary": 3
             },
             "setFlags": [
               "defect_not_exhibited"
             ],
             "unlockCg": [
               "cg.trust_threshold"
-            ]
+            ],
+            "resolveBattles": [
+              {
+                "battleId": "battle.white.gallery_pressure",
+                "outcome": "victory"
+              }
+            ],
+            "professionXp": {
+              "boundary_mediator": 6
+            }
           }
         },
         {
@@ -1380,14 +2033,30 @@
             "values": {
               "affectionAlbina": 3,
               "trust": 5,
+              "danger": 3,
               "artResonance": 4
+            },
+            "relationshipVectors": {
+              "suspicion": 3
+            },
+            "conflictMastery": {
+              "boundary": 1
             },
             "setFlags": [
               "exhibit_choice_returned"
             ],
             "unlockCg": [
               "cg.art_resonance"
-            ]
+            ],
+            "resolveBattles": [
+              {
+                "battleId": "battle.white.gallery_pressure",
+                "outcome": "setback"
+              }
+            ],
+            "professionXp": {
+              "boundary_mediator": 3
+            }
           }
         }
       ]
@@ -1407,7 +2076,7 @@
           "source.official.canto-ix.9-43",
           "source.project.legacy-v1.0.44"
         ],
-        "note": "Project-authored route content after the explicit 9-37 divergence; never source-game canon."
+        "note": "Project-authored route content after the explicit 9-43 divergence; never source-game canon."
       },
       "locationId": "ring_atelier",
       "backgroundAssetId": "bg.ring_atelier",
@@ -1494,7 +2163,7 @@
           "source.official.canto-ix.9-43",
           "source.project.legacy-v1.0.44"
         ],
-        "note": "Project-authored route content after the explicit 9-37 divergence; never source-game canon."
+        "note": "Project-authored route content after the explicit 9-43 divergence; never source-game canon."
       },
       "locationId": "city_rooftop",
       "backgroundAssetId": "bg.city_rooftop",
@@ -1578,7 +2247,7 @@
           "source.official.canto-ix.9-43",
           "source.project.legacy-v1.0.44"
         ],
-        "note": "Project-authored route content after the explicit 9-37 divergence; never source-game canon."
+        "note": "Project-authored route content after the explicit 9-43 divergence; never source-game canon."
       },
       "locationId": "outskirts_dawn",
       "backgroundAssetId": "bg.outskirts_dawn",
@@ -1642,7 +2311,7 @@
           "source.official.canto-ix.9-43",
           "source.project.legacy-v1.0.44"
         ],
-        "note": "Project-authored route content after the explicit 9-37 divergence; never source-game canon."
+        "note": "Project-authored route content after the explicit 9-43 divergence; never source-game canon."
       },
       "locationId": "outskirts_dawn",
       "backgroundAssetId": "bg.outskirts_dawn",
@@ -1699,6 +2368,40 @@
                 "key": "danger",
                 "operator": "lte",
                 "value": 5
+              },
+              {
+                "kind": "quest",
+                "questId": "quest.white.boundary_protocol",
+                "status": "completed"
+              },
+              {
+                "kind": "battle",
+                "battleId": "battle.white.gallery_pressure",
+                "outcome": "victory"
+              },
+              {
+                "kind": "equipment",
+                "equipmentId": "equipment.white.boundary_charm"
+              },
+              {
+                "kind": "outfit",
+                "outfitId": "outfit.albina.white_canvas"
+              },
+              {
+                "kind": "profession",
+                "professionId": "boundary_mediator",
+                "levelGte": 2
+              },
+              {
+                "kind": "relationship",
+                "key": "reliance",
+                "operator": "gte",
+                "value": 7
+              },
+              {
+                "kind": "worldbook",
+                "entryId": "albina_routes_endings_au_if",
+                "status": "seen"
               }
             ]
           },
@@ -1782,7 +2485,7 @@
           "source.official.canto-ix.9-43",
           "source.project.legacy-v1.0.44"
         ],
-        "note": "Project-authored route content after the explicit 9-37 divergence; never source-game canon."
+        "note": "Project-authored route content after the explicit 9-43 divergence; never source-game canon."
       },
       "locationId": "outskirts_dawn",
       "backgroundAssetId": "bg.outskirts_dawn",
@@ -1858,7 +2561,7 @@
           "source.official.canto-ix.9-43",
           "source.project.legacy-v1.0.44"
         ],
-        "note": "Project-authored route content after the explicit 9-37 divergence; never source-game canon."
+        "note": "Project-authored route content after the explicit 9-43 divergence; never source-game canon."
       },
       "locationId": "outskirts_dawn",
       "backgroundAssetId": "bg.outskirts_dawn",
@@ -1917,7 +2620,7 @@
           "source.official.canto-ix.9-43",
           "source.project.legacy-v1.0.44"
         ],
-        "note": "Project-authored route content after the explicit 9-37 divergence; never source-game canon."
+        "note": "Project-authored route content after the explicit 9-43 divergence; never source-game canon."
       },
       "locationId": "outskirts_dawn",
       "backgroundAssetId": "bg.outskirts_dawn",
@@ -1989,7 +2692,7 @@
           "source.official.canto-ix.9-43",
           "source.project.legacy-v1.0.44"
         ],
-        "note": "Project-authored route content after the explicit 9-37 divergence; never source-game canon."
+        "note": "Project-authored route content after the explicit 9-43 divergence; never source-game canon."
       },
       "locationId": "golden_bough_fault",
       "backgroundAssetId": "bg.golden_bough",
@@ -2073,7 +2776,7 @@
           "source.official.canto-ix.9-43",
           "source.project.legacy-v1.0.44"
         ],
-        "note": "Project-authored route content after the explicit 9-37 divergence; never source-game canon."
+        "note": "Project-authored route content after the explicit 9-43 divergence; never source-game canon."
       },
       "locationId": "mirror_corridor",
       "backgroundAssetId": "bg.mirror_corridor",
@@ -2152,7 +2855,7 @@
           "source.official.canto-ix.9-43",
           "source.project.legacy-v1.0.44"
         ],
-        "note": "Project-authored route content after the explicit 9-37 divergence; never source-game canon."
+        "note": "Project-authored route content after the explicit 9-43 divergence; never source-game canon."
       },
       "locationId": "lce_lab",
       "backgroundAssetId": "bg.lce_lab",
@@ -2203,12 +2906,35 @@
               "danger": 1,
               "artResonance": 4
             },
+            "relationshipVectors": {
+              "intimacy": 1,
+              "reliance": 4
+            },
+            "conflictMastery": {
+              "analysis": 1
+            },
             "setFlags": [
               "false_completion_cut"
             ],
             "unlockCg": [
               "cg.surgery_of_memory"
-            ]
+            ],
+            "grantItems": [
+              "item.golden.memory_anchor"
+            ],
+            "equipItems": [
+              "equipment.golden.memory_lens"
+            ],
+            "unlockOutfits": [
+              "outfit.albina.golden_bough"
+            ],
+            "activateOutfit": "outfit.albina.golden_bough",
+            "completeQuests": [
+              "quest.golden.memory_continuity"
+            ],
+            "professionXp": {
+              "memory_surgeon": 6
+            }
           }
         },
         {
@@ -2223,12 +2949,35 @@
               "trust": 3,
               "artResonance": 3
             },
+            "relationshipVectors": {
+              "reliance": 3,
+              "obsession": 1
+            },
+            "conflictMastery": {
+              "resonance": 1
+            },
             "setFlags": [
               "fascia_pulse_guarded"
             ],
             "unlockCg": [
               "cg.fascia_heartbeat"
-            ]
+            ],
+            "grantItems": [
+              "item.golden.memory_anchor"
+            ],
+            "equipItems": [
+              "equipment.golden.memory_lens"
+            ],
+            "unlockOutfits": [
+              "outfit.albina.golden_bough"
+            ],
+            "activateOutfit": "outfit.albina.golden_bough",
+            "completeQuests": [
+              "quest.golden.memory_continuity"
+            ],
+            "professionXp": {
+              "memory_surgeon": 6
+            }
           }
         }
       ]
@@ -2248,7 +2997,7 @@
           "source.official.canto-ix.9-43",
           "source.project.legacy-v1.0.44"
         ],
-        "note": "Project-authored route content after the explicit 9-37 divergence; never source-game canon."
+        "note": "Project-authored route content after the explicit 9-43 divergence; never source-game canon."
       },
       "locationId": "city_rooftop",
       "backgroundAssetId": "bg.city_rooftop",
@@ -2339,7 +3088,7 @@
           "source.official.canto-ix.9-43",
           "source.project.legacy-v1.0.44"
         ],
-        "note": "Project-authored route content after the explicit 9-37 divergence; never source-game canon."
+        "note": "Project-authored route content after the explicit 9-43 divergence; never source-game canon."
       },
       "locationId": "mirror_corridor",
       "backgroundAssetId": "bg.mirror_corridor",
@@ -2410,7 +3159,7 @@
           "source.official.canto-ix.9-43",
           "source.project.legacy-v1.0.44"
         ],
-        "note": "Project-authored route content after the explicit 9-37 divergence; never source-game canon."
+        "note": "Project-authored route content after the explicit 9-43 divergence; never source-game canon."
       },
       "locationId": "lce_lab",
       "backgroundAssetId": "bg.lce_lab",
@@ -2501,7 +3250,7 @@
           "source.official.canto-ix.9-43",
           "source.project.legacy-v1.0.44"
         ],
-        "note": "Project-authored route content after the explicit 9-37 divergence; never source-game canon."
+        "note": "Project-authored route content after the explicit 9-43 divergence; never source-game canon."
       },
       "locationId": "golden_bough_fault",
       "backgroundAssetId": "bg.golden_bough",
@@ -2585,7 +3334,7 @@
           "source.official.canto-ix.9-43",
           "source.project.legacy-v1.0.44"
         ],
-        "note": "Project-authored route content after the explicit 9-37 divergence; never source-game canon."
+        "note": "Project-authored route content after the explicit 9-43 divergence; never source-game canon."
       },
       "locationId": "city_rooftop",
       "backgroundAssetId": "bg.city_rooftop",
@@ -2682,7 +3431,7 @@
           "source.official.canto-ix.9-43",
           "source.project.legacy-v1.0.44"
         ],
-        "note": "Project-authored route content after the explicit 9-37 divergence; never source-game canon."
+        "note": "Project-authored route content after the explicit 9-43 divergence; never source-game canon."
       },
       "locationId": "mirror_corridor",
       "backgroundAssetId": "bg.mirror_corridor",
@@ -2773,7 +3522,7 @@
           "source.official.canto-ix.9-43",
           "source.project.legacy-v1.0.44"
         ],
-        "note": "Project-authored route content after the explicit 9-37 divergence; never source-game canon."
+        "note": "Project-authored route content after the explicit 9-43 divergence; never source-game canon."
       },
       "locationId": "lce_lab",
       "backgroundAssetId": "bg.lce_lab",
@@ -2868,7 +3617,7 @@
           "source.official.canto-ix.9-43",
           "source.project.legacy-v1.0.44"
         ],
-        "note": "Project-authored route content after the explicit 9-37 divergence; never source-game canon."
+        "note": "Project-authored route content after the explicit 9-43 divergence; never source-game canon."
       },
       "locationId": "limbus_bus",
       "backgroundAssetId": "bg.limbus_bus",
@@ -2961,7 +3710,7 @@
           "source.official.canto-ix.9-43",
           "source.project.legacy-v1.0.44"
         ],
-        "note": "Project-authored route content after the explicit 9-37 divergence; never source-game canon."
+        "note": "Project-authored route content after the explicit 9-43 divergence; never source-game canon."
       },
       "locationId": "ring_atelier",
       "backgroundAssetId": "bg.ring_atelier",
@@ -3007,15 +3756,30 @@
           "effects": {
             "values": {
               "trust": 4,
-              "danger": 2,
+              "danger": 0,
               "artResonance": 3
+            },
+            "relationshipVectors": {
+              "reliance": 3
+            },
+            "conflictMastery": {
+              "analysis": 3
             },
             "setFlags": [
               "replacement_contract_torn"
             ],
             "unlockCg": [
               "cg.conspiracy_contract"
-            ]
+            ],
+            "resolveBattles": [
+              {
+                "battleId": "battle.golden.replacement_protocol",
+                "outcome": "victory"
+              }
+            ],
+            "professionXp": {
+              "memory_surgeon": 6
+            }
           }
         },
         {
@@ -3027,15 +3791,31 @@
           "effects": {
             "values": {
               "affectionAlbina": 2,
-              "trust": 3,
-              "artResonance": 4
+              "trust": -5,
+              "danger": 3,
+              "artResonance": -4
+            },
+            "relationshipVectors": {
+              "suspicion": 3
+            },
+            "conflictMastery": {
+              "analysis": 1
             },
             "setFlags": [
               "terms_renegotiated"
             ],
             "unlockCg": [
               "cg.surgery_of_memory"
-            ]
+            ],
+            "resolveBattles": [
+              {
+                "battleId": "battle.golden.replacement_protocol",
+                "outcome": "setback"
+              }
+            ],
+            "professionXp": {
+              "memory_surgeon": 3
+            }
           }
         }
       ]
@@ -3055,7 +3835,7 @@
           "source.official.canto-ix.9-43",
           "source.project.legacy-v1.0.44"
         ],
-        "note": "Project-authored route content after the explicit 9-37 divergence; never source-game canon."
+        "note": "Project-authored route content after the explicit 9-43 divergence; never source-game canon."
       },
       "locationId": "golden_bough_fault",
       "backgroundAssetId": "bg.golden_bough",
@@ -3139,7 +3919,7 @@
           "source.official.canto-ix.9-43",
           "source.project.legacy-v1.0.44"
         ],
-        "note": "Project-authored route content after the explicit 9-37 divergence; never source-game canon."
+        "note": "Project-authored route content after the explicit 9-43 divergence; never source-game canon."
       },
       "locationId": "mirror_corridor",
       "backgroundAssetId": "bg.mirror_corridor",
@@ -3223,7 +4003,7 @@
           "source.official.canto-ix.9-43",
           "source.project.legacy-v1.0.44"
         ],
-        "note": "Project-authored route content after the explicit 9-37 divergence; never source-game canon."
+        "note": "Project-authored route content after the explicit 9-43 divergence; never source-game canon."
       },
       "locationId": "outskirts_dawn",
       "backgroundAssetId": "bg.outskirts_dawn",
@@ -3287,7 +4067,7 @@
           "source.official.canto-ix.9-43",
           "source.project.legacy-v1.0.44"
         ],
-        "note": "Project-authored route content after the explicit 9-37 divergence; never source-game canon."
+        "note": "Project-authored route content after the explicit 9-43 divergence; never source-game canon."
       },
       "locationId": "outskirts_dawn",
       "backgroundAssetId": "bg.outskirts_dawn",
@@ -3344,6 +4124,40 @@
                 "key": "danger",
                 "operator": "lte",
                 "value": 8
+              },
+              {
+                "kind": "quest",
+                "questId": "quest.golden.memory_continuity",
+                "status": "completed"
+              },
+              {
+                "kind": "battle",
+                "battleId": "battle.golden.replacement_protocol",
+                "outcome": "victory"
+              },
+              {
+                "kind": "equipment",
+                "equipmentId": "equipment.golden.memory_lens"
+              },
+              {
+                "kind": "outfit",
+                "outfitId": "outfit.albina.golden_bough"
+              },
+              {
+                "kind": "profession",
+                "professionId": "memory_surgeon",
+                "levelGte": 2
+              },
+              {
+                "kind": "relationship",
+                "key": "reliance",
+                "operator": "gte",
+                "value": 7
+              },
+              {
+                "kind": "worldbook",
+                "entryId": "albina_routes_endings_au_if",
+                "status": "seen"
               }
             ]
           },
@@ -3427,7 +4241,7 @@
           "source.official.canto-ix.9-43",
           "source.project.legacy-v1.0.44"
         ],
-        "note": "Project-authored route content after the explicit 9-37 divergence; never source-game canon."
+        "note": "Project-authored route content after the explicit 9-43 divergence; never source-game canon."
       },
       "locationId": "outskirts_dawn",
       "backgroundAssetId": "bg.outskirts_dawn",
@@ -3503,7 +4317,7 @@
           "source.official.canto-ix.9-43",
           "source.project.legacy-v1.0.44"
         ],
-        "note": "Project-authored route content after the explicit 9-37 divergence; never source-game canon."
+        "note": "Project-authored route content after the explicit 9-43 divergence; never source-game canon."
       },
       "locationId": "outskirts_dawn",
       "backgroundAssetId": "bg.outskirts_dawn",
@@ -3562,7 +4376,7 @@
           "source.official.canto-ix.9-43",
           "source.project.legacy-v1.0.44"
         ],
-        "note": "Project-authored route content after the explicit 9-37 divergence; never source-game canon."
+        "note": "Project-authored route content after the explicit 9-43 divergence; never source-game canon."
       },
       "locationId": "outskirts_dawn",
       "backgroundAssetId": "bg.outskirts_dawn",
@@ -3634,7 +4448,7 @@
           "source.official.canto-ix.9-43",
           "source.project.legacy-v1.0.44"
         ],
-        "note": "Project-authored route content after the explicit 9-37 divergence; never source-game canon."
+        "note": "Project-authored route content after the explicit 9-43 divergence; never source-game canon."
       },
       "locationId": "spider_gallery",
       "backgroundAssetId": "bg.spider_gallery",
@@ -3728,7 +4542,7 @@
           "source.official.canto-ix.9-43",
           "source.project.legacy-v1.0.44"
         ],
-        "note": "Project-authored route content after the explicit 9-37 divergence; never source-game canon."
+        "note": "Project-authored route content after the explicit 9-43 divergence; never source-game canon."
       },
       "locationId": "ring_atelier",
       "backgroundAssetId": "bg.ring_atelier",
@@ -3811,7 +4625,7 @@
           "source.official.canto-ix.9-43",
           "source.project.legacy-v1.0.44"
         ],
-        "note": "Project-authored route content after the explicit 9-37 divergence; never source-game canon."
+        "note": "Project-authored route content after the explicit 9-43 divergence; never source-game canon."
       },
       "locationId": "backstreets_rain",
       "backgroundAssetId": "bg.backstreets_rain",
@@ -3862,12 +4676,35 @@
               "danger": 2,
               "artResonance": 3
             },
+            "relationshipVectors": {
+              "intimacy": 1,
+              "reliance": 4
+            },
+            "conflictMastery": {
+              "blade": 1
+            },
             "setFlags": [
               "pursuit_frame_broken"
             ],
             "unlockCg": [
               "cg.combat_transition_01"
-            ]
+            ],
+            "grantItems": [
+              "item.ring.counter_signet"
+            ],
+            "equipItems": [
+              "equipment.ring.counter_signet"
+            ],
+            "unlockOutfits": [
+              "outfit.albina.ring_disguise"
+            ],
+            "activateOutfit": "outfit.albina.ring_disguise",
+            "completeQuests": [
+              "quest.ring.counter_contract"
+            ],
+            "professionXp": {
+              "ring_counterforger": 6
+            }
           }
         },
         {
@@ -3882,12 +4719,35 @@
               "danger": -1,
               "artResonance": 4
             },
+            "relationshipVectors": {
+              "reliance": 3,
+              "suspicion": 1
+            },
+            "conflictMastery": {
+              "analysis": 1
+            },
             "setFlags": [
               "false_signature_planted"
             ],
             "unlockCg": [
               "cg.ren_interruption"
-            ]
+            ],
+            "grantItems": [
+              "item.ring.counter_signet"
+            ],
+            "equipItems": [
+              "equipment.ring.counter_signet"
+            ],
+            "unlockOutfits": [
+              "outfit.albina.ring_disguise"
+            ],
+            "activateOutfit": "outfit.albina.ring_disguise",
+            "completeQuests": [
+              "quest.ring.counter_contract"
+            ],
+            "professionXp": {
+              "ring_counterforger": 6
+            }
           }
         }
       ]
@@ -3907,7 +4767,7 @@
           "source.official.canto-ix.9-43",
           "source.project.legacy-v1.0.44"
         ],
-        "note": "Project-authored route content after the explicit 9-37 divergence; never source-game canon."
+        "note": "Project-authored route content after the explicit 9-43 divergence; never source-game canon."
       },
       "locationId": "spider_gallery",
       "backgroundAssetId": "bg.spider_gallery",
@@ -3982,7 +4842,7 @@
           "source.official.canto-ix.9-43",
           "source.project.legacy-v1.0.44"
         ],
-        "note": "Project-authored route content after the explicit 9-37 divergence; never source-game canon."
+        "note": "Project-authored route content after the explicit 9-43 divergence; never source-game canon."
       },
       "locationId": "ring_atelier",
       "backgroundAssetId": "bg.ring_atelier",
@@ -4078,7 +4938,7 @@
           "source.official.canto-ix.9-43",
           "source.project.legacy-v1.0.44"
         ],
-        "note": "Project-authored route content after the explicit 9-37 divergence; never source-game canon."
+        "note": "Project-authored route content after the explicit 9-43 divergence; never source-game canon."
       },
       "locationId": "spider_gallery",
       "backgroundAssetId": "bg.spider_gallery",
@@ -4174,7 +5034,7 @@
           "source.official.canto-ix.9-43",
           "source.project.legacy-v1.0.44"
         ],
-        "note": "Project-authored route content after the explicit 9-37 divergence; never source-game canon."
+        "note": "Project-authored route content after the explicit 9-43 divergence; never source-game canon."
       },
       "locationId": "backstreets_rain",
       "backgroundAssetId": "bg.backstreets_rain",
@@ -4268,7 +5128,7 @@
           "source.official.canto-ix.9-43",
           "source.project.legacy-v1.0.44"
         ],
-        "note": "Project-authored route content after the explicit 9-37 divergence; never source-game canon."
+        "note": "Project-authored route content after the explicit 9-43 divergence; never source-game canon."
       },
       "locationId": "lce_lab",
       "backgroundAssetId": "bg.lce_lab",
@@ -4365,7 +5225,7 @@
           "source.official.canto-ix.9-43",
           "source.project.legacy-v1.0.44"
         ],
-        "note": "Project-authored route content after the explicit 9-37 divergence; never source-game canon."
+        "note": "Project-authored route content after the explicit 9-43 divergence; never source-game canon."
       },
       "locationId": "mirror_corridor",
       "backgroundAssetId": "bg.mirror_corridor",
@@ -4459,7 +5319,7 @@
           "source.official.canto-ix.9-43",
           "source.project.legacy-v1.0.44"
         ],
-        "note": "Project-authored route content after the explicit 9-37 divergence; never source-game canon."
+        "note": "Project-authored route content after the explicit 9-43 divergence; never source-game canon."
       },
       "locationId": "ring_atelier",
       "backgroundAssetId": "bg.ring_atelier",
@@ -4555,7 +5415,7 @@
           "source.official.canto-ix.9-43",
           "source.project.legacy-v1.0.44"
         ],
-        "note": "Project-authored route content after the explicit 9-37 divergence; never source-game canon."
+        "note": "Project-authored route content after the explicit 9-43 divergence; never source-game canon."
       },
       "locationId": "spider_gallery",
       "backgroundAssetId": "bg.spider_gallery",
@@ -4603,15 +5463,30 @@
           "effects": {
             "values": {
               "trust": 4,
-              "danger": 2,
+              "danger": 0,
               "artResonance": 4
+            },
+            "relationshipVectors": {
+              "reliance": 3
+            },
+            "conflictMastery": {
+              "blade": 3
             },
             "setFlags": [
               "ending_rewritten"
             ],
             "unlockCg": [
               "cg.ring_conspiracy_ending"
-            ]
+            ],
+            "resolveBattles": [
+              {
+                "battleId": "battle.ring.authorship_frame",
+                "outcome": "victory"
+              }
+            ],
+            "professionXp": {
+              "ring_counterforger": 6
+            }
           }
         },
         {
@@ -4623,15 +5498,30 @@
           "effects": {
             "values": {
               "trust": 3,
-              "danger": 4,
+              "danger": 7,
               "artResonance": 3
+            },
+            "relationshipVectors": {
+              "suspicion": 3
+            },
+            "conflictMastery": {
+              "blade": 1
             },
             "setFlags": [
               "film_burned"
             ],
             "unlockCg": [
               "cg.combat_transition_01"
-            ]
+            ],
+            "resolveBattles": [
+              {
+                "battleId": "battle.ring.authorship_frame",
+                "outcome": "setback"
+              }
+            ],
+            "professionXp": {
+              "ring_counterforger": 3
+            }
           }
         }
       ]
@@ -4651,7 +5541,7 @@
           "source.official.canto-ix.9-43",
           "source.project.legacy-v1.0.44"
         ],
-        "note": "Project-authored route content after the explicit 9-37 divergence; never source-game canon."
+        "note": "Project-authored route content after the explicit 9-43 divergence; never source-game canon."
       },
       "locationId": "city_rooftop",
       "backgroundAssetId": "bg.city_rooftop",
@@ -4747,7 +5637,7 @@
           "source.official.canto-ix.9-43",
           "source.project.legacy-v1.0.44"
         ],
-        "note": "Project-authored route content after the explicit 9-37 divergence; never source-game canon."
+        "note": "Project-authored route content after the explicit 9-43 divergence; never source-game canon."
       },
       "locationId": "limbus_bus",
       "backgroundAssetId": "bg.limbus_bus",
@@ -4838,7 +5728,7 @@
           "source.official.canto-ix.9-43",
           "source.project.legacy-v1.0.44"
         ],
-        "note": "Project-authored route content after the explicit 9-37 divergence; never source-game canon."
+        "note": "Project-authored route content after the explicit 9-43 divergence; never source-game canon."
       },
       "locationId": "nest_station",
       "backgroundAssetId": "bg.nest_station",
@@ -4933,7 +5823,7 @@
           "source.official.canto-ix.9-43",
           "source.project.legacy-v1.0.44"
         ],
-        "note": "Project-authored route content after the explicit 9-37 divergence; never source-game canon."
+        "note": "Project-authored route content after the explicit 9-43 divergence; never source-game canon."
       },
       "locationId": "outskirts_dawn",
       "backgroundAssetId": "bg.outskirts_dawn",
@@ -4997,7 +5887,7 @@
           "source.official.canto-ix.9-43",
           "source.project.legacy-v1.0.44"
         ],
-        "note": "Project-authored route content after the explicit 9-37 divergence; never source-game canon."
+        "note": "Project-authored route content after the explicit 9-43 divergence; never source-game canon."
       },
       "locationId": "outskirts_dawn",
       "backgroundAssetId": "bg.outskirts_dawn",
@@ -5054,6 +5944,40 @@
                 "key": "danger",
                 "operator": "lte",
                 "value": 15
+              },
+              {
+                "kind": "quest",
+                "questId": "quest.ring.counter_contract",
+                "status": "completed"
+              },
+              {
+                "kind": "battle",
+                "battleId": "battle.ring.authorship_frame",
+                "outcome": "victory"
+              },
+              {
+                "kind": "equipment",
+                "equipmentId": "equipment.ring.counter_signet"
+              },
+              {
+                "kind": "outfit",
+                "outfitId": "outfit.albina.ring_disguise"
+              },
+              {
+                "kind": "profession",
+                "professionId": "ring_counterforger",
+                "levelGte": 2
+              },
+              {
+                "kind": "relationship",
+                "key": "reliance",
+                "operator": "gte",
+                "value": 7
+              },
+              {
+                "kind": "worldbook",
+                "entryId": "albina_routes_endings_au_if",
+                "status": "seen"
               }
             ]
           },
@@ -5137,7 +6061,7 @@
           "source.official.canto-ix.9-43",
           "source.project.legacy-v1.0.44"
         ],
-        "note": "Project-authored route content after the explicit 9-37 divergence; never source-game canon."
+        "note": "Project-authored route content after the explicit 9-43 divergence; never source-game canon."
       },
       "locationId": "outskirts_dawn",
       "backgroundAssetId": "bg.outskirts_dawn",
@@ -5213,7 +6137,7 @@
           "source.official.canto-ix.9-43",
           "source.project.legacy-v1.0.44"
         ],
-        "note": "Project-authored route content after the explicit 9-37 divergence; never source-game canon."
+        "note": "Project-authored route content after the explicit 9-43 divergence; never source-game canon."
       },
       "locationId": "outskirts_dawn",
       "backgroundAssetId": "bg.outskirts_dawn",
@@ -5272,7 +6196,7 @@
           "source.official.canto-ix.9-43",
           "source.project.legacy-v1.0.44"
         ],
-        "note": "Project-authored route content after the explicit 9-37 divergence; never source-game canon."
+        "note": "Project-authored route content after the explicit 9-43 divergence; never source-game canon."
       },
       "locationId": "outskirts_dawn",
       "backgroundAssetId": "bg.outskirts_dawn",

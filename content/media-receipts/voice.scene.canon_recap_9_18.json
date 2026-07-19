@@ -1,0 +1,26 @@
+{
+  "version": 1,
+  "assetId": "voice.scene.canon_recap_9_18",
+  "artifactSha256": "92d1bdda2e7c3a93bf3b4e2a68a424bf85d10949df29e99f57f026710c83a10c",
+  "provenance": {
+    "provider": "pie",
+    "model": "speech-2.8-hd",
+    "promptVersion": "albina-speech-v2",
+    "sourceJobHash": "b1206c85c6846079b1ce0c3b47a6d63984bb23c7a1480c04e7e42a22c3de8ca6",
+    "review": {
+      "status": "approved",
+      "reviewer": "automated-audio-qc",
+      "reviewedAt": "2026-07-15T18:02:47.186Z"
+    }
+  },
+  "lineage": {
+    "kind": "conversion",
+    "processVersion": "speech-loudnorm-v2",
+    "inputs": [
+      {
+        "sha256": "5fd4987e9c25727521f51e2bf27df5982d59de85277b74df9d97e9f724e51bd5",
+        "role": "pie-speech-api-output"
+      }
+    ]
+  }
+}

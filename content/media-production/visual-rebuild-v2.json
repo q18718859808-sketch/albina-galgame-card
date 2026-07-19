@@ -1,0 +1,3401 @@
+{
+  "version": 2,
+  "projectId": "albina-galgame-card",
+  "policy": {
+    "requiredImageProvider": "x666-openai-compatible",
+    "pieImageAvailability": {
+      "model": "gpt-image-2",
+      "available": false,
+      "modelListCount": 148
+    },
+    "verifiedCandidate": {
+      "provider": "x666-openai-compatible",
+      "model": "gpt-image-2",
+      "generationVerified": true,
+      "currentlyAvailable": false,
+      "availabilityCheckedAt": "2026-07-19T00:48:15.7793914+08:00",
+      "availabilityErrorCode": "model_not_found",
+      "upstreamPieVerified": false,
+      "authorizedForProduction": true,
+      "authorization": {
+        "scope": "albina-v2-image-batch",
+        "source": "direct-user-instruction",
+        "recordedOn": "2026-07-16",
+        "authorizedContentSha256": "c9831c27544e6f90bda0f9935a4087567cc0993b78d39eb13e3fc6da8f61fa42"
+      },
+      "probeArtifactSha256": "a13895f54d2ed8d033e369715e1177eb2f4a01010ec0d5016f1f6775e37786db"
+    },
+    "runtimeGeneration": false,
+    "canonVisualSourceIndexSha256": "072f9152d524062bc08deb87fd0702ced1a4aca2dca3a0b62b7b3626179dcf88",
+    "canonClaimsSha256": "c77eef4a9cd67e8ac643dd02f6862336d1dff9d915211d852b773efedb53c148"
+  },
+  "counts": {
+    "imageJobs": 67,
+    "videoContentJobs": 24,
+    "videoDeliveryEncodes": 48
+  },
+  "imageJobs": [
+    {
+      "id": "visual.image.bg.backstreets_rain",
+      "assetId": "bg.backstreets_rain",
+      "receiptAssetId": "bg.backstreets_rain",
+      "path": "bg/backstreets_rain.jpg",
+      "category": "bg",
+      "provider": "x666-openai-compatible",
+      "model": "gpt-image-2",
+      "upstreamPieVerified": false,
+      "promptVersion": "albina-visual-v2",
+      "inputMode": "text-generation",
+      "referenceJobIds": [],
+      "referenceSourceIds": [],
+      "canonClaimIds": [],
+      "generationSize": "1536x1024",
+      "delivery": {
+        "format": "jpg",
+        "width": 1280,
+        "height": 720,
+        "alpha": false
+      },
+      "sceneIds": [
+        "opening_001",
+        "ring_conspiracy_003",
+        "ring_conspiracy_007"
+      ],
+      "sourceTextHashes": [
+        "027f3a95c1aa8d52dfe608d5bb0216b1601a23531a71e23387cb54119c9d40bc",
+        "19520eb6547332c6781c11fbd30f7ef9af270605c12c549dc3bf54e5e208a1dc",
+        "5468c74288b6f5c04af876c05873e45e9c914d22da3986d3f97549e05fa79a91"
+      ],
+      "status": "authorized-prompt-frozen"
+    },
+    {
+      "id": "visual.image.bg.city_rooftop",
+      "assetId": "bg.city_rooftop",
+      "receiptAssetId": "bg.city_rooftop",
+      "path": "bg/city_rooftop.jpg",
+      "category": "bg",
+      "provider": "x666-openai-compatible",
+      "model": "gpt-image-2",
+      "upstreamPieVerified": false,
+      "promptVersion": "albina-visual-v2",
+      "inputMode": "text-generation",
+      "referenceJobIds": [],
+      "referenceSourceIds": [],
+      "canonClaimIds": [],
+      "generationSize": "1536x1024",
+      "delivery": {
+        "format": "jpg",
+        "width": 1280,
+        "height": 720,
+        "alpha": false
+      },
+      "sceneIds": [
+        "golden_bough_004",
+        "golden_bough_008",
+        "ring_conspiracy_012",
+        "white_canvas_014"
+      ],
+      "sourceTextHashes": [
+        "5afcb795fcbda370eb87ab81f22b0f6461f93b11ba250146ebaa321fb6e89630",
+        "a5725091862aab29f228094e9ef482028273ad5d7163d3375dfff11b0cf4639f",
+        "b2da1860f5e8beaed550ebca91fb897ab1452a4f5746420733c9c0c25fecc5a1",
+        "f21e01d33e00b48360de9061f9417644f382ed8bdecc2a12353dc1be54b86733"
+      ],
+      "status": "authorized-prompt-frozen"
+    },
+    {
+      "id": "visual.image.bg.golden_bough",
+      "assetId": "bg.golden_bough",
+      "receiptAssetId": "bg.golden_bough",
+      "path": "bg/golden_bough.jpg",
+      "category": "bg",
+      "provider": "x666-openai-compatible",
+      "model": "gpt-image-2",
+      "upstreamPieVerified": false,
+      "promptVersion": "albina-visual-v2",
+      "inputMode": "text-generation",
+      "referenceJobIds": [],
+      "referenceSourceIds": [],
+      "canonClaimIds": [],
+      "generationSize": "1536x1024",
+      "delivery": {
+        "format": "jpg",
+        "width": 1280,
+        "height": 720,
+        "alpha": false
+      },
+      "sceneIds": [
+        "golden_bough_001",
+        "golden_bough_007",
+        "golden_bough_013"
+      ],
+      "sourceTextHashes": [
+        "2c0b76487671315953f90b804b1fb84d09af6fd62f716a984da6b6dc65f9fa6a",
+        "4e998603c66c7f8f2b820fdd5d79f2066005d38fccc6a3b3786218522eb8a4dd",
+        "516c568fcb3a0b7fd566cd5ac5ea7187ab255cb20ccd3e8251f52810d34d31dd"
+      ],
+      "status": "authorized-prompt-frozen"
+    },
+    {
+      "id": "visual.image.bg.lce_lab",
+      "assetId": "bg.lce_lab",
+      "receiptAssetId": "bg.lce_lab",
+      "path": "bg/lce_lab.jpg",
+      "category": "bg",
+      "provider": "x666-openai-compatible",
+      "model": "gpt-image-2",
+      "upstreamPieVerified": false,
+      "promptVersion": "albina-visual-v2",
+      "inputMode": "text-generation",
+      "referenceJobIds": [],
+      "referenceSourceIds": [],
+      "canonClaimIds": [],
+      "generationSize": "1536x1024",
+      "delivery": {
+        "format": "jpg",
+        "width": 1280,
+        "height": 720,
+        "alpha": false
+      },
+      "sceneIds": [
+        "canon_recap_9_14",
+        "canon_recap_9_18",
+        "golden_bough_003",
+        "golden_bough_006",
+        "golden_bough_010",
+        "ring_conspiracy_008",
+        "white_canvas_003",
+        "white_canvas_008"
+      ],
+      "sourceTextHashes": [
+        "07e8b30a1c7e578d5a639aefbcdc792ab54a70774cf02f738f02f342a82c0a7b",
+        "19a21d90b28e79902cd1f0bbe9cf46e87ee01058ae1a455a827e1cd2612ab21c",
+        "50afdf65f0a2ced9a18bfc74828cec5110c7aa02764cec072cd94b5540edc10e",
+        "553a6b1908dfba825e7e8fc15eaf1dc34bca936313e8dce5ebe699090dc41fe4",
+        "6029629249f3925d6d1e0dab3e94ffcf284b8c428cb35392c70498b042125fa3",
+        "9c6d215e05013ac6d6ba5148e9568a7f51e92eb03f7abe14db1f23754fd71bc7",
+        "d73a6ec15b6fddf7a305ee77ff23d60688a42c52ea5543f2f81aa62616b2c0ec",
+        "daaacdad2260822985c31348336380863b6be4a0d163cfb1da4cfb88219b1e08"
+      ],
+      "status": "authorized-prompt-frozen"
+    },
+    {
+      "id": "visual.image.bg.limbus_bus",
+      "assetId": "bg.limbus_bus",
+      "receiptAssetId": "bg.limbus_bus",
+      "path": "bg/limbus_bus.jpg",
+      "category": "bg",
+      "provider": "x666-openai-compatible",
+      "model": "gpt-image-2",
+      "upstreamPieVerified": false,
+      "promptVersion": "albina-visual-v2",
+      "inputMode": "text-generation",
+      "referenceJobIds": [],
+      "referenceSourceIds": [],
+      "canonClaimIds": [],
+      "generationSize": "1536x1024",
+      "delivery": {
+        "format": "jpg",
+        "width": 1280,
+        "height": 720,
+        "alpha": false
+      },
+      "sceneIds": [
+        "golden_bough_011",
+        "ring_conspiracy_013",
+        "white_canvas_004",
+        "white_canvas_010"
+      ],
+      "sourceTextHashes": [
+        "a4dbf7e99260a0f3314b250a856166b10f8799694150659be790de266e6d86bb",
+        "b33ada025e79bb19d95694c3a1ed7d9b5f9d00aa056caedfe7dc7b8b9ccf1858",
+        "b5ed62d689f3a6e3dfac2a5a776787fee78d5dd2643fb7b5b0407efd13857a96",
+        "d67b47d008657b642351c222fc684308ff0f662cc52666dad53b2b264e910aa5"
+      ],
+      "status": "authorized-prompt-frozen"
+    },
+    {
+      "id": "visual.image.bg.mirror_corridor",
+      "assetId": "bg.mirror_corridor",
+      "receiptAssetId": "bg.mirror_corridor",
+      "path": "bg/mirror_corridor.jpg",
+      "category": "bg",
+      "provider": "x666-openai-compatible",
+      "model": "gpt-image-2",
+      "upstreamPieVerified": false,
+      "promptVersion": "albina-visual-v2",
+      "inputMode": "text-generation",
+      "referenceJobIds": [],
+      "referenceSourceIds": [],
+      "canonClaimIds": [],
+      "generationSize": "1536x1024",
+      "delivery": {
+        "format": "jpg",
+        "width": 1280,
+        "height": 720,
+        "alpha": false
+      },
+      "sceneIds": [
+        "canon_recap_9_37",
+        "canon_recap_9_37_battle",
+        "canon_recap_9_43_outcome",
+        "golden_bough_002",
+        "golden_bough_005",
+        "golden_bough_009",
+        "golden_bough_014",
+        "ring_conspiracy_009",
+        "white_canvas_007"
+      ],
+      "sourceTextHashes": [
+        "2019e8d779ca3b5d8ab4267085c1e342c9392f873910740556aeb8df9c21bf9f",
+        "25f2f055885d659f5f119386d177a3e1fee851eb56e259816ad1c6f559f38a85",
+        "41f347cf0e82cd43125ccc09c46d50482e270795eb3c131c4f0a02faeab81fb3",
+        "53a58b725c3041231fb6103478744c18e83b27c27b419c629fb544b8138e818c",
+        "767c9f971e43e8439cb5fe373c311a3eb5abfe60afb86f546165e830aa070c35",
+        "b98cfbf00714b2805e178af8867d50ed04c1bd47c98f157dd7c709e5423bc1c8",
+        "c44db78d53ff7d58c18a40aaaead7e30d31130ded12e552c3249b3fda15ca705",
+        "cdd7a4e02a09c47cc99536d64cc8de4c4c3afed0172ef74cf752e92a66f9a191",
+        "d73f5c57e75702711c2bafeeb6b82ed9c0480aa5ca2909d4d6b84dc9b38e117b"
+      ],
+      "status": "authorized-prompt-frozen"
+    },
+    {
+      "id": "visual.image.bg.nest_station",
+      "assetId": "bg.nest_station",
+      "receiptAssetId": "bg.nest_station",
+      "path": "bg/nest_station.jpg",
+      "category": "bg",
+      "provider": "x666-openai-compatible",
+      "model": "gpt-image-2",
+      "upstreamPieVerified": false,
+      "promptVersion": "albina-visual-v2",
+      "inputMode": "text-generation",
+      "referenceJobIds": [],
+      "referenceSourceIds": [],
+      "canonClaimIds": [],
+      "generationSize": "1536x1024",
+      "delivery": {
+        "format": "jpg",
+        "width": 1280,
+        "height": 720,
+        "alpha": false
+      },
+      "sceneIds": [
+        "ring_conspiracy_014",
+        "white_canvas_011"
+      ],
+      "sourceTextHashes": [
+        "3d50b8df021aff8797fe0689117005ae2aae34d70566d032253d775f0b93602c",
+        "649f05c3323610b0311fb949b6c1c171b0a6fc3ede24dbdfdd3d375e961461c5"
+      ],
+      "status": "authorized-prompt-frozen"
+    },
+    {
+      "id": "visual.image.bg.outskirts_dawn",
+      "assetId": "bg.outskirts_dawn",
+      "receiptAssetId": "bg.outskirts_dawn",
+      "path": "bg/outskirts_dawn.jpg",
+      "category": "bg",
+      "provider": "x666-openai-compatible",
+      "model": "gpt-image-2",
+      "upstreamPieVerified": false,
+      "promptVersion": "albina-visual-v2",
+      "inputMode": "text-generation",
+      "referenceJobIds": [],
+      "referenceSourceIds": [],
+      "canonClaimIds": [],
+      "generationSize": "1536x1024",
+      "delivery": {
+        "format": "jpg",
+        "width": 1280,
+        "height": 720,
+        "alpha": false
+      },
+      "sceneIds": [
+        "golden_bough_015",
+        "golden_bough_rebuild_ending_bad",
+        "golden_bough_rebuild_ending_gate",
+        "golden_bough_rebuild_ending_normal",
+        "golden_bough_rebuild_ending_true",
+        "ring_conspiracy_015",
+        "ring_conspiracy_ending_bad",
+        "ring_conspiracy_ending_gate",
+        "ring_conspiracy_ending_normal",
+        "ring_conspiracy_ending_true",
+        "white_canvas_005",
+        "white_canvas_015",
+        "white_canvas_ending_bad",
+        "white_canvas_ending_gate",
+        "white_canvas_ending_normal",
+        "white_canvas_ending_true"
+      ],
+      "sourceTextHashes": [
+        "1418960f3a8008e29c4604675dc19e247b05c917e1c8a605487944fb21ac726f",
+        "189b6d22593d309974fd2c8a26b175d449b0afee5739b56221377cf9d5f2541d",
+        "1deaa37e95bd1f9f953d3a41757c1054cb49b33ffe65b24f9015f6cc385c5b69",
+        "3819f2c9aa8f3480a059860361fb81ebcb1e0b4e46f57ac005856ec384500805",
+        "4797ab3b17aa7667af45999fe0dcdd75a1b145b91bc85815eefec5fa15c2a992",
+        "6cbb86eddc4a29ab2fbaea9f216db5fcd8b0b0fb699380eb01e87e41a42f15fe",
+        "7728c16008f0f774c4282f3dfd24589130161b5177c59eab0d2bd64c2d831070",
+        "7a695f36260517f5e0d12f1e58ab85adea2e2d7d4d9ed046c0bcf37130744f8d",
+        "96725094cfe0854cfc2859c3817e73c5bca4ca8fba6d69c03701be5be789d0b5",
+        "9ee8bc49780439cf2c26abadcb744eb143e05ca17d68e5bcba76b610707c35b1",
+        "a5a98964ecedb6aae08ba0435f1ab0659a04c3830fe22dd119c8d83a432255b6",
+        "b34a580116418e861f1cee7a9ce8382b980673927f64382fb4dd3a7c6d513644",
+        "bf62ed1e189480dd5818d9f7a0db2ce5754f5cc8f86decdf473e42ae0ff9c865",
+        "c06e62ce3510f648be083a2d422803f04fe46af22a6fefb99b1433b1ec0b18a4",
+        "cc782c9b867e5671881453f178c731bb1cf472fa7d1809d934f8f9fe4742821e",
+        "e8435955fb336a76c4114fc33ac2a9d6e6162de5f734e3ae309df415c3560338"
+      ],
+      "status": "authorized-prompt-frozen"
+    },
+    {
+      "id": "visual.image.bg.rain_room",
+      "assetId": "bg.rain_room",
+      "receiptAssetId": "bg.rain_room",
+      "path": "bg/rain_room.jpg",
+      "category": "bg",
+      "provider": "x666-openai-compatible",
+      "model": "gpt-image-2",
+      "upstreamPieVerified": false,
+      "promptVersion": "albina-visual-v2",
+      "inputMode": "text-generation",
+      "referenceJobIds": [],
+      "referenceSourceIds": [],
+      "canonClaimIds": [],
+      "generationSize": "1536x1024",
+      "delivery": {
+        "format": "jpg",
+        "width": 1280,
+        "height": 720,
+        "alpha": false
+      },
+      "sceneIds": [
+        "white_canvas_002",
+        "white_canvas_009"
+      ],
+      "sourceTextHashes": [
+        "05458bb5db24270e31d2efa3473d4e9694f733475c0574a616e52a5d56e96cd9",
+        "88f1b22bb89742e2e0849ff094d788253f68fed6cd88d2c88a6850be491d2426"
+      ],
+      "status": "authorized-prompt-frozen"
+    },
+    {
+      "id": "visual.image.bg.ring_atelier",
+      "assetId": "bg.ring_atelier",
+      "receiptAssetId": "bg.ring_atelier",
+      "path": "bg/ring_atelier.jpg",
+      "category": "bg",
+      "provider": "x666-openai-compatible",
+      "model": "gpt-image-2",
+      "upstreamPieVerified": false,
+      "promptVersion": "albina-visual-v2",
+      "inputMode": "text-generation",
+      "referenceJobIds": [],
+      "referenceSourceIds": [],
+      "canonClaimIds": [],
+      "generationSize": "1536x1024",
+      "delivery": {
+        "format": "jpg",
+        "width": 1280,
+        "height": 720,
+        "alpha": false
+      },
+      "sceneIds": [
+        "canon_recap_albina_fascia",
+        "golden_bough_012",
+        "ring_conspiracy_002",
+        "ring_conspiracy_005",
+        "ring_conspiracy_010",
+        "white_canvas_013"
+      ],
+      "sourceTextHashes": [
+        "4ed6ec9f9de9f505be7795b1b9212b5d4964ed24579aaccdb8453fbea075f41d",
+        "52d28e9fef4f9ed04b20b77f2e30d44e2de6e2d25abf4ff62def7184a45c0bd7",
+        "738446ac4c7939e5d24c34fe5d2d2e98d2d342566d85b8d12370511eb989162c",
+        "79d6bc57c669a3d0ed3542e9ebb79ec0c3a0c0ff4e17a4c2756efd78576c31f4",
+        "c5903bc4df676d348c90a6ec7a5ba42243589be142d1e57f2073287b2421aeea",
+        "ebc5078fd3594998c8789501ee81d60bd043a1896406d9553c7b87beeda8bae9"
+      ],
+      "status": "authorized-prompt-frozen"
+    },
+    {
+      "id": "visual.image.bg.spider_gallery",
+      "assetId": "bg.spider_gallery",
+      "receiptAssetId": "bg.spider_gallery",
+      "path": "bg/spider_gallery.jpg",
+      "category": "bg",
+      "provider": "x666-openai-compatible",
+      "model": "gpt-image-2",
+      "upstreamPieVerified": false,
+      "promptVersion": "albina-visual-v2",
+      "inputMode": "text-generation",
+      "referenceJobIds": [],
+      "referenceSourceIds": [],
+      "canonClaimIds": [],
+      "generationSize": "1536x1024",
+      "delivery": {
+        "format": "jpg",
+        "width": 1280,
+        "height": 720,
+        "alpha": false
+      },
+      "sceneIds": [
+        "ring_conspiracy_001",
+        "ring_conspiracy_004",
+        "ring_conspiracy_006",
+        "ring_conspiracy_011",
+        "white_canvas_012"
+      ],
+      "sourceTextHashes": [
+        "0cce9e2035bc330581db6f3f4de6370d5ab410e417468373b4d76ae7b69a8f23",
+        "1f7147bb9f13e975ed4a611461764ae12986c7bbe17ce90fc7a5f7abe430a5cd",
+        "2fcbd7e62eabf6e7de5d670641f34edc3ba5486a64dd0531adc26d5015a56d5c",
+        "52f9c5fc2a27d7d7cb399db33fa7923e29fcdcbc05e737be69682ba75f3be21b",
+        "a7e0a48368957c28a39907723a7bd713414dc8ea8b09628ea23291776fea89c5"
+      ],
+      "status": "authorized-prompt-frozen"
+    },
+    {
+      "id": "visual.image.bg.white_canvas",
+      "assetId": "bg.white_canvas",
+      "receiptAssetId": "bg.white_canvas",
+      "path": "bg/white_canvas.jpg",
+      "category": "bg",
+      "provider": "x666-openai-compatible",
+      "model": "gpt-image-2",
+      "upstreamPieVerified": false,
+      "promptVersion": "albina-visual-v2",
+      "inputMode": "text-generation",
+      "referenceJobIds": [],
+      "referenceSourceIds": [],
+      "canonClaimIds": [],
+      "generationSize": "1536x1024",
+      "delivery": {
+        "format": "jpg",
+        "width": 1280,
+        "height": 720,
+        "alpha": false
+      },
+      "sceneIds": [
+        "white_canvas_001",
+        "white_canvas_006"
+      ],
+      "sourceTextHashes": [
+        "5d2db4619a33462a393496243499939481d41134a1061bef3e86b9ee08f5c61a",
+        "cb162214faf77f724d7ed8e608503d82d51ca36f9868e6db4020470da39201b1"
+      ],
+      "status": "authorized-prompt-frozen"
+    },
+    {
+      "id": "visual.image.cg.araya_rooftop",
+      "assetId": "cg.araya_rooftop",
+      "receiptAssetId": "cg.araya_rooftop",
+      "path": "cg/araya_rooftop.jpg",
+      "category": "cg",
+      "provider": "x666-openai-compatible",
+      "model": "gpt-image-2",
+      "upstreamPieVerified": false,
+      "promptVersion": "albina-visual-v2",
+      "inputMode": "reference-edit",
+      "referenceJobIds": [
+        "visual.image.portrait.albina.normal",
+        "visual.image.portrait.protagonist.serious",
+        "visual.image.portrait.vergilius.normal"
+      ],
+      "referenceSourceIds": [],
+      "canonClaimIds": [],
+      "generationSize": "1536x1024",
+      "delivery": {
+        "format": "jpg",
+        "width": 1280,
+        "height": 720,
+        "alpha": false
+      },
+      "sceneIds": [
+        "golden_bough_004",
+        "golden_bough_008",
+        "golden_bough_009",
+        "golden_bough_011",
+        "golden_bough_014",
+        "ring_conspiracy_012"
+      ],
+      "sourceTextHashes": [
+        "57964cc24f6c3317bf275a1c487641c50d5531aa8d6db41f02fa22cd8b7c32fb",
+        "5afcb795fcbda370eb87ab81f22b0f6461f93b11ba250146ebaa321fb6e89630",
+        "9cb66049e4cc1a4935be7e27ac863fec90ba2730189c83eb7354db3c31a8b4d2",
+        "a5725091862aab29f228094e9ef482028273ad5d7163d3375dfff11b0cf4639f",
+        "b98cfbf00714b2805e178af8867d50ed04c1bd47c98f157dd7c709e5423bc1c8",
+        "c7b5090504e0c09d8c0e15a2054b23162d7bee19b95c6bd78cbec9b98296bf50",
+        "cde0acd9e649727b179d3ff94c6fd8a76eb7f812c41f531c03b13d9cf5aba5f5",
+        "f21e01d33e00b48360de9061f9417644f382ed8bdecc2a12353dc1be54b86733"
+      ],
+      "status": "authorized-prompt-frozen"
+    },
+    {
+      "id": "visual.image.cg.art_resonance",
+      "assetId": "cg.art_resonance",
+      "receiptAssetId": "cg.art_resonance",
+      "path": "cg/art_resonance.jpg",
+      "category": "cg",
+      "provider": "x666-openai-compatible",
+      "model": "gpt-image-2",
+      "upstreamPieVerified": false,
+      "promptVersion": "albina-visual-v2",
+      "inputMode": "reference-edit",
+      "referenceJobIds": [
+        "visual.image.portrait.albina.normal",
+        "visual.image.portrait.protagonist.tender"
+      ],
+      "referenceSourceIds": [],
+      "canonClaimIds": [],
+      "generationSize": "1536x1024",
+      "delivery": {
+        "format": "jpg",
+        "width": 1280,
+        "height": 720,
+        "alpha": false
+      },
+      "sceneIds": [
+        "ring_conspiracy_009",
+        "white_canvas_001",
+        "white_canvas_006",
+        "white_canvas_007",
+        "white_canvas_011",
+        "white_canvas_012",
+        "white_canvas_013",
+        "white_canvas_014"
+      ],
+      "sourceTextHashes": [
+        "1269fb34890041ca689dde3178e16ab73b266fdfc0589d905b1ac2309054d0d3",
+        "649f05c3323610b0311fb949b6c1c171b0a6fc3ede24dbdfdd3d375e961461c5",
+        "85b8b2187e4ae47f506d496f4240e36c6324e43e9996e5abbbfb440c0656ed30",
+        "a4e8a2390feb12d9507096c7e786e803480f611afdc813645b8581340c81c49a",
+        "a7306eb12f621385b27c20e016692cbaf2a8bae558a71bcfebc986608443f505",
+        "b4b5ba4d8ae82b482f0007bef2463b444ee5befb914e4e7e85c373df0f1f8644",
+        "b80a74c988363223cd06973be316f3f7739f0cf75e9f854767e248205fe1be2f",
+        "c6584bc895bd656393eaf80fe1f7c172a880f5b6a3b673d0f6bd64cf9b33ab36",
+        "e0f713b8fb233a291979ed2804128480e7f496a6b17a6955e385eb85641d9d0c",
+        "ebc5078fd3594998c8789501ee81d60bd043a1896406d9553c7b87beeda8bae9"
+      ],
+      "status": "authorized-prompt-frozen"
+    },
+    {
+      "id": "visual.image.cg.backstreet_pursuit",
+      "assetId": "cg.backstreet_pursuit",
+      "receiptAssetId": "cg.backstreet_pursuit",
+      "path": "cg/backstreet_pursuit.jpg",
+      "category": "cg",
+      "provider": "x666-openai-compatible",
+      "model": "gpt-image-2",
+      "upstreamPieVerified": false,
+      "promptVersion": "albina-visual-v2",
+      "inputMode": "reference-edit",
+      "referenceJobIds": [
+        "visual.image.portrait.albina.combat",
+        "visual.image.portrait.protagonist.battle",
+        "visual.image.portrait.ring_agent.normal"
+      ],
+      "referenceSourceIds": [],
+      "canonClaimIds": [],
+      "generationSize": "1536x1024",
+      "delivery": {
+        "format": "jpg",
+        "width": 1280,
+        "height": 720,
+        "alpha": false
+      },
+      "sceneIds": [
+        "ring_conspiracy_002",
+        "ring_conspiracy_003",
+        "ring_conspiracy_007"
+      ],
+      "sourceTextHashes": [
+        "027f3a95c1aa8d52dfe608d5bb0216b1601a23531a71e23387cb54119c9d40bc",
+        "5468c74288b6f5c04af876c05873e45e9c914d22da3986d3f97549e05fa79a91",
+        "e0fd3c6fff9d654d8f82d08689d6c7f9c5b9a11716e97fdebca52ff27c1aac10"
+      ],
+      "status": "authorized-prompt-frozen"
+    },
+    {
+      "id": "visual.image.cg.canon_recap_9_14",
+      "assetId": "cg.canon_recap_9_14",
+      "receiptAssetId": "cg.canon_recap_9_14",
+      "path": "cg/canon_recap_9_14.jpg",
+      "category": "cg",
+      "provider": "x666-openai-compatible",
+      "model": "gpt-image-2",
+      "upstreamPieVerified": false,
+      "promptVersion": "albina-visual-v2",
+      "inputMode": "reference-edit",
+      "referenceJobIds": [],
+      "referenceSourceIds": [
+        "canon.visual.canto-ix.9-14.s908"
+      ],
+      "canonClaimIds": [
+        "canon.9-14.corporism-context"
+      ],
+      "generationSize": "1536x1024",
+      "delivery": {
+        "format": "jpg",
+        "width": 1280,
+        "height": 720,
+        "alpha": false
+      },
+      "sceneIds": [
+        "canon_recap_9_14"
+      ],
+      "sourceTextHashes": [
+        "d73a6ec15b6fddf7a305ee77ff23d60688a42c52ea5543f2f81aa62616b2c0ec"
+      ],
+      "status": "authorized-prompt-frozen"
+    },
+    {
+      "id": "visual.image.cg.canon_recap_9_18",
+      "assetId": "cg.canon_recap_9_18",
+      "receiptAssetId": "cg.canon_recap_9_18",
+      "path": "cg/canon_recap_9_18.jpg",
+      "category": "cg",
+      "provider": "x666-openai-compatible",
+      "model": "gpt-image-2",
+      "upstreamPieVerified": false,
+      "promptVersion": "albina-visual-v2",
+      "inputMode": "reference-edit",
+      "referenceJobIds": [],
+      "referenceSourceIds": [
+        "canon.visual.canto-ix.9-18.lce-lab-bg",
+        "canon.visual.albina.armored-standing",
+        "canon.visual.ren.standing",
+        "canon.visual.dante.standing"
+      ],
+      "canonClaimIds": [
+        "canon.9-18.first-appearance"
+      ],
+      "generationSize": "1536x1024",
+      "delivery": {
+        "format": "jpg",
+        "width": 1280,
+        "height": 720,
+        "alpha": false
+      },
+      "sceneIds": [
+        "canon_recap_9_18"
+      ],
+      "sourceTextHashes": [
+        "6029629249f3925d6d1e0dab3e94ffcf284b8c428cb35392c70498b042125fa3"
+      ],
+      "status": "authorized-prompt-frozen"
+    },
+    {
+      "id": "visual.image.cg.canon_recap_9_37",
+      "assetId": "cg.canon_recap_9_37",
+      "receiptAssetId": "cg.canon_recap_9_37",
+      "path": "cg/canon_recap_9_37.jpg",
+      "category": "cg",
+      "provider": "x666-openai-compatible",
+      "model": "gpt-image-2",
+      "upstreamPieVerified": false,
+      "promptVersion": "albina-visual-v2",
+      "inputMode": "reference-edit",
+      "referenceJobIds": [],
+      "referenceSourceIds": [
+        "canon.visual.canto-ix.9-43.ring-corridor-bg",
+        "canon.visual.albina.armored-standing",
+        "canon.visual.faust.standing"
+      ],
+      "canonClaimIds": [
+        "canon.9-37.encounter-and-method"
+      ],
+      "generationSize": "1536x1024",
+      "delivery": {
+        "format": "jpg",
+        "width": 1280,
+        "height": 720,
+        "alpha": false
+      },
+      "sceneIds": [
+        "canon_recap_9_37"
+      ],
+      "sourceTextHashes": [
+        "cdd7a4e02a09c47cc99536d64cc8de4c4c3afed0172ef74cf752e92a66f9a191"
+      ],
+      "status": "authorized-prompt-frozen"
+    },
+    {
+      "id": "visual.image.cg.canon_recap_9_37_battle",
+      "assetId": "cg.canon_recap_9_37_battle",
+      "receiptAssetId": "cg.canon_recap_9_37_battle",
+      "path": "cg/canon_recap_9_37_battle.jpg",
+      "category": "cg",
+      "provider": "x666-openai-compatible",
+      "model": "gpt-image-2",
+      "upstreamPieVerified": false,
+      "promptVersion": "albina-visual-v2",
+      "inputMode": "reference-edit",
+      "referenceJobIds": [],
+      "referenceSourceIds": [
+        "canon.visual.canto-ix.9-43.ring-corridor-bg",
+        "canon.visual.albina.unarmored-standing",
+        "canon.visual.callisto.standing",
+        "canon.visual.alyssa.story-icon"
+      ],
+      "canonClaimIds": [
+        "canon.9-37.escalation"
+      ],
+      "generationSize": "1536x1024",
+      "delivery": {
+        "format": "jpg",
+        "width": 1280,
+        "height": 720,
+        "alpha": false
+      },
+      "sceneIds": [
+        "canon_recap_9_37_battle"
+      ],
+      "sourceTextHashes": [
+        "2019e8d779ca3b5d8ab4267085c1e342c9392f873910740556aeb8df9c21bf9f"
+      ],
+      "status": "authorized-prompt-frozen"
+    },
+    {
+      "id": "visual.image.cg.canon_recap_9_43_outcome",
+      "assetId": "cg.canon_recap_9_43_outcome",
+      "receiptAssetId": "cg.canon_recap_9_43_outcome",
+      "path": "cg/canon_recap_9_43_outcome.jpg",
+      "category": "cg",
+      "provider": "x666-openai-compatible",
+      "model": "gpt-image-2",
+      "upstreamPieVerified": false,
+      "promptVersion": "albina-visual-v2",
+      "inputMode": "reference-edit",
+      "referenceJobIds": [],
+      "referenceSourceIds": [
+        "canon.visual.canto-ix.9-43.ring-corridor-bg",
+        "canon.visual.albina.unarmored-standing",
+        "canon.visual.callisto.standing",
+        "canon.visual.sinclair.smoke-war-story-icon"
+      ],
+      "canonClaimIds": [
+        "canon.9-43.sign-awakening",
+        "canon.9-43.outcome"
+      ],
+      "generationSize": "1536x1024",
+      "delivery": {
+        "format": "jpg",
+        "width": 1280,
+        "height": 720,
+        "alpha": false
+      },
+      "sceneIds": [
+        "canon_recap_9_43_outcome"
+      ],
+      "sourceTextHashes": [
+        "41f347cf0e82cd43125ccc09c46d50482e270795eb3c131c4f0a02faeab81fb3"
+      ],
+      "status": "authorized-prompt-frozen"
+    },
+    {
+      "id": "visual.image.cg.canon_recap_albina_fascia",
+      "assetId": "cg.canon_recap_albina_fascia",
+      "receiptAssetId": "cg.canon_recap_albina_fascia",
+      "path": "cg/canon_recap_albina_fascia.jpg",
+      "category": "cg",
+      "provider": "x666-openai-compatible",
+      "model": "gpt-image-2",
+      "upstreamPieVerified": false,
+      "promptVersion": "albina-visual-v2",
+      "inputMode": "reference-edit",
+      "referenceJobIds": [],
+      "referenceSourceIds": [
+        "canon.visual.albina.unarmored-standing",
+        "canon.visual.albina.armored-standing"
+      ],
+      "canonClaimIds": [
+        "canon.profile.identity",
+        "canon.appearance.prosthetic-body",
+        "canon.appearance.armor-and-fascia",
+        "canon.personality.fascia-attachment",
+        "canon.personality.social-and-ambition",
+        "canon.story.pre-canto-fascia"
+      ],
+      "generationSize": "1536x1024",
+      "delivery": {
+        "format": "jpg",
+        "width": 1280,
+        "height": 720,
+        "alpha": false
+      },
+      "sceneIds": [
+        "canon_recap_albina_fascia"
+      ],
+      "sourceTextHashes": [
+        "c5903bc4df676d348c90a6ec7a5ba42243589be142d1e57f2073287b2421aeea"
+      ],
+      "status": "authorized-prompt-frozen"
+    },
+    {
+      "id": "visual.image.cg.combat_transition_01",
+      "assetId": "cg.combat_transition_01",
+      "receiptAssetId": "cg.combat_transition_01",
+      "path": "cg/combat_transition_01.jpg",
+      "category": "cg",
+      "provider": "x666-openai-compatible",
+      "model": "gpt-image-2",
+      "upstreamPieVerified": false,
+      "promptVersion": "albina-visual-v2",
+      "inputMode": "reference-edit",
+      "referenceJobIds": [
+        "visual.image.portrait.albina.combat",
+        "visual.image.portrait.protagonist.battle",
+        "visual.image.portrait.ring_agent.normal"
+      ],
+      "referenceSourceIds": [],
+      "canonClaimIds": [],
+      "generationSize": "1536x1024",
+      "delivery": {
+        "format": "jpg",
+        "width": 1280,
+        "height": 720,
+        "alpha": false
+      },
+      "sceneIds": [
+        "ring_conspiracy_003",
+        "ring_conspiracy_006",
+        "ring_conspiracy_007",
+        "ring_conspiracy_010",
+        "ring_conspiracy_011"
+      ],
+      "sourceTextHashes": [
+        "02885581c3506884460fb44edbe8abadb7bdb748ec1af07585544ce16a77fb9f",
+        "187634d79bfcf6ac43725f29fa9dbbe40e5e84ecd322b082011037c9bad8dd53",
+        "3ba3d59180173ebd8b4a25447850925a5d5d2eff3bf8596d9fc66b79cfa37b64",
+        "6c41b91f7e6b14987608fb02b80656ec38c7a0c0f8c165c592fdf6ebdbf35aa5",
+        "83d5fc20e915dc2bc63edea576e5c64419ea6174134a2f3d64b9fce65dd871c0"
+      ],
+      "status": "authorized-prompt-frozen"
+    },
+    {
+      "id": "visual.image.cg.conspiracy_contract",
+      "assetId": "cg.conspiracy_contract",
+      "receiptAssetId": "cg.conspiracy_contract",
+      "path": "cg/conspiracy_contract.jpg",
+      "category": "cg",
+      "provider": "x666-openai-compatible",
+      "model": "gpt-image-2",
+      "upstreamPieVerified": false,
+      "promptVersion": "albina-visual-v2",
+      "inputMode": "reference-edit",
+      "referenceJobIds": [
+        "visual.image.portrait.albina.ring-conspiracy",
+        "visual.image.portrait.protagonist.serious",
+        "visual.image.portrait.callisto.normal",
+        "visual.image.portrait.ren.normal"
+      ],
+      "referenceSourceIds": [],
+      "canonClaimIds": [],
+      "generationSize": "1536x1024",
+      "delivery": {
+        "format": "jpg",
+        "width": 1280,
+        "height": 720,
+        "alpha": false
+      },
+      "sceneIds": [
+        "golden_bough_012",
+        "ring_conspiracy_001",
+        "ring_conspiracy_005",
+        "ring_conspiracy_006",
+        "ring_conspiracy_008",
+        "ring_conspiracy_010"
+      ],
+      "sourceTextHashes": [
+        "2fcbd7e62eabf6e7de5d670641f34edc3ba5486a64dd0531adc26d5015a56d5c",
+        "4a7ec70c63da8ce4172bbe1c1609ad1a22e2c3e3c1a83a3f7a926f11dece6e62",
+        "4ed6ec9f9de9f505be7795b1b9212b5d4964ed24579aaccdb8453fbea075f41d",
+        "67643df68f374d2eacf796aa45bf251be1a153ce742485288277c6dbe591378b",
+        "726663df4f3b568b3523357ab8d5e242af7a8fc06c3fcda9d4430320c7a415b8",
+        "738446ac4c7939e5d24c34fe5d2d2e98d2d342566d85b8d12370511eb989162c",
+        "a7e0a48368957c28a39907723a7bd713414dc8ea8b09628ea23291776fea89c5",
+        "b6a92f50a0dbe13be70edd326c84ba048ada61ec47318a0c97759b0230a1e0ad"
+      ],
+      "status": "authorized-prompt-frozen"
+    },
+    {
+      "id": "visual.image.cg.fascia_heartbeat",
+      "assetId": "cg.fascia_heartbeat",
+      "receiptAssetId": "cg.fascia_heartbeat",
+      "path": "cg/fascia_heartbeat.jpg",
+      "category": "cg",
+      "provider": "x666-openai-compatible",
+      "model": "gpt-image-2",
+      "upstreamPieVerified": false,
+      "promptVersion": "albina-visual-v2",
+      "inputMode": "reference-edit",
+      "referenceJobIds": [
+        "visual.image.portrait.albina.fascia-open",
+        "visual.image.portrait.protagonist.tender"
+      ],
+      "referenceSourceIds": [],
+      "canonClaimIds": [],
+      "generationSize": "1536x1024",
+      "delivery": {
+        "format": "jpg",
+        "width": 1280,
+        "height": 720,
+        "alpha": false
+      },
+      "sceneIds": [
+        "golden_bough_001",
+        "golden_bough_003",
+        "golden_bough_006",
+        "golden_bough_007",
+        "ring_conspiracy_013",
+        "white_canvas_003",
+        "white_canvas_007",
+        "white_canvas_008"
+      ],
+      "sourceTextHashes": [
+        "0cef6bf94c01e69637fe9be38270fe6bee1afb733a5d527722f3328074f116d4",
+        "15c5cf5b87e13a083a030cd34cd3cd6f9c5dcdebc60523a5133e25c74de0575b",
+        "4745dddedf2387cedcc549596c328ca4bccc03813d070747e2810756e95d01bd",
+        "53a58b725c3041231fb6103478744c18e83b27c27b419c629fb544b8138e818c",
+        "5bda3d17b127853d1639d822d84a644fa0de6ee10ef86910d85cedbe9c15eda6",
+        "7246761df2e245bbae7f97258bf20117d0be3781d35471468476a222fb321aee",
+        "9ba8553e72a15c1ba61cde5c11154fc7ecb2a2212c3a18461f0ca8daaba49fcd",
+        "b36ec8e8e8b75132bafec7b4a05054d7210151de89ddf977252921186b462b55",
+        "f77e81525be6720d97525b9d7b234f5835818a1ac2f12d23faad93139ca955e6"
+      ],
+      "status": "authorized-prompt-frozen"
+    },
+    {
+      "id": "visual.image.cg.golden_bough_ending",
+      "assetId": "cg.golden_bough_ending",
+      "receiptAssetId": "cg.golden_bough_ending",
+      "path": "cg/golden_bough_ending.jpg",
+      "category": "cg",
+      "provider": "x666-openai-compatible",
+      "model": "gpt-image-2",
+      "upstreamPieVerified": false,
+      "promptVersion": "albina-visual-v2",
+      "inputMode": "reference-edit",
+      "referenceJobIds": [
+        "visual.image.portrait.albina.endgame",
+        "visual.image.portrait.protagonist.resolve"
+      ],
+      "referenceSourceIds": [],
+      "canonClaimIds": [],
+      "generationSize": "1536x1024",
+      "delivery": {
+        "format": "jpg",
+        "width": 1280,
+        "height": 720,
+        "alpha": false
+      },
+      "sceneIds": [
+        "golden_bough_002",
+        "golden_bough_004",
+        "golden_bough_005",
+        "golden_bough_009",
+        "golden_bough_013",
+        "golden_bough_014",
+        "golden_bough_015",
+        "golden_bough_rebuild_ending_bad",
+        "golden_bough_rebuild_ending_gate",
+        "golden_bough_rebuild_ending_normal",
+        "golden_bough_rebuild_ending_true"
+      ],
+      "sourceTextHashes": [
+        "189b6d22593d309974fd2c8a26b175d449b0afee5739b56221377cf9d5f2541d",
+        "1deaa37e95bd1f9f953d3a41757c1054cb49b33ffe65b24f9015f6cc385c5b69",
+        "2c0b76487671315953f90b804b1fb84d09af6fd62f716a984da6b6dc65f9fa6a",
+        "2c8c13f05fd67932d2f52e071743c43b8fdb12277ef350434ed877793a391190",
+        "4797ab3b17aa7667af45999fe0dcdd75a1b145b91bc85815eefec5fa15c2a992",
+        "4a2b4c8aff5985c439f73f3ffe22f0e2a56b04720f0a3bf304a0ad96af5bd5eb",
+        "767c9f971e43e8439cb5fe373c311a3eb5abfe60afb86f546165e830aa070c35",
+        "96725094cfe0854cfc2859c3817e73c5bca4ca8fba6d69c03701be5be789d0b5",
+        "c17f30c53c164de64b5ba5d2fa44a94a024c828117bfedd7d46b8d9fdd720c34",
+        "c44db78d53ff7d58c18a40aaaead7e30d31130ded12e552c3249b3fda15ca705",
+        "d73f5c57e75702711c2bafeeb6b82ed9c0480aa5ca2909d4d6b84dc9b38e117b",
+        "e8435955fb336a76c4114fc33ac2a9d6e6162de5f734e3ae309df415c3560338",
+        "feb0623551eba290a6b721281138366f02fa4720edc2a39ecf5f41adc3a72d4f"
+      ],
+      "status": "authorized-prompt-frozen"
+    },
+    {
+      "id": "visual.image.cg.golden_bough_rebuild",
+      "assetId": "cg.golden_bough_rebuild",
+      "receiptAssetId": "cg.golden_bough_rebuild",
+      "path": "cg/golden_bough_rebuild.jpg",
+      "category": "cg",
+      "provider": "x666-openai-compatible",
+      "model": "gpt-image-2",
+      "upstreamPieVerified": false,
+      "promptVersion": "albina-visual-v2",
+      "inputMode": "reference-edit",
+      "referenceJobIds": [
+        "visual.image.portrait.albina.normal"
+      ],
+      "referenceSourceIds": [],
+      "canonClaimIds": [],
+      "generationSize": "1536x1024",
+      "delivery": {
+        "format": "jpg",
+        "width": 1280,
+        "height": 720,
+        "alpha": false
+      },
+      "sceneIds": [
+        "opening_001"
+      ],
+      "sourceTextHashes": [
+        "f684287b2f2826ef754afd03e8332d07529af320b37bb532e149d6661c53bb49"
+      ],
+      "status": "authorized-prompt-frozen"
+    },
+    {
+      "id": "visual.image.cg.hollow_torso_reveal",
+      "assetId": "cg.hollow_torso_reveal",
+      "receiptAssetId": "cg.hollow_torso_reveal",
+      "path": "cg/hollow_torso_reveal.jpg",
+      "category": "cg",
+      "provider": "x666-openai-compatible",
+      "model": "gpt-image-2",
+      "upstreamPieVerified": false,
+      "promptVersion": "albina-visual-v2",
+      "inputMode": "reference-edit",
+      "referenceJobIds": [
+        "visual.image.portrait.albina.surgical",
+        "visual.image.portrait.protagonist.serious",
+        "visual.image.portrait.lce_doctor.normal"
+      ],
+      "referenceSourceIds": [],
+      "canonClaimIds": [],
+      "generationSize": "1536x1024",
+      "delivery": {
+        "format": "jpg",
+        "width": 1280,
+        "height": 720,
+        "alpha": false
+      },
+      "sceneIds": [
+        "white_canvas_002",
+        "white_canvas_003",
+        "white_canvas_008"
+      ],
+      "sourceTextHashes": [
+        "07e8b30a1c7e578d5a639aefbcdc792ab54a70774cf02f738f02f342a82c0a7b",
+        "3db78f7026b0f53e2450bc258d94854db51b1f2fbc714eea556c00ec93e5035b",
+        "daaacdad2260822985c31348336380863b6be4a0d163cfb1da4cfb88219b1e08"
+      ],
+      "status": "authorized-prompt-frozen"
+    },
+    {
+      "id": "visual.image.cg.lce_raid",
+      "assetId": "cg.lce_raid",
+      "receiptAssetId": "cg.lce_raid",
+      "path": "cg/lce_raid.jpg",
+      "category": "cg",
+      "provider": "x666-openai-compatible",
+      "model": "gpt-image-2",
+      "upstreamPieVerified": false,
+      "promptVersion": "albina-visual-v2",
+      "inputMode": "reference-edit",
+      "referenceJobIds": [
+        "visual.image.portrait.albina.combat",
+        "visual.image.portrait.protagonist.battle",
+        "visual.image.portrait.lce_doctor.normal"
+      ],
+      "referenceSourceIds": [],
+      "canonClaimIds": [],
+      "generationSize": "1536x1024",
+      "delivery": {
+        "format": "jpg",
+        "width": 1280,
+        "height": 720,
+        "alpha": false
+      },
+      "sceneIds": [
+        "golden_bough_002",
+        "golden_bough_003",
+        "golden_bough_008",
+        "golden_bough_010",
+        "ring_conspiracy_008",
+        "white_canvas_003",
+        "white_canvas_008"
+      ],
+      "sourceTextHashes": [
+        "08620615ebb20aca92ca3590d433208d387524722f64b148ebdf5be43695a1e9",
+        "0b9e45c1395ebf71da4e76c145585facaeeec7efabd60a33bc216705153d235d",
+        "19a21d90b28e79902cd1f0bbe9cf46e87ee01058ae1a455a827e1cd2612ab21c",
+        "2fed21e96d849021078a482773a8dbc47c7b44745ea7fc8c477ff006256a20c7",
+        "3d351ee837ae434116c125043948637eb764986da2b0e47aef40345186ad2bb8",
+        "553a6b1908dfba825e7e8fc15eaf1dc34bca936313e8dce5ebe699090dc41fe4",
+        "634ce68ccff7a36fd4c44d5849bcb805eaf98303afbc346387dad69c4b95b8e7",
+        "9c6d215e05013ac6d6ba5148e9568a7f51e92eb03f7abe14db1f23754fd71bc7",
+        "a9c0bb69ae35cfe2abdeae12e48cb2efa0b34f16bc6c6cfe3c7fdc09a4844098"
+      ],
+      "status": "authorized-prompt-frozen"
+    },
+    {
+      "id": "visual.image.cg.limbus_bus_night",
+      "assetId": "cg.limbus_bus_night",
+      "receiptAssetId": "cg.limbus_bus_night",
+      "path": "cg/limbus_bus_night.jpg",
+      "category": "cg",
+      "provider": "x666-openai-compatible",
+      "model": "gpt-image-2",
+      "upstreamPieVerified": false,
+      "promptVersion": "albina-visual-v2",
+      "inputMode": "reference-edit",
+      "referenceJobIds": [
+        "visual.image.portrait.albina.rain",
+        "visual.image.portrait.protagonist.tender",
+        "visual.image.portrait.dante.normal"
+      ],
+      "referenceSourceIds": [],
+      "canonClaimIds": [],
+      "generationSize": "1536x1024",
+      "delivery": {
+        "format": "jpg",
+        "width": 1280,
+        "height": 720,
+        "alpha": false
+      },
+      "sceneIds": [
+        "golden_bough_011",
+        "ring_conspiracy_013",
+        "white_canvas_004",
+        "white_canvas_010"
+      ],
+      "sourceTextHashes": [
+        "a4dbf7e99260a0f3314b250a856166b10f8799694150659be790de266e6d86bb",
+        "b33ada025e79bb19d95694c3a1ed7d9b5f9d00aa056caedfe7dc7b8b9ccf1858",
+        "b5ed62d689f3a6e3dfac2a5a776787fee78d5dd2643fb7b5b0407efd13857a96",
+        "d67b47d008657b642351c222fc684308ff0f662cc52666dad53b2b264e910aa5",
+        "edd75b5e7b46139a23d509ea807b4a0a40c3e19bda46ac81b1e4fdfcfc7a191b",
+        "fe3305e9bed32934cd04d0b46bd6288cd45919e97da297346d05ac211b0c56bd"
+      ],
+      "status": "authorized-prompt-frozen"
+    },
+    {
+      "id": "visual.image.cg.maestro_shadow",
+      "assetId": "cg.maestro_shadow",
+      "receiptAssetId": "cg.maestro_shadow",
+      "path": "cg/maestro_shadow.jpg",
+      "category": "cg",
+      "provider": "x666-openai-compatible",
+      "model": "gpt-image-2",
+      "upstreamPieVerified": false,
+      "promptVersion": "albina-visual-v2",
+      "inputMode": "reference-edit",
+      "referenceJobIds": [
+        "visual.image.portrait.albina.maestro",
+        "visual.image.portrait.protagonist.shadow",
+        "visual.image.portrait.callisto.normal",
+        "visual.image.portrait.ren.normal"
+      ],
+      "referenceSourceIds": [],
+      "canonClaimIds": [],
+      "generationSize": "1536x1024",
+      "delivery": {
+        "format": "jpg",
+        "width": 1280,
+        "height": 720,
+        "alpha": false
+      },
+      "sceneIds": [
+        "ring_conspiracy_001",
+        "ring_conspiracy_004",
+        "ring_conspiracy_005",
+        "ring_conspiracy_006",
+        "ring_conspiracy_007",
+        "ring_conspiracy_009",
+        "ring_conspiracy_010",
+        "ring_conspiracy_011",
+        "ring_conspiracy_012",
+        "ring_conspiracy_014",
+        "white_canvas_012"
+      ],
+      "sourceTextHashes": [
+        "045e4d35df15335170e84190749311a69facdc1e95343821b9682b95237c509b",
+        "09aae6e13f42860c949201050176428d9c7da92081d64d1a2749fe46f347de5f",
+        "0cce9e2035bc330581db6f3f4de6370d5ab410e417468373b4d76ae7b69a8f23",
+        "1968c659688b1eeb63d7d03dbfeab5f6dd20cbd75950b38c940f40f4cfe8365e",
+        "1f7147bb9f13e975ed4a611461764ae12986c7bbe17ce90fc7a5f7abe430a5cd",
+        "1fde92452d59b733c5439ffe3a913b3727684d707060679854e32da17310f584",
+        "25f2f055885d659f5f119386d177a3e1fee851eb56e259816ad1c6f559f38a85",
+        "3e79f52534f25db32ab393806f007dd930588d82fda7902e769e89db176fcaf2",
+        "52f9c5fc2a27d7d7cb399db33fa7923e29fcdcbc05e737be69682ba75f3be21b",
+        "79d6bc57c669a3d0ed3542e9ebb79ec0c3a0c0ff4e17a4c2756efd78576c31f4",
+        "9ee8f5dc699829efaff3331d287e2cfed890cb85c426b740e2fe6bdbd5cd77b6",
+        "a88aeb7dc6ee27f32df2990914b7614d2ec7eb3eae17640415f41e406c07812e",
+        "d3f3486f2625ccabe735217b5487881cf826ebfc9fdfdc800746ec9d43ef85f3"
+      ],
+      "status": "authorized-prompt-frozen"
+    },
+    {
+      "id": "visual.image.cg.opening_rain",
+      "assetId": "cg.opening_rain",
+      "receiptAssetId": "cg.opening_rain",
+      "path": "cg/opening_rain.jpg",
+      "category": "cg",
+      "provider": "x666-openai-compatible",
+      "model": "gpt-image-2",
+      "upstreamPieVerified": false,
+      "promptVersion": "albina-visual-v2",
+      "inputMode": "reference-edit",
+      "referenceJobIds": [
+        "visual.image.portrait.albina.normal",
+        "visual.image.portrait.protagonist.serious"
+      ],
+      "referenceSourceIds": [],
+      "canonClaimIds": [],
+      "generationSize": "1536x1024",
+      "delivery": {
+        "format": "jpg",
+        "width": 1280,
+        "height": 720,
+        "alpha": false
+      },
+      "sceneIds": [
+        "opening_001"
+      ],
+      "sourceTextHashes": [
+        "06cb986b36a1b6221ddb2d93d76d131332987094e112c924ca50992408312ff3",
+        "19520eb6547332c6781c11fbd30f7ef9af270605c12c549dc3bf54e5e208a1dc"
+      ],
+      "status": "authorized-prompt-frozen"
+    },
+    {
+      "id": "visual.image.cg.rain_confession",
+      "assetId": "cg.rain_confession",
+      "receiptAssetId": "cg.rain_confession",
+      "path": "cg/rain_confession.jpg",
+      "category": "cg",
+      "provider": "x666-openai-compatible",
+      "model": "gpt-image-2",
+      "upstreamPieVerified": false,
+      "promptVersion": "albina-visual-v2",
+      "inputMode": "reference-edit",
+      "referenceJobIds": [
+        "visual.image.portrait.albina.rain",
+        "visual.image.portrait.protagonist.wet-hair"
+      ],
+      "referenceSourceIds": [],
+      "canonClaimIds": [],
+      "generationSize": "1536x1024",
+      "delivery": {
+        "format": "jpg",
+        "width": 1280,
+        "height": 720,
+        "alpha": false
+      },
+      "sceneIds": [
+        "ring_conspiracy_013",
+        "white_canvas_002",
+        "white_canvas_004",
+        "white_canvas_009",
+        "white_canvas_010",
+        "white_canvas_011"
+      ],
+      "sourceTextHashes": [
+        "05458bb5db24270e31d2efa3473d4e9694f733475c0574a616e52a5d56e96cd9",
+        "1b4b01934db914f5ffdd1e9500e421c64c70705c0ad0dfb2e3fb572a4d82b2a7",
+        "39a2dce8a8026ea01e9ab3d6d0035f525ee52bbc02e8e6da990a538ed9503468",
+        "48eb81bc63d1cf58a0f78e31b290023195794f5c763f1f6398d583e1a9978eb8",
+        "71cf81ece3098ed4a1aea6cc59a3fbecf845169ca422bcb5a48003c7c39eec07",
+        "88f1b22bb89742e2e0849ff094d788253f68fed6cd88d2c88a6850be491d2426",
+        "92c5dc77f4f9614d8ace6b933ea7723a8f40da577ea8ee840b2b9f4214a7c1b6",
+        "bf3a6c4a3ea0998cf832ab7b70d8b9baec5d2f7bbdfdf24b620b145a0c0d3e1d"
+      ],
+      "status": "authorized-prompt-frozen"
+    },
+    {
+      "id": "visual.image.cg.rebuild_awakening",
+      "assetId": "cg.rebuild_awakening",
+      "receiptAssetId": "cg.rebuild_awakening",
+      "path": "cg/rebuild_awakening.jpg",
+      "category": "cg",
+      "provider": "x666-openai-compatible",
+      "model": "gpt-image-2",
+      "upstreamPieVerified": false,
+      "promptVersion": "albina-visual-v2",
+      "inputMode": "reference-edit",
+      "referenceJobIds": [
+        "visual.image.portrait.albina.golden-bough",
+        "visual.image.portrait.protagonist.serious"
+      ],
+      "referenceSourceIds": [],
+      "canonClaimIds": [],
+      "generationSize": "1536x1024",
+      "delivery": {
+        "format": "jpg",
+        "width": 1280,
+        "height": 720,
+        "alpha": false
+      },
+      "sceneIds": [
+        "golden_bough_001",
+        "golden_bough_007"
+      ],
+      "sourceTextHashes": [
+        "4e998603c66c7f8f2b820fdd5d79f2066005d38fccc6a3b3786218522eb8a4dd",
+        "516c568fcb3a0b7fd566cd5ac5ea7187ab255cb20ccd3e8251f52810d34d31dd"
+      ],
+      "status": "authorized-prompt-frozen"
+    },
+    {
+      "id": "visual.image.cg.ren_interruption",
+      "assetId": "cg.ren_interruption",
+      "receiptAssetId": "cg.ren_interruption",
+      "path": "cg/ren_interruption.jpg",
+      "category": "cg",
+      "provider": "x666-openai-compatible",
+      "model": "gpt-image-2",
+      "upstreamPieVerified": false,
+      "promptVersion": "albina-visual-v2",
+      "inputMode": "reference-edit",
+      "referenceJobIds": [
+        "visual.image.portrait.albina.combat",
+        "visual.image.portrait.protagonist.battle",
+        "visual.image.portrait.ren.normal"
+      ],
+      "referenceSourceIds": [],
+      "canonClaimIds": [],
+      "generationSize": "1536x1024",
+      "delivery": {
+        "format": "jpg",
+        "width": 1280,
+        "height": 720,
+        "alpha": false
+      },
+      "sceneIds": [
+        "ring_conspiracy_003"
+      ],
+      "sourceTextHashes": [
+        "d5b41174ec676a6b35275ae75767af33f06526fbc1d4f9e1313670d370d625c1"
+      ],
+      "status": "authorized-prompt-frozen"
+    },
+    {
+      "id": "visual.image.cg.ring_conspiracy_ending",
+      "assetId": "cg.ring_conspiracy_ending",
+      "receiptAssetId": "cg.ring_conspiracy_ending",
+      "path": "cg/ring_conspiracy_ending.jpg",
+      "category": "cg",
+      "provider": "x666-openai-compatible",
+      "model": "gpt-image-2",
+      "upstreamPieVerified": false,
+      "promptVersion": "albina-visual-v2",
+      "inputMode": "reference-edit",
+      "referenceJobIds": [
+        "visual.image.portrait.albina.endgame",
+        "visual.image.portrait.protagonist.resolve"
+      ],
+      "referenceSourceIds": [],
+      "canonClaimIds": [],
+      "generationSize": "1536x1024",
+      "delivery": {
+        "format": "jpg",
+        "width": 1280,
+        "height": 720,
+        "alpha": false
+      },
+      "sceneIds": [
+        "ring_conspiracy_002",
+        "ring_conspiracy_004",
+        "ring_conspiracy_011",
+        "ring_conspiracy_012",
+        "ring_conspiracy_014",
+        "ring_conspiracy_015",
+        "ring_conspiracy_ending_bad",
+        "ring_conspiracy_ending_gate",
+        "ring_conspiracy_ending_normal",
+        "ring_conspiracy_ending_true"
+      ],
+      "sourceTextHashes": [
+        "037a97d27ce81d81b2a383d292147050b6706d97909be650f23d42e30e1d3b12",
+        "3819f2c9aa8f3480a059860361fb81ebcb1e0b4e46f57ac005856ec384500805",
+        "3d50b8df021aff8797fe0689117005ae2aae34d70566d032253d775f0b93602c",
+        "51bd0d2012bc59a8fbc5bc0510b5dff1ab8faa3269bcb3bc599cd5fdda85cf15",
+        "52d28e9fef4f9ed04b20b77f2e30d44e2de6e2d25abf4ff62def7184a45c0bd7",
+        "6b706e9609abbd56db514ab5d8ac49114037e33edf649e0b8d5dd01d2ea0ff97",
+        "6cbb86eddc4a29ab2fbaea9f216db5fcd8b0b0fb699380eb01e87e41a42f15fe",
+        "7728c16008f0f774c4282f3dfd24589130161b5177c59eab0d2bd64c2d831070",
+        "7a695f36260517f5e0d12f1e58ab85adea2e2d7d4d9ed046c0bcf37130744f8d",
+        "80d4b5452fd7a9980e22a2e855cf0fd23e5f610b1b98114fc6d4aa2921b93ed2",
+        "cc782c9b867e5671881453f178c731bb1cf472fa7d1809d934f8f9fe4742821e"
+      ],
+      "status": "authorized-prompt-frozen"
+    },
+    {
+      "id": "visual.image.cg.ring_invitation",
+      "assetId": "cg.ring_invitation",
+      "receiptAssetId": "cg.ring_invitation",
+      "path": "cg/ring_invitation.jpg",
+      "category": "cg",
+      "provider": "x666-openai-compatible",
+      "model": "gpt-image-2",
+      "upstreamPieVerified": false,
+      "promptVersion": "albina-visual-v2",
+      "inputMode": "reference-edit",
+      "referenceJobIds": [
+        "visual.image.portrait.albina.ring-conspiracy",
+        "visual.image.portrait.callisto.normal",
+        "visual.image.portrait.ren.normal"
+      ],
+      "referenceSourceIds": [],
+      "canonClaimIds": [],
+      "generationSize": "1536x1024",
+      "delivery": {
+        "format": "jpg",
+        "width": 1280,
+        "height": 720,
+        "alpha": false
+      },
+      "sceneIds": [
+        "opening_001"
+      ],
+      "sourceTextHashes": [
+        "c0a0ee634816b69a6f6ed8ad6de0d942448d00a2a66dd087b779b9ad19f78111"
+      ],
+      "status": "authorized-prompt-frozen"
+    },
+    {
+      "id": "visual.image.cg.surgery_of_memory",
+      "assetId": "cg.surgery_of_memory",
+      "receiptAssetId": "cg.surgery_of_memory",
+      "path": "cg/surgery_of_memory.jpg",
+      "category": "cg",
+      "provider": "x666-openai-compatible",
+      "model": "gpt-image-2",
+      "upstreamPieVerified": false,
+      "promptVersion": "albina-visual-v2",
+      "inputMode": "reference-edit",
+      "referenceJobIds": [
+        "visual.image.portrait.albina.surgical",
+        "visual.image.portrait.protagonist.serious",
+        "visual.image.portrait.faust.normal"
+      ],
+      "referenceSourceIds": [],
+      "canonClaimIds": [],
+      "generationSize": "1536x1024",
+      "delivery": {
+        "format": "jpg",
+        "width": 1280,
+        "height": 720,
+        "alpha": false
+      },
+      "sceneIds": [
+        "golden_bough_001",
+        "golden_bough_003",
+        "golden_bough_006",
+        "golden_bough_007",
+        "golden_bough_008",
+        "golden_bough_010",
+        "golden_bough_012",
+        "golden_bough_013"
+      ],
+      "sourceTextHashes": [
+        "4a696dd07b2015de934ed59ee76eeac0615e87f124febebffe537355fad254ba",
+        "4ff4a8695862493aaf1552cd159a420b6138c120b1ae14d585df9187cf86c4f3",
+        "50afdf65f0a2ced9a18bfc74828cec5110c7aa02764cec072cd94b5540edc10e",
+        "58d4df35d05e3eda49f8f5ef3901feae8f4fefc63f062af066c27e0bd3ac2612",
+        "77ffe94456dcad158ff09ca552616c1eae7a471c957f0a8de8e3ca0e9c2c52f0",
+        "8c7ba1205383c07784266cfe27ec7b9ccb180d528a62e5fcf29ecaa10806ee32",
+        "b2470a22d1383f14b6ed5bbf259eda97d29ae32114a59ef3944c7b707810a306",
+        "b6aad37a13963b5d0a344dd913ffe6112bd0aac75206474ddb4e9c1ae577321f",
+        "e4eac1b68666229321180bb39416bec54bb89c79189fb4902d588aadfacd16db"
+      ],
+      "status": "authorized-prompt-frozen"
+    },
+    {
+      "id": "visual.image.cg.trust_threshold",
+      "assetId": "cg.trust_threshold",
+      "receiptAssetId": "cg.trust_threshold",
+      "path": "cg/trust_threshold.jpg",
+      "category": "cg",
+      "provider": "x666-openai-compatible",
+      "model": "gpt-image-2",
+      "upstreamPieVerified": false,
+      "promptVersion": "albina-visual-v2",
+      "inputMode": "reference-edit",
+      "referenceJobIds": [
+        "visual.image.portrait.albina.endgame",
+        "visual.image.portrait.protagonist.tender"
+      ],
+      "referenceSourceIds": [],
+      "canonClaimIds": [],
+      "generationSize": "1536x1024",
+      "delivery": {
+        "format": "jpg",
+        "width": 1280,
+        "height": 720,
+        "alpha": false
+      },
+      "sceneIds": [
+        "white_canvas_001",
+        "white_canvas_006",
+        "white_canvas_012",
+        "white_canvas_014"
+      ],
+      "sourceTextHashes": [
+        "1720171472a1c42ffd088b37e74549afdd3cff53a294b92f6a8d81937003ddd9",
+        "3ed29e9de78e680c80ffc7fe20bf9a606066e0ab69281d3dfb04fedb10a72cf9",
+        "7b239704b0116bcc59c20a208dbc7793a55ff1800c4c5062789705aaaa4a47a9",
+        "b2da1860f5e8beaed550ebca91fb897ab1452a4f5746420733c9c0c25fecc5a1"
+      ],
+      "status": "authorized-prompt-frozen"
+    },
+    {
+      "id": "visual.image.cg.white_canvas_choice",
+      "assetId": "cg.white_canvas_choice",
+      "receiptAssetId": "cg.white_canvas_choice",
+      "path": "cg/white_canvas_choice.jpg",
+      "category": "cg",
+      "provider": "x666-openai-compatible",
+      "model": "gpt-image-2",
+      "upstreamPieVerified": false,
+      "promptVersion": "albina-visual-v2",
+      "inputMode": "reference-edit",
+      "referenceJobIds": [
+        "visual.image.portrait.albina.white-canvas",
+        "visual.image.portrait.protagonist.tender"
+      ],
+      "referenceSourceIds": [],
+      "canonClaimIds": [],
+      "generationSize": "1536x1024",
+      "delivery": {
+        "format": "jpg",
+        "width": 1280,
+        "height": 720,
+        "alpha": false
+      },
+      "sceneIds": [
+        "white_canvas_001",
+        "white_canvas_006"
+      ],
+      "sourceTextHashes": [
+        "5d2db4619a33462a393496243499939481d41134a1061bef3e86b9ee08f5c61a",
+        "cb162214faf77f724d7ed8e608503d82d51ca36f9868e6db4020470da39201b1"
+      ],
+      "status": "authorized-prompt-frozen"
+    },
+    {
+      "id": "visual.image.cg.white_canvas_ending",
+      "assetId": "cg.white_canvas_ending",
+      "receiptAssetId": "cg.white_canvas_ending",
+      "path": "cg/white_canvas_ending.jpg",
+      "category": "cg",
+      "provider": "x666-openai-compatible",
+      "model": "gpt-image-2",
+      "upstreamPieVerified": false,
+      "promptVersion": "albina-visual-v2",
+      "inputMode": "reference-edit",
+      "referenceJobIds": [
+        "visual.image.portrait.albina.endgame",
+        "visual.image.portrait.protagonist.resolve"
+      ],
+      "referenceSourceIds": [],
+      "canonClaimIds": [],
+      "generationSize": "1536x1024",
+      "delivery": {
+        "format": "jpg",
+        "width": 1280,
+        "height": 720,
+        "alpha": false
+      },
+      "sceneIds": [
+        "white_canvas_004",
+        "white_canvas_005",
+        "white_canvas_011",
+        "white_canvas_014",
+        "white_canvas_015",
+        "white_canvas_ending_bad",
+        "white_canvas_ending_gate",
+        "white_canvas_ending_normal",
+        "white_canvas_ending_true"
+      ],
+      "sourceTextHashes": [
+        "1418960f3a8008e29c4604675dc19e247b05c917e1c8a605487944fb21ac726f",
+        "369b323a87fadba75f7aed761a75b4858c578cf2495aa26014700848d36cc13a",
+        "60314b167f7cb582f7169d06f45abf7270b6bb688914b1edad52303224b1fb0e",
+        "9ee8bc49780439cf2c26abadcb744eb143e05ca17d68e5bcba76b610707c35b1",
+        "a5a98964ecedb6aae08ba0435f1ab0659a04c3830fe22dd119c8d83a432255b6",
+        "b34a580116418e861f1cee7a9ce8382b980673927f64382fb4dd3a7c6d513644",
+        "bf31d696e3383c5d9b625cbed986ae29eee3e7bc84d7390f1fcbcf32c09c6bf1",
+        "bf62ed1e189480dd5818d9f7a0db2ce5754f5cc8f86decdf473e42ae0ff9c865",
+        "c06e62ce3510f648be083a2d422803f04fe46af22a6fefb99b1433b1ec0b18a4"
+      ],
+      "status": "authorized-prompt-frozen"
+    },
+    {
+      "id": "visual.image.portrait.albina.armored",
+      "assetId": "portrait.albina.armored",
+      "receiptAssetId": "file.characters.albina.armored.png",
+      "portraitAssetId": "portrait.albina.armored",
+      "path": "characters/albina/armored.png",
+      "category": "characters",
+      "provider": "x666-openai-compatible",
+      "model": "gpt-image-2",
+      "upstreamPieVerified": false,
+      "promptVersion": "albina-visual-v2",
+      "inputMode": "reference-edit",
+      "referenceJobIds": [
+        "visual.image.portrait.albina.normal"
+      ],
+      "referenceSourceIds": [],
+      "canonClaimIds": [],
+      "generationSize": "1024x1536",
+      "delivery": {
+        "format": "png",
+        "width": 1024,
+        "height": 1536,
+        "alpha": true
+      },
+      "sceneIds": [
+        "canon_recap_9_18",
+        "canon_recap_9_37_battle",
+        "canon_recap_albina_fascia"
+      ],
+      "sourceTextHashes": [
+        "2019e8d779ca3b5d8ab4267085c1e342c9392f873910740556aeb8df9c21bf9f",
+        "6029629249f3925d6d1e0dab3e94ffcf284b8c428cb35392c70498b042125fa3",
+        "c5903bc4df676d348c90a6ec7a5ba42243589be142d1e57f2073287b2421aeea"
+      ],
+      "status": "authorized-prompt-frozen"
+    },
+    {
+      "id": "visual.image.portrait.albina.combat",
+      "assetId": "portrait.albina.combat",
+      "receiptAssetId": "file.characters.albina.combat.png",
+      "portraitAssetId": "portrait.albina.combat",
+      "path": "characters/albina/combat.png",
+      "category": "characters",
+      "provider": "x666-openai-compatible",
+      "model": "gpt-image-2",
+      "upstreamPieVerified": false,
+      "promptVersion": "albina-visual-v2",
+      "inputMode": "reference-edit",
+      "referenceJobIds": [
+        "visual.image.portrait.albina.normal"
+      ],
+      "referenceSourceIds": [],
+      "canonClaimIds": [],
+      "generationSize": "1024x1536",
+      "delivery": {
+        "format": "png",
+        "width": 1024,
+        "height": 1536,
+        "alpha": true
+      },
+      "sceneIds": [
+        "golden_bough_008",
+        "ring_conspiracy_003",
+        "ring_conspiracy_007",
+        "ring_conspiracy_011"
+      ],
+      "sourceTextHashes": [
+        "027f3a95c1aa8d52dfe608d5bb0216b1601a23531a71e23387cb54119c9d40bc",
+        "1f7147bb9f13e975ed4a611461764ae12986c7bbe17ce90fc7a5f7abe430a5cd",
+        "5468c74288b6f5c04af876c05873e45e9c914d22da3986d3f97549e05fa79a91",
+        "5afcb795fcbda370eb87ab81f22b0f6461f93b11ba250146ebaa321fb6e89630"
+      ],
+      "status": "authorized-prompt-frozen"
+    },
+    {
+      "id": "visual.image.portrait.albina.endgame",
+      "assetId": "portrait.albina.endgame",
+      "receiptAssetId": "file.characters.albina.endgame.png",
+      "portraitAssetId": "portrait.albina.endgame",
+      "path": "characters/albina/endgame.png",
+      "category": "characters",
+      "provider": "x666-openai-compatible",
+      "model": "gpt-image-2",
+      "upstreamPieVerified": false,
+      "promptVersion": "albina-visual-v2",
+      "inputMode": "reference-edit",
+      "referenceJobIds": [
+        "visual.image.portrait.albina.normal"
+      ],
+      "referenceSourceIds": [],
+      "canonClaimIds": [],
+      "generationSize": "1024x1536",
+      "delivery": {
+        "format": "png",
+        "width": 1024,
+        "height": 1536,
+        "alpha": true
+      },
+      "sceneIds": [
+        "golden_bough_002",
+        "golden_bough_005",
+        "golden_bough_009",
+        "golden_bough_014",
+        "golden_bough_015",
+        "golden_bough_rebuild_ending_bad",
+        "golden_bough_rebuild_ending_gate",
+        "golden_bough_rebuild_ending_normal",
+        "golden_bough_rebuild_ending_true",
+        "ring_conspiracy_015",
+        "ring_conspiracy_ending_bad",
+        "ring_conspiracy_ending_gate",
+        "ring_conspiracy_ending_normal",
+        "ring_conspiracy_ending_true",
+        "white_canvas_005",
+        "white_canvas_014",
+        "white_canvas_015",
+        "white_canvas_ending_bad",
+        "white_canvas_ending_gate",
+        "white_canvas_ending_normal",
+        "white_canvas_ending_true"
+      ],
+      "sourceTextHashes": [
+        "1418960f3a8008e29c4604675dc19e247b05c917e1c8a605487944fb21ac726f",
+        "189b6d22593d309974fd2c8a26b175d449b0afee5739b56221377cf9d5f2541d",
+        "1deaa37e95bd1f9f953d3a41757c1054cb49b33ffe65b24f9015f6cc385c5b69",
+        "3819f2c9aa8f3480a059860361fb81ebcb1e0b4e46f57ac005856ec384500805",
+        "4797ab3b17aa7667af45999fe0dcdd75a1b145b91bc85815eefec5fa15c2a992",
+        "6cbb86eddc4a29ab2fbaea9f216db5fcd8b0b0fb699380eb01e87e41a42f15fe",
+        "767c9f971e43e8439cb5fe373c311a3eb5abfe60afb86f546165e830aa070c35",
+        "7728c16008f0f774c4282f3dfd24589130161b5177c59eab0d2bd64c2d831070",
+        "7a695f36260517f5e0d12f1e58ab85adea2e2d7d4d9ed046c0bcf37130744f8d",
+        "96725094cfe0854cfc2859c3817e73c5bca4ca8fba6d69c03701be5be789d0b5",
+        "9ee8bc49780439cf2c26abadcb744eb143e05ca17d68e5bcba76b610707c35b1",
+        "a5a98964ecedb6aae08ba0435f1ab0659a04c3830fe22dd119c8d83a432255b6",
+        "b2da1860f5e8beaed550ebca91fb897ab1452a4f5746420733c9c0c25fecc5a1",
+        "b34a580116418e861f1cee7a9ce8382b980673927f64382fb4dd3a7c6d513644",
+        "b98cfbf00714b2805e178af8867d50ed04c1bd47c98f157dd7c709e5423bc1c8",
+        "bf62ed1e189480dd5818d9f7a0db2ce5754f5cc8f86decdf473e42ae0ff9c865",
+        "c06e62ce3510f648be083a2d422803f04fe46af22a6fefb99b1433b1ec0b18a4",
+        "c44db78d53ff7d58c18a40aaaead7e30d31130ded12e552c3249b3fda15ca705",
+        "cc782c9b867e5671881453f178c731bb1cf472fa7d1809d934f8f9fe4742821e",
+        "d73f5c57e75702711c2bafeeb6b82ed9c0480aa5ca2909d4d6b84dc9b38e117b",
+        "e8435955fb336a76c4114fc33ac2a9d6e6162de5f734e3ae309df415c3560338"
+      ],
+      "status": "authorized-prompt-frozen"
+    },
+    {
+      "id": "visual.image.portrait.albina.fascia-open",
+      "assetId": "portrait.albina.fascia-open",
+      "receiptAssetId": "file.characters.albina.fascia.open.png",
+      "portraitAssetId": "portrait.albina.fascia-open",
+      "path": "characters/albina/fascia-open.png",
+      "category": "characters",
+      "provider": "x666-openai-compatible",
+      "model": "gpt-image-2",
+      "upstreamPieVerified": false,
+      "promptVersion": "albina-visual-v2",
+      "inputMode": "reference-edit",
+      "referenceJobIds": [
+        "visual.image.portrait.albina.normal"
+      ],
+      "referenceSourceIds": [],
+      "canonClaimIds": [],
+      "generationSize": "1024x1536",
+      "delivery": {
+        "format": "png",
+        "width": 1024,
+        "height": 1536,
+        "alpha": true
+      },
+      "sceneIds": [
+        "golden_bough_003",
+        "golden_bough_006"
+      ],
+      "sourceTextHashes": [
+        "19a21d90b28e79902cd1f0bbe9cf46e87ee01058ae1a455a827e1cd2612ab21c",
+        "50afdf65f0a2ced9a18bfc74828cec5110c7aa02764cec072cd94b5540edc10e"
+      ],
+      "status": "authorized-prompt-frozen"
+    },
+    {
+      "id": "visual.image.portrait.albina.furious",
+      "assetId": "portrait.albina.furious",
+      "receiptAssetId": "file.characters.albina.furious.png",
+      "portraitAssetId": "portrait.albina.furious",
+      "path": "characters/albina/furious.png",
+      "category": "characters",
+      "provider": "x666-openai-compatible",
+      "model": "gpt-image-2",
+      "upstreamPieVerified": false,
+      "promptVersion": "albina-visual-v2",
+      "inputMode": "reference-edit",
+      "referenceJobIds": [
+        "visual.image.portrait.albina.normal"
+      ],
+      "referenceSourceIds": [],
+      "canonClaimIds": [],
+      "generationSize": "1024x1536",
+      "delivery": {
+        "format": "png",
+        "width": 1024,
+        "height": 1536,
+        "alpha": true
+      },
+      "sceneIds": [
+        "golden_bough_012",
+        "ring_conspiracy_002",
+        "ring_conspiracy_006",
+        "ring_conspiracy_010",
+        "white_canvas_013"
+      ],
+      "sourceTextHashes": [
+        "2fcbd7e62eabf6e7de5d670641f34edc3ba5486a64dd0531adc26d5015a56d5c",
+        "4ed6ec9f9de9f505be7795b1b9212b5d4964ed24579aaccdb8453fbea075f41d",
+        "52d28e9fef4f9ed04b20b77f2e30d44e2de6e2d25abf4ff62def7184a45c0bd7",
+        "738446ac4c7939e5d24c34fe5d2d2e98d2d342566d85b8d12370511eb989162c",
+        "ebc5078fd3594998c8789501ee81d60bd043a1896406d9553c7b87beeda8bae9"
+      ],
+      "status": "authorized-prompt-frozen"
+    },
+    {
+      "id": "visual.image.portrait.albina.golden-bough",
+      "assetId": "portrait.albina.golden-bough",
+      "receiptAssetId": "file.characters.albina.golden.bough.png",
+      "portraitAssetId": "portrait.albina.golden-bough",
+      "path": "characters/albina/golden-bough.png",
+      "category": "characters",
+      "provider": "x666-openai-compatible",
+      "model": "gpt-image-2",
+      "upstreamPieVerified": false,
+      "promptVersion": "albina-visual-v2",
+      "inputMode": "reference-edit",
+      "referenceJobIds": [
+        "visual.image.portrait.albina.normal"
+      ],
+      "referenceSourceIds": [],
+      "canonClaimIds": [],
+      "generationSize": "1024x1536",
+      "delivery": {
+        "format": "png",
+        "width": 1024,
+        "height": 1536,
+        "alpha": true
+      },
+      "sceneIds": [
+        "golden_bough_001",
+        "golden_bough_004",
+        "golden_bough_007",
+        "golden_bough_013"
+      ],
+      "sourceTextHashes": [
+        "2c0b76487671315953f90b804b1fb84d09af6fd62f716a984da6b6dc65f9fa6a",
+        "4e998603c66c7f8f2b820fdd5d79f2066005d38fccc6a3b3786218522eb8a4dd",
+        "516c568fcb3a0b7fd566cd5ac5ea7187ab255cb20ccd3e8251f52810d34d31dd",
+        "f21e01d33e00b48360de9061f9417644f382ed8bdecc2a12353dc1be54b86733"
+      ],
+      "status": "authorized-prompt-frozen"
+    },
+    {
+      "id": "visual.image.portrait.albina.maestro",
+      "assetId": "portrait.albina.maestro",
+      "receiptAssetId": "file.characters.albina.maestro.png",
+      "portraitAssetId": "portrait.albina.maestro",
+      "path": "characters/albina/maestro.png",
+      "category": "characters",
+      "provider": "x666-openai-compatible",
+      "model": "gpt-image-2",
+      "upstreamPieVerified": false,
+      "promptVersion": "albina-visual-v2",
+      "inputMode": "reference-edit",
+      "referenceJobIds": [
+        "visual.image.portrait.albina.normal"
+      ],
+      "referenceSourceIds": [],
+      "canonClaimIds": [],
+      "generationSize": "1024x1536",
+      "delivery": {
+        "format": "png",
+        "width": 1024,
+        "height": 1536,
+        "alpha": true
+      },
+      "sceneIds": [
+        "ring_conspiracy_004",
+        "ring_conspiracy_005",
+        "ring_conspiracy_009",
+        "ring_conspiracy_014"
+      ],
+      "sourceTextHashes": [
+        "0cce9e2035bc330581db6f3f4de6370d5ab410e417468373b4d76ae7b69a8f23",
+        "25f2f055885d659f5f119386d177a3e1fee851eb56e259816ad1c6f559f38a85",
+        "3d50b8df021aff8797fe0689117005ae2aae34d70566d032253d775f0b93602c",
+        "79d6bc57c669a3d0ed3542e9ebb79ec0c3a0c0ff4e17a4c2756efd78576c31f4"
+      ],
+      "status": "authorized-prompt-frozen"
+    },
+    {
+      "id": "visual.image.portrait.albina.normal",
+      "assetId": "portrait.albina.normal",
+      "receiptAssetId": "file.characters.albina.normal.png",
+      "portraitAssetId": "portrait.albina.normal",
+      "path": "characters/albina/normal.png",
+      "category": "characters",
+      "provider": "x666-openai-compatible",
+      "model": "gpt-image-2",
+      "upstreamPieVerified": false,
+      "promptVersion": "albina-visual-v2",
+      "inputMode": "reference-edit",
+      "referenceJobIds": [],
+      "referenceSourceIds": [
+        "canon.visual.albina.unarmored-standing"
+      ],
+      "canonClaimIds": [],
+      "generationSize": "1024x1536",
+      "delivery": {
+        "format": "png",
+        "width": 1024,
+        "height": 1536,
+        "alpha": true
+      },
+      "sceneIds": [
+        "canon_recap_9_37",
+        "opening_001"
+      ],
+      "sourceTextHashes": [
+        "19520eb6547332c6781c11fbd30f7ef9af270605c12c549dc3bf54e5e208a1dc",
+        "cdd7a4e02a09c47cc99536d64cc8de4c4c3afed0172ef74cf752e92a66f9a191"
+      ],
+      "status": "authorized-prompt-frozen"
+    },
+    {
+      "id": "visual.image.portrait.albina.rain",
+      "assetId": "portrait.albina.rain",
+      "receiptAssetId": "file.characters.albina.rain.png",
+      "portraitAssetId": "portrait.albina.rain",
+      "path": "characters/albina/rain.png",
+      "category": "characters",
+      "provider": "x666-openai-compatible",
+      "model": "gpt-image-2",
+      "upstreamPieVerified": false,
+      "promptVersion": "albina-visual-v2",
+      "inputMode": "reference-edit",
+      "referenceJobIds": [
+        "visual.image.portrait.albina.normal"
+      ],
+      "referenceSourceIds": [],
+      "canonClaimIds": [],
+      "generationSize": "1024x1536",
+      "delivery": {
+        "format": "png",
+        "width": 1024,
+        "height": 1536,
+        "alpha": true
+      },
+      "sceneIds": [
+        "golden_bough_011",
+        "ring_conspiracy_012",
+        "ring_conspiracy_013",
+        "white_canvas_004",
+        "white_canvas_009",
+        "white_canvas_010"
+      ],
+      "sourceTextHashes": [
+        "05458bb5db24270e31d2efa3473d4e9694f733475c0574a616e52a5d56e96cd9",
+        "a4dbf7e99260a0f3314b250a856166b10f8799694150659be790de266e6d86bb",
+        "a5725091862aab29f228094e9ef482028273ad5d7163d3375dfff11b0cf4639f",
+        "b33ada025e79bb19d95694c3a1ed7d9b5f9d00aa056caedfe7dc7b8b9ccf1858",
+        "b5ed62d689f3a6e3dfac2a5a776787fee78d5dd2643fb7b5b0407efd13857a96",
+        "d67b47d008657b642351c222fc684308ff0f662cc52666dad53b2b264e910aa5"
+      ],
+      "status": "authorized-prompt-frozen"
+    },
+    {
+      "id": "visual.image.portrait.albina.ring-conspiracy",
+      "assetId": "portrait.albina.ring-conspiracy",
+      "receiptAssetId": "file.characters.albina.ring.conspiracy.png",
+      "portraitAssetId": "portrait.albina.ring-conspiracy",
+      "path": "characters/albina/ring-conspiracy.png",
+      "category": "characters",
+      "provider": "x666-openai-compatible",
+      "model": "gpt-image-2",
+      "upstreamPieVerified": false,
+      "promptVersion": "albina-visual-v2",
+      "inputMode": "reference-edit",
+      "referenceJobIds": [
+        "visual.image.portrait.albina.normal"
+      ],
+      "referenceSourceIds": [],
+      "canonClaimIds": [],
+      "generationSize": "1024x1536",
+      "delivery": {
+        "format": "png",
+        "width": 1024,
+        "height": 1536,
+        "alpha": true
+      },
+      "sceneIds": [
+        "ring_conspiracy_001",
+        "white_canvas_012"
+      ],
+      "sourceTextHashes": [
+        "52f9c5fc2a27d7d7cb399db33fa7923e29fcdcbc05e737be69682ba75f3be21b",
+        "a7e0a48368957c28a39907723a7bd713414dc8ea8b09628ea23291776fea89c5"
+      ],
+      "status": "authorized-prompt-frozen"
+    },
+    {
+      "id": "visual.image.portrait.albina.shy",
+      "assetId": "portrait.albina.shy",
+      "receiptAssetId": "file.characters.albina.shy.png",
+      "portraitAssetId": "portrait.albina.shy",
+      "path": "characters/albina/shy.png",
+      "category": "characters",
+      "provider": "x666-openai-compatible",
+      "model": "gpt-image-2",
+      "upstreamPieVerified": false,
+      "promptVersion": "albina-visual-v2",
+      "inputMode": "reference-edit",
+      "referenceJobIds": [
+        "visual.image.portrait.albina.normal"
+      ],
+      "referenceSourceIds": [],
+      "canonClaimIds": [],
+      "generationSize": "1024x1536",
+      "delivery": {
+        "format": "png",
+        "width": 1024,
+        "height": 1536,
+        "alpha": true
+      },
+      "sceneIds": [
+        "white_canvas_002",
+        "white_canvas_007"
+      ],
+      "sourceTextHashes": [
+        "53a58b725c3041231fb6103478744c18e83b27c27b419c629fb544b8138e818c",
+        "88f1b22bb89742e2e0849ff094d788253f68fed6cd88d2c88a6850be491d2426"
+      ],
+      "status": "authorized-prompt-frozen"
+    },
+    {
+      "id": "visual.image.portrait.albina.surgical",
+      "assetId": "portrait.albina.surgical",
+      "receiptAssetId": "file.characters.albina.surgical.png",
+      "portraitAssetId": "portrait.albina.surgical",
+      "path": "characters/albina/surgical.png",
+      "category": "characters",
+      "provider": "x666-openai-compatible",
+      "model": "gpt-image-2",
+      "upstreamPieVerified": false,
+      "promptVersion": "albina-visual-v2",
+      "inputMode": "reference-edit",
+      "referenceJobIds": [
+        "visual.image.portrait.albina.normal"
+      ],
+      "referenceSourceIds": [],
+      "canonClaimIds": [],
+      "generationSize": "1024x1536",
+      "delivery": {
+        "format": "png",
+        "width": 1024,
+        "height": 1536,
+        "alpha": true
+      },
+      "sceneIds": [
+        "golden_bough_010",
+        "ring_conspiracy_008",
+        "white_canvas_003",
+        "white_canvas_008"
+      ],
+      "sourceTextHashes": [
+        "07e8b30a1c7e578d5a639aefbcdc792ab54a70774cf02f738f02f342a82c0a7b",
+        "553a6b1908dfba825e7e8fc15eaf1dc34bca936313e8dce5ebe699090dc41fe4",
+        "9c6d215e05013ac6d6ba5148e9568a7f51e92eb03f7abe14db1f23754fd71bc7",
+        "daaacdad2260822985c31348336380863b6be4a0d163cfb1da4cfb88219b1e08"
+      ],
+      "status": "authorized-prompt-frozen"
+    },
+    {
+      "id": "visual.image.portrait.albina.white-canvas",
+      "assetId": "portrait.albina.white-canvas",
+      "receiptAssetId": "file.characters.albina.white.canvas.png",
+      "portraitAssetId": "portrait.albina.white-canvas",
+      "path": "characters/albina/white-canvas.png",
+      "category": "characters",
+      "provider": "x666-openai-compatible",
+      "model": "gpt-image-2",
+      "upstreamPieVerified": false,
+      "promptVersion": "albina-visual-v2",
+      "inputMode": "reference-edit",
+      "referenceJobIds": [
+        "visual.image.portrait.albina.normal"
+      ],
+      "referenceSourceIds": [],
+      "canonClaimIds": [],
+      "generationSize": "1024x1536",
+      "delivery": {
+        "format": "png",
+        "width": 1024,
+        "height": 1536,
+        "alpha": true
+      },
+      "sceneIds": [
+        "white_canvas_001",
+        "white_canvas_006",
+        "white_canvas_011"
+      ],
+      "sourceTextHashes": [
+        "5d2db4619a33462a393496243499939481d41134a1061bef3e86b9ee08f5c61a",
+        "649f05c3323610b0311fb949b6c1c171b0a6fc3ede24dbdfdd3d375e961461c5",
+        "cb162214faf77f724d7ed8e608503d82d51ca36f9868e6db4020470da39201b1"
+      ],
+      "status": "authorized-prompt-frozen"
+    },
+    {
+      "id": "visual.image.portrait.callisto.normal",
+      "assetId": "portrait.callisto.normal",
+      "receiptAssetId": "file.characters.callisto.normal.png",
+      "portraitAssetId": "portrait.callisto.normal",
+      "path": "characters/callisto/normal.png",
+      "category": "characters",
+      "provider": "x666-openai-compatible",
+      "model": "gpt-image-2",
+      "upstreamPieVerified": false,
+      "promptVersion": "albina-visual-v2",
+      "inputMode": "reference-edit",
+      "referenceJobIds": [],
+      "referenceSourceIds": [
+        "canon.visual.callisto.standing"
+      ],
+      "canonClaimIds": [],
+      "generationSize": "1024x1536",
+      "delivery": {
+        "format": "png",
+        "width": 1024,
+        "height": 1536,
+        "alpha": true
+      },
+      "sceneIds": [
+        "ring_conspiracy_001",
+        "ring_conspiracy_005",
+        "ring_conspiracy_010",
+        "ring_conspiracy_014",
+        "white_canvas_012"
+      ],
+      "sourceTextHashes": [
+        "3d50b8df021aff8797fe0689117005ae2aae34d70566d032253d775f0b93602c",
+        "52f9c5fc2a27d7d7cb399db33fa7923e29fcdcbc05e737be69682ba75f3be21b",
+        "738446ac4c7939e5d24c34fe5d2d2e98d2d342566d85b8d12370511eb989162c",
+        "79d6bc57c669a3d0ed3542e9ebb79ec0c3a0c0ff4e17a4c2756efd78576c31f4",
+        "a7e0a48368957c28a39907723a7bd713414dc8ea8b09628ea23291776fea89c5"
+      ],
+      "status": "authorized-prompt-frozen"
+    },
+    {
+      "id": "visual.image.portrait.dante.normal",
+      "assetId": "portrait.dante.normal",
+      "receiptAssetId": "file.characters.dante.normal.png",
+      "portraitAssetId": "portrait.dante.normal",
+      "path": "characters/dante/normal.png",
+      "category": "characters",
+      "provider": "x666-openai-compatible",
+      "model": "gpt-image-2",
+      "upstreamPieVerified": false,
+      "promptVersion": "albina-visual-v2",
+      "inputMode": "reference-edit",
+      "referenceJobIds": [],
+      "referenceSourceIds": [
+        "canon.visual.dante.standing"
+      ],
+      "canonClaimIds": [],
+      "generationSize": "1024x1536",
+      "delivery": {
+        "format": "png",
+        "width": 1024,
+        "height": 1536,
+        "alpha": true
+      },
+      "sceneIds": [
+        "golden_bough_011",
+        "ring_conspiracy_013",
+        "white_canvas_004",
+        "white_canvas_010"
+      ],
+      "sourceTextHashes": [
+        "a4dbf7e99260a0f3314b250a856166b10f8799694150659be790de266e6d86bb",
+        "b33ada025e79bb19d95694c3a1ed7d9b5f9d00aa056caedfe7dc7b8b9ccf1858",
+        "b5ed62d689f3a6e3dfac2a5a776787fee78d5dd2643fb7b5b0407efd13857a96",
+        "d67b47d008657b642351c222fc684308ff0f662cc52666dad53b2b264e910aa5"
+      ],
+      "status": "authorized-prompt-frozen"
+    },
+    {
+      "id": "visual.image.portrait.faust.normal",
+      "assetId": "portrait.faust.normal",
+      "receiptAssetId": "file.characters.faust.normal.png",
+      "portraitAssetId": "portrait.faust.normal",
+      "path": "characters/faust/normal.png",
+      "category": "characters",
+      "provider": "x666-openai-compatible",
+      "model": "gpt-image-2",
+      "upstreamPieVerified": false,
+      "promptVersion": "albina-visual-v2",
+      "inputMode": "reference-edit",
+      "referenceJobIds": [],
+      "referenceSourceIds": [
+        "canon.visual.faust.standing"
+      ],
+      "canonClaimIds": [],
+      "generationSize": "1024x1536",
+      "delivery": {
+        "format": "png",
+        "width": 1024,
+        "height": 1536,
+        "alpha": true
+      },
+      "sceneIds": [
+        "golden_bough_003",
+        "golden_bough_006"
+      ],
+      "sourceTextHashes": [
+        "19a21d90b28e79902cd1f0bbe9cf46e87ee01058ae1a455a827e1cd2612ab21c",
+        "50afdf65f0a2ced9a18bfc74828cec5110c7aa02764cec072cd94b5540edc10e"
+      ],
+      "status": "authorized-prompt-frozen"
+    },
+    {
+      "id": "visual.image.portrait.golden_apparition.normal",
+      "assetId": "portrait.golden_apparition.normal",
+      "receiptAssetId": "file.characters.golden.apparition.normal.png",
+      "portraitAssetId": "portrait.golden_apparition.normal",
+      "path": "characters/golden_apparition/normal.png",
+      "category": "characters",
+      "provider": "x666-openai-compatible",
+      "model": "gpt-image-2",
+      "upstreamPieVerified": false,
+      "promptVersion": "albina-visual-v2",
+      "inputMode": "reference-edit",
+      "referenceJobIds": [
+        "visual.image.portrait.albina.normal"
+      ],
+      "referenceSourceIds": [],
+      "canonClaimIds": [],
+      "generationSize": "1024x1536",
+      "delivery": {
+        "format": "png",
+        "width": 1024,
+        "height": 1536,
+        "alpha": true
+      },
+      "sceneIds": [
+        "golden_bough_005",
+        "golden_bough_009",
+        "ring_conspiracy_009"
+      ],
+      "sourceTextHashes": [
+        "25f2f055885d659f5f119386d177a3e1fee851eb56e259816ad1c6f559f38a85",
+        "c44db78d53ff7d58c18a40aaaead7e30d31130ded12e552c3249b3fda15ca705",
+        "d73f5c57e75702711c2bafeeb6b82ed9c0480aa5ca2909d4d6b84dc9b38e117b"
+      ],
+      "status": "authorized-prompt-frozen"
+    },
+    {
+      "id": "visual.image.portrait.lce_doctor.normal",
+      "assetId": "portrait.lce_doctor.normal",
+      "receiptAssetId": "file.characters.lce.doctor.normal.png",
+      "portraitAssetId": "portrait.lce_doctor.normal",
+      "path": "characters/lce_doctor/normal.png",
+      "category": "characters",
+      "provider": "x666-openai-compatible",
+      "model": "gpt-image-2",
+      "upstreamPieVerified": false,
+      "promptVersion": "albina-visual-v2",
+      "inputMode": "text-generation",
+      "referenceJobIds": [],
+      "referenceSourceIds": [],
+      "canonClaimIds": [],
+      "generationSize": "1024x1536",
+      "delivery": {
+        "format": "png",
+        "width": 1024,
+        "height": 1536,
+        "alpha": true
+      },
+      "sceneIds": [
+        "golden_bough_010",
+        "ring_conspiracy_008",
+        "white_canvas_003",
+        "white_canvas_008"
+      ],
+      "sourceTextHashes": [
+        "07e8b30a1c7e578d5a639aefbcdc792ab54a70774cf02f738f02f342a82c0a7b",
+        "553a6b1908dfba825e7e8fc15eaf1dc34bca936313e8dce5ebe699090dc41fe4",
+        "9c6d215e05013ac6d6ba5148e9568a7f51e92eb03f7abe14db1f23754fd71bc7",
+        "daaacdad2260822985c31348336380863b6be4a0d163cfb1da4cfb88219b1e08"
+      ],
+      "status": "authorized-prompt-frozen"
+    },
+    {
+      "id": "visual.image.portrait.protagonist.battle",
+      "assetId": "portrait.protagonist.battle",
+      "receiptAssetId": "file.characters.protagonist.battle.png",
+      "portraitAssetId": "portrait.protagonist.battle",
+      "path": "characters/protagonist/battle.png",
+      "category": "characters",
+      "provider": "x666-openai-compatible",
+      "model": "gpt-image-2",
+      "upstreamPieVerified": false,
+      "promptVersion": "albina-visual-v2",
+      "inputMode": "reference-edit",
+      "referenceJobIds": [
+        "visual.image.portrait.protagonist.serious"
+      ],
+      "referenceSourceIds": [],
+      "canonClaimIds": [],
+      "generationSize": "1024x1536",
+      "delivery": {
+        "format": "png",
+        "width": 1024,
+        "height": 1536,
+        "alpha": true
+      },
+      "sceneIds": [
+        "golden_bough_003",
+        "golden_bough_007",
+        "golden_bough_008",
+        "golden_bough_012",
+        "ring_conspiracy_002",
+        "ring_conspiracy_003",
+        "ring_conspiracy_006",
+        "ring_conspiracy_007",
+        "ring_conspiracy_010",
+        "ring_conspiracy_011",
+        "white_canvas_013"
+      ],
+      "sourceTextHashes": [
+        "027f3a95c1aa8d52dfe608d5bb0216b1601a23531a71e23387cb54119c9d40bc",
+        "19a21d90b28e79902cd1f0bbe9cf46e87ee01058ae1a455a827e1cd2612ab21c",
+        "1f7147bb9f13e975ed4a611461764ae12986c7bbe17ce90fc7a5f7abe430a5cd",
+        "2fcbd7e62eabf6e7de5d670641f34edc3ba5486a64dd0531adc26d5015a56d5c",
+        "4ed6ec9f9de9f505be7795b1b9212b5d4964ed24579aaccdb8453fbea075f41d",
+        "516c568fcb3a0b7fd566cd5ac5ea7187ab255cb20ccd3e8251f52810d34d31dd",
+        "52d28e9fef4f9ed04b20b77f2e30d44e2de6e2d25abf4ff62def7184a45c0bd7",
+        "5468c74288b6f5c04af876c05873e45e9c914d22da3986d3f97549e05fa79a91",
+        "5afcb795fcbda370eb87ab81f22b0f6461f93b11ba250146ebaa321fb6e89630",
+        "738446ac4c7939e5d24c34fe5d2d2e98d2d342566d85b8d12370511eb989162c",
+        "ebc5078fd3594998c8789501ee81d60bd043a1896406d9553c7b87beeda8bae9"
+      ],
+      "status": "authorized-prompt-frozen"
+    },
+    {
+      "id": "visual.image.portrait.protagonist.resolve",
+      "assetId": "portrait.protagonist.resolve",
+      "receiptAssetId": "file.characters.protagonist.resolve.png",
+      "portraitAssetId": "portrait.protagonist.resolve",
+      "path": "characters/protagonist/resolve.png",
+      "category": "characters",
+      "provider": "x666-openai-compatible",
+      "model": "gpt-image-2",
+      "upstreamPieVerified": false,
+      "promptVersion": "albina-visual-v2",
+      "inputMode": "reference-edit",
+      "referenceJobIds": [
+        "visual.image.portrait.protagonist.serious"
+      ],
+      "referenceSourceIds": [],
+      "canonClaimIds": [],
+      "generationSize": "1024x1536",
+      "delivery": {
+        "format": "png",
+        "width": 1024,
+        "height": 1536,
+        "alpha": true
+      },
+      "sceneIds": [
+        "golden_bough_002",
+        "golden_bough_004",
+        "golden_bough_005",
+        "golden_bough_009",
+        "golden_bough_013",
+        "golden_bough_014",
+        "golden_bough_015",
+        "golden_bough_rebuild_ending_bad",
+        "golden_bough_rebuild_ending_gate",
+        "golden_bough_rebuild_ending_normal",
+        "golden_bough_rebuild_ending_true",
+        "ring_conspiracy_012",
+        "ring_conspiracy_015",
+        "ring_conspiracy_ending_bad",
+        "ring_conspiracy_ending_gate",
+        "ring_conspiracy_ending_normal",
+        "ring_conspiracy_ending_true",
+        "white_canvas_005",
+        "white_canvas_011",
+        "white_canvas_014",
+        "white_canvas_015",
+        "white_canvas_ending_bad",
+        "white_canvas_ending_gate",
+        "white_canvas_ending_normal",
+        "white_canvas_ending_true"
+      ],
+      "sourceTextHashes": [
+        "1418960f3a8008e29c4604675dc19e247b05c917e1c8a605487944fb21ac726f",
+        "189b6d22593d309974fd2c8a26b175d449b0afee5739b56221377cf9d5f2541d",
+        "1deaa37e95bd1f9f953d3a41757c1054cb49b33ffe65b24f9015f6cc385c5b69",
+        "2c0b76487671315953f90b804b1fb84d09af6fd62f716a984da6b6dc65f9fa6a",
+        "3819f2c9aa8f3480a059860361fb81ebcb1e0b4e46f57ac005856ec384500805",
+        "4797ab3b17aa7667af45999fe0dcdd75a1b145b91bc85815eefec5fa15c2a992",
+        "649f05c3323610b0311fb949b6c1c171b0a6fc3ede24dbdfdd3d375e961461c5",
+        "6cbb86eddc4a29ab2fbaea9f216db5fcd8b0b0fb699380eb01e87e41a42f15fe",
+        "767c9f971e43e8439cb5fe373c311a3eb5abfe60afb86f546165e830aa070c35",
+        "7728c16008f0f774c4282f3dfd24589130161b5177c59eab0d2bd64c2d831070",
+        "7a695f36260517f5e0d12f1e58ab85adea2e2d7d4d9ed046c0bcf37130744f8d",
+        "96725094cfe0854cfc2859c3817e73c5bca4ca8fba6d69c03701be5be789d0b5",
+        "9ee8bc49780439cf2c26abadcb744eb143e05ca17d68e5bcba76b610707c35b1",
+        "a5725091862aab29f228094e9ef482028273ad5d7163d3375dfff11b0cf4639f",
+        "a5a98964ecedb6aae08ba0435f1ab0659a04c3830fe22dd119c8d83a432255b6",
+        "b2da1860f5e8beaed550ebca91fb897ab1452a4f5746420733c9c0c25fecc5a1",
+        "b34a580116418e861f1cee7a9ce8382b980673927f64382fb4dd3a7c6d513644",
+        "b98cfbf00714b2805e178af8867d50ed04c1bd47c98f157dd7c709e5423bc1c8",
+        "bf62ed1e189480dd5818d9f7a0db2ce5754f5cc8f86decdf473e42ae0ff9c865",
+        "c06e62ce3510f648be083a2d422803f04fe46af22a6fefb99b1433b1ec0b18a4",
+        "c44db78d53ff7d58c18a40aaaead7e30d31130ded12e552c3249b3fda15ca705",
+        "cc782c9b867e5671881453f178c731bb1cf472fa7d1809d934f8f9fe4742821e",
+        "d73f5c57e75702711c2bafeeb6b82ed9c0480aa5ca2909d4d6b84dc9b38e117b",
+        "e8435955fb336a76c4114fc33ac2a9d6e6162de5f734e3ae309df415c3560338",
+        "f21e01d33e00b48360de9061f9417644f382ed8bdecc2a12353dc1be54b86733"
+      ],
+      "status": "authorized-prompt-frozen"
+    },
+    {
+      "id": "visual.image.portrait.protagonist.serious",
+      "assetId": "portrait.protagonist.serious",
+      "receiptAssetId": "file.characters.protagonist.serious.png",
+      "portraitAssetId": "portrait.protagonist.serious",
+      "path": "characters/protagonist/serious.png",
+      "category": "characters",
+      "provider": "x666-openai-compatible",
+      "model": "gpt-image-2",
+      "upstreamPieVerified": false,
+      "promptVersion": "albina-visual-v2",
+      "inputMode": "text-generation",
+      "referenceJobIds": [],
+      "referenceSourceIds": [],
+      "canonClaimIds": [],
+      "generationSize": "1024x1536",
+      "delivery": {
+        "format": "png",
+        "width": 1024,
+        "height": 1536,
+        "alpha": true
+      },
+      "sceneIds": [
+        "golden_bough_001",
+        "golden_bough_006",
+        "golden_bough_010",
+        "ring_conspiracy_008",
+        "white_canvas_003",
+        "white_canvas_008",
+        "white_canvas_010",
+        "white_canvas_012"
+      ],
+      "sourceTextHashes": [
+        "07e8b30a1c7e578d5a639aefbcdc792ab54a70774cf02f738f02f342a82c0a7b",
+        "4e998603c66c7f8f2b820fdd5d79f2066005d38fccc6a3b3786218522eb8a4dd",
+        "50afdf65f0a2ced9a18bfc74828cec5110c7aa02764cec072cd94b5540edc10e",
+        "52f9c5fc2a27d7d7cb399db33fa7923e29fcdcbc05e737be69682ba75f3be21b",
+        "553a6b1908dfba825e7e8fc15eaf1dc34bca936313e8dce5ebe699090dc41fe4",
+        "9c6d215e05013ac6d6ba5148e9568a7f51e92eb03f7abe14db1f23754fd71bc7",
+        "d67b47d008657b642351c222fc684308ff0f662cc52666dad53b2b264e910aa5",
+        "daaacdad2260822985c31348336380863b6be4a0d163cfb1da4cfb88219b1e08"
+      ],
+      "status": "authorized-prompt-frozen"
+    },
+    {
+      "id": "visual.image.portrait.protagonist.shadow",
+      "assetId": "portrait.protagonist.shadow",
+      "receiptAssetId": "file.characters.protagonist.shadow.png",
+      "portraitAssetId": "portrait.protagonist.shadow",
+      "path": "characters/protagonist/shadow.png",
+      "category": "characters",
+      "provider": "x666-openai-compatible",
+      "model": "gpt-image-2",
+      "upstreamPieVerified": false,
+      "promptVersion": "albina-visual-v2",
+      "inputMode": "reference-edit",
+      "referenceJobIds": [
+        "visual.image.portrait.protagonist.serious"
+      ],
+      "referenceSourceIds": [],
+      "canonClaimIds": [],
+      "generationSize": "1024x1536",
+      "delivery": {
+        "format": "png",
+        "width": 1024,
+        "height": 1536,
+        "alpha": true
+      },
+      "sceneIds": [
+        "ring_conspiracy_004",
+        "ring_conspiracy_005",
+        "ring_conspiracy_009",
+        "ring_conspiracy_014"
+      ],
+      "sourceTextHashes": [
+        "0cce9e2035bc330581db6f3f4de6370d5ab410e417468373b4d76ae7b69a8f23",
+        "25f2f055885d659f5f119386d177a3e1fee851eb56e259816ad1c6f559f38a85",
+        "3d50b8df021aff8797fe0689117005ae2aae34d70566d032253d775f0b93602c",
+        "79d6bc57c669a3d0ed3542e9ebb79ec0c3a0c0ff4e17a4c2756efd78576c31f4"
+      ],
+      "status": "authorized-prompt-frozen"
+    },
+    {
+      "id": "visual.image.portrait.protagonist.tender",
+      "assetId": "portrait.protagonist.tender",
+      "receiptAssetId": "file.characters.protagonist.tender.png",
+      "portraitAssetId": "portrait.protagonist.tender",
+      "path": "characters/protagonist/tender.png",
+      "category": "characters",
+      "provider": "x666-openai-compatible",
+      "model": "gpt-image-2",
+      "upstreamPieVerified": false,
+      "promptVersion": "albina-visual-v2",
+      "inputMode": "reference-edit",
+      "referenceJobIds": [
+        "visual.image.portrait.protagonist.serious"
+      ],
+      "referenceSourceIds": [],
+      "canonClaimIds": [],
+      "generationSize": "1024x1536",
+      "delivery": {
+        "format": "png",
+        "width": 1024,
+        "height": 1536,
+        "alpha": true
+      },
+      "sceneIds": [
+        "golden_bough_011",
+        "white_canvas_001",
+        "white_canvas_006",
+        "white_canvas_007"
+      ],
+      "sourceTextHashes": [
+        "53a58b725c3041231fb6103478744c18e83b27c27b419c629fb544b8138e818c",
+        "5d2db4619a33462a393496243499939481d41134a1061bef3e86b9ee08f5c61a",
+        "a4dbf7e99260a0f3314b250a856166b10f8799694150659be790de266e6d86bb",
+        "cb162214faf77f724d7ed8e608503d82d51ca36f9868e6db4020470da39201b1"
+      ],
+      "status": "authorized-prompt-frozen"
+    },
+    {
+      "id": "visual.image.portrait.protagonist.wet-hair",
+      "assetId": "portrait.protagonist.wet-hair",
+      "receiptAssetId": "file.characters.protagonist.wet.hair.png",
+      "portraitAssetId": "portrait.protagonist.wet-hair",
+      "path": "characters/protagonist/wet-hair.png",
+      "category": "characters",
+      "provider": "x666-openai-compatible",
+      "model": "gpt-image-2",
+      "upstreamPieVerified": false,
+      "promptVersion": "albina-visual-v2",
+      "inputMode": "reference-edit",
+      "referenceJobIds": [
+        "visual.image.portrait.protagonist.serious"
+      ],
+      "referenceSourceIds": [],
+      "canonClaimIds": [],
+      "generationSize": "1024x1536",
+      "delivery": {
+        "format": "png",
+        "width": 1024,
+        "height": 1536,
+        "alpha": true
+      },
+      "sceneIds": [
+        "ring_conspiracy_013",
+        "white_canvas_004",
+        "white_canvas_009"
+      ],
+      "sourceTextHashes": [
+        "05458bb5db24270e31d2efa3473d4e9694f733475c0574a616e52a5d56e96cd9",
+        "b33ada025e79bb19d95694c3a1ed7d9b5f9d00aa056caedfe7dc7b8b9ccf1858",
+        "b5ed62d689f3a6e3dfac2a5a776787fee78d5dd2643fb7b5b0407efd13857a96"
+      ],
+      "status": "authorized-prompt-frozen"
+    },
+    {
+      "id": "visual.image.portrait.ren.normal",
+      "assetId": "portrait.ren.normal",
+      "receiptAssetId": "file.characters.ren.normal.png",
+      "portraitAssetId": "portrait.ren.normal",
+      "path": "characters/ren/normal.png",
+      "category": "characters",
+      "provider": "x666-openai-compatible",
+      "model": "gpt-image-2",
+      "upstreamPieVerified": false,
+      "promptVersion": "albina-visual-v2",
+      "inputMode": "reference-edit",
+      "referenceJobIds": [],
+      "referenceSourceIds": [
+        "canon.visual.ren.standing"
+      ],
+      "canonClaimIds": [],
+      "generationSize": "1024x1536",
+      "delivery": {
+        "format": "png",
+        "width": 1024,
+        "height": 1536,
+        "alpha": true
+      },
+      "sceneIds": [
+        "golden_bough_012",
+        "ring_conspiracy_001",
+        "ring_conspiracy_004",
+        "ring_conspiracy_006",
+        "ring_conspiracy_011"
+      ],
+      "sourceTextHashes": [
+        "0cce9e2035bc330581db6f3f4de6370d5ab410e417468373b4d76ae7b69a8f23",
+        "1f7147bb9f13e975ed4a611461764ae12986c7bbe17ce90fc7a5f7abe430a5cd",
+        "2fcbd7e62eabf6e7de5d670641f34edc3ba5486a64dd0531adc26d5015a56d5c",
+        "4ed6ec9f9de9f505be7795b1b9212b5d4964ed24579aaccdb8453fbea075f41d",
+        "a7e0a48368957c28a39907723a7bd713414dc8ea8b09628ea23291776fea89c5"
+      ],
+      "status": "authorized-prompt-frozen"
+    },
+    {
+      "id": "visual.image.portrait.ring_agent.normal",
+      "assetId": "portrait.ring_agent.normal",
+      "receiptAssetId": "file.characters.ring.agent.normal.png",
+      "portraitAssetId": "portrait.ring_agent.normal",
+      "path": "characters/ring_agent/normal.png",
+      "category": "characters",
+      "provider": "x666-openai-compatible",
+      "model": "gpt-image-2",
+      "upstreamPieVerified": false,
+      "promptVersion": "albina-visual-v2",
+      "inputMode": "text-generation",
+      "referenceJobIds": [],
+      "referenceSourceIds": [],
+      "canonClaimIds": [],
+      "generationSize": "1024x1536",
+      "delivery": {
+        "format": "png",
+        "width": 1024,
+        "height": 1536,
+        "alpha": true
+      },
+      "sceneIds": [
+        "ring_conspiracy_003",
+        "ring_conspiracy_007"
+      ],
+      "sourceTextHashes": [
+        "027f3a95c1aa8d52dfe608d5bb0216b1601a23531a71e23387cb54119c9d40bc",
+        "5468c74288b6f5c04af876c05873e45e9c914d22da3986d3f97549e05fa79a91"
+      ],
+      "status": "authorized-prompt-frozen"
+    },
+    {
+      "id": "visual.image.portrait.vergilius.normal",
+      "assetId": "portrait.vergilius.normal",
+      "receiptAssetId": "file.characters.vergilius.normal.png",
+      "portraitAssetId": "portrait.vergilius.normal",
+      "path": "characters/vergilius/normal.png",
+      "category": "characters",
+      "provider": "x666-openai-compatible",
+      "model": "gpt-image-2",
+      "upstreamPieVerified": false,
+      "promptVersion": "albina-visual-v2",
+      "inputMode": "reference-edit",
+      "referenceJobIds": [],
+      "referenceSourceIds": [
+        "canon.visual.vergilius.standing"
+      ],
+      "canonClaimIds": [],
+      "generationSize": "1024x1536",
+      "delivery": {
+        "format": "png",
+        "width": 1024,
+        "height": 1536,
+        "alpha": true
+      },
+      "sceneIds": [
+        "golden_bough_004",
+        "golden_bough_008",
+        "ring_conspiracy_012"
+      ],
+      "sourceTextHashes": [
+        "5afcb795fcbda370eb87ab81f22b0f6461f93b11ba250146ebaa321fb6e89630",
+        "a5725091862aab29f228094e9ef482028273ad5d7163d3375dfff11b0cf4639f",
+        "f21e01d33e00b48360de9061f9417644f382ed8bdecc2a12353dc1be54b86733"
+      ],
+      "status": "authorized-prompt-frozen"
+    }
+  ],
+  "videoJobs": [
+    {
+      "id": "visual.video.golden_bough_003",
+      "sceneId": "golden_bough_003",
+      "sourceCgAssetId": "cg.lce_raid",
+      "sourceTextHash": "19a21d90b28e79902cd1f0bbe9cf46e87ee01058ae1a455a827e1cd2612ab21c",
+      "provider": "pie",
+      "model": "seedance-1.5-pro",
+      "promptVersion": "albina-video-v2",
+      "durationSeconds": 8,
+      "masterDelivery": {
+        "retainedOffline": true
+      },
+      "runtime": {
+        "assetId": "video.animated.runtime.golden_bough_rebuild_scene_3",
+        "path": "video/animated/runtime/golden_bough_rebuild_scene_3.mp4",
+        "width": 1280,
+        "height": 720,
+        "fps": 24
+      },
+      "desktop": {
+        "assetId": "video.animated.desktop.golden_bough_rebuild_scene_3",
+        "path": "video/animated/desktop/golden_bough_rebuild_scene_3.mp4",
+        "width": 1920,
+        "height": 1080,
+        "fps": 24
+      },
+      "status": "blocked-source-keyframe"
+    },
+    {
+      "id": "visual.video.golden_bough_005",
+      "sceneId": "golden_bough_005",
+      "sourceCgAssetId": "cg.golden_bough_ending",
+      "sourceTextHash": "d73f5c57e75702711c2bafeeb6b82ed9c0480aa5ca2909d4d6b84dc9b38e117b",
+      "provider": "pie",
+      "model": "seedance-1.5-pro",
+      "promptVersion": "albina-video-v2",
+      "durationSeconds": 8,
+      "masterDelivery": {
+        "retainedOffline": true
+      },
+      "runtime": {
+        "assetId": "video.animated.runtime.golden_bough_rebuild_scene_5",
+        "path": "video/animated/runtime/golden_bough_rebuild_scene_5.mp4",
+        "width": 1280,
+        "height": 720,
+        "fps": 24
+      },
+      "desktop": {
+        "assetId": "video.animated.desktop.golden_bough_rebuild_scene_5",
+        "path": "video/animated/desktop/golden_bough_rebuild_scene_5.mp4",
+        "width": 1920,
+        "height": 1080,
+        "fps": 24
+      },
+      "status": "blocked-source-keyframe"
+    },
+    {
+      "id": "visual.video.golden_bough_008",
+      "sceneId": "golden_bough_008",
+      "sourceCgAssetId": "cg.araya_rooftop",
+      "sourceTextHash": "5afcb795fcbda370eb87ab81f22b0f6461f93b11ba250146ebaa321fb6e89630",
+      "provider": "pie",
+      "model": "seedance-1.5-pro",
+      "promptVersion": "albina-video-v2",
+      "durationSeconds": 8,
+      "masterDelivery": {
+        "retainedOffline": true
+      },
+      "runtime": {
+        "assetId": "video.animated.runtime.golden_bough_rebuild_scene_8",
+        "path": "video/animated/runtime/golden_bough_rebuild_scene_8.mp4",
+        "width": 1280,
+        "height": 720,
+        "fps": 24
+      },
+      "desktop": {
+        "assetId": "video.animated.desktop.golden_bough_rebuild_scene_8",
+        "path": "video/animated/desktop/golden_bough_rebuild_scene_8.mp4",
+        "width": 1920,
+        "height": 1080,
+        "fps": 24
+      },
+      "status": "blocked-source-keyframe"
+    },
+    {
+      "id": "visual.video.golden_bough_011",
+      "sceneId": "golden_bough_011",
+      "sourceCgAssetId": "cg.limbus_bus_night",
+      "sourceTextHash": "a4dbf7e99260a0f3314b250a856166b10f8799694150659be790de266e6d86bb",
+      "provider": "pie",
+      "model": "seedance-1.5-pro",
+      "promptVersion": "albina-video-v2",
+      "durationSeconds": 8,
+      "masterDelivery": {
+        "retainedOffline": true
+      },
+      "runtime": {
+        "assetId": "video.animated.runtime.golden_bough_rebuild_scene_11",
+        "path": "video/animated/runtime/golden_bough_rebuild_scene_11.mp4",
+        "width": 1280,
+        "height": 720,
+        "fps": 24
+      },
+      "desktop": {
+        "assetId": "video.animated.desktop.golden_bough_rebuild_scene_11",
+        "path": "video/animated/desktop/golden_bough_rebuild_scene_11.mp4",
+        "width": 1920,
+        "height": 1080,
+        "fps": 24
+      },
+      "status": "blocked-source-keyframe"
+    },
+    {
+      "id": "visual.video.golden_bough_015",
+      "sceneId": "golden_bough_015",
+      "sourceCgAssetId": "cg.golden_bough_ending",
+      "sourceTextHash": "1deaa37e95bd1f9f953d3a41757c1054cb49b33ffe65b24f9015f6cc385c5b69",
+      "provider": "pie",
+      "model": "seedance-1.5-pro",
+      "promptVersion": "albina-video-v2",
+      "durationSeconds": 8,
+      "masterDelivery": {
+        "retainedOffline": true
+      },
+      "runtime": {
+        "assetId": "video.animated.runtime.golden_bough_rebuild_scene_15",
+        "path": "video/animated/runtime/golden_bough_rebuild_scene_15.mp4",
+        "width": 1280,
+        "height": 720,
+        "fps": 24
+      },
+      "desktop": {
+        "assetId": "video.animated.desktop.golden_bough_rebuild_scene_15",
+        "path": "video/animated/desktop/golden_bough_rebuild_scene_15.mp4",
+        "width": 1920,
+        "height": 1080,
+        "fps": 24
+      },
+      "status": "blocked-source-keyframe"
+    },
+    {
+      "id": "visual.video.golden_bough_rebuild_ending_bad",
+      "sceneId": "golden_bough_rebuild_ending_bad",
+      "sourceCgAssetId": "cg.golden_bough_ending",
+      "sourceTextHash": "e8435955fb336a76c4114fc33ac2a9d6e6162de5f734e3ae309df415c3560338",
+      "provider": "pie",
+      "model": "seedance-1.5-pro",
+      "promptVersion": "albina-video-v2",
+      "durationSeconds": 8,
+      "masterDelivery": {
+        "retainedOffline": true
+      },
+      "runtime": {
+        "assetId": "video.animated.runtime.golden_bough_rebuild_ending_bad",
+        "path": "video/animated/runtime/golden_bough_rebuild_ending_bad.mp4",
+        "width": 1280,
+        "height": 720,
+        "fps": 24
+      },
+      "desktop": {
+        "assetId": "video.animated.desktop.golden_bough_rebuild_ending_bad",
+        "path": "video/animated/desktop/golden_bough_rebuild_ending_bad.mp4",
+        "width": 1920,
+        "height": 1080,
+        "fps": 24
+      },
+      "status": "blocked-source-keyframe"
+    },
+    {
+      "id": "visual.video.golden_bough_rebuild_ending_normal",
+      "sceneId": "golden_bough_rebuild_ending_normal",
+      "sourceCgAssetId": "cg.golden_bough_ending",
+      "sourceTextHash": "96725094cfe0854cfc2859c3817e73c5bca4ca8fba6d69c03701be5be789d0b5",
+      "provider": "pie",
+      "model": "seedance-1.5-pro",
+      "promptVersion": "albina-video-v2",
+      "durationSeconds": 8,
+      "masterDelivery": {
+        "retainedOffline": true
+      },
+      "runtime": {
+        "assetId": "video.animated.runtime.golden_bough_rebuild_ending_normal",
+        "path": "video/animated/runtime/golden_bough_rebuild_ending_normal.mp4",
+        "width": 1280,
+        "height": 720,
+        "fps": 24
+      },
+      "desktop": {
+        "assetId": "video.animated.desktop.golden_bough_rebuild_ending_normal",
+        "path": "video/animated/desktop/golden_bough_rebuild_ending_normal.mp4",
+        "width": 1920,
+        "height": 1080,
+        "fps": 24
+      },
+      "status": "blocked-source-keyframe"
+    },
+    {
+      "id": "visual.video.golden_bough_rebuild_ending_true",
+      "sceneId": "golden_bough_rebuild_ending_true",
+      "sourceCgAssetId": "cg.golden_bough_ending",
+      "sourceTextHash": "189b6d22593d309974fd2c8a26b175d449b0afee5739b56221377cf9d5f2541d",
+      "provider": "pie",
+      "model": "seedance-1.5-pro",
+      "promptVersion": "albina-video-v2",
+      "durationSeconds": 8,
+      "masterDelivery": {
+        "retainedOffline": true
+      },
+      "runtime": {
+        "assetId": "video.animated.runtime.golden_bough_rebuild_ending_true",
+        "path": "video/animated/runtime/golden_bough_rebuild_ending_true.mp4",
+        "width": 1280,
+        "height": 720,
+        "fps": 24
+      },
+      "desktop": {
+        "assetId": "video.animated.desktop.golden_bough_rebuild_ending_true",
+        "path": "video/animated/desktop/golden_bough_rebuild_ending_true.mp4",
+        "width": 1920,
+        "height": 1080,
+        "fps": 24
+      },
+      "status": "blocked-source-keyframe"
+    },
+    {
+      "id": "visual.video.ring_conspiracy_003",
+      "sceneId": "ring_conspiracy_003",
+      "sourceCgAssetId": "cg.backstreet_pursuit",
+      "sourceTextHash": "5468c74288b6f5c04af876c05873e45e9c914d22da3986d3f97549e05fa79a91",
+      "provider": "pie",
+      "model": "seedance-1.5-pro",
+      "promptVersion": "albina-video-v2",
+      "durationSeconds": 8,
+      "masterDelivery": {
+        "retainedOffline": true
+      },
+      "runtime": {
+        "assetId": "video.animated.runtime.ring_conspiracy_scene_3",
+        "path": "video/animated/runtime/ring_conspiracy_scene_3.mp4",
+        "width": 1280,
+        "height": 720,
+        "fps": 24
+      },
+      "desktop": {
+        "assetId": "video.animated.desktop.ring_conspiracy_scene_3",
+        "path": "video/animated/desktop/ring_conspiracy_scene_3.mp4",
+        "width": 1920,
+        "height": 1080,
+        "fps": 24
+      },
+      "status": "blocked-source-keyframe"
+    },
+    {
+      "id": "visual.video.ring_conspiracy_005",
+      "sceneId": "ring_conspiracy_005",
+      "sourceCgAssetId": "cg.maestro_shadow",
+      "sourceTextHash": "79d6bc57c669a3d0ed3542e9ebb79ec0c3a0c0ff4e17a4c2756efd78576c31f4",
+      "provider": "pie",
+      "model": "seedance-1.5-pro",
+      "promptVersion": "albina-video-v2",
+      "durationSeconds": 8,
+      "masterDelivery": {
+        "retainedOffline": true
+      },
+      "runtime": {
+        "assetId": "video.animated.runtime.ring_conspiracy_scene_5",
+        "path": "video/animated/runtime/ring_conspiracy_scene_5.mp4",
+        "width": 1280,
+        "height": 720,
+        "fps": 24
+      },
+      "desktop": {
+        "assetId": "video.animated.desktop.ring_conspiracy_scene_5",
+        "path": "video/animated/desktop/ring_conspiracy_scene_5.mp4",
+        "width": 1920,
+        "height": 1080,
+        "fps": 24
+      },
+      "status": "blocked-source-keyframe"
+    },
+    {
+      "id": "visual.video.ring_conspiracy_008",
+      "sceneId": "ring_conspiracy_008",
+      "sourceCgAssetId": "cg.lce_raid",
+      "sourceTextHash": "553a6b1908dfba825e7e8fc15eaf1dc34bca936313e8dce5ebe699090dc41fe4",
+      "provider": "pie",
+      "model": "seedance-1.5-pro",
+      "promptVersion": "albina-video-v2",
+      "durationSeconds": 8,
+      "masterDelivery": {
+        "retainedOffline": true
+      },
+      "runtime": {
+        "assetId": "video.animated.runtime.ring_conspiracy_scene_8",
+        "path": "video/animated/runtime/ring_conspiracy_scene_8.mp4",
+        "width": 1280,
+        "height": 720,
+        "fps": 24
+      },
+      "desktop": {
+        "assetId": "video.animated.desktop.ring_conspiracy_scene_8",
+        "path": "video/animated/desktop/ring_conspiracy_scene_8.mp4",
+        "width": 1920,
+        "height": 1080,
+        "fps": 24
+      },
+      "status": "blocked-source-keyframe"
+    },
+    {
+      "id": "visual.video.ring_conspiracy_011",
+      "sceneId": "ring_conspiracy_011",
+      "sourceCgAssetId": "cg.maestro_shadow",
+      "sourceTextHash": "1f7147bb9f13e975ed4a611461764ae12986c7bbe17ce90fc7a5f7abe430a5cd",
+      "provider": "pie",
+      "model": "seedance-1.5-pro",
+      "promptVersion": "albina-video-v2",
+      "durationSeconds": 8,
+      "masterDelivery": {
+        "retainedOffline": true
+      },
+      "runtime": {
+        "assetId": "video.animated.runtime.ring_conspiracy_scene_11",
+        "path": "video/animated/runtime/ring_conspiracy_scene_11.mp4",
+        "width": 1280,
+        "height": 720,
+        "fps": 24
+      },
+      "desktop": {
+        "assetId": "video.animated.desktop.ring_conspiracy_scene_11",
+        "path": "video/animated/desktop/ring_conspiracy_scene_11.mp4",
+        "width": 1920,
+        "height": 1080,
+        "fps": 24
+      },
+      "status": "blocked-source-keyframe"
+    },
+    {
+      "id": "visual.video.ring_conspiracy_015",
+      "sceneId": "ring_conspiracy_015",
+      "sourceCgAssetId": "cg.ring_conspiracy_ending",
+      "sourceTextHash": "7728c16008f0f774c4282f3dfd24589130161b5177c59eab0d2bd64c2d831070",
+      "provider": "pie",
+      "model": "seedance-1.5-pro",
+      "promptVersion": "albina-video-v2",
+      "durationSeconds": 8,
+      "masterDelivery": {
+        "retainedOffline": true
+      },
+      "runtime": {
+        "assetId": "video.animated.runtime.ring_conspiracy_scene_15",
+        "path": "video/animated/runtime/ring_conspiracy_scene_15.mp4",
+        "width": 1280,
+        "height": 720,
+        "fps": 24
+      },
+      "desktop": {
+        "assetId": "video.animated.desktop.ring_conspiracy_scene_15",
+        "path": "video/animated/desktop/ring_conspiracy_scene_15.mp4",
+        "width": 1920,
+        "height": 1080,
+        "fps": 24
+      },
+      "status": "blocked-source-keyframe"
+    },
+    {
+      "id": "visual.video.ring_conspiracy_ending_bad",
+      "sceneId": "ring_conspiracy_ending_bad",
+      "sourceCgAssetId": "cg.ring_conspiracy_ending",
+      "sourceTextHash": "cc782c9b867e5671881453f178c731bb1cf472fa7d1809d934f8f9fe4742821e",
+      "provider": "pie",
+      "model": "seedance-1.5-pro",
+      "promptVersion": "albina-video-v2",
+      "durationSeconds": 8,
+      "masterDelivery": {
+        "retainedOffline": true
+      },
+      "runtime": {
+        "assetId": "video.animated.runtime.ring_conspiracy_ending_bad",
+        "path": "video/animated/runtime/ring_conspiracy_ending_bad.mp4",
+        "width": 1280,
+        "height": 720,
+        "fps": 24
+      },
+      "desktop": {
+        "assetId": "video.animated.desktop.ring_conspiracy_ending_bad",
+        "path": "video/animated/desktop/ring_conspiracy_ending_bad.mp4",
+        "width": 1920,
+        "height": 1080,
+        "fps": 24
+      },
+      "status": "blocked-source-keyframe"
+    },
+    {
+      "id": "visual.video.ring_conspiracy_ending_normal",
+      "sceneId": "ring_conspiracy_ending_normal",
+      "sourceCgAssetId": "cg.ring_conspiracy_ending",
+      "sourceTextHash": "6cbb86eddc4a29ab2fbaea9f216db5fcd8b0b0fb699380eb01e87e41a42f15fe",
+      "provider": "pie",
+      "model": "seedance-1.5-pro",
+      "promptVersion": "albina-video-v2",
+      "durationSeconds": 8,
+      "masterDelivery": {
+        "retainedOffline": true
+      },
+      "runtime": {
+        "assetId": "video.animated.runtime.ring_conspiracy_ending_normal",
+        "path": "video/animated/runtime/ring_conspiracy_ending_normal.mp4",
+        "width": 1280,
+        "height": 720,
+        "fps": 24
+      },
+      "desktop": {
+        "assetId": "video.animated.desktop.ring_conspiracy_ending_normal",
+        "path": "video/animated/desktop/ring_conspiracy_ending_normal.mp4",
+        "width": 1920,
+        "height": 1080,
+        "fps": 24
+      },
+      "status": "blocked-source-keyframe"
+    },
+    {
+      "id": "visual.video.ring_conspiracy_ending_true",
+      "sceneId": "ring_conspiracy_ending_true",
+      "sourceCgAssetId": "cg.ring_conspiracy_ending",
+      "sourceTextHash": "7a695f36260517f5e0d12f1e58ab85adea2e2d7d4d9ed046c0bcf37130744f8d",
+      "provider": "pie",
+      "model": "seedance-1.5-pro",
+      "promptVersion": "albina-video-v2",
+      "durationSeconds": 8,
+      "masterDelivery": {
+        "retainedOffline": true
+      },
+      "runtime": {
+        "assetId": "video.animated.runtime.ring_conspiracy_ending_true",
+        "path": "video/animated/runtime/ring_conspiracy_ending_true.mp4",
+        "width": 1280,
+        "height": 720,
+        "fps": 24
+      },
+      "desktop": {
+        "assetId": "video.animated.desktop.ring_conspiracy_ending_true",
+        "path": "video/animated/desktop/ring_conspiracy_ending_true.mp4",
+        "width": 1920,
+        "height": 1080,
+        "fps": 24
+      },
+      "status": "blocked-source-keyframe"
+    },
+    {
+      "id": "visual.video.white_canvas_003",
+      "sceneId": "white_canvas_003",
+      "sourceCgAssetId": "cg.hollow_torso_reveal",
+      "sourceTextHash": "daaacdad2260822985c31348336380863b6be4a0d163cfb1da4cfb88219b1e08",
+      "provider": "pie",
+      "model": "seedance-1.5-pro",
+      "promptVersion": "albina-video-v2",
+      "durationSeconds": 8,
+      "masterDelivery": {
+        "retainedOffline": true
+      },
+      "runtime": {
+        "assetId": "video.animated.runtime.white_canvas_scene_3",
+        "path": "video/animated/runtime/white_canvas_scene_3.mp4",
+        "width": 1280,
+        "height": 720,
+        "fps": 24
+      },
+      "desktop": {
+        "assetId": "video.animated.desktop.white_canvas_scene_3",
+        "path": "video/animated/desktop/white_canvas_scene_3.mp4",
+        "width": 1920,
+        "height": 1080,
+        "fps": 24
+      },
+      "status": "blocked-source-keyframe"
+    },
+    {
+      "id": "visual.video.white_canvas_005",
+      "sceneId": "white_canvas_005",
+      "sourceCgAssetId": "cg.white_canvas_ending",
+      "sourceTextHash": "b34a580116418e861f1cee7a9ce8382b980673927f64382fb4dd3a7c6d513644",
+      "provider": "pie",
+      "model": "seedance-1.5-pro",
+      "promptVersion": "albina-video-v2",
+      "durationSeconds": 8,
+      "masterDelivery": {
+        "retainedOffline": true
+      },
+      "runtime": {
+        "assetId": "video.animated.runtime.white_canvas_scene_5",
+        "path": "video/animated/runtime/white_canvas_scene_5.mp4",
+        "width": 1280,
+        "height": 720,
+        "fps": 24
+      },
+      "desktop": {
+        "assetId": "video.animated.desktop.white_canvas_scene_5",
+        "path": "video/animated/desktop/white_canvas_scene_5.mp4",
+        "width": 1920,
+        "height": 1080,
+        "fps": 24
+      },
+      "status": "blocked-source-keyframe"
+    },
+    {
+      "id": "visual.video.white_canvas_008",
+      "sceneId": "white_canvas_008",
+      "sourceCgAssetId": "cg.hollow_torso_reveal",
+      "sourceTextHash": "07e8b30a1c7e578d5a639aefbcdc792ab54a70774cf02f738f02f342a82c0a7b",
+      "provider": "pie",
+      "model": "seedance-1.5-pro",
+      "promptVersion": "albina-video-v2",
+      "durationSeconds": 8,
+      "masterDelivery": {
+        "retainedOffline": true
+      },
+      "runtime": {
+        "assetId": "video.animated.runtime.white_canvas_scene_8",
+        "path": "video/animated/runtime/white_canvas_scene_8.mp4",
+        "width": 1280,
+        "height": 720,
+        "fps": 24
+      },
+      "desktop": {
+        "assetId": "video.animated.desktop.white_canvas_scene_8",
+        "path": "video/animated/desktop/white_canvas_scene_8.mp4",
+        "width": 1920,
+        "height": 1080,
+        "fps": 24
+      },
+      "status": "blocked-source-keyframe"
+    },
+    {
+      "id": "visual.video.white_canvas_011",
+      "sceneId": "white_canvas_011",
+      "sourceCgAssetId": "cg.art_resonance",
+      "sourceTextHash": "649f05c3323610b0311fb949b6c1c171b0a6fc3ede24dbdfdd3d375e961461c5",
+      "provider": "pie",
+      "model": "seedance-1.5-pro",
+      "promptVersion": "albina-video-v2",
+      "durationSeconds": 8,
+      "masterDelivery": {
+        "retainedOffline": true
+      },
+      "runtime": {
+        "assetId": "video.animated.runtime.white_canvas_scene_11",
+        "path": "video/animated/runtime/white_canvas_scene_11.mp4",
+        "width": 1280,
+        "height": 720,
+        "fps": 24
+      },
+      "desktop": {
+        "assetId": "video.animated.desktop.white_canvas_scene_11",
+        "path": "video/animated/desktop/white_canvas_scene_11.mp4",
+        "width": 1920,
+        "height": 1080,
+        "fps": 24
+      },
+      "status": "blocked-source-keyframe"
+    },
+    {
+      "id": "visual.video.white_canvas_015",
+      "sceneId": "white_canvas_015",
+      "sourceCgAssetId": "cg.white_canvas_ending",
+      "sourceTextHash": "c06e62ce3510f648be083a2d422803f04fe46af22a6fefb99b1433b1ec0b18a4",
+      "provider": "pie",
+      "model": "seedance-1.5-pro",
+      "promptVersion": "albina-video-v2",
+      "durationSeconds": 8,
+      "masterDelivery": {
+        "retainedOffline": true
+      },
+      "runtime": {
+        "assetId": "video.animated.runtime.white_canvas_scene_15",
+        "path": "video/animated/runtime/white_canvas_scene_15.mp4",
+        "width": 1280,
+        "height": 720,
+        "fps": 24
+      },
+      "desktop": {
+        "assetId": "video.animated.desktop.white_canvas_scene_15",
+        "path": "video/animated/desktop/white_canvas_scene_15.mp4",
+        "width": 1920,
+        "height": 1080,
+        "fps": 24
+      },
+      "status": "blocked-source-keyframe"
+    },
+    {
+      "id": "visual.video.white_canvas_ending_bad",
+      "sceneId": "white_canvas_ending_bad",
+      "sourceCgAssetId": "cg.white_canvas_ending",
+      "sourceTextHash": "9ee8bc49780439cf2c26abadcb744eb143e05ca17d68e5bcba76b610707c35b1",
+      "provider": "pie",
+      "model": "seedance-1.5-pro",
+      "promptVersion": "albina-video-v2",
+      "durationSeconds": 8,
+      "masterDelivery": {
+        "retainedOffline": true
+      },
+      "runtime": {
+        "assetId": "video.animated.runtime.white_canvas_ending_bad",
+        "path": "video/animated/runtime/white_canvas_ending_bad.mp4",
+        "width": 1280,
+        "height": 720,
+        "fps": 24
+      },
+      "desktop": {
+        "assetId": "video.animated.desktop.white_canvas_ending_bad",
+        "path": "video/animated/desktop/white_canvas_ending_bad.mp4",
+        "width": 1920,
+        "height": 1080,
+        "fps": 24
+      },
+      "status": "blocked-source-keyframe"
+    },
+    {
+      "id": "visual.video.white_canvas_ending_normal",
+      "sceneId": "white_canvas_ending_normal",
+      "sourceCgAssetId": "cg.white_canvas_ending",
+      "sourceTextHash": "a5a98964ecedb6aae08ba0435f1ab0659a04c3830fe22dd119c8d83a432255b6",
+      "provider": "pie",
+      "model": "seedance-1.5-pro",
+      "promptVersion": "albina-video-v2",
+      "durationSeconds": 8,
+      "masterDelivery": {
+        "retainedOffline": true
+      },
+      "runtime": {
+        "assetId": "video.animated.runtime.white_canvas_ending_normal",
+        "path": "video/animated/runtime/white_canvas_ending_normal.mp4",
+        "width": 1280,
+        "height": 720,
+        "fps": 24
+      },
+      "desktop": {
+        "assetId": "video.animated.desktop.white_canvas_ending_normal",
+        "path": "video/animated/desktop/white_canvas_ending_normal.mp4",
+        "width": 1920,
+        "height": 1080,
+        "fps": 24
+      },
+      "status": "blocked-source-keyframe"
+    },
+    {
+      "id": "visual.video.white_canvas_ending_true",
+      "sceneId": "white_canvas_ending_true",
+      "sourceCgAssetId": "cg.white_canvas_ending",
+      "sourceTextHash": "1418960f3a8008e29c4604675dc19e247b05c917e1c8a605487944fb21ac726f",
+      "provider": "pie",
+      "model": "seedance-1.5-pro",
+      "promptVersion": "albina-video-v2",
+      "durationSeconds": 8,
+      "masterDelivery": {
+        "retainedOffline": true
+      },
+      "runtime": {
+        "assetId": "video.animated.runtime.white_canvas_ending_true",
+        "path": "video/animated/runtime/white_canvas_ending_true.mp4",
+        "width": 1280,
+        "height": 720,
+        "fps": 24
+      },
+      "desktop": {
+        "assetId": "video.animated.desktop.white_canvas_ending_true",
+        "path": "video/animated/desktop/white_canvas_ending_true.mp4",
+        "width": 1920,
+        "height": 1080,
+        "fps": 24
+      },
+      "status": "blocked-source-keyframe"
+    }
+  ]
+}

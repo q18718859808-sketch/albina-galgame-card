@@ -71,9 +71,15 @@
   ],
   "officialSoundtrack": {
     "publisher": "ProjectMoon",
+    "channel": "ProjectMoon Official",
+    "playlistTitle": "LCB OST",
+    "playlistTrackCount": 35,
+    "verifiedOn": "2026-07-15",
     "bundled": false,
     "cached": false,
+    "redistributionAllowed": false,
     "notice": "ProjectMoon 官方 OST 仅提供外部试听链接；本卡不下载、缓存或再分发这些音频。",
+    "rightsNotice": "官方播放列表可免费试听，但 ProjectMoon 服务条款未授予把游戏音乐复制进角色卡并再次分发的许可。",
     "links": [
       {
         "label": "ProjectMoon 官方 OST 播放列表",
