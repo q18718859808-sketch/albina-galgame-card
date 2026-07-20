@@ -17,6 +17,8 @@ it('promotes only the approved v2 release surface before mirroring it', async ()
   const script = join(projectRoot, 'scripts/build-release.mjs');
   const buildSource = join(projectRoot, 'build/source/albina-source.js');
   const canonicalData = join(projectRoot, 'dist/albina-galgame-card/data/game-script-v2.json');
+  const canonicalCardJson = join(projectRoot, 'card/albina.card.json');
+  const canonicalCardPng = join(projectRoot, 'card/albina.card.png');
   const deniedPaths = [
     'albina-bridge/albina-bridge.js',
     'cinema/cinematic-engine.js',
@@ -37,6 +39,7 @@ it('promotes only the approved v2 release surface before mirroring it', async ()
     await mkdir(dirname(script), { recursive: true });
     await mkdir(dirname(buildSource), { recursive: true });
     await mkdir(dirname(canonicalData), { recursive: true });
+    await mkdir(dirname(canonicalCardJson), { recursive: true });
     await mkdir(dirname(leakedTool), { recursive: true });
     await mkdir(dirname(historicalReleaseFile), { recursive: true });
     await copyFile(
@@ -48,6 +51,9 @@ it('promotes only the approved v2 release surface before mirroring it', async ()
     await copyFile(fileURLToPath(new URL('../../scripts/lib/release-integrity.mjs', import.meta.url)), helper);
     await writeFile(buildSource, 'source-build');
     await writeFile(canonicalData, 'canonical-data');
+    await writeFile(canonicalCardJson, '{"spec":"chara_card_v3"}');
+    await writeFile(canonicalCardPng, 'character-card-png');
+    await writeFile(join(projectRoot, 'card/character-card.template.json'), '{"private":"template"}');
     for (const path of deniedPaths) {
       const target = join(projectRoot, 'dist/albina-galgame-card', path);
       await mkdir(dirname(target), { recursive: true });
@@ -61,6 +67,9 @@ it('promotes only the approved v2 release surface before mirroring it', async ()
     expect(existsSync(join(projectRoot, 'dist/albina-galgame-card/source/albina-source.js'))).toBe(true);
     expect(existsSync(join(projectRoot, 'release/github-cdn-root/dist/albina-galgame-card/source/albina-source.js'))).toBe(true);
     expect(await readFile(join(projectRoot, 'release/github-cdn-root/dist/albina-galgame-card/data/game-script-v2.json'), 'utf8')).toBe('canonical-data');
+    expect(await readFile(join(projectRoot, 'release/github-cdn-root/card/albina.card.json'), 'utf8')).toBe('{"spec":"chara_card_v3"}');
+    expect(await readFile(join(projectRoot, 'release/github-cdn-root/card/albina.card.png'), 'utf8')).toBe('character-card-png');
+    expect(existsSync(join(projectRoot, 'release/github-cdn-root/card/character-card.template.json'))).toBe(false);
     for (const path of deniedPaths) {
       expect(existsSync(join(projectRoot, 'dist/albina-galgame-card', path)), path).toBe(false);
       expect(existsSync(join(projectRoot, 'release/github-cdn-root/dist/albina-galgame-card', path)), path).toBe(false);

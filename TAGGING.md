@@ -1,6 +1,6 @@
 # Release Tagging
 
-`v2.0.0-rc.1` is an immutable release-candidate tag. It may be published while `completeEdition` is false because the card and status file identify it as an RC and disclose its remaining limits. Never move or overwrite a published tag.
+`v2.0.0-rc.2` is an immutable release-candidate tag. It may be published while `completeEdition` is false because the card and status file identify it as an RC and disclose its remaining limits. Never move or overwrite a published tag.
 
 The final `v2.0.0` name remains reserved and uses four ordered phases against one reviewed commit:
 

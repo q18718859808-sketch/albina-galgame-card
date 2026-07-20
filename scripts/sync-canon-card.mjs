@@ -7,6 +7,7 @@ const projectRoot = resolve(import.meta.dirname, '..');
 const sourcePath = resolve(projectRoot, 'content/albina-card-canon-v1.json');
 const canonSourcesPath = resolve(projectRoot, 'content/canon-sources-v1.json');
 const canonClaimsPath = resolve(projectRoot, 'content/canon-claims-v1.json');
+const tavernHelperPath = resolve(projectRoot, 'content/tavern-helper-v1.json');
 const cardPaths = [
   resolve(projectRoot, 'card/albina.card.json'),
   resolve(projectRoot, 'card/character-card.template.json'),
@@ -189,13 +190,54 @@ function standaloneBook(source) {
   };
 }
 
-function synchronizedCard(card, source) {
+function validateTavernHelper(source) {
+  assert(source?.schemaVersion === 1, 'Tavern Helper schemaVersion must be 1');
+  nonEmptyString(source.releaseVersion, 'Tavern Helper releaseVersion');
+  nonEmptyString(source.cdnUrl, 'Tavern Helper cdnUrl');
+  assert(source.cdnUrl.includes(`@v${source.releaseVersion}/`), 'Tavern Helper CDN tag must match releaseVersion');
+  assert(source.script?.type === 'script', 'Tavern Helper script type must be script');
+  assert(source.script.enabled === true, 'Tavern Helper script must be enabled');
+  nonEmptyString(source.script.name, 'Tavern Helper script name');
+  nonEmptyString(source.script.id, 'Tavern Helper script id');
+  assert(source.script.info === '', 'Tavern Helper script info must be empty');
+  assert(source.script.button?.enabled === true, 'Tavern Helper button must be enabled');
+  assert(source.script.button.buttons?.length === 1, 'Tavern Helper must expose one button');
+  nonEmptyString(source.script.button.buttons[0].name, 'Tavern Helper button name');
+  assert(source.script.button.buttons[0].visible === true, 'Tavern Helper button must be visible');
+  assert(isDeepStrictEqual(source.script.data, {}), 'Tavern Helper script data must be empty');
+  assert(isDeepStrictEqual(source.variables, {}), 'Tavern Helper variables must be empty');
+  return source;
+}
+
+function helperExtension(source) {
+  return {
+    scripts: [{
+      type: source.script.type,
+      enabled: source.script.enabled,
+      name: source.script.name,
+      id: source.script.id,
+      content: `import '${source.cdnUrl}'\n`,
+      info: source.script.info,
+      button: source.script.button,
+      data: source.script.data,
+    }],
+    variables: source.variables,
+  };
+}
+
+function synchronizedCard(card, source, tavernHelper) {
   assert(card?.spec === 'chara_card_v3', 'target card must use chara_card_v3');
   assert(card.data && typeof card.data === 'object', 'target card.data is required');
   const next = structuredClone(card);
   for (const field of legacyFields) next[field] = source.card[field];
   for (const field of dataFields) next.data[field] = structuredClone(source.card[field]);
   next.data.character_book = cardBook(source);
+  next.data.character_version = tavernHelper.releaseVersion;
+  next.data.tags = next.data.tags.filter((tag) => !/^v2\.0\.0-rc\.\d+$/u.test(tag));
+  next.data.tags.push(`v${tavernHelper.releaseVersion}`);
+  next.data.extensions.albina_galgame_card.cdn_import = tavernHelper.cdnUrl;
+  next.data.extensions.tavern_helper = helperExtension(tavernHelper);
+  next.data.cdn_import = tavernHelper.cdnUrl;
   return next;
 }
 
@@ -208,16 +250,18 @@ async function readJson(path) {
 }
 
 async function synchronize(writeMode) {
-  const [profile, sourceLedger, claimLedger] = await Promise.all([
+  const [profile, sourceLedger, claimLedger, helperSource] = await Promise.all([
     readJson(sourcePath),
     readJson(canonSourcesPath),
     readJson(canonClaimsPath),
+    readJson(tavernHelperPath),
   ]);
   const source = validateSource(profile, sourceLedger, claimLedger);
+  const tavernHelper = validateTavernHelper(helperSource);
   const changes = [];
   for (const path of cardPaths) {
     const current = await readJson(path);
-    const expected = synchronizedCard(current, source);
+    const expected = synchronizedCard(current, source, tavernHelper);
     if (!isDeepStrictEqual(current, expected)) changes.push({ path, expected });
   }
 

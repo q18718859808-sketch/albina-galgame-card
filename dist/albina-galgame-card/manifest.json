@@ -1,6 +1,6 @@
 {
   "base": ".",
-  "version": "2.0.0-rc.1",
+  "version": "2.0.0-rc.2",
   "bg": {
     "backstreets_rain": "assets/bg/backstreets_rain.jpg",
     "city_rooftop": "assets/bg/city_rooftop.jpg",

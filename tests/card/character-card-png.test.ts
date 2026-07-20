@@ -11,6 +11,8 @@ import {
 
 const projectRoot = process.cwd();
 const pngPath = join(projectRoot, 'card/albina.card.png');
+const releaseJsonPath = join(projectRoot, 'release/github-cdn-root/card/albina.card.json');
+const releasePngPath = join(projectRoot, 'release/github-cdn-root/card/albina.card.png');
 const jsonPath = join(projectRoot, 'card/albina.card.json');
 
 async function fixture(): Promise<{ card: unknown; png: Buffer }> {
@@ -58,6 +60,39 @@ describe('character-card PNG metadata', () => {
   it('deep-equals the canonical card JSON', async () => {
     const { card, png } = await fixture();
     expect(readCharacterCardPng(png)).toEqual(card);
+  });
+
+  it('embeds the proven Tavern Helper static-import protocol in canonical and release cards', async () => {
+    const expectedContent = "import 'https://cdn.jsdelivr.net/gh/q18718859808-sketch/albina-galgame-card@v2.0.0-rc.2/dist/albina-galgame-card/source/albina-classic-loader.js'\n";
+    const [canonicalJson, canonicalPng, releaseJson, releasePng] = await Promise.all([
+      readFile(jsonPath, 'utf8').then((source) => JSON.parse(source) as Record<string, unknown>),
+      readFile(pngPath).then(readCharacterCardPng),
+      readFile(releaseJsonPath, 'utf8').then((source) => JSON.parse(source) as Record<string, unknown>),
+      readFile(releasePngPath).then(readCharacterCardPng),
+    ]);
+    expect(canonicalPng).toEqual(canonicalJson);
+    expect(releaseJson).toEqual(canonicalJson);
+    expect(releasePng).toEqual(canonicalJson);
+
+    const card = canonicalJson as {
+      data: { extensions: { tavern_helper: { scripts: Array<Record<string, unknown>>; variables: Record<string, unknown> } } };
+    };
+    const helper = card.data.extensions.tavern_helper;
+    expect(helper.variables).toEqual({});
+    expect(helper.scripts).toHaveLength(1);
+    expect(helper.scripts[0]).toMatchObject({
+      type: 'script',
+      enabled: true,
+      name: 'Albina',
+      id: '7f664fa2-7123-484f-bafb-bc812ae1103f',
+      content: expectedContent,
+      info: '',
+      button: { enabled: true, buttons: [{ name: '打开阿尔比娜前端', visible: true }] },
+      data: {},
+    });
+    expect(Object.keys(helper.scripts[0] ?? {}).sort()).toEqual(
+      ['button', 'content', 'data', 'enabled', 'id', 'info', 'name', 'type'].sort(),
+    );
   });
 
   it('is byte-idempotent when already synchronized', async () => {

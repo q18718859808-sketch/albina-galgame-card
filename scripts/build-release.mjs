@@ -7,8 +7,10 @@ const projectRoot = resolve(import.meta.dirname, '..');
 const buildRoot = resolve(projectRoot, 'build/source');
 const canonicalRoot = resolve(projectRoot, 'dist/albina-galgame-card');
 const canonicalSourceRoot = resolve(canonicalRoot, 'source');
+const canonicalCardRoot = resolve(projectRoot, 'card');
 const releaseTreeRoot = resolve(projectRoot, 'release/github-cdn-root');
 const releaseRoot = resolve(releaseTreeRoot, 'dist/albina-galgame-card');
+const releaseCardRoot = resolve(releaseTreeRoot, 'card');
 const approvedRootEntries = new Set(['assets', 'data', 'manifest.json', 'release-status.json', 'source', 'worldbooks']);
 
 async function copyTree(source, destination) {
@@ -91,4 +93,10 @@ console.log(`Promoted source build to ${canonicalSourceRoot}`);
 
 await rm(releaseTreeRoot, { recursive: true, force: true });
 await copyTree(canonicalRoot, releaseRoot);
+await mkdir(releaseCardRoot, { recursive: true });
+await Promise.all([
+  copyFile(resolve(canonicalCardRoot, 'albina.card.json'), resolve(releaseCardRoot, 'albina.card.json')),
+  copyFile(resolve(canonicalCardRoot, 'albina.card.png'), resolve(releaseCardRoot, 'albina.card.png')),
+]);
 console.log(`Mirrored canonical dist tree to ${releaseRoot}`);
+console.log(`Copied importable character card to ${releaseCardRoot}`);

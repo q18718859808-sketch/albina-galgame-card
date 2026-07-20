@@ -1,0 +1,23 @@
+{
+  "schemaVersion": 1,
+  "releaseVersion": "2.0.0-rc.2",
+  "cdnUrl": "https://cdn.jsdelivr.net/gh/q18718859808-sketch/albina-galgame-card@v2.0.0-rc.2/dist/albina-galgame-card/source/albina-classic-loader.js",
+  "script": {
+    "type": "script",
+    "enabled": true,
+    "name": "Albina",
+    "id": "7f664fa2-7123-484f-bafb-bc812ae1103f",
+    "info": "",
+    "button": {
+      "enabled": true,
+      "buttons": [
+        {
+          "name": "打开阿尔比娜前端",
+          "visible": true
+        }
+      ]
+    },
+    "data": {}
+  },
+  "variables": {}
+}

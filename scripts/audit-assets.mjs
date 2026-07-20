@@ -21,7 +21,7 @@ const promotionReceiptRoots = [
 ];
 const audioCreditsPath = resolve(assetRoot, 'audio/CREDITS.json');
 const bgmRoot = resolve(assetRoot, 'audio/bgm');
-const releaseVersion = '2.0.0-rc.1';
+const releaseVersion = '2.0.0-rc.2';
 const previewBase = '.';
 const mediaExtensions = new Set(['.jpeg', '.jpg', '.json', '.mp3', '.mp4', '.png', '.svg', '.wav', '.webp']);
 
@@ -359,18 +359,15 @@ async function hashedFiles(root) {
 }
 
 async function classifyRelease() {
-  const [canonicalFiles, releaseFiles] = await Promise.all([hashedFiles(canonicalRoot), hashedFiles(releaseRoot)]);
+  const [canonicalFiles, releaseFiles] = await Promise.all([hashedFiles(canonicalRoot), hashedFiles(releaseMirrorRoot)]);
   const report = { duplicate: [], missing: [], mismatch: [], stale: [] };
-  const mirrorSeen = new Set();
-  for (const [releasePath, releaseHash] of releaseFiles) {
-    const nestedPrefix = 'dist/albina-galgame-card/';
-    const canonicalPath = releasePath.startsWith(nestedPrefix) ? releasePath.slice(nestedPrefix.length) : releasePath;
-    if (releasePath.startsWith(nestedPrefix)) mirrorSeen.add(canonicalPath);
+  for (const [canonicalPath, releaseHash] of releaseFiles) {
+    const releasePath = `dist/albina-galgame-card/${canonicalPath}`;
     if (!canonicalFiles.has(canonicalPath)) report.stale.push(releasePath);
     else if (canonicalFiles.get(canonicalPath) === releaseHash) report.duplicate.push(releasePath);
     else report.mismatch.push(releasePath);
   }
-  for (const canonicalPath of canonicalFiles.keys()) if (!mirrorSeen.has(canonicalPath)) report.missing.push(`dist/albina-galgame-card/${canonicalPath}`);
+  for (const canonicalPath of canonicalFiles.keys()) if (!releaseFiles.has(canonicalPath)) report.missing.push(`dist/albina-galgame-card/${canonicalPath}`);
   Object.values(report).forEach((paths) => paths.sort());
   return report;
 }

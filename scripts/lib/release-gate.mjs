@@ -27,6 +27,11 @@ export function evaluateReleaseGate({ channel, status, repository } = {}) {
 
   if (channel === 'rc') {
     if (!status.releaseCandidate || !isPrereleaseVersion(status.version)) blockers.push('version:not-prerelease');
+    const tag = `v${status.version}`;
+    if (repository?.remoteReleaseTagExists) blockers.push(`tag:${tag}-already-published`);
+    if (repository?.localReleaseTagCommit && repository.localReleaseTagCommit !== repository.head) {
+      blockers.push(`tag:${tag}-points-elsewhere`);
+    }
     return {
       channel,
       allowed: blockers.length === 0,
@@ -57,7 +62,13 @@ export function buildReleaseCommands({ channel, status, repository, remote = 'or
   if (!gate.allowed) return { ...gate, commands: [] };
 
   const branchRef = `HEAD:refs/heads/${repository.branch}`;
-  if (channel === 'rc') return { ...gate, commands: [['push', remote, branchRef]] };
+  if (channel === 'rc') {
+    const tag = `v${status.version}`;
+    const commands = [];
+    if (!repository.localReleaseTagCommit) commands.push(['tag', '-a', tag, '-m', `Albina ${status.version}`, repository.head]);
+    commands.push(['push', remote, branchRef], ['push', remote, `refs/tags/${tag}`]);
+    return { ...gate, commands };
+  }
 
   const tag = `v${FINAL_VERSION}`;
   const commands = [];

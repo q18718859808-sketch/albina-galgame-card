@@ -49,7 +49,7 @@ describe('release status and publication gate', () => {
 
   it('derives incomplete status from blocked media and unavailable production provider', () => {
     const status = deriveReleaseStatus({
-      version: '2.0.0-rc.1',
+      version: '2.0.0-rc.2',
       runtimeMediaApis: false,
       completed: { ...completeCounts, fixedVoiceAssets: 0, pieProvenancedVoiceAssets: 0 },
       mediaReadiness: { total: 109, ready: 0, blocked: 109, byRoot: {}, blockers: [{ path: 'cg/test.png', assetIds: ['cg.test'], ready: false, issues: ['rights'] }] },
@@ -85,7 +85,7 @@ describe('release status and publication gate', () => {
 
   it('refuses the final gate until the package is a complete non-RC edition', () => {
     const status = deriveReleaseStatus({
-      version: '2.0.0-rc.1',
+      version: '2.0.0-rc.2',
       runtimeMediaApis: false,
       completed: completeCounts,
       mediaReadiness: completeReadiness,
@@ -104,7 +104,7 @@ describe('release status and publication gate', () => {
     }).commands).toEqual([]);
   });
 
-  it('builds an RC branch push only after the clean-worktree gate', () => {
+  it('builds an immutable RC tag and branch push only after the clean-worktree gate', () => {
     const status = deriveReleaseStatus({
       version: '2.0.0-rc.2', runtimeMediaApis: false,
       completed: { ...completeCounts, animatedCgRuntime: 0 },
@@ -112,11 +112,30 @@ describe('release status and publication gate', () => {
       providerProbes: { probes: [imageProbe(true), pieProbe], compatibilityProbes: [] },
       pendingMediaJobs: 0,
     });
-    const repository = { workingTreeClean: true, branch: 'codex/albina-v2-complete', head: 'abc' };
+    const repository = {
+      workingTreeClean: true,
+      branch: 'codex/albina-v2-complete',
+      head: 'abc',
+      localReleaseTagCommit: null,
+      remoteReleaseTagExists: false,
+    };
     expect(buildReleaseCommands({ channel: 'rc', status, repository })).toMatchObject({
       allowed: true,
       incomplete: true,
-      commands: [['push', 'origin', 'HEAD:refs/heads/codex/albina-v2-complete']],
+      commands: [
+        ['tag', '-a', 'v2.0.0-rc.2', '-m', 'Albina 2.0.0-rc.2', 'abc'],
+        ['push', 'origin', 'HEAD:refs/heads/codex/albina-v2-complete'],
+        ['push', 'origin', 'refs/tags/v2.0.0-rc.2'],
+      ],
+    });
+    expect(buildReleaseCommands({
+      channel: 'rc',
+      status,
+      repository: { ...repository, remoteReleaseTagExists: true },
+    })).toMatchObject({
+      allowed: false,
+      commands: [],
+      blockers: expect.arrayContaining(['tag:v2.0.0-rc.2-already-published']),
     });
     expect(buildReleaseCommands({ channel: 'rc', status, repository: { ...repository, workingTreeClean: false } })).toMatchObject({
       allowed: false,

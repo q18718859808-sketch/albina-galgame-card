@@ -9,6 +9,8 @@ export interface ReleaseRepositoryState {
   workingTreeClean?: boolean;
   branch?: string;
   head?: string;
+  localReleaseTagCommit?: string | null;
+  remoteReleaseTagExists?: boolean;
   localFinalTagCommit?: string;
   remoteFinalTagExists?: boolean;
 }

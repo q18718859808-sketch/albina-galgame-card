@@ -10,4 +10,4 @@ The Albina v2 frontend is authoritative for route, values, flags, choices, tasks
 
 ## Distribution
 
-The card is an installable `v2.0.0-rc.1` release candidate with one enabled, tag-pinned Tavern Helper loader. The final `v2.0.0` CDN location remains reserved until the complete-edition gate and public verification pass.
+The card is an installable `v2.0.0-rc.2` release candidate with one enabled, tag-pinned Tavern Helper loader. The final `v2.0.0` CDN location remains reserved until the complete-edition gate and public verification pass.

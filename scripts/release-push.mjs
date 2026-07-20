@@ -19,22 +19,23 @@ async function optionalGit(args) {
   try { return await git(args); } catch { return null; }
 }
 
-async function repositoryState(remote, channel) {
-  const [porcelain, branch, head, localFinalTagCommit] = await Promise.all([
+async function repositoryState(remote, channel, version) {
+  const releaseTag = channel === 'final' ? 'v2.0.0' : `v${version}`;
+  const [porcelain, branch, head, localReleaseTagCommit] = await Promise.all([
     git(['status', '--porcelain=v1', '--untracked-files=all'], { trim: false }),
     optionalGit(['symbolic-ref', '--quiet', '--short', 'HEAD']),
     optionalGit(['rev-parse', 'HEAD']),
-    optionalGit(['rev-parse', 'refs/tags/v2.0.0^{commit}']),
+    optionalGit(['rev-parse', `refs/tags/${releaseTag}^{commit}`]),
   ]);
-  const remoteTags = channel === 'final'
-    ? await git(['ls-remote', '--tags', remote, 'refs/tags/v2.0.0', 'refs/tags/v2.0.0^{}'])
-    : '';
+  const remoteTags = await git(['ls-remote', '--tags', remote, `refs/tags/${releaseTag}`, `refs/tags/${releaseTag}^{}`]);
   return {
     workingTreeClean: !hasPublishableWorktreeChanges(porcelain),
     branch,
     head,
-    localFinalTagCommit,
-    remoteFinalTagExists: Boolean(remoteTags),
+    localReleaseTagCommit,
+    remoteReleaseTagExists: Boolean(remoteTags),
+    localFinalTagCommit: channel === 'final' ? localReleaseTagCommit : null,
+    remoteFinalTagExists: channel === 'final' && Boolean(remoteTags),
   };
 }
 
@@ -49,7 +50,7 @@ function parseArgs(argv) {
 
 export async function planReleasePush({ channel, remote = 'origin' }) {
   const status = await buildCurrentReleaseStatus();
-  const repository = await repositoryState(remote, channel);
+  const repository = await repositoryState(remote, channel, status.version);
   const gate = buildReleaseCommands({ channel, status, repository, remote });
   return { status, repository, gate };
 }

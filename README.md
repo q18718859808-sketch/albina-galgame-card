@@ -1,6 +1,6 @@
 # Albina Galgame Card v2
 
-Albina v2 is a Tavern Helper independent frontend card with deterministic story and save-state authority. `v2.0.0-rc.1` is the remotely installable release candidate; the final `v2.0.0` tag remains reserved.
+Albina v2 is a Tavern Helper independent frontend card with deterministic story and save-state authority. `v2.0.0-rc.2` is the remotely installable release candidate; the final `v2.0.0` tag remains reserved.
 
 The source-backed opening covers the 9-14 Corporism context and Albina's 9-18, 9-37, and 9-43 appearances through the fixed canon outcome. Only then does the card enter 58 explicitly labelled AU/IF scenes and nine author-created endings.
 

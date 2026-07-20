@@ -57,7 +57,21 @@ interface Card {
   first_mes: string;
   mes_example: string;
   data: Record<string, unknown> & {
-    extensions: { tavern_helper: { scripts: Array<{ content: string }> } };
+    extensions: {
+      tavern_helper: {
+        scripts: Array<{
+          type: string;
+          enabled: boolean;
+          name: string;
+          id: string;
+          content: string;
+          info: string;
+          button: { enabled: boolean; buttons: Array<{ name: string; visible: boolean }> };
+          data: Record<string, unknown>;
+        }>;
+        variables: Record<string, unknown>;
+      };
+    };
     character_book: { entries: CardEntry[] };
   };
 }
@@ -140,11 +154,24 @@ describe('source-backed Albina card canon', () => {
 
   it('preserves the approved Tavern Helper loader and card extensions', async () => {
     const [card, template] = await Promise.all([json<Card>(cardPath), json<Card>(templatePath)]);
-    const cardLoader = card.data.extensions.tavern_helper.scripts[0]?.content;
-    const templateLoader = template.data.extensions.tavern_helper.scripts[0]?.content;
-    expect(cardLoader).toBe(templateLoader);
-    expect(cardLoader).toContain('@v2.0.0-rc.1/dist/albina-galgame-card/source/albina-classic-loader.js');
-    expect(cardLoader).toContain('data-albina-classic-loader');
+    const cardHelper = card.data.extensions.tavern_helper;
+    const templateHelper = template.data.extensions.tavern_helper;
+    expect(cardHelper).toEqual(templateHelper);
+    expect(cardHelper.variables).toEqual({});
+    expect(cardHelper.scripts).toHaveLength(1);
+    expect(cardHelper.scripts[0]).toEqual({
+      type: 'script',
+      enabled: true,
+      name: 'Albina',
+      id: '7f664fa2-7123-484f-bafb-bc812ae1103f',
+      content: "import 'https://cdn.jsdelivr.net/gh/q18718859808-sketch/albina-galgame-card@v2.0.0-rc.2/dist/albina-galgame-card/source/albina-classic-loader.js'\n",
+      info: '',
+      button: {
+        enabled: true,
+        buttons: [{ name: '打开阿尔比娜前端', visible: true }],
+      },
+      data: {},
+    });
   });
 
   it('covers the 9-18, 9-37, and 9-43 canon chain and marks all routes and endings as AU/IF', async () => {

@@ -1,7 +1,7 @@
 import { extname } from 'node:path';
 
 const textExtensions = new Set(['.cjs', '.conf', '.css', '.env', '.html', '.ini', '.js', '.json', '.jsx', '.md', '.mjs', '.mts', '.ps1', '.py', '.sh', '.toml', '.ts', '.tsx', '.txt', '.vue', '.xml', '.yaml', '.yml']);
-const canonicalBase = 'https://cdn.jsdelivr.net/gh/q18718859808-sketch/albina-galgame-card@v2.0.0-rc.1/dist/albina-galgame-card';
+const canonicalBase = 'https://cdn.jsdelivr.net/gh/q18718859808-sketch/albina-galgame-card@v2.0.0-rc.2/dist/albina-galgame-card';
 const approvedRemoteScripts = new Set([`${canonicalBase}/source/albina-classic-loader.js`]);
 const secretPatterns = [
   /["']?(?:api[_-]?key|authorization|token|secret|credential)["']?\s*[:=][ \t]*["'`](?:bearer\s+)?(?!\$\{|<|your[_-]|example|replace|test|fake|redacted)[a-z0-9._+/=-]{16,}["'`]/iu,
