@@ -43,9 +43,9 @@
       "阿尔比娜",
       "单女主",
       "RP",
-      "v2.0.0-rc.3"
+      "v2.0.0-rc.4"
     ],
-    "character_version": "2.0.0-rc.3",
+    "character_version": "2.0.0-rc.4",
     "extensions": {
       "talkativeness": "0.65",
       "fav": false,
@@ -53,7 +53,7 @@
       "albina_galgame_card": {
         "project_id": "albina-galgame-card",
         "save_key": "albinaSaveV2",
-        "cdn_import": "https://cdn.jsdelivr.net/gh/q18718859808-sketch/albina-galgame-card@v2.0.0-rc.3/dist/albina-galgame-card/source/albina-classic-loader.js",
+        "cdn_import": "https://cdn.jsdelivr.net/gh/q18718859808-sketch/albina-galgame-card@v2.0.0-rc.4/dist/albina-galgame-card/source/albina-classic-loader.js",
         "routes": [
           "white_canvas",
           "golden_bough_rebuild",
@@ -67,7 +67,7 @@
             "enabled": true,
             "name": "Albina",
             "id": "7f664fa2-7123-484f-bafb-bc812ae1103f",
-            "content": "import 'https://cdn.jsdelivr.net/gh/q18718859808-sketch/albina-galgame-card@v2.0.0-rc.3/dist/albina-galgame-card/source/albina-classic-loader.js'\n",
+            "content": "import 'https://cdn.jsdelivr.net/gh/q18718859808-sketch/albina-galgame-card@v2.0.0-rc.4/dist/albina-galgame-card/source/albina-classic-loader.js'\n",
             "info": "",
             "button": {
               "enabled": true,
@@ -655,7 +655,7 @@
         }
       ]
     },
-    "creator_notes": "【正史与同人边界】本卡的正史来源与 claim 统一来自 content/canon-sources-v1.json 和 content/canon-claims-v1.json；角色卡与世界书不再维护第二套来源 ID。9-18、9-37、9-43 构成 Albina 的直接出场链，9-14 仅提供 Corporism 背景；三条路线、九个结局、玩家身份与存活后的所有互动均为原创 AU/IF。\n\n固定 wiki.gg 修订用于可重复文本定位。B站公开 API 只核验分 P、CID、时长、零字幕轨与 no_reprint=1；浏览器直连和本机代理均返回 ERR_CONNECTION_CLOSED，因此录播条目不作为剧情文字证据，发布包也不下载或分发视频、音轨、字幕和长篇台词。\n\n当前 v2.0.0-rc.3 已明确标记为 RC；最终 v2.0.0 只在正史、固定语音、存档迁移、媒体溯源、真实导入和最终资产门禁全部通过后发布。",
-    "cdn_import": "https://cdn.jsdelivr.net/gh/q18718859808-sketch/albina-galgame-card@v2.0.0-rc.3/dist/albina-galgame-card/source/albina-classic-loader.js"
+    "creator_notes": "【正史与同人边界】本卡的正史来源与 claim 统一来自 content/canon-sources-v1.json 和 content/canon-claims-v1.json；角色卡与世界书不再维护第二套来源 ID。9-18、9-37、9-43 构成 Albina 的直接出场链，9-14 仅提供 Corporism 背景；三条路线、九个结局、玩家身份与存活后的所有互动均为原创 AU/IF。\n\n固定 wiki.gg 修订用于可重复文本定位。B站公开 API 只核验分 P、CID、时长、零字幕轨与 no_reprint=1；浏览器直连和本机代理均返回 ERR_CONNECTION_CLOSED，因此录播条目不作为剧情文字证据，发布包也不下载或分发视频、音轨、字幕和长篇台词。\n\n当前 v2.0.0-rc.4 已明确标记为 RC；最终 v2.0.0 只在正史、固定语音、存档迁移、媒体溯源、真实导入和最终资产门禁全部通过后发布。",
+    "cdn_import": "https://cdn.jsdelivr.net/gh/q18718859808-sketch/albina-galgame-card@v2.0.0-rc.4/dist/albina-galgame-card/source/albina-classic-loader.js"
   }
 }

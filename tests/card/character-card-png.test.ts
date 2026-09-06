@@ -63,7 +63,7 @@ describe('character-card PNG metadata', () => {
   });
 
   it('embeds the proven Tavern Helper static-import protocol in canonical and release cards', async () => {
-    const expectedContent = "import 'https://cdn.jsdelivr.net/gh/q18718859808-sketch/albina-galgame-card@v2.0.0-rc.3/dist/albina-galgame-card/source/albina-classic-loader.js'\n";
+    const expectedContent = "import 'https://cdn.jsdelivr.net/gh/q18718859808-sketch/albina-galgame-card@v2.0.0-rc.4/dist/albina-galgame-card/source/albina-classic-loader.js'\n";
     const [canonicalJson, canonicalPng, releaseJson, releasePng] = await Promise.all([
       readFile(jsonPath, 'utf8').then((source) => JSON.parse(source) as Record<string, unknown>),
       readFile(pngPath).then(readCharacterCardPng),

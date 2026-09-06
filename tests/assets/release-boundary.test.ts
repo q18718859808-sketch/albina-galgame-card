@@ -112,7 +112,7 @@ describe('offline release boundary', () => {
     const joined = documentation.join('\n');
     expect(joined).toMatch(/release candidate/iu);
     expect(joined).toMatch(/(?:reserved|保留)/iu);
-    expect(joined).toContain('@v2.0.0-rc.3/');
+    expect(joined).toContain('@v2.0.0-rc.4/');
     expect(joined).not.toContain('@v2.0.0/');
     expect(joined).not.toMatch(/document\.createElement\(['"]script['"]\)/iu);
     expect(joined).not.toMatch(/git\s+tag\s+v2\.0\.0/iu);
@@ -132,7 +132,7 @@ describe('offline release boundary', () => {
       data: { cdn_import?: string; extensions: { albina_galgame_card: { cdn_import?: string } } };
     };
     const values = [card.data.cdn_import, card.data.extensions.albina_galgame_card.cdn_import].filter(Boolean).join('\n');
-    expect(values).toContain('@v2.0.0-rc.3/');
+    expect(values).toContain('@v2.0.0-rc.4/');
     expect(values).not.toContain('@v2.0.0/');
   });
 
@@ -141,12 +141,12 @@ describe('offline release boundary', () => {
     const lookup = await json('dist/albina-galgame-card/assets/runtime-lookup.json') as {
       base: string; assetsById: Record<string, string>; portraitsById: Record<string, string>;
     };
-    expect(manifest.version).toBe('2.0.0-rc.3');
+    expect(manifest.version).toBe('2.0.0-rc.4');
     expect(manifest.base).toBe('.');
     expect(lookup.base).toBe('.');
     expect([...Object.values(lookup.assetsById), ...Object.values(lookup.portraitsById)]
       .every((path) => path.startsWith('assets/') && !path.includes('://'))).toBe(true);
-    expect(ALBINA_RELEASE_VERSION).toBe('2.0.0-rc.3');
+    expect(ALBINA_RELEASE_VERSION).toBe('2.0.0-rc.4');
     expect(ALBINA_CDN_BASE).toBe('.');
   });
 

@@ -21,7 +21,7 @@ const promotionReceiptRoots = [
 ];
 const audioCreditsPath = resolve(assetRoot, 'audio/CREDITS.json');
 const bgmRoot = resolve(assetRoot, 'audio/bgm');
-const releaseVersion = '2.0.0-rc.3';
+const releaseVersion = '2.0.0-rc.4';
 const previewBase = '.';
 const mediaExtensions = new Set(['.jpeg', '.jpg', '.json', '.mp3', '.mp4', '.png', '.svg', '.wav', '.webp']);
 

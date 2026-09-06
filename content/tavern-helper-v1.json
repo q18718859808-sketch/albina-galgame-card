@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
-  "releaseVersion": "2.0.0-rc.3",
-  "cdnUrl": "https://cdn.jsdelivr.net/gh/q18718859808-sketch/albina-galgame-card@v2.0.0-rc.3/dist/albina-galgame-card/source/albina-classic-loader.js",
+  "releaseVersion": "2.0.0-rc.4",
+  "cdnUrl": "https://cdn.jsdelivr.net/gh/q18718859808-sketch/albina-galgame-card@v2.0.0-rc.4/dist/albina-galgame-card/source/albina-classic-loader.js",
   "script": {
     "type": "script",
     "enabled": true,

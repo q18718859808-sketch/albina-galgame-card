@@ -178,7 +178,7 @@ describe('source-backed Albina card canon', () => {
       enabled: true,
       name: 'Albina',
       id: '7f664fa2-7123-484f-bafb-bc812ae1103f',
-      content: "import 'https://cdn.jsdelivr.net/gh/q18718859808-sketch/albina-galgame-card@v2.0.0-rc.3/dist/albina-galgame-card/source/albina-classic-loader.js'\n",
+      content: "import 'https://cdn.jsdelivr.net/gh/q18718859808-sketch/albina-galgame-card@v2.0.0-rc.4/dist/albina-galgame-card/source/albina-classic-loader.js'\n",
       info: '',
       button: {
         enabled: true,

@@ -77,10 +77,10 @@ describe('v2 release-candidate completeness with explicit limitations', () => {
     const card = await json('card/albina.card.json') as Card;
     const template = await json('card/character-card.template.json') as Card;
     const scripts = card.data.extensions.tavern_helper.scripts;
-    expect(card.data.character_version).toBe('2.0.0-rc.3');
-    expect(template.data.character_version).toBe('2.0.0-rc.3');
-    expect(card.data.tags).toContain('v2.0.0-rc.3');
-    expect(template.data.tags).toContain('v2.0.0-rc.3');
+    expect(card.data.character_version).toBe('2.0.0-rc.4');
+    expect(template.data.character_version).toBe('2.0.0-rc.4');
+    expect(card.data.tags).toContain('v2.0.0-rc.4');
+    expect(template.data.tags).toContain('v2.0.0-rc.4');
     expect(card.data.tags).not.toContain('v2.0.0');
     expect(template.data.tags).not.toContain('v2.0.0');
     expect(card.data.extensions.albina_galgame_card.save_key).toBe(TAVERN_HELPER_SAVE_KEY);
@@ -88,8 +88,8 @@ describe('v2 release-candidate completeness with explicit limitations', () => {
     expect(scripts).toHaveLength(1);
     expect(scripts).toEqual(template.data.extensions.tavern_helper.scripts);
     expect(scripts[0]?.enabled).toBe(true);
-    expect(card.data.creator_notes).toContain('v2.0.0-rc.3');
-    expect(scripts[0]?.content).toBe("import 'https://cdn.jsdelivr.net/gh/q18718859808-sketch/albina-galgame-card@v2.0.0-rc.3/dist/albina-galgame-card/source/albina-classic-loader.js'\n");
+    expect(card.data.creator_notes).toContain('v2.0.0-rc.4');
+    expect(scripts[0]?.content).toBe("import 'https://cdn.jsdelivr.net/gh/q18718859808-sketch/albina-galgame-card@v2.0.0-rc.4/dist/albina-galgame-card/source/albina-classic-loader.js'\n");
     expect(scripts[0]?.content).not.toContain('/console/index.js');
     expect(existsSync('dist/albina-galgame-card/source/albina-classic-loader.js')).toBe(true);
     const loader = await readFile('public/albina-classic-loader.js', 'utf8');
@@ -105,6 +105,6 @@ describe('v2 release-candidate completeness with explicit limitations', () => {
     const status = await json('dist/albina-galgame-card/release-status.json') as { completeEdition: boolean; releaseCandidate: boolean; version: string };
     expect(status.completeEdition).toBe(false);
     expect(status.releaseCandidate).toBe(true);
-    expect(status.version).toBe('2.0.0-rc.3');
+    expect(status.version).toBe('2.0.0-rc.4');
   });
 });
