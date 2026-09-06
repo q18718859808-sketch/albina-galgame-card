@@ -91,7 +91,8 @@ test('imports the final card script inside a Tavern Helper frame and mounts in t
   expect(requests.filter((name) => name === 'albina-classic-loader.js')).toHaveLength(1);
   expect(requests.filter((name) => name === 'albina-source.js')).toHaveLength(1);
 
-  await launcher.click();
-  await expect(page.locator('body > [data-albina-shell]')).toBeVisible();
-  await expect(page.getByTestId('title-screen')).toBeVisible();
+  // Self-bootstrap: the install path opens the fullscreen app frame without
+  // waiting for a launcher click.
+  await expect(page.locator('body > iframe[data-albina-shell="v2"]')).toBeVisible();
+  await expect(page.locator('iframe[data-albina-shell="v2"] [data-testid="title-screen"]')).toBeVisible();
 });

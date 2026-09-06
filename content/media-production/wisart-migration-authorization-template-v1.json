@@ -9,7 +9,7 @@
   "planVariantVersion": "2.3.0-migration-v2",
   "promptFreezeVersion": "albina-visual-migration-v1",
   "sourceIndexVersion": "albina-canon-visual-sources-migration-v1",
-  "migrationContentSha256": "d8b9bbd5f19cf9a3b5ecab2873da13e12b70328ff9a908250edd32d99a7c538f",
+  "migrationContentSha256": "e7da42a509f9e11bdb8e87b2c2943f5768e689bf689a40cf9536a21c8d152491",
   "styleBoardSha256": "aaf89630110b6fef687b86334404b00cd39fd29c84451971575b26a29ce51142",
   "instructions": [
     "本文件是自动校验上下文，不是生产授权文件；运行时不读取任何人工授权文件。",

@@ -73,7 +73,7 @@ describe('security scanner', () => {
   });
 
   it('allows only the exact immutable Albina loader and canonical asset URLs in runtime files', () => {
-    const base = 'https://cdn.jsdelivr.net/gh/q18718859808-sketch/albina-galgame-card@v2.0.0-rc.2/dist/albina-galgame-card';
+    const base = 'https://cdn.jsdelivr.net/gh/q18718859808-sketch/albina-galgame-card@v2.0.0-rc.3/dist/albina-galgame-card';
     expect(scanText('card/albina.card.json', `script.src='${base}/source/albina-classic-loader.js'`)).toEqual([]);
     expect(scanText('src/media.ts', `image.src='${base}/assets/cg/opening_rain.jpg'; audio.src='${base}/assets/audio/bgm/title.mp3'`)).toEqual([]);
     expect(scanText('dist/albina-galgame-card/manifest.json', `{"asset":"${base}/assets/cg/opening_rain.jpg"}`)).toEqual([]);

@@ -19,10 +19,23 @@ describe('source launcher host lifecycle contract', () => {
     expect(source).toContain('application mount failed');
   });
 
-  it('removes shell, launcher, stylesheet, and host/page lifecycle listeners on uninstall', async () => {
+  it('boots the frontend inside a dedicated fullscreen host iframe (self-bootstrap)', async () => {
+    const source = await readFile('src/main.ts', 'utf8');
+    expect(source).toContain("hostDocument.createElement('iframe')");
+    expect(source).toContain("frame.dataset.albinaShell = 'v2'");
+    expect(source).toContain("zIndex: '2147483647'");
+    expect(source).toContain("root.id = 'albina-v2-root'");
+    // Bridge TavernHelper globals into the app frame so chat-variable
+    // persistence keeps working inside the dedicated document.
+    expect(source).toContain('bridgeFrameGlobals');
+    // Bootstrap: the install path opens the frontend without a click.
+    expect(source).toMatch(/\n {2}open\(\);\n/u);
+  });
+
+  it('removes the app frame, launcher, stylesheet, and host/page lifecycle listeners on uninstall', async () => {
     const source = await readFile('src/main.ts', 'utf8');
     expect(source).toContain('application?.unmount()');
-    expect(source).toContain('shell?.remove()');
+    expect(source).toContain('frame?.remove()');
     expect(source).toContain('launcher.remove()');
     expect(source).toContain('style?.remove()');
     expect(source).toContain("listen(resolveAlbinaPagehideWindow(window, hostWindow), 'pagehide', lifecycleUnmount)");

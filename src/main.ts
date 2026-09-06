@@ -47,6 +47,15 @@ export function resolveAlbinaPagehideWindow(currentWindow: Window, hostWindow: W
   return hostWindow === currentWindow ? currentWindow : hostWindow;
 }
 
+/**
+ * The frontend boots inside a dedicated fullscreen iframe owned by the host
+ * page (the proven v1 console architecture). Hosting the app in its own
+ * document isolates it from SillyTavern styles, stacking contexts, and layout
+ * — a shell appended to the host body can be clipped or covered there, which
+ * is exactly the "launcher click does nothing" failure mode observed in the
+ * real host. The DOM launcher stays as a visible toggle; the frontend itself
+ * auto-opens on install (bootstrap), matching the v1 behavior.
+ */
 export function installAlbinaOneClick(options: InstallOptions = {}): AlbinaInstallation | undefined {
   if (typeof document === 'undefined' || typeof window === 'undefined') return undefined;
   const hostWindow = resolveAlbinaLifecycleWindow(window) as AlbinaHostWindow;
@@ -55,7 +64,7 @@ export function installAlbinaOneClick(options: InstallOptions = {}): AlbinaInsta
 
   let state: AlbinaLauncherState = 'loading';
   let disposed = false;
-  let shell: HTMLElement | undefined;
+  let frame: HTMLIFrameElement | undefined;
   let application: VueApplication | undefined;
   let style: HTMLLinkElement | undefined;
   const sourceUrl = options.sourceUrl ?? import.meta.url;
@@ -77,34 +86,79 @@ export function installAlbinaOneClick(options: InstallOptions = {}): AlbinaInsta
   const close = (): void => {
     application?.unmount();
     application = undefined;
-    shell?.remove();
-    shell = undefined;
+    frame?.remove();
+    frame = undefined;
     if (!disposed) setState('closed');
   };
 
-  const open = (): void => {
-    if (disposed || state === 'loading' || state === 'error' || shell?.isConnected) return;
+  /** Globals the runtime expects from the TavernHelper script frame. */
+  const bridgeFrameGlobals = (frameWindow: Window): void => {
+    const scriptWindow = window as unknown as Window & Record<string, unknown>;
+    for (const key of ['TavernHelper', 'eventOn', 'eventEmit', 'eventOnce', 'eventOff', 'tavern_events', 'getScriptId', 'getIframeName', 'triggerSlash', 'replaceScriptButtons', 'getButtonEvent']) {
+      const value = scriptWindow[key];
+      if (value !== undefined) {
+        try { (frameWindow as unknown as Window & Record<string, unknown>)[key] = value; } catch { /* cross-origin frame: ignore */ }
+      }
+    }
+  };
+
+  const onFrameLoad = (): void => {
+    if (disposed || !frame?.contentDocument?.body) return;
     try {
-      shell = hostDocument.createElement('section');
-      shell.dataset.albinaShell = 'v2';
-      Object.assign(shell.style, { position: 'fixed', inset: '0', zIndex: '2147483647', background: '#020308' });
-      const closeButton = hostDocument.createElement('button');
-      closeButton.type = 'button';
-      closeButton.textContent = '关闭';
-      closeButton.dataset.albinaClose = 'v2';
-      Object.assign(closeButton.style, { position: 'absolute', right: '12px', top: '12px', zIndex: '4' });
-      const root = hostDocument.createElement('div');
+      const frameDocument = frame.contentDocument;
+      const root = frameDocument.createElement('div');
       root.id = 'albina-v2-root';
-      shell.append(root, closeButton);
-      hostDocument.body.append(shell);
-      closeButton.addEventListener('click', close, { once: true });
+      frameDocument.body.append(root);
+      const frameStyle = frameDocument.createElement('style');
+      frameStyle.textContent = 'html,body{margin:0;width:100%;height:100%;overflow:hidden;background:#020308}#albina-v2-root{width:100%;height:100%}';
+      frameDocument.head.append(frameStyle);
+      const appCssHref = hostDocument.querySelector('link[data-albina-style]')?.getAttribute('href');
+      if (appCssHref) {
+        const appCss = frameDocument.createElement('link');
+        appCss.rel = 'stylesheet';
+        appCss.href = appCssHref;
+        frameDocument.head.append(appCss);
+      }
+      if (frame.contentWindow) bridgeFrameGlobals(frame.contentWindow);
       application = mount(root);
       setState('open');
     } catch (error) {
       application?.unmount();
       application = undefined;
-      shell?.remove();
-      shell = undefined;
+      frame?.remove();
+      frame = undefined;
+      const reason = error instanceof Error ? error.message : String(error);
+      setState('error', `Albina frontend startup failed: ${reason}`);
+      console.error('[Albina] application mount failed.', error);
+    }
+  };
+
+  const open = (): void => {
+    if (disposed || state === 'error') return;
+    if (frame?.isConnected) { close(); return; }
+    try {
+      frame = hostDocument.createElement('iframe');
+      frame.title = 'Albina frontend';
+      frame.dataset.albinaShell = 'v2';
+      Object.assign(frame.style, {
+        position: 'fixed',
+        inset: '0',
+        width: '100vw',
+        height: '100dvh',
+        zIndex: '2147483647',
+        border: 'none',
+        background: '#020308',
+      });
+      frame.addEventListener('load', onFrameLoad, { once: true });
+      hostDocument.body.append(frame);
+      // about:blank same-origin frames usually fire load before this listener
+      // attaches; mount directly when the document is already interactive.
+      if (frame.contentDocument?.body) onFrameLoad();
+    } catch (error) {
+      application?.unmount();
+      application = undefined;
+      frame?.remove();
+      frame = undefined;
       const reason = error instanceof Error ? error.message : String(error);
       setState('error', `Albina frontend startup failed: ${reason}`);
       console.error('[Albina] application mount failed.', error);
@@ -118,13 +172,17 @@ export function installAlbinaOneClick(options: InstallOptions = {}): AlbinaInsta
     target.addEventListener(name, listener);
     listeners.push([target, name, listener]);
   };
+  const onLauncherClick = (): void => {
+    if (state === 'open' && frame?.isConnected) { close(); return; }
+    open();
+  };
   let installation: AlbinaInstallation;
   const uninstall = (): void => {
     if (disposed) return;
     disposed = true;
     close();
     listeners.splice(0).forEach(([target, name, listener]) => target.removeEventListener(name, listener));
-    launcher.removeEventListener('click', open);
+    launcher.removeEventListener('click', onLauncherClick);
     launcher.remove();
     style?.removeEventListener('load', onStyleLoad);
     style?.removeEventListener('error', onStyleError);
@@ -141,7 +199,7 @@ export function installAlbinaOneClick(options: InstallOptions = {}): AlbinaInsta
     uninstall,
   };
   hostWindow.__ALBINA_INSTALLATION__ = installation;
-  launcher.addEventListener('click', open);
+  launcher.addEventListener('click', onLauncherClick);
   setState('loading');
   hostDocument.body.append(launcher);
 
@@ -156,6 +214,12 @@ export function installAlbinaOneClick(options: InstallOptions = {}): AlbinaInsta
   } else {
     setState('ready');
   }
+
+  // Bootstrap: open the frontend immediately after install, like the v1
+  // console. Independent of stylesheet readiness so slow networks cannot
+  // leave the user stuck on a launcher that never opens; the launcher
+  // remains as a manual toggle for the session.
+  open();
 
   const lifecycleUnmount = (event?: Event): void => {
     if (isPersistedPagehide(event)) return;

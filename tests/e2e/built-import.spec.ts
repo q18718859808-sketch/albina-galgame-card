@@ -43,8 +43,9 @@ test('executes the published Tavern Helper module, injects CSS, mounts, recovers
   await expect(launcher).toBeVisible();
   expect(sourceModuleRequests).toBe(1);
   await expect(page.locator('link[data-albina-style]')).toHaveAttribute('href', /albina-source\.css$/u);
-  await launcher.click();
-  await expect(page.locator('[data-albina-shell]')).toBeVisible();
+  // Self-bootstrap: the frontend opens its dedicated fullscreen frame on
+  // install; the launcher acts as the session toggle.
+  await expect(page.locator('iframe[data-albina-shell="v2"]')).toBeVisible();
   await expect(page.getByTestId('title-screen')).toBeVisible();
   await page.getByTestId('new-game').click();
   await page.getByTestId('profile-begin').click();
@@ -52,8 +53,8 @@ test('executes the published Tavern Helper module, injects CSS, mounts, recovers
   await expect.poll(() => page.evaluate(() => (window as unknown as { __mediaCounts: { plays: number } }).__mediaCounts.plays)).toBeGreaterThanOrEqual(1);
   await page.getByTestId('autoplay-recovery').click();
   await expect.poll(() => page.evaluate(() => (window as unknown as { __mediaCounts: { plays: number } }).__mediaCounts.plays)).toBeGreaterThanOrEqual(2);
-  await page.locator('[data-albina-close="v2"]').click();
-  await expect(page.locator('[data-albina-shell]')).toHaveCount(0);
+  await launcher.click();
+  await expect(page.locator('iframe[data-albina-shell="v2"]')).toHaveCount(0);
   await expect.poll(() => page.evaluate(() => (window as unknown as { __mediaCounts: { pauses: number } }).__mediaCounts.pauses)).toBeGreaterThan(0);
   await expect.poll(() => page.evaluate(() => (window as unknown as { __listenerCounts: { adds: number; removes: number } }).__listenerCounts)).toEqual({ adds: 0, removes: 0 });
   await expect.poll(() => page.evaluate(() => (window as unknown as { __motionCounts: { adds: number; removes: number } }).__motionCounts)).toEqual({ adds: 1, removes: 1 });

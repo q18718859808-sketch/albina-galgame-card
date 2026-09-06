@@ -69,6 +69,24 @@ for (const asset of imageAssets) {
 const blankCg = [...blankByReceipt.values()].filter((asset) => asset.id.startsWith('cg.')).map((asset) => asset.id).sort();
 const blankCharacters = [...blankByReceipt.values()]
   .filter((asset) => asset.id.startsWith('file.characters.')).map((asset) => asset.id).sort();
+
+/**
+ * The dual-pipeline queue is a retired Latent-era scheduling artifact.
+ *
+ * rc.3 delivered all 67 jobs through the WisArt migration pipe, so the
+ * manifest no longer carries any blank CG records and the "22 Latent split"
+ * premise can never hold again. The committed queue is kept as an audit
+ * record; regenerating it would silently rewrite history, so refuse loudly
+ * instead of emitting a queue that contradicts the delivered manifest.
+ */
+if (blankCg.length === 0 && blankCharacters.length === 0) {
+  throw new Error(
+    'build-visual-production-queue.mjs is retired: rc.3 delivered every visual through WisArt, '
+    + 'the manifest has no blank CG/character records left, and the dual-pipeline '
+    + 'Latent/WisArt split no longer exists. The committed '
+    + 'content/media-production/visual-production-queue-v2.json is the historical audit record.',
+  );
+}
 if (blankCg.length !== 22) throw new Error(`Expected 22 blank CG assets, found ${blankCg.length}`);
 if (blankCharacters.length !== 23) throw new Error(`Expected 23 blank character assets, found ${blankCharacters.length}`);
 

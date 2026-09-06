@@ -23,7 +23,8 @@ test('runs the reviewed Krea2 background preview in the Tavern Helper frontend',
     if (/\/staging\/media\/krea2-local-preview\/assets\/characters\/albina\/(?:normal|rain|combat)\.png$/u.test(request.url())) portraitRequests.push(request.url());
   });
   await page.goto(`/staging/media/krea2-local-preview/preview-harness.html?run=${test.info().project.name}-${Date.now()}`);
-  await page.locator('[data-albina-launcher]').click();
+  // Self-bootstrap opens the frontend frame on install; no click needed.
+  await expect(page.locator('iframe[data-albina-shell="v2"]')).toBeVisible();
   await page.getByTestId('new-game').click();
   await page.getByTestId('profile-begin').click();
   await expect.poll(() => backgroundRequests.some((url) => url.endsWith('/assets/bg/lce_lab.jpg'))).toBe(true);
@@ -83,7 +84,8 @@ test('routes injected AU CG candidates through the game fallback slots', async (
   });
   await run(process.execPath, ['scripts/build-krea2-local-preview.mjs', '--include-au-cg'], { cwd: process.cwd() });
   await page.goto(`/staging/media/krea2-local-preview/preview-harness.html?run=cg-route-${Date.now()}`);
-  await page.locator('[data-albina-launcher]').click();
+  // Self-bootstrap opens the frontend frame on install; no click needed.
+  await expect(page.locator('iframe[data-albina-shell="v2"]')).toBeVisible();
   await page.getByTestId('new-game').click();
   await page.getByTestId('profile-begin').click();
 

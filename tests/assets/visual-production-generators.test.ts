@@ -62,14 +62,15 @@ function withoutTimestamps(value: any): any {
 }
 
 describe('build-visual-production-queue.mjs', () => {
-  it('reproduces the committed dual-pipeline queue deterministically', async () => {
+  it('refuses regeneration after rc.3 retired the dual-pipeline split and keeps the committed queue intact', async () => {
     await snapshot();
-    const before = await readJson(queuePath);
-    await runFile(process.execPath, [join(projectRoot, 'scripts', 'build-visual-production-queue.mjs')], { cwd: projectRoot });
-    const after = await readJson(queuePath);
-    expect(withoutTimestamps(after)).toEqual(withoutTimestamps(before));
-    expect(after.generatedAt).toEqual(expect.any(String));
-    await restore();
+    const before = await readFile(queuePath, 'utf8');
+    // rc.3 delivered every visual through WisArt, so the manifest has no blank
+    // records left and the Latent-era scheduler must fail loudly instead of
+    // rewriting the historical audit record.
+    await expect(runFile(process.execPath, [join(projectRoot, 'scripts', 'build-visual-production-queue.mjs')], { cwd: projectRoot }))
+      .rejects.toThrow(/retired/u);
+    expect(await readFile(queuePath, 'utf8')).toBe(before);
   }, 60_000);
 
   it('allocates 22 latent CG + 45 wisart jobs with the documented blank-asset split', async () => {

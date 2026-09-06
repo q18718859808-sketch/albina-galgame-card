@@ -22,8 +22,9 @@ test.describe('real SillyTavern Albina acceptance', () => {
     await page.goto(tavernUrl!, { waitUntil: 'domcontentloaded' });
     const launcher = await requireMountedAlbina(page);
     await expect(launcher).toBeVisible();
-    await launcher.click();
-    await expect(page.locator('[data-albina-shell]')).toBeVisible();
+    // Self-bootstrap opens the app frame on install; tolerate an already-open
+    // frontend and just wait for it.
+    await expect(page.locator('iframe[data-albina-shell="v2"]')).toBeVisible();
 
     await page.getByTestId('new-game').click();
     await expect(page.getByTestId('profile-screen')).toBeVisible();
@@ -40,12 +41,10 @@ test.describe('real SillyTavern Albina acceptance', () => {
     expect(variableState).toHaveProperty('albinaPlayerProfileV1');
 
     await page.reload({ waitUntil: 'domcontentloaded' });
-    await expect(page.locator('[data-albina-launcher]').first()).toBeVisible();
-    await page.locator('[data-albina-launcher]').first().click();
-    await expect(page.locator('[data-albina-shell]')).toBeVisible();
+    await expect(page.locator('iframe[data-albina-shell="v2"]')).toBeVisible();
 
     await page.evaluate(() => window.dispatchEvent(new Event('albina:unmount')));
-    await expect(page.locator('[data-albina-shell]')).toHaveCount(0);
+    await expect(page.locator('iframe[data-albina-shell="v2"]')).toHaveCount(0);
     await expect(page.locator('[data-albina-launcher]')).toHaveCount(0);
   });
 
@@ -53,7 +52,7 @@ test.describe('real SillyTavern Albina acceptance', () => {
     await page.goto(tavernUrl!, { waitUntil: 'domcontentloaded' });
     const launcher = await requireMountedAlbina(page);
     await expect(launcher).toBeVisible();
-    await launcher.click();
+    await expect(page.locator('iframe[data-albina-shell="v2"]')).toBeVisible();
     await page.getByTestId('new-game').click();
     await page.getByTestId('profile-begin').click();
     await context.setOffline(true);
