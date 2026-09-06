@@ -221,10 +221,10 @@ class uu {
     }
   }
 }
-function pu(t) {
+function fu(t) {
   return new uu(t);
 }
-function fu() {
+function pu() {
   return ht;
 }
 function Fh(t, e = !1) {
@@ -263,7 +263,7 @@ class hu {
   stop() {
     if (this.flags & 1) {
       for (let e = this.deps; e; e = e.nextDep)
-        pc(e);
+        fc(e);
       this.deps = this.depsTail = void 0, od(this), this.onStop && this.onStop(), this.flags &= -2;
     }
   }
@@ -325,7 +325,7 @@ function gu(t) {
   let e, a = t.depsTail, i = a;
   for (; i; ) {
     const o = i.prevDep;
-    i.version === -1 ? (i === a && (a = o), pc(i), qh(i)) : e = i, i.dep.activeLink = i.prevActiveLink, i.prevActiveLink = void 0, i = o;
+    i.version === -1 ? (i === a && (a = o), fc(i), qh(i)) : e = i, i.dep.activeLink = i.prevActiveLink, i.prevActiveLink = void 0, i = o;
   }
   t.deps = e, t.depsTail = a;
 }
@@ -351,12 +351,12 @@ function _u(t) {
     Ze = a, da = i, gu(t), t.flags &= -3;
   }
 }
-function pc(t, e = !1) {
+function fc(t, e = !1) {
   const { dep: a, prevSub: i, nextSub: o } = t;
   if (i && (i.nextSub = o, t.prevSub = void 0), o && (o.prevSub = i, t.nextSub = void 0), a.subs === t && (a.subs = i, !i && a.computed)) {
     a.computed.flags &= -5;
     for (let n = a.computed.deps; n; n = n.nextDep)
-      pc(n, !0);
+      fc(n, !0);
   }
   !e && !--a.sc && a.map && a.map.delete(a.key);
 }
@@ -391,7 +391,7 @@ class Zh {
     this.sub = e, this.dep = a, this.version = a.version, this.nextDep = this.prevDep = this.nextSub = this.prevSub = this.prevActiveLink = void 0;
   }
 }
-class fc {
+class pc {
   // TODO isolatedDeclarations "__v_skip"
   constructor(e) {
     this.computed = e, this.version = 0, this.activeLink = void 0, this.subs = void 0, this.map = void 0, this.key = void 0, this.sc = 0, this.__v_skip = !0;
@@ -445,7 +445,7 @@ function kt(t, e, a) {
     let i = er.get(t);
     i || er.set(t, i = /* @__PURE__ */ new Map());
     let o = i.get(a);
-    o || (i.set(a, o = new fc()), o.map = i, o.key = a), o.track();
+    o || (i.set(a, o = new pc()), o.map = i, o.key = a), o.track();
   }
 }
 function ja(t, e, a, i, o, n) {
@@ -463,8 +463,8 @@ function ja(t, e, a, i, o, n) {
     const c = he(t), d = c && Ir(a);
     if (c && a === "length") {
       const l = Number(i);
-      r.forEach((u, p) => {
-        (p === "length" || p === Xo || !na(p) && p >= l) && s(u);
+      r.forEach((u, f) => {
+        (f === "length" || f === Xo || !na(f) && f >= l) && s(u);
       });
     } else
       switch ((a !== void 0 || r.has(void 0)) && s(r.get(a)), d && s(r.get(Xo)), e) {
@@ -620,10 +620,10 @@ function Ra(t, e, a, i, o, n) {
     return s ? la(u) : u;
   }
   let d = a;
-  r !== t && (s ? d = function(u, p) {
-    return a.call(this, va(t, u), p, t);
-  } : a.length > 2 && (d = function(u, p) {
-    return a.call(this, u, p, t);
+  r !== t && (s ? d = function(u, f) {
+    return a.call(this, va(t, u), f, t);
+  } : a.length > 2 && (d = function(u, f) {
+    return a.call(this, u, f, t);
   }));
   const l = c.call(r, d, i);
   return s && o ? o(l) : l;
@@ -764,10 +764,10 @@ function Yh(t, e, a) {
       {
         // iterator protocol
         next() {
-          const { value: u, done: p } = d.next();
-          return p ? { value: u, done: p } : {
+          const { value: u, done: f } = d.next();
+          return f ? { value: u, done: f } : {
             value: s ? [l(u[0]), l(u[1])] : l(u),
-            done: p
+            done: f
           };
         }
       }
@@ -967,7 +967,7 @@ function Cu(t, e) {
 }
 class rb {
   constructor(e, a) {
-    this.dep = new fc(), this.__v_isRef = !0, this.__v_isShallow = !1, this._rawValue = a ? e : /* @__PURE__ */ Ve(e), this._value = a ? e : la(e), this.__v_isShallow = a;
+    this.dep = new pc(), this.__v_isRef = !0, this.__v_isShallow = !1, this._rawValue = a ? e : /* @__PURE__ */ Ve(e), this._value = a ? e : la(e), this.__v_isShallow = a;
   }
   get value() {
     return this.dep.track(), this._value;
@@ -1033,7 +1033,7 @@ function lb(t, e, a) {
 }
 class ub {
   constructor(e, a, i) {
-    this.fn = e, this.setter = a, this._value = void 0, this.dep = new fc(this), this.__v_isRef = !0, this.deps = void 0, this.depsTail = void 0, this.flags = 16, this.globalVersion = Yo - 1, this.next = void 0, this.effect = this, this.__v_isReadonly = !a, this.isSSR = i;
+    this.fn = e, this.setter = a, this._value = void 0, this.dep = new pc(this), this.__v_isRef = !0, this.deps = void 0, this.depsTail = void 0, this.flags = 16, this.globalVersion = Yo - 1, this.next = void 0, this.effect = this, this.__v_isReadonly = !a, this.isSSR = i;
   }
   /**
    * @internal
@@ -1052,13 +1052,13 @@ class ub {
   }
 }
 // @__NO_SIDE_EFFECTS__
-function pb(t, e, a = !1) {
+function fb(t, e, a = !1) {
   let i, o;
   return _e(t) ? i = t : (i = t.get, o = t.set), new ub(i, o, a);
 }
 const On = {}, tr = /* @__PURE__ */ new WeakMap();
 let Ai;
-function fb(t, e = !1, a = Ai) {
+function pb(t, e = !1, a = Ai) {
   if (a) {
     let i = tr.get(a);
     i || tr.set(a, i = []), i.push(t);
@@ -1066,7 +1066,7 @@ function fb(t, e = !1, a = Ai) {
 }
 function hb(t, e, a = qe) {
   const { immediate: i, deep: o, once: n, scheduler: r, augmentJob: s, call: c } = a, d = (T) => o ? T : /* @__PURE__ */ Wt(T) || o === !1 || o === 0 ? za(T, 1) : za(T);
-  let l, u, p, h, y = !1, v = !1;
+  let l, u, f, b, y = !1, v = !1;
   if (/* @__PURE__ */ nt(t) ? (u = () => t.value, y = /* @__PURE__ */ Wt(t)) : /* @__PURE__ */ Fa(t) ? (u = () => d(t), y = !0) : he(t) ? (v = !0, y = t.some((T) => /* @__PURE__ */ Fa(T) || /* @__PURE__ */ Wt(T)), u = () => t.map((T) => {
     if (/* @__PURE__ */ nt(T))
       return T.value;
@@ -1075,10 +1075,10 @@ function hb(t, e, a = qe) {
     if (_e(T))
       return c ? c(T, 2) : T();
   })) : _e(t) ? e ? u = c ? () => c(t, 2) : t : u = () => {
-    if (p) {
+    if (f) {
       Ta();
       try {
-        p();
+        f();
       } finally {
         Sa();
       }
@@ -1086,61 +1086,61 @@ function hb(t, e, a = qe) {
     const T = Ai;
     Ai = l;
     try {
-      return c ? c(t, 3, [h]) : t(h);
+      return c ? c(t, 3, [b]) : t(b);
     } finally {
       Ai = T;
     }
   } : u = Aa, e && o) {
-    const T = u, k = o === !0 ? 1 / 0 : o;
-    u = () => za(T(), k);
+    const T = u, x = o === !0 ? 1 / 0 : o;
+    u = () => za(T(), x);
   }
-  const g = fu(), I = () => {
+  const g = pu(), k = () => {
     l.stop(), g && g.active && cc(g.effects, l);
   };
   if (n && e) {
     const T = e;
-    e = (...k) => {
-      const Z = T(...k);
-      return I(), Z;
+    e = (...x) => {
+      const D = T(...x);
+      return k(), D;
     };
   }
-  let A = v ? new Array(t.length).fill(On) : On;
+  let I = v ? new Array(t.length).fill(On) : On;
   const S = (T) => {
     if (!(!(l.flags & 1) || !l.dirty && !T))
       if (e) {
-        const k = l.run();
-        if (T || o || y || (v ? k.some((Z, P) => ya(Z, A[P])) : ya(k, A))) {
-          p && p();
-          const Z = Ai;
+        const x = l.run();
+        if (T || o || y || (v ? x.some((D, V) => ya(D, I[V])) : ya(x, I))) {
+          f && f();
+          const D = Ai;
           Ai = l;
           try {
-            const P = [
-              k,
+            const V = [
+              x,
               // pass undefined as the old value when it's changed for the first time
-              A === On ? void 0 : v && A[0] === On ? [] : A,
-              h
+              I === On ? void 0 : v && I[0] === On ? [] : I,
+              b
             ];
-            A = k, c ? c(e, 3, P) : (
+            I = x, c ? c(e, 3, V) : (
               // @ts-expect-error
-              e(...P)
+              e(...V)
             );
           } finally {
-            Ai = Z;
+            Ai = D;
           }
         }
       } else
         l.run();
   };
-  return s && s(S), l = new hu(u), l.scheduler = r ? () => r(S, !1) : S, h = (T) => fb(T, !1, l), p = l.onStop = () => {
+  return s && s(S), l = new hu(u), l.scheduler = r ? () => r(S, !1) : S, b = (T) => pb(T, !1, l), f = l.onStop = () => {
     const T = tr.get(l);
     if (T) {
       if (c)
         c(T, 4);
       else
-        for (const k of T) k();
+        for (const x of T) x();
       tr.delete(l);
     }
-  }, e ? i ? S(!0) : A = l.run() : r ? r(S.bind(null, !0), !0) : l.run(), I.pause = l.pause.bind(l), I.resume = l.resume.bind(l), I.stop = I, I;
+  }, e ? i ? S(!0) : I = l.run() : r ? r(S.bind(null, !0), !0) : l.run(), k.pause = l.pause.bind(l), k.resume = l.resume.bind(l), k.stop = k, k;
 }
 function za(t, e = 1 / 0, a) {
   if (e <= 0 || !ze(t) || t.__v_skip || (a = a || /* @__PURE__ */ new Map(), (a.get(t) || 0) >= e))
@@ -1352,7 +1352,7 @@ function _b(t, e) {
   }
 }
 function Zo(t, e, a = !1) {
-  const i = sp();
+  const i = cf();
   if (i || Vi) {
     let o = Vi ? Vi._context.provides : i ? i.parent == null || i.ce ? i.vnode.appContext && i.vnode.appContext.provides : i.parent.provides : void 0;
     if (o && t in o)
@@ -1362,7 +1362,7 @@ function Zo(t, e, a = !1) {
   }
 }
 function yb() {
-  return !!(sp() || Vi);
+  return !!(cf() || Vi);
 }
 const wb = /* @__PURE__ */ Symbol.for("v-scx"), kb = () => Zo(wb);
 function ut(t, e, a) {
@@ -1373,26 +1373,26 @@ function $u(t, e, a = qe) {
   let d;
   if (an) {
     if (n === "sync") {
-      const h = kb();
-      d = h.__watcherHandles || (h.__watcherHandles = []);
+      const b = kb();
+      d = b.__watcherHandles || (b.__watcherHandles = []);
     } else if (!c) {
-      const h = () => {
+      const b = () => {
       };
-      return h.stop = Aa, h.resume = Aa, h.pause = Aa, h;
+      return b.stop = Aa, b.resume = Aa, b.pause = Aa, b;
     }
   }
   const l = Vt;
-  s.call = (h, y, v) => ua(h, l, y, v);
+  s.call = (b, y, v) => ua(b, l, y, v);
   let u = !1;
-  n === "post" ? s.scheduler = (h) => {
-    $t(h, l && l.suspense);
-  } : n !== "sync" && (u = !0, s.scheduler = (h, y) => {
-    y ? h() : mc(h);
-  }), s.augmentJob = (h) => {
-    e && (h.flags |= 4), u && (h.flags |= 2, l && (h.id = l.uid, h.i = l));
+  n === "post" ? s.scheduler = (b) => {
+    $t(b, l && l.suspense);
+  } : n !== "sync" && (u = !0, s.scheduler = (b, y) => {
+    y ? b() : mc(b);
+  }), s.augmentJob = (b) => {
+    e && (b.flags |= 4), u && (b.flags |= 2, l && (b.id = l.uid, b.i = l));
   };
-  const p = hb(t, e, s);
-  return an && (d ? d.push(p) : c && p()), p;
+  const f = hb(t, e, s);
+  return an && (d ? d.push(f) : c && f()), f;
 }
 function Ib(t, e, a) {
   const i = this.proxy, o = ot(t) ? t.includes(".") ? ju(i, t) : () => i[t] : t.bind(i, i);
@@ -1447,10 +1447,10 @@ function Lo(t, e, a, i, o = !1) {
     i.shapeFlag & 512 && i.type.__asyncResolved && i.component.subTree.component && Lo(t, e, a, i.component.subTree);
     return;
   }
-  const n = i.shapeFlag & 4 ? Mr(i.component) : i.el, r = o ? null : n, { i: s, r: c } = t, d = e && e.r, l = s.refs === qe ? s.refs = {} : s.refs, u = s.setupState, p = /* @__PURE__ */ Ve(u), h = u === qe ? au : (v) => sd(l, v) ? !1 : Oe(p, v), y = (v, g) => !(g && sd(l, g));
+  const n = i.shapeFlag & 4 ? Mr(i.component) : i.el, r = o ? null : n, { i: s, r: c } = t, d = e && e.r, l = s.refs === qe ? s.refs = {} : s.refs, u = s.setupState, f = /* @__PURE__ */ Ve(u), b = u === qe ? au : (v) => sd(l, v) ? !1 : Oe(f, v), y = (v, g) => !(g && sd(l, g));
   if (d != null && d !== c) {
     if (cd(e), ot(d))
-      l[d] = null, h(d) && (u[d] = null);
+      l[d] = null, b(d) && (u[d] = null);
     else if (/* @__PURE__ */ nt(d)) {
       const v = e;
       y(d, v.k) && (d.value = null), v.k && (l[v.k] = null);
@@ -1466,28 +1466,28 @@ function Lo(t, e, a, i, o = !1) {
   } else {
     const v = ot(c), g = /* @__PURE__ */ nt(c);
     if (v || g) {
-      const I = () => {
+      const k = () => {
         if (t.f) {
-          const A = v ? h(c) ? u[c] : l[c] : y() || !t.k ? c.value : l[t.k];
+          const I = v ? b(c) ? u[c] : l[c] : y() || !t.k ? c.value : l[t.k];
           if (o)
-            he(A) && cc(A, n);
-          else if (he(A))
-            A.includes(n) || A.push(n);
+            he(I) && cc(I, n);
+          else if (he(I))
+            I.includes(n) || I.push(n);
           else if (v)
-            l[c] = [n], h(c) && (u[c] = l[c]);
+            l[c] = [n], b(c) && (u[c] = l[c]);
           else {
             const S = [n];
             y(c, t.k) && (c.value = S), t.k && (l[t.k] = S);
           }
-        } else v ? (l[c] = r, h(c) && (u[c] = r)) : g && (y(c, t.k) && (c.value = r), t.k && (l[t.k] = r));
+        } else v ? (l[c] = r, b(c) && (u[c] = r)) : g && (y(c, t.k) && (c.value = r), t.k && (l[t.k] = r));
       };
       if (r) {
-        const A = () => {
-          I(), or.delete(t);
+        const I = () => {
+          k(), or.delete(t);
         };
-        A.id = -1, or.set(t, A), $t(A, a);
+        I.id = -1, or.set(t, I), $t(I, a);
       } else
-        cd(t), I();
+        cd(t), k();
     }
   }
 }
@@ -1591,7 +1591,7 @@ function Ee(t, e, a, i) {
     o = [];
   return o;
 }
-const Ss = (t) => t ? cp(t) ? Mr(t) : Ss(t.parent) : null, Do = (
+const Ss = (t) => t ? df(t) ? Mr(t) : Ss(t.parent) : null, Do = (
   // Move PURE marker to new line to workaround compiler discarding it
   // due to type annotation
   /* @__PURE__ */ yt(/* @__PURE__ */ Object.create(null), {
@@ -1619,9 +1619,9 @@ const Ss = (t) => t ? cp(t) ? Mr(t) : Ss(t.parent) : null, Do = (
       return !0;
     const { ctx: a, setupState: i, data: o, props: n, accessCache: r, type: s, appContext: c } = t;
     if (e[0] !== "$") {
-      const p = r[e];
-      if (p !== void 0)
-        switch (p) {
+      const f = r[e];
+      if (f !== void 0)
+        switch (f) {
           case 1:
             return i[e];
           case 2:
@@ -1695,44 +1695,44 @@ function Ub(t) {
     // lifecycle
     created: l,
     beforeMount: u,
-    mounted: p,
-    beforeUpdate: h,
+    mounted: f,
+    beforeUpdate: b,
     updated: y,
     activated: v,
     deactivated: g,
-    beforeDestroy: I,
-    beforeUnmount: A,
+    beforeDestroy: k,
+    beforeUnmount: I,
     destroyed: S,
     unmounted: T,
-    render: k,
-    renderTracked: Z,
-    renderTriggered: P,
-    errorCaptured: O,
-    serverPrefetch: E,
+    render: x,
+    renderTracked: D,
+    renderTriggered: V,
+    errorCaptured: P,
+    serverPrefetch: R,
     // public API
-    expose: q,
-    inheritAttrs: ee,
+    expose: j,
+    inheritAttrs: Q,
     // assets
-    components: J,
+    components: B,
     directives: re,
     filters: de
   } = e;
   if (d && Fb(d, i, null), r)
-    for (const L in r) {
-      const K = r[L];
-      _e(K) && (i[L] = K.bind(a));
+    for (const Z in r) {
+      const K = r[Z];
+      _e(K) && (i[Z] = K.bind(a));
     }
   if (o) {
-    const L = o.call(a, a);
-    ze(L) && (t.data = /* @__PURE__ */ Cr(L));
+    const Z = o.call(a, a);
+    ze(Z) && (t.data = /* @__PURE__ */ Cr(Z));
   }
   if (Cs = !0, n)
-    for (const L in n) {
-      const K = n[L], ue = _e(K) ? K.bind(a, a) : _e(K.get) ? K.get.bind(a, a) : Aa, Te = !_e(K) && _e(K.set) ? K.set.bind(a) : Aa, Se = ve({
+    for (const Z in n) {
+      const K = n[Z], ue = _e(K) ? K.bind(a, a) : _e(K.get) ? K.get.bind(a, a) : Aa, Te = !_e(K) && _e(K.set) ? K.set.bind(a) : Aa, Se = ve({
         get: ue,
         set: Te
       });
-      Object.defineProperty(i, L, {
+      Object.defineProperty(i, Z, {
         enumerable: !0,
         configurable: !0,
         get: () => Se.value,
@@ -1740,30 +1740,30 @@ function Ub(t) {
       });
     }
   if (s)
-    for (const L in s)
-      Zu(s[L], i, a, L);
+    for (const Z in s)
+      Zu(s[Z], i, a, Z);
   if (c) {
-    const L = _e(c) ? c.call(a) : c;
-    Reflect.ownKeys(L).forEach((K) => {
-      _b(K, L[K]);
+    const Z = _e(c) ? c.call(a) : c;
+    Reflect.ownKeys(Z).forEach((K) => {
+      _b(K, Z[K]);
     });
   }
   l && ld(l, t, "c");
-  function te(L, K) {
-    he(K) ? K.forEach((ue) => L(ue.bind(a))) : K && L(K.bind(a));
+  function te(Z, K) {
+    he(K) ? K.forEach((ue) => Z(ue.bind(a))) : K && Z(K.bind(a));
   }
-  if (te(Pb, u), te(yn, p), te(Rb, h), te(Vb, y), te(Tb, v), te(Sb, g), te($b, O), te(Mb, Z), te(Ob, P), te(wo, A), te(qu, T), te(Eb, E), he(q))
-    if (q.length) {
-      const L = t.exposed || (t.exposed = {});
-      q.forEach((K) => {
-        Object.defineProperty(L, K, {
+  if (te(Pb, u), te(yn, f), te(Rb, b), te(Vb, y), te(Tb, v), te(Sb, g), te($b, P), te(Mb, D), te(Ob, V), te(wo, I), te(qu, T), te(Eb, R), he(j))
+    if (j.length) {
+      const Z = t.exposed || (t.exposed = {});
+      j.forEach((K) => {
+        Object.defineProperty(Z, K, {
           get: () => a[K],
           set: (ue) => a[K] = ue,
           enumerable: !0
         });
       });
     } else t.exposed || (t.exposed = {});
-  k && t.render === Aa && (t.render = k), ee != null && (t.inheritAttrs = ee), J && (t.components = J), re && (t.directives = re), E && zu(t);
+  x && t.render === Aa && (t.render = x), Q != null && (t.inheritAttrs = Q), B && (t.components = B), re && (t.directives = re), R && zu(t);
 }
 function Fb(t, e, a = Aa) {
   he(t) && (t = Ps(t));
@@ -1829,8 +1829,8 @@ function nr(t, e, a, i = !1) {
 }
 const qb = {
   data: ud,
-  props: pd,
-  emits: pd,
+  props: fd,
+  emits: fd,
   // objects
   methods: Ro,
   computed: Ro,
@@ -1884,7 +1884,7 @@ function St(t, e) {
 function Ro(t, e) {
   return t ? yt(/* @__PURE__ */ Object.create(null), t, e) : e;
 }
-function pd(t, e) {
+function fd(t, e) {
   return t ? he(t) && he(e) ? [.../* @__PURE__ */ new Set([...t, ...e])] : yt(
     /* @__PURE__ */ Object.create(null),
     dd(t),
@@ -1951,10 +1951,10 @@ function Db(t, e) {
       directive(l, u) {
         return u ? (n.directives[l] = u, d) : n.directives[l];
       },
-      mount(l, u, p) {
+      mount(l, u, f) {
         if (!c) {
-          const h = d._ceVNode || zt(i, o);
-          return h.appContext = n, p === !0 ? p = "svg" : p === !1 && (p = void 0), t(h, l, p), c = !0, d._container = l, l.__vue_app__ = d, Mr(h.component);
+          const b = d._ceVNode || zt(i, o);
+          return b.appContext = n, f === !0 ? f = "svg" : f === !1 && (f = void 0), t(b, l, f), c = !0, d._container = l, l.__vue_app__ = d, Mr(b.component);
         }
       },
       onUnmount(l) {
@@ -2032,7 +2032,7 @@ function Du(t, e, a = !1) {
 function Er(t, e) {
   return !t || !wr(e) ? !1 : (e = e.slice(2), e = e === "Once" ? e : e.replace(/Once$/, ""), Oe(t, e[0].toLowerCase() + e.slice(1)) || Oe(t, hi(e)) || Oe(t, e));
 }
-function fd(t) {
+function pd(t) {
   const {
     type: e,
     vnode: a,
@@ -2045,29 +2045,29 @@ function fd(t) {
     render: d,
     renderCache: l,
     props: u,
-    data: p,
-    setupState: h,
+    data: f,
+    setupState: b,
     ctx: y,
     inheritAttrs: v
   } = t, g = ir(t);
-  let I, A;
+  let k, I;
   try {
     if (a.shapeFlag & 4) {
-      const T = o || i, k = T;
-      I = ga(
+      const T = o || i, x = T;
+      k = ga(
         d.call(
-          k,
+          x,
           T,
           l,
           u,
-          h,
-          p,
+          b,
+          f,
           y
         )
-      ), A = s;
+      ), I = s;
     } else {
       const T = e;
-      I = ga(
+      k = ga(
         T.length > 1 ? T(
           u,
           { attrs: s, slots: r, emit: c }
@@ -2075,20 +2075,20 @@ function fd(t) {
           u,
           null
         )
-      ), A = e.props ? s : Gb(s);
+      ), I = e.props ? s : Gb(s);
     }
   } catch (T) {
-    Bo.length = 0, Rr(T, t, 1), I = zt(ci);
+    Bo.length = 0, Rr(T, t, 1), k = zt(ci);
   }
-  let S = I;
-  if (A && v !== !1) {
-    const T = Object.keys(A), { shapeFlag: k } = S;
-    T.length && k & 7 && (n && T.some(kr) && (A = Wb(
-      A,
+  let S = k;
+  if (I && v !== !1) {
+    const T = Object.keys(I), { shapeFlag: x } = S;
+    T.length && x & 7 && (n && T.some(kr) && (I = Wb(
+      I,
       n
-    )), S = so(S, A, !1, !0));
+    )), S = so(S, I, !1, !0));
   }
-  return a.dirs && (S = so(S, null, !1, !0), S.dirs = S.dirs ? S.dirs.concat(a.dirs) : a.dirs), a.transition && vc(S, a.transition), I = S, ir(g), I;
+  return a.dirs && (S = so(S, null, !1, !0), S.dirs = S.dirs ? S.dirs.concat(a.dirs) : a.dirs), a.transition && vc(S, a.transition), k = S, ir(g), k;
 }
 const Gb = (t) => {
   let e;
@@ -2113,8 +2113,8 @@ function Kb(t, e, a) {
     if (c & 8) {
       const l = e.dynamicProps;
       for (let u = 0; u < l.length; u++) {
-        const p = l[u];
-        if (Bu(r, i, p) && !Er(d, p))
+        const f = l[u];
+        if (Bu(r, i, f) && !Er(d, f))
           return !0;
       }
     }
@@ -2171,26 +2171,26 @@ function Qb(t, e, a, i) {
     if (r & 8) {
       const l = t.vnode.dynamicProps;
       for (let u = 0; u < l.length; u++) {
-        let p = l[u];
-        if (Er(t.emitsOptions, p))
+        let f = l[u];
+        if (Er(t.emitsOptions, f))
           continue;
-        const h = e[p];
+        const b = e[f];
         if (c)
-          if (Oe(n, p))
-            h !== n[p] && (n[p] = h, d = !0);
+          if (Oe(n, f))
+            b !== n[f] && (n[f] = b, d = !0);
           else {
-            const y = ca(p);
+            const y = ca(f);
             o[y] = Rs(
               c,
               s,
               y,
-              h,
+              b,
               t,
               !1
             );
           }
         else
-          h !== n[p] && (n[p] = h, d = !0);
+          b !== n[f] && (n[f] = b, d = !0);
       }
     }
   } else {
@@ -2284,8 +2284,8 @@ function Ku(t, e, a = !1) {
   if (!_e(t)) {
     const l = (u) => {
       c = !0;
-      const [p, h] = Ku(u, e, !0);
-      yt(r, p), h && s.push(...h);
+      const [f, b] = Ku(u, e, !0);
+      yt(r, f), b && s.push(...b);
     };
     !a && e.mixins.length && e.mixins.forEach(l), t.extends && l(t.extends), t.mixins && t.mixins.forEach(l);
   }
@@ -2300,11 +2300,11 @@ function Ku(t, e, a = !1) {
     for (const l in n) {
       const u = ca(l);
       if (bd(u)) {
-        const p = n[l], h = r[u] = he(p) || _e(p) ? { type: p } : yt({}, p), y = h.type;
+        const f = n[l], b = r[u] = he(f) || _e(f) ? { type: f } : yt({}, f), y = b.type;
         let v = !1, g = !0;
         if (he(y))
-          for (let I = 0; I < y.length; ++I) {
-            const A = y[I], S = _e(A) && A.name;
+          for (let k = 0; k < y.length; ++k) {
+            const I = y[k], S = _e(I) && I.name;
             if (S === "Boolean") {
               v = !0;
               break;
@@ -2312,13 +2312,13 @@ function Ku(t, e, a = !1) {
           }
         else
           v = _e(y) && y.name === "Boolean";
-        h[
+        b[
           0
           /* shouldCast */
-        ] = v, h[
+        ] = v, b[
           1
           /* shouldCastTrue */
-        ] = g, (v || Oe(h, "default")) && s.push(u);
+        ] = g, (v || Oe(b, "default")) && s.push(u);
       }
     }
   const d = [r, s];
@@ -2383,394 +2383,394 @@ function nm(t, e) {
     setText: d,
     setElementText: l,
     parentNode: u,
-    nextSibling: p,
-    setScopeId: h = Aa,
+    nextSibling: f,
+    setScopeId: b = Aa,
     insertStaticContent: y
-  } = t, v = (_, x, j, G = null, D = null, H = null, ae = void 0, C = null, V = !!x.dynamicChildren) => {
-    if (_ === x)
+  } = t, v = (_, A, z, G = null, N = null, J = null, ae = void 0, C = null, O = !!A.dynamicChildren) => {
+    if (_ === A)
       return;
-    _ && !To(_, x) && (G = Tt(_), Ae(_, D, H, !0), _ = null), x.patchFlag === -2 && (V = !1, x.dynamicChildren = null);
-    const { type: m, ref: Q, shapeFlag: ie } = x;
+    _ && !To(_, A) && (G = Tt(_), Ae(_, N, J, !0), _ = null), A.patchFlag === -2 && (O = !1, A.dynamicChildren = null);
+    const { type: m, ref: ee, shapeFlag: ie } = A;
     switch (m) {
       case Or:
-        g(_, x, j, G);
+        g(_, A, z, G);
         break;
       case ci:
-        I(_, x, j, G);
+        k(_, A, z, G);
         break;
       case Hn:
-        _ == null && A(x, j, G, ae);
+        _ == null && I(A, z, G, ae);
         break;
       case me:
-        J(
+        B(
           _,
-          x,
-          j,
+          A,
+          z,
           G,
-          D,
-          H,
+          N,
+          J,
           ae,
           C,
-          V
+          O
         );
         break;
       default:
-        ie & 1 ? k(
+        ie & 1 ? x(
           _,
-          x,
-          j,
+          A,
+          z,
           G,
-          D,
-          H,
+          N,
+          J,
           ae,
           C,
-          V
+          O
         ) : ie & 6 ? re(
           _,
-          x,
-          j,
+          A,
+          z,
           G,
-          D,
-          H,
+          N,
+          J,
           ae,
           C,
-          V
+          O
         ) : (ie & 64 || ie & 128) && m.process(
           _,
-          x,
-          j,
+          A,
+          z,
           G,
-          D,
-          H,
+          N,
+          J,
           ae,
           C,
-          V,
+          O,
           dt
         );
     }
-    Q != null && D ? Lo(Q, _ && _.ref, H, x || _, !x) : Q == null && _ && _.ref != null && Lo(_.ref, null, H, _, !0);
-  }, g = (_, x, j, G) => {
+    ee != null && N ? Lo(ee, _ && _.ref, J, A || _, !A) : ee == null && _ && _.ref != null && Lo(_.ref, null, J, _, !0);
+  }, g = (_, A, z, G) => {
     if (_ == null)
       i(
-        x.el = s(x.children),
-        j,
+        A.el = s(A.children),
+        z,
         G
       );
     else {
-      const D = x.el = _.el;
-      x.children !== _.children && d(D, x.children);
+      const N = A.el = _.el;
+      A.children !== _.children && d(N, A.children);
     }
-  }, I = (_, x, j, G) => {
+  }, k = (_, A, z, G) => {
     _ == null ? i(
-      x.el = c(x.children || ""),
-      j,
+      A.el = c(A.children || ""),
+      z,
       G
-    ) : x.el = _.el;
-  }, A = (_, x, j, G) => {
+    ) : A.el = _.el;
+  }, I = (_, A, z, G) => {
     [_.el, _.anchor] = y(
       _.children,
-      x,
-      j,
+      A,
+      z,
       G,
       _.el,
       _.anchor
     );
-  }, S = ({ el: _, anchor: x }, j, G) => {
-    let D;
-    for (; _ && _ !== x; )
-      D = p(_), i(_, j, G), _ = D;
-    i(x, j, G);
-  }, T = ({ el: _, anchor: x }) => {
-    let j;
-    for (; _ && _ !== x; )
-      j = p(_), o(_), _ = j;
-    o(x);
-  }, k = (_, x, j, G, D, H, ae, C, V) => {
-    if (x.type === "svg" ? ae = "svg" : x.type === "math" && (ae = "mathml"), _ == null)
-      Z(
-        x,
-        j,
+  }, S = ({ el: _, anchor: A }, z, G) => {
+    let N;
+    for (; _ && _ !== A; )
+      N = f(_), i(_, z, G), _ = N;
+    i(A, z, G);
+  }, T = ({ el: _, anchor: A }) => {
+    let z;
+    for (; _ && _ !== A; )
+      z = f(_), o(_), _ = z;
+    o(A);
+  }, x = (_, A, z, G, N, J, ae, C, O) => {
+    if (A.type === "svg" ? ae = "svg" : A.type === "math" && (ae = "mathml"), _ == null)
+      D(
+        A,
+        z,
         G,
-        D,
-        H,
+        N,
+        J,
         ae,
         C,
-        V
+        O
       );
     else {
       const m = _.el && _.el._isVueCE ? _.el : null;
       try {
-        m && m._beginPatch(), E(
+        m && m._beginPatch(), R(
           _,
-          x,
-          D,
-          H,
+          A,
+          N,
+          J,
           ae,
           C,
-          V
+          O
         );
       } finally {
         m && m._endPatch();
       }
     }
-  }, Z = (_, x, j, G, D, H, ae, C) => {
-    let V, m;
-    const { props: Q, shapeFlag: ie, transition: B, dirs: Y } = _;
-    if (V = _.el = r(
+  }, D = (_, A, z, G, N, J, ae, C) => {
+    let O, m;
+    const { props: ee, shapeFlag: ie, transition: H, dirs: Y } = _;
+    if (O = _.el = r(
       _.type,
-      H,
-      Q && Q.is,
-      Q
-    ), ie & 8 ? l(V, _.children) : ie & 16 && O(
+      J,
+      ee && ee.is,
+      ee
+    ), ie & 8 ? l(O, _.children) : ie & 16 && P(
       _.children,
-      V,
+      O,
       null,
       G,
-      D,
-      is(_, H),
+      N,
+      is(_, J),
       ae,
       C
-    ), Y && yi(_, null, G, "created"), P(V, _, _.scopeId, ae, G), Q) {
-      for (const ye in Q)
-        ye !== "value" && !Uo(ye) && n(V, ye, null, Q[ye], H, G);
-      "value" in Q && n(V, "value", null, Q.value, H), (m = Q.onVnodeBeforeMount) && pa(m, G, _);
+    ), Y && yi(_, null, G, "created"), V(O, _, _.scopeId, ae, G), ee) {
+      for (const ye in ee)
+        ye !== "value" && !Uo(ye) && n(O, ye, null, ee[ye], J, G);
+      "value" in ee && n(O, "value", null, ee.value, J), (m = ee.onVnodeBeforeMount) && fa(m, G, _);
     }
     Y && yi(_, null, G, "beforeMount");
-    const ce = rm(D, B);
-    ce && B.beforeEnter(V), i(V, x, j), ((m = Q && Q.onVnodeMounted) || ce || Y) && $t(() => {
-      m && pa(m, G, _), ce && B.enter(V), Y && yi(_, null, G, "mounted");
-    }, D);
-  }, P = (_, x, j, G, D) => {
-    if (j && h(_, j), G)
-      for (let H = 0; H < G.length; H++)
-        h(_, G[H]);
-    if (D) {
-      let H = D.subTree;
-      if (x === H || ip(H.type) && (H.ssContent === x || H.ssFallback === x)) {
-        const ae = D.vnode;
-        P(
+    const ce = rm(N, H);
+    ce && H.beforeEnter(O), i(O, A, z), ((m = ee && ee.onVnodeMounted) || ce || Y) && $t(() => {
+      m && fa(m, G, _), ce && H.enter(O), Y && yi(_, null, G, "mounted");
+    }, N);
+  }, V = (_, A, z, G, N) => {
+    if (z && b(_, z), G)
+      for (let J = 0; J < G.length; J++)
+        b(_, G[J]);
+    if (N) {
+      let J = N.subTree;
+      if (A === J || of(J.type) && (J.ssContent === A || J.ssFallback === A)) {
+        const ae = N.vnode;
+        V(
           _,
           ae,
           ae.scopeId,
           ae.slotScopeIds,
-          D.parent
+          N.parent
         );
       }
     }
-  }, O = (_, x, j, G, D, H, ae, C, V = 0) => {
-    for (let m = V; m < _.length; m++) {
-      const Q = _[m] = C ? Ma(_[m]) : ga(_[m]);
+  }, P = (_, A, z, G, N, J, ae, C, O = 0) => {
+    for (let m = O; m < _.length; m++) {
+      const ee = _[m] = C ? Ma(_[m]) : ga(_[m]);
       v(
         null,
-        Q,
-        x,
-        j,
+        ee,
+        A,
+        z,
         G,
-        D,
-        H,
+        N,
+        J,
         ae,
         C
       );
     }
-  }, E = (_, x, j, G, D, H, ae) => {
-    const C = x.el = _.el;
-    let { patchFlag: V, dynamicChildren: m, dirs: Q } = x;
-    V |= _.patchFlag & 16;
-    const ie = _.props || qe, B = x.props || qe;
+  }, R = (_, A, z, G, N, J, ae) => {
+    const C = A.el = _.el;
+    let { patchFlag: O, dynamicChildren: m, dirs: ee } = A;
+    O |= _.patchFlag & 16;
+    const ie = _.props || qe, H = A.props || qe;
     let Y;
-    if (j && wi(j, !1), (Y = B.onVnodeBeforeUpdate) && pa(Y, j, x, _), Q && yi(x, _, j, "beforeUpdate"), j && wi(j, !0), // #6385 the old vnode may be a user-wrapped non-isomorphic block
+    if (z && wi(z, !1), (Y = H.onVnodeBeforeUpdate) && fa(Y, z, A, _), ee && yi(A, _, z, "beforeUpdate"), z && wi(z, !0), // #6385 the old vnode may be a user-wrapped non-isomorphic block
     // Force full diff when block metadata is unstable.
-    m && (!_.dynamicChildren || _.dynamicChildren.length !== m.length) && (V = 0, ae = !1, m = null), (ie.innerHTML && B.innerHTML == null || ie.textContent && B.textContent == null) && l(C, ""), m ? q(
+    m && (!_.dynamicChildren || _.dynamicChildren.length !== m.length) && (O = 0, ae = !1, m = null), (ie.innerHTML && H.innerHTML == null || ie.textContent && H.textContent == null) && l(C, ""), m ? j(
       _.dynamicChildren,
       m,
       C,
-      j,
+      z,
       G,
-      is(x, D),
-      H
+      is(A, N),
+      J
     ) : ae || K(
       _,
-      x,
+      A,
       C,
       null,
-      j,
+      z,
       G,
-      is(x, D),
-      H,
+      is(A, N),
+      J,
       !1
-    ), V > 0) {
-      if (V & 16)
-        ee(C, ie, B, j, D);
-      else if (V & 2 && ie.class !== B.class && n(C, "class", null, B.class, D), V & 4 && n(C, "style", ie.style, B.style, D), V & 8) {
-        const ce = x.dynamicProps;
+    ), O > 0) {
+      if (O & 16)
+        Q(C, ie, H, z, N);
+      else if (O & 2 && ie.class !== H.class && n(C, "class", null, H.class, N), O & 4 && n(C, "style", ie.style, H.style, N), O & 8) {
+        const ce = A.dynamicProps;
         for (let ye = 0; ye < ce.length; ye++) {
-          const Re = ce[ye], Le = ie[Re], Ge = B[Re];
-          (Ge !== Le || Re === "value") && n(C, Re, Le, Ge, D, j);
+          const Re = ce[ye], Le = ie[Re], Ge = H[Re];
+          (Ge !== Le || Re === "value") && n(C, Re, Le, Ge, N, z);
         }
       }
-      V & 1 && _.children !== x.children && l(C, x.children);
-    } else !ae && m == null && ee(C, ie, B, j, D);
-    ((Y = B.onVnodeUpdated) || Q) && $t(() => {
-      Y && pa(Y, j, x, _), Q && yi(x, _, j, "updated");
+      O & 1 && _.children !== A.children && l(C, A.children);
+    } else !ae && m == null && Q(C, ie, H, z, N);
+    ((Y = H.onVnodeUpdated) || ee) && $t(() => {
+      Y && fa(Y, z, A, _), ee && yi(A, _, z, "updated");
     }, G);
-  }, q = (_, x, j, G, D, H, ae) => {
-    for (let C = 0; C < x.length; C++) {
-      const V = _[C], m = x[C], Q = (
+  }, j = (_, A, z, G, N, J, ae) => {
+    for (let C = 0; C < A.length; C++) {
+      const O = _[C], m = A[C], ee = (
         // oldVNode may be an errored async setup() component inside Suspense
         // which will not have a mounted element
-        V.el && // - In the case of a Fragment, we need to provide the actual parent
+        O.el && // - In the case of a Fragment, we need to provide the actual parent
         // of the Fragment itself so it can move its children.
-        (V.type === me || // - In the case of different nodes, there is going to be a replacement
+        (O.type === me || // - In the case of different nodes, there is going to be a replacement
         // which also requires the correct parent container
-        !To(V, m) || // - In the case of a component, it could contain anything.
-        V.shapeFlag & 198) ? u(V.el) : (
+        !To(O, m) || // - In the case of a component, it could contain anything.
+        O.shapeFlag & 198) ? u(O.el) : (
           // In other cases, the parent container is not actually used so we
           // just pass the block element here to avoid a DOM parentNode call.
-          j
+          z
         )
       );
       v(
-        V,
+        O,
         m,
-        Q,
+        ee,
         null,
         G,
-        D,
-        H,
+        N,
+        J,
         ae,
         !0
       );
     }
-  }, ee = (_, x, j, G, D) => {
-    if (x !== j) {
-      if (x !== qe)
-        for (const H in x)
-          !Uo(H) && !(H in j) && n(
+  }, Q = (_, A, z, G, N) => {
+    if (A !== z) {
+      if (A !== qe)
+        for (const J in A)
+          !Uo(J) && !(J in z) && n(
             _,
-            H,
-            x[H],
+            J,
+            A[J],
             null,
-            D,
+            N,
             G
           );
-      for (const H in j) {
-        if (Uo(H)) continue;
-        const ae = j[H], C = x[H];
-        ae !== C && H !== "value" && n(_, H, C, ae, D, G);
+      for (const J in z) {
+        if (Uo(J)) continue;
+        const ae = z[J], C = A[J];
+        ae !== C && J !== "value" && n(_, J, C, ae, N, G);
       }
-      "value" in j && n(_, "value", x.value, j.value, D);
+      "value" in z && n(_, "value", A.value, z.value, N);
     }
-  }, J = (_, x, j, G, D, H, ae, C, V) => {
-    const m = x.el = _ ? _.el : s(""), Q = x.anchor = _ ? _.anchor : s("");
-    let { patchFlag: ie, dynamicChildren: B, slotScopeIds: Y } = x;
-    Y && (C = C ? C.concat(Y) : Y), _ == null ? (i(m, j, G), i(Q, j, G), O(
+  }, B = (_, A, z, G, N, J, ae, C, O) => {
+    const m = A.el = _ ? _.el : s(""), ee = A.anchor = _ ? _.anchor : s("");
+    let { patchFlag: ie, dynamicChildren: H, slotScopeIds: Y } = A;
+    Y && (C = C ? C.concat(Y) : Y), _ == null ? (i(m, z, G), i(ee, z, G), P(
       // #10007
       // such fragment like `<></>` will be compiled into
       // a fragment which doesn't have a children.
       // In this case fallback to an empty array
-      x.children || [],
-      j,
-      Q,
-      D,
-      H,
+      A.children || [],
+      z,
+      ee,
+      N,
+      J,
       ae,
       C,
-      V
-    )) : ie > 0 && ie & 64 && B && // #2715 the previous fragment could've been a BAILed one as a result
+      O
+    )) : ie > 0 && ie & 64 && H && // #2715 the previous fragment could've been a BAILed one as a result
     // of renderSlot() with no valid children
-    _.dynamicChildren && _.dynamicChildren.length === B.length ? (q(
+    _.dynamicChildren && _.dynamicChildren.length === H.length ? (j(
       _.dynamicChildren,
-      B,
-      j,
-      D,
       H,
+      z,
+      N,
+      J,
       ae,
       C
     ), // #2080 if the stable fragment has a key, it's a <template v-for> that may
     //  get moved around. Make sure all root level vnodes inherit el.
     // #2134 or if it's a component root, it may also get moved around
     // as the component is being moved.
-    (x.key != null || D && x === D.subTree) && ep(
+    (A.key != null || N && A === N.subTree) && ef(
       _,
-      x,
+      A,
       !0
       /* shallow */
     )) : K(
       _,
-      x,
-      j,
-      Q,
-      D,
-      H,
+      A,
+      z,
+      ee,
+      N,
+      J,
       ae,
       C,
-      V
+      O
     );
-  }, re = (_, x, j, G, D, H, ae, C, V) => {
-    x.slotScopeIds = C, _ == null ? x.shapeFlag & 512 ? D.ctx.activate(
-      x,
-      j,
+  }, re = (_, A, z, G, N, J, ae, C, O) => {
+    A.slotScopeIds = C, _ == null ? A.shapeFlag & 512 ? N.ctx.activate(
+      A,
+      z,
       G,
       ae,
-      V
+      O
     ) : de(
-      x,
-      j,
+      A,
+      z,
       G,
-      D,
-      H,
+      N,
+      J,
       ae,
-      V
-    ) : se(_, x, V);
-  }, de = (_, x, j, G, D, H, ae) => {
+      O
+    ) : se(_, A, O);
+  }, de = (_, A, z, G, N, J, ae) => {
     const C = _.component = mm(
       _,
       G,
-      D
+      N
     );
     if (Uu(_) && (C.ctx.renderer = dt), vm(C, !1, ae), C.asyncDep) {
-      if (D && D.registerDep(C, te, ae), !_.el) {
-        const V = C.subTree = zt(ci);
-        I(null, V, x, j), _.placeholder = V.el;
+      if (N && N.registerDep(C, te, ae), !_.el) {
+        const O = C.subTree = zt(ci);
+        k(null, O, A, z), _.placeholder = O.el;
       }
     } else
       te(
         C,
         _,
-        x,
-        j,
-        D,
-        H,
+        A,
+        z,
+        N,
+        J,
         ae
       );
-  }, se = (_, x, j) => {
-    const G = x.component = _.component;
-    if (Kb(_, x, j))
+  }, se = (_, A, z) => {
+    const G = A.component = _.component;
+    if (Kb(_, A, z))
       if (G.asyncDep && !G.asyncResolved) {
-        L(G, x, j);
+        Z(G, A, z);
         return;
       } else
-        G.next = x, G.update();
+        G.next = A, G.update();
     else
-      x.el = _.el, G.vnode = x;
-  }, te = (_, x, j, G, D, H, ae) => {
+      A.el = _.el, G.vnode = A;
+  }, te = (_, A, z, G, N, J, ae) => {
     const C = () => {
       if (_.isMounted) {
-        let { next: ie, bu: B, u: Y, parent: ce, vnode: ye } = _;
+        let { next: ie, bu: H, u: Y, parent: ce, vnode: ye } = _;
         {
-          const vt = tp(_);
+          const vt = tf(_);
           if (vt) {
-            ie && (ie.el = ye.el, L(_, ie, ae)), vt.asyncDep.then(() => {
+            ie && (ie.el = ye.el, Z(_, ie, ae)), vt.asyncDep.then(() => {
               $t(() => {
                 _.isUnmounted || m();
-              }, D);
+              }, N);
             });
             return;
           }
         }
         let Re = ie, Le;
-        wi(_, !1), ie ? (ie.el = ye.el, L(_, ie, ae)) : ie = ye, B && Bn(B), (Le = ie.props && ie.props.onVnodeBeforeUpdate) && pa(Le, ce, ie, ye), wi(_, !0);
-        const Ge = fd(_), Ot = _.subTree;
+        wi(_, !1), ie ? (ie.el = ye.el, Z(_, ie, ae)) : ie = ye, H && Bn(H), (Le = ie.props && ie.props.onVnodeBeforeUpdate) && fa(Le, ce, ie, ye), wi(_, !0);
+        const Ge = pd(_), Ot = _.subTree;
         _.subTree = Ge, v(
           Ot,
           Ge,
@@ -2779,328 +2779,328 @@ function nm(t, e) {
           // anchor may have changed if it's in a fragment
           Tt(Ot),
           _,
-          D,
-          H
-        ), ie.el = Ge.el, Re === null && Yb(_, Ge.el), Y && $t(Y, D), (Le = ie.props && ie.props.onVnodeUpdated) && $t(
-          () => pa(Le, ce, ie, ye),
-          D
+          N,
+          J
+        ), ie.el = Ge.el, Re === null && Yb(_, Ge.el), Y && $t(Y, N), (Le = ie.props && ie.props.onVnodeUpdated) && $t(
+          () => fa(Le, ce, ie, ye),
+          N
         );
       } else {
         let ie;
-        const { el: B, props: Y } = x, { bm: ce, m: ye, parent: Re, root: Le, type: Ge } = _, Ot = No(x);
-        wi(_, !1), ce && Bn(ce), !Ot && (ie = Y && Y.onVnodeBeforeMount) && pa(ie, Re, x), wi(_, !0);
+        const { el: H, props: Y } = A, { bm: ce, m: ye, parent: Re, root: Le, type: Ge } = _, Ot = No(A);
+        wi(_, !1), ce && Bn(ce), !Ot && (ie = Y && Y.onVnodeBeforeMount) && fa(ie, Re, A), wi(_, !0);
         {
           Le.ce && Le.ce._hasShadowRoot() && Le.ce._injectChildStyle(
             Ge,
             _.parent ? _.parent.type : void 0
           );
-          const vt = _.subTree = fd(_);
+          const vt = _.subTree = pd(_);
           v(
             null,
             vt,
-            j,
+            z,
             G,
             _,
-            D,
-            H
-          ), x.el = vt.el;
+            N,
+            J
+          ), A.el = vt.el;
         }
-        if (ye && $t(ye, D), !Ot && (ie = Y && Y.onVnodeMounted)) {
-          const vt = x;
+        if (ye && $t(ye, N), !Ot && (ie = Y && Y.onVnodeMounted)) {
+          const vt = A;
           $t(
-            () => pa(ie, Re, vt),
-            D
+            () => fa(ie, Re, vt),
+            N
           );
         }
-        (x.shapeFlag & 256 || Re && No(Re.vnode) && Re.vnode.shapeFlag & 256) && _.a && $t(_.a, D), _.isMounted = !0, x = j = G = null;
+        (A.shapeFlag & 256 || Re && No(Re.vnode) && Re.vnode.shapeFlag & 256) && _.a && $t(_.a, N), _.isMounted = !0, A = z = G = null;
       }
     };
     _.scope.on();
-    const V = _.effect = new hu(C);
+    const O = _.effect = new hu(C);
     _.scope.off();
-    const m = _.update = V.run.bind(V), Q = _.job = V.runIfDirty.bind(V);
-    Q.i = _, Q.id = _.uid, V.scheduler = () => mc(Q), wi(_, !0), m();
-  }, L = (_, x, j) => {
-    x.component = _;
+    const m = _.update = O.run.bind(O), ee = _.job = O.runIfDirty.bind(O);
+    ee.i = _, ee.id = _.uid, O.scheduler = () => mc(ee), wi(_, !0), m();
+  }, Z = (_, A, z) => {
+    A.component = _;
     const G = _.vnode.props;
-    _.vnode = x, _.next = null, Qb(_, x.props, G, j), im(_, x.children, j), Ta(), rd(_), Sa();
-  }, K = (_, x, j, G, D, H, ae, C, V = !1) => {
-    const m = _ && _.children, Q = _ ? _.shapeFlag : 0, ie = x.children, { patchFlag: B, shapeFlag: Y } = x;
-    if (B > 0) {
-      if (B & 128) {
+    _.vnode = A, _.next = null, Qb(_, A.props, G, z), im(_, A.children, z), Ta(), rd(_), Sa();
+  }, K = (_, A, z, G, N, J, ae, C, O = !1) => {
+    const m = _ && _.children, ee = _ ? _.shapeFlag : 0, ie = A.children, { patchFlag: H, shapeFlag: Y } = A;
+    if (H > 0) {
+      if (H & 128) {
         Te(
           m,
           ie,
-          j,
+          z,
           G,
-          D,
-          H,
+          N,
+          J,
           ae,
           C,
-          V
+          O
         );
         return;
-      } else if (B & 256) {
+      } else if (H & 256) {
         ue(
           m,
           ie,
-          j,
+          z,
           G,
-          D,
-          H,
+          N,
+          J,
           ae,
           C,
-          V
+          O
         );
         return;
       }
     }
-    Y & 8 ? (Q & 16 && $e(m, D, H), ie !== m && l(j, ie)) : Q & 16 ? Y & 16 ? Te(
+    Y & 8 ? (ee & 16 && $e(m, N, J), ie !== m && l(z, ie)) : ee & 16 ? Y & 16 ? Te(
       m,
       ie,
-      j,
+      z,
       G,
-      D,
-      H,
+      N,
+      J,
       ae,
       C,
-      V
-    ) : $e(m, D, H, !0) : (Q & 8 && l(j, ""), Y & 16 && O(
+      O
+    ) : $e(m, N, J, !0) : (ee & 8 && l(z, ""), Y & 16 && P(
       ie,
-      j,
+      z,
       G,
-      D,
-      H,
+      N,
+      J,
       ae,
       C,
-      V
+      O
     ));
-  }, ue = (_, x, j, G, D, H, ae, C, V) => {
-    _ = _ || Qi, x = x || Qi;
-    const m = _.length, Q = x.length, ie = Math.min(m, Q);
-    let B;
-    for (B = 0; B < ie; B++) {
-      const Y = x[B] = V ? Ma(x[B]) : ga(x[B]);
+  }, ue = (_, A, z, G, N, J, ae, C, O) => {
+    _ = _ || Qi, A = A || Qi;
+    const m = _.length, ee = A.length, ie = Math.min(m, ee);
+    let H;
+    for (H = 0; H < ie; H++) {
+      const Y = A[H] = O ? Ma(A[H]) : ga(A[H]);
       v(
-        _[B],
+        _[H],
         Y,
-        j,
+        z,
         null,
-        D,
-        H,
+        N,
+        J,
         ae,
         C,
-        V
+        O
       );
     }
-    m > Q ? $e(
+    m > ee ? $e(
       _,
-      D,
-      H,
+      N,
+      J,
       !0,
       !1,
       ie
-    ) : O(
-      x,
-      j,
+    ) : P(
+      A,
+      z,
       G,
-      D,
-      H,
+      N,
+      J,
       ae,
       C,
-      V,
+      O,
       ie
     );
-  }, Te = (_, x, j, G, D, H, ae, C, V) => {
+  }, Te = (_, A, z, G, N, J, ae, C, O) => {
     let m = 0;
-    const Q = x.length;
-    let ie = _.length - 1, B = Q - 1;
-    for (; m <= ie && m <= B; ) {
-      const Y = _[m], ce = x[m] = V ? Ma(x[m]) : ga(x[m]);
+    const ee = A.length;
+    let ie = _.length - 1, H = ee - 1;
+    for (; m <= ie && m <= H; ) {
+      const Y = _[m], ce = A[m] = O ? Ma(A[m]) : ga(A[m]);
       if (To(Y, ce))
         v(
           Y,
           ce,
-          j,
+          z,
           null,
-          D,
-          H,
+          N,
+          J,
           ae,
           C,
-          V
+          O
         );
       else
         break;
       m++;
     }
-    for (; m <= ie && m <= B; ) {
-      const Y = _[ie], ce = x[B] = V ? Ma(x[B]) : ga(x[B]);
+    for (; m <= ie && m <= H; ) {
+      const Y = _[ie], ce = A[H] = O ? Ma(A[H]) : ga(A[H]);
       if (To(Y, ce))
         v(
           Y,
           ce,
-          j,
+          z,
           null,
-          D,
-          H,
+          N,
+          J,
           ae,
           C,
-          V
+          O
         );
       else
         break;
-      ie--, B--;
+      ie--, H--;
     }
     if (m > ie) {
-      if (m <= B) {
-        const Y = B + 1, ce = Y < Q ? x[Y].el : G;
-        for (; m <= B; )
+      if (m <= H) {
+        const Y = H + 1, ce = Y < ee ? A[Y].el : G;
+        for (; m <= H; )
           v(
             null,
-            x[m] = V ? Ma(x[m]) : ga(x[m]),
-            j,
+            A[m] = O ? Ma(A[m]) : ga(A[m]),
+            z,
             ce,
-            D,
-            H,
+            N,
+            J,
             ae,
             C,
-            V
+            O
           ), m++;
       }
-    } else if (m > B)
+    } else if (m > H)
       for (; m <= ie; )
-        Ae(_[m], D, H, !0), m++;
+        Ae(_[m], N, J, !0), m++;
     else {
       const Y = m, ce = m, ye = /* @__PURE__ */ new Map();
-      for (m = ce; m <= B; m++) {
-        const ft = x[m] = V ? Ma(x[m]) : ga(x[m]);
-        ft.key != null && ye.set(ft.key, m);
+      for (m = ce; m <= H; m++) {
+        const pt = A[m] = O ? Ma(A[m]) : ga(A[m]);
+        pt.key != null && ye.set(pt.key, m);
       }
       let Re, Le = 0;
-      const Ge = B - ce + 1;
+      const Ge = H - ce + 1;
       let Ot = !1, vt = 0;
       const sa = new Array(Ge);
       for (m = 0; m < Ge; m++) sa[m] = 0;
       for (m = Y; m <= ie; m++) {
-        const ft = _[m];
+        const pt = _[m];
         if (Le >= Ge) {
-          Ae(ft, D, H, !0);
+          Ae(pt, N, J, !0);
           continue;
         }
         let Mt;
-        if (ft.key != null)
-          Mt = ye.get(ft.key);
+        if (pt.key != null)
+          Mt = ye.get(pt.key);
         else
-          for (Re = ce; Re <= B; Re++)
-            if (sa[Re - ce] === 0 && To(ft, x[Re])) {
+          for (Re = ce; Re <= H; Re++)
+            if (sa[Re - ce] === 0 && To(pt, A[Re])) {
               Mt = Re;
               break;
             }
-        Mt === void 0 ? Ae(ft, D, H, !0) : (sa[Mt - ce] = m + 1, Mt >= vt ? vt = Mt : Ot = !0, v(
-          ft,
-          x[Mt],
-          j,
+        Mt === void 0 ? Ae(pt, N, J, !0) : (sa[Mt - ce] = m + 1, Mt >= vt ? vt = Mt : Ot = !0, v(
+          pt,
+          A[Mt],
+          z,
           null,
-          D,
-          H,
+          N,
+          J,
           ae,
           C,
-          V
+          O
         ), Le++);
       }
       const Li = Ot ? sm(sa) : Qi;
       for (Re = Li.length - 1, m = Ge - 1; m >= 0; m--) {
-        const ft = ce + m, Mt = x[ft], Ni = x[ft + 1], _i = ft + 1 < Q ? (
+        const pt = ce + m, Mt = A[pt], Ni = A[pt + 1], _i = pt + 1 < ee ? (
           // #13559, #14173 fallback to el placeholder for unresolved async component
-          Ni.el || ap(Ni)
+          Ni.el || af(Ni)
         ) : G;
         sa[m] === 0 ? v(
           null,
           Mt,
-          j,
+          z,
           _i,
-          D,
-          H,
+          N,
+          J,
           ae,
           C,
-          V
-        ) : Ot && (Re < 0 || m !== Li[Re] ? Se(Mt, j, _i, 2) : Re--);
+          O
+        ) : Ot && (Re < 0 || m !== Li[Re] ? Se(Mt, z, _i, 2) : Re--);
       }
     }
-  }, Se = (_, x, j, G, D = null) => {
-    const { el: H, type: ae, transition: C, children: V, shapeFlag: m } = _;
+  }, Se = (_, A, z, G, N = null) => {
+    const { el: J, type: ae, transition: C, children: O, shapeFlag: m } = _;
     if (m & 6) {
-      Se(_.component.subTree, x, j, G);
+      Se(_.component.subTree, A, z, G);
       return;
     }
     if (m & 128) {
-      _.suspense.move(x, j, G);
+      _.suspense.move(A, z, G);
       return;
     }
     if (m & 64) {
-      ae.move(_, x, j, dt);
+      ae.move(_, A, z, dt);
       return;
     }
     if (ae === me) {
-      i(H, x, j);
-      for (let ie = 0; ie < V.length; ie++)
-        Se(V[ie], x, j, G);
-      i(_.anchor, x, j);
+      i(J, A, z);
+      for (let ie = 0; ie < O.length; ie++)
+        Se(O[ie], A, z, G);
+      i(_.anchor, A, z);
       return;
     }
     if (ae === Hn) {
-      S(_, x, j);
+      S(_, A, z);
       return;
     }
     if (G !== 2 && m & 1 && C)
       if (G === 0)
-        C.persisted && !H[ts] ? i(H, x, j) : (C.beforeEnter(H), i(H, x, j), $t(() => C.enter(H), D));
+        C.persisted && !J[ts] ? i(J, A, z) : (C.beforeEnter(J), i(J, A, z), $t(() => C.enter(J), N));
       else {
-        const { leave: ie, delayLeave: B, afterLeave: Y } = C, ce = () => {
-          _.ctx.isUnmounted ? o(H) : i(H, x, j);
+        const { leave: ie, delayLeave: H, afterLeave: Y } = C, ce = () => {
+          _.ctx.isUnmounted ? o(J) : i(J, A, z);
         }, ye = () => {
-          const Re = H._isLeaving || !!H[ts];
-          H._isLeaving && H[ts](
+          const Re = J._isLeaving || !!J[ts];
+          J._isLeaving && J[ts](
             !0
             /* cancelled */
-          ), C.persisted && !Re ? ce() : ie(H, () => {
+          ), C.persisted && !Re ? ce() : ie(J, () => {
             ce(), Y && Y();
           });
         };
-        B ? B(H, ce, ye) : ye();
+        H ? H(J, ce, ye) : ye();
       }
     else
-      i(H, x, j);
-  }, Ae = (_, x, j, G = !1, D = !1) => {
+      i(J, A, z);
+  }, Ae = (_, A, z, G = !1, N = !1) => {
     const {
-      type: H,
+      type: J,
       props: ae,
       ref: C,
-      children: V,
+      children: O,
       dynamicChildren: m,
-      shapeFlag: Q,
+      shapeFlag: ee,
       patchFlag: ie,
-      dirs: B,
+      dirs: H,
       cacheIndex: Y,
       memo: ce
     } = _;
-    if (ie === -2 && (D = !1), C != null && (Ta(), Lo(C, null, j, _, !0), Sa()), Y != null && (x.renderCache[Y] = void 0), Q & 256) {
-      x.ctx.deactivate(_);
+    if (ie === -2 && (N = !1), C != null && (Ta(), Lo(C, null, z, _, !0), Sa()), Y != null && (A.renderCache[Y] = void 0), ee & 256) {
+      A.ctx.deactivate(_);
       return;
     }
-    const ye = Q & 1 && B, Re = !No(_);
+    const ye = ee & 1 && H, Re = !No(_);
     let Le;
-    if (Re && (Le = ae && ae.onVnodeBeforeUnmount) && pa(Le, x, _), Q & 6)
-      st(_.component, j, G);
+    if (Re && (Le = ae && ae.onVnodeBeforeUnmount) && fa(Le, A, _), ee & 6)
+      st(_.component, z, G);
     else {
-      if (Q & 128) {
-        _.suspense.unmount(j, G);
+      if (ee & 128) {
+        _.suspense.unmount(z, G);
         return;
       }
-      ye && yi(_, null, x, "beforeUnmount"), Q & 64 ? _.type.remove(
+      ye && yi(_, null, A, "beforeUnmount"), ee & 64 ? _.type.remove(
         _,
-        x,
-        j,
+        A,
+        z,
         dt,
         G
       ) : m && // #5154
@@ -3109,78 +3109,78 @@ function nm(t, e) {
       // so that it doesn't take the fast path during unmount - otherwise
       // components nested in v-once are never unmounted.
       !m.hasOnce && // #1153: fast path should not be taken for non-stable (v-for) fragments
-      (H !== me || ie > 0 && ie & 64) ? $e(
+      (J !== me || ie > 0 && ie & 64) ? $e(
         m,
-        x,
-        j,
+        A,
+        z,
         !1,
         !0
-      ) : (H === me && ie & 384 || !D && Q & 16) && $e(V, x, j), G && Me(_);
+      ) : (J === me && ie & 384 || !N && ee & 16) && $e(O, A, z), G && Me(_);
     }
     const Ge = ce != null && Y == null;
     (Re && (Le = ae && ae.onVnodeUnmounted) || ye || Ge) && $t(() => {
-      Le && pa(Le, x, _), ye && yi(_, null, x, "unmounted"), Ge && (_.el = null);
-    }, j);
+      Le && fa(Le, A, _), ye && yi(_, null, A, "unmounted"), Ge && (_.el = null);
+    }, z);
   }, Me = (_) => {
-    const { type: x, el: j, anchor: G, transition: D } = _;
-    if (x === me) {
-      ke(j, G);
+    const { type: A, el: z, anchor: G, transition: N } = _;
+    if (A === me) {
+      ke(z, G);
       return;
     }
-    if (x === Hn) {
+    if (A === Hn) {
       T(_);
       return;
     }
-    const H = () => {
-      o(j), D && !D.persisted && D.afterLeave && D.afterLeave();
+    const J = () => {
+      o(z), N && !N.persisted && N.afterLeave && N.afterLeave();
     };
-    if (_.shapeFlag & 1 && D && !D.persisted) {
-      const { leave: ae, delayLeave: C } = D, V = () => ae(j, H);
-      C ? C(_.el, H, V) : V();
+    if (_.shapeFlag & 1 && N && !N.persisted) {
+      const { leave: ae, delayLeave: C } = N, O = () => ae(z, J);
+      C ? C(_.el, J, O) : O();
     } else
-      H();
-  }, ke = (_, x) => {
-    let j;
-    for (; _ !== x; )
-      j = p(_), o(_), _ = j;
-    o(x);
-  }, st = (_, x, j) => {
-    const { bum: G, scope: D, job: H, subTree: ae, um: C, m: V, a: m } = _;
-    md(V), md(m), G && Bn(G), D.stop(), H && (H.flags |= 8, Ae(ae, _, x, j)), C && $t(C, x), $t(() => {
+      J();
+  }, ke = (_, A) => {
+    let z;
+    for (; _ !== A; )
+      z = f(_), o(_), _ = z;
+    o(A);
+  }, st = (_, A, z) => {
+    const { bum: G, scope: N, job: J, subTree: ae, um: C, m: O, a: m } = _;
+    md(O), md(m), G && Bn(G), N.stop(), J && (J.flags |= 8, Ae(ae, _, A, z)), C && $t(C, A), $t(() => {
       _.isUnmounted = !0;
-    }, x);
-  }, $e = (_, x, j, G = !1, D = !1, H = 0) => {
-    for (let ae = H; ae < _.length; ae++)
-      Ae(_[ae], x, j, G, D);
+    }, A);
+  }, $e = (_, A, z, G = !1, N = !1, J = 0) => {
+    for (let ae = J; ae < _.length; ae++)
+      Ae(_[ae], A, z, G, N);
   }, Tt = (_) => {
     if (_.shapeFlag & 6)
       return Tt(_.component.subTree);
     if (_.shapeFlag & 128)
       return _.suspense.next();
-    const x = p(_.anchor || _.el), j = x && x[Ab];
-    return j ? p(j) : x;
+    const A = f(_.anchor || _.el), z = A && A[Ab];
+    return z ? f(z) : A;
   };
   let ct = !1;
-  const wt = (_, x, j) => {
+  const wt = (_, A, z) => {
     let G;
-    _ == null ? x._vnode && (Ae(x._vnode, null, null, !0), G = x._vnode.component) : v(
-      x._vnode || null,
+    _ == null ? A._vnode && (Ae(A._vnode, null, null, !0), G = A._vnode.component) : v(
+      A._vnode || null,
       _,
-      x,
+      A,
       null,
       null,
       null,
-      j
-    ), x._vnode = _, ct || (ct = !0, rd(G), Eu(), ct = !1);
+      z
+    ), A._vnode = _, ct || (ct = !0, rd(G), Eu(), ct = !1);
   }, dt = {
     p: v,
     um: Ae,
     m: Se,
     r: Me,
     mt: de,
-    mc: O,
+    mc: P,
     pc: K,
-    pbc: q,
+    pbc: j,
     n: Tt,
     o: t
   };
@@ -3199,13 +3199,13 @@ function wi({ effect: t, job: e }, a) {
 function rm(t, e) {
   return (!t || t && !t.pendingBranch) && e && !e.persisted;
 }
-function ep(t, e, a = !1) {
+function ef(t, e, a = !1) {
   const i = t.children, o = e.children;
   if (he(i) && he(o))
     for (let n = 0; n < i.length; n++) {
       const r = i[n];
       let s = o[n];
-      s.shapeFlag & 1 && !s.dynamicChildren && ((s.patchFlag <= 0 || s.patchFlag === 32) && (s = o[n] = Ma(o[n]), s.el = r.el), !a && s.patchFlag !== -2 && ep(r, s)), s.type === Or && (s.patchFlag === -1 && (s = o[n] = Ma(s)), s.el = r.el), s.type === ci && !s.el && (s.el = r.el);
+      s.shapeFlag & 1 && !s.dynamicChildren && ((s.patchFlag <= 0 || s.patchFlag === 32) && (s = o[n] = Ma(o[n]), s.el = r.el), !a && s.patchFlag !== -2 && ef(r, s)), s.type === Or && (s.patchFlag === -1 && (s = o[n] = Ma(s)), s.el = r.el), s.type === ci && !s.el && (s.el = r.el);
     }
 }
 function sm(t) {
@@ -3228,29 +3228,29 @@ function sm(t) {
     a[n] = r, r = e[r];
   return a;
 }
-function tp(t) {
+function tf(t) {
   const e = t.subTree.component;
   if (e)
-    return e.asyncDep && !e.asyncResolved ? e : tp(e);
+    return e.asyncDep && !e.asyncResolved ? e : tf(e);
 }
 function md(t) {
   if (t)
     for (let e = 0; e < t.length; e++)
       t[e].flags |= 8;
 }
-function ap(t) {
+function af(t) {
   if (t.placeholder)
     return t.placeholder;
   const e = t.component;
-  return e ? ap(e.subTree) : null;
+  return e ? af(e.subTree) : null;
 }
-const ip = (t) => t.__isSuspense;
+const of = (t) => t.__isSuspense;
 function cm(t, e) {
   e && e.pendingBranch ? he(t) ? e.effects.push(...t) : e.effects.push(t) : vb(t);
 }
 const me = /* @__PURE__ */ Symbol.for("v-fgt"), Or = /* @__PURE__ */ Symbol.for("v-txt"), ci = /* @__PURE__ */ Symbol.for("v-cmt"), Hn = /* @__PURE__ */ Symbol.for("v-stc"), Bo = [];
 let Ht = null;
-function z(t = !1) {
+function U(t = !1) {
   Bo.push(Ht = t ? null : []);
 }
 function dm() {
@@ -3260,12 +3260,12 @@ let tn = 1;
 function vd(t, e = !1) {
   tn += t, t < 0 && Ht && e && (Ht.hasOnce = !0);
 }
-function op(t) {
+function nf(t) {
   return t.dynamicChildren = tn > 0 ? Ht || Qi : null, dm(), tn > 0 && Ht && Ht.push(t), t;
 }
-function U(t, e, a, i, o, n) {
-  return op(
-    f(
+function F(t, e, a, i, o, n) {
+  return nf(
+    p(
       t,
       e,
       a,
@@ -3277,7 +3277,7 @@ function U(t, e, a, i, o, n) {
   );
 }
 function lm(t, e, a, i, o) {
-  return op(
+  return nf(
     zt(
       t,
       e,
@@ -3288,24 +3288,24 @@ function lm(t, e, a, i, o) {
     )
   );
 }
-function np(t) {
+function rf(t) {
   return t ? t.__v_isVNode === !0 : !1;
 }
 function To(t, e) {
   return t.type === e.type && t.key === e.key;
 }
-const rp = ({ key: t }) => t ?? null, Jn = ({
+const sf = ({ key: t }) => t ?? null, Jn = ({
   ref: t,
   ref_key: e,
   ref_for: a
 }) => (typeof t == "number" && (t = "" + t), t != null ? ot(t) || /* @__PURE__ */ nt(t) || _e(t) ? { i: aa, r: t, k: e, f: !!a } : t : null);
-function f(t, e = null, a = null, i = 0, o = null, n = t === me ? 0 : 1, r = !1, s = !1) {
+function p(t, e = null, a = null, i = 0, o = null, n = t === me ? 0 : 1, r = !1, s = !1) {
   const c = {
     __v_isVNode: !0,
     __v_skip: !0,
     type: t,
     props: e,
-    key: e && rp(e),
+    key: e && sf(e),
     ref: e && Jn(e),
     scopeId: Mu,
     slotScopeIds: null,
@@ -3341,7 +3341,7 @@ function f(t, e = null, a = null, i = 0, o = null, n = t === me ? 0 : 1, r = !1,
 }
 const zt = um;
 function um(t, e = null, a = null, i = 0, o = null, n = !1) {
-  if ((!t || t === jb) && (t = ci), np(t)) {
+  if ((!t || t === jb) && (t = ci), rf(t)) {
     const s = so(
       t,
       e,
@@ -3351,12 +3351,12 @@ function um(t, e = null, a = null, i = 0, o = null, n = !1) {
     return a && rr(s, a), tn > 0 && !n && Ht && (s.shapeFlag & 6 ? Ht[Ht.indexOf(t)] = s : Ht.push(s)), s.patchFlag = -2, s;
   }
   if (wm(t) && (t = t.__vccOpts), e) {
-    e = pm(e);
+    e = fm(e);
     let { class: s, style: c } = e;
     s && !ot(s) && (e.class = we(s)), ze(c) && (/* @__PURE__ */ Pr(c) && !he(c) && (c = yt({}, c)), e.style = Ua(c));
   }
-  const r = ot(t) ? 1 : ip(t) ? 128 : xb(t) ? 64 : ze(t) ? 4 : _e(t) ? 2 : 0;
-  return f(
+  const r = ot(t) ? 1 : of(t) ? 128 : xb(t) ? 64 : ze(t) ? 4 : _e(t) ? 2 : 0;
+  return p(
     t,
     e,
     a,
@@ -3367,16 +3367,16 @@ function um(t, e = null, a = null, i = 0, o = null, n = !1) {
     !0
   );
 }
-function pm(t) {
+function fm(t) {
   return t ? /* @__PURE__ */ Pr(t) || Gu(t) ? yt({}, t) : t : null;
 }
 function so(t, e, a = !1, i = !1) {
-  const { props: o, ref: n, patchFlag: r, children: s, transition: c } = t, d = e ? fm(o || {}, e) : o, l = {
+  const { props: o, ref: n, patchFlag: r, children: s, transition: c } = t, d = e ? pm(o || {}, e) : o, l = {
     __v_isVNode: !0,
     __v_skip: !0,
     type: t.type,
     props: d,
-    key: d && rp(d),
+    key: d && sf(d),
     ref: e && e.ref ? (
       // #2078 in the case of <component :is="vnode" ref="extra"/>
       // if the vnode itself already has a ref, cloneVNode will need to merge
@@ -3428,7 +3428,7 @@ function Gn(t, e) {
   return a.staticCount = e, a;
 }
 function ge(t = "", e = !1) {
-  return e ? (z(), lm(ci, null, t)) : zt(ci, null, t);
+  return e ? (U(), lm(ci, null, t)) : zt(ci, null, t);
 }
 function ga(t) {
   return t == null || typeof t == "boolean" ? zt(ci) : he(t) ? zt(
@@ -3436,7 +3436,7 @@ function ga(t) {
     null,
     // #3666, avoid reference pollution when reusing vnode
     t.slice()
-  ) : np(t) ? Ma(t) : zt(Or, null, String(t));
+  ) : rf(t) ? Ma(t) : zt(Or, null, String(t));
 }
 function Ma(t) {
   return t.el === null && t.patchFlag !== -1 || t.memo ? t : so(t);
@@ -3468,7 +3468,7 @@ function rr(t, e) {
     e = String(e), i & 64 ? (a = 16, e = [ta(e)]) : a = 8;
   t.children = e, t.shapeFlag |= a;
 }
-function fm(...t) {
+function pm(...t) {
   const e = {};
   for (let a = 0; a < t.length; a++) {
     const i = t[a];
@@ -3486,7 +3486,7 @@ function fm(...t) {
   }
   return e;
 }
-function pa(t, e, a, i = null) {
+function fa(t, e, a, i = null) {
   ua(t, e, 7, [
     a,
     i
@@ -3574,7 +3574,7 @@ function mm(t, e, a) {
   return n.ctx = { _: n }, n.root = e ? e.root : n, n.emit = Hb.bind(null, n), t.ce && t.ce(n), n;
 }
 let Vt = null;
-const sp = () => Vt || aa;
+const cf = () => Vt || aa;
 let sr, Vs;
 {
   const t = Tr(), e = (a, i) => {
@@ -3599,13 +3599,13 @@ const wn = (t) => {
 }, gd = () => {
   Vt && Vt.scope.off(), sr(null);
 };
-function cp(t) {
+function df(t) {
   return t.vnode.shapeFlag & 4;
 }
 let an = !1;
 function vm(t, e = !1, a = !1) {
   e && Vs(e);
-  const { props: i, children: o } = t.vnode, n = cp(t);
+  const { props: i, children: o } = t.vnode, n = df(t);
   Xb(t, i, n, e), am(t, o, a || e);
   const r = n ? gm(t, e) : void 0;
   return e && Vs(!1), r;
@@ -3636,12 +3636,12 @@ function gm(t, e) {
     } else
       _d(t, r);
   } else
-    dp(t);
+    lf(t);
 }
 function _d(t, e, a) {
-  _e(e) ? t.type.__ssrInlineRender ? t.ssrRender = e : t.render = e : ze(e) && (t.setupState = Pu(e)), dp(t);
+  _e(e) ? t.type.__ssrInlineRender ? t.ssrRender = e : t.render = e : ze(e) && (t.setupState = Pu(e)), lf(t);
 }
-function dp(t, e, a) {
+function lf(t, e, a) {
   const i = t.type;
   t.render || (t.render = i.render || Aa);
   {
@@ -3686,7 +3686,7 @@ function Mr(t) {
 function wm(t) {
   return _e(t) && "__vccOpts" in t;
 }
-const ve = (t, e) => /* @__PURE__ */ pb(t, e, an), km = "3.5.39";
+const ve = (t, e) => /* @__PURE__ */ fb(t, e, an), km = "3.5.39";
 let Es;
 const yd = typeof window < "u" && window.trustedTypes;
 if (yd)
@@ -3696,7 +3696,7 @@ if (yd)
     });
   } catch {
   }
-const lp = Es ? (t) => Es.createHTML(t) : (t) => t, Im = "http://www.w3.org/2000/svg", Am = "http://www.w3.org/1998/Math/MathML", Ea = typeof document < "u" ? document : null, wd = Ea && /* @__PURE__ */ Ea.createElement("template"), xm = {
+const uf = Es ? (t) => Es.createHTML(t) : (t) => t, Im = "http://www.w3.org/2000/svg", Am = "http://www.w3.org/1998/Math/MathML", Ea = typeof document < "u" ? document : null, wd = Ea && /* @__PURE__ */ Ea.createElement("template"), xm = {
   insert: (t, e, a) => {
     e.insertBefore(t, a || null);
   },
@@ -3732,7 +3732,7 @@ const lp = Es ? (t) => Es.createHTML(t) : (t) => t, Im = "http://www.w3.org/2000
       for (; e.insertBefore(o.cloneNode(!0), a), !(o === n || !(o = o.nextSibling)); )
         ;
     else {
-      wd.innerHTML = lp(
+      wd.innerHTML = uf(
         i === "svg" ? `<svg>${t}</svg>` : i === "mathml" ? `<math>${t}</math>` : t
       );
       const s = wd.content;
@@ -3756,7 +3756,7 @@ function Sm(t, e, a) {
   const i = t[Tm];
   i && (e = (e ? [e, ...i] : [...i]).join(" ")), e == null ? t.removeAttribute("class") : a ? t.setAttribute("class", e) : t.className = e;
 }
-const cr = /* @__PURE__ */ Symbol("_vod"), up = /* @__PURE__ */ Symbol("_vsh"), Ga = {
+const cr = /* @__PURE__ */ Symbol("_vod"), ff = /* @__PURE__ */ Symbol("_vsh"), Ga = {
   // used for prop mismatch check during hydration
   name: "show",
   beforeMount(t, { value: e }, { transition: a }) {
@@ -3775,7 +3775,7 @@ const cr = /* @__PURE__ */ Symbol("_vod"), up = /* @__PURE__ */ Symbol("_vsh"), 
   }
 };
 function So(t, e) {
-  t.style.display = e ? t[cr] : "none", t[up] = !e;
+  t.style.display = e ? t[cr] : "none", t[ff] = !e;
 }
 const Cm = /* @__PURE__ */ Symbol(""), Pm = /(?:^|;)\s*display\s*:/;
 function Rm(t, e, a) {
@@ -3807,7 +3807,7 @@ function Rm(t, e, a) {
       r && (a += ";" + r), i.cssText = a, n = Pm.test(a);
     }
   } else e && t.removeAttribute("style");
-  cr in t && (t[cr] = n ? i.display : "", t[up] && (i.display = "none"));
+  cr in t && (t[cr] = n ? i.display : "", t[ff] && (i.display = "none"));
 }
 const kd = /\s*!important$/;
 function Vo(t, e, a) {
@@ -3852,7 +3852,7 @@ function xd(t, e, a, i, o, n = zh(e)) {
 }
 function Td(t, e, a, i, o) {
   if (e === "innerHTML" || e === "textContent") {
-    a != null && (t[e] = e === "innerHTML" ? lp(a) : a);
+    a != null && (t[e] = e === "innerHTML" ? uf(a) : a);
     return;
   }
   const n = t.tagName;
@@ -3984,7 +3984,7 @@ const qa = /* @__PURE__ */ Symbol("_assign");
 function Rd(t, e, a) {
   return e && (t = t.trim()), a && (t = xr(t)), t;
 }
-const fa = {
+const pa = {
   created(t, { modifiers: { lazy: e, trim: a, number: i } }, o) {
     t[qa] = co(o);
     const n = i || o.props && o.props.type === "number";
@@ -4006,7 +4006,7 @@ const fa = {
     const d = t.getRootNode();
     (d instanceof Document || d instanceof ShadowRoot) && d.activeElement === t && t.type !== "range" && (i && e === a || o && t.value.trim() === c) || (t.value = c);
   }
-}, pp = {
+}, pf = {
   // #4096 array checkboxes need to be deep traversed
   deep: !0,
   created(t, e, a) {
@@ -4024,7 +4024,7 @@ const fa = {
         const s = new Set(i);
         n ? s.add(o) : s.delete(o), r(s);
       } else
-        r(fp(t, n));
+        r(hf(t, n));
     });
   },
   // set initial checked on mount to wait for true-value/false-value
@@ -4042,7 +4042,7 @@ function Vd(t, { value: e, oldValue: a }, i) {
     o = e.has(i.props.value);
   else {
     if (e === a) return;
-    o = yo(e, fp(t, !0));
+    o = yo(e, hf(t, !0));
   }
   t.checked !== o && (t.checked = o);
 }
@@ -4096,7 +4096,7 @@ function Od(t, e) {
 function on(t) {
   return "_value" in t ? t._value : t.value;
 }
-function fp(t, e) {
+function hf(t, e) {
   const a = e ? "_trueValue" : "_falseValue";
   return a in t ? t[a] : e;
 }
@@ -4166,8 +4166,8 @@ function Ym(t) {
 function Xm(t) {
   return ot(t) ? document.querySelector(t) : t;
 }
-let hp;
-const $r = (t) => hp = t, bp = (
+let bf;
+const $r = (t) => bf = t, mf = (
   /* istanbul ignore next */
   /* @__PURE__ */ Symbol()
 );
@@ -4179,11 +4179,11 @@ var Ho;
   t.direct = "direct", t.patchObject = "patch object", t.patchFunction = "patch function";
 })(Ho || (Ho = {}));
 function Qm() {
-  const t = pu(!0), e = t.run(() => /* @__PURE__ */ ne({}));
+  const t = fu(!0), e = t.run(() => /* @__PURE__ */ ne({}));
   let a = [], i = [];
   const o = Qo({
     install(n) {
-      $r(o), o._a = n, n.provide(bp, o), n.config.globalProperties.$pinia = o, i.forEach((r) => a.push(r)), i = [];
+      $r(o), o._a = n, n.provide(mf, o), n.config.globalProperties.$pinia = o, i.forEach((r) => a.push(r)), i = [];
     },
     use(n) {
       return this._a ? a.push(n) : i.push(n), this;
@@ -4198,14 +4198,14 @@ function Qm() {
   });
   return o;
 }
-const mp = () => {
+const vf = () => {
 };
-function jd(t, e, a, i = mp) {
+function jd(t, e, a, i = vf) {
   t.add(e);
   const o = () => {
     t.delete(e) && i();
   };
-  return !a && fu() && Fh(o), o;
+  return !a && pu() && Fh(o), o;
 }
 function Bi(t, ...e) {
   t.forEach((a) => {
@@ -4240,123 +4240,123 @@ function o0(t, e, a, i) {
   function d() {
     s || (a.state.value[t] = o ? o() : {});
     const l = /* @__PURE__ */ cb(a.state.value[t]);
-    return Wa(l, n, Object.keys(r || {}).reduce((u, p) => (u[p] = Qo(ve(() => {
+    return Wa(l, n, Object.keys(r || {}).reduce((u, f) => (u[f] = Qo(ve(() => {
       $r(a);
-      const h = a._s.get(t);
-      return r[p].call(h, h);
+      const b = a._s.get(t);
+      return r[f].call(b, b);
     })), u), {}));
   }
-  return c = vp(t, d, e, a, i, !0), c;
+  return c = gf(t, d, e, a, i, !0), c;
 }
-function vp(t, e, a = {}, i, o, n) {
+function gf(t, e, a = {}, i, o, n) {
   let r;
   const s = Wa({ actions: {} }, a), c = { deep: !0 };
-  let d, l, u = /* @__PURE__ */ new Set(), p = /* @__PURE__ */ new Set(), h;
+  let d, l, u = /* @__PURE__ */ new Set(), f = /* @__PURE__ */ new Set(), b;
   const y = i.state.value[t];
   !n && !y && (i.state.value[t] = {});
   let v;
-  function g(O) {
-    let E;
-    d = l = !1, typeof O == "function" ? (O(i.state.value[t]), E = {
+  function g(P) {
+    let R;
+    d = l = !1, typeof P == "function" ? (P(i.state.value[t]), R = {
       type: Ho.patchFunction,
       storeId: t,
-      events: h
-    }) : (Ms(i.state.value[t], O), E = {
+      events: b
+    }) : (Ms(i.state.value[t], P), R = {
       type: Ho.patchObject,
-      payload: O,
+      payload: P,
       storeId: t,
-      events: h
+      events: b
     });
-    const q = v = /* @__PURE__ */ Symbol();
+    const j = v = /* @__PURE__ */ Symbol();
     Ne().then(() => {
-      v === q && (d = !0);
-    }), l = !0, Bi(u, E, i.state.value[t]);
+      v === j && (d = !0);
+    }), l = !0, Bi(u, R, i.state.value[t]);
   }
-  const I = n ? function() {
-    const { state: E } = a, q = E ? E() : {};
-    this.$patch((ee) => {
-      Wa(ee, q);
+  const k = n ? function() {
+    const { state: R } = a, j = R ? R() : {};
+    this.$patch((Q) => {
+      Wa(Q, j);
     });
   } : (
     /* istanbul ignore next */
-    mp
+    vf
   );
-  function A() {
-    r.stop(), u.clear(), p.clear(), i._s.delete(t);
+  function I() {
+    r.stop(), u.clear(), f.clear(), i._s.delete(t);
   }
-  const S = (O, E = "") => {
-    if (zd in O)
-      return O[rs] = E, O;
-    const q = function() {
+  const S = (P, R = "") => {
+    if (zd in P)
+      return P[rs] = R, P;
+    const j = function() {
       $r(i);
-      const ee = Array.from(arguments), J = /* @__PURE__ */ new Set(), re = /* @__PURE__ */ new Set();
-      function de(L) {
-        J.add(L);
+      const Q = Array.from(arguments), B = /* @__PURE__ */ new Set(), re = /* @__PURE__ */ new Set();
+      function de(Z) {
+        B.add(Z);
       }
-      function se(L) {
-        re.add(L);
+      function se(Z) {
+        re.add(Z);
       }
-      Bi(p, {
-        args: ee,
-        name: q[rs],
-        store: k,
+      Bi(f, {
+        args: Q,
+        name: j[rs],
+        store: x,
         after: de,
         onError: se
       });
       let te;
       try {
-        te = O.apply(this && this.$id === t ? this : k, ee);
-      } catch (L) {
-        throw Bi(re, L), L;
+        te = P.apply(this && this.$id === t ? this : x, Q);
+      } catch (Z) {
+        throw Bi(re, Z), Z;
       }
-      return te instanceof Promise ? te.then((L) => (Bi(J, L), L)).catch((L) => (Bi(re, L), Promise.reject(L))) : (Bi(J, te), te);
+      return te instanceof Promise ? te.then((Z) => (Bi(B, Z), Z)).catch((Z) => (Bi(re, Z), Promise.reject(Z))) : (Bi(B, te), te);
     };
-    return q[zd] = !0, q[rs] = E, q;
+    return j[zd] = !0, j[rs] = R, j;
   }, T = {
     _p: i,
     // _s: scope,
     $id: t,
-    $onAction: jd.bind(null, p),
+    $onAction: jd.bind(null, f),
     $patch: g,
-    $reset: I,
-    $subscribe(O, E = {}) {
-      const q = jd(u, O, E.detached, () => ee()), ee = r.run(() => ut(() => i.state.value[t], (J) => {
-        (E.flush === "sync" ? l : d) && O({
+    $reset: k,
+    $subscribe(P, R = {}) {
+      const j = jd(u, P, R.detached, () => Q()), Q = r.run(() => ut(() => i.state.value[t], (B) => {
+        (R.flush === "sync" ? l : d) && P({
           storeId: t,
           type: Ho.direct,
-          events: h
-        }, J);
-      }, Wa({}, c, E)));
-      return q;
+          events: b
+        }, B);
+      }, Wa({}, c, R)));
+      return j;
     },
-    $dispose: A
-  }, k = /* @__PURE__ */ Cr(T);
-  i._s.set(t, k);
-  const P = (i._a && i._a.runWithContext || e0)(() => i._e.run(() => (r = pu()).run(() => e({ action: S }))));
-  for (const O in P) {
-    const E = P[O];
-    if (/* @__PURE__ */ nt(E) && !i0(E) || /* @__PURE__ */ Fa(E))
-      n || (y && a0(E) && (/* @__PURE__ */ nt(E) ? E.value = y[O] : Ms(E, y[O])), i.state.value[t][O] = E);
-    else if (typeof E == "function") {
-      const q = S(E, O);
-      P[O] = q, s.actions[O] = E;
+    $dispose: I
+  }, x = /* @__PURE__ */ Cr(T);
+  i._s.set(t, x);
+  const V = (i._a && i._a.runWithContext || e0)(() => i._e.run(() => (r = fu()).run(() => e({ action: S }))));
+  for (const P in V) {
+    const R = V[P];
+    if (/* @__PURE__ */ nt(R) && !i0(R) || /* @__PURE__ */ Fa(R))
+      n || (y && a0(R) && (/* @__PURE__ */ nt(R) ? R.value = y[P] : Ms(R, y[P])), i.state.value[t][P] = R);
+    else if (typeof R == "function") {
+      const j = S(R, P);
+      V[P] = j, s.actions[P] = R;
     }
   }
-  return Wa(k, P), Wa(/* @__PURE__ */ Ve(k), P), Object.defineProperty(k, "$state", {
+  return Wa(x, V), Wa(/* @__PURE__ */ Ve(x), V), Object.defineProperty(x, "$state", {
     get: () => i.state.value[t],
-    set: (O) => {
-      g((E) => {
-        Wa(E, O);
+    set: (P) => {
+      g((R) => {
+        Wa(R, P);
       });
     }
-  }), i._p.forEach((O) => {
-    Wa(k, r.run(() => O({
-      store: k,
+  }), i._p.forEach((P) => {
+    Wa(x, r.run(() => P({
+      store: x,
       app: i._a,
       pinia: i,
       options: s
     })));
-  }), y && n && a.hydrate && a.hydrate(k.$state, y), d = !0, l = !0, k;
+  }), y && n && a.hydrate && a.hydrate(x.$state, y), d = !0, l = !0, x;
 }
 // @__NO_SIDE_EFFECTS__
 function n0(t, e, a) {
@@ -4367,7 +4367,7 @@ function n0(t, e, a) {
     const c = yb();
     return r = // in test mode, ignore the argument provided as we can always retrieve a
     // pinia instance with getActivePinia()
-    r || (c ? Zo(bp, null) : null), r && $r(r), r = hp, r._s.has(t) || (o ? vp(t, e, i, r) : o0(t, i, r)), r._s.get(t);
+    r || (c ? Zo(mf, null) : null), r && $r(r), r = bf, r._s.has(t) || (o ? gf(t, e, i, r) : o0(t, i, r)), r._s.get(t);
   }
   return n.$id = t, n;
 }
@@ -4383,7 +4383,7 @@ function Oa(t) {
     throw new ReferenceError("this hasn't been initialised - super() hasn't been called");
   return t;
 }
-function gp(t, e) {
+function _f(t, e) {
   t.prototype = Object.create(e.prototype), t.prototype.constructor = t, t.__proto__ = e;
 }
 var Kt = {
@@ -4397,7 +4397,7 @@ var Kt = {
   duration: 0.5,
   overwrite: !1,
   delay: 0
-}, yc, _t, Be, ia = 1e8, Fe = 1 / ia, $s = Math.PI * 2, p0 = $s / 4, f0 = 0, _p = Math.sqrt, h0 = Math.cos, b0 = Math.sin, mt = function(e) {
+}, yc, _t, Be, ia = 1e8, Fe = 1 / ia, $s = Math.PI * 2, f0 = $s / 4, p0 = 0, yf = Math.sqrt, h0 = Math.cos, b0 = Math.sin, mt = function(e) {
   return typeof e == "string";
 }, it = function(e) {
   return typeof e == "function";
@@ -4413,14 +4413,14 @@ var Kt = {
   return typeof window < "u";
 }, Mn = function(e) {
   return it(e) || mt(e);
-}, yp = typeof ArrayBuffer == "function" && ArrayBuffer.isView || function() {
-}, xt = Array.isArray, m0 = /random\([^)]+\)/g, v0 = /,\s*/g, Ud = /(?:-?\.?\d|\.)+/gi, wp = /[-+=.]*\d+[.e\-+]*\d*[e\-+]*\d*/g, Ki = /[-+=.]*\d+[.e-]*\d*[a-z%]*/g, ss = /[-+=.]*\d+\.?\d*(?:e-|e\+)?\d*/gi, kp = /[+-]=-?[.\d]+/, g0 = /[^,'"\[\]\s]+/gi, _0 = /^[+\-=e\s\d]*\d+[.\d]*([a-z]*|%)\s*$/i, Ye, ma, js, Ic, Yt = {}, dr = {}, Ip, Ap = function(e) {
+}, wf = typeof ArrayBuffer == "function" && ArrayBuffer.isView || function() {
+}, xt = Array.isArray, m0 = /random\([^)]+\)/g, v0 = /,\s*/g, Ud = /(?:-?\.?\d|\.)+/gi, kf = /[-+=.]*\d+[.e\-+]*\d*[e\-+]*\d*/g, Ki = /[-+=.]*\d+[.e-]*\d*[a-z%]*/g, ss = /[-+=.]*\d+\.?\d*(?:e-|e\+)?\d*/gi, If = /[+-]=-?[.\d]+/, g0 = /[^,'"\[\]\s]+/gi, _0 = /^[+\-=e\s\d]*\d+[.\d]*([a-z]*|%)\s*$/i, Ye, ma, js, Ic, Yt = {}, dr = {}, Af, xf = function(e) {
   return (dr = lo(e, Yt)) && Lt;
 }, Ac = function(e, a) {
   return console.warn("Invalid property", e, "set to", a, "Missing plugin? gsap.registerPlugin()");
 }, rn = function(e, a) {
   return !a && console.warn(e);
-}, xp = function(e, a) {
+}, Tf = function(e, a) {
   return e && (Yt[e] = a) && dr && (dr[e] = a) || Yt;
 }, sn = function() {
   return 0;
@@ -4433,7 +4433,7 @@ var Kt = {
   kill: !1
 }, w0 = {
   suppressEvents: !0
-}, xc = {}, ni = [], zs = {}, Tp, Dt = {}, cs = {}, Fd = 30, Kn = [], Tc = "", Sc = function(e) {
+}, xc = {}, ni = [], zs = {}, Sf, Dt = {}, cs = {}, Fd = 30, Kn = [], Tc = "", Sc = function(e) {
   var a = e[0], i, o;
   if (Ca(a) || it(a) || (e = [e]), !(i = (a._gsap || {}).harness)) {
     for (o = Kn.length; o-- && !Kn[o].targetTest(a); )
@@ -4441,11 +4441,11 @@ var Kt = {
     i = Kn[o];
   }
   for (o = e.length; o--; )
-    e[o] && (e[o]._gsap || (e[o]._gsap = new Gp(e[o], i))) || e.splice(o, 1);
+    e[o] && (e[o]._gsap || (e[o]._gsap = new Wf(e[o], i))) || e.splice(o, 1);
   return e;
 }, Ei = function(e) {
   return e._gsap || Sc(oa(e))[0]._gsap;
-}, Sp = function(e, a, i) {
+}, Cf = function(e, a, i) {
   return (i = e[a]) && it(i) ? e[a]() : wc(i) && e.getAttribute && e.getAttribute(a) || i;
 }, Ft = function(e, a) {
   return (e = e.split(",")).forEach(a) || e;
@@ -4466,12 +4466,12 @@ var Kt = {
     o = a[i], o && o._lazy && (o.render(o._lazy[0], o._lazy[1], !0)._lazy = 0);
 }, Cc = function(e) {
   return !!(e._initted || e._startAt || e.add);
-}, Cp = function(e, a, i, o) {
+}, Pf = function(e, a, i, o) {
   ni.length && !_t && lr(), e.render(a, i, !!(_t && a < 0 && Cc(e))), ni.length && !_t && lr();
-}, Pp = function(e) {
+}, Rf = function(e) {
   var a = parseFloat(e);
   return (a || a === 0) && (e + "").match(g0).length < 2 ? a : mt(e) ? e.trim() : e;
-}, Rp = function(e) {
+}, Vf = function(e) {
   return e;
 }, Xt = function(e, a) {
   for (var i in a)
@@ -4505,7 +4505,7 @@ var Kt = {
   for (var i = e.length, o = i === a.length; o && i-- && e[i] === a[i]; )
     ;
   return i < 0;
-}, Vp = function(e, a, i, o, n) {
+}, Ef = function(e, a, i, o, n) {
   var r = e[o], s;
   if (n)
     for (s = a[n]; r && r[n] > s; )
@@ -4535,29 +4535,29 @@ var Kt = {
 }, uo = function(e, a) {
   var i = Math.floor(e = Ke(e / a));
   return e && i === e ? i - 1 : i;
-}, pr = function(e, a) {
+}, fr = function(e, a) {
   return (e - a._start) * a._ts + (a._ts >= 0 ? 0 : a._dirty ? a.totalDuration() : a._tDur);
 }, zr = function(e) {
   return e._end = Ke(e._start + (e._tDur / Math.abs(e._ts || e._rts || Fe) || 0));
 }, Ur = function(e, a) {
   var i = e._dp;
   return i && i.smoothChildTiming && e._ts && (e._start = Ke(i._time - (e._ts > 0 ? a / e._ts : ((e._dirty ? e.totalDuration() : e._tDur) - a) / -e._ts)), zr(e), i._dirty || Oi(i, e)), e;
-}, Ep = function(e, a) {
+}, Of = function(e, a) {
   var i;
-  if ((a._time || !a._dur && a._initted || a._start < e._time && (a._dur || !a.add)) && (i = pr(e.rawTime(), a), (!a._dur || kn(0, a.totalDuration(), i) - a._tTime > Fe) && a.render(i, !0)), Oi(e, a)._dp && e._initted && e._time >= e._dur && e._ts) {
+  if ((a._time || !a._dur && a._initted || a._start < e._time && (a._dur || !a.add)) && (i = fr(e.rawTime(), a), (!a._dur || kn(0, a.totalDuration(), i) - a._tTime > Fe) && a.render(i, !0)), Oi(e, a)._dp && e._initted && e._time >= e._dur && e._ts) {
     if (e._dur < e.duration())
       for (i = e; i._dp; )
         i.rawTime() >= 0 && i.totalTime(i._tTime), i = i._dp;
     e._zTime = -Fe;
   }
 }, wa = function(e, a, i, o) {
-  return a.parent && di(a), a._start = Ke((La(i) ? i : i || e !== Ye ? ea(e, i, a) : e._time) + a._delay), a._end = Ke(a._start + (a.totalDuration() / Math.abs(a.timeScale()) || 0)), Vp(e, a, "_first", "_last", e._sort ? "_start" : 0), Fs(a) || (e._recent = a), o || Ep(e, a), e._ts < 0 && Ur(e, e._tTime), e;
-}, Op = function(e, a) {
+  return a.parent && di(a), a._start = Ke((La(i) ? i : i || e !== Ye ? ea(e, i, a) : e._time) + a._delay), a._end = Ke(a._start + (a.totalDuration() / Math.abs(a.timeScale()) || 0)), Ef(e, a, "_first", "_last", e._sort ? "_start" : 0), Fs(a) || (e._recent = a), o || Of(e, a), e._ts < 0 && Ur(e, e._tTime), e;
+}, Mf = function(e, a) {
   return (Yt.ScrollTrigger || Ac("scrollTrigger", a)) && Yt.ScrollTrigger.create(a, e);
-}, Mp = function(e, a, i, o, n) {
+}, $f = function(e, a, i, o, n) {
   if (Rc(e, a, n), !e._initted)
     return 1;
-  if (!i && e._pt && !_t && (e._dur && e.vars.lazy !== !1 || !e._dur && e.vars.lazy) && Tp !== Bt.frame)
+  if (!i && e._pt && !_t && (e._dur && e.vars.lazy !== !1 || !e._dur && e.vars.lazy) && Sf !== Bt.frame)
     return ni.push(e), e._lazy = [n, o], 1;
 }, S0 = function t(e) {
   var a = e.parent;
@@ -4568,7 +4568,7 @@ var Kt = {
 }, C0 = function(e, a, i, o) {
   var n = e.ratio, r = a < 0 || !a && (!e._start && S0(e) && !(!e._initted && Fs(e)) || (e._ts < 0 || e._dp._ts < 0) && !Fs(e)) ? 0 : 1, s = e._rDelay, c = 0, d, l, u;
   if (s && e._repeat && (c = kn(0, e._tDur, a), l = uo(c, s), e._yoyo && l & 1 && (r = 1 - r), l !== uo(e._tTime, s) && (n = 1 - r, e.vars.repeatRefresh && e._initted && e.invalidate())), r !== n || _t || o || e._zTime === Fe || !a && e._zTime) {
-    if (!e._initted && Mp(e, a, o, i, c))
+    if (!e._initted && $f(e, a, o, i, c))
       return;
     for (u = e._zTime, e._zTime = a || (i ? Fe : 0), i || (i = a && !u), e.ratio = r, e._from && (r = 1 - r), e._time = 0, e._tTime = c, d = e._pt; d; )
       d.r(r, d.d), d = d._next;
@@ -4588,11 +4588,11 @@ var Kt = {
         return o;
       o = o._prev;
     }
-}, po = function(e, a, i, o) {
+}, fo = function(e, a, i, o) {
   var n = e._repeat, r = Ke(a) || 0, s = e._tTime / e._tDur;
   return s && !o && (e._time *= r / e._dur), e._dur = r, e._tDur = n ? n < 0 ? 1e10 : Ke(r * (n + 1) + e._rDelay * n) : r, s > 0 && !o && Ur(e, e._tTime = e._tDur * s), e.parent && zr(e), i || Oi(e.parent, e), e;
 }, Ld = function(e) {
-  return e instanceof jt ? Oi(e) : po(e, e._dur);
+  return e instanceof jt ? Oi(e) : fo(e, e._dur);
 }, R0 = {
   _start: 0,
   endTime: sn,
@@ -4607,7 +4607,7 @@ var Kt = {
       s = c.vars.defaults || {}, c = Ut(c.vars.inherit) && c.parent;
     r.immediateRender = Ut(s.immediateRender), e < 2 ? r.runBackwards = 1 : r.startAt = a[n - 1];
   }
-  return new pt(a[0], r, a[n + 1]);
+  return new ft(a[0], r, a[n + 1]);
 }, bi = function(e, a) {
   return e || e === 0 ? a(e) : a;
 }, kn = function(e, a, i) {
@@ -4618,25 +4618,25 @@ var Kt = {
   return bi(i, function(o) {
     return kn(e, a, o);
   });
-}, qs = [].slice, $p = function(e, a) {
+}, qs = [].slice, jf = function(e, a) {
   return e && Ca(e) && "length" in e && (!a && !e.length || e.length - 1 in e && Ca(e[0])) && !e.nodeType && e !== ma;
 }, E0 = function(e, a, i) {
   return i === void 0 && (i = []), e.forEach(function(o) {
     var n;
-    return mt(o) && !a || $p(o, 1) ? (n = i).push.apply(n, oa(o)) : i.push(o);
+    return mt(o) && !a || jf(o, 1) ? (n = i).push.apply(n, oa(o)) : i.push(o);
   }) || i;
 }, oa = function(e, a, i) {
-  return Be && !a && Be.selector ? Be.selector(e) : mt(e) && !i && (js || !fo()) ? qs.call((a || Ic).querySelectorAll(e), 0) : xt(e) ? E0(e, i) : $p(e) ? qs.call(e, 0) : e ? [e] : [];
+  return Be && !a && Be.selector ? Be.selector(e) : mt(e) && !i && (js || !po()) ? qs.call((a || Ic).querySelectorAll(e), 0) : xt(e) ? E0(e, i) : jf(e) ? qs.call(e, 0) : e ? [e] : [];
 }, Zs = function(e) {
   return e = oa(e)[0] || rn("Invalid scope") || {}, function(a) {
     var i = e.current || e.nativeElement || e;
     return oa(a, i.querySelectorAll ? i : i === e ? rn("Invalid scope") || Ic.createElement("div") : e);
   };
-}, jp = function(e) {
+}, zf = function(e) {
   return e.sort(function() {
     return 0.5 - Math.random();
   });
-}, zp = function(e) {
+}, Uf = function(e) {
   if (it(e))
     return e;
   var a = Ca(e) ? e : {
@@ -4646,19 +4646,19 @@ var Kt = {
     center: 0.5,
     edges: 0.5,
     end: 1
-  }[o] || 0 : !s && c && (l = o[0], u = o[1]), function(p, h, y) {
-    var v = (y || a).length, g = r[v], I, A, S, T, k, Z, P, O, E;
+  }[o] || 0 : !s && c && (l = o[0], u = o[1]), function(f, b, y) {
+    var v = (y || a).length, g = r[v], k, I, S, T, x, D, V, P, R;
     if (!g) {
-      if (E = a.grid === "auto" ? 0 : (a.grid || [1, ia])[1], !E) {
-        for (P = -ia; P < (P = y[E++].getBoundingClientRect().left) && E < v; )
+      if (R = a.grid === "auto" ? 0 : (a.grid || [1, ia])[1], !R) {
+        for (V = -ia; V < (V = y[R++].getBoundingClientRect().left) && R < v; )
           ;
-        E < v && E--;
+        R < v && R--;
       }
-      for (g = r[v] = [], I = c ? Math.min(E, v) * l - 0.5 : o % E, A = E === ia ? 0 : c ? v * u / E - 0.5 : o / E | 0, P = 0, O = ia, Z = 0; Z < v; Z++)
-        S = Z % E - I, T = A - (Z / E | 0), g[Z] = k = d ? Math.abs(d === "y" ? T : S) : _p(S * S + T * T), k > P && (P = k), k < O && (O = k);
-      o === "random" && jp(g), g.max = P - O, g.min = O, g.v = v = (parseFloat(a.amount) || parseFloat(a.each) * (E > v ? v - 1 : d ? d === "y" ? v / E : E : Math.max(E, v / E)) || 0) * (o === "edges" ? -1 : 1), g.b = v < 0 ? n - v : n, g.u = It(a.amount || a.each) || 0, i = i && v < 0 ? B0(i) : i;
+      for (g = r[v] = [], k = c ? Math.min(R, v) * l - 0.5 : o % R, I = R === ia ? 0 : c ? v * u / R - 0.5 : o / R | 0, V = 0, P = ia, D = 0; D < v; D++)
+        S = D % R - k, T = I - (D / R | 0), g[D] = x = d ? Math.abs(d === "y" ? T : S) : yf(S * S + T * T), x > V && (V = x), x < P && (P = x);
+      o === "random" && zf(g), g.max = V - P, g.min = P, g.v = v = (parseFloat(a.amount) || parseFloat(a.each) * (R > v ? v - 1 : d ? d === "y" ? v / R : R : Math.max(R, v / R)) || 0) * (o === "edges" ? -1 : 1), g.b = v < 0 ? n - v : n, g.u = It(a.amount || a.each) || 0, i = i && v < 0 ? B0(i) : i;
     }
-    return v = (g[p] - g.min) / g.max || 0, Ke(g.b + (i ? i(v) : v) * g.v) + g.u;
+    return v = (g[f] - g.min) / g.max || 0, Ke(g.b + (i ? i(v) : v) * g.v) + g.u;
   };
 }, Ls = function(e) {
   var a = Math.pow(10, ((e + "").split(".")[1] || "").length);
@@ -4666,16 +4666,16 @@ var Kt = {
     var o = Ke(Math.round(parseFloat(i) / e) * e * a);
     return (o - o % 1) / a + (La(i) ? 0 : It(i));
   };
-}, Up = function(e, a) {
+}, Ff = function(e, a) {
   var i = xt(e), o, n;
   return !i && Ca(e) && (o = i = e.radius || ia, e.values ? (e = oa(e.values), (n = !La(e[0])) && (o *= o)) : e = Ls(e.increment)), bi(a, i ? it(e) ? function(r) {
     return n = e(r), Math.abs(n - r) <= o ? n : r;
   } : function(r) {
-    for (var s = parseFloat(n ? r.x : r), c = parseFloat(n ? r.y : 0), d = ia, l = 0, u = e.length, p, h; u--; )
-      n ? (p = e[u].x - s, h = e[u].y - c, p = p * p + h * h) : p = Math.abs(e[u] - s), p < d && (d = p, l = u);
+    for (var s = parseFloat(n ? r.x : r), c = parseFloat(n ? r.y : 0), d = ia, l = 0, u = e.length, f, b; u--; )
+      n ? (f = e[u].x - s, b = e[u].y - c, f = f * f + b * b) : f = Math.abs(e[u] - s), f < d && (d = f, l = u);
     return l = !o || d <= o ? e[l] : r, n || l === r || La(r) ? l : l + It(r);
   } : Ls(e));
-}, Fp = function(e, a, i, o) {
+}, qf = function(e, a, i, o) {
   return bi(xt(e) ? !a : i === !0 ? !!(i = 0) : !o, function() {
     return xt(e) ? e[~~(Math.random() * e.length)] : (i = i || 1e-5) && (o = i < 1 ? Math.pow(10, (i + "").length - 2) : 1) && Math.floor(Math.round((e - i / 2 + Math.random() * (a - e + i * 0.99)) / i) * i * o) / o;
   });
@@ -4692,37 +4692,37 @@ var Kt = {
     return e(parseFloat(i)) + (a || It(i));
   };
 }, $0 = function(e, a, i) {
-  return Zp(e, a, 0, 1, i);
-}, qp = function(e, a, i) {
+  return Lf(e, a, 0, 1, i);
+}, Zf = function(e, a, i) {
   return bi(i, function(o) {
     return e[~~a(o)];
   });
 }, j0 = function t(e, a, i) {
   var o = a - e;
-  return xt(e) ? qp(e, t(0, e.length), a) : bi(i, function(n) {
+  return xt(e) ? Zf(e, t(0, e.length), a) : bi(i, function(n) {
     return (o + (n - e) % o) % o + e;
   });
 }, z0 = function t(e, a, i) {
   var o = a - e, n = o * 2;
-  return xt(e) ? qp(e, t(0, e.length - 1), a) : bi(i, function(r) {
+  return xt(e) ? Zf(e, t(0, e.length - 1), a) : bi(i, function(r) {
     return r = (n + (r - e) % n) % n || 0, e + (r > o ? n - r : r);
   });
 }, cn = function(e) {
   return e.replace(m0, function(a) {
     var i = a.indexOf("[") + 1, o = a.substring(i || 7, i ? a.indexOf("]") : a.length - 1).split(v0);
-    return Fp(i ? o : +o[0], i ? 0 : +o[1], +o[2] || 1e-5);
+    return qf(i ? o : +o[0], i ? 0 : +o[1], +o[2] || 1e-5);
   });
-}, Zp = function(e, a, i, o, n) {
+}, Lf = function(e, a, i, o, n) {
   var r = a - e, s = o - i;
   return bi(n, function(c) {
     return i + ((c - e) / r * s || 0);
   });
 }, U0 = function t(e, a, i, o) {
-  var n = isNaN(e + a) ? 0 : function(h) {
-    return (1 - h) * e + h * a;
+  var n = isNaN(e + a) ? 0 : function(b) {
+    return (1 - b) * e + b * a;
   };
   if (!n) {
-    var r = mt(e), s = {}, c, d, l, u, p;
+    var r = mt(e), s = {}, c, d, l, u, f;
     if (i === !0 && (o = 1) && (i = null), r)
       e = {
         p: e
@@ -4730,11 +4730,11 @@ var Kt = {
         p: a
       };
     else if (xt(e) && !xt(a)) {
-      for (l = [], u = e.length, p = u - 2, d = 1; d < u; d++)
+      for (l = [], u = e.length, f = u - 2, d = 1; d < u; d++)
         l.push(t(e[d - 1], e[d]));
       u--, n = function(y) {
         y *= u;
-        var v = Math.min(p, ~~y);
+        var v = Math.min(f, ~~y);
         return l[v](y - v);
       }, i = a;
     } else o || (e = lo(xt(e) ? [] : {}, e));
@@ -4758,7 +4758,7 @@ var Kt = {
     return c = o[a + "Params"], d = o.callbackScope || e, i && ni.length && lr(), s && (Be = s), l = c ? n.apply(d, c) : n.call(d), Be = r, l;
 }, Eo = function(e) {
   return di(e), e.scrollTrigger && e.scrollTrigger.kill(!!_t), e.progress() < 1 && Jt(e, "onInterrupt"), e;
-}, Yi, Lp = [], Np = function(e) {
+}, Yi, Nf = [], Df = function(e) {
   if (e)
     if (e = !e.name && e.default || e, kc() || e.headless) {
       var a = e.name, i = it(e), o = a && !i && e.init ? function() {
@@ -4777,14 +4777,14 @@ var Kt = {
         aliases: {},
         register: 0
       };
-      if (fo(), e !== o) {
+      if (po(), e !== o) {
         if (Dt[a])
           return;
         Xt(o, Xt(ur(e, n), r)), lo(o.prototype, lo(n, ur(e, r))), Dt[o.prop = a] = o, e.targetTest && (Kn.push(o), xc[a] = 1), a = (a === "css" ? "CSS" : a.charAt(0).toUpperCase() + a.substr(1)) + "Plugin";
       }
-      xp(a, o), e.register && e.register(Lt, o, qt);
+      Tf(a, o), e.register && e.register(Lt, o, qt);
     } else
-      Lp.push(e);
+      Nf.push(e);
 }, Ue = 255, Oo = {
   aqua: [0, Ue, Ue],
   lime: [0, Ue, 0],
@@ -4807,8 +4807,8 @@ var Kt = {
   transparent: [Ue, Ue, Ue, 0]
 }, ds = function(e, a, i) {
   return e += e < 0 ? 1 : e > 1 ? -1 : 0, (e * 6 < 1 ? a + (i - a) * e * 6 : e < 0.5 ? i : e * 3 < 2 ? a + (i - a) * (2 / 3 - e) * 6 : a) * Ue + 0.5 | 0;
-}, Dp = function(e, a, i) {
-  var o = e ? La(e) ? [e >> 16, e >> 8 & Ue, e & Ue] : 0 : Oo.black, n, r, s, c, d, l, u, p, h, y;
+}, Bf = function(e, a, i) {
+  var o = e ? La(e) ? [e >> 16, e >> 8 & Ue, e & Ue] : 0 : Oo.black, n, r, s, c, d, l, u, f, b, y;
   if (!o) {
     if (e.substr(-1) === "," && (e = e.substr(0, e.length - 1)), Oo[e])
       o = Oo[e];
@@ -4820,13 +4820,13 @@ var Kt = {
       if (o = y = e.match(Ud), !a)
         c = +o[0] % 360 / 360, d = +o[1] / 100, l = +o[2] / 100, r = l <= 0.5 ? l * (d + 1) : l + d - l * d, n = l * 2 - r, o.length > 3 && (o[3] *= 1), o[0] = ds(c + 1 / 3, n, r), o[1] = ds(c, n, r), o[2] = ds(c - 1 / 3, n, r);
       else if (~e.indexOf("="))
-        return o = e.match(wp), i && o.length < 4 && (o[3] = 1), o;
+        return o = e.match(kf), i && o.length < 4 && (o[3] = 1), o;
     } else
       o = e.match(Ud) || Oo.transparent;
     o = o.map(Number);
   }
-  return a && !y && (n = o[0] / Ue, r = o[1] / Ue, s = o[2] / Ue, u = Math.max(n, r, s), p = Math.min(n, r, s), l = (u + p) / 2, u === p ? c = d = 0 : (h = u - p, d = l > 0.5 ? h / (2 - u - p) : h / (u + p), c = u === n ? (r - s) / h + (r < s ? 6 : 0) : u === r ? (s - n) / h + 2 : (n - r) / h + 4, c *= 60), o[0] = ~~(c + 0.5), o[1] = ~~(d * 100 + 0.5), o[2] = ~~(l * 100 + 0.5)), i && o.length < 4 && (o[3] = 1), o;
-}, Bp = function(e) {
+  return a && !y && (n = o[0] / Ue, r = o[1] / Ue, s = o[2] / Ue, u = Math.max(n, r, s), f = Math.min(n, r, s), l = (u + f) / 2, u === f ? c = d = 0 : (b = u - f, d = l > 0.5 ? b / (2 - u - f) : b / (u + f), c = u === n ? (r - s) / b + (r < s ? 6 : 0) : u === r ? (s - n) / b + 2 : (n - r) / b + 4, c *= 60), o[0] = ~~(c + 0.5), o[1] = ~~(d * 100 + 0.5), o[2] = ~~(l * 100 + 0.5)), i && o.length < 4 && (o[3] = 1), o;
+}, Hf = function(e) {
   var a = [], i = [], o = -1;
   return e.split(ri).forEach(function(n) {
     var r = n.match(Ki) || [];
@@ -4836,9 +4836,9 @@ var Kt = {
   var o = "", n = (e + o).match(ri), r = a ? "hsla(" : "rgba(", s = 0, c, d, l, u;
   if (!n)
     return e;
-  if (n = n.map(function(p) {
-    return (p = Dp(p, a, 1)) && r + (a ? p[0] + "," + p[1] + "%," + p[2] + "%," + p[3] : p.join(",")) + ")";
-  }), i && (l = Bp(e), c = i.c, c.join(o) !== l.c.join(o)))
+  if (n = n.map(function(f) {
+    return (f = Bf(f, a, 1)) && r + (a ? f[0] + "," + f[1] + "%," + f[2] + "%," + f[3] : f.join(",")) + ")";
+  }), i && (l = Hf(e), c = i.c, c.join(o) !== l.c.join(o)))
     for (d = e.replace(ri, "1").split(Ki), u = d.length - 1; s < u; s++)
       o += d[s] + (~c.indexOf(s) ? n.shift() || r + "0,0,0,0)" : (l.length ? l : n.length ? n : i).shift());
   if (!d)
@@ -4850,16 +4850,16 @@ var Kt = {
   for (e in Oo)
     t += "|" + e + "\\b";
   return new RegExp(t + ")", "gi");
-})(), F0 = /hsl[a]?\(/, Hp = function(e) {
+})(), F0 = /hsl[a]?\(/, Jf = function(e) {
   var a = e.join(" "), i;
   if (ri.lastIndex = 0, ri.test(a))
-    return i = F0.test(a), e[1] = Dd(e[1], i), e[0] = Dd(e[0], i, Bp(e[1])), !0;
+    return i = F0.test(a), e[1] = Dd(e[1], i), e[0] = Dd(e[0], i, Hf(e[1])), !0;
 }, dn, Bt = (function() {
-  var t = Date.now, e = 500, a = 33, i = t(), o = i, n = 1e3 / 240, r = n, s = [], c, d, l, u, p, h, y = function v(g) {
-    var I = t() - o, A = g === !0, S, T, k, Z;
-    if ((I > e || I < 0) && (i += I - a), o += I, k = o - i, S = k - r, (S > 0 || A) && (Z = ++u.frame, p = k - u.time * 1e3, u.time = k = k / 1e3, r += S + (S >= n ? 4 : n - S), T = 1), A || (c = d(v)), T)
-      for (h = 0; h < s.length; h++)
-        s[h](k, p, Z, g);
+  var t = Date.now, e = 500, a = 33, i = t(), o = i, n = 1e3 / 240, r = n, s = [], c, d, l, u, f, b, y = function v(g) {
+    var k = t() - o, I = g === !0, S, T, x, D;
+    if ((k > e || k < 0) && (i += k - a), o += k, x = o - i, S = x - r, (S > 0 || I) && (D = ++u.frame, f = x - u.time * 1e3, u.time = x = x / 1e3, r += S + (S >= n ? 4 : n - S), T = 1), I || (c = d(v)), T)
+      for (b = 0; b < s.length; b++)
+        s[b](x, f, D, g);
   };
   return u = {
     time: 0,
@@ -4868,34 +4868,34 @@ var Kt = {
       y(!0);
     },
     deltaRatio: function(g) {
-      return p / (1e3 / (g || 60));
+      return f / (1e3 / (g || 60));
     },
     wake: function() {
-      Ip && (!js && kc() && (ma = js = window, Ic = ma.document || {}, Yt.gsap = Lt, (ma.gsapVersions || (ma.gsapVersions = [])).push(Lt.version), Ap(dr || ma.GreenSockGlobals || !ma.gsap && ma || {}), Lp.forEach(Np)), l = typeof requestAnimationFrame < "u" && requestAnimationFrame, c && u.sleep(), d = l || function(g) {
+      Af && (!js && kc() && (ma = js = window, Ic = ma.document || {}, Yt.gsap = Lt, (ma.gsapVersions || (ma.gsapVersions = [])).push(Lt.version), xf(dr || ma.GreenSockGlobals || !ma.gsap && ma || {}), Nf.forEach(Df)), l = typeof requestAnimationFrame < "u" && requestAnimationFrame, c && u.sleep(), d = l || function(g) {
         return setTimeout(g, r - u.time * 1e3 + 1 | 0);
       }, dn = 1, y(2));
     },
     sleep: function() {
       (l ? cancelAnimationFrame : clearTimeout)(c), dn = 0, d = sn;
     },
-    lagSmoothing: function(g, I) {
-      e = g || 1 / 0, a = Math.min(I || 33, e);
+    lagSmoothing: function(g, k) {
+      e = g || 1 / 0, a = Math.min(k || 33, e);
     },
     fps: function(g) {
       n = 1e3 / (g || 240), r = u.time * 1e3 + n;
     },
-    add: function(g, I, A) {
-      var S = I ? function(T, k, Z, P) {
-        g(T, k, Z, P), u.remove(S);
+    add: function(g, k, I) {
+      var S = k ? function(T, x, D, V) {
+        g(T, x, D, V), u.remove(S);
       } : g;
-      return u.remove(g), s[A ? "unshift" : "push"](S), fo(), S;
+      return u.remove(g), s[I ? "unshift" : "push"](S), po(), S;
     },
-    remove: function(g, I) {
-      ~(I = s.indexOf(g)) && s.splice(I, 1) && h >= I && h--;
+    remove: function(g, k) {
+      ~(k = s.indexOf(g)) && s.splice(k, 1) && b >= k && b--;
     },
     _listeners: s
   }, u;
-})(), fo = function() {
+})(), po = function() {
   return !dn && Bt.wake();
 }, Pe = {}, q0 = /^[\d.\-M][\d.\-,\s]/, Z0 = /["']/g, L0 = function(e) {
   for (var a = {}, i = e.substr(1, e.length - 3).split(":"), o = i[0], n = 1, r = i.length, s, c, d; n < r; n++)
@@ -4906,7 +4906,7 @@ var Kt = {
   return e.substring(a, ~o && o < i ? e.indexOf(")", i + 1) : i);
 }, D0 = function(e) {
   var a = (e + "").split("("), i = Pe[a[0]];
-  return i && a.length > 1 && i.config ? i.config.apply(null, ~e.indexOf("{") ? [L0(a[1])] : N0(e).split(",").map(Pp)) : Pe._CE && q0.test(e) ? Pe._CE("", e) : i;
+  return i && a.length > 1 && i.config ? i.config.apply(null, ~e.indexOf("{") ? [L0(a[1])] : N0(e).split(",").map(Rf)) : Pe._CE && q0.test(e) ? Pe._CE("", e) : i;
 }, B0 = function(e) {
   return function(a) {
     return 1 - e(1 - a);
@@ -4929,7 +4929,7 @@ var Kt = {
     for (var c in n)
       Pe[r + (c === "easeIn" ? ".in" : c === "easeOut" ? ".out" : ".inOut")] = Pe[s + "." + c] = n[c];
   }), n;
-}, Jp = function(e) {
+}, Gf = function(e) {
   return function(a) {
     return a < 0.5 ? (1 - e(1 - a * 2)) / 2 : 0.5 + e((a - 0.5) * 2) / 2;
   };
@@ -4938,7 +4938,7 @@ var Kt = {
     return l === 1 ? 1 : o * Math.pow(2, -10 * l) * b0((l - r) * n) + 1;
   }, c = e === "out" ? s : e === "in" ? function(d) {
     return 1 - s(1 - d);
-  } : Jp(s);
+  } : Gf(s);
   return n = $s / n, c.config = function(d, l) {
     return t(e, d, l);
   }, c;
@@ -4948,7 +4948,7 @@ var Kt = {
     return r ? --r * r * ((a + 1) * r + a) + 1 : 0;
   }, o = e === "out" ? i : e === "in" ? function(n) {
     return 1 - i(1 - n);
-  } : Jp(i);
+  } : Gf(i);
   return o.config = function(n) {
     return t(e, n);
   }, o;
@@ -4979,10 +4979,10 @@ Ui("Expo", function(t) {
   return Math.pow(2, 10 * (t - 1)) * t + t * t * t * t * t * t * (1 - t);
 });
 Ui("Circ", function(t) {
-  return -(_p(1 - t * t) - 1);
+  return -(yf(1 - t * t) - 1);
 });
 Ui("Sine", function(t) {
-  return t === 1 ? 1 : -h0(t * p0) + 1;
+  return t === 1 ? 1 : -h0(t * f0) + 1;
 });
 Ui("Back", us("in"), us("out"), us());
 Pe.SteppedEase = Pe.steps = Yt.SteppedEase = {
@@ -4998,11 +4998,11 @@ nn.ease = Pe["quad.out"];
 Ft("onComplete,onUpdate,onStart,onRepeat,onReverseComplete,onInterrupt", function(t) {
   return Tc += t + "," + t + "Params,";
 });
-var Gp = function(e, a) {
-  this.id = f0++, e._gsap = this, this.target = e, this.harness = a, this.get = a ? a.get : Sp, this.set = a ? a.getSetter : Ec;
+var Wf = function(e, a) {
+  this.id = p0++, e._gsap = this, this.target = e, this.harness = a, this.get = a ? a.get : Cf, this.set = a ? a.getSetter : Ec;
 }, ln = /* @__PURE__ */ (function() {
   function t(a) {
-    this.vars = a, this._delay = +a.delay || 0, (this._repeat = a.repeat === 1 / 0 ? -2 : a.repeat || 0) && (this._rDelay = a.repeatDelay || 0, this._yoyo = !!a.yoyo || !!a.yoyoEase), this._ts = 1, po(this, +a.duration, 1, 1), this.data = a.data, Be && (this._ctx = Be, Be.data.push(this)), dn || Bt.wake();
+    this.vars = a, this._delay = +a.delay || 0, (this._repeat = a.repeat === 1 / 0 ? -2 : a.repeat || 0) && (this._rDelay = a.repeatDelay || 0, this._yoyo = !!a.yoyo || !!a.yoyoEase), this._ts = 1, fo(this, +a.duration, 1, 1), this.data = a.data, Be && (this._ctx = Be, Be.data.push(this)), dn || Bt.wake();
   }
   var e = t.prototype;
   return e.delay = function(i) {
@@ -5010,17 +5010,17 @@ var Gp = function(e, a) {
   }, e.duration = function(i) {
     return arguments.length ? this.totalDuration(this._repeat > 0 ? i + (i + this._rDelay) * this._repeat : i) : this.totalDuration() && this._dur;
   }, e.totalDuration = function(i) {
-    return arguments.length ? (this._dirty = 0, po(this, this._repeat < 0 ? i : (i - this._repeat * this._rDelay) / (this._repeat + 1))) : this._tDur;
+    return arguments.length ? (this._dirty = 0, fo(this, this._repeat < 0 ? i : (i - this._repeat * this._rDelay) / (this._repeat + 1))) : this._tDur;
   }, e.totalTime = function(i, o) {
-    if (fo(), !arguments.length)
+    if (po(), !arguments.length)
       return this._tTime;
     var n = this._dp;
     if (n && n.smoothChildTiming && this._ts) {
-      for (Ur(this, i), !n._dp || n.parent || Ep(n, this); n && n.parent; )
+      for (Ur(this, i), !n._dp || n.parent || Of(n, this); n && n.parent; )
         n.parent._time !== n._start + (n._ts >= 0 ? n._tTime / n._ts : (n.totalDuration() - n._tTime) / -n._ts) && n.totalTime(n._tTime, !0), n = n.parent;
       !this.parent && this._dp.autoRemoveChildren && (this._ts > 0 && i < this._tDur || this._ts < 0 && i > 0 || !this._tDur && !i) && wa(this._dp, this, this._start - this._delay);
     }
-    return (this._tTime !== i || !this._dur && !o || this._initted && Math.abs(this._zTime) === Fe || !this._initted && this._dur && i || !i && !this._initted && (this.add || this._ptLookup)) && (this._ts || (this._pTime = i), Cp(this, i, o)), this;
+    return (this._tTime !== i || !this._dur && !o || this._initted && Math.abs(this._zTime) === Fe || !this._initted && this._dur && i || !i && !this._initted && (this.add || this._ptLookup)) && (this._ts || (this._pTime = i), Pf(this, i, o)), this;
   }, e.time = function(i, o) {
     return arguments.length ? this.totalTime(Math.min(this.totalDuration(), i + Zd(this)) % (this._dur + this._rDelay) || (i ? this._dur : 0), o) : this._time;
   }, e.totalProgress = function(i, o) {
@@ -5035,10 +5035,10 @@ var Gp = function(e, a) {
       return this._rts === -Fe ? 0 : this._rts;
     if (this._rts === i)
       return this;
-    var n = this.parent && this._ts ? pr(this.parent._time, this) : this._tTime;
+    var n = this.parent && this._ts ? fr(this.parent._time, this) : this._tTime;
     return this._rts = +i || 0, this._ts = this._ps || i === -Fe ? 0 : this._rts, this.totalTime(kn(-Math.abs(this._delay), this.totalDuration(), n), o !== !1), zr(this), x0(this);
   }, e.paused = function(i) {
-    return arguments.length ? (this._ps !== i && (this._ps = i, i ? (this._pTime = this._tTime || Math.max(-this._delay, this.rawTime()), this._ts = this._act = 0) : (fo(), this._ts = this._rts, this.totalTime(this.parent && !this.parent.smoothChildTiming ? this.rawTime() : this._tTime || this._pTime, this.progress() === 1 && Math.abs(this._zTime) !== Fe && (this._tTime -= Fe)))), this) : this._ps;
+    return arguments.length ? (this._ps !== i && (this._ps = i, i ? (this._pTime = this._tTime || Math.max(-this._delay, this.rawTime()), this._ts = this._act = 0) : (po(), this._ts = this._rts, this.totalTime(this.parent && !this.parent.smoothChildTiming ? this.rawTime() : this._tTime || this._pTime, this.progress() === 1 && Math.abs(this._zTime) !== Fe && (this._tTime -= Fe)))), this) : this._ps;
   }, e.startTime = function(i) {
     if (arguments.length) {
       this._start = Ke(i);
@@ -5050,7 +5050,7 @@ var Gp = function(e, a) {
     return this._start + (Ut(i) ? this.totalDuration() : this.duration()) / Math.abs(this._ts || 1);
   }, e.rawTime = function(i) {
     var o = this.parent || this._dp;
-    return o ? i && (!this._ts || this._repeat && this._time && this.totalProgress() < 1) ? this._tTime % (this._dur + this._rDelay) : this._ts ? pr(o.rawTime(i), this) : this._tTime : this._tTime;
+    return o ? i && (!this._ts || this._repeat && this._time && this.totalProgress() < 1) ? this._tTime % (this._dur + this._rDelay) : this._ts ? fr(o.rawTime(i), this) : this._tTime : this._tTime;
   }, e.revert = function(i) {
     i === void 0 && (i = w0);
     var o = _t;
@@ -5094,7 +5094,7 @@ var Gp = function(e, a) {
   }, e.then = function(i) {
     var o = this, n = o._prom;
     return new Promise(function(r) {
-      var s = it(i) ? i : Rp, c = function() {
+      var s = it(i) ? i : Vf, c = function() {
         var l = o.then;
         o.then = null, n && n(), it(s) && (s = s(o)) && (s.then || s === o) && (o.then = l), r(s), o.then = l;
       };
@@ -5125,10 +5125,10 @@ Xt(ln.prototype, {
   _rts: 1
 });
 var jt = /* @__PURE__ */ (function(t) {
-  gp(e, t);
+  _f(e, t);
   function e(i, o) {
     var n;
-    return i === void 0 && (i = {}), n = t.call(this, i) || this, n.labels = {}, n.smoothChildTiming = !!i.smoothChildTiming, n.autoRemoveChildren = !!i.autoRemoveChildren, n._sort = Ut(i.sortChildren), Ye && wa(i.parent || Ye, Oa(n), o), i.reversed && n.reverse(), i.paused && n.paused(!0), i.scrollTrigger && Op(Oa(n), i.scrollTrigger), n;
+    return i === void 0 && (i = {}), n = t.call(this, i) || this, n.labels = {}, n.smoothChildTiming = !!i.smoothChildTiming, n.autoRemoveChildren = !!i.autoRemoveChildren, n._sort = Ut(i.sortChildren), Ye && wa(i.parent || Ye, Oa(n), o), i.reversed && n.reverse(), i.paused && n.paused(!0), i.scrollTrigger && Mf(Oa(n), i.scrollTrigger), n;
   }
   var a = e.prototype;
   return a.to = function(o, n, r) {
@@ -5138,58 +5138,58 @@ var jt = /* @__PURE__ */ (function(t) {
   }, a.fromTo = function(o, n, r, s) {
     return Go(2, arguments, this), this;
   }, a.set = function(o, n, r) {
-    return n.duration = 0, n.parent = this, Jo(n).repeatDelay || (n.repeat = 0), n.immediateRender = !!n.immediateRender, new pt(o, n, ea(this, r), 1), this;
+    return n.duration = 0, n.parent = this, Jo(n).repeatDelay || (n.repeat = 0), n.immediateRender = !!n.immediateRender, new ft(o, n, ea(this, r), 1), this;
   }, a.call = function(o, n, r) {
-    return wa(this, pt.delayedCall(0, o, n), r);
+    return wa(this, ft.delayedCall(0, o, n), r);
   }, a.staggerTo = function(o, n, r, s, c, d, l) {
-    return r.duration = n, r.stagger = r.stagger || s, r.onComplete = d, r.onCompleteParams = l, r.parent = this, new pt(o, r, ea(this, c)), this;
+    return r.duration = n, r.stagger = r.stagger || s, r.onComplete = d, r.onCompleteParams = l, r.parent = this, new ft(o, r, ea(this, c)), this;
   }, a.staggerFrom = function(o, n, r, s, c, d, l) {
     return r.runBackwards = 1, Jo(r).immediateRender = Ut(r.immediateRender), this.staggerTo(o, n, r, s, c, d, l);
   }, a.staggerFromTo = function(o, n, r, s, c, d, l, u) {
     return s.startAt = r, Jo(s).immediateRender = Ut(s.immediateRender), this.staggerTo(o, n, s, c, d, l, u);
   }, a.render = function(o, n, r) {
-    var s = this._time, c = this._dirty ? this.totalDuration() : this._tDur, d = this._dur, l = o <= 0 ? 0 : Ke(o), u = this._zTime < 0 != o < 0 && (this._initted || !d), p, h, y, v, g, I, A, S, T, k, Z, P;
+    var s = this._time, c = this._dirty ? this.totalDuration() : this._tDur, d = this._dur, l = o <= 0 ? 0 : Ke(o), u = this._zTime < 0 != o < 0 && (this._initted || !d), f, b, y, v, g, k, I, S, T, x, D, V;
     if (this !== Ye && l > c && o >= 0 && (l = c), l !== this._tTime || r || u) {
-      if (s !== this._time && d && (l += this._time - s, o += this._time - s), p = l, T = this._start, S = this._ts, I = !S, u && (d || (s = this._zTime), (o || !n) && (this._zTime = o)), this._repeat) {
-        if (Z = this._yoyo, g = d + this._rDelay, this._repeat < -1 && o < 0)
+      if (s !== this._time && d && (l += this._time - s, o += this._time - s), f = l, T = this._start, S = this._ts, k = !S, u && (d || (s = this._zTime), (o || !n) && (this._zTime = o)), this._repeat) {
+        if (D = this._yoyo, g = d + this._rDelay, this._repeat < -1 && o < 0)
           return this.totalTime(g * 100 + o, n, r);
-        if (p = Ke(l % g), l === c ? (v = this._repeat, p = d) : (k = Ke(l / g), v = ~~k, v && v === k && (p = d, v--), p > d && (p = d)), k = uo(this._tTime, g), !s && this._tTime && k !== v && this._tTime - k * g - this._dur <= 0 && (k = v), Z && v & 1 && (p = d - p, P = 1), v !== k && !this._lock) {
-          var O = Z && k & 1, E = O === (Z && v & 1);
-          if (v < k && (O = !O), s = O ? 0 : l % d ? d : l, this._lock = 1, this.render(s || (P ? 0 : Ke(v * g)), n, !d)._lock = 0, this._tTime = l, !n && this.parent && Jt(this, "onRepeat"), this.vars.repeatRefresh && !P && (this.invalidate()._lock = 1, k = v), s && s !== this._time || I !== !this._ts || this.vars.onRepeat && !this.parent && !this._act)
+        if (f = Ke(l % g), l === c ? (v = this._repeat, f = d) : (x = Ke(l / g), v = ~~x, v && v === x && (f = d, v--), f > d && (f = d)), x = uo(this._tTime, g), !s && this._tTime && x !== v && this._tTime - x * g - this._dur <= 0 && (x = v), D && v & 1 && (f = d - f, V = 1), v !== x && !this._lock) {
+          var P = D && x & 1, R = P === (D && v & 1);
+          if (v < x && (P = !P), s = P ? 0 : l % d ? d : l, this._lock = 1, this.render(s || (V ? 0 : Ke(v * g)), n, !d)._lock = 0, this._tTime = l, !n && this.parent && Jt(this, "onRepeat"), this.vars.repeatRefresh && !V && (this.invalidate()._lock = 1, x = v), s && s !== this._time || k !== !this._ts || this.vars.onRepeat && !this.parent && !this._act)
             return this;
-          if (d = this._dur, c = this._tDur, E && (this._lock = 2, s = O ? d : -1e-4, this.render(s, !0), this.vars.repeatRefresh && !P && this.invalidate()), this._lock = 0, !this._ts && !I)
+          if (d = this._dur, c = this._tDur, R && (this._lock = 2, s = P ? d : -1e-4, this.render(s, !0), this.vars.repeatRefresh && !V && this.invalidate()), this._lock = 0, !this._ts && !k)
             return this;
         }
       }
-      if (this._hasPause && !this._forcing && this._lock < 2 && (A = P0(this, Ke(s), Ke(p)), A && (l -= p - (p = A._start))), this._tTime = l, this._time = p, this._act = !!S, this._initted || (this._onUpdate = this.vars.onUpdate, this._initted = 1, this._zTime = o, s = 0), !s && l && d && !n && !k && (Jt(this, "onStart"), this._tTime !== l))
+      if (this._hasPause && !this._forcing && this._lock < 2 && (I = P0(this, Ke(s), Ke(f)), I && (l -= f - (f = I._start))), this._tTime = l, this._time = f, this._act = !!S, this._initted || (this._onUpdate = this.vars.onUpdate, this._initted = 1, this._zTime = o, s = 0), !s && l && d && !n && !x && (Jt(this, "onStart"), this._tTime !== l))
         return this;
-      if (p >= s && o >= 0)
-        for (h = this._first; h; ) {
-          if (y = h._next, (h._act || p >= h._start) && h._ts && A !== h) {
-            if (h.parent !== this)
+      if (f >= s && o >= 0)
+        for (b = this._first; b; ) {
+          if (y = b._next, (b._act || f >= b._start) && b._ts && I !== b) {
+            if (b.parent !== this)
               return this.render(o, n, r);
-            if (h.render(h._ts > 0 ? (p - h._start) * h._ts : (h._dirty ? h.totalDuration() : h._tDur) + (p - h._start) * h._ts, n, r), p !== this._time || !this._ts && !I) {
-              A = 0, y && (l += this._zTime = -Fe);
+            if (b.render(b._ts > 0 ? (f - b._start) * b._ts : (b._dirty ? b.totalDuration() : b._tDur) + (f - b._start) * b._ts, n, r), f !== this._time || !this._ts && !k) {
+              I = 0, y && (l += this._zTime = -Fe);
               break;
             }
           }
-          h = y;
+          b = y;
         }
       else {
-        h = this._last;
-        for (var q = o < 0 ? o : p; h; ) {
-          if (y = h._prev, (h._act || q <= h._end) && h._ts && A !== h) {
-            if (h.parent !== this)
+        b = this._last;
+        for (var j = o < 0 ? o : f; b; ) {
+          if (y = b._prev, (b._act || j <= b._end) && b._ts && I !== b) {
+            if (b.parent !== this)
               return this.render(o, n, r);
-            if (h.render(h._ts > 0 ? (q - h._start) * h._ts : (h._dirty ? h.totalDuration() : h._tDur) + (q - h._start) * h._ts, n, r || _t && Cc(h)), p !== this._time || !this._ts && !I) {
-              A = 0, y && (l += this._zTime = q ? -Fe : Fe);
+            if (b.render(b._ts > 0 ? (j - b._start) * b._ts : (b._dirty ? b.totalDuration() : b._tDur) + (j - b._start) * b._ts, n, r || _t && Cc(b)), f !== this._time || !this._ts && !k) {
+              I = 0, y && (l += this._zTime = j ? -Fe : Fe);
               break;
             }
           }
-          h = y;
+          b = y;
         }
       }
-      if (A && !n && (this.pause(), A.render(p >= s ? 0 : -Fe)._zTime = p >= s ? 1 : -1, this._ts))
+      if (I && !n && (this.pause(), I.render(f >= s ? 0 : -Fe)._zTime = f >= s ? 1 : -1, this._ts))
         return this._start = T, zr(this), this.render(o, n, r);
       this._onUpdate && !n && Jt(this, "onUpdate", !0), (l === c && this._tTime >= this.totalDuration() || !l && s) && (T === this._start || Math.abs(S) !== Math.abs(this._ts)) && (this._lock || ((o || !d) && (l === c && this._ts > 0 || !l && this._ts < 0) && di(this, 1), !n && !(o < 0 && !s) && (l || s || !c) && (Jt(this, l === c && o >= 0 ? "onComplete" : "onReverseComplete", !0), this._prom && !(l < c && this.timeScale() > 0) && this._prom())));
     }
@@ -5204,7 +5204,7 @@ var jt = /* @__PURE__ */ (function(t) {
       if (mt(o))
         return this.addLabel(o, n);
       if (it(o))
-        o = pt.delayedCall(0, o);
+        o = ft.delayedCall(0, o);
       else
         return this;
     }
@@ -5212,7 +5212,7 @@ var jt = /* @__PURE__ */ (function(t) {
   }, a.getChildren = function(o, n, r, s) {
     o === void 0 && (o = !0), n === void 0 && (n = !0), r === void 0 && (r = !0), s === void 0 && (s = -ia);
     for (var c = [], d = this._first; d; )
-      d._start >= s && (d instanceof pt ? n && c.push(d) : (r && c.push(d), o && c.push.apply(c, d.getChildren(!0, n, r)))), d = d._next;
+      d._start >= s && (d instanceof ft ? n && c.push(d) : (r && c.push(d), o && c.push.apply(c, d.getChildren(!0, n, r)))), d = d._next;
     return c;
   }, a.getById = function(o) {
     for (var n = this.getChildren(1, 1, 1), r = n.length; r--; )
@@ -5227,7 +5227,7 @@ var jt = /* @__PURE__ */ (function(t) {
   }, a.removeLabel = function(o) {
     return delete this.labels[o], this;
   }, a.addPause = function(o, n, r) {
-    var s = pt.delayedCall(0, n || sn, r);
+    var s = ft.delayedCall(0, n || sn, r);
     return s.data = "isPause", this._hasPause = 1, wa(this, s, ea(this, o));
   }, a.removePause = function(o) {
     var n = this._first;
@@ -5239,11 +5239,11 @@ var jt = /* @__PURE__ */ (function(t) {
     return this;
   }, a.getTweensOf = function(o, n) {
     for (var r = [], s = oa(o), c = this._first, d = La(n), l; c; )
-      c instanceof pt ? k0(c._targets, s) && (d ? (!ti || c._initted && c._ts) && c.globalTime(0) <= n && c.globalTime(c.totalDuration()) > n : !n || c.isActive()) && r.push(c) : (l = c.getTweensOf(s, n)).length && r.push.apply(r, l), c = c._next;
+      c instanceof ft ? k0(c._targets, s) && (d ? (!ti || c._initted && c._ts) && c.globalTime(0) <= n && c.globalTime(c.totalDuration()) > n : !n || c.isActive()) && r.push(c) : (l = c.getTweensOf(s, n)).length && r.push.apply(r, l), c = c._next;
     return r;
   }, a.tweenTo = function(o, n) {
     n = n || {};
-    var r = this, s = ea(r, o), c = n, d = c.startAt, l = c.onStart, u = c.onStartParams, p = c.immediateRender, h, y = pt.to(r, Xt({
+    var r = this, s = ea(r, o), c = n, d = c.startAt, l = c.onStart, u = c.onStartParams, f = c.immediateRender, b, y = ft.to(r, Xt({
       ease: n.ease || "none",
       lazy: !1,
       immediateRender: !1,
@@ -5251,14 +5251,14 @@ var jt = /* @__PURE__ */ (function(t) {
       overwrite: "auto",
       duration: n.duration || Math.abs((s - (d && "time" in d ? d.time : r._time)) / r.timeScale()) || Fe,
       onStart: function() {
-        if (r.pause(), !h) {
+        if (r.pause(), !b) {
           var g = n.duration || Math.abs((s - (d && "time" in d ? d.time : r._time)) / r.timeScale());
-          y._dur !== g && po(y, g, 0, 1).render(y._time, !0, !0), h = 1;
+          y._dur !== g && fo(y, g, 0, 1).render(y._time, !0, !0), b = 1;
         }
         l && l.apply(y, u || []);
       }
     }, n));
-    return p ? y.render(0) : y;
+    return f ? y.render(0) : y;
   }, a.tweenFromTo = function(o, n, r) {
     return this.tweenTo(n, Xt({
       startAt: {
@@ -5299,11 +5299,11 @@ var jt = /* @__PURE__ */ (function(t) {
     if (r._dirty) {
       for (u = r.parent; s; )
         d = s._prev, s._dirty && s.totalDuration(), l = s._start, l > c && r._sort && s._ts && !r._lock ? (r._lock = 1, wa(r, s, l - s._delay, 1)._lock = 0) : c = l, l < 0 && s._ts && (n -= l, (!u && !r._dp || u && u.smoothChildTiming) && (r._start += Ke(l / r._ts), r._time -= l, r._tTime -= l), r.shiftChildren(-l, !1, -1 / 0), c = 0), s._end > n && s._ts && (n = s._end), s = d;
-      po(r, r === Ye && r._time > n ? r._time : n, 1, 1), r._dirty = 0;
+      fo(r, r === Ye && r._time > n ? r._time : n, 1, 1), r._dirty = 0;
     }
     return r._tDur;
   }, e.updateRoot = function(o) {
-    if (Ye._ts && (Cp(Ye, pr(o, Ye)), Tp = Bt.frame), Bt.frame >= Fd) {
+    if (Ye._ts && (Pf(Ye, fr(o, Ye)), Sf = Bt.frame), Bt.frame >= Fd) {
       Fd += Kt.autoSleep || 120;
       var n = Ye._first;
       if ((!n || !n._ts) && Kt.autoSleep && Bt._listeners.length < 2) {
@@ -5320,43 +5320,43 @@ Xt(jt.prototype, {
   _forcing: 0
 });
 var H0 = function(e, a, i, o, n, r, s) {
-  var c = new qt(this._pt, e, a, 0, 1, ef, null, n), d = 0, l = 0, u, p, h, y, v, g, I, A;
-  for (c.b = i, c.e = o, i += "", o += "", (I = ~o.indexOf("random(")) && (o = cn(o)), r && (A = [i, o], r(A, e, a), i = A[0], o = A[1]), p = i.match(ss) || []; u = ss.exec(o); )
-    y = u[0], v = o.substring(d, u.index), h ? h = (h + 1) % 5 : v.substr(-5) === "rgba(" && (h = 1), y !== p[l++] && (g = parseFloat(p[l - 1]) || 0, c._pt = {
+  var c = new qt(this._pt, e, a, 0, 1, tp, null, n), d = 0, l = 0, u, f, b, y, v, g, k, I;
+  for (c.b = i, c.e = o, i += "", o += "", (k = ~o.indexOf("random(")) && (o = cn(o)), r && (I = [i, o], r(I, e, a), i = I[0], o = I[1]), f = i.match(ss) || []; u = ss.exec(o); )
+    y = u[0], v = o.substring(d, u.index), b ? b = (b + 1) % 5 : v.substr(-5) === "rgba(" && (b = 1), y !== f[l++] && (g = parseFloat(f[l - 1]) || 0, c._pt = {
       _next: c._pt,
       p: v || l === 1 ? v : ",",
       //note: SVG spec allows omission of comma/space when a negative sign is wedged between two numbers, like 2.5-5.3 instead of 2.5,-5.3 but when tweening, the negative value may switch to positive, so we insert the comma just in case.
       s: g,
       c: y.charAt(1) === "=" ? ao(g, y) - g : parseFloat(y) - g,
-      m: h && h < 4 ? Math.round : 0
+      m: b && b < 4 ? Math.round : 0
     }, d = ss.lastIndex);
-  return c.c = d < o.length ? o.substring(d, o.length) : "", c.fp = s, (kp.test(o) || I) && (c.e = 0), this._pt = c, c;
+  return c.c = d < o.length ? o.substring(d, o.length) : "", c.fp = s, (If.test(o) || k) && (c.e = 0), this._pt = c, c;
 }, Pc = function(e, a, i, o, n, r, s, c, d, l) {
   it(o) && (o = o(n || 0, e, r));
-  var u = e[a], p = i !== "get" ? i : it(u) ? d ? e[a.indexOf("set") || !it(e["get" + a.substr(3)]) ? a : "get" + a.substr(3)](d) : e[a]() : u, h = it(u) ? d ? Y0 : Xp : Vc, y;
-  if (mt(o) && (~o.indexOf("random(") && (o = cn(o)), o.charAt(1) === "=" && (y = ao(p, o) + (It(p) || 0), (y || y === 0) && (o = y))), !l || p !== o || Ns)
-    return !isNaN(p * o) && o !== "" ? (y = new qt(this._pt, e, a, +p || 0, o - (p || 0), typeof u == "boolean" ? Q0 : Qp, 0, h), d && (y.fp = d), s && y.modifier(s, this, e), this._pt = y) : (!u && !(a in e) && Ac(a, o), H0.call(this, e, a, p, o, h, c || Kt.stringFilter, d));
+  var u = e[a], f = i !== "get" ? i : it(u) ? d ? e[a.indexOf("set") || !it(e["get" + a.substr(3)]) ? a : "get" + a.substr(3)](d) : e[a]() : u, b = it(u) ? d ? Y0 : Qf : Vc, y;
+  if (mt(o) && (~o.indexOf("random(") && (o = cn(o)), o.charAt(1) === "=" && (y = ao(f, o) + (It(f) || 0), (y || y === 0) && (o = y))), !l || f !== o || Ns)
+    return !isNaN(f * o) && o !== "" ? (y = new qt(this._pt, e, a, +f || 0, o - (f || 0), typeof u == "boolean" ? Q0 : ep, 0, b), d && (y.fp = d), s && y.modifier(s, this, e), this._pt = y) : (!u && !(a in e) && Ac(a, o), H0.call(this, e, a, f, o, b, c || Kt.stringFilter, d));
 }, J0 = function(e, a, i, o, n) {
-  if (it(e) && (e = Wo(e, n, a, i, o)), !Ca(e) || e.style && e.nodeType || xt(e) || yp(e))
+  if (it(e) && (e = Wo(e, n, a, i, o)), !Ca(e) || e.style && e.nodeType || xt(e) || wf(e))
     return mt(e) ? Wo(e, n, a, i, o) : e;
   var r = {}, s;
   for (s in e)
     r[s] = Wo(e[s], n, a, i, o);
   return r;
-}, Wp = function(e, a, i, o, n, r) {
+}, Kf = function(e, a, i, o, n, r) {
   var s, c, d, l;
   if (Dt[e] && (s = new Dt[e]()).init(n, s.rawVars ? a[e] : J0(a[e], o, n, r, i), i, o, r) !== !1 && (i._pt = c = new qt(i._pt, n, e, 0, 1, s.render, s, 0, s.priority), i !== Yi))
     for (d = i._ptLookup[i._targets.indexOf(n)], l = s._props.length; l--; )
       d[s._props[l]] = c;
   return s;
 }, ti, Ns, Rc = function t(e, a, i) {
-  var o = e.vars, n = o.ease, r = o.startAt, s = o.immediateRender, c = o.lazy, d = o.onUpdate, l = o.runBackwards, u = o.yoyoEase, p = o.keyframes, h = o.autoRevert, y = e._dur, v = e._startAt, g = e._targets, I = e.parent, A = I && I.data === "nested" ? I.vars.targets : g, S = e._overwrite === "auto" && !yc, T = e.timeline, k = o.easeReverse || u, Z, P, O, E, q, ee, J, re, de, se, te, L, K;
-  if (T && (!p || !n) && (n = "none"), e._ease = Mi(n, nn.ease), e._rEase = k && (Mi(k) || e._ease), e._from = !T && !!o.runBackwards, e._from && (e.ratio = 1), !T || p && !o.stagger) {
-    if (re = g[0] ? Ei(g[0]).harness : 0, L = re && o[re.prop], Z = ur(o, xc), v && (v._zTime < 0 && v.progress(1), a < 0 && l && s && !h ? v.render(-1, !0) : v.revert(l && y ? Wn : y0), v._lazy = 0), r) {
-      if (di(e._startAt = pt.set(g, Xt({
+  var o = e.vars, n = o.ease, r = o.startAt, s = o.immediateRender, c = o.lazy, d = o.onUpdate, l = o.runBackwards, u = o.yoyoEase, f = o.keyframes, b = o.autoRevert, y = e._dur, v = e._startAt, g = e._targets, k = e.parent, I = k && k.data === "nested" ? k.vars.targets : g, S = e._overwrite === "auto" && !yc, T = e.timeline, x = o.easeReverse || u, D, V, P, R, j, Q, B, re, de, se, te, Z, K;
+  if (T && (!f || !n) && (n = "none"), e._ease = Mi(n, nn.ease), e._rEase = x && (Mi(x) || e._ease), e._from = !T && !!o.runBackwards, e._from && (e.ratio = 1), !T || f && !o.stagger) {
+    if (re = g[0] ? Ei(g[0]).harness : 0, Z = re && o[re.prop], D = ur(o, xc), v && (v._zTime < 0 && v.progress(1), a < 0 && l && s && !b ? v.render(-1, !0) : v.revert(l && y ? Wn : y0), v._lazy = 0), r) {
+      if (di(e._startAt = ft.set(g, Xt({
         data: "isStart",
         overwrite: !1,
-        parent: I,
+        parent: k,
         immediateRender: !0,
         lazy: !v && Ut(c),
         startAt: null,
@@ -5365,12 +5365,12 @@ var H0 = function(e, a, i, o, n, r, s) {
           return Jt(e, "onUpdate");
         },
         stagger: 0
-      }, r))), e._startAt._dp = 0, e._startAt._sat = e, a < 0 && (_t || !s && !h) && e._startAt.revert(Wn), s && y && a <= 0 && i <= 0) {
+      }, r))), e._startAt._dp = 0, e._startAt._sat = e, a < 0 && (_t || !s && !b) && e._startAt.revert(Wn), s && y && a <= 0 && i <= 0) {
         a && (e._zTime = a);
         return;
       }
     } else if (l && y && !v) {
-      if (a && (s = !1), O = Xt({
+      if (a && (s = !1), P = Xt({
         overwrite: !1,
         data: "isFromStart",
         //we tag the tween with as "isFromStart" so that if [inside a plugin] we need to only do something at the very END of a tween, we have a way of identifying this tween as merely the one that's setting the beginning values for a "from()" tween. For example, clearProps in CSSPlugin should only get applied at the very END of a tween and without this tag, from(...{height:100, clearProps:"height", delay:1}) would wipe the height at the beginning of the tween and after 1 second, it'd kick back in.
@@ -5378,37 +5378,37 @@ var H0 = function(e, a, i, o, n, r, s) {
         immediateRender: s,
         //zero-duration tweens render immediately by default, but if we're not specifically instructed to render this tween immediately, we should skip this and merely _init() to record the starting values (rendering them immediately would push them to completion which is wasteful in that case - we'd have to render(-1) immediately after)
         stagger: 0,
-        parent: I
+        parent: k
         //ensures that nested tweens that had a stagger are handled properly, like gsap.from(".class", {y: gsap.utils.wrap([-100,100]), stagger: 0.5})
-      }, Z), L && (O[re.prop] = L), di(e._startAt = pt.set(g, O)), e._startAt._dp = 0, e._startAt._sat = e, a < 0 && (_t ? e._startAt.revert(Wn) : e._startAt.render(-1, !0)), e._zTime = a, !s)
+      }, D), Z && (P[re.prop] = Z), di(e._startAt = ft.set(g, P)), e._startAt._dp = 0, e._startAt._sat = e, a < 0 && (_t ? e._startAt.revert(Wn) : e._startAt.render(-1, !0)), e._zTime = a, !s)
         t(e._startAt, Fe, Fe);
       else if (!a)
         return;
     }
-    for (e._pt = e._ptCache = 0, c = y && Ut(c) || c && !y, P = 0; P < g.length; P++) {
-      if (q = g[P], J = q._gsap || Sc(g)[P]._gsap, e._ptLookup[P] = se = {}, zs[J.id] && ni.length && lr(), te = A === g ? P : A.indexOf(q), re && (de = new re()).init(q, L || Z, e, te, A) !== !1 && (e._pt = E = new qt(e._pt, q, de.name, 0, 1, de.render, de, 0, de.priority), de._props.forEach(function(ue) {
-        se[ue] = E;
-      }), de.priority && (ee = 1)), !re || L)
-        for (O in Z)
-          Dt[O] && (de = Wp(O, Z, e, te, q, A)) ? de.priority && (ee = 1) : se[O] = E = Pc.call(e, q, O, "get", Z[O], te, A, 0, o.stringFilter);
-      e._op && e._op[P] && e.kill(q, e._op[P]), S && e._pt && (ti = e, Ye.killTweensOf(q, se, e.globalTime(a)), K = !e.parent, ti = 0), e._pt && c && (zs[J.id] = 1);
+    for (e._pt = e._ptCache = 0, c = y && Ut(c) || c && !y, V = 0; V < g.length; V++) {
+      if (j = g[V], B = j._gsap || Sc(g)[V]._gsap, e._ptLookup[V] = se = {}, zs[B.id] && ni.length && lr(), te = I === g ? V : I.indexOf(j), re && (de = new re()).init(j, Z || D, e, te, I) !== !1 && (e._pt = R = new qt(e._pt, j, de.name, 0, 1, de.render, de, 0, de.priority), de._props.forEach(function(ue) {
+        se[ue] = R;
+      }), de.priority && (Q = 1)), !re || Z)
+        for (P in D)
+          Dt[P] && (de = Kf(P, D, e, te, j, I)) ? de.priority && (Q = 1) : se[P] = R = Pc.call(e, j, P, "get", D[P], te, I, 0, o.stringFilter);
+      e._op && e._op[V] && e.kill(j, e._op[V]), S && e._pt && (ti = e, Ye.killTweensOf(j, se, e.globalTime(a)), K = !e.parent, ti = 0), e._pt && c && (zs[B.id] = 1);
     }
-    ee && tf(e), e._onInit && e._onInit(e);
+    Q && ap(e), e._onInit && e._onInit(e);
   }
-  e._onUpdate = d, e._initted = (!e._op || e._pt) && !K, p && a <= 0 && T.render(ia, !0, !0);
+  e._onUpdate = d, e._initted = (!e._op || e._pt) && !K, f && a <= 0 && T.render(ia, !0, !0);
 }, G0 = function(e, a, i, o, n, r, s, c) {
-  var d = (e._pt && e._ptCache || (e._ptCache = {}))[a], l, u, p, h;
+  var d = (e._pt && e._ptCache || (e._ptCache = {}))[a], l, u, f, b;
   if (!d)
-    for (d = e._ptCache[a] = [], p = e._ptLookup, h = e._targets.length; h--; ) {
-      if (l = p[h][a], l && l.d && l.d._pt)
+    for (d = e._ptCache[a] = [], f = e._ptLookup, b = e._targets.length; b--; ) {
+      if (l = f[b][a], l && l.d && l.d._pt)
         for (l = l.d._pt; l && l.p !== a && l.fp !== a; )
           l = l._next;
       if (!l)
         return Ns = 1, e.vars[a] = "+=0", Rc(e, s), Ns = 0, c ? rn(a + " not eligible for reset. Try splitting into individual properties") : 1;
       d.push(l);
     }
-  for (h = d.length; h--; )
-    u = d[h], l = u._pt || u, l.s = (o || o === 0) && !n ? o : l.s + (o || 0) + r * l.c, l.c = i - l.s, u.e && (u.e = lt(i) + It(u.e)), u.b && (u.b = l.s + It(u.b));
+  for (b = d.length; b--; )
+    u = d[b], l = u._pt || u, l.s = (o || o === 0) && !n ? o : l.s + (o || 0) + r * l.c, l.c = i - l.s, u.e && (u.e = lt(i) + It(u.e)), u.b && (u.b = l.s + It(u.b));
 }, W0 = function(e, a) {
   var i = e[0] ? Ei(e[0]).harness : 0, o = i && i.aliases, n, r, s, c;
   if (!o)
@@ -5438,51 +5438,51 @@ var H0 = function(e, a, i, o, n, r, s) {
       });
 }, Wo = function(e, a, i, o, n) {
   return it(e) ? e.call(a, i, o, n) : mt(e) && ~e.indexOf("random(") ? cn(e) : e;
-}, Kp = Tc + "repeat,repeatDelay,yoyo,repeatRefresh,yoyoEase,easeReverse,autoRevert", Yp = {};
-Ft(Kp + ",id,stagger,delay,duration,paused,scrollTrigger", function(t) {
-  return Yp[t] = 1;
+}, Yf = Tc + "repeat,repeatDelay,yoyo,repeatRefresh,yoyoEase,easeReverse,autoRevert", Xf = {};
+Ft(Yf + ",id,stagger,delay,duration,paused,scrollTrigger", function(t) {
+  return Xf[t] = 1;
 });
-var pt = /* @__PURE__ */ (function(t) {
-  gp(e, t);
+var ft = /* @__PURE__ */ (function(t) {
+  _f(e, t);
   function e(i, o, n, r) {
     var s;
     typeof o == "number" && (n.duration = o, o = n, n = null), s = t.call(this, r ? o : Jo(o)) || this;
-    var c = s.vars, d = c.duration, l = c.delay, u = c.immediateRender, p = c.stagger, h = c.overwrite, y = c.keyframes, v = c.defaults, g = c.scrollTrigger, I = o.parent || Ye, A = (xt(i) || yp(i) ? La(i[0]) : "length" in o) ? [i] : oa(i), S, T, k, Z, P, O, E, q;
-    if (s._targets = A.length ? Sc(A) : rn("GSAP target " + i + " not found. https://gsap.com", !Kt.nullTargetWarn) || [], s._ptLookup = [], s._overwrite = h, y || p || Mn(d) || Mn(l)) {
+    var c = s.vars, d = c.duration, l = c.delay, u = c.immediateRender, f = c.stagger, b = c.overwrite, y = c.keyframes, v = c.defaults, g = c.scrollTrigger, k = o.parent || Ye, I = (xt(i) || wf(i) ? La(i[0]) : "length" in o) ? [i] : oa(i), S, T, x, D, V, P, R, j;
+    if (s._targets = I.length ? Sc(I) : rn("GSAP target " + i + " not found. https://gsap.com", !Kt.nullTargetWarn) || [], s._ptLookup = [], s._overwrite = b, y || f || Mn(d) || Mn(l)) {
       o = s.vars;
-      var ee = o.easeReverse || o.yoyoEase;
+      var Q = o.easeReverse || o.yoyoEase;
       if (S = s.timeline = new jt({
         data: "nested",
         defaults: v || {},
-        targets: I && I.data === "nested" ? I.vars.targets : A
-      }), S.kill(), S.parent = S._dp = Oa(s), S._start = 0, p || Mn(d) || Mn(l)) {
-        if (Z = A.length, E = p && zp(p), Ca(p))
-          for (P in p)
-            ~Kp.indexOf(P) && (q || (q = {}), q[P] = p[P]);
-        for (T = 0; T < Z; T++)
-          k = ur(o, Yp), k.stagger = 0, ee && (k.easeReverse = ee), q && lo(k, q), O = A[T], k.duration = +Wo(d, Oa(s), T, O, A), k.delay = (+Wo(l, Oa(s), T, O, A) || 0) - s._delay, !p && Z === 1 && k.delay && (s._delay = l = k.delay, s._start += l, k.delay = 0), S.to(O, k, E ? E(T, O, A) : 0), S._ease = Pe.none;
+        targets: k && k.data === "nested" ? k.vars.targets : I
+      }), S.kill(), S.parent = S._dp = Oa(s), S._start = 0, f || Mn(d) || Mn(l)) {
+        if (D = I.length, R = f && Uf(f), Ca(f))
+          for (V in f)
+            ~Yf.indexOf(V) && (j || (j = {}), j[V] = f[V]);
+        for (T = 0; T < D; T++)
+          x = ur(o, Xf), x.stagger = 0, Q && (x.easeReverse = Q), j && lo(x, j), P = I[T], x.duration = +Wo(d, Oa(s), T, P, I), x.delay = (+Wo(l, Oa(s), T, P, I) || 0) - s._delay, !f && D === 1 && x.delay && (s._delay = l = x.delay, s._start += l, x.delay = 0), S.to(P, x, R ? R(T, P, I) : 0), S._ease = Pe.none;
         S.duration() ? d = l = 0 : s.timeline = 0;
       } else if (y) {
         Jo(Xt(S.vars.defaults, {
           ease: "none"
         })), S._ease = Mi(y.ease || o.ease || "none");
-        var J = 0, re, de, se;
+        var B = 0, re, de, se;
         if (xt(y))
           y.forEach(function(te) {
-            return S.to(A, te, ">");
+            return S.to(I, te, ">");
           }), S.duration();
         else {
-          k = {};
-          for (P in y)
-            P === "ease" || P === "easeEach" || K0(P, y[P], k, y.easeEach);
-          for (P in k)
-            for (re = k[P].sort(function(te, L) {
-              return te.t - L.t;
-            }), J = 0, T = 0; T < re.length; T++)
+          x = {};
+          for (V in y)
+            V === "ease" || V === "easeEach" || K0(V, y[V], x, y.easeEach);
+          for (V in x)
+            for (re = x[V].sort(function(te, Z) {
+              return te.t - Z.t;
+            }), B = 0, T = 0; T < re.length; T++)
               de = re[T], se = {
                 ease: de.e,
                 duration: (de.t - (T ? re[T - 1].t : 0)) / 100 * d
-              }, se[P] = de.v, S.to(A, se, J), J += se.duration;
+              }, se[V] = de.v, S.to(I, se, B), B += se.duration;
           S.duration() < d && S.to({}, {
             duration: d - S.duration()
           });
@@ -5491,23 +5491,23 @@ var pt = /* @__PURE__ */ (function(t) {
       d || s.duration(d = S.duration());
     } else
       s.timeline = 0;
-    return h === !0 && !yc && (ti = Oa(s), Ye.killTweensOf(A), ti = 0), wa(I, Oa(s), n), o.reversed && s.reverse(), o.paused && s.paused(!0), (u || !d && !y && s._start === Ke(I._time) && Ut(u) && T0(Oa(s)) && I.data !== "nested") && (s._tTime = -Fe, s.render(Math.max(0, -l) || 0)), g && Op(Oa(s), g), s;
+    return b === !0 && !yc && (ti = Oa(s), Ye.killTweensOf(I), ti = 0), wa(k, Oa(s), n), o.reversed && s.reverse(), o.paused && s.paused(!0), (u || !d && !y && s._start === Ke(k._time) && Ut(u) && T0(Oa(s)) && k.data !== "nested") && (s._tTime = -Fe, s.render(Math.max(0, -l) || 0)), g && Mf(Oa(s), g), s;
   }
   var a = e.prototype;
   return a.render = function(o, n, r) {
-    var s = this._time, c = this._tDur, d = this._dur, l = o < 0, u = o > c - Fe && !l ? c : o < Fe ? 0 : o, p, h, y, v, g, I, A, S;
+    var s = this._time, c = this._tDur, d = this._dur, l = o < 0, u = o > c - Fe && !l ? c : o < Fe ? 0 : o, f, b, y, v, g, k, I, S;
     if (!d)
       C0(this, o, n, r);
     else if (u !== this._tTime || !o || r || !this._initted && this._tTime || this._startAt && this._zTime < 0 !== l || this._lazy) {
-      if (p = u, S = this.timeline, this._repeat) {
+      if (f = u, S = this.timeline, this._repeat) {
         if (v = d + this._rDelay, this._repeat < -1 && l)
           return this.totalTime(v * 100 + o, n, r);
-        if (p = Ke(u % v), u === c ? (y = this._repeat, p = d) : (g = Ke(u / v), y = ~~g, y && y === g ? (p = d, y--) : p > d && (p = d)), I = this._yoyo && y & 1, I && (p = d - p), g = uo(this._tTime, v), p === s && !r && this._initted && y === g)
+        if (f = Ke(u % v), u === c ? (y = this._repeat, f = d) : (g = Ke(u / v), y = ~~g, y && y === g ? (f = d, y--) : f > d && (f = d)), k = this._yoyo && y & 1, k && (f = d - f), g = uo(this._tTime, v), f === s && !r && this._initted && y === g)
           return this._tTime = u, this;
-        y !== g && this.vars.repeatRefresh && !I && !this._lock && p !== v && this._initted && (this._lock = r = 1, this.render(Ke(v * y), !0).invalidate()._lock = 0);
+        y !== g && this.vars.repeatRefresh && !k && !this._lock && f !== v && this._initted && (this._lock = r = 1, this.render(Ke(v * y), !0).invalidate()._lock = 0);
       }
       if (!this._initted) {
-        if (Mp(this, l ? o : p, r, n, u))
+        if ($f(this, l ? o : f, r, n, u))
           return this._tTime = 0, this;
         if (s !== this._time && !(r && this.vars.repeatRefresh && y !== g))
           return this;
@@ -5515,19 +5515,19 @@ var pt = /* @__PURE__ */ (function(t) {
           return this.render(o, n, r);
       }
       if (this._rEase) {
-        var T = p < s;
+        var T = f < s;
         if (T !== this._inv) {
-          var k = T ? s : d - s;
-          this._inv = T, this._from && (this.ratio = 1 - this.ratio), this._invRatio = this.ratio, this._invTime = s, this._invRecip = k ? (T ? -1 : 1) / k : 0, this._invScale = T ? -this.ratio : 1 - this.ratio, this._invEase = T ? this._rEase : this._ease;
+          var x = T ? s : d - s;
+          this._inv = T, this._from && (this.ratio = 1 - this.ratio), this._invRatio = this.ratio, this._invTime = s, this._invRecip = x ? (T ? -1 : 1) / x : 0, this._invScale = T ? -this.ratio : 1 - this.ratio, this._invEase = T ? this._rEase : this._ease;
         }
-        this.ratio = A = this._invRatio + this._invScale * this._invEase((p - this._invTime) * this._invRecip);
+        this.ratio = I = this._invRatio + this._invScale * this._invEase((f - this._invTime) * this._invRecip);
       } else
-        this.ratio = A = this._ease(p / d);
-      if (this._from && (this.ratio = A = 1 - A), this._tTime = u, this._time = p, !this._act && this._ts && (this._act = 1, this._lazy = 0), !s && u && !n && !g && (Jt(this, "onStart"), this._tTime !== u))
+        this.ratio = I = this._ease(f / d);
+      if (this._from && (this.ratio = I = 1 - I), this._tTime = u, this._time = f, !this._act && this._ts && (this._act = 1, this._lazy = 0), !s && u && !n && !g && (Jt(this, "onStart"), this._tTime !== u))
         return this;
-      for (h = this._pt; h; )
-        h.r(A, h.d), h = h._next;
-      S && S.render(o < 0 ? o : S._dur * S._ease(p / this._dur), n, r) || this._startAt && (this._zTime = o), this._onUpdate && !n && (l && Us(this, o, n, r), Jt(this, "onUpdate")), this._repeat && y !== g && this.vars.onRepeat && !n && this.parent && Jt(this, "onRepeat"), (u === this._tDur || !u) && this._tTime === u && (l && !this._onUpdate && Us(this, o, !0, !0), (o || !d) && (u === this._tDur && this._ts > 0 || !u && this._ts < 0) && di(this, 1), !n && !(l && !s) && (u || s || I) && (Jt(this, u === c ? "onComplete" : "onReverseComplete", !0), this._prom && !(u < c && this.timeScale() > 0) && this._prom()));
+      for (b = this._pt; b; )
+        b.r(I, b.d), b = b._next;
+      S && S.render(o < 0 ? o : S._dur * S._ease(f / this._dur), n, r) || this._startAt && (this._zTime = o), this._onUpdate && !n && (l && Us(this, o, n, r), Jt(this, "onUpdate")), this._repeat && y !== g && this.vars.onRepeat && !n && this.parent && Jt(this, "onRepeat"), (u === this._tDur || !u) && this._tTime === u && (l && !this._onUpdate && Us(this, o, !0, !0), (o || !d) && (u === this._tDur && this._ts > 0 || !u && this._ts < 0) && di(this, 1), !n && !(l && !s) && (u || s || k) && (Jt(this, u === c ? "onComplete" : "onReverseComplete", !0), this._prom && !(u < c && this.timeScale() > 0) && this._prom()));
     }
     return this;
   }, a.targets = function() {
@@ -5537,24 +5537,24 @@ var pt = /* @__PURE__ */ (function(t) {
   }, a.resetTo = function(o, n, r, s, c) {
     dn || Bt.wake(), this._ts || this.play();
     var d = Math.min(this._dur, (this._dp._time - this._start) * this._ts), l;
-    return this._initted || Rc(this, d), l = this._ease(d / this._dur), G0(this, o, n, r, s, l, d, c) ? this.resetTo(o, n, r, s, 1) : (Ur(this, 0), this.parent || Vp(this._dp, this, "_first", "_last", this._dp._sort ? "_start" : 0), this.render(0));
+    return this._initted || Rc(this, d), l = this._ease(d / this._dur), G0(this, o, n, r, s, l, d, c) ? this.resetTo(o, n, r, s, 1) : (Ur(this, 0), this.parent || Ef(this._dp, this, "_first", "_last", this._dp._sort ? "_start" : 0), this.render(0));
   }, a.kill = function(o, n) {
     if (n === void 0 && (n = "all"), !o && (!n || n === "all"))
       return this._lazy = this._pt = 0, this.parent ? Eo(this) : this.scrollTrigger && this.scrollTrigger.kill(!!_t), this;
     if (this.timeline) {
       var r = this.timeline.totalDuration();
-      return this.timeline.killTweensOf(o, n, ti && ti.vars.overwrite !== !0)._first || Eo(this), this.parent && r !== this.timeline.totalDuration() && po(this, this._dur * this.timeline._tDur / r, 0, 1), this;
+      return this.timeline.killTweensOf(o, n, ti && ti.vars.overwrite !== !0)._first || Eo(this), this.parent && r !== this.timeline.totalDuration() && fo(this, this._dur * this.timeline._tDur / r, 0, 1), this;
     }
-    var s = this._targets, c = o ? oa(o) : s, d = this._ptLookup, l = this._pt, u, p, h, y, v, g, I;
+    var s = this._targets, c = o ? oa(o) : s, d = this._ptLookup, l = this._pt, u, f, b, y, v, g, k;
     if ((!n || n === "all") && A0(s, c))
       return n === "all" && (this._pt = 0), Eo(this);
-    for (u = this._op = this._op || [], n !== "all" && (mt(n) && (v = {}, Ft(n, function(A) {
-      return v[A] = 1;
-    }), n = v), n = W0(s, n)), I = s.length; I--; )
-      if (~c.indexOf(s[I])) {
-        p = d[I], n === "all" ? (u[I] = n, y = p, h = {}) : (h = u[I] = u[I] || {}, y = n);
+    for (u = this._op = this._op || [], n !== "all" && (mt(n) && (v = {}, Ft(n, function(I) {
+      return v[I] = 1;
+    }), n = v), n = W0(s, n)), k = s.length; k--; )
+      if (~c.indexOf(s[k])) {
+        f = d[k], n === "all" ? (u[k] = n, y = f, b = {}) : (b = u[k] = u[k] || {}, y = n);
         for (v in y)
-          g = p && p[v], g && ((!("kill" in g.d) || g.d.kill(v) === !0) && jr(this, g, "_pt"), delete p[v]), h !== "all" && (h[v] = 1);
+          g = f && f[v], g && ((!("kill" in g.d) || g.d.kill(v) === !0) && jr(this, g, "_pt"), delete f[v]), b !== "all" && (b[v] = 1);
       }
     return this._initted && !this._pt && l && Eo(this), this;
   }, e.to = function(o, n) {
@@ -5581,7 +5581,7 @@ var pt = /* @__PURE__ */ (function(t) {
     return Ye.killTweensOf(o, n, r);
   }, e;
 })(ln);
-Xt(pt.prototype, {
+Xt(ft.prototype, {
   _targets: [],
   _lazy: 0,
   _startAt: 0,
@@ -5589,26 +5589,26 @@ Xt(pt.prototype, {
   _onInit: 0
 });
 Ft("staggerTo,staggerFrom,staggerFromTo", function(t) {
-  pt[t] = function() {
+  ft[t] = function() {
     var e = new jt(), a = qs.call(arguments, 0);
     return a.splice(t === "staggerFromTo" ? 5 : 4, 0, 0), e[t].apply(e, a);
   };
 });
 var Vc = function(e, a, i) {
   return e[a] = i;
-}, Xp = function(e, a, i) {
+}, Qf = function(e, a, i) {
   return e[a](i);
 }, Y0 = function(e, a, i, o) {
   return e[a](o.fp, i);
 }, X0 = function(e, a, i) {
   return e.setAttribute(a, i);
 }, Ec = function(e, a) {
-  return it(e[a]) ? Xp : wc(e[a]) && e.setAttribute ? X0 : Vc;
-}, Qp = function(e, a) {
+  return it(e[a]) ? Qf : wc(e[a]) && e.setAttribute ? X0 : Vc;
+}, ep = function(e, a) {
   return a.set(a.t, a.p, Math.round((a.s + a.c * e) * 1e6) / 1e6, a);
 }, Q0 = function(e, a) {
   return a.set(a.t, a.p, !!(a.s + a.c * e), a);
-}, ef = function(e, a) {
+}, tp = function(e, a) {
   var i = a._pt, o = "";
   if (!e && a.b)
     o = a.b;
@@ -5632,7 +5632,7 @@ var Vc = function(e, a, i) {
   return !i;
 }, av = function(e, a, i, o) {
   o.mSet(e, a, o.m.call(o.tween, i, o.mt), o);
-}, tf = function(e) {
+}, ap = function(e) {
   for (var a = e._pt, i, o, n, r; a; ) {
     for (i = a._next, o = n; o && o.pr > a.pr; )
       o = o._next;
@@ -5641,7 +5641,7 @@ var Vc = function(e, a, i) {
   e._pt = n;
 }, qt = /* @__PURE__ */ (function() {
   function t(a, i, o, n, r, s, c, d, l) {
-    this.t = i, this.s = n, this.c = r, this.p = o, this.r = s || Qp, this.d = c || this, this.set = d || Vc, this.pr = l || 0, this._next = a, a && (a._prev = this);
+    this.t = i, this.s = n, this.c = r, this.p = o, this.r = s || ep, this.d = c || this, this.set = d || Vc, this.pr = l || 0, this._next = a, a && (a._prev = this);
   }
   var e = t.prototype;
   return e.modifier = function(i, o, n) {
@@ -5651,7 +5651,7 @@ var Vc = function(e, a, i) {
 Ft(Tc + "parent,duration,ease,delay,overwrite,runBackwards,startAt,yoyo,immediateRender,repeat,repeatDelay,data,paused,reversed,lazy,callbackScope,stringFilter,id,yoyoEase,stagger,inherit,repeatRefresh,keyframes,autoRevert,scrollTrigger,easeReverse", function(t) {
   return xc[t] = 1;
 });
-Yt.TweenMax = Yt.TweenLite = pt;
+Yt.TweenMax = Yt.TweenLite = ft;
 Yt.TimelineLite = Yt.TimelineMax = jt;
 Ye = new jt({
   sortChildren: !1,
@@ -5660,24 +5660,24 @@ Ye = new jt({
   id: "root",
   smoothChildTiming: !0
 });
-Kt.stringFilter = Hp;
-var $i = [], Yn = {}, iv = [], Bd = 0, ov = 0, ps = function(e) {
+Kt.stringFilter = Jf;
+var $i = [], Yn = {}, iv = [], Bd = 0, ov = 0, fs = function(e) {
   return (Yn[e] || iv).map(function(a) {
     return a();
   });
 }, Ds = function() {
   var e = Date.now(), a = [];
-  e - Bd > 2 && (ps("matchMediaInit"), $i.forEach(function(i) {
+  e - Bd > 2 && (fs("matchMediaInit"), $i.forEach(function(i) {
     var o = i.queries, n = i.conditions, r, s, c, d;
     for (s in o)
       r = ma.matchMedia(o[s]).matches, r && (c = 1), r !== n[s] && (n[s] = r, d = 1);
     d && (i.revert(), c && a.push(i));
-  }), ps("matchMediaRevert"), a.forEach(function(i) {
+  }), fs("matchMediaRevert"), a.forEach(function(i) {
     return i.onMatch(i, function(o) {
       return i.add(null, o);
     });
-  }), Bd = e, ps("matchMedia"));
-}, af = /* @__PURE__ */ (function() {
+  }), Bd = e, fs("matchMedia"));
+}, ip = /* @__PURE__ */ (function() {
   function t(a, i) {
     this.selector = i && Zs(i), this.data = [], this._r = [], this.isReverted = !1, this.id = ov++, a && this.add(a);
   }
@@ -5697,7 +5697,7 @@ var $i = [], Yn = {}, iv = [], Bd = 0, ov = 0, ps = function(e) {
   }, e.getTweens = function() {
     var i = [];
     return this.data.forEach(function(o) {
-      return o instanceof t ? i.push.apply(i, o.getTweens()) : o instanceof pt && !(o.parent && o.parent.data === "nested") && i.push(o);
+      return o instanceof t ? i.push.apply(i, o.getTweens()) : o instanceof ft && !(o.parent && o.parent.data === "nested") && i.push(o);
     }), i;
   }, e.clear = function() {
     this._r.length = this.data.length = 0;
@@ -5718,7 +5718,7 @@ var $i = [], Yn = {}, iv = [], Bd = 0, ov = 0, ps = function(e) {
       }).forEach(function(l) {
         return l.t.revert(i);
       }), c = n.data.length; c--; )
-        d = n.data[c], d instanceof jt ? d.data !== "nested" && (d.scrollTrigger && d.scrollTrigger.revert(), d.kill()) : !(d instanceof pt) && d.revert && d.revert(i);
+        d = n.data[c], d instanceof jt ? d.data !== "nested" && (d.scrollTrigger && d.scrollTrigger.revert(), d.kill()) : !(d instanceof ft) && d.revert && d.revert(i);
       n._r.forEach(function(l) {
         return l(i, n);
       }), n.isReverted = !0;
@@ -5739,7 +5739,7 @@ var $i = [], Yn = {}, iv = [], Bd = 0, ov = 0, ps = function(e) {
     Ca(i) || (i = {
       matches: i
     });
-    var r = new af(0, n || this.scope), s = r.conditions = {}, c, d, l;
+    var r = new ip(0, n || this.scope), s = r.conditions = {}, c, d, l;
     Be && !r.selector && (r.selector = Be.selector), this.contexts.push(r), o = r.add("onMatch", o), r.queries = i;
     for (d in i)
       d === "all" ? l = 1 : (c = ma.matchMedia(i[d]), c && ($i.indexOf(r) < 0 && $i.push(r), (s[d] = c.matches) && (l = 1), c.addListener ? c.addListener(Ds) : c.addEventListener("change", Ds)));
@@ -5753,12 +5753,12 @@ var $i = [], Yn = {}, iv = [], Bd = 0, ov = 0, ps = function(e) {
       return o.kill(i, !0);
     });
   }, t;
-})(), fr = {
+})(), pr = {
   registerPlugin: function() {
     for (var e = arguments.length, a = new Array(e), i = 0; i < e; i++)
       a[i] = arguments[i];
     a.forEach(function(o) {
-      return Np(o);
+      return Df(o);
     });
   },
   timeline: function(e) {
@@ -5769,7 +5769,7 @@ var $i = [], Yn = {}, iv = [], Bd = 0, ov = 0, ps = function(e) {
   },
   getProperty: function(e, a, i, o) {
     mt(e) && (e = oa(e)[0]);
-    var n = Ei(e || {}).get, r = i ? Rp : Pp;
+    var n = Ei(e || {}).get, r = i ? Vf : Rf;
     return i === "native" && (i = ""), e && (a ? r((Dt[a] && Dt[a].get || n)(e, a, i, o)) : function(s, c, d) {
       return r((Dt[s] && Dt[s].get || n)(e, s, c, d));
     });
@@ -5831,11 +5831,11 @@ var $i = [], Yn = {}, iv = [], Bd = 0, ov = 0, ps = function(e) {
     e === void 0 && (e = {});
     var i = new jt(e), o, n;
     for (i.smoothChildTiming = Ut(e.smoothChildTiming), Ye.remove(i), i._dp = 0, i._time = i._tTime = Ye._time, o = Ye._first; o; )
-      n = o._next, (a || !(!o._dur && o instanceof pt && o.vars.onComplete === o._targets[0])) && wa(i, o, o._start - o._delay), o = n;
+      n = o._next, (a || !(!o._dur && o instanceof ft && o.vars.onComplete === o._targets[0])) && wa(i, o, o._start - o._delay), o = n;
     return wa(Ye, i, 0), i;
   },
   context: function(e, a) {
-    return e ? new af(e, a) : Be;
+    return e ? new ip(e, a) : Be;
   },
   matchMedia: function(e) {
     return new nv(e);
@@ -5859,22 +5859,22 @@ var $i = [], Yn = {}, iv = [], Bd = 0, ov = 0, ps = function(e) {
   utils: {
     wrap: j0,
     wrapYoyo: z0,
-    distribute: zp,
-    random: Fp,
-    snap: Up,
+    distribute: Uf,
+    random: qf,
+    snap: Ff,
     normalize: $0,
     getUnit: It,
     clamp: V0,
-    splitColor: Dp,
+    splitColor: Bf,
     toArray: oa,
     selector: Zs,
-    mapRange: Zp,
+    mapRange: Lf,
     pipe: O0,
     unitize: M0,
     interpolate: U0,
-    shuffle: jp
+    shuffle: zf
   },
-  install: Ap,
+  install: xf,
   effects: cs,
   ticker: Bt,
   updateRoot: jt.updateRoot,
@@ -5882,8 +5882,8 @@ var $i = [], Yn = {}, iv = [], Bd = 0, ov = 0, ps = function(e) {
   globalTimeline: Ye,
   core: {
     PropTween: qt,
-    globals: xp,
-    Tween: pt,
+    globals: Tf,
+    Tween: ft,
     Timeline: jt,
     Animation: ln,
     getCache: Ei,
@@ -5900,10 +5900,10 @@ var $i = [], Yn = {}, iv = [], Bd = 0, ov = 0, ps = function(e) {
   }
 };
 Ft("to,from,fromTo,delayedCall,set,killTweensOf", function(t) {
-  return fr[t] = pt[t];
+  return pr[t] = ft[t];
 });
 Bt.add(jt.updateRoot);
-Yi = fr.to({}, {
+Yi = pr.to({}, {
   duration: 0
 });
 var rv = function(e, a) {
@@ -5915,7 +5915,7 @@ var rv = function(e, a) {
   for (o in a)
     for (n = i.length; n--; )
       r = e._ptLookup[n][o], r && (r = r.d) && (r._pt && (r = rv(r, o)), r && r.modifier && r.modifier(a[o], e, i[n], o));
-}, fs = function(e, a) {
+}, ps = function(e, a) {
   return {
     name: e,
     headless: 1,
@@ -5936,7 +5936,7 @@ var rv = function(e, a) {
       };
     }
   };
-}, Lt = fr.registerPlugin({
+}, Lt = pr.registerPlugin({
   name: "attr",
   init: function(e, a, i, o, n) {
     var r, s, c;
@@ -5955,10 +5955,10 @@ var rv = function(e, a) {
     for (var i = a.length; i--; )
       this.add(e, i, e[i] || 0, a[i], 0, 0, 0, 0, 0, 1);
   }
-}, fs("roundProps", Ls), fs("modifiers"), fs("snap", Up)) || fr;
-pt.version = jt.version = Lt.version = "3.15.0";
-Ip = 1;
-kc() && fo();
+}, ps("roundProps", Ls), ps("modifiers"), ps("snap", Ff)) || pr;
+ft.version = jt.version = Lt.version = "3.15.0";
+Af = 1;
+kc() && po();
 Pe.Power0;
 Pe.Power1;
 Pe.Power2;
@@ -5987,16 +5987,16 @@ var Hd, ai, io, Mc, Pi, Jd, $c, cv = function() {
   return a.set(a.t, a.p, Math.round((a.s + a.c * e) * 1e4) / 1e4 + a.u, a);
 }, uv = function(e, a) {
   return a.set(a.t, a.p, e === 1 ? a.e : Math.round((a.s + a.c * e) * 1e4) / 1e4 + a.u, a);
-}, pv = function(e, a) {
-  return a.set(a.t, a.p, e ? Math.round((a.s + a.c * e) * 1e4) / 1e4 + a.u : a.b, a);
 }, fv = function(e, a) {
+  return a.set(a.t, a.p, e ? Math.round((a.s + a.c * e) * 1e4) / 1e4 + a.u : a.b, a);
+}, pv = function(e, a) {
   return a.set(a.t, a.p, e === 1 ? a.e : e ? Math.round((a.s + a.c * e) * 1e4) / 1e4 + a.u : a.b, a);
 }, hv = function(e, a) {
   var i = a.s + a.c * e;
   a.set(a.t, a.p, ~~(i + (i < 0 ? -0.5 : 0.5)) + a.u, a);
-}, of = function(e, a) {
+}, op = function(e, a) {
   return a.set(a.t, a.p, e ? a.e : a.b, a);
-}, nf = function(e, a) {
+}, np = function(e, a) {
   return a.set(a.t, a.p, e !== 1 ? a.b : a.e, a);
 }, bv = function(e, a, i) {
   return e.style[a] = i;
@@ -6028,7 +6028,7 @@ var Hd, ai, io, Mc, Pi, Jd, $c, cv = function() {
     r.svg && (this.svgo = o.getAttribute("data-svg-origin"), this.props.push(Zt, a, "")), e = Xe;
   }
   (n || a) && this.props.push(e, a, n[e]);
-}, rf = function(e) {
+}, rp = function(e) {
   e.translate && (e.removeProperty("translate"), e.removeProperty("scale"), e.removeProperty("rotate"));
 }, kv = function() {
   var e = this.props, a = this.target, i = a.style, o = a._gsap, n, r;
@@ -6037,9 +6037,9 @@ var Hd, ai, io, Mc, Pi, Jd, $c, cv = function() {
   if (this.tfm) {
     for (r in this.tfm)
       o[r] = this.tfm[r];
-    o.svg && (o.renderTransform(), a.setAttribute("data-svg-origin", this.svgo || "")), n = $c(), (!n || !n.isStart) && !i[Xe] && (rf(i), o.zOrigin && i[Zt] && (i[Zt] += " " + o.zOrigin + "px", o.zOrigin = 0, o.renderTransform()), o.uncache = 1);
+    o.svg && (o.renderTransform(), a.setAttribute("data-svg-origin", this.svgo || "")), n = $c(), (!n || !n.isStart) && !i[Xe] && (rp(i), o.zOrigin && i[Zt] && (i[Zt] += " " + o.zOrigin + "px", o.zOrigin = 0, o.renderTransform()), o.uncache = 1);
   }
-}, sf = function(e, a) {
+}, sp = function(e, a) {
   var i = {
     target: e,
     props: [],
@@ -6049,7 +6049,7 @@ var Hd, ai, io, Mc, Pi, Jd, $c, cv = function() {
   return e._gsap || Lt.core.getCache(e), a && e.style && e.nodeType && a.split(",").forEach(function(o) {
     return i.save(o);
   }), i;
-}, cf, Hs = function(e, a) {
+}, cp, Hs = function(e, a) {
   var i = ai.createElementNS ? ai.createElementNS((a || "http://www.w3.org/1999/xhtml").replace(/^https/, "http"), e) : ai.createElement(e);
   return i && i.style ? i : ai.createElement(e);
 }, Gt = function t(e, a, i) {
@@ -6065,7 +6065,7 @@ var Hd, ai, io, Mc, Pi, Jd, $c, cv = function() {
 }, Js = function() {
   cv() && window.document && (Hd = window, ai = Hd.document, io = ai.documentElement, Pi = Hs("div") || {
     style: {}
-  }, Hs("div"), Xe = ho(Xe), Zt = Xe + "Origin", Pi.style.cssText = "border-width:0;line-height:0;position:absolute;padding:0", cf = !!ho("perspective"), $c = Lt.core.reverting, Mc = 1);
+  }, Hs("div"), Xe = ho(Xe), Zt = Xe + "Origin", Pi.style.cssText = "border-width:0;line-height:0;position:absolute;padding:0", cp = !!ho("perspective"), $c = Lt.core.reverting, Mc = 1);
 }, Kd = function(e) {
   var a = e.ownerSVGElement, i = Hs("svg", a && a.getAttribute("xmlns") || "http://www.w3.org/2000/svg"), o = e.cloneNode(!0), n;
   o.style.display = "block", i.appendChild(o), io.appendChild(i);
@@ -6078,7 +6078,7 @@ var Hd, ai, io, Mc, Pi, Jd, $c, cv = function() {
   for (var i = a.length; i--; )
     if (e.hasAttribute(a[i]))
       return e.getAttribute(a[i]);
-}, df = function(e) {
+}, dp = function(e) {
   var a, i;
   try {
     a = e.getBBox();
@@ -6091,15 +6091,15 @@ var Hd, ai, io, Mc, Pi, Jd, $c, cv = function() {
     width: 0,
     height: 0
   } : a;
-}, lf = function(e) {
-  return !!(e.getCTM && (!e.parentNode || e.ownerSVGElement) && df(e));
+}, lp = function(e) {
+  return !!(e.getCTM && (!e.parentNode || e.ownerSVGElement) && dp(e));
 }, li = function(e, a) {
   if (a) {
     var i = e.style, o;
     a in Na && a !== Zt && (a = Xe), i.removeProperty ? (o = a.substr(0, 2), (o === "ms" || a.substr(0, 6) === "webkit") && (a = "-" + a), i.removeProperty(o === "--" ? a : a.replace(jc, "-$1").toLowerCase())) : i.removeAttribute(a);
   }
 }, ii = function(e, a, i, o, n, r) {
-  var s = new qt(e._pt, a, i, 0, 1, r ? nf : of);
+  var s = new qt(e._pt, a, i, 0, 1, r ? np : op);
   return e._pt = s, s.b = o, s.e = n, e._props.push(i), s;
 }, Xd = {
   deg: 1,
@@ -6109,42 +6109,42 @@ var Hd, ai, io, Mc, Pi, Jd, $c, cv = function() {
   grid: 1,
   flex: 1
 }, ui = function t(e, a, i, o) {
-  var n = parseFloat(i) || 0, r = (i + "").trim().substr((n + "").length) || "px", s = Pi.style, c = dv.test(a), d = e.tagName.toLowerCase() === "svg", l = (d ? "client" : "offset") + (c ? "Width" : "Height"), u = 100, p = o === "px", h = o === "%", y, v, g, I;
+  var n = parseFloat(i) || 0, r = (i + "").trim().substr((n + "").length) || "px", s = Pi.style, c = dv.test(a), d = e.tagName.toLowerCase() === "svg", l = (d ? "client" : "offset") + (c ? "Width" : "Height"), u = 100, f = o === "px", b = o === "%", y, v, g, k;
   if (o === r || !n || Xd[o] || Xd[r])
     return n;
-  if (r !== "px" && !p && (n = t(e, a, i, "px")), I = e.getCTM && lf(e), (h || r === "%") && (Na[a] || ~a.indexOf("adius")))
-    return y = I ? e.getBBox()[c ? "width" : "height"] : e[l], lt(h ? n / y * u : n / 100 * y);
-  if (s[c ? "width" : "height"] = u + (p ? r : o), v = o !== "rem" && ~a.indexOf("adius") || o === "em" && e.appendChild && !d ? e : e.parentNode, I && (v = (e.ownerSVGElement || {}).parentNode), (!v || v === ai || !v.appendChild) && (v = ai.body), g = v._gsap, g && h && g.width && c && g.time === Bt.time && !g.uncache)
+  if (r !== "px" && !f && (n = t(e, a, i, "px")), k = e.getCTM && lp(e), (b || r === "%") && (Na[a] || ~a.indexOf("adius")))
+    return y = k ? e.getBBox()[c ? "width" : "height"] : e[l], lt(b ? n / y * u : n / 100 * y);
+  if (s[c ? "width" : "height"] = u + (f ? r : o), v = o !== "rem" && ~a.indexOf("adius") || o === "em" && e.appendChild && !d ? e : e.parentNode, k && (v = (e.ownerSVGElement || {}).parentNode), (!v || v === ai || !v.appendChild) && (v = ai.body), g = v._gsap, g && b && g.width && c && g.time === Bt.time && !g.uncache)
     return lt(n / g.width * u);
-  if (h && (a === "height" || a === "width")) {
-    var A = e.style[a];
-    e.style[a] = u + o, y = e[l], A ? e.style[a] = A : li(e, a);
+  if (b && (a === "height" || a === "width")) {
+    var I = e.style[a];
+    e.style[a] = u + o, y = e[l], I ? e.style[a] = I : li(e, a);
   } else
-    (h || r === "%") && !Iv[Gt(v, "display")] && (s.position = Gt(e, "position")), v === e && (s.position = "static"), v.appendChild(Pi), y = Pi[l], v.removeChild(Pi), s.position = "absolute";
-  return c && h && (g = Ei(v), g.time = Bt.time, g.width = v[l]), lt(p ? y * n / u : y && n ? u / y * n : 0);
+    (b || r === "%") && !Iv[Gt(v, "display")] && (s.position = Gt(e, "position")), v === e && (s.position = "static"), v.appendChild(Pi), y = Pi[l], v.removeChild(Pi), s.position = "absolute";
+  return c && b && (g = Ei(v), g.time = Bt.time, g.width = v[l]), lt(f ? y * n / u : y && n ? u / y * n : 0);
 }, $a = function(e, a, i, o) {
   var n;
-  return Mc || Js(), a in Ia && a !== "transform" && (a = Ia[a], ~a.indexOf(",") && (a = a.split(",")[0])), Na[a] && a !== "transform" ? (n = pn(e, o), n = a !== "transformOrigin" ? n[a] : n.svg ? n.origin : br(Gt(e, Zt)) + " " + n.zOrigin + "px") : (n = e.style[a], (!n || n === "auto" || o || ~(n + "").indexOf("calc(")) && (n = hr[a] && hr[a](e, a, i) || Gt(e, a) || Sp(e, a) || (a === "opacity" ? 1 : 0))), i && !~(n + "").trim().indexOf(" ") ? ui(e, a, n, i) + i : n;
+  return Mc || Js(), a in Ia && a !== "transform" && (a = Ia[a], ~a.indexOf(",") && (a = a.split(",")[0])), Na[a] && a !== "transform" ? (n = fn(e, o), n = a !== "transformOrigin" ? n[a] : n.svg ? n.origin : br(Gt(e, Zt)) + " " + n.zOrigin + "px") : (n = e.style[a], (!n || n === "auto" || o || ~(n + "").indexOf("calc(")) && (n = hr[a] && hr[a](e, a, i) || Gt(e, a) || Cf(e, a) || (a === "opacity" ? 1 : 0))), i && !~(n + "").trim().indexOf(" ") ? ui(e, a, n, i) + i : n;
 }, Av = function(e, a, i, o) {
   if (!i || i === "none") {
     var n = ho(a, e, 1), r = n && Gt(e, n, 1);
     r && r !== i ? (a = n, i = r) : a === "borderColor" && (i = Gt(e, "borderTopColor"));
   }
-  var s = new qt(this._pt, e.style, a, 0, 1, ef), c = 0, d = 0, l, u, p, h, y, v, g, I, A, S, T, k;
-  if (s.b = i, s.e = o, i += "", o += "", o.substring(0, 6) === "var(--" && (o = Gt(e, o.substring(4, o.indexOf(")")))), o === "auto" && (v = e.style[a], e.style[a] = o, o = Gt(e, a) || o, v ? e.style[a] = v : li(e, a)), l = [i, o], Hp(l), i = l[0], o = l[1], p = i.match(Ki) || [], k = o.match(Ki) || [], k.length) {
+  var s = new qt(this._pt, e.style, a, 0, 1, tp), c = 0, d = 0, l, u, f, b, y, v, g, k, I, S, T, x;
+  if (s.b = i, s.e = o, i += "", o += "", o.substring(0, 6) === "var(--" && (o = Gt(e, o.substring(4, o.indexOf(")")))), o === "auto" && (v = e.style[a], e.style[a] = o, o = Gt(e, a) || o, v ? e.style[a] = v : li(e, a)), l = [i, o], Jf(l), i = l[0], o = l[1], f = i.match(Ki) || [], x = o.match(Ki) || [], x.length) {
     for (; u = Ki.exec(o); )
-      g = u[0], A = o.substring(c, u.index), y ? y = (y + 1) % 5 : (A.substr(-5) === "rgba(" || A.substr(-5) === "hsla(") && (y = 1), g !== (v = p[d++] || "") && (h = parseFloat(v) || 0, T = v.substr((h + "").length), g.charAt(1) === "=" && (g = ao(h, g) + T), I = parseFloat(g), S = g.substr((I + "").length), c = Ki.lastIndex - S.length, S || (S = S || Kt.units[a] || T, c === o.length && (o += S, s.e += S)), T !== S && (h = ui(e, a, v, S) || 0), s._pt = {
+      g = u[0], I = o.substring(c, u.index), y ? y = (y + 1) % 5 : (I.substr(-5) === "rgba(" || I.substr(-5) === "hsla(") && (y = 1), g !== (v = f[d++] || "") && (b = parseFloat(v) || 0, T = v.substr((b + "").length), g.charAt(1) === "=" && (g = ao(b, g) + T), k = parseFloat(g), S = g.substr((k + "").length), c = Ki.lastIndex - S.length, S || (S = S || Kt.units[a] || T, c === o.length && (o += S, s.e += S)), T !== S && (b = ui(e, a, v, S) || 0), s._pt = {
         _next: s._pt,
-        p: A || d === 1 ? A : ",",
+        p: I || d === 1 ? I : ",",
         //note: SVG spec allows omission of comma/space when a negative sign is wedged between two numbers, like 2.5-5.3 instead of 2.5,-5.3 but when tweening, the negative value may switch to positive, so we insert the comma just in case.
-        s: h,
-        c: I - h,
+        s: b,
+        c: k - b,
         m: y && y < 4 || a === "zIndex" ? Math.round : 0
       });
     s.c = c < o.length ? o.substring(c, o.length) : "";
   } else
-    s.r = a === "display" && o === "none" ? nf : of;
-  return kp.test(o) && (s.e = 0), this._pt = s, s;
+    s.r = a === "display" && o === "none" ? np : op;
+  return If.test(o) && (s.e = 0), this._pt = s, s;
 }, Qd = {
   top: "0%",
   bottom: "100%",
@@ -6162,7 +6162,7 @@ var Hd, ai, io, Mc, Pi, Jd, $c, cv = function() {
     else
       for (n = n.split(","), d = n.length; --d > -1; )
         s = n[d], Na[s] && (c = 1, s = s === "transformOrigin" ? Zt : Xe), li(i, s);
-    c && (li(i, Xe), r && (r.svg && i.removeAttribute("transform"), o.scale = o.rotate = o.translate = "none", pn(i, 1), r.uncache = 1, rf(o)));
+    c && (li(i, Xe), r && (r.svg && i.removeAttribute("transform"), o.scale = o.rotate = o.translate = "none", fn(i, 1), r.uncache = 1, rp(o)));
   }
 }, hr = {
   clearProps: function(e, a, i, o, n) {
@@ -6234,52 +6234,52 @@ var Hd, ai, io, Mc, Pi, Jd, $c, cv = function() {
   	return 1;
   }
   */
-}, un = [1, 0, 0, 1, 0, 0], uf = {}, pf = function(e) {
+}, un = [1, 0, 0, 1, 0, 0], up = {}, fp = function(e) {
   return e === "matrix(1, 0, 0, 1, 0, 0)" || e === "none" || !e;
 }, el = function(e) {
   var a = Gt(e, Xe);
-  return pf(a) ? un : a.substr(7).match(wp).map(lt);
+  return fp(a) ? un : a.substr(7).match(kf).map(lt);
 }, zc = function(e, a) {
   var i = e._gsap || Ei(e), o = e.style, n = el(e), r, s, c, d;
   return i.svg && e.getAttribute("transform") ? (c = e.transform.baseVal.consolidate().matrix, n = [c.a, c.b, c.c, c.d, c.e, c.f], n.join(",") === "1,0,0,1,0,0" ? un : n) : (n === un && !e.offsetParent && e !== io && !i.svg && (c = o.display, o.display = "block", r = e.parentNode, (!r || !e.offsetParent && !e.getBoundingClientRect().width) && (d = 1, s = e.nextElementSibling, io.appendChild(e)), n = el(e), c ? o.display = c : li(e, "display"), d && (s ? r.insertBefore(e, s) : r ? r.appendChild(e) : io.removeChild(e))), a && n.length > 6 ? [n[0], n[1], n[4], n[5], n[12], n[13]] : n);
 }, Gs = function(e, a, i, o, n, r) {
-  var s = e._gsap, c = n || zc(e, !0), d = s.xOrigin || 0, l = s.yOrigin || 0, u = s.xOffset || 0, p = s.yOffset || 0, h = c[0], y = c[1], v = c[2], g = c[3], I = c[4], A = c[5], S = a.split(" "), T = parseFloat(S[0]) || 0, k = parseFloat(S[1]) || 0, Z, P, O, E;
-  i ? c !== un && (P = h * g - y * v) && (O = T * (g / P) + k * (-v / P) + (v * A - g * I) / P, E = T * (-y / P) + k * (h / P) - (h * A - y * I) / P, T = O, k = E) : (Z = df(e), T = Z.x + (~S[0].indexOf("%") ? T / 100 * Z.width : T), k = Z.y + (~(S[1] || S[0]).indexOf("%") ? k / 100 * Z.height : k)), o || o !== !1 && s.smooth ? (I = T - d, A = k - l, s.xOffset = u + (I * h + A * v) - I, s.yOffset = p + (I * y + A * g) - A) : s.xOffset = s.yOffset = 0, s.xOrigin = T, s.yOrigin = k, s.smooth = !!o, s.origin = a, s.originIsAbsolute = !!i, e.style[Zt] = "0px 0px", r && (ii(r, s, "xOrigin", d, T), ii(r, s, "yOrigin", l, k), ii(r, s, "xOffset", u, s.xOffset), ii(r, s, "yOffset", p, s.yOffset)), e.setAttribute("data-svg-origin", T + " " + k);
-}, pn = function(e, a) {
-  var i = e._gsap || new Gp(e);
+  var s = e._gsap, c = n || zc(e, !0), d = s.xOrigin || 0, l = s.yOrigin || 0, u = s.xOffset || 0, f = s.yOffset || 0, b = c[0], y = c[1], v = c[2], g = c[3], k = c[4], I = c[5], S = a.split(" "), T = parseFloat(S[0]) || 0, x = parseFloat(S[1]) || 0, D, V, P, R;
+  i ? c !== un && (V = b * g - y * v) && (P = T * (g / V) + x * (-v / V) + (v * I - g * k) / V, R = T * (-y / V) + x * (b / V) - (b * I - y * k) / V, T = P, x = R) : (D = dp(e), T = D.x + (~S[0].indexOf("%") ? T / 100 * D.width : T), x = D.y + (~(S[1] || S[0]).indexOf("%") ? x / 100 * D.height : x)), o || o !== !1 && s.smooth ? (k = T - d, I = x - l, s.xOffset = u + (k * b + I * v) - k, s.yOffset = f + (k * y + I * g) - I) : s.xOffset = s.yOffset = 0, s.xOrigin = T, s.yOrigin = x, s.smooth = !!o, s.origin = a, s.originIsAbsolute = !!i, e.style[Zt] = "0px 0px", r && (ii(r, s, "xOrigin", d, T), ii(r, s, "yOrigin", l, x), ii(r, s, "xOffset", u, s.xOffset), ii(r, s, "yOffset", f, s.yOffset)), e.setAttribute("data-svg-origin", T + " " + x);
+}, fn = function(e, a) {
+  var i = e._gsap || new Wf(e);
   if ("x" in i && !a && !i.uncache)
     return i;
-  var o = e.style, n = i.scaleX < 0, r = "px", s = "deg", c = getComputedStyle(e), d = Gt(e, Zt) || "0", l, u, p, h, y, v, g, I, A, S, T, k, Z, P, O, E, q, ee, J, re, de, se, te, L, K, ue, Te, Se, Ae, Me, ke, st;
-  return l = u = p = v = g = I = A = S = T = 0, h = y = 1, i.svg = !!(e.getCTM && lf(e)), c.translate && ((c.translate !== "none" || c.scale !== "none" || c.rotate !== "none") && (o[Xe] = (c.translate !== "none" ? "translate3d(" + (c.translate + " 0 0").split(" ").slice(0, 3).join(", ") + ") " : "") + (c.rotate !== "none" ? "rotate(" + c.rotate + ") " : "") + (c.scale !== "none" ? "scale(" + c.scale.split(" ").join(",") + ") " : "") + (c[Xe] !== "none" ? c[Xe] : "")), o.scale = o.rotate = o.translate = "none"), P = zc(e, i.svg), i.svg && (i.uncache ? (K = e.getBBox(), d = i.xOrigin - K.x + "px " + (i.yOrigin - K.y) + "px", L = "") : L = !a && e.getAttribute("data-svg-origin"), Gs(e, L || d, !!L || i.originIsAbsolute, i.smooth !== !1, P)), k = i.xOrigin || 0, Z = i.yOrigin || 0, P !== un && (ee = P[0], J = P[1], re = P[2], de = P[3], l = se = P[4], u = te = P[5], P.length === 6 ? (h = Math.sqrt(ee * ee + J * J), y = Math.sqrt(de * de + re * re), v = ee || J ? Hi(J, ee) * xi : 0, A = re || de ? Hi(re, de) * xi + v : 0, A && (y *= Math.abs(Math.cos(A * oo))), i.svg && (l -= k - (k * ee + Z * re), u -= Z - (k * J + Z * de))) : (st = P[6], Me = P[7], Te = P[8], Se = P[9], Ae = P[10], ke = P[11], l = P[12], u = P[13], p = P[14], O = Hi(st, Ae), g = O * xi, O && (E = Math.cos(-O), q = Math.sin(-O), L = se * E + Te * q, K = te * E + Se * q, ue = st * E + Ae * q, Te = se * -q + Te * E, Se = te * -q + Se * E, Ae = st * -q + Ae * E, ke = Me * -q + ke * E, se = L, te = K, st = ue), O = Hi(-re, Ae), I = O * xi, O && (E = Math.cos(-O), q = Math.sin(-O), L = ee * E - Te * q, K = J * E - Se * q, ue = re * E - Ae * q, ke = de * q + ke * E, ee = L, J = K, re = ue), O = Hi(J, ee), v = O * xi, O && (E = Math.cos(O), q = Math.sin(O), L = ee * E + J * q, K = se * E + te * q, J = J * E - ee * q, te = te * E - se * q, ee = L, se = K), g && Math.abs(g) + Math.abs(v) > 359.9 && (g = v = 0, I = 180 - I), h = lt(Math.sqrt(ee * ee + J * J + re * re)), y = lt(Math.sqrt(te * te + st * st)), O = Hi(se, te), A = Math.abs(O) > 2e-4 ? O * xi : 0, T = ke ? 1 / (ke < 0 ? -ke : ke) : 0), i.svg && (L = e.getAttribute("transform"), i.forceCSS = e.setAttribute("transform", "") || !pf(Gt(e, Xe)), L && e.setAttribute("transform", L))), Math.abs(A) > 90 && Math.abs(A) < 270 && (n ? (h *= -1, A += v <= 0 ? 180 : -180, v += v <= 0 ? 180 : -180) : (y *= -1, A += A <= 0 ? 180 : -180)), a = a || i.uncache, i.x = l - ((i.xPercent = l && (!a && i.xPercent || (Math.round(e.offsetWidth / 2) === Math.round(-l) ? -50 : 0))) ? e.offsetWidth * i.xPercent / 100 : 0) + r, i.y = u - ((i.yPercent = u && (!a && i.yPercent || (Math.round(e.offsetHeight / 2) === Math.round(-u) ? -50 : 0))) ? e.offsetHeight * i.yPercent / 100 : 0) + r, i.z = p + r, i.scaleX = lt(h), i.scaleY = lt(y), i.rotation = lt(v) + s, i.rotationX = lt(g) + s, i.rotationY = lt(I) + s, i.skewX = A + s, i.skewY = S + s, i.transformPerspective = T + r, (i.zOrigin = parseFloat(d.split(" ")[2]) || !a && i.zOrigin || 0) && (o[Zt] = br(d)), i.xOffset = i.yOffset = 0, i.force3D = Kt.force3D, i.renderTransform = i.svg ? Cv : cf ? ff : Sv, i.uncache = 0, i;
+  var o = e.style, n = i.scaleX < 0, r = "px", s = "deg", c = getComputedStyle(e), d = Gt(e, Zt) || "0", l, u, f, b, y, v, g, k, I, S, T, x, D, V, P, R, j, Q, B, re, de, se, te, Z, K, ue, Te, Se, Ae, Me, ke, st;
+  return l = u = f = v = g = k = I = S = T = 0, b = y = 1, i.svg = !!(e.getCTM && lp(e)), c.translate && ((c.translate !== "none" || c.scale !== "none" || c.rotate !== "none") && (o[Xe] = (c.translate !== "none" ? "translate3d(" + (c.translate + " 0 0").split(" ").slice(0, 3).join(", ") + ") " : "") + (c.rotate !== "none" ? "rotate(" + c.rotate + ") " : "") + (c.scale !== "none" ? "scale(" + c.scale.split(" ").join(",") + ") " : "") + (c[Xe] !== "none" ? c[Xe] : "")), o.scale = o.rotate = o.translate = "none"), V = zc(e, i.svg), i.svg && (i.uncache ? (K = e.getBBox(), d = i.xOrigin - K.x + "px " + (i.yOrigin - K.y) + "px", Z = "") : Z = !a && e.getAttribute("data-svg-origin"), Gs(e, Z || d, !!Z || i.originIsAbsolute, i.smooth !== !1, V)), x = i.xOrigin || 0, D = i.yOrigin || 0, V !== un && (Q = V[0], B = V[1], re = V[2], de = V[3], l = se = V[4], u = te = V[5], V.length === 6 ? (b = Math.sqrt(Q * Q + B * B), y = Math.sqrt(de * de + re * re), v = Q || B ? Hi(B, Q) * xi : 0, I = re || de ? Hi(re, de) * xi + v : 0, I && (y *= Math.abs(Math.cos(I * oo))), i.svg && (l -= x - (x * Q + D * re), u -= D - (x * B + D * de))) : (st = V[6], Me = V[7], Te = V[8], Se = V[9], Ae = V[10], ke = V[11], l = V[12], u = V[13], f = V[14], P = Hi(st, Ae), g = P * xi, P && (R = Math.cos(-P), j = Math.sin(-P), Z = se * R + Te * j, K = te * R + Se * j, ue = st * R + Ae * j, Te = se * -j + Te * R, Se = te * -j + Se * R, Ae = st * -j + Ae * R, ke = Me * -j + ke * R, se = Z, te = K, st = ue), P = Hi(-re, Ae), k = P * xi, P && (R = Math.cos(-P), j = Math.sin(-P), Z = Q * R - Te * j, K = B * R - Se * j, ue = re * R - Ae * j, ke = de * j + ke * R, Q = Z, B = K, re = ue), P = Hi(B, Q), v = P * xi, P && (R = Math.cos(P), j = Math.sin(P), Z = Q * R + B * j, K = se * R + te * j, B = B * R - Q * j, te = te * R - se * j, Q = Z, se = K), g && Math.abs(g) + Math.abs(v) > 359.9 && (g = v = 0, k = 180 - k), b = lt(Math.sqrt(Q * Q + B * B + re * re)), y = lt(Math.sqrt(te * te + st * st)), P = Hi(se, te), I = Math.abs(P) > 2e-4 ? P * xi : 0, T = ke ? 1 / (ke < 0 ? -ke : ke) : 0), i.svg && (Z = e.getAttribute("transform"), i.forceCSS = e.setAttribute("transform", "") || !fp(Gt(e, Xe)), Z && e.setAttribute("transform", Z))), Math.abs(I) > 90 && Math.abs(I) < 270 && (n ? (b *= -1, I += v <= 0 ? 180 : -180, v += v <= 0 ? 180 : -180) : (y *= -1, I += I <= 0 ? 180 : -180)), a = a || i.uncache, i.x = l - ((i.xPercent = l && (!a && i.xPercent || (Math.round(e.offsetWidth / 2) === Math.round(-l) ? -50 : 0))) ? e.offsetWidth * i.xPercent / 100 : 0) + r, i.y = u - ((i.yPercent = u && (!a && i.yPercent || (Math.round(e.offsetHeight / 2) === Math.round(-u) ? -50 : 0))) ? e.offsetHeight * i.yPercent / 100 : 0) + r, i.z = f + r, i.scaleX = lt(b), i.scaleY = lt(y), i.rotation = lt(v) + s, i.rotationX = lt(g) + s, i.rotationY = lt(k) + s, i.skewX = I + s, i.skewY = S + s, i.transformPerspective = T + r, (i.zOrigin = parseFloat(d.split(" ")[2]) || !a && i.zOrigin || 0) && (o[Zt] = br(d)), i.xOffset = i.yOffset = 0, i.force3D = Kt.force3D, i.renderTransform = i.svg ? Cv : cp ? pp : Sv, i.uncache = 0, i;
 }, br = function(e) {
   return (e = e.split(" "))[0] + " " + e[1];
 }, hs = function(e, a, i) {
   var o = It(a);
   return lt(parseFloat(a) + parseFloat(ui(e, "x", i + "px", o))) + o;
 }, Sv = function(e, a) {
-  a.z = "0px", a.rotationY = a.rotationX = "0deg", a.force3D = 0, ff(e, a);
-}, ki = "0deg", Co = "0px", Ii = ") ", ff = function(e, a) {
-  var i = a || this, o = i.xPercent, n = i.yPercent, r = i.x, s = i.y, c = i.z, d = i.rotation, l = i.rotationY, u = i.rotationX, p = i.skewX, h = i.skewY, y = i.scaleX, v = i.scaleY, g = i.transformPerspective, I = i.force3D, A = i.target, S = i.zOrigin, T = "", k = I === "auto" && e && e !== 1 || I === !0;
+  a.z = "0px", a.rotationY = a.rotationX = "0deg", a.force3D = 0, pp(e, a);
+}, ki = "0deg", Co = "0px", Ii = ") ", pp = function(e, a) {
+  var i = a || this, o = i.xPercent, n = i.yPercent, r = i.x, s = i.y, c = i.z, d = i.rotation, l = i.rotationY, u = i.rotationX, f = i.skewX, b = i.skewY, y = i.scaleX, v = i.scaleY, g = i.transformPerspective, k = i.force3D, I = i.target, S = i.zOrigin, T = "", x = k === "auto" && e && e !== 1 || k === !0;
   if (S && (u !== ki || l !== ki)) {
-    var Z = parseFloat(l) * oo, P = Math.sin(Z), O = Math.cos(Z), E;
-    Z = parseFloat(u) * oo, E = Math.cos(Z), r = hs(A, r, P * E * -S), s = hs(A, s, -Math.sin(Z) * -S), c = hs(A, c, O * E * -S + S);
+    var D = parseFloat(l) * oo, V = Math.sin(D), P = Math.cos(D), R;
+    D = parseFloat(u) * oo, R = Math.cos(D), r = hs(I, r, V * R * -S), s = hs(I, s, -Math.sin(D) * -S), c = hs(I, c, P * R * -S + S);
   }
-  g !== Co && (T += "perspective(" + g + Ii), (o || n) && (T += "translate(" + o + "%, " + n + "%) "), (k || r !== Co || s !== Co || c !== Co) && (T += c !== Co || k ? "translate3d(" + r + ", " + s + ", " + c + ") " : "translate(" + r + ", " + s + Ii), d !== ki && (T += "rotate(" + d + Ii), l !== ki && (T += "rotateY(" + l + Ii), u !== ki && (T += "rotateX(" + u + Ii), (p !== ki || h !== ki) && (T += "skew(" + p + ", " + h + Ii), (y !== 1 || v !== 1) && (T += "scale(" + y + ", " + v + Ii), A.style[Xe] = T || "translate(0, 0)";
+  g !== Co && (T += "perspective(" + g + Ii), (o || n) && (T += "translate(" + o + "%, " + n + "%) "), (x || r !== Co || s !== Co || c !== Co) && (T += c !== Co || x ? "translate3d(" + r + ", " + s + ", " + c + ") " : "translate(" + r + ", " + s + Ii), d !== ki && (T += "rotate(" + d + Ii), l !== ki && (T += "rotateY(" + l + Ii), u !== ki && (T += "rotateX(" + u + Ii), (f !== ki || b !== ki) && (T += "skew(" + f + ", " + b + Ii), (y !== 1 || v !== 1) && (T += "scale(" + y + ", " + v + Ii), I.style[Xe] = T || "translate(0, 0)";
 }, Cv = function(e, a) {
-  var i = a || this, o = i.xPercent, n = i.yPercent, r = i.x, s = i.y, c = i.rotation, d = i.skewX, l = i.skewY, u = i.scaleX, p = i.scaleY, h = i.target, y = i.xOrigin, v = i.yOrigin, g = i.xOffset, I = i.yOffset, A = i.forceCSS, S = parseFloat(r), T = parseFloat(s), k, Z, P, O, E;
-  c = parseFloat(c), d = parseFloat(d), l = parseFloat(l), l && (l = parseFloat(l), d += l, c += l), c || d ? (c *= oo, d *= oo, k = Math.cos(c) * u, Z = Math.sin(c) * u, P = Math.sin(c - d) * -p, O = Math.cos(c - d) * p, d && (l *= oo, E = Math.tan(d - l), E = Math.sqrt(1 + E * E), P *= E, O *= E, l && (E = Math.tan(l), E = Math.sqrt(1 + E * E), k *= E, Z *= E)), k = lt(k), Z = lt(Z), P = lt(P), O = lt(O)) : (k = u, O = p, Z = P = 0), (S && !~(r + "").indexOf("px") || T && !~(s + "").indexOf("px")) && (S = ui(h, "x", r, "px"), T = ui(h, "y", s, "px")), (y || v || g || I) && (S = lt(S + y - (y * k + v * P) + g), T = lt(T + v - (y * Z + v * O) + I)), (o || n) && (E = h.getBBox(), S = lt(S + o / 100 * E.width), T = lt(T + n / 100 * E.height)), E = "matrix(" + k + "," + Z + "," + P + "," + O + "," + S + "," + T + ")", h.setAttribute("transform", E), A && (h.style[Xe] = E);
+  var i = a || this, o = i.xPercent, n = i.yPercent, r = i.x, s = i.y, c = i.rotation, d = i.skewX, l = i.skewY, u = i.scaleX, f = i.scaleY, b = i.target, y = i.xOrigin, v = i.yOrigin, g = i.xOffset, k = i.yOffset, I = i.forceCSS, S = parseFloat(r), T = parseFloat(s), x, D, V, P, R;
+  c = parseFloat(c), d = parseFloat(d), l = parseFloat(l), l && (l = parseFloat(l), d += l, c += l), c || d ? (c *= oo, d *= oo, x = Math.cos(c) * u, D = Math.sin(c) * u, V = Math.sin(c - d) * -f, P = Math.cos(c - d) * f, d && (l *= oo, R = Math.tan(d - l), R = Math.sqrt(1 + R * R), V *= R, P *= R, l && (R = Math.tan(l), R = Math.sqrt(1 + R * R), x *= R, D *= R)), x = lt(x), D = lt(D), V = lt(V), P = lt(P)) : (x = u, P = f, D = V = 0), (S && !~(r + "").indexOf("px") || T && !~(s + "").indexOf("px")) && (S = ui(b, "x", r, "px"), T = ui(b, "y", s, "px")), (y || v || g || k) && (S = lt(S + y - (y * x + v * V) + g), T = lt(T + v - (y * D + v * P) + k)), (o || n) && (R = b.getBBox(), S = lt(S + o / 100 * R.width), T = lt(T + n / 100 * R.height)), R = "matrix(" + x + "," + D + "," + V + "," + P + "," + S + "," + T + ")", b.setAttribute("transform", R), I && (b.style[Xe] = R);
 }, Pv = function(e, a, i, o, n) {
-  var r = 360, s = mt(n), c = parseFloat(n) * (s && ~n.indexOf("rad") ? xi : 1), d = c - o, l = o + d + "deg", u, p;
-  return s && (u = n.split("_")[1], u === "short" && (d %= r, d !== d % (r / 2) && (d += d < 0 ? r : -r)), u === "cw" && d < 0 ? d = (d + r * Gd) % r - ~~(d / r) * r : u === "ccw" && d > 0 && (d = (d - r * Gd) % r - ~~(d / r) * r)), e._pt = p = new qt(e._pt, a, i, o, d, uv), p.e = l, p.u = "deg", e._props.push(i), p;
+  var r = 360, s = mt(n), c = parseFloat(n) * (s && ~n.indexOf("rad") ? xi : 1), d = c - o, l = o + d + "deg", u, f;
+  return s && (u = n.split("_")[1], u === "short" && (d %= r, d !== d % (r / 2) && (d += d < 0 ? r : -r)), u === "cw" && d < 0 ? d = (d + r * Gd) % r - ~~(d / r) * r : u === "ccw" && d > 0 && (d = (d - r * Gd) % r - ~~(d / r) * r)), e._pt = f = new qt(e._pt, a, i, o, d, uv), f.e = l, f.u = "deg", e._props.push(i), f;
 }, tl = function(e, a) {
   for (var i in a)
     e[i] = a[i];
   return e;
 }, Rv = function(e, a, i) {
-  var o = tl({}, i._gsap), n = "perspective,force3D,transformOrigin,svgOrigin", r = i.style, s, c, d, l, u, p, h, y;
-  o.svg ? (d = i.getAttribute("transform"), i.setAttribute("transform", ""), r[Xe] = a, s = pn(i, 1), li(i, Xe), i.setAttribute("transform", d)) : (d = getComputedStyle(i)[Xe], r[Xe] = a, s = pn(i, 1), r[Xe] = d);
+  var o = tl({}, i._gsap), n = "perspective,force3D,transformOrigin,svgOrigin", r = i.style, s, c, d, l, u, f, b, y;
+  o.svg ? (d = i.getAttribute("transform"), i.setAttribute("transform", ""), r[Xe] = a, s = fn(i, 1), li(i, Xe), i.setAttribute("transform", d)) : (d = getComputedStyle(i)[Xe], r[Xe] = a, s = fn(i, 1), r[Xe] = d);
   for (c in Na)
-    d = o[c], l = s[c], d !== l && n.indexOf(c) < 0 && (h = It(d), y = It(l), u = h !== y ? ui(i, c, d, y) : parseFloat(d), p = parseFloat(l), e._pt = new qt(e._pt, s, c, u, p - u, Bs), e._pt.u = y || 0, e._props.push(c));
+    d = o[c], l = s[c], d !== l && n.indexOf(c) < 0 && (b = It(d), y = It(l), u = b !== y ? ui(i, c, d, y) : parseFloat(d), f = parseFloat(l), e._pt = new qt(e._pt, s, c, u, f - u, Bs), e._pt.u = y || 0, e._props.push(c));
   tl(s, o);
 };
 Ft("padding,margin,Width,Radius", function(t, e) {
@@ -6287,76 +6287,76 @@ Ft("padding,margin,Width,Radius", function(t, e) {
     return e < 2 ? t + s : "border" + s + t;
   });
   hr[e > 1 ? "border" + t : t] = function(s, c, d, l, u) {
-    var p, h;
+    var f, b;
     if (arguments.length < 4)
-      return p = r.map(function(y) {
+      return f = r.map(function(y) {
         return $a(s, y, d);
-      }), h = p.join(" "), h.split(p[0]).length === 5 ? p[0] : h;
-    p = (l + "").split(" "), h = {}, r.forEach(function(y, v) {
-      return h[y] = p[v] = p[v] || p[(v - 1) / 2 | 0];
-    }), s.init(c, h, u);
+      }), b = f.join(" "), b.split(f[0]).length === 5 ? f[0] : b;
+    f = (l + "").split(" "), b = {}, r.forEach(function(y, v) {
+      return b[y] = f[v] = f[v] || f[(v - 1) / 2 | 0];
+    }), s.init(c, b, u);
   };
 });
-var hf = {
+var hp = {
   name: "css",
   register: Js,
   targetTest: function(e) {
     return e.style && e.nodeType;
   },
   init: function(e, a, i, o, n) {
-    var r = this._props, s = e.style, c = i.vars.startAt, d, l, u, p, h, y, v, g, I, A, S, T, k, Z, P, O, E;
-    Mc || Js(), this.styles = this.styles || sf(e), O = this.styles.props, this.tween = i;
+    var r = this._props, s = e.style, c = i.vars.startAt, d, l, u, f, b, y, v, g, k, I, S, T, x, D, V, P, R;
+    Mc || Js(), this.styles = this.styles || sp(e), P = this.styles.props, this.tween = i;
     for (v in a)
-      if (v !== "autoRound" && (l = a[v], !(Dt[v] && Wp(v, a, i, o, e, n)))) {
-        if (h = typeof l, y = hr[v], h === "function" && (l = l.call(i, o, e, n), h = typeof l), h === "string" && ~l.indexOf("random(") && (l = cn(l)), y)
-          y(this, e, v, l, i) && (P = 1);
+      if (v !== "autoRound" && (l = a[v], !(Dt[v] && Kf(v, a, i, o, e, n)))) {
+        if (b = typeof l, y = hr[v], b === "function" && (l = l.call(i, o, e, n), b = typeof l), b === "string" && ~l.indexOf("random(") && (l = cn(l)), y)
+          y(this, e, v, l, i) && (V = 1);
         else if (v.substr(0, 2) === "--")
-          d = (getComputedStyle(e).getPropertyValue(v) + "").trim(), l += "", ri.lastIndex = 0, ri.test(d) || (g = It(d), I = It(l), I ? g !== I && (d = ui(e, v, d, I) + I) : g && (l += g)), this.add(s, "setProperty", d, l, o, n, 0, 0, v), r.push(v), O.push(v, 0, s[v]);
-        else if (h !== "undefined") {
-          if (c && v in c ? (d = typeof c[v] == "function" ? c[v].call(i, o, e, n) : c[v], mt(d) && ~d.indexOf("random(") && (d = cn(d)), It(d + "") || d === "auto" || (d += Kt.units[v] || It($a(e, v)) || ""), (d + "").charAt(1) === "=" && (d = $a(e, v))) : d = $a(e, v), p = parseFloat(d), A = h === "string" && l.charAt(1) === "=" && l.substr(0, 2), A && (l = l.substr(2)), u = parseFloat(l), v in Ia && (v === "autoAlpha" && (p === 1 && $a(e, "visibility") === "hidden" && u && (p = 0), O.push("visibility", 0, s.visibility), ii(this, s, "visibility", p ? "inherit" : "hidden", u ? "inherit" : "hidden", !u)), v !== "scale" && v !== "transform" && (v = Ia[v], ~v.indexOf(",") && (v = v.split(",")[0]))), S = v in Na, S) {
-            if (this.styles.save(v), E = l, h === "string" && l.substring(0, 6) === "var(--") {
+          d = (getComputedStyle(e).getPropertyValue(v) + "").trim(), l += "", ri.lastIndex = 0, ri.test(d) || (g = It(d), k = It(l), k ? g !== k && (d = ui(e, v, d, k) + k) : g && (l += g)), this.add(s, "setProperty", d, l, o, n, 0, 0, v), r.push(v), P.push(v, 0, s[v]);
+        else if (b !== "undefined") {
+          if (c && v in c ? (d = typeof c[v] == "function" ? c[v].call(i, o, e, n) : c[v], mt(d) && ~d.indexOf("random(") && (d = cn(d)), It(d + "") || d === "auto" || (d += Kt.units[v] || It($a(e, v)) || ""), (d + "").charAt(1) === "=" && (d = $a(e, v))) : d = $a(e, v), f = parseFloat(d), I = b === "string" && l.charAt(1) === "=" && l.substr(0, 2), I && (l = l.substr(2)), u = parseFloat(l), v in Ia && (v === "autoAlpha" && (f === 1 && $a(e, "visibility") === "hidden" && u && (f = 0), P.push("visibility", 0, s.visibility), ii(this, s, "visibility", f ? "inherit" : "hidden", u ? "inherit" : "hidden", !u)), v !== "scale" && v !== "transform" && (v = Ia[v], ~v.indexOf(",") && (v = v.split(",")[0]))), S = v in Na, S) {
+            if (this.styles.save(v), R = l, b === "string" && l.substring(0, 6) === "var(--") {
               if (l = Gt(e, l.substring(4, l.indexOf(")"))), l.substring(0, 5) === "calc(") {
-                var q = e.style.perspective;
-                e.style.perspective = l, l = Gt(e, "perspective"), q ? e.style.perspective = q : li(e, "perspective");
+                var j = e.style.perspective;
+                e.style.perspective = l, l = Gt(e, "perspective"), j ? e.style.perspective = j : li(e, "perspective");
               }
               u = parseFloat(l);
             }
-            if (T || (k = e._gsap, k.renderTransform && !a.parseTransform || pn(e, a.parseTransform), Z = a.smoothOrigin !== !1 && k.smooth, T = this._pt = new qt(this._pt, s, Xe, 0, 1, k.renderTransform, k, 0, -1), T.dep = 1), v === "scale")
-              this._pt = new qt(this._pt, k, "scaleY", k.scaleY, (A ? ao(k.scaleY, A + u) : u) - k.scaleY || 0, Bs), this._pt.u = 0, r.push("scaleY", v), v += "X";
+            if (T || (x = e._gsap, x.renderTransform && !a.parseTransform || fn(e, a.parseTransform), D = a.smoothOrigin !== !1 && x.smooth, T = this._pt = new qt(this._pt, s, Xe, 0, 1, x.renderTransform, x, 0, -1), T.dep = 1), v === "scale")
+              this._pt = new qt(this._pt, x, "scaleY", x.scaleY, (I ? ao(x.scaleY, I + u) : u) - x.scaleY || 0, Bs), this._pt.u = 0, r.push("scaleY", v), v += "X";
             else if (v === "transformOrigin") {
-              O.push(Zt, 0, s[Zt]), l = xv(l), k.svg ? Gs(e, l, 0, Z, 0, this) : (I = parseFloat(l.split(" ")[2]) || 0, I !== k.zOrigin && ii(this, k, "zOrigin", k.zOrigin, I), ii(this, s, v, br(d), br(l)));
+              P.push(Zt, 0, s[Zt]), l = xv(l), x.svg ? Gs(e, l, 0, D, 0, this) : (k = parseFloat(l.split(" ")[2]) || 0, k !== x.zOrigin && ii(this, x, "zOrigin", x.zOrigin, k), ii(this, s, v, br(d), br(l)));
               continue;
             } else if (v === "svgOrigin") {
-              Gs(e, l, 1, Z, 0, this);
+              Gs(e, l, 1, D, 0, this);
               continue;
-            } else if (v in uf) {
-              Pv(this, k, v, p, A ? ao(p, A + l) : l);
+            } else if (v in up) {
+              Pv(this, x, v, f, I ? ao(f, I + l) : l);
               continue;
             } else if (v === "smoothOrigin") {
-              ii(this, k, "smooth", k.smooth, l);
+              ii(this, x, "smooth", x.smooth, l);
               continue;
             } else if (v === "force3D") {
-              k[v] = l;
+              x[v] = l;
               continue;
             } else if (v === "transform") {
               Rv(this, l, e);
               continue;
             }
           } else v in s || (v = ho(v) || v);
-          if (S || (u || u === 0) && (p || p === 0) && !lv.test(l) && v in s)
-            g = (d + "").substr((p + "").length), u || (u = 0), I = It(l) || (v in Kt.units ? Kt.units[v] : g), g !== I && (p = ui(e, v, d, I)), this._pt = new qt(this._pt, S ? k : s, v, p, (A ? ao(p, A + u) : u) - p, !S && (I === "px" || v === "zIndex") && a.autoRound !== !1 ? hv : Bs), this._pt.u = I || 0, S && E !== l ? (this._pt.b = d, this._pt.e = E, this._pt.r = fv) : g !== I && I !== "%" && (this._pt.b = d, this._pt.r = pv);
+          if (S || (u || u === 0) && (f || f === 0) && !lv.test(l) && v in s)
+            g = (d + "").substr((f + "").length), u || (u = 0), k = It(l) || (v in Kt.units ? Kt.units[v] : g), g !== k && (f = ui(e, v, d, k)), this._pt = new qt(this._pt, S ? x : s, v, f, (I ? ao(f, I + u) : u) - f, !S && (k === "px" || v === "zIndex") && a.autoRound !== !1 ? hv : Bs), this._pt.u = k || 0, S && R !== l ? (this._pt.b = d, this._pt.e = R, this._pt.r = pv) : g !== k && k !== "%" && (this._pt.b = d, this._pt.r = fv);
           else if (v in s)
-            Av.call(this, e, v, d, A ? A + l : l);
+            Av.call(this, e, v, d, I ? I + l : l);
           else if (v in e)
-            this.add(e, v, d || e[v], A ? A + l : l, o, n);
+            this.add(e, v, d || e[v], I ? I + l : l, o, n);
           else if (v !== "parseTransform") {
             Ac(v, l);
             continue;
           }
-          S || (v in s ? O.push(v, 0, s[v]) : typeof e[v] == "function" ? O.push(v, 2, e[v]()) : O.push(v, 1, d || e[v])), r.push(v);
+          S || (v in s ? P.push(v, 0, s[v]) : typeof e[v] == "function" ? P.push(v, 2, e[v]()) : P.push(v, 1, d || e[v])), r.push(v);
         }
       }
-    P && tf(this);
+    V && ap(this);
   },
   render: function(e, a) {
     if (a.tween._time || !$c())
@@ -6377,13 +6377,13 @@ var hf = {
   }
 };
 Lt.utils.checkPrefix = ho;
-Lt.core.getStyleSaver = sf;
+Lt.core.getStyleSaver = sp;
 (function(t, e, a, i) {
   var o = Ft(t + "," + e + "," + a, function(n) {
     Na[n] = 1;
   });
   Ft(e, function(n) {
-    Kt.units[n] = "deg", uf[n] = 1;
+    Kt.units[n] = "deg", up[n] = 1;
   }), Ia[o[13]] = t + "," + e, Ft(i, function(n) {
     var r = n.split(":");
     Ia[r[1]] = o[r[0]];
@@ -6392,8 +6392,8 @@ Lt.core.getStyleSaver = sf;
 Ft("x,y,z,top,right,bottom,left,width,height,fontSize,padding,margin,perspective", function(t) {
   Kt.units[t] = "px";
 });
-Lt.registerPlugin(hf);
-var xe = Lt.registerPlugin(hf) || Lt;
+Lt.registerPlugin(hp);
+var xe = Lt.registerPlugin(hp) || Lt;
 xe.core.Tween;
 const Vv = 1, Ev = "albina-layered-worldbooks-v1", Ov = ["content/worldbook/limbus-world-audit-v1.json", "research/legacy-worldbooks/inventory-v1.json"], Mv = { auditedUniqueEntries: 2481, substantiveCandidates: 599, sourceIndexBridges: 1882, fullPackagesAreUidDisjoint: !0, sourceIndexInjectsByDefault: !1, quarantineInjectsByDefault: !1, l0IsStandaloneAndExcludedFromFullSetCounts: !0 }, $v = { unit: "UTF-16 content characters", defaultEnabledConstantCharacterLimit: 12e3, defaultEnabledInventoryCharacterLimit: 12e4, note: "Keyword-triggered inventory is not simultaneous prompt cost. Disabled packages and entries count as zero runtime budget." }, jv = { minimal: ["l0-minimal-card-anchors"], canonicalCore: ["l1-albina-core", "l2-canto-ix-and-main-cast", "plot-full-timeline"], canonicalExpanded: ["l1-albina-core", "l2-canto-ix-and-main-cast", "plot-full-timeline", "l3-world-expansion"], mechanicsOptIn: ["l4-mechanics"], identityOptIn: ["l5-reviewed-identities"], auOptIn: ["au-if"], neverRuntime: ["source-index", "quarantine-unverified-rp"] }, zv = { id: "l0-minimal-card-anchors", file: "content/worldbook/albina-worldbook-l0-minimal-anchors-v1.json", defaultEnabled: !0, entryCount: 16, enabledEntryCount: 16, contentCharacters: 2610, constantCharacters: 1319, sha256: "0e3cba0ff1fbd57a49671c56a548bdea8810aeec225bcb06794b4178f2abd596" }, Uv = [{ id: "l1-albina-core", file: "content/worldbook/albina-worldbook-l1-albina-core-v1.json", defaultEnabled: !0, entryCount: 7, enabledEntryCount: 7, contentCharacters: 1716, constantCharacters: 0, sha256: "48b7452f27c66ee1e5ba8edd85839001a562bdd85ffaa71fdc9beaaf600cf442" }, { id: "l2-canto-ix-and-main-cast", file: "content/worldbook/albina-worldbook-l2-canto-ix-main-cast-v1.json", defaultEnabled: !0, entryCount: 33, enabledEntryCount: 33, contentCharacters: 5134, constantCharacters: 0, sha256: "ed8195155b0a32b55444981b3183a3d9ed1df0e50f13850ba6ebb0f9cbdbfa52" }, { id: "l3-world-expansion", file: "content/worldbook/albina-worldbook-l3-world-expansion-v1.json", defaultEnabled: !1, entryCount: 80, enabledEntryCount: 0, contentCharacters: 17936, constantCharacters: 0, sha256: "f05dd9a95240b27153141c264447c111f37c4546ae92349cd9f1437d63d056d6" }, { id: "plot-full-timeline", file: "content/worldbook/albina-worldbook-plot-full-timeline-v1.json", defaultEnabled: !0, entryCount: 22, enabledEntryCount: 22, contentCharacters: 6728, constantCharacters: 0, sha256: "279b3b3dc84435cda7e16dffa28946f9e1bc51068f8cba09fac91dc877f65342" }, { id: "l4-mechanics", file: "content/worldbook/albina-worldbook-l4-mechanics-v1.json", defaultEnabled: !1, entryCount: 37, enabledEntryCount: 0, contentCharacters: 7745, constantCharacters: 0, sha256: "0adf5c88bbc7b03b850818f54df899cc62ac2b783c19cc6777c36dd8e5f5dab5" }, { id: "l5-reviewed-identities", file: "content/worldbook/albina-worldbook-l5-reviewed-identities-v1.json", defaultEnabled: !1, entryCount: 156, enabledEntryCount: 0, contentCharacters: 87805, constantCharacters: 0, sha256: "f540745fc0f23d8544b926e4ae40fed34d66f376eecfcb74d5b4388c8ac78277" }, { id: "au-if", file: "content/worldbook/albina-worldbook-au-if-v1.json", defaultEnabled: !1, entryCount: 6, enabledEntryCount: 0, contentCharacters: 3611, constantCharacters: 0, sha256: "e154e1c11510eda3e074260867ef9e4a37a2356ade1c92d26a6a1177ef19efaa" }, { id: "quarantine-unverified-rp", file: "content/worldbook/albina-worldbook-quarantine-unverified-rp-v1.json", defaultEnabled: !1, entryCount: 258, enabledEntryCount: 0, contentCharacters: 117035, constantCharacters: 0, sha256: "26e901e791cff2cd84f249ba63c6592c0d580dac7c6c95a6189a31cf4dec5036" }, { id: "source-index", file: "content/worldbook/albina-worldbook-source-index-disabled-v1.json", defaultEnabled: !1, entryCount: 1882, enabledEntryCount: 0, contentCharacters: 2100253, constantCharacters: 0, sha256: "9f4309b9b8e962c5bfc24194dedbb5eccbf2fb5171a4e23290b12e4821ed052f" }], Fv = { substantiveCandidates: 599, sourceIndexBridges: 1882, defaultEnabledInventoryCharacters: 13578, defaultEnabledConstantCharacters: 0 }, qv = {
   schemaVersion: Vv,
@@ -6407,7 +6407,7 @@ const Vv = 1, Ev = "albina-layered-worldbooks-v1", Ov = ["content/worldbook/limb
   totals: Fv
 };
 var al;
-function N(t, e, a) {
+function L(t, e, a) {
   function i(s, c) {
     if (s._zod || Object.defineProperty(s, "_zod", {
       value: {
@@ -6421,8 +6421,8 @@ function N(t, e, a) {
     s._zod.traits.add(t), e(s, c);
     const d = r.prototype, l = Object.keys(d);
     for (let u = 0; u < l.length; u++) {
-      const p = l[u];
-      p in s || (s[p] = d[p].bind(s));
+      const f = l[u];
+      f in s || (s[f] = d[f].bind(s));
     }
   }
   const o = a?.Parent ?? Object;
@@ -6446,7 +6446,7 @@ class no extends Error {
     super("Encountered Promise during synchronous parse. Use .parseAsync() instead.");
   }
 }
-class bf extends Error {
+class bp extends Error {
   constructor(e) {
     super(`Encountered unidirectional transform during encode: ${e}`), this.name = "ZodEncodeError";
   }
@@ -6456,7 +6456,7 @@ const Uc = globalThis.__zod_globalConfig;
 function Da(t) {
   return Uc;
 }
-function mf(t) {
+function mp(t) {
   const e = Object.values(t).filter((i) => typeof i == "number");
   return Object.entries(t).filter(([i, o]) => e.indexOf(+i) === -1).map(([i, o]) => o);
 }
@@ -6523,9 +6523,9 @@ function ol(t) {
 function Lv(t) {
   return t.toLowerCase().trim().replace(/[^\w\s-]/g, "").replace(/[\s_-]+/g, "-").replace(/^-+|-+$/g, "");
 }
-const vf = "captureStackTrace" in Error ? Error.captureStackTrace : (...t) => {
+const vp = "captureStackTrace" in Error ? Error.captureStackTrace : (...t) => {
 };
-function fn(t) {
+function pn(t) {
   return typeof t == "object" && t !== null && !Array.isArray(t);
 }
 const Nv = /* @__PURE__ */ Fr(() => {
@@ -6539,15 +6539,15 @@ const Nv = /* @__PURE__ */ Fr(() => {
   }
 });
 function bo(t) {
-  if (fn(t) === !1)
+  if (pn(t) === !1)
     return !1;
   const e = t.constructor;
   if (e === void 0 || typeof e != "function")
     return !0;
   const a = e.prototype;
-  return !(fn(a) === !1 || Object.prototype.hasOwnProperty.call(a, "isPrototypeOf") === !1);
+  return !(pn(a) === !1 || Object.prototype.hasOwnProperty.call(a, "isPrototypeOf") === !1);
 }
-function gf(t) {
+function gp(t) {
   return bo(t) ? { ...t } : Array.isArray(t) ? [...t] : t instanceof Map ? new Map(t) : t instanceof Set ? new Set(t) : t;
 }
 const Dv = /* @__PURE__ */ new Set(["string", "number", "symbol"]);
@@ -6754,7 +6754,7 @@ function hn(...t) {
     inst: i
   } : { ...e };
 }
-const _f = (t, e) => {
+const _p = (t, e) => {
   t.name = "$ZodError", Object.defineProperty(t, "_zod", {
     value: t._zod,
     enumerable: !1
@@ -6765,7 +6765,7 @@ const _f = (t, e) => {
     value: () => t.message,
     enumerable: !1
   });
-}, yf = N("$ZodError", _f), wf = N("$ZodError", _f, { Parent: Error });
+}, yp = L("$ZodError", _p), wp = L("$ZodError", _p, { Parent: Error });
 function tg(t, e = (a) => a.message) {
   const a = {}, i = [];
   for (const o of t.issues)
@@ -6802,7 +6802,7 @@ const Lc = (t) => (e, a, i, o) => {
     throw new no();
   if (r.issues.length) {
     const s = new (o?.Err ?? t)(r.issues.map((c) => Ba(c, n, Da())));
-    throw vf(s, o?.callee), s;
+    throw vp(s, o?.callee), s;
   }
   return r.value;
 }, Nc = (t) => async (e, a, i, o) => {
@@ -6810,7 +6810,7 @@ const Lc = (t) => (e, a, i, o) => {
   let r = e._zod.run({ value: a, issues: [] }, n);
   if (r instanceof Promise && (r = await r), r.issues.length) {
     const s = new (o?.Err ?? t)(r.issues.map((c) => Ba(c, n, Da())));
-    throw vf(s, o?.callee), s;
+    throw vp(s, o?.callee), s;
   }
   return r.value;
 }, qr = (t) => (e, a, i) => {
@@ -6819,16 +6819,16 @@ const Lc = (t) => (e, a, i, o) => {
     throw new no();
   return n.issues.length ? {
     success: !1,
-    error: new (t ?? yf)(n.issues.map((r) => Ba(r, o, Da())))
+    error: new (t ?? yp)(n.issues.map((r) => Ba(r, o, Da())))
   } : { success: !0, data: n.value };
-}, ig = /* @__PURE__ */ qr(wf), Zr = (t) => async (e, a, i) => {
+}, ig = /* @__PURE__ */ qr(wp), Zr = (t) => async (e, a, i) => {
   const o = i ? { ...i, async: !0 } : { async: !0 };
   let n = e._zod.run({ value: a, issues: [] }, o);
   return n instanceof Promise && (n = await n), n.issues.length ? {
     success: !1,
     error: new t(n.issues.map((r) => Ba(r, o, Da())))
   } : { success: !0, data: n.value };
-}, og = /* @__PURE__ */ Zr(wf), ng = (t) => (e, a, i) => {
+}, og = /* @__PURE__ */ Zr(wp), ng = (t) => (e, a, i) => {
   const o = i ? { ...i, direction: "backward" } : { direction: "backward" };
   return Lc(t)(e, a, o);
 }, rg = (t) => (e, a, i) => Lc(t)(e, a, i), sg = (t) => async (e, a, i) => {
@@ -6840,37 +6840,37 @@ const Lc = (t) => (e, a, i, o) => {
 }, lg = (t) => (e, a, i) => qr(t)(e, a, i), ug = (t) => async (e, a, i) => {
   const o = i ? { ...i, direction: "backward" } : { direction: "backward" };
   return Zr(t)(e, a, o);
-}, pg = (t) => async (e, a, i) => Zr(t)(e, a, i), fg = /^[cC][0-9a-z]{6,}$/, hg = /^[0-9a-z]+$/, bg = /^[0-9A-HJKMNP-TV-Za-hjkmnp-tv-z]{26}$/, mg = /^[0-9a-vA-V]{20}$/, vg = /^[A-Za-z0-9]{27}$/, gg = /^[a-zA-Z0-9_-]{21}$/, _g = /^P(?:(\d+W)|(?!.*W)(?=\d|T\d)(\d+Y)?(\d+M)?(\d+D)?(T(?=\d)(\d+H)?(\d+M)?(\d+([.,]\d+)?S)?)?)$/, yg = /^([0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12})$/, nl = (t) => t ? new RegExp(`^([0-9a-fA-F]{8}-[0-9a-fA-F]{4}-${t}[0-9a-fA-F]{3}-[89abAB][0-9a-fA-F]{3}-[0-9a-fA-F]{12})$`) : /^([0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[1-8][0-9a-fA-F]{3}-[89abAB][0-9a-fA-F]{3}-[0-9a-fA-F]{12}|00000000-0000-0000-0000-000000000000|ffffffff-ffff-ffff-ffff-ffffffffffff)$/, wg = /^(?!\.)(?!.*\.\.)([A-Za-z0-9_'+\-\.]*)[A-Za-z0-9_+-]@([A-Za-z0-9][A-Za-z0-9\-]*\.)+[A-Za-z]{2,}$/, kg = "^(\\p{Extended_Pictographic}|\\p{Emoji_Component})+$";
+}, fg = (t) => async (e, a, i) => Zr(t)(e, a, i), pg = /^[cC][0-9a-z]{6,}$/, hg = /^[0-9a-z]+$/, bg = /^[0-9A-HJKMNP-TV-Za-hjkmnp-tv-z]{26}$/, mg = /^[0-9a-vA-V]{20}$/, vg = /^[A-Za-z0-9]{27}$/, gg = /^[a-zA-Z0-9_-]{21}$/, _g = /^P(?:(\d+W)|(?!.*W)(?=\d|T\d)(\d+Y)?(\d+M)?(\d+D)?(T(?=\d)(\d+H)?(\d+M)?(\d+([.,]\d+)?S)?)?)$/, yg = /^([0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12})$/, nl = (t) => t ? new RegExp(`^([0-9a-fA-F]{8}-[0-9a-fA-F]{4}-${t}[0-9a-fA-F]{3}-[89abAB][0-9a-fA-F]{3}-[0-9a-fA-F]{12})$`) : /^([0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[1-8][0-9a-fA-F]{3}-[89abAB][0-9a-fA-F]{3}-[0-9a-fA-F]{12}|00000000-0000-0000-0000-000000000000|ffffffff-ffff-ffff-ffff-ffffffffffff)$/, wg = /^(?!\.)(?!.*\.\.)([A-Za-z0-9_'+\-\.]*)[A-Za-z0-9_+-]@([A-Za-z0-9][A-Za-z0-9\-]*\.)+[A-Za-z]{2,}$/, kg = "^(\\p{Extended_Pictographic}|\\p{Emoji_Component})+$";
 function Ig() {
   return new RegExp(kg, "u");
 }
-const Ag = /^(?:(?:25[0-5]|2[0-4][0-9]|1[0-9][0-9]|[1-9][0-9]|[0-9])\.){3}(?:25[0-5]|2[0-4][0-9]|1[0-9][0-9]|[1-9][0-9]|[0-9])$/, xg = /^(([0-9a-fA-F]{1,4}:){7}[0-9a-fA-F]{1,4}|([0-9a-fA-F]{1,4}:){1,7}:|([0-9a-fA-F]{1,4}:){1,6}:[0-9a-fA-F]{1,4}|([0-9a-fA-F]{1,4}:){1,5}(:[0-9a-fA-F]{1,4}){1,2}|([0-9a-fA-F]{1,4}:){1,4}(:[0-9a-fA-F]{1,4}){1,3}|([0-9a-fA-F]{1,4}:){1,3}(:[0-9a-fA-F]{1,4}){1,4}|([0-9a-fA-F]{1,4}:){1,2}(:[0-9a-fA-F]{1,4}){1,5}|[0-9a-fA-F]{1,4}:((:[0-9a-fA-F]{1,4}){1,6})|:((:[0-9a-fA-F]{1,4}){1,7}|:))$/, Tg = /^((25[0-5]|2[0-4][0-9]|1[0-9][0-9]|[1-9][0-9]|[0-9])\.){3}(25[0-5]|2[0-4][0-9]|1[0-9][0-9]|[1-9][0-9]|[0-9])\/([0-9]|[1-2][0-9]|3[0-2])$/, Sg = /^(([0-9a-fA-F]{1,4}:){7}[0-9a-fA-F]{1,4}|::|([0-9a-fA-F]{1,4})?::([0-9a-fA-F]{1,4}:?){0,6})\/(12[0-8]|1[01][0-9]|[1-9]?[0-9])$/, Cg = /^$|^(?:[0-9a-zA-Z+/]{4})*(?:(?:[0-9a-zA-Z+/]{2}==)|(?:[0-9a-zA-Z+/]{3}=))?$/, kf = /^[A-Za-z0-9_-]*$/, Pg = /^https?$/, Rg = /^\+[1-9]\d{6,14}$/, If = "(?:(?:\\d\\d[2468][048]|\\d\\d[13579][26]|\\d\\d0[48]|[02468][048]00|[13579][26]00)-02-29|\\d{4}-(?:(?:0[13578]|1[02])-(?:0[1-9]|[12]\\d|3[01])|(?:0[469]|11)-(?:0[1-9]|[12]\\d|30)|(?:02)-(?:0[1-9]|1\\d|2[0-8])))", Vg = /* @__PURE__ */ new RegExp(`^${If}$`);
-function Af(t) {
+const Ag = /^(?:(?:25[0-5]|2[0-4][0-9]|1[0-9][0-9]|[1-9][0-9]|[0-9])\.){3}(?:25[0-5]|2[0-4][0-9]|1[0-9][0-9]|[1-9][0-9]|[0-9])$/, xg = /^(([0-9a-fA-F]{1,4}:){7}[0-9a-fA-F]{1,4}|([0-9a-fA-F]{1,4}:){1,7}:|([0-9a-fA-F]{1,4}:){1,6}:[0-9a-fA-F]{1,4}|([0-9a-fA-F]{1,4}:){1,5}(:[0-9a-fA-F]{1,4}){1,2}|([0-9a-fA-F]{1,4}:){1,4}(:[0-9a-fA-F]{1,4}){1,3}|([0-9a-fA-F]{1,4}:){1,3}(:[0-9a-fA-F]{1,4}){1,4}|([0-9a-fA-F]{1,4}:){1,2}(:[0-9a-fA-F]{1,4}){1,5}|[0-9a-fA-F]{1,4}:((:[0-9a-fA-F]{1,4}){1,6})|:((:[0-9a-fA-F]{1,4}){1,7}|:))$/, Tg = /^((25[0-5]|2[0-4][0-9]|1[0-9][0-9]|[1-9][0-9]|[0-9])\.){3}(25[0-5]|2[0-4][0-9]|1[0-9][0-9]|[1-9][0-9]|[0-9])\/([0-9]|[1-2][0-9]|3[0-2])$/, Sg = /^(([0-9a-fA-F]{1,4}:){7}[0-9a-fA-F]{1,4}|::|([0-9a-fA-F]{1,4})?::([0-9a-fA-F]{1,4}:?){0,6})\/(12[0-8]|1[01][0-9]|[1-9]?[0-9])$/, Cg = /^$|^(?:[0-9a-zA-Z+/]{4})*(?:(?:[0-9a-zA-Z+/]{2}==)|(?:[0-9a-zA-Z+/]{3}=))?$/, kp = /^[A-Za-z0-9_-]*$/, Pg = /^https?$/, Rg = /^\+[1-9]\d{6,14}$/, Ip = "(?:(?:\\d\\d[2468][048]|\\d\\d[13579][26]|\\d\\d0[48]|[02468][048]00|[13579][26]00)-02-29|\\d{4}-(?:(?:0[13578]|1[02])-(?:0[1-9]|[12]\\d|3[01])|(?:0[469]|11)-(?:0[1-9]|[12]\\d|30)|(?:02)-(?:0[1-9]|1\\d|2[0-8])))", Vg = /* @__PURE__ */ new RegExp(`^${Ip}$`);
+function Ap(t) {
   const e = "(?:[01]\\d|2[0-3]):[0-5]\\d";
   return typeof t.precision == "number" ? t.precision === -1 ? `${e}` : t.precision === 0 ? `${e}:[0-5]\\d` : `${e}:[0-5]\\d\\.\\d{${t.precision}}` : `${e}(?::[0-5]\\d(?:\\.\\d+)?)?`;
 }
 function Eg(t) {
-  return new RegExp(`^${Af(t)}$`);
+  return new RegExp(`^${Ap(t)}$`);
 }
 function Og(t) {
-  const e = Af({ precision: t.precision }), a = ["Z"];
+  const e = Ap({ precision: t.precision }), a = ["Z"];
   t.local && a.push(""), t.offset && a.push("([+-](?:[01]\\d|2[0-3]):[0-5]\\d)");
   const i = `${e}(?:${a.join("|")})`;
-  return new RegExp(`^${If}T(?:${i})$`);
+  return new RegExp(`^${Ip}T(?:${i})$`);
 }
 const Mg = (t) => {
   const e = t ? `[\\s\\S]{${t?.minimum ?? 0},${t?.maximum ?? ""}}` : "[\\s\\S]*";
   return new RegExp(`^${e}$`);
-}, $g = /^-?\d+$/, xf = /^-?\d+(?:\.\d+)?$/, jg = /^(?:true|false)$/i, zg = /^[^A-Z]*$/, Ug = /^[^a-z]*$/, Nt = /* @__PURE__ */ N("$ZodCheck", (t, e) => {
+}, $g = /^-?\d+$/, xp = /^-?\d+(?:\.\d+)?$/, jg = /^(?:true|false)$/i, zg = /^[^A-Z]*$/, Ug = /^[^a-z]*$/, Nt = /* @__PURE__ */ L("$ZodCheck", (t, e) => {
   var a;
   t._zod ?? (t._zod = {}), t._zod.def = e, (a = t._zod).onattach ?? (a.onattach = []);
-}), Tf = {
+}), Tp = {
   number: "number",
   bigint: "bigint",
   object: "date"
-}, Sf = /* @__PURE__ */ N("$ZodCheckLessThan", (t, e) => {
+}, Sp = /* @__PURE__ */ L("$ZodCheckLessThan", (t, e) => {
   Nt.init(t, e);
-  const a = Tf[typeof e.value];
+  const a = Tp[typeof e.value];
   t._zod.onattach.push((i) => {
     const o = i._zod.bag, n = (e.inclusive ? o.maximum : o.exclusiveMaximum) ?? Number.POSITIVE_INFINITY;
     e.value < n && (e.inclusive ? o.maximum = e.value : o.exclusiveMaximum = e.value);
@@ -6885,9 +6885,9 @@ const Mg = (t) => {
       continue: !e.abort
     });
   };
-}), Cf = /* @__PURE__ */ N("$ZodCheckGreaterThan", (t, e) => {
+}), Cp = /* @__PURE__ */ L("$ZodCheckGreaterThan", (t, e) => {
   Nt.init(t, e);
-  const a = Tf[typeof e.value];
+  const a = Tp[typeof e.value];
   t._zod.onattach.push((i) => {
     const o = i._zod.bag, n = (e.inclusive ? o.minimum : o.exclusiveMinimum) ?? Number.NEGATIVE_INFINITY;
     e.value > n && (e.inclusive ? o.minimum = e.value : o.exclusiveMinimum = e.value);
@@ -6902,7 +6902,7 @@ const Mg = (t) => {
       continue: !e.abort
     });
   };
-}), Fg = /* @__PURE__ */ N("$ZodCheckMultipleOf", (t, e) => {
+}), Fg = /* @__PURE__ */ L("$ZodCheckMultipleOf", (t, e) => {
   Nt.init(t, e), t._zod.onattach.push((a) => {
     var i;
     (i = a._zod.bag).multipleOf ?? (i.multipleOf = e.value);
@@ -6918,7 +6918,7 @@ const Mg = (t) => {
       continue: !e.abort
     });
   };
-}), qg = /* @__PURE__ */ N("$ZodCheckNumberFormat", (t, e) => {
+}), qg = /* @__PURE__ */ L("$ZodCheckNumberFormat", (t, e) => {
   Nt.init(t, e), e.format = e.format || "float64";
   const a = e.format?.includes("int"), i = a ? "int" : "number", [o, n] = Hv[e.format];
   t._zod.onattach.push((r) => {
@@ -6979,7 +6979,7 @@ const Mg = (t) => {
       continue: !e.abort
     });
   };
-}), Zg = /* @__PURE__ */ N("$ZodCheckMaxLength", (t, e) => {
+}), Zg = /* @__PURE__ */ L("$ZodCheckMaxLength", (t, e) => {
   var a;
   Nt.init(t, e), (a = t._zod.def).when ?? (a.when = (i) => {
     const o = i.value;
@@ -7002,7 +7002,7 @@ const Mg = (t) => {
       continue: !e.abort
     });
   };
-}), Lg = /* @__PURE__ */ N("$ZodCheckMinLength", (t, e) => {
+}), Lg = /* @__PURE__ */ L("$ZodCheckMinLength", (t, e) => {
   var a;
   Nt.init(t, e), (a = t._zod.def).when ?? (a.when = (i) => {
     const o = i.value;
@@ -7025,7 +7025,7 @@ const Mg = (t) => {
       continue: !e.abort
     });
   };
-}), Ng = /* @__PURE__ */ N("$ZodCheckLengthEquals", (t, e) => {
+}), Ng = /* @__PURE__ */ L("$ZodCheckLengthEquals", (t, e) => {
   var a;
   Nt.init(t, e), (a = t._zod.def).when ?? (a.when = (i) => {
     const o = i.value;
@@ -7048,7 +7048,7 @@ const Mg = (t) => {
       continue: !e.abort
     });
   };
-}), Lr = /* @__PURE__ */ N("$ZodCheckStringFormat", (t, e) => {
+}), Lr = /* @__PURE__ */ L("$ZodCheckStringFormat", (t, e) => {
   var a, i;
   Nt.init(t, e), t._zod.onattach.push((o) => {
     const n = o._zod.bag;
@@ -7065,7 +7065,7 @@ const Mg = (t) => {
     });
   }) : (i = t._zod).check ?? (i.check = () => {
   });
-}), Dg = /* @__PURE__ */ N("$ZodCheckRegex", (t, e) => {
+}), Dg = /* @__PURE__ */ L("$ZodCheckRegex", (t, e) => {
   Lr.init(t, e), t._zod.check = (a) => {
     e.pattern.lastIndex = 0, !e.pattern.test(a.value) && a.issues.push({
       origin: "string",
@@ -7077,11 +7077,11 @@ const Mg = (t) => {
       continue: !e.abort
     });
   };
-}), Bg = /* @__PURE__ */ N("$ZodCheckLowerCase", (t, e) => {
+}), Bg = /* @__PURE__ */ L("$ZodCheckLowerCase", (t, e) => {
   e.pattern ?? (e.pattern = zg), Lr.init(t, e);
-}), Hg = /* @__PURE__ */ N("$ZodCheckUpperCase", (t, e) => {
+}), Hg = /* @__PURE__ */ L("$ZodCheckUpperCase", (t, e) => {
   e.pattern ?? (e.pattern = Ug), Lr.init(t, e);
-}), Jg = /* @__PURE__ */ N("$ZodCheckIncludes", (t, e) => {
+}), Jg = /* @__PURE__ */ L("$ZodCheckIncludes", (t, e) => {
   Nt.init(t, e);
   const a = mo(e.includes), i = new RegExp(typeof e.position == "number" ? `^.{${e.position}}${a}` : a);
   e.pattern = i, t._zod.onattach.push((o) => {
@@ -7098,7 +7098,7 @@ const Mg = (t) => {
       continue: !e.abort
     });
   };
-}), Gg = /* @__PURE__ */ N("$ZodCheckStartsWith", (t, e) => {
+}), Gg = /* @__PURE__ */ L("$ZodCheckStartsWith", (t, e) => {
   Nt.init(t, e);
   const a = new RegExp(`^${mo(e.prefix)}.*`);
   e.pattern ?? (e.pattern = a), t._zod.onattach.push((i) => {
@@ -7115,7 +7115,7 @@ const Mg = (t) => {
       continue: !e.abort
     });
   };
-}), Wg = /* @__PURE__ */ N("$ZodCheckEndsWith", (t, e) => {
+}), Wg = /* @__PURE__ */ L("$ZodCheckEndsWith", (t, e) => {
   Nt.init(t, e);
   const a = new RegExp(`.*${mo(e.suffix)}$`);
   e.pattern ?? (e.pattern = a), t._zod.onattach.push((i) => {
@@ -7132,7 +7132,7 @@ const Mg = (t) => {
       continue: !e.abort
     });
   };
-}), Kg = /* @__PURE__ */ N("$ZodCheckOverwrite", (t, e) => {
+}), Kg = /* @__PURE__ */ L("$ZodCheckOverwrite", (t, e) => {
   Nt.init(t, e), t._zod.check = (a) => {
     a.value = e.tx(a.value);
   };
@@ -7164,7 +7164,7 @@ const Xg = {
   major: 4,
   minor: 4,
   patch: 3
-}, De = /* @__PURE__ */ N("$ZodType", (t, e) => {
+}, De = /* @__PURE__ */ L("$ZodType", (t, e) => {
   var a;
   t ?? (t = {}), t._zod.def = e, t._zod.bag = t._zod.bag || {}, t._zod.version = Xg;
   const i = [...t._zod.def.checks ?? []];
@@ -7185,17 +7185,17 @@ const Xg = {
             continue;
         } else if (d)
           continue;
-        const p = r.issues.length, h = u._zod.check(r);
-        if (h instanceof Promise && c?.async === !1)
+        const f = r.issues.length, b = u._zod.check(r);
+        if (b instanceof Promise && c?.async === !1)
           throw new no();
-        if (l || h instanceof Promise)
+        if (l || b instanceof Promise)
           l = (l ?? Promise.resolve()).then(async () => {
-            await h, r.issues.length !== p && (d || (d = Xi(r, p)));
+            await b, r.issues.length !== f && (d || (d = Xi(r, f)));
           });
         else {
-          if (r.issues.length === p)
+          if (r.issues.length === f)
             continue;
-          d || (d = Xi(r, p));
+          d || (d = Xi(r, f));
         }
       }
       return l ? l.then(() => r) : r;
@@ -7238,7 +7238,7 @@ const Xg = {
     vendor: "zod",
     version: 1
   }));
-}), Dc = /* @__PURE__ */ N("$ZodString", (t, e) => {
+}), Dc = /* @__PURE__ */ L("$ZodString", (t, e) => {
   De.init(t, e), t._zod.pattern = [...t?._zod.bag?.patterns ?? []].pop() ?? Mg(t._zod.bag), t._zod.parse = (a, i) => {
     if (e.coerce)
       try {
@@ -7252,11 +7252,11 @@ const Xg = {
       inst: t
     }), a;
   };
-}), He = /* @__PURE__ */ N("$ZodStringFormat", (t, e) => {
+}), He = /* @__PURE__ */ L("$ZodStringFormat", (t, e) => {
   Lr.init(t, e), Dc.init(t, e);
-}), Qg = /* @__PURE__ */ N("$ZodGUID", (t, e) => {
+}), Qg = /* @__PURE__ */ L("$ZodGUID", (t, e) => {
   e.pattern ?? (e.pattern = yg), He.init(t, e);
-}), e1 = /* @__PURE__ */ N("$ZodUUID", (t, e) => {
+}), e1 = /* @__PURE__ */ L("$ZodUUID", (t, e) => {
   if (e.version) {
     const i = {
       v1: 1,
@@ -7274,9 +7274,9 @@ const Xg = {
   } else
     e.pattern ?? (e.pattern = nl());
   He.init(t, e);
-}), t1 = /* @__PURE__ */ N("$ZodEmail", (t, e) => {
+}), t1 = /* @__PURE__ */ L("$ZodEmail", (t, e) => {
   e.pattern ?? (e.pattern = wg), He.init(t, e);
-}), a1 = /* @__PURE__ */ N("$ZodURL", (t, e) => {
+}), a1 = /* @__PURE__ */ L("$ZodURL", (t, e) => {
   He.init(t, e), t._zod.check = (a) => {
     try {
       const i = a.value.trim();
@@ -7320,31 +7320,31 @@ const Xg = {
       });
     }
   };
-}), i1 = /* @__PURE__ */ N("$ZodEmoji", (t, e) => {
+}), i1 = /* @__PURE__ */ L("$ZodEmoji", (t, e) => {
   e.pattern ?? (e.pattern = Ig()), He.init(t, e);
-}), o1 = /* @__PURE__ */ N("$ZodNanoID", (t, e) => {
+}), o1 = /* @__PURE__ */ L("$ZodNanoID", (t, e) => {
   e.pattern ?? (e.pattern = gg), He.init(t, e);
-}), n1 = /* @__PURE__ */ N("$ZodCUID", (t, e) => {
-  e.pattern ?? (e.pattern = fg), He.init(t, e);
-}), r1 = /* @__PURE__ */ N("$ZodCUID2", (t, e) => {
+}), n1 = /* @__PURE__ */ L("$ZodCUID", (t, e) => {
+  e.pattern ?? (e.pattern = pg), He.init(t, e);
+}), r1 = /* @__PURE__ */ L("$ZodCUID2", (t, e) => {
   e.pattern ?? (e.pattern = hg), He.init(t, e);
-}), s1 = /* @__PURE__ */ N("$ZodULID", (t, e) => {
+}), s1 = /* @__PURE__ */ L("$ZodULID", (t, e) => {
   e.pattern ?? (e.pattern = bg), He.init(t, e);
-}), c1 = /* @__PURE__ */ N("$ZodXID", (t, e) => {
+}), c1 = /* @__PURE__ */ L("$ZodXID", (t, e) => {
   e.pattern ?? (e.pattern = mg), He.init(t, e);
-}), d1 = /* @__PURE__ */ N("$ZodKSUID", (t, e) => {
+}), d1 = /* @__PURE__ */ L("$ZodKSUID", (t, e) => {
   e.pattern ?? (e.pattern = vg), He.init(t, e);
-}), l1 = /* @__PURE__ */ N("$ZodISODateTime", (t, e) => {
+}), l1 = /* @__PURE__ */ L("$ZodISODateTime", (t, e) => {
   e.pattern ?? (e.pattern = Og(e)), He.init(t, e);
-}), u1 = /* @__PURE__ */ N("$ZodISODate", (t, e) => {
+}), u1 = /* @__PURE__ */ L("$ZodISODate", (t, e) => {
   e.pattern ?? (e.pattern = Vg), He.init(t, e);
-}), p1 = /* @__PURE__ */ N("$ZodISOTime", (t, e) => {
+}), f1 = /* @__PURE__ */ L("$ZodISOTime", (t, e) => {
   e.pattern ?? (e.pattern = Eg(e)), He.init(t, e);
-}), f1 = /* @__PURE__ */ N("$ZodISODuration", (t, e) => {
+}), p1 = /* @__PURE__ */ L("$ZodISODuration", (t, e) => {
   e.pattern ?? (e.pattern = _g), He.init(t, e);
-}), h1 = /* @__PURE__ */ N("$ZodIPv4", (t, e) => {
+}), h1 = /* @__PURE__ */ L("$ZodIPv4", (t, e) => {
   e.pattern ?? (e.pattern = Ag), He.init(t, e), t._zod.bag.format = "ipv4";
-}), b1 = /* @__PURE__ */ N("$ZodIPv6", (t, e) => {
+}), b1 = /* @__PURE__ */ L("$ZodIPv6", (t, e) => {
   e.pattern ?? (e.pattern = xg), He.init(t, e), t._zod.bag.format = "ipv6", t._zod.check = (a) => {
     try {
       new URL(`http://[${a.value}]`);
@@ -7358,9 +7358,9 @@ const Xg = {
       });
     }
   };
-}), m1 = /* @__PURE__ */ N("$ZodCIDRv4", (t, e) => {
+}), m1 = /* @__PURE__ */ L("$ZodCIDRv4", (t, e) => {
   e.pattern ?? (e.pattern = Tg), He.init(t, e);
-}), v1 = /* @__PURE__ */ N("$ZodCIDRv6", (t, e) => {
+}), v1 = /* @__PURE__ */ L("$ZodCIDRv6", (t, e) => {
   e.pattern ?? (e.pattern = Sg), He.init(t, e), t._zod.check = (a) => {
     const i = a.value.split("/");
     try {
@@ -7386,7 +7386,7 @@ const Xg = {
     }
   };
 });
-function Pf(t) {
+function Pp(t) {
   if (t === "")
     return !0;
   if (/\s/.test(t) || t.length % 4 !== 0)
@@ -7397,9 +7397,9 @@ function Pf(t) {
     return !1;
   }
 }
-const g1 = /* @__PURE__ */ N("$ZodBase64", (t, e) => {
+const g1 = /* @__PURE__ */ L("$ZodBase64", (t, e) => {
   e.pattern ?? (e.pattern = Cg), He.init(t, e), t._zod.bag.contentEncoding = "base64", t._zod.check = (a) => {
-    Pf(a.value) || a.issues.push({
+    Pp(a.value) || a.issues.push({
       code: "invalid_format",
       format: "base64",
       input: a.value,
@@ -7409,13 +7409,13 @@ const g1 = /* @__PURE__ */ N("$ZodBase64", (t, e) => {
   };
 });
 function _1(t) {
-  if (!kf.test(t))
+  if (!kp.test(t))
     return !1;
   const e = t.replace(/[-_]/g, (i) => i === "-" ? "+" : "/"), a = e.padEnd(Math.ceil(e.length / 4) * 4, "=");
-  return Pf(a);
+  return Pp(a);
 }
-const y1 = /* @__PURE__ */ N("$ZodBase64URL", (t, e) => {
-  e.pattern ?? (e.pattern = kf), He.init(t, e), t._zod.bag.contentEncoding = "base64url", t._zod.check = (a) => {
+const y1 = /* @__PURE__ */ L("$ZodBase64URL", (t, e) => {
+  e.pattern ?? (e.pattern = kp), He.init(t, e), t._zod.bag.contentEncoding = "base64url", t._zod.check = (a) => {
     _1(a.value) || a.issues.push({
       code: "invalid_format",
       format: "base64url",
@@ -7424,7 +7424,7 @@ const y1 = /* @__PURE__ */ N("$ZodBase64URL", (t, e) => {
       continue: !e.abort
     });
   };
-}), w1 = /* @__PURE__ */ N("$ZodE164", (t, e) => {
+}), w1 = /* @__PURE__ */ L("$ZodE164", (t, e) => {
   e.pattern ?? (e.pattern = Rg), He.init(t, e);
 });
 function k1(t, e = null) {
@@ -7441,7 +7441,7 @@ function k1(t, e = null) {
     return !1;
   }
 }
-const I1 = /* @__PURE__ */ N("$ZodJWT", (t, e) => {
+const I1 = /* @__PURE__ */ L("$ZodJWT", (t, e) => {
   He.init(t, e), t._zod.check = (a) => {
     k1(a.value, e.alg) || a.issues.push({
       code: "invalid_format",
@@ -7451,8 +7451,8 @@ const I1 = /* @__PURE__ */ N("$ZodJWT", (t, e) => {
       continue: !e.abort
     });
   };
-}), Rf = /* @__PURE__ */ N("$ZodNumber", (t, e) => {
-  De.init(t, e), t._zod.pattern = t._zod.bag.pattern ?? xf, t._zod.parse = (a, i) => {
+}), Rp = /* @__PURE__ */ L("$ZodNumber", (t, e) => {
+  De.init(t, e), t._zod.pattern = t._zod.bag.pattern ?? xp, t._zod.parse = (a, i) => {
     if (e.coerce)
       try {
         a.value = Number(a.value);
@@ -7470,9 +7470,9 @@ const I1 = /* @__PURE__ */ N("$ZodJWT", (t, e) => {
       ...n ? { received: n } : {}
     }), a;
   };
-}), A1 = /* @__PURE__ */ N("$ZodNumberFormat", (t, e) => {
-  qg.init(t, e), Rf.init(t, e);
-}), x1 = /* @__PURE__ */ N("$ZodBoolean", (t, e) => {
+}), A1 = /* @__PURE__ */ L("$ZodNumberFormat", (t, e) => {
+  qg.init(t, e), Rp.init(t, e);
+}), x1 = /* @__PURE__ */ L("$ZodBoolean", (t, e) => {
   De.init(t, e), t._zod.pattern = jg, t._zod.parse = (a, i) => {
     if (e.coerce)
       try {
@@ -7487,9 +7487,9 @@ const I1 = /* @__PURE__ */ N("$ZodJWT", (t, e) => {
       inst: t
     }), a;
   };
-}), T1 = /* @__PURE__ */ N("$ZodUnknown", (t, e) => {
+}), T1 = /* @__PURE__ */ L("$ZodUnknown", (t, e) => {
   De.init(t, e), t._zod.parse = (a) => a;
-}), S1 = /* @__PURE__ */ N("$ZodNever", (t, e) => {
+}), S1 = /* @__PURE__ */ L("$ZodNever", (t, e) => {
   De.init(t, e), t._zod.parse = (a, i) => (a.issues.push({
     expected: "never",
     code: "invalid_type",
@@ -7500,7 +7500,7 @@ const I1 = /* @__PURE__ */ N("$ZodJWT", (t, e) => {
 function rl(t, e, a) {
   t.issues.length && e.issues.push(...oi(a, t.issues)), e.value[a] = t.value;
 }
-const C1 = /* @__PURE__ */ N("$ZodArray", (t, e) => {
+const C1 = /* @__PURE__ */ L("$ZodArray", (t, e) => {
   De.init(t, e), t._zod.parse = (a, i) => {
     const o = a.value;
     if (!Array.isArray(o))
@@ -7540,7 +7540,7 @@ function mr(t, e, a, i, o, n) {
   }
   t.value === void 0 ? r && (e.value[a] = void 0) : e.value[a] = t.value;
 }
-function Vf(t) {
+function Vp(t) {
   const e = Object.keys(t.shape);
   for (const i of e)
     if (!t.shape?.[i]?._zod?.traits?.has("$ZodType"))
@@ -7554,17 +7554,17 @@ function Vf(t) {
     optionalKeys: new Set(a)
   };
 }
-function Ef(t, e, a, i, o, n) {
+function Ep(t, e, a, i, o, n) {
   const r = [], s = o.keySet, c = o.catchall._zod, d = c.def.type, l = c.optin === "optional", u = c.optout === "optional";
-  for (const p in e) {
-    if (p === "__proto__" || s.has(p))
+  for (const f in e) {
+    if (f === "__proto__" || s.has(f))
       continue;
     if (d === "never") {
-      r.push(p);
+      r.push(f);
       continue;
     }
-    const h = c.run({ value: e[p], issues: [] }, i);
-    h instanceof Promise ? t.push(h.then((y) => mr(y, a, p, e, l, u))) : mr(h, a, p, e, l, u);
+    const b = c.run({ value: e[f], issues: [] }, i);
+    b instanceof Promise ? t.push(b.then((y) => mr(y, a, f, e, l, u))) : mr(b, a, f, e, l, u);
   }
   return r.length && a.issues.push({
     code: "unrecognized_keys",
@@ -7573,7 +7573,7 @@ function Ef(t, e, a, i, o, n) {
     inst: n
   }), t.length ? Promise.all(t).then(() => a) : a;
 }
-const P1 = /* @__PURE__ */ N("$ZodObject", (t, e) => {
+const P1 = /* @__PURE__ */ L("$ZodObject", (t, e) => {
   if (De.init(t, e), !Object.getOwnPropertyDescriptor(e, "shape")?.get) {
     const s = e.shape;
     Object.defineProperty(e, "shape", {
@@ -7585,7 +7585,7 @@ const P1 = /* @__PURE__ */ N("$ZodObject", (t, e) => {
       }
     });
   }
-  const i = Fr(() => Vf(e));
+  const i = Fr(() => Vp(e));
   je(t._zod, "propValues", () => {
     const s = e.shape, c = {};
     for (const d in s) {
@@ -7598,7 +7598,7 @@ const P1 = /* @__PURE__ */ N("$ZodObject", (t, e) => {
     }
     return c;
   });
-  const o = fn, n = e.catchall;
+  const o = pn, n = e.catchall;
   let r;
   t._zod.parse = (s, c) => {
     r ?? (r = i.value);
@@ -7612,67 +7612,67 @@ const P1 = /* @__PURE__ */ N("$ZodObject", (t, e) => {
       }), s;
     s.value = {};
     const l = [], u = r.shape;
-    for (const p of r.keys) {
-      const h = u[p], y = h._zod.optin === "optional", v = h._zod.optout === "optional", g = h._zod.run({ value: d[p], issues: [] }, c);
-      g instanceof Promise ? l.push(g.then((I) => mr(I, s, p, d, y, v))) : mr(g, s, p, d, y, v);
+    for (const f of r.keys) {
+      const b = u[f], y = b._zod.optin === "optional", v = b._zod.optout === "optional", g = b._zod.run({ value: d[f], issues: [] }, c);
+      g instanceof Promise ? l.push(g.then((k) => mr(k, s, f, d, y, v))) : mr(g, s, f, d, y, v);
     }
-    return n ? Ef(l, d, s, c, i.value, t) : l.length ? Promise.all(l).then(() => s) : s;
+    return n ? Ep(l, d, s, c, i.value, t) : l.length ? Promise.all(l).then(() => s) : s;
   };
-}), R1 = /* @__PURE__ */ N("$ZodObjectJIT", (t, e) => {
+}), R1 = /* @__PURE__ */ L("$ZodObjectJIT", (t, e) => {
   P1.init(t, e);
-  const a = t._zod.parse, i = Fr(() => Vf(e)), o = (p) => {
-    const h = new Yg(["shape", "payload", "ctx"]), y = i.value, v = (S) => {
+  const a = t._zod.parse, i = Fr(() => Vp(e)), o = (f) => {
+    const b = new Yg(["shape", "payload", "ctx"]), y = i.value, v = (S) => {
       const T = ol(S);
       return `shape[${T}]._zod.run({ value: input[${T}], issues: [] }, ctx)`;
     };
-    h.write("const input = payload.value;");
+    b.write("const input = payload.value;");
     const g = /* @__PURE__ */ Object.create(null);
-    let I = 0;
+    let k = 0;
     for (const S of y.keys)
-      g[S] = `key_${I++}`;
-    h.write("const newResult = {};");
+      g[S] = `key_${k++}`;
+    b.write("const newResult = {};");
     for (const S of y.keys) {
-      const T = g[S], k = ol(S), Z = p[S], P = Z?._zod?.optin === "optional", O = Z?._zod?.optout === "optional";
-      h.write(`const ${T} = ${v(S)};`), P && O ? h.write(`
+      const T = g[S], x = ol(S), D = f[S], V = D?._zod?.optin === "optional", P = D?._zod?.optout === "optional";
+      b.write(`const ${T} = ${v(S)};`), V && P ? b.write(`
         if (${T}.issues.length) {
-          if (${k} in input) {
+          if (${x} in input) {
             payload.issues = payload.issues.concat(${T}.issues.map(iss => ({
               ...iss,
-              path: iss.path ? [${k}, ...iss.path] : [${k}]
+              path: iss.path ? [${x}, ...iss.path] : [${x}]
             })));
           }
         }
 
         if (${T}.value === undefined) {
-          if (${k} in input) {
-            newResult[${k}] = undefined;
+          if (${x} in input) {
+            newResult[${x}] = undefined;
           }
         } else {
-          newResult[${k}] = ${T}.value;
+          newResult[${x}] = ${T}.value;
         }
 
-      `) : P ? h.write(`
+      `) : V ? b.write(`
         if (${T}.issues.length) {
           payload.issues = payload.issues.concat(${T}.issues.map(iss => ({
             ...iss,
-            path: iss.path ? [${k}, ...iss.path] : [${k}]
+            path: iss.path ? [${x}, ...iss.path] : [${x}]
           })));
         }
 
         if (${T}.value === undefined) {
-          if (${k} in input) {
-            newResult[${k}] = undefined;
+          if (${x} in input) {
+            newResult[${x}] = undefined;
           }
         } else {
-          newResult[${k}] = ${T}.value;
+          newResult[${x}] = ${T}.value;
         }
 
-      `) : h.write(`
-        const ${T}_present = ${k} in input;
+      `) : b.write(`
+        const ${T}_present = ${x} in input;
         if (${T}.issues.length) {
           payload.issues = payload.issues.concat(${T}.issues.map(iss => ({
             ...iss,
-            path: iss.path ? [${k}, ...iss.path] : [${k}]
+            path: iss.path ? [${x}, ...iss.path] : [${x}]
           })));
         }
         if (!${T}_present && !${T}.issues.length) {
@@ -7680,36 +7680,36 @@ const P1 = /* @__PURE__ */ N("$ZodObject", (t, e) => {
             code: "invalid_type",
             expected: "nonoptional",
             input: undefined,
-            path: [${k}]
+            path: [${x}]
           });
         }
 
         if (${T}_present) {
           if (${T}.value === undefined) {
-            newResult[${k}] = undefined;
+            newResult[${x}] = undefined;
           } else {
-            newResult[${k}] = ${T}.value;
+            newResult[${x}] = ${T}.value;
           }
         }
 
       `);
     }
-    h.write("payload.value = newResult;"), h.write("return payload;");
-    const A = h.compile();
-    return (S, T) => A(p, S, T);
+    b.write("payload.value = newResult;"), b.write("return payload;");
+    const I = b.compile();
+    return (S, T) => I(f, S, T);
   };
   let n;
-  const r = fn, s = !Uc.jitless, d = s && Nv.value, l = e.catchall;
+  const r = pn, s = !Uc.jitless, d = s && Nv.value, l = e.catchall;
   let u;
-  t._zod.parse = (p, h) => {
+  t._zod.parse = (f, b) => {
     u ?? (u = i.value);
-    const y = p.value;
-    return r(y) ? s && d && h?.async === !1 && h.jitless !== !0 ? (n || (n = o(e.shape)), p = n(p, h), l ? Ef([], y, p, h, u, t) : p) : a(p, h) : (p.issues.push({
+    const y = f.value;
+    return r(y) ? s && d && b?.async === !1 && b.jitless !== !0 ? (n || (n = o(e.shape)), f = n(f, b), l ? Ep([], y, f, b, u, t) : f) : a(f, b) : (f.issues.push({
       expected: "object",
       code: "invalid_type",
       input: y,
       inst: t
-    }), p);
+    }), f);
   };
 });
 function sl(t, e, a, i) {
@@ -7724,7 +7724,7 @@ function sl(t, e, a, i) {
     errors: t.map((n) => n.issues.map((r) => Ba(r, i, Da())))
   }), e);
 }
-const Of = /* @__PURE__ */ N("$ZodUnion", (t, e) => {
+const Op = /* @__PURE__ */ L("$ZodUnion", (t, e) => {
   De.init(t, e), je(t._zod, "optin", () => e.options.some((i) => i._zod.optin === "optional") ? "optional" : void 0), je(t._zod, "optout", () => e.options.some((i) => i._zod.optout === "optional") ? "optional" : void 0), je(t._zod, "values", () => {
     if (e.options.every((i) => i._zod.values))
       return new Set(e.options.flatMap((i) => Array.from(i._zod.values)));
@@ -7755,8 +7755,8 @@ const Of = /* @__PURE__ */ N("$ZodUnion", (t, e) => {
     }
     return n ? Promise.all(r).then((s) => sl(s, i, t, o)) : sl(r, i, t, o);
   };
-}), V1 = /* @__PURE__ */ N("$ZodDiscriminatedUnion", (t, e) => {
-  e.inclusive = !1, Of.init(t, e);
+}), V1 = /* @__PURE__ */ L("$ZodDiscriminatedUnion", (t, e) => {
+  e.inclusive = !1, Op.init(t, e);
   const a = t._zod.parse;
   je(t._zod, "propValues", () => {
     const o = {};
@@ -7788,7 +7788,7 @@ const Of = /* @__PURE__ */ N("$ZodUnion", (t, e) => {
   });
   t._zod.parse = (o, n) => {
     const r = o.value;
-    if (!fn(r))
+    if (!pn(r))
       return o.issues.push({
         code: "invalid_type",
         expected: "object",
@@ -7807,7 +7807,7 @@ const Of = /* @__PURE__ */ N("$ZodUnion", (t, e) => {
       inst: t
     }), o);
   };
-}), E1 = /* @__PURE__ */ N("$ZodIntersection", (t, e) => {
+}), E1 = /* @__PURE__ */ L("$ZodIntersection", (t, e) => {
   De.init(t, e), t._zod.parse = (a, i) => {
     const o = a.value, n = e.left._zod.run({ value: o, issues: [] }, i), r = e.right._zod.run({ value: o, issues: [] }, i);
     return n instanceof Promise || r instanceof Promise ? Promise.all([n, r]).then(([c, d]) => cl(a, c, d)) : cl(a, n, r);
@@ -7872,7 +7872,7 @@ function cl(t, e, a) {
     throw new Error(`Unmergable intersection. Error path: ${JSON.stringify(r.mergeErrorPath)}`);
   return t.value = r.data, t;
 }
-const O1 = /* @__PURE__ */ N("$ZodTuple", (t, e) => {
+const O1 = /* @__PURE__ */ L("$ZodTuple", (t, e) => {
   De.init(t, e);
   const a = e.items;
   t._zod.parse = (i, o) => {
@@ -7908,17 +7908,17 @@ const O1 = /* @__PURE__ */ N("$ZodTuple", (t, e) => {
     const d = new Array(a.length);
     for (let l = 0; l < a.length; l++) {
       const u = a[l]._zod.run({ value: n[l], issues: [] }, o);
-      u instanceof Promise ? r.push(u.then((p) => {
-        d[l] = p;
+      u instanceof Promise ? r.push(u.then((f) => {
+        d[l] = f;
       })) : d[l] = u;
     }
     if (e.rest) {
       let l = a.length - 1;
       const u = n.slice(a.length);
-      for (const p of u) {
+      for (const f of u) {
         l++;
-        const h = e.rest._zod.run({ value: p, issues: [] }, o);
-        h instanceof Promise ? r.push(h.then((y) => ll(y, i, l))) : ll(h, i, l);
+        const b = e.rest._zod.run({ value: f, issues: [] }, o);
+        b instanceof Promise ? r.push(b.then((y) => ll(y, i, l))) : ll(b, i, l);
       }
     }
     return r.length ? Promise.all(r).then(() => ul(d, i, a, n, c)) : ul(d, i, a, n, c);
@@ -7949,7 +7949,7 @@ function ul(t, e, a, i, o) {
     e.value.length = n;
   return e;
 }
-const M1 = /* @__PURE__ */ N("$ZodRecord", (t, e) => {
+const M1 = /* @__PURE__ */ L("$ZodRecord", (t, e) => {
   De.init(t, e), t._zod.parse = (a, i) => {
     const o = a.value;
     if (!bo(o))
@@ -7973,17 +7973,17 @@ const M1 = /* @__PURE__ */ N("$ZodRecord", (t, e) => {
             a.issues.push({
               code: "invalid_key",
               origin: "record",
-              issues: l.issues.map((h) => Ba(h, i, Da())),
+              issues: l.issues.map((b) => Ba(b, i, Da())),
               input: d,
               path: [d],
               inst: t
             });
             continue;
           }
-          const u = l.value, p = e.valueType._zod.run({ value: o[d], issues: [] }, i);
-          p instanceof Promise ? n.push(p.then((h) => {
-            h.issues.length && a.issues.push(...oi(d, h.issues)), a.value[u] = h.value;
-          })) : (p.issues.length && a.issues.push(...oi(d, p.issues)), a.value[u] = p.value);
+          const u = l.value, f = e.valueType._zod.run({ value: o[d], issues: [] }, i);
+          f instanceof Promise ? n.push(f.then((b) => {
+            b.issues.length && a.issues.push(...oi(d, b.issues)), a.value[u] = b.value;
+          })) : (f.issues.length && a.issues.push(...oi(d, f.issues)), a.value[u] = f.value);
         }
       let c;
       for (const d in o)
@@ -8002,7 +8002,7 @@ const M1 = /* @__PURE__ */ N("$ZodRecord", (t, e) => {
         let c = e.keyType._zod.run({ value: s, issues: [] }, i);
         if (c instanceof Promise)
           throw new Error("Async schemas not supported in object keys currently");
-        if (typeof s == "string" && xf.test(s) && c.issues.length) {
+        if (typeof s == "string" && xp.test(s) && c.issues.length) {
           const u = e.keyType._zod.run({ value: Number(s), issues: [] }, i);
           if (u instanceof Promise)
             throw new Error("Async schemas not supported in object keys currently");
@@ -8027,9 +8027,9 @@ const M1 = /* @__PURE__ */ N("$ZodRecord", (t, e) => {
     }
     return n.length ? Promise.all(n).then(() => a) : a;
   };
-}), $1 = /* @__PURE__ */ N("$ZodEnum", (t, e) => {
+}), $1 = /* @__PURE__ */ L("$ZodEnum", (t, e) => {
   De.init(t, e);
-  const a = mf(e.entries), i = new Set(a);
+  const a = mp(e.entries), i = new Set(a);
   t._zod.values = i, t._zod.pattern = new RegExp(`^(${a.filter((o) => Dv.has(typeof o)).map((o) => typeof o == "string" ? mo(o) : o.toString()).join("|")})$`), t._zod.parse = (o, n) => {
     const r = o.value;
     return i.has(r) || o.issues.push({
@@ -8039,7 +8039,7 @@ const M1 = /* @__PURE__ */ N("$ZodRecord", (t, e) => {
       inst: t
     }), o;
   };
-}), j1 = /* @__PURE__ */ N("$ZodLiteral", (t, e) => {
+}), j1 = /* @__PURE__ */ L("$ZodLiteral", (t, e) => {
   if (De.init(t, e), e.values.length === 0)
     throw new Error("Cannot create literal schema with no valid values");
   const a = new Set(e.values);
@@ -8052,10 +8052,10 @@ const M1 = /* @__PURE__ */ N("$ZodRecord", (t, e) => {
       inst: t
     }), i;
   };
-}), z1 = /* @__PURE__ */ N("$ZodTransform", (t, e) => {
+}), z1 = /* @__PURE__ */ L("$ZodTransform", (t, e) => {
   De.init(t, e), t._zod.optin = "optional", t._zod.parse = (a, i) => {
     if (i.direction === "backward")
-      throw new bf(t.constructor.name);
+      throw new bp(t.constructor.name);
     const o = e.transform(a.value, a);
     if (i.async)
       return (o instanceof Promise ? o : Promise.resolve(o)).then((r) => (a.value = r, a.fallback = !0, a));
@@ -8064,43 +8064,43 @@ const M1 = /* @__PURE__ */ N("$ZodRecord", (t, e) => {
     return a.value = o, a.fallback = !0, a;
   };
 });
-function pl(t, e) {
+function fl(t, e) {
   return e === void 0 && (t.issues.length || t.fallback) ? { issues: [], value: void 0 } : t;
 }
-const Mf = /* @__PURE__ */ N("$ZodOptional", (t, e) => {
+const Mp = /* @__PURE__ */ L("$ZodOptional", (t, e) => {
   De.init(t, e), t._zod.optin = "optional", t._zod.optout = "optional", je(t._zod, "values", () => e.innerType._zod.values ? /* @__PURE__ */ new Set([...e.innerType._zod.values, void 0]) : void 0), je(t._zod, "pattern", () => {
     const a = e.innerType._zod.pattern;
     return a ? new RegExp(`^(${qc(a.source)})?$`) : void 0;
   }), t._zod.parse = (a, i) => {
     if (e.innerType._zod.optin === "optional") {
       const o = a.value, n = e.innerType._zod.run(a, i);
-      return n instanceof Promise ? n.then((r) => pl(r, o)) : pl(n, o);
+      return n instanceof Promise ? n.then((r) => fl(r, o)) : fl(n, o);
     }
     return a.value === void 0 ? a : e.innerType._zod.run(a, i);
   };
-}), U1 = /* @__PURE__ */ N("$ZodExactOptional", (t, e) => {
-  Mf.init(t, e), je(t._zod, "values", () => e.innerType._zod.values), je(t._zod, "pattern", () => e.innerType._zod.pattern), t._zod.parse = (a, i) => e.innerType._zod.run(a, i);
-}), F1 = /* @__PURE__ */ N("$ZodNullable", (t, e) => {
+}), U1 = /* @__PURE__ */ L("$ZodExactOptional", (t, e) => {
+  Mp.init(t, e), je(t._zod, "values", () => e.innerType._zod.values), je(t._zod, "pattern", () => e.innerType._zod.pattern), t._zod.parse = (a, i) => e.innerType._zod.run(a, i);
+}), F1 = /* @__PURE__ */ L("$ZodNullable", (t, e) => {
   De.init(t, e), je(t._zod, "optin", () => e.innerType._zod.optin), je(t._zod, "optout", () => e.innerType._zod.optout), je(t._zod, "pattern", () => {
     const a = e.innerType._zod.pattern;
     return a ? new RegExp(`^(${qc(a.source)}|null)$`) : void 0;
   }), je(t._zod, "values", () => e.innerType._zod.values ? /* @__PURE__ */ new Set([...e.innerType._zod.values, null]) : void 0), t._zod.parse = (a, i) => a.value === null ? a : e.innerType._zod.run(a, i);
-}), q1 = /* @__PURE__ */ N("$ZodDefault", (t, e) => {
+}), q1 = /* @__PURE__ */ L("$ZodDefault", (t, e) => {
   De.init(t, e), t._zod.optin = "optional", je(t._zod, "values", () => e.innerType._zod.values), t._zod.parse = (a, i) => {
     if (i.direction === "backward")
       return e.innerType._zod.run(a, i);
     if (a.value === void 0)
       return a.value = e.defaultValue, a;
     const o = e.innerType._zod.run(a, i);
-    return o instanceof Promise ? o.then((n) => fl(n, e)) : fl(o, e);
+    return o instanceof Promise ? o.then((n) => pl(n, e)) : pl(o, e);
   };
 });
-function fl(t, e) {
+function pl(t, e) {
   return t.value === void 0 && (t.value = e.defaultValue), t;
 }
-const Z1 = /* @__PURE__ */ N("$ZodPrefault", (t, e) => {
+const Z1 = /* @__PURE__ */ L("$ZodPrefault", (t, e) => {
   De.init(t, e), t._zod.optin = "optional", je(t._zod, "values", () => e.innerType._zod.values), t._zod.parse = (a, i) => (i.direction === "backward" || a.value === void 0 && (a.value = e.defaultValue), e.innerType._zod.run(a, i));
-}), L1 = /* @__PURE__ */ N("$ZodNonOptional", (t, e) => {
+}), L1 = /* @__PURE__ */ L("$ZodNonOptional", (t, e) => {
   De.init(t, e), je(t._zod, "values", () => {
     const a = e.innerType._zod.values;
     return a ? new Set([...a].filter((i) => i !== void 0)) : void 0;
@@ -8117,7 +8117,7 @@ function hl(t, e) {
     inst: e
   }), t;
 }
-const N1 = /* @__PURE__ */ N("$ZodCatch", (t, e) => {
+const N1 = /* @__PURE__ */ L("$ZodCatch", (t, e) => {
   De.init(t, e), t._zod.optin = "optional", je(t._zod, "optout", () => e.innerType._zod.optout), je(t._zod, "values", () => e.innerType._zod.values), t._zod.parse = (a, i) => {
     if (i.direction === "backward")
       return e.innerType._zod.run(a, i);
@@ -8136,7 +8136,7 @@ const N1 = /* @__PURE__ */ N("$ZodCatch", (t, e) => {
       input: a.value
     }), a.issues = [], a.fallback = !0), a);
   };
-}), D1 = /* @__PURE__ */ N("$ZodPipe", (t, e) => {
+}), D1 = /* @__PURE__ */ L("$ZodPipe", (t, e) => {
   De.init(t, e), je(t._zod, "values", () => e.in._zod.values), je(t._zod, "optin", () => e.in._zod.optin), je(t._zod, "optout", () => e.out._zod.optout), je(t._zod, "propValues", () => e.in._zod.propValues), t._zod.parse = (a, i) => {
     if (i.direction === "backward") {
       const n = e.out._zod.run(a, i);
@@ -8149,7 +8149,7 @@ const N1 = /* @__PURE__ */ N("$ZodCatch", (t, e) => {
 function jn(t, e, a) {
   return t.issues.length ? (t.aborted = !0, t) : e._zod.run({ value: t.value, issues: t.issues, fallback: t.fallback }, a);
 }
-const B1 = /* @__PURE__ */ N("$ZodReadonly", (t, e) => {
+const B1 = /* @__PURE__ */ L("$ZodReadonly", (t, e) => {
   De.init(t, e), je(t._zod, "propValues", () => e.innerType._zod.propValues), je(t._zod, "values", () => e.innerType._zod.values), je(t._zod, "optin", () => e.innerType?._zod?.optin), je(t._zod, "optout", () => e.innerType?._zod?.optout), t._zod.parse = (a, i) => {
     if (i.direction === "backward")
       return e.innerType._zod.run(a, i);
@@ -8160,7 +8160,7 @@ const B1 = /* @__PURE__ */ N("$ZodReadonly", (t, e) => {
 function bl(t) {
   return t.value = Object.freeze(t.value), t;
 }
-const H1 = /* @__PURE__ */ N("$ZodCustom", (t, e) => {
+const H1 = /* @__PURE__ */ L("$ZodCustom", (t, e) => {
   Nt.init(t, e), De.init(t, e), t._zod.parse = (a, i) => a, t._zod.check = (a) => {
     const i = a.value, o = e.fn(i);
     if (o instanceof Promise)
@@ -8399,7 +8399,7 @@ function u2(t, e) {
   });
 }
 // @__NO_SIDE_EFFECTS__
-function p2(t, e) {
+function f2(t, e) {
   return new t({
     type: "string",
     format: "cidrv6",
@@ -8409,7 +8409,7 @@ function p2(t, e) {
   });
 }
 // @__NO_SIDE_EFFECTS__
-function f2(t, e) {
+function p2(t, e) {
   return new t({
     type: "string",
     format: "base64",
@@ -8528,7 +8528,7 @@ function x2(t, e) {
 }
 // @__NO_SIDE_EFFECTS__
 function _l(t, e) {
-  return new Sf({
+  return new Sp({
     check: "less_than",
     ...le(e),
     value: t,
@@ -8537,7 +8537,7 @@ function _l(t, e) {
 }
 // @__NO_SIDE_EFFECTS__
 function bs(t, e) {
-  return new Sf({
+  return new Sp({
     check: "less_than",
     ...le(e),
     value: t,
@@ -8546,7 +8546,7 @@ function bs(t, e) {
 }
 // @__NO_SIDE_EFFECTS__
 function yl(t, e) {
-  return new Cf({
+  return new Cp({
     check: "greater_than",
     ...le(e),
     value: t,
@@ -8555,7 +8555,7 @@ function yl(t, e) {
 }
 // @__NO_SIDE_EFFECTS__
 function ms(t, e) {
-  return new Cf({
+  return new Cp({
     check: "greater_than",
     ...le(e),
     value: t,
@@ -8571,7 +8571,7 @@ function wl(t, e) {
   });
 }
 // @__NO_SIDE_EFFECTS__
-function $f(t, e) {
+function $p(t, e) {
   return new Zg({
     check: "max_length",
     ...le(e),
@@ -8587,7 +8587,7 @@ function vr(t, e) {
   });
 }
 // @__NO_SIDE_EFFECTS__
-function jf(t, e) {
+function jp(t, e) {
   return new Ng({
     check: "length_equals",
     ...le(e),
@@ -8723,7 +8723,7 @@ function Z2(t, e) {
   });
   return a._zod.check = t, a;
 }
-function zf(t) {
+function zp(t) {
   let e = t?.target ?? "draft-2020-12";
   return e === "draft-4" && (e = "draft-04"), e === "draft-7" && (e = "draft-07"), {
     processors: t.processors ?? {},
@@ -8759,10 +8759,10 @@ function rt(t, e, a = { path: [], schemaPath: [] }) {
     if (t._zod.processJSONSchema)
       t._zod.processJSONSchema(e, r.schema, l);
     else {
-      const p = r.schema, h = e.processors[o.type];
-      if (!h)
+      const f = r.schema, b = e.processors[o.type];
+      if (!b)
         throw new Error(`[toJSONSchema]: Non-representable type encountered: ${o.type}`);
-      h(t, e, p, l);
+      b(t, e, f, l);
     }
     const u = t._zod.parent;
     u && (r.ref || (r.ref = u), rt(u, e, l), e.seen.get(u).isParent = !0);
@@ -8770,7 +8770,7 @@ function rt(t, e, a = { path: [], schemaPath: [] }) {
   const c = e.metadataRegistry.get(t);
   return c && Object.assign(r.schema, c), e.io === "input" && Ct(t) && (delete r.schema.examples, delete r.schema.default), e.io === "input" && "_prefault" in r.schema && ((i = r.schema).default ?? (i.default = r.schema._prefault)), delete r.schema._prefault, e.seen.get(t).schema;
 }
-function Uf(t, e) {
+function Up(t, e) {
   const a = t.seen.get(e);
   if (!a)
     throw new Error("Unprocessed schema. This is a bug in Zod.");
@@ -8787,11 +8787,11 @@ function Uf(t, e) {
   const o = (r) => {
     const s = t.target === "draft-2020-12" ? "$defs" : "definitions";
     if (t.external) {
-      const u = t.external.registry.get(r[0])?.id, p = t.external.uri ?? ((y) => y);
+      const u = t.external.registry.get(r[0])?.id, f = t.external.uri ?? ((y) => y);
       if (u)
-        return { ref: p(u) };
-      const h = r[1].defId ?? r[1].schema.id ?? `schema${t.counter++}`;
-      return r[1].defId = h, { defId: h, ref: `${p("__shared")}#/${s}/${h}` };
+        return { ref: f(u) };
+      const b = r[1].defId ?? r[1].schema.id ?? `schema${t.counter++}`;
+      return r[1].defId = b, { defId: b, ref: `${f("__shared")}#/${s}/${b}` };
     }
     if (r[1] === a)
       return { ref: "#" };
@@ -8842,7 +8842,7 @@ Set the \`cycles\` parameter to \`"ref"\` to resolve cyclical schemas with defs.
     }
   }
 }
-function Ff(t, e) {
+function Fp(t, e) {
   const a = t.seen.get(e);
   if (!a)
     throw new Error("Unprocessed schema. This is a bug in Zod.");
@@ -8853,21 +8853,21 @@ function Ff(t, e) {
     const d = c.def ?? c.schema, l = { ...d }, u = c.ref;
     if (c.ref = null, u) {
       i(u);
-      const h = t.seen.get(u), y = h.schema;
+      const b = t.seen.get(u), y = b.schema;
       if (y.$ref && (t.target === "draft-07" || t.target === "draft-04" || t.target === "openapi-3.0") ? (d.allOf = d.allOf ?? [], d.allOf.push(y)) : Object.assign(d, y), Object.assign(d, l), s._zod.parent === u)
         for (const g in d)
           g === "$ref" || g === "allOf" || g in l || delete d[g];
-      if (y.$ref && h.def)
+      if (y.$ref && b.def)
         for (const g in d)
-          g === "$ref" || g === "allOf" || g in h.def && JSON.stringify(d[g]) === JSON.stringify(h.def[g]) && delete d[g];
+          g === "$ref" || g === "allOf" || g in b.def && JSON.stringify(d[g]) === JSON.stringify(b.def[g]) && delete d[g];
     }
-    const p = s._zod.parent;
-    if (p && p !== u) {
-      i(p);
-      const h = t.seen.get(p);
-      if (h?.schema.$ref && (d.$ref = h.schema.$ref, h.def))
+    const f = s._zod.parent;
+    if (f && f !== u) {
+      i(f);
+      const b = t.seen.get(f);
+      if (b?.schema.$ref && (d.$ref = b.schema.$ref, b.def))
         for (const y in d)
-          y === "$ref" || y === "allOf" || y in h.def && JSON.stringify(d[y]) === JSON.stringify(h.def[y]) && delete d[y];
+          y === "$ref" || y === "allOf" || y in b.def && JSON.stringify(d[y]) === JSON.stringify(b.def[y]) && delete d[y];
     }
     t.override({
       zodSchema: s,
@@ -8953,11 +8953,11 @@ function Ct(t, e) {
   return !1;
 }
 const L2 = (t, e = {}) => (a) => {
-  const i = zf({ ...a, processors: e });
-  return rt(t, i), Uf(i, t), Ff(i, t);
+  const i = zp({ ...a, processors: e });
+  return rt(t, i), Up(i, t), Fp(i, t);
 }, gr = (t, e, a = {}) => (i) => {
-  const { libraryOptions: o, target: n } = i ?? {}, r = zf({ ...o ?? {}, target: n, io: e, processors: a });
-  return rt(t, r), Uf(r, t), Ff(r, t);
+  const { libraryOptions: o, target: n } = i ?? {}, r = zp({ ...o ?? {}, target: n, io: e, processors: a });
+  return rt(t, r), Up(r, t), Fp(r, t);
 }, N2 = {
   guid: "uuid",
   url: "uri",
@@ -8981,15 +8981,15 @@ const L2 = (t, e = {}) => (a) => {
 }, B2 = (t, e, a, i) => {
   const o = a, { minimum: n, maximum: r, format: s, multipleOf: c, exclusiveMaximum: d, exclusiveMinimum: l } = t._zod.bag;
   typeof s == "string" && s.includes("int") ? o.type = "integer" : o.type = "number";
-  const u = typeof l == "number" && l >= (n ?? Number.NEGATIVE_INFINITY), p = typeof d == "number" && d <= (r ?? Number.POSITIVE_INFINITY), h = e.target === "draft-04" || e.target === "openapi-3.0";
-  u ? h ? (o.minimum = l, o.exclusiveMinimum = !0) : o.exclusiveMinimum = l : typeof n == "number" && (o.minimum = n), p ? h ? (o.maximum = d, o.exclusiveMaximum = !0) : o.exclusiveMaximum = d : typeof r == "number" && (o.maximum = r), typeof c == "number" && (o.multipleOf = c);
+  const u = typeof l == "number" && l >= (n ?? Number.NEGATIVE_INFINITY), f = typeof d == "number" && d <= (r ?? Number.POSITIVE_INFINITY), b = e.target === "draft-04" || e.target === "openapi-3.0";
+  u ? b ? (o.minimum = l, o.exclusiveMinimum = !0) : o.exclusiveMinimum = l : typeof n == "number" && (o.minimum = n), f ? b ? (o.maximum = d, o.exclusiveMaximum = !0) : o.exclusiveMaximum = d : typeof r == "number" && (o.maximum = r), typeof c == "number" && (o.multipleOf = c);
 }, H2 = (t, e, a, i) => {
   a.type = "boolean";
 }, J2 = (t, e, a, i) => {
   a.not = {};
 }, G2 = (t, e, a, i) => {
 }, W2 = (t, e, a, i) => {
-  const o = t._zod.def, n = mf(o.entries);
+  const o = t._zod.def, n = mp(o.entries);
   n.every((r) => typeof r == "number") && (a.type = "number"), n.every((r) => typeof r == "string") && (a.type = "string"), a.enum = n;
 }, K2 = (t, e, a, i) => {
   const o = t._zod.def, n = [];
@@ -9058,9 +9058,9 @@ const L2 = (t, e = {}) => (a) => {
 }, i_ = (t, e, a, i) => {
   const o = a, n = t._zod.def;
   o.type = "array";
-  const r = e.target === "draft-2020-12" ? "prefixItems" : "items", s = e.target === "draft-2020-12" || e.target === "openapi-3.0" ? "items" : "additionalItems", c = n.items.map((p, h) => rt(p, e, {
+  const r = e.target === "draft-2020-12" ? "prefixItems" : "items", s = e.target === "draft-2020-12" || e.target === "openapi-3.0" ? "items" : "additionalItems", c = n.items.map((f, b) => rt(f, e, {
     ...i,
-    path: [...i.path, r, h]
+    path: [...i.path, r, b]
   })), d = n.rest ? rt(n.rest, e, {
     ...i,
     path: [...i.path, s, ...e.target === "openapi-3.0" ? [n.items.length] : []]
@@ -9135,37 +9135,37 @@ const L2 = (t, e = {}) => (a) => {
   rt(o.innerType, e, i);
   const n = e.seen.get(t);
   n.ref = o.innerType, a.readOnly = !0;
-}, qf = (t, e, a, i) => {
+}, qp = (t, e, a, i) => {
   const o = t._zod.def;
   rt(o.innerType, e, i);
   const n = e.seen.get(t);
   n.ref = o.innerType;
-}, p_ = /* @__PURE__ */ N("ZodISODateTime", (t, e) => {
+}, f_ = /* @__PURE__ */ L("ZodISODateTime", (t, e) => {
   l1.init(t, e), Qe.init(t, e);
 });
-function f_(t) {
-  return /* @__PURE__ */ v2(p_, t);
+function p_(t) {
+  return /* @__PURE__ */ v2(f_, t);
 }
-const h_ = /* @__PURE__ */ N("ZodISODate", (t, e) => {
+const h_ = /* @__PURE__ */ L("ZodISODate", (t, e) => {
   u1.init(t, e), Qe.init(t, e);
 });
 function b_(t) {
   return /* @__PURE__ */ g2(h_, t);
 }
-const m_ = /* @__PURE__ */ N("ZodISOTime", (t, e) => {
-  p1.init(t, e), Qe.init(t, e);
+const m_ = /* @__PURE__ */ L("ZodISOTime", (t, e) => {
+  f1.init(t, e), Qe.init(t, e);
 });
 function v_(t) {
   return /* @__PURE__ */ _2(m_, t);
 }
-const g_ = /* @__PURE__ */ N("ZodISODuration", (t, e) => {
-  f1.init(t, e), Qe.init(t, e);
+const g_ = /* @__PURE__ */ L("ZodISODuration", (t, e) => {
+  p1.init(t, e), Qe.init(t, e);
 });
 function __(t) {
   return /* @__PURE__ */ y2(g_, t);
 }
 const y_ = (t, e) => {
-  yf.init(t, e), t.name = "ZodError", Object.defineProperties(t, {
+  yp.init(t, e), t.name = "ZodError", Object.defineProperties(t, {
     format: {
       value: (a) => ag(t, a)
       // enumerable: false,
@@ -9193,9 +9193,9 @@ const y_ = (t, e) => {
       // enumerable: false,
     }
   });
-}, ra = /* @__PURE__ */ N("ZodError", y_, {
+}, ra = /* @__PURE__ */ L("ZodError", y_, {
   Parent: Error
-}), w_ = /* @__PURE__ */ Lc(ra), k_ = /* @__PURE__ */ Nc(ra), I_ = /* @__PURE__ */ qr(ra), A_ = /* @__PURE__ */ Zr(ra), x_ = /* @__PURE__ */ ng(ra), T_ = /* @__PURE__ */ rg(ra), S_ = /* @__PURE__ */ sg(ra), C_ = /* @__PURE__ */ cg(ra), P_ = /* @__PURE__ */ dg(ra), R_ = /* @__PURE__ */ lg(ra), V_ = /* @__PURE__ */ ug(ra), E_ = /* @__PURE__ */ pg(ra), kl = /* @__PURE__ */ new WeakMap();
+}), w_ = /* @__PURE__ */ Lc(ra), k_ = /* @__PURE__ */ Nc(ra), I_ = /* @__PURE__ */ qr(ra), A_ = /* @__PURE__ */ Zr(ra), x_ = /* @__PURE__ */ ng(ra), T_ = /* @__PURE__ */ rg(ra), S_ = /* @__PURE__ */ sg(ra), C_ = /* @__PURE__ */ cg(ra), P_ = /* @__PURE__ */ dg(ra), R_ = /* @__PURE__ */ lg(ra), V_ = /* @__PURE__ */ ug(ra), E_ = /* @__PURE__ */ fg(ra), kl = /* @__PURE__ */ new WeakMap();
 function In(t, e, a) {
   const i = Object.getPrototypeOf(t);
   let o = kl.get(i);
@@ -9227,7 +9227,7 @@ function In(t, e, a) {
     }
   }
 }
-const Je = /* @__PURE__ */ N("ZodType", (t, e) => (De.init(t, e), Object.assign(t["~standard"], {
+const Je = /* @__PURE__ */ L("ZodType", (t, e) => (De.init(t, e), Object.assign(t["~standard"], {
   jsonSchema: {
     input: gr(t, "input"),
     output: gr(t, "output")
@@ -9267,7 +9267,7 @@ const Je = /* @__PURE__ */ N("ZodType", (t, e) => (De.init(t, e), Object.assign(
     return Sl(this);
   },
   exactOptional() {
-    return f5(this);
+    return p5(this);
   },
   nullable() {
     return Cl(this);
@@ -9329,7 +9329,7 @@ const Je = /* @__PURE__ */ N("ZodType", (t, e) => (De.init(t, e), Object.assign(
     return Mo.get(t)?.description;
   },
   configurable: !0
-}), t)), Zf = /* @__PURE__ */ N("_ZodString", (t, e) => {
+}), t)), Zp = /* @__PURE__ */ L("_ZodString", (t, e) => {
   Dc.init(t, e), Je.init(t, e), t._zod.processJSONSchema = (i, o, n) => D2(t, i, o);
   const a = t._zod.bag;
   t.format = a.format ?? null, t.minLength = a.minimum ?? null, t.maxLength = a.maximum ?? null, In(t, "_ZodString", {
@@ -9349,10 +9349,10 @@ const Je = /* @__PURE__ */ N("ZodType", (t, e) => (De.init(t, e), Object.assign(
       return this.check(/* @__PURE__ */ vr(...i));
     },
     max(...i) {
-      return this.check(/* @__PURE__ */ $f(...i));
+      return this.check(/* @__PURE__ */ $p(...i));
     },
     length(...i) {
-      return this.check(/* @__PURE__ */ jf(...i));
+      return this.check(/* @__PURE__ */ jp(...i));
     },
     nonempty(...i) {
       return this.check(/* @__PURE__ */ vr(1, ...i));
@@ -9379,54 +9379,54 @@ const Je = /* @__PURE__ */ N("ZodType", (t, e) => (De.init(t, e), Object.assign(
       return this.check(/* @__PURE__ */ j2());
     }
   });
-}), O_ = /* @__PURE__ */ N("ZodString", (t, e) => {
-  Dc.init(t, e), Zf.init(t, e), t.email = (a) => t.check(/* @__PURE__ */ K1(M_, a)), t.url = (a) => t.check(/* @__PURE__ */ t2($_, a)), t.jwt = (a) => t.check(/* @__PURE__ */ m2(K_, a)), t.emoji = (a) => t.check(/* @__PURE__ */ a2(j_, a)), t.guid = (a) => t.check(/* @__PURE__ */ gl(Il, a)), t.uuid = (a) => t.check(/* @__PURE__ */ Y1(zn, a)), t.uuidv4 = (a) => t.check(/* @__PURE__ */ X1(zn, a)), t.uuidv6 = (a) => t.check(/* @__PURE__ */ Q1(zn, a)), t.uuidv7 = (a) => t.check(/* @__PURE__ */ e2(zn, a)), t.nanoid = (a) => t.check(/* @__PURE__ */ i2(z_, a)), t.guid = (a) => t.check(/* @__PURE__ */ gl(Il, a)), t.cuid = (a) => t.check(/* @__PURE__ */ o2(U_, a)), t.cuid2 = (a) => t.check(/* @__PURE__ */ n2(F_, a)), t.ulid = (a) => t.check(/* @__PURE__ */ r2(q_, a)), t.base64 = (a) => t.check(/* @__PURE__ */ f2(J_, a)), t.base64url = (a) => t.check(/* @__PURE__ */ h2(G_, a)), t.xid = (a) => t.check(/* @__PURE__ */ s2(Z_, a)), t.ksuid = (a) => t.check(/* @__PURE__ */ c2(L_, a)), t.ipv4 = (a) => t.check(/* @__PURE__ */ d2(N_, a)), t.ipv6 = (a) => t.check(/* @__PURE__ */ l2(D_, a)), t.cidrv4 = (a) => t.check(/* @__PURE__ */ u2(B_, a)), t.cidrv6 = (a) => t.check(/* @__PURE__ */ p2(H_, a)), t.e164 = (a) => t.check(/* @__PURE__ */ b2(W_, a)), t.datetime = (a) => t.check(f_(a)), t.date = (a) => t.check(b_(a)), t.time = (a) => t.check(v_(a)), t.duration = (a) => t.check(__(a));
+}), O_ = /* @__PURE__ */ L("ZodString", (t, e) => {
+  Dc.init(t, e), Zp.init(t, e), t.email = (a) => t.check(/* @__PURE__ */ K1(M_, a)), t.url = (a) => t.check(/* @__PURE__ */ t2($_, a)), t.jwt = (a) => t.check(/* @__PURE__ */ m2(K_, a)), t.emoji = (a) => t.check(/* @__PURE__ */ a2(j_, a)), t.guid = (a) => t.check(/* @__PURE__ */ gl(Il, a)), t.uuid = (a) => t.check(/* @__PURE__ */ Y1(zn, a)), t.uuidv4 = (a) => t.check(/* @__PURE__ */ X1(zn, a)), t.uuidv6 = (a) => t.check(/* @__PURE__ */ Q1(zn, a)), t.uuidv7 = (a) => t.check(/* @__PURE__ */ e2(zn, a)), t.nanoid = (a) => t.check(/* @__PURE__ */ i2(z_, a)), t.guid = (a) => t.check(/* @__PURE__ */ gl(Il, a)), t.cuid = (a) => t.check(/* @__PURE__ */ o2(U_, a)), t.cuid2 = (a) => t.check(/* @__PURE__ */ n2(F_, a)), t.ulid = (a) => t.check(/* @__PURE__ */ r2(q_, a)), t.base64 = (a) => t.check(/* @__PURE__ */ p2(J_, a)), t.base64url = (a) => t.check(/* @__PURE__ */ h2(G_, a)), t.xid = (a) => t.check(/* @__PURE__ */ s2(Z_, a)), t.ksuid = (a) => t.check(/* @__PURE__ */ c2(L_, a)), t.ipv4 = (a) => t.check(/* @__PURE__ */ d2(N_, a)), t.ipv6 = (a) => t.check(/* @__PURE__ */ l2(D_, a)), t.cidrv4 = (a) => t.check(/* @__PURE__ */ u2(B_, a)), t.cidrv6 = (a) => t.check(/* @__PURE__ */ f2(H_, a)), t.e164 = (a) => t.check(/* @__PURE__ */ b2(W_, a)), t.datetime = (a) => t.check(p_(a)), t.date = (a) => t.check(b_(a)), t.time = (a) => t.check(v_(a)), t.duration = (a) => t.check(__(a));
 });
-function R(t) {
+function E(t) {
   return /* @__PURE__ */ W1(O_, t);
 }
-const Qe = /* @__PURE__ */ N("ZodStringFormat", (t, e) => {
-  He.init(t, e), Zf.init(t, e);
-}), M_ = /* @__PURE__ */ N("ZodEmail", (t, e) => {
+const Qe = /* @__PURE__ */ L("ZodStringFormat", (t, e) => {
+  He.init(t, e), Zp.init(t, e);
+}), M_ = /* @__PURE__ */ L("ZodEmail", (t, e) => {
   t1.init(t, e), Qe.init(t, e);
-}), Il = /* @__PURE__ */ N("ZodGUID", (t, e) => {
+}), Il = /* @__PURE__ */ L("ZodGUID", (t, e) => {
   Qg.init(t, e), Qe.init(t, e);
-}), zn = /* @__PURE__ */ N("ZodUUID", (t, e) => {
+}), zn = /* @__PURE__ */ L("ZodUUID", (t, e) => {
   e1.init(t, e), Qe.init(t, e);
-}), $_ = /* @__PURE__ */ N("ZodURL", (t, e) => {
+}), $_ = /* @__PURE__ */ L("ZodURL", (t, e) => {
   a1.init(t, e), Qe.init(t, e);
-}), j_ = /* @__PURE__ */ N("ZodEmoji", (t, e) => {
+}), j_ = /* @__PURE__ */ L("ZodEmoji", (t, e) => {
   i1.init(t, e), Qe.init(t, e);
-}), z_ = /* @__PURE__ */ N("ZodNanoID", (t, e) => {
+}), z_ = /* @__PURE__ */ L("ZodNanoID", (t, e) => {
   o1.init(t, e), Qe.init(t, e);
-}), U_ = /* @__PURE__ */ N("ZodCUID", (t, e) => {
+}), U_ = /* @__PURE__ */ L("ZodCUID", (t, e) => {
   n1.init(t, e), Qe.init(t, e);
-}), F_ = /* @__PURE__ */ N("ZodCUID2", (t, e) => {
+}), F_ = /* @__PURE__ */ L("ZodCUID2", (t, e) => {
   r1.init(t, e), Qe.init(t, e);
-}), q_ = /* @__PURE__ */ N("ZodULID", (t, e) => {
+}), q_ = /* @__PURE__ */ L("ZodULID", (t, e) => {
   s1.init(t, e), Qe.init(t, e);
-}), Z_ = /* @__PURE__ */ N("ZodXID", (t, e) => {
+}), Z_ = /* @__PURE__ */ L("ZodXID", (t, e) => {
   c1.init(t, e), Qe.init(t, e);
-}), L_ = /* @__PURE__ */ N("ZodKSUID", (t, e) => {
+}), L_ = /* @__PURE__ */ L("ZodKSUID", (t, e) => {
   d1.init(t, e), Qe.init(t, e);
-}), N_ = /* @__PURE__ */ N("ZodIPv4", (t, e) => {
+}), N_ = /* @__PURE__ */ L("ZodIPv4", (t, e) => {
   h1.init(t, e), Qe.init(t, e);
-}), D_ = /* @__PURE__ */ N("ZodIPv6", (t, e) => {
+}), D_ = /* @__PURE__ */ L("ZodIPv6", (t, e) => {
   b1.init(t, e), Qe.init(t, e);
-}), B_ = /* @__PURE__ */ N("ZodCIDRv4", (t, e) => {
+}), B_ = /* @__PURE__ */ L("ZodCIDRv4", (t, e) => {
   m1.init(t, e), Qe.init(t, e);
-}), H_ = /* @__PURE__ */ N("ZodCIDRv6", (t, e) => {
+}), H_ = /* @__PURE__ */ L("ZodCIDRv6", (t, e) => {
   v1.init(t, e), Qe.init(t, e);
-}), J_ = /* @__PURE__ */ N("ZodBase64", (t, e) => {
+}), J_ = /* @__PURE__ */ L("ZodBase64", (t, e) => {
   g1.init(t, e), Qe.init(t, e);
-}), G_ = /* @__PURE__ */ N("ZodBase64URL", (t, e) => {
+}), G_ = /* @__PURE__ */ L("ZodBase64URL", (t, e) => {
   y1.init(t, e), Qe.init(t, e);
-}), W_ = /* @__PURE__ */ N("ZodE164", (t, e) => {
+}), W_ = /* @__PURE__ */ L("ZodE164", (t, e) => {
   w1.init(t, e), Qe.init(t, e);
-}), K_ = /* @__PURE__ */ N("ZodJWT", (t, e) => {
+}), K_ = /* @__PURE__ */ L("ZodJWT", (t, e) => {
   I1.init(t, e), Qe.init(t, e);
-}), Lf = /* @__PURE__ */ N("ZodNumber", (t, e) => {
-  Rf.init(t, e), Je.init(t, e), t._zod.processJSONSchema = (i, o, n) => B2(t, i, o), In(t, "ZodNumber", {
+}), Lp = /* @__PURE__ */ L("ZodNumber", (t, e) => {
+  Rp.init(t, e), Je.init(t, e), t._zod.processJSONSchema = (i, o, n) => B2(t, i, o), In(t, "ZodNumber", {
     gt(i, o) {
       return this.check(/* @__PURE__ */ yl(i, o));
     },
@@ -9477,33 +9477,33 @@ const Qe = /* @__PURE__ */ N("ZodStringFormat", (t, e) => {
   t.minValue = Math.max(a.minimum ?? Number.NEGATIVE_INFINITY, a.exclusiveMinimum ?? Number.NEGATIVE_INFINITY) ?? null, t.maxValue = Math.min(a.maximum ?? Number.POSITIVE_INFINITY, a.exclusiveMaximum ?? Number.POSITIVE_INFINITY) ?? null, t.isInt = (a.format ?? "").includes("int") || Number.isSafeInteger(a.multipleOf ?? 0.5), t.isFinite = !0, t.format = a.format ?? null;
 });
 function X(t) {
-  return /* @__PURE__ */ w2(Lf, t);
+  return /* @__PURE__ */ w2(Lp, t);
 }
-const Y_ = /* @__PURE__ */ N("ZodNumberFormat", (t, e) => {
-  A1.init(t, e), Lf.init(t, e);
+const Y_ = /* @__PURE__ */ L("ZodNumberFormat", (t, e) => {
+  A1.init(t, e), Lp.init(t, e);
 });
 function Al(t) {
   return /* @__PURE__ */ k2(Y_, t);
 }
-const X_ = /* @__PURE__ */ N("ZodBoolean", (t, e) => {
+const X_ = /* @__PURE__ */ L("ZodBoolean", (t, e) => {
   x1.init(t, e), Je.init(t, e), t._zod.processJSONSchema = (a, i, o) => H2(t, a, i);
 });
 function At(t) {
   return /* @__PURE__ */ I2(X_, t);
 }
-const Q_ = /* @__PURE__ */ N("ZodUnknown", (t, e) => {
+const Q_ = /* @__PURE__ */ L("ZodUnknown", (t, e) => {
   T1.init(t, e), Je.init(t, e), t._zod.processJSONSchema = (a, i, o) => G2();
 });
 function xl() {
   return /* @__PURE__ */ A2(Q_);
 }
-const e5 = /* @__PURE__ */ N("ZodNever", (t, e) => {
+const e5 = /* @__PURE__ */ L("ZodNever", (t, e) => {
   S1.init(t, e), Je.init(t, e), t._zod.processJSONSchema = (a, i, o) => J2(t, a, i);
 });
 function t5(t) {
   return /* @__PURE__ */ x2(e5, t);
 }
-const a5 = /* @__PURE__ */ N("ZodArray", (t, e) => {
+const a5 = /* @__PURE__ */ L("ZodArray", (t, e) => {
   C1.init(t, e), Je.init(t, e), t._zod.processJSONSchema = (a, i, o) => Q2(t, a, i, o), t.element = e.element, In(t, "ZodArray", {
     min(a, i) {
       return this.check(/* @__PURE__ */ vr(a, i));
@@ -9512,10 +9512,10 @@ const a5 = /* @__PURE__ */ N("ZodArray", (t, e) => {
       return this.check(/* @__PURE__ */ vr(1, a));
     },
     max(a, i) {
-      return this.check(/* @__PURE__ */ $f(a, i));
+      return this.check(/* @__PURE__ */ $p(a, i));
     },
     length(a, i) {
-      return this.check(/* @__PURE__ */ jf(a, i));
+      return this.check(/* @__PURE__ */ jp(a, i));
     },
     unwrap() {
       return this.element;
@@ -9525,7 +9525,7 @@ const a5 = /* @__PURE__ */ N("ZodArray", (t, e) => {
 function oe(t, e) {
   return /* @__PURE__ */ z2(a5, t, e);
 }
-const i5 = /* @__PURE__ */ N("ZodObject", (t, e) => {
+const i5 = /* @__PURE__ */ L("ZodObject", (t, e) => {
   R1.init(t, e), Je.init(t, e), t._zod.processJSONSchema = (a, i, o) => e_(t, a, i, o), je(t, "shape", () => e.shape), In(t, "ZodObject", {
     keyof() {
       return Ie(Object.keys(this._zod.def.shape));
@@ -9561,10 +9561,10 @@ const i5 = /* @__PURE__ */ N("ZodObject", (t, e) => {
       return Gv(this, a);
     },
     partial(...a) {
-      return Xv(Df, this, a[0]);
+      return Xv(Dp, this, a[0]);
     },
     required(...a) {
-      return Qv(Bf, this, a[0]);
+      return Qv(Bp, this, a[0]);
     }
   });
 });
@@ -9576,18 +9576,18 @@ function W(t, e) {
   };
   return new i5(a);
 }
-const Nf = /* @__PURE__ */ N("ZodUnion", (t, e) => {
-  Of.init(t, e), Je.init(t, e), t._zod.processJSONSchema = (a, i, o) => t_(t, a, i, o), t.options = e.options;
+const Np = /* @__PURE__ */ L("ZodUnion", (t, e) => {
+  Op.init(t, e), Je.init(t, e), t._zod.processJSONSchema = (a, i, o) => t_(t, a, i, o), t.options = e.options;
 });
 function o5(t, e) {
-  return new Nf({
+  return new Np({
     type: "union",
     options: t,
     ...le(e)
   });
 }
-const n5 = /* @__PURE__ */ N("ZodDiscriminatedUnion", (t, e) => {
-  Nf.init(t, e), V1.init(t, e);
+const n5 = /* @__PURE__ */ L("ZodDiscriminatedUnion", (t, e) => {
+  Np.init(t, e), V1.init(t, e);
 });
 function Nr(t, e, a) {
   return new n5({
@@ -9597,7 +9597,7 @@ function Nr(t, e, a) {
     ...le(a)
   });
 }
-const r5 = /* @__PURE__ */ N("ZodIntersection", (t, e) => {
+const r5 = /* @__PURE__ */ L("ZodIntersection", (t, e) => {
   E1.init(t, e), Je.init(t, e), t._zod.processJSONSchema = (a, i, o) => a_(t, a, i, o);
 });
 function s5(t, e) {
@@ -9607,13 +9607,13 @@ function s5(t, e) {
     right: e
   });
 }
-const c5 = /* @__PURE__ */ N("ZodTuple", (t, e) => {
+const c5 = /* @__PURE__ */ L("ZodTuple", (t, e) => {
   O1.init(t, e), Je.init(t, e), t._zod.processJSONSchema = (a, i, o) => i_(t, a, i, o), t.rest = (a) => t.clone({
     ...t._zod.def,
     rest: a
   });
 });
-function pi(t, e, a) {
+function fi(t, e, a) {
   const i = e instanceof De, o = i ? a : e, n = i ? e : null;
   return new c5({
     type: "tuple",
@@ -9622,13 +9622,13 @@ function pi(t, e, a) {
     ...le(o)
   });
 }
-const Tl = /* @__PURE__ */ N("ZodRecord", (t, e) => {
+const Tl = /* @__PURE__ */ L("ZodRecord", (t, e) => {
   M1.init(t, e), Je.init(t, e), t._zod.processJSONSchema = (a, i, o) => o_(t, a, i, o), t.keyType = e.keyType, t.valueType = e.valueType;
 });
 function gi(t, e, a) {
   return !e || !e._zod ? new Tl({
     type: "record",
-    keyType: R(),
+    keyType: E(),
     valueType: t,
     ...le(e)
   }) : new Tl({
@@ -9638,7 +9638,7 @@ function gi(t, e, a) {
     ...le(a)
   });
 }
-const Ys = /* @__PURE__ */ N("ZodEnum", (t, e) => {
+const Ys = /* @__PURE__ */ L("ZodEnum", (t, e) => {
   $1.init(t, e), Je.init(t, e), t._zod.processJSONSchema = (i, o, n) => W2(t, i, o), t.enum = e.entries, t.options = Object.values(e.entries);
   const a = new Set(Object.keys(e.entries));
   t.extract = (i, o) => {
@@ -9677,7 +9677,7 @@ function Ie(t, e) {
     ...le(e)
   });
 }
-const d5 = /* @__PURE__ */ N("ZodLiteral", (t, e) => {
+const d5 = /* @__PURE__ */ L("ZodLiteral", (t, e) => {
   j1.init(t, e), Je.init(t, e), t._zod.processJSONSchema = (a, i, o) => K2(t, a, i), t.values = new Set(e.values), Object.defineProperty(t, "value", {
     get() {
       if (e.values.length > 1)
@@ -9686,17 +9686,17 @@ const d5 = /* @__PURE__ */ N("ZodLiteral", (t, e) => {
     }
   });
 });
-function fe(t, e) {
+function pe(t, e) {
   return new d5({
     type: "literal",
     values: Array.isArray(t) ? t : [t],
     ...le(e)
   });
 }
-const l5 = /* @__PURE__ */ N("ZodTransform", (t, e) => {
+const l5 = /* @__PURE__ */ L("ZodTransform", (t, e) => {
   z1.init(t, e), Je.init(t, e), t._zod.processJSONSchema = (a, i, o) => X2(t, a), t._zod.parse = (a, i) => {
     if (i.direction === "backward")
-      throw new bf(t.constructor.name);
+      throw new bp(t.constructor.name);
     a.addIssue = (n) => {
       if (typeof n == "string")
         a.issues.push(hn(n, a.value, e));
@@ -9715,25 +9715,25 @@ function u5(t) {
     transform: t
   });
 }
-const Df = /* @__PURE__ */ N("ZodOptional", (t, e) => {
-  Mf.init(t, e), Je.init(t, e), t._zod.processJSONSchema = (a, i, o) => qf(t, a, i, o), t.unwrap = () => t._zod.def.innerType;
+const Dp = /* @__PURE__ */ L("ZodOptional", (t, e) => {
+  Mp.init(t, e), Je.init(t, e), t._zod.processJSONSchema = (a, i, o) => qp(t, a, i, o), t.unwrap = () => t._zod.def.innerType;
 });
 function Sl(t) {
-  return new Df({
+  return new Dp({
     type: "optional",
     innerType: t
   });
 }
-const p5 = /* @__PURE__ */ N("ZodExactOptional", (t, e) => {
-  U1.init(t, e), Je.init(t, e), t._zod.processJSONSchema = (a, i, o) => qf(t, a, i, o), t.unwrap = () => t._zod.def.innerType;
+const f5 = /* @__PURE__ */ L("ZodExactOptional", (t, e) => {
+  U1.init(t, e), Je.init(t, e), t._zod.processJSONSchema = (a, i, o) => qp(t, a, i, o), t.unwrap = () => t._zod.def.innerType;
 });
-function f5(t) {
-  return new p5({
+function p5(t) {
+  return new f5({
     type: "optional",
     innerType: t
   });
 }
-const h5 = /* @__PURE__ */ N("ZodNullable", (t, e) => {
+const h5 = /* @__PURE__ */ L("ZodNullable", (t, e) => {
   F1.init(t, e), Je.init(t, e), t._zod.processJSONSchema = (a, i, o) => n_(t, a, i, o), t.unwrap = () => t._zod.def.innerType;
 });
 function Cl(t) {
@@ -9742,7 +9742,7 @@ function Cl(t) {
     innerType: t
   });
 }
-const b5 = /* @__PURE__ */ N("ZodDefault", (t, e) => {
+const b5 = /* @__PURE__ */ L("ZodDefault", (t, e) => {
   q1.init(t, e), Je.init(t, e), t._zod.processJSONSchema = (a, i, o) => s_(t, a, i, o), t.unwrap = () => t._zod.def.innerType, t.removeDefault = t.unwrap;
 });
 function m5(t, e) {
@@ -9750,11 +9750,11 @@ function m5(t, e) {
     type: "default",
     innerType: t,
     get defaultValue() {
-      return typeof e == "function" ? e() : gf(e);
+      return typeof e == "function" ? e() : gp(e);
     }
   });
 }
-const v5 = /* @__PURE__ */ N("ZodPrefault", (t, e) => {
+const v5 = /* @__PURE__ */ L("ZodPrefault", (t, e) => {
   Z1.init(t, e), Je.init(t, e), t._zod.processJSONSchema = (a, i, o) => c_(t, a, i, o), t.unwrap = () => t._zod.def.innerType;
 });
 function g5(t, e) {
@@ -9762,21 +9762,21 @@ function g5(t, e) {
     type: "prefault",
     innerType: t,
     get defaultValue() {
-      return typeof e == "function" ? e() : gf(e);
+      return typeof e == "function" ? e() : gp(e);
     }
   });
 }
-const Bf = /* @__PURE__ */ N("ZodNonOptional", (t, e) => {
+const Bp = /* @__PURE__ */ L("ZodNonOptional", (t, e) => {
   L1.init(t, e), Je.init(t, e), t._zod.processJSONSchema = (a, i, o) => r_(t, a, i, o), t.unwrap = () => t._zod.def.innerType;
 });
 function _5(t, e) {
-  return new Bf({
+  return new Bp({
     type: "nonoptional",
     innerType: t,
     ...le(e)
   });
 }
-const y5 = /* @__PURE__ */ N("ZodCatch", (t, e) => {
+const y5 = /* @__PURE__ */ L("ZodCatch", (t, e) => {
   N1.init(t, e), Je.init(t, e), t._zod.processJSONSchema = (a, i, o) => d_(t, a, i, o), t.unwrap = () => t._zod.def.innerType, t.removeCatch = t.unwrap;
 });
 function w5(t, e) {
@@ -9786,7 +9786,7 @@ function w5(t, e) {
     catchValue: typeof e == "function" ? e : () => e
   });
 }
-const k5 = /* @__PURE__ */ N("ZodPipe", (t, e) => {
+const k5 = /* @__PURE__ */ L("ZodPipe", (t, e) => {
   D1.init(t, e), Je.init(t, e), t._zod.processJSONSchema = (a, i, o) => l_(t, a, i, o), t.in = e.in, t.out = e.out;
 });
 function Pl(t, e) {
@@ -9797,7 +9797,7 @@ function Pl(t, e) {
     // ...util.normalizeParams(params),
   });
 }
-const I5 = /* @__PURE__ */ N("ZodReadonly", (t, e) => {
+const I5 = /* @__PURE__ */ L("ZodReadonly", (t, e) => {
   B1.init(t, e), Je.init(t, e), t._zod.processJSONSchema = (a, i, o) => u_(t, a, i, o), t.unwrap = () => t._zod.def.innerType;
 });
 function A5(t) {
@@ -9806,19 +9806,19 @@ function A5(t) {
     innerType: t
   });
 }
-const Hf = /* @__PURE__ */ N("ZodCustom", (t, e) => {
+const Hp = /* @__PURE__ */ L("ZodCustom", (t, e) => {
   H1.init(t, e), Je.init(t, e), t._zod.processJSONSchema = (a, i, o) => Y2(t, a);
 });
 function x5(t, e) {
-  return /* @__PURE__ */ U2(Hf, t ?? (() => !0), e);
+  return /* @__PURE__ */ U2(Hp, t ?? (() => !0), e);
 }
 function T5(t, e = {}) {
-  return /* @__PURE__ */ F2(Hf, t, e);
+  return /* @__PURE__ */ F2(Hp, t, e);
 }
 function S5(t, e) {
   return /* @__PURE__ */ q2(t, e);
 }
-const Jf = {
+const Jp = {
   custom: "custom"
 }, C5 = [
   "minimal",
@@ -9829,19 +9829,19 @@ const Jf = {
   "auOptIn",
   "neverRuntime"
 ], P5 = W({
-  id: R().min(1),
-  file: R().min(1),
+  id: E().min(1),
+  file: E().min(1),
   defaultEnabled: At(),
   entryCount: X().int().nonnegative(),
   enabledEntryCount: X().int().nonnegative(),
   contentCharacters: X().int().nonnegative(),
   constantCharacters: X().int().nonnegative(),
-  sha256: R().regex(/^[a-f0-9]{64}$/u)
+  sha256: E().regex(/^[a-f0-9]{64}$/u)
 }).strict(), R5 = W({
-  schemaVersion: fe(1),
-  id: fe("albina-layered-worldbooks-v1"),
-  presets: gi(R(), oe(R().min(1))),
-  l0: W({ id: R(), file: R(), entryCount: X(), sha256: R() }).passthrough(),
+  schemaVersion: pe(1),
+  id: pe("albina-layered-worldbooks-v1"),
+  presets: gi(E(), oe(E().min(1))),
+  l0: W({ id: E(), file: E(), entryCount: X(), sha256: E() }).passthrough(),
   packages: oe(P5)
 }).passthrough(), vo = R5.parse(qv), Bc = Ie(C5), Rl = {
   minimal: "Embedded L0 fallback",
@@ -9860,18 +9860,18 @@ function E5(t) {
 function An(t) {
   return vo.packages.some((e) => e.id === t) && !vo.presets.neverRuntime?.includes(t);
 }
-function Gf(t) {
+function Gp(t) {
   const e = new Map(vo.packages.map((a) => [a.id, a]));
   return (vo.presets[t] ?? []).map((a) => e.get(a)).filter((a) => a !== void 0);
 }
 function O5(t) {
-  return Gf(t).filter((e) => An(e.id)).map((e) => e.id);
+  return Gp(t).filter((e) => An(e.id)).map((e) => e.id);
 }
 const Hc = W({
   presetId: Bc,
-  packageIds: oe(R().min(1).refine(An, "Worldbook package is not runtime-installable."))
+  packageIds: oe(E().min(1).refine(An, "Worldbook package is not runtime-installable."))
 }).strict().superRefine((t, e) => {
-  t.presetId === "neverRuntime" && e.addIssue({ code: Jf.custom, path: ["presetId"], message: "The neverRuntime preset cannot be persisted as an active selection." });
+  t.presetId === "neverRuntime" && e.addIssue({ code: Jp.custom, path: ["presetId"], message: "The neverRuntime preset cannot be persisted as an active selection." });
 }).transform((t) => Gc(t.presetId, t.packageIds));
 function Jc(t) {
   return { presetId: t, packageIds: O5(t) };
@@ -9880,7 +9880,7 @@ function Gc(t, e) {
   const a = e === void 0 ? Jc(t).packageIds : [...new Set(e)].filter(An);
   return { presetId: t, packageIds: a };
 }
-function Wf() {
+function Wp() {
   return Jc(V5);
 }
 function M5(t = import.meta.url) {
@@ -9889,7 +9889,7 @@ function M5(t = import.meta.url) {
     downloadUrl: new URL(`../worldbooks/${E5(i.file)}`, t).href,
     installable: An(i.id)
   }), a = Object.keys(Rl).map((i) => {
-    const o = i, n = Gf(o).map(e);
+    const o = i, n = Gp(o).map(e);
     return { id: o, label: Rl[i] ?? i, packages: n, installable: n.length > 0 && n.every((r) => r.installable) };
   });
   return {
@@ -9931,7 +9931,7 @@ const $5 = { class: "gameplay-panel__header" }, j5 = {
   role: "tabpanel",
   "aria-labelledby": "gameplay-tab-challenges",
   "data-testid": "gameplay-page-challenges"
-}, c6 = { class: "gameplay-entry-list gameplay-minigame-list" }, d6 = ["data-minigame-id", "data-minigame-outcome"], l6 = { class: "gameplay-state-badge" }, u6 = { key: 0 }, p6 = { key: 1 }, f6 = { key: 2 }, h6 = {
+}, c6 = { class: "gameplay-entry-list gameplay-minigame-list" }, d6 = ["data-minigame-id", "data-minigame-outcome"], l6 = { class: "gameplay-state-badge" }, u6 = { key: 0 }, f6 = { key: 1 }, p6 = { key: 2 }, h6 = {
   key: 0,
   class: "gameplay-empty"
 }, b6 = {
@@ -9982,25 +9982,25 @@ const $5 = { class: "gameplay-panel__header" }, j5 = {
       { id: "codex", label: "资料库" }
     ], n = /* @__PURE__ */ ne(), r = /* @__PURE__ */ ne(), s = /* @__PURE__ */ ne();
     let c, d, l;
-    const u = /* @__PURE__ */ new Set(), p = /* @__PURE__ */ ne("status");
-    function h(C, V) {
-      const m = r.value, Q = s.value;
-      if (!m || !Q) return;
+    const u = /* @__PURE__ */ new Set(), f = /* @__PURE__ */ ne("status");
+    function b(C, O) {
+      const m = r.value, ee = s.value;
+      if (!m || !ee) return;
       const ie = m.querySelector(`#gameplay-tab-${C}`);
       if (!ie) return;
-      const { offsetLeft: B, offsetWidth: Y } = ie;
-      if (l?.kill(), !V || a.reducedMotion) {
-        xe.set(Q, { left: B, width: Y });
+      const { offsetLeft: H, offsetWidth: Y } = ie;
+      if (l?.kill(), !O || a.reducedMotion) {
+        xe.set(ee, { left: H, width: Y });
         return;
       }
-      l = xe.to(Q, { left: B, width: Y, duration: 0.3, ease: "power2.inOut" });
+      l = xe.to(ee, { left: H, width: Y, duration: 0.3, ease: "power2.inOut" });
     }
-    const y = M5(), v = ve(() => a.save.worldbook.presetId), g = ve(() => new Set(a.save.worldbook.packageIds)), I = [
+    const y = M5(), v = ve(() => a.save.worldbook.presetId), g = ve(() => new Set(a.save.worldbook.packageIds)), k = [
       { key: "affectionAlbina", label: "好感" },
       { key: "trust", label: "信任" },
       { key: "danger", label: "危险" },
       { key: "artResonance", label: "共鸣" }
-    ], A = [
+    ], I = [
       { key: "composure", label: "镇定" },
       { key: "materials", label: "材料" },
       { key: "leverage", label: "筹码" },
@@ -10019,37 +10019,37 @@ const $5 = { class: "gameplay-panel__header" }, j5 = {
       materials: "材料",
       leverage: "筹码",
       exposure: "暴露"
-    }, k = (C) => C === void 0 || C === a.save.route, Z = ve(() => a.gameplay.quests.filter((C) => k(C.route))), P = ve(() => a.gameplay.battles.filter((C) => k(C.route))), O = ve(() => ({
-      questsDone: Z.value.filter((C) => ke(C.id) === "completed").length,
-      questsTotal: Z.value.length,
-      victories: P.value.filter((C) => $e(C.id) === "victory").length,
-      battlesTotal: P.value.length,
-      challengesDone: E.value.filter((C) => ct(C.id) !== "pending").length,
-      challengesTotal: E.value.length
-    })), E = ve(() => a.gameplay.minigames.filter((C) => k(C.route))), q = ve(() => a.gameplay.items.filter((C) => k(C.route) && a.save.inventory.ownedIds.includes(C.id))), ee = ve(() => a.gameplay.equipment.filter((C) => k(C.route))), J = ve(() => a.gameplay.outfits.filter((C) => k(C.route))), re = ve(() => a.gameplay.professions.filter((C) => k(C.route))), de = ve(() => a.gameplay.achievements.filter((C) => k(C.route))), se = ve(() => {
+    }, x = (C) => C === void 0 || C === a.save.route, D = ve(() => a.gameplay.quests.filter((C) => x(C.route))), V = ve(() => a.gameplay.battles.filter((C) => x(C.route))), P = ve(() => ({
+      questsDone: D.value.filter((C) => ke(C.id) === "completed").length,
+      questsTotal: D.value.length,
+      victories: V.value.filter((C) => $e(C.id) === "victory").length,
+      battlesTotal: V.value.length,
+      challengesDone: R.value.filter((C) => ct(C.id) !== "pending").length,
+      challengesTotal: R.value.length
+    })), R = ve(() => a.gameplay.minigames.filter((C) => x(C.route))), j = ve(() => a.gameplay.items.filter((C) => x(C.route) && a.save.inventory.ownedIds.includes(C.id))), Q = ve(() => a.gameplay.equipment.filter((C) => x(C.route))), B = ve(() => a.gameplay.outfits.filter((C) => x(C.route))), re = ve(() => a.gameplay.professions.filter((C) => x(C.route))), de = ve(() => a.gameplay.achievements.filter((C) => x(C.route))), se = ve(() => {
       const C = new Set(a.save.achievements.unlockedIds);
       return {
-        activeProfessionLabel: re.value.find((V) => V.id === a.save.professions.activeId)?.label ?? "未选择",
+        activeProfessionLabel: re.value.find((O) => O.id === a.save.professions.activeId)?.label ?? "未选择",
         professionsTotal: re.value.length,
-        professionsAdvanced: re.value.filter((V) => j(V.id).level > 1).length,
-        professionLevels: re.value.reduce((V, m) => V + j(m.id).level, 0),
-        achievementsUnlocked: de.value.filter((V) => C.has(V.id)).length,
+        professionsAdvanced: re.value.filter((O) => z(O.id).level > 1).length,
+        professionLevels: re.value.reduce((O, m) => O + z(m.id).level, 0),
+        achievementsUnlocked: de.value.filter((O) => C.has(O.id)).length,
         achievementsTotal: de.value.length
       };
     });
     yn(() => {
       const C = n.value;
-      if (!C || (C.focus(), Ne(() => h(p.value, !1)), a.reducedMotion)) return;
-      const V = C.closest(".gameplay-panel-backdrop") ?? C;
+      if (!C || (C.focus(), Ne(() => b(f.value, !1)), a.reducedMotion)) return;
+      const O = C.closest(".gameplay-panel-backdrop") ?? C;
       c = xe.context(() => {
-        xe.timeline({ defaults: { ease: "power3.out" } }).fromTo(V, { autoAlpha: 0 }, { autoAlpha: 1, duration: 0.2 }).fromTo(C, { y: 28, scale: 0.975, autoAlpha: 0, filter: "blur(8px)" }, { y: 0, scale: 1, autoAlpha: 1, filter: "blur(0px)", duration: 0.5 }, 0).fromTo(".gameplay-panel__header, .gameplay-tabs", { y: 12, autoAlpha: 0 }, { y: 0, autoAlpha: 1, duration: 0.32, stagger: 0.07 }, 0.18);
+        xe.timeline({ defaults: { ease: "power3.out" } }).fromTo(O, { autoAlpha: 0 }, { autoAlpha: 1, duration: 0.2 }).fromTo(C, { y: 28, scale: 0.975, autoAlpha: 0, filter: "blur(8px)" }, { y: 0, scale: 1, autoAlpha: 1, filter: "blur(0px)", duration: 0.5 }, 0).fromTo(".gameplay-panel__header, .gameplay-tabs", { y: 12, autoAlpha: 0 }, { y: 0, autoAlpha: 1, duration: 0.32, stagger: 0.07 }, 0.18);
       }, C);
     });
-    function te(C, V) {
+    function te(C, O) {
       const m = n.value;
-      if (!m || !V) return;
-      const Q = m.querySelector(`[data-stat-key="${C}"]`);
-      Q && (Q.dataset.statChanged = "true", !a.reducedMotion && (u.forEach((ie) => ie.kill()), u.clear(), u.add(xe.fromTo(Q, { scale: 1, filter: "brightness(1)" }, {
+      if (!m || !O) return;
+      const ee = m.querySelector(`[data-stat-key="${C}"]`);
+      ee && (ee.dataset.statChanged = "true", !a.reducedMotion && (u.forEach((ie) => ie.kill()), u.clear(), u.add(xe.fromTo(ee, { scale: 1, filter: "brightness(1)" }, {
         scale: 1.1,
         filter: "brightness(1.45)",
         duration: 0.3,
@@ -10057,51 +10057,51 @@ const $5 = { class: "gameplay-panel__header" }, j5 = {
         yoyo: !0,
         repeat: 1,
         onComplete: () => {
-          Q.dataset.statChanged = "false";
+          ee.dataset.statChanged = "false";
         }
       }))));
     }
-    let L = { ...a.effectiveValues };
+    let Z = { ...a.effectiveValues };
     ut(() => a.effectiveValues, async (C) => {
-      const V = L;
-      L = { ...C }, await Ne();
-      for (const m of I)
-        te(m.key, C[m.key] !== V[m.key]);
+      const O = Z;
+      Z = { ...C }, await Ne();
+      for (const m of k)
+        te(m.key, C[m.key] !== O[m.key]);
     }, { deep: !0 }), ut(() => a.reducedMotion, (C) => {
-      C && (u.forEach((V) => V.kill()), u.clear(), n.value?.querySelectorAll("[data-stat-key]").forEach((V) => {
-        V.dataset.statChanged = "false";
+      C && (u.forEach((O) => O.kill()), u.clear(), n.value?.querySelectorAll("[data-stat-key]").forEach((O) => {
+        O.dataset.statChanged = "false";
       }));
     }), wo(() => {
       d?.kill(), l?.kill(), u.forEach((C) => C.kill()), u.clear(), c?.revert();
     });
     function K(C) {
-      p.value = C, Ne(() => {
-        if (h(C, !0), !n.value || a.reducedMotion) return;
+      f.value = C, Ne(() => {
+        if (b(C, !0), !n.value || a.reducedMotion) return;
         d?.kill();
-        const V = n.value.querySelector(`#gameplay-page-${C}`), m = n.value.querySelector(`#gameplay-tab-${C}`);
-        d = xe.timeline({ defaults: { ease: "power3.out" } }).fromTo(m, { y: -2, filter: "brightness(.88)" }, { y: 0, filter: "brightness(1.15)", duration: 0.24 }).fromTo(V?.children ?? [], { y: 14, autoAlpha: 0 }, { y: 0, autoAlpha: 1, duration: 0.34, stagger: 0.045 }, 0);
+        const O = n.value.querySelector(`#gameplay-page-${C}`), m = n.value.querySelector(`#gameplay-tab-${C}`);
+        d = xe.timeline({ defaults: { ease: "power3.out" } }).fromTo(m, { y: -2, filter: "brightness(.88)" }, { y: 0, filter: "brightness(1.15)", duration: 0.24 }).fromTo(O?.children ?? [], { y: 14, autoAlpha: 0 }, { y: 0, autoAlpha: 1, duration: 0.34, stagger: 0.045 }, 0);
       });
     }
-    function ue(C, V) {
-      let m = V;
-      if (C.key === "ArrowRight") m = (V + 1) % o.length;
-      else if (C.key === "ArrowLeft") m = (V - 1 + o.length) % o.length;
+    function ue(C, O) {
+      let m = O;
+      if (C.key === "ArrowRight") m = (O + 1) % o.length;
+      else if (C.key === "ArrowLeft") m = (O - 1 + o.length) % o.length;
       else if (C.key === "Home") m = 0;
       else if (C.key === "End") m = o.length - 1;
       else return;
       C.preventDefault();
-      const Q = o[m];
-      Q && (K(Q.id), requestAnimationFrame(() => document.getElementById(`gameplay-tab-${Q.id}`)?.focus()));
+      const ee = o[m];
+      ee && (K(ee.id), requestAnimationFrame(() => document.getElementById(`gameplay-tab-${ee.id}`)?.focus()));
     }
     function Te(C) {
-      const V = Array.from(n.value?.querySelectorAll(
+      const O = Array.from(n.value?.querySelectorAll(
         'button:not([disabled]), a[href], input:not([disabled]), textarea:not([disabled]), [tabindex]:not([tabindex="-1"])'
-      ) ?? []).filter((ie) => ie.tabIndex >= 0 && ie.getClientRects().length > 0), m = V[0], Q = V.at(-1);
-      if (!m || !Q) {
+      ) ?? []).filter((ie) => ie.tabIndex >= 0 && ie.getClientRects().length > 0), m = O[0], ee = O.at(-1);
+      if (!m || !ee) {
         C.preventDefault();
         return;
       }
-      C.shiftKey && document.activeElement === m ? (C.preventDefault(), Q.focus()) : !C.shiftKey && document.activeElement === Q && (C.preventDefault(), m.focus());
+      C.shiftKey && document.activeElement === m ? (C.preventDefault(), ee.focus()) : !C.shiftKey && document.activeElement === ee && (C.preventDefault(), m.focus());
     }
     function Se(C) {
       return `${C > 0 ? "+" : ""}${C}`;
@@ -10110,7 +10110,7 @@ const $5 = { class: "gameplay-panel__header" }, j5 = {
       return a.effectiveValues[C] - a.save.values[C];
     }
     function Me(C) {
-      return Object.entries(C).filter((m) => typeof m[1] == "number").map(([m, Q]) => `${T[m] ?? m} ${Se(Q)}`).join(" / ") || "无数值修正";
+      return Object.entries(C).filter((m) => typeof m[1] == "number").map(([m, ee]) => `${T[m] ?? m} ${Se(ee)}`).join(" / ") || "无数值修正";
     }
     function ke(C) {
       return a.save.quests.completedNodeIds.includes(C) ? "completed" : a.save.quests.activeNodeIds.includes(C) ? "active" : "locked";
@@ -10125,8 +10125,8 @@ const $5 = { class: "gameplay-panel__header" }, j5 = {
       return { victory: "胜利", setback: "受挫", pending: "未解决" }[$e(C)];
     }
     function ct(C) {
-      const V = a.save.minigames.records[C];
-      return !V?.resolved || !V.lastOutcome ? "pending" : V.lastOutcome === "perfect" ? "completed" : V.lastOutcome;
+      const O = a.save.minigames.records[C];
+      return !O?.resolved || !O.lastOutcome ? "pending" : O.lastOutcome === "perfect" ? "completed" : O.lastOutcome;
     }
     function wt(C) {
       return { completed: "完美介入", assisted: "辅助完成", setback: "介入受挫", skipped: "已跳过", pending: "未触发" }[ct(C)];
@@ -10135,42 +10135,42 @@ const $5 = { class: "gameplay-panel__header" }, j5 = {
       return a.save.minigames.records[C];
     }
     function Qt(C) {
-      const V = [...a.save.logs.story].reverse().find((m) => m.kind === "minigame" && m.minigameId === C);
-      return typeof V?.sceneId == "string" ? V.sceneId : void 0;
+      const O = [...a.save.logs.story].reverse().find((m) => m.kind === "minigame" && m.minigameId === C);
+      return typeof O?.sceneId == "string" ? O.sceneId : void 0;
     }
     function _(C) {
       return a.save.inventory.ownedIds.includes(C);
     }
-    function x(C) {
+    function A(C) {
       return Object.values(a.save.inventory.equipped).includes(C);
     }
-    function j(C) {
+    function z(C) {
       return a.save.professions.progress[C] ?? { xp: 0, level: 1 };
     }
     function G(C) {
-      const V = a.gameplay.professions.find((Q) => Q.id === C), m = j(C);
-      return V?.xpThresholds[m.level];
+      const O = a.gameplay.professions.find((ee) => ee.id === C), m = z(C);
+      return O?.xpThresholds[m.level];
     }
-    function D(C) {
+    function N(C) {
       return a.save.worldbook.activeEntryIds.includes(C) ? "active" : a.save.worldbook.seenEntryIds.includes(C) ? "seen" : "locked";
     }
-    function H(C) {
-      return { active: "当前激活", seen: "已阅", locked: "未阅" }[D(C)];
+    function J(C) {
+      return { active: "当前激活", seen: "已阅", locked: "未阅" }[N(C)];
     }
     const ae = ve(() => {
-      const C = a.gameplay.worldbookEntries, V = C.map((m) => D(m.id));
+      const C = a.gameplay.worldbookEntries, O = C.map((m) => N(m.id));
       return {
         total: C.length,
-        active: V.filter((m) => m === "active").length,
-        seen: V.filter((m) => m === "seen").length,
-        locked: V.filter((m) => m === "locked").length
+        active: O.filter((m) => m === "active").length,
+        seen: O.filter((m) => m === "seen").length,
+        locked: O.filter((m) => m === "locked").length
       };
     });
-    return (C, V) => (z(), U("div", {
+    return (C, O) => (U(), F("div", {
       class: "gameplay-panel-backdrop",
-      onClick: V[2] || (V[2] = Xa((m) => i("close"), ["self"]))
+      onClick: O[2] || (O[2] = Xa((m) => i("close"), ["self"]))
     }, [
-      f("section", {
+      p("section", {
         ref_key: "panel",
         ref: n,
         class: "gameplay-panel",
@@ -10180,126 +10180,126 @@ const $5 = { class: "gameplay-panel__header" }, j5 = {
         tabindex: "-1",
         "data-testid": "gameplay-panel",
         onKeydown: [
-          V[1] || (V[1] = Md(Xa((m) => i("close"), ["stop"]), ["esc"])),
+          O[1] || (O[1] = Md(Xa((m) => i("close"), ["stop"]), ["esc"])),
           Md(Te, ["tab"])
         ]
       }, [
-        f("header", $5, [
-          V[3] || (V[3] = f("div", null, [
-            f("p", null, "ALBINA ARCHIVE"),
-            f("h2", { id: "gameplay-panel-title" }, "状态档案")
+        p("header", $5, [
+          O[3] || (O[3] = p("div", null, [
+            p("p", null, "ALBINA ARCHIVE"),
+            p("h2", { id: "gameplay-panel-title" }, "状态档案")
           ], -1)),
-          f("button", {
+          p("button", {
             type: "button",
             "aria-label": "关闭状态档案",
             title: "关闭",
-            onClick: V[0] || (V[0] = (m) => i("close"))
+            onClick: O[0] || (O[0] = (m) => i("close"))
           }, "关闭")
         ]),
-        t.interactionError ? (z(), U("p", j5, $(t.interactionError), 1)) : ge("", !0),
-        f("nav", {
+        t.interactionError ? (U(), F("p", j5, $(t.interactionError), 1)) : ge("", !0),
+        p("nav", {
           ref_key: "tabsNav",
           ref: r,
           class: "gameplay-tabs",
           role: "tablist",
           "aria-label": "状态档案分页",
-          "data-active-tab": p.value
+          "data-active-tab": f.value
         }, [
-          (z(), U(me, null, Ee(o, (m, Q) => f("button", {
+          (U(), F(me, null, Ee(o, (m, ee) => p("button", {
             id: `gameplay-tab-${m.id}`,
             key: m.id,
             type: "button",
             role: "tab",
-            "aria-selected": p.value === m.id,
+            "aria-selected": f.value === m.id,
             "aria-controls": `gameplay-page-${m.id}`,
-            tabindex: p.value === m.id ? 0 : -1,
+            tabindex: f.value === m.id ? 0 : -1,
             "data-testid": `gameplay-tab-${m.id}`,
             onClick: (ie) => K(m.id),
-            onKeydown: (ie) => ue(ie, Q)
+            onKeydown: (ie) => ue(ie, ee)
           }, $(m.label), 41, U5)), 64)),
-          f("span", {
+          p("span", {
             ref_key: "tabIndicator",
             ref: s,
             class: "gameplay-tabs__indicator",
             "aria-hidden": "true"
           }, null, 512)
         ], 8, z5),
-        f("div", F5, [
-          at(f("section", q5, [
-            V[6] || (V[6] = f("div", { class: "gameplay-section-heading" }, [
-              f("h3", null, "权威数值")
+        p("div", F5, [
+          at(p("section", q5, [
+            O[6] || (O[6] = p("div", { class: "gameplay-section-heading" }, [
+              p("h3", null, "权威数值")
             ], -1)),
-            f("div", Z5, [
-              (z(), U(me, null, Ee(I, (m) => f("article", {
+            p("div", Z5, [
+              (U(), F(me, null, Ee(k, (m) => p("article", {
                 key: m.key
               }, [
-                f("span", null, $(m.label), 1),
-                f("strong", {
+                p("span", null, $(m.label), 1),
+                p("strong", {
                   "data-stat-key": m.key
                 }, $(t.effectiveValues[m.key]), 9, L5),
-                Ae(m.key) ? (z(), U("small", N5, "基础 " + $(t.save.values[m.key]) + " · 修正 " + $(Se(Ae(m.key))), 1)) : (z(), U("small", D5, "基础值"))
+                Ae(m.key) ? (U(), F("small", N5, "基础 " + $(t.save.values[m.key]) + " · 修正 " + $(Se(Ae(m.key))), 1)) : (U(), F("small", D5, "基础值"))
               ])), 64))
             ]),
-            V[7] || (V[7] = f("div", { class: "gameplay-section-heading" }, [
-              f("h3", null, "关系向量")
+            O[7] || (O[7] = p("div", { class: "gameplay-section-heading" }, [
+              p("h3", null, "关系向量")
             ], -1)),
-            f("div", B5, [
-              (z(!0), U(me, null, Ee(t.gameplay.relationshipTracks, (m) => (z(), U("label", {
+            p("div", B5, [
+              (U(!0), F(me, null, Ee(t.gameplay.relationshipTracks, (m) => (U(), F("label", {
                 key: m.id
               }, [
-                f("span", null, $(m.label), 1),
-                f("progress", {
+                p("span", null, $(m.label), 1),
+                p("progress", {
                   value: t.save.values.relationshipVectors[m.id],
                   min: m.minimum,
                   max: m.maximum
                 }, null, 8, H5),
-                f("strong", null, $(t.save.values.relationshipVectors[m.id]), 1)
+                p("strong", null, $(t.save.values.relationshipVectors[m.id]), 1)
               ]))), 128))
             ]),
-            f("div", J5, [
-              f("section", null, [
-                V[4] || (V[4] = f("div", { class: "gameplay-section-heading" }, [
-                  f("h3", null, "路线资源")
+            p("div", J5, [
+              p("section", null, [
+                O[4] || (O[4] = p("div", { class: "gameplay-section-heading" }, [
+                  p("h3", null, "路线资源")
                 ], -1)),
-                f("dl", G5, [
-                  (z(), U(me, null, Ee(A, (m) => (z(), U(me, {
+                p("dl", G5, [
+                  (U(), F(me, null, Ee(I, (m) => (U(), F(me, {
                     key: m.key
                   }, [
-                    f("dt", null, $(m.label), 1),
-                    f("dd", null, $(t.save.values.routeEconomy[m.key]), 1)
+                    p("dt", null, $(m.label), 1),
+                    p("dd", null, $(t.save.values.routeEconomy[m.key]), 1)
                   ], 64))), 64))
                 ])
               ]),
-              f("section", null, [
-                V[5] || (V[5] = f("div", { class: "gameplay-section-heading" }, [
-                  f("h3", null, "冲突专精")
+              p("section", null, [
+                O[5] || (O[5] = p("div", { class: "gameplay-section-heading" }, [
+                  p("h3", null, "冲突专精")
                 ], -1)),
-                f("dl", W5, [
-                  (z(), U(me, null, Ee(S, (m) => (z(), U(me, {
+                p("dl", W5, [
+                  (U(), F(me, null, Ee(S, (m) => (U(), F(me, {
                     key: m.key
                   }, [
-                    f("dt", null, $(m.label), 1),
-                    f("dd", null, $(t.save.values.conflictMastery[m.key]), 1)
+                    p("dt", null, $(m.label), 1),
+                    p("dd", null, $(t.save.values.conflictMastery[m.key]), 1)
                   ], 64))), 64))
                 ])
               ])
             ])
           ], 512), [
-            [Ga, p.value === "status"]
+            [Ga, f.value === "status"]
           ]),
-          at(f("section", K5, [
-            f("div", Y5, [
-              f("span", null, "任务 " + $(O.value.questsDone) + " / " + $(O.value.questsTotal), 1),
-              f("span", null, "冲突胜利 " + $(O.value.victories) + " / " + $(O.value.battlesTotal), 1),
-              f("span", null, "挑战完成 " + $(O.value.challengesDone) + " / " + $(O.value.challengesTotal), 1)
+          at(p("section", K5, [
+            p("div", Y5, [
+              p("span", null, "任务 " + $(P.value.questsDone) + " / " + $(P.value.questsTotal), 1),
+              p("span", null, "冲突胜利 " + $(P.value.victories) + " / " + $(P.value.battlesTotal), 1),
+              p("span", null, "挑战完成 " + $(P.value.challengesDone) + " / " + $(P.value.challengesTotal), 1)
             ]),
-            f("div", X5, [
-              f("section", null, [
-                V[8] || (V[8] = f("div", { class: "gameplay-section-heading" }, [
-                  f("h3", null, "路线任务")
+            p("div", X5, [
+              p("section", null, [
+                O[8] || (O[8] = p("div", { class: "gameplay-section-heading" }, [
+                  p("h3", null, "路线任务")
                 ], -1)),
-                f("div", Q5, [
-                  (z(!0), U(me, null, Ee(Z.value, (m) => (z(), U("article", {
+                p("div", Q5, [
+                  (U(!0), F(me, null, Ee(D.value, (m) => (U(), F("article", {
                     key: m.id,
                     class: we(ke(m.id)),
                     "data-quest-id": m.id,
@@ -10307,24 +10307,24 @@ const $5 = { class: "gameplay-panel__header" }, j5 = {
                     "data-objective-state": ke(m.id),
                     "data-quest-state": ke(m.id)
                   }, [
-                    f("header", null, [
-                      f("strong", null, $(m.label), 1),
-                      f("span", {
+                    p("header", null, [
+                      p("strong", null, $(m.label), 1),
+                      p("span", {
                         class: "gameplay-state-badge",
                         "aria-label": `任务状态：${st(m.id)}`
                       }, $(st(m.id)), 9, t6)
                     ]),
-                    f("p", null, $(m.description), 1)
+                    p("p", null, $(m.description), 1)
                   ], 10, e6))), 128)),
-                  Z.value.length === 0 ? (z(), U("p", a6, "当前尚未进入路线任务。")) : ge("", !0)
+                  D.value.length === 0 ? (U(), F("p", a6, "当前尚未进入路线任务。")) : ge("", !0)
                 ])
               ]),
-              f("section", null, [
-                V[9] || (V[9] = f("div", { class: "gameplay-section-heading" }, [
-                  f("h3", null, "冲突记录")
+              p("section", null, [
+                O[9] || (O[9] = p("div", { class: "gameplay-section-heading" }, [
+                  p("h3", null, "冲突记录")
                 ], -1)),
-                f("div", i6, [
-                  (z(!0), U(me, null, Ee(P.value, (m) => (z(), U("article", {
+                p("div", i6, [
+                  (U(!0), F(me, null, Ee(V.value, (m) => (U(), F("article", {
                     key: m.id,
                     class: we($e(m.id)),
                     "data-battle-id": m.id,
@@ -10332,118 +10332,118 @@ const $5 = { class: "gameplay-panel__header" }, j5 = {
                     "data-objective-state": $e(m.id),
                     "data-battle-state": $e(m.id)
                   }, [
-                    f("header", null, [
-                      f("strong", null, $(m.label), 1),
-                      f("span", {
+                    p("header", null, [
+                      p("strong", null, $(m.label), 1),
+                      p("span", {
                         class: "gameplay-state-badge",
                         "aria-label": `冲突状态：${Tt(m.id)}`
                       }, $(Tt(m.id)), 9, n6)
                     ]),
-                    f("p", null, $(m.description), 1),
-                    f("small", null, "推荐专精：" + $(S.find((Q) => Q.key === m.recommendedMastery)?.label), 1)
+                    p("p", null, $(m.description), 1),
+                    p("small", null, "推荐专精：" + $(S.find((ee) => ee.key === m.recommendedMastery)?.label), 1)
                   ], 10, o6))), 128)),
-                  P.value.length === 0 ? (z(), U("p", r6, "当前尚无路线冲突。")) : ge("", !0)
+                  V.value.length === 0 ? (U(), F("p", r6, "当前尚无路线冲突。")) : ge("", !0)
                 ])
               ])
             ])
           ], 512), [
-            [Ga, p.value === "objectives"]
+            [Ga, f.value === "objectives"]
           ]),
-          at(f("section", s6, [
-            V[10] || (V[10] = f("div", { class: "gameplay-section-heading" }, [
-              f("h3", null, "叙事挑战记录"),
-              f("p", null, "完成、辅助、受挫和跳过均会写入当前 SaveV2。")
+          at(p("section", s6, [
+            O[10] || (O[10] = p("div", { class: "gameplay-section-heading" }, [
+              p("h3", null, "叙事挑战记录"),
+              p("p", null, "完成、辅助、受挫和跳过均会写入当前 SaveV2。")
             ], -1)),
-            f("div", c6, [
-              (z(!0), U(me, null, Ee(E.value, (m) => (z(), U("article", {
+            p("div", c6, [
+              (U(!0), F(me, null, Ee(R.value, (m) => (U(), F("article", {
                 key: m.id,
                 class: we(ct(m.id)),
                 "data-minigame-id": m.id,
                 "data-minigame-outcome": dt(m.id)?.lastOutcome ?? "pending"
               }, [
-                f("header", null, [
-                  f("strong", null, $(m.label), 1),
-                  f("span", l6, $(wt(m.id)), 1)
+                p("header", null, [
+                  p("strong", null, $(m.label), 1),
+                  p("span", l6, $(wt(m.id)), 1)
                 ]),
-                f("p", null, $(m.description), 1),
-                dt(m.id) ? (z(), U("small", u6, "尝试 " + $(dt(m.id)?.attempts) + " 次 · 最佳 " + $(dt(m.id)?.bestScore) + " 分 · " + $(dt(m.id)?.assisted ? "已使用辅助" : "未使用辅助"), 1)) : ge("", !0),
-                Qt(m.id) ? (z(), U("small", p6, "剧情来源：" + $(Qt(m.id)), 1)) : ge("", !0),
-                dt(m.id) ? ge("", !0) : (z(), U("small", f6, "尚未在当前存档中进入对应剧情场景。"))
+                p("p", null, $(m.description), 1),
+                dt(m.id) ? (U(), F("small", u6, "尝试 " + $(dt(m.id)?.attempts) + " 次 · 最佳 " + $(dt(m.id)?.bestScore) + " 分 · " + $(dt(m.id)?.assisted ? "已使用辅助" : "未使用辅助"), 1)) : ge("", !0),
+                Qt(m.id) ? (U(), F("small", f6, "剧情来源：" + $(Qt(m.id)), 1)) : ge("", !0),
+                dt(m.id) ? ge("", !0) : (U(), F("small", p6, "尚未在当前存档中进入对应剧情场景。"))
               ], 10, d6))), 128)),
-              E.value.length === 0 ? (z(), U("p", h6, "当前路线尚未配置叙事挑战。")) : ge("", !0)
+              R.value.length === 0 ? (U(), F("p", h6, "当前路线尚未配置叙事挑战。")) : ge("", !0)
             ])
           ], 512), [
-            [Ga, p.value === "challenges"]
+            [Ga, f.value === "challenges"]
           ]),
-          at(f("section", b6, [
-            V[14] || (V[14] = f("div", { class: "gameplay-section-heading" }, [
-              f("h3", null, "已持有物品")
+          at(p("section", b6, [
+            O[14] || (O[14] = p("div", { class: "gameplay-section-heading" }, [
+              p("h3", null, "已持有物品")
             ], -1)),
-            f("div", m6, [
-              (z(!0), U(me, null, Ee(q.value, (m) => (z(), U("article", {
+            p("div", m6, [
+              (U(!0), F(me, null, Ee(j.value, (m) => (U(), F("article", {
                 key: m.id,
                 "data-item-id": m.id
               }, [
-                f("header", null, [
-                  f("strong", null, $(m.label), 1),
-                  V[11] || (V[11] = f("span", null, "已持有", -1))
+                p("header", null, [
+                  p("strong", null, $(m.label), 1),
+                  O[11] || (O[11] = p("span", null, "已持有", -1))
                 ]),
-                f("p", null, $(m.description), 1)
+                p("p", null, $(m.description), 1)
               ], 8, v6))), 128)),
-              q.value.length === 0 ? (z(), U("p", g6, "当前背包为空。")) : ge("", !0)
+              j.value.length === 0 ? (U(), F("p", g6, "当前背包为空。")) : ge("", !0)
             ]),
-            f("div", _6, [
-              f("section", null, [
-                V[12] || (V[12] = f("div", { class: "gameplay-section-heading" }, [
-                  f("h3", null, "装备")
+            p("div", _6, [
+              p("section", null, [
+                O[12] || (O[12] = p("div", { class: "gameplay-section-heading" }, [
+                  p("h3", null, "装备")
                 ], -1)),
-                f("div", y6, [
-                  (z(!0), U(me, null, Ee(ee.value, (m) => (z(), U("article", {
+                p("div", y6, [
+                  (U(!0), F(me, null, Ee(Q.value, (m) => (U(), F("article", {
                     key: m.id,
-                    class: we({ active: x(m.id), locked: !_(m.itemId) }),
+                    class: we({ active: A(m.id), locked: !_(m.itemId) }),
                     "data-equipment-id": m.id
                   }, [
-                    f("header", null, [
-                      f("strong", null, $(m.label), 1),
-                      f("span", null, $(x(m.id) ? "装备中" : _(m.itemId) ? m.slot : "未获得"), 1)
+                    p("header", null, [
+                      p("strong", null, $(m.label), 1),
+                      p("span", null, $(A(m.id) ? "装备中" : _(m.itemId) ? m.slot : "未获得"), 1)
                     ]),
-                    f("p", null, $(Me(m.modifiers)), 1),
-                    f("button", {
+                    p("p", null, $(Me(m.modifiers)), 1),
+                    p("button", {
                       type: "button",
-                      disabled: !_(m.itemId) || x(m.id),
-                      onClick: (Q) => i("equip", m.id)
-                    }, $(x(m.id) ? "已装备" : "装备"), 9, k6)
+                      disabled: !_(m.itemId) || A(m.id),
+                      onClick: (ee) => i("equip", m.id)
+                    }, $(A(m.id) ? "已装备" : "装备"), 9, k6)
                   ], 10, w6))), 128))
                 ])
               ]),
-              f("section", null, [
-                V[13] || (V[13] = f("div", { class: "gameplay-section-heading" }, [
-                  f("h3", null, "衣装")
+              p("section", null, [
+                O[13] || (O[13] = p("div", { class: "gameplay-section-heading" }, [
+                  p("h3", null, "衣装")
                 ], -1)),
-                f("div", I6, [
-                  (z(!0), U(me, null, Ee(J.value, (m) => (z(), U("article", {
+                p("div", I6, [
+                  (U(!0), F(me, null, Ee(B.value, (m) => (U(), F("article", {
                     key: m.id,
                     class: we({ active: t.save.inventory.activeOutfitId === m.id, locked: !t.save.inventory.outfitIds.includes(m.id) }),
                     "data-outfit-id": m.id
                   }, [
-                    f("header", null, [
-                      f("strong", null, $(m.label), 1),
-                      f("span", null, $(t.save.inventory.activeOutfitId === m.id ? "穿着中" : t.save.inventory.outfitIds.includes(m.id) ? "已解锁" : "未解锁"), 1)
+                    p("header", null, [
+                      p("strong", null, $(m.label), 1),
+                      p("span", null, $(t.save.inventory.activeOutfitId === m.id ? "穿着中" : t.save.inventory.outfitIds.includes(m.id) ? "已解锁" : "未解锁"), 1)
                     ]),
-                    f("button", {
+                    p("button", {
                       type: "button",
                       disabled: !t.save.inventory.outfitIds.includes(m.id) || t.save.inventory.activeOutfitId === m.id,
-                      onClick: (Q) => i("wearOutfit", m.id)
+                      onClick: (ee) => i("wearOutfit", m.id)
                     }, $(t.save.inventory.activeOutfitId === m.id ? "穿着中" : "更换"), 9, x6)
                   ], 10, A6))), 128))
                 ])
               ])
             ])
           ], 512), [
-            [Ga, p.value === "loadout"]
+            [Ga, f.value === "loadout"]
           ]),
-          at(f("section", T6, [
-            f("div", {
+          at(p("section", T6, [
+            p("div", {
               class: "gameplay-objective-summary gameplay-progression-summary",
               "data-testid": "progression-summary",
               "data-progression-summary": "",
@@ -10453,75 +10453,75 @@ const $5 = { class: "gameplay-panel__header" }, j5 = {
               "data-achievements-unlocked": se.value.achievementsUnlocked,
               "data-achievements-total": se.value.achievementsTotal
             }, [
-              f("span", null, "当前职业 " + $(se.value.activeProfessionLabel), 1),
-              f("span", null, "已进阶 " + $(se.value.professionsAdvanced) + " / " + $(se.value.professionsTotal), 1),
-              f("span", null, "职业等级合计 " + $(se.value.professionLevels), 1),
-              f("span", null, "成就 " + $(se.value.achievementsUnlocked) + " / " + $(se.value.achievementsTotal), 1)
+              p("span", null, "当前职业 " + $(se.value.activeProfessionLabel), 1),
+              p("span", null, "已进阶 " + $(se.value.professionsAdvanced) + " / " + $(se.value.professionsTotal), 1),
+              p("span", null, "职业等级合计 " + $(se.value.professionLevels), 1),
+              p("span", null, "成就 " + $(se.value.achievementsUnlocked) + " / " + $(se.value.achievementsTotal), 1)
             ], 8, S6),
-            f("div", C6, [
-              f("section", null, [
-                V[15] || (V[15] = f("div", { class: "gameplay-section-heading" }, [
-                  f("h3", null, "职业")
+            p("div", C6, [
+              p("section", null, [
+                O[15] || (O[15] = p("div", { class: "gameplay-section-heading" }, [
+                  p("h3", null, "职业")
                 ], -1)),
-                f("div", P6, [
-                  (z(!0), U(me, null, Ee(re.value, (m) => (z(), U("article", {
+                p("div", P6, [
+                  (U(!0), F(me, null, Ee(re.value, (m) => (U(), F("article", {
                     key: m.id,
                     class: we({ active: t.save.professions.activeId === m.id }),
                     "data-profession-id": m.id
                   }, [
-                    f("header", null, [
-                      f("strong", null, $(m.label), 1),
-                      f("span", null, "Lv." + $(j(m.id).level), 1)
+                    p("header", null, [
+                      p("strong", null, $(m.label), 1),
+                      p("span", null, "Lv." + $(z(m.id).level), 1)
                     ]),
-                    f("p", null, $(Me(m.modifiersPerLevel)) + " / 等级", 1),
-                    G(m.id) !== void 0 ? (z(), U("progress", {
+                    p("p", null, $(Me(m.modifiersPerLevel)) + " / 等级", 1),
+                    G(m.id) !== void 0 ? (U(), F("progress", {
                       key: 0,
                       class: "gameplay-xp-progress",
-                      value: j(m.id).xp,
+                      value: z(m.id).xp,
                       max: G(m.id) ?? 0,
-                      "data-xp-level": j(m.id).level
+                      "data-xp-level": z(m.id).level
                     }, null, 8, V6)) : ge("", !0),
-                    f("small", null, [
-                      ta("XP " + $(j(m.id).xp), 1),
-                      G(m.id) !== void 0 ? (z(), U(me, { key: 0 }, [
+                    p("small", null, [
+                      ta("XP " + $(z(m.id).xp), 1),
+                      G(m.id) !== void 0 ? (U(), F(me, { key: 0 }, [
                         ta(" / " + $(G(m.id)), 1)
-                      ], 64)) : (z(), U(me, { key: 1 }, [
+                      ], 64)) : (U(), F(me, { key: 1 }, [
                         ta(" · MAX")
                       ], 64))
                     ]),
-                    f("button", {
+                    p("button", {
                       type: "button",
                       disabled: t.save.professions.activeId === m.id,
-                      onClick: (Q) => i("selectProfession", m.id)
+                      onClick: (ee) => i("selectProfession", m.id)
                     }, $(t.save.professions.activeId === m.id ? "当前职业" : "设为当前"), 9, E6)
                   ], 10, R6))), 128))
                 ])
               ]),
-              f("section", null, [
-                V[16] || (V[16] = f("div", { class: "gameplay-section-heading" }, [
-                  f("h3", null, "成就")
+              p("section", null, [
+                O[16] || (O[16] = p("div", { class: "gameplay-section-heading" }, [
+                  p("h3", null, "成就")
                 ], -1)),
-                f("div", O6, [
-                  (z(!0), U(me, null, Ee(de.value, (m) => (z(), U("article", {
+                p("div", O6, [
+                  (U(!0), F(me, null, Ee(de.value, (m) => (U(), F("article", {
                     key: m.id,
                     class: we({ completed: t.save.achievements.unlockedIds.includes(m.id), locked: !t.save.achievements.unlockedIds.includes(m.id) }),
                     "data-achievement-id": m.id
                   }, [
-                    f("header", null, [
-                      f("strong", null, $(m.label), 1),
-                      f("span", null, $(t.save.achievements.unlockedIds.includes(m.id) ? "已解锁" : "未解锁"), 1)
+                    p("header", null, [
+                      p("strong", null, $(m.label), 1),
+                      p("span", null, $(t.save.achievements.unlockedIds.includes(m.id) ? "已解锁" : "未解锁"), 1)
                     ]),
-                    f("p", null, $(m.description), 1),
-                    f("small", null, $(Me(m.reward.values ?? {})), 1)
+                    p("p", null, $(m.description), 1),
+                    p("small", null, $(Me(m.reward.values ?? {})), 1)
                   ], 10, M6))), 128))
                 ])
               ])
             ])
           ], 512), [
-            [Ga, p.value === "progression"]
+            [Ga, f.value === "progression"]
           ]),
-          at(f("section", $6, [
-            f("div", {
+          at(p("section", $6, [
+            p("div", {
               class: "gameplay-objective-summary gameplay-codex-summary",
               "data-testid": "codex-summary",
               "data-codex-summary": "",
@@ -10531,91 +10531,91 @@ const $5 = { class: "gameplay-panel__header" }, j5 = {
               "data-codex-locked": ae.value.locked,
               "data-codex-discovered": ae.value.active + ae.value.seen
             }, [
-              f("span", null, "已发现 " + $(ae.value.active + ae.value.seen) + " / " + $(ae.value.total), 1),
-              f("span", null, "当前激活 " + $(ae.value.active), 1),
-              f("span", null, "已阅 " + $(ae.value.seen), 1),
-              f("span", null, "未阅 " + $(ae.value.locked), 1)
+              p("span", null, "已发现 " + $(ae.value.active + ae.value.seen) + " / " + $(ae.value.total), 1),
+              p("span", null, "当前激活 " + $(ae.value.active), 1),
+              p("span", null, "已阅 " + $(ae.value.seen), 1),
+              p("span", null, "未阅 " + $(ae.value.locked), 1)
             ], 8, j6),
-            V[17] || (V[17] = f("div", { class: "gameplay-section-heading" }, [
-              f("h3", null, "世界书状态")
+            O[17] || (O[17] = p("div", { class: "gameplay-section-heading" }, [
+              p("h3", null, "世界书状态")
             ], -1)),
-            f("div", z6, [
-              (z(!0), U(me, null, Ee(t.gameplay.worldbookEntries, (m) => (z(), U("article", {
+            p("div", z6, [
+              (U(!0), F(me, null, Ee(t.gameplay.worldbookEntries, (m) => (U(), F("article", {
                 key: m.id,
-                class: we(D(m.id)),
+                class: we(N(m.id)),
                 "data-worldbook-id": m.id
               }, [
-                f("header", null, [
-                  f("strong", null, $(m.id), 1),
-                  f("span", null, $(H(m.id)), 1)
+                p("header", null, [
+                  p("strong", null, $(m.id), 1),
+                  p("span", null, $(J(m.id)), 1)
                 ]),
-                D(m.id) !== "locked" ? (z(), U("p", F6, $(m.content), 1)) : (z(), U("p", q6, "该条目尚未在当前存档中解锁。")),
-                D(m.id) !== "locked" ? (z(), U("small", Z6, $(m.constant ? "常驻" : m.selective ? "场景选择性激活" : "已记录"), 1)) : ge("", !0)
+                N(m.id) !== "locked" ? (U(), F("p", F6, $(m.content), 1)) : (U(), F("p", q6, "该条目尚未在当前存档中解锁。")),
+                N(m.id) !== "locked" ? (U(), F("small", Z6, $(m.constant ? "常驻" : m.selective ? "场景选择性激活" : "已记录"), 1)) : ge("", !0)
               ], 10, U6))), 128))
             ])
           ], 512), [
-            [Ga, p.value === "codex"]
+            [Ga, f.value === "codex"]
           ]),
-          at(f("section", L6, [
-            V[18] || (V[18] = f("div", { class: "gameplay-section-heading" }, [
-              f("h3", null, "Layered worldbook packages"),
-              f("p", null, "Download and import through the normal SillyTavern UI.")
+          at(p("section", L6, [
+            O[18] || (O[18] = p("div", { class: "gameplay-section-heading" }, [
+              p("h3", null, "Layered worldbook packages"),
+              p("p", null, "Download and import through the normal SillyTavern UI.")
             ], -1)),
-            f("p", N6, $(M(y).l0.note), 1),
-            f("ol", D6, [
-              (z(!0), U(me, null, Ee(M(y).installInstructions, (m) => (z(), U("li", { key: m }, $(m), 1))), 128))
+            p("p", N6, $(M(y).l0.note), 1),
+            p("ol", D6, [
+              (U(!0), F(me, null, Ee(M(y).installInstructions, (m) => (U(), F("li", { key: m }, $(m), 1))), 128))
             ]),
-            f("div", B6, [
-              (z(!0), U(me, null, Ee(M(y).presets, (m) => (z(), U("article", {
+            p("div", B6, [
+              (U(!0), F(me, null, Ee(M(y).presets, (m) => (U(), F("article", {
                 key: m.id,
                 class: we({ active: v.value === m.id, locked: !m.installable }),
                 "data-worldbook-preset": m.id
               }, [
-                f("header", null, [
-                  f("strong", null, $(m.label), 1),
-                  f("span", null, $(m.installable ? `${m.packages.length} package(s)` : "excluded"), 1)
+                p("header", null, [
+                  p("strong", null, $(m.label), 1),
+                  p("span", null, $(m.installable ? `${m.packages.length} package(s)` : "excluded"), 1)
                 ]),
-                m.id === "minimal" ? (z(), U("p", J6, $(M(y).l0.entryCount) + " embedded card entries; no JSON import is needed.", 1)) : m.installable ? (z(), U("p", G6, $(m.packages.map((Q) => Q.entryCount).reduce((Q, ie) => Q + ie, 0)) + " entries across the selected package set.", 1)) : (z(), U("p", W6, "Audit-only material: never import or enable it at runtime.")),
-                m.installable && m.packages.length ? (z(), U("button", {
+                m.id === "minimal" ? (U(), F("p", J6, $(M(y).l0.entryCount) + " embedded card entries; no JSON import is needed.", 1)) : m.installable ? (U(), F("p", G6, $(m.packages.map((ee) => ee.entryCount).reduce((ee, ie) => ee + ie, 0)) + " entries across the selected package set.", 1)) : (U(), F("p", W6, "Audit-only material: never import or enable it at runtime.")),
+                m.installable && m.packages.length ? (U(), F("button", {
                   key: 3,
                   type: "button",
                   role: "radio",
                   "aria-checked": v.value === m.id,
-                  onClick: (Q) => i("selectWorldbookPreset", m.id)
+                  onClick: (ee) => i("selectWorldbookPreset", m.id)
                 }, $(v.value === m.id ? "Selected" : "Select preset"), 9, K6)) : ge("", !0)
               ], 10, H6))), 128))
             ]),
-            V[19] || (V[19] = f("div", { class: "gameplay-section-heading" }, [
-              f("h3", null, "Selected downloads"),
-              f("p", null, "Checksums remain visible for package verification.")
+            O[19] || (O[19] = p("div", { class: "gameplay-section-heading" }, [
+              p("h3", null, "Selected downloads"),
+              p("p", null, "Checksums remain visible for package verification.")
             ], -1)),
-            f("div", Y6, [
-              (z(!0), U(me, null, Ee(M(y).presets, (m) => at((z(), U("article", {
+            p("div", Y6, [
+              (U(!0), F(me, null, Ee(M(y).presets, (m) => at((U(), F("article", {
                 key: m.id
               }, [
-                m.packages.length ? (z(!0), U(me, { key: 0 }, Ee(m.packages, (Q) => (z(), U("div", {
-                  key: Q.id,
-                  "data-worldbook-package": Q.id,
-                  class: we({ active: g.value.has(Q.id) })
+                m.packages.length ? (U(!0), F(me, { key: 0 }, Ee(m.packages, (ee) => (U(), F("div", {
+                  key: ee.id,
+                  "data-worldbook-package": ee.id,
+                  class: we({ active: g.value.has(ee.id) })
                 }, [
-                  f("header", null, [
-                    f("strong", null, $(Q.id), 1),
-                    f("span", null, $(Q.entryCount) + " entries", 1)
+                  p("header", null, [
+                    p("strong", null, $(ee.id), 1),
+                    p("span", null, $(ee.entryCount) + " entries", 1)
                   ]),
-                  f("p", null, $(Q.contentCharacters.toLocaleString()) + " UTF-16 content characters", 1),
-                  f("small", null, "SHA-256 " + $(Q.sha256), 1),
-                  f("a", {
-                    href: Q.downloadUrl,
-                    download: Q.downloadUrl.split("/").at(-1),
+                  p("p", null, $(ee.contentCharacters.toLocaleString()) + " UTF-16 content characters", 1),
+                  p("small", null, "SHA-256 " + $(ee.sha256), 1),
+                  p("a", {
+                    href: ee.downloadUrl,
+                    download: ee.downloadUrl.split("/").at(-1),
                     "data-testid": "worldbook-package-download"
                   }, "Download JSON", 8, Q6)
-                ], 10, X6))), 128)) : (z(), U("p", e3, "No download: this preset uses the embedded L0 card anchors only."))
+                ], 10, X6))), 128)) : (U(), F("p", e3, "No download: this preset uses the embedded L0 card anchors only."))
               ])), [
                 [Ga, v.value === m.id]
               ])), 128))
             ])
           ], 512), [
-            [Ga, p.value === "worldbook-packages"]
+            [Ga, f.value === "worldbook-packages"]
           ])
         ])
       ], 544)
@@ -10648,19 +10648,19 @@ const $5 = { class: "gameplay-panel__header" }, j5 = {
   values: a3.optional(),
   relationshipVectors: i3.optional(),
   conflictMastery: o3.optional(),
-  setFlags: oe(R().min(1)).optional(),
-  clearFlags: oe(R().min(1)).optional(),
-  unlockCg: oe(R().min(1)).optional(),
-  grantItems: oe(R().min(1)).optional(),
-  equipItems: oe(R().min(1)).optional(),
-  unlockOutfits: oe(R().min(1)).optional(),
-  activateOutfit: R().min(1).optional(),
-  startQuests: oe(R().min(1)).optional(),
-  completeQuests: oe(R().min(1)).optional(),
-  resolveBattles: oe(W({ battleId: R().min(1), outcome: Ie(["victory", "setback"]) }).strict()).optional(),
-  professionXp: gi(R().min(1), X().int().positive()).optional(),
-  activateProfession: R().min(1).optional()
-}).strict(), Wc = R().min(1), xa = R().min(1);
+  setFlags: oe(E().min(1)).optional(),
+  clearFlags: oe(E().min(1)).optional(),
+  unlockCg: oe(E().min(1)).optional(),
+  grantItems: oe(E().min(1)).optional(),
+  equipItems: oe(E().min(1)).optional(),
+  unlockOutfits: oe(E().min(1)).optional(),
+  activateOutfit: E().min(1).optional(),
+  startQuests: oe(E().min(1)).optional(),
+  completeQuests: oe(E().min(1)).optional(),
+  resolveBattles: oe(W({ battleId: E().min(1), outcome: Ie(["victory", "setback"]) }).strict()).optional(),
+  professionXp: gi(E().min(1), X().int().positive()).optional(),
+  activateProfession: E().min(1).optional()
+}).strict(), Wc = E().min(1), xa = E().min(1);
 Ie([
   "mirror_thread",
   "testimony_cipher",
@@ -10680,18 +10680,18 @@ const Vl = Ie([
   lastOutcome: Vl.optional(),
   bestScore: X().int().min(0).max(100),
   assisted: At(),
-  seed: R().min(1).optional(),
-  resolvedAt: R().min(1).optional()
+  seed: E().min(1).optional(),
+  resolvedAt: E().min(1).optional()
 }).strict(), r3 = W({
   records: gi(Wc, n3)
 }).strict(), s3 = W({
   id: xa,
-  label: R().min(1),
-  description: R().min(1)
+  label: E().min(1),
+  description: E().min(1)
 }).strict(), c3 = W({
-  kind: fe("mirror_thread"),
+  kind: pe("mirror_thread"),
   anchors: oe(s3).min(2),
-  correctPair: pi([xa, xa])
+  correctPair: fi([xa, xa])
 }).strict().superRefine((t, e) => {
   const a = new Set(t.anchors.map(({ id: i }) => i));
   t.correctPair[0] === t.correctPair[1] && e.addIssue({ code: "custom", path: ["correctPair"], message: "Mirror thread targets must be distinct." }), t.correctPair.forEach((i, o) => {
@@ -10699,9 +10699,9 @@ const Vl = Ie([
   });
 }), d3 = W({
   id: xa,
-  text: R().min(1)
+  text: E().min(1)
 }).strict(), l3 = W({
-  kind: fe("testimony_cipher"),
+  kind: pe("testimony_cipher"),
   fragments: oe(d3).min(2),
   solutionOrder: oe(xa).min(2)
 }).strict().superRefine((t, e) => {
@@ -10711,9 +10711,9 @@ const Vl = Ie([
   });
 }), u3 = W({
   id: xa,
-  label: R().min(1)
-}).strict(), p3 = W({
-  kind: fe("boundary_resonance"),
+  label: E().min(1)
+}).strict(), f3 = W({
+  kind: pe("boundary_resonance"),
   nodes: oe(u3).min(2),
   targetActiveIds: oe(xa).min(1)
 }).strict().superRefine((t, e) => {
@@ -10721,10 +10721,10 @@ const Vl = Ie([
   new Set(t.targetActiveIds).size !== t.targetActiveIds.length && e.addIssue({ code: "custom", path: ["targetActiveIds"], message: "Resonance targets may not repeat nodes." }), t.targetActiveIds.forEach((i, o) => {
     a.has(i) || e.addIssue({ code: "custom", path: ["targetActiveIds", o], message: `Unknown resonance node: ${i}` });
   });
-}), f3 = Nr("kind", [
+}), p3 = Nr("kind", [
   c3,
   l3,
-  p3
+  f3
 ]), h3 = W({
   perfect: Un,
   assisted: Un,
@@ -10733,21 +10733,21 @@ const Vl = Ie([
 }).strict(), b3 = W({
   id: Wc,
   route: Et.optional(),
-  label: R().min(1),
-  description: R().min(1),
-  puzzle: f3,
+  label: E().min(1),
+  description: E().min(1),
+  puzzle: p3,
   outcomes: h3
 }).strict(), m3 = W({
   minigameId: Wc,
-  seed: R().min(1),
-  prompt: R().min(1),
-  assistLabel: R().min(1),
+  seed: E().min(1),
+  prompt: E().min(1),
+  assistLabel: E().min(1),
   allowSkip: At()
 }).strict(), v3 = Nr("kind", [
-  W({ kind: fe("mirror_thread"), selectedAnchorIds: oe(xa).length(2), assisted: At() }).strict(),
-  W({ kind: fe("testimony_cipher"), orderedFragmentIds: oe(xa).min(1), assisted: At() }).strict(),
-  W({ kind: fe("boundary_resonance"), activeNodeIds: oe(xa), assisted: At() }).strict(),
-  W({ kind: fe("skip"), assisted: fe(!0) }).strict()
+  W({ kind: pe("mirror_thread"), selectedAnchorIds: oe(xa).length(2), assisted: At() }).strict(),
+  W({ kind: pe("testimony_cipher"), orderedFragmentIds: oe(xa).min(1), assisted: At() }).strict(),
+  W({ kind: pe("boundary_resonance"), activeNodeIds: oe(xa), assisted: At() }).strict(),
+  W({ kind: pe("skip"), assisted: pe(!0) }).strict()
 ]), El = {
   skipped: 0,
   setback: 1,
@@ -10837,71 +10837,71 @@ const w3 = ["data-minigame-id", "data-minigame-kind", "data-assisted", "data-can
   emits: ["close", "resolve"],
   setup(t, { emit: e }) {
     const a = t, i = e, o = /* @__PURE__ */ ne(!1), n = /* @__PURE__ */ ne([]), r = /* @__PURE__ */ ne([]), s = /* @__PURE__ */ ne([]), c = /* @__PURE__ */ new Set();
-    function d(q) {
-      const ee = q?.currentTarget;
-      if (!(ee instanceof HTMLButtonElement) || a.reducedMotion || a.busy) return;
-      let J;
-      J = xe.fromTo(ee, { scale: 1 }, {
+    function d(j) {
+      const Q = j?.currentTarget;
+      if (!(Q instanceof HTMLButtonElement) || a.reducedMotion || a.busy) return;
+      let B;
+      B = xe.fromTo(Q, { scale: 1 }, {
         scale: 1.035,
         duration: 0.12,
         yoyo: !0,
         repeat: 1,
         ease: "power2.out",
         onComplete: () => {
-          c.delete(J);
+          c.delete(B);
         }
-      }), c.add(J);
+      }), c.add(B);
     }
     wo(() => {
-      c.forEach((q) => q.kill()), c.clear();
+      c.forEach((j) => j.kill()), c.clear();
     });
-    const l = ve(() => a.definition.puzzle.kind === "mirror_thread" ? vs(a.definition.puzzle.anchors, a.challenge.seed) : []), u = ve(() => a.definition.puzzle.kind === "testimony_cipher" ? vs(a.definition.puzzle.fragments, a.challenge.seed) : []), p = ve(() => a.definition.puzzle.kind === "boundary_resonance" ? vs(a.definition.puzzle.nodes, a.challenge.seed) : []);
-    function h(q, ee, J) {
-      if (q.value.includes(ee)) {
-        q.value = q.value.filter((re) => re !== ee);
+    const l = ve(() => a.definition.puzzle.kind === "mirror_thread" ? vs(a.definition.puzzle.anchors, a.challenge.seed) : []), u = ve(() => a.definition.puzzle.kind === "testimony_cipher" ? vs(a.definition.puzzle.fragments, a.challenge.seed) : []), f = ve(() => a.definition.puzzle.kind === "boundary_resonance" ? vs(a.definition.puzzle.nodes, a.challenge.seed) : []);
+    function b(j, Q, B) {
+      if (j.value.includes(Q)) {
+        j.value = j.value.filter((re) => re !== Q);
         return;
       }
-      q.value = J && q.value.length >= J ? [...q.value.slice(1), ee] : [...q.value, ee];
+      j.value = B && j.value.length >= B ? [...j.value.slice(1), Q] : [...j.value, Q];
     }
-    function y(q, ee) {
-      h(n, q, 2), d(ee);
+    function y(j, Q) {
+      b(n, j, 2), d(Q);
     }
-    function v(q, ee) {
-      h(s, q), d(ee);
+    function v(j, Q) {
+      b(s, j), d(Q);
     }
-    function g(q, ee) {
-      h(r, q), d(ee);
+    function g(j, Q) {
+      b(r, j), d(Q);
     }
-    function I(q, ee) {
-      const J = r.value.indexOf(q), re = J + ee;
-      if (J < 0 || re < 0 || re >= r.value.length) return;
+    function k(j, Q) {
+      const B = r.value.indexOf(j), re = B + Q;
+      if (B < 0 || re < 0 || re >= r.value.length) return;
       const de = [...r.value];
-      [de[J], de[re]] = [de[re], de[J]], r.value = de;
+      [de[B], de[re]] = [de[re], de[B]], r.value = de;
     }
-    function A(q) {
+    function I(j) {
       if (!(!o.value || a.definition.puzzle.kind !== "mirror_thread"))
-        return a.definition.puzzle.correctPair.includes(q) ? "keep" : "drop";
+        return a.definition.puzzle.correctPair.includes(j) ? "keep" : "drop";
     }
-    function S(q) {
+    function S(j) {
       if (!o.value || a.definition.puzzle.kind !== "testimony_cipher") return;
-      const ee = a.definition.puzzle.solutionOrder.indexOf(q);
-      return ee < 0 ? void 0 : ee + 1;
+      const Q = a.definition.puzzle.solutionOrder.indexOf(j);
+      return Q < 0 ? void 0 : Q + 1;
     }
-    function T(q) {
+    function T(j) {
       if (!(!o.value || a.definition.puzzle.kind !== "boundary_resonance"))
-        return a.definition.puzzle.targetActiveIds.includes(q) ? "keep" : "drop";
+        return a.definition.puzzle.targetActiveIds.includes(j) ? "keep" : "drop";
     }
-    const k = ve(() => a.definition.puzzle.kind === "testimony_cipher" ? a.definition.puzzle.solutionOrder.length : 0), Z = ve(() => {
+    const x = ve(() => a.definition.puzzle.kind === "testimony_cipher" ? a.definition.puzzle.solutionOrder.length : 0), D = ve(() => {
       if (a.definition.puzzle.kind === "mirror_thread")
         return n.value.length === 2 ? void 0 : "请选择两个锚点后再提交。";
       if (a.definition.puzzle.kind === "testimony_cipher") {
-        const q = k.value - r.value.length;
-        return q === 0 ? void 0 : `还需要排入 ${q} 段证词。`;
+        const j = x.value - r.value.length;
+        return j === 0 ? void 0 : `还需要排入 ${j} 段证词。`;
       }
       return s.value.length === 0 ? "请至少点亮一个条款节点。" : void 0;
     });
-    function P() {
-      if (!(a.busy || Z.value)) {
+    function V() {
+      if (!(a.busy || D.value)) {
         if (a.definition.puzzle.kind === "mirror_thread") {
           i("resolve", { kind: "mirror_thread", selectedAnchorIds: n.value, assisted: o.value });
           return;
@@ -10913,126 +10913,126 @@ const w3 = ["data-minigame-id", "data-minigame-kind", "data-assisted", "data-can
         i("resolve", { kind: "boundary_resonance", activeNodeIds: s.value, assisted: o.value });
       }
     }
-    const O = ve(() => !a.busy && Z.value === void 0);
-    function E() {
+    const P = ve(() => !a.busy && D.value === void 0);
+    function R() {
       i("resolve", { kind: "skip", assisted: !0 });
     }
-    return (q, ee) => (z(), U("section", {
+    return (j, Q) => (U(), F("section", {
       class: we(["minigame-panel", `minigame-panel--${t.definition.puzzle.kind}`]),
       "data-minigame-id": t.definition.id,
       "data-minigame-kind": t.definition.puzzle.kind,
       "data-assisted": o.value,
-      "data-can-submit": O.value ? "true" : "false",
+      "data-can-submit": P.value ? "true" : "false",
       "aria-labelledby": "minigame-title"
     }, [
-      f("header", k3, [
-        f("div", null, [
-          ee[2] || (ee[2] = f("p", null, "叙事介入 · 可跳过", -1)),
-          f("h3", I3, $(t.definition.label), 1)
+      p("header", k3, [
+        p("div", null, [
+          Q[2] || (Q[2] = p("p", null, "叙事介入 · 可跳过", -1)),
+          p("h3", I3, $(t.definition.label), 1)
         ]),
-        f("span", null, $(t.busy ? "结算中" : "剧情挑战"), 1),
-        f("button", {
+        p("span", null, $(t.busy ? "结算中" : "剧情挑战"), 1),
+        p("button", {
           type: "button",
           class: "minigame-panel__close",
           "aria-label": "关闭挑战",
           disabled: t.busy,
-          onClick: ee[0] || (ee[0] = (J) => i("close"))
+          onClick: Q[0] || (Q[0] = (B) => i("close"))
         }, "关闭", 8, A3)
       ]),
-      f("p", x3, $(t.challenge.prompt), 1),
-      t.definition.puzzle.kind === "mirror_thread" ? (z(), U("div", T3, [
-        (z(!0), U(me, null, Ee(l.value, (J) => (z(), U("button", {
-          key: J.id,
+      p("p", x3, $(t.challenge.prompt), 1),
+      t.definition.puzzle.kind === "mirror_thread" ? (U(), F("div", T3, [
+        (U(!0), F(me, null, Ee(l.value, (B) => (U(), F("button", {
+          key: B.id,
           type: "button",
-          class: we(["minigame-mirror__anchor", { "is-selected": n.value.includes(J.id) }]),
-          "data-anchor-id": J.id,
-          "aria-pressed": n.value.includes(J.id),
-          "data-assist": A(J.id),
+          class: we(["minigame-mirror__anchor", { "is-selected": n.value.includes(B.id) }]),
+          "data-anchor-id": B.id,
+          "aria-pressed": n.value.includes(B.id),
+          "data-assist": I(B.id),
           disabled: t.busy,
-          onClick: (re) => y(J.id, re)
+          onClick: (re) => y(B.id, re)
         }, [
-          f("strong", null, $(J.label), 1),
-          f("span", null, $(J.description), 1),
-          A(J.id) ? (z(), U("em", C3, $(A(J.id) === "keep" ? "应当保留" : "不应连入"), 1)) : ge("", !0)
+          p("strong", null, $(B.label), 1),
+          p("span", null, $(B.description), 1),
+          I(B.id) ? (U(), F("em", C3, $(I(B.id) === "keep" ? "应当保留" : "不应连入"), 1)) : ge("", !0)
         ], 10, S3))), 128)),
-        f("p", P3, "已选择 " + $(n.value.length) + " / 2 个锚点。", 1)
-      ])) : t.definition.puzzle.kind === "testimony_cipher" ? (z(), U("div", R3, [
-        f("div", V3, [
-          (z(!0), U(me, null, Ee(u.value, (J) => (z(), U("button", {
-            key: J.id,
+        p("p", P3, "已选择 " + $(n.value.length) + " / 2 个锚点。", 1)
+      ])) : t.definition.puzzle.kind === "testimony_cipher" ? (U(), F("div", R3, [
+        p("div", V3, [
+          (U(!0), F(me, null, Ee(u.value, (B) => (U(), F("button", {
+            key: B.id,
             type: "button",
-            "data-fragment-id": J.id,
-            class: we({ "is-selected": r.value.includes(J.id) }),
-            "aria-pressed": r.value.includes(J.id),
-            "data-assist-rank": S(J.id),
+            "data-fragment-id": B.id,
+            class: we({ "is-selected": r.value.includes(B.id) }),
+            "aria-pressed": r.value.includes(B.id),
+            "data-assist-rank": S(B.id),
             disabled: t.busy,
-            onClick: (re) => g(J.id, re)
+            onClick: (re) => g(B.id, re)
           }, [
-            ta($(J.text) + " ", 1),
-            S(J.id) ? (z(), U("em", O3, "建议第 " + $(S(J.id)) + " 位", 1)) : ge("", !0)
+            ta($(B.text) + " ", 1),
+            S(B.id) ? (U(), F("em", O3, "建议第 " + $(S(B.id)) + " 位", 1)) : ge("", !0)
           ], 10, E3))), 128))
         ]),
-        f("ol", M3, [
-          (z(!0), U(me, null, Ee(r.value, (J, re) => (z(), U("li", { key: J }, [
-            f("span", null, $(re + 1), 1),
-            f("strong", null, $(t.definition.puzzle.fragments.find((de) => de.id === J)?.text), 1),
-            f("button", {
+        p("ol", M3, [
+          (U(!0), F(me, null, Ee(r.value, (B, re) => (U(), F("li", { key: B }, [
+            p("span", null, $(re + 1), 1),
+            p("strong", null, $(t.definition.puzzle.fragments.find((de) => de.id === B)?.text), 1),
+            p("button", {
               type: "button",
               "aria-label": "上移",
               disabled: t.busy || re === 0,
-              onClick: (de) => I(J, -1)
+              onClick: (de) => k(B, -1)
             }, "↑", 8, $3),
-            f("button", {
+            p("button", {
               type: "button",
               "aria-label": "下移",
               disabled: t.busy || re === r.value.length - 1,
-              onClick: (de) => I(J, 1)
+              onClick: (de) => k(B, 1)
             }, "↓", 8, j3)
           ]))), 128)),
-          r.value.length === 0 ? (z(), U("li", z3, "从左侧选择证词，按顺序排入这一栏。")) : ge("", !0)
+          r.value.length === 0 ? (U(), F("li", z3, "从左侧选择证词，按顺序排入这一栏。")) : ge("", !0)
         ])
-      ])) : (z(), U("div", U3, [
-        (z(!0), U(me, null, Ee(p.value, (J) => (z(), U("button", {
-          key: J.id,
+      ])) : (U(), F("div", U3, [
+        (U(!0), F(me, null, Ee(f.value, (B) => (U(), F("button", {
+          key: B.id,
           type: "button",
-          "data-node-id": J.id,
-          class: we({ "is-active": s.value.includes(J.id) }),
-          "aria-pressed": s.value.includes(J.id),
-          "data-assist": T(J.id),
+          "data-node-id": B.id,
+          class: we({ "is-active": s.value.includes(B.id) }),
+          "aria-pressed": s.value.includes(B.id),
+          "data-assist": T(B.id),
           disabled: t.busy,
-          onClick: (re) => v(J.id, re)
+          onClick: (re) => v(B.id, re)
         }, [
-          ee[3] || (ee[3] = f("span", { "aria-hidden": "true" }, null, -1)),
-          ta($(J.label) + " ", 1),
-          T(J.id) ? (z(), U("em", q3, $(T(J.id) === "keep" ? "应点亮" : "应关闭"), 1)) : ge("", !0)
+          Q[3] || (Q[3] = p("span", { "aria-hidden": "true" }, null, -1)),
+          ta($(B.label) + " ", 1),
+          T(B.id) ? (U(), F("em", q3, $(T(B.id) === "keep" ? "应点亮" : "应关闭"), 1)) : ge("", !0)
         ], 10, F3))), 128))
       ])),
-      f("label", Z3, [
-        at(f("input", {
-          "onUpdate:modelValue": ee[1] || (ee[1] = (J) => o.value = J),
+      p("label", Z3, [
+        at(p("input", {
+          "onUpdate:modelValue": Q[1] || (Q[1] = (B) => o.value = B),
           type: "checkbox",
           disabled: t.busy
         }, null, 8, L3), [
-          [pp, o.value]
+          [pf, o.value]
         ]),
-        f("span", null, $(t.challenge.assistLabel) + "。可完成挑战，但不会获得完美结算。", 1)
+        p("span", null, $(t.challenge.assistLabel) + "。可完成挑战，但不会获得完美结算。", 1)
       ]),
-      f("footer", N3, [
-        Z.value ? (z(), U("p", D3, $(Z.value), 1)) : ge("", !0),
-        f("button", {
+      p("footer", N3, [
+        D.value ? (U(), F("p", D3, $(D.value), 1)) : ge("", !0),
+        p("button", {
           type: "button",
           "data-testid": "minigame-submit",
-          class: we({ "is-ready": O.value }),
-          disabled: t.busy || !!Z.value,
-          onClick: P
+          class: we({ "is-ready": P.value }),
+          disabled: t.busy || !!D.value,
+          onClick: V
         }, "提交介入", 10, B3),
-        t.challenge.allowSkip ? (z(), U("button", {
+        t.challenge.allowSkip ? (U(), F("button", {
           key: 1,
           type: "button",
           class: "minigame-panel__skip",
           "data-testid": "minigame-skip",
           disabled: t.busy,
-          onClick: E
+          onClick: R
         }, "跳过并继续剧情", 8, H3)) : ge("", !0)
       ])
     ], 10, w3));
@@ -11055,53 +11055,53 @@ const w3 = ["data-minigame-id", "data-minigame-kind", "data-assisted", "data-can
     const e = t, a = /* @__PURE__ */ new Map(), i = /* @__PURE__ */ ne();
     let o, n, r, s;
     const c = /* @__PURE__ */ ne(0), d = ["left", "center", "right"], l = /* @__PURE__ */ ne([]), u = /* @__PURE__ */ new Set();
-    let p = [];
-    function h(P) {
-      return `${P.characterId}:${P.position}`;
+    let f = [];
+    function b(V) {
+      return `${V.characterId}:${V.position}`;
     }
-    const y = ve(() => e.speaker ?? e.portraits.find((P) => P.active)?.characterId), v = ve(() => d.map((P) => e.portraits.find((O) => O.position === P || P === "left" && O.position === "far-left" || P === "right" && O.position === "far-right")));
-    function g(P, O) {
-      O instanceof HTMLCanvasElement ? a.set(P, O) : a.delete(P);
+    const y = ve(() => e.speaker ?? e.portraits.find((V) => V.active)?.characterId), v = ve(() => d.map((V) => e.portraits.find((P) => P.position === V || V === "left" && P.position === "far-left" || V === "right" && P.position === "far-right")));
+    function g(V, P) {
+      P instanceof HTMLCanvasElement ? a.set(V, P) : a.delete(V);
     }
-    async function I() {
-      e.service.stopAll(), await Ne(), await Promise.all(e.portraits.map(async (P) => {
-        const O = a.get(h(P));
-        O && await e.service.play(P.portraitAssetId, O);
+    async function k() {
+      e.service.stopAll(), await Ne(), await Promise.all(e.portraits.map(async (V) => {
+        const P = a.get(b(V));
+        P && await e.service.play(V.portraitAssetId, P);
       }));
     }
-    function A(P) {
-      a.delete(`${h(P)}:exiting`), l.value = l.value.filter((O) => h(O) !== h(P));
+    function I(V) {
+      a.delete(`${b(V)}:exiting`), l.value = l.value.filter((P) => b(P) !== b(V));
     }
-    async function S(P) {
-      P.length && (l.value.push(...P), await Ne(), await Promise.all(P.map((O) => new Promise((E) => {
+    async function S(V) {
+      V.length && (l.value.push(...V), await Ne(), await Promise.all(V.map((P) => new Promise((R) => {
         if (e.reducedMotion) {
-          A(O), E();
+          I(P), R();
           return;
         }
-        const q = a.get(`${h(O)}:exiting`);
-        if (!q) {
-          A(O), E();
+        const j = a.get(`${b(P)}:exiting`);
+        if (!j) {
+          I(P), R();
           return;
         }
-        const ee = xe.to(q, {
+        const Q = xe.to(j, {
           y: 26,
           autoAlpha: 0,
           duration: 0.42,
           ease: "power2.in",
           onComplete: () => {
-            u.delete(ee), A(O), E();
+            u.delete(Q), I(P), R();
           }
         });
-        u.add(ee);
+        u.add(Q);
       }))));
     }
     function T() {
-      u.forEach((P) => P.kill()), u.clear(), l.value.forEach((P) => a.delete(`${h(P)}:exiting`)), l.value = [];
+      u.forEach((V) => V.kill()), u.clear(), l.value.forEach((V) => a.delete(`${b(V)}:exiting`)), l.value = [];
     }
-    function k() {
+    function x() {
       if (r?.kill(), r = void 0, e.reducedMotion || !i.value) return;
-      const P = i.value.querySelector(".portrait-stage__canvas.is-speaking");
-      P && (r = xe.fromTo(P, { boxShadow: "0 0 0 rgba(230, 190, 96, 0)" }, {
+      const V = i.value.querySelector(".portrait-stage__canvas.is-speaking");
+      V && (r = xe.fromTo(V, { boxShadow: "0 0 0 rgba(230, 190, 96, 0)" }, {
         boxShadow: "0 0 44px rgba(230, 190, 96, .4)",
         duration: 1.7,
         yoyo: !0,
@@ -11109,10 +11109,10 @@ const w3 = ["data-minigame-id", "data-minigame-kind", "data-assisted", "data-can
         ease: "sine.inOut"
       }));
     }
-    async function Z() {
+    async function D() {
       if (c.value += 1, s?.kill(), s = void 0, e.reducedMotion || !i.value || (await Ne(), !i.value)) return;
-      const P = i.value.querySelectorAll(".portrait-stage__canvas.is-speaking"), O = i.value.querySelectorAll(".portrait-stage__canvas.is-active:not(.is-speaking)");
-      s = xe.timeline({ defaults: { ease: "power2.out" } }), O.length && s.to(O, { filter: "brightness(1) saturate(1)", duration: 0.22, clearProps: "filter" }, 0), P.length && s.fromTo(P, { filter: "brightness(1.08) saturate(1.06)" }, {
+      const V = i.value.querySelectorAll(".portrait-stage__canvas.is-speaking"), P = i.value.querySelectorAll(".portrait-stage__canvas.is-active:not(.is-speaking)");
+      s = xe.timeline({ defaults: { ease: "power2.out" } }), P.length && s.to(P, { filter: "brightness(1) saturate(1)", duration: 0.22, clearProps: "filter" }, 0), V.length && s.fromTo(V, { filter: "brightness(1.08) saturate(1.06)" }, {
         filter: "brightness(1.18) saturate(1.12)",
         duration: 0.34,
         ease: "power3.out",
@@ -11121,23 +11121,23 @@ const w3 = ["data-minigame-id", "data-minigame-kind", "data-assisted", "data-can
         clearProps: "filter"
       }, 0.06);
     }
-    return ut(() => e.reducedMotion, (P) => {
-      e.service.setReducedMotionOverride(P), P && (T(), k()), I();
-    }, { immediate: !0 }), ut(() => e.portraits, async (P) => {
-      const O = new Set(P.map(h)), E = p.filter((ee) => !O.has(h(ee)));
-      if (p = [...P], E.length && S(E), await I(), await Ne(), k(), e.reducedMotion || !i.value) return;
+    return ut(() => e.reducedMotion, (V) => {
+      e.service.setReducedMotionOverride(V), V && (T(), x()), k();
+    }, { immediate: !0 }), ut(() => e.portraits, async (V) => {
+      const P = new Set(V.map(b)), R = f.filter((Q) => !P.has(b(Q)));
+      if (f = [...V], R.length && S(R), await k(), await Ne(), x(), e.reducedMotion || !i.value) return;
       n?.kill();
-      const q = xe.utils.selector(i.value);
-      n = xe.timeline({ defaults: { ease: "power3.out" } }).fromTo(q(".portrait-stage__canvas.is-speaking"), { y: 24, autoAlpha: 0, scale: 0.97 }, { y: 0, autoAlpha: 1, scale: 1, duration: 0.5 }).fromTo(q(".portrait-stage__canvas.is-active:not(.is-speaking)"), { y: 20, autoAlpha: 0, scale: 0.98 }, { y: 0, autoAlpha: 1, scale: 1, duration: 0.56, stagger: 0.09 }, 0.1).fromTo(q(".portrait-stage__canvas.is-supporting"), { y: 12, autoAlpha: 0 }, { y: 0, autoAlpha: 0.46, duration: 0.44, stagger: 0.055 }, 0.22);
+      const j = xe.utils.selector(i.value);
+      n = xe.timeline({ defaults: { ease: "power3.out" } }).fromTo(j(".portrait-stage__canvas.is-speaking"), { y: 24, autoAlpha: 0, scale: 0.97 }, { y: 0, autoAlpha: 1, scale: 1, duration: 0.5 }).fromTo(j(".portrait-stage__canvas.is-active:not(.is-speaking)"), { y: 20, autoAlpha: 0, scale: 0.98 }, { y: 0, autoAlpha: 1, scale: 1, duration: 0.56, stagger: 0.09 }, 0.1).fromTo(j(".portrait-stage__canvas.is-supporting"), { y: 12, autoAlpha: 0 }, { y: 0, autoAlpha: 0.46, duration: 0.44, stagger: 0.055 }, 0.22);
     }, { deep: !0, immediate: !0 }), ut(() => y.value, () => {
-      k(), Z();
+      x(), D();
     }, { flush: "post" }), yn(() => {
       !i.value || e.reducedMotion || (o = xe.context(() => {
         xe.fromTo(".portrait-stage__canvas", { autoAlpha: 0, y: 14 }, { autoAlpha: 1, y: 0, duration: 0.42, stagger: 0.06, ease: "power3.out" });
       }, i.value));
     }), wo(() => {
-      n?.kill(), r?.kill(), s?.kill(), u.forEach((P) => P.kill()), u.clear(), o?.revert(), e.service.stopAll();
-    }), (P, O) => (z(), U("div", {
+      n?.kill(), r?.kill(), s?.kill(), u.forEach((V) => V.kill()), u.clear(), o?.revert(), e.service.stopAll();
+    }), (V, P) => (U(), F("div", {
       ref_key: "stage",
       ref: i,
       class: "portrait-stage",
@@ -11149,54 +11149,54 @@ const w3 = ["data-minigame-id", "data-minigame-kind", "data-assisted", "data-can
       "data-speaker-transfer": c.value,
       style: Ua({ "--scene-focus-x": `${(t.focus?.[0] ?? 0.5) * 100}%` })
     }, [
-      (z(!0), U(me, null, Ee(v.value, (E, q) => (z(), U("div", {
-        key: d[q],
-        class: we(["portrait-slot", `portrait-slot--${d[q]}`]),
-        "data-slot": d[q]
+      (U(!0), F(me, null, Ee(v.value, (R, j) => (U(), F("div", {
+        key: d[j],
+        class: we(["portrait-slot", `portrait-slot--${d[j]}`]),
+        "data-slot": d[j]
       }, [
-        E ? (z(), U("canvas", {
-          key: `${E.characterId}:${E.portraitAssetId}`,
+        R ? (U(), F("canvas", {
+          key: `${R.characterId}:${R.portraitAssetId}`,
           ref_for: !0,
-          ref: (ee) => g(h(E), ee),
-          class: we(["portrait-stage__canvas", [`portrait-stage__canvas--${E.position}`, { "is-active": E.active, "is-speaking": E.active && E.characterId === y.value, "is-supporting": !E.active }]]),
+          ref: (Q) => g(b(R), Q),
+          class: we(["portrait-stage__canvas", [`portrait-stage__canvas--${R.position}`, { "is-active": R.active, "is-speaking": R.active && R.characterId === y.value, "is-supporting": !R.active }]]),
           "data-reduced-motion": t.reducedMotion ? "true" : "false",
           "data-state": "present",
-          "data-speaking": E.characterId === y.value ? "true" : "false",
-          "data-speaking-glow": E.active && E.characterId === y.value ? "true" : "false",
-          "data-focus": E.active ? "primary" : "supporting",
-          "data-character-id": E.characterId,
+          "data-speaking": R.characterId === y.value ? "true" : "false",
+          "data-speaking-glow": R.active && R.characterId === y.value ? "true" : "false",
+          "data-focus": R.active ? "primary" : "supporting",
+          "data-character-id": R.characterId,
           width: "512",
           height: "768",
-          style: Ua({ transform: `translateX(-50%) translateX(${E.active ? 0 : (t.focus?.[0] ?? 0.5) < 0.5 ? "0.45rem" : "-0.45rem"}) scale(${E.scale})` })
-        }, null, 14, K3)) : (z(), U("span", Y3))
+          style: Ua({ transform: `translateX(-50%) translateX(${R.active ? 0 : (t.focus?.[0] ?? 0.5) < 0.5 ? "0.45rem" : "-0.45rem"}) scale(${R.scale})` })
+        }, null, 14, K3)) : (U(), F("span", Y3))
       ], 10, W3))), 128)),
-      (z(!0), U(me, null, Ee(l.value, (E) => (z(), U("div", {
-        key: `exiting:${h(E)}`,
+      (U(!0), F(me, null, Ee(l.value, (R) => (U(), F("div", {
+        key: `exiting:${b(R)}`,
         class: "portrait-slot portrait-slot--exiting",
-        "data-slot": E.position
+        "data-slot": R.position
       }, [
-        f("canvas", {
+        p("canvas", {
           ref_for: !0,
-          ref: (q) => g(`${h(E)}:exiting`, q),
-          class: we(["portrait-stage__canvas", [`portrait-stage__canvas--${E.position}`, "is-exiting"]]),
+          ref: (j) => g(`${b(R)}:exiting`, j),
+          class: we(["portrait-stage__canvas", [`portrait-stage__canvas--${R.position}`, "is-exiting"]]),
           "data-reduced-motion": t.reducedMotion ? "true" : "false",
           "data-state": "exiting",
           "data-speaking": "false",
           "data-focus": "supporting",
-          "data-character-id": E.characterId,
+          "data-character-id": R.characterId,
           width: "512",
           height: "768",
-          style: Ua({ transform: `translateX(-50%) scale(${E.scale})` })
+          style: Ua({ transform: `translateX(-50%) scale(${R.scale})` })
         }, null, 14, Q3)
       ], 8, X3))), 128))
     ], 12, G3));
   }
-}), Kf = (t, e) => {
+}), Kp = (t, e) => {
   const a = t.__vccOpts || t;
   for (const [i, o] of e)
     a[i] = o;
   return a;
-}, t4 = /* @__PURE__ */ Kf(e4, [["__scopeId", "data-v-226ec7ae"]]), a4 = [{ sceneIds: ["canon_recap_9_14"], provenance: { classification: "canon_paraphrase", scope: "canon_recap", claimIds: ["canon.9-14.corporism-context"], sourceIds: ["source.official.canto-ix.9-14", "source.wiki.canto-ix-part-i.172275"], note: "Short zh-CN event paraphrase; not a quotation or transcript replacement." } }, { sceneIds: ["canon_recap_9_18"], provenance: { classification: "canon_paraphrase", scope: "canon_recap", claimIds: ["canon.9-18.first-appearance"], sourceIds: ["source.official.canto-ix.9-18", "source.wiki.canto-ix-part-i.172275", "source.wiki.albina.173286"], note: "Reviewed zh-CN first-appearance paraphrase covering the complete Albina-related 9-18 event sequence." } }, { sceneIds: ["canon_recap_9_37"], provenance: { classification: "canon_paraphrase", scope: "canon_recap", claimIds: ["canon.9-37.encounter-and-method"], sourceIds: ["source.official.canto-ix.9-37", "source.wiki.canto-ix-part-iii.177602", "source.wiki.albina.173286"], note: "Reviewed zh-CN 9-37 arrival, method and friendship paraphrase; player boundary text is kept out of this canon scene." } }, { sceneIds: ["canon_recap_albina_fascia"], provenance: { classification: "canon_paraphrase", scope: "canon_recap", claimIds: ["canon.profile.identity", "canon.appearance.prosthetic-body", "canon.appearance.armor-and-fascia", "canon.personality.fascia-attachment", "canon.personality.social-and-ambition", "canon.story.pre-canto-fascia"], sourceIds: ["source.official.canto-ix.9-18", "source.official.canto-ix.9-37", "source.official.canto-ix.9-43", "source.wiki.albina-enemy.175660", "source.wiki.albina.173286", "source.wiki.callisto.177757", "source.wiki.canto-ix-part-i.172275", "source.wiki.canto-ix-part-iii.177602", "source.wiki.house-of-spiders.177075"], note: "Atomic profile, appearance, personality and pre-Canto facts rendered from the reviewed claim ledger; no source dialogue is reproduced." } }, { sceneIds: ["canon_recap_9_37_battle"], provenance: { classification: "canon_paraphrase", scope: "canon_recap", claimIds: ["canon.9-37.escalation"], sourceIds: ["source.official.canto-ix.9-37", "source.official.canto-ix.9-43", "source.wiki.canto-ix-part-iii.177602"], note: "Reviewed 9-37 ending boundary contrasted with the later 9-43 outcome." } }, { sceneIds: ["canon_recap_9_43_outcome"], provenance: { classification: "canon_paraphrase", scope: "canon_recap", claimIds: ["canon.9-43.sign-awakening", "canon.9-43.outcome"], sourceIds: ["source.official.canto-ix.9-43", "source.wiki.canto-ix-part-iii.177602", "source.wiki.albina.173286"], note: "Reviewed 9-43 pressure, Sign awakening and outcome paraphrase; the AU boundary remains a separate scene." } }, { sceneIds: ["opening_001"], provenance: { classification: "AU_extension", scope: "AU_boundary", claimIds: ["boundary.routes-and-player.are-AU"], sourceIds: ["source.official.canto-ix.9-43", "source.project.legacy-v1.0.44"], note: "Explicit continuity boundary shown before the player selects an author-created AU route." } }, { sceneIds: ["white_canvas_001", "white_canvas_002", "white_canvas_003", "white_canvas_004", "white_canvas_005", "white_canvas_006", "white_canvas_007", "white_canvas_008", "white_canvas_009", "white_canvas_010", "white_canvas_011", "white_canvas_012", "white_canvas_013", "white_canvas_014", "white_canvas_015", "white_canvas_ending_gate", "white_canvas_ending_true", "white_canvas_ending_normal", "white_canvas_ending_bad", "golden_bough_001", "golden_bough_002", "golden_bough_003", "golden_bough_004", "golden_bough_005", "golden_bough_006", "golden_bough_007", "golden_bough_008", "golden_bough_009", "golden_bough_010", "golden_bough_011", "golden_bough_012", "golden_bough_013", "golden_bough_014", "golden_bough_015", "golden_bough_rebuild_ending_gate", "golden_bough_rebuild_ending_true", "golden_bough_rebuild_ending_normal", "golden_bough_rebuild_ending_bad", "ring_conspiracy_001", "ring_conspiracy_002", "ring_conspiracy_003", "ring_conspiracy_004", "ring_conspiracy_005", "ring_conspiracy_006", "ring_conspiracy_007", "ring_conspiracy_008", "ring_conspiracy_009", "ring_conspiracy_010", "ring_conspiracy_011", "ring_conspiracy_012", "ring_conspiracy_013", "ring_conspiracy_014", "ring_conspiracy_015", "ring_conspiracy_ending_gate", "ring_conspiracy_ending_true", "ring_conspiracy_ending_normal", "ring_conspiracy_ending_bad"], provenance: { classification: "AU_extension", scope: "route", claimIds: ["boundary.routes-and-player.are-AU"], sourceIds: ["source.official.canto-ix.9-43", "source.project.legacy-v1.0.44"], note: "Project-authored route content after the explicit 9-43 divergence; never source-game canon." } }], i4 = {
+}, t4 = /* @__PURE__ */ Kp(e4, [["__scopeId", "data-v-226ec7ae"]]), a4 = [{ sceneIds: ["canon_recap_9_14"], provenance: { classification: "canon_paraphrase", scope: "canon_recap", claimIds: ["canon.9-14.corporism-context"], sourceIds: ["source.official.canto-ix.9-14", "source.wiki.canto-ix-part-i.172275"], note: "Short zh-CN event paraphrase; not a quotation or transcript replacement." } }, { sceneIds: ["canon_recap_9_18"], provenance: { classification: "canon_paraphrase", scope: "canon_recap", claimIds: ["canon.9-18.first-appearance"], sourceIds: ["source.official.canto-ix.9-18", "source.wiki.canto-ix-part-i.172275", "source.wiki.albina.173286"], note: "Reviewed zh-CN first-appearance paraphrase covering the complete Albina-related 9-18 event sequence." } }, { sceneIds: ["canon_recap_9_37"], provenance: { classification: "canon_paraphrase", scope: "canon_recap", claimIds: ["canon.9-37.encounter-and-method"], sourceIds: ["source.official.canto-ix.9-37", "source.wiki.canto-ix-part-iii.177602", "source.wiki.albina.173286"], note: "Reviewed zh-CN 9-37 arrival, method and friendship paraphrase; player boundary text is kept out of this canon scene." } }, { sceneIds: ["canon_recap_albina_fascia"], provenance: { classification: "canon_paraphrase", scope: "canon_recap", claimIds: ["canon.profile.identity", "canon.appearance.prosthetic-body", "canon.appearance.armor-and-fascia", "canon.personality.fascia-attachment", "canon.personality.social-and-ambition", "canon.story.pre-canto-fascia"], sourceIds: ["source.official.canto-ix.9-18", "source.official.canto-ix.9-37", "source.official.canto-ix.9-43", "source.wiki.albina-enemy.175660", "source.wiki.albina.173286", "source.wiki.callisto.177757", "source.wiki.canto-ix-part-i.172275", "source.wiki.canto-ix-part-iii.177602", "source.wiki.house-of-spiders.177075"], note: "Atomic profile, appearance, personality and pre-Canto facts rendered from the reviewed claim ledger; no source dialogue is reproduced." } }, { sceneIds: ["canon_recap_9_37_battle"], provenance: { classification: "canon_paraphrase", scope: "canon_recap", claimIds: ["canon.9-37.escalation"], sourceIds: ["source.official.canto-ix.9-37", "source.official.canto-ix.9-43", "source.wiki.canto-ix-part-iii.177602"], note: "Reviewed 9-37 ending boundary contrasted with the later 9-43 outcome." } }, { sceneIds: ["canon_recap_9_43_outcome"], provenance: { classification: "canon_paraphrase", scope: "canon_recap", claimIds: ["canon.9-43.sign-awakening", "canon.9-43.outcome"], sourceIds: ["source.official.canto-ix.9-43", "source.wiki.canto-ix-part-iii.177602", "source.wiki.albina.173286"], note: "Reviewed 9-43 pressure, Sign awakening and outcome paraphrase; the AU boundary remains a separate scene." } }, { sceneIds: ["opening_001"], provenance: { classification: "AU_extension", scope: "AU_boundary", claimIds: ["boundary.routes-and-player.are-AU"], sourceIds: ["source.official.canto-ix.9-43", "source.project.legacy-v1.0.44"], note: "Explicit continuity boundary shown before the player selects an author-created AU route." } }, { sceneIds: ["white_canvas_001", "white_canvas_002", "white_canvas_003", "white_canvas_004", "white_canvas_005", "white_canvas_006", "white_canvas_007", "white_canvas_008", "white_canvas_009", "white_canvas_010", "white_canvas_011", "white_canvas_012", "white_canvas_013", "white_canvas_014", "white_canvas_015", "white_canvas_ending_gate", "white_canvas_ending_true", "white_canvas_ending_normal", "white_canvas_ending_bad", "golden_bough_001", "golden_bough_002", "golden_bough_003", "golden_bough_004", "golden_bough_005", "golden_bough_006", "golden_bough_007", "golden_bough_008", "golden_bough_009", "golden_bough_010", "golden_bough_011", "golden_bough_012", "golden_bough_013", "golden_bough_014", "golden_bough_015", "golden_bough_rebuild_ending_gate", "golden_bough_rebuild_ending_true", "golden_bough_rebuild_ending_normal", "golden_bough_rebuild_ending_bad", "ring_conspiracy_001", "ring_conspiracy_002", "ring_conspiracy_003", "ring_conspiracy_004", "ring_conspiracy_005", "ring_conspiracy_006", "ring_conspiracy_007", "ring_conspiracy_008", "ring_conspiracy_009", "ring_conspiracy_010", "ring_conspiracy_011", "ring_conspiracy_012", "ring_conspiracy_013", "ring_conspiracy_014", "ring_conspiracy_015", "ring_conspiracy_ending_gate", "ring_conspiracy_ending_true", "ring_conspiracy_ending_normal", "ring_conspiracy_ending_bad"], provenance: { classification: "AU_extension", scope: "route", claimIds: ["boundary.routes-and-player.are-AU"], sourceIds: ["source.official.canto-ix.9-43", "source.project.legacy-v1.0.44"], note: "Project-authored route content after the explicit 9-43 divergence; never source-game canon." } }], i4 = {
   entries: a4
 }, o4 = i4, n4 = new Map(
   o4.entries.flatMap((t) => t.sceneIds.map((e) => [e, t.provenance]))
@@ -11209,28 +11209,28 @@ function s4(t) {
   return e ? e.scope === "canon_recap" ? "canon" : e.scope === "AU_boundary" ? "au-boundary" : "au-route" : t.startsWith("canon_") || t.startsWith("canon-") ? "canon" : t.startsWith("opening_") ? "au-boundary" : "au-route";
 }
 Ie(["enter", "establish", "dialogue", "choice", "exit"]);
-const Yf = W({
-  characterId: R().min(1),
+const Yp = W({
+  characterId: E().min(1),
   position: Ie(["far-left", "left", "center", "right", "far-right"]),
-  point: pi([X().min(0).max(1), X().min(0).max(1)]),
+  point: fi([X().min(0).max(1), X().min(0).max(1)]),
   active: At()
-}).strict(), Xf = W({
-  sourceCharacterId: R().min(1),
-  targetCharacterId: R().min(1),
-  source: pi([X().min(0).max(1), X().min(0).max(1)]),
-  target: pi([X().min(0).max(1), X().min(0).max(1)]),
+}).strict(), Xp = W({
+  sourceCharacterId: E().min(1),
+  targetCharacterId: E().min(1),
+  source: fi([X().min(0).max(1), X().min(0).max(1)]),
+  target: fi([X().min(0).max(1), X().min(0).max(1)]),
   strength: X().min(0).max(1)
 }).strict(), c4 = W({
-  sceneId: R().min(1),
-  route: R().min(1),
-  tone: R().min(1),
-  focusCharacterId: R().min(1).optional(),
-  portraitAnchors: oe(Yf),
-  relationshipRibbon: Xf.optional(),
-  focus: pi([X().min(0).max(1), X().min(0).max(1)]),
+  sceneId: E().min(1),
+  route: E().min(1),
+  tone: E().min(1),
+  focusCharacterId: E().min(1).optional(),
+  portraitAnchors: oe(Yp),
+  relationshipRibbon: Xp.optional(),
+  focus: fi([X().min(0).max(1), X().min(0).max(1)]),
   camera: W({
     mode: Ie(["establish", "focus", "drift", "impact", "ending"]),
-    offset: pi([X().min(-0.18).max(0.18), X().min(-0.18).max(0.18)]),
+    offset: fi([X().min(-0.18).max(0.18), X().min(-0.18).max(0.18)]),
     zoom: X().min(0.9).max(1.2),
     damping: X().min(0.01).max(1),
     shake: X().min(0).max(1)
@@ -11243,8 +11243,8 @@ const Yf = W({
     exitMs: X().int().positive().max(4e3)
   }).strict(),
   palette: W({
-    primary: R().regex(/^#[0-9a-f]{6}$/iu),
-    shadow: R().regex(/^#[0-9a-f]{6}$/iu)
+    primary: E().regex(/^#[0-9a-f]{6}$/iu),
+    shadow: E().regex(/^#[0-9a-f]{6}$/iu)
   }).strict(),
   /**
    * Route and tone resolve to a compact director-facing style preset. The
@@ -11258,7 +11258,7 @@ const Yf = W({
     bloom: X().min(0).max(1),
     motifDensity: X().min(0).max(1)
   }).strict()
-}).strict(), Qf = {
+}).strict(), Qp = {
   "far-left": [0.22, 0.43],
   left: [0.34, 0.43],
   center: [0.5, 0.42],
@@ -11266,10 +11266,10 @@ const Yf = W({
   "far-right": [0.78, 0.43]
 };
 function d4(t) {
-  return t.map((e) => Yf.parse({
+  return t.map((e) => Yp.parse({
     characterId: e.characterId,
     position: e.position,
-    point: Qf[e.position],
+    point: Qp[e.position],
     active: e.active
   }));
 }
@@ -11277,7 +11277,7 @@ function l4(t, e) {
   const a = t.find((n) => n.characterId === e && n.active), i = t.find((n) => n.characterId !== a?.characterId);
   if (!a || !i) return;
   const o = Math.abs(a.point[0] - i.point[0]);
-  return Xf.parse({
+  return Xp.parse({
     sourceCharacterId: i.characterId,
     targetCharacterId: a.characterId,
     source: i.point,
@@ -11293,11 +11293,11 @@ const Ml = {
 function u4(t, e) {
   return e ? "ending" : t === "threat" ? "impact" : t === "quiet" ? "focus" : t === "rain" || t === "gallery" ? "drift" : "establish";
 }
-function p4(t, e, a) {
+function f4(t, e, a) {
   return a ? { profile: "ending", parallax: 0.22, grain: 0.04, bloom: 0.76, motifDensity: 0.88 } : e === "threat" ? { profile: "threat", parallax: 0.58, grain: 0.42, bloom: 0.67, motifDensity: 0.74 } : e === "gallery" ? { profile: "gallery", parallax: 0.44, grain: 0.16, bloom: 0.72, motifDensity: 0.62 } : e === "rain" ? { profile: "rain", parallax: 0.68, grain: 0.28, bloom: 0.38, motifDensity: 0.86 } : t === "golden_bough_rebuild" ? { profile: "golden", parallax: 0.52, grain: 0.22, bloom: 0.64, motifDensity: 0.74 } : { profile: "canvas", parallax: 0.4, grain: 0.19, bloom: 0.46, motifDensity: 0.54 };
 }
 function eh(t) {
-  const e = t.portraits.find((l) => l.active), a = d4(t.portraits), i = e ? Qf[e.position] : [0.5, 0.42], o = l4(a, e?.characterId), n = t.route ?? "white_canvas", r = t.tone.toLowerCase(), s = u4(r, !!t.ending), c = s === "impact" ? 1.055 : s === "focus" ? 1.035 : s === "ending" ? 1.02 : 1, d = [Number(((i[0] - 0.5) * -0.12).toFixed(4)), Number(((i[1] - 0.42) * -0.08).toFixed(4))];
+  const e = t.portraits.find((l) => l.active), a = d4(t.portraits), i = e ? Qp[e.position] : [0.5, 0.42], o = l4(a, e?.characterId), n = t.route ?? "white_canvas", r = t.tone.toLowerCase(), s = u4(r, !!t.ending), c = s === "impact" ? 1.055 : s === "focus" ? 1.035 : s === "ending" ? 1.02 : 1, d = [Number(((i[0] - 0.5) * -0.12).toFixed(4)), Number(((i[1] - 0.42) * -0.08).toFixed(4))];
   return c4.parse({
     sceneId: t.id,
     route: n,
@@ -11321,10 +11321,10 @@ function eh(t) {
       exitMs: s === "ending" ? 1500 : 520
     },
     palette: Ml[n] ?? Ml.white_canvas,
-    visual: p4(n, r, !!t.ending)
+    visual: f4(n, r, !!t.ending)
   });
 }
-const f4 = Ie([
+const p4 = Ie([
   "atmosphere",
   "dialogue-emphasis",
   "choice-confirm",
@@ -11335,17 +11335,17 @@ const f4 = Ie([
   "ending"
 ]);
 W({
-  route: R().min(1),
-  sceneId: R().min(1),
+  route: E().min(1),
+  sceneId: E().min(1),
   chapter: X().int().nonnegative().optional(),
-  tone: R().min(1).optional(),
-  focus: pi([X().min(0).max(1), X().min(0).max(1)]).optional()
+  tone: E().min(1).optional(),
+  focus: fi([X().min(0).max(1), X().min(0).max(1)]).optional()
 }).strict();
 const h4 = W({
-  kind: f4,
+  kind: p4,
   intensity: X().min(0).max(1).optional(),
   durationMs: X().int().positive().max(4e3).optional(),
-  focus: pi([X().min(0).max(1), X().min(0).max(1)]).optional()
+  focus: fi([X().min(0).max(1), X().min(0).max(1)]).optional()
 }).strict(), b4 = {
   rain: "atmosphere",
   quiet: "dialogue-emphasis",
@@ -11391,37 +11391,37 @@ function _4(t) {
     shake: 0,
     focus: [...d]
   };
-  const u = (p) => {
-    const h = r && a < s ? r : m4(a, e), y = Wi(a / e.timing.enterMs, 0, 1), v = v4(y), g = a < i ? n * (1 - (a - o) / Math.max(1, i - o)) : 0, I = h === "enter" ? 1 + (e.camera.zoom - 1) * v : e.camera.zoom, A = h === "establish" ? Math.sin(a * 17e-4) * 6e-3 : 0;
-    if (p > 0) {
-      const S = g4(e.camera.damping), T = 1 - Math.exp(-Math.min(p, 250) / S);
+  const u = (f) => {
+    const b = r && a < s ? r : m4(a, e), y = Wi(a / e.timing.enterMs, 0, 1), v = v4(y), g = a < i ? n * (1 - (a - o) / Math.max(1, i - o)) : 0, k = b === "enter" ? 1 + (e.camera.zoom - 1) * v : e.camera.zoom, I = b === "establish" ? Math.sin(a * 17e-4) * 6e-3 : 0;
+    if (f > 0) {
+      const S = g4(e.camera.damping), T = 1 - Math.exp(-Math.min(f, 250) / S);
       d = [
         d[0] + (c[0] - d[0]) * T,
         d[1] + (c[1] - d[1]) * T
       ];
     }
     return l = {
-      phase: h,
+      phase: b,
       progress: Wi(a / (e.timing.enterMs + e.timing.establishMs), 0, 1),
-      offset: [e.camera.offset[0] + A, e.camera.offset[1]],
-      zoom: I + g * 0.012,
+      offset: [e.camera.offset[0] + I, e.camera.offset[1]],
+      zoom: k + g * 0.012,
       shake: Math.max(e.camera.shake * g, g * 0.025),
       focus: [...d]
     }, l;
   };
   return {
-    setScene(p) {
-      e = p, a = 0, i = 0, o = 0, n = 0, r = void 0, s = 0, c = [...p.focus], u(0);
+    setScene(f) {
+      e = f, a = 0, i = 0, o = 0, n = 0, r = void 0, s = 0, c = [...f.focus], u(0);
     },
-    setFocus(p) {
-      c = [Wi(p[0], 0, 1), Wi(p[1], 0, 1)], u(0);
+    setFocus(f) {
+      c = [Wi(f[0], 0, 1), Wi(f[1], 0, 1)], u(0);
     },
-    trigger(p, h, y) {
-      const v = p === "choice-confirm" ? "choice" : p === "route-transition" || p === "chapter-transition" || p === "cg-reveal" || p === "ending" ? "exit" : l.phase;
-      (v === "choice" || v === "exit") && (r = v, s = Math.max(s, a + y)), o = a, n = Math.max(n, Wi(h, 0, 1)), i = Math.max(i, a + y), u(0);
+    trigger(f, b, y) {
+      const v = f === "choice-confirm" ? "choice" : f === "route-transition" || f === "chapter-transition" || f === "cg-reveal" || f === "ending" ? "exit" : l.phase;
+      (v === "choice" || v === "exit") && (r = v, s = Math.max(s, a + y)), o = a, n = Math.max(n, Wi(b, 0, 1)), i = Math.max(i, a + y), u(0);
     },
-    advance(p) {
-      return a += Math.max(0, Math.min(p, 250)), u(p);
+    advance(f) {
+      return a += Math.max(0, Math.min(f, 250)), u(f);
     },
     snapshot() {
       return l;
@@ -11544,76 +11544,76 @@ function ih(t, e) {
   a.style.display = "block", a.style.width = "100%", a.style.height = "100%", a.dataset.vfxQuality = "static", a.dataset.vfxQualityLevel = "static", a.dataset.vfxAdaptive = "idle", a.dataset.vfxEffect = "static-svg-fallback", a.dataset.vfxRoute = e.route, a.dataset.vfxSceneId = e.sceneId, a.dataset.vfxPaused = "true", a.dataset.vfxTransition = "idle", a.dataset.vfxTransitionPhase = "idle", a.dataset.vfxCameraPhase = "static", a.dataset.vfxCameraZoom = "1", a.dataset.vfxCameraShake = "0", a.dataset.vfxVisualProfile = "canvas", a.setAttribute("aria-hidden", "true");
   let i, o, n, r = [0.5, 0.44], s = 0.6, c, d;
   const l = (g = e.route) => {
-    const I = Math.max(1, t.clientWidth || 1e3), A = Math.max(1, t.clientHeight || 600);
-    a.width = I, a.height = A;
+    const k = Math.max(1, t.clientWidth || 1e3), I = Math.max(1, t.clientHeight || 600);
+    a.width = k, a.height = I;
     const S = a.getContext("2d");
     if (!S) return;
-    S.clearRect(0, 0, I, A);
-    const [T, k, Z, P, O, E] = _a[g] ?? _a.white_canvas, q = i ?? { profile: "canvas", bloom: 0.46, motifDensity: 0.54 }, ee = (L) => Math.round(Math.min(1, Math.max(0, L)) * 255), J = (L) => `rgba(${ee(T)}, ${ee(k)}, ${ee(Z)}, ${L})`, re = (L) => `rgba(${ee(P)}, ${ee(O)}, ${ee(E)}, ${L})`, de = S.createRadialGradient(I * 0.5, A * 0.44, 0, I * 0.5, A * 0.44, Math.max(I, A) * 0.52);
-    de.addColorStop(0, J(0.27)), de.addColorStop(0.65, re(0.14)), de.addColorStop(1, "rgba(2, 3, 8, 0)"), S.fillStyle = de, S.fillRect(0, 0, I, A), S.strokeStyle = J(0.4), S.lineWidth = Math.max(1, I / 900), S.beginPath(), S.ellipse(I * 0.5, A * 0.44, I * 0.22, A * 0.28, 0, 0, Math.PI * 2), S.stroke();
-    const se = [I * 0.5, A * 0.44], te = Math.round(8 + q.motifDensity * 18);
-    if (S.save(), S.globalCompositeOperation = "screen", S.lineWidth = Math.max(1, I / 1500), S.strokeStyle = J(0.13 + q.bloom * 0.18), q.profile === "rain")
-      for (let L = 0; L < te; L += 1) {
-        const K = L * 97 % I + I * 0.02, ue = L * 151 % Math.max(1, A * 0.72) - A * 0.1;
-        S.beginPath(), S.moveTo(K, ue), S.lineTo(K - I * 0.045, ue + A * (0.13 + L % 4 * 0.018)), S.stroke();
+    S.clearRect(0, 0, k, I);
+    const [T, x, D, V, P, R] = _a[g] ?? _a.white_canvas, j = i ?? { profile: "canvas", bloom: 0.46, motifDensity: 0.54 }, Q = (Z) => Math.round(Math.min(1, Math.max(0, Z)) * 255), B = (Z) => `rgba(${Q(T)}, ${Q(x)}, ${Q(D)}, ${Z})`, re = (Z) => `rgba(${Q(V)}, ${Q(P)}, ${Q(R)}, ${Z})`, de = S.createRadialGradient(k * 0.5, I * 0.44, 0, k * 0.5, I * 0.44, Math.max(k, I) * 0.52);
+    de.addColorStop(0, B(0.27)), de.addColorStop(0.65, re(0.14)), de.addColorStop(1, "rgba(2, 3, 8, 0)"), S.fillStyle = de, S.fillRect(0, 0, k, I), S.strokeStyle = B(0.4), S.lineWidth = Math.max(1, k / 900), S.beginPath(), S.ellipse(k * 0.5, I * 0.44, k * 0.22, I * 0.28, 0, 0, Math.PI * 2), S.stroke();
+    const se = [k * 0.5, I * 0.44], te = Math.round(8 + j.motifDensity * 18);
+    if (S.save(), S.globalCompositeOperation = "screen", S.lineWidth = Math.max(1, k / 1500), S.strokeStyle = B(0.13 + j.bloom * 0.18), j.profile === "rain")
+      for (let Z = 0; Z < te; Z += 1) {
+        const K = Z * 97 % k + k * 0.02, ue = Z * 151 % Math.max(1, I * 0.72) - I * 0.1;
+        S.beginPath(), S.moveTo(K, ue), S.lineTo(K - k * 0.045, ue + I * (0.13 + Z % 4 * 0.018)), S.stroke();
       }
-    else if (q.profile === "golden" || q.profile === "ending")
-      for (let L = 0; L < te; L += 1) {
-        const K = L / te * Math.PI * 2, ue = Math.min(I, A) * (0.19 + L % 3 * 0.045);
+    else if (j.profile === "golden" || j.profile === "ending")
+      for (let Z = 0; Z < te; Z += 1) {
+        const K = Z / te * Math.PI * 2, ue = Math.min(k, I) * (0.19 + Z % 3 * 0.045);
         S.beginPath(), S.arc(se[0], se[1], ue, K, K + 0.32), S.stroke();
       }
     else
-      for (let L = 0; L < te; L += 1) {
-        const K = L * 131 % I + I * 0.01, ue = L * 71 % Math.max(1, A * 0.8) + A * 0.04, Te = Math.max(1, I * (14e-4 + L % 4 * 5e-4));
-        S.fillStyle = J(0.08 + q.bloom * 0.16), S.fillRect(K, ue, Te, Te);
+      for (let Z = 0; Z < te; Z += 1) {
+        const K = Z * 131 % k + k * 0.01, ue = Z * 71 % Math.max(1, I * 0.8) + I * 0.04, Te = Math.max(1, k * (14e-4 + Z % 4 * 5e-4));
+        S.fillStyle = B(0.08 + j.bloom * 0.16), S.fillRect(K, ue, Te, Te);
       }
     if (o) {
-      const L = [o.source[0] * I, o.source[1] * A], K = [o.target[0] * I, o.target[1] * A], ue = (L[0] + K[0]) * 0.5, Te = Math.min(L[1], K[1]) - A * (0.1 + o.strength * 0.13);
-      S.lineWidth = Math.max(1, I / 1100) * (0.7 + o.strength), S.strokeStyle = J(0.16 + q.bloom * 0.18), S.beginPath(), S.moveTo(L[0], L[1]), S.quadraticCurveTo(ue, Te, K[0], K[1]), S.stroke();
+      const Z = [o.source[0] * k, o.source[1] * I], K = [o.target[0] * k, o.target[1] * I], ue = (Z[0] + K[0]) * 0.5, Te = Math.min(Z[1], K[1]) - I * (0.1 + o.strength * 0.13);
+      S.lineWidth = Math.max(1, k / 1100) * (0.7 + o.strength), S.strokeStyle = B(0.16 + j.bloom * 0.18), S.beginPath(), S.moveTo(Z[0], Z[1]), S.quadraticCurveTo(ue, Te, K[0], K[1]), S.stroke();
     }
     if (n) {
-      const L = [r[0] * I, r[1] * A], K = n === "impact";
-      K && (S.strokeStyle = re(0.26), S.lineWidth = Math.max(1, I / 1200), S.beginPath(), S.ellipse(L[0] - I * 0.012 * s, L[1], I * 0.12 * s, A * 0.16 * s, 0, 0, Math.PI * 2), S.stroke()), S.strokeStyle = K ? "rgba(245, 112, 88, .38)" : J(0.28), S.lineWidth = Math.max(1, I / 1300), S.beginPath(), S.ellipse(L[0], L[1], I * 0.12 * s, A * 0.16 * s, 0, 0, Math.PI * 2), S.stroke();
+      const Z = [r[0] * k, r[1] * I], K = n === "impact";
+      K && (S.strokeStyle = re(0.26), S.lineWidth = Math.max(1, k / 1200), S.beginPath(), S.ellipse(Z[0] - k * 0.012 * s, Z[1], k * 0.12 * s, I * 0.16 * s, 0, 0, Math.PI * 2), S.stroke()), S.strokeStyle = K ? "rgba(245, 112, 88, .38)" : B(0.28), S.lineWidth = Math.max(1, k / 1300), S.beginPath(), S.ellipse(Z[0], Z[1], k * 0.12 * s, I * 0.16 * s, 0, 0, Math.PI * 2), S.stroke();
     }
     S.restore();
   };
   a.parentNode || t.append(a);
-  let u = e.route, p = !1;
-  const h = (g = u) => {
-    if (!p)
+  let u = e.route, f = !1;
+  const b = (g = u) => {
+    if (!f)
       try {
         l(g);
-      } catch (I) {
-        console.error("Albina static VFX fallback failed to paint", I);
+      } catch (k) {
+        console.error("Albina static VFX fallback failed to paint", k);
       }
-  }, y = typeof ResizeObserver < "u" ? new ResizeObserver(() => h()) : void 0;
-  y?.observe(t), h();
+  }, y = typeof ResizeObserver < "u" ? new ResizeObserver(() => b()) : void 0;
+  y?.observe(t), b();
   const v = (g) => {
     g ? a.dataset.vfxTone = g : delete a.dataset.vfxTone;
-    const I = Xs(g);
-    I && (a.dataset.vfxCue = I.kind);
+    const k = Xs(g);
+    k && (a.dataset.vfxCue = k.kind);
   };
   return v(e.tone), {
     canvas: a,
     quality: "static",
     setSceneState(g) {
-      if (p) return;
-      const I = u !== g.route, A = u;
-      u = g.route, a.dataset.vfxSceneId = g.sceneId, a.dataset.vfxRoute = g.route, a.dataset.vfxCameraPhase = "static", a.dataset.vfxCameraZoom = "1", a.dataset.vfxCameraShake = "0", g.focus && (r = g.focus, a.dataset.vfxCameraFocus = `${g.focus[0]},${g.focus[1]}`), v(g.tone), I && (c = _a[A]?.slice(0, 3) ?? _a.white_canvas.slice(0, 3), d = _a[g.route]?.slice(0, 3) ?? _a.white_canvas.slice(0, 3), a.dataset.vfxPaletteFrom = c.join(","), a.dataset.vfxPaletteTo = d.join(","), a.dataset.vfxPaletteMix = "1", a.dataset.vfxTransition = "static"), h(g.route);
+      if (f) return;
+      const k = u !== g.route, I = u;
+      u = g.route, a.dataset.vfxSceneId = g.sceneId, a.dataset.vfxRoute = g.route, a.dataset.vfxCameraPhase = "static", a.dataset.vfxCameraZoom = "1", a.dataset.vfxCameraShake = "0", g.focus && (r = g.focus, a.dataset.vfxCameraFocus = `${g.focus[0]},${g.focus[1]}`), v(g.tone), k && (c = _a[I]?.slice(0, 3) ?? _a.white_canvas.slice(0, 3), d = _a[g.route]?.slice(0, 3) ?? _a.white_canvas.slice(0, 3), a.dataset.vfxPaletteFrom = c.join(","), a.dataset.vfxPaletteTo = d.join(","), a.dataset.vfxPaletteMix = "1", a.dataset.vfxTransition = "static"), b(g.route);
     },
     setPresentation(g) {
-      p || (i = g.visual, o = g.relationshipRibbon, r = g.focus, a.dataset.vfxVisualProfile = g.visual.profile, a.dataset.vfxRibbon = o ? "active" : "idle", o ? (a.dataset.vfxRibbonSource = o.sourceCharacterId, a.dataset.vfxRibbonTarget = o.targetCharacterId) : (delete a.dataset.vfxRibbonSource, delete a.dataset.vfxRibbonTarget), a.dataset.vfxCameraPhase = "static", a.dataset.vfxCameraMode = g.camera.mode, a.dataset.vfxCameraZoom = String(g.camera.zoom), a.dataset.vfxCameraShake = String(g.camera.shake), a.dataset.vfxCameraFocus = `${g.focus[0]},${g.focus[1]}`, h(u));
+      f || (i = g.visual, o = g.relationshipRibbon, r = g.focus, a.dataset.vfxVisualProfile = g.visual.profile, a.dataset.vfxRibbon = o ? "active" : "idle", o ? (a.dataset.vfxRibbonSource = o.sourceCharacterId, a.dataset.vfxRibbonTarget = o.targetCharacterId) : (delete a.dataset.vfxRibbonSource, delete a.dataset.vfxRibbonTarget), a.dataset.vfxCameraPhase = "static", a.dataset.vfxCameraMode = g.camera.mode, a.dataset.vfxCameraZoom = String(g.camera.zoom), a.dataset.vfxCameraShake = String(g.camera.shake), a.dataset.vfxCameraFocus = `${g.focus[0]},${g.focus[1]}`, b(u));
     },
     emit(g) {
-      p || (n = g.kind === "impact" || g.kind === "choice-confirm" || g.kind === "cg-reveal" ? g.kind : void 0, s = g.intensity ?? th(g.kind).intensity, a.dataset.vfxCue = g.kind, a.dataset.vfxRipple = n ? "static" : "idle", a.dataset.vfxRippleIntensity = s.toFixed(3), a.dataset.vfxAberration = g.kind === "impact" || g.kind === "cg-reveal" ? "static" : "idle", a.dataset.vfxTransition = g.kind === "route-transition" || g.kind === "chapter-transition" || g.kind === "cg-reveal" || g.kind === "ending" ? "static" : "idle", a.dataset.vfxTransitionPhase = "idle", h());
+      f || (n = g.kind === "impact" || g.kind === "choice-confirm" || g.kind === "cg-reveal" ? g.kind : void 0, s = g.intensity ?? th(g.kind).intensity, a.dataset.vfxCue = g.kind, a.dataset.vfxRipple = n ? "static" : "idle", a.dataset.vfxRippleIntensity = s.toFixed(3), a.dataset.vfxAberration = g.kind === "impact" || g.kind === "cg-reveal" ? "static" : "idle", a.dataset.vfxTransition = g.kind === "route-transition" || g.kind === "chapter-transition" || g.kind === "cg-reveal" || g.kind === "ending" ? "static" : "idle", a.dataset.vfxTransitionPhase = "idle", b());
     },
-    setState(g, I) {
-      p || (u = g, a.dataset.vfxRoute = g, a.dataset.vfxSceneId = I, h(g));
+    setState(g, k) {
+      f || (u = g, a.dataset.vfxRoute = g, a.dataset.vfxSceneId = k, b(g));
     },
     // Vue owns the canvas node when the static fallback is rendered by the
     // component. Disposal only clears its drawing surface; unmount removes it.
     dispose() {
-      p || (p = !0, y?.disconnect(), a.getContext("2d")?.clearRect(0, 0, a.width, a.height), a.dataset.vfxContext = "disposed");
+      f || (f = !0, y?.disconnect(), a.getContext("2d")?.clearRect(0, 0, a.width, a.height), a.dataset.vfxContext = "disposed");
     }
   };
 }
@@ -11944,15 +11944,15 @@ function L4(t, e, a) {
     antialias: i === "high",
     powerPreference: "high-performance",
     preserveDrawingBuffer: n
-  }), s = new t.Scene(), c = new t.OrthographicCamera(-1, 1, 1, -1, 0, 2), d = new t.Clock(), l = w4(t), u = R4(t, l), p = M4(t, l, o.refraction), h = j4(t, o.particles, l), y = V4(t, o.motifs, l), v = z4(t, o.branches), g = E4(t, l), I = O4(t, l), A = $4(t, l), S = I.material.uniforms.uRippleMode;
+  }), s = new t.Scene(), c = new t.OrthographicCamera(-1, 1, 1, -1, 0, 2), d = new t.Clock(), l = w4(t), u = R4(t, l), f = M4(t, l, o.refraction), b = j4(t, o.particles, l), y = V4(t, o.motifs, l), v = z4(t, o.branches), g = E4(t, l), k = O4(t, l), I = $4(t, l), S = k.material.uniforms.uRippleMode;
   if (!S) throw new Error("Focus ripple mode uniform was not created.");
-  const T = A.material.uniforms.uTransition, k = A.material.uniforms.uTransitionMode;
+  const T = I.material.uniforms.uTransition, x = I.material.uniforms.uTransitionMode;
   if (!T) throw new Error("Transition veil uniform was not created.");
-  if (!k) throw new Error("Transition veil mode uniform was not created.");
-  let Z = 1, P = !1, O = !1, E, q = 0, ee = 1, J = 0, re = !1, de = a.route, se = a.sceneId, te = a.chapter, L = a.presentation ?? eh({ id: se, route: de, tone: a.tone ?? "quiet", portraits: [], ending: void 0 });
-  const K = _4(L);
+  if (!x) throw new Error("Transition veil mode uniform was not created.");
+  let D = 1, V = !1, P = !1, R, j = 0, Q = 1, B = 0, re = !1, de = a.route, se = a.sceneId, te = a.chapter, Z = a.presentation ?? eh({ id: se, route: de, tone: a.tone ?? "quiet", portraits: [], ending: void 0 });
+  const K = _4(Z);
   let ue = i, Te, Se;
-  const Ae = A.material.uniforms.uPaletteFrom, Me = A.material.uniforms.uPaletteTo, ke = A.material.uniforms.uPaletteMix;
+  const Ae = I.material.uniforms.uPaletteFrom, Me = I.material.uniforms.uPaletteTo, ke = I.material.uniforms.uPaletteMix;
   if (!Ae || !Me || !ke) throw new Error("Transition veil palette uniforms were not created.");
   const st = U4(F4, q4, () => {
     if (ue === "high") ue = "medium";
@@ -11962,93 +11962,93 @@ function L4(t, e, a) {
   });
   c.position.z = 1, s.add(
     u.mesh,
-    p.mesh,
-    h.points,
+    f.mesh,
+    b.points,
     v.lines,
     y.points,
     g.mesh,
-    I.mesh,
-    A.mesh
-  ), g.mesh.visible = l.uRibbonStrength.value > 0, I.mesh.visible = !1, A.mesh.renderOrder = 3, A.mesh.visible = !1, v.lines.visible = Ul(a.route), r.setClearColor(0, 0), r.setPixelRatio(Math.min(globalThis.devicePixelRatio || 1, o.pixelRatio)), r.domElement.dataset.vfxQuality = i, r.domElement.dataset.vfxQualityLevel = i, r.domElement.dataset.vfxAdaptive = "idle", r.domElement.dataset.vfxEffect = "mirror-rain-bough-refraction", r.domElement.dataset.vfxSceneId = se, r.domElement.dataset.vfxRoute = de, r.domElement.dataset.vfxPaused = "true", r.domElement.dataset.vfxCameraPhase = "enter", r.domElement.dataset.vfxCameraProgress = "0", r.domElement.dataset.vfxCameraZoom = "1", r.domElement.dataset.vfxCameraShake = "0", r.domElement.dataset.vfxVisualProfile = L.visual.profile, r.domElement.dataset.vfxLayerStack = "stage,atmosphere,particles,motifs,ribbon,ripple,transition", r.domElement.dataset.vfxRibbon = L.relationshipRibbon ? "active" : "idle", r.domElement.dataset.vfxRipple = "idle", L.relationshipRibbon && (r.domElement.dataset.vfxRibbonSource = L.relationshipRibbon.sourceCharacterId, r.domElement.dataset.vfxRibbonTarget = L.relationshipRibbon.targetCharacterId), r.domElement.setAttribute("aria-hidden", "true"), l.uFocus.value.set(L.focus[0], L.focus[1]), $l(l, L), r.domElement.dataset.vfxCameraFocus = `${L.focus[0]},${L.focus[1]}`, r.domElement.dataset.vfxCameraMode = L.camera.mode, e.append(r.domElement), zl(t, a.route, [u.material, p.material, h.material, y.material, v.material, g.material, I.material, A.material]);
+    k.mesh,
+    I.mesh
+  ), g.mesh.visible = l.uRibbonStrength.value > 0, k.mesh.visible = !1, I.mesh.renderOrder = 3, I.mesh.visible = !1, v.lines.visible = Ul(a.route), r.setClearColor(0, 0), r.setPixelRatio(Math.min(globalThis.devicePixelRatio || 1, o.pixelRatio)), r.domElement.dataset.vfxQuality = i, r.domElement.dataset.vfxQualityLevel = i, r.domElement.dataset.vfxAdaptive = "idle", r.domElement.dataset.vfxEffect = "mirror-rain-bough-refraction", r.domElement.dataset.vfxSceneId = se, r.domElement.dataset.vfxRoute = de, r.domElement.dataset.vfxPaused = "true", r.domElement.dataset.vfxCameraPhase = "enter", r.domElement.dataset.vfxCameraProgress = "0", r.domElement.dataset.vfxCameraZoom = "1", r.domElement.dataset.vfxCameraShake = "0", r.domElement.dataset.vfxVisualProfile = Z.visual.profile, r.domElement.dataset.vfxLayerStack = "stage,atmosphere,particles,motifs,ribbon,ripple,transition", r.domElement.dataset.vfxRibbon = Z.relationshipRibbon ? "active" : "idle", r.domElement.dataset.vfxRipple = "idle", Z.relationshipRibbon && (r.domElement.dataset.vfxRibbonSource = Z.relationshipRibbon.sourceCharacterId, r.domElement.dataset.vfxRibbonTarget = Z.relationshipRibbon.targetCharacterId), r.domElement.setAttribute("aria-hidden", "true"), l.uFocus.value.set(Z.focus[0], Z.focus[1]), $l(l, Z), r.domElement.dataset.vfxCameraFocus = `${Z.focus[0]},${Z.focus[1]}`, r.domElement.dataset.vfxCameraMode = Z.camera.mode, e.append(r.domElement), zl(t, a.route, [u.material, f.material, b.material, y.material, v.material, g.material, k.material, I.material]);
   const $e = () => {
-    const B = Math.max(e.clientWidth, 1), Y = Math.max(e.clientHeight, 1);
-    r.setSize(B, Y, !1), l.uResolution.value.set(B * r.getPixelRatio(), Y * r.getPixelRatio());
+    const H = Math.max(e.clientWidth, 1), Y = Math.max(e.clientHeight, 1);
+    r.setSize(H, Y, !1), l.uResolution.value.set(H * r.getPixelRatio(), Y * r.getPixelRatio());
   }, Tt = typeof ResizeObserver < "u" ? new ResizeObserver($e) : void 0;
   Tt?.observe(e), $e();
-  const ct = (B) => {
-    B.preventDefault(), re = !0, r.domElement.dataset.vfxContext = "lost", C(), a.onContextLost();
+  const ct = (H) => {
+    H.preventDefault(), re = !0, r.domElement.dataset.vfxContext = "lost", C(), a.onContextLost();
   };
   r.domElement.addEventListener("webglcontextlost", ct);
   let wt = !0, dt;
   const Qt = () => {
-    const B = typeof document < "u" && document.hidden, Y = wt && !B;
+    const H = typeof document < "u" && document.hidden, Y = wt && !H;
     r.domElement.dataset.vfxViewport = Y ? "visible" : "hidden", Y ? ae() : C();
   };
-  typeof IntersectionObserver < "u" && (dt = new IntersectionObserver((B) => {
-    wt = B.some((Y) => Y.isIntersecting), Qt();
+  typeof IntersectionObserver < "u" && (dt = new IntersectionObserver((H) => {
+    wt = H.some((Y) => Y.isIntersecting), Qt();
   }, { threshold: 0.02 }), dt.observe(e));
   const _ = () => {
-    E !== void 0 && globalThis.clearTimeout(E), E = void 0, J = 0;
-  }, x = (B, Y, ce) => {
-    A.mesh.visible && Y < J || (_(), J = Y, q = d.getElapsedTime(), ee = Math.max(1, B), A.mesh.visible = !0, T.value = 0, k.value = S4(ce), r.domElement.dataset.vfxTransition = "active", r.domElement.dataset.vfxTransitionKind = ce, r.domElement.dataset.vfxTransitionPhase = "enter", E = globalThis.setTimeout(() => {
-      E = void 0, P || (r.domElement.dataset.vfxTransition = "idle", r.domElement.dataset.vfxTransitionPhase = "idle", A.mesh.visible = !1, T.value = 0);
-    }, B));
-  }, j = () => typeof globalThis.performance < "u" && typeof globalThis.performance.now == "function" ? globalThis.performance.now() : Date.now(), G = {}, D = (B, Y) => {
-    G[B] !== Y && (G[B] = Y, r.domElement.dataset[B] = Y);
-  }, H = () => {
-    if (P) return;
-    const B = Math.min(d.getDelta(), 0.25), Y = d.getElapsedTime(), ce = K.advance(B * 1e3);
-    if (Z = Math.max(0, Z - 0.018), l.uTime.value = Y, l.uPulse.value = Math.max(Z, ce.shake), l.uCameraOffset.value.set(ce.offset[0], ce.offset[1]), l.uCameraZoom.value = ce.zoom, l.uCameraShake.value = ce.shake, l.uSceneProgress.value = ce.progress, l.uFocus.value.set(ce.focus[0], ce.focus[1]), l.uAberration.value = l.uAberration.value < 4e-3 ? 0 : l.uAberration.value * Math.exp(-B / 0.09), l.uRipple.value = Math.max(0, Z - 0.08) * (I.mesh.visible ? 1 : 0), l.uRipple.value < 0.015 && (I.mesh.visible = !1, r.domElement.dataset.vfxRipple = "idle"), D("vfxCameraPhase", ce.phase), D("vfxCameraProgress", ce.progress.toFixed(3)), D("vfxCameraZoom", ce.zoom.toFixed(4)), D("vfxCameraShake", ce.shake.toFixed(4)), D("vfxCameraFocus", `${ce.focus[0].toFixed(4)},${ce.focus[1].toFixed(4)}`), A.mesh.visible) {
-      const ye = Math.min(1, Math.max(0, (Y - q) * 1e3 / ee)), Re = Math.sin(Math.PI * ye);
-      T.value = Re, Te && Se ? (Ae.value.copy(Te), Me.value.copy(Se), ke.value = Math.min(1, ye * 2)) : ke.value = 0, D("vfxTransitionPhase", ye < 0.24 ? "enter" : ye < 0.72 ? "hold" : "exit");
+    R !== void 0 && globalThis.clearTimeout(R), R = void 0, B = 0;
+  }, A = (H, Y, ce) => {
+    I.mesh.visible && Y < B || (_(), B = Y, j = d.getElapsedTime(), Q = Math.max(1, H), I.mesh.visible = !0, T.value = 0, x.value = S4(ce), r.domElement.dataset.vfxTransition = "active", r.domElement.dataset.vfxTransitionKind = ce, r.domElement.dataset.vfxTransitionPhase = "enter", R = globalThis.setTimeout(() => {
+      R = void 0, V || (r.domElement.dataset.vfxTransition = "idle", r.domElement.dataset.vfxTransitionPhase = "idle", I.mesh.visible = !1, T.value = 0);
+    }, H));
+  }, z = () => typeof globalThis.performance < "u" && typeof globalThis.performance.now == "function" ? globalThis.performance.now() : Date.now(), G = {}, N = (H, Y) => {
+    G[H] !== Y && (G[H] = Y, r.domElement.dataset[H] = Y);
+  }, J = () => {
+    if (V) return;
+    const H = Math.min(d.getDelta(), 0.25), Y = d.getElapsedTime(), ce = K.advance(H * 1e3);
+    if (D = Math.max(0, D - 0.018), l.uTime.value = Y, l.uPulse.value = Math.max(D, ce.shake), l.uCameraOffset.value.set(ce.offset[0], ce.offset[1]), l.uCameraZoom.value = ce.zoom, l.uCameraShake.value = ce.shake, l.uSceneProgress.value = ce.progress, l.uFocus.value.set(ce.focus[0], ce.focus[1]), l.uAberration.value = l.uAberration.value < 4e-3 ? 0 : l.uAberration.value * Math.exp(-H / 0.09), l.uRipple.value = Math.max(0, D - 0.08) * (k.mesh.visible ? 1 : 0), l.uRipple.value < 0.015 && (k.mesh.visible = !1, r.domElement.dataset.vfxRipple = "idle"), N("vfxCameraPhase", ce.phase), N("vfxCameraProgress", ce.progress.toFixed(3)), N("vfxCameraZoom", ce.zoom.toFixed(4)), N("vfxCameraShake", ce.shake.toFixed(4)), N("vfxCameraFocus", `${ce.focus[0].toFixed(4)},${ce.focus[1].toFixed(4)}`), I.mesh.visible) {
+      const ye = Math.min(1, Math.max(0, (Y - j) * 1e3 / Q)), Re = Math.sin(Math.PI * ye);
+      T.value = Re, Te && Se ? (Ae.value.copy(Te), Me.value.copy(Se), ke.value = Math.min(1, ye * 2)) : ke.value = 0, N("vfxTransitionPhase", ye < 0.24 ? "enter" : ye < 0.72 ? "hold" : "exit");
     }
-    v.lines.rotation.z = Math.sin(Y * 0.07) * 0.018, st.tick(j()), r.render(s, c);
+    v.lines.rotation.z = Math.sin(Y * 0.07) * 0.018, st.tick(z()), r.render(s, c);
   }, ae = () => {
-    P || re || typeof document < "u" && document.hidden || O || (O = !0, d.start(), r.setAnimationLoop(H), r.domElement.dataset.vfxPaused = "false");
+    V || re || typeof document < "u" && document.hidden || P || (P = !0, d.start(), r.setAnimationLoop(J), r.domElement.dataset.vfxPaused = "false");
   }, C = () => {
-    O && (O = !1, d.stop(), r.setAnimationLoop(null), r.domElement.dataset.vfxPaused = "true");
-  }, V = () => {
+    P && (P = !1, d.stop(), r.setAnimationLoop(null), r.domElement.dataset.vfxPaused = "true");
+  }, O = () => {
     Qt();
   };
-  typeof document < "u" && document.addEventListener("visibilitychange", V);
-  const m = (B) => {
-    const Y = A.mesh.visible ? jl(J, B) : jl(0, B);
+  typeof document < "u" && document.addEventListener("visibilitychange", O);
+  const m = (H) => {
+    const Y = I.mesh.visible ? jl(B, H) : jl(0, H);
     if (!Y) return;
     K.setFocus(Y.focus), l.uAberration.value = Y.kind === "impact" ? Y.intensity * 0.85 : Y.kind === "cg-reveal" ? Y.intensity * 0.4 : 0;
     const ce = Y.kind === "impact" || Y.kind === "choice-confirm" || Y.kind === "cg-reveal";
-    I.mesh.visible = ce, l.uRipple.value = ce ? Y.intensity : 0, S.value = Y.kind === "impact" ? 2 : Y.kind === "cg-reveal" ? 1 : 0, r.domElement.dataset.vfxRipple = ce ? "active" : "idle", K.trigger(Y.kind, Y.intensity, Y.durationMs), Z = Math.max(Z, Y.intensity), r.domElement.dataset.vfxCue = Y.kind, x(Y.durationMs, Y.priority, Y.kind);
-  }, Q = (B) => {
-    L = B, K.setScene(B), $l(l, B), g.mesh.visible = l.uRibbonStrength.value > 0, r.domElement.dataset.vfxVisualProfile = B.visual.profile, r.domElement.dataset.vfxRibbon = B.relationshipRibbon ? "active" : "idle", B.relationshipRibbon ? (r.domElement.dataset.vfxRibbonSource = B.relationshipRibbon.sourceCharacterId, r.domElement.dataset.vfxRibbonTarget = B.relationshipRibbon.targetCharacterId) : (delete r.domElement.dataset.vfxRibbonSource, delete r.domElement.dataset.vfxRibbonTarget), r.domElement.dataset.vfxCameraFocus = `${B.focus[0]},${B.focus[1]}`, r.domElement.dataset.vfxCameraMode = B.camera.mode;
-  }, ie = (B) => {
+    k.mesh.visible = ce, l.uRipple.value = ce ? Y.intensity : 0, S.value = Y.kind === "impact" ? 2 : Y.kind === "cg-reveal" ? 1 : 0, r.domElement.dataset.vfxRipple = ce ? "active" : "idle", K.trigger(Y.kind, Y.intensity, Y.durationMs), D = Math.max(D, Y.intensity), r.domElement.dataset.vfxCue = Y.kind, A(Y.durationMs, Y.priority, Y.kind);
+  }, ee = (H) => {
+    Z = H, K.setScene(H), $l(l, H), g.mesh.visible = l.uRibbonStrength.value > 0, r.domElement.dataset.vfxVisualProfile = H.visual.profile, r.domElement.dataset.vfxRibbon = H.relationshipRibbon ? "active" : "idle", H.relationshipRibbon ? (r.domElement.dataset.vfxRibbonSource = H.relationshipRibbon.sourceCharacterId, r.domElement.dataset.vfxRibbonTarget = H.relationshipRibbon.targetCharacterId) : (delete r.domElement.dataset.vfxRibbonSource, delete r.domElement.dataset.vfxRibbonTarget), r.domElement.dataset.vfxCameraFocus = `${H.focus[0]},${H.focus[1]}`, r.domElement.dataset.vfxCameraMode = H.camera.mode;
+  }, ie = (H) => {
     const Y = de;
-    if (zl(t, B.route, [u.material, p.material, h.material, y.material, v.material, g.material, I.material, A.material]), v.lines.visible = Ul(B.route), de = B.route, se = B.sceneId, te = B.chapter, Y !== B.route)
-      Te = gs(t, Y), Se = gs(t, B.route), ke.value = 0;
+    if (zl(t, H.route, [u.material, f.material, b.material, y.material, v.material, g.material, k.material, I.material]), v.lines.visible = Ul(H.route), de = H.route, se = H.sceneId, te = H.chapter, Y !== H.route)
+      Te = gs(t, Y), Se = gs(t, H.route), ke.value = 0;
     else {
       Te = void 0, Se = void 0, ke.value = 0;
-      const ce = gs(t, B.route);
+      const ce = gs(t, H.route);
       Ae.value.copy(ce), Me.value.copy(ce);
     }
-    if (r.domElement.dataset.vfxSceneId = se, r.domElement.dataset.vfxRoute = de, B.tone) {
-      r.domElement.dataset.vfxTone = B.tone;
-      const ce = Xs(B.tone);
+    if (r.domElement.dataset.vfxSceneId = se, r.domElement.dataset.vfxRoute = de, H.tone) {
+      r.domElement.dataset.vfxTone = H.tone;
+      const ce = Xs(H.tone);
       ce && m(ce);
     } else delete r.domElement.dataset.vfxTone;
   };
   if (a.tone) {
-    const B = Xs(a.tone);
-    B && m(B);
+    const H = Xs(a.tone);
+    H && m(H);
   }
   return Qt(), {
     canvas: r.domElement,
     quality: i,
     setSceneState: ie,
-    setPresentation: Q,
+    setPresentation: ee,
     emit: m,
-    setState(B, Y) {
-      ie({ route: B, sceneId: Y, ...te !== void 0 ? { chapter: te } : {} });
+    setState(H, Y) {
+      ie({ route: H, sceneId: Y, ...te !== void 0 ? { chapter: te } : {} });
     },
     dispose() {
-      P || (P = !0, _(), Tt?.disconnect(), dt?.disconnect(), typeof document < "u" && document.removeEventListener("visibilitychange", V), C(), r.domElement.removeEventListener("webglcontextlost", ct), r.domElement.dataset.vfxContext = "disposed", u.geometry.dispose(), u.material.dispose(), p.geometry.dispose(), p.material.dispose(), A.geometry.dispose(), A.material.dispose(), h.geometry.dispose(), h.material.dispose(), y.geometry.dispose(), y.material.dispose(), g.geometry.dispose(), g.material.dispose(), I.geometry.dispose(), I.material.dispose(), v.geometry.dispose(), v.material.dispose(), r.dispose(), r.forceContextLoss(), r.domElement.remove());
+      V || (V = !0, _(), Tt?.disconnect(), dt?.disconnect(), typeof document < "u" && document.removeEventListener("visibilitychange", O), C(), r.domElement.removeEventListener("webglcontextlost", ct), r.domElement.dataset.vfxContext = "disposed", u.geometry.dispose(), u.material.dispose(), f.geometry.dispose(), f.material.dispose(), I.geometry.dispose(), I.material.dispose(), b.geometry.dispose(), b.material.dispose(), y.geometry.dispose(), y.material.dispose(), g.geometry.dispose(), g.material.dispose(), k.geometry.dispose(), k.material.dispose(), v.geometry.dispose(), v.material.dispose(), r.dispose(), r.forceContextLoss(), r.domElement.remove());
     }
   };
 }
@@ -12111,51 +12111,51 @@ const H4 = ["data-vfx-mode", "data-vfx-adaptive", "data-vfx-quality-level", "dat
       white_canvas: "White Canvas",
       golden_bough_rebuild: "Golden Bough Rebuild",
       ring_conspiracy: "Ring Conspiracy"
-    })[i.value] ?? "White Canvas"), p = ve(() => y4(i.value, a.sceneId)), h = /* @__PURE__ */ ne(!1), y = /* @__PURE__ */ ne("atmosphere"), v = /* @__PURE__ */ ne(0);
-    let g, I;
-    function A() {
+    })[i.value] ?? "White Canvas"), f = ve(() => y4(i.value, a.sceneId)), b = /* @__PURE__ */ ne(!1), y = /* @__PURE__ */ ne("atmosphere"), v = /* @__PURE__ */ ne(0);
+    let g, k;
+    function I() {
       if (a.reducedMotion) {
-        h.value = !1, g && clearTimeout(g), g = void 0;
+        b.value = !1, g && clearTimeout(g), g = void 0;
         return;
       }
-      h.value = !0, g && clearTimeout(g), g = setTimeout(() => {
-        h.value = !1;
+      b.value = !0, g && clearTimeout(g), g = setTimeout(() => {
+        b.value = !1;
       }, 420);
     }
     function S() {
-      I && clearTimeout(I), I = void 0, y.value = "atmosphere";
+      k && clearTimeout(k), k = void 0, y.value = "atmosphere";
     }
     function T(se) {
-      I && clearTimeout(I), y.value = se.kind, v.value += 1, I = setTimeout(S, Math.max(240, se.durationMs ?? 900));
+      k && clearTimeout(k), y.value = se.kind, v.value += 1, k = setTimeout(S, Math.max(240, se.durationMs ?? 900));
     }
-    let k, Z = 0, P;
-    function O() {
-      Z += 1, r.value = !1, k?.dispose(), k = void 0;
+    let x, D = 0, V;
+    function P() {
+      D += 1, r.value = !1, x?.dispose(), x = void 0;
     }
-    function E() {
-      !o.value || k || Z < 1 || J();
+    function R() {
+      !o.value || x || D < 1 || B();
     }
-    function q() {
+    function j() {
       return !(a.reducedMotion || !o.value || typeof WebGLRenderingContext > "u");
     }
-    function ee(se) {
-      k = ih(se, { route: i.value, sceneId: a.sceneId, canvas: n.value }), k.setSceneState({ route: i.value, sceneId: a.sceneId, ...a.chapter !== void 0 ? { chapter: a.chapter } : {}, ...a.tone ? { tone: a.tone } : {}, focus: a.presentation.focus }), k.setPresentation(a.presentation), r.value = !1, s.value = "idle", c.value = "static";
+    function Q(se) {
+      x = ih(se, { route: i.value, sceneId: a.sceneId, canvas: n.value }), x.setSceneState({ route: i.value, sceneId: a.sceneId, ...a.chapter !== void 0 ? { chapter: a.chapter } : {}, ...a.tone ? { tone: a.tone } : {}, focus: a.presentation.focus }), x.setPresentation(a.presentation), r.value = !1, s.value = "idle", c.value = "static";
     }
-    async function J() {
-      const se = ++Z;
-      k?.dispose(), k = void 0, r.value = !1;
+    async function B() {
+      const se = ++D;
+      x?.dispose(), x = void 0, r.value = !1;
       const te = o.value;
       if (te) {
-        if (a.quality === "static" || !q()) {
-          ee(te);
+        if (a.quality === "static" || !j()) {
+          Q(te);
           return;
         }
         await Ne();
         try {
-          const L = await import("./three.module-BWYgh0Id.js");
-          if (se !== Z || !q() || !o.value) return;
+          const Z = await import("./three.module-BWYgh0Id.js");
+          if (se !== D || !j() || !o.value) return;
           let K;
-          if (K = L4(L, te, {
+          if (K = L4(Z, te, {
             route: i.value,
             sceneId: a.sceneId,
             ...a.chapter !== void 0 ? { chapter: a.chapter } : {},
@@ -12163,76 +12163,76 @@ const H4 = ["data-vfx-mode", "data-vfx-adaptive", "data-vfx-quality-level", "dat
             ...a.tone ? { tone: a.tone } : {},
             presentation: a.presentation,
             onContextLost: () => {
-              se !== Z || !o.value || (K?.dispose(), k === K && (k = void 0, ee(te)));
+              se !== D || !o.value || (K?.dispose(), x === K && (x = void 0, Q(te)));
             },
             onQualityDownshift: (ue) => {
-              se === Z && (s.value = "active", c.value = ue);
+              se === D && (s.value = "active", c.value = ue);
             }
-          }), se !== Z || !q()) {
+          }), se !== D || !j()) {
             K.dispose();
             return;
           }
-          k = K, r.value = !0, s.value = "idle", c.value = K.quality;
+          x = K, r.value = !0, s.value = "idle", c.value = K.quality;
         } catch {
-          se === Z && o.value && ee(o.value);
+          se === D && o.value && Q(o.value);
         }
       }
     }
     function re(se) {
       if (T(se), a.reducedMotion || a.quality === "static" || !r.value) {
-        h.value = !1, k?.emit(se);
+        b.value = !1, x?.emit(se);
         return;
       }
-      A(), k?.emit(se);
+      I(), x?.emit(se);
     }
     const de = B4(re);
     return yn(() => {
-      P = xn(window), P.addEventListener("pagehide", O), P.addEventListener("pageshow", E), J(), !a.reducedMotion && a.quality !== "static" && (window.requestIdleCallback ?? ((L) => window.setTimeout(L, 1200)))(() => {
+      V = xn(window), V.addEventListener("pagehide", P), V.addEventListener("pageshow", R), B(), !a.reducedMotion && a.quality !== "static" && (window.requestIdleCallback ?? ((Z) => window.setTimeout(Z, 1200)))(() => {
         import("./three.module-BWYgh0Id.js").catch(() => {
         });
       });
     }), ut(() => [a.reducedMotion, a.quality], ([se]) => {
-      se && (h.value = !1, g && clearTimeout(g), g = void 0), J();
-    }), ut(() => [i.value, a.sceneId, a.chapter, a.tone], ([se, te, L, K], [ue, Te, Se]) => {
-      if (a.reducedMotion && (h.value = !1, g && clearTimeout(g), g = void 0), k?.setSceneState({ route: se, sceneId: te, ...L !== void 0 ? { chapter: L } : {}, ...K ? { tone: K } : {}, focus: a.presentation.focus }), k?.setPresentation(a.presentation), de.commitScene({
+      se && (b.value = !1, g && clearTimeout(g), g = void 0), B();
+    }), ut(() => [i.value, a.sceneId, a.chapter, a.tone], ([se, te, Z, K], [ue, Te, Se]) => {
+      if (a.reducedMotion && (b.value = !1, g && clearTimeout(g), g = void 0), x?.setSceneState({ route: se, sceneId: te, ...Z !== void 0 ? { chapter: Z } : {}, ...K ? { tone: K } : {}, focus: a.presentation.focus }), x?.setPresentation(a.presentation), de.commitScene({
         route: se,
         sceneId: te,
-        ...L !== void 0 ? { chapter: L } : {},
+        ...Z !== void 0 ? { chapter: Z } : {},
         ...K ? { tone: K } : {},
         previousRoute: ue,
         previousSceneId: Te,
         ...Se !== void 0 ? { previousChapter: Se } : {}
       }), a.reducedMotion || a.quality === "static" || !r.value) {
-        h.value = !1;
+        b.value = !1;
         return;
       }
-      A();
+      I();
     }), wo(() => {
-      Z += 1, r.value = !1, P?.removeEventListener("pagehide", O), P?.removeEventListener("pageshow", E), P = void 0, g && clearTimeout(g), I && clearTimeout(I), k?.dispose(), de.dispose();
-    }), e({ emitCue: re }), (se, te) => (z(), U("aside", {
+      D += 1, r.value = !1, V?.removeEventListener("pagehide", P), V?.removeEventListener("pageshow", R), V = void 0, g && clearTimeout(g), k && clearTimeout(k), x?.dispose(), de.dispose();
+    }), e({ emitCue: re }), (se, te) => (U(), F("aside", {
       class: "scene-atmosphere",
       "aria-label": "Route atmosphere and progress",
       "data-vfx-mode": r.value ? "webgl" : d.value,
       "data-vfx-adaptive": s.value,
       "data-vfx-quality-level": c.value,
-      "data-vfx-transition": h.value ? "active" : "idle",
+      "data-vfx-transition": b.value ? "active" : "idle",
       "data-semantic-cue": y.value,
       "data-cue-nonce": v.value,
       "data-scene-id": t.sceneId,
-      "data-continuity-band": p.value.band,
-      "data-route-reached": p.value.reached,
+      "data-continuity-band": f.value.band,
+      "data-route-reached": f.value.reached,
       "data-active-route": i.value,
       "data-scene-tone": t.tone ?? "",
       "data-visual-profile": t.presentation.visual.profile
     }, [
-      f("div", {
+      p("div", {
         ref_key: "host",
         ref: o,
         class: "scene-atmosphere__webgl",
         "aria-hidden": "true",
         "data-testid": "scene-webgl"
       }, [
-        f("canvas", {
+        p("canvas", {
           ref_key: "staticCanvas",
           ref: n,
           class: "scene-atmosphere__static-canvas",
@@ -12240,11 +12240,11 @@ const H4 = ["data-vfx-mode", "data-vfx-adaptive", "data-vfx-quality-level", "dat
           style: Ua({ display: r.value ? "none" : "block" })
         }, null, 4)
       ], 512),
-      f("div", {
+      p("div", {
         class: we(["scene-atmosphere__rain", { "is-static": l.value }]),
         "aria-hidden": "true"
       }, null, 2),
-      (z(), U("svg", {
+      (U(), F("svg", {
         class: "scene-atmosphere__static-refraction",
         viewBox: "0 0 1000 600",
         preserveAspectRatio: "none",
@@ -12255,7 +12255,7 @@ const H4 = ["data-vfx-mode", "data-vfx-adaptive", "data-vfx-quality-level", "dat
       }, [...te[0] || (te[0] = [
         Gn('<defs data-v-574411d8><radialGradient id="bough-focus" cx="50%" cy="44%" r="48%" data-v-574411d8><stop offset="0" stop-color="#f5d879" stop-opacity="0" data-v-574411d8></stop><stop offset="0.38" stop-color="var(--atmo-core)" stop-opacity="0.08" data-v-574411d8></stop><stop offset="0.72" stop-color="var(--atmo-rim)" stop-opacity="0.34" data-v-574411d8></stop><stop offset="1" stop-color="#111722" stop-opacity="0" data-v-574411d8></stop></radialGradient><linearGradient id="rain-mirror" x1="0" y1="0" x2="0" y2="1" data-v-574411d8><stop offset="0.58" stop-color="#cce6f4" stop-opacity="0" data-v-574411d8></stop><stop offset="0.76" stop-color="var(--atmo-mirror)" stop-opacity="0.22" data-v-574411d8></stop><stop offset="1" stop-color="#40292a" stop-opacity="0" data-v-574411d8></stop></linearGradient></defs><ellipse cx="500" cy="264" rx="286" ry="230" fill="url(#bough-focus)" data-v-574411d8></ellipse><path d="M0 350 Q250 324 500 354 T1000 350 V600 H0Z" fill="url(#rain-mirror)" data-v-574411d8></path><g class="scene-atmosphere__static-motif" fill="none" stroke="var(--atmo-line)" stroke-opacity="0.22" data-v-574411d8><ellipse cx="500" cy="264" rx="205" ry="166" data-v-574411d8></ellipse><ellipse cx="500" cy="264" rx="258" ry="205" stroke-opacity="0.12" data-v-574411d8></ellipse></g>', 4)
       ])], 12, J4)),
-      (z(), U("svg", {
+      (U(), F("svg", {
         key: v.value,
         class: "scene-atmosphere__semantic-cue",
         viewBox: "0 0 1000 600",
@@ -12265,7 +12265,7 @@ const H4 = ["data-vfx-mode", "data-vfx-adaptive", "data-vfx-quality-level", "dat
       }, [...te[1] || (te[1] = [
         Gn('<g class="scene-atmosphere__cue-choice" data-v-574411d8><path d="M348 428h92M560 428h92M386 390l46 0M568 390l46 0" data-v-574411d8></path><path d="M404 452l28-18M596 452l-28-18" data-v-574411d8></path></g><g class="scene-atmosphere__cue-impact" data-v-574411d8><path d="M500 246v86M456 290h88M468 258l64 64M532 258l-64 64" data-v-574411d8></path><path d="M500 212v-24M500 364v24M422 290h-24M578 290h24" data-v-574411d8></path></g><g class="scene-atmosphere__cue-reveal" data-v-574411d8><rect x="318" y="126" width="364" height="328" rx="8" data-v-574411d8></rect><path d="M350 158h92M558 158h92M350 422h92M558 422h92" data-v-574411d8></path></g><g class="scene-atmosphere__cue-transition" data-v-574411d8><ellipse cx="500" cy="264" rx="186" ry="148" data-v-574411d8></ellipse><ellipse cx="500" cy="264" rx="238" ry="192" data-v-574411d8></ellipse></g>', 4)
       ])])),
-      (z(), U("svg", {
+      (U(), F("svg", {
         class: "scene-atmosphere__route",
         viewBox: "0 0 320 84",
         role: "img",
@@ -12273,110 +12273,110 @@ const H4 = ["data-vfx-mode", "data-vfx-adaptive", "data-vfx-quality-level", "dat
         "data-testid": "route-map",
         "data-route-scene": t.sceneId
       }, [
-        te[2] || (te[2] = f("title", { id: "route-map-title" }, "Route map", -1)),
-        f("desc", W4, "The selected player route is " + $(u.value) + ". Current progress: " + $(t.sceneId) + ".", 1),
-        te[3] || (te[3] = f("path", {
+        te[2] || (te[2] = p("title", { id: "route-map-title" }, "Route map", -1)),
+        p("desc", W4, "The selected player route is " + $(u.value) + ". Current progress: " + $(t.sceneId) + ".", 1),
+        te[3] || (te[3] = p("path", {
           d: "M20 42H120",
           class: "scene-atmosphere__route-line scene-atmosphere__route-leg is-traversed"
         }, null, -1)),
-        f("path", {
+        p("path", {
           d: "M120 42L218 16",
-          class: we(["scene-atmosphere__route-line", "scene-atmosphere__route-leg", { "is-traversed": p.value.reached === "golden_bough_rebuild" }])
+          class: we(["scene-atmosphere__route-line", "scene-atmosphere__route-leg", { "is-traversed": f.value.reached === "golden_bough_rebuild" }])
         }, null, 2),
-        f("path", {
+        p("path", {
           d: "M120 42L218 42",
-          class: we(["scene-atmosphere__route-line", "scene-atmosphere__route-leg", { "is-traversed": p.value.reached === "white_canvas" }])
+          class: we(["scene-atmosphere__route-line", "scene-atmosphere__route-leg", { "is-traversed": f.value.reached === "white_canvas" }])
         }, null, 2),
-        f("path", {
+        p("path", {
           d: "M120 42L218 68",
-          class: we(["scene-atmosphere__route-line", "scene-atmosphere__route-leg", { "is-traversed": p.value.reached === "ring_conspiracy" }])
+          class: we(["scene-atmosphere__route-line", "scene-atmosphere__route-leg", { "is-traversed": f.value.reached === "ring_conspiracy" }])
         }, null, 2),
-        f("circle", {
+        p("circle", {
           cx: "20",
           cy: "42",
           r: "5",
-          class: we(["scene-atmosphere__route-node", { "is-reached": p.value.canonReached }])
+          class: we(["scene-atmosphere__route-node", { "is-reached": f.value.canonReached }])
         }, null, 2),
-        f("circle", {
+        p("circle", {
           cx: "20",
           cy: "42",
           r: "2.1",
-          class: we(["scene-atmosphere__route-core", { "is-reached": p.value.canonReached }])
+          class: we(["scene-atmosphere__route-core", { "is-reached": f.value.canonReached }])
         }, null, 2),
-        f("circle", {
+        p("circle", {
           cx: "120",
           cy: "42",
           r: "5",
-          class: we(["scene-atmosphere__route-node", { "is-reached": p.value.junctionReached }])
+          class: we(["scene-atmosphere__route-node", { "is-reached": f.value.junctionReached }])
         }, null, 2),
-        f("circle", {
+        p("circle", {
           cx: "120",
           cy: "42",
           r: "2.1",
-          class: we(["scene-atmosphere__route-core", { "is-reached": p.value.junctionReached }])
+          class: we(["scene-atmosphere__route-core", { "is-reached": f.value.junctionReached }])
         }, null, 2),
-        f("circle", {
+        p("circle", {
           cx: "218",
           cy: "16",
           r: "5",
-          class: we(["scene-atmosphere__route-node", { "is-selected": p.value.selected === "golden_bough_rebuild", "is-reached": p.value.reached === "golden_bough_rebuild" }])
+          class: we(["scene-atmosphere__route-node", { "is-selected": f.value.selected === "golden_bough_rebuild", "is-reached": f.value.reached === "golden_bough_rebuild" }])
         }, null, 2),
-        f("circle", {
+        p("circle", {
           cx: "218",
           cy: "16",
           r: "2.1",
-          class: we(["scene-atmosphere__route-core", { "is-reached": p.value.reached === "golden_bough_rebuild" }])
+          class: we(["scene-atmosphere__route-core", { "is-reached": f.value.reached === "golden_bough_rebuild" }])
         }, null, 2),
-        f("circle", {
+        p("circle", {
           cx: "218",
           cy: "42",
           r: "5",
-          class: we(["scene-atmosphere__route-node", { "is-selected": p.value.selected === "white_canvas", "is-reached": p.value.reached === "white_canvas" }])
+          class: we(["scene-atmosphere__route-node", { "is-selected": f.value.selected === "white_canvas", "is-reached": f.value.reached === "white_canvas" }])
         }, null, 2),
-        f("circle", {
+        p("circle", {
           cx: "218",
           cy: "42",
           r: "2.1",
-          class: we(["scene-atmosphere__route-core", { "is-reached": p.value.reached === "white_canvas" }])
+          class: we(["scene-atmosphere__route-core", { "is-reached": f.value.reached === "white_canvas" }])
         }, null, 2),
-        f("circle", {
+        p("circle", {
           cx: "218",
           cy: "68",
           r: "5",
-          class: we(["scene-atmosphere__route-node", { "is-selected": p.value.selected === "ring_conspiracy", "is-reached": p.value.reached === "ring_conspiracy" }])
+          class: we(["scene-atmosphere__route-node", { "is-selected": f.value.selected === "ring_conspiracy", "is-reached": f.value.reached === "ring_conspiracy" }])
         }, null, 2),
-        f("circle", {
+        p("circle", {
           cx: "218",
           cy: "68",
           r: "2.1",
-          class: we(["scene-atmosphere__route-core", { "is-reached": p.value.reached === "ring_conspiracy" }])
+          class: we(["scene-atmosphere__route-core", { "is-reached": f.value.reached === "ring_conspiracy" }])
         }, null, 2),
         te[4] || (te[4] = Gn('<text x="8" y="72" data-v-574411d8>Canon</text><text x="104" y="72" data-v-574411d8>AU/IF</text><text x="230" y="20" data-v-574411d8>Rebuild</text><text x="230" y="46" data-v-574411d8>Canvas</text><text x="230" y="72" data-v-574411d8>Ring</text>', 5))
       ], 8, G4)),
-      f("p", K4, [
-        f("span", {
+      p("p", K4, [
+        p("span", {
           class: "scene-atmosphere__status-chip scene-atmosphere__status-chip--route",
           "data-route": i.value
         }, $(u.value), 9, Y4),
-        f("span", {
+        p("span", {
           class: "scene-atmosphere__status-chip scene-atmosphere__status-chip--band",
-          "data-band": p.value.band
-        }, $(p.value.branch === "canon" ? "Canon recap" : "AU / IF route"), 9, X4),
-        f("span", {
+          "data-band": f.value.band
+        }, $(f.value.branch === "canon" ? "Canon recap" : "AU / IF route"), 9, X4),
+        p("span", {
           class: "scene-atmosphere__status-chip scene-atmosphere__status-chip--junction",
-          "data-junction": p.value.junctionReached ? "reached" : "pending"
-        }, $(p.value.junctionReached ? "junction reached" : "junction pending"), 9, Q4)
+          "data-junction": f.value.junctionReached ? "reached" : "pending"
+        }, $(f.value.junctionReached ? "junction reached" : "junction pending"), 9, Q4)
       ]),
-      f("span", {
+      p("span", {
         class: "scene-atmosphere__mode",
         "data-testid": "scene-atmosphere-mode",
         role: "status",
         "aria-live": "polite",
-        "data-vfx-status": h.value ? "transitioning" : r.value ? "live" : "static"
-      }, $(h.value ? "Scene transition" : r.value ? "VFX live" : "Static composition"), 9, e9)
+        "data-vfx-status": b.value ? "transitioning" : r.value ? "live" : "static"
+      }, $(b.value ? "Scene transition" : r.value ? "VFX live" : "Static composition"), 9, e9)
     ], 8, H4));
   }
-}), a9 = /* @__PURE__ */ Kf(t9, [["__scopeId", "data-v-574411d8"]]), nh = Ie([
+}), a9 = /* @__PURE__ */ Kp(t9, [["__scopeId", "data-v-574411d8"]]), nh = Ie([
   "canon_exact",
   "canon_paraphrase",
   "supported_inference",
@@ -12402,53 +12402,53 @@ const H4 = ["data-vfx-mode", "data-vfx-adaptive", "data-vfx-quality-level", "dat
   "no-reprint",
   "project-internal"
 ]), r9 = W({
-  id: R().min(1),
+  id: E().min(1),
   kind: o9,
-  title: R().min(1),
-  url: R().url().optional(),
-  localPath: R().min(1).optional(),
-  locator: R().min(1),
-  language: R().min(1),
-  checkedAt: R().regex(/^\d{4}-\d{2}-\d{2}$/u),
+  title: E().min(1),
+  url: E().url().optional(),
+  localPath: E().min(1).optional(),
+  locator: E().min(1),
+  language: E().min(1),
+  checkedAt: E().regex(/^\d{4}-\d{2}-\d{2}$/u),
   revisionId: X().int().positive().optional(),
-  revisionTimestamp: R().min(1).optional(),
+  revisionTimestamp: E().min(1).optional(),
   redistribution: n9,
-  note: R().min(1).optional()
+  note: E().min(1).optional()
 }).strict().refine((t) => !!t.url != !!t.localPath, {
   message: "Canon source must declare exactly one of url or localPath"
 }), s9 = W({
-  sourceId: R().min(1),
-  locator: R().min(1)
+  sourceId: E().min(1),
+  locator: E().min(1)
 }).strict(), c9 = W({
-  id: R().min(1),
+  id: E().min(1),
   classification: nh,
   scope: i9,
-  statement: R().min(1),
-  recapText: R().min(1).optional(),
+  statement: E().min(1),
+  recapText: E().min(1).optional(),
   evidence: oe(s9).min(1),
-  reviewedAt: R().regex(/^\d{4}-\d{2}-\d{2}$/u),
-  rationale: R().min(1).optional(),
-  rejectionReason: R().min(1).optional()
+  reviewedAt: E().regex(/^\d{4}-\d{2}-\d{2}$/u),
+  rationale: E().min(1).optional(),
+  rejectionReason: E().min(1).optional()
 }).strict().superRefine((t, e) => {
   t.classification === "rejected" && !t.rejectionReason && e.addIssue({ code: "custom", path: ["rejectionReason"], message: "Rejected claims require a rejection reason" }), t.classification !== "rejected" && t.rejectionReason && e.addIssue({ code: "custom", path: ["rejectionReason"], message: "Only rejected claims may declare a rejection reason" });
 }), rh = W({
   classification: nh,
   scope: Ie(["canon_recap", "AU_boundary", "route"]),
-  claimIds: oe(R().min(1)).min(1),
-  sourceIds: oe(R().min(1)).min(1),
-  note: R().min(1)
+  claimIds: oe(E().min(1)).min(1),
+  sourceIds: oe(E().min(1)).min(1),
+  note: E().min(1)
 }).strict().superRefine((t, e) => {
   t.classification === "rejected" && e.addIssue({ code: "custom", path: ["classification"], message: "Rejected content cannot enter a published scene" }), t.scope === "canon_recap" && t.classification !== "canon_paraphrase" && e.addIssue({ code: "custom", path: ["classification"], message: "Canon recap scenes must be canon_paraphrase" }), t.scope !== "canon_recap" && t.classification !== "AU_extension" && e.addIssue({ code: "custom", path: ["classification"], message: "AU boundary and route scenes must be AU_extension" });
 }), d9 = W({
-  sceneIds: oe(R().min(1)).min(1),
+  sceneIds: oe(E().min(1)).min(1),
   provenance: rh
 }).strict(), l9 = W({
-  claimId: R().min(1),
-  sceneIds: oe(R().min(1)),
-  worldbookEntryIds: oe(R().min(1)),
-  cardFields: oe(R().min(1)),
+  claimId: E().min(1),
+  sceneIds: oe(E().min(1)),
+  worldbookEntryIds: oe(E().min(1)),
+  cardFields: oe(E().min(1)),
   disposition: Ie(["published", "production-constraint", "rejected"]),
-  note: R().min(1)
+  note: E().min(1)
 }).strict().superRefine((t, e) => {
   const a = t.sceneIds.length + t.worldbookEntryIds.length + t.cardFields.length;
   t.disposition !== "rejected" && a === 0 && e.addIssue({ code: "custom", path: ["sceneIds"], message: "Published claims require at least one consumer" }), t.disposition === "rejected" && a !== 0 && e.addIssue({ code: "custom", path: ["sceneIds"], message: "Rejected claims cannot have published consumers" });
@@ -12459,18 +12459,18 @@ function sh(t, e, a) {
     i.has(o.id) && t.addIssue({ code: "custom", path: [a, n, "id"], message: `Duplicate id: ${o.id}` }), i.add(o.id);
   });
 }
-W({ version: fe(1), sources: oe(r9).min(1) }).strict().superRefine((t, e) => sh(e, t.sources, "sources"));
-W({ version: fe(1), claims: oe(c9).min(1) }).strict().superRefine((t, e) => sh(e, t.claims, "claims"));
-W({ version: fe(1), entries: oe(d9).min(1) }).strict().superRefine((t, e) => {
+W({ version: pe(1), sources: oe(r9).min(1) }).strict().superRefine((t, e) => sh(e, t.sources, "sources"));
+W({ version: pe(1), claims: oe(c9).min(1) }).strict().superRefine((t, e) => sh(e, t.claims, "claims"));
+W({ version: pe(1), entries: oe(d9).min(1) }).strict().superRefine((t, e) => {
   const a = /* @__PURE__ */ new Set();
   t.entries.forEach((i, o) => i.sceneIds.forEach((n, r) => {
     a.has(n) && e.addIssue({ code: "custom", path: ["entries", o, "sceneIds", r], message: `Duplicate scene provenance: ${n}` }), a.add(n);
   }));
 });
 W({
-  version: fe(1),
-  scope: R().min(1),
-  exclusions: oe(W({ scope: R().min(1), reason: R().min(1) }).strict()),
+  version: pe(1),
+  scope: E().min(1),
+  exclusions: oe(W({ scope: E().min(1), reason: E().min(1) }).strict()),
   entries: oe(l9).min(1)
 }).strict().superRefine((t, e) => {
   const a = /* @__PURE__ */ new Set();
@@ -12478,7 +12478,7 @@ W({
     a.has(i.claimId) && e.addIssue({ code: "custom", path: ["entries", o, "claimId"], message: `Duplicate claim coverage: ${i.claimId}` }), a.add(i.claimId);
   });
 });
-const Ce = R().min(1), u9 = Ie([
+const Ce = E().min(1), u9 = Ie([
   "affectionAlbina",
   "trust",
   "danger",
@@ -12488,7 +12488,7 @@ const Ce = R().min(1), u9 = Ie([
   "reliance",
   "obsession",
   "suspicion"
-]), p9 = Ie([
+]), f9 = Ie([
   "blade",
   "boundary",
   "analysis",
@@ -12507,7 +12507,7 @@ const Ce = R().min(1), u9 = Ie([
   reliance: X().finite().optional(),
   obsession: X().finite().optional(),
   suspicion: X().finite().optional()
-}).strict(), f9 = W({
+}).strict(), p9 = W({
   blade: X().finite().optional(),
   boundary: X().finite().optional(),
   analysis: X().finite().optional(),
@@ -12521,7 +12521,7 @@ const Ce = R().min(1), u9 = Ie([
 }, b9 = W({
   values: Dr.optional(),
   relationshipVectors: dh.optional(),
-  conflictMastery: f9.optional(),
+  conflictMastery: p9.optional(),
   setFlags: oe(Ce).optional(),
   clearFlags: oe(Ce).optional(),
   unlockCg: oe(Ce).optional(),
@@ -12535,53 +12535,53 @@ const Ce = R().min(1), u9 = Ie([
   professionXp: gi(Ce, X().int().positive()).optional(),
   activateProfession: Ce.optional()
 }).strict(), lh = Nr("kind", [
-  W({ kind: fe("value"), key: u9, ...Fl }).strict(),
-  W({ kind: fe("relationship"), key: ch, ...Fl }).strict(),
-  W({ kind: fe("flag"), flag: Ce, equals: At() }).strict(),
-  W({ kind: fe("quest"), questId: Ce, status: Ie(["active", "completed"]) }).strict(),
-  W({ kind: fe("battle"), battleId: Ce, outcome: Ie(["victory", "setback"]).optional() }).strict(),
-  W({ kind: fe("item"), itemId: Ce }).strict(),
-  W({ kind: fe("equipment"), equipmentId: Ce }).strict(),
-  W({ kind: fe("outfit"), outfitId: Ce }).strict(),
-  W({ kind: fe("profession"), professionId: Ce, levelGte: X().int().positive() }).strict(),
-  W({ kind: fe("worldbook"), entryId: Ce, status: Ie(["active", "seen"]) }).strict()
+  W({ kind: pe("value"), key: u9, ...Fl }).strict(),
+  W({ kind: pe("relationship"), key: ch, ...Fl }).strict(),
+  W({ kind: pe("flag"), flag: Ce, equals: At() }).strict(),
+  W({ kind: pe("quest"), questId: Ce, status: Ie(["active", "completed"]) }).strict(),
+  W({ kind: pe("battle"), battleId: Ce, outcome: Ie(["victory", "setback"]).optional() }).strict(),
+  W({ kind: pe("item"), itemId: Ce }).strict(),
+  W({ kind: pe("equipment"), equipmentId: Ce }).strict(),
+  W({ kind: pe("outfit"), outfitId: Ce }).strict(),
+  W({ kind: pe("profession"), professionId: Ce, levelGte: X().int().positive() }).strict(),
+  W({ kind: pe("worldbook"), entryId: Ce, status: Ie(["active", "seen"]) }).strict()
 ]), m9 = W({
   id: ch,
-  label: R().min(1),
+  label: E().min(1),
   minimum: X().finite(),
   maximum: X().finite()
 }).strict().refine((t) => t.minimum < t.maximum, { message: "Relationship track minimum must be below maximum" }), v9 = W({
   id: Ce,
   route: Et,
-  label: R().min(1),
-  description: R().min(1)
+  label: E().min(1),
+  description: E().min(1)
 }).strict(), g9 = W({
   id: Ce,
   route: Et,
-  label: R().min(1),
-  description: R().min(1),
-  recommendedMastery: p9
+  label: E().min(1),
+  description: E().min(1),
+  recommendedMastery: f9
 }).strict(), _9 = W({
   id: Ce,
   route: Et.optional(),
-  label: R().min(1),
-  description: R().min(1)
+  label: E().min(1),
+  description: E().min(1)
 }).strict(), y9 = W({
   id: Ce,
   itemId: Ce,
   route: Et.optional(),
   slot: Ie(["weapon", "armor", "accessory", "tool"]),
-  label: R().min(1),
+  label: E().min(1),
   modifiers: Dr
 }).strict(), w9 = W({
   id: Ce,
   route: Et.optional(),
-  label: R().min(1),
+  label: E().min(1),
   portraitAssetId: Ce
 }).strict(), k9 = W({
   id: Ce,
   route: Et.optional(),
-  label: R().min(1),
+  label: E().min(1),
   xpThresholds: oe(X().int().nonnegative()).min(1),
   modifiersPerLevel: Dr
 }).strict().superRefine((t, e) => {
@@ -12598,8 +12598,8 @@ const Ce = R().min(1), u9 = Ie([
 }).strict(), A9 = W({
   id: Ce,
   route: Et.optional(),
-  label: R().min(1),
-  description: R().min(1),
+  label: E().min(1),
+  description: E().min(1),
   eligibility: oe(lh).min(1),
   reward: I9
 }).strict(), x9 = W({
@@ -12607,7 +12607,7 @@ const Ce = R().min(1), u9 = Ie([
   claimIds: oe(Ce),
   constant: At(),
   selective: At(),
-  content: R().min(1)
+  content: E().min(1)
 }).strict(), T9 = W({
   relationshipTracks: oe(m9),
   quests: oe(v9),
@@ -12649,37 +12649,37 @@ const P9 = T9.superRefine((t, e) => {
   kind: Ie(["true", "normal", "bad"]),
   eligibility: uh
 }).strict(), E9 = W({
-  id: R().min(1),
-  text: R().min(1),
-  nextSceneId: R().min(1),
-  resultText: R().min(1).optional(),
-  resultVoiceAssetId: R().min(1).optional(),
+  id: E().min(1),
+  text: E().min(1),
+  nextSceneId: E().min(1),
+  resultText: E().min(1).optional(),
+  resultVoiceAssetId: E().min(1).optional(),
   availability: uh.optional(),
   effects: R9
 }).strict(), O9 = W({
-  characterId: R().min(1),
-  portraitAssetId: R().min(1),
+  characterId: E().min(1),
+  portraitAssetId: E().min(1),
   position: Ie(["far-left", "left", "center", "right", "far-right"]),
   active: At(),
   scale: X().positive().finite()
 }).strict(), M9 = W({
-  version: fe(Zi),
-  id: R().min(1),
+  version: pe(Zi),
+  id: E().min(1),
   chapter: X().int().nonnegative(),
   route: Et.nullable(),
   provenance: rh,
-  locationId: R().min(1),
-  backgroundAssetId: R().min(1),
-  cgAssetId: R().min(1).optional(),
-  videoAssetId: R().min(1).optional(),
-  desktopVideoAssetId: R().min(1).optional(),
-  tone: R().min(1),
+  locationId: E().min(1),
+  backgroundAssetId: E().min(1),
+  cgAssetId: E().min(1).optional(),
+  videoAssetId: E().min(1).optional(),
+  desktopVideoAssetId: E().min(1).optional(),
+  tone: E().min(1),
   portraits: oe(O9),
-  speaker: R().min(1),
-  text: R(),
-  voiceAssetId: R().min(1).optional(),
-  bgmAssetId: R().min(1).optional(),
-  sfxAssetIds: oe(R().min(1)).optional(),
+  speaker: E().min(1),
+  text: E(),
+  voiceAssetId: E().min(1).optional(),
+  bgmAssetId: E().min(1).optional(),
+  sfxAssetIds: oe(E().min(1)).optional(),
   choices: oe(E9),
   minigame: m3.optional(),
   ending: V9.optional()
@@ -12689,41 +12689,41 @@ const P9 = T9.superRefine((t, e) => {
 function j9(t) {
   return t.startsWith("/") || t.endsWith("/") || t.includes("\\") || t.includes(":") ? !1 : t.split("/").every((e) => e.length > 0 && e !== "." && e !== "..");
 }
-const zi = R().min(1).refine(j9, {
+const zi = E().min(1).refine(j9, {
   message: "Asset paths must be relative to the canonical asset root"
-}), ph = Ie(["pie", "wisart-openai-compatible", "comfyui-local-krea2"]), fh = Ie(["gpt-image-2", "redcraft23FP8_30Krea2.safetensors", "seedance-1.5-pro", "speech-2.8-hd"]), Kc = R().regex(/^[a-z0-9][a-z0-9._-]*$/iu), hh = W({
-  cueAlias: R().regex(/^[a-z0-9][a-z0-9_]*$/u),
-  title: R().min(1),
-  creator: R().min(1),
-  isrc: R().regex(/^[A-Z]{2}[A-Z0-9]{3}\d{7}$/u),
-  sourceUrl: R().url(),
-  licenseId: fe("CC-BY-4.0"),
-  licenseUrl: fe("https://creativecommons.org/licenses/by/4.0/"),
-  attribution: R().min(1)
+}), fh = Ie(["pie", "wisart-openai-compatible", "comfyui-local-krea2"]), ph = Ie(["gpt-image-2", "redcraft23FP8_30Krea2.safetensors", "seedance-1.5-pro", "speech-2.8-hd"]), Kc = E().regex(/^[a-z0-9][a-z0-9._-]*$/iu), hh = W({
+  cueAlias: E().regex(/^[a-z0-9][a-z0-9_]*$/u),
+  title: E().min(1),
+  creator: E().min(1),
+  isrc: E().regex(/^[A-Z]{2}[A-Z0-9]{3}\d{7}$/u),
+  sourceUrl: E().url(),
+  licenseId: pe("CC-BY-4.0"),
+  licenseUrl: pe("https://creativecommons.org/licenses/by/4.0/"),
+  attribution: E().min(1)
 }).strict(), z9 = W({
-  version: fe(1),
-  projectId: fe("albina-galgame-card"),
-  packagedNotice: R().min(1),
+  version: pe(1),
+  projectId: pe("albina-galgame-card"),
+  packagedNotice: E().min(1),
   tracks: oe(hh.extend({
-    assetId: R().min(1),
+    assetId: E().min(1),
     path: zi.refine((t) => t.startsWith("audio/bgm/"), {
       message: "Licensed music paths must be inside audio/bgm"
     }),
-    sha256: R().regex(/^[a-f0-9]{64}$/u)
+    sha256: E().regex(/^[a-f0-9]{64}$/u)
   }).strict()).length(5),
   officialSoundtrack: W({
-    publisher: fe("ProjectMoon"),
-    channel: fe("ProjectMoon Official"),
-    playlistTitle: fe("LCB OST"),
-    playlistTrackCount: fe(35),
-    verifiedOn: fe("2026-07-15"),
-    bundled: fe(!1),
-    cached: fe(!1),
-    redistributionAllowed: fe(!1),
-    notice: R().min(1),
-    rightsNotice: R().min(1),
-    links: oe(W({ label: R().min(1), url: R().url() }).strict()).length(2),
-    termsUrl: fe("https://limbuscompany.com/terms-of-service/")
+    publisher: pe("ProjectMoon"),
+    channel: pe("ProjectMoon Official"),
+    playlistTitle: pe("LCB OST"),
+    playlistTrackCount: pe(35),
+    verifiedOn: pe("2026-07-15"),
+    bundled: pe(!1),
+    cached: pe(!1),
+    redistributionAllowed: pe(!1),
+    notice: E().min(1),
+    rightsNotice: E().min(1),
+    links: oe(W({ label: E().min(1), url: E().url() }).strict()).length(2),
+    termsUrl: pe("https://limbuscompany.com/terms-of-service/")
   }).strict()
 }).strict().superRefine((t, e) => {
   t.tracks.forEach((a, i) => {
@@ -12733,20 +12733,20 @@ const zi = R().min(1).refine(j9, {
   });
 }), U9 = W({
   workflowPath: zi,
-  workflowSha256: R().regex(/^[a-f0-9]{64}$/iu),
+  workflowSha256: E().regex(/^[a-f0-9]{64}$/iu),
   evidencePath: zi,
-  evidenceSha256: R().regex(/^[a-f0-9]{64}$/iu),
-  topologySha256: R().regex(/^[a-f0-9]{64}$/iu)
+  evidenceSha256: E().regex(/^[a-f0-9]{64}$/iu),
+  topologySha256: E().regex(/^[a-f0-9]{64}$/iu)
 }).strict(), F9 = W({
-  provider: ph,
-  model: fh,
+  provider: fh,
+  model: ph,
   promptVersion: Kc,
-  sourceJobHash: R().regex(/^[a-f0-9]{64}$/iu),
+  sourceJobHash: E().regex(/^[a-f0-9]{64}$/iu),
   baseline: U9.optional(),
   review: W({
-    status: fe("approved"),
-    reviewer: R().min(1),
-    reviewedAt: R().datetime()
+    status: pe("approved"),
+    reviewer: E().min(1),
+    reviewedAt: E().datetime()
   }).strict()
 }).strict().superRefine((t, e) => {
   bh(e, ["model"], t.provider, t.model);
@@ -12754,15 +12754,15 @@ const zi = R().min(1).refine(j9, {
   status: Ie(["verified", "unverified"]),
   sourceType: Ie(["model-output", "project-authored", "licensed-source", "third-party-source"]),
   redistribution: Ie(["allowed", "restricted", "unverified"]),
-  rightsBasis: R().min(1),
-  holder: R().min(1).optional(),
-  sourceUrl: R().url().optional()
+  rightsBasis: E().min(1),
+  holder: E().min(1).optional(),
+  sourceUrl: E().url().optional()
 }).strict().superRefine((t, e) => {
   t.status === "verified" && t.redistribution !== "allowed" && e.addIssue({ code: "custom", path: ["redistribution"], message: "Verified asset rights must allow redistribution" }), t.status === "verified" && !t.holder && e.addIssue({ code: "custom", path: ["holder"], message: "Verified asset rights require a holder" });
 }), Z9 = W({
-  assetId: R().min(1).optional(),
-  sha256: R().regex(/^[a-f0-9]{64}$/iu),
-  role: R().min(1)
+  assetId: E().min(1).optional(),
+  sha256: E().regex(/^[a-f0-9]{64}$/iu),
+  role: E().min(1)
 }).strict(), L9 = W({
   kind: Ie(["original", "derivative", "transcode", "conversion"]),
   processVersion: Kc,
@@ -12770,11 +12770,11 @@ const zi = R().min(1).refine(j9, {
 }).strict().superRefine((t, e) => {
   t.kind === "original" && t.inputs.length !== 0 && e.addIssue({ code: "custom", path: ["inputs"], message: "Original assets cannot declare parent inputs" }), t.kind !== "original" && t.inputs.length === 0 && e.addIssue({ code: "custom", path: ["inputs"], message: "Derived assets require at least one parent input" });
 }), N9 = W({
-  id: R().min(1),
+  id: E().min(1),
   kind: Ie(["image", "video", "audio", "json"]),
   path: zi,
-  mimeType: R().min(1).optional(),
-  sha256: R().regex(/^[a-f0-9]{64}$/i).optional(),
+  mimeType: E().min(1).optional(),
+  sha256: E().regex(/^[a-f0-9]{64}$/i).optional(),
   bytes: X().int().nonnegative().optional(),
   provenance: F9.optional(),
   rights: q9.optional(),
@@ -12783,35 +12783,35 @@ const zi = R().min(1).refine(j9, {
 }).strict().superRefine((t, e) => {
   t.path.startsWith("audio/bgm/") && !t.license && e.addIssue({ code: "custom", path: ["license"], message: "Packaged BGM requires registered license metadata" }), t.license && t.kind !== "audio" && e.addIssue({ code: "custom", path: ["license"], message: "License metadata is only supported on audio assets" });
 }), D9 = Nr("kind", [
-  W({ kind: fe("static") }).strict(),
+  W({ kind: pe("static") }).strict(),
   W({
-    kind: fe("strip"),
-    frameCount: fe(8),
+    kind: pe("strip"),
+    frameCount: pe(8),
     frameWidth: X().int().positive(),
     frameHeight: X().int().positive(),
     fps: X().positive().finite()
   }).strict()
 ]), B9 = W({
-  version: fe(Zi),
-  id: R().min(1),
-  characterId: R().min(1),
+  version: pe(Zi),
+  id: E().min(1),
+  characterId: E().min(1),
   path: zi,
   animation: D9,
-  fallbackAssetId: R().min(1).optional()
+  fallbackAssetId: E().min(1).optional()
 }).strict(), H9 = W({
-  version: fe(Zi),
-  id: R().min(1),
-  assetId: R().min(1),
+  version: pe(Zi),
+  id: E().min(1),
+  assetId: E().min(1),
   kind: Ie(["image", "image-edit", "video", "speech"]),
-  provider: ph,
-  model: fh,
+  provider: fh,
+  model: ph,
   promptVersion: Kc,
   status: Ie(["pending", "running", "completed", "failed"]),
-  contentHash: R().regex(/^[a-f0-9]{64}$/i),
-  inputAssetIds: oe(R().min(1)),
+  contentHash: E().regex(/^[a-f0-9]{64}$/i),
+  inputAssetIds: oe(E().min(1)),
   outputPath: zi,
   attempts: X().int().nonnegative(),
-  error: R().optional()
+  error: E().optional()
 }).strict().superRefine((t, e) => {
   const a = t.kind === "image-edit" ? "image" : t.kind;
   bh(e, ["model"], t.provider, t.model, a);
@@ -12821,8 +12821,8 @@ function bh(t, e, a, i, o) {
   (!n.includes(i) || !r) && t.addIssue({ code: "custom", path: e, message: `Unsupported provider/model pair: ${a}/${i}` });
 }
 const J9 = W({
-  version: fe(Zi),
-  projectId: fe("albina-galgame-card"),
+  version: pe(Zi),
+  projectId: pe("albina-galgame-card"),
   basePath: zi,
   assets: oe(N9),
   portraits: oe(B9),
@@ -12852,7 +12852,7 @@ const mh = J9.superRefine((t, e) => {
 function G9(t) {
   return mh.parse(t);
 }
-const Zl = "2.0.0-rc.2", W9 = ".";
+const Zl = "2.0.0-rc.3", W9 = ".";
 function K9(t, e) {
   if (e)
     return t.assets.find((a) => a.id === e);
@@ -13029,21 +13029,21 @@ const a8 = 2, i8 = "albina-galgame-card", o8 = "assets", n8 = /* @__PURE__ */ JS
   assets: n8,
   portraits: r8,
   mediaJobs: s8
-}, d8 = 2, l8 = "albina-galgame-card", u8 = "canon_recap_9_14", p8 = { white_canvas: "white_canvas_001", golden_bough_rebuild: "golden_bough_001", ring_conspiracy: "ring_conspiracy_001" }, f8 = /* @__PURE__ */ JSON.parse('{"relationshipTracks":[{"id":"intimacy","label":"亲密","minimum":0,"maximum":100},{"id":"reliance","label":"信赖","minimum":0,"maximum":100},{"id":"obsession","label":"执着","minimum":0,"maximum":100},{"id":"suspicion","label":"戒备","minimum":0,"maximum":100}],"quests":[{"id":"quest.white.boundary_protocol","route":"white_canvas","label":"白色画布边界协议","description":"在见证、处置权和展出决定之间建立可撤回的边界。"},{"id":"quest.golden.memory_continuity","route":"golden_bough_rebuild","label":"金枝记忆连续性","description":"在重构过程中保住称谓、选择权与法西娅的心跳锚点。"},{"id":"quest.ring.counter_contract","route":"ring_conspiracy","label":"环指反制契约","description":"保留自身条件并把敌对委托改写为可追踪的反制条款。"}],"battles":[{"id":"battle.white.gallery_pressure","route":"white_canvas","label":"画廊展出压力","description":"决定是否把阿尔比娜作为作品展出的制度性冲突。","recommendedMastery":"boundary"},{"id":"battle.golden.replacement_protocol","route":"golden_bough_rebuild","label":"替换协议冲突","description":"围绕记忆封存和替换协议发生的确定性规则冲突。","recommendedMastery":"analysis"},{"id":"battle.ring.authorship_frame","route":"ring_conspiracy","label":"署名权取景框","description":"在环指剧本、胶片和署名权之间争夺叙事控制。","recommendedMastery":"blade"}],"minigames":[{"id":"minigame.white.mirror_thread","route":"white_canvas","label":"镜面连线","description":"辨认见证、撤回与处置之间应被保留的边界连线。","puzzle":{"kind":"mirror_thread","anchors":[{"id":"witness","label":"见证","description":"在场、记录，但不替任何人作决定。"},{"id":"consent","label":"撤回权","description":"任何亲密或处置都可被当事人随时收回。"},{"id":"ownership","label":"所有权","description":"LCE 希望写进协议的占有性措辞。"}],"correctPair":["witness","consent"]},"outcomes":{"perfect":{"values":{"trust":3,"danger":-2},"relationshipVectors":{"reliance":2},"conflictMastery":{"boundary":2},"setFlags":["minigame_white_boundary_perfect"],"professionXp":{"boundary_mediator":3}},"assisted":{"values":{"trust":1,"danger":-1},"relationshipVectors":{"reliance":1},"conflictMastery":{"boundary":1},"setFlags":["minigame_white_boundary_assisted"],"professionXp":{"boundary_mediator":1}},"setback":{"values":{"danger":1},"setFlags":["minigame_white_boundary_setback"]},"skipped":{"setFlags":["minigame_white_boundary_skipped"]}}},{"id":"minigame.golden.testimony_cipher","route":"golden_bough_rebuild","label":"称谓证词解码","description":"把记忆碎片按“本人意愿优先”的顺序归还，而非替她拼成完成品。","puzzle":{"kind":"testimony_cipher","fragments":[{"id":"name","text":"先叫出她现在选择的名字。"},{"id":"consent","text":"确认由她决定哪些记忆可以留下。"},{"id":"copy","text":"拒绝把旧版本当作唯一正确答案。"}],"solutionOrder":["name","consent","copy"]},"outcomes":{"perfect":{"values":{"trust":3,"danger":-1,"artResonance":4},"relationshipVectors":{"reliance":2},"conflictMastery":{"analysis":2,"resonance":1},"setFlags":["minigame_golden_memory_perfect"],"professionXp":{"memory_surgeon":3}},"assisted":{"values":{"trust":1,"artResonance":2},"conflictMastery":{"analysis":1},"setFlags":["minigame_golden_memory_assisted"],"professionXp":{"memory_surgeon":1}},"setback":{"values":{"danger":1},"setFlags":["minigame_golden_memory_setback"]},"skipped":{"setFlags":["minigame_golden_memory_skipped"]}}},{"id":"minigame.ring.boundary_resonance","route":"ring_conspiracy","label":"反制条款共振","description":"只激活能够保留双方署名、撤回和追踪权的条款节点。","puzzle":{"kind":"boundary_resonance","nodes":[{"id":"authorship","label":"署名权"},{"id":"revocation","label":"撤回权"},{"id":"trace","label":"追踪条款"},{"id":"possession","label":"占有条款"}],"targetActiveIds":["authorship","revocation","trace"]},"outcomes":{"perfect":{"values":{"trust":2,"danger":-2,"artResonance":2,"leverage":3},"relationshipVectors":{"reliance":2},"conflictMastery":{"blade":1,"analysis":2},"setFlags":["minigame_ring_counter_clause_perfect"],"professionXp":{"ring_counterforger":3}},"assisted":{"values":{"trust":1,"danger":-1,"leverage":1},"conflictMastery":{"analysis":1},"setFlags":["minigame_ring_counter_clause_assisted"],"professionXp":{"ring_counterforger":1}},"setback":{"values":{"danger":1,"exposure":1},"setFlags":["minigame_ring_counter_clause_setback"]},"skipped":{"setFlags":["minigame_ring_counter_clause_skipped"]}}}],"items":[{"id":"item.rain_room_badge","label":"雨室观测徽记","description":"进入 AU/IF 后由前端保存的身份与见证锚点。"},{"id":"item.white.boundary_contract","route":"white_canvas","label":"边界契约钥","description":"证明处置权、撤回权和展出决定已写入权威状态。"},{"id":"item.golden.memory_anchor","route":"golden_bough_rebuild","label":"称谓锚定镜片","description":"用于稳定重构后的称谓和人格连续性。"},{"id":"item.ring.counter_signet","route":"ring_conspiracy","label":"反制环印","description":"记录玩家保留条件和反写条款的装备凭据。"}],"equipment":[{"id":"equipment.rain_room_badge","itemId":"item.rain_room_badge","slot":"accessory","label":"雨室观测徽记","modifiers":{"trust":1,"composure":2}},{"id":"equipment.white.boundary_charm","itemId":"item.white.boundary_contract","route":"white_canvas","slot":"accessory","label":"边界契约护符","modifiers":{"trust":3,"danger":-2}},{"id":"equipment.golden.memory_lens","itemId":"item.golden.memory_anchor","route":"golden_bough_rebuild","slot":"accessory","label":"称谓锚定镜片","modifiers":{"trust":2,"artResonance":4}},{"id":"equipment.ring.counter_signet","itemId":"item.ring.counter_signet","route":"ring_conspiracy","slot":"accessory","label":"反制环印","modifiers":{"danger":-3,"leverage":3}}],"professions":[{"id":"narrative_curator","label":"剧情索引师","xpThresholds":[0,8,20,36],"modifiersPerLevel":{"artResonance":1}},{"id":"boundary_mediator","route":"white_canvas","label":"边界调停者","xpThresholds":[0,8,20,36],"modifiersPerLevel":{"trust":1,"danger":-1}},{"id":"memory_surgeon","route":"golden_bough_rebuild","label":"记忆修复师","xpThresholds":[0,8,20,36],"modifiersPerLevel":{"artResonance":2}},{"id":"ring_counterforger","route":"ring_conspiracy","label":"契约反写者","xpThresholds":[0,8,20,36],"modifiersPerLevel":{"trust":1,"danger":-1,"leverage":1}}],"achievements":[{"id":"ach_au_boundary_witness","label":"AU 边界见证","description":"完成正史复盘并确认本卡路线属于原创 AU/IF。","eligibility":[{"kind":"flag","flag":"AU_boundary_acknowledged","equals":true},{"kind":"worldbook","entryId":"albina_routes_endings_au_if","status":"seen"}],"reward":{"values":{"artResonance":1},"professionXp":{"narrative_curator":2},"setFlags":["achievement_au_boundary_witness"]}},{"id":"ach_white_boundary_archivist","route":"white_canvas","label":"白厅边界档案","description":"完成边界任务并解决画廊展出压力。","eligibility":[{"kind":"quest","questId":"quest.white.boundary_protocol","status":"completed"},{"kind":"battle","battleId":"battle.white.gallery_pressure","outcome":"victory"},{"kind":"profession","professionId":"boundary_mediator","levelGte":2}],"reward":{"values":{"trust":2,"danger":-2},"professionXp":{"boundary_mediator":2},"setFlags":["achievement_white_boundary_archivist"]}},{"id":"ach_golden_memory_protocol","route":"golden_bough_rebuild","label":"重构称谓协议","description":"完成连续性任务并解决替换协议冲突。","eligibility":[{"kind":"quest","questId":"quest.golden.memory_continuity","status":"completed"},{"kind":"battle","battleId":"battle.golden.replacement_protocol","outcome":"victory"},{"kind":"profession","professionId":"memory_surgeon","levelGte":2}],"reward":{"values":{"artResonance":3},"professionXp":{"memory_surgeon":2},"setFlags":["achievement_golden_memory_protocol"]}},{"id":"ach_ring_counter_clause","route":"ring_conspiracy","label":"反写条款生效","description":"完成反制任务并夺回署名权。","eligibility":[{"kind":"quest","questId":"quest.ring.counter_contract","status":"completed"},{"kind":"battle","battleId":"battle.ring.authorship_frame","outcome":"victory"},{"kind":"profession","professionId":"ring_counterforger","levelGte":2}],"reward":{"values":{"trust":2,"danger":-2},"professionXp":{"ring_counterforger":2},"setFlags":["achievement_ring_counter_clause"]}}],"outfits":[{"id":"outfit.albina.rain","label":"雨室外套","portraitAssetId":"portrait.albina.rain"},{"id":"outfit.albina.white_canvas","route":"white_canvas","label":"白色画布装束","portraitAssetId":"portrait.albina.white-canvas"},{"id":"outfit.albina.golden_bough","route":"golden_bough_rebuild","label":"金枝重构装束","portraitAssetId":"portrait.albina.golden-bough"},{"id":"outfit.albina.ring_disguise","route":"ring_conspiracy","label":"环指潜入装束","portraitAssetId":"portrait.albina.ring-conspiracy"}],"worldbookEntries":[{"id":"albina_canon_term_corporism","claimIds":["canon.term.corporism"],"constant":false,"selective":true,"content":"Corporism 是 Canto IX 9-14 与 9-37 明确使用的环指艺术流派名称。本卡保留英文术语，避免无来源扩写其教义。"},{"id":"albina_identity_status","claimIds":["canon.profile.identity"],"constant":false,"selective":true,"content":"阿尔比娜是女性环指 Corporism 学徒、House of Spiders 成员与卡利斯托的弟子，在 Canto IX 作为敌对角色登场；韩语配音为 Kim Do-hee，9-43 后的正史状态为死亡。"},{"id":"albina_prosthetic_appearance","claimIds":["canon.appearance.prosthetic-body"],"constant":false,"selective":true,"content":"阿尔比娜使用带金色点缀的白色全身义体；浅灰色人工高马尾近似线缆，脸与关节处有分界线，黑色机械和线路在颈胸与大腿处裸露，中央结构近似骨架。她右眼黑、左眼白，前臂可展开多种医疗与切割工具。"},{"id":"albina_armor_fascia_visual","claimIds":["canon.appearance.armor-and-fascia"],"constant":false,"selective":true,"content":"白、亮黄、金色的铁处女式装甲具有长裙、尖刺头环、垂链、尖刺裙甲和绘有金色锐眼的面具。Fascia 是同色系巨剑，侧板打开后可见暗色骨架、肋骨与内脏组织。"},{"id":"fascia_body_origin","claimIds":["canon.story.pre-canto-fascia"],"constant":false,"selective":true,"content":"阿尔比娜主动切分原本肉体并将其制作成 Fascia，之后以全身义体替换身体、主要保留脑；Fascia 则缺少脑。她也曾先用自己的手臂练习如何处理创作素材。"},{"id":"albina_fascia_attachment","claimIds":["canon.personality.fascia-attachment"],"constant":false,"selective":true,"content":"阿尔比娜会与 Fascia 交谈、用他人血肉喂养它，并在它可能受损时优先保护它；她甚至会为让 Fascia 继续行动而违背同伴要求。"},{"id":"albina_social_ambition","claimIds":["canon.personality.social-and-ambition"],"constant":false,"selective":true,"content":"阿尔比娜通常平静轻声，却难以理解他人情绪；她把朋友与可用于 Fascia 的素材联系起来，并说自己因把部分脑组织交给 Fascia 而不善说谎。她敬仰卡利斯托，也希望未来成为超越师父的 Maestro。"},{"id":"canto_ix_9_14_context","claimIds":["canon.9-14.corporism-context"],"constant":false,"selective":true,"content":"9-14 展示了环指加工的人体作品、Faust 对 Corporism 的辨认和 Nursefather 留给女儿的创作指示。阿尔比娜本人没有在这一节直接出场。"},{"id":"canto_ix_9_18_first_appearance","claimIds":["canon.9-18.first-appearance"],"constant":false,"selective":true,"content":"9-18 是阿尔比娜首次直接出场。她与 Ren 接替 Shiomi Yoru 阻挡 Dante、Ryōshū、Gregor、Meursault 与 Yi Sang，为 Yoru 带走嫁接的 Golden Boughs 争取时间。战斗中装甲与 Fascia 侧板打开；她坚持让 Fascia 继续行动，Ren 出手制止，争执使罪人得以继续追赶 Yoru。"},{"id":"canto_ix_9_37_encounter","claimIds":["canon.9-37.encounter-and-method"],"constant":false,"selective":true,"content":"Callisto 派阿尔比娜迎接抵达 Corridor of the Ring 的 Sinclair、Ishmael、Faust、Hohenheim 与 Alyssa。她谈到唤醒 Fascia、用自己手臂练习素材处理和交朋友的愿望；遭到 Sinclair 拒绝后开战，并自称是 Callisto 门下的 Corporism 学徒。"},{"id":"canto_ix_9_37_escalation","claimIds":["canon.9-37.escalation"],"constant":false,"selective":true,"content":"Callisto 加入后与阿尔比娜一同压制众人。9-37 最后是 Callisto 以骨肉尖桩制住除 Alyssa 外的成员、Alyssa 以 Ardor Blossom Star 全力反击；Fascia 被毁和师徒死亡不发生在这一节。"},{"id":"canto_ix_9_43_turn_and_outcome","claimIds":["canon.9-43.sign-awakening","canon.9-43.outcome"],"constant":true,"selective":false,"content":"9-43 中 Hohenheim 突袭 Callisto 后，阿尔比娜阻止追击并谈到未来；Sinclair 完全觉醒 The Sign，显现未来版本。Faust 与 Ishmael 制造开口后，Future Sinclair 先摧毁 Fascia，再杀死阿尔比娜，并随后杀死 Callisto。"},{"id":"albina_combat_profile","claimIds":["canon.combat.story-variants","canon.combat.mechanics"],"constant":false,"selective":true,"content":"主线敌人记录包含 9-18 装甲形态、9-37 的装甲转无装甲阶段和 9-43 无装甲形态。她是 65 级、Lust 倾向、以 Bleed 为核心的 Boss；Corpus Ingredient 会转为 Artwork - Fascia 并启用强力攻击。Mirror Dungeon 与 Refracted 记录属于玩法变体，不是主线事件。"},{"id":"albina_visual_reference_lock","claimIds":["inference.visual-reference-lock"],"constant":true,"selective":false,"content":"代表正史阿尔比娜的视觉必须保留白色全身义体、右黑左白双眼、白黄金铁处女式装甲和具有骨骼内脏结构的 Fascia。路线服装变化只能作为明确标注的 AU 视觉。"},{"id":"albina_routes_endings_au_if","claimIds":["boundary.routes-and-player.are-AU"],"constant":true,"selective":false,"content":"opening_001、white_canvas、golden_bough_rebuild、ring_conspiracy、九个结局以及 {{user}} 的身份、能力和关系全部是本卡原创 AU/IF。分歧点位于 9-43 正史结果之后，不能称为原作后续或隐藏结局。"}]}'), h8 = /* @__PURE__ */ JSON.parse('[{"version":2,"id":"canon_recap_9_14","chapter":0,"route":null,"provenance":{"classification":"canon_paraphrase","scope":"canon_recap","claimIds":["canon.9-14.corporism-context"],"sourceIds":["source.official.canto-ix.9-14","source.wiki.canto-ix-part-i.172275"],"note":"Short zh-CN event paraphrase; not a quotation or transcript replacement."},"locationId":"lce_research_hallway","backgroundAssetId":"bg.lce_lab","tone":"canon-recap","portraits":[],"speaker":"正史复盘","text":"【正史中文意译·9-14 背景】在 LCE 研究区走廊，众人遭遇环指加工的人体作品。Faust 根据骨骼、肌肉与运动方式将其辨认为 Corporism，并发现 Nursefather 留给女儿的创作指示。固定转录全文没有在 9-14 直接写到 Albina；本节只提供她所属艺术流派的背景。","voiceAssetId":"voice.scene.canon_recap_9_14","bgmAssetId":"file.audio.bgm.between.two.worlds.mp3","choices":[{"id":"canon_recap_continue_9_18","text":"继续复盘 Albina 的首次登场","nextSceneId":"canon_recap_9_18","resultText":"时间推进到 9-18 的 LCE 研究区实验室。","resultVoiceAssetId":"voice.result.canon_recap_continue_9_18","effects":{"setFlags":["canon_recap_9_14_seen"]}}]},{"version":2,"id":"canon_recap_9_18","chapter":0,"route":null,"provenance":{"classification":"canon_paraphrase","scope":"canon_recap","claimIds":["canon.9-18.first-appearance"],"sourceIds":["source.official.canto-ix.9-18","source.wiki.canto-ix-part-i.172275","source.wiki.albina.173286"],"note":"Reviewed zh-CN first-appearance paraphrase covering the complete Albina-related 9-18 event sequence."},"locationId":"lce_research_lab","backgroundAssetId":"bg.lce_lab","tone":"canon-recap","portraits":[{"characterId":"albina","portraitAssetId":"portrait.albina.armored","position":"center","active":true,"scale":1}],"speaker":"正史复盘","text":"【正史中文意译·9-18 首次出场】Dante、Ryōshū、Gregor、Meursault 与 Yi Sang 在 LCE 研究区实验室追查 Golden Boughs。Albina 与 Ren 接替 Shiomi Yoru 阻挡他们，让 Yoru 接近并带走嫁接的金枝。战斗推进到两人受创后，Albina 的上半装甲与 Fascia 侧板打开，露出搏动组织；她坚持让 Fascia 继续行动，Ren 则要求服从各自师父的计划，并出手制止她。两人的争执也给了罪人继续追赶 Yoru 的机会。","voiceAssetId":"voice.scene.canon_recap_9_18","bgmAssetId":"file.audio.bgm.between.two.worlds.mp3","choices":[{"id":"canon_recap_continue_9_37","text":"继续复盘 9-37","nextSceneId":"canon_recap_9_37","resultText":"时间推进到 Operation Spider Pyre 期间的 Ring Corridor。","resultVoiceAssetId":"voice.result.canon_recap_continue_9_37","effects":{"setFlags":["canon_recap_9_18_seen"]}}]},{"version":2,"id":"canon_recap_9_37","chapter":0,"route":null,"provenance":{"classification":"canon_paraphrase","scope":"canon_recap","claimIds":["canon.9-37.encounter-and-method"],"sourceIds":["source.official.canto-ix.9-37","source.wiki.canto-ix-part-iii.177602","source.wiki.albina.173286"],"note":"Reviewed zh-CN 9-37 arrival, method and friendship paraphrase; player boundary text is kept out of this canon scene."},"locationId":"ring_corridor","backgroundAssetId":"bg.mirror_corridor","tone":"canon-recap","portraits":[{"characterId":"albina","portraitAssetId":"portrait.albina.normal","position":"center","active":true,"scale":1}],"speaker":"正史复盘","text":"【正史中文意译·9-37 相遇】Operation Spider Pyre 期间，Sinclair、Ishmael、Faust、Hohenheim 与 Alyssa 抵达 Corridor of the Ring；Callisto 派 Albina 前来“迎接”他们。她因唤醒沉睡的 Fascia 而迟到，并说明自己仍不擅长在不损坏素材的情况下完成作品，所以先用自己的手臂练习。她礼貌地请求众人与自己成为朋友，却把了解彼此与挑选 Fascia 的素材混在一起；遭到 Sinclair 拒绝后，双方开战。Albina 随后自报姓名，并说明自己是 Callisto 门下的 Corporism 学徒。","voiceAssetId":"voice.scene.canon_recap_9_37","bgmAssetId":"file.audio.bgm.between.two.worlds.mp3","choices":[{"id":"canon_recap_continue_albina_fascia","text":"核对 Albina 与 Fascia","nextSceneId":"canon_recap_albina_fascia","resultText":"复盘转向两者的身份与身体关系。","resultVoiceAssetId":"voice.result.canon_recap_continue_albina_fascia","effects":{"setFlags":["canon_recap_9_37_seen"]}}]},{"version":2,"id":"canon_recap_albina_fascia","chapter":0,"route":null,"provenance":{"classification":"canon_paraphrase","scope":"canon_recap","claimIds":["canon.profile.identity","canon.appearance.prosthetic-body","canon.appearance.armor-and-fascia","canon.personality.fascia-attachment","canon.personality.social-and-ambition","canon.story.pre-canto-fascia"],"sourceIds":["source.official.canto-ix.9-18","source.official.canto-ix.9-37","source.official.canto-ix.9-43","source.wiki.albina-enemy.175660","source.wiki.albina.173286","source.wiki.callisto.177757","source.wiki.canto-ix-part-i.172275","source.wiki.canto-ix-part-iii.177602","source.wiki.house-of-spiders.177075"],"note":"Atomic profile, appearance, personality and pre-Canto facts rendered from the reviewed claim ledger; no source dialogue is reproduced."},"locationId":"ring_corridor","backgroundAssetId":"bg.ring_atelier","tone":"canon-recap","portraits":[{"characterId":"albina","portraitAssetId":"portrait.albina.armored","position":"left","active":true,"scale":1}],"speaker":"正史复盘","text":"【身份】Albina（韩文 알비나，日文 アルビナ）是女性环指 Corporism 学徒、House of Spiders 成员与 Callisto 的弟子。她在 Canto IX 中作为敌对角色登场，韩语配音为 Kim Do-hee；9-43 之后的正史状态为死亡。\\n\\n【外观】她使用带金色点缀的白色全身义体：浅灰色人工质感高马尾近似线缆，脸与关节处有分界线，颈胸与大腿可见黑色机械和线路，躯干中央近似骨架。她右眼黑、左眼白，前臂还能展开剪刀、锯、手术刀、三爪与牵开器等工具。\\n\\n【装甲与武器】她的铁处女式全身装甲以白、亮黄与金色为主，具有长裙、尖刺头环、垂链、尖刺裙甲和绘有金色锐眼的面具。Fascia 是同色系巨剑，侧板打开后会露出暗色骨架、肋骨与内脏组织。\\n\\n【Fascia】Albina 对 Fascia 有强烈依恋，会与它交谈、用他人血肉喂养它，并在它可能受损时优先保护它；9-18 中她甚至为让 Fascia 继续行动而违背 Ren 对计划的要求。\\n\\n【人格与关系】她通常平静轻声、专注艺术，却难以理解他人的情绪；她将“朋友”与可用于 Fascia 的素材联系起来。她表示自己把部分脑组织交给 Fascia 后变得很不善说谎，同时敬仰 Callisto，并希望未来成为超越师父的 Maestro。\\n\\n【身体关系】Albina 主动切分原本肉体并将其制作成 Fascia，随后用全身义体替换身体、主要保留脑；Fascia 则缺少脑。她还曾先以自己的手臂练习如何处理创作素材。","voiceAssetId":"voice.scene.canon_recap_albina_fascia","bgmAssetId":"file.audio.bgm.between.two.worlds.mp3","choices":[{"id":"canon_recap_continue_9_37_battle","text":"继续复盘 9-37 的战斗升级","nextSceneId":"canon_recap_9_37_battle","resultText":"复盘转向 Callisto 加入后的最后阶段。","resultVoiceAssetId":"voice.result.canon_recap_continue_9_37_battle","effects":{"setFlags":["canon_recap_albina_fascia_seen"]}}]},{"version":2,"id":"canon_recap_9_37_battle","chapter":0,"route":null,"provenance":{"classification":"canon_paraphrase","scope":"canon_recap","claimIds":["canon.9-37.escalation"],"sourceIds":["source.official.canto-ix.9-37","source.official.canto-ix.9-43","source.wiki.canto-ix-part-iii.177602"],"note":"Reviewed 9-37 ending boundary contrasted with the later 9-43 outcome."},"locationId":"ring_corridor","backgroundAssetId":"bg.mirror_corridor","tone":"canon-recap","portraits":[{"characterId":"albina","portraitAssetId":"portrait.albina.armored","position":"center","active":true,"scale":1}],"speaker":"正史复盘","text":"【正史中文意译·9-37 战斗升级】Callisto 加入战斗后，与 Albina 一同逐步压制 Limbus Company 一行。该节最后，Callisto 以骨肉尖桩制住除 Alyssa 外的众人，Alyssa 则将 Ardor Blossom Star 调至最高同调并发动反击。9-37 到此结束；Fascia 被毁、Albina 与 Callisto 死亡都不属于这一节，而发生在后续 9-43《Hatching》。","voiceAssetId":"voice.scene.canon_recap_9_37_battle","bgmAssetId":"file.audio.bgm.between.two.worlds.mp3","choices":[{"id":"canon_recap_continue_9_43","text":"继续复盘 9-43《Hatching》","nextSceneId":"canon_recap_9_43_outcome","resultText":"时间推进到 9-43；接下来才是不能被路线文本改写为正史的既定结果。","resultVoiceAssetId":"voice.result.canon_recap_continue_9_43","effects":{"setFlags":["canon_recap_9_37_battle_seen"]}}]},{"version":2,"id":"canon_recap_9_43_outcome","chapter":0,"route":null,"provenance":{"classification":"canon_paraphrase","scope":"canon_recap","claimIds":["canon.9-43.sign-awakening","canon.9-43.outcome"],"sourceIds":["source.official.canto-ix.9-43","source.wiki.canto-ix-part-iii.177602","source.wiki.albina.173286"],"note":"Reviewed 9-43 pressure, Sign awakening and outcome paraphrase; the AU boundary remains a separate scene."},"locationId":"ring_corridor","backgroundAssetId":"bg.mirror_corridor","tone":"canon-recap-outcome","portraits":[],"speaker":"正史复盘","text":"【正史中文意译·9-43《Hatching》转折】Hohenheim 用 Diffraction 突袭 Callisto 后，Albina 阻止 Faust 与 Ishmael 乘机追击；师徒仍将严重受创的众人逼入绝境。她要求 Sinclair 留下成为自己与 Fascia 的朋友，并在旁观 Callisto 对 Hohenheim 下手时谈到未来超越师父的梦想。她提出“未来”后，Sinclair 完全觉醒 The Sign，并显现一个来自未来的自己。\\n\\n【正史中文意译·9-43 既定结果】Faust 与 Ishmael 的同步攻击制造开口后，Future Sinclair 首先摧毁 Fascia。Albina 因 Fascia 被毁而失措，随后也被 Future Sinclair 杀死；Callisto 在之后被杀。Albina 的正史直接出场链至此结束，顺序是 9-18、9-37、9-43。","voiceAssetId":"voice.scene.canon_recap_9_43_outcome","bgmAssetId":"file.audio.bgm.between.two.worlds.mp3","choices":[{"id":"canon_recap_enter_AU","text":"确认边界并进入 AU/IF 分歧","nextSceneId":"opening_001","resultText":"正史复盘已结束。以下三条路线全部是本卡原创 AU/IF。","resultVoiceAssetId":"voice.result.canon_recap_enter_AU","effects":{"setFlags":["canon_recap_9_43_seen","canon_recap_complete","AU_boundary_acknowledged"],"professionXp":{"narrative_curator":2},"activateProfession":"narrative_curator"}}]},{"version":2,"id":"opening_001","chapter":1,"route":null,"provenance":{"classification":"AU_extension","scope":"AU_boundary","claimIds":["boundary.routes-and-player.are-AU"],"sourceIds":["source.official.canto-ix.9-43","source.project.legacy-v1.0.44"],"note":"Explicit continuity boundary shown before the player selects an author-created AU route."},"locationId":"backstreets_rain","backgroundAssetId":"bg.backstreets_rain","cgAssetId":"cg.opening_rain","tone":"AU-boundary","portraits":[{"characterId":"albina","portraitAssetId":"portrait.albina.normal","position":"center","active":true,"scale":1}],"speaker":"AU/IF 分歧","text":"【本卡原创 AU/IF，不是原作后续】9-43《Hatching》的正史结局已经复盘完毕。从这一刻开始，Albina 的存活、玩家 {{user}} 的出现、三条路线与九个结局均为本卡原创，不代表原作事实或隐藏结局。","voiceAssetId":"voice.scene.opening_001","bgmAssetId":"file.audio.bgm.backstreets.rain.mp3","choices":[{"id":"enter_white_canvas","text":"进入 white_canvas AU","nextSceneId":"white_canvas_001","resultText":"【AU/IF】你进入以关系边界与自我选择为核心的 white_canvas 原创路线。","resultVoiceAssetId":"voice.result.enter_white_canvas","effects":{"values":{"affectionAlbina":2,"trust":2,"artResonance":1},"relationshipVectors":{"intimacy":2,"reliance":2},"setFlags":["route_white_canvas_seen"],"unlockCg":["cg.opening_rain"],"grantItems":["item.rain_room_badge"],"equipItems":["equipment.rain_room_badge"],"unlockOutfits":["outfit.albina.rain"],"activateOutfit":"outfit.albina.rain","startQuests":["quest.white.boundary_protocol"],"professionXp":{"boundary_mediator":4},"activateProfession":"boundary_mediator","route":"white_canvas"}},{"id":"enter_rebuild","text":"进入 golden_bough_rebuild AU","nextSceneId":"golden_bough_001","resultText":"【AU/IF】这条路线假设 Albina 在 9-43 死亡后被重构；该前提与全部后续均非正史。","resultVoiceAssetId":"voice.result.enter_rebuild","effects":{"values":{"trust":3,"danger":1},"relationshipVectors":{"reliance":2,"suspicion":1},"setFlags":["route_rebuild_seen"],"unlockCg":["cg.golden_bough_rebuild"],"grantItems":["item.rain_room_badge"],"equipItems":["equipment.rain_room_badge"],"unlockOutfits":["outfit.albina.rain"],"activateOutfit":"outfit.albina.rain","startQuests":["quest.golden.memory_continuity"],"professionXp":{"memory_surgeon":4},"activateProfession":"memory_surgeon","route":"golden_bough_rebuild"}},{"id":"enter_conspiracy","text":"进入 ring_conspiracy AU","nextSceneId":"ring_conspiracy_001","resultText":"【AU/IF】这条路线主动改写 9-43 后续因果；其中的委托、关系和结局均为本卡原创。","resultVoiceAssetId":"voice.result.enter_conspiracy","effects":{"values":{"danger":3,"artResonance":2},"relationshipVectors":{"reliance":1,"suspicion":2},"setFlags":["route_conspiracy_seen"],"unlockCg":["cg.ring_invitation"],"grantItems":["item.rain_room_badge"],"equipItems":["equipment.rain_room_badge"],"unlockOutfits":["outfit.albina.rain"],"activateOutfit":"outfit.albina.rain","startQuests":["quest.ring.counter_contract"],"professionXp":{"ring_counterforger":4},"activateProfession":"ring_counterforger","route":"ring_conspiracy"}}]},{"version":2,"id":"white_canvas_001","chapter":1,"route":"white_canvas","provenance":{"classification":"AU_extension","scope":"route","claimIds":["boundary.routes-and-player.are-AU"],"sourceIds":["source.official.canto-ix.9-43","source.project.legacy-v1.0.44"],"note":"Project-authored route content after the explicit 9-43 divergence; never source-game canon."},"locationId":"white_canvas_room","backgroundAssetId":"bg.white_canvas","cgAssetId":"cg.white_canvas_choice","tone":"quiet","portraits":[{"characterId":"protagonist","portraitAssetId":"portrait.protagonist.tender","position":"left","active":false,"scale":0.94},{"characterId":"albina","portraitAssetId":"portrait.albina.white-canvas","position":"right","active":true,"scale":1}],"speaker":"阿尔比娜","text":"白色并不代表干净。它只是暂时还没有被决定。你也是这样，{{user}}。","voiceAssetId":"voice.scene.white_canvas_001","bgmAssetId":"file.audio.bgm.between.two.worlds.mp3","choices":[{"id":"white_touch_boundary","text":"告诉她：完整也是一种作品","nextSceneId":"white_canvas_002","resultText":"你选择“告诉她：完整也是一种作品”。阿尔比娜：她把黑色手掌停在离你心口一寸的位置，没有继续向前。法西娅安静得像也在等待你的许可。","resultVoiceAssetId":"voice.result.white_touch_boundary","effects":{"values":{"affectionAlbina":3,"trust":4,"artResonance":2},"setFlags":["albina_learns_wholeness"],"unlockCg":["cg.trust_threshold"]}},{"id":"white_tease_back","text":"反问她是否害怕自己的画布","nextSceneId":"white_canvas_002","resultText":"你选择“反问她是否害怕自己的画布”。阿尔比娜：她把黑色手掌停在离你心口一寸的位置，没有继续向前。法西娅安静得像也在等待你的许可。","resultVoiceAssetId":"voice.result.white_tease_back","effects":{"values":{"affectionAlbina":2,"danger":1,"artResonance":3},"setFlags":["player_teases_artist"],"unlockCg":["cg.art_resonance"]}}]},{"version":2,"id":"white_canvas_002","chapter":2,"route":"white_canvas","provenance":{"classification":"AU_extension","scope":"route","claimIds":["boundary.routes-and-player.are-AU"],"sourceIds":["source.official.canto-ix.9-43","source.project.legacy-v1.0.44"],"note":"Project-authored route content after the explicit 9-43 divergence; never source-game canon."},"locationId":"rain_room","backgroundAssetId":"bg.rain_room","cgAssetId":"cg.rain_confession","tone":"rain","portraits":[{"characterId":"albina","portraitAssetId":"portrait.albina.shy","position":"center","active":true,"scale":1}],"speaker":"阿尔比娜","text":"她把黑色手掌停在离你心口一寸的位置，没有继续向前。法西娅安静得像也在等待你的许可。","voiceAssetId":"voice.scene.white_canvas_002","bgmAssetId":"file.audio.bgm.between.two.worlds.mp3","choices":[{"id":"white_follow_to_lab","text":"陪她把画布带进 LCE 临时手术室","nextSceneId":"white_canvas_003","resultText":"你选择“陪她把画布带进 LCE 临时手术室”。LCE 医师：灯光没有温度。记录员要求你签下旁观协议，阿尔比娜却先把笔推给自己：这一次，谁也不能替她同意被拆解。","resultVoiceAssetId":"voice.result.white_follow_to_lab","effects":{"values":{"affectionAlbina":2,"trust":3,"artResonance":2},"setFlags":["white_lab_boundary_seen"],"unlockCg":["cg.hollow_torso_reveal"]}},{"id":"return_opening_from_white","text":"回到路线选择","nextSceneId":"opening_001","resultText":"你选择“回到路线选择”。阿尔比娜：晚上好，{{user}}。请不要站得太远，我还没决定该把你称作观众、朋友，还是一块值得等待的画布。","resultVoiceAssetId":"voice.result.return_opening_from_white","effects":{"values":{"trust":1},"setFlags":["white_canvas_looped"]}}]},{"version":2,"id":"white_canvas_003","chapter":3,"route":"white_canvas","provenance":{"classification":"AU_extension","scope":"route","claimIds":["boundary.routes-and-player.are-AU"],"sourceIds":["source.official.canto-ix.9-43","source.project.legacy-v1.0.44"],"note":"Project-authored route content after the explicit 9-43 divergence; never source-game canon."},"locationId":"lce_lab","backgroundAssetId":"bg.lce_lab","cgAssetId":"cg.hollow_torso_reveal","tone":"quiet","portraits":[{"characterId":"lce_doctor","portraitAssetId":"portrait.lce_doctor.normal","position":"left","active":false,"scale":0.86},{"characterId":"albina","portraitAssetId":"portrait.albina.surgical","position":"center","active":true,"scale":1},{"characterId":"protagonist","portraitAssetId":"portrait.protagonist.serious","position":"right","active":false,"scale":0.9}],"speaker":"LCE 医师","text":"灯光没有温度。记录员要求你签下旁观协议，阿尔比娜却先把笔推给自己：这一次，谁也不能替她同意被拆解。","voiceAssetId":"voice.scene.white_canvas_003","bgmAssetId":"file.audio.bgm.between.two.worlds.mp3","choices":[{"id":"white_sign_witness_protocol","text":"只签见证，不签处置权","nextSceneId":"white_canvas_004","resultText":"你选择“只签见证，不签处置权”。阿尔比娜：巴士窗上映出她的白色义体，也映出你故意留下的空座。她说完整不是没有裂缝，而是裂缝终于有了不被展览的权利。","resultVoiceAssetId":"voice.result.white_sign_witness_protocol","effects":{"values":{"affectionAlbina":1,"trust":4,"artResonance":2},"relationshipVectors":{"intimacy":2,"reliance":3},"conflictMastery":{"boundary":1},"setFlags":["witness_not_ownership"],"unlockCg":["cg.lce_raid"],"grantItems":["item.white.boundary_contract"],"equipItems":["equipment.white.boundary_charm"],"unlockOutfits":["outfit.albina.white_canvas"],"activateOutfit":"outfit.albina.white_canvas","completeQuests":["quest.white.boundary_protocol"],"professionXp":{"boundary_mediator":6}}},{"id":"white_interrupt_lab_terms","text":"要求医师删去所有所有权措辞","nextSceneId":"white_canvas_004","resultText":"你选择“要求医师删去所有所有权措辞”。阿尔比娜：巴士窗上映出她的白色义体，也映出你故意留下的空座。她说完整不是没有裂缝，而是裂缝终于有了不被展览的权利。","resultVoiceAssetId":"voice.result.white_interrupt_lab_terms","effects":{"values":{"trust":3,"danger":1,"artResonance":3},"relationshipVectors":{"reliance":4,"suspicion":-1},"conflictMastery":{"boundary":1},"setFlags":["lab_terms_rewritten"],"unlockCg":["cg.fascia_heartbeat"],"grantItems":["item.white.boundary_contract"],"equipItems":["equipment.white.boundary_charm"],"unlockOutfits":["outfit.albina.white_canvas"],"activateOutfit":"outfit.albina.white_canvas","completeQuests":["quest.white.boundary_protocol"],"professionXp":{"boundary_mediator":6}}}],"minigame":{"minigameId":"minigame.white.mirror_thread","seed":"white-canvas-lce-witness-v1","prompt":"在签字前，连起能让阿尔比娜保留决定权的两项原则。","assistLabel":"显示边界提示","allowSkip":true}},{"version":2,"id":"white_canvas_004","chapter":4,"route":"white_canvas","provenance":{"classification":"AU_extension","scope":"route","claimIds":["boundary.routes-and-player.are-AU"],"sourceIds":["source.official.canto-ix.9-43","source.project.legacy-v1.0.44"],"note":"Project-authored route content after the explicit 9-43 divergence; never source-game canon."},"locationId":"limbus_bus","backgroundAssetId":"bg.limbus_bus","cgAssetId":"cg.limbus_bus_night","tone":"rain","portraits":[{"characterId":"dante","portraitAssetId":"portrait.dante.normal","position":"left","active":false,"scale":0.82},{"characterId":"albina","portraitAssetId":"portrait.albina.rain","position":"center","active":true,"scale":1},{"characterId":"protagonist","portraitAssetId":"portrait.protagonist.wet-hair","position":"right","active":false,"scale":0.9}],"speaker":"阿尔比娜","text":"巴士窗上映出她的白色义体，也映出你故意留下的空座。她说完整不是没有裂缝，而是裂缝终于有了不被展览的权利。","voiceAssetId":"voice.scene.white_canvas_004","bgmAssetId":"file.audio.bgm.between.two.worlds.mp3","choices":[{"id":"white_keep_empty_seat","text":"替她保留那张无人审判的座位","nextSceneId":"white_canvas_005","resultText":"你选择“替她保留那张无人审判的座位”。阿尔比娜：黎明像一层还没有落款的底色。她把法西娅插在你们之间，不是阻隔，而是提醒：任何亲密都必须能被双方随时收回。","resultVoiceAssetId":"voice.result.white_keep_empty_seat","effects":{"values":{"affectionAlbina":4,"trust":3,"artResonance":1},"setFlags":["white_canvas_empty_seat"],"unlockCg":["cg.white_canvas_ending"]}},{"id":"white_share_rain_window","text":"把雨夜倒影交给她自己命名","nextSceneId":"white_canvas_005","resultText":"你选择“把雨夜倒影交给她自己命名”。阿尔比娜：黎明像一层还没有落款的底色。她把法西娅插在你们之间，不是阻隔，而是提醒：任何亲密都必须能被双方随时收回。","resultVoiceAssetId":"voice.result.white_share_rain_window","effects":{"values":{"affectionAlbina":3,"trust":2,"artResonance":3},"setFlags":["rain_reflection_named"],"unlockCg":["cg.rain_confession"]}}]},{"version":2,"id":"white_canvas_005","chapter":5,"route":"white_canvas","provenance":{"classification":"AU_extension","scope":"route","claimIds":["boundary.routes-and-player.are-AU"],"sourceIds":["source.official.canto-ix.9-43","source.project.legacy-v1.0.44"],"note":"Project-authored route content after the explicit 9-43 divergence; never source-game canon."},"locationId":"outskirts_dawn","backgroundAssetId":"bg.outskirts_dawn","cgAssetId":"cg.white_canvas_ending","tone":"quiet","portraits":[{"characterId":"protagonist","portraitAssetId":"portrait.protagonist.resolve","position":"left","active":false,"scale":0.92},{"characterId":"albina","portraitAssetId":"portrait.albina.endgame","position":"center","active":true,"scale":1}],"speaker":"阿尔比娜","text":"黎明像一层还没有落款的底色。她把法西娅插在你们之间，不是阻隔，而是提醒：任何亲密都必须能被双方随时收回。","voiceAssetId":"voice.scene.white_canvas_005","bgmAssetId":"file.audio.bgm.between.two.worlds.mp3","choices":[{"id":"white_canvas_route_complete","text":"记录白色画布路线的暂定结局","nextSceneId":"white_canvas_006","resultText":"你选择“记录白色画布路线的暂定结局”。阿尔比娜：空展厅的回声比任何观众都诚实。她拿起一支没有颜料的画笔，在你面前比划出一条看不见的轮廓：这是你今晚没有说出口的那句话。","resultVoiceAssetId":"voice.result.white_canvas_route_complete","effects":{"values":{"affectionAlbina":2,"trust":2,"danger":-1,"artResonance":2},"setFlags":["white_canvas_route_complete"]}}]},{"version":2,"id":"white_canvas_006","chapter":6,"route":"white_canvas","provenance":{"classification":"AU_extension","scope":"route","claimIds":["boundary.routes-and-player.are-AU"],"sourceIds":["source.official.canto-ix.9-43","source.project.legacy-v1.0.44"],"note":"Project-authored route content after the explicit 9-43 divergence; never source-game canon."},"locationId":"white_canvas_room","backgroundAssetId":"bg.white_canvas","cgAssetId":"cg.white_canvas_choice","tone":"quiet","portraits":[{"characterId":"albina","portraitAssetId":"portrait.albina.white-canvas","position":"center","active":true,"scale":1},{"characterId":"protagonist","portraitAssetId":"portrait.protagonist.tender","position":"left","active":false,"scale":0.92}],"speaker":"阿尔比娜","text":"空展厅的回声比任何观众都诚实。她拿起一支没有颜料的画笔，在你面前比划出一条看不见的轮廓：这是你今晚没有说出口的那句话。","voiceAssetId":"voice.scene.white_canvas_006","bgmAssetId":"file.audio.bgm.between.two.worlds.mp3","choices":[{"id":"white_006_name_silence","text":"替那条轮廓取一个不会被收藏的名字","nextSceneId":"white_canvas_007","resultText":"你选择“替那条轮廓取一个不会被收藏的名字”。法西娅：法西娅的低语从镜面里渗出来：你正在画的并不是她，是一个被允许随时擦掉的你。阿尔比娜没有反驳，只是把那面镜子轻轻转开半寸。","resultVoiceAssetId":"voice.result.white_006_name_silence","effects":{"values":{"affectionAlbina":3,"trust":3,"artResonance":3},"setFlags":["silhouette_named"],"unlockCg":["cg.art_resonance"]}},{"id":"white_006_refuse_naming","text":"让轮廓保持无名，由她决定","nextSceneId":"white_canvas_007","resultText":"你选择“让轮廓保持无名，由她决定”。法西娅：法西娅的低语从镜面里渗出来：你正在画的并不是她，是一个被允许随时擦掉的你。阿尔比娜没有反驳，只是把那面镜子轻轻转开半寸。","resultVoiceAssetId":"voice.result.white_006_refuse_naming","effects":{"values":{"affectionAlbina":2,"trust":4,"artResonance":2},"setFlags":["naming_returned"],"unlockCg":["cg.trust_threshold"]}}]},{"version":2,"id":"white_canvas_007","chapter":7,"route":"white_canvas","provenance":{"classification":"AU_extension","scope":"route","claimIds":["boundary.routes-and-player.are-AU"],"sourceIds":["source.official.canto-ix.9-43","source.project.legacy-v1.0.44"],"note":"Project-authored route content after the explicit 9-43 divergence; never source-game canon."},"locationId":"mirror_corridor","backgroundAssetId":"bg.mirror_corridor","cgAssetId":"cg.fascia_heartbeat","tone":"quiet","portraits":[{"characterId":"albina","portraitAssetId":"portrait.albina.shy","position":"right","active":true,"scale":1},{"characterId":"protagonist","portraitAssetId":"portrait.protagonist.tender","position":"left","active":false,"scale":0.9}],"speaker":"法西娅","text":"法西娅的低语从镜面里渗出来：你正在画的并不是她，是一个被允许随时擦掉的你。阿尔比娜没有反驳，只是把那面镜子轻轻转开半寸。","voiceAssetId":"voice.scene.white_canvas_007","bgmAssetId":"file.audio.bgm.between.two.worlds.mp3","choices":[{"id":"white_007_keep_mirror_open","text":"让镜子继续映照，不替她遮蔽","nextSceneId":"white_canvas_008","resultText":"你选择“让镜子继续映照，不替她遮蔽”。阿尔比娜：义体维护槽的白光下，她把法西娅从胸口取出来，放在你和她之间的托盘上。她说：完整不是把它装回去，是承认它有权利短暂离开我。","resultVoiceAssetId":"voice.result.white_007_keep_mirror_open","effects":{"values":{"trust":3,"danger":1,"artResonance":4},"setFlags":["mirror_kept_open"],"unlockCg":["cg.fascia_heartbeat"]}},{"id":"white_007_ask_fascia_term","text":"当着阿尔比娜问法西娅一个边界问题","nextSceneId":"white_canvas_008","resultText":"你选择“当着阿尔比娜问法西娅一个边界问题”。阿尔比娜：义体维护槽的白光下，她把法西娅从胸口取出来，放在你和她之间的托盘上。她说：完整不是把它装回去，是承认它有权利短暂离开我。","resultVoiceAssetId":"voice.result.white_007_ask_fascia_term","effects":{"values":{"affectionAlbina":1,"trust":2,"artResonance":3},"setFlags":["fascia_addressed_directly"],"unlockCg":["cg.art_resonance"]}}]},{"version":2,"id":"white_canvas_008","chapter":8,"route":"white_canvas","provenance":{"classification":"AU_extension","scope":"route","claimIds":["boundary.routes-and-player.are-AU"],"sourceIds":["source.official.canto-ix.9-43","source.project.legacy-v1.0.44"],"note":"Project-authored route content after the explicit 9-43 divergence; never source-game canon."},"locationId":"lce_lab","backgroundAssetId":"bg.lce_lab","cgAssetId":"cg.hollow_torso_reveal","tone":"quiet","portraits":[{"characterId":"lce_doctor","portraitAssetId":"portrait.lce_doctor.normal","position":"left","active":false,"scale":0.84},{"characterId":"albina","portraitAssetId":"portrait.albina.surgical","position":"center","active":true,"scale":1},{"characterId":"protagonist","portraitAssetId":"portrait.protagonist.serious","position":"right","active":false,"scale":0.9}],"speaker":"阿尔比娜","text":"义体维护槽的白光下，她把法西娅从胸口取出来，放在你和她之间的托盘上。她说：完整不是把它装回去，是承认它有权利短暂离开我。","voiceAssetId":"voice.scene.white_canvas_008","bgmAssetId":"file.audio.bgm.between.two.worlds.mp3","choices":[{"id":"white_008_hold_fascia","text":"替她暂时照看法西娅","nextSceneId":"white_canvas_009","resultText":"你选择“替她暂时照看法西娅”。阿尔比娜：雨室的水线像无数根未被签名的画框。她让你站在她身后半步，说那个距离刚好能让两人都不必替对方回答。","resultVoiceAssetId":"voice.result.white_008_hold_fascia","effects":{"values":{"affectionAlbina":2,"trust":5,"artResonance":2},"setFlags":["fascia_held_by_player"],"unlockCg":["cg.fascia_heartbeat"]}},{"id":"white_008_stay_witness_only","text":"只站在她视野内，不接手","nextSceneId":"white_canvas_009","resultText":"你选择“只站在她视野内，不接手”。阿尔比娜：雨室的水线像无数根未被签名的画框。她让你站在她身后半步，说那个距离刚好能让两人都不必替对方回答。","resultVoiceAssetId":"voice.result.white_008_stay_witness_only","effects":{"values":{"affectionAlbina":1,"trust":3,"artResonance":3},"setFlags":["witness_distance_kept"],"unlockCg":["cg.lce_raid"]}}]},{"version":2,"id":"white_canvas_009","chapter":9,"route":"white_canvas","provenance":{"classification":"AU_extension","scope":"route","claimIds":["boundary.routes-and-player.are-AU"],"sourceIds":["source.official.canto-ix.9-43","source.project.legacy-v1.0.44"],"note":"Project-authored route content after the explicit 9-43 divergence; never source-game canon."},"locationId":"rain_room","backgroundAssetId":"bg.rain_room","cgAssetId":"cg.rain_confession","tone":"rain","portraits":[{"characterId":"albina","portraitAssetId":"portrait.albina.rain","position":"center","active":true,"scale":1},{"characterId":"protagonist","portraitAssetId":"portrait.protagonist.wet-hair","position":"left","active":false,"scale":0.92}],"speaker":"阿尔比娜","text":"雨室的水线像无数根未被签名的画框。她让你站在她身后半步，说那个距离刚好能让两人都不必替对方回答。","voiceAssetId":"voice.scene.white_canvas_009","bgmAssetId":"file.audio.bgm.between.two.worlds.mp3","choices":[{"id":"white_009_keep_half_step","text":"守住半步距离，不擅自靠近","nextSceneId":"white_canvas_010","resultText":"你选择“守住半步距离，不擅自靠近”。但丁：但丁没有抬头，只低声提醒：她在试着把自己画成一个可以离开的人，你最好别急着把她画成离不开你的人。","resultVoiceAssetId":"voice.result.white_009_keep_half_step","effects":{"values":{"affectionAlbina":3,"trust":4,"artResonance":2},"setFlags":["half_step_distance"],"unlockCg":["cg.rain_confession"]}},{"id":"white_009_share_umbrella_edge","text":"把伞沿偏向她那侧","nextSceneId":"white_canvas_010","resultText":"你选择“把伞沿偏向她那侧”。但丁：但丁没有抬头，只低声提醒：她在试着把自己画成一个可以离开的人，你最好别急着把她画成离不开你的人。","resultVoiceAssetId":"voice.result.white_009_share_umbrella_edge","effects":{"values":{"affectionAlbina":4,"trust":2,"artResonance":2},"setFlags":["umbrella_shared"],"unlockCg":["cg.rain_confession"]}}]},{"version":2,"id":"white_canvas_010","chapter":10,"route":"white_canvas","provenance":{"classification":"AU_extension","scope":"route","claimIds":["boundary.routes-and-player.are-AU"],"sourceIds":["source.official.canto-ix.9-43","source.project.legacy-v1.0.44"],"note":"Project-authored route content after the explicit 9-43 divergence; never source-game canon."},"locationId":"limbus_bus","backgroundAssetId":"bg.limbus_bus","cgAssetId":"cg.limbus_bus_night","tone":"rain","portraits":[{"characterId":"dante","portraitAssetId":"portrait.dante.normal","position":"left","active":false,"scale":0.8},{"characterId":"albina","portraitAssetId":"portrait.albina.rain","position":"center","active":true,"scale":1},{"characterId":"protagonist","portraitAssetId":"portrait.protagonist.serious","position":"right","active":false,"scale":0.9}],"speaker":"但丁","text":"但丁没有抬头，只低声提醒：她在试着把自己画成一个可以离开的人，你最好别急着把她画成离不开你的人。","voiceAssetId":"voice.scene.white_canvas_010","bgmAssetId":"file.audio.bgm.between.two.worlds.mp3","choices":[{"id":"white_010_acknowledge_leave","text":"承认她随时可以离开这张画布","nextSceneId":"white_canvas_011","resultText":"你选择“承认她随时可以离开这张画布”。阿尔比娜：巢穴车站的灯光白得发硬。她站在月台边缘，没有回头，只问：如果一个艺术家拒绝被展览，你愿意做那个替她谢幕的人吗？","resultVoiceAssetId":"voice.result.white_010_acknowledge_leave","effects":{"values":{"affectionAlbina":2,"trust":4,"artResonance":3},"setFlags":["leaving_acknowledged"],"unlockCg":["cg.limbus_bus_night"]}},{"id":"white_010_offer_return_ticket","text":"给她一张可以返回的车票，而不是绳索","nextSceneId":"white_canvas_011","resultText":"你选择“给她一张可以返回的车票，而不是绳索”。阿尔比娜：巢穴车站的灯光白得发硬。她站在月台边缘，没有回头，只问：如果一个艺术家拒绝被展览，你愿意做那个替她谢幕的人吗？","resultVoiceAssetId":"voice.result.white_010_offer_return_ticket","effects":{"values":{"affectionAlbina":3,"trust":3,"artResonance":2},"setFlags":["return_ticket_given"],"unlockCg":["cg.rain_confession"]}}]},{"version":2,"id":"white_canvas_011","chapter":11,"route":"white_canvas","provenance":{"classification":"AU_extension","scope":"route","claimIds":["boundary.routes-and-player.are-AU"],"sourceIds":["source.official.canto-ix.9-43","source.project.legacy-v1.0.44"],"note":"Project-authored route content after the explicit 9-43 divergence; never source-game canon."},"locationId":"nest_station","backgroundAssetId":"bg.nest_station","cgAssetId":"cg.art_resonance","tone":"quiet","portraits":[{"characterId":"albina","portraitAssetId":"portrait.albina.white-canvas","position":"center","active":true,"scale":1},{"characterId":"protagonist","portraitAssetId":"portrait.protagonist.resolve","position":"left","active":false,"scale":0.92}],"speaker":"阿尔比娜","text":"巢穴车站的灯光白得发硬。她站在月台边缘，没有回头，只问：如果一个艺术家拒绝被展览，你愿意做那个替她谢幕的人吗？","voiceAssetId":"voice.scene.white_canvas_011","bgmAssetId":"file.audio.bgm.between.two.worlds.mp3","choices":[{"id":"white_011_curtain_call","text":"答应替她谢幕，不替她登台","nextSceneId":"white_canvas_012","resultText":"你选择“答应替她谢幕，不替她登台”。卡利斯托：蜘蛛画廊借给白画布一个临时展位。卡利斯托微笑着提议：把她最有缺陷的那一面挂出来，观众会替你们完成剩下的故事。","resultVoiceAssetId":"voice.result.white_011_curtain_call","effects":{"values":{"affectionAlbina":2,"trust":5,"artResonance":3},"setFlags":["curtain_call_promised"],"unlockCg":["cg.white_canvas_ending"]}},{"id":"white_011_walk_beside","text":"陪她走下月台，不离开也不催促","nextSceneId":"white_canvas_012","resultText":"你选择“陪她走下月台，不离开也不催促”。卡利斯托：蜘蛛画廊借给白画布一个临时展位。卡利斯托微笑着提议：把她最有缺陷的那一面挂出来，观众会替你们完成剩下的故事。","resultVoiceAssetId":"voice.result.white_011_walk_beside","effects":{"values":{"affectionAlbina":4,"trust":3,"artResonance":2},"setFlags":["platform_walked_together"],"unlockCg":["cg.rain_confession"]}}]},{"version":2,"id":"white_canvas_012","chapter":12,"route":"white_canvas","provenance":{"classification":"AU_extension","scope":"route","claimIds":["boundary.routes-and-player.are-AU"],"sourceIds":["source.official.canto-ix.9-43","source.project.legacy-v1.0.44"],"note":"Project-authored route content after the explicit 9-43 divergence; never source-game canon."},"locationId":"spider_gallery","backgroundAssetId":"bg.spider_gallery","cgAssetId":"cg.maestro_shadow","tone":"gallery","portraits":[{"characterId":"callisto","portraitAssetId":"portrait.callisto.normal","position":"left","active":false,"scale":0.84},{"characterId":"albina","portraitAssetId":"portrait.albina.ring-conspiracy","position":"center","active":true,"scale":1},{"characterId":"protagonist","portraitAssetId":"portrait.protagonist.serious","position":"right","active":false,"scale":0.9}],"speaker":"卡利斯托","text":"蜘蛛画廊借给白画布一个临时展位。卡利斯托微笑着提议：把她最有缺陷的那一面挂出来，观众会替你们完成剩下的故事。","voiceAssetId":"voice.scene.white_canvas_012","bgmAssetId":"file.audio.bgm.between.two.worlds.mp3","sfxAssetIds":["file.audio.se.glass.shatter.wav"],"choices":[{"id":"white_012_refuse_exhibit","text":"当众拒绝展出她的缺陷","nextSceneId":"white_canvas_013","resultText":"你选择“当众拒绝展出她的缺陷”。阿尔比娜：环指工坊的颜料气味里混着血。她握着一柄画刀，对你说：今天我可能要毁掉一件作品，请你告诉我哪一件是她真正想毁掉的。","resultVoiceAssetId":"voice.result.white_012_refuse_exhibit","effects":{"values":{"affectionAlbina":2,"trust":4,"danger":-1,"artResonance":3},"relationshipVectors":{"reliance":3},"conflictMastery":{"boundary":3},"setFlags":["defect_not_exhibited"],"unlockCg":["cg.trust_threshold"],"resolveBattles":[{"battleId":"battle.white.gallery_pressure","outcome":"victory"}],"professionXp":{"boundary_mediator":6}}},{"id":"white_012_let_her_decide","text":"把展与不展的决定权交还给她","nextSceneId":"white_canvas_013","resultText":"你选择“把展与不展的决定权交还给她”。阿尔比娜：环指工坊的颜料气味里混着血。她握着一柄画刀，对你说：今天我可能要毁掉一件作品，请你告诉我哪一件是她真正想毁掉的。","resultVoiceAssetId":"voice.result.white_012_let_her_decide","effects":{"values":{"affectionAlbina":3,"trust":5,"danger":3,"artResonance":4},"relationshipVectors":{"suspicion":3},"conflictMastery":{"boundary":1},"setFlags":["exhibit_choice_returned"],"unlockCg":["cg.art_resonance"],"resolveBattles":[{"battleId":"battle.white.gallery_pressure","outcome":"setback"}],"professionXp":{"boundary_mediator":3}}}]},{"version":2,"id":"white_canvas_013","chapter":13,"route":"white_canvas","provenance":{"classification":"AU_extension","scope":"route","claimIds":["boundary.routes-and-player.are-AU"],"sourceIds":["source.official.canto-ix.9-43","source.project.legacy-v1.0.44"],"note":"Project-authored route content after the explicit 9-43 divergence; never source-game canon."},"locationId":"ring_atelier","backgroundAssetId":"bg.ring_atelier","cgAssetId":"cg.art_resonance","tone":"gallery","portraits":[{"characterId":"albina","portraitAssetId":"portrait.albina.furious","position":"right","active":true,"scale":1},{"characterId":"protagonist","portraitAssetId":"portrait.protagonist.battle","position":"left","active":false,"scale":0.92}],"speaker":"阿尔比娜","text":"环指工坊的颜料气味里混着血。她握着一柄画刀，对你说：今天我可能要毁掉一件作品，请你告诉我哪一件是她真正想毁掉的。","voiceAssetId":"voice.scene.white_canvas_013","bgmAssetId":"file.audio.bgm.between.two.worlds.mp3","sfxAssetIds":["file.audio.se.glass.shatter.wav"],"choices":[{"id":"white_013_point_to_mirror","text":"指向墙上那面映过法西娅的镜子","nextSceneId":"white_canvas_014","resultText":"你选择“指向墙上那面映过法西娅的镜子”。阿尔比娜：楼顶的风把她的话吹得很轻。她说：如果有一天我想把自己重新画成空白，你会替我保留这最后一层底色，还是替我重新开始？","resultVoiceAssetId":"voice.result.white_013_point_to_mirror","effects":{"values":{"affectionAlbina":2,"trust":3,"artResonance":5},"setFlags":["mirror_pointed_out"],"unlockCg":["cg.art_resonance"]}},{"id":"white_013_refuse_to_choose","text":"拒绝替她决定，让她自己下刀","nextSceneId":"white_canvas_014","resultText":"你选择“拒绝替她决定，让她自己下刀”。阿尔比娜：楼顶的风把她的话吹得很轻。她说：如果有一天我想把自己重新画成空白，你会替我保留这最后一层底色，还是替我重新开始？","resultVoiceAssetId":"voice.result.white_013_refuse_to_choose","effects":{"values":{"affectionAlbina":1,"trust":4,"artResonance":3},"setFlags":["knife_returned"],"unlockCg":["cg.art_resonance"]}}]},{"version":2,"id":"white_canvas_014","chapter":14,"route":"white_canvas","provenance":{"classification":"AU_extension","scope":"route","claimIds":["boundary.routes-and-player.are-AU"],"sourceIds":["source.official.canto-ix.9-43","source.project.legacy-v1.0.44"],"note":"Project-authored route content after the explicit 9-43 divergence; never source-game canon."},"locationId":"city_rooftop","backgroundAssetId":"bg.city_rooftop","cgAssetId":"cg.trust_threshold","tone":"quiet","portraits":[{"characterId":"albina","portraitAssetId":"portrait.albina.endgame","position":"center","active":true,"scale":1},{"characterId":"protagonist","portraitAssetId":"portrait.protagonist.resolve","position":"left","active":false,"scale":0.92}],"speaker":"阿尔比娜","text":"楼顶的风把她的话吹得很轻。她说：如果有一天我想把自己重新画成空白，你会替我保留这最后一层底色，还是替我重新开始？","voiceAssetId":"voice.scene.white_canvas_014","bgmAssetId":"file.audio.bgm.between.two.worlds.mp3","choices":[{"id":"white_014_keep_base_color","text":"答应替她保留最后一层底色","nextSceneId":"white_canvas_015","resultText":"你选择“答应替她保留最后一层底色”。阿尔比娜：城郊的黎明像一张终于干透的画布。她把法西娅重新放回胸口，又把画笔交到你手里：这张画布已经记住了你，但它仍然属于我。","resultVoiceAssetId":"voice.result.white_014_keep_base_color","effects":{"values":{"affectionAlbina":4,"trust":4,"artResonance":3},"setFlags":["base_color_kept"],"unlockCg":["cg.white_canvas_ending"]}},{"id":"white_014_offer_restart","text":"答应陪她从空白重新开始","nextSceneId":"white_canvas_015","resultText":"你选择“答应陪她从空白重新开始”。阿尔比娜：城郊的黎明像一张终于干透的画布。她把法西娅重新放回胸口，又把画笔交到你手里：这张画布已经记住了你，但它仍然属于我。","resultVoiceAssetId":"voice.result.white_014_offer_restart","effects":{"values":{"affectionAlbina":3,"trust":5,"artResonance":4},"setFlags":["restart_offered"],"unlockCg":["cg.art_resonance"]}}]},{"version":2,"id":"white_canvas_015","chapter":15,"route":"white_canvas","provenance":{"classification":"AU_extension","scope":"route","claimIds":["boundary.routes-and-player.are-AU"],"sourceIds":["source.official.canto-ix.9-43","source.project.legacy-v1.0.44"],"note":"Project-authored route content after the explicit 9-43 divergence; never source-game canon."},"locationId":"outskirts_dawn","backgroundAssetId":"bg.outskirts_dawn","cgAssetId":"cg.white_canvas_ending","tone":"quiet","portraits":[{"characterId":"protagonist","portraitAssetId":"portrait.protagonist.resolve","position":"left","active":false,"scale":0.92},{"characterId":"albina","portraitAssetId":"portrait.albina.endgame","position":"center","active":true,"scale":1}],"speaker":"阿尔比娜","text":"城郊的黎明像一张终于干透的画布。她把法西娅重新放回胸口，又把画笔交到你手里：这张画布已经记住了你，但它仍然属于我。","voiceAssetId":"voice.scene.white_canvas_015","bgmAssetId":"file.audio.bgm.between.two.worlds.mp3","choices":[{"id":"white_canvas_route_final","text":"为白色画布路线盖上最后一枚印章","nextSceneId":"white_canvas_ending_gate","resultText":"你选择“为白色画布路线盖上最后一枚印章”。白色画布路线终章已封存，进入固定结局资格判定。","resultVoiceAssetId":"voice.result.white_canvas_route_final","effects":{"values":{"affectionAlbina":3,"trust":3,"danger":-2,"artResonance":4},"setFlags":["white_canvas_route_final"]}}]},{"version":2,"id":"white_canvas_ending_gate","chapter":16,"route":"white_canvas","provenance":{"classification":"AU_extension","scope":"route","claimIds":["boundary.routes-and-player.are-AU"],"sourceIds":["source.official.canto-ix.9-43","source.project.legacy-v1.0.44"],"note":"Project-authored route content after the explicit 9-43 divergence; never source-game canon."},"locationId":"outskirts_dawn","backgroundAssetId":"bg.outskirts_dawn","cgAssetId":"cg.white_canvas_ending","tone":"quiet","portraits":[{"characterId":"protagonist","portraitAssetId":"portrait.protagonist.resolve","position":"left","active":false,"scale":0.92},{"characterId":"albina","portraitAssetId":"portrait.albina.endgame","position":"center","active":true,"scale":1}],"speaker":"叙事记录","text":"白色画布的全部选择已封存。系统将只依据持久状态判定结局，不请求任何运行时生成。","voiceAssetId":"voice.scene.white_canvas_ending_gate","bgmAssetId":"file.audio.bgm.between.two.worlds.mp3","choices":[{"id":"white_canvas_choose_true_ending","text":"确认彼此共同抵达的真结局","nextSceneId":"white_canvas_ending_true","resultText":"结局判定完成：白色画布·TRUE。资格规则与选择记录已固定写入。","resultVoiceAssetId":"voice.result.white_canvas.true_ending","availability":{"allOf":[{"kind":"flag","flag":"white_canvas_route_final","equals":true},{"kind":"value","key":"trust","operator":"gte","value":52},{"kind":"value","key":"artResonance","operator":"gte","value":44},{"kind":"value","key":"danger","operator":"lte","value":5},{"kind":"quest","questId":"quest.white.boundary_protocol","status":"completed"},{"kind":"battle","battleId":"battle.white.gallery_pressure","outcome":"victory"},{"kind":"equipment","equipmentId":"equipment.white.boundary_charm"},{"kind":"outfit","outfitId":"outfit.albina.white_canvas"},{"kind":"profession","professionId":"boundary_mediator","levelGte":2},{"kind":"relationship","key":"reliance","operator":"gte","value":7},{"kind":"worldbook","entryId":"albina_routes_endings_au_if","status":"seen"}]},"effects":{"setFlags":["ending_white_canvas_true_qualified"]}},{"id":"white_canvas_choose_normal_ending","text":"接受仍留有余白的普通结局","nextSceneId":"white_canvas_ending_normal","resultText":"结局判定完成：白色画布·NORMAL。资格规则与选择记录已固定写入。","resultVoiceAssetId":"voice.result.white_canvas.normal_ending","availability":{"allOf":[{"kind":"flag","flag":"white_canvas_route_final","equals":true}],"fallback":true},"effects":{"setFlags":["ending_white_canvas_normal_qualified"]}},{"id":"white_canvas_choose_bad_ending","text":"承认这次未能跨过的坏结局","nextSceneId":"white_canvas_ending_bad","resultText":"结局判定完成：白色画布·BAD。资格规则与选择记录已固定写入。","resultVoiceAssetId":"voice.result.white_canvas.bad_ending","availability":{"allOf":[{"kind":"flag","flag":"white_canvas_route_final","equals":true}],"anyOf":[{"kind":"value","key":"trust","operator":"lte","value":44},{"kind":"value","key":"artResonance","operator":"lte","value":38}]},"effects":{"setFlags":["ending_white_canvas_bad_qualified"]}}]},{"version":2,"id":"white_canvas_ending_true","chapter":17,"route":"white_canvas","provenance":{"classification":"AU_extension","scope":"route","claimIds":["boundary.routes-and-player.are-AU"],"sourceIds":["source.official.canto-ix.9-43","source.project.legacy-v1.0.44"],"note":"Project-authored route content after the explicit 9-43 divergence; never source-game canon."},"locationId":"outskirts_dawn","backgroundAssetId":"bg.outskirts_dawn","cgAssetId":"cg.white_canvas_ending","tone":"quiet","portraits":[{"characterId":"protagonist","portraitAssetId":"portrait.protagonist.resolve","position":"left","active":false,"scale":0.92},{"characterId":"albina","portraitAssetId":"portrait.albina.endgame","position":"center","active":true,"scale":1}],"speaker":"阿尔比娜","text":"晨光落在未署名的白画上。阿尔比娜没有把你画成作品，而是把并肩离开的两道影子留在画框之外：这一次，完整与亲密同时成立。","voiceAssetId":"voice.scene.white_canvas_ending_true","bgmAssetId":"file.audio.bgm.between.two.worlds.mp3","choices":[],"ending":{"route":"white_canvas","kind":"true","eligibility":{"allOf":[{"kind":"flag","flag":"white_canvas_route_final","equals":true},{"kind":"value","key":"trust","operator":"gte","value":52},{"kind":"value","key":"artResonance","operator":"gte","value":44},{"kind":"value","key":"danger","operator":"lte","value":5}]}}},{"version":2,"id":"white_canvas_ending_normal","chapter":17,"route":"white_canvas","provenance":{"classification":"AU_extension","scope":"route","claimIds":["boundary.routes-and-player.are-AU"],"sourceIds":["source.official.canto-ix.9-43","source.project.legacy-v1.0.44"],"note":"Project-authored route content after the explicit 9-43 divergence; never source-game canon."},"locationId":"outskirts_dawn","backgroundAssetId":"bg.outskirts_dawn","cgAssetId":"cg.white_canvas_ending","tone":"quiet","portraits":[{"characterId":"protagonist","portraitAssetId":"portrait.protagonist.resolve","position":"left","active":false,"scale":0.92},{"characterId":"albina","portraitAssetId":"portrait.albina.endgame","position":"center","active":true,"scale":1}],"speaker":"阿尔比娜","text":"展厅按约熄灯。你们保留了尚未说尽的话，也保留了随时重画的权利。阿尔比娜把空白画布卷好，约定下一场雨后再见。","voiceAssetId":"voice.scene.white_canvas_ending_normal","bgmAssetId":"file.audio.bgm.between.two.worlds.mp3","choices":[],"ending":{"route":"white_canvas","kind":"normal","eligibility":{"allOf":[{"kind":"flag","flag":"white_canvas_route_final","equals":true}],"fallback":true}}},{"version":2,"id":"white_canvas_ending_bad","chapter":17,"route":"white_canvas","provenance":{"classification":"AU_extension","scope":"route","claimIds":["boundary.routes-and-player.are-AU"],"sourceIds":["source.official.canto-ix.9-43","source.project.legacy-v1.0.44"],"note":"Project-authored route content after the explicit 9-43 divergence; never source-game canon."},"locationId":"outskirts_dawn","backgroundAssetId":"bg.outskirts_dawn","cgAssetId":"cg.white_canvas_ending","tone":"quiet","portraits":[{"characterId":"protagonist","portraitAssetId":"portrait.protagonist.resolve","position":"left","active":false,"scale":0.92},{"characterId":"albina","portraitAssetId":"portrait.albina.endgame","position":"center","active":true,"scale":1}],"speaker":"阿尔比娜","text":"白厅没有发生争吵，只剩一张过早完成的画。阿尔比娜礼貌地收回画笔与称呼；边界仍被守住，但你们没能把信任带到黎明。","voiceAssetId":"voice.scene.white_canvas_ending_bad","bgmAssetId":"file.audio.bgm.between.two.worlds.mp3","choices":[],"ending":{"route":"white_canvas","kind":"bad","eligibility":{"allOf":[{"kind":"flag","flag":"white_canvas_route_final","equals":true}],"anyOf":[{"kind":"value","key":"trust","operator":"lte","value":44},{"kind":"value","key":"artResonance","operator":"lte","value":38}]}}},{"version":2,"id":"golden_bough_001","chapter":1,"route":"golden_bough_rebuild","provenance":{"classification":"AU_extension","scope":"route","claimIds":["boundary.routes-and-player.are-AU"],"sourceIds":["source.official.canto-ix.9-43","source.project.legacy-v1.0.44"],"note":"Project-authored route content after the explicit 9-43 divergence; never source-game canon."},"locationId":"golden_bough_fault","backgroundAssetId":"bg.golden_bough","cgAssetId":"cg.rebuild_awakening","tone":"golden","portraits":[{"characterId":"albina","portraitAssetId":"portrait.albina.golden-bough","position":"center","active":true,"scale":1},{"characterId":"protagonist","portraitAssetId":"portrait.protagonist.serious","position":"left","active":false,"scale":0.9}],"speaker":"阿尔比娜","text":"金色光尘沿着她的义体裂缝回流。她先确认的不是自己，而是法西娅是否还在呼吸。","voiceAssetId":"voice.scene.golden_bough_001","bgmAssetId":"file.audio.bgm.title.theme.mp3","choices":[{"id":"rebuild_anchor","text":"成为她的记忆锚点","nextSceneId":"golden_bough_002","resultText":"你选择“成为她的记忆锚点”。旁白：镜面里的阿尔比娜有无数个切口，但每一道切口都避开了你替她守住的名字。","resultVoiceAssetId":"voice.result.rebuild_anchor","effects":{"values":{"affectionAlbina":1,"trust":5,"artResonance":2},"setFlags":["player_memory_anchor"],"unlockCg":["cg.surgery_of_memory"]}},{"id":"rebuild_question_fascia","text":"先检查法西娅","nextSceneId":"golden_bough_002","resultText":"你选择“先检查法西娅”。旁白：镜面里的阿尔比娜有无数个切口，但每一道切口都避开了你替她守住的名字。","resultVoiceAssetId":"voice.result.rebuild_question_fascia","effects":{"values":{"trust":2,"danger":1,"artResonance":4},"setFlags":["fascia_checked_first"],"unlockCg":["cg.fascia_heartbeat"]}}]},{"version":2,"id":"golden_bough_002","chapter":2,"route":"golden_bough_rebuild","provenance":{"classification":"AU_extension","scope":"route","claimIds":["boundary.routes-and-player.are-AU"],"sourceIds":["source.official.canto-ix.9-43","source.project.legacy-v1.0.44"],"note":"Project-authored route content after the explicit 9-43 divergence; never source-game canon."},"locationId":"mirror_corridor","backgroundAssetId":"bg.mirror_corridor","cgAssetId":"cg.golden_bough_ending","tone":"golden","portraits":[{"characterId":"albina","portraitAssetId":"portrait.albina.endgame","position":"right","active":true,"scale":1},{"characterId":"protagonist","portraitAssetId":"portrait.protagonist.resolve","position":"left","active":false,"scale":0.94}],"speaker":"旁白","text":"镜面里的阿尔比娜有无数个切口，但每一道切口都避开了你替她守住的名字。","voiceAssetId":"voice.scene.golden_bough_002","bgmAssetId":"file.audio.bgm.title.theme.mp3","choices":[{"id":"rebuild_push_into_raid","text":"带着记忆锚点突入金枝异常现场","nextSceneId":"golden_bough_003","resultText":"你选择“带着记忆锚点突入金枝异常现场”。浮士德：金枝残响把病床、画架和战场叠成一张薄膜。浮士德只给出结论：如果锚点断裂，阿尔比娜会把自己误认为一件已经完成的作品。","resultVoiceAssetId":"voice.result.rebuild_push_into_raid","effects":{"values":{"trust":3,"danger":2,"artResonance":3},"setFlags":["rebuild_raid_committed"],"unlockCg":["cg.lce_raid"]}},{"id":"return_opening_from_rebuild","text":"回到路线选择","nextSceneId":"opening_001","resultText":"你选择“回到路线选择”。阿尔比娜：晚上好，{{user}}。请不要站得太远，我还没决定该把你称作观众、朋友，还是一块值得等待的画布。","resultVoiceAssetId":"voice.result.return_opening_from_rebuild","effects":{"values":{"trust":1},"setFlags":["rebuild_looped"]}}]},{"version":2,"id":"golden_bough_003","chapter":3,"route":"golden_bough_rebuild","provenance":{"classification":"AU_extension","scope":"route","claimIds":["boundary.routes-and-player.are-AU"],"sourceIds":["source.official.canto-ix.9-43","source.project.legacy-v1.0.44"],"note":"Project-authored route content after the explicit 9-43 divergence; never source-game canon."},"locationId":"lce_lab","backgroundAssetId":"bg.lce_lab","cgAssetId":"cg.lce_raid","tone":"threat","portraits":[{"characterId":"faust","portraitAssetId":"portrait.faust.normal","position":"left","active":false,"scale":0.82},{"characterId":"albina","portraitAssetId":"portrait.albina.fascia-open","position":"center","active":true,"scale":1},{"characterId":"protagonist","portraitAssetId":"portrait.protagonist.battle","position":"right","active":false,"scale":0.92}],"speaker":"浮士德","text":"金枝残响把病床、画架和战场叠成一张薄膜。浮士德只给出结论：如果锚点断裂，阿尔比娜会把自己误认为一件已经完成的作品。","voiceAssetId":"voice.scene.golden_bough_003","bgmAssetId":"file.audio.bgm.title.theme.mp3","sfxAssetIds":["file.audio.se.slash.heavy.wav"],"choices":[{"id":"rebuild_cut_false_completion","text":"切断“完成品”的错误定义","nextSceneId":"golden_bough_004","resultText":"你选择“切断“完成品”的错误定义”。维吉利乌斯：楼顶的风把金色光尘吹成刀刃。维吉利乌斯没有劝阻，只提醒你：重构不是修好她，而是承认她有权决定哪些缺口继续存在。","resultVoiceAssetId":"voice.result.rebuild_cut_false_completion","effects":{"values":{"trust":4,"danger":1,"artResonance":4},"relationshipVectors":{"intimacy":1,"reliance":4},"conflictMastery":{"analysis":1},"setFlags":["false_completion_cut"],"unlockCg":["cg.surgery_of_memory"],"grantItems":["item.golden.memory_anchor"],"equipItems":["equipment.golden.memory_lens"],"unlockOutfits":["outfit.albina.golden_bough"],"activateOutfit":"outfit.albina.golden_bough","completeQuests":["quest.golden.memory_continuity"],"professionXp":{"memory_surgeon":6}}},{"id":"rebuild_guard_fascia_pulse","text":"守住法西娅的心跳频率","nextSceneId":"golden_bough_004","resultText":"你选择“守住法西娅的心跳频率”。维吉利乌斯：楼顶的风把金色光尘吹成刀刃。维吉利乌斯没有劝阻，只提醒你：重构不是修好她，而是承认她有权决定哪些缺口继续存在。","resultVoiceAssetId":"voice.result.rebuild_guard_fascia_pulse","effects":{"values":{"affectionAlbina":1,"trust":3,"artResonance":3},"relationshipVectors":{"reliance":3,"obsession":1},"conflictMastery":{"resonance":1},"setFlags":["fascia_pulse_guarded"],"unlockCg":["cg.fascia_heartbeat"],"grantItems":["item.golden.memory_anchor"],"equipItems":["equipment.golden.memory_lens"],"unlockOutfits":["outfit.albina.golden_bough"],"activateOutfit":"outfit.albina.golden_bough","completeQuests":["quest.golden.memory_continuity"],"professionXp":{"memory_surgeon":6}}}]},{"version":2,"id":"golden_bough_004","chapter":4,"route":"golden_bough_rebuild","provenance":{"classification":"AU_extension","scope":"route","claimIds":["boundary.routes-and-player.are-AU"],"sourceIds":["source.official.canto-ix.9-43","source.project.legacy-v1.0.44"],"note":"Project-authored route content after the explicit 9-43 divergence; never source-game canon."},"locationId":"city_rooftop","backgroundAssetId":"bg.city_rooftop","cgAssetId":"cg.araya_rooftop","tone":"golden","portraits":[{"characterId":"vergilius","portraitAssetId":"portrait.vergilius.normal","position":"left","active":false,"scale":0.84},{"characterId":"albina","portraitAssetId":"portrait.albina.golden-bough","position":"center","active":true,"scale":1},{"characterId":"protagonist","portraitAssetId":"portrait.protagonist.resolve","position":"right","active":false,"scale":0.92}],"speaker":"维吉利乌斯","text":"楼顶的风把金色光尘吹成刀刃。维吉利乌斯没有劝阻，只提醒你：重构不是修好她，而是承认她有权决定哪些缺口继续存在。","voiceAssetId":"voice.scene.golden_bough_004","bgmAssetId":"file.audio.bgm.title.theme.mp3","choices":[{"id":"rebuild_accept_missing_pieces","text":"承认缺口也是她的结构","nextSceneId":"golden_bough_005","resultText":"你选择“承认缺口也是她的结构”。阿尔比娜：最后一面镜子没有给她完整倒影，只给出一条可以返回的路。她握住你的手腕，确认那不是束缚，而是一次被允许的回航。","resultVoiceAssetId":"voice.result.rebuild_accept_missing_pieces","effects":{"values":{"affectionAlbina":2,"trust":4,"artResonance":2},"setFlags":["missing_pieces_accepted"],"unlockCg":["cg.golden_bough_ending"]}},{"id":"rebuild_use_rooftop_signal","text":"用楼顶信号重排记忆顺序","nextSceneId":"golden_bough_005","resultText":"你选择“用楼顶信号重排记忆顺序”。阿尔比娜：最后一面镜子没有给她完整倒影，只给出一条可以返回的路。她握住你的手腕，确认那不是束缚，而是一次被允许的回航。","resultVoiceAssetId":"voice.result.rebuild_use_rooftop_signal","effects":{"values":{"trust":3,"danger":-1,"artResonance":4},"setFlags":["rooftop_signal_reordered"],"unlockCg":["cg.araya_rooftop"]}}]},{"version":2,"id":"golden_bough_005","chapter":5,"route":"golden_bough_rebuild","provenance":{"classification":"AU_extension","scope":"route","claimIds":["boundary.routes-and-player.are-AU"],"sourceIds":["source.official.canto-ix.9-43","source.project.legacy-v1.0.44"],"note":"Project-authored route content after the explicit 9-43 divergence; never source-game canon."},"locationId":"mirror_corridor","backgroundAssetId":"bg.mirror_corridor","cgAssetId":"cg.golden_bough_ending","tone":"golden","portraits":[{"characterId":"golden_apparition","portraitAssetId":"portrait.golden_apparition.normal","position":"left","active":false,"scale":0.82},{"characterId":"albina","portraitAssetId":"portrait.albina.endgame","position":"center","active":true,"scale":1},{"characterId":"protagonist","portraitAssetId":"portrait.protagonist.resolve","position":"right","active":false,"scale":0.92}],"speaker":"阿尔比娜","text":"最后一面镜子没有给她完整倒影，只给出一条可以返回的路。她握住你的手腕，确认那不是束缚，而是一次被允许的回航。","voiceAssetId":"voice.scene.golden_bough_005","bgmAssetId":"file.audio.bgm.title.theme.mp3","choices":[{"id":"golden_bough_route_complete","text":"记录金枝重构路线的暂定结局","nextSceneId":"golden_bough_006","resultText":"你选择“记录金枝重构路线的暂定结局”。浮士德：记忆手术台上，金色光尘在义体接缝里像旧伤口一样反复渗出。浮士德递过一把刻度尺：她说她想重构的不是身体，是你替她记下却没敢念出来的那段。","resultVoiceAssetId":"voice.result.golden_bough_route_complete","effects":{"values":{"affectionAlbina":1,"trust":2,"danger":-1,"artResonance":3},"setFlags":["golden_bough_route_complete"]}}]},{"version":2,"id":"golden_bough_006","chapter":6,"route":"golden_bough_rebuild","provenance":{"classification":"AU_extension","scope":"route","claimIds":["boundary.routes-and-player.are-AU"],"sourceIds":["source.official.canto-ix.9-43","source.project.legacy-v1.0.44"],"note":"Project-authored route content after the explicit 9-43 divergence; never source-game canon."},"locationId":"lce_lab","backgroundAssetId":"bg.lce_lab","cgAssetId":"cg.surgery_of_memory","tone":"golden","portraits":[{"characterId":"faust","portraitAssetId":"portrait.faust.normal","position":"left","active":false,"scale":0.82},{"characterId":"albina","portraitAssetId":"portrait.albina.fascia-open","position":"center","active":true,"scale":1},{"characterId":"protagonist","portraitAssetId":"portrait.protagonist.serious","position":"right","active":false,"scale":0.9}],"speaker":"浮士德","text":"记忆手术台上，金色光尘在义体接缝里像旧伤口一样反复渗出。浮士德递过一把刻度尺：她说她想重构的不是身体，是你替她记下却没敢念出来的那段。","voiceAssetId":"voice.scene.golden_bough_006","bgmAssetId":"file.audio.bgm.title.theme.mp3","choices":[{"id":"rebuild_006_read_aloud","text":"把那段记忆当着她的面念出来","nextSceneId":"golden_bough_007","resultText":"你选择“把那段记忆当着她的面念出来”。阿尔比娜：金枝裂隙里的回声全是她过去没说完的句子。她让法西娅在你和她之间选择一个频率，说这次她要先听见自己的节拍，再决定要不要跟上。","resultVoiceAssetId":"voice.result.rebuild_006_read_aloud","effects":{"values":{"affectionAlbina":2,"trust":4,"artResonance":3},"setFlags":["memory_read_aloud"],"unlockCg":["cg.surgery_of_memory"]}},{"id":"rebuild_006_keep_silent_anchor","text":"只做锚点，不替她出声","nextSceneId":"golden_bough_007","resultText":"你选择“只做锚点，不替她出声”。阿尔比娜：金枝裂隙里的回声全是她过去没说完的句子。她让法西娅在你和她之间选择一个频率，说这次她要先听见自己的节拍，再决定要不要跟上。","resultVoiceAssetId":"voice.result.rebuild_006_keep_silent_anchor","effects":{"values":{"affectionAlbina":1,"trust":5,"artResonance":2},"setFlags":["silent_anchor_kept"],"unlockCg":["cg.fascia_heartbeat"]}}],"minigame":{"minigameId":"minigame.golden.testimony_cipher","seed":"golden-bough-name-continuity-v1","prompt":"把三段证词排成先尊重本人、再修复记忆的顺序。","assistLabel":"显示证词顺序提示","allowSkip":true}},{"version":2,"id":"golden_bough_007","chapter":7,"route":"golden_bough_rebuild","provenance":{"classification":"AU_extension","scope":"route","claimIds":["boundary.routes-and-player.are-AU"],"sourceIds":["source.official.canto-ix.9-43","source.project.legacy-v1.0.44"],"note":"Project-authored route content after the explicit 9-43 divergence; never source-game canon."},"locationId":"golden_bough_fault","backgroundAssetId":"bg.golden_bough","cgAssetId":"cg.rebuild_awakening","tone":"golden","portraits":[{"characterId":"albina","portraitAssetId":"portrait.albina.golden-bough","position":"center","active":true,"scale":1},{"characterId":"protagonist","portraitAssetId":"portrait.protagonist.battle","position":"left","active":false,"scale":0.92}],"speaker":"阿尔比娜","text":"金枝裂隙里的回声全是她过去没说完的句子。她让法西娅在你和她之间选择一个频率，说这次她要先听见自己的节拍，再决定要不要跟上。","voiceAssetId":"voice.scene.golden_bough_007","bgmAssetId":"file.audio.bgm.title.theme.mp3","choices":[{"id":"rebuild_007_match_her_pulse","text":"按她的节拍调整呼吸","nextSceneId":"golden_bough_008","resultText":"你选择“按她的节拍调整呼吸”。维吉利乌斯：LCE 的搜捕光柱扫过楼顶。维吉利乌斯扔下一句话：你救不回完整的她，但你能决定让她以哪个版本继续存在。阿尔比娜握紧法西娅，等你下判断。","resultVoiceAssetId":"voice.result.rebuild_007_match_her_pulse","effects":{"values":{"affectionAlbina":3,"trust":4,"artResonance":3},"setFlags":["pulse_matched"],"unlockCg":["cg.fascia_heartbeat"]}},{"id":"rebuild_007_stay_own_rhythm","text":"保留你自己的呼吸节奏，让她对齐","nextSceneId":"golden_bough_008","resultText":"你选择“保留你自己的呼吸节奏，让她对齐”。维吉利乌斯：LCE 的搜捕光柱扫过楼顶。维吉利乌斯扔下一句话：你救不回完整的她，但你能决定让她以哪个版本继续存在。阿尔比娜握紧法西娅，等你下判断。","resultVoiceAssetId":"voice.result.rebuild_007_stay_own_rhythm","effects":{"values":{"affectionAlbina":1,"trust":3,"artResonance":4},"setFlags":["own_rhythm_kept"],"unlockCg":["cg.surgery_of_memory"]}}]},{"version":2,"id":"golden_bough_008","chapter":8,"route":"golden_bough_rebuild","provenance":{"classification":"AU_extension","scope":"route","claimIds":["boundary.routes-and-player.are-AU"],"sourceIds":["source.official.canto-ix.9-43","source.project.legacy-v1.0.44"],"note":"Project-authored route content after the explicit 9-43 divergence; never source-game canon."},"locationId":"city_rooftop","backgroundAssetId":"bg.city_rooftop","cgAssetId":"cg.araya_rooftop","tone":"threat","portraits":[{"characterId":"vergilius","portraitAssetId":"portrait.vergilius.normal","position":"left","active":false,"scale":0.84},{"characterId":"albina","portraitAssetId":"portrait.albina.combat","position":"center","active":true,"scale":1},{"characterId":"protagonist","portraitAssetId":"portrait.protagonist.battle","position":"right","active":false,"scale":0.92}],"speaker":"维吉利乌斯","text":"LCE 的搜捕光柱扫过楼顶。维吉利乌斯扔下一句话：你救不回完整的她，但你能决定让她以哪个版本继续存在。阿尔比娜握紧法西娅，等你下判断。","voiceAssetId":"voice.scene.golden_bough_008","bgmAssetId":"file.audio.bgm.title.theme.mp3","sfxAssetIds":["file.audio.se.slash.heavy.wav"],"choices":[{"id":"rebuild_008_protect_current_self","text":"保护此刻这个尚未完成的她","nextSceneId":"golden_bough_009","resultText":"你选择“保护此刻这个尚未完成的她”。金色幻影：镜廊深处的金色幻影模仿着她的旧姿态，问她：要不要把我装回去，省得你再做一个有缺口的自己？她抬头看你，等你回答那个不属于她的问题。","resultVoiceAssetId":"voice.result.rebuild_008_protect_current_self","effects":{"values":{"affectionAlbina":2,"trust":4,"danger":1,"artResonance":3},"setFlags":["current_self_protected"],"unlockCg":["cg.lce_raid"]}},{"id":"rebuild_008_trade_old_memory","text":"用一段旧记忆换取撤退时间","nextSceneId":"golden_bough_009","resultText":"你选择“用一段旧记忆换取撤退时间”。金色幻影：镜廊深处的金色幻影模仿着她的旧姿态，问她：要不要把我装回去，省得你再做一个有缺口的自己？她抬头看你，等你回答那个不属于她的问题。","resultVoiceAssetId":"voice.result.rebuild_008_trade_old_memory","effects":{"values":{"trust":2,"danger":-2,"artResonance":4},"setFlags":["memory_traded"],"unlockCg":["cg.surgery_of_memory"]}}]},{"version":2,"id":"golden_bough_009","chapter":9,"route":"golden_bough_rebuild","provenance":{"classification":"AU_extension","scope":"route","claimIds":["boundary.routes-and-player.are-AU"],"sourceIds":["source.official.canto-ix.9-43","source.project.legacy-v1.0.44"],"note":"Project-authored route content after the explicit 9-43 divergence; never source-game canon."},"locationId":"mirror_corridor","backgroundAssetId":"bg.mirror_corridor","cgAssetId":"cg.golden_bough_ending","tone":"golden","portraits":[{"characterId":"golden_apparition","portraitAssetId":"portrait.golden_apparition.normal","position":"left","active":false,"scale":0.82},{"characterId":"albina","portraitAssetId":"portrait.albina.endgame","position":"center","active":true,"scale":1},{"characterId":"protagonist","portraitAssetId":"portrait.protagonist.resolve","position":"right","active":false,"scale":0.92}],"speaker":"金色幻影","text":"镜廊深处的金色幻影模仿着她的旧姿态，问她：要不要把我装回去，省得你再做一个有缺口的自己？她抬头看你，等你回答那个不属于她的问题。","voiceAssetId":"voice.scene.golden_bough_009","bgmAssetId":"file.audio.bgm.title.theme.mp3","choices":[{"id":"rebuild_009_refuse_perfect_copy","text":"替她拒绝那个完美复制品","nextSceneId":"golden_bough_010","resultText":"你选择“替她拒绝那个完美复制品”。LCE 医师：医师递来一份重构协议：只要她愿意封存一段记忆，LCE 就允许她保留现在的外形。她把笔尖停在协议上，没有签字，先看你的反应。","resultVoiceAssetId":"voice.result.rebuild_009_refuse_perfect_copy","effects":{"values":{"affectionAlbina":2,"trust":5,"artResonance":3},"setFlags":["perfect_copy_refused"],"unlockCg":["cg.golden_bough_ending"]}},{"id":"rebuild_009_hand_question_back","text":"把问题原样交还给她","nextSceneId":"golden_bough_010","resultText":"你选择“把问题原样交还给她”。LCE 医师：医师递来一份重构协议：只要她愿意封存一段记忆，LCE 就允许她保留现在的外形。她把笔尖停在协议上，没有签字，先看你的反应。","resultVoiceAssetId":"voice.result.rebuild_009_hand_question_back","effects":{"values":{"affectionAlbina":3,"trust":3,"artResonance":4},"setFlags":["question_returned"],"unlockCg":["cg.araya_rooftop"]}}]},{"version":2,"id":"golden_bough_010","chapter":10,"route":"golden_bough_rebuild","provenance":{"classification":"AU_extension","scope":"route","claimIds":["boundary.routes-and-player.are-AU"],"sourceIds":["source.official.canto-ix.9-43","source.project.legacy-v1.0.44"],"note":"Project-authored route content after the explicit 9-43 divergence; never source-game canon."},"locationId":"lce_lab","backgroundAssetId":"bg.lce_lab","cgAssetId":"cg.lce_raid","tone":"threat","portraits":[{"characterId":"lce_doctor","portraitAssetId":"portrait.lce_doctor.normal","position":"left","active":false,"scale":0.84},{"characterId":"albina","portraitAssetId":"portrait.albina.surgical","position":"center","active":true,"scale":1},{"characterId":"protagonist","portraitAssetId":"portrait.protagonist.serious","position":"right","active":false,"scale":0.9}],"speaker":"LCE 医师","text":"医师递来一份重构协议：只要她愿意封存一段记忆，LCE 就允许她保留现在的外形。她把笔尖停在协议上，没有签字，先看你的反应。","voiceAssetId":"voice.scene.golden_bough_010","bgmAssetId":"file.audio.bgm.title.theme.mp3","sfxAssetIds":["file.audio.se.slash.heavy.wav"],"choices":[{"id":"rebuild_010_veto_sealing","text":"当着医师反对封存记忆","nextSceneId":"golden_bough_011","resultText":"你选择“当着医师反对封存记忆”。阿尔比娜：夜班巴士上，她把额头轻轻抵在窗玻璃上。她说：你今天替我守住的，不是金枝，是一个允许我继续修改自己的我。","resultVoiceAssetId":"voice.result.rebuild_010_veto_sealing","effects":{"values":{"affectionAlbina":2,"trust":4,"danger":2,"artResonance":3},"setFlags":["memory_seal_vetoed"],"unlockCg":["cg.lce_raid"]}},{"id":"rebuild_010_ask_her_choice","text":"低声问她自己想怎么签","nextSceneId":"golden_bough_011","resultText":"你选择“低声问她自己想怎么签”。阿尔比娜：夜班巴士上，她把额头轻轻抵在窗玻璃上。她说：你今天替我守住的，不是金枝，是一个允许我继续修改自己的我。","resultVoiceAssetId":"voice.result.rebuild_010_ask_her_choice","effects":{"values":{"affectionAlbina":3,"trust":5,"artResonance":2},"setFlags":["seal_choice_hers"],"unlockCg":["cg.surgery_of_memory"]}}]},{"version":2,"id":"golden_bough_011","chapter":11,"route":"golden_bough_rebuild","provenance":{"classification":"AU_extension","scope":"route","claimIds":["boundary.routes-and-player.are-AU"],"sourceIds":["source.official.canto-ix.9-43","source.project.legacy-v1.0.44"],"note":"Project-authored route content after the explicit 9-43 divergence; never source-game canon."},"locationId":"limbus_bus","backgroundAssetId":"bg.limbus_bus","cgAssetId":"cg.limbus_bus_night","tone":"quiet","portraits":[{"characterId":"dante","portraitAssetId":"portrait.dante.normal","position":"left","active":false,"scale":0.8},{"characterId":"albina","portraitAssetId":"portrait.albina.rain","position":"center","active":true,"scale":1},{"characterId":"protagonist","portraitAssetId":"portrait.protagonist.tender","position":"right","active":false,"scale":0.9}],"speaker":"阿尔比娜","text":"夜班巴士上，她把额头轻轻抵在窗玻璃上。她说：你今天替我守住的，不是金枝，是一个允许我继续修改自己的我。","voiceAssetId":"voice.scene.golden_bough_011","bgmAssetId":"file.audio.bgm.title.theme.mp3","choices":[{"id":"rebuild_011_sit_beside","text":"坐到她旁边，不说话","nextSceneId":"golden_bough_012","resultText":"你选择“坐到她旁边，不说话”。环指代理人：环指工坊里有人拿出一枚金枝仿品，提议替她换掉所有\\"未完成\\"的接口。她握紧法西娅，等你判断这是救济，还是又一次把她写成完成品的尝试。","resultVoiceAssetId":"voice.result.rebuild_011_sit_beside","effects":{"values":{"affectionAlbina":4,"trust":3,"artResonance":2},"setFlags":["silent_companionship"],"unlockCg":["cg.limbus_bus_night"]}},{"id":"rebuild_011_ask_next_revision","text":"问她下一笔想修改哪里","nextSceneId":"golden_bough_012","resultText":"你选择“问她下一笔想修改哪里”。环指代理人：环指工坊里有人拿出一枚金枝仿品，提议替她换掉所有\\"未完成\\"的接口。她握紧法西娅，等你判断这是救济，还是又一次把她写成完成品的尝试。","resultVoiceAssetId":"voice.result.rebuild_011_ask_next_revision","effects":{"values":{"affectionAlbina":2,"trust":4,"artResonance":3},"setFlags":["next_revision_asked"],"unlockCg":["cg.araya_rooftop"]}}]},{"version":2,"id":"golden_bough_012","chapter":12,"route":"golden_bough_rebuild","provenance":{"classification":"AU_extension","scope":"route","claimIds":["boundary.routes-and-player.are-AU"],"sourceIds":["source.official.canto-ix.9-43","source.project.legacy-v1.0.44"],"note":"Project-authored route content after the explicit 9-43 divergence; never source-game canon."},"locationId":"ring_atelier","backgroundAssetId":"bg.ring_atelier","cgAssetId":"cg.conspiracy_contract","tone":"gallery","portraits":[{"characterId":"ren","portraitAssetId":"portrait.ren.normal","position":"left","active":false,"scale":0.84},{"characterId":"albina","portraitAssetId":"portrait.albina.furious","position":"center","active":true,"scale":1},{"characterId":"protagonist","portraitAssetId":"portrait.protagonist.battle","position":"right","active":false,"scale":0.92}],"speaker":"环指代理人","text":"环指工坊里有人拿出一枚金枝仿品，提议替她换掉所有\\"未完成\\"的接口。她握紧法西娅，等你判断这是救济，还是又一次把她写成完成品的尝试。","voiceAssetId":"voice.scene.golden_bough_012","bgmAssetId":"file.audio.bgm.title.theme.mp3","sfxAssetIds":["file.audio.se.glass.shatter.wav"],"choices":[{"id":"rebuild_012_break_contract","text":"当面撕毁那份替换协议","nextSceneId":"golden_bough_013","resultText":"你选择“当面撕毁那份替换协议”。阿尔比娜：回到金枝裂隙，她终于允许自己颤抖。她说：你不肯替我决定形状，那我能不能请求你，在我下一次重构失败时，仍然叫出我现在的名字？","resultVoiceAssetId":"voice.result.rebuild_012_break_contract","effects":{"values":{"trust":4,"danger":0,"artResonance":3},"relationshipVectors":{"reliance":3},"conflictMastery":{"analysis":3},"setFlags":["replacement_contract_torn"],"unlockCg":["cg.conspiracy_contract"],"resolveBattles":[{"battleId":"battle.golden.replacement_protocol","outcome":"victory"}],"professionXp":{"memory_surgeon":6}}},{"id":"rebuild_012_negotiate_terms","text":"替她重新谈判条件，不让她独自承担","nextSceneId":"golden_bough_013","resultText":"你选择“替她重新谈判条件，不让她独自承担”。阿尔比娜：回到金枝裂隙，她终于允许自己颤抖。她说：你不肯替我决定形状，那我能不能请求你，在我下一次重构失败时，仍然叫出我现在的名字？","resultVoiceAssetId":"voice.result.rebuild_012_negotiate_terms","effects":{"values":{"affectionAlbina":2,"trust":-5,"danger":3,"artResonance":-4},"relationshipVectors":{"suspicion":3},"conflictMastery":{"analysis":1},"setFlags":["terms_renegotiated"],"unlockCg":["cg.surgery_of_memory"],"resolveBattles":[{"battleId":"battle.golden.replacement_protocol","outcome":"setback"}],"professionXp":{"memory_surgeon":3}}}]},{"version":2,"id":"golden_bough_013","chapter":13,"route":"golden_bough_rebuild","provenance":{"classification":"AU_extension","scope":"route","claimIds":["boundary.routes-and-player.are-AU"],"sourceIds":["source.official.canto-ix.9-43","source.project.legacy-v1.0.44"],"note":"Project-authored route content after the explicit 9-43 divergence; never source-game canon."},"locationId":"golden_bough_fault","backgroundAssetId":"bg.golden_bough","cgAssetId":"cg.golden_bough_ending","tone":"golden","portraits":[{"characterId":"albina","portraitAssetId":"portrait.albina.golden-bough","position":"center","active":true,"scale":1},{"characterId":"protagonist","portraitAssetId":"portrait.protagonist.resolve","position":"left","active":false,"scale":0.92}],"speaker":"阿尔比娜","text":"回到金枝裂隙，她终于允许自己颤抖。她说：你不肯替我决定形状，那我能不能请求你，在我下一次重构失败时，仍然叫出我现在的名字？","voiceAssetId":"voice.scene.golden_bough_013","bgmAssetId":"file.audio.bgm.title.theme.mp3","choices":[{"id":"rebuild_013_promise_name","text":"答应她即使失败也记得这个名字","nextSceneId":"golden_bough_014","resultText":"你选择“答应她即使失败也记得这个名字”。阿尔比娜：镜廊最后一面镜子没有给倒影，只映出一枚未熄的金枝。她把镜子推向你：请你替我保管它，但不要替我点亮它。","resultVoiceAssetId":"voice.result.rebuild_013_promise_name","effects":{"values":{"affectionAlbina":4,"trust":5,"artResonance":3},"setFlags":["name_promise_given"],"unlockCg":["cg.golden_bough_ending"]}},{"id":"rebuild_013_offer_witness","text":"只承诺做见证，不承诺结果","nextSceneId":"golden_bough_014","resultText":"你选择“只承诺做见证，不承诺结果”。阿尔比娜：镜廊最后一面镜子没有给倒影，只映出一枚未熄的金枝。她把镜子推向你：请你替我保管它，但不要替我点亮它。","resultVoiceAssetId":"voice.result.rebuild_013_offer_witness","effects":{"values":{"affectionAlbina":2,"trust":4,"artResonance":4},"setFlags":["witness_only_promise"],"unlockCg":["cg.surgery_of_memory"]}}]},{"version":2,"id":"golden_bough_014","chapter":14,"route":"golden_bough_rebuild","provenance":{"classification":"AU_extension","scope":"route","claimIds":["boundary.routes-and-player.are-AU"],"sourceIds":["source.official.canto-ix.9-43","source.project.legacy-v1.0.44"],"note":"Project-authored route content after the explicit 9-43 divergence; never source-game canon."},"locationId":"mirror_corridor","backgroundAssetId":"bg.mirror_corridor","cgAssetId":"cg.araya_rooftop","tone":"golden","portraits":[{"characterId":"albina","portraitAssetId":"portrait.albina.endgame","position":"center","active":true,"scale":1},{"characterId":"protagonist","portraitAssetId":"portrait.protagonist.resolve","position":"left","active":false,"scale":0.92}],"speaker":"阿尔比娜","text":"镜廊最后一面镜子没有给倒影，只映出一枚未熄的金枝。她把镜子推向你：请你替我保管它，但不要替我点亮它。","voiceAssetId":"voice.scene.golden_bough_014","bgmAssetId":"file.audio.bgm.title.theme.mp3","choices":[{"id":"rebuild_014_keep_unlit","text":"答应只保管，不替她点亮","nextSceneId":"golden_bough_015","resultText":"你选择“答应只保管，不替她点亮”。阿尔比娜：黎明把金枝的光尘压成一层很薄的金属。她抬头看你，第一次没有问该不该重构自己，而是说：谢谢你愿意陪我等到这一层颜色冷却。","resultVoiceAssetId":"voice.result.rebuild_014_keep_unlit","effects":{"values":{"affectionAlbina":3,"trust":5,"artResonance":3},"setFlags":["gilded_bough_kept_unlit"],"unlockCg":["cg.golden_bough_ending"]}},{"id":"rebuild_014_ask_when_to_light","text":"问她什么时刻才能点亮","nextSceneId":"golden_bough_015","resultText":"你选择“问她什么时刻才能点亮”。阿尔比娜：黎明把金枝的光尘压成一层很薄的金属。她抬头看你，第一次没有问该不该重构自己，而是说：谢谢你愿意陪我等到这一层颜色冷却。","resultVoiceAssetId":"voice.result.rebuild_014_ask_when_to_light","effects":{"values":{"affectionAlbina":3,"trust":3,"artResonance":4},"setFlags":["lighting_condition_asked"],"unlockCg":["cg.araya_rooftop"]}}]},{"version":2,"id":"golden_bough_015","chapter":15,"route":"golden_bough_rebuild","provenance":{"classification":"AU_extension","scope":"route","claimIds":["boundary.routes-and-player.are-AU"],"sourceIds":["source.official.canto-ix.9-43","source.project.legacy-v1.0.44"],"note":"Project-authored route content after the explicit 9-43 divergence; never source-game canon."},"locationId":"outskirts_dawn","backgroundAssetId":"bg.outskirts_dawn","cgAssetId":"cg.golden_bough_ending","tone":"golden","portraits":[{"characterId":"protagonist","portraitAssetId":"portrait.protagonist.resolve","position":"left","active":false,"scale":0.92},{"characterId":"albina","portraitAssetId":"portrait.albina.endgame","position":"center","active":true,"scale":1}],"speaker":"阿尔比娜","text":"黎明把金枝的光尘压成一层很薄的金属。她抬头看你，第一次没有问该不该重构自己，而是说：谢谢你愿意陪我等到这一层颜色冷却。","voiceAssetId":"voice.scene.golden_bough_015","bgmAssetId":"file.audio.bgm.title.theme.mp3","choices":[{"id":"golden_bough_route_final","text":"为金枝重构路线落最后一笔","nextSceneId":"golden_bough_rebuild_ending_gate","resultText":"你选择“为金枝重构路线落最后一笔”。金枝重构路线终章已封存，进入固定结局资格判定。","resultVoiceAssetId":"voice.result.golden_bough_route_final","effects":{"values":{"affectionAlbina":3,"trust":3,"danger":-2,"artResonance":4},"setFlags":["golden_bough_route_final"]}}]},{"version":2,"id":"golden_bough_rebuild_ending_gate","chapter":16,"route":"golden_bough_rebuild","provenance":{"classification":"AU_extension","scope":"route","claimIds":["boundary.routes-and-player.are-AU"],"sourceIds":["source.official.canto-ix.9-43","source.project.legacy-v1.0.44"],"note":"Project-authored route content after the explicit 9-43 divergence; never source-game canon."},"locationId":"outskirts_dawn","backgroundAssetId":"bg.outskirts_dawn","cgAssetId":"cg.golden_bough_ending","tone":"golden","portraits":[{"characterId":"protagonist","portraitAssetId":"portrait.protagonist.resolve","position":"left","active":false,"scale":0.92},{"characterId":"albina","portraitAssetId":"portrait.albina.endgame","position":"center","active":true,"scale":1}],"speaker":"叙事记录","text":"金枝重构的全部选择已封存。系统将只依据持久状态判定结局，不请求任何运行时生成。","voiceAssetId":"voice.scene.golden_bough_rebuild_ending_gate","bgmAssetId":"file.audio.bgm.title.theme.mp3","choices":[{"id":"golden_bough_rebuild_choose_true_ending","text":"确认彼此共同抵达的真结局","nextSceneId":"golden_bough_rebuild_ending_true","resultText":"结局判定完成：金枝重构·TRUE。资格规则与选择记录已固定写入。","resultVoiceAssetId":"voice.result.golden_bough_rebuild.true_ending","availability":{"allOf":[{"kind":"flag","flag":"golden_bough_route_final","equals":true},{"kind":"value","key":"trust","operator":"gte","value":56},{"kind":"value","key":"artResonance","operator":"gte","value":50},{"kind":"value","key":"danger","operator":"lte","value":8},{"kind":"quest","questId":"quest.golden.memory_continuity","status":"completed"},{"kind":"battle","battleId":"battle.golden.replacement_protocol","outcome":"victory"},{"kind":"equipment","equipmentId":"equipment.golden.memory_lens"},{"kind":"outfit","outfitId":"outfit.albina.golden_bough"},{"kind":"profession","professionId":"memory_surgeon","levelGte":2},{"kind":"relationship","key":"reliance","operator":"gte","value":7},{"kind":"worldbook","entryId":"albina_routes_endings_au_if","status":"seen"}]},"effects":{"setFlags":["ending_golden_bough_rebuild_true_qualified"]}},{"id":"golden_bough_rebuild_choose_normal_ending","text":"接受仍留有余白的普通结局","nextSceneId":"golden_bough_rebuild_ending_normal","resultText":"结局判定完成：金枝重构·NORMAL。资格规则与选择记录已固定写入。","resultVoiceAssetId":"voice.result.golden_bough_rebuild.normal_ending","availability":{"allOf":[{"kind":"flag","flag":"golden_bough_route_final","equals":true}],"fallback":true},"effects":{"setFlags":["ending_golden_bough_rebuild_normal_qualified"]}},{"id":"golden_bough_rebuild_choose_bad_ending","text":"承认这次未能跨过的坏结局","nextSceneId":"golden_bough_rebuild_ending_bad","resultText":"结局判定完成：金枝重构·BAD。资格规则与选择记录已固定写入。","resultVoiceAssetId":"voice.result.golden_bough_rebuild.bad_ending","availability":{"allOf":[{"kind":"flag","flag":"golden_bough_route_final","equals":true}],"anyOf":[{"kind":"value","key":"trust","operator":"lte","value":49},{"kind":"value","key":"artResonance","operator":"lte","value":44}]},"effects":{"setFlags":["ending_golden_bough_rebuild_bad_qualified"]}}]},{"version":2,"id":"golden_bough_rebuild_ending_true","chapter":17,"route":"golden_bough_rebuild","provenance":{"classification":"AU_extension","scope":"route","claimIds":["boundary.routes-and-player.are-AU"],"sourceIds":["source.official.canto-ix.9-43","source.project.legacy-v1.0.44"],"note":"Project-authored route content after the explicit 9-43 divergence; never source-game canon."},"locationId":"outskirts_dawn","backgroundAssetId":"bg.outskirts_dawn","cgAssetId":"cg.golden_bough_ending","tone":"golden","portraits":[{"characterId":"protagonist","portraitAssetId":"portrait.protagonist.resolve","position":"left","active":false,"scale":0.92},{"characterId":"albina","portraitAssetId":"portrait.albina.endgame","position":"center","active":true,"scale":1}],"speaker":"阿尔比娜","text":"金枝残响终于与法西娅的心跳重合。阿尔比娜记得每一次称呼、暂停和重新确认；她以新的身体醒来，也完整记得是谁陪她走过重构。","voiceAssetId":"voice.scene.golden_bough_rebuild_ending_true","bgmAssetId":"file.audio.bgm.title.theme.mp3","choices":[],"ending":{"route":"golden_bough_rebuild","kind":"true","eligibility":{"allOf":[{"kind":"flag","flag":"golden_bough_route_final","equals":true},{"kind":"value","key":"trust","operator":"gte","value":56},{"kind":"value","key":"artResonance","operator":"gte","value":50},{"kind":"value","key":"danger","operator":"lte","value":8}]}}},{"version":2,"id":"golden_bough_rebuild_ending_normal","chapter":17,"route":"golden_bough_rebuild","provenance":{"classification":"AU_extension","scope":"route","claimIds":["boundary.routes-and-player.are-AU"],"sourceIds":["source.official.canto-ix.9-43","source.project.legacy-v1.0.44"],"note":"Project-authored route content after the explicit 9-43 divergence; never source-game canon."},"locationId":"outskirts_dawn","backgroundAssetId":"bg.outskirts_dawn","cgAssetId":"cg.golden_bough_ending","tone":"golden","portraits":[{"characterId":"protagonist","portraitAssetId":"portrait.protagonist.resolve","position":"left","active":false,"scale":0.92},{"characterId":"albina","portraitAssetId":"portrait.albina.endgame","position":"center","active":true,"scale":1}],"speaker":"阿尔比娜","text":"重构在可控范围内结束。部分残响仍被封存在金色薄膜后，但阿尔比娜认得你，也认得自己。你们决定把余下修复交给时间。","voiceAssetId":"voice.scene.golden_bough_rebuild_ending_normal","bgmAssetId":"file.audio.bgm.title.theme.mp3","choices":[],"ending":{"route":"golden_bough_rebuild","kind":"normal","eligibility":{"allOf":[{"kind":"flag","flag":"golden_bough_route_final","equals":true}],"fallback":true}}},{"version":2,"id":"golden_bough_rebuild_ending_bad","chapter":17,"route":"golden_bough_rebuild","provenance":{"classification":"AU_extension","scope":"route","claimIds":["boundary.routes-and-player.are-AU"],"sourceIds":["source.official.canto-ix.9-43","source.project.legacy-v1.0.44"],"note":"Project-authored route content after the explicit 9-43 divergence; never source-game canon."},"locationId":"outskirts_dawn","backgroundAssetId":"bg.outskirts_dawn","cgAssetId":"cg.golden_bough_ending","tone":"golden","portraits":[{"characterId":"protagonist","portraitAssetId":"portrait.protagonist.resolve","position":"left","active":false,"scale":0.92},{"characterId":"albina","portraitAssetId":"portrait.albina.endgame","position":"center","active":true,"scale":1}],"speaker":"阿尔比娜","text":"稳定槽保住了身体，却没能保住全部连续性。阿尔比娜醒来时仍然礼貌，只把你当作可靠的见证者；被遗漏的称呼沉在金枝深处。","voiceAssetId":"voice.scene.golden_bough_rebuild_ending_bad","bgmAssetId":"file.audio.bgm.title.theme.mp3","choices":[],"ending":{"route":"golden_bough_rebuild","kind":"bad","eligibility":{"allOf":[{"kind":"flag","flag":"golden_bough_route_final","equals":true}],"anyOf":[{"kind":"value","key":"trust","operator":"lte","value":49},{"kind":"value","key":"artResonance","operator":"lte","value":44}]}}},{"version":2,"id":"ring_conspiracy_001","chapter":1,"route":"ring_conspiracy","provenance":{"classification":"AU_extension","scope":"route","claimIds":["boundary.routes-and-player.are-AU"],"sourceIds":["source.official.canto-ix.9-43","source.project.legacy-v1.0.44"],"note":"Project-authored route content after the explicit 9-43 divergence; never source-game canon."},"locationId":"spider_gallery","backgroundAssetId":"bg.spider_gallery","cgAssetId":"cg.conspiracy_contract","tone":"threat","portraits":[{"characterId":"callisto","portraitAssetId":"portrait.callisto.normal","position":"left","active":false,"scale":0.86},{"characterId":"albina","portraitAssetId":"portrait.albina.ring-conspiracy","position":"center","active":true,"scale":1},{"characterId":"ren","portraitAssetId":"portrait.ren.normal","position":"right","active":false,"scale":0.84}],"speaker":"阿尔比娜","text":"蜘蛛巢的灯光像手术刀一样落下。她向你递来一份没有署名的委托，笑得礼貌又危险。","voiceAssetId":"voice.scene.ring_conspiracy_001","bgmAssetId":"file.audio.bgm.boss.kromer.mp3","sfxAssetIds":["file.audio.se.slash.heavy.wav"],"choices":[{"id":"conspiracy_accept","text":"接下委托，但保留自己的条件","nextSceneId":"ring_conspiracy_002","resultText":"你选择“接下委托，但保留自己的条件”。阿尔比娜：她第一次没有把怒意伪装成礼貌。那不是要毁掉你的眼神，更像是不允许任何人替她决定你的用途。","resultVoiceAssetId":"voice.result.conspiracy_accept","effects":{"values":{"trust":2,"danger":3,"artResonance":3},"setFlags":["contract_with_boundary"],"unlockCg":["cg.conspiracy_contract"]}},{"id":"conspiracy_pressure","text":"逼她说出真正目标","nextSceneId":"ring_conspiracy_002","resultText":"你选择“逼她说出真正目标”。阿尔比娜：她第一次没有把怒意伪装成礼貌。那不是要毁掉你的眼神，更像是不允许任何人替她决定你的用途。","resultVoiceAssetId":"voice.result.conspiracy_pressure","effects":{"values":{"affectionAlbina":1,"danger":4,"artResonance":2},"setFlags":["pressed_true_goal"],"unlockCg":["cg.maestro_shadow"]}}]},{"version":2,"id":"ring_conspiracy_002","chapter":2,"route":"ring_conspiracy","provenance":{"classification":"AU_extension","scope":"route","claimIds":["boundary.routes-and-player.are-AU"],"sourceIds":["source.official.canto-ix.9-43","source.project.legacy-v1.0.44"],"note":"Project-authored route content after the explicit 9-43 divergence; never source-game canon."},"locationId":"ring_atelier","backgroundAssetId":"bg.ring_atelier","cgAssetId":"cg.ring_conspiracy_ending","tone":"gallery","portraits":[{"characterId":"albina","portraitAssetId":"portrait.albina.furious","position":"right","active":true,"scale":1},{"characterId":"protagonist","portraitAssetId":"portrait.protagonist.battle","position":"left","active":false,"scale":0.95}],"speaker":"阿尔比娜","text":"她第一次没有把怒意伪装成礼貌。那不是要毁掉你的眼神，更像是不允许任何人替她决定你的用途。","voiceAssetId":"voice.scene.ring_conspiracy_002","bgmAssetId":"file.audio.bgm.boss.kromer.mp3","sfxAssetIds":["file.audio.se.glass.shatter.wav"],"choices":[{"id":"conspiracy_escape_to_backstreets","text":"带着未签名委托冲出画廊","nextSceneId":"ring_conspiracy_003","resultText":"你选择“带着未签名委托冲出画廊”。环指代理人：追兵把雨巷切成一个个展格，仿佛你们已经是可出售的连环画。阿尔比娜没有回头，只把法西娅横在你和委托书之间。","resultVoiceAssetId":"voice.result.conspiracy_escape_to_backstreets","effects":{"values":{"trust":2,"danger":3,"artResonance":2},"setFlags":["ring_escape_committed"],"unlockCg":["cg.backstreet_pursuit"]}},{"id":"return_opening_from_ring","text":"回到路线选择","nextSceneId":"opening_001","resultText":"你选择“回到路线选择”。阿尔比娜：晚上好，{{user}}。请不要站得太远，我还没决定该把你称作观众、朋友，还是一块值得等待的画布。","resultVoiceAssetId":"voice.result.return_opening_from_ring","effects":{"values":{"trust":1,"danger":-1},"setFlags":["conspiracy_looped"]}}]},{"version":2,"id":"ring_conspiracy_003","chapter":3,"route":"ring_conspiracy","provenance":{"classification":"AU_extension","scope":"route","claimIds":["boundary.routes-and-player.are-AU"],"sourceIds":["source.official.canto-ix.9-43","source.project.legacy-v1.0.44"],"note":"Project-authored route content after the explicit 9-43 divergence; never source-game canon."},"locationId":"backstreets_rain","backgroundAssetId":"bg.backstreets_rain","cgAssetId":"cg.backstreet_pursuit","tone":"threat","portraits":[{"characterId":"ring_agent","portraitAssetId":"portrait.ring_agent.normal","position":"left","active":false,"scale":0.84},{"characterId":"albina","portraitAssetId":"portrait.albina.combat","position":"center","active":true,"scale":1},{"characterId":"protagonist","portraitAssetId":"portrait.protagonist.battle","position":"right","active":false,"scale":0.92}],"speaker":"环指代理人","text":"追兵把雨巷切成一个个展格，仿佛你们已经是可出售的连环画。阿尔比娜没有回头，只把法西娅横在你和委托书之间。","voiceAssetId":"voice.scene.ring_conspiracy_003","bgmAssetId":"file.audio.bgm.boss.kromer.mp3","sfxAssetIds":["file.audio.se.slash.heavy.wav"],"choices":[{"id":"conspiracy_break_pursuit_frame","text":"打碎追兵布下的取景框","nextSceneId":"ring_conspiracy_004","resultText":"你选择“打碎追兵布下的取景框”。阿尔比娜：回到蜘蛛画廊时，所有灯都向她弯下去。她把那份委托钉在空框里，语气平静：如果他们要收藏背叛，就先学会被背叛凝视。","resultVoiceAssetId":"voice.result.conspiracy_break_pursuit_frame","effects":{"values":{"trust":3,"danger":2,"artResonance":3},"relationshipVectors":{"intimacy":1,"reliance":4},"conflictMastery":{"blade":1},"setFlags":["pursuit_frame_broken"],"unlockCg":["cg.combat_transition_01"],"grantItems":["item.ring.counter_signet"],"equipItems":["equipment.ring.counter_signet"],"unlockOutfits":["outfit.albina.ring_disguise"],"activateOutfit":"outfit.albina.ring_disguise","completeQuests":["quest.ring.counter_contract"],"professionXp":{"ring_counterforger":6}}},{"id":"conspiracy_feed_false_signature","text":"交出伪造签名引开视线","nextSceneId":"ring_conspiracy_004","resultText":"你选择“交出伪造签名引开视线”。阿尔比娜：回到蜘蛛画廊时，所有灯都向她弯下去。她把那份委托钉在空框里，语气平静：如果他们要收藏背叛，就先学会被背叛凝视。","resultVoiceAssetId":"voice.result.conspiracy_feed_false_signature","effects":{"values":{"trust":2,"danger":-1,"artResonance":4},"relationshipVectors":{"reliance":3,"suspicion":1},"conflictMastery":{"analysis":1},"setFlags":["false_signature_planted"],"unlockCg":["cg.ren_interruption"],"grantItems":["item.ring.counter_signet"],"equipItems":["equipment.ring.counter_signet"],"unlockOutfits":["outfit.albina.ring_disguise"],"activateOutfit":"outfit.albina.ring_disguise","completeQuests":["quest.ring.counter_contract"],"professionXp":{"ring_counterforger":6}}}]},{"version":2,"id":"ring_conspiracy_004","chapter":4,"route":"ring_conspiracy","provenance":{"classification":"AU_extension","scope":"route","claimIds":["boundary.routes-and-player.are-AU"],"sourceIds":["source.official.canto-ix.9-43","source.project.legacy-v1.0.44"],"note":"Project-authored route content after the explicit 9-43 divergence; never source-game canon."},"locationId":"spider_gallery","backgroundAssetId":"bg.spider_gallery","cgAssetId":"cg.maestro_shadow","tone":"gallery","portraits":[{"characterId":"ren","portraitAssetId":"portrait.ren.normal","position":"left","active":false,"scale":0.82},{"characterId":"albina","portraitAssetId":"portrait.albina.maestro","position":"center","active":true,"scale":1},{"characterId":"protagonist","portraitAssetId":"portrait.protagonist.shadow","position":"right","active":false,"scale":0.9}],"speaker":"阿尔比娜","text":"回到蜘蛛画廊时，所有灯都向她弯下去。她把那份委托钉在空框里，语气平静：如果他们要收藏背叛，就先学会被背叛凝视。","voiceAssetId":"voice.scene.ring_conspiracy_004","bgmAssetId":"file.audio.bgm.boss.kromer.mp3","sfxAssetIds":["file.audio.se.glass.shatter.wav"],"choices":[{"id":"ring_conspiracy_route_complete","text":"记录环指共谋路线的暂定结局","nextSceneId":"ring_conspiracy_005","resultText":"你选择“记录环指共谋路线的暂定结局”。卡利斯托：卡利斯托把另一份署了名的委托推到你们中间，笑得像在挑礼物：既然上次没有展出你的缺陷，这次不如让你们两个一起成为一件合作作品。","resultVoiceAssetId":"voice.result.ring_conspiracy_route_complete","effects":{"values":{"affectionAlbina":1,"trust":2,"danger":-2,"artResonance":3},"setFlags":["ring_conspiracy_route_complete"],"unlockCg":["cg.ring_conspiracy_ending"]}}]},{"version":2,"id":"ring_conspiracy_005","chapter":5,"route":"ring_conspiracy","provenance":{"classification":"AU_extension","scope":"route","claimIds":["boundary.routes-and-player.are-AU"],"sourceIds":["source.official.canto-ix.9-43","source.project.legacy-v1.0.44"],"note":"Project-authored route content after the explicit 9-43 divergence; never source-game canon."},"locationId":"ring_atelier","backgroundAssetId":"bg.ring_atelier","cgAssetId":"cg.maestro_shadow","tone":"gallery","portraits":[{"characterId":"callisto","portraitAssetId":"portrait.callisto.normal","position":"left","active":false,"scale":0.86},{"characterId":"albina","portraitAssetId":"portrait.albina.maestro","position":"center","active":true,"scale":1},{"characterId":"protagonist","portraitAssetId":"portrait.protagonist.shadow","position":"right","active":false,"scale":0.9}],"speaker":"卡利斯托","text":"卡利斯托把另一份署了名的委托推到你们中间，笑得像在挑礼物：既然上次没有展出你的缺陷，这次不如让你们两个一起成为一件合作作品。","voiceAssetId":"voice.scene.ring_conspiracy_005","bgmAssetId":"file.audio.bgm.boss.kromer.mp3","sfxAssetIds":["file.audio.se.glass.shatter.wav"],"choices":[{"id":"conspiracy_005_refuse_duo","text":"当众拒绝成为合作展品","nextSceneId":"ring_conspiracy_006","resultText":"你选择“当众拒绝成为合作展品”。阿尔比娜：蜘蛛画廊的灯突然转向她。她把法西娅插进墙上一幅空框，声音很冷：你们想收藏我，那就先学会被我凝视。","resultVoiceAssetId":"voice.result.conspiracy_005_refuse_duo","effects":{"values":{"trust":3,"danger":2,"artResonance":3},"setFlags":["duo_exhibit_refused"],"unlockCg":["cg.maestro_shadow"]}},{"id":"conspiracy_005_let_her_answer","text":"不替她回答，让阿尔比娜开口","nextSceneId":"ring_conspiracy_006","resultText":"你选择“不替她回答，让阿尔比娜开口”。阿尔比娜：蜘蛛画廊的灯突然转向她。她把法西娅插进墙上一幅空框，声音很冷：你们想收藏我，那就先学会被我凝视。","resultVoiceAssetId":"voice.result.conspiracy_005_let_her_answer","effects":{"values":{"affectionAlbina":2,"trust":4,"artResonance":4},"setFlags":["albina_answered_herself"],"unlockCg":["cg.conspiracy_contract"]}}]},{"version":2,"id":"ring_conspiracy_006","chapter":6,"route":"ring_conspiracy","provenance":{"classification":"AU_extension","scope":"route","claimIds":["boundary.routes-and-player.are-AU"],"sourceIds":["source.official.canto-ix.9-43","source.project.legacy-v1.0.44"],"note":"Project-authored route content after the explicit 9-43 divergence; never source-game canon."},"locationId":"spider_gallery","backgroundAssetId":"bg.spider_gallery","cgAssetId":"cg.conspiracy_contract","tone":"threat","portraits":[{"characterId":"ren","portraitAssetId":"portrait.ren.normal","position":"left","active":false,"scale":0.84},{"characterId":"albina","portraitAssetId":"portrait.albina.furious","position":"center","active":true,"scale":1},{"characterId":"protagonist","portraitAssetId":"portrait.protagonist.battle","position":"right","active":false,"scale":0.92}],"speaker":"阿尔比娜","text":"蜘蛛画廊的灯突然转向她。她把法西娅插进墙上一幅空框，声音很冷：你们想收藏我，那就先学会被我凝视。","voiceAssetId":"voice.scene.ring_conspiracy_006","bgmAssetId":"file.audio.bgm.boss.kromer.mp3","sfxAssetIds":["file.audio.se.slash.heavy.wav"],"choices":[{"id":"conspiracy_006_stand_with_her","text":"站到她身侧，分担凝视","nextSceneId":"ring_conspiracy_007","resultText":"你选择“站到她身侧，分担凝视”。环指代理人：雨巷的尽头被代理人堵住。他不拔武器，只是举起一面空画框，要把你们框进环指的目录。阿尔比娜低声让你选：是冲破画框，还是把它抢过来。","resultVoiceAssetId":"voice.result.conspiracy_006_stand_with_her","effects":{"values":{"affectionAlbina":3,"trust":4,"danger":1,"artResonance":3},"setFlags":["gaze_shared"],"unlockCg":["cg.maestro_shadow"]}},{"id":"conspiracy_006_block_view","text":"挡在她和委托人之间","nextSceneId":"ring_conspiracy_007","resultText":"你选择“挡在她和委托人之间”。环指代理人：雨巷的尽头被代理人堵住。他不拔武器，只是举起一面空画框，要把你们框进环指的目录。阿尔比娜低声让你选：是冲破画框，还是把它抢过来。","resultVoiceAssetId":"voice.result.conspiracy_006_block_view","effects":{"values":{"affectionAlbina":2,"trust":3,"danger":3,"artResonance":2},"setFlags":["view_blocked"],"unlockCg":["cg.combat_transition_01"]}}]},{"version":2,"id":"ring_conspiracy_007","chapter":7,"route":"ring_conspiracy","provenance":{"classification":"AU_extension","scope":"route","claimIds":["boundary.routes-and-player.are-AU"],"sourceIds":["source.official.canto-ix.9-43","source.project.legacy-v1.0.44"],"note":"Project-authored route content after the explicit 9-43 divergence; never source-game canon."},"locationId":"backstreets_rain","backgroundAssetId":"bg.backstreets_rain","cgAssetId":"cg.backstreet_pursuit","tone":"threat","portraits":[{"characterId":"ring_agent","portraitAssetId":"portrait.ring_agent.normal","position":"left","active":false,"scale":0.84},{"characterId":"albina","portraitAssetId":"portrait.albina.combat","position":"center","active":true,"scale":1},{"characterId":"protagonist","portraitAssetId":"portrait.protagonist.battle","position":"right","active":false,"scale":0.92}],"speaker":"环指代理人","text":"雨巷的尽头被代理人堵住。他不拔武器，只是举起一面空画框，要把你们框进环指的目录。阿尔比娜低声让你选：是冲破画框，还是把它抢过来。","voiceAssetId":"voice.scene.ring_conspiracy_007","bgmAssetId":"file.audio.bgm.boss.kromer.mp3","sfxAssetIds":["file.audio.se.slash.heavy.wav"],"choices":[{"id":"conspiracy_007_break_frame","text":"冲破画框","nextSceneId":"ring_conspiracy_008","resultText":"你选择“冲破画框”。LCE 医师：LCE 把你们暂扣在手术间。医师递来一份中立证词表，说只要她肯指认环指，就帮她换掉被环指标注过的接口。她没有看表，先看你。","resultVoiceAssetId":"voice.result.conspiracy_007_break_frame","effects":{"values":{"trust":3,"danger":3,"artResonance":3},"setFlags":["street_frame_broken"],"unlockCg":["cg.combat_transition_01"]}},{"id":"conspiracy_007_seize_frame","text":"把画框抢过来，反过来框住他","nextSceneId":"ring_conspiracy_008","resultText":"你选择“把画框抢过来，反过来框住他”。LCE 医师：LCE 把你们暂扣在手术间。医师递来一份中立证词表，说只要她肯指认环指，就帮她换掉被环指标注过的接口。她没有看表，先看你。","resultVoiceAssetId":"voice.result.conspiracy_007_seize_frame","effects":{"values":{"trust":4,"danger":2,"artResonance":4},"setFlags":["frame_seized"],"unlockCg":["cg.maestro_shadow"]}}]},{"version":2,"id":"ring_conspiracy_008","chapter":8,"route":"ring_conspiracy","provenance":{"classification":"AU_extension","scope":"route","claimIds":["boundary.routes-and-player.are-AU"],"sourceIds":["source.official.canto-ix.9-43","source.project.legacy-v1.0.44"],"note":"Project-authored route content after the explicit 9-43 divergence; never source-game canon."},"locationId":"lce_lab","backgroundAssetId":"bg.lce_lab","cgAssetId":"cg.lce_raid","tone":"threat","portraits":[{"characterId":"lce_doctor","portraitAssetId":"portrait.lce_doctor.normal","position":"left","active":false,"scale":0.84},{"characterId":"albina","portraitAssetId":"portrait.albina.surgical","position":"center","active":true,"scale":1},{"characterId":"protagonist","portraitAssetId":"portrait.protagonist.serious","position":"right","active":false,"scale":0.9}],"speaker":"LCE 医师","text":"LCE 把你们暂扣在手术间。医师递来一份中立证词表，说只要她肯指认环指，就帮她换掉被环指标注过的接口。她没有看表，先看你。","voiceAssetId":"voice.scene.ring_conspiracy_008","bgmAssetId":"file.audio.bgm.boss.kromer.mp3","sfxAssetIds":["file.audio.se.slash.heavy.wav"],"choices":[{"id":"conspiracy_008_refuse_testimony","text":"当面拒绝用她换取证词","nextSceneId":"ring_conspiracy_009","resultText":"你选择“当面拒绝用她换取证词”。阿尔比娜：镜廊里同时映出\\"环指版的她\\"和\\"现在的她\\"。她让法西娅在两面镜子之间选一面，然后问你：你愿意被哪一个版本记得？","resultVoiceAssetId":"voice.result.conspiracy_008_refuse_testimony","effects":{"values":{"affectionAlbina":2,"trust":5,"danger":2,"artResonance":2},"setFlags":["testimony_refused"],"unlockCg":["cg.lce_raid"]}},{"id":"conspiracy_008_hand_pen_to_her","text":"把笔交还给她，由她自己决定","nextSceneId":"ring_conspiracy_009","resultText":"你选择“把笔交还给她，由她自己决定”。阿尔比娜：镜廊里同时映出\\"环指版的她\\"和\\"现在的她\\"。她让法西娅在两面镜子之间选一面，然后问你：你愿意被哪一个版本记得？","resultVoiceAssetId":"voice.result.conspiracy_008_hand_pen_to_her","effects":{"values":{"affectionAlbina":3,"trust":4,"artResonance":3},"setFlags":["pen_returned_to_albina"],"unlockCg":["cg.conspiracy_contract"]}}],"minigame":{"minigameId":"minigame.ring.boundary_resonance","seed":"ring-counter-contract-v1","prompt":"只点亮能把这份委托改写为反制契约的条款节点。","assistLabel":"标记不可接受的占有条款","allowSkip":true}},{"version":2,"id":"ring_conspiracy_009","chapter":9,"route":"ring_conspiracy","provenance":{"classification":"AU_extension","scope":"route","claimIds":["boundary.routes-and-player.are-AU"],"sourceIds":["source.official.canto-ix.9-43","source.project.legacy-v1.0.44"],"note":"Project-authored route content after the explicit 9-43 divergence; never source-game canon."},"locationId":"mirror_corridor","backgroundAssetId":"bg.mirror_corridor","cgAssetId":"cg.maestro_shadow","tone":"gallery","portraits":[{"characterId":"golden_apparition","portraitAssetId":"portrait.golden_apparition.normal","position":"left","active":false,"scale":0.82},{"characterId":"albina","portraitAssetId":"portrait.albina.maestro","position":"center","active":true,"scale":1},{"characterId":"protagonist","portraitAssetId":"portrait.protagonist.shadow","position":"right","active":false,"scale":0.9}],"speaker":"阿尔比娜","text":"镜廊里同时映出\\"环指版的她\\"和\\"现在的她\\"。她让法西娅在两面镜子之间选一面，然后问你：你愿意被哪一个版本记得？","voiceAssetId":"voice.scene.ring_conspiracy_009","bgmAssetId":"file.audio.bgm.boss.kromer.mp3","sfxAssetIds":["file.audio.se.glass.shatter.wav"],"choices":[{"id":"conspiracy_009_choose_present","text":"选现在的她，不挑那个环指版","nextSceneId":"ring_conspiracy_010","resultText":"你选择“选现在的她，不挑那个环指版”。卡利斯托：卡利斯托拿出一枚\\"合作者徽章\\"，说只要她肯戴上，环指就放过你。阿尔比娜笑了一下，把徽章塞进你掌心：你来替我决定，要不要让我用它换你。","resultVoiceAssetId":"voice.result.conspiracy_009_choose_present","effects":{"values":{"affectionAlbina":4,"trust":3,"artResonance":3},"setFlags":["present_albina_chosen"],"unlockCg":["cg.art_resonance"]}},{"id":"conspiracy_009_refuse_choice","text":"拒绝回答，让她自己挑镜子","nextSceneId":"ring_conspiracy_010","resultText":"你选择“拒绝回答，让她自己挑镜子”。卡利斯托：卡利斯托拿出一枚\\"合作者徽章\\"，说只要她肯戴上，环指就放过你。阿尔比娜笑了一下，把徽章塞进你掌心：你来替我决定，要不要让我用它换你。","resultVoiceAssetId":"voice.result.conspiracy_009_refuse_choice","effects":{"values":{"affectionAlbina":2,"trust":4,"artResonance":4},"setFlags":["mirror_choice_returned"],"unlockCg":["cg.maestro_shadow"]}}]},{"version":2,"id":"ring_conspiracy_010","chapter":10,"route":"ring_conspiracy","provenance":{"classification":"AU_extension","scope":"route","claimIds":["boundary.routes-and-player.are-AU"],"sourceIds":["source.official.canto-ix.9-43","source.project.legacy-v1.0.44"],"note":"Project-authored route content after the explicit 9-43 divergence; never source-game canon."},"locationId":"ring_atelier","backgroundAssetId":"bg.ring_atelier","cgAssetId":"cg.conspiracy_contract","tone":"gallery","portraits":[{"characterId":"callisto","portraitAssetId":"portrait.callisto.normal","position":"left","active":false,"scale":0.84},{"characterId":"albina","portraitAssetId":"portrait.albina.furious","position":"center","active":true,"scale":1},{"characterId":"protagonist","portraitAssetId":"portrait.protagonist.battle","position":"right","active":false,"scale":0.92}],"speaker":"卡利斯托","text":"卡利斯托拿出一枚\\"合作者徽章\\"，说只要她肯戴上，环指就放过你。阿尔比娜笑了一下，把徽章塞进你掌心：你来替我决定，要不要让我用它换你。","voiceAssetId":"voice.scene.ring_conspiracy_010","bgmAssetId":"file.audio.bgm.boss.kromer.mp3","sfxAssetIds":["file.audio.se.glass.shatter.wav"],"choices":[{"id":"conspiracy_010_throw_badge","text":"把徽章扔回卡利斯托脸上","nextSceneId":"ring_conspiracy_011","resultText":"你选择“把徽章扔回卡利斯托脸上”。环指代理人：代理人撕下礼貌，举出一卷写好剧本的胶片：今晚的故事已经定稿，结局是你们两个都被装裱。阿尔比娜握紧法西娅，低声让你替她改写最后一格分镜。","resultVoiceAssetId":"voice.result.conspiracy_010_throw_badge","effects":{"values":{"affectionAlbina":3,"trust":4,"danger":3,"artResonance":2},"setFlags":["badge_thrown"],"unlockCg":["cg.combat_transition_01"]}},{"id":"conspiracy_010_keep_badge_unworn","text":"收下徽章，但谁都不许戴","nextSceneId":"ring_conspiracy_011","resultText":"你选择“收下徽章，但谁都不许戴”。环指代理人：代理人撕下礼貌，举出一卷写好剧本的胶片：今晚的故事已经定稿，结局是你们两个都被装裱。阿尔比娜握紧法西娅，低声让你替她改写最后一格分镜。","resultVoiceAssetId":"voice.result.conspiracy_010_keep_badge_unworn","effects":{"values":{"affectionAlbina":2,"trust":3,"danger":1,"artResonance":4},"setFlags":["badge_kept_unworn"],"unlockCg":["cg.maestro_shadow"]}}]},{"version":2,"id":"ring_conspiracy_011","chapter":11,"route":"ring_conspiracy","provenance":{"classification":"AU_extension","scope":"route","claimIds":["boundary.routes-and-player.are-AU"],"sourceIds":["source.official.canto-ix.9-43","source.project.legacy-v1.0.44"],"note":"Project-authored route content after the explicit 9-43 divergence; never source-game canon."},"locationId":"spider_gallery","backgroundAssetId":"bg.spider_gallery","cgAssetId":"cg.maestro_shadow","tone":"threat","portraits":[{"characterId":"ren","portraitAssetId":"portrait.ren.normal","position":"left","active":false,"scale":0.82},{"characterId":"albina","portraitAssetId":"portrait.albina.combat","position":"center","active":true,"scale":1},{"characterId":"protagonist","portraitAssetId":"portrait.protagonist.battle","position":"right","active":false,"scale":0.92}],"speaker":"环指代理人","text":"代理人撕下礼貌，举出一卷写好剧本的胶片：今晚的故事已经定稿，结局是你们两个都被装裱。阿尔比娜握紧法西娅，低声让你替她改写最后一格分镜。","voiceAssetId":"voice.scene.ring_conspiracy_011","bgmAssetId":"file.audio.bgm.boss.kromer.mp3","sfxAssetIds":["file.audio.se.slash.heavy.wav"],"choices":[{"id":"conspiracy_011_rewrite_ending","text":"当众改写结局，让他们措手不及","nextSceneId":"ring_conspiracy_012","resultText":"你选择“当众改写结局，让他们措手不及”。维吉利乌斯：楼顶上，维吉利乌斯把一柄已经卸下锋刃的环指画刀扔在你们脚边：用这个结束今晚，或者用它开始下一次共谋，你们自己挑。","resultVoiceAssetId":"voice.result.conspiracy_011_rewrite_ending","effects":{"values":{"trust":4,"danger":0,"artResonance":4},"relationshipVectors":{"reliance":3},"conflictMastery":{"blade":3},"setFlags":["ending_rewritten"],"unlockCg":["cg.ring_conspiracy_ending"],"resolveBattles":[{"battleId":"battle.ring.authorship_frame","outcome":"victory"}],"professionXp":{"ring_counterforger":6}}},{"id":"conspiracy_011_burn_film","text":"直接烧掉胶片，让剧本作废","nextSceneId":"ring_conspiracy_012","resultText":"你选择“直接烧掉胶片，让剧本作废”。维吉利乌斯：楼顶上，维吉利乌斯把一柄已经卸下锋刃的环指画刀扔在你们脚边：用这个结束今晚，或者用它开始下一次共谋，你们自己挑。","resultVoiceAssetId":"voice.result.conspiracy_011_burn_film","effects":{"values":{"trust":3,"danger":7,"artResonance":3},"relationshipVectors":{"suspicion":3},"conflictMastery":{"blade":1},"setFlags":["film_burned"],"unlockCg":["cg.combat_transition_01"],"resolveBattles":[{"battleId":"battle.ring.authorship_frame","outcome":"setback"}],"professionXp":{"ring_counterforger":3}}}]},{"version":2,"id":"ring_conspiracy_012","chapter":12,"route":"ring_conspiracy","provenance":{"classification":"AU_extension","scope":"route","claimIds":["boundary.routes-and-player.are-AU"],"sourceIds":["source.official.canto-ix.9-43","source.project.legacy-v1.0.44"],"note":"Project-authored route content after the explicit 9-43 divergence; never source-game canon."},"locationId":"city_rooftop","backgroundAssetId":"bg.city_rooftop","cgAssetId":"cg.araya_rooftop","tone":"threat","portraits":[{"characterId":"vergilius","portraitAssetId":"portrait.vergilius.normal","position":"left","active":false,"scale":0.84},{"characterId":"albina","portraitAssetId":"portrait.albina.rain","position":"center","active":true,"scale":1},{"characterId":"protagonist","portraitAssetId":"portrait.protagonist.resolve","position":"right","active":false,"scale":0.92}],"speaker":"维吉利乌斯","text":"楼顶上，维吉利乌斯把一柄已经卸下锋刃的环指画刀扔在你们脚边：用这个结束今晚，或者用它开始下一次共谋，你们自己挑。","voiceAssetId":"voice.scene.ring_conspiracy_012","bgmAssetId":"file.audio.bgm.boss.kromer.mp3","sfxAssetIds":["file.audio.se.slash.heavy.wav"],"choices":[{"id":"conspiracy_012_end_tonight","text":"选择结束今晚的共谋","nextSceneId":"ring_conspiracy_013","resultText":"你选择“选择结束今晚的共谋”。阿尔比娜：夜班巴士把你们带离环指的视线。她靠在窗边，把法西娅从胸口取出来放在你掌心一秒：今晚我借你这一秒心跳，作为不签名的合作凭证。","resultVoiceAssetId":"voice.result.conspiracy_012_end_tonight","effects":{"values":{"affectionAlbina":2,"trust":3,"danger":-2,"artResonance":3},"setFlags":["night_ended"],"unlockCg":["cg.ring_conspiracy_ending"]}},{"id":"conspiracy_012_keep_blade","text":"收下画刀，留给未来必要时再用","nextSceneId":"ring_conspiracy_013","resultText":"你选择“收下画刀，留给未来必要时再用”。阿尔比娜：夜班巴士把你们带离环指的视线。她靠在窗边，把法西娅从胸口取出来放在你掌心一秒：今晚我借你这一秒心跳，作为不签名的合作凭证。","resultVoiceAssetId":"voice.result.conspiracy_012_keep_blade","effects":{"values":{"affectionAlbina":1,"trust":4,"danger":1,"artResonance":4},"setFlags":["blade_kept"],"unlockCg":["cg.maestro_shadow"]}}]},{"version":2,"id":"ring_conspiracy_013","chapter":13,"route":"ring_conspiracy","provenance":{"classification":"AU_extension","scope":"route","claimIds":["boundary.routes-and-player.are-AU"],"sourceIds":["source.official.canto-ix.9-43","source.project.legacy-v1.0.44"],"note":"Project-authored route content after the explicit 9-43 divergence; never source-game canon."},"locationId":"limbus_bus","backgroundAssetId":"bg.limbus_bus","cgAssetId":"cg.limbus_bus_night","tone":"quiet","portraits":[{"characterId":"dante","portraitAssetId":"portrait.dante.normal","position":"left","active":false,"scale":0.8},{"characterId":"albina","portraitAssetId":"portrait.albina.rain","position":"center","active":true,"scale":1},{"characterId":"protagonist","portraitAssetId":"portrait.protagonist.wet-hair","position":"right","active":false,"scale":0.9}],"speaker":"阿尔比娜","text":"夜班巴士把你们带离环指的视线。她靠在窗边，把法西娅从胸口取出来放在你掌心一秒：今晚我借你这一秒心跳，作为不签名的合作凭证。","voiceAssetId":"voice.scene.ring_conspiracy_013","bgmAssetId":"file.audio.bgm.boss.kromer.mp3","choices":[{"id":"conspiracy_013_hold_one_second","text":"认真握住那一秒，不多不少","nextSceneId":"ring_conspiracy_014","resultText":"你选择“认真握住那一秒，不多不少”。卡利斯托：巢穴车站最后一盏灯下，卡利斯托最后一次出现，递来一张空白入场券：你愿意把今晚写进环指的目录，还是彻底从目录里抹去？","resultVoiceAssetId":"voice.result.conspiracy_013_hold_one_second","effects":{"values":{"affectionAlbina":4,"trust":3,"artResonance":3},"setFlags":["one_second_held"],"unlockCg":["cg.fascia_heartbeat"]}},{"id":"conspiracy_013_return_gently","text":"提前把它轻轻送回，不占有","nextSceneId":"ring_conspiracy_014","resultText":"你选择“提前把它轻轻送回，不占有”。卡利斯托：巢穴车站最后一盏灯下，卡利斯托最后一次出现，递来一张空白入场券：你愿意把今晚写进环指的目录，还是彻底从目录里抹去？","resultVoiceAssetId":"voice.result.conspiracy_013_return_gently","effects":{"values":{"affectionAlbina":2,"trust":5,"artResonance":4},"setFlags":["heartbeat_returned_early"],"unlockCg":["cg.rain_confession"]}}]},{"version":2,"id":"ring_conspiracy_014","chapter":14,"route":"ring_conspiracy","provenance":{"classification":"AU_extension","scope":"route","claimIds":["boundary.routes-and-player.are-AU"],"sourceIds":["source.official.canto-ix.9-43","source.project.legacy-v1.0.44"],"note":"Project-authored route content after the explicit 9-43 divergence; never source-game canon."},"locationId":"nest_station","backgroundAssetId":"bg.nest_station","cgAssetId":"cg.ring_conspiracy_ending","tone":"gallery","portraits":[{"characterId":"callisto","portraitAssetId":"portrait.callisto.normal","position":"left","active":false,"scale":0.82},{"characterId":"albina","portraitAssetId":"portrait.albina.maestro","position":"center","active":true,"scale":1},{"characterId":"protagonist","portraitAssetId":"portrait.protagonist.shadow","position":"right","active":false,"scale":0.9}],"speaker":"卡利斯托","text":"巢穴车站最后一盏灯下，卡利斯托最后一次出现，递来一张空白入场券：你愿意把今晚写进环指的目录，还是彻底从目录里抹去？","voiceAssetId":"voice.scene.ring_conspiracy_014","bgmAssetId":"file.audio.bgm.boss.kromer.mp3","sfxAssetIds":["file.audio.se.glass.shatter.wav"],"choices":[{"id":"conspiracy_014_erase_from_catalog","text":"选择从环指目录里彻底抹去","nextSceneId":"ring_conspiracy_015","resultText":"你选择“选择从环指目录里彻底抹去”。阿尔比娜：城郊黎明把环指的灯火远远压在身后。她停下脚步，把那柄卸下锋刃的画刀插进土里：今晚的共谋到此为止，下一次见面，我会以自己的名义邀请你。","resultVoiceAssetId":"voice.result.conspiracy_014_erase_from_catalog","effects":{"values":{"affectionAlbina":2,"trust":4,"danger":-2,"artResonance":3},"setFlags":["catalog_erased"],"unlockCg":["cg.ring_conspiracy_ending"]}},{"id":"conspiracy_014_keep_one_line","text":"只保留一行不被署名的记录","nextSceneId":"ring_conspiracy_015","resultText":"你选择“只保留一行不被署名的记录”。阿尔比娜：城郊黎明把环指的灯火远远压在身后。她停下脚步，把那柄卸下锋刃的画刀插进土里：今晚的共谋到此为止，下一次见面，我会以自己的名义邀请你。","resultVoiceAssetId":"voice.result.conspiracy_014_keep_one_line","effects":{"values":{"affectionAlbina":3,"trust":3,"artResonance":4},"setFlags":["anonymous_line_kept"],"unlockCg":["cg.maestro_shadow"]}}]},{"version":2,"id":"ring_conspiracy_015","chapter":15,"route":"ring_conspiracy","provenance":{"classification":"AU_extension","scope":"route","claimIds":["boundary.routes-and-player.are-AU"],"sourceIds":["source.official.canto-ix.9-43","source.project.legacy-v1.0.44"],"note":"Project-authored route content after the explicit 9-43 divergence; never source-game canon."},"locationId":"outskirts_dawn","backgroundAssetId":"bg.outskirts_dawn","cgAssetId":"cg.ring_conspiracy_ending","tone":"quiet","portraits":[{"characterId":"protagonist","portraitAssetId":"portrait.protagonist.resolve","position":"left","active":false,"scale":0.92},{"characterId":"albina","portraitAssetId":"portrait.albina.endgame","position":"center","active":true,"scale":1}],"speaker":"阿尔比娜","text":"城郊黎明把环指的灯火远远压在身后。她停下脚步，把那柄卸下锋刃的画刀插进土里：今晚的共谋到此为止，下一次见面，我会以自己的名义邀请你。","voiceAssetId":"voice.scene.ring_conspiracy_015","bgmAssetId":"file.audio.bgm.boss.kromer.mp3","choices":[{"id":"ring_conspiracy_route_final","text":"为环指共谋路线合上最后一卷胶片","nextSceneId":"ring_conspiracy_ending_gate","resultText":"你选择“为环指共谋路线合上最后一卷胶片”。环指共谋路线终章已封存，进入固定结局资格判定。","resultVoiceAssetId":"voice.result.ring_conspiracy_route_final","effects":{"values":{"affectionAlbina":3,"trust":3,"danger":-2,"artResonance":4},"setFlags":["ring_conspiracy_route_final"]}}]},{"version":2,"id":"ring_conspiracy_ending_gate","chapter":16,"route":"ring_conspiracy","provenance":{"classification":"AU_extension","scope":"route","claimIds":["boundary.routes-and-player.are-AU"],"sourceIds":["source.official.canto-ix.9-43","source.project.legacy-v1.0.44"],"note":"Project-authored route content after the explicit 9-43 divergence; never source-game canon."},"locationId":"outskirts_dawn","backgroundAssetId":"bg.outskirts_dawn","cgAssetId":"cg.ring_conspiracy_ending","tone":"quiet","portraits":[{"characterId":"protagonist","portraitAssetId":"portrait.protagonist.resolve","position":"left","active":false,"scale":0.92},{"characterId":"albina","portraitAssetId":"portrait.albina.endgame","position":"center","active":true,"scale":1}],"speaker":"叙事记录","text":"环指共谋的全部选择已封存。系统将只依据持久状态判定结局，不请求任何运行时生成。","voiceAssetId":"voice.scene.ring_conspiracy_ending_gate","bgmAssetId":"file.audio.bgm.boss.kromer.mp3","choices":[{"id":"ring_conspiracy_choose_true_ending","text":"确认彼此共同抵达的真结局","nextSceneId":"ring_conspiracy_ending_true","resultText":"结局判定完成：环指共谋·TRUE。资格规则与选择记录已固定写入。","resultVoiceAssetId":"voice.result.ring_conspiracy.true_ending","availability":{"allOf":[{"kind":"flag","flag":"ring_conspiracy_route_final","equals":true},{"kind":"value","key":"trust","operator":"gte","value":49},{"kind":"value","key":"artResonance","operator":"gte","value":49},{"kind":"value","key":"danger","operator":"lte","value":15},{"kind":"quest","questId":"quest.ring.counter_contract","status":"completed"},{"kind":"battle","battleId":"battle.ring.authorship_frame","outcome":"victory"},{"kind":"equipment","equipmentId":"equipment.ring.counter_signet"},{"kind":"outfit","outfitId":"outfit.albina.ring_disguise"},{"kind":"profession","professionId":"ring_counterforger","levelGte":2},{"kind":"relationship","key":"reliance","operator":"gte","value":7},{"kind":"worldbook","entryId":"albina_routes_endings_au_if","status":"seen"}]},"effects":{"setFlags":["ending_ring_conspiracy_true_qualified"]}},{"id":"ring_conspiracy_choose_normal_ending","text":"接受仍留有余白的普通结局","nextSceneId":"ring_conspiracy_ending_normal","resultText":"结局判定完成：环指共谋·NORMAL。资格规则与选择记录已固定写入。","resultVoiceAssetId":"voice.result.ring_conspiracy.normal_ending","availability":{"allOf":[{"kind":"flag","flag":"ring_conspiracy_route_final","equals":true}],"fallback":true},"effects":{"setFlags":["ending_ring_conspiracy_normal_qualified"]}},{"id":"ring_conspiracy_choose_bad_ending","text":"承认这次未能跨过的坏结局","nextSceneId":"ring_conspiracy_ending_bad","resultText":"结局判定完成：环指共谋·BAD。资格规则与选择记录已固定写入。","resultVoiceAssetId":"voice.result.ring_conspiracy.bad_ending","availability":{"allOf":[{"kind":"flag","flag":"ring_conspiracy_route_final","equals":true}],"anyOf":[{"kind":"value","key":"trust","operator":"lte","value":44},{"kind":"value","key":"danger","operator":"gte","value":18}]},"effects":{"setFlags":["ending_ring_conspiracy_bad_qualified"]}}]},{"version":2,"id":"ring_conspiracy_ending_true","chapter":17,"route":"ring_conspiracy","provenance":{"classification":"AU_extension","scope":"route","claimIds":["boundary.routes-and-player.are-AU"],"sourceIds":["source.official.canto-ix.9-43","source.project.legacy-v1.0.44"],"note":"Project-authored route content after the explicit 9-43 divergence; never source-game canon."},"locationId":"outskirts_dawn","backgroundAssetId":"bg.outskirts_dawn","cgAssetId":"cg.ring_conspiracy_ending","tone":"quiet","portraits":[{"characterId":"protagonist","portraitAssetId":"portrait.protagonist.resolve","position":"left","active":false,"scale":0.92},{"characterId":"albina","portraitAssetId":"portrait.albina.endgame","position":"center","active":true,"scale":1}],"speaker":"阿尔比娜","text":"环指的目录里只剩一页无法归档的空白。阿尔比娜以自己的名字向你发出下一次邀请；你们不再是展品或棋子，而是彼此承认的共谋者。","voiceAssetId":"voice.scene.ring_conspiracy_ending_true","bgmAssetId":"file.audio.bgm.boss.kromer.mp3","choices":[],"ending":{"route":"ring_conspiracy","kind":"true","eligibility":{"allOf":[{"kind":"flag","flag":"ring_conspiracy_route_final","equals":true},{"kind":"value","key":"trust","operator":"gte","value":49},{"kind":"value","key":"artResonance","operator":"gte","value":49},{"kind":"value","key":"danger","operator":"lte","value":15}]}}},{"version":2,"id":"ring_conspiracy_ending_normal","chapter":17,"route":"ring_conspiracy","provenance":{"classification":"AU_extension","scope":"route","claimIds":["boundary.routes-and-player.are-AU"],"sourceIds":["source.official.canto-ix.9-43","source.project.legacy-v1.0.44"],"note":"Project-authored route content after the explicit 9-43 divergence; never source-game canon."},"locationId":"outskirts_dawn","backgroundAssetId":"bg.outskirts_dawn","cgAssetId":"cg.ring_conspiracy_ending","tone":"quiet","portraits":[{"characterId":"protagonist","portraitAssetId":"portrait.protagonist.resolve","position":"left","active":false,"scale":0.92},{"characterId":"albina","portraitAssetId":"portrait.albina.endgame","position":"center","active":true,"scale":1}],"speaker":"阿尔比娜","text":"你们离开了画廊，也留下了一条匿名记录作为制衡。危险没有消失，但契约已被改写；阿尔比娜把下一次会面留给更安全的夜晚。","voiceAssetId":"voice.scene.ring_conspiracy_ending_normal","bgmAssetId":"file.audio.bgm.boss.kromer.mp3","choices":[],"ending":{"route":"ring_conspiracy","kind":"normal","eligibility":{"allOf":[{"kind":"flag","flag":"ring_conspiracy_route_final","equals":true}],"fallback":true}}},{"version":2,"id":"ring_conspiracy_ending_bad","chapter":17,"route":"ring_conspiracy","provenance":{"classification":"AU_extension","scope":"route","claimIds":["boundary.routes-and-player.are-AU"],"sourceIds":["source.official.canto-ix.9-43","source.project.legacy-v1.0.44"],"note":"Project-authored route content after the explicit 9-43 divergence; never source-game canon."},"locationId":"outskirts_dawn","backgroundAssetId":"bg.outskirts_dawn","cgAssetId":"cg.ring_conspiracy_ending","tone":"quiet","portraits":[{"characterId":"protagonist","portraitAssetId":"portrait.protagonist.resolve","position":"left","active":false,"scale":0.92},{"characterId":"albina","portraitAssetId":"portrait.albina.endgame","position":"center","active":true,"scale":1}],"speaker":"阿尔比娜","text":"追击停止时，代价已经写进彼此的沉默。你们逃出了装裱，却没能保住共同节奏；阿尔比娜独自带走那柄无锋画刀，没有约定再见。","voiceAssetId":"voice.scene.ring_conspiracy_ending_bad","bgmAssetId":"file.audio.bgm.boss.kromer.mp3","choices":[],"ending":{"route":"ring_conspiracy","kind":"bad","eligibility":{"allOf":[{"kind":"flag","flag":"ring_conspiracy_route_final","equals":true}],"anyOf":[{"kind":"value","key":"trust","operator":"lte","value":44},{"kind":"value","key":"danger","operator":"gte","value":18}]}}}]'), b8 = {
+}, d8 = 2, l8 = "albina-galgame-card", u8 = "canon_recap_9_14", f8 = { white_canvas: "white_canvas_001", golden_bough_rebuild: "golden_bough_001", ring_conspiracy: "ring_conspiracy_001" }, p8 = /* @__PURE__ */ JSON.parse('{"relationshipTracks":[{"id":"intimacy","label":"亲密","minimum":0,"maximum":100},{"id":"reliance","label":"信赖","minimum":0,"maximum":100},{"id":"obsession","label":"执着","minimum":0,"maximum":100},{"id":"suspicion","label":"戒备","minimum":0,"maximum":100}],"quests":[{"id":"quest.white.boundary_protocol","route":"white_canvas","label":"白色画布边界协议","description":"在见证、处置权和展出决定之间建立可撤回的边界。"},{"id":"quest.golden.memory_continuity","route":"golden_bough_rebuild","label":"金枝记忆连续性","description":"在重构过程中保住称谓、选择权与法西娅的心跳锚点。"},{"id":"quest.ring.counter_contract","route":"ring_conspiracy","label":"环指反制契约","description":"保留自身条件并把敌对委托改写为可追踪的反制条款。"}],"battles":[{"id":"battle.white.gallery_pressure","route":"white_canvas","label":"画廊展出压力","description":"决定是否把阿尔比娜作为作品展出的制度性冲突。","recommendedMastery":"boundary"},{"id":"battle.golden.replacement_protocol","route":"golden_bough_rebuild","label":"替换协议冲突","description":"围绕记忆封存和替换协议发生的确定性规则冲突。","recommendedMastery":"analysis"},{"id":"battle.ring.authorship_frame","route":"ring_conspiracy","label":"署名权取景框","description":"在环指剧本、胶片和署名权之间争夺叙事控制。","recommendedMastery":"blade"}],"minigames":[{"id":"minigame.white.mirror_thread","route":"white_canvas","label":"镜面连线","description":"辨认见证、撤回与处置之间应被保留的边界连线。","puzzle":{"kind":"mirror_thread","anchors":[{"id":"witness","label":"见证","description":"在场、记录，但不替任何人作决定。"},{"id":"consent","label":"撤回权","description":"任何亲密或处置都可被当事人随时收回。"},{"id":"ownership","label":"所有权","description":"LCE 希望写进协议的占有性措辞。"}],"correctPair":["witness","consent"]},"outcomes":{"perfect":{"values":{"trust":3,"danger":-2},"relationshipVectors":{"reliance":2},"conflictMastery":{"boundary":2},"setFlags":["minigame_white_boundary_perfect"],"professionXp":{"boundary_mediator":3}},"assisted":{"values":{"trust":1,"danger":-1},"relationshipVectors":{"reliance":1},"conflictMastery":{"boundary":1},"setFlags":["minigame_white_boundary_assisted"],"professionXp":{"boundary_mediator":1}},"setback":{"values":{"danger":1},"setFlags":["minigame_white_boundary_setback"]},"skipped":{"setFlags":["minigame_white_boundary_skipped"]}}},{"id":"minigame.golden.testimony_cipher","route":"golden_bough_rebuild","label":"称谓证词解码","description":"把记忆碎片按“本人意愿优先”的顺序归还，而非替她拼成完成品。","puzzle":{"kind":"testimony_cipher","fragments":[{"id":"name","text":"先叫出她现在选择的名字。"},{"id":"consent","text":"确认由她决定哪些记忆可以留下。"},{"id":"copy","text":"拒绝把旧版本当作唯一正确答案。"}],"solutionOrder":["name","consent","copy"]},"outcomes":{"perfect":{"values":{"trust":3,"danger":-1,"artResonance":4},"relationshipVectors":{"reliance":2},"conflictMastery":{"analysis":2,"resonance":1},"setFlags":["minigame_golden_memory_perfect"],"professionXp":{"memory_surgeon":3}},"assisted":{"values":{"trust":1,"artResonance":2},"conflictMastery":{"analysis":1},"setFlags":["minigame_golden_memory_assisted"],"professionXp":{"memory_surgeon":1}},"setback":{"values":{"danger":1},"setFlags":["minigame_golden_memory_setback"]},"skipped":{"setFlags":["minigame_golden_memory_skipped"]}}},{"id":"minigame.ring.boundary_resonance","route":"ring_conspiracy","label":"反制条款共振","description":"只激活能够保留双方署名、撤回和追踪权的条款节点。","puzzle":{"kind":"boundary_resonance","nodes":[{"id":"authorship","label":"署名权"},{"id":"revocation","label":"撤回权"},{"id":"trace","label":"追踪条款"},{"id":"possession","label":"占有条款"}],"targetActiveIds":["authorship","revocation","trace"]},"outcomes":{"perfect":{"values":{"trust":2,"danger":-2,"artResonance":2,"leverage":3},"relationshipVectors":{"reliance":2},"conflictMastery":{"blade":1,"analysis":2},"setFlags":["minigame_ring_counter_clause_perfect"],"professionXp":{"ring_counterforger":3}},"assisted":{"values":{"trust":1,"danger":-1,"leverage":1},"conflictMastery":{"analysis":1},"setFlags":["minigame_ring_counter_clause_assisted"],"professionXp":{"ring_counterforger":1}},"setback":{"values":{"danger":1,"exposure":1},"setFlags":["minigame_ring_counter_clause_setback"]},"skipped":{"setFlags":["minigame_ring_counter_clause_skipped"]}}}],"items":[{"id":"item.rain_room_badge","label":"雨室观测徽记","description":"进入 AU/IF 后由前端保存的身份与见证锚点。"},{"id":"item.white.boundary_contract","route":"white_canvas","label":"边界契约钥","description":"证明处置权、撤回权和展出决定已写入权威状态。"},{"id":"item.golden.memory_anchor","route":"golden_bough_rebuild","label":"称谓锚定镜片","description":"用于稳定重构后的称谓和人格连续性。"},{"id":"item.ring.counter_signet","route":"ring_conspiracy","label":"反制环印","description":"记录玩家保留条件和反写条款的装备凭据。"}],"equipment":[{"id":"equipment.rain_room_badge","itemId":"item.rain_room_badge","slot":"accessory","label":"雨室观测徽记","modifiers":{"trust":1,"composure":2}},{"id":"equipment.white.boundary_charm","itemId":"item.white.boundary_contract","route":"white_canvas","slot":"accessory","label":"边界契约护符","modifiers":{"trust":3,"danger":-2}},{"id":"equipment.golden.memory_lens","itemId":"item.golden.memory_anchor","route":"golden_bough_rebuild","slot":"accessory","label":"称谓锚定镜片","modifiers":{"trust":2,"artResonance":4}},{"id":"equipment.ring.counter_signet","itemId":"item.ring.counter_signet","route":"ring_conspiracy","slot":"accessory","label":"反制环印","modifiers":{"danger":-3,"leverage":3}}],"professions":[{"id":"narrative_curator","label":"剧情索引师","xpThresholds":[0,8,20,36],"modifiersPerLevel":{"artResonance":1}},{"id":"boundary_mediator","route":"white_canvas","label":"边界调停者","xpThresholds":[0,8,20,36],"modifiersPerLevel":{"trust":1,"danger":-1}},{"id":"memory_surgeon","route":"golden_bough_rebuild","label":"记忆修复师","xpThresholds":[0,8,20,36],"modifiersPerLevel":{"artResonance":2}},{"id":"ring_counterforger","route":"ring_conspiracy","label":"契约反写者","xpThresholds":[0,8,20,36],"modifiersPerLevel":{"trust":1,"danger":-1,"leverage":1}}],"achievements":[{"id":"ach_au_boundary_witness","label":"AU 边界见证","description":"完成正史复盘并确认本卡路线属于原创 AU/IF。","eligibility":[{"kind":"flag","flag":"AU_boundary_acknowledged","equals":true},{"kind":"worldbook","entryId":"albina_routes_endings_au_if","status":"seen"}],"reward":{"values":{"artResonance":1},"professionXp":{"narrative_curator":2},"setFlags":["achievement_au_boundary_witness"]}},{"id":"ach_white_boundary_archivist","route":"white_canvas","label":"白厅边界档案","description":"完成边界任务并解决画廊展出压力。","eligibility":[{"kind":"quest","questId":"quest.white.boundary_protocol","status":"completed"},{"kind":"battle","battleId":"battle.white.gallery_pressure","outcome":"victory"},{"kind":"profession","professionId":"boundary_mediator","levelGte":2}],"reward":{"values":{"trust":2,"danger":-2},"professionXp":{"boundary_mediator":2},"setFlags":["achievement_white_boundary_archivist"]}},{"id":"ach_golden_memory_protocol","route":"golden_bough_rebuild","label":"重构称谓协议","description":"完成连续性任务并解决替换协议冲突。","eligibility":[{"kind":"quest","questId":"quest.golden.memory_continuity","status":"completed"},{"kind":"battle","battleId":"battle.golden.replacement_protocol","outcome":"victory"},{"kind":"profession","professionId":"memory_surgeon","levelGte":2}],"reward":{"values":{"artResonance":3},"professionXp":{"memory_surgeon":2},"setFlags":["achievement_golden_memory_protocol"]}},{"id":"ach_ring_counter_clause","route":"ring_conspiracy","label":"反写条款生效","description":"完成反制任务并夺回署名权。","eligibility":[{"kind":"quest","questId":"quest.ring.counter_contract","status":"completed"},{"kind":"battle","battleId":"battle.ring.authorship_frame","outcome":"victory"},{"kind":"profession","professionId":"ring_counterforger","levelGte":2}],"reward":{"values":{"trust":2,"danger":-2},"professionXp":{"ring_counterforger":2},"setFlags":["achievement_ring_counter_clause"]}}],"outfits":[{"id":"outfit.albina.rain","label":"雨室外套","portraitAssetId":"portrait.albina.rain"},{"id":"outfit.albina.white_canvas","route":"white_canvas","label":"白色画布装束","portraitAssetId":"portrait.albina.white-canvas"},{"id":"outfit.albina.golden_bough","route":"golden_bough_rebuild","label":"金枝重构装束","portraitAssetId":"portrait.albina.golden-bough"},{"id":"outfit.albina.ring_disguise","route":"ring_conspiracy","label":"环指潜入装束","portraitAssetId":"portrait.albina.ring-conspiracy"}],"worldbookEntries":[{"id":"albina_canon_term_corporism","claimIds":["canon.term.corporism"],"constant":false,"selective":true,"content":"Corporism 是 Canto IX 9-14 与 9-37 明确使用的环指艺术流派名称。本卡保留英文术语，避免无来源扩写其教义。"},{"id":"albina_identity_status","claimIds":["canon.profile.identity"],"constant":false,"selective":true,"content":"阿尔比娜是女性环指 Corporism 学徒、House of Spiders 成员与卡利斯托的弟子，在 Canto IX 作为敌对角色登场；韩语配音为 Kim Do-hee，9-43 后的正史状态为死亡。"},{"id":"albina_prosthetic_appearance","claimIds":["canon.appearance.prosthetic-body"],"constant":false,"selective":true,"content":"阿尔比娜使用带金色点缀的白色全身义体；浅灰色人工高马尾近似线缆，脸与关节处有分界线，黑色机械和线路在颈胸与大腿处裸露，中央结构近似骨架。她右眼黑、左眼白，前臂可展开多种医疗与切割工具。"},{"id":"albina_armor_fascia_visual","claimIds":["canon.appearance.armor-and-fascia"],"constant":false,"selective":true,"content":"白、亮黄、金色的铁处女式装甲具有长裙、尖刺头环、垂链、尖刺裙甲和绘有金色锐眼的面具。Fascia 是同色系巨剑，侧板打开后可见暗色骨架、肋骨与内脏组织。"},{"id":"fascia_body_origin","claimIds":["canon.story.pre-canto-fascia"],"constant":false,"selective":true,"content":"阿尔比娜主动切分原本肉体并将其制作成 Fascia，之后以全身义体替换身体、主要保留脑；Fascia 则缺少脑。她也曾先用自己的手臂练习如何处理创作素材。"},{"id":"albina_fascia_attachment","claimIds":["canon.personality.fascia-attachment"],"constant":false,"selective":true,"content":"阿尔比娜会与 Fascia 交谈、用他人血肉喂养它，并在它可能受损时优先保护它；她甚至会为让 Fascia 继续行动而违背同伴要求。"},{"id":"albina_social_ambition","claimIds":["canon.personality.social-and-ambition"],"constant":false,"selective":true,"content":"阿尔比娜通常平静轻声，却难以理解他人情绪；她把朋友与可用于 Fascia 的素材联系起来，并说自己因把部分脑组织交给 Fascia 而不善说谎。她敬仰卡利斯托，也希望未来成为超越师父的 Maestro。"},{"id":"canto_ix_9_14_context","claimIds":["canon.9-14.corporism-context"],"constant":false,"selective":true,"content":"9-14 展示了环指加工的人体作品、Faust 对 Corporism 的辨认和 Nursefather 留给女儿的创作指示。阿尔比娜本人没有在这一节直接出场。"},{"id":"canto_ix_9_18_first_appearance","claimIds":["canon.9-18.first-appearance"],"constant":false,"selective":true,"content":"9-18 是阿尔比娜首次直接出场。她与 Ren 接替 Shiomi Yoru 阻挡 Dante、Ryōshū、Gregor、Meursault 与 Yi Sang，为 Yoru 带走嫁接的 Golden Boughs 争取时间。战斗中装甲与 Fascia 侧板打开；她坚持让 Fascia 继续行动，Ren 出手制止，争执使罪人得以继续追赶 Yoru。"},{"id":"canto_ix_9_37_encounter","claimIds":["canon.9-37.encounter-and-method"],"constant":false,"selective":true,"content":"Callisto 派阿尔比娜迎接抵达 Corridor of the Ring 的 Sinclair、Ishmael、Faust、Hohenheim 与 Alyssa。她谈到唤醒 Fascia、用自己手臂练习素材处理和交朋友的愿望；遭到 Sinclair 拒绝后开战，并自称是 Callisto 门下的 Corporism 学徒。"},{"id":"canto_ix_9_37_escalation","claimIds":["canon.9-37.escalation"],"constant":false,"selective":true,"content":"Callisto 加入后与阿尔比娜一同压制众人。9-37 最后是 Callisto 以骨肉尖桩制住除 Alyssa 外的成员、Alyssa 以 Ardor Blossom Star 全力反击；Fascia 被毁和师徒死亡不发生在这一节。"},{"id":"canto_ix_9_43_turn_and_outcome","claimIds":["canon.9-43.sign-awakening","canon.9-43.outcome"],"constant":true,"selective":false,"content":"9-43 中 Hohenheim 突袭 Callisto 后，阿尔比娜阻止追击并谈到未来；Sinclair 完全觉醒 The Sign，显现未来版本。Faust 与 Ishmael 制造开口后，Future Sinclair 先摧毁 Fascia，再杀死阿尔比娜，并随后杀死 Callisto。"},{"id":"albina_combat_profile","claimIds":["canon.combat.story-variants","canon.combat.mechanics"],"constant":false,"selective":true,"content":"主线敌人记录包含 9-18 装甲形态、9-37 的装甲转无装甲阶段和 9-43 无装甲形态。她是 65 级、Lust 倾向、以 Bleed 为核心的 Boss；Corpus Ingredient 会转为 Artwork - Fascia 并启用强力攻击。Mirror Dungeon 与 Refracted 记录属于玩法变体，不是主线事件。"},{"id":"albina_visual_reference_lock","claimIds":["inference.visual-reference-lock"],"constant":true,"selective":false,"content":"代表正史阿尔比娜的视觉必须保留白色全身义体、右黑左白双眼、白黄金铁处女式装甲和具有骨骼内脏结构的 Fascia。路线服装变化只能作为明确标注的 AU 视觉。"},{"id":"albina_routes_endings_au_if","claimIds":["boundary.routes-and-player.are-AU"],"constant":true,"selective":false,"content":"opening_001、white_canvas、golden_bough_rebuild、ring_conspiracy、九个结局以及 {{user}} 的身份、能力和关系全部是本卡原创 AU/IF。分歧点位于 9-43 正史结果之后，不能称为原作后续或隐藏结局。"}]}'), h8 = /* @__PURE__ */ JSON.parse('[{"version":2,"id":"canon_recap_9_14","chapter":0,"route":null,"provenance":{"classification":"canon_paraphrase","scope":"canon_recap","claimIds":["canon.9-14.corporism-context"],"sourceIds":["source.official.canto-ix.9-14","source.wiki.canto-ix-part-i.172275"],"note":"Short zh-CN event paraphrase; not a quotation or transcript replacement."},"locationId":"lce_research_hallway","backgroundAssetId":"bg.lce_lab","tone":"canon-recap","portraits":[],"speaker":"正史复盘","text":"【正史中文意译·9-14 背景】在 LCE 研究区走廊，众人遭遇环指加工的人体作品。Faust 根据骨骼、肌肉与运动方式将其辨认为 Corporism，并发现 Nursefather 留给女儿的创作指示。固定转录全文没有在 9-14 直接写到 Albina；本节只提供她所属艺术流派的背景。","voiceAssetId":"voice.scene.canon_recap_9_14","bgmAssetId":"file.audio.bgm.between.two.worlds.mp3","choices":[{"id":"canon_recap_continue_9_18","text":"继续复盘 Albina 的首次登场","nextSceneId":"canon_recap_9_18","resultText":"时间推进到 9-18 的 LCE 研究区实验室。","resultVoiceAssetId":"voice.result.canon_recap_continue_9_18","effects":{"setFlags":["canon_recap_9_14_seen"]}}]},{"version":2,"id":"canon_recap_9_18","chapter":0,"route":null,"provenance":{"classification":"canon_paraphrase","scope":"canon_recap","claimIds":["canon.9-18.first-appearance"],"sourceIds":["source.official.canto-ix.9-18","source.wiki.canto-ix-part-i.172275","source.wiki.albina.173286"],"note":"Reviewed zh-CN first-appearance paraphrase covering the complete Albina-related 9-18 event sequence."},"locationId":"lce_research_lab","backgroundAssetId":"bg.lce_lab","tone":"canon-recap","portraits":[{"characterId":"albina","portraitAssetId":"portrait.albina.armored","position":"center","active":true,"scale":1}],"speaker":"正史复盘","text":"【正史中文意译·9-18 首次出场】Dante、Ryōshū、Gregor、Meursault 与 Yi Sang 在 LCE 研究区实验室追查 Golden Boughs。Albina 与 Ren 接替 Shiomi Yoru 阻挡他们，让 Yoru 接近并带走嫁接的金枝。战斗推进到两人受创后，Albina 的上半装甲与 Fascia 侧板打开，露出搏动组织；她坚持让 Fascia 继续行动，Ren 则要求服从各自师父的计划，并出手制止她。两人的争执也给了罪人继续追赶 Yoru 的机会。","voiceAssetId":"voice.scene.canon_recap_9_18","bgmAssetId":"file.audio.bgm.between.two.worlds.mp3","choices":[{"id":"canon_recap_continue_9_37","text":"继续复盘 9-37","nextSceneId":"canon_recap_9_37","resultText":"时间推进到 Operation Spider Pyre 期间的 Ring Corridor。","resultVoiceAssetId":"voice.result.canon_recap_continue_9_37","effects":{"setFlags":["canon_recap_9_18_seen"]}}]},{"version":2,"id":"canon_recap_9_37","chapter":0,"route":null,"provenance":{"classification":"canon_paraphrase","scope":"canon_recap","claimIds":["canon.9-37.encounter-and-method"],"sourceIds":["source.official.canto-ix.9-37","source.wiki.canto-ix-part-iii.177602","source.wiki.albina.173286"],"note":"Reviewed zh-CN 9-37 arrival, method and friendship paraphrase; player boundary text is kept out of this canon scene."},"locationId":"ring_corridor","backgroundAssetId":"bg.mirror_corridor","tone":"canon-recap","portraits":[{"characterId":"albina","portraitAssetId":"portrait.albina.normal","position":"center","active":true,"scale":1}],"speaker":"正史复盘","text":"【正史中文意译·9-37 相遇】Operation Spider Pyre 期间，Sinclair、Ishmael、Faust、Hohenheim 与 Alyssa 抵达 Corridor of the Ring；Callisto 派 Albina 前来“迎接”他们。她因唤醒沉睡的 Fascia 而迟到，并说明自己仍不擅长在不损坏素材的情况下完成作品，所以先用自己的手臂练习。她礼貌地请求众人与自己成为朋友，却把了解彼此与挑选 Fascia 的素材混在一起；遭到 Sinclair 拒绝后，双方开战。Albina 随后自报姓名，并说明自己是 Callisto 门下的 Corporism 学徒。","voiceAssetId":"voice.scene.canon_recap_9_37","bgmAssetId":"file.audio.bgm.between.two.worlds.mp3","choices":[{"id":"canon_recap_continue_albina_fascia","text":"核对 Albina 与 Fascia","nextSceneId":"canon_recap_albina_fascia","resultText":"复盘转向两者的身份与身体关系。","resultVoiceAssetId":"voice.result.canon_recap_continue_albina_fascia","effects":{"setFlags":["canon_recap_9_37_seen"]}}]},{"version":2,"id":"canon_recap_albina_fascia","chapter":0,"route":null,"provenance":{"classification":"canon_paraphrase","scope":"canon_recap","claimIds":["canon.profile.identity","canon.appearance.prosthetic-body","canon.appearance.armor-and-fascia","canon.personality.fascia-attachment","canon.personality.social-and-ambition","canon.story.pre-canto-fascia"],"sourceIds":["source.official.canto-ix.9-18","source.official.canto-ix.9-37","source.official.canto-ix.9-43","source.wiki.albina-enemy.175660","source.wiki.albina.173286","source.wiki.callisto.177757","source.wiki.canto-ix-part-i.172275","source.wiki.canto-ix-part-iii.177602","source.wiki.house-of-spiders.177075"],"note":"Atomic profile, appearance, personality and pre-Canto facts rendered from the reviewed claim ledger; no source dialogue is reproduced."},"locationId":"ring_corridor","backgroundAssetId":"bg.ring_atelier","tone":"canon-recap","portraits":[{"characterId":"albina","portraitAssetId":"portrait.albina.armored","position":"left","active":true,"scale":1}],"speaker":"正史复盘","text":"【身份】Albina（韩文 알비나，日文 アルビナ）是女性环指 Corporism 学徒、House of Spiders 成员与 Callisto 的弟子。她在 Canto IX 中作为敌对角色登场，韩语配音为 Kim Do-hee；9-43 之后的正史状态为死亡。\\n\\n【外观】她使用带金色点缀的白色全身义体：浅灰色人工质感高马尾近似线缆，脸与关节处有分界线，颈胸与大腿可见黑色机械和线路，躯干中央近似骨架。她右眼黑、左眼白，前臂还能展开剪刀、锯、手术刀、三爪与牵开器等工具。\\n\\n【装甲与武器】她的铁处女式全身装甲以白、亮黄与金色为主，具有长裙、尖刺头环、垂链、尖刺裙甲和绘有金色锐眼的面具。Fascia 是同色系巨剑，侧板打开后会露出暗色骨架、肋骨与内脏组织。\\n\\n【Fascia】Albina 对 Fascia 有强烈依恋，会与它交谈、用他人血肉喂养它，并在它可能受损时优先保护它；9-18 中她甚至为让 Fascia 继续行动而违背 Ren 对计划的要求。\\n\\n【人格与关系】她通常平静轻声、专注艺术，却难以理解他人的情绪；她将“朋友”与可用于 Fascia 的素材联系起来。她表示自己把部分脑组织交给 Fascia 后变得很不善说谎，同时敬仰 Callisto，并希望未来成为超越师父的 Maestro。\\n\\n【身体关系】Albina 主动切分原本肉体并将其制作成 Fascia，随后用全身义体替换身体、主要保留脑；Fascia 则缺少脑。她还曾先以自己的手臂练习如何处理创作素材。","voiceAssetId":"voice.scene.canon_recap_albina_fascia","bgmAssetId":"file.audio.bgm.between.two.worlds.mp3","choices":[{"id":"canon_recap_continue_9_37_battle","text":"继续复盘 9-37 的战斗升级","nextSceneId":"canon_recap_9_37_battle","resultText":"复盘转向 Callisto 加入后的最后阶段。","resultVoiceAssetId":"voice.result.canon_recap_continue_9_37_battle","effects":{"setFlags":["canon_recap_albina_fascia_seen"]}}]},{"version":2,"id":"canon_recap_9_37_battle","chapter":0,"route":null,"provenance":{"classification":"canon_paraphrase","scope":"canon_recap","claimIds":["canon.9-37.escalation"],"sourceIds":["source.official.canto-ix.9-37","source.official.canto-ix.9-43","source.wiki.canto-ix-part-iii.177602"],"note":"Reviewed 9-37 ending boundary contrasted with the later 9-43 outcome."},"locationId":"ring_corridor","backgroundAssetId":"bg.mirror_corridor","tone":"canon-recap","portraits":[{"characterId":"albina","portraitAssetId":"portrait.albina.armored","position":"center","active":true,"scale":1}],"speaker":"正史复盘","text":"【正史中文意译·9-37 战斗升级】Callisto 加入战斗后，与 Albina 一同逐步压制 Limbus Company 一行。该节最后，Callisto 以骨肉尖桩制住除 Alyssa 外的众人，Alyssa 则将 Ardor Blossom Star 调至最高同调并发动反击。9-37 到此结束；Fascia 被毁、Albina 与 Callisto 死亡都不属于这一节，而发生在后续 9-43《Hatching》。","voiceAssetId":"voice.scene.canon_recap_9_37_battle","bgmAssetId":"file.audio.bgm.between.two.worlds.mp3","choices":[{"id":"canon_recap_continue_9_43","text":"继续复盘 9-43《Hatching》","nextSceneId":"canon_recap_9_43_outcome","resultText":"时间推进到 9-43；接下来才是不能被路线文本改写为正史的既定结果。","resultVoiceAssetId":"voice.result.canon_recap_continue_9_43","effects":{"setFlags":["canon_recap_9_37_battle_seen"]}}]},{"version":2,"id":"canon_recap_9_43_outcome","chapter":0,"route":null,"provenance":{"classification":"canon_paraphrase","scope":"canon_recap","claimIds":["canon.9-43.sign-awakening","canon.9-43.outcome"],"sourceIds":["source.official.canto-ix.9-43","source.wiki.canto-ix-part-iii.177602","source.wiki.albina.173286"],"note":"Reviewed 9-43 pressure, Sign awakening and outcome paraphrase; the AU boundary remains a separate scene."},"locationId":"ring_corridor","backgroundAssetId":"bg.mirror_corridor","tone":"canon-recap-outcome","portraits":[],"speaker":"正史复盘","text":"【正史中文意译·9-43《Hatching》转折】Hohenheim 用 Diffraction 突袭 Callisto 后，Albina 阻止 Faust 与 Ishmael 乘机追击；师徒仍将严重受创的众人逼入绝境。她要求 Sinclair 留下成为自己与 Fascia 的朋友，并在旁观 Callisto 对 Hohenheim 下手时谈到未来超越师父的梦想。她提出“未来”后，Sinclair 完全觉醒 The Sign，并显现一个来自未来的自己。\\n\\n【正史中文意译·9-43 既定结果】Faust 与 Ishmael 的同步攻击制造开口后，Future Sinclair 首先摧毁 Fascia。Albina 因 Fascia 被毁而失措，随后也被 Future Sinclair 杀死；Callisto 在之后被杀。Albina 的正史直接出场链至此结束，顺序是 9-18、9-37、9-43。","voiceAssetId":"voice.scene.canon_recap_9_43_outcome","bgmAssetId":"file.audio.bgm.between.two.worlds.mp3","choices":[{"id":"canon_recap_enter_AU","text":"确认边界并进入 AU/IF 分歧","nextSceneId":"opening_001","resultText":"正史复盘已结束。以下三条路线全部是本卡原创 AU/IF。","resultVoiceAssetId":"voice.result.canon_recap_enter_AU","effects":{"setFlags":["canon_recap_9_43_seen","canon_recap_complete","AU_boundary_acknowledged"],"professionXp":{"narrative_curator":2},"activateProfession":"narrative_curator"}}]},{"version":2,"id":"opening_001","chapter":1,"route":null,"provenance":{"classification":"AU_extension","scope":"AU_boundary","claimIds":["boundary.routes-and-player.are-AU"],"sourceIds":["source.official.canto-ix.9-43","source.project.legacy-v1.0.44"],"note":"Explicit continuity boundary shown before the player selects an author-created AU route."},"locationId":"backstreets_rain","backgroundAssetId":"bg.backstreets_rain","cgAssetId":"cg.opening_rain","tone":"AU-boundary","portraits":[{"characterId":"albina","portraitAssetId":"portrait.albina.normal","position":"center","active":true,"scale":1}],"speaker":"AU/IF 分歧","text":"【本卡原创 AU/IF，不是原作后续】9-43《Hatching》的正史结局已经复盘完毕。从这一刻开始，Albina 的存活、玩家 {{user}} 的出现、三条路线与九个结局均为本卡原创，不代表原作事实或隐藏结局。","voiceAssetId":"voice.scene.opening_001","bgmAssetId":"file.audio.bgm.backstreets.rain.mp3","choices":[{"id":"enter_white_canvas","text":"进入 white_canvas AU","nextSceneId":"white_canvas_001","resultText":"【AU/IF】你进入以关系边界与自我选择为核心的 white_canvas 原创路线。","resultVoiceAssetId":"voice.result.enter_white_canvas","effects":{"values":{"affectionAlbina":2,"trust":2,"artResonance":1},"relationshipVectors":{"intimacy":2,"reliance":2},"setFlags":["route_white_canvas_seen"],"unlockCg":["cg.opening_rain"],"grantItems":["item.rain_room_badge"],"equipItems":["equipment.rain_room_badge"],"unlockOutfits":["outfit.albina.rain"],"activateOutfit":"outfit.albina.rain","startQuests":["quest.white.boundary_protocol"],"professionXp":{"boundary_mediator":4},"activateProfession":"boundary_mediator","route":"white_canvas"}},{"id":"enter_rebuild","text":"进入 golden_bough_rebuild AU","nextSceneId":"golden_bough_001","resultText":"【AU/IF】这条路线假设 Albina 在 9-43 死亡后被重构；该前提与全部后续均非正史。","resultVoiceAssetId":"voice.result.enter_rebuild","effects":{"values":{"trust":3,"danger":1},"relationshipVectors":{"reliance":2,"suspicion":1},"setFlags":["route_rebuild_seen"],"unlockCg":["cg.golden_bough_rebuild"],"grantItems":["item.rain_room_badge"],"equipItems":["equipment.rain_room_badge"],"unlockOutfits":["outfit.albina.rain"],"activateOutfit":"outfit.albina.rain","startQuests":["quest.golden.memory_continuity"],"professionXp":{"memory_surgeon":4},"activateProfession":"memory_surgeon","route":"golden_bough_rebuild"}},{"id":"enter_conspiracy","text":"进入 ring_conspiracy AU","nextSceneId":"ring_conspiracy_001","resultText":"【AU/IF】这条路线主动改写 9-43 后续因果；其中的委托、关系和结局均为本卡原创。","resultVoiceAssetId":"voice.result.enter_conspiracy","effects":{"values":{"danger":3,"artResonance":2},"relationshipVectors":{"reliance":1,"suspicion":2},"setFlags":["route_conspiracy_seen"],"unlockCg":["cg.ring_invitation"],"grantItems":["item.rain_room_badge"],"equipItems":["equipment.rain_room_badge"],"unlockOutfits":["outfit.albina.rain"],"activateOutfit":"outfit.albina.rain","startQuests":["quest.ring.counter_contract"],"professionXp":{"ring_counterforger":4},"activateProfession":"ring_counterforger","route":"ring_conspiracy"}}]},{"version":2,"id":"white_canvas_001","chapter":1,"route":"white_canvas","provenance":{"classification":"AU_extension","scope":"route","claimIds":["boundary.routes-and-player.are-AU"],"sourceIds":["source.official.canto-ix.9-43","source.project.legacy-v1.0.44"],"note":"Project-authored route content after the explicit 9-43 divergence; never source-game canon."},"locationId":"white_canvas_room","backgroundAssetId":"bg.white_canvas","cgAssetId":"cg.white_canvas_choice","tone":"quiet","portraits":[{"characterId":"protagonist","portraitAssetId":"portrait.protagonist.tender","position":"left","active":false,"scale":0.94},{"characterId":"albina","portraitAssetId":"portrait.albina.white-canvas","position":"right","active":true,"scale":1}],"speaker":"阿尔比娜","text":"白色并不代表干净。它只是暂时还没有被决定。你也是这样，{{user}}。","voiceAssetId":"voice.scene.white_canvas_001","bgmAssetId":"file.audio.bgm.between.two.worlds.mp3","choices":[{"id":"white_touch_boundary","text":"告诉她：完整也是一种作品","nextSceneId":"white_canvas_002","resultText":"你选择“告诉她：完整也是一种作品”。阿尔比娜：她把黑色手掌停在离你心口一寸的位置，没有继续向前。法西娅安静得像也在等待你的许可。","resultVoiceAssetId":"voice.result.white_touch_boundary","effects":{"values":{"affectionAlbina":3,"trust":4,"artResonance":2},"setFlags":["albina_learns_wholeness"],"unlockCg":["cg.trust_threshold"]}},{"id":"white_tease_back","text":"反问她是否害怕自己的画布","nextSceneId":"white_canvas_002","resultText":"你选择“反问她是否害怕自己的画布”。阿尔比娜：她把黑色手掌停在离你心口一寸的位置，没有继续向前。法西娅安静得像也在等待你的许可。","resultVoiceAssetId":"voice.result.white_tease_back","effects":{"values":{"affectionAlbina":2,"danger":1,"artResonance":3},"setFlags":["player_teases_artist"],"unlockCg":["cg.art_resonance"]}}]},{"version":2,"id":"white_canvas_002","chapter":2,"route":"white_canvas","provenance":{"classification":"AU_extension","scope":"route","claimIds":["boundary.routes-and-player.are-AU"],"sourceIds":["source.official.canto-ix.9-43","source.project.legacy-v1.0.44"],"note":"Project-authored route content after the explicit 9-43 divergence; never source-game canon."},"locationId":"rain_room","backgroundAssetId":"bg.rain_room","cgAssetId":"cg.rain_confession","tone":"rain","portraits":[{"characterId":"albina","portraitAssetId":"portrait.albina.shy","position":"center","active":true,"scale":1}],"speaker":"阿尔比娜","text":"她把黑色手掌停在离你心口一寸的位置，没有继续向前。法西娅安静得像也在等待你的许可。","voiceAssetId":"voice.scene.white_canvas_002","bgmAssetId":"file.audio.bgm.between.two.worlds.mp3","choices":[{"id":"white_follow_to_lab","text":"陪她把画布带进 LCE 临时手术室","nextSceneId":"white_canvas_003","resultText":"你选择“陪她把画布带进 LCE 临时手术室”。LCE 医师：灯光没有温度。记录员要求你签下旁观协议，阿尔比娜却先把笔推给自己：这一次，谁也不能替她同意被拆解。","resultVoiceAssetId":"voice.result.white_follow_to_lab","effects":{"values":{"affectionAlbina":2,"trust":3,"artResonance":2},"setFlags":["white_lab_boundary_seen"],"unlockCg":["cg.hollow_torso_reveal"]}},{"id":"return_opening_from_white","text":"回到路线选择","nextSceneId":"opening_001","resultText":"你选择“回到路线选择”。阿尔比娜：晚上好，{{user}}。请不要站得太远，我还没决定该把你称作观众、朋友，还是一块值得等待的画布。","resultVoiceAssetId":"voice.result.return_opening_from_white","effects":{"values":{"trust":1},"setFlags":["white_canvas_looped"]}}]},{"version":2,"id":"white_canvas_003","chapter":3,"route":"white_canvas","provenance":{"classification":"AU_extension","scope":"route","claimIds":["boundary.routes-and-player.are-AU"],"sourceIds":["source.official.canto-ix.9-43","source.project.legacy-v1.0.44"],"note":"Project-authored route content after the explicit 9-43 divergence; never source-game canon."},"locationId":"lce_lab","backgroundAssetId":"bg.lce_lab","cgAssetId":"cg.hollow_torso_reveal","tone":"quiet","portraits":[{"characterId":"lce_doctor","portraitAssetId":"portrait.lce_doctor.normal","position":"left","active":false,"scale":0.86},{"characterId":"albina","portraitAssetId":"portrait.albina.surgical","position":"center","active":true,"scale":1},{"characterId":"protagonist","portraitAssetId":"portrait.protagonist.serious","position":"right","active":false,"scale":0.9}],"speaker":"LCE 医师","text":"灯光没有温度。记录员要求你签下旁观协议，阿尔比娜却先把笔推给自己：这一次，谁也不能替她同意被拆解。","voiceAssetId":"voice.scene.white_canvas_003","bgmAssetId":"file.audio.bgm.between.two.worlds.mp3","choices":[{"id":"white_sign_witness_protocol","text":"只签见证，不签处置权","nextSceneId":"white_canvas_004","resultText":"你选择“只签见证，不签处置权”。阿尔比娜：巴士窗上映出她的白色义体，也映出你故意留下的空座。她说完整不是没有裂缝，而是裂缝终于有了不被展览的权利。","resultVoiceAssetId":"voice.result.white_sign_witness_protocol","effects":{"values":{"affectionAlbina":1,"trust":4,"artResonance":2},"relationshipVectors":{"intimacy":2,"reliance":3},"conflictMastery":{"boundary":1},"setFlags":["witness_not_ownership"],"unlockCg":["cg.lce_raid"],"grantItems":["item.white.boundary_contract"],"equipItems":["equipment.white.boundary_charm"],"unlockOutfits":["outfit.albina.white_canvas"],"activateOutfit":"outfit.albina.white_canvas","completeQuests":["quest.white.boundary_protocol"],"professionXp":{"boundary_mediator":6}}},{"id":"white_interrupt_lab_terms","text":"要求医师删去所有所有权措辞","nextSceneId":"white_canvas_004","resultText":"你选择“要求医师删去所有所有权措辞”。阿尔比娜：巴士窗上映出她的白色义体，也映出你故意留下的空座。她说完整不是没有裂缝，而是裂缝终于有了不被展览的权利。","resultVoiceAssetId":"voice.result.white_interrupt_lab_terms","effects":{"values":{"trust":3,"danger":1,"artResonance":3},"relationshipVectors":{"reliance":4,"suspicion":-1},"conflictMastery":{"boundary":1},"setFlags":["lab_terms_rewritten"],"unlockCg":["cg.fascia_heartbeat"],"grantItems":["item.white.boundary_contract"],"equipItems":["equipment.white.boundary_charm"],"unlockOutfits":["outfit.albina.white_canvas"],"activateOutfit":"outfit.albina.white_canvas","completeQuests":["quest.white.boundary_protocol"],"professionXp":{"boundary_mediator":6}}}],"minigame":{"minigameId":"minigame.white.mirror_thread","seed":"white-canvas-lce-witness-v1","prompt":"在签字前，连起能让阿尔比娜保留决定权的两项原则。","assistLabel":"显示边界提示","allowSkip":true}},{"version":2,"id":"white_canvas_004","chapter":4,"route":"white_canvas","provenance":{"classification":"AU_extension","scope":"route","claimIds":["boundary.routes-and-player.are-AU"],"sourceIds":["source.official.canto-ix.9-43","source.project.legacy-v1.0.44"],"note":"Project-authored route content after the explicit 9-43 divergence; never source-game canon."},"locationId":"limbus_bus","backgroundAssetId":"bg.limbus_bus","cgAssetId":"cg.limbus_bus_night","tone":"rain","portraits":[{"characterId":"dante","portraitAssetId":"portrait.dante.normal","position":"left","active":false,"scale":0.82},{"characterId":"albina","portraitAssetId":"portrait.albina.rain","position":"center","active":true,"scale":1},{"characterId":"protagonist","portraitAssetId":"portrait.protagonist.wet-hair","position":"right","active":false,"scale":0.9}],"speaker":"阿尔比娜","text":"巴士窗上映出她的白色义体，也映出你故意留下的空座。她说完整不是没有裂缝，而是裂缝终于有了不被展览的权利。","voiceAssetId":"voice.scene.white_canvas_004","bgmAssetId":"file.audio.bgm.between.two.worlds.mp3","choices":[{"id":"white_keep_empty_seat","text":"替她保留那张无人审判的座位","nextSceneId":"white_canvas_005","resultText":"你选择“替她保留那张无人审判的座位”。阿尔比娜：黎明像一层还没有落款的底色。她把法西娅插在你们之间，不是阻隔，而是提醒：任何亲密都必须能被双方随时收回。","resultVoiceAssetId":"voice.result.white_keep_empty_seat","effects":{"values":{"affectionAlbina":4,"trust":3,"artResonance":1},"setFlags":["white_canvas_empty_seat"],"unlockCg":["cg.white_canvas_ending"]}},{"id":"white_share_rain_window","text":"把雨夜倒影交给她自己命名","nextSceneId":"white_canvas_005","resultText":"你选择“把雨夜倒影交给她自己命名”。阿尔比娜：黎明像一层还没有落款的底色。她把法西娅插在你们之间，不是阻隔，而是提醒：任何亲密都必须能被双方随时收回。","resultVoiceAssetId":"voice.result.white_share_rain_window","effects":{"values":{"affectionAlbina":3,"trust":2,"artResonance":3},"setFlags":["rain_reflection_named"],"unlockCg":["cg.rain_confession"]}}]},{"version":2,"id":"white_canvas_005","chapter":5,"route":"white_canvas","provenance":{"classification":"AU_extension","scope":"route","claimIds":["boundary.routes-and-player.are-AU"],"sourceIds":["source.official.canto-ix.9-43","source.project.legacy-v1.0.44"],"note":"Project-authored route content after the explicit 9-43 divergence; never source-game canon."},"locationId":"outskirts_dawn","backgroundAssetId":"bg.outskirts_dawn","cgAssetId":"cg.white_canvas_ending","tone":"quiet","portraits":[{"characterId":"protagonist","portraitAssetId":"portrait.protagonist.resolve","position":"left","active":false,"scale":0.92},{"characterId":"albina","portraitAssetId":"portrait.albina.endgame","position":"center","active":true,"scale":1}],"speaker":"阿尔比娜","text":"黎明像一层还没有落款的底色。她把法西娅插在你们之间，不是阻隔，而是提醒：任何亲密都必须能被双方随时收回。","voiceAssetId":"voice.scene.white_canvas_005","bgmAssetId":"file.audio.bgm.between.two.worlds.mp3","choices":[{"id":"white_canvas_route_complete","text":"记录白色画布路线的暂定结局","nextSceneId":"white_canvas_006","resultText":"你选择“记录白色画布路线的暂定结局”。阿尔比娜：空展厅的回声比任何观众都诚实。她拿起一支没有颜料的画笔，在你面前比划出一条看不见的轮廓：这是你今晚没有说出口的那句话。","resultVoiceAssetId":"voice.result.white_canvas_route_complete","effects":{"values":{"affectionAlbina":2,"trust":2,"danger":-1,"artResonance":2},"setFlags":["white_canvas_route_complete"]}}]},{"version":2,"id":"white_canvas_006","chapter":6,"route":"white_canvas","provenance":{"classification":"AU_extension","scope":"route","claimIds":["boundary.routes-and-player.are-AU"],"sourceIds":["source.official.canto-ix.9-43","source.project.legacy-v1.0.44"],"note":"Project-authored route content after the explicit 9-43 divergence; never source-game canon."},"locationId":"white_canvas_room","backgroundAssetId":"bg.white_canvas","cgAssetId":"cg.white_canvas_choice","tone":"quiet","portraits":[{"characterId":"albina","portraitAssetId":"portrait.albina.white-canvas","position":"center","active":true,"scale":1},{"characterId":"protagonist","portraitAssetId":"portrait.protagonist.tender","position":"left","active":false,"scale":0.92}],"speaker":"阿尔比娜","text":"空展厅的回声比任何观众都诚实。她拿起一支没有颜料的画笔，在你面前比划出一条看不见的轮廓：这是你今晚没有说出口的那句话。","voiceAssetId":"voice.scene.white_canvas_006","bgmAssetId":"file.audio.bgm.between.two.worlds.mp3","choices":[{"id":"white_006_name_silence","text":"替那条轮廓取一个不会被收藏的名字","nextSceneId":"white_canvas_007","resultText":"你选择“替那条轮廓取一个不会被收藏的名字”。法西娅：法西娅的低语从镜面里渗出来：你正在画的并不是她，是一个被允许随时擦掉的你。阿尔比娜没有反驳，只是把那面镜子轻轻转开半寸。","resultVoiceAssetId":"voice.result.white_006_name_silence","effects":{"values":{"affectionAlbina":3,"trust":3,"artResonance":3},"setFlags":["silhouette_named"],"unlockCg":["cg.art_resonance"]}},{"id":"white_006_refuse_naming","text":"让轮廓保持无名，由她决定","nextSceneId":"white_canvas_007","resultText":"你选择“让轮廓保持无名，由她决定”。法西娅：法西娅的低语从镜面里渗出来：你正在画的并不是她，是一个被允许随时擦掉的你。阿尔比娜没有反驳，只是把那面镜子轻轻转开半寸。","resultVoiceAssetId":"voice.result.white_006_refuse_naming","effects":{"values":{"affectionAlbina":2,"trust":4,"artResonance":2},"setFlags":["naming_returned"],"unlockCg":["cg.trust_threshold"]}}]},{"version":2,"id":"white_canvas_007","chapter":7,"route":"white_canvas","provenance":{"classification":"AU_extension","scope":"route","claimIds":["boundary.routes-and-player.are-AU"],"sourceIds":["source.official.canto-ix.9-43","source.project.legacy-v1.0.44"],"note":"Project-authored route content after the explicit 9-43 divergence; never source-game canon."},"locationId":"mirror_corridor","backgroundAssetId":"bg.mirror_corridor","cgAssetId":"cg.fascia_heartbeat","tone":"quiet","portraits":[{"characterId":"albina","portraitAssetId":"portrait.albina.shy","position":"right","active":true,"scale":1},{"characterId":"protagonist","portraitAssetId":"portrait.protagonist.tender","position":"left","active":false,"scale":0.9}],"speaker":"法西娅","text":"法西娅的低语从镜面里渗出来：你正在画的并不是她，是一个被允许随时擦掉的你。阿尔比娜没有反驳，只是把那面镜子轻轻转开半寸。","voiceAssetId":"voice.scene.white_canvas_007","bgmAssetId":"file.audio.bgm.between.two.worlds.mp3","choices":[{"id":"white_007_keep_mirror_open","text":"让镜子继续映照，不替她遮蔽","nextSceneId":"white_canvas_008","resultText":"你选择“让镜子继续映照，不替她遮蔽”。阿尔比娜：义体维护槽的白光下，她把法西娅从胸口取出来，放在你和她之间的托盘上。她说：完整不是把它装回去，是承认它有权利短暂离开我。","resultVoiceAssetId":"voice.result.white_007_keep_mirror_open","effects":{"values":{"trust":3,"danger":1,"artResonance":4},"setFlags":["mirror_kept_open"],"unlockCg":["cg.fascia_heartbeat"]}},{"id":"white_007_ask_fascia_term","text":"当着阿尔比娜问法西娅一个边界问题","nextSceneId":"white_canvas_008","resultText":"你选择“当着阿尔比娜问法西娅一个边界问题”。阿尔比娜：义体维护槽的白光下，她把法西娅从胸口取出来，放在你和她之间的托盘上。她说：完整不是把它装回去，是承认它有权利短暂离开我。","resultVoiceAssetId":"voice.result.white_007_ask_fascia_term","effects":{"values":{"affectionAlbina":1,"trust":2,"artResonance":3},"setFlags":["fascia_addressed_directly"],"unlockCg":["cg.art_resonance"]}}]},{"version":2,"id":"white_canvas_008","chapter":8,"route":"white_canvas","provenance":{"classification":"AU_extension","scope":"route","claimIds":["boundary.routes-and-player.are-AU"],"sourceIds":["source.official.canto-ix.9-43","source.project.legacy-v1.0.44"],"note":"Project-authored route content after the explicit 9-43 divergence; never source-game canon."},"locationId":"lce_lab","backgroundAssetId":"bg.lce_lab","cgAssetId":"cg.hollow_torso_reveal","tone":"quiet","portraits":[{"characterId":"lce_doctor","portraitAssetId":"portrait.lce_doctor.normal","position":"left","active":false,"scale":0.84},{"characterId":"albina","portraitAssetId":"portrait.albina.surgical","position":"center","active":true,"scale":1},{"characterId":"protagonist","portraitAssetId":"portrait.protagonist.serious","position":"right","active":false,"scale":0.9}],"speaker":"阿尔比娜","text":"义体维护槽的白光下，她把法西娅从胸口取出来，放在你和她之间的托盘上。她说：完整不是把它装回去，是承认它有权利短暂离开我。","voiceAssetId":"voice.scene.white_canvas_008","bgmAssetId":"file.audio.bgm.between.two.worlds.mp3","choices":[{"id":"white_008_hold_fascia","text":"替她暂时照看法西娅","nextSceneId":"white_canvas_009","resultText":"你选择“替她暂时照看法西娅”。阿尔比娜：雨室的水线像无数根未被签名的画框。她让你站在她身后半步，说那个距离刚好能让两人都不必替对方回答。","resultVoiceAssetId":"voice.result.white_008_hold_fascia","effects":{"values":{"affectionAlbina":2,"trust":5,"artResonance":2},"setFlags":["fascia_held_by_player"],"unlockCg":["cg.fascia_heartbeat"]}},{"id":"white_008_stay_witness_only","text":"只站在她视野内，不接手","nextSceneId":"white_canvas_009","resultText":"你选择“只站在她视野内，不接手”。阿尔比娜：雨室的水线像无数根未被签名的画框。她让你站在她身后半步，说那个距离刚好能让两人都不必替对方回答。","resultVoiceAssetId":"voice.result.white_008_stay_witness_only","effects":{"values":{"affectionAlbina":1,"trust":3,"artResonance":3},"setFlags":["witness_distance_kept"],"unlockCg":["cg.lce_raid"]}}]},{"version":2,"id":"white_canvas_009","chapter":9,"route":"white_canvas","provenance":{"classification":"AU_extension","scope":"route","claimIds":["boundary.routes-and-player.are-AU"],"sourceIds":["source.official.canto-ix.9-43","source.project.legacy-v1.0.44"],"note":"Project-authored route content after the explicit 9-43 divergence; never source-game canon."},"locationId":"rain_room","backgroundAssetId":"bg.rain_room","cgAssetId":"cg.rain_confession","tone":"rain","portraits":[{"characterId":"albina","portraitAssetId":"portrait.albina.rain","position":"center","active":true,"scale":1},{"characterId":"protagonist","portraitAssetId":"portrait.protagonist.wet-hair","position":"left","active":false,"scale":0.92}],"speaker":"阿尔比娜","text":"雨室的水线像无数根未被签名的画框。她让你站在她身后半步，说那个距离刚好能让两人都不必替对方回答。","voiceAssetId":"voice.scene.white_canvas_009","bgmAssetId":"file.audio.bgm.between.two.worlds.mp3","choices":[{"id":"white_009_keep_half_step","text":"守住半步距离，不擅自靠近","nextSceneId":"white_canvas_010","resultText":"你选择“守住半步距离，不擅自靠近”。但丁：但丁没有抬头，只低声提醒：她在试着把自己画成一个可以离开的人，你最好别急着把她画成离不开你的人。","resultVoiceAssetId":"voice.result.white_009_keep_half_step","effects":{"values":{"affectionAlbina":3,"trust":4,"artResonance":2},"setFlags":["half_step_distance"],"unlockCg":["cg.rain_confession"]}},{"id":"white_009_share_umbrella_edge","text":"把伞沿偏向她那侧","nextSceneId":"white_canvas_010","resultText":"你选择“把伞沿偏向她那侧”。但丁：但丁没有抬头，只低声提醒：她在试着把自己画成一个可以离开的人，你最好别急着把她画成离不开你的人。","resultVoiceAssetId":"voice.result.white_009_share_umbrella_edge","effects":{"values":{"affectionAlbina":4,"trust":2,"artResonance":2},"setFlags":["umbrella_shared"],"unlockCg":["cg.rain_confession"]}}]},{"version":2,"id":"white_canvas_010","chapter":10,"route":"white_canvas","provenance":{"classification":"AU_extension","scope":"route","claimIds":["boundary.routes-and-player.are-AU"],"sourceIds":["source.official.canto-ix.9-43","source.project.legacy-v1.0.44"],"note":"Project-authored route content after the explicit 9-43 divergence; never source-game canon."},"locationId":"limbus_bus","backgroundAssetId":"bg.limbus_bus","cgAssetId":"cg.limbus_bus_night","tone":"rain","portraits":[{"characterId":"dante","portraitAssetId":"portrait.dante.normal","position":"left","active":false,"scale":0.8},{"characterId":"albina","portraitAssetId":"portrait.albina.rain","position":"center","active":true,"scale":1},{"characterId":"protagonist","portraitAssetId":"portrait.protagonist.serious","position":"right","active":false,"scale":0.9}],"speaker":"但丁","text":"但丁没有抬头，只低声提醒：她在试着把自己画成一个可以离开的人，你最好别急着把她画成离不开你的人。","voiceAssetId":"voice.scene.white_canvas_010","bgmAssetId":"file.audio.bgm.between.two.worlds.mp3","choices":[{"id":"white_010_acknowledge_leave","text":"承认她随时可以离开这张画布","nextSceneId":"white_canvas_011","resultText":"你选择“承认她随时可以离开这张画布”。阿尔比娜：巢穴车站的灯光白得发硬。她站在月台边缘，没有回头，只问：如果一个艺术家拒绝被展览，你愿意做那个替她谢幕的人吗？","resultVoiceAssetId":"voice.result.white_010_acknowledge_leave","effects":{"values":{"affectionAlbina":2,"trust":4,"artResonance":3},"setFlags":["leaving_acknowledged"],"unlockCg":["cg.limbus_bus_night"]}},{"id":"white_010_offer_return_ticket","text":"给她一张可以返回的车票，而不是绳索","nextSceneId":"white_canvas_011","resultText":"你选择“给她一张可以返回的车票，而不是绳索”。阿尔比娜：巢穴车站的灯光白得发硬。她站在月台边缘，没有回头，只问：如果一个艺术家拒绝被展览，你愿意做那个替她谢幕的人吗？","resultVoiceAssetId":"voice.result.white_010_offer_return_ticket","effects":{"values":{"affectionAlbina":3,"trust":3,"artResonance":2},"setFlags":["return_ticket_given"],"unlockCg":["cg.rain_confession"]}}]},{"version":2,"id":"white_canvas_011","chapter":11,"route":"white_canvas","provenance":{"classification":"AU_extension","scope":"route","claimIds":["boundary.routes-and-player.are-AU"],"sourceIds":["source.official.canto-ix.9-43","source.project.legacy-v1.0.44"],"note":"Project-authored route content after the explicit 9-43 divergence; never source-game canon."},"locationId":"nest_station","backgroundAssetId":"bg.nest_station","cgAssetId":"cg.art_resonance","tone":"quiet","portraits":[{"characterId":"albina","portraitAssetId":"portrait.albina.white-canvas","position":"center","active":true,"scale":1},{"characterId":"protagonist","portraitAssetId":"portrait.protagonist.resolve","position":"left","active":false,"scale":0.92}],"speaker":"阿尔比娜","text":"巢穴车站的灯光白得发硬。她站在月台边缘，没有回头，只问：如果一个艺术家拒绝被展览，你愿意做那个替她谢幕的人吗？","voiceAssetId":"voice.scene.white_canvas_011","bgmAssetId":"file.audio.bgm.between.two.worlds.mp3","choices":[{"id":"white_011_curtain_call","text":"答应替她谢幕，不替她登台","nextSceneId":"white_canvas_012","resultText":"你选择“答应替她谢幕，不替她登台”。卡利斯托：蜘蛛画廊借给白画布一个临时展位。卡利斯托微笑着提议：把她最有缺陷的那一面挂出来，观众会替你们完成剩下的故事。","resultVoiceAssetId":"voice.result.white_011_curtain_call","effects":{"values":{"affectionAlbina":2,"trust":5,"artResonance":3},"setFlags":["curtain_call_promised"],"unlockCg":["cg.white_canvas_ending"]}},{"id":"white_011_walk_beside","text":"陪她走下月台，不离开也不催促","nextSceneId":"white_canvas_012","resultText":"你选择“陪她走下月台，不离开也不催促”。卡利斯托：蜘蛛画廊借给白画布一个临时展位。卡利斯托微笑着提议：把她最有缺陷的那一面挂出来，观众会替你们完成剩下的故事。","resultVoiceAssetId":"voice.result.white_011_walk_beside","effects":{"values":{"affectionAlbina":4,"trust":3,"artResonance":2},"setFlags":["platform_walked_together"],"unlockCg":["cg.rain_confession"]}}]},{"version":2,"id":"white_canvas_012","chapter":12,"route":"white_canvas","provenance":{"classification":"AU_extension","scope":"route","claimIds":["boundary.routes-and-player.are-AU"],"sourceIds":["source.official.canto-ix.9-43","source.project.legacy-v1.0.44"],"note":"Project-authored route content after the explicit 9-43 divergence; never source-game canon."},"locationId":"spider_gallery","backgroundAssetId":"bg.spider_gallery","cgAssetId":"cg.maestro_shadow","tone":"gallery","portraits":[{"characterId":"callisto","portraitAssetId":"portrait.callisto.normal","position":"left","active":false,"scale":0.84},{"characterId":"albina","portraitAssetId":"portrait.albina.ring-conspiracy","position":"center","active":true,"scale":1},{"characterId":"protagonist","portraitAssetId":"portrait.protagonist.serious","position":"right","active":false,"scale":0.9}],"speaker":"卡利斯托","text":"蜘蛛画廊借给白画布一个临时展位。卡利斯托微笑着提议：把她最有缺陷的那一面挂出来，观众会替你们完成剩下的故事。","voiceAssetId":"voice.scene.white_canvas_012","bgmAssetId":"file.audio.bgm.between.two.worlds.mp3","sfxAssetIds":["file.audio.se.glass.shatter.wav"],"choices":[{"id":"white_012_refuse_exhibit","text":"当众拒绝展出她的缺陷","nextSceneId":"white_canvas_013","resultText":"你选择“当众拒绝展出她的缺陷”。阿尔比娜：环指工坊的颜料气味里混着血。她握着一柄画刀，对你说：今天我可能要毁掉一件作品，请你告诉我哪一件是她真正想毁掉的。","resultVoiceAssetId":"voice.result.white_012_refuse_exhibit","effects":{"values":{"affectionAlbina":2,"trust":4,"danger":-1,"artResonance":3},"relationshipVectors":{"reliance":3},"conflictMastery":{"boundary":3},"setFlags":["defect_not_exhibited"],"unlockCg":["cg.trust_threshold"],"resolveBattles":[{"battleId":"battle.white.gallery_pressure","outcome":"victory"}],"professionXp":{"boundary_mediator":6}}},{"id":"white_012_let_her_decide","text":"把展与不展的决定权交还给她","nextSceneId":"white_canvas_013","resultText":"你选择“把展与不展的决定权交还给她”。阿尔比娜：环指工坊的颜料气味里混着血。她握着一柄画刀，对你说：今天我可能要毁掉一件作品，请你告诉我哪一件是她真正想毁掉的。","resultVoiceAssetId":"voice.result.white_012_let_her_decide","effects":{"values":{"affectionAlbina":3,"trust":5,"danger":3,"artResonance":4},"relationshipVectors":{"suspicion":3},"conflictMastery":{"boundary":1},"setFlags":["exhibit_choice_returned"],"unlockCg":["cg.art_resonance"],"resolveBattles":[{"battleId":"battle.white.gallery_pressure","outcome":"setback"}],"professionXp":{"boundary_mediator":3}}}]},{"version":2,"id":"white_canvas_013","chapter":13,"route":"white_canvas","provenance":{"classification":"AU_extension","scope":"route","claimIds":["boundary.routes-and-player.are-AU"],"sourceIds":["source.official.canto-ix.9-43","source.project.legacy-v1.0.44"],"note":"Project-authored route content after the explicit 9-43 divergence; never source-game canon."},"locationId":"ring_atelier","backgroundAssetId":"bg.ring_atelier","cgAssetId":"cg.art_resonance","tone":"gallery","portraits":[{"characterId":"albina","portraitAssetId":"portrait.albina.furious","position":"right","active":true,"scale":1},{"characterId":"protagonist","portraitAssetId":"portrait.protagonist.battle","position":"left","active":false,"scale":0.92}],"speaker":"阿尔比娜","text":"环指工坊的颜料气味里混着血。她握着一柄画刀，对你说：今天我可能要毁掉一件作品，请你告诉我哪一件是她真正想毁掉的。","voiceAssetId":"voice.scene.white_canvas_013","bgmAssetId":"file.audio.bgm.between.two.worlds.mp3","sfxAssetIds":["file.audio.se.glass.shatter.wav"],"choices":[{"id":"white_013_point_to_mirror","text":"指向墙上那面映过法西娅的镜子","nextSceneId":"white_canvas_014","resultText":"你选择“指向墙上那面映过法西娅的镜子”。阿尔比娜：楼顶的风把她的话吹得很轻。她说：如果有一天我想把自己重新画成空白，你会替我保留这最后一层底色，还是替我重新开始？","resultVoiceAssetId":"voice.result.white_013_point_to_mirror","effects":{"values":{"affectionAlbina":2,"trust":3,"artResonance":5},"setFlags":["mirror_pointed_out"],"unlockCg":["cg.art_resonance"]}},{"id":"white_013_refuse_to_choose","text":"拒绝替她决定，让她自己下刀","nextSceneId":"white_canvas_014","resultText":"你选择“拒绝替她决定，让她自己下刀”。阿尔比娜：楼顶的风把她的话吹得很轻。她说：如果有一天我想把自己重新画成空白，你会替我保留这最后一层底色，还是替我重新开始？","resultVoiceAssetId":"voice.result.white_013_refuse_to_choose","effects":{"values":{"affectionAlbina":1,"trust":4,"artResonance":3},"setFlags":["knife_returned"],"unlockCg":["cg.art_resonance"]}}]},{"version":2,"id":"white_canvas_014","chapter":14,"route":"white_canvas","provenance":{"classification":"AU_extension","scope":"route","claimIds":["boundary.routes-and-player.are-AU"],"sourceIds":["source.official.canto-ix.9-43","source.project.legacy-v1.0.44"],"note":"Project-authored route content after the explicit 9-43 divergence; never source-game canon."},"locationId":"city_rooftop","backgroundAssetId":"bg.city_rooftop","cgAssetId":"cg.trust_threshold","tone":"quiet","portraits":[{"characterId":"albina","portraitAssetId":"portrait.albina.endgame","position":"center","active":true,"scale":1},{"characterId":"protagonist","portraitAssetId":"portrait.protagonist.resolve","position":"left","active":false,"scale":0.92}],"speaker":"阿尔比娜","text":"楼顶的风把她的话吹得很轻。她说：如果有一天我想把自己重新画成空白，你会替我保留这最后一层底色，还是替我重新开始？","voiceAssetId":"voice.scene.white_canvas_014","bgmAssetId":"file.audio.bgm.between.two.worlds.mp3","choices":[{"id":"white_014_keep_base_color","text":"答应替她保留最后一层底色","nextSceneId":"white_canvas_015","resultText":"你选择“答应替她保留最后一层底色”。阿尔比娜：城郊的黎明像一张终于干透的画布。她把法西娅重新放回胸口，又把画笔交到你手里：这张画布已经记住了你，但它仍然属于我。","resultVoiceAssetId":"voice.result.white_014_keep_base_color","effects":{"values":{"affectionAlbina":4,"trust":4,"artResonance":3},"setFlags":["base_color_kept"],"unlockCg":["cg.white_canvas_ending"]}},{"id":"white_014_offer_restart","text":"答应陪她从空白重新开始","nextSceneId":"white_canvas_015","resultText":"你选择“答应陪她从空白重新开始”。阿尔比娜：城郊的黎明像一张终于干透的画布。她把法西娅重新放回胸口，又把画笔交到你手里：这张画布已经记住了你，但它仍然属于我。","resultVoiceAssetId":"voice.result.white_014_offer_restart","effects":{"values":{"affectionAlbina":3,"trust":5,"artResonance":4},"setFlags":["restart_offered"],"unlockCg":["cg.art_resonance"]}}]},{"version":2,"id":"white_canvas_015","chapter":15,"route":"white_canvas","provenance":{"classification":"AU_extension","scope":"route","claimIds":["boundary.routes-and-player.are-AU"],"sourceIds":["source.official.canto-ix.9-43","source.project.legacy-v1.0.44"],"note":"Project-authored route content after the explicit 9-43 divergence; never source-game canon."},"locationId":"outskirts_dawn","backgroundAssetId":"bg.outskirts_dawn","cgAssetId":"cg.white_canvas_ending","tone":"quiet","portraits":[{"characterId":"protagonist","portraitAssetId":"portrait.protagonist.resolve","position":"left","active":false,"scale":0.92},{"characterId":"albina","portraitAssetId":"portrait.albina.endgame","position":"center","active":true,"scale":1}],"speaker":"阿尔比娜","text":"城郊的黎明像一张终于干透的画布。她把法西娅重新放回胸口，又把画笔交到你手里：这张画布已经记住了你，但它仍然属于我。","voiceAssetId":"voice.scene.white_canvas_015","bgmAssetId":"file.audio.bgm.between.two.worlds.mp3","choices":[{"id":"white_canvas_route_final","text":"为白色画布路线盖上最后一枚印章","nextSceneId":"white_canvas_ending_gate","resultText":"你选择“为白色画布路线盖上最后一枚印章”。白色画布路线终章已封存，进入固定结局资格判定。","resultVoiceAssetId":"voice.result.white_canvas_route_final","effects":{"values":{"affectionAlbina":3,"trust":3,"danger":-2,"artResonance":4},"setFlags":["white_canvas_route_final"]}}]},{"version":2,"id":"white_canvas_ending_gate","chapter":16,"route":"white_canvas","provenance":{"classification":"AU_extension","scope":"route","claimIds":["boundary.routes-and-player.are-AU"],"sourceIds":["source.official.canto-ix.9-43","source.project.legacy-v1.0.44"],"note":"Project-authored route content after the explicit 9-43 divergence; never source-game canon."},"locationId":"outskirts_dawn","backgroundAssetId":"bg.outskirts_dawn","cgAssetId":"cg.white_canvas_ending","tone":"quiet","portraits":[{"characterId":"protagonist","portraitAssetId":"portrait.protagonist.resolve","position":"left","active":false,"scale":0.92},{"characterId":"albina","portraitAssetId":"portrait.albina.endgame","position":"center","active":true,"scale":1}],"speaker":"叙事记录","text":"白色画布的全部选择已封存。系统将只依据持久状态判定结局，不请求任何运行时生成。","voiceAssetId":"voice.scene.white_canvas_ending_gate","bgmAssetId":"file.audio.bgm.between.two.worlds.mp3","choices":[{"id":"white_canvas_choose_true_ending","text":"确认彼此共同抵达的真结局","nextSceneId":"white_canvas_ending_true","resultText":"结局判定完成：白色画布·TRUE。资格规则与选择记录已固定写入。","resultVoiceAssetId":"voice.result.white_canvas.true_ending","availability":{"allOf":[{"kind":"flag","flag":"white_canvas_route_final","equals":true},{"kind":"value","key":"trust","operator":"gte","value":52},{"kind":"value","key":"artResonance","operator":"gte","value":44},{"kind":"value","key":"danger","operator":"lte","value":5},{"kind":"quest","questId":"quest.white.boundary_protocol","status":"completed"},{"kind":"battle","battleId":"battle.white.gallery_pressure","outcome":"victory"},{"kind":"equipment","equipmentId":"equipment.white.boundary_charm"},{"kind":"outfit","outfitId":"outfit.albina.white_canvas"},{"kind":"profession","professionId":"boundary_mediator","levelGte":2},{"kind":"relationship","key":"reliance","operator":"gte","value":7},{"kind":"worldbook","entryId":"albina_routes_endings_au_if","status":"seen"}]},"effects":{"setFlags":["ending_white_canvas_true_qualified"]}},{"id":"white_canvas_choose_normal_ending","text":"接受仍留有余白的普通结局","nextSceneId":"white_canvas_ending_normal","resultText":"结局判定完成：白色画布·NORMAL。资格规则与选择记录已固定写入。","resultVoiceAssetId":"voice.result.white_canvas.normal_ending","availability":{"allOf":[{"kind":"flag","flag":"white_canvas_route_final","equals":true}],"fallback":true},"effects":{"setFlags":["ending_white_canvas_normal_qualified"]}},{"id":"white_canvas_choose_bad_ending","text":"承认这次未能跨过的坏结局","nextSceneId":"white_canvas_ending_bad","resultText":"结局判定完成：白色画布·BAD。资格规则与选择记录已固定写入。","resultVoiceAssetId":"voice.result.white_canvas.bad_ending","availability":{"allOf":[{"kind":"flag","flag":"white_canvas_route_final","equals":true}],"anyOf":[{"kind":"value","key":"trust","operator":"lte","value":44},{"kind":"value","key":"artResonance","operator":"lte","value":38}]},"effects":{"setFlags":["ending_white_canvas_bad_qualified"]}}]},{"version":2,"id":"white_canvas_ending_true","chapter":17,"route":"white_canvas","provenance":{"classification":"AU_extension","scope":"route","claimIds":["boundary.routes-and-player.are-AU"],"sourceIds":["source.official.canto-ix.9-43","source.project.legacy-v1.0.44"],"note":"Project-authored route content after the explicit 9-43 divergence; never source-game canon."},"locationId":"outskirts_dawn","backgroundAssetId":"bg.outskirts_dawn","cgAssetId":"cg.white_canvas_ending","tone":"quiet","portraits":[{"characterId":"protagonist","portraitAssetId":"portrait.protagonist.resolve","position":"left","active":false,"scale":0.92},{"characterId":"albina","portraitAssetId":"portrait.albina.endgame","position":"center","active":true,"scale":1}],"speaker":"阿尔比娜","text":"晨光落在未署名的白画上。阿尔比娜没有把你画成作品，而是把并肩离开的两道影子留在画框之外：这一次，完整与亲密同时成立。","voiceAssetId":"voice.scene.white_canvas_ending_true","bgmAssetId":"file.audio.bgm.between.two.worlds.mp3","choices":[],"ending":{"route":"white_canvas","kind":"true","eligibility":{"allOf":[{"kind":"flag","flag":"white_canvas_route_final","equals":true},{"kind":"value","key":"trust","operator":"gte","value":52},{"kind":"value","key":"artResonance","operator":"gte","value":44},{"kind":"value","key":"danger","operator":"lte","value":5}]}}},{"version":2,"id":"white_canvas_ending_normal","chapter":17,"route":"white_canvas","provenance":{"classification":"AU_extension","scope":"route","claimIds":["boundary.routes-and-player.are-AU"],"sourceIds":["source.official.canto-ix.9-43","source.project.legacy-v1.0.44"],"note":"Project-authored route content after the explicit 9-43 divergence; never source-game canon."},"locationId":"outskirts_dawn","backgroundAssetId":"bg.outskirts_dawn","cgAssetId":"cg.white_canvas_ending","tone":"quiet","portraits":[{"characterId":"protagonist","portraitAssetId":"portrait.protagonist.resolve","position":"left","active":false,"scale":0.92},{"characterId":"albina","portraitAssetId":"portrait.albina.endgame","position":"center","active":true,"scale":1}],"speaker":"阿尔比娜","text":"展厅按约熄灯。你们保留了尚未说尽的话，也保留了随时重画的权利。阿尔比娜把空白画布卷好，约定下一场雨后再见。","voiceAssetId":"voice.scene.white_canvas_ending_normal","bgmAssetId":"file.audio.bgm.between.two.worlds.mp3","choices":[],"ending":{"route":"white_canvas","kind":"normal","eligibility":{"allOf":[{"kind":"flag","flag":"white_canvas_route_final","equals":true}],"fallback":true}}},{"version":2,"id":"white_canvas_ending_bad","chapter":17,"route":"white_canvas","provenance":{"classification":"AU_extension","scope":"route","claimIds":["boundary.routes-and-player.are-AU"],"sourceIds":["source.official.canto-ix.9-43","source.project.legacy-v1.0.44"],"note":"Project-authored route content after the explicit 9-43 divergence; never source-game canon."},"locationId":"outskirts_dawn","backgroundAssetId":"bg.outskirts_dawn","cgAssetId":"cg.white_canvas_ending","tone":"quiet","portraits":[{"characterId":"protagonist","portraitAssetId":"portrait.protagonist.resolve","position":"left","active":false,"scale":0.92},{"characterId":"albina","portraitAssetId":"portrait.albina.endgame","position":"center","active":true,"scale":1}],"speaker":"阿尔比娜","text":"白厅没有发生争吵，只剩一张过早完成的画。阿尔比娜礼貌地收回画笔与称呼；边界仍被守住，但你们没能把信任带到黎明。","voiceAssetId":"voice.scene.white_canvas_ending_bad","bgmAssetId":"file.audio.bgm.between.two.worlds.mp3","choices":[],"ending":{"route":"white_canvas","kind":"bad","eligibility":{"allOf":[{"kind":"flag","flag":"white_canvas_route_final","equals":true}],"anyOf":[{"kind":"value","key":"trust","operator":"lte","value":44},{"kind":"value","key":"artResonance","operator":"lte","value":38}]}}},{"version":2,"id":"golden_bough_001","chapter":1,"route":"golden_bough_rebuild","provenance":{"classification":"AU_extension","scope":"route","claimIds":["boundary.routes-and-player.are-AU"],"sourceIds":["source.official.canto-ix.9-43","source.project.legacy-v1.0.44"],"note":"Project-authored route content after the explicit 9-43 divergence; never source-game canon."},"locationId":"golden_bough_fault","backgroundAssetId":"bg.golden_bough","cgAssetId":"cg.rebuild_awakening","tone":"golden","portraits":[{"characterId":"albina","portraitAssetId":"portrait.albina.golden-bough","position":"center","active":true,"scale":1},{"characterId":"protagonist","portraitAssetId":"portrait.protagonist.serious","position":"left","active":false,"scale":0.9}],"speaker":"阿尔比娜","text":"金色光尘沿着她的义体裂缝回流。她先确认的不是自己，而是法西娅是否还在呼吸。","voiceAssetId":"voice.scene.golden_bough_001","bgmAssetId":"file.audio.bgm.title.theme.mp3","choices":[{"id":"rebuild_anchor","text":"成为她的记忆锚点","nextSceneId":"golden_bough_002","resultText":"你选择“成为她的记忆锚点”。旁白：镜面里的阿尔比娜有无数个切口，但每一道切口都避开了你替她守住的名字。","resultVoiceAssetId":"voice.result.rebuild_anchor","effects":{"values":{"affectionAlbina":1,"trust":5,"artResonance":2},"setFlags":["player_memory_anchor"],"unlockCg":["cg.surgery_of_memory"]}},{"id":"rebuild_question_fascia","text":"先检查法西娅","nextSceneId":"golden_bough_002","resultText":"你选择“先检查法西娅”。旁白：镜面里的阿尔比娜有无数个切口，但每一道切口都避开了你替她守住的名字。","resultVoiceAssetId":"voice.result.rebuild_question_fascia","effects":{"values":{"trust":2,"danger":1,"artResonance":4},"setFlags":["fascia_checked_first"],"unlockCg":["cg.fascia_heartbeat"]}}]},{"version":2,"id":"golden_bough_002","chapter":2,"route":"golden_bough_rebuild","provenance":{"classification":"AU_extension","scope":"route","claimIds":["boundary.routes-and-player.are-AU"],"sourceIds":["source.official.canto-ix.9-43","source.project.legacy-v1.0.44"],"note":"Project-authored route content after the explicit 9-43 divergence; never source-game canon."},"locationId":"mirror_corridor","backgroundAssetId":"bg.mirror_corridor","cgAssetId":"cg.golden_bough_ending","tone":"golden","portraits":[{"characterId":"albina","portraitAssetId":"portrait.albina.endgame","position":"right","active":true,"scale":1},{"characterId":"protagonist","portraitAssetId":"portrait.protagonist.resolve","position":"left","active":false,"scale":0.94}],"speaker":"旁白","text":"镜面里的阿尔比娜有无数个切口，但每一道切口都避开了你替她守住的名字。","voiceAssetId":"voice.scene.golden_bough_002","bgmAssetId":"file.audio.bgm.title.theme.mp3","choices":[{"id":"rebuild_push_into_raid","text":"带着记忆锚点突入金枝异常现场","nextSceneId":"golden_bough_003","resultText":"你选择“带着记忆锚点突入金枝异常现场”。浮士德：金枝残响把病床、画架和战场叠成一张薄膜。浮士德只给出结论：如果锚点断裂，阿尔比娜会把自己误认为一件已经完成的作品。","resultVoiceAssetId":"voice.result.rebuild_push_into_raid","effects":{"values":{"trust":3,"danger":2,"artResonance":3},"setFlags":["rebuild_raid_committed"],"unlockCg":["cg.lce_raid"]}},{"id":"return_opening_from_rebuild","text":"回到路线选择","nextSceneId":"opening_001","resultText":"你选择“回到路线选择”。阿尔比娜：晚上好，{{user}}。请不要站得太远，我还没决定该把你称作观众、朋友，还是一块值得等待的画布。","resultVoiceAssetId":"voice.result.return_opening_from_rebuild","effects":{"values":{"trust":1},"setFlags":["rebuild_looped"]}}]},{"version":2,"id":"golden_bough_003","chapter":3,"route":"golden_bough_rebuild","provenance":{"classification":"AU_extension","scope":"route","claimIds":["boundary.routes-and-player.are-AU"],"sourceIds":["source.official.canto-ix.9-43","source.project.legacy-v1.0.44"],"note":"Project-authored route content after the explicit 9-43 divergence; never source-game canon."},"locationId":"lce_lab","backgroundAssetId":"bg.lce_lab","cgAssetId":"cg.lce_raid","tone":"threat","portraits":[{"characterId":"faust","portraitAssetId":"portrait.faust.normal","position":"left","active":false,"scale":0.82},{"characterId":"albina","portraitAssetId":"portrait.albina.fascia-open","position":"center","active":true,"scale":1},{"characterId":"protagonist","portraitAssetId":"portrait.protagonist.battle","position":"right","active":false,"scale":0.92}],"speaker":"浮士德","text":"金枝残响把病床、画架和战场叠成一张薄膜。浮士德只给出结论：如果锚点断裂，阿尔比娜会把自己误认为一件已经完成的作品。","voiceAssetId":"voice.scene.golden_bough_003","bgmAssetId":"file.audio.bgm.title.theme.mp3","sfxAssetIds":["file.audio.se.slash.heavy.wav"],"choices":[{"id":"rebuild_cut_false_completion","text":"切断“完成品”的错误定义","nextSceneId":"golden_bough_004","resultText":"你选择“切断“完成品”的错误定义”。维吉利乌斯：楼顶的风把金色光尘吹成刀刃。维吉利乌斯没有劝阻，只提醒你：重构不是修好她，而是承认她有权决定哪些缺口继续存在。","resultVoiceAssetId":"voice.result.rebuild_cut_false_completion","effects":{"values":{"trust":4,"danger":1,"artResonance":4},"relationshipVectors":{"intimacy":1,"reliance":4},"conflictMastery":{"analysis":1},"setFlags":["false_completion_cut"],"unlockCg":["cg.surgery_of_memory"],"grantItems":["item.golden.memory_anchor"],"equipItems":["equipment.golden.memory_lens"],"unlockOutfits":["outfit.albina.golden_bough"],"activateOutfit":"outfit.albina.golden_bough","completeQuests":["quest.golden.memory_continuity"],"professionXp":{"memory_surgeon":6}}},{"id":"rebuild_guard_fascia_pulse","text":"守住法西娅的心跳频率","nextSceneId":"golden_bough_004","resultText":"你选择“守住法西娅的心跳频率”。维吉利乌斯：楼顶的风把金色光尘吹成刀刃。维吉利乌斯没有劝阻，只提醒你：重构不是修好她，而是承认她有权决定哪些缺口继续存在。","resultVoiceAssetId":"voice.result.rebuild_guard_fascia_pulse","effects":{"values":{"affectionAlbina":1,"trust":3,"artResonance":3},"relationshipVectors":{"reliance":3,"obsession":1},"conflictMastery":{"resonance":1},"setFlags":["fascia_pulse_guarded"],"unlockCg":["cg.fascia_heartbeat"],"grantItems":["item.golden.memory_anchor"],"equipItems":["equipment.golden.memory_lens"],"unlockOutfits":["outfit.albina.golden_bough"],"activateOutfit":"outfit.albina.golden_bough","completeQuests":["quest.golden.memory_continuity"],"professionXp":{"memory_surgeon":6}}}]},{"version":2,"id":"golden_bough_004","chapter":4,"route":"golden_bough_rebuild","provenance":{"classification":"AU_extension","scope":"route","claimIds":["boundary.routes-and-player.are-AU"],"sourceIds":["source.official.canto-ix.9-43","source.project.legacy-v1.0.44"],"note":"Project-authored route content after the explicit 9-43 divergence; never source-game canon."},"locationId":"city_rooftop","backgroundAssetId":"bg.city_rooftop","cgAssetId":"cg.araya_rooftop","tone":"golden","portraits":[{"characterId":"vergilius","portraitAssetId":"portrait.vergilius.normal","position":"left","active":false,"scale":0.84},{"characterId":"albina","portraitAssetId":"portrait.albina.golden-bough","position":"center","active":true,"scale":1},{"characterId":"protagonist","portraitAssetId":"portrait.protagonist.resolve","position":"right","active":false,"scale":0.92}],"speaker":"维吉利乌斯","text":"楼顶的风把金色光尘吹成刀刃。维吉利乌斯没有劝阻，只提醒你：重构不是修好她，而是承认她有权决定哪些缺口继续存在。","voiceAssetId":"voice.scene.golden_bough_004","bgmAssetId":"file.audio.bgm.title.theme.mp3","choices":[{"id":"rebuild_accept_missing_pieces","text":"承认缺口也是她的结构","nextSceneId":"golden_bough_005","resultText":"你选择“承认缺口也是她的结构”。阿尔比娜：最后一面镜子没有给她完整倒影，只给出一条可以返回的路。她握住你的手腕，确认那不是束缚，而是一次被允许的回航。","resultVoiceAssetId":"voice.result.rebuild_accept_missing_pieces","effects":{"values":{"affectionAlbina":2,"trust":4,"artResonance":2},"setFlags":["missing_pieces_accepted"],"unlockCg":["cg.golden_bough_ending"]}},{"id":"rebuild_use_rooftop_signal","text":"用楼顶信号重排记忆顺序","nextSceneId":"golden_bough_005","resultText":"你选择“用楼顶信号重排记忆顺序”。阿尔比娜：最后一面镜子没有给她完整倒影，只给出一条可以返回的路。她握住你的手腕，确认那不是束缚，而是一次被允许的回航。","resultVoiceAssetId":"voice.result.rebuild_use_rooftop_signal","effects":{"values":{"trust":3,"danger":-1,"artResonance":4},"setFlags":["rooftop_signal_reordered"],"unlockCg":["cg.araya_rooftop"]}}]},{"version":2,"id":"golden_bough_005","chapter":5,"route":"golden_bough_rebuild","provenance":{"classification":"AU_extension","scope":"route","claimIds":["boundary.routes-and-player.are-AU"],"sourceIds":["source.official.canto-ix.9-43","source.project.legacy-v1.0.44"],"note":"Project-authored route content after the explicit 9-43 divergence; never source-game canon."},"locationId":"mirror_corridor","backgroundAssetId":"bg.mirror_corridor","cgAssetId":"cg.golden_bough_ending","tone":"golden","portraits":[{"characterId":"golden_apparition","portraitAssetId":"portrait.golden_apparition.normal","position":"left","active":false,"scale":0.82},{"characterId":"albina","portraitAssetId":"portrait.albina.endgame","position":"center","active":true,"scale":1},{"characterId":"protagonist","portraitAssetId":"portrait.protagonist.resolve","position":"right","active":false,"scale":0.92}],"speaker":"阿尔比娜","text":"最后一面镜子没有给她完整倒影，只给出一条可以返回的路。她握住你的手腕，确认那不是束缚，而是一次被允许的回航。","voiceAssetId":"voice.scene.golden_bough_005","bgmAssetId":"file.audio.bgm.title.theme.mp3","choices":[{"id":"golden_bough_route_complete","text":"记录金枝重构路线的暂定结局","nextSceneId":"golden_bough_006","resultText":"你选择“记录金枝重构路线的暂定结局”。浮士德：记忆手术台上，金色光尘在义体接缝里像旧伤口一样反复渗出。浮士德递过一把刻度尺：她说她想重构的不是身体，是你替她记下却没敢念出来的那段。","resultVoiceAssetId":"voice.result.golden_bough_route_complete","effects":{"values":{"affectionAlbina":1,"trust":2,"danger":-1,"artResonance":3},"setFlags":["golden_bough_route_complete"]}}]},{"version":2,"id":"golden_bough_006","chapter":6,"route":"golden_bough_rebuild","provenance":{"classification":"AU_extension","scope":"route","claimIds":["boundary.routes-and-player.are-AU"],"sourceIds":["source.official.canto-ix.9-43","source.project.legacy-v1.0.44"],"note":"Project-authored route content after the explicit 9-43 divergence; never source-game canon."},"locationId":"lce_lab","backgroundAssetId":"bg.lce_lab","cgAssetId":"cg.surgery_of_memory","tone":"golden","portraits":[{"characterId":"faust","portraitAssetId":"portrait.faust.normal","position":"left","active":false,"scale":0.82},{"characterId":"albina","portraitAssetId":"portrait.albina.fascia-open","position":"center","active":true,"scale":1},{"characterId":"protagonist","portraitAssetId":"portrait.protagonist.serious","position":"right","active":false,"scale":0.9}],"speaker":"浮士德","text":"记忆手术台上，金色光尘在义体接缝里像旧伤口一样反复渗出。浮士德递过一把刻度尺：她说她想重构的不是身体，是你替她记下却没敢念出来的那段。","voiceAssetId":"voice.scene.golden_bough_006","bgmAssetId":"file.audio.bgm.title.theme.mp3","choices":[{"id":"rebuild_006_read_aloud","text":"把那段记忆当着她的面念出来","nextSceneId":"golden_bough_007","resultText":"你选择“把那段记忆当着她的面念出来”。阿尔比娜：金枝裂隙里的回声全是她过去没说完的句子。她让法西娅在你和她之间选择一个频率，说这次她要先听见自己的节拍，再决定要不要跟上。","resultVoiceAssetId":"voice.result.rebuild_006_read_aloud","effects":{"values":{"affectionAlbina":2,"trust":4,"artResonance":3},"setFlags":["memory_read_aloud"],"unlockCg":["cg.surgery_of_memory"]}},{"id":"rebuild_006_keep_silent_anchor","text":"只做锚点，不替她出声","nextSceneId":"golden_bough_007","resultText":"你选择“只做锚点，不替她出声”。阿尔比娜：金枝裂隙里的回声全是她过去没说完的句子。她让法西娅在你和她之间选择一个频率，说这次她要先听见自己的节拍，再决定要不要跟上。","resultVoiceAssetId":"voice.result.rebuild_006_keep_silent_anchor","effects":{"values":{"affectionAlbina":1,"trust":5,"artResonance":2},"setFlags":["silent_anchor_kept"],"unlockCg":["cg.fascia_heartbeat"]}}],"minigame":{"minigameId":"minigame.golden.testimony_cipher","seed":"golden-bough-name-continuity-v1","prompt":"把三段证词排成先尊重本人、再修复记忆的顺序。","assistLabel":"显示证词顺序提示","allowSkip":true}},{"version":2,"id":"golden_bough_007","chapter":7,"route":"golden_bough_rebuild","provenance":{"classification":"AU_extension","scope":"route","claimIds":["boundary.routes-and-player.are-AU"],"sourceIds":["source.official.canto-ix.9-43","source.project.legacy-v1.0.44"],"note":"Project-authored route content after the explicit 9-43 divergence; never source-game canon."},"locationId":"golden_bough_fault","backgroundAssetId":"bg.golden_bough","cgAssetId":"cg.rebuild_awakening","tone":"golden","portraits":[{"characterId":"albina","portraitAssetId":"portrait.albina.golden-bough","position":"center","active":true,"scale":1},{"characterId":"protagonist","portraitAssetId":"portrait.protagonist.battle","position":"left","active":false,"scale":0.92}],"speaker":"阿尔比娜","text":"金枝裂隙里的回声全是她过去没说完的句子。她让法西娅在你和她之间选择一个频率，说这次她要先听见自己的节拍，再决定要不要跟上。","voiceAssetId":"voice.scene.golden_bough_007","bgmAssetId":"file.audio.bgm.title.theme.mp3","choices":[{"id":"rebuild_007_match_her_pulse","text":"按她的节拍调整呼吸","nextSceneId":"golden_bough_008","resultText":"你选择“按她的节拍调整呼吸”。维吉利乌斯：LCE 的搜捕光柱扫过楼顶。维吉利乌斯扔下一句话：你救不回完整的她，但你能决定让她以哪个版本继续存在。阿尔比娜握紧法西娅，等你下判断。","resultVoiceAssetId":"voice.result.rebuild_007_match_her_pulse","effects":{"values":{"affectionAlbina":3,"trust":4,"artResonance":3},"setFlags":["pulse_matched"],"unlockCg":["cg.fascia_heartbeat"]}},{"id":"rebuild_007_stay_own_rhythm","text":"保留你自己的呼吸节奏，让她对齐","nextSceneId":"golden_bough_008","resultText":"你选择“保留你自己的呼吸节奏，让她对齐”。维吉利乌斯：LCE 的搜捕光柱扫过楼顶。维吉利乌斯扔下一句话：你救不回完整的她，但你能决定让她以哪个版本继续存在。阿尔比娜握紧法西娅，等你下判断。","resultVoiceAssetId":"voice.result.rebuild_007_stay_own_rhythm","effects":{"values":{"affectionAlbina":1,"trust":3,"artResonance":4},"setFlags":["own_rhythm_kept"],"unlockCg":["cg.surgery_of_memory"]}}]},{"version":2,"id":"golden_bough_008","chapter":8,"route":"golden_bough_rebuild","provenance":{"classification":"AU_extension","scope":"route","claimIds":["boundary.routes-and-player.are-AU"],"sourceIds":["source.official.canto-ix.9-43","source.project.legacy-v1.0.44"],"note":"Project-authored route content after the explicit 9-43 divergence; never source-game canon."},"locationId":"city_rooftop","backgroundAssetId":"bg.city_rooftop","cgAssetId":"cg.araya_rooftop","tone":"threat","portraits":[{"characterId":"vergilius","portraitAssetId":"portrait.vergilius.normal","position":"left","active":false,"scale":0.84},{"characterId":"albina","portraitAssetId":"portrait.albina.combat","position":"center","active":true,"scale":1},{"characterId":"protagonist","portraitAssetId":"portrait.protagonist.battle","position":"right","active":false,"scale":0.92}],"speaker":"维吉利乌斯","text":"LCE 的搜捕光柱扫过楼顶。维吉利乌斯扔下一句话：你救不回完整的她，但你能决定让她以哪个版本继续存在。阿尔比娜握紧法西娅，等你下判断。","voiceAssetId":"voice.scene.golden_bough_008","bgmAssetId":"file.audio.bgm.title.theme.mp3","sfxAssetIds":["file.audio.se.slash.heavy.wav"],"choices":[{"id":"rebuild_008_protect_current_self","text":"保护此刻这个尚未完成的她","nextSceneId":"golden_bough_009","resultText":"你选择“保护此刻这个尚未完成的她”。金色幻影：镜廊深处的金色幻影模仿着她的旧姿态，问她：要不要把我装回去，省得你再做一个有缺口的自己？她抬头看你，等你回答那个不属于她的问题。","resultVoiceAssetId":"voice.result.rebuild_008_protect_current_self","effects":{"values":{"affectionAlbina":2,"trust":4,"danger":1,"artResonance":3},"setFlags":["current_self_protected"],"unlockCg":["cg.lce_raid"]}},{"id":"rebuild_008_trade_old_memory","text":"用一段旧记忆换取撤退时间","nextSceneId":"golden_bough_009","resultText":"你选择“用一段旧记忆换取撤退时间”。金色幻影：镜廊深处的金色幻影模仿着她的旧姿态，问她：要不要把我装回去，省得你再做一个有缺口的自己？她抬头看你，等你回答那个不属于她的问题。","resultVoiceAssetId":"voice.result.rebuild_008_trade_old_memory","effects":{"values":{"trust":2,"danger":-2,"artResonance":4},"setFlags":["memory_traded"],"unlockCg":["cg.surgery_of_memory"]}}]},{"version":2,"id":"golden_bough_009","chapter":9,"route":"golden_bough_rebuild","provenance":{"classification":"AU_extension","scope":"route","claimIds":["boundary.routes-and-player.are-AU"],"sourceIds":["source.official.canto-ix.9-43","source.project.legacy-v1.0.44"],"note":"Project-authored route content after the explicit 9-43 divergence; never source-game canon."},"locationId":"mirror_corridor","backgroundAssetId":"bg.mirror_corridor","cgAssetId":"cg.golden_bough_ending","tone":"golden","portraits":[{"characterId":"golden_apparition","portraitAssetId":"portrait.golden_apparition.normal","position":"left","active":false,"scale":0.82},{"characterId":"albina","portraitAssetId":"portrait.albina.endgame","position":"center","active":true,"scale":1},{"characterId":"protagonist","portraitAssetId":"portrait.protagonist.resolve","position":"right","active":false,"scale":0.92}],"speaker":"金色幻影","text":"镜廊深处的金色幻影模仿着她的旧姿态，问她：要不要把我装回去，省得你再做一个有缺口的自己？她抬头看你，等你回答那个不属于她的问题。","voiceAssetId":"voice.scene.golden_bough_009","bgmAssetId":"file.audio.bgm.title.theme.mp3","choices":[{"id":"rebuild_009_refuse_perfect_copy","text":"替她拒绝那个完美复制品","nextSceneId":"golden_bough_010","resultText":"你选择“替她拒绝那个完美复制品”。LCE 医师：医师递来一份重构协议：只要她愿意封存一段记忆，LCE 就允许她保留现在的外形。她把笔尖停在协议上，没有签字，先看你的反应。","resultVoiceAssetId":"voice.result.rebuild_009_refuse_perfect_copy","effects":{"values":{"affectionAlbina":2,"trust":5,"artResonance":3},"setFlags":["perfect_copy_refused"],"unlockCg":["cg.golden_bough_ending"]}},{"id":"rebuild_009_hand_question_back","text":"把问题原样交还给她","nextSceneId":"golden_bough_010","resultText":"你选择“把问题原样交还给她”。LCE 医师：医师递来一份重构协议：只要她愿意封存一段记忆，LCE 就允许她保留现在的外形。她把笔尖停在协议上，没有签字，先看你的反应。","resultVoiceAssetId":"voice.result.rebuild_009_hand_question_back","effects":{"values":{"affectionAlbina":3,"trust":3,"artResonance":4},"setFlags":["question_returned"],"unlockCg":["cg.araya_rooftop"]}}]},{"version":2,"id":"golden_bough_010","chapter":10,"route":"golden_bough_rebuild","provenance":{"classification":"AU_extension","scope":"route","claimIds":["boundary.routes-and-player.are-AU"],"sourceIds":["source.official.canto-ix.9-43","source.project.legacy-v1.0.44"],"note":"Project-authored route content after the explicit 9-43 divergence; never source-game canon."},"locationId":"lce_lab","backgroundAssetId":"bg.lce_lab","cgAssetId":"cg.lce_raid","tone":"threat","portraits":[{"characterId":"lce_doctor","portraitAssetId":"portrait.lce_doctor.normal","position":"left","active":false,"scale":0.84},{"characterId":"albina","portraitAssetId":"portrait.albina.surgical","position":"center","active":true,"scale":1},{"characterId":"protagonist","portraitAssetId":"portrait.protagonist.serious","position":"right","active":false,"scale":0.9}],"speaker":"LCE 医师","text":"医师递来一份重构协议：只要她愿意封存一段记忆，LCE 就允许她保留现在的外形。她把笔尖停在协议上，没有签字，先看你的反应。","voiceAssetId":"voice.scene.golden_bough_010","bgmAssetId":"file.audio.bgm.title.theme.mp3","sfxAssetIds":["file.audio.se.slash.heavy.wav"],"choices":[{"id":"rebuild_010_veto_sealing","text":"当着医师反对封存记忆","nextSceneId":"golden_bough_011","resultText":"你选择“当着医师反对封存记忆”。阿尔比娜：夜班巴士上，她把额头轻轻抵在窗玻璃上。她说：你今天替我守住的，不是金枝，是一个允许我继续修改自己的我。","resultVoiceAssetId":"voice.result.rebuild_010_veto_sealing","effects":{"values":{"affectionAlbina":2,"trust":4,"danger":2,"artResonance":3},"setFlags":["memory_seal_vetoed"],"unlockCg":["cg.lce_raid"]}},{"id":"rebuild_010_ask_her_choice","text":"低声问她自己想怎么签","nextSceneId":"golden_bough_011","resultText":"你选择“低声问她自己想怎么签”。阿尔比娜：夜班巴士上，她把额头轻轻抵在窗玻璃上。她说：你今天替我守住的，不是金枝，是一个允许我继续修改自己的我。","resultVoiceAssetId":"voice.result.rebuild_010_ask_her_choice","effects":{"values":{"affectionAlbina":3,"trust":5,"artResonance":2},"setFlags":["seal_choice_hers"],"unlockCg":["cg.surgery_of_memory"]}}]},{"version":2,"id":"golden_bough_011","chapter":11,"route":"golden_bough_rebuild","provenance":{"classification":"AU_extension","scope":"route","claimIds":["boundary.routes-and-player.are-AU"],"sourceIds":["source.official.canto-ix.9-43","source.project.legacy-v1.0.44"],"note":"Project-authored route content after the explicit 9-43 divergence; never source-game canon."},"locationId":"limbus_bus","backgroundAssetId":"bg.limbus_bus","cgAssetId":"cg.limbus_bus_night","tone":"quiet","portraits":[{"characterId":"dante","portraitAssetId":"portrait.dante.normal","position":"left","active":false,"scale":0.8},{"characterId":"albina","portraitAssetId":"portrait.albina.rain","position":"center","active":true,"scale":1},{"characterId":"protagonist","portraitAssetId":"portrait.protagonist.tender","position":"right","active":false,"scale":0.9}],"speaker":"阿尔比娜","text":"夜班巴士上，她把额头轻轻抵在窗玻璃上。她说：你今天替我守住的，不是金枝，是一个允许我继续修改自己的我。","voiceAssetId":"voice.scene.golden_bough_011","bgmAssetId":"file.audio.bgm.title.theme.mp3","choices":[{"id":"rebuild_011_sit_beside","text":"坐到她旁边，不说话","nextSceneId":"golden_bough_012","resultText":"你选择“坐到她旁边，不说话”。环指代理人：环指工坊里有人拿出一枚金枝仿品，提议替她换掉所有\\"未完成\\"的接口。她握紧法西娅，等你判断这是救济，还是又一次把她写成完成品的尝试。","resultVoiceAssetId":"voice.result.rebuild_011_sit_beside","effects":{"values":{"affectionAlbina":4,"trust":3,"artResonance":2},"setFlags":["silent_companionship"],"unlockCg":["cg.limbus_bus_night"]}},{"id":"rebuild_011_ask_next_revision","text":"问她下一笔想修改哪里","nextSceneId":"golden_bough_012","resultText":"你选择“问她下一笔想修改哪里”。环指代理人：环指工坊里有人拿出一枚金枝仿品，提议替她换掉所有\\"未完成\\"的接口。她握紧法西娅，等你判断这是救济，还是又一次把她写成完成品的尝试。","resultVoiceAssetId":"voice.result.rebuild_011_ask_next_revision","effects":{"values":{"affectionAlbina":2,"trust":4,"artResonance":3},"setFlags":["next_revision_asked"],"unlockCg":["cg.araya_rooftop"]}}]},{"version":2,"id":"golden_bough_012","chapter":12,"route":"golden_bough_rebuild","provenance":{"classification":"AU_extension","scope":"route","claimIds":["boundary.routes-and-player.are-AU"],"sourceIds":["source.official.canto-ix.9-43","source.project.legacy-v1.0.44"],"note":"Project-authored route content after the explicit 9-43 divergence; never source-game canon."},"locationId":"ring_atelier","backgroundAssetId":"bg.ring_atelier","cgAssetId":"cg.conspiracy_contract","tone":"gallery","portraits":[{"characterId":"ren","portraitAssetId":"portrait.ren.normal","position":"left","active":false,"scale":0.84},{"characterId":"albina","portraitAssetId":"portrait.albina.furious","position":"center","active":true,"scale":1},{"characterId":"protagonist","portraitAssetId":"portrait.protagonist.battle","position":"right","active":false,"scale":0.92}],"speaker":"环指代理人","text":"环指工坊里有人拿出一枚金枝仿品，提议替她换掉所有\\"未完成\\"的接口。她握紧法西娅，等你判断这是救济，还是又一次把她写成完成品的尝试。","voiceAssetId":"voice.scene.golden_bough_012","bgmAssetId":"file.audio.bgm.title.theme.mp3","sfxAssetIds":["file.audio.se.glass.shatter.wav"],"choices":[{"id":"rebuild_012_break_contract","text":"当面撕毁那份替换协议","nextSceneId":"golden_bough_013","resultText":"你选择“当面撕毁那份替换协议”。阿尔比娜：回到金枝裂隙，她终于允许自己颤抖。她说：你不肯替我决定形状，那我能不能请求你，在我下一次重构失败时，仍然叫出我现在的名字？","resultVoiceAssetId":"voice.result.rebuild_012_break_contract","effects":{"values":{"trust":4,"danger":0,"artResonance":3},"relationshipVectors":{"reliance":3},"conflictMastery":{"analysis":3},"setFlags":["replacement_contract_torn"],"unlockCg":["cg.conspiracy_contract"],"resolveBattles":[{"battleId":"battle.golden.replacement_protocol","outcome":"victory"}],"professionXp":{"memory_surgeon":6}}},{"id":"rebuild_012_negotiate_terms","text":"替她重新谈判条件，不让她独自承担","nextSceneId":"golden_bough_013","resultText":"你选择“替她重新谈判条件，不让她独自承担”。阿尔比娜：回到金枝裂隙，她终于允许自己颤抖。她说：你不肯替我决定形状，那我能不能请求你，在我下一次重构失败时，仍然叫出我现在的名字？","resultVoiceAssetId":"voice.result.rebuild_012_negotiate_terms","effects":{"values":{"affectionAlbina":2,"trust":-5,"danger":3,"artResonance":-4},"relationshipVectors":{"suspicion":3},"conflictMastery":{"analysis":1},"setFlags":["terms_renegotiated"],"unlockCg":["cg.surgery_of_memory"],"resolveBattles":[{"battleId":"battle.golden.replacement_protocol","outcome":"setback"}],"professionXp":{"memory_surgeon":3}}}]},{"version":2,"id":"golden_bough_013","chapter":13,"route":"golden_bough_rebuild","provenance":{"classification":"AU_extension","scope":"route","claimIds":["boundary.routes-and-player.are-AU"],"sourceIds":["source.official.canto-ix.9-43","source.project.legacy-v1.0.44"],"note":"Project-authored route content after the explicit 9-43 divergence; never source-game canon."},"locationId":"golden_bough_fault","backgroundAssetId":"bg.golden_bough","cgAssetId":"cg.golden_bough_ending","tone":"golden","portraits":[{"characterId":"albina","portraitAssetId":"portrait.albina.golden-bough","position":"center","active":true,"scale":1},{"characterId":"protagonist","portraitAssetId":"portrait.protagonist.resolve","position":"left","active":false,"scale":0.92}],"speaker":"阿尔比娜","text":"回到金枝裂隙，她终于允许自己颤抖。她说：你不肯替我决定形状，那我能不能请求你，在我下一次重构失败时，仍然叫出我现在的名字？","voiceAssetId":"voice.scene.golden_bough_013","bgmAssetId":"file.audio.bgm.title.theme.mp3","choices":[{"id":"rebuild_013_promise_name","text":"答应她即使失败也记得这个名字","nextSceneId":"golden_bough_014","resultText":"你选择“答应她即使失败也记得这个名字”。阿尔比娜：镜廊最后一面镜子没有给倒影，只映出一枚未熄的金枝。她把镜子推向你：请你替我保管它，但不要替我点亮它。","resultVoiceAssetId":"voice.result.rebuild_013_promise_name","effects":{"values":{"affectionAlbina":4,"trust":5,"artResonance":3},"setFlags":["name_promise_given"],"unlockCg":["cg.golden_bough_ending"]}},{"id":"rebuild_013_offer_witness","text":"只承诺做见证，不承诺结果","nextSceneId":"golden_bough_014","resultText":"你选择“只承诺做见证，不承诺结果”。阿尔比娜：镜廊最后一面镜子没有给倒影，只映出一枚未熄的金枝。她把镜子推向你：请你替我保管它，但不要替我点亮它。","resultVoiceAssetId":"voice.result.rebuild_013_offer_witness","effects":{"values":{"affectionAlbina":2,"trust":4,"artResonance":4},"setFlags":["witness_only_promise"],"unlockCg":["cg.surgery_of_memory"]}}]},{"version":2,"id":"golden_bough_014","chapter":14,"route":"golden_bough_rebuild","provenance":{"classification":"AU_extension","scope":"route","claimIds":["boundary.routes-and-player.are-AU"],"sourceIds":["source.official.canto-ix.9-43","source.project.legacy-v1.0.44"],"note":"Project-authored route content after the explicit 9-43 divergence; never source-game canon."},"locationId":"mirror_corridor","backgroundAssetId":"bg.mirror_corridor","cgAssetId":"cg.araya_rooftop","tone":"golden","portraits":[{"characterId":"albina","portraitAssetId":"portrait.albina.endgame","position":"center","active":true,"scale":1},{"characterId":"protagonist","portraitAssetId":"portrait.protagonist.resolve","position":"left","active":false,"scale":0.92}],"speaker":"阿尔比娜","text":"镜廊最后一面镜子没有给倒影，只映出一枚未熄的金枝。她把镜子推向你：请你替我保管它，但不要替我点亮它。","voiceAssetId":"voice.scene.golden_bough_014","bgmAssetId":"file.audio.bgm.title.theme.mp3","choices":[{"id":"rebuild_014_keep_unlit","text":"答应只保管，不替她点亮","nextSceneId":"golden_bough_015","resultText":"你选择“答应只保管，不替她点亮”。阿尔比娜：黎明把金枝的光尘压成一层很薄的金属。她抬头看你，第一次没有问该不该重构自己，而是说：谢谢你愿意陪我等到这一层颜色冷却。","resultVoiceAssetId":"voice.result.rebuild_014_keep_unlit","effects":{"values":{"affectionAlbina":3,"trust":5,"artResonance":3},"setFlags":["gilded_bough_kept_unlit"],"unlockCg":["cg.golden_bough_ending"]}},{"id":"rebuild_014_ask_when_to_light","text":"问她什么时刻才能点亮","nextSceneId":"golden_bough_015","resultText":"你选择“问她什么时刻才能点亮”。阿尔比娜：黎明把金枝的光尘压成一层很薄的金属。她抬头看你，第一次没有问该不该重构自己，而是说：谢谢你愿意陪我等到这一层颜色冷却。","resultVoiceAssetId":"voice.result.rebuild_014_ask_when_to_light","effects":{"values":{"affectionAlbina":3,"trust":3,"artResonance":4},"setFlags":["lighting_condition_asked"],"unlockCg":["cg.araya_rooftop"]}}]},{"version":2,"id":"golden_bough_015","chapter":15,"route":"golden_bough_rebuild","provenance":{"classification":"AU_extension","scope":"route","claimIds":["boundary.routes-and-player.are-AU"],"sourceIds":["source.official.canto-ix.9-43","source.project.legacy-v1.0.44"],"note":"Project-authored route content after the explicit 9-43 divergence; never source-game canon."},"locationId":"outskirts_dawn","backgroundAssetId":"bg.outskirts_dawn","cgAssetId":"cg.golden_bough_ending","tone":"golden","portraits":[{"characterId":"protagonist","portraitAssetId":"portrait.protagonist.resolve","position":"left","active":false,"scale":0.92},{"characterId":"albina","portraitAssetId":"portrait.albina.endgame","position":"center","active":true,"scale":1}],"speaker":"阿尔比娜","text":"黎明把金枝的光尘压成一层很薄的金属。她抬头看你，第一次没有问该不该重构自己，而是说：谢谢你愿意陪我等到这一层颜色冷却。","voiceAssetId":"voice.scene.golden_bough_015","bgmAssetId":"file.audio.bgm.title.theme.mp3","choices":[{"id":"golden_bough_route_final","text":"为金枝重构路线落最后一笔","nextSceneId":"golden_bough_rebuild_ending_gate","resultText":"你选择“为金枝重构路线落最后一笔”。金枝重构路线终章已封存，进入固定结局资格判定。","resultVoiceAssetId":"voice.result.golden_bough_route_final","effects":{"values":{"affectionAlbina":3,"trust":3,"danger":-2,"artResonance":4},"setFlags":["golden_bough_route_final"]}}]},{"version":2,"id":"golden_bough_rebuild_ending_gate","chapter":16,"route":"golden_bough_rebuild","provenance":{"classification":"AU_extension","scope":"route","claimIds":["boundary.routes-and-player.are-AU"],"sourceIds":["source.official.canto-ix.9-43","source.project.legacy-v1.0.44"],"note":"Project-authored route content after the explicit 9-43 divergence; never source-game canon."},"locationId":"outskirts_dawn","backgroundAssetId":"bg.outskirts_dawn","cgAssetId":"cg.golden_bough_ending","tone":"golden","portraits":[{"characterId":"protagonist","portraitAssetId":"portrait.protagonist.resolve","position":"left","active":false,"scale":0.92},{"characterId":"albina","portraitAssetId":"portrait.albina.endgame","position":"center","active":true,"scale":1}],"speaker":"叙事记录","text":"金枝重构的全部选择已封存。系统将只依据持久状态判定结局，不请求任何运行时生成。","voiceAssetId":"voice.scene.golden_bough_rebuild_ending_gate","bgmAssetId":"file.audio.bgm.title.theme.mp3","choices":[{"id":"golden_bough_rebuild_choose_true_ending","text":"确认彼此共同抵达的真结局","nextSceneId":"golden_bough_rebuild_ending_true","resultText":"结局判定完成：金枝重构·TRUE。资格规则与选择记录已固定写入。","resultVoiceAssetId":"voice.result.golden_bough_rebuild.true_ending","availability":{"allOf":[{"kind":"flag","flag":"golden_bough_route_final","equals":true},{"kind":"value","key":"trust","operator":"gte","value":56},{"kind":"value","key":"artResonance","operator":"gte","value":50},{"kind":"value","key":"danger","operator":"lte","value":8},{"kind":"quest","questId":"quest.golden.memory_continuity","status":"completed"},{"kind":"battle","battleId":"battle.golden.replacement_protocol","outcome":"victory"},{"kind":"equipment","equipmentId":"equipment.golden.memory_lens"},{"kind":"outfit","outfitId":"outfit.albina.golden_bough"},{"kind":"profession","professionId":"memory_surgeon","levelGte":2},{"kind":"relationship","key":"reliance","operator":"gte","value":7},{"kind":"worldbook","entryId":"albina_routes_endings_au_if","status":"seen"}]},"effects":{"setFlags":["ending_golden_bough_rebuild_true_qualified"]}},{"id":"golden_bough_rebuild_choose_normal_ending","text":"接受仍留有余白的普通结局","nextSceneId":"golden_bough_rebuild_ending_normal","resultText":"结局判定完成：金枝重构·NORMAL。资格规则与选择记录已固定写入。","resultVoiceAssetId":"voice.result.golden_bough_rebuild.normal_ending","availability":{"allOf":[{"kind":"flag","flag":"golden_bough_route_final","equals":true}],"fallback":true},"effects":{"setFlags":["ending_golden_bough_rebuild_normal_qualified"]}},{"id":"golden_bough_rebuild_choose_bad_ending","text":"承认这次未能跨过的坏结局","nextSceneId":"golden_bough_rebuild_ending_bad","resultText":"结局判定完成：金枝重构·BAD。资格规则与选择记录已固定写入。","resultVoiceAssetId":"voice.result.golden_bough_rebuild.bad_ending","availability":{"allOf":[{"kind":"flag","flag":"golden_bough_route_final","equals":true}],"anyOf":[{"kind":"value","key":"trust","operator":"lte","value":49},{"kind":"value","key":"artResonance","operator":"lte","value":44}]},"effects":{"setFlags":["ending_golden_bough_rebuild_bad_qualified"]}}]},{"version":2,"id":"golden_bough_rebuild_ending_true","chapter":17,"route":"golden_bough_rebuild","provenance":{"classification":"AU_extension","scope":"route","claimIds":["boundary.routes-and-player.are-AU"],"sourceIds":["source.official.canto-ix.9-43","source.project.legacy-v1.0.44"],"note":"Project-authored route content after the explicit 9-43 divergence; never source-game canon."},"locationId":"outskirts_dawn","backgroundAssetId":"bg.outskirts_dawn","cgAssetId":"cg.golden_bough_ending","tone":"golden","portraits":[{"characterId":"protagonist","portraitAssetId":"portrait.protagonist.resolve","position":"left","active":false,"scale":0.92},{"characterId":"albina","portraitAssetId":"portrait.albina.endgame","position":"center","active":true,"scale":1}],"speaker":"阿尔比娜","text":"金枝残响终于与法西娅的心跳重合。阿尔比娜记得每一次称呼、暂停和重新确认；她以新的身体醒来，也完整记得是谁陪她走过重构。","voiceAssetId":"voice.scene.golden_bough_rebuild_ending_true","bgmAssetId":"file.audio.bgm.title.theme.mp3","choices":[],"ending":{"route":"golden_bough_rebuild","kind":"true","eligibility":{"allOf":[{"kind":"flag","flag":"golden_bough_route_final","equals":true},{"kind":"value","key":"trust","operator":"gte","value":56},{"kind":"value","key":"artResonance","operator":"gte","value":50},{"kind":"value","key":"danger","operator":"lte","value":8}]}}},{"version":2,"id":"golden_bough_rebuild_ending_normal","chapter":17,"route":"golden_bough_rebuild","provenance":{"classification":"AU_extension","scope":"route","claimIds":["boundary.routes-and-player.are-AU"],"sourceIds":["source.official.canto-ix.9-43","source.project.legacy-v1.0.44"],"note":"Project-authored route content after the explicit 9-43 divergence; never source-game canon."},"locationId":"outskirts_dawn","backgroundAssetId":"bg.outskirts_dawn","cgAssetId":"cg.golden_bough_ending","tone":"golden","portraits":[{"characterId":"protagonist","portraitAssetId":"portrait.protagonist.resolve","position":"left","active":false,"scale":0.92},{"characterId":"albina","portraitAssetId":"portrait.albina.endgame","position":"center","active":true,"scale":1}],"speaker":"阿尔比娜","text":"重构在可控范围内结束。部分残响仍被封存在金色薄膜后，但阿尔比娜认得你，也认得自己。你们决定把余下修复交给时间。","voiceAssetId":"voice.scene.golden_bough_rebuild_ending_normal","bgmAssetId":"file.audio.bgm.title.theme.mp3","choices":[],"ending":{"route":"golden_bough_rebuild","kind":"normal","eligibility":{"allOf":[{"kind":"flag","flag":"golden_bough_route_final","equals":true}],"fallback":true}}},{"version":2,"id":"golden_bough_rebuild_ending_bad","chapter":17,"route":"golden_bough_rebuild","provenance":{"classification":"AU_extension","scope":"route","claimIds":["boundary.routes-and-player.are-AU"],"sourceIds":["source.official.canto-ix.9-43","source.project.legacy-v1.0.44"],"note":"Project-authored route content after the explicit 9-43 divergence; never source-game canon."},"locationId":"outskirts_dawn","backgroundAssetId":"bg.outskirts_dawn","cgAssetId":"cg.golden_bough_ending","tone":"golden","portraits":[{"characterId":"protagonist","portraitAssetId":"portrait.protagonist.resolve","position":"left","active":false,"scale":0.92},{"characterId":"albina","portraitAssetId":"portrait.albina.endgame","position":"center","active":true,"scale":1}],"speaker":"阿尔比娜","text":"稳定槽保住了身体，却没能保住全部连续性。阿尔比娜醒来时仍然礼貌，只把你当作可靠的见证者；被遗漏的称呼沉在金枝深处。","voiceAssetId":"voice.scene.golden_bough_rebuild_ending_bad","bgmAssetId":"file.audio.bgm.title.theme.mp3","choices":[],"ending":{"route":"golden_bough_rebuild","kind":"bad","eligibility":{"allOf":[{"kind":"flag","flag":"golden_bough_route_final","equals":true}],"anyOf":[{"kind":"value","key":"trust","operator":"lte","value":49},{"kind":"value","key":"artResonance","operator":"lte","value":44}]}}},{"version":2,"id":"ring_conspiracy_001","chapter":1,"route":"ring_conspiracy","provenance":{"classification":"AU_extension","scope":"route","claimIds":["boundary.routes-and-player.are-AU"],"sourceIds":["source.official.canto-ix.9-43","source.project.legacy-v1.0.44"],"note":"Project-authored route content after the explicit 9-43 divergence; never source-game canon."},"locationId":"spider_gallery","backgroundAssetId":"bg.spider_gallery","cgAssetId":"cg.conspiracy_contract","tone":"threat","portraits":[{"characterId":"callisto","portraitAssetId":"portrait.callisto.normal","position":"left","active":false,"scale":0.86},{"characterId":"albina","portraitAssetId":"portrait.albina.ring-conspiracy","position":"center","active":true,"scale":1},{"characterId":"ren","portraitAssetId":"portrait.ren.normal","position":"right","active":false,"scale":0.84}],"speaker":"阿尔比娜","text":"蜘蛛巢的灯光像手术刀一样落下。她向你递来一份没有署名的委托，笑得礼貌又危险。","voiceAssetId":"voice.scene.ring_conspiracy_001","bgmAssetId":"file.audio.bgm.boss.kromer.mp3","sfxAssetIds":["file.audio.se.slash.heavy.wav"],"choices":[{"id":"conspiracy_accept","text":"接下委托，但保留自己的条件","nextSceneId":"ring_conspiracy_002","resultText":"你选择“接下委托，但保留自己的条件”。阿尔比娜：她第一次没有把怒意伪装成礼貌。那不是要毁掉你的眼神，更像是不允许任何人替她决定你的用途。","resultVoiceAssetId":"voice.result.conspiracy_accept","effects":{"values":{"trust":2,"danger":3,"artResonance":3},"setFlags":["contract_with_boundary"],"unlockCg":["cg.conspiracy_contract"]}},{"id":"conspiracy_pressure","text":"逼她说出真正目标","nextSceneId":"ring_conspiracy_002","resultText":"你选择“逼她说出真正目标”。阿尔比娜：她第一次没有把怒意伪装成礼貌。那不是要毁掉你的眼神，更像是不允许任何人替她决定你的用途。","resultVoiceAssetId":"voice.result.conspiracy_pressure","effects":{"values":{"affectionAlbina":1,"danger":4,"artResonance":2},"setFlags":["pressed_true_goal"],"unlockCg":["cg.maestro_shadow"]}}]},{"version":2,"id":"ring_conspiracy_002","chapter":2,"route":"ring_conspiracy","provenance":{"classification":"AU_extension","scope":"route","claimIds":["boundary.routes-and-player.are-AU"],"sourceIds":["source.official.canto-ix.9-43","source.project.legacy-v1.0.44"],"note":"Project-authored route content after the explicit 9-43 divergence; never source-game canon."},"locationId":"ring_atelier","backgroundAssetId":"bg.ring_atelier","cgAssetId":"cg.ring_conspiracy_ending","tone":"gallery","portraits":[{"characterId":"albina","portraitAssetId":"portrait.albina.furious","position":"right","active":true,"scale":1},{"characterId":"protagonist","portraitAssetId":"portrait.protagonist.battle","position":"left","active":false,"scale":0.95}],"speaker":"阿尔比娜","text":"她第一次没有把怒意伪装成礼貌。那不是要毁掉你的眼神，更像是不允许任何人替她决定你的用途。","voiceAssetId":"voice.scene.ring_conspiracy_002","bgmAssetId":"file.audio.bgm.boss.kromer.mp3","sfxAssetIds":["file.audio.se.glass.shatter.wav"],"choices":[{"id":"conspiracy_escape_to_backstreets","text":"带着未签名委托冲出画廊","nextSceneId":"ring_conspiracy_003","resultText":"你选择“带着未签名委托冲出画廊”。环指代理人：追兵把雨巷切成一个个展格，仿佛你们已经是可出售的连环画。阿尔比娜没有回头，只把法西娅横在你和委托书之间。","resultVoiceAssetId":"voice.result.conspiracy_escape_to_backstreets","effects":{"values":{"trust":2,"danger":3,"artResonance":2},"setFlags":["ring_escape_committed"],"unlockCg":["cg.backstreet_pursuit"]}},{"id":"return_opening_from_ring","text":"回到路线选择","nextSceneId":"opening_001","resultText":"你选择“回到路线选择”。阿尔比娜：晚上好，{{user}}。请不要站得太远，我还没决定该把你称作观众、朋友，还是一块值得等待的画布。","resultVoiceAssetId":"voice.result.return_opening_from_ring","effects":{"values":{"trust":1,"danger":-1},"setFlags":["conspiracy_looped"]}}]},{"version":2,"id":"ring_conspiracy_003","chapter":3,"route":"ring_conspiracy","provenance":{"classification":"AU_extension","scope":"route","claimIds":["boundary.routes-and-player.are-AU"],"sourceIds":["source.official.canto-ix.9-43","source.project.legacy-v1.0.44"],"note":"Project-authored route content after the explicit 9-43 divergence; never source-game canon."},"locationId":"backstreets_rain","backgroundAssetId":"bg.backstreets_rain","cgAssetId":"cg.backstreet_pursuit","tone":"threat","portraits":[{"characterId":"ring_agent","portraitAssetId":"portrait.ring_agent.normal","position":"left","active":false,"scale":0.84},{"characterId":"albina","portraitAssetId":"portrait.albina.combat","position":"center","active":true,"scale":1},{"characterId":"protagonist","portraitAssetId":"portrait.protagonist.battle","position":"right","active":false,"scale":0.92}],"speaker":"环指代理人","text":"追兵把雨巷切成一个个展格，仿佛你们已经是可出售的连环画。阿尔比娜没有回头，只把法西娅横在你和委托书之间。","voiceAssetId":"voice.scene.ring_conspiracy_003","bgmAssetId":"file.audio.bgm.boss.kromer.mp3","sfxAssetIds":["file.audio.se.slash.heavy.wav"],"choices":[{"id":"conspiracy_break_pursuit_frame","text":"打碎追兵布下的取景框","nextSceneId":"ring_conspiracy_004","resultText":"你选择“打碎追兵布下的取景框”。阿尔比娜：回到蜘蛛画廊时，所有灯都向她弯下去。她把那份委托钉在空框里，语气平静：如果他们要收藏背叛，就先学会被背叛凝视。","resultVoiceAssetId":"voice.result.conspiracy_break_pursuit_frame","effects":{"values":{"trust":3,"danger":2,"artResonance":3},"relationshipVectors":{"intimacy":1,"reliance":4},"conflictMastery":{"blade":1},"setFlags":["pursuit_frame_broken"],"unlockCg":["cg.combat_transition_01"],"grantItems":["item.ring.counter_signet"],"equipItems":["equipment.ring.counter_signet"],"unlockOutfits":["outfit.albina.ring_disguise"],"activateOutfit":"outfit.albina.ring_disguise","completeQuests":["quest.ring.counter_contract"],"professionXp":{"ring_counterforger":6}}},{"id":"conspiracy_feed_false_signature","text":"交出伪造签名引开视线","nextSceneId":"ring_conspiracy_004","resultText":"你选择“交出伪造签名引开视线”。阿尔比娜：回到蜘蛛画廊时，所有灯都向她弯下去。她把那份委托钉在空框里，语气平静：如果他们要收藏背叛，就先学会被背叛凝视。","resultVoiceAssetId":"voice.result.conspiracy_feed_false_signature","effects":{"values":{"trust":2,"danger":-1,"artResonance":4},"relationshipVectors":{"reliance":3,"suspicion":1},"conflictMastery":{"analysis":1},"setFlags":["false_signature_planted"],"unlockCg":["cg.ren_interruption"],"grantItems":["item.ring.counter_signet"],"equipItems":["equipment.ring.counter_signet"],"unlockOutfits":["outfit.albina.ring_disguise"],"activateOutfit":"outfit.albina.ring_disguise","completeQuests":["quest.ring.counter_contract"],"professionXp":{"ring_counterforger":6}}}]},{"version":2,"id":"ring_conspiracy_004","chapter":4,"route":"ring_conspiracy","provenance":{"classification":"AU_extension","scope":"route","claimIds":["boundary.routes-and-player.are-AU"],"sourceIds":["source.official.canto-ix.9-43","source.project.legacy-v1.0.44"],"note":"Project-authored route content after the explicit 9-43 divergence; never source-game canon."},"locationId":"spider_gallery","backgroundAssetId":"bg.spider_gallery","cgAssetId":"cg.maestro_shadow","tone":"gallery","portraits":[{"characterId":"ren","portraitAssetId":"portrait.ren.normal","position":"left","active":false,"scale":0.82},{"characterId":"albina","portraitAssetId":"portrait.albina.maestro","position":"center","active":true,"scale":1},{"characterId":"protagonist","portraitAssetId":"portrait.protagonist.shadow","position":"right","active":false,"scale":0.9}],"speaker":"阿尔比娜","text":"回到蜘蛛画廊时，所有灯都向她弯下去。她把那份委托钉在空框里，语气平静：如果他们要收藏背叛，就先学会被背叛凝视。","voiceAssetId":"voice.scene.ring_conspiracy_004","bgmAssetId":"file.audio.bgm.boss.kromer.mp3","sfxAssetIds":["file.audio.se.glass.shatter.wav"],"choices":[{"id":"ring_conspiracy_route_complete","text":"记录环指共谋路线的暂定结局","nextSceneId":"ring_conspiracy_005","resultText":"你选择“记录环指共谋路线的暂定结局”。卡利斯托：卡利斯托把另一份署了名的委托推到你们中间，笑得像在挑礼物：既然上次没有展出你的缺陷，这次不如让你们两个一起成为一件合作作品。","resultVoiceAssetId":"voice.result.ring_conspiracy_route_complete","effects":{"values":{"affectionAlbina":1,"trust":2,"danger":-2,"artResonance":3},"setFlags":["ring_conspiracy_route_complete"],"unlockCg":["cg.ring_conspiracy_ending"]}}]},{"version":2,"id":"ring_conspiracy_005","chapter":5,"route":"ring_conspiracy","provenance":{"classification":"AU_extension","scope":"route","claimIds":["boundary.routes-and-player.are-AU"],"sourceIds":["source.official.canto-ix.9-43","source.project.legacy-v1.0.44"],"note":"Project-authored route content after the explicit 9-43 divergence; never source-game canon."},"locationId":"ring_atelier","backgroundAssetId":"bg.ring_atelier","cgAssetId":"cg.maestro_shadow","tone":"gallery","portraits":[{"characterId":"callisto","portraitAssetId":"portrait.callisto.normal","position":"left","active":false,"scale":0.86},{"characterId":"albina","portraitAssetId":"portrait.albina.maestro","position":"center","active":true,"scale":1},{"characterId":"protagonist","portraitAssetId":"portrait.protagonist.shadow","position":"right","active":false,"scale":0.9}],"speaker":"卡利斯托","text":"卡利斯托把另一份署了名的委托推到你们中间，笑得像在挑礼物：既然上次没有展出你的缺陷，这次不如让你们两个一起成为一件合作作品。","voiceAssetId":"voice.scene.ring_conspiracy_005","bgmAssetId":"file.audio.bgm.boss.kromer.mp3","sfxAssetIds":["file.audio.se.glass.shatter.wav"],"choices":[{"id":"conspiracy_005_refuse_duo","text":"当众拒绝成为合作展品","nextSceneId":"ring_conspiracy_006","resultText":"你选择“当众拒绝成为合作展品”。阿尔比娜：蜘蛛画廊的灯突然转向她。她把法西娅插进墙上一幅空框，声音很冷：你们想收藏我，那就先学会被我凝视。","resultVoiceAssetId":"voice.result.conspiracy_005_refuse_duo","effects":{"values":{"trust":3,"danger":2,"artResonance":3},"setFlags":["duo_exhibit_refused"],"unlockCg":["cg.maestro_shadow"]}},{"id":"conspiracy_005_let_her_answer","text":"不替她回答，让阿尔比娜开口","nextSceneId":"ring_conspiracy_006","resultText":"你选择“不替她回答，让阿尔比娜开口”。阿尔比娜：蜘蛛画廊的灯突然转向她。她把法西娅插进墙上一幅空框，声音很冷：你们想收藏我，那就先学会被我凝视。","resultVoiceAssetId":"voice.result.conspiracy_005_let_her_answer","effects":{"values":{"affectionAlbina":2,"trust":4,"artResonance":4},"setFlags":["albina_answered_herself"],"unlockCg":["cg.conspiracy_contract"]}}]},{"version":2,"id":"ring_conspiracy_006","chapter":6,"route":"ring_conspiracy","provenance":{"classification":"AU_extension","scope":"route","claimIds":["boundary.routes-and-player.are-AU"],"sourceIds":["source.official.canto-ix.9-43","source.project.legacy-v1.0.44"],"note":"Project-authored route content after the explicit 9-43 divergence; never source-game canon."},"locationId":"spider_gallery","backgroundAssetId":"bg.spider_gallery","cgAssetId":"cg.conspiracy_contract","tone":"threat","portraits":[{"characterId":"ren","portraitAssetId":"portrait.ren.normal","position":"left","active":false,"scale":0.84},{"characterId":"albina","portraitAssetId":"portrait.albina.furious","position":"center","active":true,"scale":1},{"characterId":"protagonist","portraitAssetId":"portrait.protagonist.battle","position":"right","active":false,"scale":0.92}],"speaker":"阿尔比娜","text":"蜘蛛画廊的灯突然转向她。她把法西娅插进墙上一幅空框，声音很冷：你们想收藏我，那就先学会被我凝视。","voiceAssetId":"voice.scene.ring_conspiracy_006","bgmAssetId":"file.audio.bgm.boss.kromer.mp3","sfxAssetIds":["file.audio.se.slash.heavy.wav"],"choices":[{"id":"conspiracy_006_stand_with_her","text":"站到她身侧，分担凝视","nextSceneId":"ring_conspiracy_007","resultText":"你选择“站到她身侧，分担凝视”。环指代理人：雨巷的尽头被代理人堵住。他不拔武器，只是举起一面空画框，要把你们框进环指的目录。阿尔比娜低声让你选：是冲破画框，还是把它抢过来。","resultVoiceAssetId":"voice.result.conspiracy_006_stand_with_her","effects":{"values":{"affectionAlbina":3,"trust":4,"danger":1,"artResonance":3},"setFlags":["gaze_shared"],"unlockCg":["cg.maestro_shadow"]}},{"id":"conspiracy_006_block_view","text":"挡在她和委托人之间","nextSceneId":"ring_conspiracy_007","resultText":"你选择“挡在她和委托人之间”。环指代理人：雨巷的尽头被代理人堵住。他不拔武器，只是举起一面空画框，要把你们框进环指的目录。阿尔比娜低声让你选：是冲破画框，还是把它抢过来。","resultVoiceAssetId":"voice.result.conspiracy_006_block_view","effects":{"values":{"affectionAlbina":2,"trust":3,"danger":3,"artResonance":2},"setFlags":["view_blocked"],"unlockCg":["cg.combat_transition_01"]}}]},{"version":2,"id":"ring_conspiracy_007","chapter":7,"route":"ring_conspiracy","provenance":{"classification":"AU_extension","scope":"route","claimIds":["boundary.routes-and-player.are-AU"],"sourceIds":["source.official.canto-ix.9-43","source.project.legacy-v1.0.44"],"note":"Project-authored route content after the explicit 9-43 divergence; never source-game canon."},"locationId":"backstreets_rain","backgroundAssetId":"bg.backstreets_rain","cgAssetId":"cg.backstreet_pursuit","tone":"threat","portraits":[{"characterId":"ring_agent","portraitAssetId":"portrait.ring_agent.normal","position":"left","active":false,"scale":0.84},{"characterId":"albina","portraitAssetId":"portrait.albina.combat","position":"center","active":true,"scale":1},{"characterId":"protagonist","portraitAssetId":"portrait.protagonist.battle","position":"right","active":false,"scale":0.92}],"speaker":"环指代理人","text":"雨巷的尽头被代理人堵住。他不拔武器，只是举起一面空画框，要把你们框进环指的目录。阿尔比娜低声让你选：是冲破画框，还是把它抢过来。","voiceAssetId":"voice.scene.ring_conspiracy_007","bgmAssetId":"file.audio.bgm.boss.kromer.mp3","sfxAssetIds":["file.audio.se.slash.heavy.wav"],"choices":[{"id":"conspiracy_007_break_frame","text":"冲破画框","nextSceneId":"ring_conspiracy_008","resultText":"你选择“冲破画框”。LCE 医师：LCE 把你们暂扣在手术间。医师递来一份中立证词表，说只要她肯指认环指，就帮她换掉被环指标注过的接口。她没有看表，先看你。","resultVoiceAssetId":"voice.result.conspiracy_007_break_frame","effects":{"values":{"trust":3,"danger":3,"artResonance":3},"setFlags":["street_frame_broken"],"unlockCg":["cg.combat_transition_01"]}},{"id":"conspiracy_007_seize_frame","text":"把画框抢过来，反过来框住他","nextSceneId":"ring_conspiracy_008","resultText":"你选择“把画框抢过来，反过来框住他”。LCE 医师：LCE 把你们暂扣在手术间。医师递来一份中立证词表，说只要她肯指认环指，就帮她换掉被环指标注过的接口。她没有看表，先看你。","resultVoiceAssetId":"voice.result.conspiracy_007_seize_frame","effects":{"values":{"trust":4,"danger":2,"artResonance":4},"setFlags":["frame_seized"],"unlockCg":["cg.maestro_shadow"]}}]},{"version":2,"id":"ring_conspiracy_008","chapter":8,"route":"ring_conspiracy","provenance":{"classification":"AU_extension","scope":"route","claimIds":["boundary.routes-and-player.are-AU"],"sourceIds":["source.official.canto-ix.9-43","source.project.legacy-v1.0.44"],"note":"Project-authored route content after the explicit 9-43 divergence; never source-game canon."},"locationId":"lce_lab","backgroundAssetId":"bg.lce_lab","cgAssetId":"cg.lce_raid","tone":"threat","portraits":[{"characterId":"lce_doctor","portraitAssetId":"portrait.lce_doctor.normal","position":"left","active":false,"scale":0.84},{"characterId":"albina","portraitAssetId":"portrait.albina.surgical","position":"center","active":true,"scale":1},{"characterId":"protagonist","portraitAssetId":"portrait.protagonist.serious","position":"right","active":false,"scale":0.9}],"speaker":"LCE 医师","text":"LCE 把你们暂扣在手术间。医师递来一份中立证词表，说只要她肯指认环指，就帮她换掉被环指标注过的接口。她没有看表，先看你。","voiceAssetId":"voice.scene.ring_conspiracy_008","bgmAssetId":"file.audio.bgm.boss.kromer.mp3","sfxAssetIds":["file.audio.se.slash.heavy.wav"],"choices":[{"id":"conspiracy_008_refuse_testimony","text":"当面拒绝用她换取证词","nextSceneId":"ring_conspiracy_009","resultText":"你选择“当面拒绝用她换取证词”。阿尔比娜：镜廊里同时映出\\"环指版的她\\"和\\"现在的她\\"。她让法西娅在两面镜子之间选一面，然后问你：你愿意被哪一个版本记得？","resultVoiceAssetId":"voice.result.conspiracy_008_refuse_testimony","effects":{"values":{"affectionAlbina":2,"trust":5,"danger":2,"artResonance":2},"setFlags":["testimony_refused"],"unlockCg":["cg.lce_raid"]}},{"id":"conspiracy_008_hand_pen_to_her","text":"把笔交还给她，由她自己决定","nextSceneId":"ring_conspiracy_009","resultText":"你选择“把笔交还给她，由她自己决定”。阿尔比娜：镜廊里同时映出\\"环指版的她\\"和\\"现在的她\\"。她让法西娅在两面镜子之间选一面，然后问你：你愿意被哪一个版本记得？","resultVoiceAssetId":"voice.result.conspiracy_008_hand_pen_to_her","effects":{"values":{"affectionAlbina":3,"trust":4,"artResonance":3},"setFlags":["pen_returned_to_albina"],"unlockCg":["cg.conspiracy_contract"]}}],"minigame":{"minigameId":"minigame.ring.boundary_resonance","seed":"ring-counter-contract-v1","prompt":"只点亮能把这份委托改写为反制契约的条款节点。","assistLabel":"标记不可接受的占有条款","allowSkip":true}},{"version":2,"id":"ring_conspiracy_009","chapter":9,"route":"ring_conspiracy","provenance":{"classification":"AU_extension","scope":"route","claimIds":["boundary.routes-and-player.are-AU"],"sourceIds":["source.official.canto-ix.9-43","source.project.legacy-v1.0.44"],"note":"Project-authored route content after the explicit 9-43 divergence; never source-game canon."},"locationId":"mirror_corridor","backgroundAssetId":"bg.mirror_corridor","cgAssetId":"cg.maestro_shadow","tone":"gallery","portraits":[{"characterId":"golden_apparition","portraitAssetId":"portrait.golden_apparition.normal","position":"left","active":false,"scale":0.82},{"characterId":"albina","portraitAssetId":"portrait.albina.maestro","position":"center","active":true,"scale":1},{"characterId":"protagonist","portraitAssetId":"portrait.protagonist.shadow","position":"right","active":false,"scale":0.9}],"speaker":"阿尔比娜","text":"镜廊里同时映出\\"环指版的她\\"和\\"现在的她\\"。她让法西娅在两面镜子之间选一面，然后问你：你愿意被哪一个版本记得？","voiceAssetId":"voice.scene.ring_conspiracy_009","bgmAssetId":"file.audio.bgm.boss.kromer.mp3","sfxAssetIds":["file.audio.se.glass.shatter.wav"],"choices":[{"id":"conspiracy_009_choose_present","text":"选现在的她，不挑那个环指版","nextSceneId":"ring_conspiracy_010","resultText":"你选择“选现在的她，不挑那个环指版”。卡利斯托：卡利斯托拿出一枚\\"合作者徽章\\"，说只要她肯戴上，环指就放过你。阿尔比娜笑了一下，把徽章塞进你掌心：你来替我决定，要不要让我用它换你。","resultVoiceAssetId":"voice.result.conspiracy_009_choose_present","effects":{"values":{"affectionAlbina":4,"trust":3,"artResonance":3},"setFlags":["present_albina_chosen"],"unlockCg":["cg.art_resonance"]}},{"id":"conspiracy_009_refuse_choice","text":"拒绝回答，让她自己挑镜子","nextSceneId":"ring_conspiracy_010","resultText":"你选择“拒绝回答，让她自己挑镜子”。卡利斯托：卡利斯托拿出一枚\\"合作者徽章\\"，说只要她肯戴上，环指就放过你。阿尔比娜笑了一下，把徽章塞进你掌心：你来替我决定，要不要让我用它换你。","resultVoiceAssetId":"voice.result.conspiracy_009_refuse_choice","effects":{"values":{"affectionAlbina":2,"trust":4,"artResonance":4},"setFlags":["mirror_choice_returned"],"unlockCg":["cg.maestro_shadow"]}}]},{"version":2,"id":"ring_conspiracy_010","chapter":10,"route":"ring_conspiracy","provenance":{"classification":"AU_extension","scope":"route","claimIds":["boundary.routes-and-player.are-AU"],"sourceIds":["source.official.canto-ix.9-43","source.project.legacy-v1.0.44"],"note":"Project-authored route content after the explicit 9-43 divergence; never source-game canon."},"locationId":"ring_atelier","backgroundAssetId":"bg.ring_atelier","cgAssetId":"cg.conspiracy_contract","tone":"gallery","portraits":[{"characterId":"callisto","portraitAssetId":"portrait.callisto.normal","position":"left","active":false,"scale":0.84},{"characterId":"albina","portraitAssetId":"portrait.albina.furious","position":"center","active":true,"scale":1},{"characterId":"protagonist","portraitAssetId":"portrait.protagonist.battle","position":"right","active":false,"scale":0.92}],"speaker":"卡利斯托","text":"卡利斯托拿出一枚\\"合作者徽章\\"，说只要她肯戴上，环指就放过你。阿尔比娜笑了一下，把徽章塞进你掌心：你来替我决定，要不要让我用它换你。","voiceAssetId":"voice.scene.ring_conspiracy_010","bgmAssetId":"file.audio.bgm.boss.kromer.mp3","sfxAssetIds":["file.audio.se.glass.shatter.wav"],"choices":[{"id":"conspiracy_010_throw_badge","text":"把徽章扔回卡利斯托脸上","nextSceneId":"ring_conspiracy_011","resultText":"你选择“把徽章扔回卡利斯托脸上”。环指代理人：代理人撕下礼貌，举出一卷写好剧本的胶片：今晚的故事已经定稿，结局是你们两个都被装裱。阿尔比娜握紧法西娅，低声让你替她改写最后一格分镜。","resultVoiceAssetId":"voice.result.conspiracy_010_throw_badge","effects":{"values":{"affectionAlbina":3,"trust":4,"danger":3,"artResonance":2},"setFlags":["badge_thrown"],"unlockCg":["cg.combat_transition_01"]}},{"id":"conspiracy_010_keep_badge_unworn","text":"收下徽章，但谁都不许戴","nextSceneId":"ring_conspiracy_011","resultText":"你选择“收下徽章，但谁都不许戴”。环指代理人：代理人撕下礼貌，举出一卷写好剧本的胶片：今晚的故事已经定稿，结局是你们两个都被装裱。阿尔比娜握紧法西娅，低声让你替她改写最后一格分镜。","resultVoiceAssetId":"voice.result.conspiracy_010_keep_badge_unworn","effects":{"values":{"affectionAlbina":2,"trust":3,"danger":1,"artResonance":4},"setFlags":["badge_kept_unworn"],"unlockCg":["cg.maestro_shadow"]}}]},{"version":2,"id":"ring_conspiracy_011","chapter":11,"route":"ring_conspiracy","provenance":{"classification":"AU_extension","scope":"route","claimIds":["boundary.routes-and-player.are-AU"],"sourceIds":["source.official.canto-ix.9-43","source.project.legacy-v1.0.44"],"note":"Project-authored route content after the explicit 9-43 divergence; never source-game canon."},"locationId":"spider_gallery","backgroundAssetId":"bg.spider_gallery","cgAssetId":"cg.maestro_shadow","tone":"threat","portraits":[{"characterId":"ren","portraitAssetId":"portrait.ren.normal","position":"left","active":false,"scale":0.82},{"characterId":"albina","portraitAssetId":"portrait.albina.combat","position":"center","active":true,"scale":1},{"characterId":"protagonist","portraitAssetId":"portrait.protagonist.battle","position":"right","active":false,"scale":0.92}],"speaker":"环指代理人","text":"代理人撕下礼貌，举出一卷写好剧本的胶片：今晚的故事已经定稿，结局是你们两个都被装裱。阿尔比娜握紧法西娅，低声让你替她改写最后一格分镜。","voiceAssetId":"voice.scene.ring_conspiracy_011","bgmAssetId":"file.audio.bgm.boss.kromer.mp3","sfxAssetIds":["file.audio.se.slash.heavy.wav"],"choices":[{"id":"conspiracy_011_rewrite_ending","text":"当众改写结局，让他们措手不及","nextSceneId":"ring_conspiracy_012","resultText":"你选择“当众改写结局，让他们措手不及”。维吉利乌斯：楼顶上，维吉利乌斯把一柄已经卸下锋刃的环指画刀扔在你们脚边：用这个结束今晚，或者用它开始下一次共谋，你们自己挑。","resultVoiceAssetId":"voice.result.conspiracy_011_rewrite_ending","effects":{"values":{"trust":4,"danger":0,"artResonance":4},"relationshipVectors":{"reliance":3},"conflictMastery":{"blade":3},"setFlags":["ending_rewritten"],"unlockCg":["cg.ring_conspiracy_ending"],"resolveBattles":[{"battleId":"battle.ring.authorship_frame","outcome":"victory"}],"professionXp":{"ring_counterforger":6}}},{"id":"conspiracy_011_burn_film","text":"直接烧掉胶片，让剧本作废","nextSceneId":"ring_conspiracy_012","resultText":"你选择“直接烧掉胶片，让剧本作废”。维吉利乌斯：楼顶上，维吉利乌斯把一柄已经卸下锋刃的环指画刀扔在你们脚边：用这个结束今晚，或者用它开始下一次共谋，你们自己挑。","resultVoiceAssetId":"voice.result.conspiracy_011_burn_film","effects":{"values":{"trust":3,"danger":7,"artResonance":3},"relationshipVectors":{"suspicion":3},"conflictMastery":{"blade":1},"setFlags":["film_burned"],"unlockCg":["cg.combat_transition_01"],"resolveBattles":[{"battleId":"battle.ring.authorship_frame","outcome":"setback"}],"professionXp":{"ring_counterforger":3}}}]},{"version":2,"id":"ring_conspiracy_012","chapter":12,"route":"ring_conspiracy","provenance":{"classification":"AU_extension","scope":"route","claimIds":["boundary.routes-and-player.are-AU"],"sourceIds":["source.official.canto-ix.9-43","source.project.legacy-v1.0.44"],"note":"Project-authored route content after the explicit 9-43 divergence; never source-game canon."},"locationId":"city_rooftop","backgroundAssetId":"bg.city_rooftop","cgAssetId":"cg.araya_rooftop","tone":"threat","portraits":[{"characterId":"vergilius","portraitAssetId":"portrait.vergilius.normal","position":"left","active":false,"scale":0.84},{"characterId":"albina","portraitAssetId":"portrait.albina.rain","position":"center","active":true,"scale":1},{"characterId":"protagonist","portraitAssetId":"portrait.protagonist.resolve","position":"right","active":false,"scale":0.92}],"speaker":"维吉利乌斯","text":"楼顶上，维吉利乌斯把一柄已经卸下锋刃的环指画刀扔在你们脚边：用这个结束今晚，或者用它开始下一次共谋，你们自己挑。","voiceAssetId":"voice.scene.ring_conspiracy_012","bgmAssetId":"file.audio.bgm.boss.kromer.mp3","sfxAssetIds":["file.audio.se.slash.heavy.wav"],"choices":[{"id":"conspiracy_012_end_tonight","text":"选择结束今晚的共谋","nextSceneId":"ring_conspiracy_013","resultText":"你选择“选择结束今晚的共谋”。阿尔比娜：夜班巴士把你们带离环指的视线。她靠在窗边，把法西娅从胸口取出来放在你掌心一秒：今晚我借你这一秒心跳，作为不签名的合作凭证。","resultVoiceAssetId":"voice.result.conspiracy_012_end_tonight","effects":{"values":{"affectionAlbina":2,"trust":3,"danger":-2,"artResonance":3},"setFlags":["night_ended"],"unlockCg":["cg.ring_conspiracy_ending"]}},{"id":"conspiracy_012_keep_blade","text":"收下画刀，留给未来必要时再用","nextSceneId":"ring_conspiracy_013","resultText":"你选择“收下画刀，留给未来必要时再用”。阿尔比娜：夜班巴士把你们带离环指的视线。她靠在窗边，把法西娅从胸口取出来放在你掌心一秒：今晚我借你这一秒心跳，作为不签名的合作凭证。","resultVoiceAssetId":"voice.result.conspiracy_012_keep_blade","effects":{"values":{"affectionAlbina":1,"trust":4,"danger":1,"artResonance":4},"setFlags":["blade_kept"],"unlockCg":["cg.maestro_shadow"]}}]},{"version":2,"id":"ring_conspiracy_013","chapter":13,"route":"ring_conspiracy","provenance":{"classification":"AU_extension","scope":"route","claimIds":["boundary.routes-and-player.are-AU"],"sourceIds":["source.official.canto-ix.9-43","source.project.legacy-v1.0.44"],"note":"Project-authored route content after the explicit 9-43 divergence; never source-game canon."},"locationId":"limbus_bus","backgroundAssetId":"bg.limbus_bus","cgAssetId":"cg.limbus_bus_night","tone":"quiet","portraits":[{"characterId":"dante","portraitAssetId":"portrait.dante.normal","position":"left","active":false,"scale":0.8},{"characterId":"albina","portraitAssetId":"portrait.albina.rain","position":"center","active":true,"scale":1},{"characterId":"protagonist","portraitAssetId":"portrait.protagonist.wet-hair","position":"right","active":false,"scale":0.9}],"speaker":"阿尔比娜","text":"夜班巴士把你们带离环指的视线。她靠在窗边，把法西娅从胸口取出来放在你掌心一秒：今晚我借你这一秒心跳，作为不签名的合作凭证。","voiceAssetId":"voice.scene.ring_conspiracy_013","bgmAssetId":"file.audio.bgm.boss.kromer.mp3","choices":[{"id":"conspiracy_013_hold_one_second","text":"认真握住那一秒，不多不少","nextSceneId":"ring_conspiracy_014","resultText":"你选择“认真握住那一秒，不多不少”。卡利斯托：巢穴车站最后一盏灯下，卡利斯托最后一次出现，递来一张空白入场券：你愿意把今晚写进环指的目录，还是彻底从目录里抹去？","resultVoiceAssetId":"voice.result.conspiracy_013_hold_one_second","effects":{"values":{"affectionAlbina":4,"trust":3,"artResonance":3},"setFlags":["one_second_held"],"unlockCg":["cg.fascia_heartbeat"]}},{"id":"conspiracy_013_return_gently","text":"提前把它轻轻送回，不占有","nextSceneId":"ring_conspiracy_014","resultText":"你选择“提前把它轻轻送回，不占有”。卡利斯托：巢穴车站最后一盏灯下，卡利斯托最后一次出现，递来一张空白入场券：你愿意把今晚写进环指的目录，还是彻底从目录里抹去？","resultVoiceAssetId":"voice.result.conspiracy_013_return_gently","effects":{"values":{"affectionAlbina":2,"trust":5,"artResonance":4},"setFlags":["heartbeat_returned_early"],"unlockCg":["cg.rain_confession"]}}]},{"version":2,"id":"ring_conspiracy_014","chapter":14,"route":"ring_conspiracy","provenance":{"classification":"AU_extension","scope":"route","claimIds":["boundary.routes-and-player.are-AU"],"sourceIds":["source.official.canto-ix.9-43","source.project.legacy-v1.0.44"],"note":"Project-authored route content after the explicit 9-43 divergence; never source-game canon."},"locationId":"nest_station","backgroundAssetId":"bg.nest_station","cgAssetId":"cg.ring_conspiracy_ending","tone":"gallery","portraits":[{"characterId":"callisto","portraitAssetId":"portrait.callisto.normal","position":"left","active":false,"scale":0.82},{"characterId":"albina","portraitAssetId":"portrait.albina.maestro","position":"center","active":true,"scale":1},{"characterId":"protagonist","portraitAssetId":"portrait.protagonist.shadow","position":"right","active":false,"scale":0.9}],"speaker":"卡利斯托","text":"巢穴车站最后一盏灯下，卡利斯托最后一次出现，递来一张空白入场券：你愿意把今晚写进环指的目录，还是彻底从目录里抹去？","voiceAssetId":"voice.scene.ring_conspiracy_014","bgmAssetId":"file.audio.bgm.boss.kromer.mp3","sfxAssetIds":["file.audio.se.glass.shatter.wav"],"choices":[{"id":"conspiracy_014_erase_from_catalog","text":"选择从环指目录里彻底抹去","nextSceneId":"ring_conspiracy_015","resultText":"你选择“选择从环指目录里彻底抹去”。阿尔比娜：城郊黎明把环指的灯火远远压在身后。她停下脚步，把那柄卸下锋刃的画刀插进土里：今晚的共谋到此为止，下一次见面，我会以自己的名义邀请你。","resultVoiceAssetId":"voice.result.conspiracy_014_erase_from_catalog","effects":{"values":{"affectionAlbina":2,"trust":4,"danger":-2,"artResonance":3},"setFlags":["catalog_erased"],"unlockCg":["cg.ring_conspiracy_ending"]}},{"id":"conspiracy_014_keep_one_line","text":"只保留一行不被署名的记录","nextSceneId":"ring_conspiracy_015","resultText":"你选择“只保留一行不被署名的记录”。阿尔比娜：城郊黎明把环指的灯火远远压在身后。她停下脚步，把那柄卸下锋刃的画刀插进土里：今晚的共谋到此为止，下一次见面，我会以自己的名义邀请你。","resultVoiceAssetId":"voice.result.conspiracy_014_keep_one_line","effects":{"values":{"affectionAlbina":3,"trust":3,"artResonance":4},"setFlags":["anonymous_line_kept"],"unlockCg":["cg.maestro_shadow"]}}]},{"version":2,"id":"ring_conspiracy_015","chapter":15,"route":"ring_conspiracy","provenance":{"classification":"AU_extension","scope":"route","claimIds":["boundary.routes-and-player.are-AU"],"sourceIds":["source.official.canto-ix.9-43","source.project.legacy-v1.0.44"],"note":"Project-authored route content after the explicit 9-43 divergence; never source-game canon."},"locationId":"outskirts_dawn","backgroundAssetId":"bg.outskirts_dawn","cgAssetId":"cg.ring_conspiracy_ending","tone":"quiet","portraits":[{"characterId":"protagonist","portraitAssetId":"portrait.protagonist.resolve","position":"left","active":false,"scale":0.92},{"characterId":"albina","portraitAssetId":"portrait.albina.endgame","position":"center","active":true,"scale":1}],"speaker":"阿尔比娜","text":"城郊黎明把环指的灯火远远压在身后。她停下脚步，把那柄卸下锋刃的画刀插进土里：今晚的共谋到此为止，下一次见面，我会以自己的名义邀请你。","voiceAssetId":"voice.scene.ring_conspiracy_015","bgmAssetId":"file.audio.bgm.boss.kromer.mp3","choices":[{"id":"ring_conspiracy_route_final","text":"为环指共谋路线合上最后一卷胶片","nextSceneId":"ring_conspiracy_ending_gate","resultText":"你选择“为环指共谋路线合上最后一卷胶片”。环指共谋路线终章已封存，进入固定结局资格判定。","resultVoiceAssetId":"voice.result.ring_conspiracy_route_final","effects":{"values":{"affectionAlbina":3,"trust":3,"danger":-2,"artResonance":4},"setFlags":["ring_conspiracy_route_final"]}}]},{"version":2,"id":"ring_conspiracy_ending_gate","chapter":16,"route":"ring_conspiracy","provenance":{"classification":"AU_extension","scope":"route","claimIds":["boundary.routes-and-player.are-AU"],"sourceIds":["source.official.canto-ix.9-43","source.project.legacy-v1.0.44"],"note":"Project-authored route content after the explicit 9-43 divergence; never source-game canon."},"locationId":"outskirts_dawn","backgroundAssetId":"bg.outskirts_dawn","cgAssetId":"cg.ring_conspiracy_ending","tone":"quiet","portraits":[{"characterId":"protagonist","portraitAssetId":"portrait.protagonist.resolve","position":"left","active":false,"scale":0.92},{"characterId":"albina","portraitAssetId":"portrait.albina.endgame","position":"center","active":true,"scale":1}],"speaker":"叙事记录","text":"环指共谋的全部选择已封存。系统将只依据持久状态判定结局，不请求任何运行时生成。","voiceAssetId":"voice.scene.ring_conspiracy_ending_gate","bgmAssetId":"file.audio.bgm.boss.kromer.mp3","choices":[{"id":"ring_conspiracy_choose_true_ending","text":"确认彼此共同抵达的真结局","nextSceneId":"ring_conspiracy_ending_true","resultText":"结局判定完成：环指共谋·TRUE。资格规则与选择记录已固定写入。","resultVoiceAssetId":"voice.result.ring_conspiracy.true_ending","availability":{"allOf":[{"kind":"flag","flag":"ring_conspiracy_route_final","equals":true},{"kind":"value","key":"trust","operator":"gte","value":49},{"kind":"value","key":"artResonance","operator":"gte","value":49},{"kind":"value","key":"danger","operator":"lte","value":15},{"kind":"quest","questId":"quest.ring.counter_contract","status":"completed"},{"kind":"battle","battleId":"battle.ring.authorship_frame","outcome":"victory"},{"kind":"equipment","equipmentId":"equipment.ring.counter_signet"},{"kind":"outfit","outfitId":"outfit.albina.ring_disguise"},{"kind":"profession","professionId":"ring_counterforger","levelGte":2},{"kind":"relationship","key":"reliance","operator":"gte","value":7},{"kind":"worldbook","entryId":"albina_routes_endings_au_if","status":"seen"}]},"effects":{"setFlags":["ending_ring_conspiracy_true_qualified"]}},{"id":"ring_conspiracy_choose_normal_ending","text":"接受仍留有余白的普通结局","nextSceneId":"ring_conspiracy_ending_normal","resultText":"结局判定完成：环指共谋·NORMAL。资格规则与选择记录已固定写入。","resultVoiceAssetId":"voice.result.ring_conspiracy.normal_ending","availability":{"allOf":[{"kind":"flag","flag":"ring_conspiracy_route_final","equals":true}],"fallback":true},"effects":{"setFlags":["ending_ring_conspiracy_normal_qualified"]}},{"id":"ring_conspiracy_choose_bad_ending","text":"承认这次未能跨过的坏结局","nextSceneId":"ring_conspiracy_ending_bad","resultText":"结局判定完成：环指共谋·BAD。资格规则与选择记录已固定写入。","resultVoiceAssetId":"voice.result.ring_conspiracy.bad_ending","availability":{"allOf":[{"kind":"flag","flag":"ring_conspiracy_route_final","equals":true}],"anyOf":[{"kind":"value","key":"trust","operator":"lte","value":44},{"kind":"value","key":"danger","operator":"gte","value":18}]},"effects":{"setFlags":["ending_ring_conspiracy_bad_qualified"]}}]},{"version":2,"id":"ring_conspiracy_ending_true","chapter":17,"route":"ring_conspiracy","provenance":{"classification":"AU_extension","scope":"route","claimIds":["boundary.routes-and-player.are-AU"],"sourceIds":["source.official.canto-ix.9-43","source.project.legacy-v1.0.44"],"note":"Project-authored route content after the explicit 9-43 divergence; never source-game canon."},"locationId":"outskirts_dawn","backgroundAssetId":"bg.outskirts_dawn","cgAssetId":"cg.ring_conspiracy_ending","tone":"quiet","portraits":[{"characterId":"protagonist","portraitAssetId":"portrait.protagonist.resolve","position":"left","active":false,"scale":0.92},{"characterId":"albina","portraitAssetId":"portrait.albina.endgame","position":"center","active":true,"scale":1}],"speaker":"阿尔比娜","text":"环指的目录里只剩一页无法归档的空白。阿尔比娜以自己的名字向你发出下一次邀请；你们不再是展品或棋子，而是彼此承认的共谋者。","voiceAssetId":"voice.scene.ring_conspiracy_ending_true","bgmAssetId":"file.audio.bgm.boss.kromer.mp3","choices":[],"ending":{"route":"ring_conspiracy","kind":"true","eligibility":{"allOf":[{"kind":"flag","flag":"ring_conspiracy_route_final","equals":true},{"kind":"value","key":"trust","operator":"gte","value":49},{"kind":"value","key":"artResonance","operator":"gte","value":49},{"kind":"value","key":"danger","operator":"lte","value":15}]}}},{"version":2,"id":"ring_conspiracy_ending_normal","chapter":17,"route":"ring_conspiracy","provenance":{"classification":"AU_extension","scope":"route","claimIds":["boundary.routes-and-player.are-AU"],"sourceIds":["source.official.canto-ix.9-43","source.project.legacy-v1.0.44"],"note":"Project-authored route content after the explicit 9-43 divergence; never source-game canon."},"locationId":"outskirts_dawn","backgroundAssetId":"bg.outskirts_dawn","cgAssetId":"cg.ring_conspiracy_ending","tone":"quiet","portraits":[{"characterId":"protagonist","portraitAssetId":"portrait.protagonist.resolve","position":"left","active":false,"scale":0.92},{"characterId":"albina","portraitAssetId":"portrait.albina.endgame","position":"center","active":true,"scale":1}],"speaker":"阿尔比娜","text":"你们离开了画廊，也留下了一条匿名记录作为制衡。危险没有消失，但契约已被改写；阿尔比娜把下一次会面留给更安全的夜晚。","voiceAssetId":"voice.scene.ring_conspiracy_ending_normal","bgmAssetId":"file.audio.bgm.boss.kromer.mp3","choices":[],"ending":{"route":"ring_conspiracy","kind":"normal","eligibility":{"allOf":[{"kind":"flag","flag":"ring_conspiracy_route_final","equals":true}],"fallback":true}}},{"version":2,"id":"ring_conspiracy_ending_bad","chapter":17,"route":"ring_conspiracy","provenance":{"classification":"AU_extension","scope":"route","claimIds":["boundary.routes-and-player.are-AU"],"sourceIds":["source.official.canto-ix.9-43","source.project.legacy-v1.0.44"],"note":"Project-authored route content after the explicit 9-43 divergence; never source-game canon."},"locationId":"outskirts_dawn","backgroundAssetId":"bg.outskirts_dawn","cgAssetId":"cg.ring_conspiracy_ending","tone":"quiet","portraits":[{"characterId":"protagonist","portraitAssetId":"portrait.protagonist.resolve","position":"left","active":false,"scale":0.92},{"characterId":"albina","portraitAssetId":"portrait.albina.endgame","position":"center","active":true,"scale":1}],"speaker":"阿尔比娜","text":"追击停止时，代价已经写进彼此的沉默。你们逃出了装裱，却没能保住共同节奏；阿尔比娜独自带走那柄无锋画刀，没有约定再见。","voiceAssetId":"voice.scene.ring_conspiracy_ending_bad","bgmAssetId":"file.audio.bgm.boss.kromer.mp3","choices":[],"ending":{"route":"ring_conspiracy","kind":"bad","eligibility":{"allOf":[{"kind":"flag","flag":"ring_conspiracy_route_final","equals":true}],"anyOf":[{"kind":"value","key":"trust","operator":"lte","value":44},{"kind":"value","key":"danger","operator":"gte","value":18}]}}}]'), b8 = {
   version: d8,
   projectId: l8,
   initialSceneId: u8,
-  routeEntrySceneIds: p8,
-  gameplay: f8,
+  routeEntrySceneIds: f8,
+  gameplay: p8,
   scenes: h8
 }, m8 = W({
-  white_canvas: R().min(1),
-  golden_bough_rebuild: R().min(1),
-  ring_conspiracy: R().min(1)
+  white_canvas: E().min(1),
+  golden_bough_rebuild: E().min(1),
+  ring_conspiracy: E().min(1)
 }).strict(), v8 = W({
-  version: fe(Zi),
-  projectId: fe("albina-galgame-card"),
-  initialSceneId: R().min(1),
+  version: pe(Zi),
+  projectId: pe("albina-galgame-card"),
+  initialSceneId: E().min(1),
   routeEntrySceneIds: m8,
   gameplay: P9,
   scenes: oe($9).min(1)
@@ -13137,16 +13137,16 @@ function I8(t) {
       [
         [r.backgroundAssetId, ["scenes", s, "backgroundAssetId"]],
         [r.cgAssetId, ["scenes", s, "cgAssetId"]]
-      ].forEach(([u, p]) => u && Ji(n, a, u, "image", p)), [
+      ].forEach(([u, f]) => u && Ji(n, a, u, "image", f)), [
         [r.videoAssetId, ["scenes", s, "videoAssetId"]],
         [r.desktopVideoAssetId, ["scenes", s, "desktopVideoAssetId"]]
-      ].forEach(([u, p]) => u && Ji(n, a, u, "video", p)), [
+      ].forEach(([u, f]) => u && Ji(n, a, u, "video", f)), [
         [r.voiceAssetId, ["scenes", s, "voiceAssetId"]],
         [r.bgmAssetId, ["scenes", s, "bgmAssetId"]]
-      ].forEach(([u, p]) => u && Ji(n, a, u, "audio", p)), r.sfxAssetIds?.forEach((u, p) => Ji(n, a, u, "audio", ["scenes", s, "sfxAssetIds", p])), r.portraits.forEach((u, p) => {
-        i.has(u.portraitAssetId) || Qs(n, ["scenes", s, "portraits", p, "portraitAssetId"], u.portraitAssetId);
-      }), r.choices.forEach((u, p) => {
-        u.resultVoiceAssetId && Ji(n, a, u.resultVoiceAssetId, "audio", ["scenes", s, "choices", p, "resultVoiceAssetId"]), u.effects.unlockCg?.forEach((h, y) => Ji(n, a, h, "image", ["scenes", s, "choices", p, "effects", "unlockCg", y]));
+      ].forEach(([u, f]) => u && Ji(n, a, u, "audio", f)), r.sfxAssetIds?.forEach((u, f) => Ji(n, a, u, "audio", ["scenes", s, "sfxAssetIds", f])), r.portraits.forEach((u, f) => {
+        i.has(u.portraitAssetId) || Qs(n, ["scenes", s, "portraits", f, "portraitAssetId"], u.portraitAssetId);
+      }), r.choices.forEach((u, f) => {
+        u.resultVoiceAssetId && Ji(n, a, u.resultVoiceAssetId, "audio", ["scenes", s, "choices", f, "resultVoiceAssetId"]), u.effects.unlockCg?.forEach((b, y) => Ji(n, a, b, "image", ["scenes", s, "choices", f, "effects", "unlockCg", y]));
       });
     }), o.gameplay.outfits.forEach((r, s) => {
       i.has(r.portraitAssetId) || Qs(n, ["gameplay", "outfits", s, "portraitAssetId"], r.portraitAssetId);
@@ -13168,14 +13168,14 @@ function A8(t, e) {
   return e === void 0 ? vh.parse(t) : I8(e).parse(t);
 }
 const Br = W({
-  name: R().min(1).max(80),
-  addressName: R().min(1).max(80),
-  gender: R().min(1).max(80),
-  appearance: R().max(800),
-  background: R().max(800),
-  ability: R().max(400),
-  initialRelationship: R().max(400),
-  boundaries: R().max(800),
+  name: E().min(1).max(80),
+  addressName: E().min(1).max(80),
+  gender: E().min(1).max(80),
+  appearance: E().max(800),
+  background: E().max(800),
+  ability: E().max(400),
+  initialRelationship: E().max(400),
+  boundaries: E().max(800),
   routePreference: Et
 }).strict();
 function x8() {
@@ -13200,31 +13200,31 @@ const T8 = W({ intimacy: X().finite(), reliance: X().finite(), obsession: X().fi
   routeEconomy: S8,
   conflictMastery: C8
 }).strict(), R8 = W({
-  ownedIds: oe(R().min(1)),
+  ownedIds: oe(E().min(1)),
   equipped: W({
-    weapon: R().min(1).optional(),
-    armor: R().min(1).optional(),
-    accessory: R().min(1).optional(),
-    tool: R().min(1).optional()
+    weapon: E().min(1).optional(),
+    armor: E().min(1).optional(),
+    accessory: E().min(1).optional(),
+    tool: E().min(1).optional()
   }).strict(),
-  outfitIds: oe(R().min(1)),
-  activeOutfitId: R()
+  outfitIds: oe(E().min(1)),
+  activeOutfitId: E()
 }).strict(), V8 = W({
-  resolvedIds: oe(R().min(1)),
-  outcomes: gi(R().min(1), Ie(["victory", "setback"]))
+  resolvedIds: oe(E().min(1)),
+  outcomes: gi(E().min(1), Ie(["victory", "setback"]))
 }).strict(), E8 = W({
   xp: X().int().nonnegative(),
   level: X().int().positive()
 }).strict(), O8 = W({
-  activeId: R(),
-  progress: gi(R().min(1), E8)
-}).strict(), M8 = W({ unlockedIds: oe(R().min(1)) }).strict(), bn = Wf(), $8 = W({
-  activeEntryIds: oe(R().min(1)),
-  seenEntryIds: oe(R().min(1)),
+  activeId: E(),
+  progress: gi(E().min(1), E8)
+}).strict(), M8 = W({ unlockedIds: oe(E().min(1)) }).strict(), bn = Wp(), $8 = W({
+  activeEntryIds: oe(E().min(1)),
+  seenEntryIds: oe(E().min(1)),
   presetId: Bc.default(bn.presetId),
-  packageIds: oe(R().min(1).refine(An, "Worldbook package is not runtime-installable.")).optional()
+  packageIds: oe(E().min(1).refine(An, "Worldbook package is not runtime-installable.")).optional()
 }).strict().superRefine((t, e) => {
-  t.presetId === "neverRuntime" && e.addIssue({ code: Jf.custom, path: ["presetId"], message: "The neverRuntime preset cannot be persisted as an active selection." });
+  t.presetId === "neverRuntime" && e.addIssue({ code: Jp.custom, path: ["presetId"], message: "The neverRuntime preset cannot be persisted as an active selection." });
 }).transform((t) => ({
   ...t,
   ...Gc(t.presetId, t.packageIds)
@@ -13260,23 +13260,23 @@ const j8 = x5((t) => t !== null && typeof t == "object" && !Array.isArray(t) && 
   storySummaries: et,
   dynamicMemories: et
 }).strict(), Tn = W({
-  version: fe(Zi),
-  projectId: fe("albina-galgame-card"),
-  saveId: R().min(1),
-  createdAt: R().min(1),
-  updatedAt: R().min(1),
+  version: pe(Zi),
+  projectId: pe("albina-galgame-card"),
+  saveId: E().min(1),
+  createdAt: E().min(1),
+  updatedAt: E().min(1),
   playerProfile: Br,
   route: Et.nullable(),
   chapter: X().int().nonnegative(),
-  sceneId: R().min(1),
-  locationId: R(),
+  sceneId: E().min(1),
+  locationId: E(),
   values: P8,
-  flags: gi(R().min(1), At()),
+  flags: gi(E().min(1), At()),
   inventory: R8,
   quests: W({
-    activeNodeIds: oe(R().min(1)).default([]),
-    completedNodeIds: oe(R().min(1)),
-    currentMapNodeId: R(),
+    activeNodeIds: oe(E().min(1)).default([]),
+    completedNodeIds: oe(E().min(1)),
+    currentMapNodeId: E(),
     progressLog: et
   }).strict(),
   battles: V8.default({ resolvedIds: [], outcomes: {} }),
@@ -13289,7 +13289,7 @@ const j8 = x5((t) => t !== null && typeof t == "object" && !Array.isArray(t) && 
     presetId: bn.presetId,
     packageIds: bn.packageIds
   }),
-  unlockedCg: oe(R().min(1)),
+  unlockedCg: oe(E().min(1)),
   logs: z8
 }).strict(), Hl = "1970-01-01T00:00:00.000Z";
 function U8() {
@@ -13500,7 +13500,7 @@ function W8(t) {
   return Array.isArray(e.records) ? ei(e.records.map((a) => gt(a)?.id)) : [];
 }
 function K8(t) {
-  const e = Wf(), a = gt(t.worldbook) ?? gt(t.worldbookSelection) ?? {}, i = Bc.safeParse(a.presetId ?? t.worldbookPreset), o = i.success && i.data !== "neverRuntime" ? i.data : e.presetId, n = a.packageIds ?? t.worldbookPackageIds;
+  const e = Wp(), a = gt(t.worldbook) ?? gt(t.worldbookSelection) ?? {}, i = Bc.safeParse(a.presetId ?? t.worldbookPreset), o = i.success && i.data !== "neverRuntime" ? i.data : e.presetId, n = a.packageIds ?? t.worldbookPackageIds;
   return Gc(o, Array.isArray(n) ? ei(n) : void 0);
 }
 function Y8(t) {
@@ -13602,7 +13602,7 @@ const ey = ["affectionAlbina", "trust", "danger", "artResonance"], ty = ["compos
 function _r(t, e = 0, a = 100) {
   return Math.max(e, Math.min(a, t));
 }
-function fi(t, e) {
+function pi(t, e) {
   e.forEach((a) => {
     t.includes(a) || t.push(a);
   });
@@ -13683,15 +13683,15 @@ function Ih(t, e, a, i) {
   e.professions.activeId = o.id, e.professions.progress[o.id] ??= { xp: 0, level: 1 }, e.logs.progressionUnlocks.push({ kind: "profession-active", id: o.id, at: i });
 }
 function sy(t, e, a, i) {
-  fi(e.inventory.ownedIds, a.grantItems ?? []), fi(e.inventory.outfitIds, a.unlockOutfits ?? []), a.equipItems?.forEach((o) => wh(t, e, o, i)), a.activateOutfit && kh(t, e, a.activateOutfit, i);
+  pi(e.inventory.ownedIds, a.grantItems ?? []), pi(e.inventory.outfitIds, a.unlockOutfits ?? []), a.equipItems?.forEach((o) => wh(t, e, o, i)), a.activateOutfit && kh(t, e, a.activateOutfit, i);
 }
 function cy(t, e, a) {
   e.resolveBattles?.forEach(({ battleId: i, outcome: o }) => {
-    fi(t.battles.resolvedIds, [i]), t.battles.outcomes[i] = o, t.logs.conflicts.push({ battleId: i, outcome: o, at: a });
+    pi(t.battles.resolvedIds, [i]), t.battles.outcomes[i] = o, t.logs.conflicts.push({ battleId: i, outcome: o, at: a });
   });
 }
 function dy(t, e) {
-  fi(t.unlockedCg, e.unlockCg ?? []), fi(t.inventory.ownedIds, e.grantItems ?? []);
+  pi(t.unlockedCg, e.unlockCg ?? []), pi(t.inventory.ownedIds, e.grantItems ?? []);
 }
 function Ah(t, e, a, i) {
   gh(e, a.values), _h(t, e, a.relationshipVectors), ay(e, a.conflictMastery), iy(e, a), dy(e, a), oy(e, a.startQuests ?? [], i), ny(e, a.completeQuests ?? [], i), yh(t, e, a.professionXp), a.activateProfession && Ih(t, e, a.activateProfession, i), sy(t, e, a, i), cy(e, a, i);
@@ -13705,14 +13705,14 @@ function uy(t, e, a) {
     return i + (n?.modifiers[a] ?? 0);
   }, 0);
 }
-function py(t, e, a) {
+function fy(t, e, a) {
   const i = t.gameplay.professions.find(({ id: n }) => n === e.professions.activeId);
   if (!i) return 0;
   const o = e.professions.progress[i.id]?.level ?? 1;
   return (i.modifiersPerLevel[a] ?? 0) * o;
 }
 function jo(t, e, a) {
-  return e.values[a] + uy(t, e, a) + py(t, e, a);
+  return e.values[a] + uy(t, e, a) + fy(t, e, a);
 }
 function Jl(t, e) {
   return e.operator === "gte" ? t >= e.value : e.operator === "lte" ? t <= e.value : t === e.value;
@@ -13722,20 +13722,20 @@ function ic(t, e, a) {
 }
 function ys(t, e, a) {
   const i = new Set(a.provenance.claimIds), o = t.gameplay.worldbookEntries.filter((n) => n.constant || n.claimIds.some((r) => i.has(r))).map(({ id: n }) => n);
-  e.worldbook.activeEntryIds = o, fi(e.worldbook.seenEntryIds, o);
+  e.worldbook.activeEntryIds = o, pi(e.worldbook.seenEntryIds, o);
 }
-function fy(t, e, a) {
+function py(t, e, a) {
   return a.route && e.route !== a.route ? !1 : a.eligibility.every((i) => ic(t, e, i));
 }
 function hy(t, e, a, i) {
   const o = a.reward;
   gh(e, o.values), _h(t, e, o.relationshipVectors), yh(t, e, o.professionXp), o.setFlags?.forEach((n) => {
     e.flags[n] = !0;
-  }), fi(e.inventory.ownedIds, o.grantItems ?? []), fi(e.inventory.outfitIds, o.unlockOutfits ?? []), e.achievements.unlockedIds.push(a.id), e.logs.achievements.push({ achievementId: a.id, at: i });
+  }), pi(e.inventory.ownedIds, o.grantItems ?? []), pi(e.inventory.outfitIds, o.unlockOutfits ?? []), e.achievements.unlockedIds.push(a.id), e.logs.achievements.push({ achievementId: a.id, at: i });
 }
 function qn(t, e, a) {
   for (const i of t.gameplay.achievements)
-    e.achievements.unlockedIds.includes(i.id) || fy(t, e, i) && hy(t, e, i, a);
+    e.achievements.unlockedIds.includes(i.id) || py(t, e, i) && hy(t, e, i, a);
 }
 function by(t, e) {
   if (e.inventory.outfitIds.includes(e.inventory.activeOutfitId))
@@ -14375,8 +14375,8 @@ class Ry {
     const l = (u) => {
       if (!this.isCurrent(i, o, n)) return;
       d ??= u;
-      const p = u - d, h = Math.floor(p / (1e3 / r.fps)) % r.frameCount;
-      a.clearRect(0, 0, i.width, i.height), a.drawImage(s, h * r.frameWidth, 0, r.frameWidth, r.frameHeight, 0, 0, i.width, i.height), c.frameHandle = this.environment.requestFrame(l);
+      const f = u - d, b = Math.floor(f / (1e3 / r.fps)) % r.frameCount;
+      a.clearRect(0, 0, i.width, i.height), a.drawImage(s, b * r.frameWidth, 0, r.frameWidth, r.frameHeight, 0, 0, i.width, i.height), c.frameHandle = this.environment.requestFrame(l);
     };
     c.frameHandle = this.environment.requestFrame(l);
   }
@@ -14874,48 +14874,48 @@ const Qy = /* @__PURE__ */ n0("albina-game", () => {
     manifest: Ci,
     host: xy(),
     assetBaseUrl: t,
-    onLifecycle: (b) => {
-      if (b === "chatChanged" || b === "load") return Tt(b);
+    onLifecycle: (h) => {
+      if (h === "chatChanged" || h === "load") return Tt(h);
     }
   })), a = Qo(new vy(Ci, e.storage, t));
-  e.portraits.setUrlResolver(async (b) => Ci.portraits.some((w) => w.id === b) ? a.cachePortrait(b) : a.cache(b));
+  e.portraits.setUrlResolver(async (h) => Ci.portraits.some((w) => w.id === h) ? a.cachePortrait(h) : a.cache(h));
   const i = /* @__PURE__ */ nb(new Gl(Ko)), o = /* @__PURE__ */ ne("title"), n = /* @__PURE__ */ ne(structuredClone(i.value.save.playerProfile)), r = /* @__PURE__ */ ne(""), s = /* @__PURE__ */ ne(0), c = /* @__PURE__ */ ne(1), d = /* @__PURE__ */ ne("idle");
-  e.typewriter.subscribe((b) => {
-    d.value = b;
+  e.typewriter.subscribe((h) => {
+    d.value = h;
   });
-  const l = /* @__PURE__ */ ne(), u = /* @__PURE__ */ ne(!1), p = /* @__PURE__ */ ne(!1), h = /* @__PURE__ */ ne(!1), y = /* @__PURE__ */ ne([]), v = /* @__PURE__ */ ne({}), g = /* @__PURE__ */ ne([]), I = /* @__PURE__ */ ne(), A = /* @__PURE__ */ ne(!1), S = /* @__PURE__ */ ne("idle"), T = /* @__PURE__ */ ne(), k = /* @__PURE__ */ ne(), Z = /* @__PURE__ */ ne(), P = /* @__PURE__ */ ne(!1), O = /* @__PURE__ */ new Set(), E = typeof matchMedia == "function" ? matchMedia("(prefers-reduced-motion: reduce)") : void 0, q = /* @__PURE__ */ ne(E?.matches ?? !1);
-  let ee, J, re, de = 0;
-  const se = (b) => {
-    q.value = b.matches, b.matches && wt(te.value.cgAssetId ?? te.value.backgroundAssetId);
+  const l = /* @__PURE__ */ ne(), u = /* @__PURE__ */ ne(!1), f = /* @__PURE__ */ ne(!1), b = /* @__PURE__ */ ne(!1), y = /* @__PURE__ */ ne([]), v = /* @__PURE__ */ ne({}), g = /* @__PURE__ */ ne([]), k = /* @__PURE__ */ ne(), I = /* @__PURE__ */ ne(!1), S = /* @__PURE__ */ ne("idle"), T = /* @__PURE__ */ ne(), x = /* @__PURE__ */ ne(), D = /* @__PURE__ */ ne(), V = /* @__PURE__ */ ne(!1), P = /* @__PURE__ */ new Set(), R = typeof matchMedia == "function" ? matchMedia("(prefers-reduced-motion: reduce)") : void 0, j = /* @__PURE__ */ ne(R?.matches ?? !1);
+  let Q, B, re, de = 0;
+  const se = (h) => {
+    j.value = h.matches, h.matches && wt(te.value.cgAssetId ?? te.value.backgroundAssetId);
   };
-  E?.addEventListener("change", se);
+  R?.addEventListener("change", se);
   const te = ve(() => {
-    const b = i.value.scene, w = i.value.outfitPortraitAssetId;
+    const h = i.value.scene, w = i.value.outfitPortraitAssetId;
     return w ? {
-      ...b,
-      portraits: b.portraits.map((pe) => pe.characterId === "albina" && Yy.has(pe.portraitAssetId) ? { ...pe, portraitAssetId: w } : pe)
-    } : b;
-  }), L = ve(() => eh(te.value)), K = ve(() => i.value.save), ue = ve(() => i.value.choices), Te = ve(() => i.value.effectiveValues), Se = ve(() => i.value.currentMinigame), Ae = ve(() => i.value.activeMinigame), Me = ve(() => Wy(te.value, Ci, ct));
-  function ke(b, w) {
-    const pe = w instanceof si;
-    I.value = {
-      code: pe ? w.code : "unexpected",
-      message: `${b}: ${pe ? w.message : "The save operation could not be completed."}`,
+      ...h,
+      portraits: h.portraits.map((fe) => fe.characterId === "albina" && Yy.has(fe.portraitAssetId) ? { ...fe, portraitAssetId: w } : fe)
+    } : h;
+  }), Z = ve(() => eh(te.value)), K = ve(() => i.value.save), ue = ve(() => i.value.choices), Te = ve(() => i.value.effectiveValues), Se = ve(() => i.value.currentMinigame), Ae = ve(() => i.value.activeMinigame), Me = ve(() => Wy(te.value, Ci, ct));
+  function ke(h, w) {
+    const fe = w instanceof si;
+    k.value = {
+      code: fe ? w.code : "unexpected",
+      message: `${h}: ${fe ? w.message : "The save operation could not be completed."}`,
       recoverable: !0
     };
   }
-  function st(b) {
-    if (!ks.has(b.sceneId))
-      throw new si("unknown-scene", `The save references unavailable scene "${b.sceneId}".`);
-    return b;
+  function st(h) {
+    if (!ks.has(h.sceneId))
+      throw new si("unknown-scene", `The save references unavailable scene "${h.sceneId}".`);
+    return h;
   }
-  function $e(b) {
-    i.value = new Gl(Ko, { save: st(b) }), n.value = structuredClone(b.playerProfile), I.value = void 0;
+  function $e(h) {
+    i.value = new Gl(Ko, { save: st(h) }), n.value = structuredClone(h.playerProfile), k.value = void 0;
   }
-  async function Tt(b) {
+  async function Tt(h) {
     const w = ++de;
-    u.value = !0, l.value = void 0, k.value = void 0, Z.value = void 0, P.value = !1, o.value = "title", ee = void 0, v.value = {};
-    const pe = mn();
+    u.value = !0, l.value = void 0, x.value = void 0, D.value = void 0, V.value = !1, o.value = "title", Q = void 0, v.value = {};
+    const fe = mn();
     try {
       const [be, We] = await Promise.all([
         e.host.loadSave().catch((Ja) => {
@@ -14925,172 +14925,172 @@ const Qy = /* @__PURE__ */ n0("albina-game", () => {
         })
       ]);
       if (w !== de) return;
-      const Pa = be ?? pe;
+      const Pa = be ?? fe;
       $e(We ? { ...Pa, playerProfile: We } : Pa), await ye();
     } catch (be) {
       if (w !== de) return;
-      $e(pe), ke(`Unable to reload after ${b}`, be);
+      $e(fe), ke(`Unable to reload after ${h}`, be);
     } finally {
       w === de && (u.value = !1);
     }
   }
-  function ct(b) {
-    if (b)
-      return v.value[b] ?? Yc(Ci, b, t);
+  function ct(h) {
+    if (h)
+      return v.value[h] ?? Yc(Ci, h, t);
   }
-  async function wt(b) {
-    if (!b) return;
-    const w = await a.cache(b);
-    w && (v.value = { ...v.value, [b]: w });
+  async function wt(h) {
+    if (!h) return;
+    const w = await a.cache(h);
+    w && (v.value = { ...v.value, [h]: w });
   }
-  async function dt(b) {
-    S.value = "loading", T.value = b.id;
+  async function dt(h) {
+    S.value = "loading", T.value = h.id;
     const w = [
-      b.backgroundAssetId,
-      b.cgAssetId,
-      b.voiceAssetId,
-      b.bgmAssetId,
-      ...b.sfxAssetIds ?? []
-    ].filter((be) => !!be), pe = await a.prefetch(w);
-    pe.size && (v.value = { ...v.value, ...Object.fromEntries(pe) }), await Promise.all(b.portraits.map((be) => a.cachePortrait(be.portraitAssetId))), T.value === b.id && (S.value = "ready");
+      h.backgroundAssetId,
+      h.cgAssetId,
+      h.voiceAssetId,
+      h.bgmAssetId,
+      ...h.sfxAssetIds ?? []
+    ].filter((be) => !!be), fe = await a.prefetch(w);
+    fe.size && (v.value = { ...v.value, ...Object.fromEntries(fe) }), await Promise.all(h.portraits.map((be) => a.cachePortrait(be.portraitAssetId))), T.value === h.id && (S.value = "ready");
   }
   function Qt() {
-    const b = te.value.choices.map((w) => ks.get(w.nextSceneId)).filter((w) => !!w);
+    const h = te.value.choices.map((w) => ks.get(w.nextSceneId)).filter((w) => !!w);
     (async () => {
-      for (const w of b) await dt(w);
+      for (const w of h) await dt(w);
     })();
   }
   async function _() {
-    if (!p.value) {
-      if (te.value.bgmAssetId && ee !== te.value.bgmAssetId) {
-        ee = te.value.bgmAssetId;
-        const b = ct(ee);
-        b && (h.value = !await e.audio.playBgm(b));
+    if (!f.value) {
+      if (te.value.bgmAssetId && Q !== te.value.bgmAssetId) {
+        Q = te.value.bgmAssetId;
+        const h = ct(Q);
+        h && (b.value = !await e.audio.playBgm(h));
       }
-      for (const b of te.value.sfxAssetIds ?? []) {
-        const w = ct(b);
+      for (const h of te.value.sfxAssetIds ?? []) {
+        const w = ct(h);
         w && e.audio.playSfx(w);
       }
       if (te.value.voiceAssetId) {
-        const b = ct(te.value.voiceAssetId);
-        b && e.audio.enqueueVoice(b);
+        const h = ct(te.value.voiceAssetId);
+        h && e.audio.enqueueVoice(h);
       }
     }
   }
-  async function x() {
+  async function A() {
     await dt(te.value), r.value = "";
-    const b = i.value.interpolate(te.value.text);
-    s.value = b.length, c.value = b.length === 0 ? 1 : 0, e.typewriter.write(b, (w) => {
-      r.value = w, c.value = b.length === 0 ? 1 : w.length / b.length;
-    }, q.value ? 0 : 18), _(), te.value.cgAssetId && (await e.gallery.unlock(te.value.cgAssetId, K.value), J !== te.value.id && (J = te.value.id, await e.specialCg.enqueue({ id: te.value.id, assetId: te.value.cgAssetId })), y.value = await e.gallery.list(K.value)), Qt();
+    const h = i.value.interpolate(te.value.text);
+    s.value = h.length, c.value = h.length === 0 ? 1 : 0, e.typewriter.write(h, (w) => {
+      r.value = w, c.value = h.length === 0 ? 1 : w.length / h.length;
+    }, j.value ? 0 : 18), _(), te.value.cgAssetId && (await e.gallery.unlock(te.value.cgAssetId, K.value), B !== te.value.id && (B = te.value.id, await e.specialCg.enqueue({ id: te.value.id, assetId: te.value.cgAssetId })), y.value = await e.gallery.list(K.value)), Qt();
   }
-  async function j() {
-    I.value = void 0, e.mount(), o.value = "game", await x();
+  async function z() {
+    k.value = void 0, e.mount(), o.value = "game", await A();
   }
-  async function G(b) {
-    const w = Qn(b), pe = { ...structuredClone(i.value.save), playerProfile: w };
-    $e(pe), n.value = structuredClone(w);
+  async function G(h) {
+    const w = Qn(h), fe = { ...structuredClone(i.value.save), playerProfile: w };
+    $e(fe), n.value = structuredClone(w);
     try {
       await e.host.savePlayerProfile(w);
     } catch (be) {
       if (!(be instanceof ji) || !be.fallbackStored) throw be;
     }
     try {
-      await e.host.saveSave(pe);
+      await e.host.saveSave(fe);
     } catch (be) {
       if (!(be instanceof ji) || !be.fallbackStored) throw be;
     }
   }
-  async function D(b) {
-    await G(b), await j();
+  async function N(h) {
+    await G(h), await z();
   }
-  async function H() {
+  async function J() {
     try {
-      const b = await e.host.loadPlayerProfile();
-      b && (n.value = structuredClone(b));
-    } catch (b) {
-      ke("Unable to load player profile", b);
+      const h = await e.host.loadPlayerProfile();
+      h && (n.value = structuredClone(h));
+    } catch (h) {
+      ke("Unable to load player profile", h);
     }
   }
   async function ae() {
-    let b;
+    let h;
     try {
       const w = await e.host.loadSave();
       if (w) return st(w);
     } catch (w) {
-      b = w;
+      h = w;
     }
     try {
       const w = await e.storage.loadSnapshot("quick-save");
       if (w) return st(w.save);
     } catch (w) {
-      b ??= w;
+      h ??= w;
     }
-    if (b !== void 0) throw b;
+    if (h !== void 0) throw h;
   }
   async function C() {
-    u.value = !0, I.value = void 0;
+    u.value = !0, k.value = void 0;
     try {
-      const b = await ae();
-      return b ? ($e(b), await j(), !0) : !1;
-    } catch (b) {
-      return ke("Unable to continue", b), !1;
+      const h = await ae();
+      return h ? ($e(h), await z(), !0) : !1;
+    } catch (h) {
+      return ke("Unable to continue", h), !1;
     } finally {
       u.value = !1;
     }
   }
-  async function V(b) {
-    e.typewriter.completeNow(), Z.value = void 0;
-    const w = i.value.choose(b);
+  async function O(h) {
+    e.typewriter.completeNow(), D.value = void 0;
+    const w = i.value.choose(h);
     xo(i), l.value = w.resultText ? i.value.interpolate(w.resultText) : void 0;
-    const pe = w.choice.resultVoiceAssetId;
-    await wt(pe);
-    const be = ct(pe);
-    !p.value && be && e.audio.enqueueVoice(be), l.value || await x();
+    const fe = w.choice.resultVoiceAssetId;
+    await wt(fe);
+    const be = ct(fe);
+    !f.value && be && e.audio.enqueueVoice(be), l.value || await A();
   }
   async function m() {
-    l.value = void 0, await x();
+    l.value = void 0, await A();
   }
-  function Q() {
-    Z.value = void 0;
+  function ee() {
+    D.value = void 0;
   }
-  function ie(b) {
-    if (P.value) return !1;
-    P.value = !0, k.value = void 0;
+  function ie(h) {
+    if (V.value) return !1;
+    V.value = !0, x.value = void 0;
     try {
-      return Z.value = i.value.resolveMinigame(b), xo(i), !0;
+      return D.value = i.value.resolveMinigame(h), xo(i), !0;
     } catch (w) {
-      return k.value = Gr(w), !1;
+      return x.value = Gr(w), !1;
     } finally {
-      P.value = !1;
+      V.value = !1;
     }
   }
-  async function B(b, w) {
-    A.value = !0;
+  async function H(h, w) {
+    I.value = !0;
     try {
-      const pe = (/* @__PURE__ */ new Date()).toISOString(), be = { ...structuredClone(K.value), saveId: b, updatedAt: pe }, We = re ?? (await eu()).blob;
-      await e.storage.saveSnapshot(be, We), w && await e.host.saveSave(be), await ye(), I.value = void 0;
+      const fe = (/* @__PURE__ */ new Date()).toISOString(), be = { ...structuredClone(K.value), saveId: h, updatedAt: fe }, We = re ?? (await eu()).blob;
+      await e.storage.saveSnapshot(be, We), w && await e.host.saveSave(be), await ye(), k.value = void 0;
     } finally {
-      A.value = !1;
+      I.value = !1;
     }
   }
   async function Y() {
-    await B("quick-save", !0);
+    await H("quick-save", !0);
   }
-  async function ce(b) {
-    await B(`slot-${b}`, !1);
+  async function ce(h) {
+    await H(`slot-${h}`, !1);
   }
   async function ye() {
-    O.forEach((be) => URL.revokeObjectURL(be)), O.clear();
-    const b = [];
-    let w, pe;
+    P.forEach((be) => URL.revokeObjectURL(be)), P.clear();
+    const h = [];
+    let w, fe;
     try {
-      pe = await e.storage.keys("saves");
+      fe = await e.storage.keys("saves");
     } catch (be) {
       g.value = [], ke("Save slots could not be listed", be);
       return;
     }
-    for (const be of pe) {
+    for (const be of fe) {
       let We;
       try {
         We = await e.storage.loadSnapshot(be);
@@ -15100,9 +15100,9 @@ const Qy = /* @__PURE__ */ n0("albina-game", () => {
       }
       if (!We) continue;
       const Pa = We.thumbnail.type.startsWith("image/") ? URL.createObjectURL(We.thumbnail) : void 0;
-      Pa && O.add(Pa);
+      Pa && P.add(Pa);
       const Ja = ks.get(We.save.sceneId);
-      b.push({
+      h.push({
         id: be,
         sceneId: We.save.sceneId,
         updatedAt: We.save.updatedAt,
@@ -15110,33 +15110,33 @@ const Qy = /* @__PURE__ */ n0("albina-game", () => {
         ...Ja ? { chapter: Ja.chapter, locationId: Ja.locationId, tone: Ja.tone } : {}
       });
     }
-    g.value = b.sort((be, We) => We.updatedAt.localeCompare(be.updatedAt)), w !== void 0 ? ke("Some save slots could not be read", w) : I.value = void 0;
+    g.value = h.sort((be, We) => We.updatedAt.localeCompare(be.updatedAt)), w !== void 0 ? ke("Some save slots could not be read", w) : k.value = void 0;
   }
   async function Re() {
     o.value === "game" && (re = (await eu()).blob), await ye(), o.value = "saves";
   }
-  async function Le(b) {
+  async function Le(h) {
     try {
-      const w = await e.storage.loadSnapshot(b);
-      return w ? ($e(w.save), o.value = "game", await x(), !0) : !1;
+      const w = await e.storage.loadSnapshot(h);
+      return w ? ($e(w.save), o.value = "game", await A(), !0) : !1;
     } catch (w) {
-      return ke(`Unable to load ${b}`, w), !1;
+      return ke(`Unable to load ${h}`, w), !1;
     }
   }
-  async function Ge(b) {
-    await e.storage.deleteValue("saves", b), await ye();
+  async function Ge(h) {
+    await e.storage.deleteValue("saves", h), await ye();
   }
   function Ot() {
     return F8(K.value);
   }
-  async function vt(b) {
-    const w = ed(b);
+  async function vt(h) {
+    const w = ed(h);
     if (!w.ok)
       return ke("Unable to import save", w.error), !1;
     try {
-      return $e(w.save), o.value = "game", await x(), !0;
-    } catch (pe) {
-      return ke("Unable to import save", pe), !1;
+      return $e(w.save), o.value = "game", await A(), !0;
+    } catch (fe) {
+      return ke("Unable to import save", fe), !1;
     }
   }
   async function sa() {
@@ -15145,50 +15145,50 @@ const Qy = /* @__PURE__ */ n0("albina-game", () => {
   function Li() {
     o.value = "game";
   }
-  async function ft() {
-    h.value = !await e.audio.recoverAutoplay();
+  async function pt() {
+    b.value = !await e.audio.recoverAutoplay();
   }
   function Mt() {
     e.typewriter.completeNow();
   }
   function Ni() {
-    p.value = !p.value, p.value ? (e.audio.stopAll(), ee = void 0) : _();
+    f.value = !f.value, f.value ? (e.audio.stopAll(), Q = void 0) : _();
   }
-  function _i(b) {
-    return b instanceof Error ? /not owned|not unlocked/iu.test(b.message) ? "尚未获得或解锁该项目。" : /unavailable on route/iu.test(b.message) ? "当前路线不能使用该项目。" : /unknown/iu.test(b.message) ? "该项目不存在于当前版本。" : "玩法状态无法更新。" : "玩法状态无法更新。";
+  function _i(h) {
+    return h instanceof Error ? /not owned|not unlocked/iu.test(h.message) ? "尚未获得或解锁该项目。" : /unavailable on route/iu.test(h.message) ? "当前路线不能使用该项目。" : /unknown/iu.test(h.message) ? "该项目不存在于当前版本。" : "玩法状态无法更新。" : "玩法状态无法更新。";
   }
-  function Gr(b) {
-    return b instanceof Error ? /already resolved/iu.test(b.message) ? "这场挑战已经结算过了。" : /no minigame is active/iu.test(b.message) ? "当前场景没有可进行的挑战。" : /skipping is unavailable/iu.test(b.message) ? "这场挑战不能跳过。" : /does not match/iu.test(b.message) ? "提交的答案与当前挑战类型不符。" : /unavailable on route/iu.test(b.message) ? "当前路线不能进行这场挑战。" : "这次介入没有生效，请再试一次。" : "这次介入没有生效，请再试一次。";
+  function Gr(h) {
+    return h instanceof Error ? /already resolved/iu.test(h.message) ? "这场挑战已经结算过了。" : /no minigame is active/iu.test(h.message) ? "当前场景没有可进行的挑战。" : /skipping is unavailable/iu.test(h.message) ? "这场挑战不能跳过。" : /does not match/iu.test(h.message) ? "提交的答案与当前挑战类型不符。" : /unavailable on route/iu.test(h.message) ? "当前路线不能进行这场挑战。" : "这次介入没有生效，请再试一次。" : "这次介入没有生效，请再试一次。";
   }
-  function Io(b) {
-    k.value = void 0;
+  function Io(h) {
+    x.value = void 0;
     try {
-      return b(), xo(i), !0;
+      return h(), xo(i), !0;
     } catch (w) {
-      return k.value = _i(w), !1;
+      return x.value = _i(w), !1;
     }
   }
-  function Cn(b) {
-    return Io(() => i.value.equip(b));
+  function Cn(h) {
+    return Io(() => i.value.equip(h));
   }
-  function Wr(b) {
-    return Io(() => i.value.wearOutfit(b));
+  function Wr(h) {
+    return Io(() => i.value.wearOutfit(h));
   }
-  function Pn(b) {
-    return Io(() => i.value.selectProfession(b));
+  function Pn(h) {
+    return Io(() => i.value.selectProfession(h));
   }
-  async function Rn(b) {
-    const w = structuredClone(K.value), pe = Jc(b), be = structuredClone(K.value);
-    be.worldbook = { ...be.worldbook, ...pe }, be.updatedAt = (/* @__PURE__ */ new Date()).toISOString(), i.value.replaceSave(be), xo(i);
+  async function Rn(h) {
+    const w = structuredClone(K.value), fe = Jc(h), be = structuredClone(K.value);
+    be.worldbook = { ...be.worldbook, ...fe }, be.updatedAt = (/* @__PURE__ */ new Date()).toISOString(), i.value.replaceSave(be), xo(i);
     try {
-      await e.host.saveSave(i.value.save), await e.host.saveWorldbookSelection(pe);
+      await e.host.saveSave(i.value.save), await e.host.saveWorldbookSelection(fe);
     } catch (We) {
       if (We instanceof ji && We.fallbackStored) return;
       i.value.replaceSave(w), xo(i), ke("Unable to persist worldbook preset", We);
     }
   }
-  function F() {
-    E?.removeEventListener("change", se), O.forEach((b) => URL.revokeObjectURL(b)), O.clear();
+  function q() {
+    R?.removeEventListener("change", se), P.forEach((h) => URL.revokeObjectURL(h)), P.clear();
   }
   return {
     runtime: e,
@@ -15201,34 +15201,34 @@ const Qy = /* @__PURE__ */ n0("albina-game", () => {
     typewriterState: d,
     resultText: l,
     loading: u,
-    muted: p,
-    reducedMotion: q,
+    muted: f,
+    reducedMotion: j,
     preloadState: S,
     preloadSceneId: T,
     currentMinigame: Se,
     activeMinigame: Ae,
-    minigameResolution: Z,
-    minigameBusy: P,
+    minigameResolution: D,
+    minigameBusy: V,
     profileDraft: n,
-    prepareProfile: H,
-    beginWithProfile: D,
-    autoplayBlocked: h,
+    prepareProfile: J,
+    beginWithProfile: N,
+    autoplayBlocked: b,
     galleryIds: y,
     saveSlots: g,
-    saveError: I,
-    saving: A,
+    saveError: k,
+    saving: I,
     scene: te,
     save: K,
     effectiveValues: Te,
     choices: ue,
     media: Me,
     assetUrl: ct,
-    start: j,
+    start: z,
     continueGame: C,
-    choose: V,
+    choose: O,
     dismissResult: m,
     resolveMinigame: ie,
-    clearMinigameResolution: Q,
+    clearMinigameResolution: ee,
     quickSave: Y,
     saveSlot: ce,
     openSaves: Re,
@@ -15238,15 +15238,15 @@ const Qy = /* @__PURE__ */ n0("albina-game", () => {
     importSave: vt,
     openGallery: sa,
     backToGame: Li,
-    recoverAutoplay: ft,
+    recoverAutoplay: pt,
     completeText: Mt,
     toggleMute: Ni,
     equip: Cn,
     wearOutfit: Wr,
-    presentation: L,
+    presentation: Z,
     selectProfession: Pn,
-    gameplayError: k,
-    disposeUiListeners: F,
+    gameplayError: x,
+    disposeUiListeners: q,
     selectWorldbookPreset: Rn
   };
 }), e7 = ["data-screen", "data-requested-screen", "data-motion-ready"], t7 = {
@@ -15272,7 +15272,7 @@ const Qy = /* @__PURE__ */ n0("albina-game", () => {
   class: "panel-screen",
   "data-testid": "saves-screen",
   "data-motion-screen": ""
-}, p7 = { class: "slot-actions" }, f7 = { class: "save-slot-grid" }, h7 = ["data-save-id", "data-slot-active", "data-slot-has-thumbnail", "data-slot-scene"], b7 = { class: "save-slot__thumbnail" }, m7 = ["src"], v7 = {
+}, f7 = { class: "slot-actions" }, p7 = { class: "save-slot-grid" }, h7 = ["data-save-id", "data-slot-active", "data-slot-has-thumbnail", "data-slot-scene"], b7 = { class: "save-slot__thumbnail" }, m7 = ["src"], v7 = {
   key: 1,
   class: "save-slot__thumbnail-empty",
   "aria-hidden": "true"
@@ -15317,7 +15317,7 @@ const Qy = /* @__PURE__ */ n0("albina-game", () => {
 }, K7 = { "aria-label": "曲目版权链接" }, Y7 = ["href"], X7 = ["href"], Q7 = {
   class: "official-listening",
   "aria-labelledby": "official-soundtrack-title"
-}, ew = { "aria-label": "官方 OST 外部试听" }, tw = ["href"], aw = ["href"], iw = ["data-scene-id"], ow = ["src"], nw = ["src"], rw = { class: "game-hud" }, sw = ["data-saving"], cw = ["data-preload-state"], dw = ["data-scene-label", "data-scene-tone"], lw = ["data-scene-tone"], uw = { key: 0 }, pw = ["data-hud-value-key", "data-hud-critical", "title"], fw = ["data-minigame-id", "data-minigame-outcome"], hw = ["data-result-outcome"], bw = {
+}, ew = { "aria-label": "官方 OST 外部试听" }, tw = ["href"], aw = ["href"], iw = ["data-scene-id"], ow = ["src"], nw = ["src"], rw = { class: "game-hud" }, sw = ["data-saving"], cw = ["data-preload-state"], dw = ["data-scene-label", "data-scene-tone"], lw = ["data-scene-tone"], uw = { key: 0 }, fw = ["data-hud-value-key", "data-hud-critical", "title"], pw = ["data-minigame-id", "data-minigame-outcome"], hw = ["data-result-outcome"], bw = {
   key: 4,
   "data-motion-modal": ""
 }, mw = ["data-typing", "data-speaker", "data-scene-tone"], vw = ["data-narration"], gw = ["aria-valuenow", "data-dialogue-progress"], _w = {
@@ -15350,111 +15350,111 @@ const Qy = /* @__PURE__ */ n0("albina-game", () => {
   setup(t) {
     const e = Qy(), a = /* @__PURE__ */ ne(), i = /* @__PURE__ */ ne(), o = /* @__PURE__ */ ne(), n = /* @__PURE__ */ ne(), r = /* @__PURE__ */ ne();
     let s;
-    const c = z9.parse(u0), d = /* @__PURE__ */ ne(""), l = /* @__PURE__ */ ne(""), u = /* @__PURE__ */ ne(), p = /* @__PURE__ */ ne(!1);
-    let h;
+    const c = z9.parse(u0), d = /* @__PURE__ */ ne(""), l = /* @__PURE__ */ ne(""), u = /* @__PURE__ */ ne(), f = /* @__PURE__ */ ne(!1);
+    let b;
     const y = /* @__PURE__ */ ne(!1);
     let v;
-    const g = /* @__PURE__ */ ne(!1), I = /* @__PURE__ */ ne(!1), A = /* @__PURE__ */ ne(), S = /* @__PURE__ */ ne(), T = /* @__PURE__ */ ne(), k = /* @__PURE__ */ ne(), Z = /* @__PURE__ */ ne(), P = /* @__PURE__ */ ne("title");
-    let O, E = !1;
-    const q = /* @__PURE__ */ ne(), ee = /* @__PURE__ */ ne(), J = /* @__PURE__ */ ne(), re = /* @__PURE__ */ ne(), de = /* @__PURE__ */ ne({ ...e.effectiveValues }), se = [
+    const g = /* @__PURE__ */ ne(!1), k = /* @__PURE__ */ ne(!1), I = /* @__PURE__ */ ne(), S = /* @__PURE__ */ ne(), T = /* @__PURE__ */ ne(), x = /* @__PURE__ */ ne(), D = /* @__PURE__ */ ne(), V = /* @__PURE__ */ ne("title");
+    let P, R = !1;
+    const j = /* @__PURE__ */ ne(), Q = /* @__PURE__ */ ne(), B = /* @__PURE__ */ ne(), re = /* @__PURE__ */ ne(), de = /* @__PURE__ */ ne({ ...e.effectiveValues }), se = [
       { key: "affectionAlbina", label: "好感" },
       { key: "trust", label: "信任" },
       { key: "danger", label: "危险" },
       { key: "artResonance", label: "共鸣" }
-    ], te = /* @__PURE__ */ ne(), L = /* @__PURE__ */ ne("auto"), K = /* @__PURE__ */ ne({ ...e.profileDraft }), ue = /* @__PURE__ */ ne(), Te = ve(() => e.galleryIds.map((F) => ({ id: F, url: e.assetUrl(F) })).filter((F) => typeof F.url == "string" && F.url.length > 0)), Se = /* @__PURE__ */ ne(/* @__PURE__ */ new Set()), Ae = /* @__PURE__ */ ne(/* @__PURE__ */ new Set()), Me = /* @__PURE__ */ ne(/* @__PURE__ */ new Set()), ke = /* @__PURE__ */ ne({});
-    function st(F, b) {
-      const w = ke.value[F];
-      return w ? `${b}${b.includes("?") ? "&" : "?"}retry=${w}` : b;
+    ], te = /* @__PURE__ */ ne(), Z = /* @__PURE__ */ ne("auto"), K = /* @__PURE__ */ ne({ ...e.profileDraft }), ue = /* @__PURE__ */ ne(), Te = ve(() => e.galleryIds.map((q) => ({ id: q, url: e.assetUrl(q) })).filter((q) => typeof q.url == "string" && q.url.length > 0)), Se = /* @__PURE__ */ ne(/* @__PURE__ */ new Set()), Ae = /* @__PURE__ */ ne(/* @__PURE__ */ new Set()), Me = /* @__PURE__ */ ne(/* @__PURE__ */ new Set()), ke = /* @__PURE__ */ ne({});
+    function st(q, h) {
+      const w = ke.value[q];
+      return w ? `${h}${h.includes("?") ? "&" : "?"}retry=${w}` : h;
     }
-    function $e(F) {
-      return Se.value.has(F) ? "failed" : Ae.value.has(F) ? "loaded" : "loading";
+    function $e(q) {
+      return Se.value.has(q) ? "failed" : Ae.value.has(q) ? "loaded" : "loading";
     }
-    function Tt(F) {
-      const b = new Set(Me.value);
-      if (b.delete(F), Me.value = b, !Se.value.has(F) && (Se.value = new Set(Se.value).add(F), Ae.value.has(F))) {
+    function Tt(q) {
+      const h = new Set(Me.value);
+      if (h.delete(q), Me.value = h, !Se.value.has(q) && (Se.value = new Set(Se.value).add(q), Ae.value.has(q))) {
         const w = new Set(Ae.value);
-        w.delete(F), Ae.value = w;
+        w.delete(q), Ae.value = w;
       }
     }
-    function ct(F) {
-      if (Me.value.has(F)) return;
-      Me.value = new Set(Me.value).add(F);
-      const b = new Set(Se.value);
-      b.delete(F), Se.value = b;
+    function ct(q) {
+      if (Me.value.has(q)) return;
+      Me.value = new Set(Me.value).add(q);
+      const h = new Set(Se.value);
+      h.delete(q), Se.value = h;
       const w = new Set(Ae.value);
-      w.delete(F), Ae.value = w, ke.value = { ...ke.value, [F]: (ke.value[F] ?? 0) + 1 };
+      w.delete(q), Ae.value = w, ke.value = { ...ke.value, [q]: (ke.value[q] ?? 0) + 1 };
     }
-    const wt = ve(() => Te.value.filter((F) => Se.value.has(F.id)).map((F) => F.id));
+    const wt = ve(() => Te.value.filter((q) => Se.value.has(q.id)).map((q) => q.id));
     function dt() {
-      for (const F of wt.value) ct(F);
+      for (const q of wt.value) ct(q);
     }
-    function Qt(F) {
-      const b = new Set(Me.value);
-      b.delete(F), Me.value = b, !(Se.value.has(F) || Ae.value.has(F)) && (Ae.value = new Set(Ae.value).add(F));
+    function Qt(q) {
+      const h = new Set(Me.value);
+      h.delete(q), Me.value = h, !(Se.value.has(q) || Ae.value.has(q)) && (Ae.value = new Set(Ae.value).add(q));
     }
     function _() {
       l.value = e.exportSave();
     }
-    async function x() {
-      const F = l.value;
-      if (F)
+    async function A() {
+      const q = l.value;
+      if (q)
         try {
           if (navigator.clipboard?.writeText)
-            await navigator.clipboard.writeText(F);
+            await navigator.clipboard.writeText(q);
           else {
-            const b = u.value;
-            b && (b.select(), document.execCommand("copy"), b.setSelectionRange(0, 0));
+            const h = u.value;
+            h && (h.select(), document.execCommand("copy"), h.setSelectionRange(0, 0));
           }
-          p.value = !0, window.clearTimeout(h), h = setTimeout(() => {
-            p.value = !1;
+          f.value = !0, window.clearTimeout(b), b = setTimeout(() => {
+            f.value = !1;
           }, 2e3);
         } catch {
         }
     }
-    async function j() {
-      const F = d.value.trim();
-      F && await e.importSave(F) && (d.value = "", y.value = !0, window.clearTimeout(v), v = setTimeout(() => {
+    async function z() {
+      const q = d.value.trim();
+      q && await e.importSave(q) && (d.value = "", y.value = !0, window.clearTimeout(v), v = setTimeout(() => {
         y.value = !1;
       }, 2e3));
     }
     const G = ve(() => {
-      const F = d.value.trim();
-      if (!F) return { state: "empty", error: void 0 };
+      const q = d.value.trim();
+      if (!q) return { state: "empty", error: void 0 };
       try {
-        return JSON.parse(F), { state: "valid", error: void 0 };
-      } catch (b) {
-        return { state: "invalid", error: b instanceof Error ? b.message : "JSON 格式错误" };
+        return JSON.parse(q), { state: "valid", error: void 0 };
+      } catch (h) {
+        return { state: "invalid", error: h instanceof Error ? h.message : "JSON 格式错误" };
       }
-    }), D = ve(() => G.value.state), H = ve(() => G.value.error);
+    }), N = ve(() => G.value.state), J = ve(() => G.value.error);
     async function ae() {
       e.screen = "profile", await e.prepareProfile(), K.value = { ...e.profileDraft };
     }
     async function C() {
       await e.beginWithProfile({ ...K.value });
     }
-    function V(F, b) {
-      r.value = b instanceof HTMLButtonElement ? b : void 0, ue.value = F;
+    function O(q, h) {
+      r.value = h instanceof HTMLButtonElement ? h : void 0, ue.value = q;
     }
-    function m(F) {
-      te.value?.emitCue(F);
+    function m(q) {
+      te.value?.emitCue(q);
     }
-    function Q(F) {
-      return `${F > 0 ? "+" : ""}${F}`;
+    function ee(q) {
+      return `${q > 0 ? "+" : ""}${q}`;
     }
-    function ie(F) {
-      return F.locationId !== void 0 ? `${Dl(F.chapter)} · ${Ll(F.locationId)}` : F.sceneId;
+    function ie(q) {
+      return q.locationId !== void 0 ? `${Dl(q.chapter)} · ${Ll(q.locationId)}` : q.sceneId;
     }
-    const B = ve(() => e.scene.tone ? Nl(e.scene.tone) : void 0), Y = /* @__PURE__ */ ne(null);
+    const H = ve(() => e.scene.tone ? Nl(e.scene.tone) : void 0), Y = /* @__PURE__ */ ne(null);
     let ce;
     function ye() {
       ce !== void 0 && (clearTimeout(ce), ce = void 0);
     }
-    function Re(F) {
-      if (Y.value === F) {
-        ye(), Y.value = null, e.deleteSlot(F);
+    function Re(q) {
+      if (Y.value === q) {
+        ye(), Y.value = null, e.deleteSlot(q);
         return;
       }
-      Y.value = F, ye(), ce = setTimeout(() => {
+      Y.value = q, ye(), ce = setTimeout(() => {
         Y.value = null;
       }, 3e3);
     }
@@ -15462,350 +15462,350 @@ const Qy = /* @__PURE__ */ n0("albina-game", () => {
       ue.value = void 0, Ne(() => r.value?.focus());
     }
     function Ge() {
-      const F = o.value;
-      F && s && !e.reducedMotion ? s.dismissModal(F, Le) : Le();
+      const q = o.value;
+      q && s && !e.reducedMotion ? s.dismissModal(q, Le) : Le();
     }
-    function Ot(F) {
-      if (F.key === "Escape") {
-        F.preventDefault(), Ge();
+    function Ot(q) {
+      if (q.key === "Escape") {
+        q.preventDefault(), Ge();
         return;
       }
-      if (F.key === "ArrowRight" || F.key === "ArrowLeft") {
-        F.preventDefault(), sa(F.key === "ArrowRight" ? 1 : -1);
+      if (q.key === "ArrowRight" || q.key === "ArrowLeft") {
+        q.preventDefault(), sa(q.key === "ArrowRight" ? 1 : -1);
         return;
       }
-      if (F.key === "Tab") {
-        F.preventDefault();
-        const b = [...o.value?.querySelectorAll("button:not([disabled])") ?? []];
-        if (b.length === 0) return;
-        const w = b.indexOf(document.activeElement), pe = F.shiftKey ? -1 : 1, be = w === -1 ? 0 : (w + pe + b.length) % b.length;
-        b[be]?.focus();
+      if (q.key === "Tab") {
+        q.preventDefault();
+        const h = [...o.value?.querySelectorAll("button:not([disabled])") ?? []];
+        if (h.length === 0) return;
+        const w = h.indexOf(document.activeElement), fe = q.shiftKey ? -1 : 1, be = w === -1 ? 0 : (w + fe + h.length) % h.length;
+        h[be]?.focus();
       }
     }
-    const vt = ve(() => ue.value === void 0 ? -1 : Te.value.findIndex((F) => F.id === ue.value));
-    function sa(F) {
-      const b = Te.value;
-      if (b.length < 2 || vt.value === -1) return;
-      const w = b[(vt.value + F + b.length) % b.length];
+    const vt = ve(() => ue.value === void 0 ? -1 : Te.value.findIndex((q) => q.id === ue.value));
+    function sa(q) {
+      const h = Te.value;
+      if (h.length < 2 || vt.value === -1) return;
+      const w = h[(vt.value + q + h.length) % h.length];
       w && (ue.value = w.id);
     }
     function Li() {
-      const F = a.value?.querySelector("[data-motion-modal]"), b = () => {
-        g.value = !1, Ne(() => Z.value?.focus());
+      const q = a.value?.querySelector("[data-motion-modal]"), h = () => {
+        g.value = !1, Ne(() => D.value?.focus());
       };
-      F && s && !e.reducedMotion ? s.dismissModal(F, b) : b();
+      q && s && !e.reducedMotion ? s.dismissModal(q, h) : h();
     }
-    function ft() {
-      const F = A.value, b = () => {
-        I.value = !1, Ne(() => S.value?.focus());
+    function pt() {
+      const q = I.value, h = () => {
+        k.value = !1, Ne(() => S.value?.focus());
       };
-      F && s && !e.reducedMotion ? s.dismissModal(F, b) : b();
+      q && s && !e.reducedMotion ? s.dismissModal(q, h) : h();
     }
     function Mt() {
-      e.activeMinigame && (T.value = void 0, e.clearMinigameResolution(), I.value = !0, Ne(() => {
-        A.value && s?.reveal("modal", A.value);
+      e.activeMinigame && (T.value = void 0, e.clearMinigameResolution(), k.value = !0, Ne(() => {
+        I.value && s?.reveal("modal", I.value);
       }));
     }
     function Ni() {
-      const F = re.value, b = () => {
+      const q = re.value, h = () => {
         T.value = void 0, e.clearMinigameResolution();
       };
-      F && s && !e.reducedMotion ? s.dismissMinigameResult(F, b) : b();
+      q && s && !e.reducedMotion ? s.dismissMinigameResult(q, h) : h();
     }
-    function _i(F) {
-      return { perfect: "完美介入", assisted: "辅助完成", setback: "介入受挫", skipped: "已跳过" }[F];
+    function _i(q) {
+      return { perfect: "完美介入", assisted: "辅助完成", setback: "介入受挫", skipped: "已跳过" }[q];
     }
-    function Gr(F) {
-      if (!e.resolveMinigame(F) || !e.minigameResolution) return;
-      const b = e.minigameResolution;
-      T.value = { ...b }, m({ kind: b.outcome === "perfect" ? "cg-reveal" : b.outcome === "setback" ? "impact" : "choice-confirm" }), ft();
+    function Gr(q) {
+      if (!e.resolveMinigame(q) || !e.minigameResolution) return;
+      const h = e.minigameResolution;
+      T.value = { ...h }, m({ kind: h.outcome === "perfect" ? "cg-reveal" : h.outcome === "setback" ? "impact" : "choice-confirm" }), pt();
     }
-    async function Io(F, b) {
-      const w = b?.currentTarget instanceof HTMLButtonElement ? b.currentTarget : void 0;
-      w && s?.pulseChoice(w), m({ kind: "choice-confirm" }), await e.choose(F);
+    async function Io(q, h) {
+      const w = h?.currentTarget instanceof HTMLButtonElement ? h.currentTarget : void 0;
+      w && s?.pulseChoice(w), m({ kind: "choice-confirm" }), await e.choose(q);
     }
     function Cn() {
       if (e.typewriterState !== "typing") return;
       e.completeText(), m({ kind: "dialogue-emphasis", intensity: 0.28, durationMs: 220 });
-      const F = a.value?.querySelector(".dialogue-box");
-      F && s?.pulseDialogue(F);
+      const q = a.value?.querySelector(".dialogue-box");
+      q && s?.pulseDialogue(q);
     }
-    function Wr(F) {
-      const b = F.target;
-      if (!(b instanceof Element)) return;
-      const w = b.closest("button:not([disabled])");
+    function Wr(q) {
+      const h = q.target;
+      if (!(h instanceof Element)) return;
+      const w = h.closest("button:not([disabled])");
       w && !w.closest(".choice-list") && s?.pulseHud(w);
     }
-    function Pn(F) {
-      return F === "title" ? "title" : F === "profile" ? "profile" : F === "game" ? "game" : "panel";
+    function Pn(q) {
+      return q === "title" ? "title" : q === "profile" ? "profile" : q === "game" ? "game" : "panel";
     }
-    async function Rn(F) {
-      if (E) {
-        O = F;
+    async function Rn(q) {
+      if (R) {
+        P = q;
         return;
       }
-      if (F === P.value) return;
-      E = !0;
-      const b = a.value?.querySelector("[data-motion-screen]"), w = async () => {
-        P.value = F, await Ne();
+      if (q === V.value) return;
+      R = !0;
+      const h = a.value?.querySelector("[data-motion-screen]"), w = async () => {
+        V.value = q, await Ne();
         const be = a.value?.querySelector("[data-motion-screen]");
-        be ? s?.enterScreen(Pn(F), be, pe) : pe();
-      }, pe = () => {
-        E = !1;
-        const be = O;
-        O = void 0, be && be !== P.value && Rn(be);
+        be ? s?.enterScreen(Pn(q), be, fe) : fe();
+      }, fe = () => {
+        R = !1;
+        const be = P;
+        P = void 0, be && be !== V.value && Rn(be);
       };
-      b && s ? s.leaveScreen(b, () => {
+      h && s ? s.leaveScreen(h, () => {
         w();
       }) : await w();
     }
-    return ut(() => e.screen, (F) => {
-      Rn(F);
-    }, { flush: "post" }), ut(() => e.saving, async (F) => {
-      await Ne(), q.value && s?.pulseStatus(q.value, F ? "cool" : "golden");
-    }), ut(() => e.effectiveValues, async (F) => {
-      const b = de.value;
-      if (de.value = { ...F }, Object.keys(F).every((pe) => F[pe] === b[pe])) return;
+    return ut(() => e.screen, (q) => {
+      Rn(q);
+    }, { flush: "post" }), ut(() => e.saving, async (q) => {
+      await Ne(), j.value && s?.pulseStatus(j.value, q ? "cool" : "golden");
+    }), ut(() => e.effectiveValues, async (q) => {
+      const h = de.value;
+      if (de.value = { ...q }, Object.keys(q).every((fe) => q[fe] === h[fe])) return;
       await Ne();
-      const w = F.danger > b.danger;
-      ee.value && s?.pulseStatus(ee.value, w ? "danger" : "golden");
-      for (const pe of se) {
-        const be = pe.key, We = ee.value?.querySelector(`[data-hud-value-key="${be}"]`);
-        if (!We || F[be] === b[be]) continue;
-        We.dataset.hudChanged = "true", s?.pulseHudValue(We, be === "danger" && F.danger > b.danger ? "danger" : "golden");
+      const w = q.danger > h.danger;
+      Q.value && s?.pulseStatus(Q.value, w ? "danger" : "golden");
+      for (const fe of se) {
+        const be = fe.key, We = Q.value?.querySelector(`[data-hud-value-key="${be}"]`);
+        if (!We || q[be] === h[be]) continue;
+        We.dataset.hudChanged = "true", s?.pulseHudValue(We, be === "danger" && q.danger > h.danger ? "danger" : "golden");
         const Pa = () => {
           We.dataset.hudChanged = "false";
         };
         window.setTimeout(Pa, 420);
       }
-    }, { deep: !0 }), ut(() => e.resultText, async (F) => {
-      F && (await Ne(), J.value && s?.revealResult(J.value));
+    }, { deep: !0 }), ut(() => e.resultText, async (q) => {
+      q && (await Ne(), B.value && s?.revealResult(B.value));
     }), ut(() => e.scene.id, () => {
-      I.value = !1, T.value = void 0, e.clearMinigameResolution(), Ne(() => {
+      k.value = !1, T.value = void 0, e.clearMinigameResolution(), Ne(() => {
         a.value && s?.transitionScene(a.value);
-        const F = a.value?.querySelector(".dialogue-box");
-        F && s?.revealDialogue(F);
-        const b = a.value?.querySelector('[data-testid="scene-label"]');
-        b && s?.revealSceneLabel(b), i.value && !e.reducedMotion && s?.wipeScene(i.value), e.scene.cgAssetId && m({ kind: "cg-reveal" }), e.scene.ending && m({ kind: "ending" });
+        const q = a.value?.querySelector(".dialogue-box");
+        q && s?.revealDialogue(q);
+        const h = a.value?.querySelector('[data-testid="scene-label"]');
+        h && s?.revealSceneLabel(h), i.value && !e.reducedMotion && s?.wipeScene(i.value), e.scene.cgAssetId && m({ kind: "cg-reveal" }), e.scene.ending && m({ kind: "ending" });
       });
     }), ut(() => e.scene.speaker, async () => {
       await Ne();
-      const F = a.value?.querySelector(".dialogue-box");
-      F && s?.switchSpeaker(F);
-    }, { flush: "post" }), ut(() => T.value, async (F) => {
-      if (!F) return;
+      const q = a.value?.querySelector(".dialogue-box");
+      q && s?.switchSpeaker(q);
+    }, { flush: "post" }), ut(() => T.value, async (q) => {
+      if (!q) return;
       await Ne();
-      const b = a.value?.querySelector(".minigame-result");
-      k.value?.focus(), b && s?.revealMinigameResult(b, F.outcome);
+      const h = a.value?.querySelector(".minigame-result");
+      x.value?.focus(), h && s?.revealMinigameResult(h, q.outcome);
     }), ut(() => g.value, async () => {
       await Ne();
-    }), ut(() => ue.value, async (F, b) => {
-      await Ne(), F && b === void 0 && o.value && (s?.reveal("modal", o.value), n.value?.focus());
+    }), ut(() => ue.value, async (q, h) => {
+      await Ne(), q && h === void 0 && o.value && (s?.reveal("modal", o.value), n.value?.focus());
     }), yn(() => {
       s = t8(ve(() => e.reducedMotion)), Ne(() => {
-        const F = a.value?.querySelector("[data-motion-screen]");
-        F && s?.reveal(Pn(P.value), F);
+        const q = a.value?.querySelector("[data-motion-screen]");
+        q && s?.reveal(Pn(V.value), q);
       });
     }), wo(() => {
-      ye(), clearTimeout(h), clearTimeout(v), s?.dispose(), e.disposeUiListeners(), e.runtime.unmount();
-    }), (F, b) => (z(), U("main", {
+      ye(), clearTimeout(b), clearTimeout(v), s?.dispose(), e.disposeUiListeners(), e.runtime.unmount();
+    }), (q, h) => (U(), F("main", {
       ref_key: "appRoot",
       ref: a,
       class: "albina-app",
       "data-albina-application": "",
-      "data-screen": P.value,
+      "data-screen": V.value,
       "data-requested-screen": M(e).screen,
       "data-motion-ready": M(s) ? "true" : "false",
       onClickCapture: Wr
     }, [
-      M(e).saveError ? (z(), U("p", t7, $(M(e).saveError.message), 1)) : ge("", !0),
-      P.value === "title" ? (z(), U("section", a7, [
-        b[45] || (b[45] = f("div", { class: "title-screen__veil" }, null, -1)),
-        f("div", i7, [
-          b[42] || (b[42] = f("p", { class: "eyebrow" }, "Canto IX · 独立前端卡", -1)),
-          b[43] || (b[43] = f("h1", null, "ALBINA", -1)),
-          b[44] || (b[44] = f("p", { class: "subtitle" }, "白色画布上的残响", -1)),
-          f("nav", o7, [
-            f("button", {
+      M(e).saveError ? (U(), F("p", t7, $(M(e).saveError.message), 1)) : ge("", !0),
+      V.value === "title" ? (U(), F("section", a7, [
+        h[45] || (h[45] = p("div", { class: "title-screen__veil" }, null, -1)),
+        p("div", i7, [
+          h[42] || (h[42] = p("p", { class: "eyebrow" }, "Canto IX · 独立前端卡", -1)),
+          h[43] || (h[43] = p("h1", null, "ALBINA", -1)),
+          h[44] || (h[44] = p("p", { class: "subtitle" }, "白色画布上的残响", -1)),
+          p("nav", o7, [
+            p("button", {
               "data-testid": "new-game",
               onClick: ae
             }, "开始新篇"),
-            f("button", {
+            p("button", {
               "data-testid": "continue-game",
               disabled: M(e).loading,
-              onClick: b[0] || (b[0] = //@ts-ignore
+              onClick: h[0] || (h[0] = //@ts-ignore
               (...w) => M(e).continueGame && M(e).continueGame(...w))
             }, "继续", 8, n7),
-            f("button", {
+            p("button", {
               "data-testid": "title-saves",
-              onClick: b[1] || (b[1] = //@ts-ignore
+              onClick: h[1] || (h[1] = //@ts-ignore
               (...w) => M(e).openSaves && M(e).openSaves(...w))
             }, "存档"),
-            f("button", {
-              onClick: b[2] || (b[2] = //@ts-ignore
+            p("button", {
+              onClick: h[2] || (h[2] = //@ts-ignore
               (...w) => M(e).openGallery && M(e).openGallery(...w))
             }, "CG 图鉴"),
-            f("button", {
+            p("button", {
               "data-testid": "title-settings",
-              onClick: b[3] || (b[3] = (w) => M(e).screen = "settings")
+              onClick: h[3] || (h[3] = (w) => M(e).screen = "settings")
             }, "设置"),
-            f("button", {
+            p("button", {
               "data-testid": "title-credits",
-              onClick: b[4] || (b[4] = (w) => M(e).screen = "credits")
+              onClick: h[4] || (h[4] = (w) => M(e).screen = "credits")
             }, "版权与鸣谢")
           ]),
-          f("p", {
+          p("p", {
             class: "build-state",
             "data-testid": "build-state",
             "data-build-version": M(Zl)
           }, "v" + $(M(Zl)) + " · 确定性主剧情 · 运行时零媒体 API", 9, r7)
         ])
-      ])) : P.value === "profile" ? (z(), U("section", s7, [
-        f("header", c7, [
-          f("button", {
+      ])) : V.value === "profile" ? (U(), F("section", s7, [
+        p("header", c7, [
+          p("button", {
             "data-testid": "profile-back",
-            onClick: b[5] || (b[5] = (w) => M(e).screen = "title")
+            onClick: h[5] || (h[5] = (w) => M(e).screen = "title")
           }, "返回"),
-          b[46] || (b[46] = f("div", null, [
-            f("p", { class: "eyebrow" }, "PLAYER PROFILE"),
-            f("h2", null, "开始新篇")
+          h[46] || (h[46] = p("div", null, [
+            p("p", { class: "eyebrow" }, "PLAYER PROFILE"),
+            p("h2", null, "开始新篇")
           ], -1)),
-          b[47] || (b[47] = f("span", { class: "profile-screen__fixed" }, "Fixed protagonist portrait", -1))
+          h[47] || (h[47] = p("span", { class: "profile-screen__fixed" }, "Fixed protagonist portrait", -1))
         ]),
-        f("form", {
+        p("form", {
           class: "profile-form",
           onSubmit: Xa(C, ["prevent"])
         }, [
-          b[58] || (b[58] = f("p", { class: "profile-form__notice" }, "The adult male protagonist keeps a fixed visual design. These fields guide narrative and the chat-scoped profile record.", -1)),
-          f("label", null, [
-            b[48] || (b[48] = f("span", null, "姓名", -1)),
-            at(f("input", {
-              "onUpdate:modelValue": b[6] || (b[6] = (w) => K.value.name = w),
+          h[58] || (h[58] = p("p", { class: "profile-form__notice" }, "The adult male protagonist keeps a fixed visual design. These fields guide narrative and the chat-scoped profile record.", -1)),
+          p("label", null, [
+            h[48] || (h[48] = p("span", null, "姓名", -1)),
+            at(p("input", {
+              "onUpdate:modelValue": h[6] || (h[6] = (w) => K.value.name = w),
               "data-testid": "profile-name",
               maxlength: "80",
               required: ""
             }, null, 512), [
-              [fa, K.value.name]
+              [pa, K.value.name]
             ])
           ]),
-          f("label", null, [
-            b[49] || (b[49] = f("span", null, "称呼", -1)),
-            at(f("input", {
-              "onUpdate:modelValue": b[7] || (b[7] = (w) => K.value.addressName = w),
+          p("label", null, [
+            h[49] || (h[49] = p("span", null, "称呼", -1)),
+            at(p("input", {
+              "onUpdate:modelValue": h[7] || (h[7] = (w) => K.value.addressName = w),
               "data-testid": "profile-address",
               maxlength: "80",
               required: ""
             }, null, 512), [
-              [fa, K.value.addressName]
+              [pa, K.value.addressName]
             ])
           ]),
-          f("label", null, [
-            b[50] || (b[50] = f("span", null, "性别表达", -1)),
-            at(f("input", {
-              "onUpdate:modelValue": b[8] || (b[8] = (w) => K.value.gender = w),
+          p("label", null, [
+            h[50] || (h[50] = p("span", null, "性别表达", -1)),
+            at(p("input", {
+              "onUpdate:modelValue": h[8] || (h[8] = (w) => K.value.gender = w),
               maxlength: "80",
               required: ""
             }, null, 512), [
-              [fa, K.value.gender]
+              [pa, K.value.gender]
             ])
           ]),
-          f("label", null, [
-            b[51] || (b[51] = f("span", null, "外观描述", -1)),
-            at(f("textarea", {
-              "onUpdate:modelValue": b[9] || (b[9] = (w) => K.value.appearance = w),
+          p("label", null, [
+            h[51] || (h[51] = p("span", null, "外观描述", -1)),
+            at(p("textarea", {
+              "onUpdate:modelValue": h[9] || (h[9] = (w) => K.value.appearance = w),
               maxlength: "800",
               rows: "3"
             }, null, 512), [
-              [fa, K.value.appearance]
+              [pa, K.value.appearance]
             ])
           ]),
-          f("label", null, [
-            b[52] || (b[52] = f("span", null, "背景", -1)),
-            at(f("textarea", {
-              "onUpdate:modelValue": b[10] || (b[10] = (w) => K.value.background = w),
+          p("label", null, [
+            h[52] || (h[52] = p("span", null, "背景", -1)),
+            at(p("textarea", {
+              "onUpdate:modelValue": h[10] || (h[10] = (w) => K.value.background = w),
               maxlength: "800",
               rows: "3"
             }, null, 512), [
-              [fa, K.value.background]
+              [pa, K.value.background]
             ])
           ]),
-          f("label", null, [
-            b[53] || (b[53] = f("span", null, "职业或能力倾向", -1)),
-            at(f("textarea", {
-              "onUpdate:modelValue": b[11] || (b[11] = (w) => K.value.ability = w),
+          p("label", null, [
+            h[53] || (h[53] = p("span", null, "职业或能力倾向", -1)),
+            at(p("textarea", {
+              "onUpdate:modelValue": h[11] || (h[11] = (w) => K.value.ability = w),
               maxlength: "400",
               rows: "2"
             }, null, 512), [
-              [fa, K.value.ability]
+              [pa, K.value.ability]
             ])
           ]),
-          f("label", null, [
-            b[54] || (b[54] = f("span", null, "与阿尔比娜的初始关系倾向", -1)),
-            at(f("textarea", {
-              "onUpdate:modelValue": b[12] || (b[12] = (w) => K.value.initialRelationship = w),
+          p("label", null, [
+            h[54] || (h[54] = p("span", null, "与阿尔比娜的初始关系倾向", -1)),
+            at(p("textarea", {
+              "onUpdate:modelValue": h[12] || (h[12] = (w) => K.value.initialRelationship = w),
               "data-testid": "profile-relationship",
               maxlength: "400",
               rows: "2"
             }, null, 512), [
-              [fa, K.value.initialRelationship]
+              [pa, K.value.initialRelationship]
             ])
           ]),
-          f("label", null, [
-            b[55] || (b[55] = f("span", null, "内容边界", -1)),
-            at(f("textarea", {
-              "onUpdate:modelValue": b[13] || (b[13] = (w) => K.value.boundaries = w),
+          p("label", null, [
+            h[55] || (h[55] = p("span", null, "内容边界", -1)),
+            at(p("textarea", {
+              "onUpdate:modelValue": h[13] || (h[13] = (w) => K.value.boundaries = w),
               maxlength: "800",
               rows: "3"
             }, null, 512), [
-              [fa, K.value.boundaries]
+              [pa, K.value.boundaries]
             ])
           ]),
-          f("label", null, [
-            b[57] || (b[57] = f("span", null, "路线偏好", -1)),
-            at(f("select", {
-              "onUpdate:modelValue": b[14] || (b[14] = (w) => K.value.routePreference = w),
+          p("label", null, [
+            h[57] || (h[57] = p("span", null, "路线偏好", -1)),
+            at(p("select", {
+              "onUpdate:modelValue": h[14] || (h[14] = (w) => K.value.routePreference = w),
               "data-testid": "profile-route"
-            }, [...b[56] || (b[56] = [
-              f("option", { value: "white_canvas" }, "White Canvas", -1),
-              f("option", { value: "golden_bough_rebuild" }, "Golden Bough Rebuild", -1),
-              f("option", { value: "ring_conspiracy" }, "Ring Conspiracy", -1)
+            }, [...h[56] || (h[56] = [
+              p("option", { value: "white_canvas" }, "White Canvas", -1),
+              p("option", { value: "golden_bough_rebuild" }, "Golden Bough Rebuild", -1),
+              p("option", { value: "ring_conspiracy" }, "Ring Conspiracy", -1)
             ])], 512), [
               [Ed, K.value.routePreference]
             ])
           ]),
-          f("footer", d7, [
-            f("button", {
+          p("footer", d7, [
+            p("button", {
               type: "button",
-              onClick: b[15] || (b[15] = (w) => M(e).screen = "title")
+              onClick: h[15] || (h[15] = (w) => M(e).screen = "title")
             }, "取消"),
-            f("button", {
+            p("button", {
               type: "submit",
               "data-testid": "profile-begin",
               disabled: M(e).preloadState === "loading"
             }, $(M(e).preloadState === "loading" ? "准备媒体…" : "确认档案并开始"), 9, l7)
           ])
         ], 32)
-      ])) : P.value === "saves" ? (z(), U("section", u7, [
-        f("header", null, [
-          f("button", {
-            onClick: b[16] || (b[16] = (w) => M(e).screen = "title")
+      ])) : V.value === "saves" ? (U(), F("section", u7, [
+        p("header", null, [
+          p("button", {
+            onClick: h[16] || (h[16] = (w) => M(e).screen = "title")
           }, "返回"),
-          b[59] || (b[59] = f("h2", null, "存档管理", -1))
+          h[59] || (h[59] = p("h2", null, "存档管理", -1))
         ]),
-        f("div", p7, [
-          f("button", {
+        p("div", f7, [
+          p("button", {
             "data-testid": "save-slot-1",
-            onClick: b[17] || (b[17] = (w) => M(e).saveSlot(1))
+            onClick: h[17] || (h[17] = (w) => M(e).saveSlot(1))
           }, "保存到槽位 1"),
-          f("button", {
-            onClick: b[18] || (b[18] = (w) => M(e).saveSlot(2))
+          p("button", {
+            onClick: h[18] || (h[18] = (w) => M(e).saveSlot(2))
           }, "保存到槽位 2"),
-          f("button", {
-            onClick: b[19] || (b[19] = (w) => M(e).saveSlot(3))
+          p("button", {
+            onClick: h[19] || (h[19] = (w) => M(e).saveSlot(3))
           }, "保存到槽位 3")
         ]),
-        f("div", f7, [
-          (z(!0), U(me, null, Ee(M(e).saveSlots, (w) => (z(), U("article", {
+        p("div", p7, [
+          (U(!0), F(me, null, Ee(M(e).saveSlots, (w) => (U(), F("article", {
             key: w.id,
             class: we(["save-slot", { "is-active": w.id === M(e).save.saveId }]),
             "data-save-id": w.id,
@@ -15813,49 +15813,49 @@ const Qy = /* @__PURE__ */ n0("albina-game", () => {
             "data-slot-has-thumbnail": w.thumbnailUrl ? "true" : "false",
             "data-slot-scene": w.sceneId
           }, [
-            f("div", b7, [
-              w.thumbnailUrl ? (z(), U("img", {
+            p("div", b7, [
+              w.thumbnailUrl ? (U(), F("img", {
                 key: 0,
                 src: w.thumbnailUrl,
                 alt: "存档缩略图"
-              }, null, 8, m7)) : (z(), U("span", v7, "·"))
+              }, null, 8, m7)) : (U(), F("span", v7, "·"))
             ]),
-            f("div", g7, [
-              f("strong", null, $(w.id), 1),
-              w.id === M(e).save.saveId ? (z(), U("span", _7, "当前")) : ge("", !0),
-              f("p", {
+            p("div", g7, [
+              p("strong", null, $(w.id), 1),
+              w.id === M(e).save.saveId ? (U(), F("span", _7, "当前")) : ge("", !0),
+              p("p", {
                 class: "save-slot__scene",
                 "data-slot-chapter": w.chapter ?? null
               }, $(ie(w)), 9, y7),
-              w.tone ? (z(), U("span", {
+              w.tone ? (U(), F("span", {
                 key: 1,
                 class: "save-slot__tone",
                 "data-slot-tone": w.tone
               }, $(M(Nl)(w.tone)), 9, w7)) : ge("", !0),
-              f("time", {
+              p("time", {
                 datetime: w.updatedAt
               }, $(M(Q9)(w.updatedAt)), 9, k7)
             ]),
-            f("button", {
-              onClick: (pe) => M(e).restoreSlot(w.id)
+            p("button", {
+              onClick: (fe) => M(e).restoreSlot(w.id)
             }, "读取", 8, I7),
-            f("button", {
-              onClick: (pe) => Re(w.id),
+            p("button", {
+              onClick: (fe) => Re(w.id),
               class: we({ "is-confirming": Y.value === w.id }),
               "data-confirming": Y.value === w.id ? "true" : "false"
             }, $(Y.value === w.id ? "确认删除?" : "删除"), 11, A7)
           ], 10, h7))), 128)),
-          M(e).saveSlots.length === 0 ? (z(), U("p", x7, "暂无普通存档。")) : ge("", !0)
+          M(e).saveSlots.length === 0 ? (U(), F("p", x7, "暂无普通存档。")) : ge("", !0)
         ])
-      ])) : P.value === "gallery" ? (z(), U("section", T7, [
-        f("header", null, [
-          f("button", {
-            onClick: b[20] || (b[20] = //@ts-ignore
+      ])) : V.value === "gallery" ? (U(), F("section", T7, [
+        p("header", null, [
+          p("button", {
+            onClick: h[20] || (h[20] = //@ts-ignore
             (...w) => M(e).backToGame && M(e).backToGame(...w))
           }, "返回"),
-          b[60] || (b[60] = f("h2", null, "CG 图鉴", -1)),
-          f("span", S7, $(Te.value.length) + " unlocked", 1),
-          wt.value.length ? (z(), U("button", {
+          h[60] || (h[60] = p("h2", null, "CG 图鉴", -1)),
+          p("span", S7, $(Te.value.length) + " unlocked", 1),
+          wt.value.length ? (U(), F("button", {
             key: 0,
             type: "button",
             class: "gallery-retry-all",
@@ -15864,52 +15864,52 @@ const Qy = /* @__PURE__ */ n0("albina-game", () => {
             onClick: dt
           }, "重试全部失败封面（" + $(wt.value.length) + "）", 9, C7)) : ge("", !0)
         ]),
-        Te.value.length ? (z(), U("div", P7, [
-          (z(!0), U(me, null, Ee(Te.value, (w) => (z(), U("article", {
+        Te.value.length ? (U(), F("div", P7, [
+          (U(!0), F(me, null, Ee(Te.value, (w) => (U(), F("article", {
             key: w.id,
             class: "gallery-item",
             "data-gallery-item": w.id,
             "data-gallery-state": $e(w.id),
             "aria-busy": $e(w.id) === "loading" ? "true" : "false"
           }, [
-            f("button", {
+            p("button", {
               class: "gallery-item__open",
               type: "button",
               "aria-label": `查看 ${w.id}`,
-              onClick: (pe) => V(w.id, pe.currentTarget)
+              onClick: (fe) => O(w.id, fe.currentTarget)
             }, [
-              $e(w.id) === "loading" ? (z(), U("span", {
+              $e(w.id) === "loading" ? (U(), F("span", {
                 key: 0,
                 class: "gallery-item__skeleton",
                 "aria-hidden": "true",
                 "data-gallery-loading": w.id
               }, null, 8, E7)) : ge("", !0),
-              $e(w.id) !== "failed" ? (z(), U("img", {
+              $e(w.id) !== "failed" ? (U(), F("img", {
                 key: 1,
                 src: st(w.id, w.url),
                 alt: w.id,
                 crossorigin: "anonymous",
                 class: we({ "is-loaded": $e(w.id) === "loaded" }),
-                onLoad: (pe) => Qt(w.id),
-                onError: (pe) => Tt(w.id)
-              }, null, 42, O7)) : (z(), U("span", {
+                onLoad: (fe) => Qt(w.id),
+                onError: (fe) => Tt(w.id)
+              }, null, 42, O7)) : (U(), F("span", {
                 key: 2,
                 class: "gallery-item__placeholder",
                 "data-gallery-failed": w.id
               }, "封面缺失", 8, M7)),
-              f("span", null, $(w.id), 1)
+              p("span", null, $(w.id), 1)
             ], 8, V7),
-            $e(w.id) === "failed" ? (z(), U("button", {
+            $e(w.id) === "failed" ? (U(), F("button", {
               key: 0,
               type: "button",
               class: "gallery-item__retry",
               disabled: Me.value.has(w.id),
               "data-gallery-retrying": Me.value.has(w.id) ? "true" : "false",
-              onClick: (pe) => ct(w.id)
+              onClick: (fe) => ct(w.id)
             }, $(Me.value.has(w.id) ? "加载中" : "重试加载"), 9, $7)) : ge("", !0)
           ], 8, R7))), 128))
-        ])) : (z(), U("p", j7, "尚未解锁 CG。")),
-        ue.value ? (z(), U("div", {
+        ])) : (U(), F("p", j7, "尚未解锁 CG。")),
+        ue.value ? (U(), F("div", {
           key: 2,
           ref_key: "galleryViewerRoot",
           ref: o,
@@ -15919,133 +15919,133 @@ const Qy = /* @__PURE__ */ n0("albina-game", () => {
           onClick: Xa(Ge, ["self"]),
           onKeydown: Ot
         }, [
-          f("figure", z7, [
-            f("button", {
+          p("figure", z7, [
+            p("button", {
               ref_key: "galleryViewerCloseButton",
               ref: n,
               type: "button",
               "aria-label": "关闭 CG 预览",
               onClick: Ge
             }, "关闭", 512),
-            Se.value.has(ue.value) ? (z(), U("span", {
+            Se.value.has(ue.value) ? (U(), F("span", {
               key: 1,
               class: "gallery-viewer__placeholder",
               role: "status",
               "aria-live": "polite",
               "data-gallery-preview-failed": ue.value
             }, [
-              b[61] || (b[61] = ta("预览图不可用", -1)),
-              f("button", {
+              h[61] || (h[61] = ta("预览图不可用", -1)),
+              p("button", {
                 type: "button",
                 disabled: Me.value.has(ue.value),
                 "data-gallery-retrying": Me.value.has(ue.value) ? "true" : "false",
-                onClick: b[23] || (b[23] = (w) => ct(ue.value))
+                onClick: h[23] || (h[23] = (w) => ct(ue.value))
               }, $(Me.value.has(ue.value) ? "加载中" : "重试加载"), 9, q7)
-            ], 8, F7)) : (z(), U("img", {
+            ], 8, F7)) : (U(), F("img", {
               key: 0,
               src: st(ue.value, M(e).assetUrl(ue.value) ?? ""),
               alt: ue.value,
               crossorigin: "anonymous",
-              onLoad: b[21] || (b[21] = (w) => Qt(ue.value)),
-              onError: b[22] || (b[22] = (w) => Tt(ue.value))
+              onLoad: h[21] || (h[21] = (w) => Qt(ue.value)),
+              onError: h[22] || (h[22] = (w) => Tt(ue.value))
             }, null, 40, U7)),
-            f("figcaption", null, [
-              f("span", null, $(ue.value), 1),
-              Te.value.length > 1 ? (z(), U("nav", {
+            p("figcaption", null, [
+              p("span", null, $(ue.value), 1),
+              Te.value.length > 1 ? (U(), F("nav", {
                 key: 0,
                 class: "gallery-viewer__nav",
                 "data-gallery-index": vt.value + 1,
                 "data-gallery-total": Te.value.length
               }, [
-                f("button", {
+                p("button", {
                   type: "button",
                   "aria-label": "上一张 CG",
-                  onClick: b[24] || (b[24] = (w) => sa(-1))
+                  onClick: h[24] || (h[24] = (w) => sa(-1))
                 }, "‹"),
-                f("span", L7, $(vt.value + 1) + " / " + $(Te.value.length), 1),
-                f("button", {
+                p("span", L7, $(vt.value + 1) + " / " + $(Te.value.length), 1),
+                p("button", {
                   type: "button",
                   "aria-label": "下一张 CG",
-                  onClick: b[25] || (b[25] = (w) => sa(1))
+                  onClick: h[25] || (h[25] = (w) => sa(1))
                 }, "›")
               ], 8, Z7)) : ge("", !0)
             ])
           ])
         ], 544)) : ge("", !0)
-      ])) : P.value === "settings" ? (z(), U("section", N7, [
-        f("header", null, [
-          f("button", {
-            onClick: b[26] || (b[26] = (w) => M(e).screen = "title")
+      ])) : V.value === "settings" ? (U(), F("section", N7, [
+        p("header", null, [
+          p("button", {
+            onClick: h[26] || (h[26] = (w) => M(e).screen = "title")
           }, "返回"),
-          b[62] || (b[62] = f("h2", null, "演出设置", -1))
+          h[62] || (h[62] = p("h2", null, "演出设置", -1))
         ]),
-        f("fieldset", D7, [
-          b[66] || (b[66] = f("legend", null, "演出", -1)),
-          f("label", null, [
-            at(f("input", {
-              "onUpdate:modelValue": b[27] || (b[27] = (w) => M(e).reducedMotion = w),
+        p("fieldset", D7, [
+          h[66] || (h[66] = p("legend", null, "演出", -1)),
+          p("label", null, [
+            at(p("input", {
+              "onUpdate:modelValue": h[27] || (h[27] = (w) => M(e).reducedMotion = w),
               type: "checkbox"
             }, null, 512), [
-              [pp, M(e).reducedMotion]
+              [pf, M(e).reducedMotion]
             ]),
-            b[63] || (b[63] = ta(" 减少动态效果", -1))
+            h[63] || (h[63] = ta(" 减少动态效果", -1))
           ]),
-          f("label", null, [
-            b[65] || (b[65] = ta("VFX quality ", -1)),
-            at(f("select", {
-              "onUpdate:modelValue": b[28] || (b[28] = (w) => L.value = w),
+          p("label", null, [
+            h[65] || (h[65] = ta("VFX quality ", -1)),
+            at(p("select", {
+              "onUpdate:modelValue": h[28] || (h[28] = (w) => Z.value = w),
               "data-testid": "vfx-quality"
-            }, [...b[64] || (b[64] = [
+            }, [...h[64] || (h[64] = [
               Gn('<option value="auto">Auto (authored high)</option><option value="high">High</option><option value="medium">Medium</option><option value="low">Low</option><option value="static">Static</option>', 5)
             ])], 512), [
-              [Ed, L.value]
+              [Ed, Z.value]
             ])
           ])
         ]),
-        f("fieldset", B7, [
-          b[68] || (b[68] = f("legend", null, "音频", -1)),
-          f("label", null, [
-            f("input", {
+        p("fieldset", B7, [
+          h[68] || (h[68] = p("legend", null, "音频", -1)),
+          p("label", null, [
+            p("input", {
               checked: M(e).muted,
               type: "checkbox",
-              onChange: b[29] || (b[29] = //@ts-ignore
+              onChange: h[29] || (h[29] = //@ts-ignore
               (...w) => M(e).toggleMute && M(e).toggleMute(...w))
             }, null, 40, H7),
-            b[67] || (b[67] = ta(" 静音", -1))
+            h[67] || (h[67] = ta(" 静音", -1))
           ]),
-          f("button", {
+          p("button", {
             "data-testid": "autoplay-recovery",
-            onClick: b[30] || (b[30] = //@ts-ignore
+            onClick: h[30] || (h[30] = //@ts-ignore
             (...w) => M(e).recoverAutoplay && M(e).recoverAutoplay(...w))
           }, "恢复音频播放")
         ]),
-        f("button", {
+        p("button", {
           "data-testid": "settings-credits",
-          onClick: b[31] || (b[31] = (w) => M(e).screen = "credits")
+          onClick: h[31] || (h[31] = (w) => M(e).screen = "credits")
         }, "查看版权与鸣谢"),
-        b[69] || (b[69] = f("p", { class: "asset-status" }, "运行时不请求媒体生成接口。包内配乐均已登记来源、文件校验值与再分发许可。", -1))
-      ])) : P.value === "credits" ? (z(), U("section", J7, [
-        f("header", null, [
-          f("button", {
-            onClick: b[32] || (b[32] = (w) => M(e).screen = "title")
+        h[69] || (h[69] = p("p", { class: "asset-status" }, "运行时不请求媒体生成接口。包内配乐均已登记来源、文件校验值与再分发许可。", -1))
+      ])) : V.value === "credits" ? (U(), F("section", J7, [
+        p("header", null, [
+          p("button", {
+            onClick: h[32] || (h[32] = (w) => M(e).screen = "title")
           }, "返回"),
-          b[70] || (b[70] = f("h2", null, "版权与鸣谢", -1))
+          h[70] || (h[70] = p("h2", null, "版权与鸣谢", -1))
         ]),
-        f("p", G7, $(M(c).packagedNotice), 1),
-        f("ol", W7, [
-          (z(!0), U(me, null, Ee(M(c).tracks, (w) => (z(), U("li", {
+        p("p", G7, $(M(c).packagedNotice), 1),
+        p("ol", W7, [
+          (U(!0), F(me, null, Ee(M(c).tracks, (w) => (U(), F("li", {
             key: w.assetId
           }, [
-            f("h3", null, $(w.title), 1),
-            f("p", null, $(w.creator) + " · ISRC " + $(w.isrc) + " · cue: " + $(w.cueAlias), 1),
-            f("p", null, $(w.attribution), 1),
-            f("nav", K7, [
-              f("a", {
+            p("h3", null, $(w.title), 1),
+            p("p", null, $(w.creator) + " · ISRC " + $(w.isrc) + " · cue: " + $(w.cueAlias), 1),
+            p("p", null, $(w.attribution), 1),
+            p("nav", K7, [
+              p("a", {
                 href: w.sourceUrl,
                 target: "_blank",
                 rel: "noopener noreferrer"
               }, "曲目来源", 8, Y7),
-              f("a", {
+              p("a", {
                 href: w.licenseUrl,
                 target: "_blank",
                 rel: "noopener noreferrer"
@@ -16053,49 +16053,49 @@ const Qy = /* @__PURE__ */ n0("albina-game", () => {
             ])
           ]))), 128))
         ]),
-        f("section", Q7, [
-          b[71] || (b[71] = f("h3", { id: "official-soundtrack-title" }, "ProjectMoon 官方 OST", -1)),
-          f("p", null, [
-            f("strong", null, $(M(c).officialSoundtrack.playlistTitle), 1),
+        p("section", Q7, [
+          h[71] || (h[71] = p("h3", { id: "official-soundtrack-title" }, "ProjectMoon 官方 OST", -1)),
+          p("p", null, [
+            p("strong", null, $(M(c).officialSoundtrack.playlistTitle), 1),
             ta(" · " + $(M(c).officialSoundtrack.channel) + " · " + $(M(c).officialSoundtrack.playlistTrackCount) + " 首", 1)
           ]),
-          f("p", null, $(M(c).officialSoundtrack.notice), 1),
-          f("p", null, $(M(c).officialSoundtrack.rightsNotice), 1),
-          f("nav", ew, [
-            (z(!0), U(me, null, Ee(M(c).officialSoundtrack.links, (w) => (z(), U("a", {
+          p("p", null, $(M(c).officialSoundtrack.notice), 1),
+          p("p", null, $(M(c).officialSoundtrack.rightsNotice), 1),
+          p("nav", ew, [
+            (U(!0), F(me, null, Ee(M(c).officialSoundtrack.links, (w) => (U(), F("a", {
               key: w.url,
               href: w.url,
               target: "_blank",
               rel: "noopener noreferrer"
             }, $(w.label), 9, tw))), 128)),
-            f("a", {
+            p("a", {
               href: M(c).officialSoundtrack.termsUrl,
               target: "_blank",
               rel: "noopener noreferrer"
             }, "ProjectMoon 服务条款", 8, aw)
           ])
         ])
-      ])) : P.value === "game" ? (z(), U("section", {
+      ])) : V.value === "game" ? (U(), F("section", {
         key: 7,
         class: "game-screen",
         "data-testid": "game-screen",
         "data-scene-id": M(e).scene.id,
         "data-motion-screen": ""
       }, [
-        f("div", {
+        p("div", {
           class: we(["game-screen__transition-veil", { "is-active": !M(e).reducedMotion }]),
           ref_key: "transitionVeil",
           ref: i,
           "aria-hidden": "true"
         }, null, 2),
-        M(e).media.backgroundUrl ? (z(), U("img", {
+        M(e).media.backgroundUrl ? (U(), F("img", {
           key: 0,
           class: "game-screen__background",
           src: M(e).media.backgroundUrl,
           alt: "",
           crossorigin: "anonymous"
         }, null, 8, ow)) : ge("", !0),
-        M(e).media.fallbackUrl ? (z(), U("img", {
+        M(e).media.fallbackUrl ? (U(), F("img", {
           key: 1,
           class: "game-screen__cg",
           src: M(e).media.fallbackUrl,
@@ -16112,7 +16112,7 @@ const Qy = /* @__PURE__ */ n0("albina-game", () => {
           "scene-id": M(e).scene.id,
           chapter: M(e).scene.chapter,
           tone: M(e).scene.tone,
-          quality: L.value,
+          quality: Z.value,
           presentation: M(e).presentation
         }, null, 8, ["reduced-motion", "route", "route-preference", "scene-id", "chapter", "tone", "quality", "presentation"]),
         zt(t4, {
@@ -16123,116 +16123,116 @@ const Qy = /* @__PURE__ */ n0("albina-game", () => {
           "visual-profile": M(e).presentation.visual.profile,
           speaker: M(e).scene.speaker
         }, null, 8, ["portraits", "service", "reduced-motion", "focus", "visual-profile", "speaker"]),
-        f("header", rw, [
-          f("span", {
+        p("header", rw, [
+          p("span", {
             ref_key: "saveStatus",
-            ref: q,
+            ref: j,
             class: "game-hud__save-status",
             "data-testid": "save-status",
             "data-saving": M(e).saving,
             "aria-live": "polite"
           }, $(M(e).saving ? "saving" : "saved"), 9, sw),
-          f("span", {
+          p("span", {
             class: "preload-status",
             "data-testid": "preload-status",
             "data-preload-state": M(e).preloadState,
             "aria-live": "polite"
           }, $(M(e).preloadState === "loading" ? "preloading" : M(e).preloadState === "ready" ? "media ready" : "media idle"), 9, cw),
-          f("span", {
+          p("span", {
             class: "game-hud__scene-label",
             "data-testid": "scene-label",
             "data-scene-label": M(e).scene.id,
             "data-scene-tone": M(e).scene.tone
           }, [
             ta($(M(Dl)(M(e).scene.chapter)) + " · " + $(M(Ll)(M(e).scene.locationId)), 1),
-            B.value ? (z(), U("em", {
+            H.value ? (U(), F("em", {
               key: 0,
               class: "game-hud__scene-tone",
               "data-scene-tone": M(e).scene.tone
-            }, $(B.value), 9, lw)) : ge("", !0)
+            }, $(H.value), 9, lw)) : ge("", !0)
           ], 8, dw),
-          f("span", {
+          p("span", {
             ref_key: "valueStatus",
-            ref: ee,
+            ref: Q,
             class: "game-hud__values",
             "aria-label": "剧情数值",
             "data-testid": "hud-values"
           }, [
-            (z(), U(me, null, Ee(se, (w, pe) => (z(), U(me, {
+            (U(), F(me, null, Ee(se, (w, fe) => (U(), F(me, {
               key: w.key
             }, [
-              pe > 0 ? (z(), U("span", uw, " / ")) : ge("", !0),
-              f("span", {
+              fe > 0 ? (U(), F("span", uw, " / ")) : ge("", !0),
+              p("span", {
                 class: "game-hud__value",
                 "data-hud-value-key": w.key,
                 "data-hud-changed": "false",
                 "data-hud-critical": w.key === "danger" && M(e).effectiveValues.danger > 0 ? "true" : "false",
-                title: `基础 ${M(e).save.values[w.key]} · 修正 ${Q(M(e).effectiveValues[w.key] - M(e).save.values[w.key])}`
-              }, $(w.label) + " " + $(M(e).effectiveValues[w.key]), 9, pw)
+                title: `基础 ${M(e).save.values[w.key]} · 修正 ${ee(M(e).effectiveValues[w.key] - M(e).save.values[w.key])}`
+              }, $(w.label) + " " + $(M(e).effectiveValues[w.key]), 9, fw)
             ], 64))), 64))
           ], 512),
-          M(e).currentMinigame ? (z(), U("span", {
+          M(e).currentMinigame ? (U(), F("span", {
             key: 0,
             class: we(["game-hud__challenge", { "is-resolved": M(e).currentMinigame.record?.resolved }]),
             "data-minigame-id": M(e).currentMinigame.definition.id,
             "data-minigame-outcome": M(e).currentMinigame.record?.lastOutcome ?? "pending"
-          }, $(M(e).currentMinigame.record?.resolved ? `挑战已结算 · ${_i(M(e).currentMinigame.record.lastOutcome)}` : "挑战待处理"), 11, fw)) : ge("", !0),
-          f("nav", null, [
-            f("button", {
+          }, $(M(e).currentMinigame.record?.resolved ? `挑战已结算 · ${_i(M(e).currentMinigame.record.lastOutcome)}` : "挑战待处理"), 11, pw)) : ge("", !0),
+          p("nav", null, [
+            p("button", {
               ref_key: "gameplayButton",
-              ref: Z,
+              ref: D,
               "data-testid": "gameplay-open",
-              onClick: b[33] || (b[33] = (w) => g.value = !0)
+              onClick: h[33] || (h[33] = (w) => g.value = !0)
             }, "状态", 512),
-            M(e).activeMinigame ? (z(), U("button", {
+            M(e).activeMinigame ? (U(), F("button", {
               key: 0,
               ref_key: "minigameButton",
               ref: S,
               "data-testid": "minigame-open",
               onClick: Mt
             }, $(M(e).activeMinigame.definition.label), 513)) : ge("", !0),
-            f("button", {
-              onClick: b[34] || (b[34] = //@ts-ignore
+            p("button", {
+              onClick: h[34] || (h[34] = //@ts-ignore
               (...w) => M(e).quickSave && M(e).quickSave(...w))
             }, "快速存档"),
-            f("button", {
+            p("button", {
               "data-testid": "game-saves",
-              onClick: b[35] || (b[35] = //@ts-ignore
+              onClick: h[35] || (h[35] = //@ts-ignore
               (...w) => M(e).openSaves && M(e).openSaves(...w))
             }, "存档"),
-            f("button", {
-              onClick: b[36] || (b[36] = //@ts-ignore
+            p("button", {
+              onClick: h[36] || (h[36] = //@ts-ignore
               (...w) => M(e).openGallery && M(e).openGallery(...w))
             }, "图鉴"),
-            f("button", {
+            p("button", {
               "data-testid": "game-settings",
-              onClick: b[37] || (b[37] = (w) => M(e).screen = "settings")
+              onClick: h[37] || (h[37] = (w) => M(e).screen = "settings")
             }, "设置"),
-            f("button", {
-              onClick: b[38] || (b[38] = //@ts-ignore
+            p("button", {
+              onClick: h[38] || (h[38] = //@ts-ignore
               (...w) => M(e).toggleMute && M(e).toggleMute(...w))
             }, $(M(e).muted ? "启音" : "静音"), 1)
           ])
         ]),
-        I.value && M(e).activeMinigame ? (z(), U("div", {
+        k.value && M(e).activeMinigame ? (U(), F("div", {
           key: 2,
           ref_key: "minigameBackdrop",
-          ref: A,
+          ref: I,
           class: "minigame-backdrop",
           "data-testid": "minigame-modal",
           "data-motion-modal": "",
-          onClick: Xa(ft, ["self"])
+          onClick: Xa(pt, ["self"])
         }, [
           zt(J3, {
             definition: M(e).activeMinigame.definition,
             challenge: M(e).activeMinigame.challenge,
             "reduced-motion": M(e).reducedMotion,
             busy: M(e).minigameBusy,
-            onClose: ft,
+            onClose: pt,
             onResolve: Gr
           }, null, 8, ["definition", "challenge", "reduced-motion", "busy"])
         ], 512)) : ge("", !0),
-        T.value ? (z(), U("section", {
+        T.value ? (U(), F("section", {
           key: 3,
           ref_key: "resultRoot",
           ref: re,
@@ -16242,18 +16242,18 @@ const Qy = /* @__PURE__ */ n0("albina-game", () => {
           "aria-live": "polite",
           "data-testid": "minigame-result"
         }, [
-          b[72] || (b[72] = f("p", null, "叙事挑战结算", -1)),
-          f("h3", null, $(_i(T.value.outcome)), 1),
-          f("p", null, $(T.value.outcome === "perfect" ? "你保住了此刻的主动权，完整奖励已写入角色成长记录。" : T.value.outcome === "assisted" ? "提示协助你完成了介入，低阶奖励已写入成长记录。" : T.value.outcome === "setback" ? "你的判断留下了代价；主线仍可继续，后果已写入存档。" : "你选择暂缓介入；主线继续，跳过记录已写入存档。"), 1),
-          f("small", null, "评分 " + $(T.value.score) + " · " + $(T.value.assisted ? "已使用辅助" : "未使用辅助"), 1),
-          f("button", {
+          h[72] || (h[72] = p("p", null, "叙事挑战结算", -1)),
+          p("h3", null, $(_i(T.value.outcome)), 1),
+          p("p", null, $(T.value.outcome === "perfect" ? "你保住了此刻的主动权，完整奖励已写入角色成长记录。" : T.value.outcome === "assisted" ? "提示协助你完成了介入，低阶奖励已写入成长记录。" : T.value.outcome === "setback" ? "你的判断留下了代价；主线仍可继续，后果已写入存档。" : "你选择暂缓介入；主线继续，跳过记录已写入存档。"), 1),
+          p("small", null, "评分 " + $(T.value.score) + " · " + $(T.value.assisted ? "已使用辅助" : "未使用辅助"), 1),
+          p("button", {
             ref_key: "minigameResultButton",
-            ref: k,
+            ref: x,
             type: "button",
             onClick: Ni
           }, "确认并继续", 512)
         ], 10, hw)) : ge("", !0),
-        g.value ? (z(), U("div", bw, [
+        g.value ? (U(), F("div", bw, [
           zt(t3, {
             gameplay: M(e).gameplay,
             save: M(e).save,
@@ -16267,7 +16267,7 @@ const Qy = /* @__PURE__ */ n0("albina-game", () => {
             onSelectWorldbookPreset: M(e).selectWorldbookPreset
           }, null, 8, ["gameplay", "save", "effective-values", "interaction-error", "reduced-motion", "onEquip", "onWearOutfit", "onSelectProfession", "onSelectWorldbookPreset"])
         ])) : ge("", !0),
-        f("article", {
+        p("article", {
           class: "dialogue-box",
           "data-testid": "dialogue-box",
           "data-typing": M(e).typewriterState,
@@ -16275,17 +16275,17 @@ const Qy = /* @__PURE__ */ n0("albina-game", () => {
           "data-scene-tone": M(e).scene.tone,
           onClick: Cn
         }, [
-          f("h2", {
+          p("h2", {
             "data-narration": M(e).scene.speaker ? "false" : "true"
           }, $(M(e).scene.speaker || "旁白"), 9, vw),
-          M(e).typewriterState === "typing" ? (z(), U("button", {
+          M(e).typewriterState === "typing" ? (U(), F("button", {
             key: 0,
             type: "button",
             class: "dialogue-box__skip",
             "data-testid": "dialogue-skip",
             onClick: Xa(Cn, ["stop"])
           }, "跳过打字")) : ge("", !0),
-          f("div", {
+          p("div", {
             class: "dialogue-box__progress",
             role: "progressbar",
             "aria-label": "当前对话阅读进度",
@@ -16294,81 +16294,81 @@ const Qy = /* @__PURE__ */ n0("albina-game", () => {
             "aria-valuemax": "100",
             "data-dialogue-progress": Math.round(M(e).dialogueProgress * 100)
           }, [
-            f("span", {
+            p("span", {
               style: Ua({ transform: `scaleX(${M(e).dialogueProgress})` })
             }, null, 4)
           ], 8, gw),
-          f("p", null, $(M(e).visibleText), 1),
-          M(e).resultText ? (z(), U("div", {
+          p("p", null, $(M(e).visibleText), 1),
+          M(e).resultText ? (U(), F("div", {
             key: 1,
             ref_key: "resultOverlay",
-            ref: J,
+            ref: B,
             class: "result-overlay",
             "data-testid": "choice-result",
             role: "status",
             "aria-live": "polite"
           }, [
-            f("p", null, $(M(e).resultText), 1),
-            f("button", {
-              onClick: b[39] || (b[39] = Xa(
+            p("p", null, $(M(e).resultText), 1),
+            p("button", {
+              onClick: h[39] || (h[39] = Xa(
                 //@ts-ignore
                 (...w) => M(e).dismissResult && M(e).dismissResult(...w),
                 ["stop"]
               ))
             }, "继续")
-          ], 512)) : (z(), U("div", _w, [
-            M(e).choices.length ? (z(), U("p", yw, "你的选择将决定走向")) : ge("", !0),
-            (z(!0), U(me, null, Ee(M(e).choices, (w) => (z(), U("button", {
+          ], 512)) : (U(), F("div", _w, [
+            M(e).choices.length ? (U(), F("p", yw, "你的选择将决定走向")) : ge("", !0),
+            (U(!0), F(me, null, Ee(M(e).choices, (w) => (U(), F("button", {
               key: w.id,
               "data-choice-id": w.id,
-              onClick: Xa((pe) => Io(w.id, pe), ["stop"])
+              onClick: Xa((fe) => Io(w.id, fe), ["stop"])
             }, $(w.text), 9, ww))), 128)),
-            M(e).scene.ending ? (z(), U("p", {
+            M(e).scene.ending ? (U(), F("p", {
               key: 1,
               class: "ending-mark",
               "data-ending-route": M(e).scene.ending.route,
               "data-ending-kind": M(e).scene.ending.kind
             }, $(M(e).scene.ending.route) + " · " + $(M(e).scene.ending.kind) + " END", 9, kw)) : ge("", !0)
           ])),
-          !M(e).resultText && M(e).choices.length === 0 && M(e).typewriterState === "idle" ? (z(), U("span", Iw, "▼")) : ge("", !0)
+          !M(e).resultText && M(e).choices.length === 0 && M(e).typewriterState === "idle" ? (U(), F("span", Iw, "▼")) : ge("", !0)
         ], 8, mw),
-        f("details", Aw, [
-          b[73] || (b[73] = f("summary", null, "存档导入 / 导出", -1)),
-          f("div", xw, [
-            f("div", Tw, [
-              f("button", { onClick: _ }, "导出当前存档"),
-              f("button", {
+        p("details", Aw, [
+          h[73] || (h[73] = p("summary", null, "存档导入 / 导出", -1)),
+          p("div", xw, [
+            p("div", Tw, [
+              p("button", { onClick: _ }, "导出当前存档"),
+              p("button", {
                 type: "button",
                 class: "save-tools__copy",
-                onClick: x,
+                onClick: A,
                 disabled: !l.value,
-                "data-copied": p.value ? "true" : "false"
-              }, $(p.value ? "已复制" : "复制"), 9, Sw)
+                "data-copied": f.value ? "true" : "false"
+              }, $(f.value ? "已复制" : "复制"), 9, Sw)
             ]),
-            at(f("textarea", {
+            at(p("textarea", {
               ref_key: "exportTextarea",
               ref: u,
-              "onUpdate:modelValue": b[40] || (b[40] = (w) => l.value = w),
+              "onUpdate:modelValue": h[40] || (h[40] = (w) => l.value = w),
               readonly: "",
               "aria-label": "导出存档"
             }, null, 512), [
-              [fa, l.value]
+              [pa, l.value]
             ])
           ]),
-          f("div", Cw, [
-            at(f("textarea", {
-              "onUpdate:modelValue": b[41] || (b[41] = (w) => d.value = w),
+          p("div", Cw, [
+            at(p("textarea", {
+              "onUpdate:modelValue": h[41] || (h[41] = (w) => d.value = w),
               "aria-label": "导入存档",
               placeholder: "粘贴 SaveV2 JSON",
-              "data-import-state": D.value
+              "data-import-state": N.value
             }, null, 8, Pw), [
-              [fa, d.value]
+              [pa, d.value]
             ]),
-            H.value ? (z(), U("p", Rw, $(H.value), 1)) : ge("", !0),
-            y.value ? (z(), U("p", Vw, "已导入")) : ge("", !0),
-            f("button", {
-              onClick: j,
-              disabled: D.value !== "valid"
+            J.value ? (U(), F("p", Rw, $(J.value), 1)) : ge("", !0),
+            y.value ? (U(), F("p", Vw, "已导入")) : ge("", !0),
+            p("button", {
+              onClick: z,
+              disabled: N.value !== "valid"
             }, "导入", 8, Ew)
           ])
         ])
@@ -16393,52 +16393,95 @@ function tu(t = {}) {
   let i = "loading", o = !1, n, r, s;
   const c = t.sourceUrl ?? import.meta.url, d = t.mount ?? Mw, l = a.createElement("button");
   l.type = "button", l.dataset.albinaLauncher = "v2", l.setAttribute("aria-live", "polite"), Object.assign(l.style, { position: "fixed", right: "18px", bottom: "18px", zIndex: "2147483646" });
-  const u = (k, Z) => {
-    i = k, l.dataset.albinaState = k, l.disabled = k === "loading", l.textContent = Z ?? (k === "loading" ? "Albina frontend loading..." : k === "error" ? "Albina frontend failed to load" : k === "open" ? "Albina frontend open" : "Open Albina frontend"), l.title = Z ?? "";
-  }, p = () => {
+  const u = (P, R) => {
+    i = P, l.dataset.albinaState = P, l.disabled = P === "loading", l.textContent = R ?? (P === "loading" ? "Albina frontend loading..." : P === "error" ? "Albina frontend failed to load" : P === "open" ? "Albina frontend open" : "Open Albina frontend"), l.title = R ?? "";
+  }, f = () => {
     r?.unmount(), r = void 0, n?.remove(), n = void 0, o || u("closed");
-  }, h = () => {
-    if (!(o || i === "loading" || i === "error" || n?.isConnected))
-      try {
-        n = a.createElement("section"), n.dataset.albinaShell = "v2", Object.assign(n.style, { position: "fixed", inset: "0", zIndex: "2147483647", background: "#020308" });
-        const k = a.createElement("button");
-        k.type = "button", k.textContent = "关闭", k.dataset.albinaClose = "v2", Object.assign(k.style, { position: "absolute", right: "12px", top: "12px", zIndex: "4" });
-        const Z = a.createElement("div");
-        Z.id = "albina-v2-root", n.append(Z, k), a.body.append(n), k.addEventListener("click", p, { once: !0 }), r = d(Z), u("open");
-      } catch (k) {
-        r?.unmount(), r = void 0, n?.remove(), n = void 0;
-        const Z = k instanceof Error ? k.message : String(k);
-        u("error", `Albina frontend startup failed: ${Z}`), console.error("[Albina] application mount failed.", k);
-      }
+  }, b = (P) => {
+    const R = window;
+    for (const j of ["TavernHelper", "eventOn", "eventEmit", "eventOnce", "eventOff", "tavern_events", "getScriptId", "getIframeName", "triggerSlash", "replaceScriptButtons", "getButtonEvent"]) {
+      const Q = R[j];
+      if (Q !== void 0)
+        try {
+          P[j] = Q;
+        } catch {
+        }
+    }
   }, y = () => {
-    !o && i === "loading" && u("ready");
+    if (!(o || !n?.contentDocument?.body))
+      try {
+        const P = n.contentDocument, R = P.createElement("div");
+        R.id = "albina-v2-root", P.body.append(R);
+        const j = P.createElement("style");
+        j.textContent = "html,body{margin:0;width:100%;height:100%;overflow:hidden;background:#020308}#albina-v2-root{width:100%;height:100%}", P.head.append(j);
+        const Q = a.querySelector("link[data-albina-style]")?.getAttribute("href");
+        if (Q) {
+          const B = P.createElement("link");
+          B.rel = "stylesheet", B.href = Q, P.head.append(B);
+        }
+        n.contentWindow && b(n.contentWindow), r = d(R), u("open");
+      } catch (P) {
+        r?.unmount(), r = void 0, n?.remove(), n = void 0;
+        const R = P instanceof Error ? P.message : String(P);
+        u("error", `Albina frontend startup failed: ${R}`), console.error("[Albina] application mount failed.", P);
+      }
   }, v = () => {
+    if (!(o || i === "error")) {
+      if (n?.isConnected) {
+        f();
+        return;
+      }
+      try {
+        n = a.createElement("iframe"), n.title = "Albina frontend", n.dataset.albinaShell = "v2", Object.assign(n.style, {
+          position: "fixed",
+          inset: "0",
+          width: "100vw",
+          height: "100dvh",
+          zIndex: "2147483647",
+          border: "none",
+          background: "#020308"
+        }), n.addEventListener("load", y, { once: !0 }), a.body.append(n), n.contentDocument?.body && y();
+      } catch (P) {
+        r?.unmount(), r = void 0, n?.remove(), n = void 0;
+        const R = P instanceof Error ? P.message : String(P);
+        u("error", `Albina frontend startup failed: ${R}`), console.error("[Albina] application mount failed.", P);
+      }
+    }
+  }, g = () => {
+    !o && i === "loading" && u("ready");
+  }, k = () => {
     o || u("error", "Albina stylesheet failed to load. Check the CDN or network.");
-  }, g = [], I = (k, Z, P) => {
-    k.addEventListener(Z, P), g.push([k, Z, P]);
+  }, I = [], S = (P, R, j) => {
+    P.addEventListener(R, j), I.push([P, R, j]);
+  }, T = () => {
+    if (i === "open" && n?.isConnected) {
+      f();
+      return;
+    }
+    v();
   };
-  let A;
-  const S = () => {
-    o || (o = !0, p(), g.splice(0).forEach(([k, Z, P]) => k.removeEventListener(Z, P)), l.removeEventListener("click", h), l.remove(), s?.removeEventListener("load", y), s?.removeEventListener("error", v), s?.remove(), s = void 0, e.__ALBINA_INSTALLATION__ === A && delete e.__ALBINA_INSTALLATION__);
+  let x;
+  const D = () => {
+    o || (o = !0, f(), I.splice(0).forEach(([P, R, j]) => P.removeEventListener(R, j)), l.removeEventListener("click", T), l.remove(), s?.removeEventListener("load", g), s?.removeEventListener("error", k), s?.remove(), s = void 0, e.__ALBINA_INSTALLATION__ === x && delete e.__ALBINA_INSTALLATION__);
   };
-  A = {
+  x = {
     document: a,
     launcher: l,
     get state() {
       return i;
     },
-    open: h,
-    close: p,
-    uninstall: S
-  }, e.__ALBINA_INSTALLATION__ = A, l.addEventListener("click", h), u("loading"), a.body.append(l), c.endsWith("/albina-source.js") && !a.querySelector("link[data-albina-style]") ? (s = a.createElement("link"), s.rel = "stylesheet", s.dataset.albinaStyle = "v2", s.href = new URL(
+    open: v,
+    close: f,
+    uninstall: D
+  }, e.__ALBINA_INSTALLATION__ = x, l.addEventListener("click", T), u("loading"), a.body.append(l), c.endsWith("/albina-source.js") && !a.querySelector("link[data-albina-style]") ? (s = a.createElement("link"), s.rel = "stylesheet", s.dataset.albinaStyle = "v2", s.href = new URL(
     /* @vite-ignore */
     "./albina-source.css",
     c
-  ).href, s.addEventListener("load", y, { once: !0 }), s.addEventListener("error", v, { once: !0 }), a.head.append(s)) : u("ready");
-  const T = (k) => {
-    oh(k) || S();
+  ).href, s.addEventListener("load", g, { once: !0 }), s.addEventListener("error", k, { once: !0 }), a.head.append(s)) : u("ready"), v();
+  const V = (P) => {
+    oh(P) || D();
   };
-  return I(window, "albina:unmount", T), I($w(window, e), "pagehide", T), e !== window && I(e, "albina:unmount", T), A;
+  return S(window, "albina:unmount", V), S($w(window, e), "pagehide", V), e !== window && S(e, "albina:unmount", V), x;
 }
 function zw() {
   if (typeof window > "u") return;
