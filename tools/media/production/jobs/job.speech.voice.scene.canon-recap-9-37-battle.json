@@ -1,0 +1,15 @@
+{
+  "kind": "speech",
+  "provider": "pie",
+  "model": "speech-2.8-hd",
+  "promptVersion": "albina-speech-v1",
+  "input": "【正史中文意译·9-37 战斗升级】Callisto 加入战斗后，与 Albina 一同逐步压制 Limbus Company 一行。该节最后，Callisto 以骨肉尖桩制住除 Alyssa 外的众人，Alyssa 则将 Ardor Blossom Star 调至最高同调并发动反击。9-37 到此结束；Fascia 被毁、Albina 与 Callisto 死亡都不属于这一节，而发生在后续 9-43《Hatching》。",
+  "voice": "alloy",
+  "output": "D:\\创作\\albina-v2-complete\\staging\\media\\audio\\voice\\scene\\canon_recap_9_37_battle.mp3",
+  "validation": {
+    "minDurationSeconds": 0.2,
+    "maxDurationSeconds": 60,
+    "minLoudnessDbfs": -30,
+    "maxLoudnessDbfs": -6
+  }
+}

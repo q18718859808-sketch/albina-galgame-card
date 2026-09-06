@@ -1,11 +1,19 @@
 {
-  "version": 1,
-  "provider": "Pie only",
-  "models": {
-    "image": "gpt-image-2",
-    "speech": "speech-2.8-hd",
-    "video": "seedance-1.5-pro",
-    "music": "music-2.6"
+  "version": 2,
+  "providerPolicy": {
+    "selected": {
+      "image": "wisart-openai-compatible",
+      "speech": "pie"
+    },
+    "candidates": {
+      "image": []
+    },
+    "fallback": false
+  },
+  "musicPolicy": {
+    "mode": "official-soundtrack",
+    "generation": false,
+    "redistributionRequiresVerifiedLicense": true
   },
   "freeze": {
     "version": 1,
@@ -52,2125 +60,111 @@
       "环指代理人": "fable",
       "金色幻影": "shimmer"
     },
-    "cueSheet": [
-      "main_menu",
-      "title_theme",
-      "backstreets_rain",
-      "between_two_worlds",
-      "boss_kromer",
-      "opening_rain",
-      "white_canvas",
-      "golden_bough",
-      "ring_conspiracy",
-      "lce_lab",
-      "limbus_bus",
-      "mirror_corridor",
-      "nest_station",
-      "outskirts_dawn",
-      "rain_room",
-      "ring_atelier",
-      "spider_gallery",
-      "city_rooftop",
-      "trust_threshold",
-      "art_resonance",
-      "surgery_of_memory",
-      "rebuild_awakening",
-      "ending_gate",
-      "op",
-      "ed_white_canvas",
-      "ed_golden_bough",
-      "ed_ring_conspiracy"
-    ]
+    "cueSheet": []
   },
   "jobs": [
     {
-      "id": "job.music.art_resonance.instrumental",
-      "kind": "music",
-      "prompt": "Albina visual novel cue art resonance, instrumental, instrumental dark chamber-electronic score, coherent motif, production ready, no spoken word.",
-      "durationSeconds": 90,
-      "output": "D:\\创作\\albina-v2-complete\\staging\\media\\music\\art_resonance\\instrumental.mp3",
-      "validation": {
-        "minDurationSeconds": 5,
-        "maxDurationSeconds": 300,
-        "minLoudnessDbfs": -30,
-        "maxLoudnessDbfs": -6
-      }
-    },
-    {
-      "id": "job.music.art_resonance.loop",
-      "kind": "music",
-      "prompt": "Albina visual novel cue art resonance, loop, instrumental dark chamber-electronic score, coherent motif, production ready, no spoken word.",
-      "durationSeconds": 60,
-      "output": "D:\\创作\\albina-v2-complete\\staging\\media\\music\\art_resonance\\loop.mp3",
-      "validation": {
-        "minDurationSeconds": 5,
-        "maxDurationSeconds": 300,
-        "minLoudnessDbfs": -30,
-        "maxLoudnessDbfs": -6
-      }
-    },
-    {
-      "id": "job.music.art_resonance.master",
-      "kind": "music",
-      "prompt": "Albina visual novel cue art resonance, master, instrumental dark chamber-electronic score, coherent motif, production ready, no spoken word.",
-      "durationSeconds": 90,
-      "output": "D:\\创作\\albina-v2-complete\\staging\\media\\music\\art_resonance\\master.mp3",
-      "validation": {
-        "minDurationSeconds": 5,
-        "maxDurationSeconds": 300,
-        "minLoudnessDbfs": -30,
-        "maxLoudnessDbfs": -6
-      }
-    },
-    {
-      "id": "job.music.backstreets_rain.instrumental",
-      "kind": "music",
-      "prompt": "Albina visual novel cue backstreets rain, instrumental, instrumental dark chamber-electronic score, coherent motif, production ready, no spoken word.",
-      "durationSeconds": 90,
-      "output": "D:\\创作\\albina-v2-complete\\staging\\media\\music\\backstreets_rain\\instrumental.mp3",
-      "validation": {
-        "minDurationSeconds": 5,
-        "maxDurationSeconds": 300,
-        "minLoudnessDbfs": -30,
-        "maxLoudnessDbfs": -6
-      }
-    },
-    {
-      "id": "job.music.backstreets_rain.loop",
-      "kind": "music",
-      "prompt": "Albina visual novel cue backstreets rain, loop, instrumental dark chamber-electronic score, coherent motif, production ready, no spoken word.",
-      "durationSeconds": 60,
-      "output": "D:\\创作\\albina-v2-complete\\staging\\media\\music\\backstreets_rain\\loop.mp3",
-      "validation": {
-        "minDurationSeconds": 5,
-        "maxDurationSeconds": 300,
-        "minLoudnessDbfs": -30,
-        "maxLoudnessDbfs": -6
-      }
-    },
-    {
-      "id": "job.music.backstreets_rain.master",
-      "kind": "music",
-      "prompt": "Albina visual novel cue backstreets rain, master, instrumental dark chamber-electronic score, coherent motif, production ready, no spoken word.",
-      "durationSeconds": 90,
-      "output": "D:\\创作\\albina-v2-complete\\staging\\media\\music\\backstreets_rain\\master.mp3",
-      "validation": {
-        "minDurationSeconds": 5,
-        "maxDurationSeconds": 300,
-        "minLoudnessDbfs": -30,
-        "maxLoudnessDbfs": -6
-      }
-    },
-    {
-      "id": "job.music.between_two_worlds.instrumental",
-      "kind": "music",
-      "prompt": "Albina visual novel cue between two worlds, instrumental, instrumental dark chamber-electronic score, coherent motif, production ready, no spoken word.",
-      "durationSeconds": 90,
-      "output": "D:\\创作\\albina-v2-complete\\staging\\media\\music\\between_two_worlds\\instrumental.mp3",
-      "validation": {
-        "minDurationSeconds": 5,
-        "maxDurationSeconds": 300,
-        "minLoudnessDbfs": -30,
-        "maxLoudnessDbfs": -6
-      }
-    },
-    {
-      "id": "job.music.between_two_worlds.loop",
-      "kind": "music",
-      "prompt": "Albina visual novel cue between two worlds, loop, instrumental dark chamber-electronic score, coherent motif, production ready, no spoken word.",
-      "durationSeconds": 60,
-      "output": "D:\\创作\\albina-v2-complete\\staging\\media\\music\\between_two_worlds\\loop.mp3",
-      "validation": {
-        "minDurationSeconds": 5,
-        "maxDurationSeconds": 300,
-        "minLoudnessDbfs": -30,
-        "maxLoudnessDbfs": -6
-      }
-    },
-    {
-      "id": "job.music.between_two_worlds.master",
-      "kind": "music",
-      "prompt": "Albina visual novel cue between two worlds, master, instrumental dark chamber-electronic score, coherent motif, production ready, no spoken word.",
-      "durationSeconds": 90,
-      "output": "D:\\创作\\albina-v2-complete\\staging\\media\\music\\between_two_worlds\\master.mp3",
-      "validation": {
-        "minDurationSeconds": 5,
-        "maxDurationSeconds": 300,
-        "minLoudnessDbfs": -30,
-        "maxLoudnessDbfs": -6
-      }
-    },
-    {
-      "id": "job.music.boss_kromer.instrumental",
-      "kind": "music",
-      "prompt": "Albina visual novel cue boss kromer, instrumental, instrumental dark chamber-electronic score, coherent motif, production ready, no spoken word.",
-      "durationSeconds": 90,
-      "output": "D:\\创作\\albina-v2-complete\\staging\\media\\music\\boss_kromer\\instrumental.mp3",
-      "validation": {
-        "minDurationSeconds": 5,
-        "maxDurationSeconds": 300,
-        "minLoudnessDbfs": -30,
-        "maxLoudnessDbfs": -6
-      }
-    },
-    {
-      "id": "job.music.boss_kromer.loop",
-      "kind": "music",
-      "prompt": "Albina visual novel cue boss kromer, loop, instrumental dark chamber-electronic score, coherent motif, production ready, no spoken word.",
-      "durationSeconds": 60,
-      "output": "D:\\创作\\albina-v2-complete\\staging\\media\\music\\boss_kromer\\loop.mp3",
-      "validation": {
-        "minDurationSeconds": 5,
-        "maxDurationSeconds": 300,
-        "minLoudnessDbfs": -30,
-        "maxLoudnessDbfs": -6
-      }
-    },
-    {
-      "id": "job.music.boss_kromer.master",
-      "kind": "music",
-      "prompt": "Albina visual novel cue boss kromer, master, instrumental dark chamber-electronic score, coherent motif, production ready, no spoken word.",
-      "durationSeconds": 90,
-      "output": "D:\\创作\\albina-v2-complete\\staging\\media\\music\\boss_kromer\\master.mp3",
-      "validation": {
-        "minDurationSeconds": 5,
-        "maxDurationSeconds": 300,
-        "minLoudnessDbfs": -30,
-        "maxLoudnessDbfs": -6
-      }
-    },
-    {
-      "id": "job.music.city_rooftop.instrumental",
-      "kind": "music",
-      "prompt": "Albina visual novel cue city rooftop, instrumental, instrumental dark chamber-electronic score, coherent motif, production ready, no spoken word.",
-      "durationSeconds": 90,
-      "output": "D:\\创作\\albina-v2-complete\\staging\\media\\music\\city_rooftop\\instrumental.mp3",
-      "validation": {
-        "minDurationSeconds": 5,
-        "maxDurationSeconds": 300,
-        "minLoudnessDbfs": -30,
-        "maxLoudnessDbfs": -6
-      }
-    },
-    {
-      "id": "job.music.city_rooftop.loop",
-      "kind": "music",
-      "prompt": "Albina visual novel cue city rooftop, loop, instrumental dark chamber-electronic score, coherent motif, production ready, no spoken word.",
-      "durationSeconds": 60,
-      "output": "D:\\创作\\albina-v2-complete\\staging\\media\\music\\city_rooftop\\loop.mp3",
-      "validation": {
-        "minDurationSeconds": 5,
-        "maxDurationSeconds": 300,
-        "minLoudnessDbfs": -30,
-        "maxLoudnessDbfs": -6
-      }
-    },
-    {
-      "id": "job.music.city_rooftop.master",
-      "kind": "music",
-      "prompt": "Albina visual novel cue city rooftop, master, instrumental dark chamber-electronic score, coherent motif, production ready, no spoken word.",
-      "durationSeconds": 90,
-      "output": "D:\\创作\\albina-v2-complete\\staging\\media\\music\\city_rooftop\\master.mp3",
-      "validation": {
-        "minDurationSeconds": 5,
-        "maxDurationSeconds": 300,
-        "minLoudnessDbfs": -30,
-        "maxLoudnessDbfs": -6
-      }
-    },
-    {
-      "id": "job.music.ed_golden_bough.instrumental",
-      "kind": "music",
-      "prompt": "Albina visual novel cue ed golden bough, instrumental, instrumental dark chamber-electronic score, coherent motif, production ready, no spoken word.",
-      "durationSeconds": 90,
-      "output": "D:\\创作\\albina-v2-complete\\staging\\media\\music\\ed_golden_bough\\instrumental.mp3",
-      "validation": {
-        "minDurationSeconds": 5,
-        "maxDurationSeconds": 300,
-        "minLoudnessDbfs": -30,
-        "maxLoudnessDbfs": -6
-      }
-    },
-    {
-      "id": "job.music.ed_golden_bough.loop",
-      "kind": "music",
-      "prompt": "Albina visual novel cue ed golden bough, loop, instrumental dark chamber-electronic score, coherent motif, production ready, no spoken word.",
-      "durationSeconds": 60,
-      "output": "D:\\创作\\albina-v2-complete\\staging\\media\\music\\ed_golden_bough\\loop.mp3",
-      "validation": {
-        "minDurationSeconds": 5,
-        "maxDurationSeconds": 300,
-        "minLoudnessDbfs": -30,
-        "maxLoudnessDbfs": -6
-      }
-    },
-    {
-      "id": "job.music.ed_golden_bough.master",
-      "kind": "music",
-      "prompt": "Albina visual novel cue ed golden bough, master, instrumental dark chamber-electronic score, coherent motif, production ready, no spoken word.",
-      "durationSeconds": 90,
-      "output": "D:\\创作\\albina-v2-complete\\staging\\media\\music\\ed_golden_bough\\master.mp3",
-      "validation": {
-        "minDurationSeconds": 5,
-        "maxDurationSeconds": 300,
-        "minLoudnessDbfs": -30,
-        "maxLoudnessDbfs": -6
-      }
-    },
-    {
-      "id": "job.music.ed_ring_conspiracy.instrumental",
-      "kind": "music",
-      "prompt": "Albina visual novel cue ed ring conspiracy, instrumental, instrumental dark chamber-electronic score, coherent motif, production ready, no spoken word.",
-      "durationSeconds": 90,
-      "output": "D:\\创作\\albina-v2-complete\\staging\\media\\music\\ed_ring_conspiracy\\instrumental.mp3",
-      "validation": {
-        "minDurationSeconds": 5,
-        "maxDurationSeconds": 300,
-        "minLoudnessDbfs": -30,
-        "maxLoudnessDbfs": -6
-      }
-    },
-    {
-      "id": "job.music.ed_ring_conspiracy.loop",
-      "kind": "music",
-      "prompt": "Albina visual novel cue ed ring conspiracy, loop, instrumental dark chamber-electronic score, coherent motif, production ready, no spoken word.",
-      "durationSeconds": 60,
-      "output": "D:\\创作\\albina-v2-complete\\staging\\media\\music\\ed_ring_conspiracy\\loop.mp3",
-      "validation": {
-        "minDurationSeconds": 5,
-        "maxDurationSeconds": 300,
-        "minLoudnessDbfs": -30,
-        "maxLoudnessDbfs": -6
-      }
-    },
-    {
-      "id": "job.music.ed_ring_conspiracy.master",
-      "kind": "music",
-      "prompt": "Albina visual novel cue ed ring conspiracy, master, instrumental dark chamber-electronic score, coherent motif, production ready, no spoken word.",
-      "durationSeconds": 90,
-      "output": "D:\\创作\\albina-v2-complete\\staging\\media\\music\\ed_ring_conspiracy\\master.mp3",
-      "validation": {
-        "minDurationSeconds": 5,
-        "maxDurationSeconds": 300,
-        "minLoudnessDbfs": -30,
-        "maxLoudnessDbfs": -6
-      }
-    },
-    {
-      "id": "job.music.ed_white_canvas.instrumental",
-      "kind": "music",
-      "prompt": "Albina visual novel cue ed white canvas, instrumental, instrumental dark chamber-electronic score, coherent motif, production ready, no spoken word.",
-      "durationSeconds": 90,
-      "output": "D:\\创作\\albina-v2-complete\\staging\\media\\music\\ed_white_canvas\\instrumental.mp3",
-      "validation": {
-        "minDurationSeconds": 5,
-        "maxDurationSeconds": 300,
-        "minLoudnessDbfs": -30,
-        "maxLoudnessDbfs": -6
-      }
-    },
-    {
-      "id": "job.music.ed_white_canvas.loop",
-      "kind": "music",
-      "prompt": "Albina visual novel cue ed white canvas, loop, instrumental dark chamber-electronic score, coherent motif, production ready, no spoken word.",
-      "durationSeconds": 60,
-      "output": "D:\\创作\\albina-v2-complete\\staging\\media\\music\\ed_white_canvas\\loop.mp3",
-      "validation": {
-        "minDurationSeconds": 5,
-        "maxDurationSeconds": 300,
-        "minLoudnessDbfs": -30,
-        "maxLoudnessDbfs": -6
-      }
-    },
-    {
-      "id": "job.music.ed_white_canvas.master",
-      "kind": "music",
-      "prompt": "Albina visual novel cue ed white canvas, master, instrumental dark chamber-electronic score, coherent motif, production ready, no spoken word.",
-      "durationSeconds": 90,
-      "output": "D:\\创作\\albina-v2-complete\\staging\\media\\music\\ed_white_canvas\\master.mp3",
-      "validation": {
-        "minDurationSeconds": 5,
-        "maxDurationSeconds": 300,
-        "minLoudnessDbfs": -30,
-        "maxLoudnessDbfs": -6
-      }
-    },
-    {
-      "id": "job.music.ending_gate.instrumental",
-      "kind": "music",
-      "prompt": "Albina visual novel cue ending gate, instrumental, instrumental dark chamber-electronic score, coherent motif, production ready, no spoken word.",
-      "durationSeconds": 90,
-      "output": "D:\\创作\\albina-v2-complete\\staging\\media\\music\\ending_gate\\instrumental.mp3",
-      "validation": {
-        "minDurationSeconds": 5,
-        "maxDurationSeconds": 300,
-        "minLoudnessDbfs": -30,
-        "maxLoudnessDbfs": -6
-      }
-    },
-    {
-      "id": "job.music.ending_gate.loop",
-      "kind": "music",
-      "prompt": "Albina visual novel cue ending gate, loop, instrumental dark chamber-electronic score, coherent motif, production ready, no spoken word.",
-      "durationSeconds": 60,
-      "output": "D:\\创作\\albina-v2-complete\\staging\\media\\music\\ending_gate\\loop.mp3",
-      "validation": {
-        "minDurationSeconds": 5,
-        "maxDurationSeconds": 300,
-        "minLoudnessDbfs": -30,
-        "maxLoudnessDbfs": -6
-      }
-    },
-    {
-      "id": "job.music.ending_gate.master",
-      "kind": "music",
-      "prompt": "Albina visual novel cue ending gate, master, instrumental dark chamber-electronic score, coherent motif, production ready, no spoken word.",
-      "durationSeconds": 90,
-      "output": "D:\\创作\\albina-v2-complete\\staging\\media\\music\\ending_gate\\master.mp3",
-      "validation": {
-        "minDurationSeconds": 5,
-        "maxDurationSeconds": 300,
-        "minLoudnessDbfs": -30,
-        "maxLoudnessDbfs": -6
-      }
-    },
-    {
-      "id": "job.music.golden_bough.instrumental",
-      "kind": "music",
-      "prompt": "Albina visual novel cue golden bough, instrumental, instrumental dark chamber-electronic score, coherent motif, production ready, no spoken word.",
-      "durationSeconds": 90,
-      "output": "D:\\创作\\albina-v2-complete\\staging\\media\\music\\golden_bough\\instrumental.mp3",
-      "validation": {
-        "minDurationSeconds": 5,
-        "maxDurationSeconds": 300,
-        "minLoudnessDbfs": -30,
-        "maxLoudnessDbfs": -6
-      }
-    },
-    {
-      "id": "job.music.golden_bough.loop",
-      "kind": "music",
-      "prompt": "Albina visual novel cue golden bough, loop, instrumental dark chamber-electronic score, coherent motif, production ready, no spoken word.",
-      "durationSeconds": 60,
-      "output": "D:\\创作\\albina-v2-complete\\staging\\media\\music\\golden_bough\\loop.mp3",
-      "validation": {
-        "minDurationSeconds": 5,
-        "maxDurationSeconds": 300,
-        "minLoudnessDbfs": -30,
-        "maxLoudnessDbfs": -6
-      }
-    },
-    {
-      "id": "job.music.golden_bough.master",
-      "kind": "music",
-      "prompt": "Albina visual novel cue golden bough, master, instrumental dark chamber-electronic score, coherent motif, production ready, no spoken word.",
-      "durationSeconds": 90,
-      "output": "D:\\创作\\albina-v2-complete\\staging\\media\\music\\golden_bough\\master.mp3",
-      "validation": {
-        "minDurationSeconds": 5,
-        "maxDurationSeconds": 300,
-        "minLoudnessDbfs": -30,
-        "maxLoudnessDbfs": -6
-      }
-    },
-    {
-      "id": "job.music.lce_lab.instrumental",
-      "kind": "music",
-      "prompt": "Albina visual novel cue lce lab, instrumental, instrumental dark chamber-electronic score, coherent motif, production ready, no spoken word.",
-      "durationSeconds": 90,
-      "output": "D:\\创作\\albina-v2-complete\\staging\\media\\music\\lce_lab\\instrumental.mp3",
-      "validation": {
-        "minDurationSeconds": 5,
-        "maxDurationSeconds": 300,
-        "minLoudnessDbfs": -30,
-        "maxLoudnessDbfs": -6
-      }
-    },
-    {
-      "id": "job.music.lce_lab.loop",
-      "kind": "music",
-      "prompt": "Albina visual novel cue lce lab, loop, instrumental dark chamber-electronic score, coherent motif, production ready, no spoken word.",
-      "durationSeconds": 60,
-      "output": "D:\\创作\\albina-v2-complete\\staging\\media\\music\\lce_lab\\loop.mp3",
-      "validation": {
-        "minDurationSeconds": 5,
-        "maxDurationSeconds": 300,
-        "minLoudnessDbfs": -30,
-        "maxLoudnessDbfs": -6
-      }
-    },
-    {
-      "id": "job.music.lce_lab.master",
-      "kind": "music",
-      "prompt": "Albina visual novel cue lce lab, master, instrumental dark chamber-electronic score, coherent motif, production ready, no spoken word.",
-      "durationSeconds": 90,
-      "output": "D:\\创作\\albina-v2-complete\\staging\\media\\music\\lce_lab\\master.mp3",
-      "validation": {
-        "minDurationSeconds": 5,
-        "maxDurationSeconds": 300,
-        "minLoudnessDbfs": -30,
-        "maxLoudnessDbfs": -6
-      }
-    },
-    {
-      "id": "job.music.limbus_bus.instrumental",
-      "kind": "music",
-      "prompt": "Albina visual novel cue limbus bus, instrumental, instrumental dark chamber-electronic score, coherent motif, production ready, no spoken word.",
-      "durationSeconds": 90,
-      "output": "D:\\创作\\albina-v2-complete\\staging\\media\\music\\limbus_bus\\instrumental.mp3",
-      "validation": {
-        "minDurationSeconds": 5,
-        "maxDurationSeconds": 300,
-        "minLoudnessDbfs": -30,
-        "maxLoudnessDbfs": -6
-      }
-    },
-    {
-      "id": "job.music.limbus_bus.loop",
-      "kind": "music",
-      "prompt": "Albina visual novel cue limbus bus, loop, instrumental dark chamber-electronic score, coherent motif, production ready, no spoken word.",
-      "durationSeconds": 60,
-      "output": "D:\\创作\\albina-v2-complete\\staging\\media\\music\\limbus_bus\\loop.mp3",
-      "validation": {
-        "minDurationSeconds": 5,
-        "maxDurationSeconds": 300,
-        "minLoudnessDbfs": -30,
-        "maxLoudnessDbfs": -6
-      }
-    },
-    {
-      "id": "job.music.limbus_bus.master",
-      "kind": "music",
-      "prompt": "Albina visual novel cue limbus bus, master, instrumental dark chamber-electronic score, coherent motif, production ready, no spoken word.",
-      "durationSeconds": 90,
-      "output": "D:\\创作\\albina-v2-complete\\staging\\media\\music\\limbus_bus\\master.mp3",
-      "validation": {
-        "minDurationSeconds": 5,
-        "maxDurationSeconds": 300,
-        "minLoudnessDbfs": -30,
-        "maxLoudnessDbfs": -6
-      }
-    },
-    {
-      "id": "job.music.main_menu.instrumental",
-      "kind": "music",
-      "prompt": "Albina visual novel cue main menu, instrumental, instrumental dark chamber-electronic score, coherent motif, production ready, no spoken word.",
-      "durationSeconds": 90,
-      "output": "D:\\创作\\albina-v2-complete\\staging\\media\\music\\main_menu\\instrumental.mp3",
-      "validation": {
-        "minDurationSeconds": 5,
-        "maxDurationSeconds": 300,
-        "minLoudnessDbfs": -30,
-        "maxLoudnessDbfs": -6
-      }
-    },
-    {
-      "id": "job.music.main_menu.loop",
-      "kind": "music",
-      "prompt": "Albina visual novel cue main menu, loop, instrumental dark chamber-electronic score, coherent motif, production ready, no spoken word.",
-      "durationSeconds": 60,
-      "output": "D:\\创作\\albina-v2-complete\\staging\\media\\music\\main_menu\\loop.mp3",
-      "validation": {
-        "minDurationSeconds": 5,
-        "maxDurationSeconds": 300,
-        "minLoudnessDbfs": -30,
-        "maxLoudnessDbfs": -6
-      }
-    },
-    {
-      "id": "job.music.main_menu.master",
-      "kind": "music",
-      "prompt": "Albina visual novel cue main menu, master, instrumental dark chamber-electronic score, coherent motif, production ready, no spoken word.",
-      "durationSeconds": 90,
-      "output": "D:\\创作\\albina-v2-complete\\staging\\media\\music\\main_menu\\master.mp3",
-      "validation": {
-        "minDurationSeconds": 5,
-        "maxDurationSeconds": 300,
-        "minLoudnessDbfs": -30,
-        "maxLoudnessDbfs": -6
-      }
-    },
-    {
-      "id": "job.music.mirror_corridor.instrumental",
-      "kind": "music",
-      "prompt": "Albina visual novel cue mirror corridor, instrumental, instrumental dark chamber-electronic score, coherent motif, production ready, no spoken word.",
-      "durationSeconds": 90,
-      "output": "D:\\创作\\albina-v2-complete\\staging\\media\\music\\mirror_corridor\\instrumental.mp3",
-      "validation": {
-        "minDurationSeconds": 5,
-        "maxDurationSeconds": 300,
-        "minLoudnessDbfs": -30,
-        "maxLoudnessDbfs": -6
-      }
-    },
-    {
-      "id": "job.music.mirror_corridor.loop",
-      "kind": "music",
-      "prompt": "Albina visual novel cue mirror corridor, loop, instrumental dark chamber-electronic score, coherent motif, production ready, no spoken word.",
-      "durationSeconds": 60,
-      "output": "D:\\创作\\albina-v2-complete\\staging\\media\\music\\mirror_corridor\\loop.mp3",
-      "validation": {
-        "minDurationSeconds": 5,
-        "maxDurationSeconds": 300,
-        "minLoudnessDbfs": -30,
-        "maxLoudnessDbfs": -6
-      }
-    },
-    {
-      "id": "job.music.mirror_corridor.master",
-      "kind": "music",
-      "prompt": "Albina visual novel cue mirror corridor, master, instrumental dark chamber-electronic score, coherent motif, production ready, no spoken word.",
-      "durationSeconds": 90,
-      "output": "D:\\创作\\albina-v2-complete\\staging\\media\\music\\mirror_corridor\\master.mp3",
-      "validation": {
-        "minDurationSeconds": 5,
-        "maxDurationSeconds": 300,
-        "minLoudnessDbfs": -30,
-        "maxLoudnessDbfs": -6
-      }
-    },
-    {
-      "id": "job.music.nest_station.instrumental",
-      "kind": "music",
-      "prompt": "Albina visual novel cue nest station, instrumental, instrumental dark chamber-electronic score, coherent motif, production ready, no spoken word.",
-      "durationSeconds": 90,
-      "output": "D:\\创作\\albina-v2-complete\\staging\\media\\music\\nest_station\\instrumental.mp3",
-      "validation": {
-        "minDurationSeconds": 5,
-        "maxDurationSeconds": 300,
-        "minLoudnessDbfs": -30,
-        "maxLoudnessDbfs": -6
-      }
-    },
-    {
-      "id": "job.music.nest_station.loop",
-      "kind": "music",
-      "prompt": "Albina visual novel cue nest station, loop, instrumental dark chamber-electronic score, coherent motif, production ready, no spoken word.",
-      "durationSeconds": 60,
-      "output": "D:\\创作\\albina-v2-complete\\staging\\media\\music\\nest_station\\loop.mp3",
-      "validation": {
-        "minDurationSeconds": 5,
-        "maxDurationSeconds": 300,
-        "minLoudnessDbfs": -30,
-        "maxLoudnessDbfs": -6
-      }
-    },
-    {
-      "id": "job.music.nest_station.master",
-      "kind": "music",
-      "prompt": "Albina visual novel cue nest station, master, instrumental dark chamber-electronic score, coherent motif, production ready, no spoken word.",
-      "durationSeconds": 90,
-      "output": "D:\\创作\\albina-v2-complete\\staging\\media\\music\\nest_station\\master.mp3",
-      "validation": {
-        "minDurationSeconds": 5,
-        "maxDurationSeconds": 300,
-        "minLoudnessDbfs": -30,
-        "maxLoudnessDbfs": -6
-      }
-    },
-    {
-      "id": "job.music.op.instrumental",
-      "kind": "music",
-      "prompt": "Albina visual novel cue op, instrumental, instrumental dark chamber-electronic score, coherent motif, production ready, no spoken word.",
-      "durationSeconds": 90,
-      "output": "D:\\创作\\albina-v2-complete\\staging\\media\\music\\op\\instrumental.mp3",
-      "validation": {
-        "minDurationSeconds": 5,
-        "maxDurationSeconds": 300,
-        "minLoudnessDbfs": -30,
-        "maxLoudnessDbfs": -6
-      }
-    },
-    {
-      "id": "job.music.op.loop",
-      "kind": "music",
-      "prompt": "Albina visual novel cue op, loop, instrumental dark chamber-electronic score, coherent motif, production ready, no spoken word.",
-      "durationSeconds": 60,
-      "output": "D:\\创作\\albina-v2-complete\\staging\\media\\music\\op\\loop.mp3",
-      "validation": {
-        "minDurationSeconds": 5,
-        "maxDurationSeconds": 300,
-        "minLoudnessDbfs": -30,
-        "maxLoudnessDbfs": -6
-      }
-    },
-    {
-      "id": "job.music.op.master",
-      "kind": "music",
-      "prompt": "Albina visual novel cue op, master, instrumental dark chamber-electronic score, coherent motif, production ready, no spoken word.",
-      "durationSeconds": 90,
-      "output": "D:\\创作\\albina-v2-complete\\staging\\media\\music\\op\\master.mp3",
-      "validation": {
-        "minDurationSeconds": 5,
-        "maxDurationSeconds": 300,
-        "minLoudnessDbfs": -30,
-        "maxLoudnessDbfs": -6
-      }
-    },
-    {
-      "id": "job.music.opening_rain.instrumental",
-      "kind": "music",
-      "prompt": "Albina visual novel cue opening rain, instrumental, instrumental dark chamber-electronic score, coherent motif, production ready, no spoken word.",
-      "durationSeconds": 90,
-      "output": "D:\\创作\\albina-v2-complete\\staging\\media\\music\\opening_rain\\instrumental.mp3",
-      "validation": {
-        "minDurationSeconds": 5,
-        "maxDurationSeconds": 300,
-        "minLoudnessDbfs": -30,
-        "maxLoudnessDbfs": -6
-      }
-    },
-    {
-      "id": "job.music.opening_rain.loop",
-      "kind": "music",
-      "prompt": "Albina visual novel cue opening rain, loop, instrumental dark chamber-electronic score, coherent motif, production ready, no spoken word.",
-      "durationSeconds": 60,
-      "output": "D:\\创作\\albina-v2-complete\\staging\\media\\music\\opening_rain\\loop.mp3",
-      "validation": {
-        "minDurationSeconds": 5,
-        "maxDurationSeconds": 300,
-        "minLoudnessDbfs": -30,
-        "maxLoudnessDbfs": -6
-      }
-    },
-    {
-      "id": "job.music.opening_rain.master",
-      "kind": "music",
-      "prompt": "Albina visual novel cue opening rain, master, instrumental dark chamber-electronic score, coherent motif, production ready, no spoken word.",
-      "durationSeconds": 90,
-      "output": "D:\\创作\\albina-v2-complete\\staging\\media\\music\\opening_rain\\master.mp3",
-      "validation": {
-        "minDurationSeconds": 5,
-        "maxDurationSeconds": 300,
-        "minLoudnessDbfs": -30,
-        "maxLoudnessDbfs": -6
-      }
-    },
-    {
-      "id": "job.music.outskirts_dawn.instrumental",
-      "kind": "music",
-      "prompt": "Albina visual novel cue outskirts dawn, instrumental, instrumental dark chamber-electronic score, coherent motif, production ready, no spoken word.",
-      "durationSeconds": 90,
-      "output": "D:\\创作\\albina-v2-complete\\staging\\media\\music\\outskirts_dawn\\instrumental.mp3",
-      "validation": {
-        "minDurationSeconds": 5,
-        "maxDurationSeconds": 300,
-        "minLoudnessDbfs": -30,
-        "maxLoudnessDbfs": -6
-      }
-    },
-    {
-      "id": "job.music.outskirts_dawn.loop",
-      "kind": "music",
-      "prompt": "Albina visual novel cue outskirts dawn, loop, instrumental dark chamber-electronic score, coherent motif, production ready, no spoken word.",
-      "durationSeconds": 60,
-      "output": "D:\\创作\\albina-v2-complete\\staging\\media\\music\\outskirts_dawn\\loop.mp3",
-      "validation": {
-        "minDurationSeconds": 5,
-        "maxDurationSeconds": 300,
-        "minLoudnessDbfs": -30,
-        "maxLoudnessDbfs": -6
-      }
-    },
-    {
-      "id": "job.music.outskirts_dawn.master",
-      "kind": "music",
-      "prompt": "Albina visual novel cue outskirts dawn, master, instrumental dark chamber-electronic score, coherent motif, production ready, no spoken word.",
-      "durationSeconds": 90,
-      "output": "D:\\创作\\albina-v2-complete\\staging\\media\\music\\outskirts_dawn\\master.mp3",
-      "validation": {
-        "minDurationSeconds": 5,
-        "maxDurationSeconds": 300,
-        "minLoudnessDbfs": -30,
-        "maxLoudnessDbfs": -6
-      }
-    },
-    {
-      "id": "job.music.probe.1",
-      "kind": "music",
-      "probe": true,
-      "prompt": "Instrumental dark chamber-electronic visual novel underscore, stable form, clean ending, no vocals.",
-      "durationSeconds": 15,
-      "output": "D:\\创作\\albina-v2-complete\\staging\\media\\music\\probes\\probe-1.mp3",
-      "validation": {
-        "minDurationSeconds": 5,
-        "maxDurationSeconds": 300,
-        "minLoudnessDbfs": -30,
-        "maxLoudnessDbfs": -6
-      }
-    },
-    {
-      "id": "job.music.probe.2",
-      "kind": "music",
-      "probe": true,
-      "prompt": "Instrumental dark chamber-electronic visual novel underscore, stable form, clean ending, no vocals.",
-      "durationSeconds": 15,
-      "output": "D:\\创作\\albina-v2-complete\\staging\\media\\music\\probes\\probe-2.mp3",
-      "validation": {
-        "minDurationSeconds": 5,
-        "maxDurationSeconds": 300,
-        "minLoudnessDbfs": -30,
-        "maxLoudnessDbfs": -6
-      }
-    },
-    {
-      "id": "job.music.probe.3",
-      "kind": "music",
-      "probe": true,
-      "prompt": "Instrumental dark chamber-electronic visual novel underscore, stable form, clean ending, no vocals.",
-      "durationSeconds": 15,
-      "output": "D:\\创作\\albina-v2-complete\\staging\\media\\music\\probes\\probe-3.mp3",
-      "validation": {
-        "minDurationSeconds": 5,
-        "maxDurationSeconds": 300,
-        "minLoudnessDbfs": -30,
-        "maxLoudnessDbfs": -6
-      }
-    },
-    {
-      "id": "job.music.rain_room.instrumental",
-      "kind": "music",
-      "prompt": "Albina visual novel cue rain room, instrumental, instrumental dark chamber-electronic score, coherent motif, production ready, no spoken word.",
-      "durationSeconds": 90,
-      "output": "D:\\创作\\albina-v2-complete\\staging\\media\\music\\rain_room\\instrumental.mp3",
-      "validation": {
-        "minDurationSeconds": 5,
-        "maxDurationSeconds": 300,
-        "minLoudnessDbfs": -30,
-        "maxLoudnessDbfs": -6
-      }
-    },
-    {
-      "id": "job.music.rain_room.loop",
-      "kind": "music",
-      "prompt": "Albina visual novel cue rain room, loop, instrumental dark chamber-electronic score, coherent motif, production ready, no spoken word.",
-      "durationSeconds": 60,
-      "output": "D:\\创作\\albina-v2-complete\\staging\\media\\music\\rain_room\\loop.mp3",
-      "validation": {
-        "minDurationSeconds": 5,
-        "maxDurationSeconds": 300,
-        "minLoudnessDbfs": -30,
-        "maxLoudnessDbfs": -6
-      }
-    },
-    {
-      "id": "job.music.rain_room.master",
-      "kind": "music",
-      "prompt": "Albina visual novel cue rain room, master, instrumental dark chamber-electronic score, coherent motif, production ready, no spoken word.",
-      "durationSeconds": 90,
-      "output": "D:\\创作\\albina-v2-complete\\staging\\media\\music\\rain_room\\master.mp3",
-      "validation": {
-        "minDurationSeconds": 5,
-        "maxDurationSeconds": 300,
-        "minLoudnessDbfs": -30,
-        "maxLoudnessDbfs": -6
-      }
-    },
-    {
-      "id": "job.music.rebuild_awakening.instrumental",
-      "kind": "music",
-      "prompt": "Albina visual novel cue rebuild awakening, instrumental, instrumental dark chamber-electronic score, coherent motif, production ready, no spoken word.",
-      "durationSeconds": 90,
-      "output": "D:\\创作\\albina-v2-complete\\staging\\media\\music\\rebuild_awakening\\instrumental.mp3",
-      "validation": {
-        "minDurationSeconds": 5,
-        "maxDurationSeconds": 300,
-        "minLoudnessDbfs": -30,
-        "maxLoudnessDbfs": -6
-      }
-    },
-    {
-      "id": "job.music.rebuild_awakening.loop",
-      "kind": "music",
-      "prompt": "Albina visual novel cue rebuild awakening, loop, instrumental dark chamber-electronic score, coherent motif, production ready, no spoken word.",
-      "durationSeconds": 60,
-      "output": "D:\\创作\\albina-v2-complete\\staging\\media\\music\\rebuild_awakening\\loop.mp3",
-      "validation": {
-        "minDurationSeconds": 5,
-        "maxDurationSeconds": 300,
-        "minLoudnessDbfs": -30,
-        "maxLoudnessDbfs": -6
-      }
-    },
-    {
-      "id": "job.music.rebuild_awakening.master",
-      "kind": "music",
-      "prompt": "Albina visual novel cue rebuild awakening, master, instrumental dark chamber-electronic score, coherent motif, production ready, no spoken word.",
-      "durationSeconds": 90,
-      "output": "D:\\创作\\albina-v2-complete\\staging\\media\\music\\rebuild_awakening\\master.mp3",
-      "validation": {
-        "minDurationSeconds": 5,
-        "maxDurationSeconds": 300,
-        "minLoudnessDbfs": -30,
-        "maxLoudnessDbfs": -6
-      }
-    },
-    {
-      "id": "job.music.ring_atelier.instrumental",
-      "kind": "music",
-      "prompt": "Albina visual novel cue ring atelier, instrumental, instrumental dark chamber-electronic score, coherent motif, production ready, no spoken word.",
-      "durationSeconds": 90,
-      "output": "D:\\创作\\albina-v2-complete\\staging\\media\\music\\ring_atelier\\instrumental.mp3",
-      "validation": {
-        "minDurationSeconds": 5,
-        "maxDurationSeconds": 300,
-        "minLoudnessDbfs": -30,
-        "maxLoudnessDbfs": -6
-      }
-    },
-    {
-      "id": "job.music.ring_atelier.loop",
-      "kind": "music",
-      "prompt": "Albina visual novel cue ring atelier, loop, instrumental dark chamber-electronic score, coherent motif, production ready, no spoken word.",
-      "durationSeconds": 60,
-      "output": "D:\\创作\\albina-v2-complete\\staging\\media\\music\\ring_atelier\\loop.mp3",
-      "validation": {
-        "minDurationSeconds": 5,
-        "maxDurationSeconds": 300,
-        "minLoudnessDbfs": -30,
-        "maxLoudnessDbfs": -6
-      }
-    },
-    {
-      "id": "job.music.ring_atelier.master",
-      "kind": "music",
-      "prompt": "Albina visual novel cue ring atelier, master, instrumental dark chamber-electronic score, coherent motif, production ready, no spoken word.",
-      "durationSeconds": 90,
-      "output": "D:\\创作\\albina-v2-complete\\staging\\media\\music\\ring_atelier\\master.mp3",
-      "validation": {
-        "minDurationSeconds": 5,
-        "maxDurationSeconds": 300,
-        "minLoudnessDbfs": -30,
-        "maxLoudnessDbfs": -6
-      }
-    },
-    {
-      "id": "job.music.ring_conspiracy.instrumental",
-      "kind": "music",
-      "prompt": "Albina visual novel cue ring conspiracy, instrumental, instrumental dark chamber-electronic score, coherent motif, production ready, no spoken word.",
-      "durationSeconds": 90,
-      "output": "D:\\创作\\albina-v2-complete\\staging\\media\\music\\ring_conspiracy\\instrumental.mp3",
-      "validation": {
-        "minDurationSeconds": 5,
-        "maxDurationSeconds": 300,
-        "minLoudnessDbfs": -30,
-        "maxLoudnessDbfs": -6
-      }
-    },
-    {
-      "id": "job.music.ring_conspiracy.loop",
-      "kind": "music",
-      "prompt": "Albina visual novel cue ring conspiracy, loop, instrumental dark chamber-electronic score, coherent motif, production ready, no spoken word.",
-      "durationSeconds": 60,
-      "output": "D:\\创作\\albina-v2-complete\\staging\\media\\music\\ring_conspiracy\\loop.mp3",
-      "validation": {
-        "minDurationSeconds": 5,
-        "maxDurationSeconds": 300,
-        "minLoudnessDbfs": -30,
-        "maxLoudnessDbfs": -6
-      }
-    },
-    {
-      "id": "job.music.ring_conspiracy.master",
-      "kind": "music",
-      "prompt": "Albina visual novel cue ring conspiracy, master, instrumental dark chamber-electronic score, coherent motif, production ready, no spoken word.",
-      "durationSeconds": 90,
-      "output": "D:\\创作\\albina-v2-complete\\staging\\media\\music\\ring_conspiracy\\master.mp3",
-      "validation": {
-        "minDurationSeconds": 5,
-        "maxDurationSeconds": 300,
-        "minLoudnessDbfs": -30,
-        "maxLoudnessDbfs": -6
-      }
-    },
-    {
-      "id": "job.music.spider_gallery.instrumental",
-      "kind": "music",
-      "prompt": "Albina visual novel cue spider gallery, instrumental, instrumental dark chamber-electronic score, coherent motif, production ready, no spoken word.",
-      "durationSeconds": 90,
-      "output": "D:\\创作\\albina-v2-complete\\staging\\media\\music\\spider_gallery\\instrumental.mp3",
-      "validation": {
-        "minDurationSeconds": 5,
-        "maxDurationSeconds": 300,
-        "minLoudnessDbfs": -30,
-        "maxLoudnessDbfs": -6
-      }
-    },
-    {
-      "id": "job.music.spider_gallery.loop",
-      "kind": "music",
-      "prompt": "Albina visual novel cue spider gallery, loop, instrumental dark chamber-electronic score, coherent motif, production ready, no spoken word.",
-      "durationSeconds": 60,
-      "output": "D:\\创作\\albina-v2-complete\\staging\\media\\music\\spider_gallery\\loop.mp3",
-      "validation": {
-        "minDurationSeconds": 5,
-        "maxDurationSeconds": 300,
-        "minLoudnessDbfs": -30,
-        "maxLoudnessDbfs": -6
-      }
-    },
-    {
-      "id": "job.music.spider_gallery.master",
-      "kind": "music",
-      "prompt": "Albina visual novel cue spider gallery, master, instrumental dark chamber-electronic score, coherent motif, production ready, no spoken word.",
-      "durationSeconds": 90,
-      "output": "D:\\创作\\albina-v2-complete\\staging\\media\\music\\spider_gallery\\master.mp3",
-      "validation": {
-        "minDurationSeconds": 5,
-        "maxDurationSeconds": 300,
-        "minLoudnessDbfs": -30,
-        "maxLoudnessDbfs": -6
-      }
-    },
-    {
-      "id": "job.music.surgery_of_memory.instrumental",
-      "kind": "music",
-      "prompt": "Albina visual novel cue surgery of memory, instrumental, instrumental dark chamber-electronic score, coherent motif, production ready, no spoken word.",
-      "durationSeconds": 90,
-      "output": "D:\\创作\\albina-v2-complete\\staging\\media\\music\\surgery_of_memory\\instrumental.mp3",
-      "validation": {
-        "minDurationSeconds": 5,
-        "maxDurationSeconds": 300,
-        "minLoudnessDbfs": -30,
-        "maxLoudnessDbfs": -6
-      }
-    },
-    {
-      "id": "job.music.surgery_of_memory.loop",
-      "kind": "music",
-      "prompt": "Albina visual novel cue surgery of memory, loop, instrumental dark chamber-electronic score, coherent motif, production ready, no spoken word.",
-      "durationSeconds": 60,
-      "output": "D:\\创作\\albina-v2-complete\\staging\\media\\music\\surgery_of_memory\\loop.mp3",
-      "validation": {
-        "minDurationSeconds": 5,
-        "maxDurationSeconds": 300,
-        "minLoudnessDbfs": -30,
-        "maxLoudnessDbfs": -6
-      }
-    },
-    {
-      "id": "job.music.surgery_of_memory.master",
-      "kind": "music",
-      "prompt": "Albina visual novel cue surgery of memory, master, instrumental dark chamber-electronic score, coherent motif, production ready, no spoken word.",
-      "durationSeconds": 90,
-      "output": "D:\\创作\\albina-v2-complete\\staging\\media\\music\\surgery_of_memory\\master.mp3",
-      "validation": {
-        "minDurationSeconds": 5,
-        "maxDurationSeconds": 300,
-        "minLoudnessDbfs": -30,
-        "maxLoudnessDbfs": -6
-      }
-    },
-    {
-      "id": "job.music.title_theme.instrumental",
-      "kind": "music",
-      "prompt": "Albina visual novel cue title theme, instrumental, instrumental dark chamber-electronic score, coherent motif, production ready, no spoken word.",
-      "durationSeconds": 90,
-      "output": "D:\\创作\\albina-v2-complete\\staging\\media\\music\\title_theme\\instrumental.mp3",
-      "validation": {
-        "minDurationSeconds": 5,
-        "maxDurationSeconds": 300,
-        "minLoudnessDbfs": -30,
-        "maxLoudnessDbfs": -6
-      }
-    },
-    {
-      "id": "job.music.title_theme.loop",
-      "kind": "music",
-      "prompt": "Albina visual novel cue title theme, loop, instrumental dark chamber-electronic score, coherent motif, production ready, no spoken word.",
-      "durationSeconds": 60,
-      "output": "D:\\创作\\albina-v2-complete\\staging\\media\\music\\title_theme\\loop.mp3",
-      "validation": {
-        "minDurationSeconds": 5,
-        "maxDurationSeconds": 300,
-        "minLoudnessDbfs": -30,
-        "maxLoudnessDbfs": -6
-      }
-    },
-    {
-      "id": "job.music.title_theme.master",
-      "kind": "music",
-      "prompt": "Albina visual novel cue title theme, master, instrumental dark chamber-electronic score, coherent motif, production ready, no spoken word.",
-      "durationSeconds": 90,
-      "output": "D:\\创作\\albina-v2-complete\\staging\\media\\music\\title_theme\\master.mp3",
-      "validation": {
-        "minDurationSeconds": 5,
-        "maxDurationSeconds": 300,
-        "minLoudnessDbfs": -30,
-        "maxLoudnessDbfs": -6
-      }
-    },
-    {
-      "id": "job.music.trust_threshold.instrumental",
-      "kind": "music",
-      "prompt": "Albina visual novel cue trust threshold, instrumental, instrumental dark chamber-electronic score, coherent motif, production ready, no spoken word.",
-      "durationSeconds": 90,
-      "output": "D:\\创作\\albina-v2-complete\\staging\\media\\music\\trust_threshold\\instrumental.mp3",
-      "validation": {
-        "minDurationSeconds": 5,
-        "maxDurationSeconds": 300,
-        "minLoudnessDbfs": -30,
-        "maxLoudnessDbfs": -6
-      }
-    },
-    {
-      "id": "job.music.trust_threshold.loop",
-      "kind": "music",
-      "prompt": "Albina visual novel cue trust threshold, loop, instrumental dark chamber-electronic score, coherent motif, production ready, no spoken word.",
-      "durationSeconds": 60,
-      "output": "D:\\创作\\albina-v2-complete\\staging\\media\\music\\trust_threshold\\loop.mp3",
-      "validation": {
-        "minDurationSeconds": 5,
-        "maxDurationSeconds": 300,
-        "minLoudnessDbfs": -30,
-        "maxLoudnessDbfs": -6
-      }
-    },
-    {
-      "id": "job.music.trust_threshold.master",
-      "kind": "music",
-      "prompt": "Albina visual novel cue trust threshold, master, instrumental dark chamber-electronic score, coherent motif, production ready, no spoken word.",
-      "durationSeconds": 90,
-      "output": "D:\\创作\\albina-v2-complete\\staging\\media\\music\\trust_threshold\\master.mp3",
-      "validation": {
-        "minDurationSeconds": 5,
-        "maxDurationSeconds": 300,
-        "minLoudnessDbfs": -30,
-        "maxLoudnessDbfs": -6
-      }
-    },
-    {
-      "id": "job.music.white_canvas.instrumental",
-      "kind": "music",
-      "prompt": "Albina visual novel cue white canvas, instrumental, instrumental dark chamber-electronic score, coherent motif, production ready, no spoken word.",
-      "durationSeconds": 90,
-      "output": "D:\\创作\\albina-v2-complete\\staging\\media\\music\\white_canvas\\instrumental.mp3",
-      "validation": {
-        "minDurationSeconds": 5,
-        "maxDurationSeconds": 300,
-        "minLoudnessDbfs": -30,
-        "maxLoudnessDbfs": -6
-      }
-    },
-    {
-      "id": "job.music.white_canvas.loop",
-      "kind": "music",
-      "prompt": "Albina visual novel cue white canvas, loop, instrumental dark chamber-electronic score, coherent motif, production ready, no spoken word.",
-      "durationSeconds": 60,
-      "output": "D:\\创作\\albina-v2-complete\\staging\\media\\music\\white_canvas\\loop.mp3",
-      "validation": {
-        "minDurationSeconds": 5,
-        "maxDurationSeconds": 300,
-        "minLoudnessDbfs": -30,
-        "maxLoudnessDbfs": -6
-      }
-    },
-    {
-      "id": "job.music.white_canvas.master",
-      "kind": "music",
-      "prompt": "Albina visual novel cue white canvas, master, instrumental dark chamber-electronic score, coherent motif, production ready, no spoken word.",
-      "durationSeconds": 90,
-      "output": "D:\\创作\\albina-v2-complete\\staging\\media\\music\\white_canvas\\master.mp3",
-      "validation": {
-        "minDurationSeconds": 5,
-        "maxDurationSeconds": 300,
-        "minLoudnessDbfs": -30,
-        "maxLoudnessDbfs": -6
-      }
-    },
-    {
-      "id": "job.strip.original.albina.sprites.battle",
-      "kind": "image",
-      "prompt": "Edit the supplied canonical reference into one transparent horizontal strip of exactly eight equal square frames. Preserve identity, outfit, palette, silhouette and line style. Frames: neutral, blink, speak, smile, sad, tense, action, recovery. No text, no borders, no extra subjects.",
-      "width": 4096,
-      "height": 512,
-      "sourceImage": "D:\\创作\\albina-v2-complete\\dist\\albina-galgame-card\\assets\\original_albina_sprites\\battle.png",
-      "output": "D:\\创作\\albina-v2-complete\\staging\\media\\sprite-atlas\\original_albina_sprites\\battle_strip.png",
-      "validation": {
-        "width": 4096,
-        "height": 512,
-        "alpha": true,
-        "frameCount": 8
-      }
-    },
-    {
-      "id": "job.strip.original.albina.sprites.normal",
-      "kind": "image",
-      "prompt": "Edit the supplied canonical reference into one transparent horizontal strip of exactly eight equal square frames. Preserve identity, outfit, palette, silhouette and line style. Frames: neutral, blink, speak, smile, sad, tense, action, recovery. No text, no borders, no extra subjects.",
-      "width": 4096,
-      "height": 512,
-      "sourceImage": "D:\\创作\\albina-v2-complete\\dist\\albina-galgame-card\\assets\\original_albina_sprites\\normal.png",
-      "output": "D:\\创作\\albina-v2-complete\\staging\\media\\sprite-atlas\\original_albina_sprites\\normal_strip.png",
-      "validation": {
-        "width": 4096,
-        "height": 512,
-        "alpha": true,
-        "frameCount": 8
-      }
-    },
-    {
-      "id": "job.strip.original.albina.sprites.sad",
-      "kind": "image",
-      "prompt": "Edit the supplied canonical reference into one transparent horizontal strip of exactly eight equal square frames. Preserve identity, outfit, palette, silhouette and line style. Frames: neutral, blink, speak, smile, sad, tense, action, recovery. No text, no borders, no extra subjects.",
-      "width": 4096,
-      "height": 512,
-      "sourceImage": "D:\\创作\\albina-v2-complete\\dist\\albina-galgame-card\\assets\\original_albina_sprites\\sad.png",
-      "output": "D:\\创作\\albina-v2-complete\\staging\\media\\sprite-atlas\\original_albina_sprites\\sad_strip.png",
-      "validation": {
-        "width": 4096,
-        "height": 512,
-        "alpha": true,
-        "frameCount": 8
-      }
-    },
-    {
-      "id": "job.strip.original.albina.sprites.smile",
-      "kind": "image",
-      "prompt": "Edit the supplied canonical reference into one transparent horizontal strip of exactly eight equal square frames. Preserve identity, outfit, palette, silhouette and line style. Frames: neutral, blink, speak, smile, sad, tense, action, recovery. No text, no borders, no extra subjects.",
-      "width": 4096,
-      "height": 512,
-      "sourceImage": "D:\\创作\\albina-v2-complete\\dist\\albina-galgame-card\\assets\\original_albina_sprites\\smile.png",
-      "output": "D:\\创作\\albina-v2-complete\\staging\\media\\sprite-atlas\\original_albina_sprites\\smile_strip.png",
-      "validation": {
-        "width": 4096,
-        "height": 512,
-        "alpha": true,
-        "frameCount": 8
-      }
-    },
-    {
-      "id": "job.strip.original.cg.canto.ix.opening",
-      "kind": "image",
-      "prompt": "Edit the supplied canonical reference into one transparent horizontal strip of exactly eight equal square frames. Preserve identity, outfit, palette, silhouette and line style. Frames: neutral, blink, speak, smile, sad, tense, action, recovery. No text, no borders, no extra subjects.",
-      "width": 4096,
-      "height": 512,
-      "sourceImage": "D:\\创作\\albina-v2-complete\\dist\\albina-galgame-card\\assets\\original_cg\\canto_ix_opening.png",
-      "output": "D:\\创作\\albina-v2-complete\\staging\\media\\sprite-atlas\\original_cg\\canto_ix_opening_strip.png",
-      "validation": {
-        "width": 4096,
-        "height": 512,
-        "alpha": true,
-        "frameCount": 8
-      }
-    },
-    {
-      "id": "job.strip.original.cg.hell.gate",
-      "kind": "image",
-      "prompt": "Edit the supplied canonical reference into one transparent horizontal strip of exactly eight equal square frames. Preserve identity, outfit, palette, silhouette and line style. Frames: neutral, blink, speak, smile, sad, tense, action, recovery. No text, no borders, no extra subjects.",
-      "width": 4096,
-      "height": 512,
-      "sourceImage": "D:\\创作\\albina-v2-complete\\dist\\albina-galgame-card\\assets\\original_cg\\hell_gate.png",
-      "output": "D:\\创作\\albina-v2-complete\\staging\\media\\sprite-atlas\\original_cg\\hell_gate_strip.png",
-      "validation": {
-        "width": 4096,
-        "height": 512,
-        "alpha": true,
-        "frameCount": 8
-      }
-    },
-    {
-      "id": "job.strip.original.cg.rain.confession",
-      "kind": "image",
-      "prompt": "Edit the supplied canonical reference into one transparent horizontal strip of exactly eight equal square frames. Preserve identity, outfit, palette, silhouette and line style. Frames: neutral, blink, speak, smile, sad, tense, action, recovery. No text, no borders, no extra subjects.",
-      "width": 4096,
-      "height": 512,
-      "sourceImage": "D:\\创作\\albina-v2-complete\\dist\\albina-galgame-card\\assets\\original_cg\\rain_confession.png",
-      "output": "D:\\创作\\albina-v2-complete\\staging\\media\\sprite-atlas\\original_cg\\rain_confession_strip.png",
-      "validation": {
-        "width": 4096,
-        "height": 512,
-        "alpha": true,
-        "frameCount": 8
-      }
-    },
-    {
-      "id": "job.strip.original.cg.ring.conspiracy",
-      "kind": "image",
-      "prompt": "Edit the supplied canonical reference into one transparent horizontal strip of exactly eight equal square frames. Preserve identity, outfit, palette, silhouette and line style. Frames: neutral, blink, speak, smile, sad, tense, action, recovery. No text, no borders, no extra subjects.",
-      "width": 4096,
-      "height": 512,
-      "sourceImage": "D:\\创作\\albina-v2-complete\\dist\\albina-galgame-card\\assets\\original_cg\\ring_conspiracy.png",
-      "output": "D:\\创作\\albina-v2-complete\\staging\\media\\sprite-atlas\\original_cg\\ring_conspiracy_strip.png",
-      "validation": {
-        "width": 4096,
-        "height": 512,
-        "alpha": true,
-        "frameCount": 8
-      }
-    },
-    {
-      "id": "job.video.ed_golden_bough_rebuild",
-      "kind": "video",
-      "prompt": "Albina visual novel animated CG: ed golden bough rebuild. Use approved keyframe composition, restrained cinematic motion, preserve character identity and frozen palette, no text or logos.",
-      "durationSeconds": 8,
-      "sourceImage": "D:\\创作\\albina-v2-complete\\dist\\albina-galgame-card\\assets\\cg\\golden_bough_ending.jpg",
-      "masterOutput": "D:\\创作\\albina-v2-complete\\staging\\media\\video\\master\\ed_golden_bough_rebuild.mp4",
-      "output": "D:\\创作\\albina-v2-complete\\staging\\media\\video\\runtime\\ed_golden_bough_rebuild.mp4",
-      "desktopOutput": "D:\\创作\\albina-v2-complete\\staging\\media\\video\\desktop\\ed_golden_bough_rebuild.mp4",
-      "validation": {
-        "width": 1280,
-        "height": 720,
-        "fps": 24,
-        "durationSeconds": 8,
-        "tolerance": 1
-      },
-      "desktopValidation": {
-        "width": 1920,
-        "height": 1080,
-        "fps": 24,
-        "durationSeconds": 8,
-        "tolerance": 1
-      },
-      "masterValidation": {
-        "minFps": 12,
-        "maxFps": 60,
-        "minDurationSeconds": 7,
-        "maxDurationSeconds": 9
-      }
-    },
-    {
-      "id": "job.video.ed_ring_conspiracy",
-      "kind": "video",
-      "prompt": "Albina visual novel animated CG: ed ring conspiracy. Use approved keyframe composition, restrained cinematic motion, preserve character identity and frozen palette, no text or logos.",
-      "durationSeconds": 8,
-      "sourceImage": "D:\\创作\\albina-v2-complete\\dist\\albina-galgame-card\\assets\\cg\\ring_conspiracy_ending.jpg",
-      "masterOutput": "D:\\创作\\albina-v2-complete\\staging\\media\\video\\master\\ed_ring_conspiracy.mp4",
-      "output": "D:\\创作\\albina-v2-complete\\staging\\media\\video\\runtime\\ed_ring_conspiracy.mp4",
-      "desktopOutput": "D:\\创作\\albina-v2-complete\\staging\\media\\video\\desktop\\ed_ring_conspiracy.mp4",
-      "validation": {
-        "width": 1280,
-        "height": 720,
-        "fps": 24,
-        "durationSeconds": 8,
-        "tolerance": 1
-      },
-      "desktopValidation": {
-        "width": 1920,
-        "height": 1080,
-        "fps": 24,
-        "durationSeconds": 8,
-        "tolerance": 1
-      },
-      "masterValidation": {
-        "minFps": 12,
-        "maxFps": 60,
-        "minDurationSeconds": 7,
-        "maxDurationSeconds": 9
-      }
-    },
-    {
-      "id": "job.video.ed_white_canvas",
-      "kind": "video",
-      "prompt": "Albina visual novel animated CG: ed white canvas. Use approved keyframe composition, restrained cinematic motion, preserve character identity and frozen palette, no text or logos.",
-      "durationSeconds": 8,
-      "sourceImage": "D:\\创作\\albina-v2-complete\\dist\\albina-galgame-card\\assets\\cg\\white_canvas_ending.jpg",
-      "masterOutput": "D:\\创作\\albina-v2-complete\\staging\\media\\video\\master\\ed_white_canvas.mp4",
-      "output": "D:\\创作\\albina-v2-complete\\staging\\media\\video\\runtime\\ed_white_canvas.mp4",
-      "desktopOutput": "D:\\创作\\albina-v2-complete\\staging\\media\\video\\desktop\\ed_white_canvas.mp4",
-      "validation": {
-        "width": 1280,
-        "height": 720,
-        "fps": 24,
-        "durationSeconds": 8,
-        "tolerance": 1
-      },
-      "desktopValidation": {
-        "width": 1920,
-        "height": 1080,
-        "fps": 24,
-        "durationSeconds": 8,
-        "tolerance": 1
-      },
-      "masterValidation": {
-        "minFps": 12,
-        "maxFps": 60,
-        "minDurationSeconds": 7,
-        "maxDurationSeconds": 9
-      }
-    },
-    {
-      "id": "job.video.golden_bough_rebuild_ending_bad",
-      "kind": "video",
-      "prompt": "Albina visual novel animated CG: golden bough rebuild ending bad. Use approved keyframe composition, restrained cinematic motion, preserve character identity and frozen palette, no text or logos.",
-      "durationSeconds": 8,
-      "sourceImage": "D:\\创作\\albina-v2-complete\\dist\\albina-galgame-card\\assets\\cg\\golden_bough_ending.jpg",
-      "masterOutput": "D:\\创作\\albina-v2-complete\\staging\\media\\video\\master\\golden_bough_rebuild_ending_bad.mp4",
-      "output": "D:\\创作\\albina-v2-complete\\staging\\media\\video\\runtime\\golden_bough_rebuild_ending_bad.mp4",
-      "desktopOutput": "D:\\创作\\albina-v2-complete\\staging\\media\\video\\desktop\\golden_bough_rebuild_ending_bad.mp4",
-      "validation": {
-        "width": 1280,
-        "height": 720,
-        "fps": 24,
-        "durationSeconds": 8,
-        "tolerance": 1
-      },
-      "desktopValidation": {
-        "width": 1920,
-        "height": 1080,
-        "fps": 24,
-        "durationSeconds": 8,
-        "tolerance": 1
-      },
-      "masterValidation": {
-        "minFps": 12,
-        "maxFps": 60,
-        "minDurationSeconds": 7,
-        "maxDurationSeconds": 9
-      }
-    },
-    {
-      "id": "job.video.golden_bough_rebuild_ending_normal",
-      "kind": "video",
-      "prompt": "Albina visual novel animated CG: golden bough rebuild ending normal. Use approved keyframe composition, restrained cinematic motion, preserve character identity and frozen palette, no text or logos.",
-      "durationSeconds": 8,
-      "sourceImage": "D:\\创作\\albina-v2-complete\\dist\\albina-galgame-card\\assets\\cg\\golden_bough_ending.jpg",
-      "masterOutput": "D:\\创作\\albina-v2-complete\\staging\\media\\video\\master\\golden_bough_rebuild_ending_normal.mp4",
-      "output": "D:\\创作\\albina-v2-complete\\staging\\media\\video\\runtime\\golden_bough_rebuild_ending_normal.mp4",
-      "desktopOutput": "D:\\创作\\albina-v2-complete\\staging\\media\\video\\desktop\\golden_bough_rebuild_ending_normal.mp4",
-      "validation": {
-        "width": 1280,
-        "height": 720,
-        "fps": 24,
-        "durationSeconds": 8,
-        "tolerance": 1
-      },
-      "desktopValidation": {
-        "width": 1920,
-        "height": 1080,
-        "fps": 24,
-        "durationSeconds": 8,
-        "tolerance": 1
-      },
-      "masterValidation": {
-        "minFps": 12,
-        "maxFps": 60,
-        "minDurationSeconds": 7,
-        "maxDurationSeconds": 9
-      }
-    },
-    {
-      "id": "job.video.golden_bough_rebuild_ending_true",
-      "kind": "video",
-      "prompt": "Albina visual novel animated CG: golden bough rebuild ending true. Use approved keyframe composition, restrained cinematic motion, preserve character identity and frozen palette, no text or logos.",
-      "durationSeconds": 8,
-      "sourceImage": "D:\\创作\\albina-v2-complete\\dist\\albina-galgame-card\\assets\\cg\\golden_bough_ending.jpg",
-      "masterOutput": "D:\\创作\\albina-v2-complete\\staging\\media\\video\\master\\golden_bough_rebuild_ending_true.mp4",
-      "output": "D:\\创作\\albina-v2-complete\\staging\\media\\video\\runtime\\golden_bough_rebuild_ending_true.mp4",
-      "desktopOutput": "D:\\创作\\albina-v2-complete\\staging\\media\\video\\desktop\\golden_bough_rebuild_ending_true.mp4",
-      "validation": {
-        "width": 1280,
-        "height": 720,
-        "fps": 24,
-        "durationSeconds": 8,
-        "tolerance": 1
-      },
-      "desktopValidation": {
-        "width": 1920,
-        "height": 1080,
-        "fps": 24,
-        "durationSeconds": 8,
-        "tolerance": 1
-      },
-      "masterValidation": {
-        "minFps": 12,
-        "maxFps": 60,
-        "minDurationSeconds": 7,
-        "maxDurationSeconds": 9
-      }
-    },
-    {
-      "id": "job.video.golden_bough_rebuild_scene_11",
-      "kind": "video",
-      "prompt": "Albina visual novel animated CG: golden bough rebuild scene 11. Use approved keyframe composition, restrained cinematic motion, preserve character identity and frozen palette, no text or logos.",
-      "durationSeconds": 8,
-      "sourceImage": "D:\\创作\\albina-v2-complete\\dist\\albina-galgame-card\\assets\\cg\\rebuild_awakening.jpg",
-      "masterOutput": "D:\\创作\\albina-v2-complete\\staging\\media\\video\\master\\golden_bough_rebuild_scene_11.mp4",
-      "output": "D:\\创作\\albina-v2-complete\\staging\\media\\video\\runtime\\golden_bough_rebuild_scene_11.mp4",
-      "desktopOutput": "D:\\创作\\albina-v2-complete\\staging\\media\\video\\desktop\\golden_bough_rebuild_scene_11.mp4",
-      "validation": {
-        "width": 1280,
-        "height": 720,
-        "fps": 24,
-        "durationSeconds": 8,
-        "tolerance": 1
-      },
-      "desktopValidation": {
-        "width": 1920,
-        "height": 1080,
-        "fps": 24,
-        "durationSeconds": 8,
-        "tolerance": 1
-      },
-      "masterValidation": {
-        "minFps": 12,
-        "maxFps": 60,
-        "minDurationSeconds": 7,
-        "maxDurationSeconds": 9
-      }
-    },
-    {
-      "id": "job.video.golden_bough_rebuild_scene_15",
-      "kind": "video",
-      "prompt": "Albina visual novel animated CG: golden bough rebuild scene 15. Use approved keyframe composition, restrained cinematic motion, preserve character identity and frozen palette, no text or logos.",
-      "durationSeconds": 8,
-      "sourceImage": "D:\\创作\\albina-v2-complete\\dist\\albina-galgame-card\\assets\\cg\\rebuild_awakening.jpg",
-      "masterOutput": "D:\\创作\\albina-v2-complete\\staging\\media\\video\\master\\golden_bough_rebuild_scene_15.mp4",
-      "output": "D:\\创作\\albina-v2-complete\\staging\\media\\video\\runtime\\golden_bough_rebuild_scene_15.mp4",
-      "desktopOutput": "D:\\创作\\albina-v2-complete\\staging\\media\\video\\desktop\\golden_bough_rebuild_scene_15.mp4",
-      "validation": {
-        "width": 1280,
-        "height": 720,
-        "fps": 24,
-        "durationSeconds": 8,
-        "tolerance": 1
-      },
-      "desktopValidation": {
-        "width": 1920,
-        "height": 1080,
-        "fps": 24,
-        "durationSeconds": 8,
-        "tolerance": 1
-      },
-      "masterValidation": {
-        "minFps": 12,
-        "maxFps": 60,
-        "minDurationSeconds": 7,
-        "maxDurationSeconds": 9
-      }
-    },
-    {
-      "id": "job.video.golden_bough_rebuild_scene_3",
-      "kind": "video",
-      "prompt": "Albina visual novel animated CG: golden bough rebuild scene 3. Use approved keyframe composition, restrained cinematic motion, preserve character identity and frozen palette, no text or logos.",
-      "durationSeconds": 8,
-      "sourceImage": "D:\\创作\\albina-v2-complete\\dist\\albina-galgame-card\\assets\\cg\\rebuild_awakening.jpg",
-      "masterOutput": "D:\\创作\\albina-v2-complete\\staging\\media\\video\\master\\golden_bough_rebuild_scene_3.mp4",
-      "output": "D:\\创作\\albina-v2-complete\\staging\\media\\video\\runtime\\golden_bough_rebuild_scene_3.mp4",
-      "desktopOutput": "D:\\创作\\albina-v2-complete\\staging\\media\\video\\desktop\\golden_bough_rebuild_scene_3.mp4",
-      "validation": {
-        "width": 1280,
-        "height": 720,
-        "fps": 24,
-        "durationSeconds": 8,
-        "tolerance": 1
-      },
-      "desktopValidation": {
-        "width": 1920,
-        "height": 1080,
-        "fps": 24,
-        "durationSeconds": 8,
-        "tolerance": 1
-      },
-      "masterValidation": {
-        "minFps": 12,
-        "maxFps": 60,
-        "minDurationSeconds": 7,
-        "maxDurationSeconds": 9
-      }
-    },
-    {
-      "id": "job.video.golden_bough_rebuild_scene_5",
-      "kind": "video",
-      "prompt": "Albina visual novel animated CG: golden bough rebuild scene 5. Use approved keyframe composition, restrained cinematic motion, preserve character identity and frozen palette, no text or logos.",
-      "durationSeconds": 8,
-      "sourceImage": "D:\\创作\\albina-v2-complete\\dist\\albina-galgame-card\\assets\\cg\\rebuild_awakening.jpg",
-      "masterOutput": "D:\\创作\\albina-v2-complete\\staging\\media\\video\\master\\golden_bough_rebuild_scene_5.mp4",
-      "output": "D:\\创作\\albina-v2-complete\\staging\\media\\video\\runtime\\golden_bough_rebuild_scene_5.mp4",
-      "desktopOutput": "D:\\创作\\albina-v2-complete\\staging\\media\\video\\desktop\\golden_bough_rebuild_scene_5.mp4",
-      "validation": {
-        "width": 1280,
-        "height": 720,
-        "fps": 24,
-        "durationSeconds": 8,
-        "tolerance": 1
-      },
-      "desktopValidation": {
-        "width": 1920,
-        "height": 1080,
-        "fps": 24,
-        "durationSeconds": 8,
-        "tolerance": 1
-      },
-      "masterValidation": {
-        "minFps": 12,
-        "maxFps": 60,
-        "minDurationSeconds": 7,
-        "maxDurationSeconds": 9
-      }
-    },
-    {
-      "id": "job.video.golden_bough_rebuild_scene_8",
-      "kind": "video",
-      "prompt": "Albina visual novel animated CG: golden bough rebuild scene 8. Use approved keyframe composition, restrained cinematic motion, preserve character identity and frozen palette, no text or logos.",
-      "durationSeconds": 8,
-      "sourceImage": "D:\\创作\\albina-v2-complete\\dist\\albina-galgame-card\\assets\\cg\\rebuild_awakening.jpg",
-      "masterOutput": "D:\\创作\\albina-v2-complete\\staging\\media\\video\\master\\golden_bough_rebuild_scene_8.mp4",
-      "output": "D:\\创作\\albina-v2-complete\\staging\\media\\video\\runtime\\golden_bough_rebuild_scene_8.mp4",
-      "desktopOutput": "D:\\创作\\albina-v2-complete\\staging\\media\\video\\desktop\\golden_bough_rebuild_scene_8.mp4",
-      "validation": {
-        "width": 1280,
-        "height": 720,
-        "fps": 24,
-        "durationSeconds": 8,
-        "tolerance": 1
-      },
-      "desktopValidation": {
-        "width": 1920,
-        "height": 1080,
-        "fps": 24,
-        "durationSeconds": 8,
-        "tolerance": 1
-      },
-      "masterValidation": {
-        "minFps": 12,
-        "maxFps": 60,
-        "minDurationSeconds": 7,
-        "maxDurationSeconds": 9
-      }
-    },
-    {
-      "id": "job.video.op",
-      "kind": "video",
-      "prompt": "Albina visual novel animated CG: op. Use approved keyframe composition, restrained cinematic motion, preserve character identity and frozen palette, no text or logos.",
-      "durationSeconds": 8,
-      "sourceImage": "D:\\创作\\albina-v2-complete\\dist\\albina-galgame-card\\assets\\cg\\opening_rain.jpg",
-      "masterOutput": "D:\\创作\\albina-v2-complete\\staging\\media\\video\\master\\op.mp4",
-      "output": "D:\\创作\\albina-v2-complete\\staging\\media\\video\\runtime\\op.mp4",
-      "desktopOutput": "D:\\创作\\albina-v2-complete\\staging\\media\\video\\desktop\\op.mp4",
-      "validation": {
-        "width": 1280,
-        "height": 720,
-        "fps": 24,
-        "durationSeconds": 8,
-        "tolerance": 1
-      },
-      "desktopValidation": {
-        "width": 1920,
-        "height": 1080,
-        "fps": 24,
-        "durationSeconds": 8,
-        "tolerance": 1
-      },
-      "masterValidation": {
-        "minFps": 12,
-        "maxFps": 60,
-        "minDurationSeconds": 7,
-        "maxDurationSeconds": 9
-      }
-    },
-    {
-      "id": "job.video.prologue",
-      "kind": "video",
-      "prompt": "Albina visual novel animated CG: prologue. Use approved keyframe composition, restrained cinematic motion, preserve character identity and frozen palette, no text or logos.",
-      "durationSeconds": 8,
-      "sourceImage": "D:\\创作\\albina-v2-complete\\dist\\albina-galgame-card\\assets\\cg\\opening_rain.jpg",
-      "masterOutput": "D:\\创作\\albina-v2-complete\\staging\\media\\video\\master\\prologue.mp4",
-      "output": "D:\\创作\\albina-v2-complete\\staging\\media\\video\\runtime\\prologue.mp4",
-      "desktopOutput": "D:\\创作\\albina-v2-complete\\staging\\media\\video\\desktop\\prologue.mp4",
-      "validation": {
-        "width": 1280,
-        "height": 720,
-        "fps": 24,
-        "durationSeconds": 8,
-        "tolerance": 1
-      },
-      "desktopValidation": {
-        "width": 1920,
-        "height": 1080,
-        "fps": 24,
-        "durationSeconds": 8,
-        "tolerance": 1
-      },
-      "masterValidation": {
-        "minFps": 12,
-        "maxFps": 60,
-        "minDurationSeconds": 7,
-        "maxDurationSeconds": 9
-      }
-    },
-    {
-      "id": "job.video.ring_conspiracy_ending_bad",
-      "kind": "video",
-      "prompt": "Albina visual novel animated CG: ring conspiracy ending bad. Use approved keyframe composition, restrained cinematic motion, preserve character identity and frozen palette, no text or logos.",
-      "durationSeconds": 8,
-      "sourceImage": "D:\\创作\\albina-v2-complete\\dist\\albina-galgame-card\\assets\\cg\\ring_conspiracy_ending.jpg",
-      "masterOutput": "D:\\创作\\albina-v2-complete\\staging\\media\\video\\master\\ring_conspiracy_ending_bad.mp4",
-      "output": "D:\\创作\\albina-v2-complete\\staging\\media\\video\\runtime\\ring_conspiracy_ending_bad.mp4",
-      "desktopOutput": "D:\\创作\\albina-v2-complete\\staging\\media\\video\\desktop\\ring_conspiracy_ending_bad.mp4",
-      "validation": {
-        "width": 1280,
-        "height": 720,
-        "fps": 24,
-        "durationSeconds": 8,
-        "tolerance": 1
-      },
-      "desktopValidation": {
-        "width": 1920,
-        "height": 1080,
-        "fps": 24,
-        "durationSeconds": 8,
-        "tolerance": 1
-      },
-      "masterValidation": {
-        "minFps": 12,
-        "maxFps": 60,
-        "minDurationSeconds": 7,
-        "maxDurationSeconds": 9
-      }
-    },
-    {
-      "id": "job.video.ring_conspiracy_ending_normal",
-      "kind": "video",
-      "prompt": "Albina visual novel animated CG: ring conspiracy ending normal. Use approved keyframe composition, restrained cinematic motion, preserve character identity and frozen palette, no text or logos.",
-      "durationSeconds": 8,
-      "sourceImage": "D:\\创作\\albina-v2-complete\\dist\\albina-galgame-card\\assets\\cg\\ring_conspiracy_ending.jpg",
-      "masterOutput": "D:\\创作\\albina-v2-complete\\staging\\media\\video\\master\\ring_conspiracy_ending_normal.mp4",
-      "output": "D:\\创作\\albina-v2-complete\\staging\\media\\video\\runtime\\ring_conspiracy_ending_normal.mp4",
-      "desktopOutput": "D:\\创作\\albina-v2-complete\\staging\\media\\video\\desktop\\ring_conspiracy_ending_normal.mp4",
-      "validation": {
-        "width": 1280,
-        "height": 720,
-        "fps": 24,
-        "durationSeconds": 8,
-        "tolerance": 1
-      },
-      "desktopValidation": {
-        "width": 1920,
-        "height": 1080,
-        "fps": 24,
-        "durationSeconds": 8,
-        "tolerance": 1
-      },
-      "masterValidation": {
-        "minFps": 12,
-        "maxFps": 60,
-        "minDurationSeconds": 7,
-        "maxDurationSeconds": 9
-      }
-    },
-    {
-      "id": "job.video.ring_conspiracy_ending_true",
-      "kind": "video",
-      "prompt": "Albina visual novel animated CG: ring conspiracy ending true. Use approved keyframe composition, restrained cinematic motion, preserve character identity and frozen palette, no text or logos.",
-      "durationSeconds": 8,
-      "sourceImage": "D:\\创作\\albina-v2-complete\\dist\\albina-galgame-card\\assets\\cg\\ring_conspiracy_ending.jpg",
-      "masterOutput": "D:\\创作\\albina-v2-complete\\staging\\media\\video\\master\\ring_conspiracy_ending_true.mp4",
-      "output": "D:\\创作\\albina-v2-complete\\staging\\media\\video\\runtime\\ring_conspiracy_ending_true.mp4",
-      "desktopOutput": "D:\\创作\\albina-v2-complete\\staging\\media\\video\\desktop\\ring_conspiracy_ending_true.mp4",
-      "validation": {
-        "width": 1280,
-        "height": 720,
-        "fps": 24,
-        "durationSeconds": 8,
-        "tolerance": 1
-      },
-      "desktopValidation": {
-        "width": 1920,
-        "height": 1080,
-        "fps": 24,
-        "durationSeconds": 8,
-        "tolerance": 1
-      },
-      "masterValidation": {
-        "minFps": 12,
-        "maxFps": 60,
-        "minDurationSeconds": 7,
-        "maxDurationSeconds": 9
-      }
-    },
-    {
-      "id": "job.video.ring_conspiracy_scene_11",
-      "kind": "video",
-      "prompt": "Albina visual novel animated CG: ring conspiracy scene 11. Use approved keyframe composition, restrained cinematic motion, preserve character identity and frozen palette, no text or logos.",
-      "durationSeconds": 8,
-      "sourceImage": "D:\\创作\\albina-v2-complete\\dist\\albina-galgame-card\\assets\\cg\\conspiracy_contract.jpg",
-      "masterOutput": "D:\\创作\\albina-v2-complete\\staging\\media\\video\\master\\ring_conspiracy_scene_11.mp4",
-      "output": "D:\\创作\\albina-v2-complete\\staging\\media\\video\\runtime\\ring_conspiracy_scene_11.mp4",
-      "desktopOutput": "D:\\创作\\albina-v2-complete\\staging\\media\\video\\desktop\\ring_conspiracy_scene_11.mp4",
-      "validation": {
-        "width": 1280,
-        "height": 720,
-        "fps": 24,
-        "durationSeconds": 8,
-        "tolerance": 1
-      },
-      "desktopValidation": {
-        "width": 1920,
-        "height": 1080,
-        "fps": 24,
-        "durationSeconds": 8,
-        "tolerance": 1
-      },
-      "masterValidation": {
-        "minFps": 12,
-        "maxFps": 60,
-        "minDurationSeconds": 7,
-        "maxDurationSeconds": 9
-      }
-    },
-    {
-      "id": "job.video.ring_conspiracy_scene_15",
-      "kind": "video",
-      "prompt": "Albina visual novel animated CG: ring conspiracy scene 15. Use approved keyframe composition, restrained cinematic motion, preserve character identity and frozen palette, no text or logos.",
-      "durationSeconds": 8,
-      "sourceImage": "D:\\创作\\albina-v2-complete\\dist\\albina-galgame-card\\assets\\cg\\conspiracy_contract.jpg",
-      "masterOutput": "D:\\创作\\albina-v2-complete\\staging\\media\\video\\master\\ring_conspiracy_scene_15.mp4",
-      "output": "D:\\创作\\albina-v2-complete\\staging\\media\\video\\runtime\\ring_conspiracy_scene_15.mp4",
-      "desktopOutput": "D:\\创作\\albina-v2-complete\\staging\\media\\video\\desktop\\ring_conspiracy_scene_15.mp4",
-      "validation": {
-        "width": 1280,
-        "height": 720,
-        "fps": 24,
-        "durationSeconds": 8,
-        "tolerance": 1
-      },
-      "desktopValidation": {
-        "width": 1920,
-        "height": 1080,
-        "fps": 24,
-        "durationSeconds": 8,
-        "tolerance": 1
-      },
-      "masterValidation": {
-        "minFps": 12,
-        "maxFps": 60,
-        "minDurationSeconds": 7,
-        "maxDurationSeconds": 9
-      }
-    },
-    {
-      "id": "job.video.ring_conspiracy_scene_3",
-      "kind": "video",
-      "prompt": "Albina visual novel animated CG: ring conspiracy scene 3. Use approved keyframe composition, restrained cinematic motion, preserve character identity and frozen palette, no text or logos.",
-      "durationSeconds": 8,
-      "sourceImage": "D:\\创作\\albina-v2-complete\\dist\\albina-galgame-card\\assets\\cg\\conspiracy_contract.jpg",
-      "masterOutput": "D:\\创作\\albina-v2-complete\\staging\\media\\video\\master\\ring_conspiracy_scene_3.mp4",
-      "output": "D:\\创作\\albina-v2-complete\\staging\\media\\video\\runtime\\ring_conspiracy_scene_3.mp4",
-      "desktopOutput": "D:\\创作\\albina-v2-complete\\staging\\media\\video\\desktop\\ring_conspiracy_scene_3.mp4",
-      "validation": {
-        "width": 1280,
-        "height": 720,
-        "fps": 24,
-        "durationSeconds": 8,
-        "tolerance": 1
-      },
-      "desktopValidation": {
-        "width": 1920,
-        "height": 1080,
-        "fps": 24,
-        "durationSeconds": 8,
-        "tolerance": 1
-      },
-      "masterValidation": {
-        "minFps": 12,
-        "maxFps": 60,
-        "minDurationSeconds": 7,
-        "maxDurationSeconds": 9
-      }
-    },
-    {
-      "id": "job.video.ring_conspiracy_scene_5",
-      "kind": "video",
-      "prompt": "Albina visual novel animated CG: ring conspiracy scene 5. Use approved keyframe composition, restrained cinematic motion, preserve character identity and frozen palette, no text or logos.",
-      "durationSeconds": 8,
-      "sourceImage": "D:\\创作\\albina-v2-complete\\dist\\albina-galgame-card\\assets\\cg\\conspiracy_contract.jpg",
-      "masterOutput": "D:\\创作\\albina-v2-complete\\staging\\media\\video\\master\\ring_conspiracy_scene_5.mp4",
-      "output": "D:\\创作\\albina-v2-complete\\staging\\media\\video\\runtime\\ring_conspiracy_scene_5.mp4",
-      "desktopOutput": "D:\\创作\\albina-v2-complete\\staging\\media\\video\\desktop\\ring_conspiracy_scene_5.mp4",
-      "validation": {
-        "width": 1280,
-        "height": 720,
-        "fps": 24,
-        "durationSeconds": 8,
-        "tolerance": 1
-      },
-      "desktopValidation": {
-        "width": 1920,
-        "height": 1080,
-        "fps": 24,
-        "durationSeconds": 8,
-        "tolerance": 1
-      },
-      "masterValidation": {
-        "minFps": 12,
-        "maxFps": 60,
-        "minDurationSeconds": 7,
-        "maxDurationSeconds": 9
-      }
-    },
-    {
-      "id": "job.video.ring_conspiracy_scene_8",
-      "kind": "video",
-      "prompt": "Albina visual novel animated CG: ring conspiracy scene 8. Use approved keyframe composition, restrained cinematic motion, preserve character identity and frozen palette, no text or logos.",
-      "durationSeconds": 8,
-      "sourceImage": "D:\\创作\\albina-v2-complete\\dist\\albina-galgame-card\\assets\\cg\\conspiracy_contract.jpg",
-      "masterOutput": "D:\\创作\\albina-v2-complete\\staging\\media\\video\\master\\ring_conspiracy_scene_8.mp4",
-      "output": "D:\\创作\\albina-v2-complete\\staging\\media\\video\\runtime\\ring_conspiracy_scene_8.mp4",
-      "desktopOutput": "D:\\创作\\albina-v2-complete\\staging\\media\\video\\desktop\\ring_conspiracy_scene_8.mp4",
-      "validation": {
-        "width": 1280,
-        "height": 720,
-        "fps": 24,
-        "durationSeconds": 8,
-        "tolerance": 1
-      },
-      "desktopValidation": {
-        "width": 1920,
-        "height": 1080,
-        "fps": 24,
-        "durationSeconds": 8,
-        "tolerance": 1
-      },
-      "masterValidation": {
-        "minFps": 12,
-        "maxFps": 60,
-        "minDurationSeconds": 7,
-        "maxDurationSeconds": 9
-      }
-    },
-    {
-      "id": "job.video.white_canvas_ending_bad",
-      "kind": "video",
-      "prompt": "Albina visual novel animated CG: white canvas ending bad. Use approved keyframe composition, restrained cinematic motion, preserve character identity and frozen palette, no text or logos.",
-      "durationSeconds": 8,
-      "sourceImage": "D:\\创作\\albina-v2-complete\\dist\\albina-galgame-card\\assets\\cg\\white_canvas_ending.jpg",
-      "masterOutput": "D:\\创作\\albina-v2-complete\\staging\\media\\video\\master\\white_canvas_ending_bad.mp4",
-      "output": "D:\\创作\\albina-v2-complete\\staging\\media\\video\\runtime\\white_canvas_ending_bad.mp4",
-      "desktopOutput": "D:\\创作\\albina-v2-complete\\staging\\media\\video\\desktop\\white_canvas_ending_bad.mp4",
-      "validation": {
-        "width": 1280,
-        "height": 720,
-        "fps": 24,
-        "durationSeconds": 8,
-        "tolerance": 1
-      },
-      "desktopValidation": {
-        "width": 1920,
-        "height": 1080,
-        "fps": 24,
-        "durationSeconds": 8,
-        "tolerance": 1
-      },
-      "masterValidation": {
-        "minFps": 12,
-        "maxFps": 60,
-        "minDurationSeconds": 7,
-        "maxDurationSeconds": 9
-      }
-    },
-    {
-      "id": "job.video.white_canvas_ending_normal",
-      "kind": "video",
-      "prompt": "Albina visual novel animated CG: white canvas ending normal. Use approved keyframe composition, restrained cinematic motion, preserve character identity and frozen palette, no text or logos.",
-      "durationSeconds": 8,
-      "sourceImage": "D:\\创作\\albina-v2-complete\\dist\\albina-galgame-card\\assets\\cg\\white_canvas_ending.jpg",
-      "masterOutput": "D:\\创作\\albina-v2-complete\\staging\\media\\video\\master\\white_canvas_ending_normal.mp4",
-      "output": "D:\\创作\\albina-v2-complete\\staging\\media\\video\\runtime\\white_canvas_ending_normal.mp4",
-      "desktopOutput": "D:\\创作\\albina-v2-complete\\staging\\media\\video\\desktop\\white_canvas_ending_normal.mp4",
-      "validation": {
-        "width": 1280,
-        "height": 720,
-        "fps": 24,
-        "durationSeconds": 8,
-        "tolerance": 1
-      },
-      "desktopValidation": {
-        "width": 1920,
-        "height": 1080,
-        "fps": 24,
-        "durationSeconds": 8,
-        "tolerance": 1
-      },
-      "masterValidation": {
-        "minFps": 12,
-        "maxFps": 60,
-        "minDurationSeconds": 7,
-        "maxDurationSeconds": 9
-      }
-    },
-    {
-      "id": "job.video.white_canvas_ending_true",
-      "kind": "video",
-      "prompt": "Albina visual novel animated CG: white canvas ending true. Use approved keyframe composition, restrained cinematic motion, preserve character identity and frozen palette, no text or logos.",
-      "durationSeconds": 8,
-      "sourceImage": "D:\\创作\\albina-v2-complete\\dist\\albina-galgame-card\\assets\\cg\\white_canvas_ending.jpg",
-      "masterOutput": "D:\\创作\\albina-v2-complete\\staging\\media\\video\\master\\white_canvas_ending_true.mp4",
-      "output": "D:\\创作\\albina-v2-complete\\staging\\media\\video\\runtime\\white_canvas_ending_true.mp4",
-      "desktopOutput": "D:\\创作\\albina-v2-complete\\staging\\media\\video\\desktop\\white_canvas_ending_true.mp4",
-      "validation": {
-        "width": 1280,
-        "height": 720,
-        "fps": 24,
-        "durationSeconds": 8,
-        "tolerance": 1
-      },
-      "desktopValidation": {
-        "width": 1920,
-        "height": 1080,
-        "fps": 24,
-        "durationSeconds": 8,
-        "tolerance": 1
-      },
-      "masterValidation": {
-        "minFps": 12,
-        "maxFps": 60,
-        "minDurationSeconds": 7,
-        "maxDurationSeconds": 9
-      }
-    },
-    {
-      "id": "job.video.white_canvas_scene_11",
-      "kind": "video",
-      "prompt": "Albina visual novel animated CG: white canvas scene 11. Use approved keyframe composition, restrained cinematic motion, preserve character identity and frozen palette, no text or logos.",
-      "durationSeconds": 8,
-      "sourceImage": "D:\\创作\\albina-v2-complete\\dist\\albina-galgame-card\\assets\\cg\\white_canvas_choice.jpg",
-      "masterOutput": "D:\\创作\\albina-v2-complete\\staging\\media\\video\\master\\white_canvas_scene_11.mp4",
-      "output": "D:\\创作\\albina-v2-complete\\staging\\media\\video\\runtime\\white_canvas_scene_11.mp4",
-      "desktopOutput": "D:\\创作\\albina-v2-complete\\staging\\media\\video\\desktop\\white_canvas_scene_11.mp4",
-      "validation": {
-        "width": 1280,
-        "height": 720,
-        "fps": 24,
-        "durationSeconds": 8,
-        "tolerance": 1
-      },
-      "desktopValidation": {
-        "width": 1920,
-        "height": 1080,
-        "fps": 24,
-        "durationSeconds": 8,
-        "tolerance": 1
-      },
-      "masterValidation": {
-        "minFps": 12,
-        "maxFps": 60,
-        "minDurationSeconds": 7,
-        "maxDurationSeconds": 9
-      }
-    },
-    {
-      "id": "job.video.white_canvas_scene_15",
-      "kind": "video",
-      "prompt": "Albina visual novel animated CG: white canvas scene 15. Use approved keyframe composition, restrained cinematic motion, preserve character identity and frozen palette, no text or logos.",
-      "durationSeconds": 8,
-      "sourceImage": "D:\\创作\\albina-v2-complete\\dist\\albina-galgame-card\\assets\\cg\\white_canvas_choice.jpg",
-      "masterOutput": "D:\\创作\\albina-v2-complete\\staging\\media\\video\\master\\white_canvas_scene_15.mp4",
-      "output": "D:\\创作\\albina-v2-complete\\staging\\media\\video\\runtime\\white_canvas_scene_15.mp4",
-      "desktopOutput": "D:\\创作\\albina-v2-complete\\staging\\media\\video\\desktop\\white_canvas_scene_15.mp4",
-      "validation": {
-        "width": 1280,
-        "height": 720,
-        "fps": 24,
-        "durationSeconds": 8,
-        "tolerance": 1
-      },
-      "desktopValidation": {
-        "width": 1920,
-        "height": 1080,
-        "fps": 24,
-        "durationSeconds": 8,
-        "tolerance": 1
-      },
-      "masterValidation": {
-        "minFps": 12,
-        "maxFps": 60,
-        "minDurationSeconds": 7,
-        "maxDurationSeconds": 9
-      }
-    },
-    {
-      "id": "job.video.white_canvas_scene_3",
-      "kind": "video",
-      "prompt": "Albina visual novel animated CG: white canvas scene 3. Use approved keyframe composition, restrained cinematic motion, preserve character identity and frozen palette, no text or logos.",
-      "durationSeconds": 8,
-      "sourceImage": "D:\\创作\\albina-v2-complete\\dist\\albina-galgame-card\\assets\\cg\\white_canvas_choice.jpg",
-      "masterOutput": "D:\\创作\\albina-v2-complete\\staging\\media\\video\\master\\white_canvas_scene_3.mp4",
-      "output": "D:\\创作\\albina-v2-complete\\staging\\media\\video\\runtime\\white_canvas_scene_3.mp4",
-      "desktopOutput": "D:\\创作\\albina-v2-complete\\staging\\media\\video\\desktop\\white_canvas_scene_3.mp4",
-      "validation": {
-        "width": 1280,
-        "height": 720,
-        "fps": 24,
-        "durationSeconds": 8,
-        "tolerance": 1
-      },
-      "desktopValidation": {
-        "width": 1920,
-        "height": 1080,
-        "fps": 24,
-        "durationSeconds": 8,
-        "tolerance": 1
-      },
-      "masterValidation": {
-        "minFps": 12,
-        "maxFps": 60,
-        "minDurationSeconds": 7,
-        "maxDurationSeconds": 9
-      }
-    },
-    {
-      "id": "job.video.white_canvas_scene_5",
-      "kind": "video",
-      "prompt": "Albina visual novel animated CG: white canvas scene 5. Use approved keyframe composition, restrained cinematic motion, preserve character identity and frozen palette, no text or logos.",
-      "durationSeconds": 8,
-      "sourceImage": "D:\\创作\\albina-v2-complete\\dist\\albina-galgame-card\\assets\\cg\\white_canvas_choice.jpg",
-      "masterOutput": "D:\\创作\\albina-v2-complete\\staging\\media\\video\\master\\white_canvas_scene_5.mp4",
-      "output": "D:\\创作\\albina-v2-complete\\staging\\media\\video\\runtime\\white_canvas_scene_5.mp4",
-      "desktopOutput": "D:\\创作\\albina-v2-complete\\staging\\media\\video\\desktop\\white_canvas_scene_5.mp4",
-      "validation": {
-        "width": 1280,
-        "height": 720,
-        "fps": 24,
-        "durationSeconds": 8,
-        "tolerance": 1
-      },
-      "desktopValidation": {
-        "width": 1920,
-        "height": 1080,
-        "fps": 24,
-        "durationSeconds": 8,
-        "tolerance": 1
-      },
-      "masterValidation": {
-        "minFps": 12,
-        "maxFps": 60,
-        "minDurationSeconds": 7,
-        "maxDurationSeconds": 9
-      }
-    },
-    {
-      "id": "job.video.white_canvas_scene_8",
-      "kind": "video",
-      "prompt": "Albina visual novel animated CG: white canvas scene 8. Use approved keyframe composition, restrained cinematic motion, preserve character identity and frozen palette, no text or logos.",
-      "durationSeconds": 8,
-      "sourceImage": "D:\\创作\\albina-v2-complete\\dist\\albina-galgame-card\\assets\\cg\\white_canvas_choice.jpg",
-      "masterOutput": "D:\\创作\\albina-v2-complete\\staging\\media\\video\\master\\white_canvas_scene_8.mp4",
-      "output": "D:\\创作\\albina-v2-complete\\staging\\media\\video\\runtime\\white_canvas_scene_8.mp4",
-      "desktopOutput": "D:\\创作\\albina-v2-complete\\staging\\media\\video\\desktop\\white_canvas_scene_8.mp4",
-      "validation": {
-        "width": 1280,
-        "height": 720,
-        "fps": 24,
-        "durationSeconds": 8,
-        "tolerance": 1
-      },
-      "desktopValidation": {
-        "width": 1920,
-        "height": 1080,
-        "fps": 24,
-        "durationSeconds": 8,
-        "tolerance": 1
-      },
-      "masterValidation": {
-        "minFps": 12,
-        "maxFps": 60,
-        "minDurationSeconds": 7,
-        "maxDurationSeconds": 9
-      }
-    },
-    {
-      "id": "job.voice.result.conspiracy_005_let_her_answer",
+      "id": "job.speech.voice.result.canon_recap_continue_9_18",
       "kind": "speech",
+      "provider": "pie",
+      "model": "speech-2.8-hd",
+      "promptVersion": "albina-speech-v1",
+      "input": "时间推进到 9-18 的 LCE 研究区实验室。",
+      "voice": "alloy",
+      "output": "D:\\创作\\albina-v2-complete\\staging\\media\\audio\\voice\\result\\canon_recap_continue_9_18.mp3",
+      "validation": {
+        "minDurationSeconds": 0.2,
+        "maxDurationSeconds": 60,
+        "minLoudnessDbfs": -30,
+        "maxLoudnessDbfs": -6
+      }
+    },
+    {
+      "id": "job.speech.voice.result.canon_recap_continue_9_37",
+      "kind": "speech",
+      "provider": "pie",
+      "model": "speech-2.8-hd",
+      "promptVersion": "albina-speech-v1",
+      "input": "时间推进到 Operation Spider Pyre 期间的 Ring Corridor。",
+      "voice": "alloy",
+      "output": "D:\\创作\\albina-v2-complete\\staging\\media\\audio\\voice\\result\\canon_recap_continue_9_37.mp3",
+      "validation": {
+        "minDurationSeconds": 0.2,
+        "maxDurationSeconds": 60,
+        "minLoudnessDbfs": -30,
+        "maxLoudnessDbfs": -6
+      }
+    },
+    {
+      "id": "job.speech.voice.result.canon_recap_continue_9_37_battle",
+      "kind": "speech",
+      "provider": "pie",
+      "model": "speech-2.8-hd",
+      "promptVersion": "albina-speech-v1",
+      "input": "复盘转向 Callisto 加入后的最后阶段。",
+      "voice": "alloy",
+      "output": "D:\\创作\\albina-v2-complete\\staging\\media\\audio\\voice\\result\\canon_recap_continue_9_37_battle.mp3",
+      "validation": {
+        "minDurationSeconds": 0.2,
+        "maxDurationSeconds": 60,
+        "minLoudnessDbfs": -30,
+        "maxLoudnessDbfs": -6
+      }
+    },
+    {
+      "id": "job.speech.voice.result.canon_recap_continue_9_43",
+      "kind": "speech",
+      "provider": "pie",
+      "model": "speech-2.8-hd",
+      "promptVersion": "albina-speech-v1",
+      "input": "时间推进到 9-43；接下来才是不能被路线文本改写为正史的既定结果。",
+      "voice": "alloy",
+      "output": "D:\\创作\\albina-v2-complete\\staging\\media\\audio\\voice\\result\\canon_recap_continue_9_43.mp3",
+      "validation": {
+        "minDurationSeconds": 0.2,
+        "maxDurationSeconds": 60,
+        "minLoudnessDbfs": -30,
+        "maxLoudnessDbfs": -6
+      }
+    },
+    {
+      "id": "job.speech.voice.result.canon_recap_continue_albina_fascia",
+      "kind": "speech",
+      "provider": "pie",
+      "model": "speech-2.8-hd",
+      "promptVersion": "albina-speech-v1",
+      "input": "复盘转向两者的身份与身体关系。",
+      "voice": "alloy",
+      "output": "D:\\创作\\albina-v2-complete\\staging\\media\\audio\\voice\\result\\canon_recap_continue_albina_fascia.mp3",
+      "validation": {
+        "minDurationSeconds": 0.2,
+        "maxDurationSeconds": 60,
+        "minLoudnessDbfs": -30,
+        "maxLoudnessDbfs": -6
+      }
+    },
+    {
+      "id": "job.speech.voice.result.canon_recap_enter_AU",
+      "kind": "speech",
+      "provider": "pie",
+      "model": "speech-2.8-hd",
+      "promptVersion": "albina-speech-v1",
+      "input": "正史复盘已结束。以下三条路线全部是本卡原创 AU/IF。",
+      "voice": "alloy",
+      "output": "D:\\创作\\albina-v2-complete\\staging\\media\\audio\\voice\\result\\canon_recap_enter_AU.mp3",
+      "validation": {
+        "minDurationSeconds": 0.2,
+        "maxDurationSeconds": 60,
+        "minLoudnessDbfs": -30,
+        "maxLoudnessDbfs": -6
+      }
+    },
+    {
+      "id": "job.speech.voice.result.conspiracy_005_let_her_answer",
+      "kind": "speech",
+      "provider": "pie",
+      "model": "speech-2.8-hd",
+      "promptVersion": "albina-speech-v1",
       "input": "你选择“不替她回答，让阿尔比娜开口”。阿尔比娜：蜘蛛画廊的灯突然转向她。她把法西娅插进墙上一幅空框，声音很冷：你们想收藏我，那就先学会被我凝视。",
       "voice": "fable",
       "output": "D:\\创作\\albina-v2-complete\\staging\\media\\audio\\voice\\result\\conspiracy_005_let_her_answer.mp3",
@@ -2182,8 +176,11 @@
       }
     },
     {
-      "id": "job.voice.result.conspiracy_005_refuse_duo",
+      "id": "job.speech.voice.result.conspiracy_005_refuse_duo",
       "kind": "speech",
+      "provider": "pie",
+      "model": "speech-2.8-hd",
+      "promptVersion": "albina-speech-v1",
       "input": "你选择“当众拒绝成为合作展品”。阿尔比娜：蜘蛛画廊的灯突然转向她。她把法西娅插进墙上一幅空框，声音很冷：你们想收藏我，那就先学会被我凝视。",
       "voice": "fable",
       "output": "D:\\创作\\albina-v2-complete\\staging\\media\\audio\\voice\\result\\conspiracy_005_refuse_duo.mp3",
@@ -2195,8 +192,11 @@
       }
     },
     {
-      "id": "job.voice.result.conspiracy_006_block_view",
+      "id": "job.speech.voice.result.conspiracy_006_block_view",
       "kind": "speech",
+      "provider": "pie",
+      "model": "speech-2.8-hd",
+      "promptVersion": "albina-speech-v1",
       "input": "你选择“挡在她和委托人之间”。环指代理人：雨巷的尽头被代理人堵住。他不拔武器，只是举起一面空画框，要把你们框进环指的目录。阿尔比娜低声让你选：是冲破画框，还是把它抢过来。",
       "voice": "nova",
       "output": "D:\\创作\\albina-v2-complete\\staging\\media\\audio\\voice\\result\\conspiracy_006_block_view.mp3",
@@ -2208,8 +208,11 @@
       }
     },
     {
-      "id": "job.voice.result.conspiracy_006_stand_with_her",
+      "id": "job.speech.voice.result.conspiracy_006_stand_with_her",
       "kind": "speech",
+      "provider": "pie",
+      "model": "speech-2.8-hd",
+      "promptVersion": "albina-speech-v1",
       "input": "你选择“站到她身侧，分担凝视”。环指代理人：雨巷的尽头被代理人堵住。他不拔武器，只是举起一面空画框，要把你们框进环指的目录。阿尔比娜低声让你选：是冲破画框，还是把它抢过来。",
       "voice": "nova",
       "output": "D:\\创作\\albina-v2-complete\\staging\\media\\audio\\voice\\result\\conspiracy_006_stand_with_her.mp3",
@@ -2221,8 +224,11 @@
       }
     },
     {
-      "id": "job.voice.result.conspiracy_007_break_frame",
+      "id": "job.speech.voice.result.conspiracy_007_break_frame",
       "kind": "speech",
+      "provider": "pie",
+      "model": "speech-2.8-hd",
+      "promptVersion": "albina-speech-v1",
       "input": "你选择“冲破画框”。LCE 医师：LCE 把你们暂扣在手术间。医师递来一份中立证词表，说只要她肯指认环指，就帮她换掉被环指标注过的接口。她没有看表，先看你。",
       "voice": "fable",
       "output": "D:\\创作\\albina-v2-complete\\staging\\media\\audio\\voice\\result\\conspiracy_007_break_frame.mp3",
@@ -2234,8 +240,11 @@
       }
     },
     {
-      "id": "job.voice.result.conspiracy_007_seize_frame",
+      "id": "job.speech.voice.result.conspiracy_007_seize_frame",
       "kind": "speech",
+      "provider": "pie",
+      "model": "speech-2.8-hd",
+      "promptVersion": "albina-speech-v1",
       "input": "你选择“把画框抢过来，反过来框住他”。LCE 医师：LCE 把你们暂扣在手术间。医师递来一份中立证词表，说只要她肯指认环指，就帮她换掉被环指标注过的接口。她没有看表，先看你。",
       "voice": "fable",
       "output": "D:\\创作\\albina-v2-complete\\staging\\media\\audio\\voice\\result\\conspiracy_007_seize_frame.mp3",
@@ -2247,8 +256,11 @@
       }
     },
     {
-      "id": "job.voice.result.conspiracy_008_hand_pen_to_her",
+      "id": "job.speech.voice.result.conspiracy_008_hand_pen_to_her",
       "kind": "speech",
+      "provider": "pie",
+      "model": "speech-2.8-hd",
+      "promptVersion": "albina-speech-v1",
       "input": "你选择“把笔交还给她，由她自己决定”。阿尔比娜：镜廊里同时映出\"环指版的她\"和\"现在的她\"。她让法西娅在两面镜子之间选一面，然后问你：你愿意被哪一个版本记得？",
       "voice": "echo",
       "output": "D:\\创作\\albina-v2-complete\\staging\\media\\audio\\voice\\result\\conspiracy_008_hand_pen_to_her.mp3",
@@ -2260,8 +272,11 @@
       }
     },
     {
-      "id": "job.voice.result.conspiracy_008_refuse_testimony",
+      "id": "job.speech.voice.result.conspiracy_008_refuse_testimony",
       "kind": "speech",
+      "provider": "pie",
+      "model": "speech-2.8-hd",
+      "promptVersion": "albina-speech-v1",
       "input": "你选择“当面拒绝用她换取证词”。阿尔比娜：镜廊里同时映出\"环指版的她\"和\"现在的她\"。她让法西娅在两面镜子之间选一面，然后问你：你愿意被哪一个版本记得？",
       "voice": "echo",
       "output": "D:\\创作\\albina-v2-complete\\staging\\media\\audio\\voice\\result\\conspiracy_008_refuse_testimony.mp3",
@@ -2273,8 +288,11 @@
       }
     },
     {
-      "id": "job.voice.result.conspiracy_009_choose_present",
+      "id": "job.speech.voice.result.conspiracy_009_choose_present",
       "kind": "speech",
+      "provider": "pie",
+      "model": "speech-2.8-hd",
+      "promptVersion": "albina-speech-v1",
       "input": "你选择“选现在的她，不挑那个环指版”。卡利斯托：卡利斯托拿出一枚\"合作者徽章\"，说只要她肯戴上，环指就放过你。阿尔比娜笑了一下，把徽章塞进你掌心：你来替我决定，要不要让我用它换你。",
       "voice": "nova",
       "output": "D:\\创作\\albina-v2-complete\\staging\\media\\audio\\voice\\result\\conspiracy_009_choose_present.mp3",
@@ -2286,8 +304,11 @@
       }
     },
     {
-      "id": "job.voice.result.conspiracy_009_refuse_choice",
+      "id": "job.speech.voice.result.conspiracy_009_refuse_choice",
       "kind": "speech",
+      "provider": "pie",
+      "model": "speech-2.8-hd",
+      "promptVersion": "albina-speech-v1",
       "input": "你选择“拒绝回答，让她自己挑镜子”。卡利斯托：卡利斯托拿出一枚\"合作者徽章\"，说只要她肯戴上，环指就放过你。阿尔比娜笑了一下，把徽章塞进你掌心：你来替我决定，要不要让我用它换你。",
       "voice": "nova",
       "output": "D:\\创作\\albina-v2-complete\\staging\\media\\audio\\voice\\result\\conspiracy_009_refuse_choice.mp3",
@@ -2299,8 +320,11 @@
       }
     },
     {
-      "id": "job.voice.result.conspiracy_010_keep_badge_unworn",
+      "id": "job.speech.voice.result.conspiracy_010_keep_badge_unworn",
       "kind": "speech",
+      "provider": "pie",
+      "model": "speech-2.8-hd",
+      "promptVersion": "albina-speech-v1",
       "input": "你选择“收下徽章，但谁都不许戴”。环指代理人：代理人撕下礼貌，举出一卷写好剧本的胶片：今晚的故事已经定稿，结局是你们两个都被装裱。阿尔比娜握紧法西娅，低声让你替她改写最后一格分镜。",
       "voice": "fable",
       "output": "D:\\创作\\albina-v2-complete\\staging\\media\\audio\\voice\\result\\conspiracy_010_keep_badge_unworn.mp3",
@@ -2312,8 +336,11 @@
       }
     },
     {
-      "id": "job.voice.result.conspiracy_010_throw_badge",
+      "id": "job.speech.voice.result.conspiracy_010_throw_badge",
       "kind": "speech",
+      "provider": "pie",
+      "model": "speech-2.8-hd",
+      "promptVersion": "albina-speech-v1",
       "input": "你选择“把徽章扔回卡利斯托脸上”。环指代理人：代理人撕下礼貌，举出一卷写好剧本的胶片：今晚的故事已经定稿，结局是你们两个都被装裱。阿尔比娜握紧法西娅，低声让你替她改写最后一格分镜。",
       "voice": "fable",
       "output": "D:\\创作\\albina-v2-complete\\staging\\media\\audio\\voice\\result\\conspiracy_010_throw_badge.mp3",
@@ -2325,8 +352,11 @@
       }
     },
     {
-      "id": "job.voice.result.conspiracy_011_burn_film",
+      "id": "job.speech.voice.result.conspiracy_011_burn_film",
       "kind": "speech",
+      "provider": "pie",
+      "model": "speech-2.8-hd",
+      "promptVersion": "albina-speech-v1",
       "input": "你选择“直接烧掉胶片，让剧本作废”。维吉利乌斯：楼顶上，维吉利乌斯把一柄已经卸下锋刃的环指画刀扔在你们脚边：用这个结束今晚，或者用它开始下一次共谋，你们自己挑。",
       "voice": "fable",
       "output": "D:\\创作\\albina-v2-complete\\staging\\media\\audio\\voice\\result\\conspiracy_011_burn_film.mp3",
@@ -2338,8 +368,11 @@
       }
     },
     {
-      "id": "job.voice.result.conspiracy_011_rewrite_ending",
+      "id": "job.speech.voice.result.conspiracy_011_rewrite_ending",
       "kind": "speech",
+      "provider": "pie",
+      "model": "speech-2.8-hd",
+      "promptVersion": "albina-speech-v1",
       "input": "你选择“当众改写结局，让他们措手不及”。维吉利乌斯：楼顶上，维吉利乌斯把一柄已经卸下锋刃的环指画刀扔在你们脚边：用这个结束今晚，或者用它开始下一次共谋，你们自己挑。",
       "voice": "fable",
       "output": "D:\\创作\\albina-v2-complete\\staging\\media\\audio\\voice\\result\\conspiracy_011_rewrite_ending.mp3",
@@ -2351,8 +384,11 @@
       }
     },
     {
-      "id": "job.voice.result.conspiracy_012_end_tonight",
+      "id": "job.speech.voice.result.conspiracy_012_end_tonight",
       "kind": "speech",
+      "provider": "pie",
+      "model": "speech-2.8-hd",
+      "promptVersion": "albina-speech-v1",
       "input": "你选择“选择结束今晚的共谋”。阿尔比娜：夜班巴士把你们带离环指的视线。她靠在窗边，把法西娅从胸口取出来放在你掌心一秒：今晚我借你这一秒心跳，作为不签名的合作凭证。",
       "voice": "echo",
       "output": "D:\\创作\\albina-v2-complete\\staging\\media\\audio\\voice\\result\\conspiracy_012_end_tonight.mp3",
@@ -2364,8 +400,11 @@
       }
     },
     {
-      "id": "job.voice.result.conspiracy_012_keep_blade",
+      "id": "job.speech.voice.result.conspiracy_012_keep_blade",
       "kind": "speech",
+      "provider": "pie",
+      "model": "speech-2.8-hd",
+      "promptVersion": "albina-speech-v1",
       "input": "你选择“收下画刀，留给未来必要时再用”。阿尔比娜：夜班巴士把你们带离环指的视线。她靠在窗边，把法西娅从胸口取出来放在你掌心一秒：今晚我借你这一秒心跳，作为不签名的合作凭证。",
       "voice": "echo",
       "output": "D:\\创作\\albina-v2-complete\\staging\\media\\audio\\voice\\result\\conspiracy_012_keep_blade.mp3",
@@ -2377,8 +416,11 @@
       }
     },
     {
-      "id": "job.voice.result.conspiracy_013_hold_one_second",
+      "id": "job.speech.voice.result.conspiracy_013_hold_one_second",
       "kind": "speech",
+      "provider": "pie",
+      "model": "speech-2.8-hd",
+      "promptVersion": "albina-speech-v1",
       "input": "你选择“认真握住那一秒，不多不少”。卡利斯托：巢穴车站最后一盏灯下，卡利斯托最后一次出现，递来一张空白入场券：你愿意把今晚写进环指的目录，还是彻底从目录里抹去？",
       "voice": "nova",
       "output": "D:\\创作\\albina-v2-complete\\staging\\media\\audio\\voice\\result\\conspiracy_013_hold_one_second.mp3",
@@ -2390,8 +432,11 @@
       }
     },
     {
-      "id": "job.voice.result.conspiracy_013_return_gently",
+      "id": "job.speech.voice.result.conspiracy_013_return_gently",
       "kind": "speech",
+      "provider": "pie",
+      "model": "speech-2.8-hd",
+      "promptVersion": "albina-speech-v1",
       "input": "你选择“提前把它轻轻送回，不占有”。卡利斯托：巢穴车站最后一盏灯下，卡利斯托最后一次出现，递来一张空白入场券：你愿意把今晚写进环指的目录，还是彻底从目录里抹去？",
       "voice": "nova",
       "output": "D:\\创作\\albina-v2-complete\\staging\\media\\audio\\voice\\result\\conspiracy_013_return_gently.mp3",
@@ -2403,8 +448,11 @@
       }
     },
     {
-      "id": "job.voice.result.conspiracy_014_erase_from_catalog",
+      "id": "job.speech.voice.result.conspiracy_014_erase_from_catalog",
       "kind": "speech",
+      "provider": "pie",
+      "model": "speech-2.8-hd",
+      "promptVersion": "albina-speech-v1",
       "input": "你选择“选择从环指目录里彻底抹去”。阿尔比娜：城郊黎明把环指的灯火远远压在身后。她停下脚步，把那柄卸下锋刃的画刀插进土里：今晚的共谋到此为止，下一次见面，我会以自己的名义邀请你。",
       "voice": "fable",
       "output": "D:\\创作\\albina-v2-complete\\staging\\media\\audio\\voice\\result\\conspiracy_014_erase_from_catalog.mp3",
@@ -2416,8 +464,11 @@
       }
     },
     {
-      "id": "job.voice.result.conspiracy_014_keep_one_line",
+      "id": "job.speech.voice.result.conspiracy_014_keep_one_line",
       "kind": "speech",
+      "provider": "pie",
+      "model": "speech-2.8-hd",
+      "promptVersion": "albina-speech-v1",
       "input": "你选择“只保留一行不被署名的记录”。阿尔比娜：城郊黎明把环指的灯火远远压在身后。她停下脚步，把那柄卸下锋刃的画刀插进土里：今晚的共谋到此为止，下一次见面，我会以自己的名义邀请你。",
       "voice": "fable",
       "output": "D:\\创作\\albina-v2-complete\\staging\\media\\audio\\voice\\result\\conspiracy_014_keep_one_line.mp3",
@@ -2429,8 +480,11 @@
       }
     },
     {
-      "id": "job.voice.result.conspiracy_accept",
+      "id": "job.speech.voice.result.conspiracy_accept",
       "kind": "speech",
+      "provider": "pie",
+      "model": "speech-2.8-hd",
+      "promptVersion": "albina-speech-v1",
       "input": "你选择“接下委托，但保留自己的条件”。阿尔比娜：她第一次没有把怒意伪装成礼貌。那不是要毁掉你的眼神，更像是不允许任何人替她决定你的用途。",
       "voice": "nova",
       "output": "D:\\创作\\albina-v2-complete\\staging\\media\\audio\\voice\\result\\conspiracy_accept.mp3",
@@ -2442,8 +496,11 @@
       }
     },
     {
-      "id": "job.voice.result.conspiracy_break_pursuit_frame",
+      "id": "job.speech.voice.result.conspiracy_break_pursuit_frame",
       "kind": "speech",
+      "provider": "pie",
+      "model": "speech-2.8-hd",
+      "promptVersion": "albina-speech-v1",
       "input": "你选择“打碎追兵布下的取景框”。阿尔比娜：回到蜘蛛画廊时，所有灯都向她弯下去。她把那份委托钉在空框里，语气平静：如果他们要收藏背叛，就先学会被背叛凝视。",
       "voice": "fable",
       "output": "D:\\创作\\albina-v2-complete\\staging\\media\\audio\\voice\\result\\conspiracy_break_pursuit_frame.mp3",
@@ -2455,8 +512,11 @@
       }
     },
     {
-      "id": "job.voice.result.conspiracy_escape_to_backstreets",
+      "id": "job.speech.voice.result.conspiracy_escape_to_backstreets",
       "kind": "speech",
+      "provider": "pie",
+      "model": "speech-2.8-hd",
+      "promptVersion": "albina-speech-v1",
       "input": "你选择“带着未签名委托冲出画廊”。环指代理人：追兵把雨巷切成一个个展格，仿佛你们已经是可出售的连环画。阿尔比娜没有回头，只把法西娅横在你和委托书之间。",
       "voice": "nova",
       "output": "D:\\创作\\albina-v2-complete\\staging\\media\\audio\\voice\\result\\conspiracy_escape_to_backstreets.mp3",
@@ -2468,8 +528,11 @@
       }
     },
     {
-      "id": "job.voice.result.conspiracy_feed_false_signature",
+      "id": "job.speech.voice.result.conspiracy_feed_false_signature",
       "kind": "speech",
+      "provider": "pie",
+      "model": "speech-2.8-hd",
+      "promptVersion": "albina-speech-v1",
       "input": "你选择“交出伪造签名引开视线”。阿尔比娜：回到蜘蛛画廊时，所有灯都向她弯下去。她把那份委托钉在空框里，语气平静：如果他们要收藏背叛，就先学会被背叛凝视。",
       "voice": "fable",
       "output": "D:\\创作\\albina-v2-complete\\staging\\media\\audio\\voice\\result\\conspiracy_feed_false_signature.mp3",
@@ -2481,8 +544,11 @@
       }
     },
     {
-      "id": "job.voice.result.conspiracy_pressure",
+      "id": "job.speech.voice.result.conspiracy_pressure",
       "kind": "speech",
+      "provider": "pie",
+      "model": "speech-2.8-hd",
+      "promptVersion": "albina-speech-v1",
       "input": "你选择“逼她说出真正目标”。阿尔比娜：她第一次没有把怒意伪装成礼貌。那不是要毁掉你的眼神，更像是不允许任何人替她决定你的用途。",
       "voice": "nova",
       "output": "D:\\创作\\albina-v2-complete\\staging\\media\\audio\\voice\\result\\conspiracy_pressure.mp3",
@@ -2494,10 +560,13 @@
       }
     },
     {
-      "id": "job.voice.result.enter_conspiracy",
+      "id": "job.speech.voice.result.enter_conspiracy",
       "kind": "speech",
-      "input": "你选择“接受环指的危险邀请”。阿尔比娜：蜘蛛巢的灯光像手术刀一样落下。她向你递来一份没有署名的委托，笑得礼貌又危险。",
-      "voice": "nova",
+      "provider": "pie",
+      "model": "speech-2.8-hd",
+      "promptVersion": "albina-speech-v1",
+      "input": "【AU/IF】这条路线主动改写 9-43 后续因果；其中的委托、关系和结局均为本卡原创。",
+      "voice": "alloy",
       "output": "D:\\创作\\albina-v2-complete\\staging\\media\\audio\\voice\\result\\enter_conspiracy.mp3",
       "validation": {
         "minDurationSeconds": 0.2,
@@ -2507,10 +576,13 @@
       }
     },
     {
-      "id": "job.voice.result.enter_rebuild",
+      "id": "job.speech.voice.result.enter_rebuild",
       "kind": "speech",
-      "input": "你选择“询问金枝重构的痕迹”。阿尔比娜：金色光尘沿着她的义体裂缝回流。她先确认的不是自己，而是法西娅是否还在呼吸。",
-      "voice": "nova",
+      "provider": "pie",
+      "model": "speech-2.8-hd",
+      "promptVersion": "albina-speech-v1",
+      "input": "【AU/IF】这条路线假设 Albina 在 9-43 死亡后被重构；该前提与全部后续均非正史。",
+      "voice": "alloy",
       "output": "D:\\创作\\albina-v2-complete\\staging\\media\\audio\\voice\\result\\enter_rebuild.mp3",
       "validation": {
         "minDurationSeconds": 0.2,
@@ -2520,10 +592,13 @@
       }
     },
     {
-      "id": "job.voice.result.enter_white_canvas",
+      "id": "job.speech.voice.result.enter_white_canvas",
       "kind": "speech",
-      "input": "你选择“留在她的白色画布前”。阿尔比娜：白色并不代表干净。它只是暂时还没有被决定。你也是这样，{{user}}。",
-      "voice": "nova",
+      "provider": "pie",
+      "model": "speech-2.8-hd",
+      "promptVersion": "albina-speech-v1",
+      "input": "【AU/IF】你进入以关系边界与自我选择为核心的 white_canvas 原创路线。",
+      "voice": "alloy",
       "output": "D:\\创作\\albina-v2-complete\\staging\\media\\audio\\voice\\result\\enter_white_canvas.mp3",
       "validation": {
         "minDurationSeconds": 0.2,
@@ -2533,8 +608,11 @@
       }
     },
     {
-      "id": "job.voice.result.golden_bough_rebuild.bad_ending",
+      "id": "job.speech.voice.result.golden_bough_rebuild.bad_ending",
       "kind": "speech",
+      "provider": "pie",
+      "model": "speech-2.8-hd",
+      "promptVersion": "albina-speech-v1",
       "input": "结局判定完成：金枝重构·BAD。资格规则与选择记录已固定写入。",
       "voice": "onyx",
       "output": "D:\\创作\\albina-v2-complete\\staging\\media\\audio\\voice\\result\\golden_bough_rebuild\\bad_ending.mp3",
@@ -2546,8 +624,11 @@
       }
     },
     {
-      "id": "job.voice.result.golden_bough_rebuild.normal_ending",
+      "id": "job.speech.voice.result.golden_bough_rebuild.normal_ending",
       "kind": "speech",
+      "provider": "pie",
+      "model": "speech-2.8-hd",
+      "promptVersion": "albina-speech-v1",
       "input": "结局判定完成：金枝重构·NORMAL。资格规则与选择记录已固定写入。",
       "voice": "onyx",
       "output": "D:\\创作\\albina-v2-complete\\staging\\media\\audio\\voice\\result\\golden_bough_rebuild\\normal_ending.mp3",
@@ -2559,8 +640,11 @@
       }
     },
     {
-      "id": "job.voice.result.golden_bough_rebuild.true_ending",
+      "id": "job.speech.voice.result.golden_bough_rebuild.true_ending",
       "kind": "speech",
+      "provider": "pie",
+      "model": "speech-2.8-hd",
+      "promptVersion": "albina-speech-v1",
       "input": "结局判定完成：金枝重构·TRUE。资格规则与选择记录已固定写入。",
       "voice": "onyx",
       "output": "D:\\创作\\albina-v2-complete\\staging\\media\\audio\\voice\\result\\golden_bough_rebuild\\true_ending.mp3",
@@ -2572,8 +656,11 @@
       }
     },
     {
-      "id": "job.voice.result.golden_bough_route_complete",
+      "id": "job.speech.voice.result.golden_bough_route_complete",
       "kind": "speech",
+      "provider": "pie",
+      "model": "speech-2.8-hd",
+      "promptVersion": "albina-speech-v1",
       "input": "你选择“记录金枝重构路线的暂定结局”。浮士德：记忆手术台上，金色光尘在义体接缝里像旧伤口一样反复渗出。浮士德递过一把刻度尺：她说她想重构的不是身体，是你替她记下却没敢念出来的那段。",
       "voice": "nova",
       "output": "D:\\创作\\albina-v2-complete\\staging\\media\\audio\\voice\\result\\golden_bough_route_complete.mp3",
@@ -2585,8 +672,11 @@
       }
     },
     {
-      "id": "job.voice.result.golden_bough_route_final",
+      "id": "job.speech.voice.result.golden_bough_route_final",
       "kind": "speech",
+      "provider": "pie",
+      "model": "speech-2.8-hd",
+      "promptVersion": "albina-speech-v1",
       "input": "你选择“为金枝重构路线落最后一笔”。金枝重构路线终章已封存，进入固定结局资格判定。",
       "voice": "nova",
       "output": "D:\\创作\\albina-v2-complete\\staging\\media\\audio\\voice\\result\\golden_bough_route_final.mp3",
@@ -2598,8 +688,11 @@
       }
     },
     {
-      "id": "job.voice.result.rebuild_006_keep_silent_anchor",
+      "id": "job.speech.voice.result.rebuild_006_keep_silent_anchor",
       "kind": "speech",
+      "provider": "pie",
+      "model": "speech-2.8-hd",
+      "promptVersion": "albina-speech-v1",
       "input": "你选择“只做锚点，不替她出声”。阿尔比娜：金枝裂隙里的回声全是她过去没说完的句子。她让法西娅在你和她之间选择一个频率，说这次她要先听见自己的节拍，再决定要不要跟上。",
       "voice": "shimmer",
       "output": "D:\\创作\\albina-v2-complete\\staging\\media\\audio\\voice\\result\\rebuild_006_keep_silent_anchor.mp3",
@@ -2611,8 +704,11 @@
       }
     },
     {
-      "id": "job.voice.result.rebuild_006_read_aloud",
+      "id": "job.speech.voice.result.rebuild_006_read_aloud",
       "kind": "speech",
+      "provider": "pie",
+      "model": "speech-2.8-hd",
+      "promptVersion": "albina-speech-v1",
       "input": "你选择“把那段记忆当着她的面念出来”。阿尔比娜：金枝裂隙里的回声全是她过去没说完的句子。她让法西娅在你和她之间选择一个频率，说这次她要先听见自己的节拍，再决定要不要跟上。",
       "voice": "shimmer",
       "output": "D:\\创作\\albina-v2-complete\\staging\\media\\audio\\voice\\result\\rebuild_006_read_aloud.mp3",
@@ -2624,8 +720,11 @@
       }
     },
     {
-      "id": "job.voice.result.rebuild_007_match_her_pulse",
+      "id": "job.speech.voice.result.rebuild_007_match_her_pulse",
       "kind": "speech",
+      "provider": "pie",
+      "model": "speech-2.8-hd",
+      "promptVersion": "albina-speech-v1",
       "input": "你选择“按她的节拍调整呼吸”。维吉利乌斯：LCE 的搜捕光柱扫过楼顶。维吉利乌斯扔下一句话：你救不回完整的她，但你能决定让她以哪个版本继续存在。阿尔比娜握紧法西娅，等你下判断。",
       "voice": "nova",
       "output": "D:\\创作\\albina-v2-complete\\staging\\media\\audio\\voice\\result\\rebuild_007_match_her_pulse.mp3",
@@ -2637,8 +736,11 @@
       }
     },
     {
-      "id": "job.voice.result.rebuild_007_stay_own_rhythm",
+      "id": "job.speech.voice.result.rebuild_007_stay_own_rhythm",
       "kind": "speech",
+      "provider": "pie",
+      "model": "speech-2.8-hd",
+      "promptVersion": "albina-speech-v1",
       "input": "你选择“保留你自己的呼吸节奏，让她对齐”。维吉利乌斯：LCE 的搜捕光柱扫过楼顶。维吉利乌斯扔下一句话：你救不回完整的她，但你能决定让她以哪个版本继续存在。阿尔比娜握紧法西娅，等你下判断。",
       "voice": "nova",
       "output": "D:\\创作\\albina-v2-complete\\staging\\media\\audio\\voice\\result\\rebuild_007_stay_own_rhythm.mp3",
@@ -2650,8 +752,11 @@
       }
     },
     {
-      "id": "job.voice.result.rebuild_008_protect_current_self",
+      "id": "job.speech.voice.result.rebuild_008_protect_current_self",
       "kind": "speech",
+      "provider": "pie",
+      "model": "speech-2.8-hd",
+      "promptVersion": "albina-speech-v1",
       "input": "你选择“保护此刻这个尚未完成的她”。金色幻影：镜廊深处的金色幻影模仿着她的旧姿态，问她：要不要把我装回去，省得你再做一个有缺口的自己？她抬头看你，等你回答那个不属于她的问题。",
       "voice": "echo",
       "output": "D:\\创作\\albina-v2-complete\\staging\\media\\audio\\voice\\result\\rebuild_008_protect_current_self.mp3",
@@ -2663,8 +768,11 @@
       }
     },
     {
-      "id": "job.voice.result.rebuild_008_trade_old_memory",
+      "id": "job.speech.voice.result.rebuild_008_trade_old_memory",
       "kind": "speech",
+      "provider": "pie",
+      "model": "speech-2.8-hd",
+      "promptVersion": "albina-speech-v1",
       "input": "你选择“用一段旧记忆换取撤退时间”。金色幻影：镜廊深处的金色幻影模仿着她的旧姿态，问她：要不要把我装回去，省得你再做一个有缺口的自己？她抬头看你，等你回答那个不属于她的问题。",
       "voice": "echo",
       "output": "D:\\创作\\albina-v2-complete\\staging\\media\\audio\\voice\\result\\rebuild_008_trade_old_memory.mp3",
@@ -2676,8 +784,11 @@
       }
     },
     {
-      "id": "job.voice.result.rebuild_009_hand_question_back",
+      "id": "job.speech.voice.result.rebuild_009_hand_question_back",
       "kind": "speech",
+      "provider": "pie",
+      "model": "speech-2.8-hd",
+      "promptVersion": "albina-speech-v1",
       "input": "你选择“把问题原样交还给她”。LCE 医师：医师递来一份重构协议：只要她愿意封存一段记忆，LCE 就允许她保留现在的外形。她把笔尖停在协议上，没有签字，先看你的反应。",
       "voice": "shimmer",
       "output": "D:\\创作\\albina-v2-complete\\staging\\media\\audio\\voice\\result\\rebuild_009_hand_question_back.mp3",
@@ -2689,8 +800,11 @@
       }
     },
     {
-      "id": "job.voice.result.rebuild_009_refuse_perfect_copy",
+      "id": "job.speech.voice.result.rebuild_009_refuse_perfect_copy",
       "kind": "speech",
+      "provider": "pie",
+      "model": "speech-2.8-hd",
+      "promptVersion": "albina-speech-v1",
       "input": "你选择“替她拒绝那个完美复制品”。LCE 医师：医师递来一份重构协议：只要她愿意封存一段记忆，LCE 就允许她保留现在的外形。她把笔尖停在协议上，没有签字，先看你的反应。",
       "voice": "shimmer",
       "output": "D:\\创作\\albina-v2-complete\\staging\\media\\audio\\voice\\result\\rebuild_009_refuse_perfect_copy.mp3",
@@ -2702,8 +816,11 @@
       }
     },
     {
-      "id": "job.voice.result.rebuild_010_ask_her_choice",
+      "id": "job.speech.voice.result.rebuild_010_ask_her_choice",
       "kind": "speech",
+      "provider": "pie",
+      "model": "speech-2.8-hd",
+      "promptVersion": "albina-speech-v1",
       "input": "你选择“低声问她自己想怎么签”。阿尔比娜：夜班巴士上，她把额头轻轻抵在窗玻璃上。她说：你今天替我守住的，不是金枝，是一个允许我继续修改自己的我。",
       "voice": "echo",
       "output": "D:\\创作\\albina-v2-complete\\staging\\media\\audio\\voice\\result\\rebuild_010_ask_her_choice.mp3",
@@ -2715,8 +832,11 @@
       }
     },
     {
-      "id": "job.voice.result.rebuild_010_veto_sealing",
+      "id": "job.speech.voice.result.rebuild_010_veto_sealing",
       "kind": "speech",
+      "provider": "pie",
+      "model": "speech-2.8-hd",
+      "promptVersion": "albina-speech-v1",
       "input": "你选择“当着医师反对封存记忆”。阿尔比娜：夜班巴士上，她把额头轻轻抵在窗玻璃上。她说：你今天替我守住的，不是金枝，是一个允许我继续修改自己的我。",
       "voice": "echo",
       "output": "D:\\创作\\albina-v2-complete\\staging\\media\\audio\\voice\\result\\rebuild_010_veto_sealing.mp3",
@@ -2728,8 +848,11 @@
       }
     },
     {
-      "id": "job.voice.result.rebuild_011_ask_next_revision",
+      "id": "job.speech.voice.result.rebuild_011_ask_next_revision",
       "kind": "speech",
+      "provider": "pie",
+      "model": "speech-2.8-hd",
+      "promptVersion": "albina-speech-v1",
       "input": "你选择“问她下一笔想修改哪里”。环指代理人：环指工坊里有人拿出一枚金枝仿品，提议替她换掉所有\"未完成\"的接口。她握紧法西娅，等你判断这是救济，还是又一次把她写成完成品的尝试。",
       "voice": "nova",
       "output": "D:\\创作\\albina-v2-complete\\staging\\media\\audio\\voice\\result\\rebuild_011_ask_next_revision.mp3",
@@ -2741,8 +864,11 @@
       }
     },
     {
-      "id": "job.voice.result.rebuild_011_sit_beside",
+      "id": "job.speech.voice.result.rebuild_011_sit_beside",
       "kind": "speech",
+      "provider": "pie",
+      "model": "speech-2.8-hd",
+      "promptVersion": "albina-speech-v1",
       "input": "你选择“坐到她旁边，不说话”。环指代理人：环指工坊里有人拿出一枚金枝仿品，提议替她换掉所有\"未完成\"的接口。她握紧法西娅，等你判断这是救济，还是又一次把她写成完成品的尝试。",
       "voice": "nova",
       "output": "D:\\创作\\albina-v2-complete\\staging\\media\\audio\\voice\\result\\rebuild_011_sit_beside.mp3",
@@ -2754,8 +880,11 @@
       }
     },
     {
-      "id": "job.voice.result.rebuild_012_break_contract",
+      "id": "job.speech.voice.result.rebuild_012_break_contract",
       "kind": "speech",
+      "provider": "pie",
+      "model": "speech-2.8-hd",
+      "promptVersion": "albina-speech-v1",
       "input": "你选择“当面撕毁那份替换协议”。阿尔比娜：回到金枝裂隙，她终于允许自己颤抖。她说：你不肯替我决定形状，那我能不能请求你，在我下一次重构失败时，仍然叫出我现在的名字？",
       "voice": "fable",
       "output": "D:\\创作\\albina-v2-complete\\staging\\media\\audio\\voice\\result\\rebuild_012_break_contract.mp3",
@@ -2767,8 +896,11 @@
       }
     },
     {
-      "id": "job.voice.result.rebuild_012_negotiate_terms",
+      "id": "job.speech.voice.result.rebuild_012_negotiate_terms",
       "kind": "speech",
+      "provider": "pie",
+      "model": "speech-2.8-hd",
+      "promptVersion": "albina-speech-v1",
       "input": "你选择“替她重新谈判条件，不让她独自承担”。阿尔比娜：回到金枝裂隙，她终于允许自己颤抖。她说：你不肯替我决定形状，那我能不能请求你，在我下一次重构失败时，仍然叫出我现在的名字？",
       "voice": "fable",
       "output": "D:\\创作\\albina-v2-complete\\staging\\media\\audio\\voice\\result\\rebuild_012_negotiate_terms.mp3",
@@ -2780,8 +912,11 @@
       }
     },
     {
-      "id": "job.voice.result.rebuild_013_offer_witness",
+      "id": "job.speech.voice.result.rebuild_013_offer_witness",
       "kind": "speech",
+      "provider": "pie",
+      "model": "speech-2.8-hd",
+      "promptVersion": "albina-speech-v1",
       "input": "你选择“只承诺做见证，不承诺结果”。阿尔比娜：镜廊最后一面镜子没有给倒影，只映出一枚未熄的金枝。她把镜子推向你：请你替我保管它，但不要替我点亮它。",
       "voice": "nova",
       "output": "D:\\创作\\albina-v2-complete\\staging\\media\\audio\\voice\\result\\rebuild_013_offer_witness.mp3",
@@ -2793,8 +928,11 @@
       }
     },
     {
-      "id": "job.voice.result.rebuild_013_promise_name",
+      "id": "job.speech.voice.result.rebuild_013_promise_name",
       "kind": "speech",
+      "provider": "pie",
+      "model": "speech-2.8-hd",
+      "promptVersion": "albina-speech-v1",
       "input": "你选择“答应她即使失败也记得这个名字”。阿尔比娜：镜廊最后一面镜子没有给倒影，只映出一枚未熄的金枝。她把镜子推向你：请你替我保管它，但不要替我点亮它。",
       "voice": "nova",
       "output": "D:\\创作\\albina-v2-complete\\staging\\media\\audio\\voice\\result\\rebuild_013_promise_name.mp3",
@@ -2806,8 +944,11 @@
       }
     },
     {
-      "id": "job.voice.result.rebuild_014_ask_when_to_light",
+      "id": "job.speech.voice.result.rebuild_014_ask_when_to_light",
       "kind": "speech",
+      "provider": "pie",
+      "model": "speech-2.8-hd",
+      "promptVersion": "albina-speech-v1",
       "input": "你选择“问她什么时刻才能点亮”。阿尔比娜：黎明把金枝的光尘压成一层很薄的金属。她抬头看你，第一次没有问该不该重构自己，而是说：谢谢你愿意陪我等到这一层颜色冷却。",
       "voice": "nova",
       "output": "D:\\创作\\albina-v2-complete\\staging\\media\\audio\\voice\\result\\rebuild_014_ask_when_to_light.mp3",
@@ -2819,8 +960,11 @@
       }
     },
     {
-      "id": "job.voice.result.rebuild_014_keep_unlit",
+      "id": "job.speech.voice.result.rebuild_014_keep_unlit",
       "kind": "speech",
+      "provider": "pie",
+      "model": "speech-2.8-hd",
+      "promptVersion": "albina-speech-v1",
       "input": "你选择“答应只保管，不替她点亮”。阿尔比娜：黎明把金枝的光尘压成一层很薄的金属。她抬头看你，第一次没有问该不该重构自己，而是说：谢谢你愿意陪我等到这一层颜色冷却。",
       "voice": "nova",
       "output": "D:\\创作\\albina-v2-complete\\staging\\media\\audio\\voice\\result\\rebuild_014_keep_unlit.mp3",
@@ -2832,8 +976,11 @@
       }
     },
     {
-      "id": "job.voice.result.rebuild_accept_missing_pieces",
+      "id": "job.speech.voice.result.rebuild_accept_missing_pieces",
       "kind": "speech",
+      "provider": "pie",
+      "model": "speech-2.8-hd",
+      "promptVersion": "albina-speech-v1",
       "input": "你选择“承认缺口也是她的结构”。阿尔比娜：最后一面镜子没有给她完整倒影，只给出一条可以返回的路。她握住你的手腕，确认那不是束缚，而是一次被允许的回航。",
       "voice": "echo",
       "output": "D:\\创作\\albina-v2-complete\\staging\\media\\audio\\voice\\result\\rebuild_accept_missing_pieces.mp3",
@@ -2845,8 +992,11 @@
       }
     },
     {
-      "id": "job.voice.result.rebuild_anchor",
+      "id": "job.speech.voice.result.rebuild_anchor",
       "kind": "speech",
+      "provider": "pie",
+      "model": "speech-2.8-hd",
+      "promptVersion": "albina-speech-v1",
       "input": "你选择“成为她的记忆锚点”。旁白：镜面里的阿尔比娜有无数个切口，但每一道切口都避开了你替她守住的名字。",
       "voice": "nova",
       "output": "D:\\创作\\albina-v2-complete\\staging\\media\\audio\\voice\\result\\rebuild_anchor.mp3",
@@ -2858,8 +1008,11 @@
       }
     },
     {
-      "id": "job.voice.result.rebuild_cut_false_completion",
+      "id": "job.speech.voice.result.rebuild_cut_false_completion",
       "kind": "speech",
+      "provider": "pie",
+      "model": "speech-2.8-hd",
+      "promptVersion": "albina-speech-v1",
       "input": "你选择“切断“完成品”的错误定义”。维吉利乌斯：楼顶的风把金色光尘吹成刀刃。维吉利乌斯没有劝阻，只提醒你：重构不是修好她，而是承认她有权决定哪些缺口继续存在。",
       "voice": "shimmer",
       "output": "D:\\创作\\albina-v2-complete\\staging\\media\\audio\\voice\\result\\rebuild_cut_false_completion.mp3",
@@ -2871,8 +1024,11 @@
       }
     },
     {
-      "id": "job.voice.result.rebuild_guard_fascia_pulse",
+      "id": "job.speech.voice.result.rebuild_guard_fascia_pulse",
       "kind": "speech",
+      "provider": "pie",
+      "model": "speech-2.8-hd",
+      "promptVersion": "albina-speech-v1",
       "input": "你选择“守住法西娅的心跳频率”。维吉利乌斯：楼顶的风把金色光尘吹成刀刃。维吉利乌斯没有劝阻，只提醒你：重构不是修好她，而是承认她有权决定哪些缺口继续存在。",
       "voice": "shimmer",
       "output": "D:\\创作\\albina-v2-complete\\staging\\media\\audio\\voice\\result\\rebuild_guard_fascia_pulse.mp3",
@@ -2884,8 +1040,11 @@
       }
     },
     {
-      "id": "job.voice.result.rebuild_push_into_raid",
+      "id": "job.speech.voice.result.rebuild_push_into_raid",
       "kind": "speech",
+      "provider": "pie",
+      "model": "speech-2.8-hd",
+      "promptVersion": "albina-speech-v1",
       "input": "你选择“带着记忆锚点突入金枝异常现场”。浮士德：金枝残响把病床、画架和战场叠成一张薄膜。浮士德只给出结论：如果锚点断裂，阿尔比娜会把自己误认为一件已经完成的作品。",
       "voice": "onyx",
       "output": "D:\\创作\\albina-v2-complete\\staging\\media\\audio\\voice\\result\\rebuild_push_into_raid.mp3",
@@ -2897,8 +1056,11 @@
       }
     },
     {
-      "id": "job.voice.result.rebuild_question_fascia",
+      "id": "job.speech.voice.result.rebuild_question_fascia",
       "kind": "speech",
+      "provider": "pie",
+      "model": "speech-2.8-hd",
+      "promptVersion": "albina-speech-v1",
       "input": "你选择“先检查法西娅”。旁白：镜面里的阿尔比娜有无数个切口，但每一道切口都避开了你替她守住的名字。",
       "voice": "nova",
       "output": "D:\\创作\\albina-v2-complete\\staging\\media\\audio\\voice\\result\\rebuild_question_fascia.mp3",
@@ -2910,8 +1072,11 @@
       }
     },
     {
-      "id": "job.voice.result.rebuild_use_rooftop_signal",
+      "id": "job.speech.voice.result.rebuild_use_rooftop_signal",
       "kind": "speech",
+      "provider": "pie",
+      "model": "speech-2.8-hd",
+      "promptVersion": "albina-speech-v1",
       "input": "你选择“用楼顶信号重排记忆顺序”。阿尔比娜：最后一面镜子没有给她完整倒影，只给出一条可以返回的路。她握住你的手腕，确认那不是束缚，而是一次被允许的回航。",
       "voice": "echo",
       "output": "D:\\创作\\albina-v2-complete\\staging\\media\\audio\\voice\\result\\rebuild_use_rooftop_signal.mp3",
@@ -2923,8 +1088,11 @@
       }
     },
     {
-      "id": "job.voice.result.return_opening_from_rebuild",
+      "id": "job.speech.voice.result.return_opening_from_rebuild",
       "kind": "speech",
+      "provider": "pie",
+      "model": "speech-2.8-hd",
+      "promptVersion": "albina-speech-v1",
       "input": "你选择“回到路线选择”。阿尔比娜：晚上好，{{user}}。请不要站得太远，我还没决定该把你称作观众、朋友，还是一块值得等待的画布。",
       "voice": "onyx",
       "output": "D:\\创作\\albina-v2-complete\\staging\\media\\audio\\voice\\result\\return_opening_from_rebuild.mp3",
@@ -2936,8 +1104,11 @@
       }
     },
     {
-      "id": "job.voice.result.return_opening_from_ring",
+      "id": "job.speech.voice.result.return_opening_from_ring",
       "kind": "speech",
+      "provider": "pie",
+      "model": "speech-2.8-hd",
+      "promptVersion": "albina-speech-v1",
       "input": "你选择“回到路线选择”。阿尔比娜：晚上好，{{user}}。请不要站得太远，我还没决定该把你称作观众、朋友，还是一块值得等待的画布。",
       "voice": "nova",
       "output": "D:\\创作\\albina-v2-complete\\staging\\media\\audio\\voice\\result\\return_opening_from_ring.mp3",
@@ -2949,8 +1120,11 @@
       }
     },
     {
-      "id": "job.voice.result.return_opening_from_white",
+      "id": "job.speech.voice.result.return_opening_from_white",
       "kind": "speech",
+      "provider": "pie",
+      "model": "speech-2.8-hd",
+      "promptVersion": "albina-speech-v1",
       "input": "你选择“回到路线选择”。阿尔比娜：晚上好，{{user}}。请不要站得太远，我还没决定该把你称作观众、朋友，还是一块值得等待的画布。",
       "voice": "nova",
       "output": "D:\\创作\\albina-v2-complete\\staging\\media\\audio\\voice\\result\\return_opening_from_white.mp3",
@@ -2962,8 +1136,11 @@
       }
     },
     {
-      "id": "job.voice.result.ring_conspiracy_route_complete",
+      "id": "job.speech.voice.result.ring_conspiracy_route_complete",
       "kind": "speech",
+      "provider": "pie",
+      "model": "speech-2.8-hd",
+      "promptVersion": "albina-speech-v1",
       "input": "你选择“记录环指共谋路线的暂定结局”。卡利斯托：卡利斯托把另一份署了名的委托推到你们中间，笑得像在挑礼物：既然上次没有展出你的缺陷，这次不如让你们两个一起成为一件合作作品。",
       "voice": "nova",
       "output": "D:\\创作\\albina-v2-complete\\staging\\media\\audio\\voice\\result\\ring_conspiracy_route_complete.mp3",
@@ -2975,8 +1152,11 @@
       }
     },
     {
-      "id": "job.voice.result.ring_conspiracy_route_final",
+      "id": "job.speech.voice.result.ring_conspiracy_route_final",
       "kind": "speech",
+      "provider": "pie",
+      "model": "speech-2.8-hd",
+      "promptVersion": "albina-speech-v1",
       "input": "你选择“为环指共谋路线合上最后一卷胶片”。环指共谋路线终章已封存，进入固定结局资格判定。",
       "voice": "nova",
       "output": "D:\\创作\\albina-v2-complete\\staging\\media\\audio\\voice\\result\\ring_conspiracy_route_final.mp3",
@@ -2988,8 +1168,11 @@
       }
     },
     {
-      "id": "job.voice.result.ring_conspiracy.bad_ending",
+      "id": "job.speech.voice.result.ring_conspiracy.bad_ending",
       "kind": "speech",
+      "provider": "pie",
+      "model": "speech-2.8-hd",
+      "promptVersion": "albina-speech-v1",
       "input": "结局判定完成：环指共谋·BAD。资格规则与选择记录已固定写入。",
       "voice": "onyx",
       "output": "D:\\创作\\albina-v2-complete\\staging\\media\\audio\\voice\\result\\ring_conspiracy\\bad_ending.mp3",
@@ -3001,8 +1184,11 @@
       }
     },
     {
-      "id": "job.voice.result.ring_conspiracy.normal_ending",
+      "id": "job.speech.voice.result.ring_conspiracy.normal_ending",
       "kind": "speech",
+      "provider": "pie",
+      "model": "speech-2.8-hd",
+      "promptVersion": "albina-speech-v1",
       "input": "结局判定完成：环指共谋·NORMAL。资格规则与选择记录已固定写入。",
       "voice": "onyx",
       "output": "D:\\创作\\albina-v2-complete\\staging\\media\\audio\\voice\\result\\ring_conspiracy\\normal_ending.mp3",
@@ -3014,8 +1200,11 @@
       }
     },
     {
-      "id": "job.voice.result.ring_conspiracy.true_ending",
+      "id": "job.speech.voice.result.ring_conspiracy.true_ending",
       "kind": "speech",
+      "provider": "pie",
+      "model": "speech-2.8-hd",
+      "promptVersion": "albina-speech-v1",
       "input": "结局判定完成：环指共谋·TRUE。资格规则与选择记录已固定写入。",
       "voice": "onyx",
       "output": "D:\\创作\\albina-v2-complete\\staging\\media\\audio\\voice\\result\\ring_conspiracy\\true_ending.mp3",
@@ -3027,8 +1216,11 @@
       }
     },
     {
-      "id": "job.voice.result.white_006_name_silence",
+      "id": "job.speech.voice.result.white_006_name_silence",
       "kind": "speech",
+      "provider": "pie",
+      "model": "speech-2.8-hd",
+      "promptVersion": "albina-speech-v1",
       "input": "你选择“替那条轮廓取一个不会被收藏的名字”。法西娅：法西娅的低语从镜面里渗出来：你正在画的并不是她，是一个被允许随时擦掉的你。阿尔比娜没有反驳，只是把那面镜子轻轻转开半寸。",
       "voice": "nova",
       "output": "D:\\创作\\albina-v2-complete\\staging\\media\\audio\\voice\\result\\white_006_name_silence.mp3",
@@ -3040,8 +1232,11 @@
       }
     },
     {
-      "id": "job.voice.result.white_006_refuse_naming",
+      "id": "job.speech.voice.result.white_006_refuse_naming",
       "kind": "speech",
+      "provider": "pie",
+      "model": "speech-2.8-hd",
+      "promptVersion": "albina-speech-v1",
       "input": "你选择“让轮廓保持无名，由她决定”。法西娅：法西娅的低语从镜面里渗出来：你正在画的并不是她，是一个被允许随时擦掉的你。阿尔比娜没有反驳，只是把那面镜子轻轻转开半寸。",
       "voice": "nova",
       "output": "D:\\创作\\albina-v2-complete\\staging\\media\\audio\\voice\\result\\white_006_refuse_naming.mp3",
@@ -3053,8 +1248,11 @@
       }
     },
     {
-      "id": "job.voice.result.white_007_ask_fascia_term",
+      "id": "job.speech.voice.result.white_007_ask_fascia_term",
       "kind": "speech",
+      "provider": "pie",
+      "model": "speech-2.8-hd",
+      "promptVersion": "albina-speech-v1",
       "input": "你选择“当着阿尔比娜问法西娅一个边界问题”。阿尔比娜：义体维护槽的白光下，她把法西娅从胸口取出来，放在你和她之间的托盘上。她说：完整不是把它装回去，是承认它有权利短暂离开我。",
       "voice": "shimmer",
       "output": "D:\\创作\\albina-v2-complete\\staging\\media\\audio\\voice\\result\\white_007_ask_fascia_term.mp3",
@@ -3066,8 +1264,11 @@
       }
     },
     {
-      "id": "job.voice.result.white_007_keep_mirror_open",
+      "id": "job.speech.voice.result.white_007_keep_mirror_open",
       "kind": "speech",
+      "provider": "pie",
+      "model": "speech-2.8-hd",
+      "promptVersion": "albina-speech-v1",
       "input": "你选择“让镜子继续映照，不替她遮蔽”。阿尔比娜：义体维护槽的白光下，她把法西娅从胸口取出来，放在你和她之间的托盘上。她说：完整不是把它装回去，是承认它有权利短暂离开我。",
       "voice": "shimmer",
       "output": "D:\\创作\\albina-v2-complete\\staging\\media\\audio\\voice\\result\\white_007_keep_mirror_open.mp3",
@@ -3079,8 +1280,11 @@
       }
     },
     {
-      "id": "job.voice.result.white_008_hold_fascia",
+      "id": "job.speech.voice.result.white_008_hold_fascia",
       "kind": "speech",
+      "provider": "pie",
+      "model": "speech-2.8-hd",
+      "promptVersion": "albina-speech-v1",
       "input": "你选择“替她暂时照看法西娅”。阿尔比娜：雨室的水线像无数根未被签名的画框。她让你站在她身后半步，说那个距离刚好能让两人都不必替对方回答。",
       "voice": "nova",
       "output": "D:\\创作\\albina-v2-complete\\staging\\media\\audio\\voice\\result\\white_008_hold_fascia.mp3",
@@ -3092,8 +1296,11 @@
       }
     },
     {
-      "id": "job.voice.result.white_008_stay_witness_only",
+      "id": "job.speech.voice.result.white_008_stay_witness_only",
       "kind": "speech",
+      "provider": "pie",
+      "model": "speech-2.8-hd",
+      "promptVersion": "albina-speech-v1",
       "input": "你选择“只站在她视野内，不接手”。阿尔比娜：雨室的水线像无数根未被签名的画框。她让你站在她身后半步，说那个距离刚好能让两人都不必替对方回答。",
       "voice": "nova",
       "output": "D:\\创作\\albina-v2-complete\\staging\\media\\audio\\voice\\result\\white_008_stay_witness_only.mp3",
@@ -3105,8 +1312,11 @@
       }
     },
     {
-      "id": "job.voice.result.white_009_keep_half_step",
+      "id": "job.speech.voice.result.white_009_keep_half_step",
       "kind": "speech",
+      "provider": "pie",
+      "model": "speech-2.8-hd",
+      "promptVersion": "albina-speech-v1",
       "input": "你选择“守住半步距离，不擅自靠近”。但丁：但丁没有抬头，只低声提醒：她在试着把自己画成一个可以离开的人，你最好别急着把她画成离不开你的人。",
       "voice": "nova",
       "output": "D:\\创作\\albina-v2-complete\\staging\\media\\audio\\voice\\result\\white_009_keep_half_step.mp3",
@@ -3118,8 +1328,11 @@
       }
     },
     {
-      "id": "job.voice.result.white_009_share_umbrella_edge",
+      "id": "job.speech.voice.result.white_009_share_umbrella_edge",
       "kind": "speech",
+      "provider": "pie",
+      "model": "speech-2.8-hd",
+      "promptVersion": "albina-speech-v1",
       "input": "你选择“把伞沿偏向她那侧”。但丁：但丁没有抬头，只低声提醒：她在试着把自己画成一个可以离开的人，你最好别急着把她画成离不开你的人。",
       "voice": "nova",
       "output": "D:\\创作\\albina-v2-complete\\staging\\media\\audio\\voice\\result\\white_009_share_umbrella_edge.mp3",
@@ -3131,8 +1344,11 @@
       }
     },
     {
-      "id": "job.voice.result.white_010_acknowledge_leave",
+      "id": "job.speech.voice.result.white_010_acknowledge_leave",
       "kind": "speech",
+      "provider": "pie",
+      "model": "speech-2.8-hd",
+      "promptVersion": "albina-speech-v1",
       "input": "你选择“承认她随时可以离开这张画布”。阿尔比娜：巢穴车站的灯光白得发硬。她站在月台边缘，没有回头，只问：如果一个艺术家拒绝被展览，你愿意做那个替她谢幕的人吗？",
       "voice": "alloy",
       "output": "D:\\创作\\albina-v2-complete\\staging\\media\\audio\\voice\\result\\white_010_acknowledge_leave.mp3",
@@ -3144,8 +1360,11 @@
       }
     },
     {
-      "id": "job.voice.result.white_010_offer_return_ticket",
+      "id": "job.speech.voice.result.white_010_offer_return_ticket",
       "kind": "speech",
+      "provider": "pie",
+      "model": "speech-2.8-hd",
+      "promptVersion": "albina-speech-v1",
       "input": "你选择“给她一张可以返回的车票，而不是绳索”。阿尔比娜：巢穴车站的灯光白得发硬。她站在月台边缘，没有回头，只问：如果一个艺术家拒绝被展览，你愿意做那个替她谢幕的人吗？",
       "voice": "alloy",
       "output": "D:\\创作\\albina-v2-complete\\staging\\media\\audio\\voice\\result\\white_010_offer_return_ticket.mp3",
@@ -3157,8 +1376,11 @@
       }
     },
     {
-      "id": "job.voice.result.white_011_curtain_call",
+      "id": "job.speech.voice.result.white_011_curtain_call",
       "kind": "speech",
+      "provider": "pie",
+      "model": "speech-2.8-hd",
+      "promptVersion": "albina-speech-v1",
       "input": "你选择“答应替她谢幕，不替她登台”。卡利斯托：蜘蛛画廊借给白画布一个临时展位。卡利斯托微笑着提议：把她最有缺陷的那一面挂出来，观众会替你们完成剩下的故事。",
       "voice": "nova",
       "output": "D:\\创作\\albina-v2-complete\\staging\\media\\audio\\voice\\result\\white_011_curtain_call.mp3",
@@ -3170,8 +1392,11 @@
       }
     },
     {
-      "id": "job.voice.result.white_011_walk_beside",
+      "id": "job.speech.voice.result.white_011_walk_beside",
       "kind": "speech",
+      "provider": "pie",
+      "model": "speech-2.8-hd",
+      "promptVersion": "albina-speech-v1",
       "input": "你选择“陪她走下月台，不离开也不催促”。卡利斯托：蜘蛛画廊借给白画布一个临时展位。卡利斯托微笑着提议：把她最有缺陷的那一面挂出来，观众会替你们完成剩下的故事。",
       "voice": "nova",
       "output": "D:\\创作\\albina-v2-complete\\staging\\media\\audio\\voice\\result\\white_011_walk_beside.mp3",
@@ -3183,8 +1408,11 @@
       }
     },
     {
-      "id": "job.voice.result.white_012_let_her_decide",
+      "id": "job.speech.voice.result.white_012_let_her_decide",
       "kind": "speech",
+      "provider": "pie",
+      "model": "speech-2.8-hd",
+      "promptVersion": "albina-speech-v1",
       "input": "你选择“把展与不展的决定权交还给她”。阿尔比娜：环指工坊的颜料气味里混着血。她握着一柄画刀，对你说：今天我可能要毁掉一件作品，请你告诉我哪一件是她真正想毁掉的。",
       "voice": "fable",
       "output": "D:\\创作\\albina-v2-complete\\staging\\media\\audio\\voice\\result\\white_012_let_her_decide.mp3",
@@ -3196,8 +1424,11 @@
       }
     },
     {
-      "id": "job.voice.result.white_012_refuse_exhibit",
+      "id": "job.speech.voice.result.white_012_refuse_exhibit",
       "kind": "speech",
+      "provider": "pie",
+      "model": "speech-2.8-hd",
+      "promptVersion": "albina-speech-v1",
       "input": "你选择“当众拒绝展出她的缺陷”。阿尔比娜：环指工坊的颜料气味里混着血。她握着一柄画刀，对你说：今天我可能要毁掉一件作品，请你告诉我哪一件是她真正想毁掉的。",
       "voice": "fable",
       "output": "D:\\创作\\albina-v2-complete\\staging\\media\\audio\\voice\\result\\white_012_refuse_exhibit.mp3",
@@ -3209,8 +1440,11 @@
       }
     },
     {
-      "id": "job.voice.result.white_013_point_to_mirror",
+      "id": "job.speech.voice.result.white_013_point_to_mirror",
       "kind": "speech",
+      "provider": "pie",
+      "model": "speech-2.8-hd",
+      "promptVersion": "albina-speech-v1",
       "input": "你选择“指向墙上那面映过法西娅的镜子”。阿尔比娜：楼顶的风把她的话吹得很轻。她说：如果有一天我想把自己重新画成空白，你会替我保留这最后一层底色，还是替我重新开始？",
       "voice": "nova",
       "output": "D:\\创作\\albina-v2-complete\\staging\\media\\audio\\voice\\result\\white_013_point_to_mirror.mp3",
@@ -3222,8 +1456,11 @@
       }
     },
     {
-      "id": "job.voice.result.white_013_refuse_to_choose",
+      "id": "job.speech.voice.result.white_013_refuse_to_choose",
       "kind": "speech",
+      "provider": "pie",
+      "model": "speech-2.8-hd",
+      "promptVersion": "albina-speech-v1",
       "input": "你选择“拒绝替她决定，让她自己下刀”。阿尔比娜：楼顶的风把她的话吹得很轻。她说：如果有一天我想把自己重新画成空白，你会替我保留这最后一层底色，还是替我重新开始？",
       "voice": "nova",
       "output": "D:\\创作\\albina-v2-complete\\staging\\media\\audio\\voice\\result\\white_013_refuse_to_choose.mp3",
@@ -3235,8 +1472,11 @@
       }
     },
     {
-      "id": "job.voice.result.white_014_keep_base_color",
+      "id": "job.speech.voice.result.white_014_keep_base_color",
       "kind": "speech",
+      "provider": "pie",
+      "model": "speech-2.8-hd",
+      "promptVersion": "albina-speech-v1",
       "input": "你选择“答应替她保留最后一层底色”。阿尔比娜：城郊的黎明像一张终于干透的画布。她把法西娅重新放回胸口，又把画笔交到你手里：这张画布已经记住了你，但它仍然属于我。",
       "voice": "nova",
       "output": "D:\\创作\\albina-v2-complete\\staging\\media\\audio\\voice\\result\\white_014_keep_base_color.mp3",
@@ -3248,8 +1488,11 @@
       }
     },
     {
-      "id": "job.voice.result.white_014_offer_restart",
+      "id": "job.speech.voice.result.white_014_offer_restart",
       "kind": "speech",
+      "provider": "pie",
+      "model": "speech-2.8-hd",
+      "promptVersion": "albina-speech-v1",
       "input": "你选择“答应陪她从空白重新开始”。阿尔比娜：城郊的黎明像一张终于干透的画布。她把法西娅重新放回胸口，又把画笔交到你手里：这张画布已经记住了你，但它仍然属于我。",
       "voice": "nova",
       "output": "D:\\创作\\albina-v2-complete\\staging\\media\\audio\\voice\\result\\white_014_offer_restart.mp3",
@@ -3261,8 +1504,11 @@
       }
     },
     {
-      "id": "job.voice.result.white_canvas_route_complete",
+      "id": "job.speech.voice.result.white_canvas_route_complete",
       "kind": "speech",
+      "provider": "pie",
+      "model": "speech-2.8-hd",
+      "promptVersion": "albina-speech-v1",
       "input": "你选择“记录白色画布路线的暂定结局”。阿尔比娜：空展厅的回声比任何观众都诚实。她拿起一支没有颜料的画笔，在你面前比划出一条看不见的轮廓：这是你今晚没有说出口的那句话。",
       "voice": "nova",
       "output": "D:\\创作\\albina-v2-complete\\staging\\media\\audio\\voice\\result\\white_canvas_route_complete.mp3",
@@ -3274,8 +1520,11 @@
       }
     },
     {
-      "id": "job.voice.result.white_canvas_route_final",
+      "id": "job.speech.voice.result.white_canvas_route_final",
       "kind": "speech",
+      "provider": "pie",
+      "model": "speech-2.8-hd",
+      "promptVersion": "albina-speech-v1",
       "input": "你选择“为白色画布路线盖上最后一枚印章”。白色画布路线终章已封存，进入固定结局资格判定。",
       "voice": "nova",
       "output": "D:\\创作\\albina-v2-complete\\staging\\media\\audio\\voice\\result\\white_canvas_route_final.mp3",
@@ -3287,8 +1536,11 @@
       }
     },
     {
-      "id": "job.voice.result.white_canvas.bad_ending",
+      "id": "job.speech.voice.result.white_canvas.bad_ending",
       "kind": "speech",
+      "provider": "pie",
+      "model": "speech-2.8-hd",
+      "promptVersion": "albina-speech-v1",
       "input": "结局判定完成：白色画布·BAD。资格规则与选择记录已固定写入。",
       "voice": "onyx",
       "output": "D:\\创作\\albina-v2-complete\\staging\\media\\audio\\voice\\result\\white_canvas\\bad_ending.mp3",
@@ -3300,8 +1552,11 @@
       }
     },
     {
-      "id": "job.voice.result.white_canvas.normal_ending",
+      "id": "job.speech.voice.result.white_canvas.normal_ending",
       "kind": "speech",
+      "provider": "pie",
+      "model": "speech-2.8-hd",
+      "promptVersion": "albina-speech-v1",
       "input": "结局判定完成：白色画布·NORMAL。资格规则与选择记录已固定写入。",
       "voice": "onyx",
       "output": "D:\\创作\\albina-v2-complete\\staging\\media\\audio\\voice\\result\\white_canvas\\normal_ending.mp3",
@@ -3313,8 +1568,11 @@
       }
     },
     {
-      "id": "job.voice.result.white_canvas.true_ending",
+      "id": "job.speech.voice.result.white_canvas.true_ending",
       "kind": "speech",
+      "provider": "pie",
+      "model": "speech-2.8-hd",
+      "promptVersion": "albina-speech-v1",
       "input": "结局判定完成：白色画布·TRUE。资格规则与选择记录已固定写入。",
       "voice": "onyx",
       "output": "D:\\创作\\albina-v2-complete\\staging\\media\\audio\\voice\\result\\white_canvas\\true_ending.mp3",
@@ -3326,8 +1584,11 @@
       }
     },
     {
-      "id": "job.voice.result.white_follow_to_lab",
+      "id": "job.speech.voice.result.white_follow_to_lab",
       "kind": "speech",
+      "provider": "pie",
+      "model": "speech-2.8-hd",
+      "promptVersion": "albina-speech-v1",
       "input": "你选择“陪她把画布带进 LCE 临时手术室”。LCE 医师：灯光没有温度。记录员要求你签下旁观协议，阿尔比娜却先把笔推给自己：这一次，谁也不能替她同意被拆解。",
       "voice": "nova",
       "output": "D:\\创作\\albina-v2-complete\\staging\\media\\audio\\voice\\result\\white_follow_to_lab.mp3",
@@ -3339,8 +1600,11 @@
       }
     },
     {
-      "id": "job.voice.result.white_interrupt_lab_terms",
+      "id": "job.speech.voice.result.white_interrupt_lab_terms",
       "kind": "speech",
+      "provider": "pie",
+      "model": "speech-2.8-hd",
+      "promptVersion": "albina-speech-v1",
       "input": "你选择“要求医师删去所有所有权措辞”。阿尔比娜：巴士窗上映出她的白色义体，也映出你故意留下的空座。她说完整不是没有裂缝，而是裂缝终于有了不被展览的权利。",
       "voice": "echo",
       "output": "D:\\创作\\albina-v2-complete\\staging\\media\\audio\\voice\\result\\white_interrupt_lab_terms.mp3",
@@ -3352,8 +1616,11 @@
       }
     },
     {
-      "id": "job.voice.result.white_keep_empty_seat",
+      "id": "job.speech.voice.result.white_keep_empty_seat",
       "kind": "speech",
+      "provider": "pie",
+      "model": "speech-2.8-hd",
+      "promptVersion": "albina-speech-v1",
       "input": "你选择“替她保留那张无人审判的座位”。阿尔比娜：黎明像一层还没有落款的底色。她把法西娅插在你们之间，不是阻隔，而是提醒：任何亲密都必须能被双方随时收回。",
       "voice": "nova",
       "output": "D:\\创作\\albina-v2-complete\\staging\\media\\audio\\voice\\result\\white_keep_empty_seat.mp3",
@@ -3365,8 +1632,11 @@
       }
     },
     {
-      "id": "job.voice.result.white_share_rain_window",
+      "id": "job.speech.voice.result.white_share_rain_window",
       "kind": "speech",
+      "provider": "pie",
+      "model": "speech-2.8-hd",
+      "promptVersion": "albina-speech-v1",
       "input": "你选择“把雨夜倒影交给她自己命名”。阿尔比娜：黎明像一层还没有落款的底色。她把法西娅插在你们之间，不是阻隔，而是提醒：任何亲密都必须能被双方随时收回。",
       "voice": "nova",
       "output": "D:\\创作\\albina-v2-complete\\staging\\media\\audio\\voice\\result\\white_share_rain_window.mp3",
@@ -3378,8 +1648,11 @@
       }
     },
     {
-      "id": "job.voice.result.white_sign_witness_protocol",
+      "id": "job.speech.voice.result.white_sign_witness_protocol",
       "kind": "speech",
+      "provider": "pie",
+      "model": "speech-2.8-hd",
+      "promptVersion": "albina-speech-v1",
       "input": "你选择“只签见证，不签处置权”。阿尔比娜：巴士窗上映出她的白色义体，也映出你故意留下的空座。她说完整不是没有裂缝，而是裂缝终于有了不被展览的权利。",
       "voice": "echo",
       "output": "D:\\创作\\albina-v2-complete\\staging\\media\\audio\\voice\\result\\white_sign_witness_protocol.mp3",
@@ -3391,8 +1664,11 @@
       }
     },
     {
-      "id": "job.voice.result.white_tease_back",
+      "id": "job.speech.voice.result.white_tease_back",
       "kind": "speech",
+      "provider": "pie",
+      "model": "speech-2.8-hd",
+      "promptVersion": "albina-speech-v1",
       "input": "你选择“反问她是否害怕自己的画布”。阿尔比娜：她把黑色手掌停在离你心口一寸的位置，没有继续向前。法西娅安静得像也在等待你的许可。",
       "voice": "nova",
       "output": "D:\\创作\\albina-v2-complete\\staging\\media\\audio\\voice\\result\\white_tease_back.mp3",
@@ -3404,8 +1680,11 @@
       }
     },
     {
-      "id": "job.voice.result.white_touch_boundary",
+      "id": "job.speech.voice.result.white_touch_boundary",
       "kind": "speech",
+      "provider": "pie",
+      "model": "speech-2.8-hd",
+      "promptVersion": "albina-speech-v1",
       "input": "你选择“告诉她：完整也是一种作品”。阿尔比娜：她把黑色手掌停在离你心口一寸的位置，没有继续向前。法西娅安静得像也在等待你的许可。",
       "voice": "nova",
       "output": "D:\\创作\\albina-v2-complete\\staging\\media\\audio\\voice\\result\\white_touch_boundary.mp3",
@@ -3417,8 +1696,107 @@
       }
     },
     {
-      "id": "job.voice.scene.golden_bough_001",
+      "id": "job.speech.voice.scene.canon_recap_9_14",
       "kind": "speech",
+      "provider": "pie",
+      "model": "speech-2.8-hd",
+      "promptVersion": "albina-speech-v1",
+      "input": "【正史中文意译·9-14 背景】在 LCE 研究区走廊，众人遭遇环指加工的人体作品。Faust 根据骨骼、肌肉与运动方式将其辨认为 Corporism，并发现 Nursefather 留给女儿的创作指示。固定转录全文没有在 9-14 直接写到 Albina；本节只提供她所属艺术流派的背景。",
+      "voice": "alloy",
+      "output": "D:\\创作\\albina-v2-complete\\staging\\media\\audio\\voice\\scene\\canon_recap_9_14.mp3",
+      "validation": {
+        "minDurationSeconds": 0.2,
+        "maxDurationSeconds": 60,
+        "minLoudnessDbfs": -30,
+        "maxLoudnessDbfs": -6
+      }
+    },
+    {
+      "id": "job.speech.voice.scene.canon_recap_9_18",
+      "kind": "speech",
+      "provider": "pie",
+      "model": "speech-2.8-hd",
+      "promptVersion": "albina-speech-v1",
+      "input": "【正史中文意译·9-18 首次出场】Dante、Ryōshū、Gregor、Meursault 与 Yi Sang 在 LCE 研究区实验室追查 Golden Boughs。Albina 与 Ren 接替 Shiomi Yoru 阻挡他们，让 Yoru 接近并带走嫁接的金枝。战斗推进到两人受创后，Albina 的上半装甲与 Fascia 侧板打开，露出搏动组织；她坚持让 Fascia 继续行动，Ren 则要求服从各自师父的计划，并出手制止她。两人的争执也给了罪人继续追赶 Yoru 的机会。",
+      "voice": "alloy",
+      "output": "D:\\创作\\albina-v2-complete\\staging\\media\\audio\\voice\\scene\\canon_recap_9_18.mp3",
+      "validation": {
+        "minDurationSeconds": 0.2,
+        "maxDurationSeconds": 60,
+        "minLoudnessDbfs": -30,
+        "maxLoudnessDbfs": -6
+      }
+    },
+    {
+      "id": "job.speech.voice.scene.canon_recap_9_37",
+      "kind": "speech",
+      "provider": "pie",
+      "model": "speech-2.8-hd",
+      "promptVersion": "albina-speech-v1",
+      "input": "【正史中文意译·9-37 相遇】Operation Spider Pyre 期间，Sinclair、Ishmael、Faust、Hohenheim 与 Alyssa 抵达 Corridor of the Ring；Callisto 派 Albina 前来“迎接”他们。她因唤醒沉睡的 Fascia 而迟到，并说明自己仍不擅长在不损坏素材的情况下完成作品，所以先用自己的手臂练习。她礼貌地请求众人与自己成为朋友，却把了解彼此与挑选 Fascia 的素材混在一起；遭到 Sinclair 拒绝后，双方开战。Albina 随后自报姓名，并说明自己是 Callisto 门下的 Corporism 学徒。",
+      "voice": "alloy",
+      "output": "D:\\创作\\albina-v2-complete\\staging\\media\\audio\\voice\\scene\\canon_recap_9_37.mp3",
+      "validation": {
+        "minDurationSeconds": 0.2,
+        "maxDurationSeconds": 60,
+        "minLoudnessDbfs": -30,
+        "maxLoudnessDbfs": -6
+      }
+    },
+    {
+      "id": "job.speech.voice.scene.canon_recap_9_37_battle",
+      "kind": "speech",
+      "provider": "pie",
+      "model": "speech-2.8-hd",
+      "promptVersion": "albina-speech-v1",
+      "input": "【正史中文意译·9-37 战斗升级】Callisto 加入战斗后，与 Albina 一同逐步压制 Limbus Company 一行。该节最后，Callisto 以骨肉尖桩制住除 Alyssa 外的众人，Alyssa 则将 Ardor Blossom Star 调至最高同调并发动反击。9-37 到此结束；Fascia 被毁、Albina 与 Callisto 死亡都不属于这一节，而发生在后续 9-43《Hatching》。",
+      "voice": "alloy",
+      "output": "D:\\创作\\albina-v2-complete\\staging\\media\\audio\\voice\\scene\\canon_recap_9_37_battle.mp3",
+      "validation": {
+        "minDurationSeconds": 0.2,
+        "maxDurationSeconds": 60,
+        "minLoudnessDbfs": -30,
+        "maxLoudnessDbfs": -6
+      }
+    },
+    {
+      "id": "job.speech.voice.scene.canon_recap_9_43_outcome",
+      "kind": "speech",
+      "provider": "pie",
+      "model": "speech-2.8-hd",
+      "promptVersion": "albina-speech-v1",
+      "input": "【正史中文意译·9-43《Hatching》转折】Hohenheim 用 Diffraction 突袭 Callisto 后，Albina 阻止 Faust 与 Ishmael 乘机追击；师徒仍将严重受创的众人逼入绝境。她要求 Sinclair 留下成为自己与 Fascia 的朋友，并在旁观 Callisto 对 Hohenheim 下手时谈到未来超越师父的梦想。她提出“未来”后，Sinclair 完全觉醒 The Sign，并显现一个来自未来的自己。\n\n【正史中文意译·9-43 既定结果】Faust 与 Ishmael 的同步攻击制造开口后，Future Sinclair 首先摧毁 Fascia。Albina 因 Fascia 被毁而失措，随后也被 Future Sinclair 杀死；Callisto 在之后被杀。Albina 的正史直接出场链至此结束，顺序是 9-18、9-37、9-43。",
+      "voice": "alloy",
+      "output": "D:\\创作\\albina-v2-complete\\staging\\media\\audio\\voice\\scene\\canon_recap_9_43_outcome.mp3",
+      "validation": {
+        "minDurationSeconds": 0.2,
+        "maxDurationSeconds": 60,
+        "minLoudnessDbfs": -30,
+        "maxLoudnessDbfs": -6
+      }
+    },
+    {
+      "id": "job.speech.voice.scene.canon_recap_albina_fascia",
+      "kind": "speech",
+      "provider": "pie",
+      "model": "speech-2.8-hd",
+      "promptVersion": "albina-speech-v1",
+      "input": "【身份】Albina（韩文 알비나，日文 アルビナ）是女性环指 Corporism 学徒、House of Spiders 成员与 Callisto 的弟子。她在 Canto IX 中作为敌对角色登场，韩语配音为 Kim Do-hee；9-43 之后的正史状态为死亡。\n\n【外观】她使用带金色点缀的白色全身义体：浅灰色人工质感高马尾近似线缆，脸与关节处有分界线，颈胸与大腿可见黑色机械和线路，躯干中央近似骨架。她右眼黑、左眼白，前臂还能展开剪刀、锯、手术刀、三爪与牵开器等工具。\n\n【装甲与武器】她的铁处女式全身装甲以白、亮黄与金色为主，具有长裙、尖刺头环、垂链、尖刺裙甲和绘有金色锐眼的面具。Fascia 是同色系巨剑，侧板打开后会露出暗色骨架、肋骨与内脏组织。\n\n【Fascia】Albina 对 Fascia 有强烈依恋，会与它交谈、用他人血肉喂养它，并在它可能受损时优先保护它；9-18 中她甚至为让 Fascia 继续行动而违背 Ren 对计划的要求。\n\n【人格与关系】她通常平静轻声、专注艺术，却难以理解他人的情绪；她将“朋友”与可用于 Fascia 的素材联系起来。她表示自己把部分脑组织交给 Fascia 后变得很不善说谎，同时敬仰 Callisto，并希望未来成为超越师父的 Maestro。\n\n【身体关系】Albina 主动切分原本肉体并将其制作成 Fascia，随后用全身义体替换身体、主要保留脑；Fascia 则缺少脑。她还曾先以自己的手臂练习如何处理创作素材。",
+      "voice": "alloy",
+      "output": "D:\\创作\\albina-v2-complete\\staging\\media\\audio\\voice\\scene\\canon_recap_albina_fascia.mp3",
+      "validation": {
+        "minDurationSeconds": 0.2,
+        "maxDurationSeconds": 60,
+        "minLoudnessDbfs": -30,
+        "maxLoudnessDbfs": -6
+      }
+    },
+    {
+      "id": "job.speech.voice.scene.golden_bough_001",
+      "kind": "speech",
+      "provider": "pie",
+      "model": "speech-2.8-hd",
+      "promptVersion": "albina-speech-v1",
       "input": "金色光尘沿着她的义体裂缝回流。她先确认的不是自己，而是法西娅是否还在呼吸。",
       "voice": "nova",
       "output": "D:\\创作\\albina-v2-complete\\staging\\media\\audio\\voice\\scene\\golden_bough_001.mp3",
@@ -3430,8 +1808,11 @@
       }
     },
     {
-      "id": "job.voice.scene.golden_bough_002",
+      "id": "job.speech.voice.scene.golden_bough_002",
       "kind": "speech",
+      "provider": "pie",
+      "model": "speech-2.8-hd",
+      "promptVersion": "albina-speech-v1",
       "input": "镜面里的阿尔比娜有无数个切口，但每一道切口都避开了你替她守住的名字。",
       "voice": "onyx",
       "output": "D:\\创作\\albina-v2-complete\\staging\\media\\audio\\voice\\scene\\golden_bough_002.mp3",
@@ -3443,8 +1824,11 @@
       }
     },
     {
-      "id": "job.voice.scene.golden_bough_003",
+      "id": "job.speech.voice.scene.golden_bough_003",
       "kind": "speech",
+      "provider": "pie",
+      "model": "speech-2.8-hd",
+      "promptVersion": "albina-speech-v1",
       "input": "金枝残响把病床、画架和战场叠成一张薄膜。浮士德只给出结论：如果锚点断裂，阿尔比娜会把自己误认为一件已经完成的作品。",
       "voice": "shimmer",
       "output": "D:\\创作\\albina-v2-complete\\staging\\media\\audio\\voice\\scene\\golden_bough_003.mp3",
@@ -3456,8 +1840,11 @@
       }
     },
     {
-      "id": "job.voice.scene.golden_bough_004",
+      "id": "job.speech.voice.scene.golden_bough_004",
       "kind": "speech",
+      "provider": "pie",
+      "model": "speech-2.8-hd",
+      "promptVersion": "albina-speech-v1",
       "input": "楼顶的风把金色光尘吹成刀刃。维吉利乌斯没有劝阻，只提醒你：重构不是修好她，而是承认她有权决定哪些缺口继续存在。",
       "voice": "echo",
       "output": "D:\\创作\\albina-v2-complete\\staging\\media\\audio\\voice\\scene\\golden_bough_004.mp3",
@@ -3469,8 +1856,11 @@
       }
     },
     {
-      "id": "job.voice.scene.golden_bough_005",
+      "id": "job.speech.voice.scene.golden_bough_005",
       "kind": "speech",
+      "provider": "pie",
+      "model": "speech-2.8-hd",
+      "promptVersion": "albina-speech-v1",
       "input": "最后一面镜子没有给她完整倒影，只给出一条可以返回的路。她握住你的手腕，确认那不是束缚，而是一次被允许的回航。",
       "voice": "nova",
       "output": "D:\\创作\\albina-v2-complete\\staging\\media\\audio\\voice\\scene\\golden_bough_005.mp3",
@@ -3482,8 +1872,11 @@
       }
     },
     {
-      "id": "job.voice.scene.golden_bough_006",
+      "id": "job.speech.voice.scene.golden_bough_006",
       "kind": "speech",
+      "provider": "pie",
+      "model": "speech-2.8-hd",
+      "promptVersion": "albina-speech-v1",
       "input": "记忆手术台上，金色光尘在义体接缝里像旧伤口一样反复渗出。浮士德递过一把刻度尺：她说她想重构的不是身体，是你替她记下却没敢念出来的那段。",
       "voice": "shimmer",
       "output": "D:\\创作\\albina-v2-complete\\staging\\media\\audio\\voice\\scene\\golden_bough_006.mp3",
@@ -3495,8 +1888,11 @@
       }
     },
     {
-      "id": "job.voice.scene.golden_bough_007",
+      "id": "job.speech.voice.scene.golden_bough_007",
       "kind": "speech",
+      "provider": "pie",
+      "model": "speech-2.8-hd",
+      "promptVersion": "albina-speech-v1",
       "input": "金枝裂隙里的回声全是她过去没说完的句子。她让法西娅在你和她之间选择一个频率，说这次她要先听见自己的节拍，再决定要不要跟上。",
       "voice": "nova",
       "output": "D:\\创作\\albina-v2-complete\\staging\\media\\audio\\voice\\scene\\golden_bough_007.mp3",
@@ -3508,8 +1904,11 @@
       }
     },
     {
-      "id": "job.voice.scene.golden_bough_008",
+      "id": "job.speech.voice.scene.golden_bough_008",
       "kind": "speech",
+      "provider": "pie",
+      "model": "speech-2.8-hd",
+      "promptVersion": "albina-speech-v1",
       "input": "LCE 的搜捕光柱扫过楼顶。维吉利乌斯扔下一句话：你救不回完整的她，但你能决定让她以哪个版本继续存在。阿尔比娜握紧法西娅，等你下判断。",
       "voice": "echo",
       "output": "D:\\创作\\albina-v2-complete\\staging\\media\\audio\\voice\\scene\\golden_bough_008.mp3",
@@ -3521,8 +1920,11 @@
       }
     },
     {
-      "id": "job.voice.scene.golden_bough_009",
+      "id": "job.speech.voice.scene.golden_bough_009",
       "kind": "speech",
+      "provider": "pie",
+      "model": "speech-2.8-hd",
+      "promptVersion": "albina-speech-v1",
       "input": "镜廊深处的金色幻影模仿着她的旧姿态，问她：要不要把我装回去，省得你再做一个有缺口的自己？她抬头看你，等你回答那个不属于她的问题。",
       "voice": "shimmer",
       "output": "D:\\创作\\albina-v2-complete\\staging\\media\\audio\\voice\\scene\\golden_bough_009.mp3",
@@ -3534,8 +1936,11 @@
       }
     },
     {
-      "id": "job.voice.scene.golden_bough_010",
+      "id": "job.speech.voice.scene.golden_bough_010",
       "kind": "speech",
+      "provider": "pie",
+      "model": "speech-2.8-hd",
+      "promptVersion": "albina-speech-v1",
       "input": "医师递来一份重构协议：只要她愿意封存一段记忆，LCE 就允许她保留现在的外形。她把笔尖停在协议上，没有签字，先看你的反应。",
       "voice": "echo",
       "output": "D:\\创作\\albina-v2-complete\\staging\\media\\audio\\voice\\scene\\golden_bough_010.mp3",
@@ -3547,8 +1952,11 @@
       }
     },
     {
-      "id": "job.voice.scene.golden_bough_011",
+      "id": "job.speech.voice.scene.golden_bough_011",
       "kind": "speech",
+      "provider": "pie",
+      "model": "speech-2.8-hd",
+      "promptVersion": "albina-speech-v1",
       "input": "夜班巴士上，她把额头轻轻抵在窗玻璃上。她说：你今天替我守住的，不是金枝，是一个允许我继续修改自己的我。",
       "voice": "nova",
       "output": "D:\\创作\\albina-v2-complete\\staging\\media\\audio\\voice\\scene\\golden_bough_011.mp3",
@@ -3560,8 +1968,11 @@
       }
     },
     {
-      "id": "job.voice.scene.golden_bough_012",
+      "id": "job.speech.voice.scene.golden_bough_012",
       "kind": "speech",
+      "provider": "pie",
+      "model": "speech-2.8-hd",
+      "promptVersion": "albina-speech-v1",
       "input": "环指工坊里有人拿出一枚金枝仿品，提议替她换掉所有\"未完成\"的接口。她握紧法西娅，等你判断这是救济，还是又一次把她写成完成品的尝试。",
       "voice": "fable",
       "output": "D:\\创作\\albina-v2-complete\\staging\\media\\audio\\voice\\scene\\golden_bough_012.mp3",
@@ -3573,8 +1984,11 @@
       }
     },
     {
-      "id": "job.voice.scene.golden_bough_013",
+      "id": "job.speech.voice.scene.golden_bough_013",
       "kind": "speech",
+      "provider": "pie",
+      "model": "speech-2.8-hd",
+      "promptVersion": "albina-speech-v1",
       "input": "回到金枝裂隙，她终于允许自己颤抖。她说：你不肯替我决定形状，那我能不能请求你，在我下一次重构失败时，仍然叫出我现在的名字？",
       "voice": "nova",
       "output": "D:\\创作\\albina-v2-complete\\staging\\media\\audio\\voice\\scene\\golden_bough_013.mp3",
@@ -3586,8 +2000,11 @@
       }
     },
     {
-      "id": "job.voice.scene.golden_bough_014",
+      "id": "job.speech.voice.scene.golden_bough_014",
       "kind": "speech",
+      "provider": "pie",
+      "model": "speech-2.8-hd",
+      "promptVersion": "albina-speech-v1",
       "input": "镜廊最后一面镜子没有给倒影，只映出一枚未熄的金枝。她把镜子推向你：请你替我保管它，但不要替我点亮它。",
       "voice": "nova",
       "output": "D:\\创作\\albina-v2-complete\\staging\\media\\audio\\voice\\scene\\golden_bough_014.mp3",
@@ -3599,8 +2016,11 @@
       }
     },
     {
-      "id": "job.voice.scene.golden_bough_015",
+      "id": "job.speech.voice.scene.golden_bough_015",
       "kind": "speech",
+      "provider": "pie",
+      "model": "speech-2.8-hd",
+      "promptVersion": "albina-speech-v1",
       "input": "黎明把金枝的光尘压成一层很薄的金属。她抬头看你，第一次没有问该不该重构自己，而是说：谢谢你愿意陪我等到这一层颜色冷却。",
       "voice": "nova",
       "output": "D:\\创作\\albina-v2-complete\\staging\\media\\audio\\voice\\scene\\golden_bough_015.mp3",
@@ -3612,8 +2032,11 @@
       }
     },
     {
-      "id": "job.voice.scene.golden_bough_rebuild_ending_bad",
+      "id": "job.speech.voice.scene.golden_bough_rebuild_ending_bad",
       "kind": "speech",
+      "provider": "pie",
+      "model": "speech-2.8-hd",
+      "promptVersion": "albina-speech-v1",
       "input": "稳定槽保住了身体，却没能保住全部连续性。阿尔比娜醒来时仍然礼貌，只把你当作可靠的见证者；被遗漏的称呼沉在金枝深处。",
       "voice": "nova",
       "output": "D:\\创作\\albina-v2-complete\\staging\\media\\audio\\voice\\scene\\golden_bough_rebuild_ending_bad.mp3",
@@ -3625,8 +2048,11 @@
       }
     },
     {
-      "id": "job.voice.scene.golden_bough_rebuild_ending_gate",
+      "id": "job.speech.voice.scene.golden_bough_rebuild_ending_gate",
       "kind": "speech",
+      "provider": "pie",
+      "model": "speech-2.8-hd",
+      "promptVersion": "albina-speech-v1",
       "input": "金枝重构的全部选择已封存。系统将只依据持久状态判定结局，不请求任何运行时生成。",
       "voice": "onyx",
       "output": "D:\\创作\\albina-v2-complete\\staging\\media\\audio\\voice\\scene\\golden_bough_rebuild_ending_gate.mp3",
@@ -3638,8 +2064,11 @@
       }
     },
     {
-      "id": "job.voice.scene.golden_bough_rebuild_ending_normal",
+      "id": "job.speech.voice.scene.golden_bough_rebuild_ending_normal",
       "kind": "speech",
+      "provider": "pie",
+      "model": "speech-2.8-hd",
+      "promptVersion": "albina-speech-v1",
       "input": "重构在可控范围内结束。部分残响仍被封存在金色薄膜后，但阿尔比娜认得你，也认得自己。你们决定把余下修复交给时间。",
       "voice": "nova",
       "output": "D:\\创作\\albina-v2-complete\\staging\\media\\audio\\voice\\scene\\golden_bough_rebuild_ending_normal.mp3",
@@ -3651,8 +2080,11 @@
       }
     },
     {
-      "id": "job.voice.scene.golden_bough_rebuild_ending_true",
+      "id": "job.speech.voice.scene.golden_bough_rebuild_ending_true",
       "kind": "speech",
+      "provider": "pie",
+      "model": "speech-2.8-hd",
+      "promptVersion": "albina-speech-v1",
       "input": "金枝残响终于与法西娅的心跳重合。阿尔比娜记得每一次称呼、暂停和重新确认；她以新的身体醒来，也完整记得是谁陪她走过重构。",
       "voice": "nova",
       "output": "D:\\创作\\albina-v2-complete\\staging\\media\\audio\\voice\\scene\\golden_bough_rebuild_ending_true.mp3",
@@ -3664,10 +2096,13 @@
       }
     },
     {
-      "id": "job.voice.scene.opening_001",
+      "id": "job.speech.voice.scene.opening_001",
       "kind": "speech",
-      "input": "晚上好，{{user}}。请不要站得太远，我还没决定该把你称作观众、朋友，还是一块值得等待的画布。",
-      "voice": "nova",
+      "provider": "pie",
+      "model": "speech-2.8-hd",
+      "promptVersion": "albina-speech-v1",
+      "input": "【本卡原创 AU/IF，不是原作后续】9-43《Hatching》的正史结局已经复盘完毕。从这一刻开始，Albina 的存活、玩家 {{user}} 的出现、三条路线与九个结局均为本卡原创，不代表原作事实或隐藏结局。",
+      "voice": "alloy",
       "output": "D:\\创作\\albina-v2-complete\\staging\\media\\audio\\voice\\scene\\opening_001.mp3",
       "validation": {
         "minDurationSeconds": 0.2,
@@ -3677,8 +2112,11 @@
       }
     },
     {
-      "id": "job.voice.scene.ring_conspiracy_001",
+      "id": "job.speech.voice.scene.ring_conspiracy_001",
       "kind": "speech",
+      "provider": "pie",
+      "model": "speech-2.8-hd",
+      "promptVersion": "albina-speech-v1",
       "input": "蜘蛛巢的灯光像手术刀一样落下。她向你递来一份没有署名的委托，笑得礼貌又危险。",
       "voice": "nova",
       "output": "D:\\创作\\albina-v2-complete\\staging\\media\\audio\\voice\\scene\\ring_conspiracy_001.mp3",
@@ -3690,8 +2128,11 @@
       }
     },
     {
-      "id": "job.voice.scene.ring_conspiracy_002",
+      "id": "job.speech.voice.scene.ring_conspiracy_002",
       "kind": "speech",
+      "provider": "pie",
+      "model": "speech-2.8-hd",
+      "promptVersion": "albina-speech-v1",
       "input": "她第一次没有把怒意伪装成礼貌。那不是要毁掉你的眼神，更像是不允许任何人替她决定你的用途。",
       "voice": "nova",
       "output": "D:\\创作\\albina-v2-complete\\staging\\media\\audio\\voice\\scene\\ring_conspiracy_002.mp3",
@@ -3703,8 +2144,11 @@
       }
     },
     {
-      "id": "job.voice.scene.ring_conspiracy_003",
+      "id": "job.speech.voice.scene.ring_conspiracy_003",
       "kind": "speech",
+      "provider": "pie",
+      "model": "speech-2.8-hd",
+      "promptVersion": "albina-speech-v1",
       "input": "追兵把雨巷切成一个个展格，仿佛你们已经是可出售的连环画。阿尔比娜没有回头，只把法西娅横在你和委托书之间。",
       "voice": "fable",
       "output": "D:\\创作\\albina-v2-complete\\staging\\media\\audio\\voice\\scene\\ring_conspiracy_003.mp3",
@@ -3716,8 +2160,11 @@
       }
     },
     {
-      "id": "job.voice.scene.ring_conspiracy_004",
+      "id": "job.speech.voice.scene.ring_conspiracy_004",
       "kind": "speech",
+      "provider": "pie",
+      "model": "speech-2.8-hd",
+      "promptVersion": "albina-speech-v1",
       "input": "回到蜘蛛画廊时，所有灯都向她弯下去。她把那份委托钉在空框里，语气平静：如果他们要收藏背叛，就先学会被背叛凝视。",
       "voice": "nova",
       "output": "D:\\创作\\albina-v2-complete\\staging\\media\\audio\\voice\\scene\\ring_conspiracy_004.mp3",
@@ -3729,8 +2176,11 @@
       }
     },
     {
-      "id": "job.voice.scene.ring_conspiracy_005",
+      "id": "job.speech.voice.scene.ring_conspiracy_005",
       "kind": "speech",
+      "provider": "pie",
+      "model": "speech-2.8-hd",
+      "promptVersion": "albina-speech-v1",
       "input": "卡利斯托把另一份署了名的委托推到你们中间，笑得像在挑礼物：既然上次没有展出你的缺陷，这次不如让你们两个一起成为一件合作作品。",
       "voice": "fable",
       "output": "D:\\创作\\albina-v2-complete\\staging\\media\\audio\\voice\\scene\\ring_conspiracy_005.mp3",
@@ -3742,8 +2192,11 @@
       }
     },
     {
-      "id": "job.voice.scene.ring_conspiracy_006",
+      "id": "job.speech.voice.scene.ring_conspiracy_006",
       "kind": "speech",
+      "provider": "pie",
+      "model": "speech-2.8-hd",
+      "promptVersion": "albina-speech-v1",
       "input": "蜘蛛画廊的灯突然转向她。她把法西娅插进墙上一幅空框，声音很冷：你们想收藏我，那就先学会被我凝视。",
       "voice": "nova",
       "output": "D:\\创作\\albina-v2-complete\\staging\\media\\audio\\voice\\scene\\ring_conspiracy_006.mp3",
@@ -3755,8 +2208,11 @@
       }
     },
     {
-      "id": "job.voice.scene.ring_conspiracy_007",
+      "id": "job.speech.voice.scene.ring_conspiracy_007",
       "kind": "speech",
+      "provider": "pie",
+      "model": "speech-2.8-hd",
+      "promptVersion": "albina-speech-v1",
       "input": "雨巷的尽头被代理人堵住。他不拔武器，只是举起一面空画框，要把你们框进环指的目录。阿尔比娜低声让你选：是冲破画框，还是把它抢过来。",
       "voice": "fable",
       "output": "D:\\创作\\albina-v2-complete\\staging\\media\\audio\\voice\\scene\\ring_conspiracy_007.mp3",
@@ -3768,8 +2224,11 @@
       }
     },
     {
-      "id": "job.voice.scene.ring_conspiracy_008",
+      "id": "job.speech.voice.scene.ring_conspiracy_008",
       "kind": "speech",
+      "provider": "pie",
+      "model": "speech-2.8-hd",
+      "promptVersion": "albina-speech-v1",
       "input": "LCE 把你们暂扣在手术间。医师递来一份中立证词表，说只要她肯指认环指，就帮她换掉被环指标注过的接口。她没有看表，先看你。",
       "voice": "echo",
       "output": "D:\\创作\\albina-v2-complete\\staging\\media\\audio\\voice\\scene\\ring_conspiracy_008.mp3",
@@ -3781,8 +2240,11 @@
       }
     },
     {
-      "id": "job.voice.scene.ring_conspiracy_009",
+      "id": "job.speech.voice.scene.ring_conspiracy_009",
       "kind": "speech",
+      "provider": "pie",
+      "model": "speech-2.8-hd",
+      "promptVersion": "albina-speech-v1",
       "input": "镜廊里同时映出\"环指版的她\"和\"现在的她\"。她让法西娅在两面镜子之间选一面，然后问你：你愿意被哪一个版本记得？",
       "voice": "nova",
       "output": "D:\\创作\\albina-v2-complete\\staging\\media\\audio\\voice\\scene\\ring_conspiracy_009.mp3",
@@ -3794,8 +2256,11 @@
       }
     },
     {
-      "id": "job.voice.scene.ring_conspiracy_010",
+      "id": "job.speech.voice.scene.ring_conspiracy_010",
       "kind": "speech",
+      "provider": "pie",
+      "model": "speech-2.8-hd",
+      "promptVersion": "albina-speech-v1",
       "input": "卡利斯托拿出一枚\"合作者徽章\"，说只要她肯戴上，环指就放过你。阿尔比娜笑了一下，把徽章塞进你掌心：你来替我决定，要不要让我用它换你。",
       "voice": "fable",
       "output": "D:\\创作\\albina-v2-complete\\staging\\media\\audio\\voice\\scene\\ring_conspiracy_010.mp3",
@@ -3807,8 +2272,11 @@
       }
     },
     {
-      "id": "job.voice.scene.ring_conspiracy_011",
+      "id": "job.speech.voice.scene.ring_conspiracy_011",
       "kind": "speech",
+      "provider": "pie",
+      "model": "speech-2.8-hd",
+      "promptVersion": "albina-speech-v1",
       "input": "代理人撕下礼貌，举出一卷写好剧本的胶片：今晚的故事已经定稿，结局是你们两个都被装裱。阿尔比娜握紧法西娅，低声让你替她改写最后一格分镜。",
       "voice": "fable",
       "output": "D:\\创作\\albina-v2-complete\\staging\\media\\audio\\voice\\scene\\ring_conspiracy_011.mp3",
@@ -3820,8 +2288,11 @@
       }
     },
     {
-      "id": "job.voice.scene.ring_conspiracy_012",
+      "id": "job.speech.voice.scene.ring_conspiracy_012",
       "kind": "speech",
+      "provider": "pie",
+      "model": "speech-2.8-hd",
+      "promptVersion": "albina-speech-v1",
       "input": "楼顶上，维吉利乌斯把一柄已经卸下锋刃的环指画刀扔在你们脚边：用这个结束今晚，或者用它开始下一次共谋，你们自己挑。",
       "voice": "echo",
       "output": "D:\\创作\\albina-v2-complete\\staging\\media\\audio\\voice\\scene\\ring_conspiracy_012.mp3",
@@ -3833,8 +2304,11 @@
       }
     },
     {
-      "id": "job.voice.scene.ring_conspiracy_013",
+      "id": "job.speech.voice.scene.ring_conspiracy_013",
       "kind": "speech",
+      "provider": "pie",
+      "model": "speech-2.8-hd",
+      "promptVersion": "albina-speech-v1",
       "input": "夜班巴士把你们带离环指的视线。她靠在窗边，把法西娅从胸口取出来放在你掌心一秒：今晚我借你这一秒心跳，作为不签名的合作凭证。",
       "voice": "nova",
       "output": "D:\\创作\\albina-v2-complete\\staging\\media\\audio\\voice\\scene\\ring_conspiracy_013.mp3",
@@ -3846,8 +2320,11 @@
       }
     },
     {
-      "id": "job.voice.scene.ring_conspiracy_014",
+      "id": "job.speech.voice.scene.ring_conspiracy_014",
       "kind": "speech",
+      "provider": "pie",
+      "model": "speech-2.8-hd",
+      "promptVersion": "albina-speech-v1",
       "input": "巢穴车站最后一盏灯下，卡利斯托最后一次出现，递来一张空白入场券：你愿意把今晚写进环指的目录，还是彻底从目录里抹去？",
       "voice": "fable",
       "output": "D:\\创作\\albina-v2-complete\\staging\\media\\audio\\voice\\scene\\ring_conspiracy_014.mp3",
@@ -3859,8 +2336,11 @@
       }
     },
     {
-      "id": "job.voice.scene.ring_conspiracy_015",
+      "id": "job.speech.voice.scene.ring_conspiracy_015",
       "kind": "speech",
+      "provider": "pie",
+      "model": "speech-2.8-hd",
+      "promptVersion": "albina-speech-v1",
       "input": "城郊黎明把环指的灯火远远压在身后。她停下脚步，把那柄卸下锋刃的画刀插进土里：今晚的共谋到此为止，下一次见面，我会以自己的名义邀请你。",
       "voice": "nova",
       "output": "D:\\创作\\albina-v2-complete\\staging\\media\\audio\\voice\\scene\\ring_conspiracy_015.mp3",
@@ -3872,8 +2352,11 @@
       }
     },
     {
-      "id": "job.voice.scene.ring_conspiracy_ending_bad",
+      "id": "job.speech.voice.scene.ring_conspiracy_ending_bad",
       "kind": "speech",
+      "provider": "pie",
+      "model": "speech-2.8-hd",
+      "promptVersion": "albina-speech-v1",
       "input": "追击停止时，代价已经写进彼此的沉默。你们逃出了装裱，却没能保住共同节奏；阿尔比娜独自带走那柄无锋画刀，没有约定再见。",
       "voice": "nova",
       "output": "D:\\创作\\albina-v2-complete\\staging\\media\\audio\\voice\\scene\\ring_conspiracy_ending_bad.mp3",
@@ -3885,8 +2368,11 @@
       }
     },
     {
-      "id": "job.voice.scene.ring_conspiracy_ending_gate",
+      "id": "job.speech.voice.scene.ring_conspiracy_ending_gate",
       "kind": "speech",
+      "provider": "pie",
+      "model": "speech-2.8-hd",
+      "promptVersion": "albina-speech-v1",
       "input": "环指共谋的全部选择已封存。系统将只依据持久状态判定结局，不请求任何运行时生成。",
       "voice": "onyx",
       "output": "D:\\创作\\albina-v2-complete\\staging\\media\\audio\\voice\\scene\\ring_conspiracy_ending_gate.mp3",
@@ -3898,8 +2384,11 @@
       }
     },
     {
-      "id": "job.voice.scene.ring_conspiracy_ending_normal",
+      "id": "job.speech.voice.scene.ring_conspiracy_ending_normal",
       "kind": "speech",
+      "provider": "pie",
+      "model": "speech-2.8-hd",
+      "promptVersion": "albina-speech-v1",
       "input": "你们离开了画廊，也留下了一条匿名记录作为制衡。危险没有消失，但契约已被改写；阿尔比娜把下一次会面留给更安全的夜晚。",
       "voice": "nova",
       "output": "D:\\创作\\albina-v2-complete\\staging\\media\\audio\\voice\\scene\\ring_conspiracy_ending_normal.mp3",
@@ -3911,8 +2400,11 @@
       }
     },
     {
-      "id": "job.voice.scene.ring_conspiracy_ending_true",
+      "id": "job.speech.voice.scene.ring_conspiracy_ending_true",
       "kind": "speech",
+      "provider": "pie",
+      "model": "speech-2.8-hd",
+      "promptVersion": "albina-speech-v1",
       "input": "环指的目录里只剩一页无法归档的空白。阿尔比娜以自己的名字向你发出下一次邀请；你们不再是展品或棋子，而是彼此承认的共谋者。",
       "voice": "nova",
       "output": "D:\\创作\\albina-v2-complete\\staging\\media\\audio\\voice\\scene\\ring_conspiracy_ending_true.mp3",
@@ -3924,8 +2416,11 @@
       }
     },
     {
-      "id": "job.voice.scene.white_canvas_001",
+      "id": "job.speech.voice.scene.white_canvas_001",
       "kind": "speech",
+      "provider": "pie",
+      "model": "speech-2.8-hd",
+      "promptVersion": "albina-speech-v1",
       "input": "白色并不代表干净。它只是暂时还没有被决定。你也是这样，{{user}}。",
       "voice": "nova",
       "output": "D:\\创作\\albina-v2-complete\\staging\\media\\audio\\voice\\scene\\white_canvas_001.mp3",
@@ -3937,8 +2432,11 @@
       }
     },
     {
-      "id": "job.voice.scene.white_canvas_002",
+      "id": "job.speech.voice.scene.white_canvas_002",
       "kind": "speech",
+      "provider": "pie",
+      "model": "speech-2.8-hd",
+      "promptVersion": "albina-speech-v1",
       "input": "她把黑色手掌停在离你心口一寸的位置，没有继续向前。法西娅安静得像也在等待你的许可。",
       "voice": "nova",
       "output": "D:\\创作\\albina-v2-complete\\staging\\media\\audio\\voice\\scene\\white_canvas_002.mp3",
@@ -3950,8 +2448,11 @@
       }
     },
     {
-      "id": "job.voice.scene.white_canvas_003",
+      "id": "job.speech.voice.scene.white_canvas_003",
       "kind": "speech",
+      "provider": "pie",
+      "model": "speech-2.8-hd",
+      "promptVersion": "albina-speech-v1",
       "input": "灯光没有温度。记录员要求你签下旁观协议，阿尔比娜却先把笔推给自己：这一次，谁也不能替她同意被拆解。",
       "voice": "echo",
       "output": "D:\\创作\\albina-v2-complete\\staging\\media\\audio\\voice\\scene\\white_canvas_003.mp3",
@@ -3963,8 +2464,11 @@
       }
     },
     {
-      "id": "job.voice.scene.white_canvas_004",
+      "id": "job.speech.voice.scene.white_canvas_004",
       "kind": "speech",
+      "provider": "pie",
+      "model": "speech-2.8-hd",
+      "promptVersion": "albina-speech-v1",
       "input": "巴士窗上映出她的白色义体，也映出你故意留下的空座。她说完整不是没有裂缝，而是裂缝终于有了不被展览的权利。",
       "voice": "nova",
       "output": "D:\\创作\\albina-v2-complete\\staging\\media\\audio\\voice\\scene\\white_canvas_004.mp3",
@@ -3976,8 +2480,11 @@
       }
     },
     {
-      "id": "job.voice.scene.white_canvas_005",
+      "id": "job.speech.voice.scene.white_canvas_005",
       "kind": "speech",
+      "provider": "pie",
+      "model": "speech-2.8-hd",
+      "promptVersion": "albina-speech-v1",
       "input": "黎明像一层还没有落款的底色。她把法西娅插在你们之间，不是阻隔，而是提醒：任何亲密都必须能被双方随时收回。",
       "voice": "nova",
       "output": "D:\\创作\\albina-v2-complete\\staging\\media\\audio\\voice\\scene\\white_canvas_005.mp3",
@@ -3989,8 +2496,11 @@
       }
     },
     {
-      "id": "job.voice.scene.white_canvas_006",
+      "id": "job.speech.voice.scene.white_canvas_006",
       "kind": "speech",
+      "provider": "pie",
+      "model": "speech-2.8-hd",
+      "promptVersion": "albina-speech-v1",
       "input": "空展厅的回声比任何观众都诚实。她拿起一支没有颜料的画笔，在你面前比划出一条看不见的轮廓：这是你今晚没有说出口的那句话。",
       "voice": "nova",
       "output": "D:\\创作\\albina-v2-complete\\staging\\media\\audio\\voice\\scene\\white_canvas_006.mp3",
@@ -4002,8 +2512,11 @@
       }
     },
     {
-      "id": "job.voice.scene.white_canvas_007",
+      "id": "job.speech.voice.scene.white_canvas_007",
       "kind": "speech",
+      "provider": "pie",
+      "model": "speech-2.8-hd",
+      "promptVersion": "albina-speech-v1",
       "input": "法西娅的低语从镜面里渗出来：你正在画的并不是她，是一个被允许随时擦掉的你。阿尔比娜没有反驳，只是把那面镜子轻轻转开半寸。",
       "voice": "shimmer",
       "output": "D:\\创作\\albina-v2-complete\\staging\\media\\audio\\voice\\scene\\white_canvas_007.mp3",
@@ -4015,8 +2528,11 @@
       }
     },
     {
-      "id": "job.voice.scene.white_canvas_008",
+      "id": "job.speech.voice.scene.white_canvas_008",
       "kind": "speech",
+      "provider": "pie",
+      "model": "speech-2.8-hd",
+      "promptVersion": "albina-speech-v1",
       "input": "义体维护槽的白光下，她把法西娅从胸口取出来，放在你和她之间的托盘上。她说：完整不是把它装回去，是承认它有权利短暂离开我。",
       "voice": "nova",
       "output": "D:\\创作\\albina-v2-complete\\staging\\media\\audio\\voice\\scene\\white_canvas_008.mp3",
@@ -4028,8 +2544,11 @@
       }
     },
     {
-      "id": "job.voice.scene.white_canvas_009",
+      "id": "job.speech.voice.scene.white_canvas_009",
       "kind": "speech",
+      "provider": "pie",
+      "model": "speech-2.8-hd",
+      "promptVersion": "albina-speech-v1",
       "input": "雨室的水线像无数根未被签名的画框。她让你站在她身后半步，说那个距离刚好能让两人都不必替对方回答。",
       "voice": "nova",
       "output": "D:\\创作\\albina-v2-complete\\staging\\media\\audio\\voice\\scene\\white_canvas_009.mp3",
@@ -4041,8 +2560,11 @@
       }
     },
     {
-      "id": "job.voice.scene.white_canvas_010",
+      "id": "job.speech.voice.scene.white_canvas_010",
       "kind": "speech",
+      "provider": "pie",
+      "model": "speech-2.8-hd",
+      "promptVersion": "albina-speech-v1",
       "input": "但丁没有抬头，只低声提醒：她在试着把自己画成一个可以离开的人，你最好别急着把她画成离不开你的人。",
       "voice": "alloy",
       "output": "D:\\创作\\albina-v2-complete\\staging\\media\\audio\\voice\\scene\\white_canvas_010.mp3",
@@ -4054,8 +2576,11 @@
       }
     },
     {
-      "id": "job.voice.scene.white_canvas_011",
+      "id": "job.speech.voice.scene.white_canvas_011",
       "kind": "speech",
+      "provider": "pie",
+      "model": "speech-2.8-hd",
+      "promptVersion": "albina-speech-v1",
       "input": "巢穴车站的灯光白得发硬。她站在月台边缘，没有回头，只问：如果一个艺术家拒绝被展览，你愿意做那个替她谢幕的人吗？",
       "voice": "nova",
       "output": "D:\\创作\\albina-v2-complete\\staging\\media\\audio\\voice\\scene\\white_canvas_011.mp3",
@@ -4067,8 +2592,11 @@
       }
     },
     {
-      "id": "job.voice.scene.white_canvas_012",
+      "id": "job.speech.voice.scene.white_canvas_012",
       "kind": "speech",
+      "provider": "pie",
+      "model": "speech-2.8-hd",
+      "promptVersion": "albina-speech-v1",
       "input": "蜘蛛画廊借给白画布一个临时展位。卡利斯托微笑着提议：把她最有缺陷的那一面挂出来，观众会替你们完成剩下的故事。",
       "voice": "fable",
       "output": "D:\\创作\\albina-v2-complete\\staging\\media\\audio\\voice\\scene\\white_canvas_012.mp3",
@@ -4080,8 +2608,11 @@
       }
     },
     {
-      "id": "job.voice.scene.white_canvas_013",
+      "id": "job.speech.voice.scene.white_canvas_013",
       "kind": "speech",
+      "provider": "pie",
+      "model": "speech-2.8-hd",
+      "promptVersion": "albina-speech-v1",
       "input": "环指工坊的颜料气味里混着血。她握着一柄画刀，对你说：今天我可能要毁掉一件作品，请你告诉我哪一件是她真正想毁掉的。",
       "voice": "nova",
       "output": "D:\\创作\\albina-v2-complete\\staging\\media\\audio\\voice\\scene\\white_canvas_013.mp3",
@@ -4093,8 +2624,11 @@
       }
     },
     {
-      "id": "job.voice.scene.white_canvas_014",
+      "id": "job.speech.voice.scene.white_canvas_014",
       "kind": "speech",
+      "provider": "pie",
+      "model": "speech-2.8-hd",
+      "promptVersion": "albina-speech-v1",
       "input": "楼顶的风把她的话吹得很轻。她说：如果有一天我想把自己重新画成空白，你会替我保留这最后一层底色，还是替我重新开始？",
       "voice": "nova",
       "output": "D:\\创作\\albina-v2-complete\\staging\\media\\audio\\voice\\scene\\white_canvas_014.mp3",
@@ -4106,8 +2640,11 @@
       }
     },
     {
-      "id": "job.voice.scene.white_canvas_015",
+      "id": "job.speech.voice.scene.white_canvas_015",
       "kind": "speech",
+      "provider": "pie",
+      "model": "speech-2.8-hd",
+      "promptVersion": "albina-speech-v1",
       "input": "城郊的黎明像一张终于干透的画布。她把法西娅重新放回胸口，又把画笔交到你手里：这张画布已经记住了你，但它仍然属于我。",
       "voice": "nova",
       "output": "D:\\创作\\albina-v2-complete\\staging\\media\\audio\\voice\\scene\\white_canvas_015.mp3",
@@ -4119,8 +2656,11 @@
       }
     },
     {
-      "id": "job.voice.scene.white_canvas_ending_bad",
+      "id": "job.speech.voice.scene.white_canvas_ending_bad",
       "kind": "speech",
+      "provider": "pie",
+      "model": "speech-2.8-hd",
+      "promptVersion": "albina-speech-v1",
       "input": "白厅没有发生争吵，只剩一张过早完成的画。阿尔比娜礼貌地收回画笔与称呼；边界仍被守住，但你们没能把信任带到黎明。",
       "voice": "nova",
       "output": "D:\\创作\\albina-v2-complete\\staging\\media\\audio\\voice\\scene\\white_canvas_ending_bad.mp3",
@@ -4132,8 +2672,11 @@
       }
     },
     {
-      "id": "job.voice.scene.white_canvas_ending_gate",
+      "id": "job.speech.voice.scene.white_canvas_ending_gate",
       "kind": "speech",
+      "provider": "pie",
+      "model": "speech-2.8-hd",
+      "promptVersion": "albina-speech-v1",
       "input": "白色画布的全部选择已封存。系统将只依据持久状态判定结局，不请求任何运行时生成。",
       "voice": "onyx",
       "output": "D:\\创作\\albina-v2-complete\\staging\\media\\audio\\voice\\scene\\white_canvas_ending_gate.mp3",
@@ -4145,8 +2688,11 @@
       }
     },
     {
-      "id": "job.voice.scene.white_canvas_ending_normal",
+      "id": "job.speech.voice.scene.white_canvas_ending_normal",
       "kind": "speech",
+      "provider": "pie",
+      "model": "speech-2.8-hd",
+      "promptVersion": "albina-speech-v1",
       "input": "展厅按约熄灯。你们保留了尚未说尽的话，也保留了随时重画的权利。阿尔比娜把空白画布卷好，约定下一场雨后再见。",
       "voice": "nova",
       "output": "D:\\创作\\albina-v2-complete\\staging\\media\\audio\\voice\\scene\\white_canvas_ending_normal.mp3",
@@ -4158,8 +2704,11 @@
       }
     },
     {
-      "id": "job.voice.scene.white_canvas_ending_true",
+      "id": "job.speech.voice.scene.white_canvas_ending_true",
       "kind": "speech",
+      "provider": "pie",
+      "model": "speech-2.8-hd",
+      "promptVersion": "albina-speech-v1",
       "input": "晨光落在未署名的白画上。阿尔比娜没有把你画成作品，而是把并肩离开的两道影子留在画框之外：这一次，完整与亲密同时成立。",
       "voice": "nova",
       "output": "D:\\创作\\albina-v2-complete\\staging\\media\\audio\\voice\\scene\\white_canvas_ending_true.mp3",

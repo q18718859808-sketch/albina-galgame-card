@@ -8,6 +8,48 @@
   },
   "assets": [
     {
+      "id": "reference.user.albina-style-board",
+      "subject": "albina-global-style-board",
+      "role": "deidentified-style-reference",
+      "localPath": "staging/research/style-reference/albina-style-board-deidentified-mosaic.png",
+      "sha256": "e6ba8109bf0a32b63ba5360ff030d80deb7fef0f72088b9e82ad63d4de275f46",
+      "bytes": 1042440,
+      "width": 1024,
+      "height": 1536,
+      "sourceAssetName": "F121759F860F58382CC0D53763FB3A6C.jpg",
+      "sourcePage": "user-provided-local-file",
+      "sourceUrl": "user-provided-local-file",
+      "sourceIds": [
+        "source.user-provided.style-baseline"
+      ],
+      "derivedFromSourceId": "reference.user.albina-style-baseline",
+      "derivation": "locally assembled from shuffled, rotated, and mirrored small crops of the text-free style-board crop; it preserves local linework, flat-color transitions, material edges, cool-white/charcoal, restrained-gold, warning-red, and industrial lighting while removing the face, complete body silhouette, pose, poster composition, typography, logo, barcode, and readable text",
+      "checkedAt": "2026-07-22",
+      "usage": "production-reference-only",
+      "redistribution": "forbidden",
+      "reviewStatus": "source-identified"
+    },
+    {
+      "id": "reference.user.albina-style-baseline",
+      "subject": "albina-reference-heroine",
+      "role": "character-reference-only",
+      "localPath": "staging/research/style-reference/albina-style-baseline.jpg",
+      "sha256": "1f13c373aaf95122686be9ca3d01d481743abd3a058e9e11cd8af6520c0a0fb4",
+      "bytes": 341902,
+      "width": 1024,
+      "height": 1536,
+      "sourceAssetName": "F121759F860F58382CC0D53763FB3A6C.jpg",
+      "sourcePage": "user-provided-local-file",
+      "sourceUrl": "user-provided-local-file",
+      "sourceIds": [
+        "source.user-provided.style-baseline"
+      ],
+      "checkedAt": "2026-07-21",
+      "usage": "production-reference-only",
+      "redistribution": "forbidden",
+      "reviewStatus": "source-identified"
+    },
+    {
       "id": "canon.visual.canto-ix.9-14.s908",
       "subject": "canto-ix-9-14",
       "role": "story-frame",

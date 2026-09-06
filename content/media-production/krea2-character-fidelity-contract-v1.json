@@ -1,0 +1,33 @@
+{
+  "schemaVersion": 1,
+  "version": "krea2-character-fidelity-v1",
+  "purpose": "Render original character designs through the verified Krea2 workflow without redesigning their identity.",
+  "sourceRoles": {
+    "characterReference": "identity, face, age presentation, anatomy, body proportion, pose, silhouette, hair or prosthetic structure, clothing construction, weapons, props, color blocking and all character-specific design facts",
+    "styleReference": "line density, flat-color transitions, restrained shading, material edges, palette treatment, industrial lighting and composition grammar only",
+    "neverTransferFromStyleReference": ["face", "body", "age", "hair", "clothing", "pose", "weapon", "prop", "logo", "text", "composition-specific subject matter"]
+  },
+  "hardRejectVisuals": [
+    "childlike or loli proportions",
+    "facial identity drift",
+    "natural hair replacing canonical hair or cable structure",
+    "altered garment silhouette or invented costume details",
+    "changed eye color or eye-side assignment",
+    "changed body ratio, limb count, hand count or finger anatomy",
+    "missing or redesigned signature weapon or prop",
+    "third-party character traits mixed into the subject",
+    "glossy 3D, doll-like or photoreal treatment when the canonical reference is flat 2D design-sheet art",
+    "cropped feet, hidden hands, text, logos, watermarks or UI"
+  ],
+  "albinaCanonicalAnchors": {
+    "unarmored": "staging/research/canon-visual/wiki-game-assets/albina-unarmored-standing.png",
+    "armored": "staging/research/canon-visual/wiki-game-assets/albina-armored-standing.png",
+    "styleBoard": "staging/research/style-reference/albina-style-board-deidentified-mosaic.png"
+  },
+  "reviewPolicy": {
+    "readImageRequired": true,
+    "promotionRequiresHumanVisualReview": true,
+    "candidateDefault": "staging-only",
+    "rightsMayNotBeInferredFromVisualSimilarity": true
+  }
+}

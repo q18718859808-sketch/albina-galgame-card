@@ -9,9 +9,22 @@ type PromotionProvenance =
       review: PromotionReview;
     }
   | {
-      provider: 'x666-openai-compatible';
+      provider: 'comfyui-local-krea2';
+      model: 'redcraft23FP8_30Krea2.safetensors';
+      promptVersion: string;
+      sourceJobHash: string;
+      review: PromotionReview;
+      baseline?: {
+        workflowPath: string;
+        workflowSha256: string;
+        evidencePath: string;
+        evidenceSha256: string;
+        topologySha256: string;
+      };
+    }
+  | {
+      provider: 'wisart-openai-compatible';
       model: 'gpt-image-2';
-      upstreamPieVerified: false;
       promptVersion: string;
       sourceJobHash: string;
       review: PromotionReview;

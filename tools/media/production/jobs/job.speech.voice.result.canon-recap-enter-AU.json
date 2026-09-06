@@ -1,0 +1,15 @@
+{
+  "kind": "speech",
+  "provider": "pie",
+  "model": "speech-2.8-hd",
+  "promptVersion": "albina-speech-v1",
+  "input": "正史复盘已结束。以下三条路线全部是本卡原创 AU/IF。",
+  "voice": "alloy",
+  "output": "D:\\创作\\albina-v2-complete\\staging\\media\\audio\\voice\\result\\canon_recap_enter_AU.mp3",
+  "validation": {
+    "minDurationSeconds": 0.2,
+    "maxDurationSeconds": 60,
+    "minLoudnessDbfs": -30,
+    "maxLoudnessDbfs": -6
+  }
+}

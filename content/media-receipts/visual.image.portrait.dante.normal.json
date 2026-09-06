@@ -1,0 +1,36 @@
+{
+  "version": 1,
+  "assetId": "file.characters.dante.normal.png",
+  "artifactSha256": "40487edd1ddf95c2448e6dd1b6a74bdc25ed32001aa3bbf7282d436ba48be80d",
+  "provenance": {
+    "provider": "wisart-openai-compatible",
+    "model": "gpt-image-2",
+    "promptVersion": "albina-visual-migration-v1",
+    "sourceJobHash": "fd2fb775497fa7b8a2731134510ef684fb4cd98c2ae8bda5a24bda6895eb3e3f",
+    "review": {
+      "status": "approved",
+      "reviewer": "workbuddy-agent",
+      "reviewedAt": "2026-09-06T07:16:41.386Z"
+    }
+  },
+  "rights": {
+    "status": "unverified",
+    "sourceType": "model-output",
+    "redistribution": "unverified",
+    "rightsBasis": "Redistribution rights for this model output have not been independently verified."
+  },
+  "lineage": {
+    "kind": "derivative",
+    "processVersion": "albina-visual-promotion-v1",
+    "inputs": [
+      {
+        "sha256": "9159aa76d13f54965f607398df7f032f66bc921470e4b8c94462e63f56f40263",
+        "role": "canon-visual-reference"
+      },
+      {
+        "sha256": "aaf89630110b6fef687b86334404b00cd39fd29c84451971575b26a29ce51142",
+        "role": "canon-visual-reference"
+      }
+    ]
+  }
+}

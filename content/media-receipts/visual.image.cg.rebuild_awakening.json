@@ -1,0 +1,42 @@
+{
+  "version": 1,
+  "assetId": "cg.rebuild_awakening",
+  "artifactSha256": "2e404e9eeaa8bcb46bc63486a219ccd96d9376d701110decd19aaa0f3c999469",
+  "provenance": {
+    "provider": "wisart-openai-compatible",
+    "model": "gpt-image-2",
+    "promptVersion": "albina-visual-migration-v1",
+    "sourceJobHash": "27c10de3118c4184f90f1439cd6381f9cc594f10d507b7b1121508e502188c00",
+    "review": {
+      "status": "approved",
+      "reviewer": "workbuddy-convergence-agent",
+      "reviewedAt": "2026-09-06T08:39:09.784Z"
+    }
+  },
+  "rights": {
+    "status": "unverified",
+    "sourceType": "model-output",
+    "redistribution": "unverified",
+    "rightsBasis": "Redistribution rights for this model output have not been independently verified."
+  },
+  "lineage": {
+    "kind": "derivative",
+    "processVersion": "albina-visual-promotion-v1",
+    "inputs": [
+      {
+        "assetId": "file.characters.albina.golden.bough.png",
+        "sha256": "c241ed5f31cf2c34cf0f9d3fd00968d93a8bb81d23b8a52e460614dd5643bfa8",
+        "role": "approved-generated-reference"
+      },
+      {
+        "assetId": "file.characters.protagonist.serious.png",
+        "sha256": "461927edeaab75615f232e57131fb9294fca75ef00b794d7a4a2955c66aeb18a",
+        "role": "approved-generated-reference"
+      },
+      {
+        "sha256": "aaf89630110b6fef687b86334404b00cd39fd29c84451971575b26a29ce51142",
+        "role": "canon-visual-reference"
+      }
+    ]
+  }
+}

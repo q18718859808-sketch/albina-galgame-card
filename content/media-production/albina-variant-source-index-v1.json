@@ -1,0 +1,36 @@
+{
+  "schemaVersion": 1,
+  "id": "albina-variant-source-index-v1",
+  "status": "production-queue-contract",
+  "purpose": "Bind every Albina state variant to one canonical latent-origin input while retaining prior AU images as non-conditioning research references only.",
+  "canonicalSource": {
+    "path": "staging/research/canon-visual/wiki-game-assets/albina-unarmored-standing.png",
+    "sha256": "e68f9d04dda42e9ab86dcb686663057619c8dfbeff5f7d70078a083b0228aa55",
+    "role": "sole-content-and-latent-origin"
+  },
+  "productionContract": {
+    "route": "krea2-staged-high-frequency-canonical-restyle-v1",
+    "fixedSixLoraChainRequired": true,
+    "structureLock": {
+      "stage1": { "denoise": 0.12, "steps": 28 },
+      "stage2": { "denoise": 0.07, "steps": 24 },
+      "allowedDenoiseRange": [0.05, 0.18]
+    },
+    "forbiddenInputs": ["au-reference-as-conditioning", "identity-edit", "secondary-reference-image", "pose-control", "depth-control", "crop", "post-style-lora"],
+    "reviewGate": "direct-original-resolution-review-required-before-adoption",
+    "rights": "unverified-no-release-promotion"
+  },
+  "variants": [
+    { "jobId": "albina-combat", "target": "characters/albina/combat.png", "researchReference": { "path": "staging/media/krea2-au-character-anchor/albina-au-combat.png", "sha256": "b99038f2e37fef9e3deb3b954895c3da460069eec898dd799be92abd1c288e62", "role": "research-only-not-sent-to-canonical-production" }, "productionStatus": "pending-krea2-six-lora-rerender" },
+    { "jobId": "albina-endgame", "target": "characters/albina/endgame.png", "researchReference": { "path": "staging/media/krea2-au-character-anchor/albina-au-endgame.png", "sha256": "7d767f326c803c13bd8ee6c46577b5fbd69321088b27f5a9ea427c9c5d8cbc93", "role": "research-only-not-sent-to-canonical-production" }, "productionStatus": "pending-krea2-six-lora-rerender" },
+    { "jobId": "albina-fascia-open", "target": "characters/albina/fascia-open.png", "researchReference": { "path": "staging/media/krea2-au-character-anchor/albina-au-fascia-open.png", "sha256": "8f6f07cec468ee5de36cda94d315124e82c9c41ad10897617e592b1b80405265", "role": "research-only-not-sent-to-canonical-production" }, "productionStatus": "pending-krea2-six-lora-rerender" },
+    { "jobId": "albina-furious", "target": "characters/albina/furious.png", "researchReference": { "path": "staging/media/krea2-au-character-anchor/albina-au-furious.png", "sha256": "fd91c5df47ff952329d258b11a1f6270974ca0bc12c585a876156d4520a27411", "role": "research-only-not-sent-to-canonical-production" }, "productionStatus": "pending-krea2-six-lora-rerender" },
+    { "jobId": "albina-golden-bough", "target": "characters/albina/golden-bough.png", "researchReference": { "path": "staging/media/krea2-au-character-anchor/albina-au-golden-bough.png", "sha256": "7d1058f06075a5f783be6868f5d2c964312dd9d458765f8e735675801832679f", "role": "research-only-not-sent-to-canonical-production" }, "productionStatus": "pending-krea2-six-lora-rerender" },
+    { "jobId": "albina-maestro", "target": "characters/albina/maestro.png", "researchReference": { "path": "staging/media/krea2-au-character-anchor/albina-au-maestro.png", "sha256": "4789cbb072a0171ab2df71e3caf25c4a5f3a9be6be5c008e18583029a9013072", "role": "research-only-not-sent-to-canonical-production" }, "productionStatus": "pending-krea2-six-lora-rerender" },
+    { "jobId": "albina-rain", "target": "characters/albina/rain.png", "researchReference": { "path": "staging/media/krea2-au-character-anchor/albina-au-rain.png", "sha256": "42f8fd12db68a6b83135f83e5282c196695d15e53a6da686ee3061210e6f3288", "role": "research-only-not-sent-to-canonical-production" }, "productionStatus": "pending-krea2-six-lora-rerender" },
+    { "jobId": "albina-ring-conspiracy", "target": "characters/albina/ring-conspiracy.png", "researchReference": { "path": "staging/media/krea2-au-character-anchor/albina-au-ring-conspiracy.png", "sha256": "25e7f47d90c53d59c0e91b114c459218ca6ab8fff502f1d4e30306222e920c66", "role": "research-only-not-sent-to-canonical-production" }, "productionStatus": "pending-krea2-six-lora-rerender" },
+    { "jobId": "albina-shy", "target": "characters/albina/shy.png", "researchReference": { "path": "staging/media/krea2-au-character-anchor/albina-au-shy.png", "sha256": "36dfa9ecce57c19439bc1c6bc92940907f6799a8a811294de4e496dc84ccfa4c", "role": "research-only-not-sent-to-canonical-production" }, "productionStatus": "pending-krea2-six-lora-rerender" },
+    { "jobId": "albina-surgical", "target": "characters/albina/surgical.png", "researchReference": { "path": "staging/media/krea2-au-character-anchor/albina-au-surgical.png", "sha256": "5cf5b8a13f045f33b11d3ca4ee49d9d446fff719c294784941638f13d5eff639", "role": "research-only-not-sent-to-canonical-production" }, "productionStatus": "pending-krea2-six-lora-rerender" },
+    { "jobId": "albina-white-canvas", "target": "characters/albina/white-canvas.png", "researchReference": { "path": "staging/media/krea2-au-character-anchor/albina-au-white-canvas.png", "sha256": "7e07ea21e9d6424fe964ca91c4cfbff9f7cfba340b2083a9675c50b5b7e82b5f", "role": "research-only-not-sent-to-canonical-production" }, "productionStatus": "pending-krea2-six-lora-rerender" }
+  ]
+}

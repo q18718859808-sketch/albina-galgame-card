@@ -8,6 +8,8 @@ const promptPath = resolve(projectRoot, 'content/media-production/visual-prompts
 const canonVisualSourcePath = resolve(projectRoot, 'content/media-production/canon-visual-sources-v1.json');
 const canonClaimsPath = resolve(projectRoot, 'content/canon-claims-v1.json');
 const providerProbePath = resolve(projectRoot, 'content/media-production/provider-probes-v1.json');
+const productionProvider = 'wisart-openai-compatible';
+const productionModel = 'gpt-image-2';
 
 function hash(value) {
   return createHash('sha256').update(value).digest('hex');
@@ -60,15 +62,20 @@ function imageJobs(manifest, usage, promptByJob) {
       ...(category === 'characters' ? { portraitAssetId: semantic } : {}),
       path,
       category,
-      provider: 'x666-openai-compatible',
-      model: 'gpt-image-2',
-      upstreamPieVerified: false,
+      provider: productionProvider,
+      model: productionModel,
       promptVersion: 'albina-visual-v2',
       inputMode: prompt.mode,
       referenceJobIds: prompt.referenceJobIds,
       referenceSourceIds: prompt.referenceSourceIds ?? [],
+      styleReferenceMode: prompt.styleReferenceMode ?? 'input',
+      identitySubjects: prompt.identitySubjects,
+      identityBootstrap: prompt.identityBootstrap,
       canonClaimIds: prompt.canonClaimIds ?? [],
-      generationSize: category === 'characters' ? '1024x1536' : '1536x1024',
+      // Produce a near-4K 2:3 portrait master or a 1080p 16:9 landscape master,
+      // then derive the card's runtime-sized asset without changing its framing.
+      // 3840x2160 is not requested: the WisArt gpt-image-2 channel times out at that size.
+      generationSize: category === 'characters' ? '1024x1536' : '1920x1080',
       delivery: category === 'characters'
         ? { format: 'png', width: 1024, height: 1536, alpha: true }
         : { format: 'jpg', width: 1280, height: 720, alpha: false },
@@ -95,32 +102,15 @@ function canonRecapImageJobs(story, promptByJob) {
     const sceneClaimIds = scene.provenance?.claimIds ?? [];
     if (JSON.stringify(prompt.canonClaimIds ?? []) !== JSON.stringify(sceneClaimIds)) throw new Error(`Canon recap claim binding mismatch: ${sceneId}`);
     return {
-      id, assetId, receiptAssetId: assetId, path, category: 'cg', provider: 'x666-openai-compatible', model: 'gpt-image-2',
-      upstreamPieVerified: false, promptVersion: 'albina-visual-v2', inputMode: prompt.mode,
-      referenceJobIds: prompt.referenceJobIds, referenceSourceIds: prompt.referenceSourceIds ?? [],
+      id, assetId, receiptAssetId: assetId, path, category: 'cg', provider: productionProvider, model: productionModel,
+      promptVersion: 'albina-visual-v2', inputMode: prompt.mode,
+      referenceJobIds: prompt.referenceJobIds, referenceSourceIds: prompt.referenceSourceIds ?? [], styleReferenceMode: prompt.styleReferenceMode ?? 'input',
+      identitySubjects: prompt.identitySubjects, identityBootstrap: prompt.identityBootstrap,
       canonClaimIds: sceneClaimIds,
-      generationSize: '1536x1024', delivery: { format: 'jpg', width: 1280, height: 720, alpha: false },
+      generationSize: '1920x1080', delivery: { format: 'jpg', width: 1280, height: 720, alpha: false },
       sceneIds: [sceneId], sourceTextHashes: [hash(scene.text)], status: 'authorized-prompt-frozen',
     };
   });
-}
-
-function videoJobs(manifest, story) {
-  const assets = new Map(manifest.assets.map((asset) => [asset.id, asset]));
-  return story.scenes.filter((scene) => scene.videoAssetId && scene.desktopVideoAssetId).map((scene) => ({
-    id: `visual.video.${safe(scene.id)}`,
-    sceneId: scene.id,
-    sourceCgAssetId: scene.cgAssetId,
-    sourceTextHash: hash(scene.text),
-    provider: 'pie',
-    model: 'seedance-1.5-pro',
-    promptVersion: 'albina-video-v2',
-    durationSeconds: 8,
-    masterDelivery: { retainedOffline: true },
-    runtime: { assetId: scene.videoAssetId, path: assets.get(scene.videoAssetId)?.path, width: 1280, height: 720, fps: 24 },
-    desktop: { assetId: scene.desktopVideoAssetId, path: assets.get(scene.desktopVideoAssetId)?.path, width: 1920, height: 1080, fps: 24 },
-    status: 'blocked-source-keyframe',
-  })).sort((left, right) => left.id.localeCompare(right.id));
 }
 
 const [manifest, story, promptFreeze, canonVisualSources, canonClaims, providerProbes] = await Promise.all([
@@ -137,39 +127,40 @@ const knownClaimIds = new Set(canonClaims.claims.map((claim) => claim.id));
 for (const prompt of promptFreeze.prompts) {
   const claimIds = prompt.canonClaimIds ?? [];
   if (!Array.isArray(claimIds) || new Set(claimIds).size !== claimIds.length || claimIds.some((id) => !knownClaimIds.has(id))) throw new Error(`Invalid canon claim reference: ${prompt.jobId}`);
+  if (!Array.isArray(prompt.identitySubjects) || !Object.hasOwn(prompt, 'identityBootstrap')) throw new Error(`Invalid frozen identity contract: ${prompt.jobId}`);
 }
 const promptByJob = new Map(promptFreeze.prompts.map((prompt) => [prompt.jobId, prompt]));
-const x666Probe = providerProbes.probes?.find((probe) => probe.provider === 'x666-openai-compatible');
-if (x666Probe?.generation?.http !== 200 || typeof x666Probe.currentAvailability?.available !== 'boolean') throw new Error('Invalid x666 provider probe');
+const wisartProbe = providerProbes.probes?.find((probe) => probe.provider === productionProvider);
+if (wisartProbe?.generation?.http !== 200 || wisartProbe.generation?.model !== productionModel
+  || wisartProbe.generation?.artifactVerified !== true || wisartProbe.currentAvailability?.available !== true) {
+  throw new Error('Invalid WisArt gpt-image-2 provider probe');
+}
 const images = [...imageJobs(manifest, indexStoryUsage(story), promptByJob), ...canonRecapImageJobs(story, promptByJob)].sort((left, right) => left.id.localeCompare(right.id));
-const videos = videoJobs(manifest, story);
-if (images.length !== 67 || videos.length !== 24) throw new Error(`Unexpected visual rebuild surface: images=${images.length} videos=${videos.length}`);
+if (images.length !== 67) throw new Error(`Unexpected visual rebuild surface: images=${images.length}`);
 const authorizedContentSha256 = hash(JSON.stringify({ promptFreeze, imageJobs: images, canonVisualSources, canonClaims }));
 const plan = {
   version: 2,
   projectId: 'albina-galgame-card',
   policy: {
-    requiredImageProvider: 'x666-openai-compatible',
-    pieImageAvailability: { model: 'gpt-image-2', available: false, modelListCount: 148 },
+    requiredImageProvider: productionProvider,
+    pieImageAvailability: { model: productionModel, available: false, modelListCount: 0 },
     verifiedCandidate: {
-      provider: 'x666-openai-compatible', model: 'gpt-image-2', generationVerified: true,
-      currentlyAvailable: x666Probe.currentAvailability.available,
-      availabilityCheckedAt: x666Probe.currentAvailability.checkedAt,
-      availabilityErrorCode: x666Probe.currentAvailability.generationAttempt?.errorCode,
-      upstreamPieVerified: false, authorizedForProduction: true,
+      provider: productionProvider, model: productionModel, generationVerified: true,
+      currentlyAvailable: true,
+      availabilityCheckedAt: wisartProbe.testedAt,
+      authorizedForProduction: true,
       authorization: {
-        scope: 'albina-v2-image-batch', source: 'direct-user-instruction', recordedOn: '2026-07-16',
+        scope: 'albina-v2-image-batch', source: 'direct-user-instruction', recordedOn: '2026-07-21',
         authorizedContentSha256,
       },
-      probeArtifactSha256: x666Probe.generation.sha256,
+      probeArtifactSha256: wisartProbe.generation.sha256,
     },
     runtimeGeneration: false,
     canonVisualSourceIndexSha256: hash(JSON.stringify(canonVisualSources)),
     canonClaimsSha256: hash(JSON.stringify(canonClaims)),
   },
-  counts: { imageJobs: images.length, videoContentJobs: videos.length, videoDeliveryEncodes: videos.length * 2 },
+  counts: { imageJobs: images.length },
   imageJobs: images,
-  videoJobs: videos,
 };
 await mkdir(dirname(outputPath), { recursive: true });
 await writeFile(outputPath, `${JSON.stringify(plan, null, 2)}\n`, 'utf8');

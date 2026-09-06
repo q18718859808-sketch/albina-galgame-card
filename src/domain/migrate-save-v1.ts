@@ -1,5 +1,11 @@
 import { RouteIdSchema, type RouteId } from './scene-cue';
 import {
+  defaultWorldbookPackageSelection,
+  LayeredWorldbookPresetIdSchema,
+  normalizeWorldbookSelection,
+  type WorldbookPackageSelection,
+} from './layered-worldbooks';
+import {
   SaveV2Schema,
   createDefaultSaveV2,
   type JsonObject,
@@ -115,7 +121,9 @@ function migrateProfile(record: UnknownRecord, route: RouteId | null, defaults: 
     gender: stringValue(source.gender, defaults.gender),
     appearance: stringValue(source.appearance, defaults.appearance),
     background: stringValue(source.background, defaults.background),
+    ability: stringValue(source.ability, defaults.ability),
     addressName: stringValue(source.addressName, defaults.addressName),
+    initialRelationship: stringValue(source.initialRelationship, defaults.initialRelationship),
     boundaries: stringValue(source.boundaries, defaults.boundaries),
     routePreference: preferredRoute.success ? preferredRoute.data : route ?? defaults.routePreference,
   };
@@ -191,6 +199,15 @@ function migrateWorldbookSeen(value: unknown): string[] {
   return stringIds(memory.records.map((record) => asRecord(record)?.id));
 }
 
+function migrateWorldbookSelection(record: UnknownRecord): WorldbookPackageSelection {
+  const defaults = defaultWorldbookPackageSelection();
+  const nested = asRecord(record.worldbook) ?? asRecord(record.worldbookSelection) ?? {};
+  const preset = LayeredWorldbookPresetIdSchema.safeParse(nested.presetId ?? record.worldbookPreset);
+  const presetId = preset.success && preset.data !== 'neverRuntime' ? preset.data : defaults.presetId;
+  const rawPackageIds = nested.packageIds ?? record.worldbookPackageIds;
+  return normalizeWorldbookSelection(presetId, Array.isArray(rawPackageIds) ? stringIds(rawPackageIds) : undefined);
+}
+
 function migrateLogs(record: UnknownRecord): SaveV2['logs'] {
   return {
     history: logEntries(record.history), timeline: logEntries(record.timeline),
@@ -211,6 +228,7 @@ function migrateRecord(record: UnknownRecord): SaveV2 {
   const defaults = createDefaultSaveV2();
   if (typeof record.schemaVersion === 'number' && record.schemaVersion > LEGACY_SAVE_V1_SCHEMA_VERSION) return defaults;
   const route = inferRoute(record.route, record.sceneId);
+  const worldbookSelection = migrateWorldbookSelection(record);
   const sceneId = typeof record.sceneId === 'string' && record.sceneId.length > 0 ? record.sceneId : defaults.sceneId;
   return SaveV2Schema.parse({
     ...defaults,
@@ -239,7 +257,10 @@ function migrateRecord(record: UnknownRecord): SaveV2 {
       progress: migrateProfessionProgress(record.professionProgress, defaults.professions.progress),
     },
     achievements: { unlockedIds: stringIds(record.unlockedAchievementIds) },
-    worldbook: { activeEntryIds: [], seenEntryIds: migrateWorldbookSeen(record.worldbookMemory) },
+    worldbook: {
+      activeEntryIds: [], seenEntryIds: migrateWorldbookSeen(record.worldbookMemory),
+      ...worldbookSelection,
+    },
     unlockedCg: stringIds(record.unlockedCg, defaults.unlockedCg),
     logs: migrateLogs(record),
   });

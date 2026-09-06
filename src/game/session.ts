@@ -1,4 +1,12 @@
 import type { GameScriptV2 } from '../domain/game-script';
+import {
+  isBetterMinigameOutcome,
+  resolveMinigameAttempt,
+  type MinigameAttempt,
+  type MinigameDefinition,
+  type MinigameResolution,
+  type SceneMinigameChallenge,
+} from '../domain/minigame';
 import { createDefaultSaveV2, type SaveV2 } from '../domain/save';
 import type { ChoiceAvailability, SceneChoice, SceneCue } from '../domain/scene-cue';
 import {
@@ -6,6 +14,7 @@ import {
   activateProfession,
   activeOutfitPortraitId,
   applyChoiceEffects,
+  applyProgressionEffects,
   effectiveStoryValue,
   equipItem,
   evaluateAchievements,
@@ -61,6 +70,69 @@ export class GameSession {
   }
 
   get outfitPortraitAssetId(): string | undefined { return activeOutfitPortraitId(this.script, this.save); }
+
+  get currentMinigame(): {
+    definition: MinigameDefinition;
+    challenge: SceneMinigameChallenge;
+    record: SaveV2['minigames']['records'][string] | undefined;
+  } | undefined {
+    const challenge = this.scene.minigame;
+    if (!challenge) return undefined;
+    const definition = this.script.gameplay.minigames.find(({ id }) => id === challenge.minigameId);
+    if (!definition) throw new Error(`Unknown minigame: ${challenge.minigameId}`);
+    if (definition.route !== undefined && definition.route !== this.save.route) {
+      throw new Error(`Minigame is unavailable on route: ${definition.id}`);
+    }
+    return {
+      definition,
+      challenge,
+      record: this.save.minigames.records[definition.id],
+    };
+  }
+
+  get activeMinigame(): { definition: MinigameDefinition; challenge: SceneMinigameChallenge } | undefined {
+    const current = this.currentMinigame;
+    if (!current || current.record?.resolved) return undefined;
+    return { definition: current.definition, challenge: current.challenge };
+  }
+
+  resolveMinigame(input: MinigameAttempt): MinigameResolution {
+    const current = this.currentMinigame;
+    if (!current) throw new Error('No minigame is active in the current scene.');
+    const existing = current.record;
+    if (existing?.resolved) throw new Error(`Minigame is already resolved: ${current.definition.id}`);
+    const active = { definition: current.definition, challenge: current.challenge };
+
+    const resolution = resolveMinigameAttempt(active.definition, active.challenge, input);
+    const at = this.now();
+    const reward = active.definition.outcomes[resolution.outcome];
+    applyProgressionEffects(this.script, this.save, reward, at);
+
+    this.save.minigames.records[active.definition.id] = {
+      attempts: (existing?.attempts ?? 0) + 1,
+      resolved: true,
+      completed: resolution.outcome === 'perfect' || resolution.outcome === 'assisted',
+      rewardClaimed: true,
+      ...(isBetterMinigameOutcome(resolution.outcome, existing?.bestOutcome) ? { bestOutcome: resolution.outcome } : existing?.bestOutcome ? { bestOutcome: existing.bestOutcome } : {}),
+      lastOutcome: resolution.outcome,
+      bestScore: Math.max(existing?.bestScore ?? 0, resolution.score),
+      assisted: resolution.assisted,
+      seed: active.challenge.seed,
+      resolvedAt: at,
+    };
+    this.save.updatedAt = at;
+    this.save.logs.story.push({
+      kind: 'minigame',
+      minigameId: active.definition.id,
+      sceneId: this.scene.id,
+      outcome: resolution.outcome,
+      score: resolution.score,
+      assisted: resolution.assisted,
+      at,
+    });
+    evaluateAchievements(this.script, this.save, at);
+    return resolution;
+  }
 
   replaceSave(save: SaveV2): void {
     if (!this.sceneById.has(save.sceneId)) throw new Error(`Save references unknown scene: ${save.sceneId}`);

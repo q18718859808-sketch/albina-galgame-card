@@ -1,0 +1,42 @@
+{
+  "version": 1,
+  "assetId": "cg.white_canvas_choice",
+  "artifactSha256": "f29ba0d9d48ae0059dc4320c93acd5fc221e7cb29749c05375473fd20529c356",
+  "provenance": {
+    "provider": "wisart-openai-compatible",
+    "model": "gpt-image-2",
+    "promptVersion": "albina-visual-migration-v1",
+    "sourceJobHash": "13f22afc3c017ce1f5eb41d9e2611f55bca1367d9e485fc23a42c0e2106891eb",
+    "review": {
+      "status": "approved",
+      "reviewer": "workbuddy-convergence-agent",
+      "reviewedAt": "2026-09-06T08:36:19.999Z"
+    }
+  },
+  "rights": {
+    "status": "unverified",
+    "sourceType": "model-output",
+    "redistribution": "unverified",
+    "rightsBasis": "Redistribution rights for this model output have not been independently verified."
+  },
+  "lineage": {
+    "kind": "derivative",
+    "processVersion": "albina-visual-promotion-v1",
+    "inputs": [
+      {
+        "assetId": "file.characters.albina.white.canvas.png",
+        "sha256": "3987479196fbdab2a2f5d2d4f33694eb6941590bfbb0ad47b69fc55b7848d215",
+        "role": "approved-generated-reference"
+      },
+      {
+        "assetId": "file.characters.protagonist.tender.png",
+        "sha256": "1654accf7c7cbdd16b6af3c3fa51d06fa0547b411451c1325d46bf02b71bd2d1",
+        "role": "approved-generated-reference"
+      },
+      {
+        "sha256": "aaf89630110b6fef687b86334404b00cd39fd29c84451971575b26a29ce51142",
+        "role": "canon-visual-reference"
+      }
+    ]
+  }
+}

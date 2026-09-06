@@ -1,0 +1,112 @@
+{
+  "schemaVersion": 1,
+  "generatedAt": "2026-08-19",
+  "purpose": "Reconcile canonical-restyle ledger entries with on-disk direct-review evidence without granting acceptance.",
+  "scope": {
+    "ledger": "staging/media/krea2-canonical-restyle/restyle-ledger-v1.json",
+    "directReviewRoot": "staging/media/krea2-canonical-restyle",
+    "ledgerEntryCountObserved": 55,
+    "ledgerEntryCountExpectedByRequest": 54,
+    "countDiscrepancyAction": "investigate-before-changing-ledger",
+    "directReviewFileCountObserved": 49
+  },
+  "decisionPolicy": {
+    "acceptedRequires": [
+      "candidateSha256 exactly matches the current ledger outputSha256",
+      "a direct-review JSON exists for the same candidate",
+      "direct-review status is accepted",
+      "promotionAllowed remains false unless an independent release policy grants promotion"
+    ],
+    "prohibited": [
+      "do not treat an ID-only match as current visual evidence",
+      "do not mark an unread asset accepted",
+      "do not infer acceptance from a pair preview, receipt, workflow, filename, or file presence",
+      "do not launch generation or mutate the staging ledger from this reconciliation"
+    ]
+  },
+  "reviewedButNotSafeToRecord": [
+    {
+      "id": "bg-lce-lab",
+      "ledgerStatus": "pending",
+      "directReviewStatus": "accepted",
+      "directReviewPath": "staging/media/krea2-canonical-restyle/backgrounds/restyle_bg_lce_lab.rgb.direct-review.json",
+      "ledgerOutputSha256": "69f9ad9670a2e53eca7d418c0be7eae716b3390a40288748dc748dbbea138828",
+      "reviewCandidateSha256": "d0929cae606b1d192679693446c0a2a327f36e32844a0385312569ef6c8ee910",
+      "action": "re-review-current-output",
+      "reason": "direct-review hash does not match current ledger output"
+    },
+    {
+      "id": "bg-ring-corridor",
+      "ledgerStatus": "pending",
+      "directReviewStatus": "accepted",
+      "directReviewPath": "staging/media/krea2-canonical-restyle/backgrounds/restyle_bg_ring_corridor.rgb.direct-review.json",
+      "ledgerOutputSha256": "dc7ede409c5fc192ae9d5eed5dcde40419011f40842f8fa65432130f774bef19",
+      "reviewCandidateSha256": "9f1446e3480af7faab88fe6cab0753be13b13856390d3e2420de0df5a6046a2a",
+      "action": "re-review-current-output",
+      "reason": "direct-review hash does not match current ledger output"
+    },
+    {
+      "id": "callisto",
+      "ledgerStatus": "pending",
+      "directReviewStatus": "accepted",
+      "directReviewPath": "staging/media/krea2-canonical-restyle/characters/restyle_callisto.direct-review.json",
+      "ledgerOutputSha256": "04c9a150ea6753fb74cfad8be1be9c2ea0e3b38a498a3ce9a01f934aaf6650b0",
+      "reviewCandidateSha256": "5bf4741cf1c337b60be620ec7857c59efae6aa0177763f0a941c453c07ee4be8",
+      "action": "re-review-current-output",
+      "reason": "direct-review hash does not match current ledger output"
+    },
+    {
+      "id": "cg-9-14-s908",
+      "ledgerStatus": "pending",
+      "directReviewStatus": "accepted",
+      "directReviewPath": "staging/media/krea2-canonical-restyle/cg/restyle_cg_9_14_s908.rgb.direct-review.json",
+      "ledgerOutputSha256": "3fd2b32546cd3ca6ffa767ec725ddc08618fb782776c18d2458860ec4e3569de",
+      "reviewCandidateSha256": "6f3e4230c7422f4f35625de76b4065f5e1dbf1cfdc3413efb002275b1fb042b0",
+      "action": "re-review-current-output",
+      "reason": "direct-review hash does not match current ledger output"
+    },
+    {
+      "id": "cg-9-14-s914",
+      "ledgerStatus": "pending",
+      "directReviewStatus": "accepted",
+      "directReviewPath": "staging/media/krea2-canonical-restyle/cg/restyle_cg_9_14_s914.rgb.direct-review.json",
+      "ledgerOutputSha256": "02f91a3d9d830394d1f69bbb57085a14eff7a78697136288d0ccbf3483eab374",
+      "reviewCandidateSha256": "e0860aabdf460367a40db7432c7e8c9fd94d333f963ca47a8b094df3b533aa01",
+      "action": "re-review-current-output",
+      "reason": "direct-review hash does not match current ledger output"
+    },
+    {
+      "id": "dante",
+      "ledgerStatus": "pending",
+      "directReviewStatus": "accepted",
+      "directReviewPath": "staging/media/krea2-canonical-restyle/characters/restyle_dante.direct-review.json",
+      "ledgerOutputSha256": "eb9e9d8152de01e5daa2d7f2e6c8d21651f6234d1946c76219a826188c75f937",
+      "reviewCandidateSha256": "9fa65713f6cfee10da36c49e7f14ec9fc9397e1fe805f5845f29ba5f22c044e4",
+      "action": "re-review-current-output",
+      "reason": "direct-review hash does not match current ledger output"
+    },
+    {
+      "id": "faust",
+      "ledgerStatus": "pending",
+      "directReviewStatus": "accepted",
+      "directReviewPath": "staging/media/krea2-canonical-restyle/characters/restyle_faust.direct-review.json",
+      "ledgerOutputSha256": "9575e57b5f27cfa10b07839019dd5a6f0c342aaecb24b652e607e811940ed315",
+      "reviewCandidateSha256": "12b4ec0edb22875c1265c8d53bed49f7073843be4c694713e532c32f047970b2",
+      "action": "re-review-current-output",
+      "reason": "direct-review hash does not match current ledger output"
+    }
+  ],
+  "nextBatchUnread": [
+    { "id": "ren", "output": "staging/media/krea2-canonical-restyle/characters/restyle_ren.png" },
+    { "id": "vergilius", "output": "staging/media/krea2-canonical-restyle/characters/restyle_vergilius.png" },
+    { "id": "v2d2-dante-story-icon", "output": "staging/media/krea2-canonical-restyle/auxiliary/restyle_v2d2_dante_story_icon.png" },
+    { "id": "v2d2-dante-storylog", "output": "staging/media/krea2-canonical-restyle/auxiliary/restyle_v2d2_dante_storylog.png" },
+    { "id": "v2d2-faust-story-icon", "output": "staging/media/krea2-canonical-restyle/auxiliary/restyle_v2d2_faust_story_icon.png" },
+    { "id": "v2d2-faust-storylog", "output": "staging/media/krea2-canonical-restyle/auxiliary/restyle_v2d2_faust_storylog.png" }
+  ],
+  "notTouched": [
+    "staging/media/krea2-canonical-restyle/restyle-ledger-v1.json",
+    "staging/media/krea2-canonical-restyle/**/*.direct-review.json",
+    "staging/media/krea2-canonical-restyle/**/*.png"
+  ]
+}

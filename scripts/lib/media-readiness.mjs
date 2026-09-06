@@ -1,3 +1,5 @@
+const sourceTypes = new Set(['model-output', 'project-authored', 'licensed-source', 'third-party-source']);
+
 export function analyzeMediaReadiness(manifest) {
   const paths = new Map();
   for (const asset of manifest.assets) {
@@ -34,7 +36,7 @@ function readinessIssues(asset) {
   if (asset.rights?.status !== 'verified' || asset.rights?.redistribution !== 'allowed') issues.push('rights');
   if (!asset.lineage) issues.push('lineage');
   if (asset.rights?.sourceType === 'model-output' && !validProvenance(asset)) issues.push('provenance');
-  if (!asset.rights) issues.push('source-type');
+  if (!sourceTypes.has(asset.rights?.sourceType)) issues.push('source-type');
   return [...new Set(issues)].sort();
 }
 
@@ -43,8 +45,12 @@ function validProvenance(asset) {
   if (!value || !/^[a-f0-9]{64}$/iu.test(value.sourceJobHash ?? '') || !/^[a-z0-9][a-z0-9._-]*$/iu.test(value.promptVersion ?? '')) return false;
   const review = value.review;
   if (review?.status !== 'approved' || typeof review.reviewer !== 'string' || review.reviewer.trim().length === 0 || Number.isNaN(Date.parse(review.reviewedAt))) return false;
-  if (asset.kind === 'image') return value.provider === 'x666-openai-compatible' && value.model === 'gpt-image-2' && value.upstreamPieVerified === false;
-  if (asset.kind === 'video') return value.provider === 'pie' && value.model === 'seedance-1.5-pro' && value.upstreamPieVerified === undefined;
-  if (asset.kind === 'audio') return value.provider === 'pie' && value.model === 'speech-2.8-hd' && value.upstreamPieVerified === undefined;
+  if (asset.kind === 'image') {
+    return (value.provider === 'wisart-openai-compatible' && value.model === 'gpt-image-2')
+      || (value.provider === 'comfyui-local-krea2' && value.model === 'redcraft23FP8_30Krea2.safetensors')
+      || (value.provider === 'latent-moe' && value.model === 'latent-moe-async');
+  }
+  if (asset.kind === 'video') return value.provider === 'pie' && value.model === 'seedance-1.5-pro';
+  if (asset.kind === 'audio') return value.provider === 'pie' && value.model === 'speech-2.8-hd';
   return false;
 }

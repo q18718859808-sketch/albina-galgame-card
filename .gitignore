@@ -24,3 +24,10 @@ playwright-report/
 dist/albina-galgame-card/assets/sprite-atlas/*_strip.png
 release/github-cdn-root/dist/albina-galgame-card/assets/sprite-atlas/*_strip.png
 
+# Test / verification / local-only noise (do NOT publish)
+test-results*/
+.verification/
+artifacts/
+.workbuddy/
+session-*/
+

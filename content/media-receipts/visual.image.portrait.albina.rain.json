@@ -1,0 +1,37 @@
+{
+  "version": 1,
+  "assetId": "file.characters.albina.rain.png",
+  "artifactSha256": "e49132402829886bcdc6b847b02810e8849cd0932c882ed4c666565c6a0ddf6e",
+  "provenance": {
+    "provider": "wisart-openai-compatible",
+    "model": "gpt-image-2",
+    "promptVersion": "albina-visual-migration-v1",
+    "sourceJobHash": "9d34fe57a2df51400283e9fd4d0e3d2fc70fb5514e4d4e99539b5be2faa4743b",
+    "review": {
+      "status": "approved",
+      "reviewer": "workbuddy-convergence-agent",
+      "reviewedAt": "2026-09-06T08:39:07.180Z"
+    }
+  },
+  "rights": {
+    "status": "unverified",
+    "sourceType": "model-output",
+    "redistribution": "unverified",
+    "rightsBasis": "Redistribution rights for this model output have not been independently verified."
+  },
+  "lineage": {
+    "kind": "derivative",
+    "processVersion": "albina-visual-promotion-v1",
+    "inputs": [
+      {
+        "assetId": "file.characters.albina.normal.png",
+        "sha256": "adae648a47c2a5285181cbbeb4d4066792b34f129cac40e48ab8974f3b9cc2ca",
+        "role": "approved-generated-reference"
+      },
+      {
+        "sha256": "aaf89630110b6fef687b86334404b00cd39fd29c84451971575b26a29ce51142",
+        "role": "canon-visual-reference"
+      }
+    ]
+  }
+}

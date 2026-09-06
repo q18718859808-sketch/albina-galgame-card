@@ -12,23 +12,27 @@ const hash = (value: Uint8Array | string) => createHash('sha256').update(value).
 
 function approvedCandidate(deliveryPath: string, bytes: Buffer) {
   const sourceJobHash = 'a'.repeat(64);
+  const currentReviewCriteria = ['current visual criterion'];
   return {
     jobId: 'visual.image.cg.test',
     receiptAssetId: 'cg.test',
     outputPath: 'cg/test.jpg',
-    provider: 'x666-openai-compatible' as const,
+    provider: 'wisart-openai-compatible' as const,
     model: 'gpt-image-2' as const,
-    upstreamPieVerified: false as const,
     promptVersion: 'albina-visual-v2',
     status: 'completed' as const,
     sourceJobHash,
     currentSourceJobHash: sourceJobHash,
+    currentReviewCriteria,
     artifactSha256: hash(bytes),
     deliveryPath,
     review: {
       status: 'approved' as const,
       reviewer: 'visual-reviewer',
       reviewedAt: '2026-07-19T00:00:00.000Z',
+      criteria: currentReviewCriteria.map((criterion) => ({
+        criterion, status: 'passed' as const, note: 'Reviewed at 100% scale.', evidence: 'asset://review/cg-test',
+      })),
     },
     inputs: [{
       jobId: 'visual.image.portrait.albina.normal',
@@ -61,6 +65,39 @@ function options() {
 }
 
 describe('visual artifact promotion', () => {
+  it('accepts a provenance-preserving current-contract review revision', async () => {
+    const value = await fixture();
+    const currentSourceJobHash = 'c'.repeat(64);
+    const criteria = ['identity', 'strict anatomy'];
+    const reviewContractRevision = {
+      version: 1, status: 'approved' as const, generationJobHash: value.candidate.sourceJobHash,
+      currentJobHash: currentSourceJobHash, artifactSha256: value.candidate.artifactSha256,
+      reviewer: 'strict-visual-qa', reviewedAt: '2026-07-21T16:00:00.000Z',
+      reason: 'Review contract changed.', notes: 'Re-reviewed against all current criteria.',
+      generationHistoryPreserved: true,
+      criteria: criteria.map((criterion) => ({
+        criterion, status: 'passed' as const, note: 'Reviewed at 100% scale.', evidence: 'asset://review/cg-test',
+      })),
+    };
+    const candidate = {
+      ...value.candidate, currentSourceJobHash, currentReviewCriteria: criteria, reviewContractRevision,
+      review: reviewContractRevision,
+    };
+    const withCandidates = async (_selection: unknown, action: (candidates: unknown[]) => Promise<unknown>) => action([candidate]);
+    await expect(promoteVisualArtifacts(options(), {
+      assetRoot: value.assetRoot, receiptRoot: value.receiptRoot, withCandidates,
+    })).resolves.toEqual([{ id: candidate.jobId, status: 'promoted', assetId: 'cg.test' }]);
+
+    const incomplete = {
+      ...candidate,
+      reviewContractRevision: { ...reviewContractRevision, criteria: reviewContractRevision.criteria.slice(0, 1) },
+    };
+    const withIncomplete = async (_selection: unknown, action: (candidates: unknown[]) => Promise<unknown>) => action([incomplete]);
+    await expect(promoteVisualArtifacts(options(), {
+      assetRoot: join(value.root, 'other-assets'), receiptRoot: join(value.root, 'other-receipts'), withCandidates: withIncomplete,
+    })).rejects.toThrow(/current contract/iu);
+  });
+
   it('atomically promotes an approved current-contract delivery and writes a strict receipt', async () => {
     const value = await fixture();
     const withCandidates = async (_selection: unknown, action: (candidates: unknown[]) => Promise<unknown>) => action([value.candidate]);
@@ -80,12 +117,15 @@ describe('visual artifact promotion', () => {
       assetId: 'cg.test',
       artifactSha256: hash(value.bytes),
       provenance: {
-        provider: 'x666-openai-compatible',
+        provider: 'wisart-openai-compatible',
         model: 'gpt-image-2',
-        upstreamPieVerified: false,
         promptVersion: 'albina-visual-v2',
         sourceJobHash: 'a'.repeat(64),
-        review: value.candidate.review,
+        review: {
+          status: 'approved',
+          reviewer: value.candidate.review.reviewer,
+          reviewedAt: value.candidate.review.reviewedAt,
+        },
       },
       rights: {
         status: 'unverified',

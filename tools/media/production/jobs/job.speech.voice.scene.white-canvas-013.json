@@ -1,0 +1,15 @@
+{
+  "kind": "speech",
+  "provider": "pie",
+  "model": "speech-2.8-hd",
+  "promptVersion": "albina-speech-v1",
+  "input": "环指工坊的颜料气味里混着血。她握着一柄画刀，对你说：今天我可能要毁掉一件作品，请你告诉我哪一件是她真正想毁掉的。",
+  "voice": "nova",
+  "output": "D:\\创作\\albina-v2-complete\\staging\\media\\audio\\voice\\scene\\white_canvas_013.mp3",
+  "validation": {
+    "minDurationSeconds": 0.2,
+    "maxDurationSeconds": 60,
+    "minLoudnessDbfs": -30,
+    "maxLoudnessDbfs": -6
+  }
+}

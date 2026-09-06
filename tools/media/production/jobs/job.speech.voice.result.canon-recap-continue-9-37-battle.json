@@ -1,0 +1,15 @@
+{
+  "kind": "speech",
+  "provider": "pie",
+  "model": "speech-2.8-hd",
+  "promptVersion": "albina-speech-v1",
+  "input": "复盘转向 Callisto 加入后的最后阶段。",
+  "voice": "alloy",
+  "output": "D:\\创作\\albina-v2-complete\\staging\\media\\audio\\voice\\result\\canon_recap_continue_9_37_battle.mp3",
+  "validation": {
+    "minDurationSeconds": 0.2,
+    "maxDurationSeconds": 60,
+    "minLoudnessDbfs": -30,
+    "maxLoudnessDbfs": -6
+  }
+}

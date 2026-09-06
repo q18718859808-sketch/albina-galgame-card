@@ -1,0 +1,45 @@
+{
+  "schemaVersion": 1,
+  "kind": "krea2-staged-production-manifest",
+  "status": "canonical-research-visuals-staging-accepted",
+  "productionProfile": "albina-staged-high-frequency-v1",
+  "provider": "comfyui-local-krea2",
+  "baseline": {
+    "model": "redcraft23FP8_30Krea2.safetensors",
+    "sixLoraRequired": true,
+    "sourceAuthority": "canonical-rgba",
+    "materialAuthority": "krea2-rgb",
+    "directImageReviewRequired": true,
+    "batchGeneration": false
+  },
+  "acceptedStaging": [
+    { "id": "albina-unarmored", "source": "albina-unarmored-standing.png", "output": "staging/media/krea2-canonical-production/characters/albina-canonical-krea2-staged-hf-ab1.png", "review": "staging/media/krea2-canonical-production/characters/albina-canonical-krea2-staged-hf-ab1.direct-review.json", "status": "accepted-as-staging-anchor" },
+    { "id": "albina-armored", "source": "albina-armored-standing.png", "output": "staging/media/krea2-canonical-production/characters/albina-armored-krea2-staged-hf-v1.png", "review": "staging/media/krea2-canonical-production/characters/albina-armored-krea2-staged-hf-v1.direct-review.json", "status": "accepted-as-staging-asset" },
+    { "id": "callisto", "source": "callisto-standing.png", "output": "staging/media/krea2-canonical-production/characters/callisto-krea2-staged-hf-v1.png", "review": "staging/media/krea2-canonical-production/characters/callisto-krea2-staged-hf-v1.direct-review.json", "status": "accepted-as-style-consistency-sample" },
+    { "id": "dante", "source": "dante-standing.png", "output": "staging/media/krea2-canonical-production/characters/dante-krea2-staged-hf-v1.png", "review": "staging/media/krea2-canonical-production/characters/dante-krea2-staged-hf-v1.direct-review.json", "status": "accepted-as-staging-asset" },
+    { "id": "faust", "source": "faust-standing.png", "output": "staging/media/krea2-canonical-production/characters/faust-krea2-staged-hf-v1.png", "review": "staging/media/krea2-canonical-production/characters/faust-krea2-staged-hf-v1.direct-review.json", "status": "accepted-as-staging-asset" },
+    { "id": "ren", "source": "ren-standing.png", "output": "staging/media/krea2-canonical-production/characters/ren-krea2-staged-hf-v1.png", "review": "staging/media/krea2-canonical-production/characters/ren-krea2-staged-hf-v1.direct-review.json", "status": "accepted-as-staging-asset" },
+    { "id": "vergilius", "source": "vergilius-standing.png", "output": "staging/media/krea2-canonical-production/characters/vergilius-krea2-staged-hf-v1.png", "review": "staging/media/krea2-canonical-production/characters/vergilius-krea2-staged-hf-v1.direct-review.json", "status": "accepted-as-staging-asset" },
+    { "id": "bg-lce-lab", "source": "9-18-lce-lab-bg.png", "output": "staging/media/krea2-canonical-production/characters/bg-lce-lab-krea2-staged-hf-v1.png", "review": "staging/media/krea2-canonical-production/characters/bg-lce-lab-krea2-staged-hf-v1.direct-review.json", "status": "accepted-as-background-style-sample" },
+    { "id": "bg-ring-corridor", "source": "9-43-ring-corridor-bg.png", "output": "staging/media/krea2-canonical-production/characters/bg-ring-corridor-krea2-staged-hf-v1.png", "review": "staging/media/krea2-canonical-production/characters/bg-ring-corridor-krea2-staged-hf-v1.direct-review.json", "status": "accepted-as-background-style-sample" },
+    { "id": "cg-9-14-s908", "source": "9-14-s908.png", "output": "staging/media/krea2-canonical-production/characters/cg-9-14-s908-krea2-staged-hf-v1.png", "review": "staging/media/krea2-canonical-production/characters/cg-9-14-s908-krea2-staged-hf-v1.direct-review.json", "status": "accepted-as-cg-style-sample" },
+    { "id": "cg-9-14-s914", "source": "9-14-s914.png", "output": "staging/media/krea2-canonical-production/characters/cg-9-14-s914-krea2-staged-hf-v1.png", "review": "staging/media/krea2-canonical-production/characters/cg-9-14-s914-krea2-staged-hf-v1.direct-review.json", "status": "accepted-as-staging-asset" },
+    { "id": "cg-9-18-s909-1", "source": "9-18-s909-1.png", "output": "staging/media/krea2-canonical-production/characters/cg-9-18-s909-1-krea2-staged-hf-v1.png", "review": "staging/media/krea2-canonical-production/characters/cg-9-18-s909-1-krea2-staged-hf-v1.direct-review.json", "status": "accepted-as-staging-asset" },
+    { "id": "cg-9-18-s909-2", "source": "9-18-s909-2.png", "output": "staging/media/krea2-canonical-production/characters/cg-9-18-s909-2-krea2-staged-hf-v1.png", "review": "staging/media/krea2-canonical-production/characters/cg-9-18-s909-2-krea2-staged-hf-v1.direct-review.json", "status": "accepted-as-staging-asset" },
+    { "id": "cg-9-18-s918", "source": "9-18-s918.png", "output": "staging/media/krea2-canonical-production/characters/cg-9-18-s918-krea2-staged-hf-v1.png", "review": "staging/media/krea2-canonical-production/characters/cg-9-18-s918-krea2-staged-hf-v1.direct-review.json", "status": "accepted-as-staging-asset" },
+    { "id": "cg-9-37-s937", "source": "9-37-s937.png", "output": "staging/media/krea2-canonical-production/characters/cg-9-37-s937-krea2-staged-hf-v1.png", "review": "staging/media/krea2-canonical-production/characters/cg-9-37-s937-krea2-staged-hf-v1.direct-review.json", "status": "accepted-as-staging-asset" },
+    { "id": "cg-9-43-s929-1", "source": "9-43-s929-1.png", "output": "staging/media/krea2-canonical-production/characters/cg-9-43-s929-1-krea2-staged-hf-v1.png", "review": "staging/media/krea2-canonical-production/characters/cg-9-43-s929-1-krea2-staged-hf-v1.direct-review.json", "status": "accepted-as-staging-asset" },
+    { "id": "cg-9-43-s929-2", "source": "9-43-s929-2.png", "output": "staging/media/krea2-canonical-production/characters/cg-9-43-s929-2-krea2-staged-hf-v1.png", "review": "staging/media/krea2-canonical-production/characters/cg-9-43-s929-2-krea2-staged-hf-v1.direct-review.json", "status": "accepted-as-staging-asset" },
+    { "id": "cg-9-43-s930-1", "source": "9-43-s930-1.png", "output": "staging/media/krea2-canonical-production/characters/cg-9-43-s930-1-krea2-staged-hf-v1.png", "review": "staging/media/krea2-canonical-production/characters/cg-9-43-s930-1-krea2-staged-hf-v1.direct-review.json", "status": "accepted-as-staging-asset" },
+    { "id": "cg-9-43-s930-2", "source": "9-43-s930-2.png", "output": "staging/media/krea2-canonical-production/characters/cg-9-43-s930-2-krea2-staged-hf-v1.png", "review": "staging/media/krea2-canonical-production/characters/cg-9-43-s930-2-krea2-staged-hf-v1.direct-review.json", "status": "accepted-as-staging-asset" },
+    { "id": "cg-9-43-s943-1", "source": "9-43-s943-1.png", "output": "staging/media/krea2-canonical-production/characters/cg-9-43-s943-1-krea2-staged-hf-v1.png", "review": "staging/media/krea2-canonical-production/characters/cg-9-43-s943-1-krea2-staged-hf-v1.direct-review.json", "status": "accepted-as-staging-asset" },
+    { "id": "cg-9-43-s943-2", "source": "9-43-s943-2.png", "output": "staging/media/krea2-canonical-production/characters/cg-9-43-s943-2-krea2-staged-hf-v1.png", "review": "staging/media/krea2-canonical-production/characters/cg-9-43-s943-2-krea2-staged-hf-v1.direct-review.json", "status": "accepted-as-staging-asset" }
+  ],
+  "pending": {
+    "characters": ["alyssa", "sinclair", "protagonist", "golden_apparition", "lce_doctor", "ring_agent"],
+    "backgrounds": ["remaining-authored-backgrounds"],
+    "cg": [],
+    "auxiliary": ["story-icons", "storylogs", "faust-promotional"]
+  },
+  "promotionPolicy": "No staging output may replace a release asset until its receipt, rights record, direct original-resolution review and release sync are complete."
+}

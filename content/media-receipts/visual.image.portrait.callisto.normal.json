@@ -1,0 +1,36 @@
+{
+  "version": 1,
+  "assetId": "file.characters.callisto.normal.png",
+  "artifactSha256": "e6158578e0fb0316c60224b86336bfe582a6515539f7ff22e2a7f2be4683c663",
+  "provenance": {
+    "provider": "wisart-openai-compatible",
+    "model": "gpt-image-2",
+    "promptVersion": "albina-visual-migration-v1",
+    "sourceJobHash": "80417b5a4067aebc356d894691b168ae6cd2aca695a06d9de27c83d0589a6843",
+    "review": {
+      "status": "approved",
+      "reviewer": "workbuddy-agent",
+      "reviewedAt": "2026-09-06T07:16:41.312Z"
+    }
+  },
+  "rights": {
+    "status": "unverified",
+    "sourceType": "model-output",
+    "redistribution": "unverified",
+    "rightsBasis": "Redistribution rights for this model output have not been independently verified."
+  },
+  "lineage": {
+    "kind": "derivative",
+    "processVersion": "albina-visual-promotion-v1",
+    "inputs": [
+      {
+        "sha256": "ec23a9bd281921be8cd3ece2fc2c81a8815c79c79b553bf1924cac65be174275",
+        "role": "canon-visual-reference"
+      },
+      {
+        "sha256": "aaf89630110b6fef687b86334404b00cd39fd29c84451971575b26a29ce51142",
+        "role": "canon-visual-reference"
+      }
+    ]
+  }
+}

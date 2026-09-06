@@ -1,0 +1,142 @@
+{
+  "schemaVersion": 1,
+  "id": "krea2-sharpness-baseline-v1",
+  "status": "active-verified-poster-fusion-baseline",
+  "purpose": "Verified Krea2 poster generation baseline: preserve the supplied poster graph and add the historical clarity postprocess chain.",
+  "workflow": {
+    "path": "staging/media/krea2-sharpness-baseline-v1.workflow.json",
+    "sourceGraph": "Image_1787670792754_398.prompt.json",
+    "sourceGraphPreserved": true,
+    "activeOutput": "VAEDecode -> UpscaleModelLoader -> ImageUpscaleWithModel -> ImageScaleBy -> ColorsCorrectNode -> SaveImage"
+  },
+  "canonicalProductionRelationship": {
+    "albinaCanonicalBaselineRemains": "staging/media/embedded-baseline/embedded-production-baseline.api.json",
+    "doesNotReplaceCanonicalContract": true,
+    "reason": "This profile changes the LoRA profile and adds a post-upscale chain; it is not valid for Albina canonical geometry production."
+  },
+  "runtime": {
+    "comfyui": "0.28.3",
+    "endpoint": "http://127.0.0.1:8199",
+    "model": "redcraft23FP8_30Krea2.safetensors",
+    "textEncoder": "qwen3vl_4b_fp8_scaled.safetensors",
+    "vae": "qwen_image_vae.safetensors",
+    "sampler": "er_sde",
+    "scheduler": "beta57",
+    "steps": 8,
+    "cfg": 1.0,
+    "denoise": 1.0,
+    "seedPolicy": "caller-supplied; historical clarity samples used 777001"
+  },
+  "generation": {
+    "latent": {
+      "width": 832,
+      "height": 1216,
+      "batchSize": 1,
+      "multiple": 8,
+      "reason": "Observed in all three historical clarity samples."
+    },
+    "loraProfiles": {
+      "posterOriginalSixLora": [
+        { "name": "z3zz4-k2-4_c1-st5000.safetensors", "strength": 0.55 },
+        { "name": "Krea2Rella_c1-st8000.safetensors", "strength": 0.65 },
+        { "name": "onineko_k2_v1.safetensors", "strength": 0.45 },
+        { "name": "meion_krea2_style_v7.0_c1-st4000.safetensors", "strength": 0.45 },
+        { "name": "masterpieces-v51.safetensors", "strength": 0.45 },
+        { "name": "ichika-k2_c1-st5000.safetensors", "strength": 0.35 }
+      ],
+      "boldInk": [
+        { "name": "bold-inked-anime-realism-comfy.safetensors", "strength": 0.7 },
+        { "name": "luminous-anime-film-comfy.safetensors", "strength": 0.45 },
+        { "name": "masterpieces-v51.safetensors", "strength": 0.45 }
+      ],
+      "luminousFilm": [
+        { "name": "luminous-anime-film-comfy.safetensors", "strength": 0.8 },
+        { "name": "z3zz4-k2-4_c1-st5000.safetensors", "strength": 0.45 },
+        { "name": "masterpieces-v51.safetensors", "strength": 0.45 }
+      ],
+      "luminousRellaMeion": [
+        { "name": "luminous-anime-film-comfy.safetensors", "strength": 0.7 },
+        { "name": "Krea2Rella_c1-st8000.safetensors", "strength": 0.5 },
+        { "name": "meion_krea2_style_v7.0_c1-st4000.safetensors", "strength": 0.4 },
+        { "name": "masterpieces-v51.safetensors", "strength": 0.45 }
+      ]
+    },
+    "defaultLoraProfile": "posterOriginalSixLora"
+  },
+  "postprocess": {
+    "enabled": true,
+    "chain": [
+      {
+        "node": "UpscaleModelLoader",
+        "model": "4x_fatal_Anime_500000_G.pth"
+      },
+      {
+        "node": "ImageUpscaleWithModel",
+        "scale": 4
+      },
+      {
+        "node": "ImageScaleBy",
+        "method": "lanczos",
+        "scaleBy": 0.375,
+        "effectiveScale": 1.5,
+        "reason": "Observed historical chain: 4x model followed by 0.375 Lanczos downscale."
+      },
+      {
+        "node": "ColorsCorrectNode",
+        "brightness": 1.0,
+        "contrast": 1.0,
+        "saturation": 1.0,
+        "gamma": 1.0,
+        "hueDegrees": 0.0,
+        "useColor": false
+      }
+    ],
+    "expectedCanvasFromObservedLatent": {
+      "width": 1248,
+      "height": 1824,
+      "formula": "832x1216 -> 4x -> 0.375x"
+    }
+  },
+  "evidence": {
+    "historicalSamples": [
+      {
+        "file": "3f80afcd105691a63c23508f2fccb7f0.png",
+        "sha256": "2cac08c1dd7ebbee4d19a7b5c24b808f98d91686435aac192a152980ceec83a9",
+        "summary": "boldInk"
+      },
+      {
+        "file": "fb2542d440ae68c7f3c4f8943cd8aa93.png",
+        "sha256": "bb6ac42d125fdf0b4ad50718d89fe13be4daacc7680d3f29546d6cefd0639c90",
+        "summary": "luminousFilm"
+      },
+      {
+        "file": "999a0f48348338f36ceed6358e26665e.png",
+        "sha256": "4ebfe65f6db16bac90393f13d3149b53a9f9787c764aa4467d2962c1f6f09b50",
+        "summary": "luminousRellaMeion"
+      }
+    ],
+    "commonObservedFields": {
+      "model": "redcraft23FP8_30Krea2.safetensors",
+      "textEncoder": "qwen3vl_4b_fp8_scaled.safetensors",
+      "vae": "qwen_image_vae.safetensors",
+      "sampler": "er_sde",
+      "scheduler": "beta57",
+      "steps": 8,
+      "denoise": 1.0,
+      "seed": 777001,
+      "latent": [832, 1216],
+      "postprocessModel": "4x_fatal_Anime_500000_G.pth"
+    }
+  },
+  "gates": {
+    "modelPresent": true,
+    "postprocessModelPresent": true,
+    "historicalMetadataExtracted": true,
+    "posterGraphPreserved": true,
+    "reproducibleWorkflowFile": "staging/media/krea2-sharpness-baseline-v1.workflow.json",
+    "multiSeedFusionTests": [1787670795, 1787670796, 1787670797],
+    "testEvidence": "staging/media/krea2-poster-preserve-tests",
+    "directVisualReviewRequired": true,
+    "promotionAllowed": false
+  }
+}

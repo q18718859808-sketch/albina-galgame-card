@@ -1,0 +1,80 @@
+{
+  "schemaVersion": 1,
+  "id": "albina-krea2-local-identity-control-audit-v1",
+  "reviewedAt": "2026-08-12T18:17:20.000Z",
+  "runtime": {
+    "comfyUrl": "http://127.0.0.1:8199",
+    "comfyuiVersion": "0.28.3",
+    "kreaModelsEnumerated": ["krea2_turbo_fp8_scaled.safetensors", "redcraft23FP8_30Krea2.safetensors"]
+  },
+  "candidates": [
+    {
+      "id": "krea2edit-regional-attention",
+      "status": "rejected-for-canonical-identity",
+      "available": true,
+      "evidence": "Krea2Edit ref_boost_mask is an attention bias, not a pixel or identity lock. RedCraft and Turbo regional-mask probes both failed direct image review.",
+      "compatibleWithSixLoraKrea2": true
+    },
+    {
+      "id": "ipadapter-faceid",
+      "status": "not-installable-as-current-krea2-control-path",
+      "available": false,
+      "runtimeNodesRegistered": ["IPAdapterFaceID", "IPAdapterUnifiedLoaderFaceID", "IPAdapterInsightFaceLoader"],
+      "missingLocalWeights": ["models/ipadapter", "models/clip_vision", "models/insightface"],
+      "compatibility": "Installed ComfyUI_IPAdapter_plus implementation branches on SDXL/SD1.5 model classes and has no verified Krea2 model path.",
+      "compatibleWithSixLoraKrea2": false
+    },
+    {
+      "id": "photomaker",
+      "status": "weights-missing-and-unverified-for-krea2",
+      "available": false,
+      "missingLocalWeights": ["models/photomaker"],
+      "compatibleWithSixLoraKrea2": false
+    },
+    {
+      "id": "krea2-depth-control",
+      "status": "available-structure-only",
+      "available": true,
+      "evidence": "The installed Krea2 Control LoRA accepts depth, canny, pose, lineart, and normal control images, but it does not consume a character identity embedding or lock facial or authored-design identity.",
+      "compatibleWithSixLoraKrea2": true,
+      "productionUse": "May be a structure-stability adjunct only after a separate identity baseline passes; it cannot unlock character production."
+    },
+    {
+      "id": "krea-reference-v10",
+      "status": "runtime-compatible-but-rejected-for-canonical-identity",
+      "available": true,
+      "runtimeNodesRegistered": ["KGKrea2ImageGuideCardV10", "KGTextEncodeKreaImageReferencesV10"],
+      "source": {
+        "repository": "https://github.com/kgilper/krea-reference",
+        "ref": "v10",
+        "commit": "9ac00b2d8896483997ce83b278d2774e5ccab6a1",
+        "archiveSha256": "0e4da7228bd77e6e4e110c45875dbe6bf4f7d238312e2afe55dc181c0461a155",
+        "license": "MIT"
+      },
+      "compatibleWithSixLoraKrea2": true,
+      "evidence": "The V10 reference stack replaces only Krea conditioning and preserves the six-LoRA MODEL chain. A single-source keep-the-same-subject probe completed on the local runtime, then failed direct image review and hash-bound Gemini paired review for all six Albina identity anchors.",
+      "rejectedProbe": {
+        "receipt": "staging/media/krea2-canonical-sample/albina-unarmored-six-lora-v15-reference-conditioning.json",
+        "directReview": "staging/media/krea2-canonical-sample/albina-unarmored-six-lora-v15-reference-conditioning.review.json",
+        "pairedReview": "staging/media/gemini-review-albina-unarmored-v15-reference-conditioning.json"
+      },
+      "productionUse": "May not unlock canonical characters, protagonist portraits, or CG. Do not repeat the same single-reference recipe as prompt or strength tuning."
+    },
+    {
+      "id": "flux-kontext-fp8",
+      "status": "installed-independent-research-path",
+      "available": true,
+      "evidence": "A complete local FLUX Kontext edit workflow and weights are installed, but it is a FLUX architecture and cannot load the mandatory Krea2/Qwen six-LoRA production chain.",
+      "compatibleWithSixLoraKrea2": false,
+      "productionUse": "Not a patch for this Krea2 baseline; requires an independent fidelity, style, and release audit before any separate use."
+    },
+    {
+      "id": "wan-consisid-reactor",
+      "status": "not-a-local-static-krea2-identity-path",
+      "available": false,
+      "evidence": "Wan Stand-In/VACE and ConsisID have no local inference weights. ReActor/InsightFace references are video post-processing and missing their expected model files.",
+      "compatibleWithSixLoraKrea2": false
+    }
+  ],
+  "decision": "Do not submit another character or CG probe until a materially different local identity/control mechanism with documented Krea2 compatibility, installed weights or nodes, and an auditable six-LoRA-compatible wiring plan is available. Krea2Edit, Krea2 depth control, and Krea Reference V10 have each been tested or bounded and cannot unlock canonical character production."
+}

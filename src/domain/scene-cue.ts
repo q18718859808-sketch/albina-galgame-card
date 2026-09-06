@@ -1,11 +1,10 @@
 import { z } from 'zod';
 
 import { SceneProvenanceSchema } from './canon';
+import { SceneMinigameChallengeSchema } from './minigame';
 import {
-  BattleResolutionEffectSchema,
-  ConflictMasteryEffectsSchema,
   GameplayStatEffectsSchema,
-  RelationshipVectorEffectsSchema,
+  ProgressionEffectsSchema,
   StatePredicateSchema,
 } from './gameplay';
 import { RouteIdSchema } from './scene-cue-route';
@@ -16,26 +15,9 @@ export { RouteIdSchema } from './scene-cue-route';
 
 export const AuthoritativeValueEffectsSchema = GameplayStatEffectsSchema;
 
-export const ChoiceEffectsSchema = z
-  .object({
-    route: RouteIdSchema.optional(),
-    values: AuthoritativeValueEffectsSchema.optional(),
-    relationshipVectors: RelationshipVectorEffectsSchema.optional(),
-    conflictMastery: ConflictMasteryEffectsSchema.optional(),
-    setFlags: z.array(z.string().min(1)).optional(),
-    clearFlags: z.array(z.string().min(1)).optional(),
-    unlockCg: z.array(z.string().min(1)).optional(),
-    grantItems: z.array(z.string().min(1)).optional(),
-    equipItems: z.array(z.string().min(1)).optional(),
-    unlockOutfits: z.array(z.string().min(1)).optional(),
-    activateOutfit: z.string().min(1).optional(),
-    startQuests: z.array(z.string().min(1)).optional(),
-    completeQuests: z.array(z.string().min(1)).optional(),
-    resolveBattles: z.array(BattleResolutionEffectSchema).optional(),
-    professionXp: z.record(z.string().min(1), z.number().int().positive()).optional(),
-    activateProfession: z.string().min(1).optional(),
-  })
-  .strict();
+export const ChoiceEffectsSchema = ProgressionEffectsSchema.extend({
+  route: RouteIdSchema.optional(),
+}).strict();
 
 export { StoryValueKeySchema } from './gameplay';
 export const EligibilityPredicateSchema = StatePredicateSchema;
@@ -101,6 +83,7 @@ const SceneCueBaseSchema = z
     bgmAssetId: z.string().min(1).optional(),
     sfxAssetIds: z.array(z.string().min(1)).optional(),
     choices: z.array(SceneChoiceSchema),
+    minigame: SceneMinigameChallengeSchema.optional(),
     ending: EndingDescriptorSchema.optional(),
   })
   .strict();

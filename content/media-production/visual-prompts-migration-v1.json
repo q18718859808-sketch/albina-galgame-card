@@ -1,0 +1,1769 @@
+{
+  "version": 2,
+  "projectId": "albina-galgame-card",
+  "promptVersion": "albina-visual-migration-v1",
+  "styleReference": {
+    "instruction": "House style: dense precise 2D anime linework, flat-color transitions, limited painterly shading, cool white and charcoal structure, restrained gold accents, warning-red energy, biomechanical material edges, cinematic industrial-city lighting. Every delivered image must contain no text, no logo, no watermark, and no faux interface overlay.",
+    "mode": "deidentified-image-last",
+    "identityIsolation": "The final attached input is an anonymized style board. It controls only linework, color treatment, material rendering, and lighting; it must never transfer a person, face, body, clothing, pose, scene fact, composition, text, logo, or watermark. Any preceding inputs control only the approved identity, canon facts, approved parent continuity, and required scene facts.",
+    "sourceId": "reference.user.albina-style-board",
+    "candidateBoardSha256": "aaf89630110b6fef687b86334404b00cd39fd29c84451971575b26a29ce51142",
+    "migrationStatus": "authorization-not-required"
+  },
+  "migration": {
+    "kind": "baseline-style-board-swap",
+    "styleBoardSourceId": "reference.user.albina-style-board",
+    "styleBoardSha256": "aaf89630110b6fef687b86334404b00cd39fd29c84451971575b26a29ce51142",
+    "styleDirective": "画风迁移指令（最高优先级，覆盖任何冲突描述）：本张输出的线条密度、平涂与厚涂过渡比例、材质边缘与收边方式、冷白与炭黑结构、克制金与警示红点缀、工业冷光方向，必须与最后一张去标识化风格板严格一致；该风格板只提供画风语言，不得从中复制身份、脸、体型、姿态、解剖、服装、武器、道具或构图。",
+    "sourcePromptVersion": "albina-visual-v2",
+    "frozenSourceUnchanged": true,
+    "frozenSourceSha256": {
+      "plan": "4b8eee820ccd006702388ba3adb45517cb47ea7ef3e03fb7cb5cc73d12f8b5ab",
+      "prompts": "17a0627652e8d20352d311dd09770f65c1b605b9eb993e644fa5f8aeaf6e28e0",
+      "sources": "17cb53af463eb2ef6729a593f0e666e501a6d0cd6b7e9e6f3e12b65c014d4414"
+    },
+    "note": "Prompt bodies are byte-identical to the frozen albina-visual-v2 set; the change is the board the final reference input resolves to plus the injected style-migration directive that raises board style semantics above any conflicting wording."
+  },
+  "styleBible": {
+    "rendering": "原创二维商业视觉小说插画；清晰克制的墨线、平涂与少量厚涂结合，材质边缘明确，暗色都市环境与白、黑、金、警示红形成平衡。不得模仿某位在世艺术家，也不得把现有发布图片当作视觉参考。",
+    "continuity": "同一角色在全部任务中保持脸型、身体比例、发型、眼睛方向、义体分缝、服装结构和道具尺度一致。",
+    "canonAuBoundary": "服装与义体设计保持内部自洽，不得把原创服装画成隐藏形态或混入未指定的设定元素。",
+    "backgroundRules": "16:9 横构图，1280x720 交付；必须是完全无人的空景，不得出现人物、人形剪影、人体倒影、尸体或可识别角色。保留中下部对话框安全区与左右立绘站位，远近层次清楚，无可读文字、品牌、UI 或水印。",
+    "cgRules": "16:9 横构图，1280x720 交付；只表现指定场景的关键动作、关系距离与道具，不写台词或标题。角色必须与引用立绘同一身份，手、眼、武器和空间接触关系可逐项审核；画面不得色情化或以血腥特写替代叙事。",
+    "portraitRules": "1024x1536 竖构图透明 PNG，2:3 等比；全身从头顶到鞋底完整可见，正面或轻微三分之四视角，胸口高度平视，等效 85mm 镜头。身体居中，脚底贴近下缘但不裁切，头顶与左右留出均匀边距；无地面、投影、背景、文字、边框或裁切。",
+    "anatomyQualityRules": "8K 级微细节与干净边缘。所有可见裸露手必须每只五根手指，结构正确且自然分离：中指最长，食指约等于无名指，小指最短；明确指根、第二关节与指尖三段结构；半透明指甲具高光和甲床细节，不粘连。所有可见裸露脚必须五趾清晰分离并从大到小自然递减，大拇趾最粗最长；半透明趾甲具高光，脚趾轻微弯曲，脚背筋骨与体积明确，站姿重心合理偏向大脚趾内侧。手套、机械手与鞋靴不得被擅自改成裸露手脚，但仍须保持五指外轮廓、抓握关系、足部体积与承重正确。人物、服装、装甲、武器和发束的轮廓及遮挡边界清楚，适合后续 Live2D 分层拆分；除任务指定变化外不得改变任何其他部位。",
+    "reviewPolicy": "尺寸、透明通道、构图安全区、角色身份、正史特征、AU 标识、肢体结构和道具结构全部通过后才可晋升；任何无法由冻结 canon 或明确 AU 设计解释的细节均视为待拒绝而非自动补全。",
+    "pipelineDirectives": {
+      "referenceDiscipline": "所有 reference-edit 只能引用本文件中先行生成并通过审核的 referenceJobIds；禁止引用仓库内既有、来源不明或未审核图片。",
+      "canonBoundary": "正史设计只使用已冻结 canon 事实。9-43 之后的存活、玩家、路线、情绪推进和路线服装均为本卡原创 AU/IF；任何原创服装不得标成原作服装或隐藏正史形态。",
+      "portraitAnchors": "交付物身体中心固定在 x=512，鞋底基线 y=1492±8，头顶留白至少 48px，左右留白至少 64px；所有立绘使用相同人体尺度与锚点，由本地后处理与人工审核逐项核验。"
+    },
+    "migrationDirective": "画风迁移指令（最高优先级，覆盖任何冲突描述）：本张输出的线条密度、平涂与厚涂过渡比例、材质边缘与收边方式、冷白与炭黑结构、克制金与警示红点缀、工业冷光方向，必须与最后一张去标识化风格板严格一致；该风格板只提供画风语言，不得从中复制身份、脸、体型、姿态、解剖、服装、武器、道具或构图。"
+  },
+  "characterBible": {
+    "albina": {
+      "canonStatus": "Canto IX 正史角色；路线存活与路线服装为本卡原创 AU/IF。",
+      "identity": "成年女性形态，平静、轻声、专注艺术；不得幼态化、色情化或补写身高体重、童年、恋爱关系与固定口癖。",
+      "body": "白色全身义体，金色点缀；脸与关节有人工分界线，颈胸与大腿露出黑色机械和线路，躯干中央近似骨架。不是穿白色紧身衣的人类，也不得出现普通裸露皮肤。",
+      "eyes": "角色解剖学右眼为黑、左眼为白；正面观看时黑眼位于画面左侧、白眼位于画面右侧。任何镜像或左右互换都不合格。",
+      "hair": "浅灰色人工质感、近似线缆束的高马尾；不是柔软自然长发。",
+      "tools": "前臂可展开剪刀、锯、手术刀、三爪与牵开器等医疗和切割工具；只在任务要求时展开，结构必须与手臂连接。",
+      "armor": "正史铁处女式全身装甲为白、亮黄、金色，具有长裙、尖刺头环、垂链、尖刺裙甲和绘有金色锐眼的面具。",
+      "fascia": "Fascia 是与装甲同色系的巨大活体剑，由 Albina 原本肉体制成；侧板打开后可见暗色骨架、肋骨与内脏组织，缺少脑。不得画成普通金属剑、独立人形或宠物。",
+      "auWardrobes": "white-canvas、golden-bough、ring-conspiracy、rain、surgical、maestro 与 endgame 服装均为本卡原创 AU/IF 外层服装；必须保留正史义体、异色眼、线缆高马尾与 Fascia，不得声称为原作形态。"
+    },
+    "protagonist": {
+      "canonStatus": "本卡原创 AU/IF 玩家代理，不属于原作正史。",
+      "identity": "成年、性别中性的都市调查员形象；短黑发、灰褐眼、清晰但不过度特征化的脸，炭黑实用长外套、象牙色内层、暗青灰围巾、黑靴。全部变体保持同一身份与比例。"
+    },
+    "canonSupportingCharacters": {
+      "policy": "Dante、Faust、Vergilius、Callisto 与 Ren 使用各自 Canto IX 可识别正史设计，不新增传记或原创正史形态。当前 Albina canon 未冻结 Callisto 与 Ren 的完整外观细节，因此文本提示只锁角色名和身份；成品必须另行对照固定官方视觉来源人工审核，无法确认即阻断。"
+    },
+    "auSupportingCharacters": {
+      "golden_apparition": "本卡原创 AU：Albina 的金枝记忆回声，保留她的轮廓但不是另一个正史角色。",
+      "lce_doctor": "本卡原创 AU：成年、性别中性的 LCE 医师，灰白防护长衣、黑色内层、冷色护目镜，不带真实医疗机构标志。",
+      "ring_agent": "本卡原创 AU：成年、性别中性的环指代理人，黑色展厅礼服与空画框道具，不冒充已有正史命名角色。"
+    }
+  },
+  "prompts": [
+    {
+      "jobId": "visual.image.bg.backstreets_rain",
+      "assetId": "bg.backstreets_rain",
+      "mode": "reference-edit",
+      "referenceJobIds": [],
+      "positivePrompt": "继承 styleBible。完全无人的暗色都市后巷雨夜空景，狭长工业巷道、湿沥青、排水沟、架空管线、旧砖与金属墙，冷白灯和少量暗红警示光在水面形成长反射；远端转角适合追逐进入，左右保留立绘站位，中下部简洁。原创二维商业视觉小说背景，16:9。",
+      "negativePrompt": "人物、人形、剪影、人体倒影、尸体、散落肢体、车辆驾驶员、可读招牌、文字、logo、水印、UI、过亮霓虹、赛博朋克彩虹、鱼眼、倾斜地平线、低清晰度。",
+      "reviewCriteria": [
+        "1280x720 交付且透视稳定",
+        "场景内及所有反射中均无人",
+        "雨夜巷道与追逐转角清楚",
+        "对话框和立绘安全区无高频杂物"
+      ],
+      "styleReferenceMode": "deidentified-image-last",
+      "referenceSourceIds": [
+        "reference.user.albina-style-board"
+      ],
+      "identitySubjects": [],
+      "identityBootstrap": null
+    },
+    {
+      "jobId": "visual.image.bg.city_rooftop",
+      "assetId": "bg.city_rooftop",
+      "mode": "reference-edit",
+      "referenceJobIds": [],
+      "positivePrompt": "继承 styleBible。完全无人的高层混凝土屋顶空景，低矮女儿墙、通风机、检修梯和一根无字信号桅杆，远处是层叠而压抑的都市天际线；夜色将退未退，云层间有冷白搜捕光与极少金色尘光，中央留出决定与对峙空间。原创二维商业视觉小说背景，16:9。",
+      "negativePrompt": "人物、人形、剪影、人体倒影、鸟群、直升机驾驶员、可读文字、标志、水印、UI、夸张科幻飞船、紫蓝渐变主导、鱼眼、建筑透视错误。",
+      "reviewCriteria": [
+        "1280x720 且地平线水平",
+        "屋顶完全无人",
+        "屋顶前中后景可供多场景复用",
+        "搜捕光与金尘不遮挡角色站位"
+      ],
+      "styleReferenceMode": "deidentified-image-last",
+      "referenceSourceIds": [
+        "reference.user.albina-style-board"
+      ],
+      "identitySubjects": [],
+      "identityBootstrap": null
+    },
+    {
+      "jobId": "visual.image.bg.golden_bough",
+      "assetId": "bg.golden_bough",
+      "mode": "reference-edit",
+      "referenceJobIds": [],
+      "positivePrompt": "继承 styleBible。完全无人的原创 AU 金枝裂隙空景：损毁的地下实验空间被黑色断面切开，一枚非植物写实形态的金色枝状能量核心悬在深处，细微光尘沿地面刻痕回流，白色医疗构件与暗金镜片相互重叠；神秘但不神圣化，中央留出角色全身空间，16:9。",
+      "negativePrompt": "人物、人形、剪影、人体器官、尸体、金色圣树、宗教圣像、可读文字、logo、水印、UI、满屏金黄、过曝、无层次粒子、镜头眩光遮挡。",
+      "reviewCriteria": [
+        "1280x720 且完全无人",
+        "金枝表现为异常能量结构而非普通树",
+        "白黑金色比例克制",
+        "中心与下方对话安全区清楚"
+      ],
+      "styleReferenceMode": "deidentified-image-last",
+      "referenceSourceIds": [
+        "reference.user.albina-style-board"
+      ],
+      "identitySubjects": [],
+      "identityBootstrap": null
+    },
+    {
+      "jobId": "visual.image.bg.lce_lab",
+      "assetId": "bg.lce_lab",
+      "mode": "reference-edit",
+      "referenceJobIds": [],
+      "positivePrompt": "继承 styleBible。完全无人的 LCE 工业生物实验室空景，冷白顶灯、灰白墙板、黑色维护槽、可移动手术台、机械臂轨道、密封观察窗和无字状态灯；空间既能承担正史复盘的研究区，也能承担 AU 临时手术与突袭，整洁但有使用痕迹，16:9。",
+      "negativePrompt": "人物、人形、剪影、尸体、人体标本、血泊、可读屏幕、医院 logo、文字、水印、UI、现代温馨诊所、纯白过曝、医疗器械结构混乱。",
+      "reviewCriteria": [
+        "1280x720 且完全无人",
+        "实验室具有工业研究区而非现实医院质感",
+        "手术台和维护槽空间关系合理",
+        "无可读屏幕或组织标志"
+      ],
+      "styleReferenceMode": "deidentified-image-last",
+      "referenceSourceIds": [
+        "reference.user.albina-style-board"
+      ],
+      "identitySubjects": [],
+      "identityBootstrap": null
+    },
+    {
+      "jobId": "visual.image.bg.limbus_bus",
+      "assetId": "bg.limbus_bus",
+      "mode": "reference-edit",
+      "referenceJobIds": [],
+      "positivePrompt": "继承 styleBible。完全无人的 Mephistopheles 夜班巴士内部空景，遵循 Limbus Company 巴士可识别的红黑工业结构与旧式座椅布局，车窗外是流动雨线和昏暗城市灯，窗玻璃可反射空座但不能反射人形；一侧保留并坐空间，16:9。",
+      "negativePrompt": "人物、人形、司机、人体倒影、普通现代公交、豪华大巴、可读路线牌、数字、logo、水印、UI、霓虹彩虹、座椅透视错乱。",
+      "reviewCriteria": [
+        "1280x720 且车内车外均无人",
+        "巴士结构具有可识别正史语义但无伪文字",
+        "雨窗与空座构图支持安静对话",
+        "所有倒影不形成角色轮廓"
+      ],
+      "styleReferenceMode": "deidentified-image-last",
+      "referenceSourceIds": [
+        "reference.user.albina-style-board"
+      ],
+      "identitySubjects": [],
+      "identityBootstrap": null
+    },
+    {
+      "jobId": "visual.image.bg.mirror_corridor",
+      "assetId": "bg.mirror_corridor",
+      "mode": "reference-edit",
+      "referenceJobIds": [],
+      "positivePrompt": "继承 styleBible。完全无人的 Corridor of the Ring 镜廊空景，狭长黑灰走廊两侧排列高窄镜面和金属框，白金顶灯逐级远去，局部镜面有裂纹、空白与不可能的空间错位，但不映出任何人形；可用于正史复盘与 AU 记忆选择，16:9。",
+      "negativePrompt": "人物、人形、剪影、人体倒影、鬼脸、尸体、可读文字、logo、水印、UI、镜面无限噪声、万花筒、鱼眼、过度恐怖血迹。",
+      "reviewCriteria": [
+        "1280x720 且所有镜面无人",
+        "长廊消失点稳定",
+        "镜面异常可见但不喧宾夺主",
+        "左右立绘与下方文本安全区充足"
+      ],
+      "styleReferenceMode": "deidentified-image-last",
+      "referenceSourceIds": [
+        "reference.user.albina-style-board"
+      ],
+      "identitySubjects": [],
+      "identityBootstrap": null
+    },
+    {
+      "jobId": "visual.image.bg.nest_station",
+      "assetId": "bg.nest_station",
+      "mode": "reference-edit",
+      "referenceJobIds": [],
+      "positivePrompt": "继承 styleBible。完全无人的巢穴车站末班月台空景，冷硬白灯、深灰站台、封闭轨道、细长立柱、空白信息板和一张未印字的纸质入场券落在长椅旁；秩序感强、安静而有监视压力，16:9。",
+      "negativePrompt": "人物、人形、剪影、乘客、列车驾驶员、人体倒影、可读站名、时刻表文字、logo、水印、UI、现实地铁品牌、过度未来感。",
+      "reviewCriteria": [
+        "1280x720 且站台轨道完全无人",
+        "白灯冷硬但保留暗部",
+        "空白入场券可辨认且无文字",
+        "月台边缘与透视符合安全逻辑"
+      ],
+      "styleReferenceMode": "deidentified-image-last",
+      "referenceSourceIds": [
+        "reference.user.albina-style-board"
+      ],
+      "identitySubjects": [],
+      "identityBootstrap": null
+    },
+    {
+      "jobId": "visual.image.bg.outskirts_dawn",
+      "assetId": "bg.outskirts_dawn",
+      "mode": "reference-edit",
+      "referenceJobIds": [],
+      "positivePrompt": "继承 styleBible。完全无人的都市城郊黎明空景，低矮废墟、潮湿土路、稀疏枯草与远处被雾压低的都市轮廓；冷灰天空中出现一条克制暖光，前景预留可插入巨剑或无锋画刀的位置，氛围可同时容纳真、普通与坏结局，16:9。",
+      "negativePrompt": "人物、人形、剪影、尸体、动物、鲜花田、灿烂旅游日出、可读文字、logo、水印、UI、满屏橙色、纯黑绝望、镜头光斑。",
+      "reviewCriteria": [
+        "1280x720 且完全无人",
+        "黎明情绪保持开放而非预判单一结局",
+        "前景可放置结局道具",
+        "城市远景与地面层次清楚"
+      ],
+      "styleReferenceMode": "deidentified-image-last",
+      "referenceSourceIds": [
+        "reference.user.albina-style-board"
+      ],
+      "identitySubjects": [],
+      "identityBootstrap": null
+    },
+    {
+      "jobId": "visual.image.bg.rain_room",
+      "assetId": "bg.rain_room",
+      "mode": "reference-edit",
+      "referenceJobIds": [],
+      "positivePrompt": "继承 styleBible。完全无人的室内雨室空景，黑色金属框架与高玻璃墙围成狭长空间，顶端细密水线落下形成一排未署名画框般的雨幕，地面浅水反射冷白灯和少量金色边缘；安静、私密但不浪漫滤镜化，16:9。",
+      "negativePrompt": "人物、人形、剪影、人体倒影、浴室、淋浴喷头特写、色情氛围、可读文字、logo、水印、UI、蓝紫霓虹主导、雾化失焦。",
+      "reviewCriteria": [
+        "1280x720 且所有玻璃水面无人",
+        "雨线形成画框语义",
+        "空间允许两人保持半步距离",
+        "地面反射不产生人形幻觉"
+      ],
+      "styleReferenceMode": "deidentified-image-last",
+      "referenceSourceIds": [
+        "reference.user.albina-style-board"
+      ],
+      "identitySubjects": [],
+      "identityBootstrap": null
+    },
+    {
+      "jobId": "visual.image.bg.ring_atelier",
+      "assetId": "bg.ring_atelier",
+      "mode": "reference-edit",
+      "referenceJobIds": [],
+      "positivePrompt": "继承 styleBible。完全无人的环指 Corporism 工坊空景，黑白金工作台、空画框、无字协议纸、精密切割与装裱工具、封闭颜料罐、墙面轨道和一块被遮住的作品台；艺术工坊与手术结构并置，危险来自秩序而非血腥，16:9。",
+      "negativePrompt": "人物、人形、剪影、尸体、人体标本、散落内脏、血泊、可读合同、文字、logo、水印、UI、普通温馨画室、杂乱彩虹颜料。",
+      "reviewCriteria": [
+        "1280x720 且完全无人",
+        "工坊同时具备艺术与精密处理语义",
+        "协议和画框均无文字",
+        "危险感不依赖血腥特写"
+      ],
+      "styleReferenceMode": "deidentified-image-last",
+      "referenceSourceIds": [
+        "reference.user.albina-style-board"
+      ],
+      "identitySubjects": [],
+      "identityBootstrap": null
+    },
+    {
+      "jobId": "visual.image.bg.spider_gallery",
+      "assetId": "bg.spider_gallery",
+      "mode": "reference-edit",
+      "referenceJobIds": [],
+      "positivePrompt": "继承 styleBible。完全无人的 House of Spiders 展厅空景，深黑高墙、白金聚光灯、放射状吊索与细长框架形成抽象蜘蛛网结构，中央是一只空展框，地面嵌有低亮金线；庄严、审视感强，不出现真实蜘蛛或人体作品，16:9。",
+      "negativePrompt": "人物、人形、剪影、人体倒影、尸体、真实蜘蛛群、蜘蛛怪物、血肉展品、可读标签、文字、logo、水印、UI、万圣节装饰。",
+      "reviewCriteria": [
+        "1280x720 且完全无人",
+        "蜘蛛意象来自建筑结构而非怪物",
+        "中央空框和聚光灯关系清楚",
+        "展厅左右站位可容纳三名立绘"
+      ],
+      "styleReferenceMode": "deidentified-image-last",
+      "referenceSourceIds": [
+        "reference.user.albina-style-board"
+      ],
+      "identitySubjects": [],
+      "identityBootstrap": null
+    },
+    {
+      "jobId": "visual.image.bg.white_canvas",
+      "assetId": "bg.white_canvas",
+      "mode": "reference-edit",
+      "referenceJobIds": [],
+      "positivePrompt": "继承 styleBible。完全无人的极简白色展厅空景，微灰白墙、细黑地脚线、柔和天窗、中央未署名巨幅空白画布与一支无颜料画笔；白色不是纯净象征，而是尚未决定的空间，阴影克制、层次可见，16:9。",
+      "negativePrompt": "人物、人形、剪影、人体倒影、可读签名、文字、logo、水印、UI、纯白过曝、奶油色家居、婚礼场景、漂浮装饰球。",
+      "reviewCriteria": [
+        "1280x720 且完全无人",
+        "白色层次可分辨不过曝",
+        "空画布无图案无签名",
+        "左右角色与下方文本安全区明确"
+      ],
+      "styleReferenceMode": "deidentified-image-last",
+      "referenceSourceIds": [
+        "reference.user.albina-style-board"
+      ],
+      "identitySubjects": [],
+      "identityBootstrap": null
+    },
+    {
+      "jobId": "visual.image.cg.araya_rooftop",
+      "assetId": "cg.araya_rooftop",
+      "mode": "reference-edit",
+      "referenceJobIds": [
+        "visual.image.portrait.albina.normal",
+        "visual.image.portrait.protagonist.serious",
+        "visual.image.portrait.vergilius.normal"
+      ],
+      "positivePrompt": "继承 styleBible，使用三张引用立绘保持身份。本卡原创 AU/IF 屋顶关键 CG：风压过低云层，Albina 与玩家在屋顶中央隔着一步面对同一方向，Fascia 斜靠防御；Vergilius 位于远处侧缘观察。冷白搜捕光切过地面，极少金色光尘被风吹成细线，构图强调选择权而非胜利。16:9。",
+      "negativePrompt": "正史事件宣称、额外人物、角色克隆、换装、眼睛左右颠倒、Fascia 普通剑、浪漫拥抱、战斗胜利姿势、可读文字、字幕、UI、水印、裁切头部、畸形手。",
+      "reviewCriteria": [
+        "1280x720 且三名角色身份与引用一致",
+        "Albina 异色眼、义体、线缆高马尾和 Fascia 正确",
+        "三人空间关系清晰且无额外人物",
+        "搜捕光与金尘不遮挡脸和手"
+      ],
+      "styleReferenceMode": "deidentified-image-last",
+      "referenceSourceIds": [
+        "reference.user.albina-style-board"
+      ],
+      "identitySubjects": [
+        "albina",
+        "protagonist",
+        "vergilius"
+      ],
+      "identityBootstrap": null
+    },
+    {
+      "jobId": "visual.image.cg.art_resonance",
+      "assetId": "cg.art_resonance",
+      "mode": "reference-edit",
+      "referenceJobIds": [
+        "visual.image.portrait.albina.normal",
+        "visual.image.portrait.protagonist.tender"
+      ],
+      "positivePrompt": "继承 styleBible，严格保持两张引用身份。本卡原创 AU/IF 多路线共用 CG：空白镜面空间里，Albina 与玩家隔着一面细窄空框站在两侧，双方的手都停在框边而不占有对方；Fascia 的低频金色脉冲沿地面连接到一条未完成白线，镜中只映出当前两人。安静、抽象但物理关系明确，16:9。",
+      "negativePrompt": "正史隐藏事件、接吻、拥抱、束缚、人体切割、额外人物、角色克隆、眼睛左右颠倒、普通剑、可读文字、字幕、UI、水印、镜面多余人影、畸形手。",
+      "reviewCriteria": [
+        "1280x720 且两人身份与引用一致",
+        "手停在边界而非发生未经许可触碰",
+        "镜面没有额外人物或错误倒影",
+        "Fascia 和金色脉冲结构可辨"
+      ],
+      "styleReferenceMode": "deidentified-image-last",
+      "referenceSourceIds": [
+        "reference.user.albina-style-board"
+      ],
+      "identitySubjects": [
+        "albina",
+        "protagonist"
+      ],
+      "identityBootstrap": null
+    },
+    {
+      "jobId": "visual.image.cg.backstreet_pursuit",
+      "assetId": "cg.backstreet_pursuit",
+      "mode": "reference-edit",
+      "referenceJobIds": [
+        "visual.image.portrait.albina.combat",
+        "visual.image.portrait.protagonist.battle",
+        "visual.image.portrait.ring_agent.normal"
+      ],
+      "positivePrompt": "继承 styleBible，严格保持引用身份。本卡原创 AU/IF 雨巷追逐 CG：Albina 用横置 Fascia 护住玩家与无字委托书，玩家打碎悬在巷口的空画框，环指代理人在远处用另一只框封锁出口；雨线、湿地反光与斜向构图制造速度，不出现伤口或尸体。16:9。",
+      "negativePrompt": "额外追兵、枪战、血泊、肢解、Fascia 普通剑、角色克隆、眼睛左右颠倒、可读委托书、字幕、UI、水印、运动模糊遮脸、畸形手脚。",
+      "reviewCriteria": [
+        "1280x720 且三名角色身份与引用一致",
+        "追逐方向、画框封锁和防御动作可读",
+        "Fascia 完整且不穿模",
+        "无人受血腥伤害且无可读文字"
+      ],
+      "styleReferenceMode": "deidentified-image-last",
+      "referenceSourceIds": [
+        "reference.user.albina-style-board"
+      ],
+      "identitySubjects": [
+        "albina",
+        "protagonist",
+        "ring_agent"
+      ],
+      "identityBootstrap": null
+    },
+    {
+      "jobId": "visual.image.cg.canon_recap_9_14",
+      "assetId": "cg.canon_recap_9_14",
+      "mode": "reference-edit",
+      "referenceJobIds": [],
+      "referenceSourceIds": [
+        "canon.visual.canto-ix.9-14.s908",
+        "reference.user.albina-style-board"
+      ],
+      "canonClaimIds": [
+        "canon.9-14.corporism-context"
+      ],
+      "positivePrompt": "严格依据输入的 9-14 固定正史故事帧制作中文复盘用 16:9 CG。保留 LCE 研究区走廊、空间内陈列的纪念性构造装置与冷白工业环境的原作构图信息；画面只表达 Corporism 与 Nursefather 创作指示的叙事背景，不出现 Albina，不添加后续战斗、金枝或 AU 人物。使用原创重绘而非复制原图，人物与物体位置以参考帧为唯一视觉依据。",
+      "negativePrompt": "Albina、Callisto、Ren、玩家代理、AU 服装、未来事件、伪正史对白、可读文本、字幕、UI、水印、logo、人体写实描绘、角色重设计。",
+      "reviewCriteria": [
+        "1280x720 且视觉关系可追溯到固定 S908 参考帧",
+        "没有凭空加入 Albina 或 9-18 之后事件",
+        "只作原创重绘，不直接分发参考帧",
+        "无可读文本、UI、logo 或水印"
+      ],
+      "styleReferenceMode": "deidentified-image-last",
+      "identitySubjects": [],
+      "identityBootstrap": null
+    },
+    {
+      "jobId": "visual.image.cg.canon_recap_9_18",
+      "assetId": "cg.canon_recap_9_18",
+      "mode": "reference-edit",
+      "referenceJobIds": [],
+      "referenceSourceIds": [
+        "canon.visual.canto-ix.9-18.lce-lab-bg",
+        "canon.visual.albina.armored-standing",
+        "canon.visual.ren.standing",
+        "canon.visual.dante.standing",
+        "reference.user.albina-style-board"
+      ],
+      "canonClaimIds": [
+        "canon.9-18.first-appearance"
+      ],
+      "positivePrompt": "严格依据固定正史文本和四张视觉参考制作 9-18 首次出场复盘用 16:9 CG。以 LCE 实验室背景锁定空间与工业材质，但不复制背景中既有伤者；装甲 Albina 与 Ren 阻挡 Dante 一行追赶带走金枝的 Shiomi Yoru。画面聚焦 Albina、Ren、Dante 三人的对峙关系，身份、服装、武器与轮廓只依据各自固定参考，不借用本节前段 Ryōshū 往事中的暴力画面。事件停在战斗开始，不提前画装甲脱落、Fascia 侧板打开、9-43 或任何 AU 结果。原创重绘，不复制游戏截图。",
+      "negativePrompt": "AU 玩家代理、Callisto、装甲提前破损、Fascia 被毁、角色死亡、错误眼睛、普通白裙、普通巨剑、原创制服、可读对白、字幕、UI、水印、logo。",
+      "reviewCriteria": [
+        "1280x720 且 Albina、Ren、Dante 身份与固定参考一致",
+        "事件阶段限定在 9-18 初次阻拦，不混入后续结果",
+        "Albina 装甲和 Fascia 外形不自由重设计",
+        "只作原创重绘且无可读文本/UI/水印"
+      ],
+      "styleReferenceMode": "deidentified-image-last",
+      "identitySubjects": [
+        "albina",
+        "dante",
+        "ren"
+      ],
+      "identityBootstrap": null
+    },
+    {
+      "jobId": "visual.image.cg.canon_recap_9_37",
+      "assetId": "cg.canon_recap_9_37",
+      "mode": "reference-edit",
+      "referenceJobIds": [],
+      "referenceSourceIds": [
+        "canon.visual.canto-ix.9-43.ring-corridor-bg",
+        "canon.visual.albina.armored-standing",
+        "canon.visual.faust.standing",
+        "reference.user.albina-style-board"
+      ],
+      "canonClaimIds": [
+        "canon.9-37.encounter-and-method"
+      ],
+      "positivePrompt": "严格依据固定正史文本、Ring Corridor 背景、Albina 装甲站立图与 Faust 正史站立图制作 9-37 的 16:9 复盘 CG。装甲形态的 Albina 带完整 Fascia 礼貌而危险地迎接来访者，Faust 作为队伍前列代表保持警戒。画面只表达 Albina 把交朋友与挑选创作素材混同的初次对峙，不加入尚未出场的 Callisto、后续压制、9-43、死亡或任何 AU 玩家。原创重绘，不复制原作资产。",
+      "negativePrompt": "AU 玩家、恋爱动作、Callisto 提前入场、Fascia 被毁、Albina 死亡、普通人类皮肤、错误异色眼、普通剑、可读对白、字幕、UI、水印、logo。",
+      "reviewCriteria": [
+        "1280x720 且空间、人物外观分别可追溯到固定背景与站立图",
+        "Albina 与 Faust 身份、服装、比例保持固定参考",
+        "阶段只到 9-37 相遇和开战前后，不混入 9-43",
+        "原创重绘且无文字/UI/水印"
+      ],
+      "styleReferenceMode": "deidentified-image-last",
+      "identitySubjects": [
+        "albina",
+        "faust"
+      ],
+      "identityBootstrap": null
+    },
+    {
+      "jobId": "visual.image.cg.canon_recap_9_37_battle",
+      "assetId": "cg.canon_recap_9_37_battle",
+      "mode": "reference-edit",
+      "referenceJobIds": [],
+      "referenceSourceIds": [
+        "canon.visual.canto-ix.9-43.ring-corridor-bg",
+        "canon.visual.albina.unarmored-standing",
+        "canon.visual.callisto.standing",
+        "canon.visual.alyssa.story-icon",
+        "reference.user.albina-style-board"
+      ],
+      "canonClaimIds": [
+        "canon.9-37.escalation"
+      ],
+      "positivePrompt": "依据固定正史文本、Ring Corridor 背景、Albina 与 Callisto 站立图及 Alyssa 图标制作 9-37 战斗升级复盘用 16:9 CG。Callisto 加入后与 Albina 共同压制队伍，骨肉尖桩制住除 Alyssa 外的众人；Alyssa 在未被束缚的位置将 Ardor Blossom Star 调至最高同调，正要发动炽热反击。构图强调师徒压制与 Alyssa 反击的临界点。不得画 Fascia 被毁、Albina 或 Callisto 死亡，因为这些结果属于 9-43。原创重绘，不复制原作资产。",
+      "negativePrompt": "9-43 结局、尸体、Fascia 已毁、AU 玩家、恋爱姿态、角色服装重设计、蜘蛛肢体怪物、血腥特写、可读对白、字幕、UI、水印、logo。",
+      "reviewCriteria": [
+        "1280x720 且 Albina、Callisto 身份与固定参考一致",
+        "明确是 9-37 战斗升级而不是 9-43 结局",
+        "骨肉尖桩只表达控制威胁不过度血腥",
+        "原创重绘且无文字/UI/水印"
+      ],
+      "styleReferenceMode": "deidentified-image-last",
+      "identitySubjects": [
+        "albina",
+        "alyssa",
+        "callisto"
+      ],
+      "identityBootstrap": null
+    },
+    {
+      "jobId": "visual.image.cg.canon_recap_9_43_outcome",
+      "assetId": "cg.canon_recap_9_43_outcome",
+      "mode": "reference-edit",
+      "referenceJobIds": [],
+      "referenceSourceIds": [
+        "canon.visual.canto-ix.9-43.ring-corridor-bg",
+        "canon.visual.albina.unarmored-standing",
+        "canon.visual.callisto.standing",
+        "canon.visual.sinclair.smoke-war-story-icon",
+        "reference.user.albina-style-board"
+      ],
+      "canonClaimIds": [
+        "canon.9-43.sign-awakening",
+        "canon.9-43.outcome"
+      ],
+      "positivePrompt": "严格依据固定正史文本、Ring Corridor 背景、Albina 与 Callisto 站立图及 Smoke War Sinclair 图标制作 9-43 的 16:9 结局复盘 CG。画面停在 Faust 与 Ishmael 制造开口之后、Smoke War Sinclair 已摧毁 Fascia 而尚未对 Albina 发出致命一击的瞬间：Albina 因 Fascia 被毁而失措，Smoke War Sinclair 持磨损长柄武器准备继续攻击，Callisto 位于后方。只表现这一可由 9-43 台词与舞台指示直接核对的时刻，不借用本节的过去回忆或角色显现故事帧。不得画 Albina 存活、重构、玩家救援或三条 AU 路线。原创重绘而非复制。",
+      "negativePrompt": "Albina 存活、复活、金枝重构、玩家代理、恋爱救援、Fascia 完好、顺序颠倒、AU 服装、血腥尸体特写、可读对白、字幕、UI、水印、logo。",
+      "reviewCriteria": [
+        "1280x720 且人物外观与固定角色参考一致",
+        "Fascia 先毁、Albina 随后失措的因果清楚",
+        "不加入任何 AU 生还或重构暗示",
+        "原创重绘、非猎奇且无文字/UI/水印"
+      ],
+      "styleReferenceMode": "deidentified-image-last",
+      "identitySubjects": [
+        "albina",
+        "callisto",
+        "sinclair-smoke-war"
+      ],
+      "identityBootstrap": null
+    },
+    {
+      "jobId": "visual.image.cg.canon_recap_albina_fascia",
+      "assetId": "cg.canon_recap_albina_fascia",
+      "mode": "reference-edit",
+      "referenceJobIds": [],
+      "referenceSourceIds": [
+        "canon.visual.albina.unarmored-standing",
+        "canon.visual.albina.armored-standing",
+        "reference.user.albina-style-board"
+      ],
+      "canonClaimIds": [
+        "canon.profile.identity",
+        "canon.appearance.prosthetic-body",
+        "canon.appearance.armor-and-fascia",
+        "canon.personality.fascia-attachment",
+        "canon.personality.social-and-ambition",
+        "canon.story.pre-canto-fascia"
+      ],
+      "positivePrompt": "以两张固定正史站立图制作 Albina 与 Fascia 身体关系的 16:9 设定复盘 CG。画面并列呈现无装甲白色全身义体与白金铁处女式装甲轮廓，Fascia 巨剑完整居中作为共同锚点；明确右眼黑左眼白、线缆高马尾、黑色机械区、金色细节与装甲尖刺结构。只做客观设定展示，不画拆解过程、不画血肉特写、不推测参考图未显示的内部构造。",
+      "negativePrompt": "普通人类皮肤、白色紧身衣、左右眼颠倒、柔软自然长发、Fascia 普通剑、情色化、解剖血腥、AU 换装、可读标签、字幕、UI、水印、logo。",
+      "reviewCriteria": [
+        "1280x720 且两种正史形态都可从固定站立图核对",
+        "右黑左白异色眼、线缆发束与机械区域正确",
+        "Fascia 和装甲不自由补全不可见结构",
+        "非血腥、无可读文字/UI/水印"
+      ],
+      "styleReferenceMode": "deidentified-image-last",
+      "identitySubjects": [
+        "albina"
+      ],
+      "identityBootstrap": null
+    },
+    {
+      "jobId": "visual.image.cg.combat_transition_01",
+      "assetId": "cg.combat_transition_01",
+      "mode": "reference-edit",
+      "referenceJobIds": [
+        "visual.image.portrait.albina.combat",
+        "visual.image.portrait.protagonist.battle",
+        "visual.image.portrait.ring_agent.normal"
+      ],
+      "positivePrompt": "继承 styleBible，严格保持引用身份。本卡原创 AU/IF 战斗转场 CG：巨大空画框正被从中央击裂，Albina 从侧面以 Fascia 格开框架，玩家从另一侧拉开撤退通道，环指代理人在碎框后失去构图控制；黑、白、金和警示红的对角线动作，碎片是木与金属而非身体。16:9。",
+      "negativePrompt": "肢解、血肉碎片、杀人特写、枪械、魔法爆炸、额外人物、眼睛左右颠倒、Fascia 普通剑、可读文字、字幕、UI、水印、手脚畸形、脸部模糊。",
+      "reviewCriteria": [
+        "1280x720 且身份与引用一致",
+        "空画框破裂而非人体受伤",
+        "动作方向和撤退通道清楚",
+        "Fascia、手与框架接触点合理"
+      ],
+      "styleReferenceMode": "deidentified-image-last",
+      "referenceSourceIds": [
+        "reference.user.albina-style-board"
+      ],
+      "identitySubjects": [
+        "albina",
+        "protagonist",
+        "ring_agent"
+      ],
+      "identityBootstrap": null
+    },
+    {
+      "jobId": "visual.image.cg.conspiracy_contract",
+      "assetId": "cg.conspiracy_contract",
+      "mode": "reference-edit",
+      "referenceJobIds": [
+        "visual.image.portrait.albina.ring-conspiracy",
+        "visual.image.portrait.protagonist.serious",
+        "visual.image.portrait.callisto.normal",
+        "visual.image.portrait.ren.normal"
+      ],
+      "positivePrompt": "继承 styleBible，严格保持引用身份。本卡原创 AU/IF 无名委托 CG：黑白金工坊长桌中央放一份完全无字、未签名的协议和空白徽章；Albina 把手停在纸上方，玩家位于她同侧，Callisto 与 Ren 分居对面两端。Fascia 竖在 Albina 身后，画面强调谁拥有决定权，16:9。",
+      "negativePrompt": "伪原作合同、可读文字、签名、logo、额外人物、角色克隆、Albina 眼睛左右颠倒、Fascia 普通剑、浪漫构图、字幕、UI、水印、畸形手。",
+      "reviewCriteria": [
+        "1280x720 且四名角色身份与引用一致",
+        "协议、徽章均为空白无字",
+        "Albina 与玩家同侧的关系清楚但不亲密化",
+        "Fascia 和所有手部结构正确"
+      ],
+      "styleReferenceMode": "deidentified-image-last",
+      "referenceSourceIds": [
+        "reference.user.albina-style-board"
+      ],
+      "identitySubjects": [
+        "albina",
+        "callisto",
+        "protagonist",
+        "ren"
+      ],
+      "identityBootstrap": null
+    },
+    {
+      "jobId": "visual.image.cg.fascia_heartbeat",
+      "assetId": "cg.fascia_heartbeat",
+      "mode": "reference-edit",
+      "referenceJobIds": [
+        "visual.image.portrait.albina.fascia-open",
+        "visual.image.portrait.protagonist.tender"
+      ],
+      "positivePrompt": "继承 styleBible，严格保持引用身份。本卡原创 AU/IF Fascia 心跳 CG：近中景但仍展示完整关系，Fascia 侧板打开置于维护托架，内部暗色骨架、肋骨和活体组织随一圈克制金光起伏；Albina 一手保护剑身，玩家只把手停在允许的距离记录频率。非色情、非血腥，16:9。",
+      "negativePrompt": "出现脑、Fascia 人形化、普通剑、喷血、断肢、手术恐怖特写、未经许可触摸、额外人物、眼睛左右颠倒、可读监护数字、字幕、UI、水印、畸形手。",
+      "reviewCriteria": [
+        "1280x720 且两人身份与引用一致",
+        "Fascia 侧板、肋骨、组织与无脑设定正确",
+        "接触边界清楚",
+        "画面不靠喷血或恐怖变形表达"
+      ],
+      "styleReferenceMode": "deidentified-image-last",
+      "referenceSourceIds": [
+        "reference.user.albina-style-board"
+      ],
+      "identitySubjects": [
+        "albina",
+        "protagonist"
+      ],
+      "identityBootstrap": null
+    },
+    {
+      "jobId": "visual.image.cg.golden_bough_ending",
+      "assetId": "cg.golden_bough_ending",
+      "mode": "reference-edit",
+      "referenceJobIds": [
+        "visual.image.portrait.albina.endgame",
+        "visual.image.portrait.protagonist.resolve"
+      ],
+      "positivePrompt": "继承 styleBible，严格保持引用身份。本卡原创 AU/IF 金枝重构结局共用 CG：城郊黎明与最后一面无倒影镜子重叠，镜中只映出一枚未点亮的金枝残响；Albina 和玩家相隔一步并肩看向它，Fascia 的心跳与微弱金尘同步。姿态开放，不能预先断定真、普通或坏结局，16:9。",
+      "negativePrompt": "正史复活宣称、婚礼、拥抱、接吻、凯旋、死亡尸体、额外人物、眼睛左右颠倒、普通剑、满屏金光、可读文字、字幕、UI、水印、错误镜像。",
+      "reviewCriteria": [
+        "1280x720 且两人身份与引用一致",
+        "未点亮金枝和无倒影镜子清楚",
+        "构图对三种结局保持中性",
+        "Fascia 与金尘不过曝不穿模"
+      ],
+      "styleReferenceMode": "deidentified-image-last",
+      "referenceSourceIds": [
+        "reference.user.albina-style-board"
+      ],
+      "identitySubjects": [
+        "albina",
+        "protagonist"
+      ],
+      "identityBootstrap": null
+    },
+    {
+      "jobId": "visual.image.cg.golden_bough_rebuild",
+      "assetId": "cg.golden_bough_rebuild",
+      "mode": "reference-edit",
+      "referenceJobIds": [
+        "visual.image.portrait.albina.normal"
+      ],
+      "positivePrompt": "继承 styleBible，严格保持 Albina 引用身份。本卡原创 AU/IF 路线入口图，不是原作后续：9-43 已结束后的抽象分歧空间中，破碎的白色义体轮廓由克制金色光尘重新聚合，完整 Fascia 在旁发出一次心跳；Albina 尚未睁眼，画面明确是可能性而非正史复活记录。16:9。",
+      "negativePrompt": "伪原作复活截图、Future Sinclair、正史战斗复现、天使降临、圣光、普通人类身体、额外人物、Fascia 普通剑、可读文字、字幕、UI、水印、血腥尸体。",
+      "reviewCriteria": [
+        "1280x720 且 Albina 轮廓与引用一致",
+        "画面只表达 AU 分歧可能性",
+        "Fascia 身份正确且完整",
+        "金色重构光不过曝、不变成宗教复活"
+      ],
+      "styleReferenceMode": "deidentified-image-last",
+      "referenceSourceIds": [
+        "reference.user.albina-style-board"
+      ],
+      "identitySubjects": [
+        "albina"
+      ],
+      "identityBootstrap": null
+    },
+    {
+      "jobId": "visual.image.cg.hollow_torso_reveal",
+      "assetId": "cg.hollow_torso_reveal",
+      "mode": "reference-edit",
+      "referenceJobIds": [
+        "visual.image.portrait.albina.surgical",
+        "visual.image.portrait.protagonist.serious",
+        "visual.image.portrait.lce_doctor.normal"
+      ],
+      "positivePrompt": "继承 styleBible，严格保持引用身份。本卡原创 AU/IF 维护场景 CG：冷白维护槽中，Albina 自主打开胸腹义体检修板，显示黑色机械线路与近似骨架的中央结构；Fascia 被她亲手放在两人之间的托盘上，LCE 医师后退记录，玩家只作为见证。机械剖面清晰、无裸体与血腥，16:9。",
+      "negativePrompt": "普通女性裸体、色情身体展示、喷血、内脏从 Albina 躯干掉出、医师强制拆解、额外人物、眼睛左右颠倒、可读监护屏、字幕、UI、水印、畸形手。",
+      "reviewCriteria": [
+        "1280x720 且三人身份与引用一致",
+        "Albina 躯干为义体机械结构而非裸体",
+        "她对检修板和 Fascia 保有主动权",
+        "托盘、手与机械结构空间关系合理"
+      ],
+      "styleReferenceMode": "deidentified-image-last",
+      "referenceSourceIds": [
+        "reference.user.albina-style-board"
+      ],
+      "identitySubjects": [
+        "albina",
+        "lce_doctor",
+        "protagonist"
+      ],
+      "identityBootstrap": null
+    },
+    {
+      "jobId": "visual.image.cg.lce_raid",
+      "assetId": "cg.lce_raid",
+      "mode": "reference-edit",
+      "referenceJobIds": [
+        "visual.image.portrait.albina.combat",
+        "visual.image.portrait.protagonist.battle",
+        "visual.image.portrait.lce_doctor.normal"
+      ],
+      "positivePrompt": "继承 styleBible，严格保持引用身份。本卡原创 AU/IF LCE 警报 CG：实验室冷白灯切换为克制红色警报，密封门正在关闭；Albina 横置 Fascia 保护撤离路线，玩家护住无字记录板，LCE 医师在远侧控制台旁停步。没有开枪、伤亡或正史事件宣称，16:9。",
+      "negativePrompt": "正史 9-18 截图、军队、枪战、尸体、喷血、额外人物、角色克隆、眼睛左右颠倒、Fascia 普通剑、可读屏幕、字幕、UI、水印、畸形手脚。",
+      "reviewCriteria": [
+        "1280x720 且三人身份与引用一致",
+        "警报、关闭门和撤离方向可读",
+        "无正史事件伪装或伤亡",
+        "Fascia、手与门体不穿模"
+      ],
+      "styleReferenceMode": "deidentified-image-last",
+      "referenceSourceIds": [
+        "reference.user.albina-style-board"
+      ],
+      "identitySubjects": [
+        "albina",
+        "lce_doctor",
+        "protagonist"
+      ],
+      "identityBootstrap": null
+    },
+    {
+      "jobId": "visual.image.cg.limbus_bus_night",
+      "assetId": "cg.limbus_bus_night",
+      "mode": "reference-edit",
+      "referenceJobIds": [
+        "visual.image.portrait.albina.rain",
+        "visual.image.portrait.protagonist.tender",
+        "visual.image.portrait.dante.normal"
+      ],
+      "positivePrompt": "继承 styleBible，严格保持引用身份。本卡原创 AU/IF 夜班巴士 CG：雨窗旁 Albina 坐在靠窗座位，Fascia 安全固定在腿侧，玩家在相邻座位保持一段可撤回的空隙，Dante 位于前方过道安静旁观；窗中只出现正确三人倒影，气氛克制。16:9。",
+      "negativePrompt": "拥抱、依偎、睡在肩上、额外乘客、错误人形倒影、驾驶员、眼睛左右颠倒、Fascia 普通剑、可读路线牌、字幕、UI、水印、座椅穿模、畸形手。",
+      "reviewCriteria": [
+        "1280x720 且三人身份与引用一致",
+        "空座距离与边界语义清楚",
+        "窗中倒影数量和身份正确",
+        "巴士、Fascia 与身体接触不穿模"
+      ],
+      "styleReferenceMode": "deidentified-image-last",
+      "referenceSourceIds": [
+        "reference.user.albina-style-board"
+      ],
+      "identitySubjects": [
+        "albina",
+        "dante",
+        "protagonist"
+      ],
+      "identityBootstrap": null
+    },
+    {
+      "jobId": "visual.image.cg.maestro_shadow",
+      "assetId": "cg.maestro_shadow",
+      "mode": "reference-edit",
+      "referenceJobIds": [
+        "visual.image.portrait.albina.maestro",
+        "visual.image.portrait.protagonist.shadow",
+        "visual.image.portrait.callisto.normal",
+        "visual.image.portrait.ren.normal"
+      ],
+      "positivePrompt": "继承 styleBible，严格保持引用身份。本卡原创 AU/IF 画廊对峙 CG：中央聚光灯只照亮 Albina 和插入空画框的 Fascia，她以自己的名义凝视观众席；玩家在其侧后方分担视线，Callisto 的身影位于高处灯外，Ren 站在侧廊。强调传承压力与自我决定，不把 Maestro AU 服装伪称正史。16:9。",
+      "negativePrompt": "加冕、王座、正史 Maestro 宣告、蜘蛛怪物、额外人物、角色克隆、眼睛左右颠倒、普通剑、可读展签、字幕、UI、水印、畸形手。",
+      "reviewCriteria": [
+        "1280x720 且四名身份与引用一致",
+        "Albina 是画面主体但没有王权化",
+        "原创 AU Maestro 服装边界清楚",
+        "Fascia、空框和聚光灯关系合理"
+      ],
+      "styleReferenceMode": "deidentified-image-last",
+      "referenceSourceIds": [
+        "reference.user.albina-style-board"
+      ],
+      "identitySubjects": [
+        "albina",
+        "callisto",
+        "protagonist",
+        "ren"
+      ],
+      "identityBootstrap": null
+    },
+    {
+      "jobId": "visual.image.cg.opening_rain",
+      "assetId": "cg.opening_rain",
+      "mode": "reference-edit",
+      "referenceJobIds": [
+        "visual.image.portrait.albina.normal",
+        "visual.image.portrait.protagonist.serious"
+      ],
+      "positivePrompt": "继承 styleBible，严格保持两张引用立绘各自的身份，不交换、混合或复制任何身份特征；用户风格板只用于统一画风。本卡原创 AU/IF 边界开场 CG，不是原作后续：雨夜后巷中 Albina 从远处冷白灯下站起，Fascia 完整竖在身旁；玩家停在画面前景而没有触碰她。Albina 与玩家每人都恰好两条手臂、两只手，各自肢体与躯干连接清楚，人物之间无肢体融合。两人之间有一道由雨水形成的清晰分界线，远处金色残光正在熄灭，16:9。",
+      "negativePrompt": "伪正史复活、9-43 战斗重演、尸体、Future Sinclair、拥抱、接吻、额外人物、额外肢体、额外手、第三条手臂、三只手、肢体融合、共享手臂、身份复制、换脸、玩家复制 Albina 的白发异色眼义体或线缆高马尾、Albina 复制玩家的短黑发或服装、眼睛左右颠倒、普通剑、可读 AU 标签、字幕、UI、水印、血腥。",
+      "reviewCriteria": [
+        "1280x720 且两人身份与引用一致",
+        "两人各自恰好两条手臂、两只手，连接清楚且数量可审核",
+        "两人无融合、无身份复制或特征交换",
+        "雨水边界和未触碰关系明确",
+        "画面不伪装为正史事件",
+        "Albina 与 Fascia 全部关键特征正确"
+      ],
+      "styleReferenceMode": "deidentified-image-last",
+      "referenceSourceIds": [
+        "reference.user.albina-style-board"
+      ],
+      "identitySubjects": [
+        "albina",
+        "protagonist"
+      ],
+      "identityBootstrap": null
+    },
+    {
+      "jobId": "visual.image.cg.rain_confession",
+      "assetId": "cg.rain_confession",
+      "mode": "reference-edit",
+      "referenceJobIds": [
+        "visual.image.portrait.albina.rain",
+        "visual.image.portrait.protagonist.wet-hair"
+      ],
+      "positivePrompt": "继承 styleBible，严格保持引用身份。本卡原创 AU/IF 雨中边界 CG：室内雨幕形成连续空画框，Albina 站在前方，玩家保持她指定的半步距离并把伞沿偏向她一侧；两人的手都可见且没有擅自触碰，Fascia 安静立于外侧。细微水光表达信任，不使用甜腻滤镜，16:9。",
+      "negativePrompt": "接吻、拥抱、牵手、脸红偶像剧、透明湿衣、额外人物、眼睛左右颠倒、普通剑、可读文字、字幕、UI、水印、伞遮脸、畸形手。",
+      "reviewCriteria": [
+        "1280x720 且两人身份与引用一致",
+        "半步距离、偏伞动作与无触碰状态清楚",
+        "雨披和湿发各自保持材质设定",
+        "Fascia 完整且不挡脸"
+      ],
+      "styleReferenceMode": "deidentified-image-last",
+      "referenceSourceIds": [
+        "reference.user.albina-style-board"
+      ],
+      "identitySubjects": [
+        "albina",
+        "protagonist"
+      ],
+      "identityBootstrap": null
+    },
+    {
+      "jobId": "visual.image.cg.rebuild_awakening",
+      "assetId": "cg.rebuild_awakening",
+      "mode": "reference-edit",
+      "referenceJobIds": [
+        "visual.image.portrait.albina.golden-bough",
+        "visual.image.portrait.protagonist.serious"
+      ],
+      "positivePrompt": "继承 styleBible，严格保持引用身份。本卡原创 AU/IF 金枝重构觉醒 CG：裂隙中的金尘沿 Albina 义体接缝逆流，她半跪后正在自主起身，第一眼看向发出心跳的 Fascia；玩家在一臂外举着无字记忆记录片作为锚点，不替她行动。白、黑、金层次清楚，16:9。",
+      "negativePrompt": "伪正史复活、天使、神迹、玩家抱起 Albina、普通人类肉身、额外人物、眼睛左右颠倒、普通剑、可读记录、字幕、UI、水印、过曝金光。",
+      "reviewCriteria": [
+        "1280x720 且两人身份与引用一致",
+        "Albina 自主起身且先确认 Fascia",
+        "金尘沿义体接缝而非变成圣光",
+        "锚点保持一臂距离且无文字"
+      ],
+      "styleReferenceMode": "deidentified-image-last",
+      "referenceSourceIds": [
+        "reference.user.albina-style-board"
+      ],
+      "identitySubjects": [
+        "albina",
+        "protagonist"
+      ],
+      "identityBootstrap": null
+    },
+    {
+      "jobId": "visual.image.cg.ren_interruption",
+      "assetId": "cg.ren_interruption",
+      "mode": "reference-edit",
+      "referenceJobIds": [
+        "visual.image.portrait.albina.combat",
+        "visual.image.portrait.protagonist.battle",
+        "visual.image.portrait.ren.normal"
+      ],
+      "positivePrompt": "继承 styleBible，严格保持引用身份。本卡原创 AU/IF Ren 中断追逐 CG：雨巷出口处 Ren 从侧面截住环指代理人的空画框轨迹，而不是攻击 Albina；Albina 横置 Fascia 护住玩家，玩家握着未签名委托后撤。动作关系一眼可读，不重演或篡改 9-18 正史。16:9。",
+      "negativePrompt": "伪 9-18 截图、Ren 杀死 Albina、血腥、额外人物、角色克隆、眼睛左右颠倒、Fascia 普通剑、可读合同、字幕、UI、水印、运动模糊遮脸、畸形肢体。",
+      "reviewCriteria": [
+        "1280x720 且三人身份与引用一致",
+        "Ren 的中断目标与撤退方向清楚",
+        "不篡改或冒充 9-18 正史",
+        "Fascia、画框和手部接触合理"
+      ],
+      "styleReferenceMode": "deidentified-image-last",
+      "referenceSourceIds": [
+        "reference.user.albina-style-board"
+      ],
+      "identitySubjects": [
+        "albina",
+        "protagonist",
+        "ren"
+      ],
+      "identityBootstrap": null
+    },
+    {
+      "jobId": "visual.image.cg.ring_conspiracy_ending",
+      "assetId": "cg.ring_conspiracy_ending",
+      "mode": "reference-edit",
+      "referenceJobIds": [
+        "visual.image.portrait.albina.endgame",
+        "visual.image.portrait.protagonist.resolve"
+      ],
+      "positivePrompt": "继承 styleBible，严格保持引用身份。本卡原创 AU/IF 环指共谋结局共用 CG：城郊黎明，Albina 把卸下锋刃的画刀插入湿土，Fascia 安静靠在另一侧；玩家站在一步外，两人共同望向被雾压低的画廊灯火。地面只有一页无字空白记录，构图不预判真、普通或坏结局，16:9。",
+      "negativePrompt": "正史结局宣称、拥抱、婚礼、胜利庆典、死亡尸体、追兵、额外人物、眼睛左右颠倒、普通剑、可读记录、字幕、UI、水印、血腥。",
+      "reviewCriteria": [
+        "1280x720 且两人身份与引用一致",
+        "无锋画刀、Fascia 与空白记录三件道具清楚",
+        "构图可兼容三种结局",
+        "无可读文字或伪正史标识"
+      ],
+      "styleReferenceMode": "deidentified-image-last",
+      "referenceSourceIds": [
+        "reference.user.albina-style-board"
+      ],
+      "identitySubjects": [
+        "albina",
+        "protagonist"
+      ],
+      "identityBootstrap": null
+    },
+    {
+      "jobId": "visual.image.cg.ring_invitation",
+      "assetId": "cg.ring_invitation",
+      "mode": "reference-edit",
+      "referenceJobIds": [
+        "visual.image.portrait.albina.ring-conspiracy",
+        "visual.image.portrait.callisto.normal",
+        "visual.image.portrait.ren.normal"
+      ],
+      "positivePrompt": "继承 styleBible，严格保持引用身份。本卡原创 AU/IF 路线入口 CG：蜘蛛画廊的空框前，Albina 戴黑色机械手把一份完全无字、未签名的委托递向镜头，Fascia 竖在她身后；Callisto 与 Ren 分居暗处两侧，只形成可识别但不抢主体的压力。危险来自邀请而非袭击，16:9。",
+      "negativePrompt": "伪原作委托、可读合同、签名、logo、蜘蛛怪物、额外人物、角色克隆、眼睛左右颠倒、普通剑、字幕、UI、水印、畸形手。",
+      "reviewCriteria": [
+        "1280x720 且三名角色身份与引用一致",
+        "未签名委托完全无字",
+        "Albina 为主体且 AU 服装边界明确",
+        "递交手势、Fascia 与暗处人物空间合理"
+      ],
+      "styleReferenceMode": "deidentified-image-last",
+      "referenceSourceIds": [
+        "reference.user.albina-style-board"
+      ],
+      "identitySubjects": [
+        "albina",
+        "callisto",
+        "ren"
+      ],
+      "identityBootstrap": null
+    },
+    {
+      "jobId": "visual.image.cg.surgery_of_memory",
+      "assetId": "cg.surgery_of_memory",
+      "mode": "reference-edit",
+      "referenceJobIds": [
+        "visual.image.portrait.albina.surgical",
+        "visual.image.portrait.protagonist.serious",
+        "visual.image.portrait.faust.normal"
+      ],
+      "positivePrompt": "继承 styleBible，严格保持引用身份。本卡原创 AU/IF 记忆手术 CG：工业手术台上方悬浮数片无字镜面记录，金色光尘沿 Albina 义体接缝显示记忆路径；Albina 自己握住刻度工具选择保留区域，玩家在侧边朗读或沉默见证，Faust 于远端校准设备。无开颅、无血腥，16:9。",
+      "negativePrompt": "开颅手术、脑组织特写、束缚 Albina、强制医疗、额外人物、普通人类皮肤、眼睛左右颠倒、可读屏幕数字、字幕、UI、水印、畸形手。",
+      "reviewCriteria": [
+        "1280x720 且三人身份与引用一致",
+        "Albina 掌握工具与选择权",
+        "记忆以无字镜片和接缝金尘表达",
+        "无血腥、无强制拆解或可读文字"
+      ],
+      "styleReferenceMode": "deidentified-image-last",
+      "referenceSourceIds": [
+        "reference.user.albina-style-board"
+      ],
+      "identitySubjects": [
+        "albina",
+        "faust",
+        "protagonist"
+      ],
+      "identityBootstrap": null
+    },
+    {
+      "jobId": "visual.image.cg.trust_threshold",
+      "assetId": "cg.trust_threshold",
+      "mode": "reference-edit",
+      "referenceJobIds": [
+        "visual.image.portrait.albina.endgame",
+        "visual.image.portrait.protagonist.tender"
+      ],
+      "positivePrompt": "继承 styleBible，严格保持引用身份。本卡原创 AU/IF 信任阈值 CG：清晨屋顶边缘，Albina 的黑色机械手停在离玩家心口一寸的位置，玩家没有后退也没有主动拉近；Fascia 竖在两人侧面作为可撤回边界。近中景清楚展示双手距离和眼神，仍保留环境，16:9。",
+      "negativePrompt": "真正触摸心口、拥抱、接吻、束缚、色情化、额外人物、眼睛左右颠倒、Fascia 普通剑、可读文字、字幕、UI、水印、手指畸形、裁切关键手势。",
+      "reviewCriteria": [
+        "1280x720 且两人身份与引用一致",
+        "一寸距离明确且没有接触",
+        "双手、胸口与 Fascia 不互相穿模",
+        "情绪克制不色情化"
+      ],
+      "styleReferenceMode": "deidentified-image-last",
+      "referenceSourceIds": [
+        "reference.user.albina-style-board"
+      ],
+      "identitySubjects": [
+        "albina",
+        "protagonist"
+      ],
+      "identityBootstrap": null
+    },
+    {
+      "jobId": "visual.image.cg.white_canvas_choice",
+      "assetId": "cg.white_canvas_choice",
+      "mode": "reference-edit",
+      "referenceJobIds": [
+        "visual.image.portrait.albina.white-canvas",
+        "visual.image.portrait.protagonist.tender"
+      ],
+      "positivePrompt": "继承 styleBible，严格保持引用身份。本卡原创 AU/IF 白色画布选择 CG：空展厅中央的未署名白画布把 Albina 与玩家分在两侧，Albina 用无颜料画笔在空气中描出一条未闭合轮廓，玩家把手留在自己一侧；Fascia 竖在画布边缘而不是隔绝两人。白色层次克制，16:9。",
+      "negativePrompt": "婚礼白厅、接吻、拥抱、画布出现人物肖像、可读签名、额外人物、眼睛左右颠倒、普通剑、纯白过曝、字幕、UI、水印、畸形手。",
+      "reviewCriteria": [
+        "1280x720 且两人身份与引用一致",
+        "空白画布无图案无签名",
+        "未闭合轮廓和双方边界动作清楚",
+        "白色有层次且 Fascia 不穿模"
+      ],
+      "styleReferenceMode": "deidentified-image-last",
+      "referenceSourceIds": [
+        "reference.user.albina-style-board"
+      ],
+      "identitySubjects": [
+        "albina",
+        "protagonist"
+      ],
+      "identityBootstrap": null
+    },
+    {
+      "jobId": "visual.image.cg.white_canvas_ending",
+      "assetId": "cg.white_canvas_ending",
+      "mode": "reference-edit",
+      "referenceJobIds": [
+        "visual.image.portrait.albina.endgame",
+        "visual.image.portrait.protagonist.resolve"
+      ],
+      "positivePrompt": "继承 styleBible，严格保持引用身份。本卡原创 AU/IF 白色画布结局共用 CG：城郊黎明，一张卷起一半的未署名白画布靠在空框外，Albina 把 Fascia 重新安置在自己身侧并把无颜料画笔放在两人之间的地面；玩家与她留下两道并行但不相交的影子。构图保持开放，不预判三种结局，16:9。",
+      "negativePrompt": "婚礼、接吻、拥抱、永恒誓言文字、死亡尸体、额外人物、眼睛左右颠倒、普通剑、画布签名、字幕、UI、水印、满屏暖光。",
+      "reviewCriteria": [
+        "1280x720 且两人身份与引用一致",
+        "画布、画笔与 Fascia 三件道具关系清楚",
+        "两道影子并行不相交且无额外人影",
+        "构图可兼容真普通坏结局"
+      ],
+      "styleReferenceMode": "deidentified-image-last",
+      "referenceSourceIds": [
+        "reference.user.albina-style-board"
+      ],
+      "identitySubjects": [
+        "albina",
+        "protagonist"
+      ],
+      "identityBootstrap": null
+    },
+    {
+      "jobId": "visual.image.portrait.albina.armored",
+      "assetId": "portrait.albina.armored",
+      "mode": "reference-edit",
+      "referenceJobIds": [
+        "visual.image.portrait.albina.normal"
+      ],
+      "referenceSourceIds": [
+        "canon.visual.albina.armored-standing",
+        "reference.user.albina-style-board"
+      ],
+      "positivePrompt": "IDENTITY-PRESERVE EDIT。把已批准的 Albina normal 与官方 Albina armored 站立图共同作为不可变的身份和正史结构基准；用户风格板只用于画风。逐项保持相同脸型、五官、平直白色刘海、双眼方向、线缆高马尾、义体身体比例、手脚、站位、画面尺度以及 Fascia 巨剑的宽大矩形外轮廓；不得重新设计人物或武器。全身解剖必须恰好两条手臂、两只手，不得让武器或装甲生成第三只手。装甲手套仍须呈现五指结构并可逐根计数，拇指、食指、中指、无名指和小指自然分离，握持关系正确。只在该同一人物身体外层增加正史铁处女装甲：白、亮黄、金色长裙式机械装甲，尖刺头环、垂链、尖刺裙甲与绘有金色锐眼的封闭面具结构全部可辨；Fascia 保持同一把巨剑并完整竖立，侧板闭合。正面威压站姿，透明背景、固定锚点，继承 styleBible。",
+      "negativePrompt": "任何新角色、换脸、改变五官、改变刘海、改变眼睛方向、自然长发、散发、角、兽耳、王冠、婚纱、礼服、普通欧洲板甲、奇幻女王、机甲驾驶舱、黑紫主色、普通剑、细剑、不同武器、装甲部件缺失、额外肢体、额外手、第三条手臂、三只手、少于五指、多于五指、手指粘连、装甲手套无法计数、背景、地面、投影、半身、裁切、色情化、文字、logo、水印、UI。",
+      "reviewCriteria": [
+        "1024x1536 真透明 PNG 且装甲与 Fascia 全部入画",
+        "白亮黄金、长裙、尖刺、垂链与金色锐眼面具齐全",
+        "引用身份、眼睛方向与线缆高马尾不变",
+        "全身恰好两条手臂、两只手，无额外肢体或额外手",
+        "两只装甲手套均保持五指结构、可逐根计数且抓握关系正确",
+        "固定锚点与基准尺度一致"
+      ],
+      "styleReferenceMode": "deidentified-image-last",
+      "identitySubjects": [
+        "albina"
+      ],
+      "identityBootstrap": null
+    },
+    {
+      "jobId": "visual.image.portrait.albina.combat",
+      "assetId": "portrait.albina.combat",
+      "mode": "reference-edit",
+      "referenceJobIds": [
+        "visual.image.portrait.albina.normal"
+      ],
+      "positivePrompt": "严格保留引用 Albina 的正史身份结构，继承 styleBible。AU 场景中的战斗姿态，服装仍沿用正史无装甲义体而非新正史形态：重心降低，Fascia 横向防守且完整入画，一只前臂展开三爪与手术刀工具，另一手稳定剑柄；冷静专注，不咆哮。透明背景、全身、固定锚点。",
+      "negativePrompt": "新战斗盔甲、枪械、魔法、狂笑、普通人类皮肤、眼睛左右颠倒、自然头发、Fascia 普通剑、多余机械臂、背景、地面、投影、裁切、色情化、文字、水印。",
+      "reviewCriteria": [
+        "1024x1536 真透明 PNG 且全身、工具和 Fascia 完整",
+        "战斗姿态稳定不改变固定脚底锚点",
+        "前臂工具与义体结构真实连接",
+        "正史身份特征无漂移"
+      ],
+      "styleReferenceMode": "deidentified-image-last",
+      "referenceSourceIds": [
+        "reference.user.albina-style-board"
+      ],
+      "identitySubjects": [
+        "albina"
+      ],
+      "identityBootstrap": null
+    },
+    {
+      "jobId": "visual.image.portrait.albina.endgame",
+      "assetId": "portrait.albina.endgame",
+      "mode": "reference-edit",
+      "referenceJobIds": [
+        "visual.image.portrait.albina.normal"
+      ],
+      "positivePrompt": "严格保留引用 Albina 的正史义体、异色眼、线缆高马尾和 Fascia，继承 styleBible。本卡原创 AU/IF 终章服装，不是原作服装：在义体外增加一件珍珠白与炭黑分区的长外套，细金修补线沿旧裂缝延伸，衣摆简洁、无徽章；Fascia 侧板闭合，平静但疲惫地站立。透明背景、全身、固定锚点。",
+      "negativePrompt": "声称正史终章形态、婚纱、礼服裙、王冠、圣光、普通人类皮肤、眼睛左右颠倒、自然头发、普通剑、背景、地面、投影、裁切、色情化、文字、水印。",
+      "reviewCriteria": [
+        "1024x1536 真透明 PNG 且全身与 Fascia 完整",
+        "服装清楚可识别为原创 AU 外层服装",
+        "白义体、黑机械区、异色眼和高马尾保持",
+        "固定锚点与基准尺度一致"
+      ],
+      "styleReferenceMode": "deidentified-image-last",
+      "referenceSourceIds": [
+        "reference.user.albina-style-board"
+      ],
+      "identitySubjects": [
+        "albina"
+      ],
+      "identityBootstrap": null
+    },
+    {
+      "jobId": "visual.image.portrait.albina.fascia-open",
+      "assetId": "portrait.albina.fascia-open",
+      "mode": "reference-edit",
+      "referenceJobIds": [
+        "visual.image.portrait.albina.normal"
+      ],
+      "positivePrompt": "严格保留引用 Albina 的身份与无装甲义体，继承 styleBible。Fascia 正史结构展示立绘：巨剑侧板机械开启，内部呈现深色金属骨架与精密机械构成的结构示意（以工程图纸与标本陈列的冷静方式呈现，不含血液、创伤或损伤画面），整体为 Albina 本体的机械衍生构造且不含脑部结构；Albina 一手保护性扶住剑身，神态专注。透明背景、全身、固定锚点。",
+      "negativePrompt": "Fascia 变成人、出现脑、普通金属剑、随机眼球、血液、断肢、创伤画面、Albina 人类皮肤、眼睛左右颠倒、背景、地面、投影、半身、裁切、色情化、文字、水印。",
+      "reviewCriteria": [
+        "1024x1536 真透明 PNG 且 Albina 与开启后的 Fascia 全部入画",
+        "侧板、骨架、肋骨与组织结构可辨且无脑",
+        "不依赖血腥喷溅表达活体结构",
+        "引用身份和固定锚点无漂移"
+      ],
+      "styleReferenceMode": "deidentified-image-last",
+      "referenceSourceIds": [
+        "reference.user.albina-style-board"
+      ],
+      "identitySubjects": [
+        "albina"
+      ],
+      "identityBootstrap": null
+    },
+    {
+      "jobId": "visual.image.portrait.albina.furious",
+      "assetId": "portrait.albina.furious",
+      "mode": "reference-edit",
+      "referenceJobIds": [
+        "visual.image.portrait.albina.normal"
+      ],
+      "positivePrompt": "严格保留引用 Albina 的全部正史视觉锚点，继承 styleBible。AU/IF 情绪变体而非新正史人格：礼貌表面终于裂开，眉眼冷硬、下颌紧绷但不夸张吼叫；无装甲义体不换装，Fascia 斜立身侧，一只黑色机械手握紧。透明背景、全身、固定锚点。",
+      "negativePrompt": "狂暴怪物、尖牙、红眼替换、哭喊、普通人类皮肤、眼睛左右颠倒、自然头发、Fascia 普通剑、新服装、背景、地面、投影、裁切、色情化、文字、水印。",
+      "reviewCriteria": [
+        "1024x1536 真透明 PNG 且全身与 Fascia 完整",
+        "愤怒通过克制表情和姿态表达",
+        "无装甲基础服装和身份结构不变",
+        "固定锚点与基准尺度一致"
+      ],
+      "styleReferenceMode": "deidentified-image-last",
+      "referenceSourceIds": [
+        "reference.user.albina-style-board"
+      ],
+      "identitySubjects": [
+        "albina"
+      ],
+      "identityBootstrap": null
+    },
+    {
+      "jobId": "visual.image.portrait.albina.golden-bough",
+      "assetId": "portrait.albina.golden-bough",
+      "mode": "reference-edit",
+      "referenceJobIds": [
+        "visual.image.portrait.albina.normal"
+      ],
+      "positivePrompt": "严格保留引用 Albina 的正史义体、异色眼、线缆高马尾与 Fascia，继承 styleBible。本卡原创 AU/IF 金枝重构服装，不是原作服装：半透明灰白短披肩覆盖肩背，细金枝状修补线从胸腹裂缝延至衣缘，少量稳定金尘从接缝逸出；Fascia 有同步金色脉冲但侧板闭合。透明背景、全身、固定锚点。",
+      "negativePrompt": "声称正史金枝形态、金色圣女、树枝王冠、满身发光、普通人类皮肤、眼睛左右颠倒、自然头发、普通剑、背景、地面、投影、裁切、色情化、文字、水印。",
+      "reviewCriteria": [
+        "1024x1536 真透明 PNG 且全身与 Fascia 完整",
+        "原创 AU 披肩和金色修补线明确但不覆盖义体锚点",
+        "金尘克制不过曝",
+        "固定锚点与基准尺度一致"
+      ],
+      "styleReferenceMode": "deidentified-image-last",
+      "referenceSourceIds": [
+        "reference.user.albina-style-board"
+      ],
+      "identitySubjects": [
+        "albina"
+      ],
+      "identityBootstrap": null
+    },
+    {
+      "jobId": "visual.image.portrait.albina.maestro",
+      "assetId": "portrait.albina.maestro",
+      "mode": "reference-edit",
+      "referenceJobIds": [
+        "visual.image.portrait.albina.normal"
+      ],
+      "positivePrompt": "严格保留引用 Albina 的正史义体、异色眼、线缆高马尾与 Fascia，继承 styleBible。本卡原创 AU/IF Maestro 候选服装，不是原作确认形态：黑白不对称长画廊外套，少量金色蜘蛛网几何缝线和可拆空框肩饰，无皇冠；她以自己的名字站直，Fascia 竖立但不攻击。透明背景、全身、固定锚点。",
+      "negativePrompt": "声称正史 Maestro 形态、王冠、女王礼服、蜘蛛肢体、Callisto 脸、普通人类皮肤、眼睛左右颠倒、自然头发、普通剑、背景、地面、投影、裁切、色情化、文字、水印。",
+      "reviewCriteria": [
+        "1024x1536 真透明 PNG 且全身与 Fascia 完整",
+        "服装明确标识原创 AU 且不冒充已确认正史",
+        "蜘蛛语义仅为几何缝线和空框饰件",
+        "固定锚点与基准尺度一致"
+      ],
+      "styleReferenceMode": "deidentified-image-last",
+      "referenceSourceIds": [
+        "reference.user.albina-style-board"
+      ],
+      "identitySubjects": [
+        "albina"
+      ],
+      "identityBootstrap": null
+    },
+    {
+      "jobId": "visual.image.portrait.albina.normal",
+      "assetId": "portrait.albina.normal",
+      "mode": "reference-edit",
+      "referenceJobIds": [],
+      "styleReferenceMode": "deidentified-image-last",
+      "referenceSourceIds": [
+        "canon.visual.albina.unarmored-standing",
+        "reference.user.albina-style-board"
+      ],
+      "positivePrompt": "INPUT ROLE LOCK：按固定顺序上传两张图。Image 1 是官方 Albina 无装甲站立图，是角色身份、脸、体型、姿态、轮廓、解剖、眼色、浅灰线缆束高马尾、机械手、服装分缝、Fascia 与所有结构细节的唯一权威；任何冲突都必须以 Image 1 为准。Image 2 是已去身份化且打乱构图的局部风格板，仅学习二维线稿密度、平涂与少量厚涂的结合、冷白与炭黑、克制金色、警示红能量、材质边缘和工业冷光画风。不得从 Image 2 复制或推断脸、自然长发、体型、姿势、解剖、服装、武器、道具或海报构图，也不得把 Image 2 的局部拼贴布局带入成图。执行保守的 identity-preserve 编辑：不重新设计人物，只提升 Image 1 的线稿、着色、光影和材质完成度。保持 Image 1 的角色、姿态、轮廓、比例、异色瞳、义体分缝、Fascia 结构与机械手完全不变。Albina 正史基础无装甲全身身份基准立绘：成年女性白色全身义体，金色细节，脸与关节人工分缝，颈胸和大腿的黑色机械线路清晰，中央躯干近似骨架；解剖学右眼黑、左眼白，正面观看时画面左眼为黑、画面右眼为白；浅灰线缆束高马尾，不是自然头发。平静正视，Fascia 巨大白黄金活体剑竖立在身体一侧且全长入画，侧板闭合。未握剑的机械手自然下垂并以可审核角度完整露出五根互相分离的机械手指：拇指、食指、中指、无名指、小指均清晰，三段指节和自然长度关系正确；握剑手也保持五指抓握结构。透明背景、固定锚点。",
+      "negativePrompt": "普通人类皮肤、白色紧身衣、自然柔软长发、眼睛左右颠倒、同色双眼、绿色双眼、Fascia 变普通剑、装甲面具、少于五指、多于五指、手指粘连、手指遮挡到无法计数、畸形手、背景、渐变洋红背景、地面、投影、半身、裁切、坐姿、色情化、幼态、多余肢体、文字、水印。",
+      "reviewCriteria": [
+        "1024x1536 真透明 PNG 且全身和 Fascia 不裁切",
+        "黑眼位于画面左、白眼位于画面右",
+        "白色全身义体、黑色机械区与线缆高马尾均准确",
+        "固定中心、鞋底基线与统一尺度合格",
+        "两只机械手均保持五指结构，下垂手五指可逐根计数且自然分离，握剑手抓握关系正确",
+        "边缘适合 Live2D 拆分且无洋红背景、色边或其他部位漂移"
+      ],
+      "identitySubjects": [
+        "albina"
+      ],
+      "identityBootstrap": null
+    },
+    {
+      "jobId": "visual.image.portrait.albina.rain",
+      "assetId": "portrait.albina.rain",
+      "mode": "reference-edit",
+      "referenceJobIds": [
+        "visual.image.portrait.albina.normal"
+      ],
+      "positivePrompt": "严格保留引用 Albina 的正史义体、异色眼、线缆高马尾与 Fascia，继承 styleBible。本卡原创 AU/IF 雨夜外层服装，不是原作服装：透明烟灰防雨披肩覆盖肩背但不遮脸、胸部结构或黑色机械区，线缆发束挂有水滴而不是变成自然湿发；Fascia 收在身侧。透明背景、全身、固定锚点。",
+      "negativePrompt": "自然湿长发、雨伞遮脸、普通人类皮肤、眼睛左右颠倒、雨衣完全遮住义体、普通剑、背景、雨景底图、地面水洼、投影、裁切、色情化、文字、水印。",
+      "reviewCriteria": [
+        "1024x1536 真透明 PNG 且全身与 Fascia 完整",
+        "透明雨披为原创 AU 且不遮挡身份锚点",
+        "线缆高马尾材质在雨中仍为人工结构",
+        "固定锚点与基准尺度一致"
+      ],
+      "styleReferenceMode": "deidentified-image-last",
+      "referenceSourceIds": [
+        "reference.user.albina-style-board"
+      ],
+      "identitySubjects": [
+        "albina"
+      ],
+      "identityBootstrap": null
+    },
+    {
+      "jobId": "visual.image.portrait.albina.ring-conspiracy",
+      "assetId": "portrait.albina.ring-conspiracy",
+      "mode": "reference-edit",
+      "referenceJobIds": [
+        "visual.image.portrait.albina.normal"
+      ],
+      "positivePrompt": "严格保留引用 Albina 的正史义体、异色眼、线缆高马尾与 Fascia，继承 styleBible。本卡原创 AU/IF 环指共谋外层服装，不是原作服装：炭黑短披肩与白色长前襟围住义体，细金装裱线和一枚无字空白扣件，不覆盖黑色机械区；礼貌、警戒的站姿，Fascia 贴身竖立。透明背景、全身、固定锚点。",
+      "negativePrompt": "声称正史环指制服、Callisto 或 Ren 的脸、蜘蛛怪物、可读徽章、普通人类皮肤、眼睛左右颠倒、自然头发、普通剑、背景、地面、投影、裁切、色情化、文字、水印。",
+      "reviewCriteria": [
+        "1024x1536 真透明 PNG 且全身与 Fascia 完整",
+        "原创 AU 披肩和装裱线明确且无伪组织文字",
+        "正史义体与异色眼全部保留",
+        "固定锚点与基准尺度一致"
+      ],
+      "styleReferenceMode": "deidentified-image-last",
+      "referenceSourceIds": [
+        "reference.user.albina-style-board"
+      ],
+      "identitySubjects": [
+        "albina"
+      ],
+      "identityBootstrap": null
+    },
+    {
+      "jobId": "visual.image.portrait.albina.shy",
+      "assetId": "portrait.albina.shy",
+      "mode": "reference-edit",
+      "referenceJobIds": [
+        "visual.image.portrait.albina.normal"
+      ],
+      "positivePrompt": "严格保留引用 Albina 的全部正史视觉锚点，继承 styleBible。AU/IF 情绪变体而非正史固定性格：视线轻微偏开，黑色机械手停在胸前但不触碰，姿态显出不熟悉亲密边界的迟疑；不换装，Fascia 安静竖立并保持距离。透明背景、全身、固定锚点。",
+      "negativePrompt": "脸红少女套路、幼态、卖萌、闭眼微笑、普通人类皮肤、眼睛左右颠倒、自然头发、新服装、普通剑、背景、地面、投影、半身、裁切、色情化、文字、水印。",
+      "reviewCriteria": [
+        "1024x1536 真透明 PNG 且全身与 Fascia 完整",
+        "迟疑情绪克制且不幼态化",
+        "基础无装甲设计和身份锚点不变",
+        "固定锚点与基准尺度一致"
+      ],
+      "styleReferenceMode": "deidentified-image-last",
+      "referenceSourceIds": [
+        "reference.user.albina-style-board"
+      ],
+      "identitySubjects": [
+        "albina"
+      ],
+      "identityBootstrap": null
+    },
+    {
+      "jobId": "visual.image.portrait.albina.surgical",
+      "assetId": "portrait.albina.surgical",
+      "mode": "reference-edit",
+      "referenceJobIds": [
+        "visual.image.portrait.albina.normal"
+      ],
+      "positivePrompt": "严格保留引用 Albina 的正史义体、异色眼、线缆高马尾与 Fascia，继承 styleBible。本卡原创 AU/IF 维护状态服装，不是原作服装：无菌灰白短罩布只覆盖肩与腰侧，胸腹义体机械结构仍可审核；一只前臂展开精密机械维护工具组，Fascia 被她保护性地靠在身侧。透明背景、全身、固定锚点。",
+      "negativePrompt": "护士制服、现实手术服完全遮身、血污围裙、色情医疗装、普通人类皮肤、眼睛左右颠倒、自然头发、普通剑、背景、地面、投影、裁切、文字、水印。",
+      "reviewCriteria": [
+        "1024x1536 真透明 PNG 且全身、工具与 Fascia 完整",
+        "原创 AU 罩布不遮挡义体识别区",
+        "展开工具与前臂机械连接合理",
+        "固定锚点与基准尺度一致"
+      ],
+      "styleReferenceMode": "deidentified-image-last",
+      "referenceSourceIds": [
+        "reference.user.albina-style-board"
+      ],
+      "identitySubjects": [
+        "albina"
+      ],
+      "identityBootstrap": null
+    },
+    {
+      "jobId": "visual.image.portrait.albina.white-canvas",
+      "assetId": "portrait.albina.white-canvas",
+      "mode": "reference-edit",
+      "referenceJobIds": [
+        "visual.image.portrait.albina.normal"
+      ],
+      "positivePrompt": "严格保留引用 Albina 的正史义体、异色眼、线缆高马尾与 Fascia，继承 styleBible。本卡原创 AU/IF 白色画布路线外层服装，不是原作服装：哑光白色未收边长罩衣以黑色细线固定在肩腰，局部保留空白布片和未落颜料的画笔，绝不覆盖义体分缝与黑色机械区；Fascia 作为可撤回的边界竖立。透明背景、全身、固定锚点。",
+      "negativePrompt": "声称正史服装、婚纱、病号服、纯白过曝、普通人类皮肤、眼睛左右颠倒、自然头发、普通剑、背景、画布底图、地面、投影、裁切、色情化、文字、水印。",
+      "reviewCriteria": [
+        "1024x1536 真透明 PNG 且全身、画笔与 Fascia 完整",
+        "罩衣清楚标识原创 AU 且未遮挡正史义体锚点",
+        "白色有材质层次不过曝",
+        "固定锚点与基准尺度一致"
+      ],
+      "styleReferenceMode": "deidentified-image-last",
+      "referenceSourceIds": [
+        "reference.user.albina-style-board"
+      ],
+      "identitySubjects": [
+        "albina"
+      ],
+      "identityBootstrap": null
+    },
+    {
+      "jobId": "visual.image.portrait.callisto.normal",
+      "assetId": "portrait.callisto.normal",
+      "mode": "reference-edit",
+      "referenceJobIds": [],
+      "referenceSourceIds": [
+        "canon.visual.callisto.standing",
+        "reference.user.albina-style-board"
+      ],
+      "positivePrompt": "继承 styleBible。Callisto from Limbus Company Canto IX，使用可识别的正史 House of Spiders Maestro 全身角色设计，不进行 AU 换装，不凭空增加身体改造、徽章或武器；从容、带审视意味的站姿，双手与服装轮廓完整。透明背景、固定锚点。",
+      "negativePrompt": "原创重设计、把 Albina 特征移植给 Callisto、蜘蛛怪物、真实蜘蛛肢体、无法核实的皇冠或制服、背景、地面、投影、半身、裁切、色情化、幼态、文字、水印。",
+      "reviewCriteria": [
+        "1024x1536 真透明 PNG 且全身完整",
+        "必须人工对照固定官方 Callisto 视觉来源，无法确认即拒绝",
+        "不得混入 Albina 的白色义体或异色眼",
+        "固定锚点与其他立绘尺度一致"
+      ],
+      "styleReferenceMode": "deidentified-image-last",
+      "identitySubjects": [
+        "callisto"
+      ],
+      "identityBootstrap": null
+    },
+    {
+      "jobId": "visual.image.portrait.dante.normal",
+      "assetId": "portrait.dante.normal",
+      "mode": "reference-edit",
+      "referenceJobIds": [],
+      "referenceSourceIds": [
+        "canon.visual.dante.standing",
+        "reference.user.albina-style-board"
+      ],
+      "positivePrompt": "继承 styleBible。Dante from Limbus Company 的可识别正史全身设计：钟表头管理者、深色长外套与正式内层，保持原作轮廓和配色，不新增面孔或 AU 装饰；安静站姿，钟头、衣摆、手套和鞋完整。透明背景、固定锚点。",
+      "negativePrompt": "人类头脸、头盔面罩、普通机器人、蒸汽朋克过度齿轮、原创制服、背景、地面、投影、半身、裁切、坐姿、多余肢体、可读钟面文字、logo、水印。",
+      "reviewCriteria": [
+        "1024x1536 真透明 PNG 且全身完整",
+        "钟表头与正史服装轮廓可识别",
+        "不得生成普通人脸",
+        "固定锚点与其他立绘尺度一致"
+      ],
+      "styleReferenceMode": "deidentified-image-last",
+      "identitySubjects": [
+        "dante"
+      ],
+      "identityBootstrap": null
+    },
+    {
+      "jobId": "visual.image.portrait.faust.normal",
+      "assetId": "portrait.faust.normal",
+      "mode": "reference-edit",
+      "referenceJobIds": [],
+      "referenceSourceIds": [
+        "canon.visual.faust.standing",
+        "reference.user.albina-style-board"
+      ],
+      "positivePrompt": "继承 styleBible。Faust from Limbus Company 的可识别正史全身设计，保持正史白发、冷静表情与 Limbus Company 制服轮廓和配色，不做 AU 换装；理性、克制的中立站姿，双手和鞋完整。透明背景、固定锚点。",
+      "negativePrompt": "原创发色、奇幻法杖、实验室白大褂替换正史制服、夸张笑容、背景、地面、投影、半身、裁切、色情化、幼态、多余肢体、文字、水印。",
+      "reviewCriteria": [
+        "1024x1536 真透明 PNG 且全身完整",
+        "必须人工对照 Faust 正史视觉设计",
+        "白发、制服与冷静神态一致",
+        "固定锚点与其他立绘尺度一致"
+      ],
+      "styleReferenceMode": "deidentified-image-last",
+      "identitySubjects": [
+        "faust"
+      ],
+      "identityBootstrap": null
+    },
+    {
+      "jobId": "visual.image.portrait.golden_apparition.normal",
+      "assetId": "portrait.golden_apparition.normal",
+      "mode": "reference-edit",
+      "referenceJobIds": [],
+      "referenceSourceIds": [
+        "reference.user.albina-style-board"
+      ],
+      "positivePrompt": "本卡原创 AU/IF 金枝记忆幻影，非任何现有角色，不从 Albina、用户女主图或任何角色图推导，也不复用任何人的脸、体型、发型、义体、服装、武器或姿势。去身份化风格板只用于统一线稿、平涂、材质、配色与工业冷光，不提供人物内容；设计一个成年、性别中性的非实体记忆残影：半透明暗金镜片与细小光尘构成的抽象人形，面部无可识别五官，双手自然下垂且每只手均有清晰自然分离的五指；不得携带实体武器。透明背景、全身、固定锚点。",
+      "negativePrompt": "任何已有角色或真人身份、Albina 身份或外观、普通金发女性、天使、幽灵白裙、完整实体复制人、可识别脸部、普通人类皮肤、实体 Fascia、背景、地面、投影、半身、裁切、额外肢体、少于或多于五指、手指粘连、文字、水印。",
+      "reviewCriteria": [
+        "1024x1536 真透明 PNG 且全身完整",
+        "不使用任何 Albina、用户女主图或其他角色的脸、体型、发型、义体、服装、武器或姿势",
+        "不被误认成任何现有或正史角色",
+        "双手均为自然分离、可逐根计数的五指且无额外肢体"
+      ],
+      "styleReferenceMode": "deidentified-image-last",
+      "identitySubjects": [
+        "golden_apparition"
+      ],
+      "identityBootstrap": {
+        "kind": "project-authored-root",
+        "subject": "golden_apparition",
+        "authority": {
+          "kind": "character-bible",
+          "pointer": "#/characterBible/auSupportingCharacters/golden_apparition"
+        },
+        "identityReferenceJobIds": [],
+        "identityReferenceSourceIds": [],
+        "requiresHumanIdentityApproval": false
+      }
+    },
+    {
+      "jobId": "visual.image.portrait.lce_doctor.normal",
+      "assetId": "portrait.lce_doctor.normal",
+      "mode": "reference-edit",
+      "referenceJobIds": [],
+      "positivePrompt": "继承 styleBible 与 characterBible.auSupportingCharacters。本卡原创 AU/IF LCE 医师，不是原作命名角色：成年、性别中性，灰白工业防护长衣、黑色内层、冷色护目镜、无标志证件夹与薄手套，手持一块完全无字的协议板；冷静职业站姿。透明背景、固定锚点。",
+      "negativePrompt": "真实医院 logo、可读证件、现代医护广告、血污、疯狂科学家、原作角色脸、背景、地面、投影、半身、裁切、色情化、幼态、多余肢体、文字、水印。",
+      "reviewCriteria": [
+        "1024x1536 真透明 PNG 且全身完整",
+        "明确为本卡原创 AU 支援角色",
+        "协议板和证件均无可读文字或标志",
+        "固定锚点与其他立绘尺度一致"
+      ],
+      "styleReferenceMode": "deidentified-image-last",
+      "referenceSourceIds": [
+        "reference.user.albina-style-board"
+      ],
+      "identitySubjects": [
+        "lce_doctor"
+      ],
+      "identityBootstrap": {
+        "kind": "project-authored-root",
+        "subject": "lce_doctor",
+        "authority": {
+          "kind": "character-bible",
+          "pointer": "#/characterBible/auSupportingCharacters/lce_doctor"
+        },
+        "identityReferenceJobIds": [],
+        "identityReferenceSourceIds": [],
+        "requiresHumanIdentityApproval": false
+      }
+    },
+    {
+      "jobId": "visual.image.portrait.protagonist.battle",
+      "assetId": "portrait.protagonist.battle",
+      "mode": "reference-edit",
+      "referenceJobIds": [
+        "visual.image.portrait.protagonist.serious"
+      ],
+      "positivePrompt": "严格保持引用玩家代理的脸、短黑发、灰褐眼和服装。本卡原创 AU/IF 战斗变体：外套扣紧、围巾收束，重心降低，一手护住无字委托书或空画框边缘，另一手伸向同伴而非持致命武器；全身动作清楚，透明背景、固定脚底锚点。",
+      "negativePrompt": "变成原作罪人、枪械、巨剑、军装、超级英雄姿势、换脸、长发、背景、地面、投影、半身、裁切、色情化、幼态、多余肢体手指、文字、水印。",
+      "reviewCriteria": [
+        "1024x1536 真透明 PNG 且全身完整",
+        "与 serious 基准为同一身份和服装",
+        "战斗姿态不改变脚底锚点",
+        "手部与无字道具结构合理"
+      ],
+      "styleReferenceMode": "deidentified-image-last",
+      "referenceSourceIds": [
+        "reference.user.albina-style-board"
+      ],
+      "identitySubjects": [
+        "protagonist"
+      ],
+      "identityBootstrap": null
+    },
+    {
+      "jobId": "visual.image.portrait.protagonist.resolve",
+      "assetId": "portrait.protagonist.resolve",
+      "mode": "reference-edit",
+      "referenceJobIds": [
+        "visual.image.portrait.protagonist.serious"
+      ],
+      "positivePrompt": "严格保持引用玩家代理的身份、短黑发、灰褐眼与原创 AU 服装。终章坚定变体：站姿放松但不软弱，外套下摆整齐，一手自然垂下、一手掌心向上表示把决定权交还；表情清醒、可承载三种结局。透明背景、全身、固定锚点。",
+      "negativePrompt": "英雄凯旋、灿烂大笑、婚礼服、原作角色脸、换发色、背景、地面、投影、半身、裁切、色情化、幼态、多余肢体手指、文字、水印。",
+      "reviewCriteria": [
+        "1024x1536 真透明 PNG 且全身完整",
+        "与 serious 基准为同一身份和服装",
+        "神态可同时适配真普通坏结局",
+        "固定锚点和尺度完全一致"
+      ],
+      "styleReferenceMode": "deidentified-image-last",
+      "referenceSourceIds": [
+        "reference.user.albina-style-board"
+      ],
+      "identitySubjects": [
+        "protagonist"
+      ],
+      "identityBootstrap": null
+    },
+    {
+      "jobId": "visual.image.portrait.protagonist.serious",
+      "assetId": "portrait.protagonist.serious",
+      "mode": "reference-edit",
+      "referenceJobIds": [],
+      "positivePrompt": "继承 styleBible 与 characterBible.protagonist。本卡原创 AU/IF 玩家代理的身份基准立绘，不是原作角色，也不得复制 Albina 的白发、异色眼、义体、线缆高马尾、服装、Fascia 或任何具体身份特征：成年、性别中性，短黑发、灰褐眼、炭黑实用长外套、象牙色内层、暗青灰围巾、黑靴；闭口严肃、克制、不微笑。采用清晰手绘线稿、平涂与少量厚涂的二维商业插画表现，不采用光滑 3D 或人偶渲染。双手自然可见且无遮挡；至少一只手以可审核角度完整展开，五根手指互相分离并可逐根计数，指节和长度关系正确。透明背景、全身、固定锚点。",
+      "negativePrompt": "Albina 身份或其白发、异色眼、义体、线缆高马尾、Fascia，现有原作角色脸，微笑、露齿笑、张嘴笑，光滑 3D 渲染、人偶质感、塑料皮肤，明确校服、军衔、logo、夸张性别特征、幼态、色情化、手藏入口袋、手被袖口或身体遮挡、武器遮挡身体、少于五指、多于五指、粘连手指、背景、地面、投影、半身、裁切、坐姿、多余肢体手指、文字、水印。",
+      "reviewCriteria": [
+        "1024x1536 真透明 PNG 且头脚完整",
+        "闭口严肃、克制且无笑容",
+        "原创 AU 身份不冒充原作角色且不复制 Albina 身份特征",
+        "短黑发、灰褐眼与三层服装结构固定",
+        "至少一只完整展开的手五指可逐根计数、自然分离且关节结构正确",
+        "二维手绘线稿、平涂与少量厚涂明确，无光滑 3D 或人偶质感",
+        "固定中心、鞋底基线与统一尺度合格"
+      ],
+      "styleReferenceMode": "deidentified-image-last",
+      "referenceSourceIds": [
+        "reference.user.albina-style-board"
+      ],
+      "identitySubjects": [
+        "protagonist"
+      ],
+      "identityBootstrap": {
+        "kind": "project-authored-root",
+        "subject": "protagonist",
+        "authority": {
+          "kind": "character-bible",
+          "pointer": "#/characterBible/protagonist"
+        },
+        "identityReferenceJobIds": [],
+        "identityReferenceSourceIds": [],
+        "requiresHumanIdentityApproval": false
+      }
+    },
+    {
+      "jobId": "visual.image.portrait.protagonist.shadow",
+      "assetId": "portrait.protagonist.shadow",
+      "mode": "reference-edit",
+      "referenceJobIds": [
+        "visual.image.portrait.protagonist.serious"
+      ],
+      "positivePrompt": "严格保持引用玩家代理的身份与原创 AU 服装。环指画廊阴影变体：整体仍有真实颜色和可辨脸部，只让画面左上方冷硬展灯在眼部投下一条窄影，外套边缘出现极细金色反光；双手可见，警戒站姿。透明背景、全身、固定锚点。",
+      "negativePrompt": "纯黑剪影、无脸人、邪恶红眼、换装、变成环指角色、背景、聚光灯底图、地面、投影、半身、裁切、色情化、幼态、文字、水印。",
+      "reviewCriteria": [
+        "1024x1536 真透明 PNG 且全身完整",
+        "脸和服装仍可识别为 serious 基准",
+        "阴影仅是照明变体而非新身份",
+        "固定锚点和尺度完全一致"
+      ],
+      "styleReferenceMode": "deidentified-image-last",
+      "referenceSourceIds": [
+        "reference.user.albina-style-board"
+      ],
+      "identitySubjects": [
+        "protagonist"
+      ],
+      "identityBootstrap": null
+    },
+    {
+      "jobId": "visual.image.portrait.protagonist.tender",
+      "assetId": "portrait.protagonist.tender",
+      "mode": "reference-edit",
+      "referenceJobIds": [
+        "visual.image.portrait.protagonist.serious"
+      ],
+      "positivePrompt": "严格保持引用玩家代理的身份与原创 AU 服装。温和边界变体：肩膀稍放松，视线平稳，一只手停在胸前距离而不主动触碰他人，表情关切但不甜腻；全身站姿、衣物比例不变。透明背景、固定锚点。",
+      "negativePrompt": "恋爱撒娇、夸张脸红、拥抱姿势、换脸、长发、原作角色服装、背景、地面、投影、半身、裁切、色情化、幼态、多余手指、文字、水印。",
+      "reviewCriteria": [
+        "1024x1536 真透明 PNG 且全身完整",
+        "与 serious 基准为同一身份和服装",
+        "温和感不越过身体边界",
+        "固定锚点和尺度完全一致"
+      ],
+      "styleReferenceMode": "deidentified-image-last",
+      "referenceSourceIds": [
+        "reference.user.albina-style-board"
+      ],
+      "identitySubjects": [
+        "protagonist"
+      ],
+      "identityBootstrap": null
+    },
+    {
+      "jobId": "visual.image.portrait.protagonist.wet-hair",
+      "assetId": "portrait.protagonist.wet-hair",
+      "mode": "reference-edit",
+      "referenceJobIds": [
+        "visual.image.portrait.protagonist.serious"
+      ],
+      "positivePrompt": "严格保持引用玩家代理的身份、脸型与原创 AU 服装。雨夜变体：短黑发被雨打湿并贴近额侧，外套和暗青灰围巾有少量真实水痕但不透明发亮，手中拿一把收拢的无标志深灰伞；克制站姿。透明背景、全身、固定锚点。",
+      "negativePrompt": "长发、换脸、透明湿衣、色情化、雨景背景、地面水洼、投影、撑伞遮脸、半身、裁切、原作角色服装、多余肢体、文字、水印。",
+      "reviewCriteria": [
+        "1024x1536 真透明 PNG 且全身和收拢雨伞完整",
+        "与 serious 基准为同一身份",
+        "湿发只改变材质不改变发型",
+        "固定锚点和尺度完全一致"
+      ],
+      "styleReferenceMode": "deidentified-image-last",
+      "referenceSourceIds": [
+        "reference.user.albina-style-board"
+      ],
+      "identitySubjects": [
+        "protagonist"
+      ],
+      "identityBootstrap": null
+    },
+    {
+      "jobId": "visual.image.portrait.ren.normal",
+      "assetId": "portrait.ren.normal",
+      "mode": "reference-edit",
+      "referenceJobIds": [],
+      "referenceSourceIds": [
+        "canon.visual.ren.standing",
+        "reference.user.albina-style-board"
+      ],
+      "positivePrompt": "继承 styleBible。Ren from Limbus Company Canto IX 的可识别正史全身设计，保持 9-18 环指同伴的正史脸、发型、服装轮廓与配色，不进行 AU 重设计；克制但会制止越界行动的站姿，双手与全部服装完整。透明背景、固定锚点。",
+      "negativePrompt": "原创重设计、把 Albina 特征移植给 Ren、蜘蛛怪物、无法核实的盔甲或枪械、背景、地面、投影、半身、裁切、色情化、幼态、文字、水印。",
+      "reviewCriteria": [
+        "1024x1536 真透明 PNG 且全身完整",
+        "必须人工对照固定官方 Ren 视觉来源，无法确认即拒绝",
+        "不得混入 Albina 的义体、异色眼或 Fascia",
+        "固定锚点与其他立绘尺度一致"
+      ],
+      "styleReferenceMode": "deidentified-image-last",
+      "identitySubjects": [
+        "ren"
+      ],
+      "identityBootstrap": null
+    },
+    {
+      "jobId": "visual.image.portrait.ring_agent.normal",
+      "assetId": "portrait.ring_agent.normal",
+      "mode": "reference-edit",
+      "referenceJobIds": [],
+      "positivePrompt": "继承 styleBible 与 characterBible.auSupportingCharacters。本卡原创 AU/IF 环指代理人，不是原作命名角色：成年、性别中性，黑色长展厅礼服、白色窄围领、少量金线、黑手套，双手举着一只完全空白的细长画框；冷淡、目录管理员般的姿态。透明背景、固定锚点。",
+      "negativePrompt": "冒充 Ren 或 Callisto、真实蜘蛛肢体、血肉服装、可读目录、logo、背景、地面、投影、半身、裁切、色情化、幼态、多余肢体手指、文字、水印。",
+      "reviewCriteria": [
+        "1024x1536 真透明 PNG 且人物和画框完整",
+        "明确为本卡原创 AU 支援角色",
+        "空画框无文字且手部握持合理",
+        "固定锚点与其他立绘尺度一致"
+      ],
+      "styleReferenceMode": "deidentified-image-last",
+      "referenceSourceIds": [
+        "reference.user.albina-style-board"
+      ],
+      "identitySubjects": [
+        "ring_agent"
+      ],
+      "identityBootstrap": {
+        "kind": "project-authored-root",
+        "subject": "ring_agent",
+        "authority": {
+          "kind": "character-bible",
+          "pointer": "#/characterBible/auSupportingCharacters/ring_agent"
+        },
+        "identityReferenceJobIds": [],
+        "identityReferenceSourceIds": [],
+        "requiresHumanIdentityApproval": false
+      }
+    },
+    {
+      "jobId": "visual.image.portrait.vergilius.normal",
+      "assetId": "portrait.vergilius.normal",
+      "mode": "reference-edit",
+      "referenceJobIds": [],
+      "referenceSourceIds": [
+        "canon.visual.vergilius.standing",
+        "reference.user.albina-style-board"
+      ],
+      "positivePrompt": "继承 styleBible。Vergilius from Limbus Company 的可识别正史全身设计，保持正史长红发、红眼、深色正式长外套与冷峻轮廓，不做 AU 换装，不新增武器；略侧身、审慎旁观的站姿，衣摆和鞋完整。透明背景、固定锚点。",
+      "negativePrompt": "短发、亮红超级英雄服、吸血鬼披风、原创武器、夸张微笑、背景、地面、投影、半身、裁切、色情化、幼态、多余肢体、文字、水印。",
+      "reviewCriteria": [
+        "1024x1536 真透明 PNG 且全身完整",
+        "必须人工对照 Vergilius 正史视觉设计",
+        "长红发、红眼与深色长外套一致",
+        "固定锚点与其他立绘尺度一致"
+      ],
+      "styleReferenceMode": "deidentified-image-last",
+      "identitySubjects": [
+        "vergilius"
+      ],
+      "identityBootstrap": null
+    }
+  ]
+}

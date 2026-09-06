@@ -23,9 +23,8 @@ function sourceReceipt(assetId: string, artifactSha256: string, overrides: Recor
     assetId,
     artifactSha256,
     provenance: {
-      provider: 'x666-openai-compatible',
+      provider: 'wisart-openai-compatible',
       model: 'gpt-image-2',
-      upstreamPieVerified: false,
       promptVersion: 'albina-visual-v2',
       sourceJobHash: 'a'.repeat(64),
       review: { status: 'approved', reviewer: 'image-reviewer', reviewedAt: '2026-07-19T00:00:00.000Z' },
@@ -74,7 +73,7 @@ function videoJob(sourceCgAssetId = 'cg.test') {
 function inputs(fixture: Awaited<ReturnType<typeof sourceFixture>>) {
   const job = videoJob(fixture.assetId);
   return {
-    plan: { version: 2, projectId: 'albina-galgame-card', counts: { videoContentJobs: 1 }, imageJobs: [{ id: 'visual.image.cg.test', assetId: fixture.assetId, category: 'cg', path: 'cg/test.jpg', provider: 'x666-openai-compatible', model: 'gpt-image-2', upstreamPieVerified: false, promptVersion: 'albina-visual-v2', status: 'authorized-prompt-frozen' }], videoJobs: [job] },
+    plan: { version: 2, projectId: 'albina-galgame-card', counts: { videoContentJobs: 1 }, imageJobs: [{ id: 'visual.image.cg.test', assetId: fixture.assetId, category: 'cg', path: 'cg/test.jpg', provider: 'wisart-openai-compatible', model: 'gpt-image-2', promptVersion: 'albina-visual-v2', status: 'authorized-prompt-frozen' }], videoJobs: [job] },
     story: { version: 2, scenes: [{ id: 'scene.test', text: 'A frozen test scene.', cgAssetId: fixture.assetId }] },
   };
 }
@@ -93,10 +92,8 @@ function dependencies(fixture: Awaited<ReturnType<typeof sourceFixture>>, testIn
 }
 
 describe('Seedance video production', () => {
-  it('loads the frozen product plan with 24 video jobs and validates the scene hash', async () => {
-    const loaded = await loadVideoInputs();
-    expect(loaded.plan.videoJobs).toHaveLength(24);
-    expect(loaded.plan.videoJobs.every((job: any) => job.provider === 'pie' && job.model === 'seedance-1.5-pro')).toBe(true);
+  it('rejects the product plan after video production is retired', async () => {
+    await expect(loadVideoInputs()).rejects.toThrow(/video production plan/iu);
   });
 
   it('accepts only a hash-bound, approved CG promotion receipt', async () => {

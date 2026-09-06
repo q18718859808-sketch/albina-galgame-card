@@ -30,9 +30,8 @@ const mediaJob = {
   id: 'job.portrait.albina.normal',
   assetId: 'portrait.albina.normal',
   kind: 'image',
-  provider: 'x666-openai-compatible',
+  provider: 'wisart-openai-compatible',
   model: 'gpt-image-2',
-  upstreamPieVerified: false,
   promptVersion: 'test-image-v1',
   status: 'completed',
   contentHash: 'a'.repeat(64),
@@ -66,19 +65,19 @@ describe('asset schemas', () => {
   it('enforces provider/model pairs and rejects secret production provenance', () => {
     expect(() => MediaJobSchema.parse({ ...mediaJob, provider: 'grok-responses' })).toThrow(/pie|invalid/iu);
     expect(() => MediaJobSchema.parse({ ...mediaJob, provider: 'hhhl' })).toThrow(/provider|invalid/iu);
-    expect(() => MediaJobSchema.parse({ ...mediaJob, provider: 'pie', upstreamPieVerified: undefined })).toThrow(/provider|model/iu);
-    expect(() => MediaJobSchema.parse({ ...mediaJob, upstreamPieVerified: undefined })).toThrow(/upstream pie/iu);
+    expect(() => MediaJobSchema.parse({ ...mediaJob, provider: 'pie' })).toThrow(/provider|model/iu);
+    expect(() => MediaJobSchema.parse({ ...mediaJob, provider: 'x666-openai-compatible' })).toThrow(/provider|invalid/iu);
     expect(() => MediaJobSchema.parse({ ...mediaJob, upstreamPieVerified: true })).toThrow();
     expect(MediaJobSchema.parse({
-      ...mediaJob, kind: 'speech', provider: 'pie', model: 'speech-2.8-hd', upstreamPieVerified: undefined,
+      ...mediaJob, kind: 'speech', provider: 'pie', model: 'speech-2.8-hd',
     }).provider).toBe('pie');
     expect(MediaJobSchema.parse({
-      ...mediaJob, kind: 'video', provider: 'pie', model: 'seedance-1.5-pro', upstreamPieVerified: undefined,
+      ...mediaJob, kind: 'video', provider: 'pie', model: 'seedance-1.5-pro',
     }).provider).toBe('pie');
     expect(() => MediaJobSchema.parse({ ...mediaJob, kind: 'music', model: 'music-2.6' })).toThrow();
     expect(() => MediaJobSchema.parse({ ...mediaJob, promptVersion: '' })).toThrow();
     expect(() => AssetRecordSchema.parse({ id: 'cg.test', kind: 'image', path: 'cg/test.png', provenance: {
-      provider: 'x666-openai-compatible', model: 'gpt-image-2', upstreamPieVerified: false, promptVersion: 'test-image-v1', sourceJobHash: 'a'.repeat(64),
+      provider: 'wisart-openai-compatible', model: 'gpt-image-2', promptVersion: 'test-image-v1', sourceJobHash: 'a'.repeat(64),
       review: { status: 'approved', reviewer: 'reviewer', reviewedAt: '2026-07-15T00:00:00.000Z' }, remoteJobId: 'secret',
     } })).toThrow();
   });

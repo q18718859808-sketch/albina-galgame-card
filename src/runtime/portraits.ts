@@ -42,6 +42,7 @@ export class PortraitService {
   private readonly canvasGenerations = new WeakMap<CanvasLike, number>();
   private lifecycleGeneration = 0;
   private urlResolver: ((portraitId: string) => Promise<string | undefined>) | undefined;
+  private reducedMotionOverride: boolean | undefined;
 
   constructor(
     private readonly manifest: AssetManifestV2,
@@ -58,7 +59,7 @@ export class PortraitService {
     const portrait = this.findPortrait(portraitId);
     const context = canvas.getContext('2d');
     if (!context) throw new Error('Portrait canvas does not expose a 2D context');
-    if (portrait.animation.kind === 'static' || this.environment.reducedMotion()) {
+    if (portrait.animation.kind === 'static' || this.prefersReducedMotion()) {
       const drawn = await this.drawStatic(portrait, context, canvas, lifecycle, generation);
       if (drawn && this.isCurrent(canvas, lifecycle, generation)) this.playbacks.add({ canvas });
       return;
@@ -67,6 +68,19 @@ export class PortraitService {
   }
 
   setUrlResolver(resolver: (portraitId: string) => Promise<string | undefined>): void { this.urlResolver = resolver; }
+
+  /**
+   * Host-level reduced-motion decision. When set it wins over the internal
+   * media query so an in-app accessibility toggle actually stops portrait
+   * animation; pass `undefined` to fall back to the environment query.
+   */
+  setReducedMotionOverride(reducedMotion: boolean | undefined): void {
+    this.reducedMotionOverride = reducedMotion;
+  }
+
+  private prefersReducedMotion(): boolean {
+    return this.reducedMotionOverride ?? this.environment.reducedMotion();
+  }
 
   stop(canvas: CanvasLike): void {
     this.nextCanvasGeneration(canvas);

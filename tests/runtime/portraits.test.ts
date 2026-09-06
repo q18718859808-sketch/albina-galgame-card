@@ -58,6 +58,27 @@ describe('PortraitService', () => {
     expect(context.drawImage.mock.calls[0]?.[0]).toMatchObject({ src: 'assets/characters/albina.png' });
   });
 
+  it('lets the host reduced-motion override win over the environment query', async () => {
+    const { canvas, context } = createCanvas();
+    const requestFrame = vi.fn();
+    const service = new PortraitService(manifest, {
+      loadImage: async (url) => ({ src: url } satisfies ImageLike),
+      requestFrame,
+      cancelFrame: vi.fn(),
+      reducedMotion: () => false,
+    });
+
+    service.setReducedMotionOverride(true);
+    await service.play('portrait.animated', canvas);
+
+    expect(requestFrame).not.toHaveBeenCalled();
+    expect(context.drawImage.mock.calls[0]?.[0]).toMatchObject({ src: 'assets/characters/albina.png' });
+
+    service.setReducedMotionOverride(undefined);
+    await service.play('portrait.animated', canvas);
+    expect(requestFrame).toHaveBeenCalled();
+  });
+
   it('cancels RAF and clears every owned canvas', async () => {
     const { canvas, context } = createCanvas();
     const cancelFrame = vi.fn();

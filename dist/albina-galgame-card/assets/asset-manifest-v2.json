@@ -8,272 +8,1470 @@
       "kind": "image",
       "path": "bg/backstreets_rain.jpg",
       "mimeType": "image/jpeg",
-      "sha256": "7a897b01c41634b0ab05b8411f487e60712909f153aed6b866c6e724f7a05ec7",
-      "bytes": 195160
+      "sha256": "2028722421626040d012db610e38f80c0707b4a708468473b7031f387600907f",
+      "bytes": 172971,
+      "provenance": {
+        "provider": "wisart-openai-compatible",
+        "model": "gpt-image-2",
+        "promptVersion": "albina-visual-migration-v1",
+        "sourceJobHash": "8105250ae84b264ce80cc823cf9b5aecf4fc3e9f3c8d7e1ad5d39988ccbf0d67",
+        "review": {
+          "status": "approved",
+          "reviewer": "workbuddy-agent",
+          "reviewedAt": "2026-09-03T20:55:21.546Z"
+        }
+      },
+      "rights": {
+        "status": "unverified",
+        "sourceType": "model-output",
+        "redistribution": "unverified",
+        "rightsBasis": "Redistribution rights for this model output have not been independently verified."
+      },
+      "lineage": {
+        "kind": "derivative",
+        "processVersion": "albina-visual-promotion-v1",
+        "inputs": [
+          {
+            "sha256": "aaf89630110b6fef687b86334404b00cd39fd29c84451971575b26a29ce51142",
+            "role": "canon-visual-reference"
+          }
+        ]
+      }
     },
     {
       "id": "bg.city_rooftop",
       "kind": "image",
       "path": "bg/city_rooftop.jpg",
       "mimeType": "image/jpeg",
-      "sha256": "4428f1f905a752eab7e4f6119f236f12767778db7f4768d2463a03ee6dcc4697",
-      "bytes": 207867
+      "sha256": "aa3311072a00a7d4afda5d1d834299d87591916921801d3270cc9ff6cd966b87",
+      "bytes": 146087,
+      "provenance": {
+        "provider": "wisart-openai-compatible",
+        "model": "gpt-image-2",
+        "promptVersion": "albina-visual-migration-v1",
+        "sourceJobHash": "839f800235a0bfa5d0d98fc84bd9e1427a0dc85b5274ecf7ccbf95b505dd44f7",
+        "review": {
+          "status": "approved",
+          "reviewer": "workbuddy-agent",
+          "reviewedAt": "2026-09-03T20:55:21.679Z"
+        }
+      },
+      "rights": {
+        "status": "unverified",
+        "sourceType": "model-output",
+        "redistribution": "unverified",
+        "rightsBasis": "Redistribution rights for this model output have not been independently verified."
+      },
+      "lineage": {
+        "kind": "derivative",
+        "processVersion": "albina-visual-promotion-v1",
+        "inputs": [
+          {
+            "sha256": "aaf89630110b6fef687b86334404b00cd39fd29c84451971575b26a29ce51142",
+            "role": "canon-visual-reference"
+          }
+        ]
+      }
     },
     {
       "id": "bg.golden_bough",
       "kind": "image",
       "path": "bg/golden_bough.jpg",
       "mimeType": "image/jpeg",
-      "sha256": "5e6a552b04b4333ca30c001a3020168908d7867926982ca4097145fa735ee207",
-      "bytes": 222682
+      "sha256": "6edf1f90d2b561048fd5d45bae15cbe3d6a2eafec6f3855dd3eeb1b5b060a0cb",
+      "bytes": 208926,
+      "provenance": {
+        "provider": "wisart-openai-compatible",
+        "model": "gpt-image-2",
+        "promptVersion": "albina-visual-migration-v1",
+        "sourceJobHash": "c196bca1ee562a98ecc900b20396f5b507e7cb84485462af1788fdf388f8e4fa",
+        "review": {
+          "status": "approved",
+          "reviewer": "workbuddy-agent",
+          "reviewedAt": "2026-09-03T20:55:21.798Z"
+        }
+      },
+      "rights": {
+        "status": "unverified",
+        "sourceType": "model-output",
+        "redistribution": "unverified",
+        "rightsBasis": "Redistribution rights for this model output have not been independently verified."
+      },
+      "lineage": {
+        "kind": "derivative",
+        "processVersion": "albina-visual-promotion-v1",
+        "inputs": [
+          {
+            "sha256": "aaf89630110b6fef687b86334404b00cd39fd29c84451971575b26a29ce51142",
+            "role": "canon-visual-reference"
+          }
+        ]
+      }
     },
     {
       "id": "bg.lce_lab",
       "kind": "image",
       "path": "bg/lce_lab.jpg",
       "mimeType": "image/jpeg",
-      "sha256": "b982f39f13eb87cdb59d1540ff4f7688c4b319600a7174a758288f3c4efe672d",
-      "bytes": 202605
+      "sha256": "b779c2834a255687728fa67129ff7929a98809b6805d1a31703a8afdf8030107",
+      "bytes": 203123,
+      "provenance": {
+        "provider": "wisart-openai-compatible",
+        "model": "gpt-image-2",
+        "promptVersion": "albina-visual-migration-v1",
+        "sourceJobHash": "5888ba5833bf9c849e70fea28c114a7cba8da57503d719d465602bfd4125c8c7",
+        "review": {
+          "status": "approved",
+          "reviewer": "workbuddy-agent",
+          "reviewedAt": "2026-09-03T20:55:21.922Z"
+        }
+      },
+      "rights": {
+        "status": "unverified",
+        "sourceType": "model-output",
+        "redistribution": "unverified",
+        "rightsBasis": "Redistribution rights for this model output have not been independently verified."
+      },
+      "lineage": {
+        "kind": "derivative",
+        "processVersion": "albina-visual-promotion-v1",
+        "inputs": [
+          {
+            "sha256": "aaf89630110b6fef687b86334404b00cd39fd29c84451971575b26a29ce51142",
+            "role": "canon-visual-reference"
+          }
+        ]
+      }
     },
     {
       "id": "bg.limbus_bus",
       "kind": "image",
       "path": "bg/limbus_bus.jpg",
       "mimeType": "image/jpeg",
-      "sha256": "c684aba165f3d0a195d6e5b438be4bc9b2a070a4ac3364e91bef93716aab9c60",
-      "bytes": 194697
+      "sha256": "b0d64d366ad3f92ab2b251ef374c6bb1898cf9079837b0aa910c0b00e145bc09",
+      "bytes": 232135,
+      "provenance": {
+        "provider": "wisart-openai-compatible",
+        "model": "gpt-image-2",
+        "promptVersion": "albina-visual-migration-v1",
+        "sourceJobHash": "c4edeb016dfce10bddd1dd2762ee16af92e2d671ec2d4e5248be678862ed48ed",
+        "review": {
+          "status": "approved",
+          "reviewer": "workbuddy-agent",
+          "reviewedAt": "2026-09-03T20:55:22.045Z"
+        }
+      },
+      "rights": {
+        "status": "unverified",
+        "sourceType": "model-output",
+        "redistribution": "unverified",
+        "rightsBasis": "Redistribution rights for this model output have not been independently verified."
+      },
+      "lineage": {
+        "kind": "derivative",
+        "processVersion": "albina-visual-promotion-v1",
+        "inputs": [
+          {
+            "sha256": "aaf89630110b6fef687b86334404b00cd39fd29c84451971575b26a29ce51142",
+            "role": "canon-visual-reference"
+          }
+        ]
+      }
     },
     {
       "id": "bg.mirror_corridor",
       "kind": "image",
       "path": "bg/mirror_corridor.jpg",
       "mimeType": "image/jpeg",
-      "sha256": "aac5cfac5624763538d533b63914c845c266dc17845789d9c3f7d5bb408603f9",
-      "bytes": 193914
+      "sha256": "17277aad2a77db022d07482af12541b3a5380aef4b7093757907aa8949e5e590",
+      "bytes": 167392,
+      "provenance": {
+        "provider": "wisart-openai-compatible",
+        "model": "gpt-image-2",
+        "promptVersion": "albina-visual-migration-v1",
+        "sourceJobHash": "085147a43b50b78041de17a6e67bc99c5cb9a4d722e4f6fd555d816870b51fab",
+        "review": {
+          "status": "approved",
+          "reviewer": "workbuddy-agent",
+          "reviewedAt": "2026-09-03T20:55:22.176Z"
+        }
+      },
+      "rights": {
+        "status": "unverified",
+        "sourceType": "model-output",
+        "redistribution": "unverified",
+        "rightsBasis": "Redistribution rights for this model output have not been independently verified."
+      },
+      "lineage": {
+        "kind": "derivative",
+        "processVersion": "albina-visual-promotion-v1",
+        "inputs": [
+          {
+            "sha256": "aaf89630110b6fef687b86334404b00cd39fd29c84451971575b26a29ce51142",
+            "role": "canon-visual-reference"
+          }
+        ]
+      }
     },
     {
       "id": "bg.nest_station",
       "kind": "image",
       "path": "bg/nest_station.jpg",
       "mimeType": "image/jpeg",
-      "sha256": "732fa0c67c071560b01c536d5ed76944c60d1a0d9a5034087ca79bf5ffff9ad2",
-      "bytes": 196705
+      "sha256": "91208785c1bc204ea79f0db217fb8fcebebbf606829590e857765f197b9e12bb",
+      "bytes": 210265,
+      "provenance": {
+        "provider": "wisart-openai-compatible",
+        "model": "gpt-image-2",
+        "promptVersion": "albina-visual-migration-v1",
+        "sourceJobHash": "7ec16c6ea744f913914b894793c3db8bdb4a99b65922922e94500b51e6354318",
+        "review": {
+          "status": "approved",
+          "reviewer": "workbuddy-agent",
+          "reviewedAt": "2026-09-03T20:55:22.297Z"
+        }
+      },
+      "rights": {
+        "status": "unverified",
+        "sourceType": "model-output",
+        "redistribution": "unverified",
+        "rightsBasis": "Redistribution rights for this model output have not been independently verified."
+      },
+      "lineage": {
+        "kind": "derivative",
+        "processVersion": "albina-visual-promotion-v1",
+        "inputs": [
+          {
+            "sha256": "aaf89630110b6fef687b86334404b00cd39fd29c84451971575b26a29ce51142",
+            "role": "canon-visual-reference"
+          }
+        ]
+      }
     },
     {
       "id": "bg.outskirts_dawn",
       "kind": "image",
       "path": "bg/outskirts_dawn.jpg",
       "mimeType": "image/jpeg",
-      "sha256": "4ccbdbab6a95b5d79ae476a96f8b453ed07241e599014002fdc83475f8bd092a",
-      "bytes": 182100
+      "sha256": "44509077697bcad88c44498d157ac05515804b2ef65fcb1bdca8b8fc1ef37e6a",
+      "bytes": 242337,
+      "provenance": {
+        "provider": "wisart-openai-compatible",
+        "model": "gpt-image-2",
+        "promptVersion": "albina-visual-migration-v1",
+        "sourceJobHash": "d9bda03bffaf20df06f50b702794d22ee990e6f1900a162fd8a77585e2e8f9d9",
+        "review": {
+          "status": "approved",
+          "reviewer": "workbuddy-agent",
+          "reviewedAt": "2026-09-03T20:55:22.418Z"
+        }
+      },
+      "rights": {
+        "status": "unverified",
+        "sourceType": "model-output",
+        "redistribution": "unverified",
+        "rightsBasis": "Redistribution rights for this model output have not been independently verified."
+      },
+      "lineage": {
+        "kind": "derivative",
+        "processVersion": "albina-visual-promotion-v1",
+        "inputs": [
+          {
+            "sha256": "aaf89630110b6fef687b86334404b00cd39fd29c84451971575b26a29ce51142",
+            "role": "canon-visual-reference"
+          }
+        ]
+      }
     },
     {
       "id": "bg.rain_room",
       "kind": "image",
       "path": "bg/rain_room.jpg",
       "mimeType": "image/jpeg",
-      "sha256": "0a4b24f02a4f9274d6691594cbfd8c1f2512c1fe4559083a22c6cf2891cb198e",
-      "bytes": 198604
+      "sha256": "e997abedea4542c4b4776bf3492b28f5852a623194b379613c32bbb39ce22922",
+      "bytes": 257137,
+      "provenance": {
+        "provider": "wisart-openai-compatible",
+        "model": "gpt-image-2",
+        "promptVersion": "albina-visual-migration-v1",
+        "sourceJobHash": "ef12bfa4bda41642820fe014898f94f9aba10bcb2dad8cd7e5de4dfe16c781fc",
+        "review": {
+          "status": "approved",
+          "reviewer": "workbuddy-agent",
+          "reviewedAt": "2026-09-03T20:55:22.539Z"
+        }
+      },
+      "rights": {
+        "status": "unverified",
+        "sourceType": "model-output",
+        "redistribution": "unverified",
+        "rightsBasis": "Redistribution rights for this model output have not been independently verified."
+      },
+      "lineage": {
+        "kind": "derivative",
+        "processVersion": "albina-visual-promotion-v1",
+        "inputs": [
+          {
+            "sha256": "aaf89630110b6fef687b86334404b00cd39fd29c84451971575b26a29ce51142",
+            "role": "canon-visual-reference"
+          }
+        ]
+      }
     },
     {
       "id": "bg.ring_atelier",
       "kind": "image",
       "path": "bg/ring_atelier.jpg",
       "mimeType": "image/jpeg",
-      "sha256": "aed9195327ca4feef20a611b2bd0f0ed4a8fba22f12fdf685bafc5b3ed13eb10",
-      "bytes": 197708
+      "sha256": "42931f287f934dacdbfdfe27cab2be02022233fda83e440d314779f43b950410",
+      "bytes": 245753,
+      "provenance": {
+        "provider": "wisart-openai-compatible",
+        "model": "gpt-image-2",
+        "promptVersion": "albina-visual-migration-v1",
+        "sourceJobHash": "411522003299c9a279713158e5b1e8f6e2a56812c7221706d9d7f589c514ab80",
+        "review": {
+          "status": "approved",
+          "reviewer": "workbuddy-agent",
+          "reviewedAt": "2026-09-03T20:55:22.668Z"
+        }
+      },
+      "rights": {
+        "status": "unverified",
+        "sourceType": "model-output",
+        "redistribution": "unverified",
+        "rightsBasis": "Redistribution rights for this model output have not been independently verified."
+      },
+      "lineage": {
+        "kind": "derivative",
+        "processVersion": "albina-visual-promotion-v1",
+        "inputs": [
+          {
+            "sha256": "aaf89630110b6fef687b86334404b00cd39fd29c84451971575b26a29ce51142",
+            "role": "canon-visual-reference"
+          }
+        ]
+      }
     },
     {
       "id": "bg.spider_gallery",
       "kind": "image",
       "path": "bg/spider_gallery.jpg",
       "mimeType": "image/jpeg",
-      "sha256": "78a4336f0aa42c3ecf10667aeeb40dcdd42b271548872255c66aee716abcf024",
-      "bytes": 223415
+      "sha256": "df109ef2411bb7cf3c373360c67ed67dc714ec30b56ee8e9932ec567ab27ca1d",
+      "bytes": 216657,
+      "provenance": {
+        "provider": "wisart-openai-compatible",
+        "model": "gpt-image-2",
+        "promptVersion": "albina-visual-migration-v1",
+        "sourceJobHash": "7a523a301c5f07ef8c4bd1242c32bc9144080f1ec182d3869bc4de3417a214c9",
+        "review": {
+          "status": "approved",
+          "reviewer": "workbuddy-agent",
+          "reviewedAt": "2026-09-03T20:55:22.791Z"
+        }
+      },
+      "rights": {
+        "status": "unverified",
+        "sourceType": "model-output",
+        "redistribution": "unverified",
+        "rightsBasis": "Redistribution rights for this model output have not been independently verified."
+      },
+      "lineage": {
+        "kind": "derivative",
+        "processVersion": "albina-visual-promotion-v1",
+        "inputs": [
+          {
+            "sha256": "aaf89630110b6fef687b86334404b00cd39fd29c84451971575b26a29ce51142",
+            "role": "canon-visual-reference"
+          }
+        ]
+      }
     },
     {
       "id": "bg.white_canvas",
       "kind": "image",
       "path": "bg/white_canvas.jpg",
       "mimeType": "image/jpeg",
-      "sha256": "6551848df5f6a312cbd769356b512643b33f2b9e68c9b8da21ad98ab9ef80605",
-      "bytes": 193895
+      "sha256": "dc29a4ee28e61a32631abc2b1f3de090bcffd9637e1c088ffd35f59fd960fcb8",
+      "bytes": 95655,
+      "provenance": {
+        "provider": "wisart-openai-compatible",
+        "model": "gpt-image-2",
+        "promptVersion": "albina-visual-migration-v1",
+        "sourceJobHash": "de3732943920bcded67540fe9dfacf70f4b1d03305a4aec9e04d06117b78c559",
+        "review": {
+          "status": "approved",
+          "reviewer": "workbuddy-agent",
+          "reviewedAt": "2026-09-03T20:55:22.913Z"
+        }
+      },
+      "rights": {
+        "status": "unverified",
+        "sourceType": "model-output",
+        "redistribution": "unverified",
+        "rightsBasis": "Redistribution rights for this model output have not been independently verified."
+      },
+      "lineage": {
+        "kind": "derivative",
+        "processVersion": "albina-visual-promotion-v1",
+        "inputs": [
+          {
+            "sha256": "aaf89630110b6fef687b86334404b00cd39fd29c84451971575b26a29ce51142",
+            "role": "canon-visual-reference"
+          }
+        ]
+      }
     },
     {
       "id": "cg.araya_rooftop",
       "kind": "image",
       "path": "cg/araya_rooftop.jpg",
       "mimeType": "image/jpeg",
-      "sha256": "1ecd4ffa5f53471b66b5aecbfa37a8289c603c2a5ce2212538da01cbd5d5d8e4",
-      "bytes": 226727
+      "sha256": "505bec4c1bdaa6968f8f59352849c233cac1874c2c7c72964c9841e7dfbee89a",
+      "bytes": 224801,
+      "provenance": {
+        "provider": "wisart-openai-compatible",
+        "model": "gpt-image-2",
+        "promptVersion": "albina-visual-migration-v1",
+        "sourceJobHash": "2ae93db7fce25b9dd137d66946ca56c056f2fcd33110a356203944a0ad508bf2",
+        "review": {
+          "status": "approved",
+          "reviewer": "workbuddy-convergence-agent",
+          "reviewedAt": "2026-09-06T08:39:09.576Z"
+        }
+      },
+      "rights": {
+        "status": "unverified",
+        "sourceType": "model-output",
+        "redistribution": "unverified",
+        "rightsBasis": "Redistribution rights for this model output have not been independently verified."
+      },
+      "lineage": {
+        "kind": "derivative",
+        "processVersion": "albina-visual-promotion-v1",
+        "inputs": [
+          {
+            "assetId": "file.characters.albina.normal.png",
+            "sha256": "adae648a47c2a5285181cbbeb4d4066792b34f129cac40e48ab8974f3b9cc2ca",
+            "role": "approved-generated-reference"
+          },
+          {
+            "assetId": "file.characters.protagonist.serious.png",
+            "sha256": "461927edeaab75615f232e57131fb9294fca75ef00b794d7a4a2955c66aeb18a",
+            "role": "approved-generated-reference"
+          },
+          {
+            "assetId": "file.characters.vergilius.normal.png",
+            "sha256": "9cd72b8261583cd4922fe2203c1f2e0e8354fc3c49642ec12a83edd1475777b6",
+            "role": "approved-generated-reference"
+          },
+          {
+            "sha256": "aaf89630110b6fef687b86334404b00cd39fd29c84451971575b26a29ce51142",
+            "role": "canon-visual-reference"
+          }
+        ]
+      }
     },
     {
       "id": "cg.art_resonance",
       "kind": "image",
       "path": "cg/art_resonance.jpg",
       "mimeType": "image/jpeg",
-      "sha256": "da4000d606059e545bbf427451a999ea99e9fd730b71033cf61ed0e5c7ebeb1a",
-      "bytes": 221527
+      "sha256": "cb9f8de75f6d3524dba019be70cfd04a0974fe4734709ede92f982fa785ff6df",
+      "bytes": 156110,
+      "provenance": {
+        "provider": "wisart-openai-compatible",
+        "model": "gpt-image-2",
+        "promptVersion": "albina-visual-migration-v1",
+        "sourceJobHash": "0966dde17c1d580e5c3269ef8c2a01d0631f24cce5137a8b540d858e33a58d31",
+        "review": {
+          "status": "approved",
+          "reviewer": "workbuddy-convergence-agent",
+          "reviewedAt": "2026-09-06T08:36:08.945Z"
+        }
+      },
+      "rights": {
+        "status": "unverified",
+        "sourceType": "model-output",
+        "redistribution": "unverified",
+        "rightsBasis": "Redistribution rights for this model output have not been independently verified."
+      },
+      "lineage": {
+        "kind": "derivative",
+        "processVersion": "albina-visual-promotion-v1",
+        "inputs": [
+          {
+            "assetId": "file.characters.albina.normal.png",
+            "sha256": "adae648a47c2a5285181cbbeb4d4066792b34f129cac40e48ab8974f3b9cc2ca",
+            "role": "approved-generated-reference"
+          },
+          {
+            "assetId": "file.characters.protagonist.tender.png",
+            "sha256": "1654accf7c7cbdd16b6af3c3fa51d06fa0547b411451c1325d46bf02b71bd2d1",
+            "role": "approved-generated-reference"
+          },
+          {
+            "sha256": "aaf89630110b6fef687b86334404b00cd39fd29c84451971575b26a29ce51142",
+            "role": "canon-visual-reference"
+          }
+        ]
+      }
     },
     {
       "id": "cg.backstreet_pursuit",
       "kind": "image",
       "path": "cg/backstreet_pursuit.jpg",
       "mimeType": "image/jpeg",
-      "sha256": "ff18127cd0ae95ad91c3e85ceec047def159a58bfec852708271a65d4f53b774",
-      "bytes": 208589
+      "sha256": "b3ed4aa5bcfca9c56b48f47c19305d7073efaf254bdf11edcedf0aa9bb23fa5b",
+      "bytes": 251161,
+      "provenance": {
+        "provider": "wisart-openai-compatible",
+        "model": "gpt-image-2",
+        "promptVersion": "albina-visual-migration-v1",
+        "sourceJobHash": "dfc14508dd9a0391c6866150b0adb141e1bcd30c3d52b7801848a60f5eb97911",
+        "review": {
+          "status": "approved",
+          "reviewer": "workbuddy-convergence-agent",
+          "reviewedAt": "2026-09-06T08:36:09.084Z"
+        }
+      },
+      "rights": {
+        "status": "unverified",
+        "sourceType": "model-output",
+        "redistribution": "unverified",
+        "rightsBasis": "Redistribution rights for this model output have not been independently verified."
+      },
+      "lineage": {
+        "kind": "derivative",
+        "processVersion": "albina-visual-promotion-v1",
+        "inputs": [
+          {
+            "assetId": "file.characters.albina.combat.png",
+            "sha256": "3447b8cb8df4edec6325ab5262892a35bff6854cd7f0fa44aaab268a97182f62",
+            "role": "approved-generated-reference"
+          },
+          {
+            "assetId": "file.characters.protagonist.battle.png",
+            "sha256": "5b40787a69bd7dc73c2b36570bf7c58c73e52a612ca6fbbc401f52ead494a400",
+            "role": "approved-generated-reference"
+          },
+          {
+            "assetId": "file.characters.ring.agent.normal.png",
+            "sha256": "4192a5a189f8e96279a856a89e2bac08997b06d5e3584c645d9c30492e76f97b",
+            "role": "approved-generated-reference"
+          },
+          {
+            "sha256": "aaf89630110b6fef687b86334404b00cd39fd29c84451971575b26a29ce51142",
+            "role": "canon-visual-reference"
+          }
+        ]
+      }
     },
     {
       "id": "cg.combat_transition_01",
       "kind": "image",
       "path": "cg/combat_transition_01.jpg",
       "mimeType": "image/jpeg",
-      "sha256": "1636765ed07b103ccc5696e5c3cf4152d300c64b147f2a3b2722dd2151275209",
-      "bytes": 238482
+      "sha256": "aba7ee4262fa8c75343f1dcd91a89c4c2f541d8184b98fd0b2e328f26e1a64f6",
+      "bytes": 306008,
+      "provenance": {
+        "provider": "wisart-openai-compatible",
+        "model": "gpt-image-2",
+        "promptVersion": "albina-visual-migration-v1",
+        "sourceJobHash": "0ca9b5e684be12b8f800be22ce038d9f6830fb428b7deed0982e123ed0b98e99",
+        "review": {
+          "status": "approved",
+          "reviewer": "workbuddy-convergence-agent",
+          "reviewedAt": "2026-09-06T08:36:09.213Z"
+        }
+      },
+      "rights": {
+        "status": "unverified",
+        "sourceType": "model-output",
+        "redistribution": "unverified",
+        "rightsBasis": "Redistribution rights for this model output have not been independently verified."
+      },
+      "lineage": {
+        "kind": "derivative",
+        "processVersion": "albina-visual-promotion-v1",
+        "inputs": [
+          {
+            "assetId": "file.characters.albina.combat.png",
+            "sha256": "3447b8cb8df4edec6325ab5262892a35bff6854cd7f0fa44aaab268a97182f62",
+            "role": "approved-generated-reference"
+          },
+          {
+            "assetId": "file.characters.protagonist.battle.png",
+            "sha256": "5b40787a69bd7dc73c2b36570bf7c58c73e52a612ca6fbbc401f52ead494a400",
+            "role": "approved-generated-reference"
+          },
+          {
+            "assetId": "file.characters.ring.agent.normal.png",
+            "sha256": "4192a5a189f8e96279a856a89e2bac08997b06d5e3584c645d9c30492e76f97b",
+            "role": "approved-generated-reference"
+          },
+          {
+            "sha256": "aaf89630110b6fef687b86334404b00cd39fd29c84451971575b26a29ce51142",
+            "role": "canon-visual-reference"
+          }
+        ]
+      }
     },
     {
       "id": "cg.conspiracy_contract",
       "kind": "image",
       "path": "cg/conspiracy_contract.jpg",
       "mimeType": "image/jpeg",
-      "sha256": "72922d9f7aac148fcfe1e6d7bed34fa8fd7bfc7323641b67feb5279fbe87dad1",
-      "bytes": 215416
+      "sha256": "b9c40c214efe4e81523100a7e0ee963ec6aba7438c2628e16fdc86431ab604f9",
+      "bytes": 240901,
+      "provenance": {
+        "provider": "wisart-openai-compatible",
+        "model": "gpt-image-2",
+        "promptVersion": "albina-visual-migration-v1",
+        "sourceJobHash": "655c0ca53653f1a58233dba1dec046e80632ee983bee985adf3b4b83f6cf0784",
+        "review": {
+          "status": "approved",
+          "reviewer": "workbuddy-convergence-agent",
+          "reviewedAt": "2026-09-06T08:36:09.345Z"
+        }
+      },
+      "rights": {
+        "status": "unverified",
+        "sourceType": "model-output",
+        "redistribution": "unverified",
+        "rightsBasis": "Redistribution rights for this model output have not been independently verified."
+      },
+      "lineage": {
+        "kind": "derivative",
+        "processVersion": "albina-visual-promotion-v1",
+        "inputs": [
+          {
+            "assetId": "file.characters.albina.ring.conspiracy.png",
+            "sha256": "60fd0b62d59b71179b7d5a2b498424968515f569052cd7e1754261eb275654eb",
+            "role": "approved-generated-reference"
+          },
+          {
+            "assetId": "file.characters.protagonist.serious.png",
+            "sha256": "461927edeaab75615f232e57131fb9294fca75ef00b794d7a4a2955c66aeb18a",
+            "role": "approved-generated-reference"
+          },
+          {
+            "assetId": "file.characters.callisto.normal.png",
+            "sha256": "e6158578e0fb0316c60224b86336bfe582a6515539f7ff22e2a7f2be4683c663",
+            "role": "approved-generated-reference"
+          },
+          {
+            "assetId": "file.characters.ren.normal.png",
+            "sha256": "5cfd6e712b8790c8a4bcb5d015b086ec2e7827d573cffcf2914446a24c6e9607",
+            "role": "approved-generated-reference"
+          },
+          {
+            "sha256": "aaf89630110b6fef687b86334404b00cd39fd29c84451971575b26a29ce51142",
+            "role": "canon-visual-reference"
+          }
+        ]
+      }
     },
     {
       "id": "cg.fascia_heartbeat",
       "kind": "image",
       "path": "cg/fascia_heartbeat.jpg",
       "mimeType": "image/jpeg",
-      "sha256": "2640a75be54575dce6bdc1b9023b06934899cbf4b5492cf012ef1e9c7d2f71e6",
-      "bytes": 204579
+      "sha256": "f81c3dd3ffbdb042090546b3fec43d736a97096179c0fdb002947458df570db2",
+      "bytes": 175916,
+      "provenance": {
+        "provider": "wisart-openai-compatible",
+        "model": "gpt-image-2",
+        "promptVersion": "albina-visual-migration-v1",
+        "sourceJobHash": "19a2403e37d3710bfec5dd087aaed2515ab79861643dc045a22aaaf5de1bce11",
+        "review": {
+          "status": "approved",
+          "reviewer": "workbuddy-convergence-agent",
+          "reviewedAt": "2026-09-06T08:36:09.456Z"
+        }
+      },
+      "rights": {
+        "status": "unverified",
+        "sourceType": "model-output",
+        "redistribution": "unverified",
+        "rightsBasis": "Redistribution rights for this model output have not been independently verified."
+      },
+      "lineage": {
+        "kind": "derivative",
+        "processVersion": "albina-visual-promotion-v1",
+        "inputs": [
+          {
+            "assetId": "file.characters.albina.fascia.open.png",
+            "sha256": "3c02947a0b3aa6b3c98012c580be7fedc92d2471d220f1440ac1a9d382d16428",
+            "role": "approved-generated-reference"
+          },
+          {
+            "assetId": "file.characters.protagonist.tender.png",
+            "sha256": "1654accf7c7cbdd16b6af3c3fa51d06fa0547b411451c1325d46bf02b71bd2d1",
+            "role": "approved-generated-reference"
+          },
+          {
+            "sha256": "aaf89630110b6fef687b86334404b00cd39fd29c84451971575b26a29ce51142",
+            "role": "canon-visual-reference"
+          }
+        ]
+      }
     },
     {
       "id": "cg.golden_bough_ending",
       "kind": "image",
       "path": "cg/golden_bough_ending.jpg",
       "mimeType": "image/jpeg",
-      "sha256": "4700e8485eb57b194cf6878741509ddc1e323d486878114259b9405051045491",
-      "bytes": 217599
+      "sha256": "27fb1ad1df4250ca823aa74f23fb61805889a2ab33e6a09e4b8c7c6ad6b0dfae",
+      "bytes": 221408,
+      "provenance": {
+        "provider": "wisart-openai-compatible",
+        "model": "gpt-image-2",
+        "promptVersion": "albina-visual-migration-v1",
+        "sourceJobHash": "1e1554518a556452f1997bdc39614431e3d93fccec7d8a1d258e6f5439a3dd47",
+        "review": {
+          "status": "approved",
+          "reviewer": "workbuddy-convergence-agent",
+          "reviewedAt": "2026-09-06T08:36:09.573Z"
+        }
+      },
+      "rights": {
+        "status": "unverified",
+        "sourceType": "model-output",
+        "redistribution": "unverified",
+        "rightsBasis": "Redistribution rights for this model output have not been independently verified."
+      },
+      "lineage": {
+        "kind": "derivative",
+        "processVersion": "albina-visual-promotion-v1",
+        "inputs": [
+          {
+            "assetId": "file.characters.albina.endgame.png",
+            "sha256": "df6bfc313afb7a707cc580ed806efdbfb79e959f48c80f4a2674bf0318a7e51c",
+            "role": "approved-generated-reference"
+          },
+          {
+            "assetId": "file.characters.protagonist.resolve.png",
+            "sha256": "20380c053a2b118a7cf85d7675501c0ae6837639e5a961f2b67ab48db6fcdce1",
+            "role": "approved-generated-reference"
+          },
+          {
+            "sha256": "aaf89630110b6fef687b86334404b00cd39fd29c84451971575b26a29ce51142",
+            "role": "canon-visual-reference"
+          }
+        ]
+      }
     },
     {
       "id": "cg.golden_bough_rebuild",
       "kind": "image",
       "path": "cg/golden_bough_rebuild.jpg",
       "mimeType": "image/jpeg",
-      "sha256": "0c8c941f77ea39f704563e02e1ed22e8619d8c335ada4215e179a8c6a1caef55",
-      "bytes": 226407
+      "sha256": "99ab6dcb6b7e643fc942a1199829fd6063007caf6a4413494a697911bf93ee52",
+      "bytes": 241426,
+      "provenance": {
+        "provider": "wisart-openai-compatible",
+        "model": "gpt-image-2",
+        "promptVersion": "albina-visual-migration-v1",
+        "sourceJobHash": "e9d8a47d55958c073fd8aebfd10f1892ba7af9cb80c4ec34f4dbe978b9234f52",
+        "review": {
+          "status": "approved",
+          "reviewer": "workbuddy-convergence-agent",
+          "reviewedAt": "2026-09-06T08:36:09.646Z"
+        }
+      },
+      "rights": {
+        "status": "unverified",
+        "sourceType": "model-output",
+        "redistribution": "unverified",
+        "rightsBasis": "Redistribution rights for this model output have not been independently verified."
+      },
+      "lineage": {
+        "kind": "derivative",
+        "processVersion": "albina-visual-promotion-v1",
+        "inputs": [
+          {
+            "assetId": "file.characters.albina.normal.png",
+            "sha256": "adae648a47c2a5285181cbbeb4d4066792b34f129cac40e48ab8974f3b9cc2ca",
+            "role": "approved-generated-reference"
+          },
+          {
+            "sha256": "aaf89630110b6fef687b86334404b00cd39fd29c84451971575b26a29ce51142",
+            "role": "canon-visual-reference"
+          }
+        ]
+      }
     },
     {
       "id": "cg.hollow_torso_reveal",
       "kind": "image",
       "path": "cg/hollow_torso_reveal.jpg",
       "mimeType": "image/jpeg",
-      "sha256": "46e83edaabd17b1316bd705daf1a14614c0a7ae8b6164281b9770a2e020fe3e5",
-      "bytes": 212406
+      "sha256": "a5c942e39e9967ec713349e5646ab781d7a8294aa876f8894c5ee076093e2197",
+      "bytes": 154697,
+      "provenance": {
+        "provider": "wisart-openai-compatible",
+        "model": "gpt-image-2",
+        "promptVersion": "albina-visual-migration-v1",
+        "sourceJobHash": "9a02cecac76e0855424a25f9cadece1f117d7b7de2e70e691d1e47fa02229c17",
+        "review": {
+          "status": "approved",
+          "reviewer": "workbuddy-convergence-agent",
+          "reviewedAt": "2026-09-06T08:39:09.687Z"
+        }
+      },
+      "rights": {
+        "status": "unverified",
+        "sourceType": "model-output",
+        "redistribution": "unverified",
+        "rightsBasis": "Redistribution rights for this model output have not been independently verified."
+      },
+      "lineage": {
+        "kind": "derivative",
+        "processVersion": "albina-visual-promotion-v1",
+        "inputs": [
+          {
+            "assetId": "file.characters.albina.surgical.png",
+            "sha256": "d6ef29a4e507767be8df6f69701d9b5cf03614172c554540ab6634bfce7a736a",
+            "role": "approved-generated-reference"
+          },
+          {
+            "assetId": "file.characters.protagonist.serious.png",
+            "sha256": "461927edeaab75615f232e57131fb9294fca75ef00b794d7a4a2955c66aeb18a",
+            "role": "approved-generated-reference"
+          },
+          {
+            "assetId": "file.characters.lce.doctor.normal.png",
+            "sha256": "228c79b933fc9d28574fc044c56cce21de9037d4e3a0abd0e8c12d80463f8577",
+            "role": "approved-generated-reference"
+          },
+          {
+            "sha256": "aaf89630110b6fef687b86334404b00cd39fd29c84451971575b26a29ce51142",
+            "role": "canon-visual-reference"
+          }
+        ]
+      }
     },
     {
       "id": "cg.lce_raid",
       "kind": "image",
       "path": "cg/lce_raid.jpg",
       "mimeType": "image/jpeg",
-      "sha256": "037414f5985f5d972656d297f771e4553d3c01d1d700185bea68f40723892284",
-      "bytes": 191396
+      "sha256": "91fbaf6b6b67db5902bd23af21cc2af3db5ef62460748121307234b2592754a7",
+      "bytes": 251262,
+      "provenance": {
+        "provider": "wisart-openai-compatible",
+        "model": "gpt-image-2",
+        "promptVersion": "albina-visual-migration-v1",
+        "sourceJobHash": "b0244042e15c2408d8fe2e90e13f39c4e0f222a112b45c09cdb2e7ab62cf51c7",
+        "review": {
+          "status": "approved",
+          "reviewer": "workbuddy-convergence-agent",
+          "reviewedAt": "2026-09-06T08:36:09.775Z"
+        }
+      },
+      "rights": {
+        "status": "unverified",
+        "sourceType": "model-output",
+        "redistribution": "unverified",
+        "rightsBasis": "Redistribution rights for this model output have not been independently verified."
+      },
+      "lineage": {
+        "kind": "derivative",
+        "processVersion": "albina-visual-promotion-v1",
+        "inputs": [
+          {
+            "assetId": "file.characters.albina.combat.png",
+            "sha256": "3447b8cb8df4edec6325ab5262892a35bff6854cd7f0fa44aaab268a97182f62",
+            "role": "approved-generated-reference"
+          },
+          {
+            "assetId": "file.characters.protagonist.battle.png",
+            "sha256": "5b40787a69bd7dc73c2b36570bf7c58c73e52a612ca6fbbc401f52ead494a400",
+            "role": "approved-generated-reference"
+          },
+          {
+            "assetId": "file.characters.lce.doctor.normal.png",
+            "sha256": "228c79b933fc9d28574fc044c56cce21de9037d4e3a0abd0e8c12d80463f8577",
+            "role": "approved-generated-reference"
+          },
+          {
+            "sha256": "aaf89630110b6fef687b86334404b00cd39fd29c84451971575b26a29ce51142",
+            "role": "canon-visual-reference"
+          }
+        ]
+      }
     },
     {
       "id": "cg.limbus_bus_night",
       "kind": "image",
       "path": "cg/limbus_bus_night.jpg",
       "mimeType": "image/jpeg",
-      "sha256": "0b1054ef8e4b8cd99b8f234ae2abd5c5e160813b73d1e564dba47c67f8a7cd8a",
-      "bytes": 202828
+      "sha256": "49357dc9a7fa859bc5cb1db2dbb2f7b5fb3e6ca19abef0ea04f811841a8c716d",
+      "bytes": 212824,
+      "provenance": {
+        "provider": "wisart-openai-compatible",
+        "model": "gpt-image-2",
+        "promptVersion": "albina-visual-migration-v1",
+        "sourceJobHash": "a72f62648095b8cfca16b0c578b1d5a61030bda8943a577c378b570669ec5393",
+        "review": {
+          "status": "approved",
+          "reviewer": "workbuddy-convergence-agent",
+          "reviewedAt": "2026-09-06T08:36:09.907Z"
+        }
+      },
+      "rights": {
+        "status": "unverified",
+        "sourceType": "model-output",
+        "redistribution": "unverified",
+        "rightsBasis": "Redistribution rights for this model output have not been independently verified."
+      },
+      "lineage": {
+        "kind": "derivative",
+        "processVersion": "albina-visual-promotion-v1",
+        "inputs": [
+          {
+            "assetId": "file.characters.albina.rain.png",
+            "sha256": "e49132402829886bcdc6b847b02810e8849cd0932c882ed4c666565c6a0ddf6e",
+            "role": "approved-generated-reference"
+          },
+          {
+            "assetId": "file.characters.protagonist.tender.png",
+            "sha256": "1654accf7c7cbdd16b6af3c3fa51d06fa0547b411451c1325d46bf02b71bd2d1",
+            "role": "approved-generated-reference"
+          },
+          {
+            "assetId": "file.characters.dante.normal.png",
+            "sha256": "40487edd1ddf95c2448e6dd1b6a74bdc25ed32001aa3bbf7282d436ba48be80d",
+            "role": "approved-generated-reference"
+          },
+          {
+            "sha256": "aaf89630110b6fef687b86334404b00cd39fd29c84451971575b26a29ce51142",
+            "role": "canon-visual-reference"
+          }
+        ]
+      }
     },
     {
       "id": "cg.maestro_shadow",
       "kind": "image",
       "path": "cg/maestro_shadow.jpg",
       "mimeType": "image/jpeg",
-      "sha256": "ff93dcfc2b02faf7920d1426ebdfadf86d58aa5744117a6d692d2f5f370fa5c6",
-      "bytes": 223021
+      "sha256": "72e8e55923e1717f52b8a30049746dc258df7f01f7ea91af3493bc974766b762",
+      "bytes": 166862,
+      "provenance": {
+        "provider": "wisart-openai-compatible",
+        "model": "gpt-image-2",
+        "promptVersion": "albina-visual-migration-v1",
+        "sourceJobHash": "f4866738a1ee211da3df79a327317564753e1d60569e68378909a5346c53b0b9",
+        "review": {
+          "status": "approved",
+          "reviewer": "workbuddy-convergence-agent",
+          "reviewedAt": "2026-09-06T08:36:19.225Z"
+        }
+      },
+      "rights": {
+        "status": "unverified",
+        "sourceType": "model-output",
+        "redistribution": "unverified",
+        "rightsBasis": "Redistribution rights for this model output have not been independently verified."
+      },
+      "lineage": {
+        "kind": "derivative",
+        "processVersion": "albina-visual-promotion-v1",
+        "inputs": [
+          {
+            "assetId": "file.characters.albina.maestro.png",
+            "sha256": "2f3d893f3d46d6539cdb100b8fc160feeec7e115d4dc114cb62e0872a41ce666",
+            "role": "approved-generated-reference"
+          },
+          {
+            "assetId": "file.characters.protagonist.shadow.png",
+            "sha256": "e041ba0b65c736c8b1c7c88d9e168160762f4f00075a54e8516af2d5d8094676",
+            "role": "approved-generated-reference"
+          },
+          {
+            "assetId": "file.characters.callisto.normal.png",
+            "sha256": "e6158578e0fb0316c60224b86336bfe582a6515539f7ff22e2a7f2be4683c663",
+            "role": "approved-generated-reference"
+          },
+          {
+            "assetId": "file.characters.ren.normal.png",
+            "sha256": "5cfd6e712b8790c8a4bcb5d015b086ec2e7827d573cffcf2914446a24c6e9607",
+            "role": "approved-generated-reference"
+          },
+          {
+            "sha256": "aaf89630110b6fef687b86334404b00cd39fd29c84451971575b26a29ce51142",
+            "role": "canon-visual-reference"
+          }
+        ]
+      }
     },
     {
       "id": "cg.opening_rain",
       "kind": "image",
       "path": "cg/opening_rain.jpg",
       "mimeType": "image/jpeg",
-      "sha256": "557521106b516bf35aa9b55473c6f977a80bdf8ed6f7fe3f8ecf47de6c961931",
-      "bytes": 190464
+      "sha256": "457696a02349c6b9745c8dc7a5f048d1d067b852a4f24b271d4bb6d284bf48be",
+      "bytes": 180039,
+      "provenance": {
+        "provider": "wisart-openai-compatible",
+        "model": "gpt-image-2",
+        "promptVersion": "albina-visual-migration-v1",
+        "sourceJobHash": "2b9ecfb065418278a19ce170c37a02b7383181cebac0a17c15f02f87e8ae0d2e",
+        "review": {
+          "status": "approved",
+          "reviewer": "workbuddy-convergence-agent",
+          "reviewedAt": "2026-09-06T08:36:19.320Z"
+        }
+      },
+      "rights": {
+        "status": "unverified",
+        "sourceType": "model-output",
+        "redistribution": "unverified",
+        "rightsBasis": "Redistribution rights for this model output have not been independently verified."
+      },
+      "lineage": {
+        "kind": "derivative",
+        "processVersion": "albina-visual-promotion-v1",
+        "inputs": [
+          {
+            "assetId": "file.characters.albina.normal.png",
+            "sha256": "adae648a47c2a5285181cbbeb4d4066792b34f129cac40e48ab8974f3b9cc2ca",
+            "role": "approved-generated-reference"
+          },
+          {
+            "assetId": "file.characters.protagonist.serious.png",
+            "sha256": "461927edeaab75615f232e57131fb9294fca75ef00b794d7a4a2955c66aeb18a",
+            "role": "approved-generated-reference"
+          },
+          {
+            "sha256": "aaf89630110b6fef687b86334404b00cd39fd29c84451971575b26a29ce51142",
+            "role": "canon-visual-reference"
+          }
+        ]
+      }
     },
     {
       "id": "cg.rain_confession",
       "kind": "image",
       "path": "cg/rain_confession.jpg",
       "mimeType": "image/jpeg",
-      "sha256": "2312880e97be851f6f2688efb07f8d1475e7e4ea1ff3de2dde2db622bee41884",
-      "bytes": 233325
+      "sha256": "4a5f80d17032543993bcb490c1f8f6eff6bec52de4416245f80dc2c008f33c6b",
+      "bytes": 249164,
+      "provenance": {
+        "provider": "wisart-openai-compatible",
+        "model": "gpt-image-2",
+        "promptVersion": "albina-visual-migration-v1",
+        "sourceJobHash": "96edf2ee24d96a19058a542d90ab68659e6f9b7a74a235ef14d00d349533e4de",
+        "review": {
+          "status": "approved",
+          "reviewer": "workbuddy-convergence-agent",
+          "reviewedAt": "2026-09-06T08:36:19.442Z"
+        }
+      },
+      "rights": {
+        "status": "unverified",
+        "sourceType": "model-output",
+        "redistribution": "unverified",
+        "rightsBasis": "Redistribution rights for this model output have not been independently verified."
+      },
+      "lineage": {
+        "kind": "derivative",
+        "processVersion": "albina-visual-promotion-v1",
+        "inputs": [
+          {
+            "assetId": "file.characters.albina.rain.png",
+            "sha256": "e49132402829886bcdc6b847b02810e8849cd0932c882ed4c666565c6a0ddf6e",
+            "role": "approved-generated-reference"
+          },
+          {
+            "assetId": "file.characters.protagonist.wet.hair.png",
+            "sha256": "a3bac76af24bc52b1c1e26867aad87f8d83ba9cf118afcfbbebcc329bf7de163",
+            "role": "approved-generated-reference"
+          },
+          {
+            "sha256": "aaf89630110b6fef687b86334404b00cd39fd29c84451971575b26a29ce51142",
+            "role": "canon-visual-reference"
+          }
+        ]
+      }
     },
     {
       "id": "cg.rebuild_awakening",
       "kind": "image",
       "path": "cg/rebuild_awakening.jpg",
       "mimeType": "image/jpeg",
-      "sha256": "21c280bc65cf08f4d34b983a9731e3e231bd154a724cec0ee32dc11fc3698648",
-      "bytes": 182730
+      "sha256": "2e404e9eeaa8bcb46bc63486a219ccd96d9376d701110decd19aaa0f3c999469",
+      "bytes": 191955,
+      "provenance": {
+        "provider": "wisart-openai-compatible",
+        "model": "gpt-image-2",
+        "promptVersion": "albina-visual-migration-v1",
+        "sourceJobHash": "27c10de3118c4184f90f1439cd6381f9cc594f10d507b7b1121508e502188c00",
+        "review": {
+          "status": "approved",
+          "reviewer": "workbuddy-convergence-agent",
+          "reviewedAt": "2026-09-06T08:39:09.784Z"
+        }
+      },
+      "rights": {
+        "status": "unverified",
+        "sourceType": "model-output",
+        "redistribution": "unverified",
+        "rightsBasis": "Redistribution rights for this model output have not been independently verified."
+      },
+      "lineage": {
+        "kind": "derivative",
+        "processVersion": "albina-visual-promotion-v1",
+        "inputs": [
+          {
+            "assetId": "file.characters.albina.golden.bough.png",
+            "sha256": "c241ed5f31cf2c34cf0f9d3fd00968d93a8bb81d23b8a52e460614dd5643bfa8",
+            "role": "approved-generated-reference"
+          },
+          {
+            "assetId": "file.characters.protagonist.serious.png",
+            "sha256": "461927edeaab75615f232e57131fb9294fca75ef00b794d7a4a2955c66aeb18a",
+            "role": "approved-generated-reference"
+          },
+          {
+            "sha256": "aaf89630110b6fef687b86334404b00cd39fd29c84451971575b26a29ce51142",
+            "role": "canon-visual-reference"
+          }
+        ]
+      }
     },
     {
       "id": "cg.ren_interruption",
       "kind": "image",
       "path": "cg/ren_interruption.jpg",
       "mimeType": "image/jpeg",
-      "sha256": "1f69370dc412adddb7367be1f751bd720db2a1b4ab7105bc091a1f3754799083",
-      "bytes": 229446
+      "sha256": "68fa377d1ed5e6aabd5fe46e6ce16ea4f19560c118484f5ce61ea8a34fd91c02",
+      "bytes": 215359,
+      "provenance": {
+        "provider": "wisart-openai-compatible",
+        "model": "gpt-image-2",
+        "promptVersion": "albina-visual-migration-v1",
+        "sourceJobHash": "49be6333c69659d1f5e285839ecb3eb3721fb2ddff9913790fdf3b6277fc3b4a",
+        "review": {
+          "status": "approved",
+          "reviewer": "workbuddy-convergence-agent",
+          "reviewedAt": "2026-09-06T08:36:19.580Z"
+        }
+      },
+      "rights": {
+        "status": "unverified",
+        "sourceType": "model-output",
+        "redistribution": "unverified",
+        "rightsBasis": "Redistribution rights for this model output have not been independently verified."
+      },
+      "lineage": {
+        "kind": "derivative",
+        "processVersion": "albina-visual-promotion-v1",
+        "inputs": [
+          {
+            "assetId": "file.characters.albina.combat.png",
+            "sha256": "3447b8cb8df4edec6325ab5262892a35bff6854cd7f0fa44aaab268a97182f62",
+            "role": "approved-generated-reference"
+          },
+          {
+            "assetId": "file.characters.protagonist.battle.png",
+            "sha256": "5b40787a69bd7dc73c2b36570bf7c58c73e52a612ca6fbbc401f52ead494a400",
+            "role": "approved-generated-reference"
+          },
+          {
+            "assetId": "file.characters.ren.normal.png",
+            "sha256": "5cfd6e712b8790c8a4bcb5d015b086ec2e7827d573cffcf2914446a24c6e9607",
+            "role": "approved-generated-reference"
+          },
+          {
+            "sha256": "aaf89630110b6fef687b86334404b00cd39fd29c84451971575b26a29ce51142",
+            "role": "canon-visual-reference"
+          }
+        ]
+      }
     },
     {
       "id": "cg.ring_conspiracy_ending",
       "kind": "image",
       "path": "cg/ring_conspiracy_ending.jpg",
       "mimeType": "image/jpeg",
-      "sha256": "dd57358bb86e03d8619a820ff3b0773dea49d24a760ea09593c5594652876ea3",
-      "bytes": 219860
+      "sha256": "de385c9a8213f57fe02f4f82c92e75fea02053b3e7746d27ec9d159957eba23a",
+      "bytes": 171259,
+      "provenance": {
+        "provider": "wisart-openai-compatible",
+        "model": "gpt-image-2",
+        "promptVersion": "albina-visual-migration-v1",
+        "sourceJobHash": "6fe805a75e878651b998874997669ff959875aa8bc3a563b467994563faa40f8",
+        "review": {
+          "status": "approved",
+          "reviewer": "workbuddy-convergence-agent",
+          "reviewedAt": "2026-09-06T08:36:19.684Z"
+        }
+      },
+      "rights": {
+        "status": "unverified",
+        "sourceType": "model-output",
+        "redistribution": "unverified",
+        "rightsBasis": "Redistribution rights for this model output have not been independently verified."
+      },
+      "lineage": {
+        "kind": "derivative",
+        "processVersion": "albina-visual-promotion-v1",
+        "inputs": [
+          {
+            "assetId": "file.characters.albina.endgame.png",
+            "sha256": "df6bfc313afb7a707cc580ed806efdbfb79e959f48c80f4a2674bf0318a7e51c",
+            "role": "approved-generated-reference"
+          },
+          {
+            "assetId": "file.characters.protagonist.resolve.png",
+            "sha256": "20380c053a2b118a7cf85d7675501c0ae6837639e5a961f2b67ab48db6fcdce1",
+            "role": "approved-generated-reference"
+          },
+          {
+            "sha256": "aaf89630110b6fef687b86334404b00cd39fd29c84451971575b26a29ce51142",
+            "role": "canon-visual-reference"
+          }
+        ]
+      }
     },
     {
       "id": "cg.ring_invitation",
       "kind": "image",
       "path": "cg/ring_invitation.jpg",
       "mimeType": "image/jpeg",
-      "sha256": "ad02a44c0f89ce0a9e3a173a82bad62c6cfe94121c2e994bc91a487cdd13e5c1",
-      "bytes": 206839
+      "sha256": "c81d595770ba53e1563b6a3e33b3eb2e1877e0f6bb0f9e576bb9d4f14d29967a",
+      "bytes": 218535,
+      "provenance": {
+        "provider": "wisart-openai-compatible",
+        "model": "gpt-image-2",
+        "promptVersion": "albina-visual-migration-v1",
+        "sourceJobHash": "57a5eb5e7ffd9915650cba7d4a2553b8e27409e939781e2c0a73e6d49de9c14a",
+        "review": {
+          "status": "approved",
+          "reviewer": "workbuddy-convergence-agent",
+          "reviewedAt": "2026-09-06T08:36:19.790Z"
+        }
+      },
+      "rights": {
+        "status": "unverified",
+        "sourceType": "model-output",
+        "redistribution": "unverified",
+        "rightsBasis": "Redistribution rights for this model output have not been independently verified."
+      },
+      "lineage": {
+        "kind": "derivative",
+        "processVersion": "albina-visual-promotion-v1",
+        "inputs": [
+          {
+            "assetId": "file.characters.albina.ring.conspiracy.png",
+            "sha256": "60fd0b62d59b71179b7d5a2b498424968515f569052cd7e1754261eb275654eb",
+            "role": "approved-generated-reference"
+          },
+          {
+            "assetId": "file.characters.callisto.normal.png",
+            "sha256": "e6158578e0fb0316c60224b86336bfe582a6515539f7ff22e2a7f2be4683c663",
+            "role": "approved-generated-reference"
+          },
+          {
+            "assetId": "file.characters.ren.normal.png",
+            "sha256": "5cfd6e712b8790c8a4bcb5d015b086ec2e7827d573cffcf2914446a24c6e9607",
+            "role": "approved-generated-reference"
+          },
+          {
+            "sha256": "aaf89630110b6fef687b86334404b00cd39fd29c84451971575b26a29ce51142",
+            "role": "canon-visual-reference"
+          }
+        ]
+      }
     },
     {
       "id": "cg.surgery_of_memory",
       "kind": "image",
       "path": "cg/surgery_of_memory.jpg",
       "mimeType": "image/jpeg",
-      "sha256": "3856e752a99b3c8c4d83ae3cd2ae259ce8911b63439c3925d92d8bafc2231b68",
-      "bytes": 241224
+      "sha256": "6b711204cbf9f6d56d67b9e8a81a36b915cb54ad08ce168410f6b5f73efe8ebc",
+      "bytes": 234073,
+      "provenance": {
+        "provider": "wisart-openai-compatible",
+        "model": "gpt-image-2",
+        "promptVersion": "albina-visual-migration-v1",
+        "sourceJobHash": "031326ca8937efa6d79c3f653fa65e9b7ccaf1ee6ff43b509096bd0179f951f8",
+        "review": {
+          "status": "approved",
+          "reviewer": "workbuddy-convergence-agent",
+          "reviewedAt": "2026-09-06T08:39:09.894Z"
+        }
+      },
+      "rights": {
+        "status": "unverified",
+        "sourceType": "model-output",
+        "redistribution": "unverified",
+        "rightsBasis": "Redistribution rights for this model output have not been independently verified."
+      },
+      "lineage": {
+        "kind": "derivative",
+        "processVersion": "albina-visual-promotion-v1",
+        "inputs": [
+          {
+            "assetId": "file.characters.albina.surgical.png",
+            "sha256": "d6ef29a4e507767be8df6f69701d9b5cf03614172c554540ab6634bfce7a736a",
+            "role": "approved-generated-reference"
+          },
+          {
+            "assetId": "file.characters.protagonist.serious.png",
+            "sha256": "461927edeaab75615f232e57131fb9294fca75ef00b794d7a4a2955c66aeb18a",
+            "role": "approved-generated-reference"
+          },
+          {
+            "assetId": "file.characters.faust.normal.png",
+            "sha256": "181d1804a348d2acb99e1c5023eac471b732651b50b5aaeacbcfd329127d8eae",
+            "role": "approved-generated-reference"
+          },
+          {
+            "sha256": "aaf89630110b6fef687b86334404b00cd39fd29c84451971575b26a29ce51142",
+            "role": "canon-visual-reference"
+          }
+        ]
+      }
     },
     {
       "id": "cg.trust_threshold",
       "kind": "image",
       "path": "cg/trust_threshold.jpg",
       "mimeType": "image/jpeg",
-      "sha256": "ee433f58ec08d7311b0dccee6f184d5b6235e398bbc62698455276e33db673fc",
-      "bytes": 183900
+      "sha256": "ff181cf1e246356b2159059b095eccc1cfdf7015acb442c978a393d001961e1f",
+      "bytes": 218518,
+      "provenance": {
+        "provider": "wisart-openai-compatible",
+        "model": "gpt-image-2",
+        "promptVersion": "albina-visual-migration-v1",
+        "sourceJobHash": "84d2cab29389d7b00a851004a38601c06af75f244c268e966b4e2a7609ee0a9b",
+        "review": {
+          "status": "approved",
+          "reviewer": "workbuddy-convergence-agent",
+          "reviewedAt": "2026-09-06T08:36:19.895Z"
+        }
+      },
+      "rights": {
+        "status": "unverified",
+        "sourceType": "model-output",
+        "redistribution": "unverified",
+        "rightsBasis": "Redistribution rights for this model output have not been independently verified."
+      },
+      "lineage": {
+        "kind": "derivative",
+        "processVersion": "albina-visual-promotion-v1",
+        "inputs": [
+          {
+            "assetId": "file.characters.albina.endgame.png",
+            "sha256": "df6bfc313afb7a707cc580ed806efdbfb79e959f48c80f4a2674bf0318a7e51c",
+            "role": "approved-generated-reference"
+          },
+          {
+            "assetId": "file.characters.protagonist.tender.png",
+            "sha256": "1654accf7c7cbdd16b6af3c3fa51d06fa0547b411451c1325d46bf02b71bd2d1",
+            "role": "approved-generated-reference"
+          },
+          {
+            "sha256": "aaf89630110b6fef687b86334404b00cd39fd29c84451971575b26a29ce51142",
+            "role": "canon-visual-reference"
+          }
+        ]
+      }
     },
     {
       "id": "cg.white_canvas_choice",
       "kind": "image",
       "path": "cg/white_canvas_choice.jpg",
       "mimeType": "image/jpeg",
-      "sha256": "ed4e27e3e480ec1bb7c3e1f400274fe8ca6277c9bd114a9edca1bcd3ad93a0d9",
-      "bytes": 200807
+      "sha256": "f29ba0d9d48ae0059dc4320c93acd5fc221e7cb29749c05375473fd20529c356",
+      "bytes": 153144,
+      "provenance": {
+        "provider": "wisart-openai-compatible",
+        "model": "gpt-image-2",
+        "promptVersion": "albina-visual-migration-v1",
+        "sourceJobHash": "13f22afc3c017ce1f5eb41d9e2611f55bca1367d9e485fc23a42c0e2106891eb",
+        "review": {
+          "status": "approved",
+          "reviewer": "workbuddy-convergence-agent",
+          "reviewedAt": "2026-09-06T08:36:19.999Z"
+        }
+      },
+      "rights": {
+        "status": "unverified",
+        "sourceType": "model-output",
+        "redistribution": "unverified",
+        "rightsBasis": "Redistribution rights for this model output have not been independently verified."
+      },
+      "lineage": {
+        "kind": "derivative",
+        "processVersion": "albina-visual-promotion-v1",
+        "inputs": [
+          {
+            "assetId": "file.characters.albina.white.canvas.png",
+            "sha256": "3987479196fbdab2a2f5d2d4f33694eb6941590bfbb0ad47b69fc55b7848d215",
+            "role": "approved-generated-reference"
+          },
+          {
+            "assetId": "file.characters.protagonist.tender.png",
+            "sha256": "1654accf7c7cbdd16b6af3c3fa51d06fa0547b411451c1325d46bf02b71bd2d1",
+            "role": "approved-generated-reference"
+          },
+          {
+            "sha256": "aaf89630110b6fef687b86334404b00cd39fd29c84451971575b26a29ce51142",
+            "role": "canon-visual-reference"
+          }
+        ]
+      }
     },
     {
       "id": "cg.white_canvas_ending",
       "kind": "image",
       "path": "cg/white_canvas_ending.jpg",
       "mimeType": "image/jpeg",
-      "sha256": "c9c999a7eed0a02dc31fe84736e7ef8af39ecd47e288c3d99d19b9bc56b5145c",
-      "bytes": 232672
+      "sha256": "1c6c05ff9b4243e65851045bd4afbfed7d37c032dc95def7bbcbf74baacc1d9f",
+      "bytes": 206831,
+      "provenance": {
+        "provider": "wisart-openai-compatible",
+        "model": "gpt-image-2",
+        "promptVersion": "albina-visual-migration-v1",
+        "sourceJobHash": "e56ce443d674e7d6b43c42d88d56c6b769558a63d3120baf5cdd06899591e42c",
+        "review": {
+          "status": "approved",
+          "reviewer": "workbuddy-convergence-agent",
+          "reviewedAt": "2026-09-06T08:36:20.110Z"
+        }
+      },
+      "rights": {
+        "status": "unverified",
+        "sourceType": "model-output",
+        "redistribution": "unverified",
+        "rightsBasis": "Redistribution rights for this model output have not been independently verified."
+      },
+      "lineage": {
+        "kind": "derivative",
+        "processVersion": "albina-visual-promotion-v1",
+        "inputs": [
+          {
+            "assetId": "file.characters.albina.endgame.png",
+            "sha256": "df6bfc313afb7a707cc580ed806efdbfb79e959f48c80f4a2674bf0318a7e51c",
+            "role": "approved-generated-reference"
+          },
+          {
+            "assetId": "file.characters.protagonist.resolve.png",
+            "sha256": "20380c053a2b118a7cf85d7675501c0ae6837639e5a961f2b67ab48db6fcdce1",
+            "role": "approved-generated-reference"
+          },
+          {
+            "sha256": "aaf89630110b6fef687b86334404b00cd39fd29c84451971575b26a29ce51142",
+            "role": "canon-visual-reference"
+          }
+        ]
+      }
     },
     {
       "id": "file.audio.bgm.backstreets.rain.mp3",
@@ -1762,1256 +2960,1573 @@
       "kind": "image",
       "path": "bg/backstreets_rain.jpg",
       "mimeType": "image/jpeg",
-      "sha256": "7a897b01c41634b0ab05b8411f487e60712909f153aed6b866c6e724f7a05ec7",
-      "bytes": 195160
+      "sha256": "2028722421626040d012db610e38f80c0707b4a708468473b7031f387600907f",
+      "bytes": 172971
     },
     {
       "id": "file.bg.city.rooftop.jpg",
       "kind": "image",
       "path": "bg/city_rooftop.jpg",
       "mimeType": "image/jpeg",
-      "sha256": "4428f1f905a752eab7e4f6119f236f12767778db7f4768d2463a03ee6dcc4697",
-      "bytes": 207867
+      "sha256": "aa3311072a00a7d4afda5d1d834299d87591916921801d3270cc9ff6cd966b87",
+      "bytes": 146087
     },
     {
       "id": "file.bg.golden.bough.jpg",
       "kind": "image",
       "path": "bg/golden_bough.jpg",
       "mimeType": "image/jpeg",
-      "sha256": "5e6a552b04b4333ca30c001a3020168908d7867926982ca4097145fa735ee207",
-      "bytes": 222682
+      "sha256": "6edf1f90d2b561048fd5d45bae15cbe3d6a2eafec6f3855dd3eeb1b5b060a0cb",
+      "bytes": 208926
     },
     {
       "id": "file.bg.lce.lab.jpg",
       "kind": "image",
       "path": "bg/lce_lab.jpg",
       "mimeType": "image/jpeg",
-      "sha256": "b982f39f13eb87cdb59d1540ff4f7688c4b319600a7174a758288f3c4efe672d",
-      "bytes": 202605
+      "sha256": "b779c2834a255687728fa67129ff7929a98809b6805d1a31703a8afdf8030107",
+      "bytes": 203123
     },
     {
       "id": "file.bg.limbus.bus.jpg",
       "kind": "image",
       "path": "bg/limbus_bus.jpg",
       "mimeType": "image/jpeg",
-      "sha256": "c684aba165f3d0a195d6e5b438be4bc9b2a070a4ac3364e91bef93716aab9c60",
-      "bytes": 194697
+      "sha256": "b0d64d366ad3f92ab2b251ef374c6bb1898cf9079837b0aa910c0b00e145bc09",
+      "bytes": 232135
     },
     {
       "id": "file.bg.mirror.corridor.jpg",
       "kind": "image",
       "path": "bg/mirror_corridor.jpg",
       "mimeType": "image/jpeg",
-      "sha256": "aac5cfac5624763538d533b63914c845c266dc17845789d9c3f7d5bb408603f9",
-      "bytes": 193914
+      "sha256": "17277aad2a77db022d07482af12541b3a5380aef4b7093757907aa8949e5e590",
+      "bytes": 167392
     },
     {
       "id": "file.bg.nest.station.jpg",
       "kind": "image",
       "path": "bg/nest_station.jpg",
       "mimeType": "image/jpeg",
-      "sha256": "732fa0c67c071560b01c536d5ed76944c60d1a0d9a5034087ca79bf5ffff9ad2",
-      "bytes": 196705
+      "sha256": "91208785c1bc204ea79f0db217fb8fcebebbf606829590e857765f197b9e12bb",
+      "bytes": 210265
     },
     {
       "id": "file.bg.outskirts.dawn.jpg",
       "kind": "image",
       "path": "bg/outskirts_dawn.jpg",
       "mimeType": "image/jpeg",
-      "sha256": "4ccbdbab6a95b5d79ae476a96f8b453ed07241e599014002fdc83475f8bd092a",
-      "bytes": 182100
+      "sha256": "44509077697bcad88c44498d157ac05515804b2ef65fcb1bdca8b8fc1ef37e6a",
+      "bytes": 242337
     },
     {
       "id": "file.bg.rain.room.jpg",
       "kind": "image",
       "path": "bg/rain_room.jpg",
       "mimeType": "image/jpeg",
-      "sha256": "0a4b24f02a4f9274d6691594cbfd8c1f2512c1fe4559083a22c6cf2891cb198e",
-      "bytes": 198604
+      "sha256": "e997abedea4542c4b4776bf3492b28f5852a623194b379613c32bbb39ce22922",
+      "bytes": 257137
     },
     {
       "id": "file.bg.ring.atelier.jpg",
       "kind": "image",
       "path": "bg/ring_atelier.jpg",
       "mimeType": "image/jpeg",
-      "sha256": "aed9195327ca4feef20a611b2bd0f0ed4a8fba22f12fdf685bafc5b3ed13eb10",
-      "bytes": 197708
+      "sha256": "42931f287f934dacdbfdfe27cab2be02022233fda83e440d314779f43b950410",
+      "bytes": 245753
     },
     {
       "id": "file.bg.spider.gallery.jpg",
       "kind": "image",
       "path": "bg/spider_gallery.jpg",
       "mimeType": "image/jpeg",
-      "sha256": "78a4336f0aa42c3ecf10667aeeb40dcdd42b271548872255c66aee716abcf024",
-      "bytes": 223415
+      "sha256": "df109ef2411bb7cf3c373360c67ed67dc714ec30b56ee8e9932ec567ab27ca1d",
+      "bytes": 216657
     },
     {
       "id": "file.bg.white.canvas.jpg",
       "kind": "image",
       "path": "bg/white_canvas.jpg",
       "mimeType": "image/jpeg",
-      "sha256": "6551848df5f6a312cbd769356b512643b33f2b9e68c9b8da21ad98ab9ef80605",
-      "bytes": 193895
+      "sha256": "dc29a4ee28e61a32631abc2b1f3de090bcffd9637e1c088ffd35f59fd960fcb8",
+      "bytes": 95655
     },
     {
       "id": "file.cg.araya.rooftop.jpg",
       "kind": "image",
       "path": "cg/araya_rooftop.jpg",
       "mimeType": "image/jpeg",
-      "sha256": "1ecd4ffa5f53471b66b5aecbfa37a8289c603c2a5ce2212538da01cbd5d5d8e4",
-      "bytes": 226727
+      "sha256": "505bec4c1bdaa6968f8f59352849c233cac1874c2c7c72964c9841e7dfbee89a",
+      "bytes": 224801
     },
     {
       "id": "file.cg.art.resonance.jpg",
       "kind": "image",
       "path": "cg/art_resonance.jpg",
       "mimeType": "image/jpeg",
-      "sha256": "da4000d606059e545bbf427451a999ea99e9fd730b71033cf61ed0e5c7ebeb1a",
-      "bytes": 221527
+      "sha256": "cb9f8de75f6d3524dba019be70cfd04a0974fe4734709ede92f982fa785ff6df",
+      "bytes": 156110
     },
     {
       "id": "file.cg.backstreet.pursuit.jpg",
       "kind": "image",
       "path": "cg/backstreet_pursuit.jpg",
       "mimeType": "image/jpeg",
-      "sha256": "ff18127cd0ae95ad91c3e85ceec047def159a58bfec852708271a65d4f53b774",
-      "bytes": 208589
+      "sha256": "b3ed4aa5bcfca9c56b48f47c19305d7073efaf254bdf11edcedf0aa9bb23fa5b",
+      "bytes": 251161
+    },
+    {
+      "id": "file.cg.canon.recap.9.18.jpg",
+      "kind": "image",
+      "path": "cg/canon_recap_9_18.jpg",
+      "mimeType": "image/jpeg",
+      "sha256": "d3340cb2fa8a99916f6862cde95f54f7a7943ead2fcf19fda3aca08d95acb5fe",
+      "bytes": 229444,
+      "provenance": {
+        "provider": "wisart-openai-compatible",
+        "model": "gpt-image-2",
+        "promptVersion": "albina-visual-migration-v1",
+        "sourceJobHash": "a134d135c3bfd83d59f40ea7740984b419d9b0cbd96943d03c8a21f0f546879a",
+        "review": {
+          "status": "approved",
+          "reviewer": "workbuddy-agent",
+          "reviewedAt": "2026-09-06T07:16:40.936Z"
+        }
+      },
+      "rights": {
+        "status": "unverified",
+        "sourceType": "model-output",
+        "redistribution": "unverified",
+        "rightsBasis": "Redistribution rights for this model output have not been independently verified."
+      },
+      "lineage": {
+        "kind": "derivative",
+        "processVersion": "albina-visual-promotion-v1",
+        "inputs": [
+          {
+            "sha256": "a68cb560ded868c79da5f6682539f5aeb2eef6ccf6e98d73f4e26b86575a0d3f",
+            "role": "canon-visual-reference"
+          },
+          {
+            "sha256": "a0192ec0071b3d2af4f3d7e38ab29e7ed4cd140b084ebc10ff47e8a42e2a36e5",
+            "role": "canon-visual-reference"
+          },
+          {
+            "sha256": "efe8cde8732d1a5a25062155b4d111dbf6185c3ba85e5612d5b67ccd465ec5bb",
+            "role": "canon-visual-reference"
+          },
+          {
+            "sha256": "9159aa76d13f54965f607398df7f032f66bc921470e4b8c94462e63f56f40263",
+            "role": "canon-visual-reference"
+          },
+          {
+            "sha256": "aaf89630110b6fef687b86334404b00cd39fd29c84451971575b26a29ce51142",
+            "role": "canon-visual-reference"
+          }
+        ]
+      }
+    },
+    {
+      "id": "file.cg.canon.recap.9.37.battle.jpg",
+      "kind": "image",
+      "path": "cg/canon_recap_9_37_battle.jpg",
+      "mimeType": "image/jpeg",
+      "sha256": "d0fe0f6571b9cc6ddba19d0af0441d0cc2f6ef2477480fe4ce838ccc123bc918",
+      "bytes": 205395,
+      "provenance": {
+        "provider": "wisart-openai-compatible",
+        "model": "gpt-image-2",
+        "promptVersion": "albina-visual-migration-v1",
+        "sourceJobHash": "131422b7acd3331ca30f14edd05d1e103cd53cb3d3c05664e530580a315dd506",
+        "review": {
+          "status": "approved",
+          "reviewer": "workbuddy-agent",
+          "reviewedAt": "2026-09-06T07:16:41.058Z"
+        }
+      },
+      "rights": {
+        "status": "unverified",
+        "sourceType": "model-output",
+        "redistribution": "unverified",
+        "rightsBasis": "Redistribution rights for this model output have not been independently verified."
+      },
+      "lineage": {
+        "kind": "derivative",
+        "processVersion": "albina-visual-promotion-v1",
+        "inputs": [
+          {
+            "sha256": "a14e568cb94fb6049b2bd0ddc37567d062067f0d6a74cc8cc7f839f30a22ee11",
+            "role": "canon-visual-reference"
+          },
+          {
+            "sha256": "e68f9d04dda42e9ab86dcb686663057619c8dfbeff5f7d70078a083b0228aa55",
+            "role": "canon-visual-reference"
+          },
+          {
+            "sha256": "ec23a9bd281921be8cd3ece2fc2c81a8815c79c79b553bf1924cac65be174275",
+            "role": "canon-visual-reference"
+          },
+          {
+            "sha256": "3409d80b72c96e5568a2b9153c533877680f1fb6a69bfc6516789c7336ffb9a7",
+            "role": "canon-visual-reference"
+          },
+          {
+            "sha256": "aaf89630110b6fef687b86334404b00cd39fd29c84451971575b26a29ce51142",
+            "role": "canon-visual-reference"
+          }
+        ]
+      }
+    },
+    {
+      "id": "file.cg.canon.recap.9.37.jpg",
+      "kind": "image",
+      "path": "cg/canon_recap_9_37.jpg",
+      "mimeType": "image/jpeg",
+      "sha256": "4245c3f9646ceac452f45a5cd1072a31efc715c289b24833071ff28ce0201c75",
+      "bytes": 170894,
+      "provenance": {
+        "provider": "wisart-openai-compatible",
+        "model": "gpt-image-2",
+        "promptVersion": "albina-visual-migration-v1",
+        "sourceJobHash": "733f8917cd994057193db18890b011cff29cbeb30596f93b2c5d03879561938d",
+        "review": {
+          "status": "approved",
+          "reviewer": "workbuddy-agent",
+          "reviewedAt": "2026-09-06T07:16:40.997Z"
+        }
+      },
+      "rights": {
+        "status": "unverified",
+        "sourceType": "model-output",
+        "redistribution": "unverified",
+        "rightsBasis": "Redistribution rights for this model output have not been independently verified."
+      },
+      "lineage": {
+        "kind": "derivative",
+        "processVersion": "albina-visual-promotion-v1",
+        "inputs": [
+          {
+            "sha256": "a14e568cb94fb6049b2bd0ddc37567d062067f0d6a74cc8cc7f839f30a22ee11",
+            "role": "canon-visual-reference"
+          },
+          {
+            "sha256": "a0192ec0071b3d2af4f3d7e38ab29e7ed4cd140b084ebc10ff47e8a42e2a36e5",
+            "role": "canon-visual-reference"
+          },
+          {
+            "sha256": "a0033f3a9da006a862cd26eaf93ff9a86856f18a5a1ef7f2490461b84ef5e0d8",
+            "role": "canon-visual-reference"
+          },
+          {
+            "sha256": "aaf89630110b6fef687b86334404b00cd39fd29c84451971575b26a29ce51142",
+            "role": "canon-visual-reference"
+          }
+        ]
+      }
+    },
+    {
+      "id": "file.cg.canon.recap.9.43.outcome.jpg",
+      "kind": "image",
+      "path": "cg/canon_recap_9_43_outcome.jpg",
+      "mimeType": "image/jpeg",
+      "sha256": "f1920022af7457b94bb23fb6b033e6dee294f5a58d6c7ed9a638fc81834e218d",
+      "bytes": 159644,
+      "provenance": {
+        "provider": "wisart-openai-compatible",
+        "model": "gpt-image-2",
+        "promptVersion": "albina-visual-migration-v1",
+        "sourceJobHash": "8052752c071d224a8c4b62a4e2dfe55091c8bacd05b1e4a4807dd5b04129035d",
+        "review": {
+          "status": "approved",
+          "reviewer": "workbuddy-agent",
+          "reviewedAt": "2026-09-06T07:16:41.117Z"
+        }
+      },
+      "rights": {
+        "status": "unverified",
+        "sourceType": "model-output",
+        "redistribution": "unverified",
+        "rightsBasis": "Redistribution rights for this model output have not been independently verified."
+      },
+      "lineage": {
+        "kind": "derivative",
+        "processVersion": "albina-visual-promotion-v1",
+        "inputs": [
+          {
+            "sha256": "a14e568cb94fb6049b2bd0ddc37567d062067f0d6a74cc8cc7f839f30a22ee11",
+            "role": "canon-visual-reference"
+          },
+          {
+            "sha256": "e68f9d04dda42e9ab86dcb686663057619c8dfbeff5f7d70078a083b0228aa55",
+            "role": "canon-visual-reference"
+          },
+          {
+            "sha256": "ec23a9bd281921be8cd3ece2fc2c81a8815c79c79b553bf1924cac65be174275",
+            "role": "canon-visual-reference"
+          },
+          {
+            "sha256": "47fb0ab9dc1c493323f3f1acd5bbbd389e7de075426d9ef02d9afe732afc8f70",
+            "role": "canon-visual-reference"
+          },
+          {
+            "sha256": "aaf89630110b6fef687b86334404b00cd39fd29c84451971575b26a29ce51142",
+            "role": "canon-visual-reference"
+          }
+        ]
+      }
+    },
+    {
+      "id": "file.cg.canon.recap.albina.fascia.jpg",
+      "kind": "image",
+      "path": "cg/canon_recap_albina_fascia.jpg",
+      "mimeType": "image/jpeg",
+      "sha256": "4c3a3146a1dc8091a5b39a9a367ae0cf62df013ba469cd5a91a7820a1365af75",
+      "bytes": 211756,
+      "provenance": {
+        "provider": "wisart-openai-compatible",
+        "model": "gpt-image-2",
+        "promptVersion": "albina-visual-migration-v1",
+        "sourceJobHash": "771075e731034189ba8daa09b17565fa00332d6464503eb02b777bc12abd734b",
+        "review": {
+          "status": "approved",
+          "reviewer": "workbuddy-agent",
+          "reviewedAt": "2026-09-06T07:16:41.175Z"
+        }
+      },
+      "rights": {
+        "status": "unverified",
+        "sourceType": "model-output",
+        "redistribution": "unverified",
+        "rightsBasis": "Redistribution rights for this model output have not been independently verified."
+      },
+      "lineage": {
+        "kind": "derivative",
+        "processVersion": "albina-visual-promotion-v1",
+        "inputs": [
+          {
+            "sha256": "e68f9d04dda42e9ab86dcb686663057619c8dfbeff5f7d70078a083b0228aa55",
+            "role": "canon-visual-reference"
+          },
+          {
+            "sha256": "a0192ec0071b3d2af4f3d7e38ab29e7ed4cd140b084ebc10ff47e8a42e2a36e5",
+            "role": "canon-visual-reference"
+          },
+          {
+            "sha256": "aaf89630110b6fef687b86334404b00cd39fd29c84451971575b26a29ce51142",
+            "role": "canon-visual-reference"
+          }
+        ]
+      }
     },
     {
       "id": "file.cg.combat.transition.01.jpg",
       "kind": "image",
       "path": "cg/combat_transition_01.jpg",
       "mimeType": "image/jpeg",
-      "sha256": "1636765ed07b103ccc5696e5c3cf4152d300c64b147f2a3b2722dd2151275209",
-      "bytes": 238482
+      "sha256": "aba7ee4262fa8c75343f1dcd91a89c4c2f541d8184b98fd0b2e328f26e1a64f6",
+      "bytes": 306008
     },
     {
       "id": "file.cg.conspiracy.contract.jpg",
       "kind": "image",
       "path": "cg/conspiracy_contract.jpg",
       "mimeType": "image/jpeg",
-      "sha256": "72922d9f7aac148fcfe1e6d7bed34fa8fd7bfc7323641b67feb5279fbe87dad1",
-      "bytes": 215416
+      "sha256": "b9c40c214efe4e81523100a7e0ee963ec6aba7438c2628e16fdc86431ab604f9",
+      "bytes": 240901
     },
     {
       "id": "file.cg.fascia.heartbeat.jpg",
       "kind": "image",
       "path": "cg/fascia_heartbeat.jpg",
       "mimeType": "image/jpeg",
-      "sha256": "2640a75be54575dce6bdc1b9023b06934899cbf4b5492cf012ef1e9c7d2f71e6",
-      "bytes": 204579
+      "sha256": "f81c3dd3ffbdb042090546b3fec43d736a97096179c0fdb002947458df570db2",
+      "bytes": 175916
     },
     {
       "id": "file.cg.golden.bough.ending.jpg",
       "kind": "image",
       "path": "cg/golden_bough_ending.jpg",
       "mimeType": "image/jpeg",
-      "sha256": "4700e8485eb57b194cf6878741509ddc1e323d486878114259b9405051045491",
-      "bytes": 217599
+      "sha256": "27fb1ad1df4250ca823aa74f23fb61805889a2ab33e6a09e4b8c7c6ad6b0dfae",
+      "bytes": 221408
     },
     {
       "id": "file.cg.golden.bough.rebuild.jpg",
       "kind": "image",
       "path": "cg/golden_bough_rebuild.jpg",
       "mimeType": "image/jpeg",
-      "sha256": "0c8c941f77ea39f704563e02e1ed22e8619d8c335ada4215e179a8c6a1caef55",
-      "bytes": 226407
+      "sha256": "99ab6dcb6b7e643fc942a1199829fd6063007caf6a4413494a697911bf93ee52",
+      "bytes": 241426
     },
     {
       "id": "file.cg.hollow.torso.reveal.jpg",
       "kind": "image",
       "path": "cg/hollow_torso_reveal.jpg",
       "mimeType": "image/jpeg",
-      "sha256": "46e83edaabd17b1316bd705daf1a14614c0a7ae8b6164281b9770a2e020fe3e5",
-      "bytes": 212406
+      "sha256": "a5c942e39e9967ec713349e5646ab781d7a8294aa876f8894c5ee076093e2197",
+      "bytes": 154697
     },
     {
       "id": "file.cg.lce.raid.jpg",
       "kind": "image",
       "path": "cg/lce_raid.jpg",
       "mimeType": "image/jpeg",
-      "sha256": "037414f5985f5d972656d297f771e4553d3c01d1d700185bea68f40723892284",
-      "bytes": 191396
+      "sha256": "91fbaf6b6b67db5902bd23af21cc2af3db5ef62460748121307234b2592754a7",
+      "bytes": 251262
     },
     {
       "id": "file.cg.limbus.bus.night.jpg",
       "kind": "image",
       "path": "cg/limbus_bus_night.jpg",
       "mimeType": "image/jpeg",
-      "sha256": "0b1054ef8e4b8cd99b8f234ae2abd5c5e160813b73d1e564dba47c67f8a7cd8a",
-      "bytes": 202828
+      "sha256": "49357dc9a7fa859bc5cb1db2dbb2f7b5fb3e6ca19abef0ea04f811841a8c716d",
+      "bytes": 212824
     },
     {
       "id": "file.cg.maestro.shadow.jpg",
       "kind": "image",
       "path": "cg/maestro_shadow.jpg",
       "mimeType": "image/jpeg",
-      "sha256": "ff93dcfc2b02faf7920d1426ebdfadf86d58aa5744117a6d692d2f5f370fa5c6",
-      "bytes": 223021
+      "sha256": "72e8e55923e1717f52b8a30049746dc258df7f01f7ea91af3493bc974766b762",
+      "bytes": 166862
     },
     {
       "id": "file.cg.opening.rain.jpg",
       "kind": "image",
       "path": "cg/opening_rain.jpg",
       "mimeType": "image/jpeg",
-      "sha256": "557521106b516bf35aa9b55473c6f977a80bdf8ed6f7fe3f8ecf47de6c961931",
-      "bytes": 190464
+      "sha256": "457696a02349c6b9745c8dc7a5f048d1d067b852a4f24b271d4bb6d284bf48be",
+      "bytes": 180039
     },
     {
       "id": "file.cg.rain.confession.jpg",
       "kind": "image",
       "path": "cg/rain_confession.jpg",
       "mimeType": "image/jpeg",
-      "sha256": "2312880e97be851f6f2688efb07f8d1475e7e4ea1ff3de2dde2db622bee41884",
-      "bytes": 233325
+      "sha256": "4a5f80d17032543993bcb490c1f8f6eff6bec52de4416245f80dc2c008f33c6b",
+      "bytes": 249164
     },
     {
       "id": "file.cg.rebuild.awakening.jpg",
       "kind": "image",
       "path": "cg/rebuild_awakening.jpg",
       "mimeType": "image/jpeg",
-      "sha256": "21c280bc65cf08f4d34b983a9731e3e231bd154a724cec0ee32dc11fc3698648",
-      "bytes": 182730
+      "sha256": "2e404e9eeaa8bcb46bc63486a219ccd96d9376d701110decd19aaa0f3c999469",
+      "bytes": 191955
     },
     {
       "id": "file.cg.ren.interruption.jpg",
       "kind": "image",
       "path": "cg/ren_interruption.jpg",
       "mimeType": "image/jpeg",
-      "sha256": "1f69370dc412adddb7367be1f751bd720db2a1b4ab7105bc091a1f3754799083",
-      "bytes": 229446
+      "sha256": "68fa377d1ed5e6aabd5fe46e6ce16ea4f19560c118484f5ce61ea8a34fd91c02",
+      "bytes": 215359
     },
     {
       "id": "file.cg.ring.conspiracy.ending.jpg",
       "kind": "image",
       "path": "cg/ring_conspiracy_ending.jpg",
       "mimeType": "image/jpeg",
-      "sha256": "dd57358bb86e03d8619a820ff3b0773dea49d24a760ea09593c5594652876ea3",
-      "bytes": 219860
+      "sha256": "de385c9a8213f57fe02f4f82c92e75fea02053b3e7746d27ec9d159957eba23a",
+      "bytes": 171259
     },
     {
       "id": "file.cg.ring.invitation.jpg",
       "kind": "image",
       "path": "cg/ring_invitation.jpg",
       "mimeType": "image/jpeg",
-      "sha256": "ad02a44c0f89ce0a9e3a173a82bad62c6cfe94121c2e994bc91a487cdd13e5c1",
-      "bytes": 206839
+      "sha256": "c81d595770ba53e1563b6a3e33b3eb2e1877e0f6bb0f9e576bb9d4f14d29967a",
+      "bytes": 218535
     },
     {
       "id": "file.cg.surgery.of.memory.jpg",
       "kind": "image",
       "path": "cg/surgery_of_memory.jpg",
       "mimeType": "image/jpeg",
-      "sha256": "3856e752a99b3c8c4d83ae3cd2ae259ce8911b63439c3925d92d8bafc2231b68",
-      "bytes": 241224
+      "sha256": "6b711204cbf9f6d56d67b9e8a81a36b915cb54ad08ce168410f6b5f73efe8ebc",
+      "bytes": 234073
     },
     {
       "id": "file.cg.trust.threshold.jpg",
       "kind": "image",
       "path": "cg/trust_threshold.jpg",
       "mimeType": "image/jpeg",
-      "sha256": "ee433f58ec08d7311b0dccee6f184d5b6235e398bbc62698455276e33db673fc",
-      "bytes": 183900
+      "sha256": "ff181cf1e246356b2159059b095eccc1cfdf7015acb442c978a393d001961e1f",
+      "bytes": 218518
     },
     {
       "id": "file.cg.white.canvas.choice.jpg",
       "kind": "image",
       "path": "cg/white_canvas_choice.jpg",
       "mimeType": "image/jpeg",
-      "sha256": "ed4e27e3e480ec1bb7c3e1f400274fe8ca6277c9bd114a9edca1bcd3ad93a0d9",
-      "bytes": 200807
+      "sha256": "f29ba0d9d48ae0059dc4320c93acd5fc221e7cb29749c05375473fd20529c356",
+      "bytes": 153144
     },
     {
       "id": "file.cg.white.canvas.ending.jpg",
       "kind": "image",
       "path": "cg/white_canvas_ending.jpg",
       "mimeType": "image/jpeg",
-      "sha256": "c9c999a7eed0a02dc31fe84736e7ef8af39ecd47e288c3d99d19b9bc56b5145c",
-      "bytes": 232672
+      "sha256": "1c6c05ff9b4243e65851045bd4afbfed7d37c032dc95def7bbcbf74baacc1d9f",
+      "bytes": 206831
     },
     {
       "id": "file.characters.albina.armored.png",
       "kind": "image",
       "path": "characters/albina/armored.png",
       "mimeType": "image/png",
-      "sha256": "a0192ec0071b3d2af4f3d7e38ab29e7ed4cd140b084ebc10ff47e8a42e2a36e5",
-      "bytes": 1043427
+      "sha256": "1289dc40db0804e8007af624efc1a13e7c014d6079a5dda47ecb0c62b8006504",
+      "bytes": 2172236,
+      "provenance": {
+        "provider": "wisart-openai-compatible",
+        "model": "gpt-image-2",
+        "promptVersion": "albina-visual-migration-v1",
+        "sourceJobHash": "dd6f523188ab8a24692466693c42989909123e7b57ceca00d412aa3a2ec01c12",
+        "review": {
+          "status": "approved",
+          "reviewer": "workbuddy-agent",
+          "reviewedAt": "2026-09-06T07:16:43.236Z"
+        }
+      },
+      "rights": {
+        "status": "unverified",
+        "sourceType": "model-output",
+        "redistribution": "unverified",
+        "rightsBasis": "Redistribution rights for this model output have not been independently verified."
+      },
+      "lineage": {
+        "kind": "derivative",
+        "processVersion": "albina-visual-promotion-v1",
+        "inputs": [
+          {
+            "sha256": "a0192ec0071b3d2af4f3d7e38ab29e7ed4cd140b084ebc10ff47e8a42e2a36e5",
+            "role": "canon-visual-reference"
+          },
+          {
+            "assetId": "file.characters.albina.normal.png",
+            "sha256": "adae648a47c2a5285181cbbeb4d4066792b34f129cac40e48ab8974f3b9cc2ca",
+            "role": "approved-generated-reference"
+          },
+          {
+            "sha256": "aaf89630110b6fef687b86334404b00cd39fd29c84451971575b26a29ce51142",
+            "role": "canon-visual-reference"
+          }
+        ]
+      }
     },
     {
       "id": "file.characters.albina.combat.png",
       "kind": "image",
       "path": "characters/albina/combat.png",
       "mimeType": "image/png",
-      "sha256": "d253d25b615b31dbdc14b9b85a6873732fbe7f5595624a6a1f67db8e1c373833",
-      "bytes": 794440
+      "sha256": "3447b8cb8df4edec6325ab5262892a35bff6854cd7f0fa44aaab268a97182f62",
+      "bytes": 1986358,
+      "provenance": {
+        "provider": "wisart-openai-compatible",
+        "model": "gpt-image-2",
+        "promptVersion": "albina-visual-migration-v1",
+        "sourceJobHash": "073f993158e939e58ee94768ce4b33660dae1cfeaf11e5d92776b52cac4c6272",
+        "review": {
+          "status": "approved",
+          "reviewer": "workbuddy-agent",
+          "reviewedAt": "2026-09-06T07:16:43.320Z"
+        }
+      },
+      "rights": {
+        "status": "unverified",
+        "sourceType": "model-output",
+        "redistribution": "unverified",
+        "rightsBasis": "Redistribution rights for this model output have not been independently verified."
+      },
+      "lineage": {
+        "kind": "derivative",
+        "processVersion": "albina-visual-promotion-v1",
+        "inputs": [
+          {
+            "assetId": "file.characters.albina.normal.png",
+            "sha256": "adae648a47c2a5285181cbbeb4d4066792b34f129cac40e48ab8974f3b9cc2ca",
+            "role": "approved-generated-reference"
+          },
+          {
+            "sha256": "aaf89630110b6fef687b86334404b00cd39fd29c84451971575b26a29ce51142",
+            "role": "canon-visual-reference"
+          }
+        ]
+      }
     },
     {
       "id": "file.characters.albina.endgame.png",
       "kind": "image",
       "path": "characters/albina/endgame.png",
       "mimeType": "image/png",
-      "sha256": "10ba1187d40b50910ff2183f83812dff890885b47d27d64d96fcd719b603e92a",
-      "bytes": 886696
+      "sha256": "df6bfc313afb7a707cc580ed806efdbfb79e959f48c80f4a2674bf0318a7e51c",
+      "bytes": 2160675,
+      "provenance": {
+        "provider": "wisart-openai-compatible",
+        "model": "gpt-image-2",
+        "promptVersion": "albina-visual-migration-v1",
+        "sourceJobHash": "2eb3dcc1460b62f6868e3fc5ae0e4d193cf140517efb6cfbd76a3db3a0cb750c",
+        "review": {
+          "status": "approved",
+          "reviewer": "workbuddy-agent",
+          "reviewedAt": "2026-09-06T07:16:43.426Z"
+        }
+      },
+      "rights": {
+        "status": "unverified",
+        "sourceType": "model-output",
+        "redistribution": "unverified",
+        "rightsBasis": "Redistribution rights for this model output have not been independently verified."
+      },
+      "lineage": {
+        "kind": "derivative",
+        "processVersion": "albina-visual-promotion-v1",
+        "inputs": [
+          {
+            "assetId": "file.characters.albina.normal.png",
+            "sha256": "adae648a47c2a5285181cbbeb4d4066792b34f129cac40e48ab8974f3b9cc2ca",
+            "role": "approved-generated-reference"
+          },
+          {
+            "sha256": "aaf89630110b6fef687b86334404b00cd39fd29c84451971575b26a29ce51142",
+            "role": "canon-visual-reference"
+          }
+        ]
+      }
     },
     {
       "id": "file.characters.albina.fascia.open.png",
       "kind": "image",
       "path": "characters/albina/fascia-open.png",
       "mimeType": "image/png",
-      "sha256": "794865a3149891f0562df93cf61e3671f6793283949a6cdeec60f299cf0a8c4a",
-      "bytes": 226988
+      "sha256": "3c02947a0b3aa6b3c98012c580be7fedc92d2471d220f1440ac1a9d382d16428",
+      "bytes": 1962970,
+      "provenance": {
+        "provider": "wisart-openai-compatible",
+        "model": "gpt-image-2",
+        "promptVersion": "albina-visual-migration-v1",
+        "sourceJobHash": "0d210bd931e873db23605c9055aa9b88f4e602cb89b3d6013dcbacca50e26761",
+        "review": {
+          "status": "approved",
+          "reviewer": "workbuddy-agent",
+          "reviewedAt": "2026-09-06T07:16:43.514Z"
+        }
+      },
+      "rights": {
+        "status": "unverified",
+        "sourceType": "model-output",
+        "redistribution": "unverified",
+        "rightsBasis": "Redistribution rights for this model output have not been independently verified."
+      },
+      "lineage": {
+        "kind": "derivative",
+        "processVersion": "albina-visual-promotion-v1",
+        "inputs": [
+          {
+            "assetId": "file.characters.albina.normal.png",
+            "sha256": "adae648a47c2a5285181cbbeb4d4066792b34f129cac40e48ab8974f3b9cc2ca",
+            "role": "approved-generated-reference"
+          },
+          {
+            "sha256": "aaf89630110b6fef687b86334404b00cd39fd29c84451971575b26a29ce51142",
+            "role": "canon-visual-reference"
+          }
+        ]
+      }
     },
     {
       "id": "file.characters.albina.furious.png",
       "kind": "image",
       "path": "characters/albina/furious.png",
       "mimeType": "image/png",
-      "sha256": "6ad513b39c743c1c1d7230aa86f76d2cf1d5f2b0d5c0b9a75acacb9e03b2a7d3",
-      "bytes": 430213
+      "sha256": "b8a323f784eaebfc647ae89e77dc4e4b91dccd395e7907401d28dee9c62c7ab4",
+      "bytes": 1998913,
+      "provenance": {
+        "provider": "wisart-openai-compatible",
+        "model": "gpt-image-2",
+        "promptVersion": "albina-visual-migration-v1",
+        "sourceJobHash": "1e337c9de61aa0e09ce890a897efb8ed0d1c27c61a8254617d9dce06434d2af4",
+        "review": {
+          "status": "approved",
+          "reviewer": "workbuddy-agent",
+          "reviewedAt": "2026-09-06T07:16:43.597Z"
+        }
+      },
+      "rights": {
+        "status": "unverified",
+        "sourceType": "model-output",
+        "redistribution": "unverified",
+        "rightsBasis": "Redistribution rights for this model output have not been independently verified."
+      },
+      "lineage": {
+        "kind": "derivative",
+        "processVersion": "albina-visual-promotion-v1",
+        "inputs": [
+          {
+            "assetId": "file.characters.albina.normal.png",
+            "sha256": "adae648a47c2a5285181cbbeb4d4066792b34f129cac40e48ab8974f3b9cc2ca",
+            "role": "approved-generated-reference"
+          },
+          {
+            "sha256": "aaf89630110b6fef687b86334404b00cd39fd29c84451971575b26a29ce51142",
+            "role": "canon-visual-reference"
+          }
+        ]
+      }
     },
     {
       "id": "file.characters.albina.golden.bough.png",
       "kind": "image",
       "path": "characters/albina/golden-bough.png",
       "mimeType": "image/png",
-      "sha256": "7b96b2ec44022a3b8a86b2480e25bd01eb5ac32218e63382373e97c273baf831",
-      "bytes": 731292
+      "sha256": "c241ed5f31cf2c34cf0f9d3fd00968d93a8bb81d23b8a52e460614dd5643bfa8",
+      "bytes": 2212827,
+      "provenance": {
+        "provider": "wisart-openai-compatible",
+        "model": "gpt-image-2",
+        "promptVersion": "albina-visual-migration-v1",
+        "sourceJobHash": "630da67520f439af142ac03c6aef6d8718d28b9ffe7ac51761665a77d2e6225f",
+        "review": {
+          "status": "approved",
+          "reviewer": "workbuddy-agent",
+          "reviewedAt": "2026-09-06T07:16:43.678Z"
+        }
+      },
+      "rights": {
+        "status": "unverified",
+        "sourceType": "model-output",
+        "redistribution": "unverified",
+        "rightsBasis": "Redistribution rights for this model output have not been independently verified."
+      },
+      "lineage": {
+        "kind": "derivative",
+        "processVersion": "albina-visual-promotion-v1",
+        "inputs": [
+          {
+            "assetId": "file.characters.albina.normal.png",
+            "sha256": "adae648a47c2a5285181cbbeb4d4066792b34f129cac40e48ab8974f3b9cc2ca",
+            "role": "approved-generated-reference"
+          },
+          {
+            "sha256": "aaf89630110b6fef687b86334404b00cd39fd29c84451971575b26a29ce51142",
+            "role": "canon-visual-reference"
+          }
+        ]
+      }
     },
     {
       "id": "file.characters.albina.maestro.png",
       "kind": "image",
       "path": "characters/albina/maestro.png",
       "mimeType": "image/png",
-      "sha256": "b148b529b7fab01184fcfa54c8b80fa9a48fcc7723fc3498bd58e504015ea0ea",
-      "bytes": 434686
+      "sha256": "2f3d893f3d46d6539cdb100b8fc160feeec7e115d4dc114cb62e0872a41ce666",
+      "bytes": 2172368,
+      "provenance": {
+        "provider": "wisart-openai-compatible",
+        "model": "gpt-image-2",
+        "promptVersion": "albina-visual-migration-v1",
+        "sourceJobHash": "0edd7904fe047258df3c793d5c760e176e8b8a7f4a2f188478e3dad5aee280a8",
+        "review": {
+          "status": "approved",
+          "reviewer": "workbuddy-convergence-agent",
+          "reviewedAt": "2026-09-06T08:39:07.110Z"
+        }
+      },
+      "rights": {
+        "status": "unverified",
+        "sourceType": "model-output",
+        "redistribution": "unverified",
+        "rightsBasis": "Redistribution rights for this model output have not been independently verified."
+      },
+      "lineage": {
+        "kind": "derivative",
+        "processVersion": "albina-visual-promotion-v1",
+        "inputs": [
+          {
+            "assetId": "file.characters.albina.normal.png",
+            "sha256": "adae648a47c2a5285181cbbeb4d4066792b34f129cac40e48ab8974f3b9cc2ca",
+            "role": "approved-generated-reference"
+          },
+          {
+            "sha256": "aaf89630110b6fef687b86334404b00cd39fd29c84451971575b26a29ce51142",
+            "role": "canon-visual-reference"
+          }
+        ]
+      }
     },
     {
       "id": "file.characters.albina.normal.png",
       "kind": "image",
       "path": "characters/albina/normal.png",
       "mimeType": "image/png",
-      "sha256": "e68f9d04dda42e9ab86dcb686663057619c8dfbeff5f7d70078a083b0228aa55",
-      "bytes": 647858
+      "sha256": "adae648a47c2a5285181cbbeb4d4066792b34f129cac40e48ab8974f3b9cc2ca",
+      "bytes": 1963407,
+      "provenance": {
+        "provider": "wisart-openai-compatible",
+        "model": "gpt-image-2",
+        "promptVersion": "albina-visual-migration-v1",
+        "sourceJobHash": "d276251520f32cb9831f16e3ab87dcaa8a492ef64a8b01f7b32302cb201e2e62",
+        "review": {
+          "status": "approved",
+          "reviewer": "workbuddy-agent",
+          "reviewedAt": "2026-09-06T07:16:41.239Z"
+        }
+      },
+      "rights": {
+        "status": "unverified",
+        "sourceType": "model-output",
+        "redistribution": "unverified",
+        "rightsBasis": "Redistribution rights for this model output have not been independently verified."
+      },
+      "lineage": {
+        "kind": "derivative",
+        "processVersion": "albina-visual-promotion-v1",
+        "inputs": [
+          {
+            "sha256": "e68f9d04dda42e9ab86dcb686663057619c8dfbeff5f7d70078a083b0228aa55",
+            "role": "canon-visual-reference"
+          },
+          {
+            "sha256": "aaf89630110b6fef687b86334404b00cd39fd29c84451971575b26a29ce51142",
+            "role": "canon-visual-reference"
+          }
+        ]
+      }
     },
     {
       "id": "file.characters.albina.rain.png",
       "kind": "image",
       "path": "characters/albina/rain.png",
       "mimeType": "image/png",
-      "sha256": "a2b3fd27325ace3c20e92c441900e338b027f7cdcdb603c12dc92924e0175f06",
-      "bytes": 649497
+      "sha256": "e49132402829886bcdc6b847b02810e8849cd0932c882ed4c666565c6a0ddf6e",
+      "bytes": 2067569,
+      "provenance": {
+        "provider": "wisart-openai-compatible",
+        "model": "gpt-image-2",
+        "promptVersion": "albina-visual-migration-v1",
+        "sourceJobHash": "9d34fe57a2df51400283e9fd4d0e3d2fc70fb5514e4d4e99539b5be2faa4743b",
+        "review": {
+          "status": "approved",
+          "reviewer": "workbuddy-convergence-agent",
+          "reviewedAt": "2026-09-06T08:39:07.180Z"
+        }
+      },
+      "rights": {
+        "status": "unverified",
+        "sourceType": "model-output",
+        "redistribution": "unverified",
+        "rightsBasis": "Redistribution rights for this model output have not been independently verified."
+      },
+      "lineage": {
+        "kind": "derivative",
+        "processVersion": "albina-visual-promotion-v1",
+        "inputs": [
+          {
+            "assetId": "file.characters.albina.normal.png",
+            "sha256": "adae648a47c2a5285181cbbeb4d4066792b34f129cac40e48ab8974f3b9cc2ca",
+            "role": "approved-generated-reference"
+          },
+          {
+            "sha256": "aaf89630110b6fef687b86334404b00cd39fd29c84451971575b26a29ce51142",
+            "role": "canon-visual-reference"
+          }
+        ]
+      }
     },
     {
       "id": "file.characters.albina.ring.conspiracy.png",
       "kind": "image",
       "path": "characters/albina/ring-conspiracy.png",
       "mimeType": "image/png",
-      "sha256": "a0192ec0071b3d2af4f3d7e38ab29e7ed4cd140b084ebc10ff47e8a42e2a36e5",
-      "bytes": 1043427
+      "sha256": "60fd0b62d59b71179b7d5a2b498424968515f569052cd7e1754261eb275654eb",
+      "bytes": 2100795,
+      "provenance": {
+        "provider": "wisart-openai-compatible",
+        "model": "gpt-image-2",
+        "promptVersion": "albina-visual-migration-v1",
+        "sourceJobHash": "cdf177db14088fc00945e1ad763d984d4f71a1ac8f880180aae51add824a92e2",
+        "review": {
+          "status": "approved",
+          "reviewer": "workbuddy-convergence-agent",
+          "reviewedAt": "2026-09-06T08:39:07.229Z"
+        }
+      },
+      "rights": {
+        "status": "unverified",
+        "sourceType": "model-output",
+        "redistribution": "unverified",
+        "rightsBasis": "Redistribution rights for this model output have not been independently verified."
+      },
+      "lineage": {
+        "kind": "derivative",
+        "processVersion": "albina-visual-promotion-v1",
+        "inputs": [
+          {
+            "assetId": "file.characters.albina.normal.png",
+            "sha256": "adae648a47c2a5285181cbbeb4d4066792b34f129cac40e48ab8974f3b9cc2ca",
+            "role": "approved-generated-reference"
+          },
+          {
+            "sha256": "aaf89630110b6fef687b86334404b00cd39fd29c84451971575b26a29ce51142",
+            "role": "canon-visual-reference"
+          }
+        ]
+      }
     },
     {
       "id": "file.characters.albina.shy.png",
       "kind": "image",
       "path": "characters/albina/shy.png",
       "mimeType": "image/png",
-      "sha256": "928100cc984332c9b4f769cc38dba965425a91cc1aece23e9d384fc993509247",
-      "bytes": 649383
+      "sha256": "1ad926e1f3e1c6300e55849c1c224ca0fba722df1f89fb88c905867c68e5d52c",
+      "bytes": 1903598,
+      "provenance": {
+        "provider": "wisart-openai-compatible",
+        "model": "gpt-image-2",
+        "promptVersion": "albina-visual-migration-v1",
+        "sourceJobHash": "51ea8be2005a421e16ad8f11f17d489e0a103c34059846a2c2040a7cbae14d8b",
+        "review": {
+          "status": "approved",
+          "reviewer": "workbuddy-convergence-agent",
+          "reviewedAt": "2026-09-06T08:39:07.316Z"
+        }
+      },
+      "rights": {
+        "status": "unverified",
+        "sourceType": "model-output",
+        "redistribution": "unverified",
+        "rightsBasis": "Redistribution rights for this model output have not been independently verified."
+      },
+      "lineage": {
+        "kind": "derivative",
+        "processVersion": "albina-visual-promotion-v1",
+        "inputs": [
+          {
+            "assetId": "file.characters.albina.normal.png",
+            "sha256": "adae648a47c2a5285181cbbeb4d4066792b34f129cac40e48ab8974f3b9cc2ca",
+            "role": "approved-generated-reference"
+          },
+          {
+            "sha256": "aaf89630110b6fef687b86334404b00cd39fd29c84451971575b26a29ce51142",
+            "role": "canon-visual-reference"
+          }
+        ]
+      }
     },
     {
       "id": "file.characters.albina.surgical.png",
       "kind": "image",
       "path": "characters/albina/surgical.png",
       "mimeType": "image/png",
-      "sha256": "b01318b4e4677e4d6e4de6aad53149717364d36a0d66b56425100e31a6547897",
-      "bytes": 360435
+      "sha256": "d6ef29a4e507767be8df6f69701d9b5cf03614172c554540ab6634bfce7a736a",
+      "bytes": 2146240,
+      "provenance": {
+        "provider": "wisart-openai-compatible",
+        "model": "gpt-image-2",
+        "promptVersion": "albina-visual-migration-v1",
+        "sourceJobHash": "f6699c4a8f6e884560e7609aa0fcdd473fb0573f6f24b219922811ba8d9f574a",
+        "review": {
+          "status": "approved",
+          "reviewer": "workbuddy-convergence-agent",
+          "reviewedAt": "2026-09-06T08:39:07.387Z"
+        }
+      },
+      "rights": {
+        "status": "unverified",
+        "sourceType": "model-output",
+        "redistribution": "unverified",
+        "rightsBasis": "Redistribution rights for this model output have not been independently verified."
+      },
+      "lineage": {
+        "kind": "derivative",
+        "processVersion": "albina-visual-promotion-v1",
+        "inputs": [
+          {
+            "assetId": "file.characters.albina.normal.png",
+            "sha256": "adae648a47c2a5285181cbbeb4d4066792b34f129cac40e48ab8974f3b9cc2ca",
+            "role": "approved-generated-reference"
+          },
+          {
+            "sha256": "aaf89630110b6fef687b86334404b00cd39fd29c84451971575b26a29ce51142",
+            "role": "canon-visual-reference"
+          }
+        ]
+      }
     },
     {
       "id": "file.characters.albina.white.canvas.png",
       "kind": "image",
       "path": "characters/albina/white-canvas.png",
       "mimeType": "image/png",
-      "sha256": "cbf1f679143b6ed9ceee9a12ce5bab2ce571e09cbade31b9ae673d0e6479f3aa",
-      "bytes": 360278
+      "sha256": "3987479196fbdab2a2f5d2d4f33694eb6941590bfbb0ad47b69fc55b7848d215",
+      "bytes": 2294606,
+      "provenance": {
+        "provider": "wisart-openai-compatible",
+        "model": "gpt-image-2",
+        "promptVersion": "albina-visual-migration-v1",
+        "sourceJobHash": "189d8435920b1866dbd8fe8d161ae41df8bd34cef1c70c7c601f9ad13c487726",
+        "review": {
+          "status": "approved",
+          "reviewer": "workbuddy-convergence-agent",
+          "reviewedAt": "2026-09-06T08:39:07.440Z"
+        }
+      },
+      "rights": {
+        "status": "unverified",
+        "sourceType": "model-output",
+        "redistribution": "unverified",
+        "rightsBasis": "Redistribution rights for this model output have not been independently verified."
+      },
+      "lineage": {
+        "kind": "derivative",
+        "processVersion": "albina-visual-promotion-v1",
+        "inputs": [
+          {
+            "assetId": "file.characters.albina.normal.png",
+            "sha256": "adae648a47c2a5285181cbbeb4d4066792b34f129cac40e48ab8974f3b9cc2ca",
+            "role": "approved-generated-reference"
+          },
+          {
+            "sha256": "aaf89630110b6fef687b86334404b00cd39fd29c84451971575b26a29ce51142",
+            "role": "canon-visual-reference"
+          }
+        ]
+      }
     },
     {
       "id": "file.characters.callisto.normal.png",
       "kind": "image",
       "path": "characters/callisto/normal.png",
       "mimeType": "image/png",
-      "sha256": "7c9c806f2a9517c65648b085ec22d1b93d47effdab3d8be91d2f368c7e6039fd",
-      "bytes": 377258
+      "sha256": "e6158578e0fb0316c60224b86336bfe582a6515539f7ff22e2a7f2be4683c663",
+      "bytes": 1731827,
+      "provenance": {
+        "provider": "wisart-openai-compatible",
+        "model": "gpt-image-2",
+        "promptVersion": "albina-visual-migration-v1",
+        "sourceJobHash": "80417b5a4067aebc356d894691b168ae6cd2aca695a06d9de27c83d0589a6843",
+        "review": {
+          "status": "approved",
+          "reviewer": "workbuddy-agent",
+          "reviewedAt": "2026-09-06T07:16:41.312Z"
+        }
+      },
+      "rights": {
+        "status": "unverified",
+        "sourceType": "model-output",
+        "redistribution": "unverified",
+        "rightsBasis": "Redistribution rights for this model output have not been independently verified."
+      },
+      "lineage": {
+        "kind": "derivative",
+        "processVersion": "albina-visual-promotion-v1",
+        "inputs": [
+          {
+            "sha256": "ec23a9bd281921be8cd3ece2fc2c81a8815c79c79b553bf1924cac65be174275",
+            "role": "canon-visual-reference"
+          },
+          {
+            "sha256": "aaf89630110b6fef687b86334404b00cd39fd29c84451971575b26a29ce51142",
+            "role": "canon-visual-reference"
+          }
+        ]
+      }
     },
     {
       "id": "file.characters.dante.normal.png",
       "kind": "image",
       "path": "characters/dante/normal.png",
       "mimeType": "image/png",
-      "sha256": "1db98bd0ed89ce5d66c175a525907c6bee207fbe61a4bb118e41a141a2613603",
-      "bytes": 788630
+      "sha256": "40487edd1ddf95c2448e6dd1b6a74bdc25ed32001aa3bbf7282d436ba48be80d",
+      "bytes": 1553315,
+      "provenance": {
+        "provider": "wisart-openai-compatible",
+        "model": "gpt-image-2",
+        "promptVersion": "albina-visual-migration-v1",
+        "sourceJobHash": "fd2fb775497fa7b8a2731134510ef684fb4cd98c2ae8bda5a24bda6895eb3e3f",
+        "review": {
+          "status": "approved",
+          "reviewer": "workbuddy-agent",
+          "reviewedAt": "2026-09-06T07:16:41.386Z"
+        }
+      },
+      "rights": {
+        "status": "unverified",
+        "sourceType": "model-output",
+        "redistribution": "unverified",
+        "rightsBasis": "Redistribution rights for this model output have not been independently verified."
+      },
+      "lineage": {
+        "kind": "derivative",
+        "processVersion": "albina-visual-promotion-v1",
+        "inputs": [
+          {
+            "sha256": "9159aa76d13f54965f607398df7f032f66bc921470e4b8c94462e63f56f40263",
+            "role": "canon-visual-reference"
+          },
+          {
+            "sha256": "aaf89630110b6fef687b86334404b00cd39fd29c84451971575b26a29ce51142",
+            "role": "canon-visual-reference"
+          }
+        ]
+      }
     },
     {
       "id": "file.characters.faust.normal.png",
       "kind": "image",
       "path": "characters/faust/normal.png",
       "mimeType": "image/png",
-      "sha256": "9e5839384ac0d57d445d14301a38abdc357a28f33d8c345255c49b2f4fb9f5c7",
-      "bytes": 919963
+      "sha256": "181d1804a348d2acb99e1c5023eac471b732651b50b5aaeacbcfd329127d8eae",
+      "bytes": 1006098,
+      "provenance": {
+        "provider": "wisart-openai-compatible",
+        "model": "gpt-image-2",
+        "promptVersion": "albina-visual-migration-v1",
+        "sourceJobHash": "ff67e1d2166f56511280152f749a52fae2a120c7f2fd75277e0a5e197cd2097b",
+        "review": {
+          "status": "approved",
+          "reviewer": "workbuddy-agent",
+          "reviewedAt": "2026-09-06T07:16:41.443Z"
+        }
+      },
+      "rights": {
+        "status": "unverified",
+        "sourceType": "model-output",
+        "redistribution": "unverified",
+        "rightsBasis": "Redistribution rights for this model output have not been independently verified."
+      },
+      "lineage": {
+        "kind": "derivative",
+        "processVersion": "albina-visual-promotion-v1",
+        "inputs": [
+          {
+            "sha256": "a0033f3a9da006a862cd26eaf93ff9a86856f18a5a1ef7f2490461b84ef5e0d8",
+            "role": "canon-visual-reference"
+          },
+          {
+            "sha256": "aaf89630110b6fef687b86334404b00cd39fd29c84451971575b26a29ce51142",
+            "role": "canon-visual-reference"
+          }
+        ]
+      }
     },
     {
       "id": "file.characters.golden.apparition.normal.png",
       "kind": "image",
       "path": "characters/golden_apparition/normal.png",
       "mimeType": "image/png",
-      "sha256": "fc90202b6b36e901fe0e75e9e2bcb9e07dc13ef32dc97083a01a4703c6ba9faf",
-      "bytes": 633415
+      "sha256": "132c72858792800b8bcbb81e3aa28f32d3bb8f4fafff50ecb98daf7a2a228564",
+      "bytes": 2267971,
+      "provenance": {
+        "provider": "wisart-openai-compatible",
+        "model": "gpt-image-2",
+        "promptVersion": "albina-visual-migration-v1",
+        "sourceJobHash": "47df9bca817ad36a8cd2829115bd7a197c6de36e367ad2920e05aae387dfc437",
+        "review": {
+          "status": "approved",
+          "reviewer": "workbuddy-agent",
+          "reviewedAt": "2026-09-06T07:16:41.507Z"
+        }
+      },
+      "rights": {
+        "status": "unverified",
+        "sourceType": "model-output",
+        "redistribution": "unverified",
+        "rightsBasis": "Redistribution rights for this model output have not been independently verified."
+      },
+      "lineage": {
+        "kind": "derivative",
+        "processVersion": "albina-visual-promotion-v1",
+        "inputs": [
+          {
+            "sha256": "aaf89630110b6fef687b86334404b00cd39fd29c84451971575b26a29ce51142",
+            "role": "canon-visual-reference"
+          }
+        ]
+      }
     },
     {
       "id": "file.characters.lce.doctor.normal.png",
       "kind": "image",
       "path": "characters/lce_doctor/normal.png",
       "mimeType": "image/png",
-      "sha256": "938fdd640295fdd9c5d98e225696137f48667b140f2649961d6a504976b011f9",
-      "bytes": 597985
+      "sha256": "228c79b933fc9d28574fc044c56cce21de9037d4e3a0abd0e8c12d80463f8577",
+      "bytes": 2026329,
+      "provenance": {
+        "provider": "wisart-openai-compatible",
+        "model": "gpt-image-2",
+        "promptVersion": "albina-visual-migration-v1",
+        "sourceJobHash": "162ce3ef8272dc80f6345bb7796e91bcfce335d69ebfb7e8e95058abacd08f30",
+        "review": {
+          "status": "approved",
+          "reviewer": "workbuddy-agent",
+          "reviewedAt": "2026-09-06T07:16:42.935Z"
+        }
+      },
+      "rights": {
+        "status": "unverified",
+        "sourceType": "model-output",
+        "redistribution": "unverified",
+        "rightsBasis": "Redistribution rights for this model output have not been independently verified."
+      },
+      "lineage": {
+        "kind": "derivative",
+        "processVersion": "albina-visual-promotion-v1",
+        "inputs": [
+          {
+            "sha256": "aaf89630110b6fef687b86334404b00cd39fd29c84451971575b26a29ce51142",
+            "role": "canon-visual-reference"
+          }
+        ]
+      }
     },
     {
       "id": "file.characters.protagonist.battle.png",
       "kind": "image",
       "path": "characters/protagonist/battle.png",
       "mimeType": "image/png",
-      "sha256": "a436e968a646e580f9e6fca88ca9e82615f1a8a05cf68e1c494afe05a594d09f",
-      "bytes": 656294
+      "sha256": "5b40787a69bd7dc73c2b36570bf7c58c73e52a612ca6fbbc401f52ead494a400",
+      "bytes": 1958821,
+      "provenance": {
+        "provider": "wisart-openai-compatible",
+        "model": "gpt-image-2",
+        "promptVersion": "albina-visual-migration-v1",
+        "sourceJobHash": "fd9f2798509997f21363ad8bb169c933703226f7e2d59fca2be71ca064efa838",
+        "review": {
+          "status": "approved",
+          "reviewer": "workbuddy-convergence-agent",
+          "reviewedAt": "2026-09-06T08:39:07.521Z"
+        }
+      },
+      "rights": {
+        "status": "unverified",
+        "sourceType": "model-output",
+        "redistribution": "unverified",
+        "rightsBasis": "Redistribution rights for this model output have not been independently verified."
+      },
+      "lineage": {
+        "kind": "derivative",
+        "processVersion": "albina-visual-promotion-v1",
+        "inputs": [
+          {
+            "assetId": "file.characters.protagonist.serious.png",
+            "sha256": "461927edeaab75615f232e57131fb9294fca75ef00b794d7a4a2955c66aeb18a",
+            "role": "approved-generated-reference"
+          },
+          {
+            "sha256": "aaf89630110b6fef687b86334404b00cd39fd29c84451971575b26a29ce51142",
+            "role": "canon-visual-reference"
+          }
+        ]
+      }
     },
     {
       "id": "file.characters.protagonist.resolve.png",
       "kind": "image",
       "path": "characters/protagonist/resolve.png",
       "mimeType": "image/png",
-      "sha256": "f084da28bd5b55273519eab6c230bc580e069f7f302cff85d333f43f833684f3",
-      "bytes": 765412
+      "sha256": "20380c053a2b118a7cf85d7675501c0ae6837639e5a961f2b67ab48db6fcdce1",
+      "bytes": 1927800,
+      "provenance": {
+        "provider": "wisart-openai-compatible",
+        "model": "gpt-image-2",
+        "promptVersion": "albina-visual-migration-v1",
+        "sourceJobHash": "4104f970ff2d21540b2373d8a7edc090faec99c451192ae229b98453142cf17d",
+        "review": {
+          "status": "approved",
+          "reviewer": "workbuddy-convergence-agent",
+          "reviewedAt": "2026-09-06T08:39:07.592Z"
+        }
+      },
+      "rights": {
+        "status": "unverified",
+        "sourceType": "model-output",
+        "redistribution": "unverified",
+        "rightsBasis": "Redistribution rights for this model output have not been independently verified."
+      },
+      "lineage": {
+        "kind": "derivative",
+        "processVersion": "albina-visual-promotion-v1",
+        "inputs": [
+          {
+            "assetId": "file.characters.protagonist.serious.png",
+            "sha256": "461927edeaab75615f232e57131fb9294fca75ef00b794d7a4a2955c66aeb18a",
+            "role": "approved-generated-reference"
+          },
+          {
+            "sha256": "aaf89630110b6fef687b86334404b00cd39fd29c84451971575b26a29ce51142",
+            "role": "canon-visual-reference"
+          }
+        ]
+      }
     },
     {
       "id": "file.characters.protagonist.serious.png",
       "kind": "image",
       "path": "characters/protagonist/serious.png",
       "mimeType": "image/png",
-      "sha256": "d9fff4f95ed8513b464cd32be5735ec1a3d2b10e581c24a8232ab9a78f81a538",
-      "bytes": 612296
+      "sha256": "461927edeaab75615f232e57131fb9294fca75ef00b794d7a4a2955c66aeb18a",
+      "bytes": 1955781,
+      "provenance": {
+        "provider": "wisart-openai-compatible",
+        "model": "gpt-image-2",
+        "promptVersion": "albina-visual-migration-v1",
+        "sourceJobHash": "c56177800036a4f30448e6b30ae3d7cfa3b9a8e6dc44e6e713a29641d2e38b3e",
+        "review": {
+          "status": "approved",
+          "reviewer": "workbuddy-agent",
+          "reviewedAt": "2026-09-06T07:16:42.998Z"
+        }
+      },
+      "rights": {
+        "status": "unverified",
+        "sourceType": "model-output",
+        "redistribution": "unverified",
+        "rightsBasis": "Redistribution rights for this model output have not been independently verified."
+      },
+      "lineage": {
+        "kind": "derivative",
+        "processVersion": "albina-visual-promotion-v1",
+        "inputs": [
+          {
+            "sha256": "aaf89630110b6fef687b86334404b00cd39fd29c84451971575b26a29ce51142",
+            "role": "canon-visual-reference"
+          }
+        ]
+      }
     },
     {
       "id": "file.characters.protagonist.shadow.png",
       "kind": "image",
       "path": "characters/protagonist/shadow.png",
       "mimeType": "image/png",
-      "sha256": "47579ad18953940ceaf00122676a79d3f8618a0057cc1f1f740535df4644a04e",
-      "bytes": 679619
+      "sha256": "e041ba0b65c736c8b1c7c88d9e168160762f4f00075a54e8516af2d5d8094676",
+      "bytes": 1970183,
+      "provenance": {
+        "provider": "wisart-openai-compatible",
+        "model": "gpt-image-2",
+        "promptVersion": "albina-visual-migration-v1",
+        "sourceJobHash": "38dbfc1830daac6b2cdc86f4f1f30033f5346e7ce0f3258a97221b6e8f553706",
+        "review": {
+          "status": "approved",
+          "reviewer": "workbuddy-convergence-agent",
+          "reviewedAt": "2026-09-06T08:39:09.344Z"
+        }
+      },
+      "rights": {
+        "status": "unverified",
+        "sourceType": "model-output",
+        "redistribution": "unverified",
+        "rightsBasis": "Redistribution rights for this model output have not been independently verified."
+      },
+      "lineage": {
+        "kind": "derivative",
+        "processVersion": "albina-visual-promotion-v1",
+        "inputs": [
+          {
+            "assetId": "file.characters.protagonist.serious.png",
+            "sha256": "461927edeaab75615f232e57131fb9294fca75ef00b794d7a4a2955c66aeb18a",
+            "role": "approved-generated-reference"
+          },
+          {
+            "sha256": "aaf89630110b6fef687b86334404b00cd39fd29c84451971575b26a29ce51142",
+            "role": "canon-visual-reference"
+          }
+        ]
+      }
     },
     {
       "id": "file.characters.protagonist.tender.png",
       "kind": "image",
       "path": "characters/protagonist/tender.png",
       "mimeType": "image/png",
-      "sha256": "1e99e5724db77e7fc536d433980519121cc43740bfc17b4f810444a2681fb214",
-      "bytes": 693086
+      "sha256": "1654accf7c7cbdd16b6af3c3fa51d06fa0547b411451c1325d46bf02b71bd2d1",
+      "bytes": 1240890,
+      "provenance": {
+        "provider": "wisart-openai-compatible",
+        "model": "gpt-image-2",
+        "promptVersion": "albina-visual-migration-v1",
+        "sourceJobHash": "b975d8eaec44855c9dc886480298198d07c2effdc2799315c2c67c3491f5a3c1",
+        "review": {
+          "status": "approved",
+          "reviewer": "workbuddy-convergence-agent",
+          "reviewedAt": "2026-09-06T08:39:09.412Z"
+        }
+      },
+      "rights": {
+        "status": "unverified",
+        "sourceType": "model-output",
+        "redistribution": "unverified",
+        "rightsBasis": "Redistribution rights for this model output have not been independently verified."
+      },
+      "lineage": {
+        "kind": "derivative",
+        "processVersion": "albina-visual-promotion-v1",
+        "inputs": [
+          {
+            "assetId": "file.characters.protagonist.serious.png",
+            "sha256": "461927edeaab75615f232e57131fb9294fca75ef00b794d7a4a2955c66aeb18a",
+            "role": "approved-generated-reference"
+          },
+          {
+            "sha256": "aaf89630110b6fef687b86334404b00cd39fd29c84451971575b26a29ce51142",
+            "role": "canon-visual-reference"
+          }
+        ]
+      }
     },
     {
       "id": "file.characters.protagonist.wet.hair.png",
       "kind": "image",
       "path": "characters/protagonist/wet-hair.png",
       "mimeType": "image/png",
-      "sha256": "ef02c60087130fba338bd9757c5ea9f045435e60d658450890c6ab5d50699dd5",
-      "bytes": 702889
+      "sha256": "a3bac76af24bc52b1c1e26867aad87f8d83ba9cf118afcfbbebcc329bf7de163",
+      "bytes": 1945877,
+      "provenance": {
+        "provider": "wisart-openai-compatible",
+        "model": "gpt-image-2",
+        "promptVersion": "albina-visual-migration-v1",
+        "sourceJobHash": "464eac2d5316a6a77592189c23644659ac27ac54c00a6a12a8466c713fe0a234",
+        "review": {
+          "status": "approved",
+          "reviewer": "workbuddy-convergence-agent",
+          "reviewedAt": "2026-09-06T08:39:09.479Z"
+        }
+      },
+      "rights": {
+        "status": "unverified",
+        "sourceType": "model-output",
+        "redistribution": "unverified",
+        "rightsBasis": "Redistribution rights for this model output have not been independently verified."
+      },
+      "lineage": {
+        "kind": "derivative",
+        "processVersion": "albina-visual-promotion-v1",
+        "inputs": [
+          {
+            "assetId": "file.characters.protagonist.serious.png",
+            "sha256": "461927edeaab75615f232e57131fb9294fca75ef00b794d7a4a2955c66aeb18a",
+            "role": "approved-generated-reference"
+          },
+          {
+            "sha256": "aaf89630110b6fef687b86334404b00cd39fd29c84451971575b26a29ce51142",
+            "role": "canon-visual-reference"
+          }
+        ]
+      }
     },
     {
       "id": "file.characters.ren.normal.png",
       "kind": "image",
       "path": "characters/ren/normal.png",
       "mimeType": "image/png",
-      "sha256": "0bd7caac7ae057da27bf86378d17b24ee43a48b958713ece4f8fbf6a79cba6b6",
-      "bytes": 793467
+      "sha256": "5cfd6e712b8790c8a4bcb5d015b086ec2e7827d573cffcf2914446a24c6e9607",
+      "bytes": 1272491,
+      "provenance": {
+        "provider": "wisart-openai-compatible",
+        "model": "gpt-image-2",
+        "promptVersion": "albina-visual-migration-v1",
+        "sourceJobHash": "d6b5e000c8b9bd04c1d9cb92d7c86bc6db5c48ac0052fef13fa920318242fc70",
+        "review": {
+          "status": "approved",
+          "reviewer": "workbuddy-agent",
+          "reviewedAt": "2026-09-06T07:16:43.087Z"
+        }
+      },
+      "rights": {
+        "status": "unverified",
+        "sourceType": "model-output",
+        "redistribution": "unverified",
+        "rightsBasis": "Redistribution rights for this model output have not been independently verified."
+      },
+      "lineage": {
+        "kind": "derivative",
+        "processVersion": "albina-visual-promotion-v1",
+        "inputs": [
+          {
+            "sha256": "efe8cde8732d1a5a25062155b4d111dbf6185c3ba85e5612d5b67ccd465ec5bb",
+            "role": "canon-visual-reference"
+          },
+          {
+            "sha256": "aaf89630110b6fef687b86334404b00cd39fd29c84451971575b26a29ce51142",
+            "role": "canon-visual-reference"
+          }
+        ]
+      }
     },
     {
       "id": "file.characters.ring.agent.normal.png",
       "kind": "image",
       "path": "characters/ring_agent/normal.png",
       "mimeType": "image/png",
-      "sha256": "71536876e4949ff36037d647f05727bf39bb6bf843b186757aacfcc95bcfe07e",
-      "bytes": 581593
+      "sha256": "4192a5a189f8e96279a856a89e2bac08997b06d5e3584c645d9c30492e76f97b",
+      "bytes": 2018621,
+      "provenance": {
+        "provider": "wisart-openai-compatible",
+        "model": "gpt-image-2",
+        "promptVersion": "albina-visual-migration-v1",
+        "sourceJobHash": "dee40308176e259adc996d601f5d881e0e765db079d1bd8624eaf13255539e60",
+        "review": {
+          "status": "approved",
+          "reviewer": "workbuddy-agent",
+          "reviewedAt": "2026-09-06T07:16:43.156Z"
+        }
+      },
+      "rights": {
+        "status": "unverified",
+        "sourceType": "model-output",
+        "redistribution": "unverified",
+        "rightsBasis": "Redistribution rights for this model output have not been independently verified."
+      },
+      "lineage": {
+        "kind": "derivative",
+        "processVersion": "albina-visual-promotion-v1",
+        "inputs": [
+          {
+            "sha256": "aaf89630110b6fef687b86334404b00cd39fd29c84451971575b26a29ce51142",
+            "role": "canon-visual-reference"
+          }
+        ]
+      }
     },
     {
       "id": "file.characters.vergilius.normal.png",
       "kind": "image",
       "path": "characters/vergilius/normal.png",
       "mimeType": "image/png",
-      "sha256": "a952f7b8042794613c6fdfe7c6e58d7675d06c9c5653ac837247c94b3ab01135",
-      "bytes": 886285
-    },
-    {
-      "id": "file.video.animated.desktop.golden.bough.rebuild.ending.bad.mp4",
-      "kind": "video",
-      "path": "video/animated/desktop/golden_bough_rebuild_ending_bad.mp4",
-      "mimeType": "video/mp4",
-      "sha256": "665342bfcf45187bc05fead1ed445b2e7f3e1fb37154aefb507009f7c9423207",
-      "bytes": 5733582
-    },
-    {
-      "id": "file.video.animated.desktop.golden.bough.rebuild.ending.normal.mp4",
-      "kind": "video",
-      "path": "video/animated/desktop/golden_bough_rebuild_ending_normal.mp4",
-      "mimeType": "video/mp4",
-      "sha256": "9ec5e0bd56b9b033b793f0b13f52c728ea195b162fe23159c9f2acb5c87e6ffe",
-      "bytes": 5654162
-    },
-    {
-      "id": "file.video.animated.desktop.golden.bough.rebuild.ending.true.mp4",
-      "kind": "video",
-      "path": "video/animated/desktop/golden_bough_rebuild_ending_true.mp4",
-      "mimeType": "video/mp4",
-      "sha256": "af8899f54f80600b8bd0ba02c30627ed2c10783a2e2a9a7aa59f82328f3fe3a2",
-      "bytes": 6441698
-    },
-    {
-      "id": "file.video.animated.desktop.golden.bough.rebuild.scene.11.mp4",
-      "kind": "video",
-      "path": "video/animated/desktop/golden_bough_rebuild_scene_11.mp4",
-      "mimeType": "video/mp4",
-      "sha256": "a98d68c9ee81056f22437cf0e66c78ad4cc4d6004a5365ca51110d9067ec976f",
-      "bytes": 4268715
-    },
-    {
-      "id": "file.video.animated.desktop.golden.bough.rebuild.scene.15.mp4",
-      "kind": "video",
-      "path": "video/animated/desktop/golden_bough_rebuild_scene_15.mp4",
-      "mimeType": "video/mp4",
-      "sha256": "510afcd7f1c27b0a4f9abc44e82bae92bd9b3436c73b261de985887a1585ee5a",
-      "bytes": 4216527
-    },
-    {
-      "id": "file.video.animated.desktop.golden.bough.rebuild.scene.3.mp4",
-      "kind": "video",
-      "path": "video/animated/desktop/golden_bough_rebuild_scene_3.mp4",
-      "mimeType": "video/mp4",
-      "sha256": "cb5c7a63f0e068b4d1c0b4047763f46b13b30b48f9808523c8fb67e7f6415b53",
-      "bytes": 4336441
-    },
-    {
-      "id": "file.video.animated.desktop.golden.bough.rebuild.scene.5.mp4",
-      "kind": "video",
-      "path": "video/animated/desktop/golden_bough_rebuild_scene_5.mp4",
-      "mimeType": "video/mp4",
-      "sha256": "f5069cb9aebe21b4bc41545e74b2f4a1c6e5aeb27f9b7f5e08b2c5fc5274cfd4",
-      "bytes": 5039163
-    },
-    {
-      "id": "file.video.animated.desktop.golden.bough.rebuild.scene.8.mp4",
-      "kind": "video",
-      "path": "video/animated/desktop/golden_bough_rebuild_scene_8.mp4",
-      "mimeType": "video/mp4",
-      "sha256": "56176731dc6ccc9892bfc7e7163bb736f5f662226910235a38d28117eaa817bd",
-      "bytes": 5167077
-    },
-    {
-      "id": "file.video.animated.desktop.ring.conspiracy.ending.bad.mp4",
-      "kind": "video",
-      "path": "video/animated/desktop/ring_conspiracy_ending_bad.mp4",
-      "mimeType": "video/mp4",
-      "sha256": "bfec2285572943ba48b8802de82715c34e734d3d7d6c8e6884a625f9f4c92778",
-      "bytes": 6094767
-    },
-    {
-      "id": "file.video.animated.desktop.ring.conspiracy.ending.normal.mp4",
-      "kind": "video",
-      "path": "video/animated/desktop/ring_conspiracy_ending_normal.mp4",
-      "mimeType": "video/mp4",
-      "sha256": "566ceca8679dd52192a9799090e9f886daa3bace30e412194a108a27fd3fe853",
-      "bytes": 6301387
-    },
-    {
-      "id": "file.video.animated.desktop.ring.conspiracy.ending.true.mp4",
-      "kind": "video",
-      "path": "video/animated/desktop/ring_conspiracy_ending_true.mp4",
-      "mimeType": "video/mp4",
-      "sha256": "c945fb3562fbec8ba6bfba6ef10a73093c23dd530a551da7e2b1cd98bbe1093f",
-      "bytes": 6156384
-    },
-    {
-      "id": "file.video.animated.desktop.ring.conspiracy.scene.11.mp4",
-      "kind": "video",
-      "path": "video/animated/desktop/ring_conspiracy_scene_11.mp4",
-      "mimeType": "video/mp4",
-      "sha256": "b5740b4216b387d9b6727ec3b03b74c2946c6ad1bbd0d2775693f0b73ae97177",
-      "bytes": 4316911
-    },
-    {
-      "id": "file.video.animated.desktop.ring.conspiracy.scene.15.mp4",
-      "kind": "video",
-      "path": "video/animated/desktop/ring_conspiracy_scene_15.mp4",
-      "mimeType": "video/mp4",
-      "sha256": "9574f17e8508b66848012e1b88e25a933cea64721d2605c806db3b59c11862ef",
-      "bytes": 4755598
-    },
-    {
-      "id": "file.video.animated.desktop.ring.conspiracy.scene.3.mp4",
-      "kind": "video",
-      "path": "video/animated/desktop/ring_conspiracy_scene_3.mp4",
-      "mimeType": "video/mp4",
-      "sha256": "42ec46e059405f1be4ea1b274cd521eb5f1f1c41b520314fca44bfc951b1823d",
-      "bytes": 5108387
-    },
-    {
-      "id": "file.video.animated.desktop.ring.conspiracy.scene.5.mp4",
-      "kind": "video",
-      "path": "video/animated/desktop/ring_conspiracy_scene_5.mp4",
-      "mimeType": "video/mp4",
-      "sha256": "3b819372d1fd9c752159286998407a266f0aafdc95195cab7eb4cd7e182fb86c",
-      "bytes": 5735950
-    },
-    {
-      "id": "file.video.animated.desktop.ring.conspiracy.scene.8.mp4",
-      "kind": "video",
-      "path": "video/animated/desktop/ring_conspiracy_scene_8.mp4",
-      "mimeType": "video/mp4",
-      "sha256": "732fdcda28570fb7d481767b46d4cf751e771dddab1597baeb7cb659fdaedf83",
-      "bytes": 5699635
-    },
-    {
-      "id": "file.video.animated.desktop.white.canvas.ending.bad.mp4",
-      "kind": "video",
-      "path": "video/animated/desktop/white_canvas_ending_bad.mp4",
-      "mimeType": "video/mp4",
-      "sha256": "93cd772af7a5e2b378b4dc0772d84a53feed7ef450c97082b431ab8802b61b80",
-      "bytes": 6060788
-    },
-    {
-      "id": "file.video.animated.desktop.white.canvas.ending.normal.mp4",
-      "kind": "video",
-      "path": "video/animated/desktop/white_canvas_ending_normal.mp4",
-      "mimeType": "video/mp4",
-      "sha256": "4e5f5ebd2cf3799429539538971be9fbc6936e5163271e3779dbd1383076621b",
-      "bytes": 5326928
-    },
-    {
-      "id": "file.video.animated.desktop.white.canvas.ending.true.mp4",
-      "kind": "video",
-      "path": "video/animated/desktop/white_canvas_ending_true.mp4",
-      "mimeType": "video/mp4",
-      "sha256": "a4422751cdf6be2191b39e7ea0d3a85e6edc215e7348d050e4f1ab63c2d5677d",
-      "bytes": 7228337
-    },
-    {
-      "id": "file.video.animated.desktop.white.canvas.scene.11.mp4",
-      "kind": "video",
-      "path": "video/animated/desktop/white_canvas_scene_11.mp4",
-      "mimeType": "video/mp4",
-      "sha256": "a2619096252787ec30101ba5feeaf0dda06d7f318bcdac080ab4ba0aa9568e12",
-      "bytes": 5294302
-    },
-    {
-      "id": "file.video.animated.desktop.white.canvas.scene.15.mp4",
-      "kind": "video",
-      "path": "video/animated/desktop/white_canvas_scene_15.mp4",
-      "mimeType": "video/mp4",
-      "sha256": "5ec29acf9df1f18494609471eddf5de221f2411acc986c6168bb9369494ad5ae",
-      "bytes": 4505329
-    },
-    {
-      "id": "file.video.animated.desktop.white.canvas.scene.3.mp4",
-      "kind": "video",
-      "path": "video/animated/desktop/white_canvas_scene_3.mp4",
-      "mimeType": "video/mp4",
-      "sha256": "50a48863359fff18e8f7fff87dfd808ae025d91179321688bc0353743887f1fd",
-      "bytes": 5346356
-    },
-    {
-      "id": "file.video.animated.desktop.white.canvas.scene.5.mp4",
-      "kind": "video",
-      "path": "video/animated/desktop/white_canvas_scene_5.mp4",
-      "mimeType": "video/mp4",
-      "sha256": "61555b7011baa029652d9304d86b7b712bab75d6f0b26b2860db578587f0a343",
-      "bytes": 5230805
-    },
-    {
-      "id": "file.video.animated.desktop.white.canvas.scene.8.mp4",
-      "kind": "video",
-      "path": "video/animated/desktop/white_canvas_scene_8.mp4",
-      "mimeType": "video/mp4",
-      "sha256": "8786be555709f223064e4e4853e175b1b33c8b9eb2012f0081897f59d36798df",
-      "bytes": 4854170
-    },
-    {
-      "id": "file.video.animated.runtime.golden.bough.rebuild.ending.bad.mp4",
-      "kind": "video",
-      "path": "video/animated/runtime/golden_bough_rebuild_ending_bad.mp4",
-      "mimeType": "video/mp4",
-      "sha256": "2af1ba03d1a26ef0e96260cec4474578bfc692c79d8a125fc4524ae22d3d8688",
-      "bytes": 3012453
-    },
-    {
-      "id": "file.video.animated.runtime.golden.bough.rebuild.ending.normal.mp4",
-      "kind": "video",
-      "path": "video/animated/runtime/golden_bough_rebuild_ending_normal.mp4",
-      "mimeType": "video/mp4",
-      "sha256": "c7b76d353c27b8b61d5b08fffbdeb96f08502f321f9f00975cb3cefc289c54a2",
-      "bytes": 3238393
-    },
-    {
-      "id": "file.video.animated.runtime.golden.bough.rebuild.ending.true.mp4",
-      "kind": "video",
-      "path": "video/animated/runtime/golden_bough_rebuild_ending_true.mp4",
-      "mimeType": "video/mp4",
-      "sha256": "04e46ecdbb3d51e881115671f0fe742e62268a7fced794974f15731fff8eb8f9",
-      "bytes": 3603061
-    },
-    {
-      "id": "file.video.animated.runtime.golden.bough.rebuild.scene.11.mp4",
-      "kind": "video",
-      "path": "video/animated/runtime/golden_bough_rebuild_scene_11.mp4",
-      "mimeType": "video/mp4",
-      "sha256": "e90196bc46e73f0a120aa895c548dc2b107f604ad300eba8c6109c287bb0f67d",
-      "bytes": 2528370
-    },
-    {
-      "id": "file.video.animated.runtime.golden.bough.rebuild.scene.15.mp4",
-      "kind": "video",
-      "path": "video/animated/runtime/golden_bough_rebuild_scene_15.mp4",
-      "mimeType": "video/mp4",
-      "sha256": "e08b3d96a184c441975dbf1bac7566d10e720ea82eb517c090aee948fc601dfa",
-      "bytes": 2353207
-    },
-    {
-      "id": "file.video.animated.runtime.golden.bough.rebuild.scene.3.mp4",
-      "kind": "video",
-      "path": "video/animated/runtime/golden_bough_rebuild_scene_3.mp4",
-      "mimeType": "video/mp4",
-      "sha256": "fc7361fdf237dd21e876149aea4950496f28f918747b0aba62713113543b3a07",
-      "bytes": 2477070
-    },
-    {
-      "id": "file.video.animated.runtime.golden.bough.rebuild.scene.5.mp4",
-      "kind": "video",
-      "path": "video/animated/runtime/golden_bough_rebuild_scene_5.mp4",
-      "mimeType": "video/mp4",
-      "sha256": "d901739424d56709c632bfb61b395d0874c0b279f20578e0485c1ce5697f5b95",
-      "bytes": 2926949
-    },
-    {
-      "id": "file.video.animated.runtime.golden.bough.rebuild.scene.8.mp4",
-      "kind": "video",
-      "path": "video/animated/runtime/golden_bough_rebuild_scene_8.mp4",
-      "mimeType": "video/mp4",
-      "sha256": "dc3b1cce4d43093e240e390a2f3209228ffa73a2041e89ae292e0790d66118ed",
-      "bytes": 2797722
-    },
-    {
-      "id": "file.video.animated.runtime.ring.conspiracy.ending.bad.mp4",
-      "kind": "video",
-      "path": "video/animated/runtime/ring_conspiracy_ending_bad.mp4",
-      "mimeType": "video/mp4",
-      "sha256": "0cf0ac007c3e1ebd37862e02146d137117838c9530fead20611ec4b179a2d079",
-      "bytes": 3519338
-    },
-    {
-      "id": "file.video.animated.runtime.ring.conspiracy.ending.normal.mp4",
-      "kind": "video",
-      "path": "video/animated/runtime/ring_conspiracy_ending_normal.mp4",
-      "mimeType": "video/mp4",
-      "sha256": "78b95f376a8fe4851309af86231c18fac0d870baa6294fbc14126face05095b3",
-      "bytes": 3401115
-    },
-    {
-      "id": "file.video.animated.runtime.ring.conspiracy.ending.true.mp4",
-      "kind": "video",
-      "path": "video/animated/runtime/ring_conspiracy_ending_true.mp4",
-      "mimeType": "video/mp4",
-      "sha256": "986917f0fe50af48c6f7a150561e48c226f992e2429c789fc6ce4ea6e1e3f346",
-      "bytes": 3567238
-    },
-    {
-      "id": "file.video.animated.runtime.ring.conspiracy.scene.11.mp4",
-      "kind": "video",
-      "path": "video/animated/runtime/ring_conspiracy_scene_11.mp4",
-      "mimeType": "video/mp4",
-      "sha256": "7a4911e99e2bea1509d9cc44836a2fd1d855d0b3f0ff14713265efd5bcfcec9f",
-      "bytes": 2400055
-    },
-    {
-      "id": "file.video.animated.runtime.ring.conspiracy.scene.15.mp4",
-      "kind": "video",
-      "path": "video/animated/runtime/ring_conspiracy_scene_15.mp4",
-      "mimeType": "video/mp4",
-      "sha256": "115b2505bc82d8e98b236556e5b709b468346c4c197fdcbb51dd1887db9f6f69",
-      "bytes": 2591243
-    },
-    {
-      "id": "file.video.animated.runtime.ring.conspiracy.scene.3.mp4",
-      "kind": "video",
-      "path": "video/animated/runtime/ring_conspiracy_scene_3.mp4",
-      "mimeType": "video/mp4",
-      "sha256": "a7481f6b1a6811072cc09b1bbd5ac639f6faa11e9041531d50b220ed1442a6e8",
-      "bytes": 2674192
-    },
-    {
-      "id": "file.video.animated.runtime.ring.conspiracy.scene.5.mp4",
-      "kind": "video",
-      "path": "video/animated/runtime/ring_conspiracy_scene_5.mp4",
-      "mimeType": "video/mp4",
-      "sha256": "65db5a7e97fab0ccfcc26e4ae078b86f2016ad16eef0ade738f005a49969f4aa",
-      "bytes": 3100461
-    },
-    {
-      "id": "file.video.animated.runtime.ring.conspiracy.scene.8.mp4",
-      "kind": "video",
-      "path": "video/animated/runtime/ring_conspiracy_scene_8.mp4",
-      "mimeType": "video/mp4",
-      "sha256": "6fc2c2c0155ff68915d0ffc2a97f68d5a66b84857745826967ff64c3fbe384ac",
-      "bytes": 3009439
-    },
-    {
-      "id": "file.video.animated.runtime.white.canvas.ending.bad.mp4",
-      "kind": "video",
-      "path": "video/animated/runtime/white_canvas_ending_bad.mp4",
-      "mimeType": "video/mp4",
-      "sha256": "b3b101dde3f85be5b68657b66ecfc1b02d0d6c42cf70ba30e516ef1ff010473c",
-      "bytes": 3336544
-    },
-    {
-      "id": "file.video.animated.runtime.white.canvas.ending.normal.mp4",
-      "kind": "video",
-      "path": "video/animated/runtime/white_canvas_ending_normal.mp4",
-      "mimeType": "video/mp4",
-      "sha256": "c62b1344da7cb5a4b3fc2b3c144d815970eab741f818771bbc750f4248852f08",
-      "bytes": 2756449
-    },
-    {
-      "id": "file.video.animated.runtime.white.canvas.ending.true.mp4",
-      "kind": "video",
-      "path": "video/animated/runtime/white_canvas_ending_true.mp4",
-      "mimeType": "video/mp4",
-      "sha256": "454767d2595ad285ada75c920eeb5974626471930549e840669ffd2d856e9d37",
-      "bytes": 3932490
-    },
-    {
-      "id": "file.video.animated.runtime.white.canvas.scene.11.mp4",
-      "kind": "video",
-      "path": "video/animated/runtime/white_canvas_scene_11.mp4",
-      "mimeType": "video/mp4",
-      "sha256": "a25ef4770934afd8cc6fc6bab08167a4aa1594fdb301edd1914411438eb01b93",
-      "bytes": 2890842
-    },
-    {
-      "id": "file.video.animated.runtime.white.canvas.scene.15.mp4",
-      "kind": "video",
-      "path": "video/animated/runtime/white_canvas_scene_15.mp4",
-      "mimeType": "video/mp4",
-      "sha256": "f5226beecc7be5275123f7cc6a91a1b58f74e831d020a788ac52a1015c9c6c2e",
-      "bytes": 2537450
-    },
-    {
-      "id": "file.video.animated.runtime.white.canvas.scene.3.mp4",
-      "kind": "video",
-      "path": "video/animated/runtime/white_canvas_scene_3.mp4",
-      "mimeType": "video/mp4",
-      "sha256": "e7d8746ec4825f0f496c2106e5c1d7862b8a00246e3109574946ccbef5be5ac7",
-      "bytes": 3030226
-    },
-    {
-      "id": "file.video.animated.runtime.white.canvas.scene.5.mp4",
-      "kind": "video",
-      "path": "video/animated/runtime/white_canvas_scene_5.mp4",
-      "mimeType": "video/mp4",
-      "sha256": "8d154e505624dde023f61510cd6cc25337ef23f43190728e72034d85806a3569",
-      "bytes": 2971914
-    },
-    {
-      "id": "file.video.animated.runtime.white.canvas.scene.8.mp4",
-      "kind": "video",
-      "path": "video/animated/runtime/white_canvas_scene_8.mp4",
-      "mimeType": "video/mp4",
-      "sha256": "ba894e5efb361a9bf52c1d5b45ec2b04ed552b4024f3e8c1fd3cf54830c8f899",
-      "bytes": 2685560
-    },
-    {
-      "id": "video.animated.desktop.golden_bough_rebuild_ending_bad",
-      "kind": "video",
-      "path": "video/animated/desktop/golden_bough_rebuild_ending_bad.mp4",
-      "mimeType": "video/mp4",
-      "sha256": "665342bfcf45187bc05fead1ed445b2e7f3e1fb37154aefb507009f7c9423207",
-      "bytes": 5733582
-    },
-    {
-      "id": "video.animated.desktop.golden_bough_rebuild_ending_normal",
-      "kind": "video",
-      "path": "video/animated/desktop/golden_bough_rebuild_ending_normal.mp4",
-      "mimeType": "video/mp4",
-      "sha256": "9ec5e0bd56b9b033b793f0b13f52c728ea195b162fe23159c9f2acb5c87e6ffe",
-      "bytes": 5654162
-    },
-    {
-      "id": "video.animated.desktop.golden_bough_rebuild_ending_true",
-      "kind": "video",
-      "path": "video/animated/desktop/golden_bough_rebuild_ending_true.mp4",
-      "mimeType": "video/mp4",
-      "sha256": "af8899f54f80600b8bd0ba02c30627ed2c10783a2e2a9a7aa59f82328f3fe3a2",
-      "bytes": 6441698
-    },
-    {
-      "id": "video.animated.desktop.golden_bough_rebuild_scene_11",
-      "kind": "video",
-      "path": "video/animated/desktop/golden_bough_rebuild_scene_11.mp4",
-      "mimeType": "video/mp4",
-      "sha256": "a98d68c9ee81056f22437cf0e66c78ad4cc4d6004a5365ca51110d9067ec976f",
-      "bytes": 4268715
-    },
-    {
-      "id": "video.animated.desktop.golden_bough_rebuild_scene_15",
-      "kind": "video",
-      "path": "video/animated/desktop/golden_bough_rebuild_scene_15.mp4",
-      "mimeType": "video/mp4",
-      "sha256": "510afcd7f1c27b0a4f9abc44e82bae92bd9b3436c73b261de985887a1585ee5a",
-      "bytes": 4216527
-    },
-    {
-      "id": "video.animated.desktop.golden_bough_rebuild_scene_3",
-      "kind": "video",
-      "path": "video/animated/desktop/golden_bough_rebuild_scene_3.mp4",
-      "mimeType": "video/mp4",
-      "sha256": "cb5c7a63f0e068b4d1c0b4047763f46b13b30b48f9808523c8fb67e7f6415b53",
-      "bytes": 4336441
-    },
-    {
-      "id": "video.animated.desktop.golden_bough_rebuild_scene_5",
-      "kind": "video",
-      "path": "video/animated/desktop/golden_bough_rebuild_scene_5.mp4",
-      "mimeType": "video/mp4",
-      "sha256": "f5069cb9aebe21b4bc41545e74b2f4a1c6e5aeb27f9b7f5e08b2c5fc5274cfd4",
-      "bytes": 5039163
-    },
-    {
-      "id": "video.animated.desktop.golden_bough_rebuild_scene_8",
-      "kind": "video",
-      "path": "video/animated/desktop/golden_bough_rebuild_scene_8.mp4",
-      "mimeType": "video/mp4",
-      "sha256": "56176731dc6ccc9892bfc7e7163bb736f5f662226910235a38d28117eaa817bd",
-      "bytes": 5167077
-    },
-    {
-      "id": "video.animated.desktop.ring_conspiracy_ending_bad",
-      "kind": "video",
-      "path": "video/animated/desktop/ring_conspiracy_ending_bad.mp4",
-      "mimeType": "video/mp4",
-      "sha256": "bfec2285572943ba48b8802de82715c34e734d3d7d6c8e6884a625f9f4c92778",
-      "bytes": 6094767
-    },
-    {
-      "id": "video.animated.desktop.ring_conspiracy_ending_normal",
-      "kind": "video",
-      "path": "video/animated/desktop/ring_conspiracy_ending_normal.mp4",
-      "mimeType": "video/mp4",
-      "sha256": "566ceca8679dd52192a9799090e9f886daa3bace30e412194a108a27fd3fe853",
-      "bytes": 6301387
-    },
-    {
-      "id": "video.animated.desktop.ring_conspiracy_ending_true",
-      "kind": "video",
-      "path": "video/animated/desktop/ring_conspiracy_ending_true.mp4",
-      "mimeType": "video/mp4",
-      "sha256": "c945fb3562fbec8ba6bfba6ef10a73093c23dd530a551da7e2b1cd98bbe1093f",
-      "bytes": 6156384
-    },
-    {
-      "id": "video.animated.desktop.ring_conspiracy_scene_11",
-      "kind": "video",
-      "path": "video/animated/desktop/ring_conspiracy_scene_11.mp4",
-      "mimeType": "video/mp4",
-      "sha256": "b5740b4216b387d9b6727ec3b03b74c2946c6ad1bbd0d2775693f0b73ae97177",
-      "bytes": 4316911
-    },
-    {
-      "id": "video.animated.desktop.ring_conspiracy_scene_15",
-      "kind": "video",
-      "path": "video/animated/desktop/ring_conspiracy_scene_15.mp4",
-      "mimeType": "video/mp4",
-      "sha256": "9574f17e8508b66848012e1b88e25a933cea64721d2605c806db3b59c11862ef",
-      "bytes": 4755598
-    },
-    {
-      "id": "video.animated.desktop.ring_conspiracy_scene_3",
-      "kind": "video",
-      "path": "video/animated/desktop/ring_conspiracy_scene_3.mp4",
-      "mimeType": "video/mp4",
-      "sha256": "42ec46e059405f1be4ea1b274cd521eb5f1f1c41b520314fca44bfc951b1823d",
-      "bytes": 5108387
-    },
-    {
-      "id": "video.animated.desktop.ring_conspiracy_scene_5",
-      "kind": "video",
-      "path": "video/animated/desktop/ring_conspiracy_scene_5.mp4",
-      "mimeType": "video/mp4",
-      "sha256": "3b819372d1fd9c752159286998407a266f0aafdc95195cab7eb4cd7e182fb86c",
-      "bytes": 5735950
-    },
-    {
-      "id": "video.animated.desktop.ring_conspiracy_scene_8",
-      "kind": "video",
-      "path": "video/animated/desktop/ring_conspiracy_scene_8.mp4",
-      "mimeType": "video/mp4",
-      "sha256": "732fdcda28570fb7d481767b46d4cf751e771dddab1597baeb7cb659fdaedf83",
-      "bytes": 5699635
-    },
-    {
-      "id": "video.animated.desktop.white_canvas_ending_bad",
-      "kind": "video",
-      "path": "video/animated/desktop/white_canvas_ending_bad.mp4",
-      "mimeType": "video/mp4",
-      "sha256": "93cd772af7a5e2b378b4dc0772d84a53feed7ef450c97082b431ab8802b61b80",
-      "bytes": 6060788
-    },
-    {
-      "id": "video.animated.desktop.white_canvas_ending_normal",
-      "kind": "video",
-      "path": "video/animated/desktop/white_canvas_ending_normal.mp4",
-      "mimeType": "video/mp4",
-      "sha256": "4e5f5ebd2cf3799429539538971be9fbc6936e5163271e3779dbd1383076621b",
-      "bytes": 5326928
-    },
-    {
-      "id": "video.animated.desktop.white_canvas_ending_true",
-      "kind": "video",
-      "path": "video/animated/desktop/white_canvas_ending_true.mp4",
-      "mimeType": "video/mp4",
-      "sha256": "a4422751cdf6be2191b39e7ea0d3a85e6edc215e7348d050e4f1ab63c2d5677d",
-      "bytes": 7228337
-    },
-    {
-      "id": "video.animated.desktop.white_canvas_scene_11",
-      "kind": "video",
-      "path": "video/animated/desktop/white_canvas_scene_11.mp4",
-      "mimeType": "video/mp4",
-      "sha256": "a2619096252787ec30101ba5feeaf0dda06d7f318bcdac080ab4ba0aa9568e12",
-      "bytes": 5294302
-    },
-    {
-      "id": "video.animated.desktop.white_canvas_scene_15",
-      "kind": "video",
-      "path": "video/animated/desktop/white_canvas_scene_15.mp4",
-      "mimeType": "video/mp4",
-      "sha256": "5ec29acf9df1f18494609471eddf5de221f2411acc986c6168bb9369494ad5ae",
-      "bytes": 4505329
-    },
-    {
-      "id": "video.animated.desktop.white_canvas_scene_3",
-      "kind": "video",
-      "path": "video/animated/desktop/white_canvas_scene_3.mp4",
-      "mimeType": "video/mp4",
-      "sha256": "50a48863359fff18e8f7fff87dfd808ae025d91179321688bc0353743887f1fd",
-      "bytes": 5346356
-    },
-    {
-      "id": "video.animated.desktop.white_canvas_scene_5",
-      "kind": "video",
-      "path": "video/animated/desktop/white_canvas_scene_5.mp4",
-      "mimeType": "video/mp4",
-      "sha256": "61555b7011baa029652d9304d86b7b712bab75d6f0b26b2860db578587f0a343",
-      "bytes": 5230805
-    },
-    {
-      "id": "video.animated.desktop.white_canvas_scene_8",
-      "kind": "video",
-      "path": "video/animated/desktop/white_canvas_scene_8.mp4",
-      "mimeType": "video/mp4",
-      "sha256": "8786be555709f223064e4e4853e175b1b33c8b9eb2012f0081897f59d36798df",
-      "bytes": 4854170
-    },
-    {
-      "id": "video.animated.runtime.golden_bough_rebuild_ending_bad",
-      "kind": "video",
-      "path": "video/animated/runtime/golden_bough_rebuild_ending_bad.mp4",
-      "mimeType": "video/mp4",
-      "sha256": "2af1ba03d1a26ef0e96260cec4474578bfc692c79d8a125fc4524ae22d3d8688",
-      "bytes": 3012453
-    },
-    {
-      "id": "video.animated.runtime.golden_bough_rebuild_ending_normal",
-      "kind": "video",
-      "path": "video/animated/runtime/golden_bough_rebuild_ending_normal.mp4",
-      "mimeType": "video/mp4",
-      "sha256": "c7b76d353c27b8b61d5b08fffbdeb96f08502f321f9f00975cb3cefc289c54a2",
-      "bytes": 3238393
-    },
-    {
-      "id": "video.animated.runtime.golden_bough_rebuild_ending_true",
-      "kind": "video",
-      "path": "video/animated/runtime/golden_bough_rebuild_ending_true.mp4",
-      "mimeType": "video/mp4",
-      "sha256": "04e46ecdbb3d51e881115671f0fe742e62268a7fced794974f15731fff8eb8f9",
-      "bytes": 3603061
-    },
-    {
-      "id": "video.animated.runtime.golden_bough_rebuild_scene_11",
-      "kind": "video",
-      "path": "video/animated/runtime/golden_bough_rebuild_scene_11.mp4",
-      "mimeType": "video/mp4",
-      "sha256": "e90196bc46e73f0a120aa895c548dc2b107f604ad300eba8c6109c287bb0f67d",
-      "bytes": 2528370
-    },
-    {
-      "id": "video.animated.runtime.golden_bough_rebuild_scene_15",
-      "kind": "video",
-      "path": "video/animated/runtime/golden_bough_rebuild_scene_15.mp4",
-      "mimeType": "video/mp4",
-      "sha256": "e08b3d96a184c441975dbf1bac7566d10e720ea82eb517c090aee948fc601dfa",
-      "bytes": 2353207
-    },
-    {
-      "id": "video.animated.runtime.golden_bough_rebuild_scene_3",
-      "kind": "video",
-      "path": "video/animated/runtime/golden_bough_rebuild_scene_3.mp4",
-      "mimeType": "video/mp4",
-      "sha256": "fc7361fdf237dd21e876149aea4950496f28f918747b0aba62713113543b3a07",
-      "bytes": 2477070
-    },
-    {
-      "id": "video.animated.runtime.golden_bough_rebuild_scene_5",
-      "kind": "video",
-      "path": "video/animated/runtime/golden_bough_rebuild_scene_5.mp4",
-      "mimeType": "video/mp4",
-      "sha256": "d901739424d56709c632bfb61b395d0874c0b279f20578e0485c1ce5697f5b95",
-      "bytes": 2926949
-    },
-    {
-      "id": "video.animated.runtime.golden_bough_rebuild_scene_8",
-      "kind": "video",
-      "path": "video/animated/runtime/golden_bough_rebuild_scene_8.mp4",
-      "mimeType": "video/mp4",
-      "sha256": "dc3b1cce4d43093e240e390a2f3209228ffa73a2041e89ae292e0790d66118ed",
-      "bytes": 2797722
-    },
-    {
-      "id": "video.animated.runtime.ring_conspiracy_ending_bad",
-      "kind": "video",
-      "path": "video/animated/runtime/ring_conspiracy_ending_bad.mp4",
-      "mimeType": "video/mp4",
-      "sha256": "0cf0ac007c3e1ebd37862e02146d137117838c9530fead20611ec4b179a2d079",
-      "bytes": 3519338
-    },
-    {
-      "id": "video.animated.runtime.ring_conspiracy_ending_normal",
-      "kind": "video",
-      "path": "video/animated/runtime/ring_conspiracy_ending_normal.mp4",
-      "mimeType": "video/mp4",
-      "sha256": "78b95f376a8fe4851309af86231c18fac0d870baa6294fbc14126face05095b3",
-      "bytes": 3401115
-    },
-    {
-      "id": "video.animated.runtime.ring_conspiracy_ending_true",
-      "kind": "video",
-      "path": "video/animated/runtime/ring_conspiracy_ending_true.mp4",
-      "mimeType": "video/mp4",
-      "sha256": "986917f0fe50af48c6f7a150561e48c226f992e2429c789fc6ce4ea6e1e3f346",
-      "bytes": 3567238
-    },
-    {
-      "id": "video.animated.runtime.ring_conspiracy_scene_11",
-      "kind": "video",
-      "path": "video/animated/runtime/ring_conspiracy_scene_11.mp4",
-      "mimeType": "video/mp4",
-      "sha256": "7a4911e99e2bea1509d9cc44836a2fd1d855d0b3f0ff14713265efd5bcfcec9f",
-      "bytes": 2400055
-    },
-    {
-      "id": "video.animated.runtime.ring_conspiracy_scene_15",
-      "kind": "video",
-      "path": "video/animated/runtime/ring_conspiracy_scene_15.mp4",
-      "mimeType": "video/mp4",
-      "sha256": "115b2505bc82d8e98b236556e5b709b468346c4c197fdcbb51dd1887db9f6f69",
-      "bytes": 2591243
-    },
-    {
-      "id": "video.animated.runtime.ring_conspiracy_scene_3",
-      "kind": "video",
-      "path": "video/animated/runtime/ring_conspiracy_scene_3.mp4",
-      "mimeType": "video/mp4",
-      "sha256": "a7481f6b1a6811072cc09b1bbd5ac639f6faa11e9041531d50b220ed1442a6e8",
-      "bytes": 2674192
-    },
-    {
-      "id": "video.animated.runtime.ring_conspiracy_scene_5",
-      "kind": "video",
-      "path": "video/animated/runtime/ring_conspiracy_scene_5.mp4",
-      "mimeType": "video/mp4",
-      "sha256": "65db5a7e97fab0ccfcc26e4ae078b86f2016ad16eef0ade738f005a49969f4aa",
-      "bytes": 3100461
-    },
-    {
-      "id": "video.animated.runtime.ring_conspiracy_scene_8",
-      "kind": "video",
-      "path": "video/animated/runtime/ring_conspiracy_scene_8.mp4",
-      "mimeType": "video/mp4",
-      "sha256": "6fc2c2c0155ff68915d0ffc2a97f68d5a66b84857745826967ff64c3fbe384ac",
-      "bytes": 3009439
-    },
-    {
-      "id": "video.animated.runtime.white_canvas_ending_bad",
-      "kind": "video",
-      "path": "video/animated/runtime/white_canvas_ending_bad.mp4",
-      "mimeType": "video/mp4",
-      "sha256": "b3b101dde3f85be5b68657b66ecfc1b02d0d6c42cf70ba30e516ef1ff010473c",
-      "bytes": 3336544
-    },
-    {
-      "id": "video.animated.runtime.white_canvas_ending_normal",
-      "kind": "video",
-      "path": "video/animated/runtime/white_canvas_ending_normal.mp4",
-      "mimeType": "video/mp4",
-      "sha256": "c62b1344da7cb5a4b3fc2b3c144d815970eab741f818771bbc750f4248852f08",
-      "bytes": 2756449
-    },
-    {
-      "id": "video.animated.runtime.white_canvas_ending_true",
-      "kind": "video",
-      "path": "video/animated/runtime/white_canvas_ending_true.mp4",
-      "mimeType": "video/mp4",
-      "sha256": "454767d2595ad285ada75c920eeb5974626471930549e840669ffd2d856e9d37",
-      "bytes": 3932490
-    },
-    {
-      "id": "video.animated.runtime.white_canvas_scene_11",
-      "kind": "video",
-      "path": "video/animated/runtime/white_canvas_scene_11.mp4",
-      "mimeType": "video/mp4",
-      "sha256": "a25ef4770934afd8cc6fc6bab08167a4aa1594fdb301edd1914411438eb01b93",
-      "bytes": 2890842
-    },
-    {
-      "id": "video.animated.runtime.white_canvas_scene_15",
-      "kind": "video",
-      "path": "video/animated/runtime/white_canvas_scene_15.mp4",
-      "mimeType": "video/mp4",
-      "sha256": "f5226beecc7be5275123f7cc6a91a1b58f74e831d020a788ac52a1015c9c6c2e",
-      "bytes": 2537450
-    },
-    {
-      "id": "video.animated.runtime.white_canvas_scene_3",
-      "kind": "video",
-      "path": "video/animated/runtime/white_canvas_scene_3.mp4",
-      "mimeType": "video/mp4",
-      "sha256": "e7d8746ec4825f0f496c2106e5c1d7862b8a00246e3109574946ccbef5be5ac7",
-      "bytes": 3030226
-    },
-    {
-      "id": "video.animated.runtime.white_canvas_scene_5",
-      "kind": "video",
-      "path": "video/animated/runtime/white_canvas_scene_5.mp4",
-      "mimeType": "video/mp4",
-      "sha256": "8d154e505624dde023f61510cd6cc25337ef23f43190728e72034d85806a3569",
-      "bytes": 2971914
-    },
-    {
-      "id": "video.animated.runtime.white_canvas_scene_8",
-      "kind": "video",
-      "path": "video/animated/runtime/white_canvas_scene_8.mp4",
-      "mimeType": "video/mp4",
-      "sha256": "ba894e5efb361a9bf52c1d5b45ec2b04ed552b4024f3e8c1fd3cf54830c8f899",
-      "bytes": 2685560
+      "sha256": "9cd72b8261583cd4922fe2203c1f2e0e8354fc3c49642ec12a83edd1475777b6",
+      "bytes": 1733949,
+      "provenance": {
+        "provider": "wisart-openai-compatible",
+        "model": "gpt-image-2",
+        "promptVersion": "albina-visual-migration-v1",
+        "sourceJobHash": "1df26e3b29404e50f734791ad7f08d34a3ef8fa9e83490228135fdb0a0605394",
+        "review": {
+          "status": "approved",
+          "reviewer": "workbuddy-agent",
+          "reviewedAt": "2026-09-03T20:36:17.504Z"
+        }
+      },
+      "rights": {
+        "status": "unverified",
+        "sourceType": "model-output",
+        "redistribution": "unverified",
+        "rightsBasis": "Redistribution rights for this model output have not been independently verified."
+      },
+      "lineage": {
+        "kind": "derivative",
+        "processVersion": "albina-visual-promotion-v1",
+        "inputs": [
+          {
+            "sha256": "fed2e3f31cfe12d58ab4c5674ea777ec18272ea6e0fb66bbdaead603a4f20c80",
+            "role": "canon-visual-reference"
+          },
+          {
+            "sha256": "aaf89630110b6fef687b86334404b00cd39fd29c84451971575b26a29ce51142",
+            "role": "canon-visual-reference"
+          }
+        ]
+      }
     },
     {
       "id": "voice.result.canon_recap_continue_9_18",

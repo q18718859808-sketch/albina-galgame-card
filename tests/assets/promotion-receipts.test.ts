@@ -12,9 +12,8 @@ function receipt(assetId = 'cg.test', artifactSha256 = 'a'.repeat(64)) {
     assetId,
     artifactSha256,
     provenance: {
-      provider: 'x666-openai-compatible',
+      provider: 'wisart-openai-compatible',
       model: 'gpt-image-2',
-      upstreamPieVerified: false,
       promptVersion: 'test-image-v1',
       sourceJobHash: 'b'.repeat(64),
       review: { status: 'approved', reviewer: 'visual-reviewer', reviewedAt: '2026-07-15T00:00:00.000Z' },
@@ -29,19 +28,31 @@ describe('promotion receipts', () => {
     await writeFile(path, JSON.stringify(receipt()));
     const receipts = await loadPromotionReceipts([path]);
     expect(attachPromotionProvenance([{ id: 'cg.test', sha256: 'a'.repeat(64) }], receipts)).toMatchObject([
-      { id: 'cg.test', provenance: { provider: 'x666-openai-compatible', model: 'gpt-image-2', upstreamPieVerified: false, review: { status: 'approved' } } },
+      { id: 'cg.test', provenance: { provider: 'wisart-openai-compatible', model: 'gpt-image-2', review: { status: 'approved' } } },
     ]);
     expect(() => attachPromotionProvenance([{ id: 'cg.test', sha256: 'c'.repeat(64) }], receipts)).toThrow(/hash mismatch/iu);
   });
 
-  it('rejects unsupported provider pairs and missing x666 upstream evidence', async () => {
+  it('rejects unsupported provider pairs and obsolete upstream evidence', async () => {
     const directory = await mkdtemp(join(tmpdir(), 'albina-promotion-provider-'));
     const pieImage = join(directory, 'pie-image.json');
-    const missingEvidence = join(directory, 'missing-evidence.json');
-    await writeFile(pieImage, JSON.stringify({ ...receipt(), provenance: { ...receipt().provenance, provider: 'pie', upstreamPieVerified: undefined } }));
-    await writeFile(missingEvidence, JSON.stringify({ ...receipt(), provenance: { ...receipt().provenance, upstreamPieVerified: undefined } }));
+    const obsoleteEvidence = join(directory, 'obsolete-evidence.json');
+    await writeFile(pieImage, JSON.stringify({ ...receipt(), provenance: { ...receipt().provenance, provider: 'pie' } }));
+    await writeFile(obsoleteEvidence, JSON.stringify({ ...receipt(), provenance: { ...receipt().provenance, upstreamPieVerified: false } }));
     await expect(loadPromotionReceipts([pieImage])).rejects.toThrow(/provider\/model/iu);
-    await expect(loadPromotionReceipts([missingEvidence])).rejects.toThrow(/upstream pie/iu);
+    await expect(loadPromotionReceipts([obsoleteEvidence])).rejects.toThrow(/fields/iu);
+  });
+
+  it('accepts the latent-moe async image provenance pair as part of the production whitelist', async () => {
+    const directory = await mkdtemp(join(tmpdir(), 'albina-promotion-latent-'));
+    const path = join(directory, 'cg.latent.json');
+    const value = { ...receipt('cg.latent'),
+      provenance: { ...receipt().provenance, provider: 'latent-moe', model: 'latent-moe-async' } };
+    await writeFile(path, JSON.stringify(value));
+    const receipts = await loadPromotionReceipts([path]);
+    expect(attachPromotionProvenance([{ id: 'cg.latent', sha256: 'a'.repeat(64) }], receipts)).toMatchObject([
+      { provenance: { provider: 'latent-moe', model: 'latent-moe-async' } },
+    ]);
   });
 
   it('rejects unknown assets, secret fields, and incomplete human review', async () => {
@@ -70,5 +81,48 @@ describe('promotion receipts', () => {
     expect(attachPromotionProvenance([{ id: 'cg.test', sha256: 'a'.repeat(64) }], receipts)).toMatchObject([
       { rights: { redistribution: 'allowed' }, lineage: { kind: 'original', inputs: [] } },
     ]);
+  });
+
+  it('validates an embedded baseline binding when present on formal Krea2 receipts', async () => {
+    const directory = await mkdtemp(join(tmpdir(), 'albina-krea2-promotion-receipt-'));
+    const path = join(directory, 'krea2.json');
+    const base = receipt('bg.krea2');
+    const baselineBinding = {
+      workflowPath: 'staging/media/embedded-baseline/embedded-production-baseline.api.json',
+      workflowSha256: 'b'.repeat(64),
+      evidencePath: 'staging/media/embedded-baseline/embedded-production-baseline-evidence.json',
+      evidenceSha256: 'c'.repeat(64),
+      topologySha256: 'd'.repeat(64),
+    };
+    const value = {
+      ...base,
+      provenance: { ...base.provenance, provider: 'comfyui-local-krea2', model: 'redcraft23FP8_30Krea2.safetensors', baseline: baselineBinding },
+    };
+    await writeFile(path, JSON.stringify(value));
+    await expect(loadPromotionReceipts([path])).resolves.toHaveProperty('size', 1);
+
+    await writeFile(path, JSON.stringify({
+      ...value,
+      provenance: {
+        ...value.provenance,
+        baseline: { workflowPath: 'staging/media/embedded-baseline/other.json', workflowSha256: 'b'.repeat(64), evidencePath: 'staging/media/embedded-baseline/embedded-production-baseline-evidence.json', evidenceSha256: 'c'.repeat(64), topologySha256: 'd'.repeat(64) },
+      },
+    }));
+    await expect(loadPromotionReceipts([path])).rejects.toThrow(/Krea2 baseline binding/iu);
+
+    await writeFile(path, JSON.stringify({
+      ...value,
+      provenance: { ...value.provenance, provider: 'wisart-openai-compatible', model: 'gpt-image-2', baseline: value.provenance.baseline },
+    }));
+    await expect(loadPromotionReceipts([path])).rejects.toThrow(/Krea2 baseline binding/iu);
+
+    await writeFile(path, JSON.stringify({
+      ...value,
+      provenance: {
+        ...value.provenance,
+        baseline: baselineBinding,
+      },
+    }));
+    await expect(loadPromotionReceipts([path])).resolves.toHaveProperty('size', 1);
   });
 });

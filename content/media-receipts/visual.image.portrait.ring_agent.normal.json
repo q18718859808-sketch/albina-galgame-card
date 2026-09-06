@@ -1,0 +1,32 @@
+{
+  "version": 1,
+  "assetId": "file.characters.ring.agent.normal.png",
+  "artifactSha256": "4192a5a189f8e96279a856a89e2bac08997b06d5e3584c645d9c30492e76f97b",
+  "provenance": {
+    "provider": "wisart-openai-compatible",
+    "model": "gpt-image-2",
+    "promptVersion": "albina-visual-migration-v1",
+    "sourceJobHash": "dee40308176e259adc996d601f5d881e0e765db079d1bd8624eaf13255539e60",
+    "review": {
+      "status": "approved",
+      "reviewer": "workbuddy-agent",
+      "reviewedAt": "2026-09-06T07:16:43.156Z"
+    }
+  },
+  "rights": {
+    "status": "unverified",
+    "sourceType": "model-output",
+    "redistribution": "unverified",
+    "rightsBasis": "Redistribution rights for this model output have not been independently verified."
+  },
+  "lineage": {
+    "kind": "derivative",
+    "processVersion": "albina-visual-promotion-v1",
+    "inputs": [
+      {
+        "sha256": "aaf89630110b6fef687b86334404b00cd39fd29c84451971575b26a29ce51142",
+        "role": "canon-visual-reference"
+      }
+    ]
+  }
+}

@@ -1,0 +1,121 @@
+{
+  "schemaVersion": 1,
+  "id": "albina-krea2-verified-baseline-v1",
+  "generatedBy": "scripts/build_verified_krea2_baseline.py",
+  "purpose": "albina-local-krea2-production-baseline",
+  "workflow": {
+    "path": "D:\\创作\\albina-v2-complete\\staging\\media\\embedded-baseline\\embedded-production-baseline.api.json",
+    "sha256": "5cb911318da9ce1fff4c5550e86c0338b9d937a1460c3222b0a7541d5aa755a9",
+    "expectedSha256": "5cb911318da9ce1fff4c5550e86c0338b9d937a1460c3222b0a7541d5aa755a9",
+    "nodeCount": 20
+  },
+  "runtime": {
+    "topologySha256": "76851b2eec0bdd0b733dfc6fb73b0c5f886f92b672a869ad818f70f59f3bad81",
+    "expectedTopologySha256": "76851b2eec0bdd0b733dfc6fb73b0c5f886f92b672a869ad818f70f59f3bad81",
+    "volatileInputKeys": [
+      "aspect_ratio",
+      "filename_prefix",
+      "megapixels",
+      "noise_seed",
+      "text"
+    ]
+  },
+  "model": "redcraft23FP8_30Krea2.safetensors",
+  "textEncoder": "qwen3vl_4b_fp8_scaled.safetensors",
+  "vae": "qwen_image_vae.safetensors",
+  "styleLoraChain": [
+    {
+      "name": "z3zz4-k2-4_c1-st5000.safetensors",
+      "strength": 0.55
+    },
+    {
+      "name": "Krea2Rella_c1-st8000.safetensors",
+      "strength": 0.65
+    },
+    {
+      "name": "onineko_k2_v1.safetensors",
+      "strength": 0.45
+    },
+    {
+      "name": "meion_krea2_style_v7.0_c1-st4000.safetensors",
+      "strength": 0.45
+    },
+    {
+      "name": "masterpieces-v51.safetensors",
+      "strength": 0.45
+    },
+    {
+      "name": "ichika-k2_c1-st5000.safetensors",
+      "strength": 0.35
+    }
+  ],
+  "observedStyleLoraChain": [
+    {
+      "nodeId": "144",
+      "name": "z3zz4-k2-4_c1-st5000.safetensors",
+      "strength": 0.55
+    },
+    {
+      "nodeId": "145",
+      "name": "Krea2Rella_c1-st8000.safetensors",
+      "strength": 0.65
+    },
+    {
+      "nodeId": "146",
+      "name": "onineko_k2_v1.safetensors",
+      "strength": 0.45
+    },
+    {
+      "nodeId": "149",
+      "name": "meion_krea2_style_v7.0_c1-st4000.safetensors",
+      "strength": 0.45
+    },
+    {
+      "nodeId": "147",
+      "name": "masterpieces-v51.safetensors",
+      "strength": 0.45
+    },
+    {
+      "nodeId": "148",
+      "name": "ichika-k2_c1-st5000.safetensors",
+      "strength": 0.35
+    }
+  ],
+  "identityEdit": {
+    "name": "krea2_identity_edit_v1_2.safetensors",
+    "strength": 1.0,
+    "placement": "immediately after the sixth production style LoRA, never before or between them"
+  },
+  "hybridPipeline": {
+    "authorized": true,
+    "modes": [
+      "txt2img",
+      "img2img"
+    ],
+    "rule": "img2img may add canonical source, identity edit, style reference and depth/canny/pose/segmentation control, but never bypasses or reweights the six-LoRA chain",
+    "reviewApi": "GCLI Gemini 3 Flash for source analysis, reverse prompting and paired review; advisory only",
+    "styleReferenceLocalCompatibility": {
+      "node": "Krea2StyleReferenceNode",
+      "consumer": "Krea2ImageNode",
+      "compatible": false,
+      "decision": "do-not-use-in-local-six-lora-production"
+    }
+  },
+  "comfyui": {
+    "performed": false
+  },
+  "evidenceFile": {
+    "path": "D:\\创作\\albina-v2-complete\\staging\\media\\embedded-baseline\\embedded-production-baseline-evidence.json",
+    "exists": true,
+    "verified": true
+  },
+  "candidate": null,
+  "characterIdentityGate": {
+    "status": "blocked-pending-direct-image-review",
+    "reason": "No Albina canonical candidate has been directly reviewed and promoted yet, so batch character production stays gated.",
+    "directImageReviewRequired": true,
+    "automatedVisionIsAdvisoryOnly": true
+  },
+  "issues": [],
+  "verified": true
+}

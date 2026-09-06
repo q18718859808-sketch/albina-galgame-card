@@ -1,0 +1,36 @@
+{
+  "version": 1,
+  "assetId": "video.animated.desktop.ring_conspiracy_scene_11",
+  "artifactSha256": "b5740b4216b387d9b6727ec3b03b74c2946c6ad1bbd0d2775693f0b73ae97177",
+  "provenance": {
+    "provider": "pie",
+    "model": "seedance-1.5-pro",
+    "promptVersion": "albina-video-v1",
+    "sourceJobHash": "bd283820447c9f55a43db67d75111359c969b83e027225c4df35d631d928f237",
+    "review": {
+      "status": "approved",
+      "reviewer": "historical-pie-video-qc-recovery",
+      "reviewedAt": "2026-07-12T03:09:39.096Z"
+    }
+  },
+  "rights": {
+    "status": "unverified",
+    "sourceType": "model-output",
+    "redistribution": "unverified",
+    "rightsBasis": "Historical provider output; redistribution terms were not independently verified."
+  },
+  "lineage": {
+    "kind": "transcode",
+    "processVersion": "albina-historical-pie-video-recovery-v1",
+    "inputs": [
+      {
+        "sha256": "bd283820447c9f55a43db67d75111359c969b83e027225c4df35d631d928f237",
+        "role": "historical-pie-job-contract"
+      },
+      {
+        "sha256": "0dcbad2b0527fb1475752fda4d945f140b1f602aef662c361d14700a47698244",
+        "role": "seedance-master"
+      }
+    ]
+  }
+}

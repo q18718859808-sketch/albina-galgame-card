@@ -1,0 +1,13 @@
+- main [ref=f3e3]:
+  - generic [ref=f3e6]:
+    - paragraph [ref=f3e7]: Canto IX · 独立前端卡
+    - heading "ALBINA" [level=1] [ref=f3e8]
+    - paragraph [ref=f3e9]: 白色画布上的残响
+    - navigation "主菜单" [ref=f3e10]:
+      - button "开始新篇" [ref=f3e11] [cursor=pointer]
+      - button "继续" [ref=f3e12] [cursor=pointer]
+      - button "存档" [ref=f3e13] [cursor=pointer]
+      - button "CG 图鉴" [ref=f3e14] [cursor=pointer]
+      - button "设置" [ref=f3e15] [cursor=pointer]
+      - button "版权与鸣谢" [ref=f3e16] [cursor=pointer]
+    - paragraph [ref=f3e17]: v2.0.0-rc.2 · 确定性主剧情 · 运行时零媒体 API

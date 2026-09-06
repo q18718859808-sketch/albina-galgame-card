@@ -67,7 +67,7 @@ describe('media validation', () => {
   test('rejects unknown validation fields instead of silently ignoring them', async () => {
     const directory = await mkdtemp(join(tmpdir(), 'albina-media-invalid-validation-'));
     const path = join(directory, 'job.json');
-    await writeFile(path, JSON.stringify({ kind: 'image', prompt: 'x', width: 8, height: 1, output: 'x.png', validation: { width: 8, height: 1, stripFrames: 8 } }));
+    await writeFile(path, JSON.stringify({ kind: 'image', provider: 'pie', model: 'gpt-image-2', promptVersion: 'test-image-v1', prompt: 'x', width: 8, height: 1, output: 'x.png', validation: { width: 8, height: 1, stripFrames: 8 } }));
     await expect(loadJob(path)).rejects.toThrow(/unknown validation fields/i);
   });
 });

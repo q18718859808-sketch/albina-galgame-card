@@ -1,0 +1,15 @@
+{
+  "kind": "speech",
+  "provider": "pie",
+  "model": "speech-2.8-hd",
+  "promptVersion": "albina-speech-v1",
+  "input": "你选择“把问题原样交还给她”。LCE 医师：医师递来一份重构协议：只要她愿意封存一段记忆，LCE 就允许她保留现在的外形。她把笔尖停在协议上，没有签字，先看你的反应。",
+  "voice": "shimmer",
+  "output": "D:\\创作\\albina-v2-complete\\staging\\media\\audio\\voice\\result\\rebuild_009_hand_question_back.mp3",
+  "validation": {
+    "minDurationSeconds": 0.2,
+    "maxDurationSeconds": 60,
+    "minLoudnessDbfs": -30,
+    "maxLoudnessDbfs": -6
+  }
+}

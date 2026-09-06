@@ -1,0 +1,78 @@
+{
+  "schemaVersion": 1,
+  "id": "krea2-community-installation-manifest-v1",
+  "capturedAt": "2026-08-25",
+  "comfyui": {
+    "endpoint": "http://127.0.0.1:8199",
+    "version": "0.28.3",
+    "reloadMethod": "targeted-process-restart",
+    "objectInfoVerification": true,
+    "queueWasEmptyBeforeReload": true
+  },
+  "installRoot": "D:/ComfyUI-aki/ComfyUI-aki-v2/ComfyUI-aki-v2/ComfyUI/custom_nodes",
+  "researchRoot": "D:/创作/framework-research/krea2-community-installed",
+  "policy": {
+    "historicalSixLoraIsNotGlobalConstraint": true,
+    "communityRoutesAreIndependentCandidates": true,
+    "noAutomaticPromotion": true,
+    "gpuPilotRequiresSeparateApproval": true,
+    "directImageReviewRequired": true
+  },
+  "routes": [
+    {
+      "id": "krea2-dype-community",
+      "repository": "https://github.com/wildminder/ComfyUI-DyPE",
+      "commit": "874f59066f4d2c6f7fbbd4149fe5bc6f07099aa3",
+      "license": "Apache-2.0",
+      "researchSnapshot": "D:/创作/framework-research/krea2-community-installed/local-dype",
+      "installedDirectory": "ComfyUI-DyPE-community",
+      "loadedNodes": ["DyPE_FLUX", "SEGA"],
+      "loadStatus": "verified-object-info",
+      "routePurpose": "positional-extrapolation-and-spectral-guidance"
+    },
+    {
+      "id": "krea2-two-stage-community",
+      "repository": "https://github.com/Auryg/Krea-2-Two-Stage-Sampler",
+      "commit": "8194c366a9dea530e57ba7cc8ae77f0dff262baa",
+      "license": "MIT",
+      "researchSnapshot": "D:/创作/framework-research/krea2-community-installed/two-stage",
+      "installedDirectory": "ComfyUI-Krea2-TwoStage-community",
+      "loadedNodes": ["KreaTwoStageSampler", "KreaThreeStageSampler", "Krea2ModelSampling"],
+      "loadStatus": "verified-object-info",
+      "routePurpose": "raw-to-turbo-or-multi-stage-resolution-refinement"
+    },
+    {
+      "id": "krea2-conditioning-community",
+      "repository": "https://github.com/TuZZiL/ComfyUI-ConditioningKrea2Rebalance",
+      "commit": "0e89fcc678f137cab16fa88b365825ce3af4bed9",
+      "license": "Apache-2.0",
+      "researchSnapshot": "D:/创作/framework-research/krea2-community-installed/conditioning",
+      "installedDirectory": "ComfyUI-ConditioningKrea2Rebalance-community",
+      "loadedNodes": ["ConditioningKrea2Rebalance", "tuzConditioningKrea2Rebalance"],
+      "loadStatus": "verified-object-info",
+      "routePurpose": "per-layer-conditioning-rebalance"
+    },
+    {
+      "id": "krea2-style-transfer-community",
+      "repository": "https://github.com/nkxx188/ComfyUI-Krea2-StyleTransfer",
+      "commit": "b30d495ab7e5626a2effc72a071430297643b718",
+      "license": "MIT",
+      "researchSnapshot": "D:/创作/framework-research/krea2-community-installed/style-transfer",
+      "installedDirectory": "ComfyUI-Krea2-StyleTransfer-community",
+      "loadedNodes": ["Krea2StyleTransfer", "Krea2TwoStyleTransfer", "Krea2StyleReference"],
+      "loadStatus": "verified-object-info",
+      "routePurpose": "latent-style-transfer-without-subject-reference-replacement"
+    },
+    {
+      "id": "krea2-regional-community",
+      "repository": "https://github.com/januspluto/ComfyUI-Krea2-Regional",
+      "commit": "307081f2b954d9f5e683dadafdb53ca971ebdbfd",
+      "license": "MIT",
+      "researchSnapshot": "D:/创作/framework-research/krea2-community-installed/regional-control",
+      "installedDirectory": "ComfyUI-Krea2-Regional-community",
+      "loadedNodes": ["Krea2RegionalBuilder", "Krea2RegionalDetailer", "Krea2ApplyRegional", "Krea2RegionalPrompt"],
+      "loadStatus": "verified-object-info",
+      "routePurpose": "regional-prompting-and-subject-aware-detailing"
+    }
+  ]
+}

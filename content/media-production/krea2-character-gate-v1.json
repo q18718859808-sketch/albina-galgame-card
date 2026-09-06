@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "id": "albina-krea2-character-production-gate-v1",
+  "status": "hybrid-canonical-certificate-pending",
+  "reason": "Character production now uses a formal hybrid loop: GCLI Gemini canonical-image analysis and prompt derivation, canonical img2img structure/identity input, the intact six-LoRA Krea2 production chain, post-style Krea2 identity edit, external paired review, and mandatory direct image review. Earlier probes remain rejected evidence but no longer imply that the hybrid production topology itself is unavailable.",
+  "productionTopology": [
+    "canonical source image",
+    "GCLI Gemini 3 Flash canonical analysis and preserve-prompt derivation",
+    "exact six-LoRA Krea2 production style chain",
+    "post-style krea2_identity_edit_v1_2",
+    "Krea2Edit source latent and grounded conditioning",
+    "GCLI paired reference/candidate review",
+    "hash-bound direct original-resolution image review"
+  ],
+  "requiredCertificate": {
+    "status": "approved",
+    "canonicalSourceSha256": "64 lowercase hexadecimal characters",
+    "canonicalOutputSha256": "64 lowercase hexadecimal characters",
+    "workflowSha256": "64 lowercase hexadecimal characters",
+    "topologySha256": "64 lowercase hexadecimal characters",
+    "styleLoras": [
+      ["z3zz4-k2-4_c1-st5000.safetensors", 0.55],
+      ["Krea2Rella_c1-st8000.safetensors", 0.65],
+      ["onineko_k2_v1.safetensors", 0.45],
+      ["meion_krea2_style_v7.0_c1-st4000.safetensors", 0.45],
+      ["masterpieces-v51.safetensors", 0.45],
+      ["ichika-k2_c1-st5000.safetensors", 0.35]
+    ],
+    "identityEdit": { "name": "krea2_identity_edit_v1_2.safetensors", "strength": 1 },
+    "directImageReview": "A hash-bound record with all six Albina identity anchors and a named reviewer.",
+    "externalPairedReview": "A hash-bound Gemini paired review record with DECISION: PASS. Advisory evidence cannot replace direct review.",
+    "allowedScope": ["single character asset per invocation"],
+    "forbidden": ["batch character generation", "character CG before approved character anchors", "unreviewed generated image as identity reference"]
+  }
+}

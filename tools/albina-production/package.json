@@ -1,0 +1,10 @@
+{
+  "name": "albina-production-mcp",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "mcp": "node mcp-server.mjs",
+    "smoke": "node mcp-smoke.mjs",
+    "pilot:dry-run": "node pilot-dry-run.mjs"
+  }
+}

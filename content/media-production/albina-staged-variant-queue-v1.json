@@ -1,0 +1,77 @@
+{
+  "schemaVersion": 1,
+  "id": "albina-staged-variant-queue-v1",
+  "profile": "albina-staged-high-frequency-v1",
+  "canonicalSourceSha256": "e68f9d04dda42e9ab86dcb686663057619c8dfbeff5f7d70078a083b0228aa55",
+  "variants": [
+    {
+      "jobId": "albina-combat",
+      "variant": "combat",
+      "outputId": "albina-combat-staged-hf-v2",
+      "seed": 2026101201,
+      "source": "staging/research/canon-visual/wiki-game-assets/albina-unarmored-standing.png",
+      "prompt": "Strict canonical geometry-preserving two-pass Krea2 material refinement of the supplied authored adult Albina design. Preserve the exact source silhouette, mature narrow face, image-left white luminous eye, image-right dark eye, segmented silver-gray hair, image-right conduit bundle, white breastplate and black internal structure, open abdominal frame, crossed mechanical forearms, black-and-white lower-body partition, complete feet, pose, composition and colour blocking. State variant only: combat. Change only restrained expression, lighting, material state and authored combat cues; do not redesign the character. The canonical image is the sole content and latent origin. No AU, identity edit, second reference, pose/depth control, crop, text, logo or watermark. Add only crisp dense 2D linework, coherent hard-surface materials and clean value separation.",
+      "negative": "child, loli, chibi, generic anime face, redesigned costume, mirrored eyes, organic replacement limbs, fused limbs, cropped feet, blurry, soft focus, smeared linework, melted mechanical detail, text, logo, watermark"
+    },
+    {
+      "jobId": "albina-endgame", "variant": "endgame", "outputId": "albina-endgame-staged-hf-v1", "seed": 2026101202,
+      "source": "staging/research/canon-visual/wiki-game-assets/albina-unarmored-standing.png",
+      "prompt": "Strict canonical geometry-preserving two-pass Krea2 material refinement of the supplied authored adult Albina design. Preserve the exact source silhouette, mature narrow face, image-left white luminous eye, image-right dark eye, segmented silver-gray hair, image-right conduit bundle, white breastplate and black internal structure, open abdominal frame, crossed mechanical forearms, black-and-white lower-body partition, complete feet, pose, composition and colour blocking. State variant only: endgame. Change only restrained expression, lighting, material state and authored endgame cues; do not redesign the character. The canonical image is the sole content and latent origin. No AU, identity edit, second reference, pose/depth control, crop, text, logo or watermark. Add only crisp dense 2D linework, coherent hard-surface materials and clean value separation.",
+      "negative": "child, loli, chibi, generic anime face, redesigned costume, mirrored eyes, organic replacement limbs, fused limbs, cropped feet, blurry, soft focus, smeared linework, melted mechanical detail, text, logo, watermark"
+    },
+    {
+      "jobId": "albina-fascia-open", "variant": "fascia-open", "outputId": "albina-fascia-open-staged-hf-v1", "seed": 2026101203,
+      "source": "staging/research/canon-visual/wiki-game-assets/albina-unarmored-standing.png",
+      "prompt": "Strict canonical geometry-preserving two-pass Krea2 material refinement of the supplied authored adult Albina design. Preserve the exact source silhouette, mature narrow face, image-left white luminous eye, image-right dark eye, segmented silver-gray hair, image-right conduit bundle, white breastplate and black internal structure, open abdominal frame, crossed mechanical forearms, black-and-white lower-body partition, complete feet, pose, composition and colour blocking. State variant only: fascia-open. Make the existing open abdominal-frame/Fascia construction legible with controlled internal light only; do not add, close or redesign any component. The canonical image is the sole content and latent origin. No AU, identity edit, second reference, pose/depth control, crop, text, logo or watermark. Add only crisp dense 2D linework, coherent hard-surface materials and clean value separation.",
+      "negative": "child, loli, chibi, generic anime face, redesigned costume, mirrored eyes, organic replacement limbs, fused limbs, cropped feet, blurry, soft focus, smeared linework, melted mechanical detail, text, logo, watermark"
+    },
+    {
+      "jobId": "albina-furious", "variant": "furious", "outputId": "albina-furious-staged-hf-v1", "seed": 2026101204,
+      "source": "staging/research/canon-visual/wiki-game-assets/albina-unarmored-standing.png",
+      "prompt": "Strict canonical geometry-preserving two-pass Krea2 material refinement of the supplied authored adult Albina design. Preserve the exact source silhouette, mature narrow face, image-left white luminous eye, image-right dark eye, segmented silver-gray hair, image-right conduit bundle, white breastplate and black internal structure, open abdominal frame, crossed mechanical forearms, black-and-white lower-body partition, complete feet, pose, composition and colour blocking. State variant only: furious. Change only restrained adult expression, tension, lighting and material state; do not redesign the character. The canonical image is the sole content and latent origin. No AU, identity edit, second reference, pose/depth control, crop, text, logo or watermark. Add only crisp dense 2D linework, coherent hard-surface materials and clean value separation.",
+      "negative": "child, loli, chibi, generic anime face, redesigned costume, mirrored eyes, organic replacement limbs, fused limbs, cropped feet, blurry, soft focus, smeared linework, melted mechanical detail, text, logo, watermark"
+    },
+    {
+      "jobId": "albina-golden-bough", "variant": "golden-bough", "outputId": "albina-golden-bough-staged-hf-v1", "seed": 2026101205,
+      "source": "staging/research/canon-visual/wiki-game-assets/albina-unarmored-standing.png",
+      "prompt": "Strict canonical geometry-preserving two-pass Krea2 material refinement of the supplied authored adult Albina design. Preserve the exact source silhouette, mature narrow face, image-left white luminous eye, image-right dark eye, segmented silver-gray hair, image-right conduit bundle, white breastplate and black internal structure, open abdominal frame, crossed mechanical forearms, black-and-white lower-body partition, complete feet, pose, composition and colour blocking. State variant only: golden-bough. Add only restrained reflected gold light and material response, preserving all original colour blocks and topology. The canonical image is the sole content and latent origin. No AU, identity edit, second reference, pose/depth control, crop, text, logo or watermark. Add only crisp dense 2D linework, coherent hard-surface materials and clean value separation.",
+      "negative": "child, loli, chibi, generic anime face, redesigned costume, mirrored eyes, organic replacement limbs, fused limbs, cropped feet, blurry, soft focus, smeared linework, melted mechanical detail, text, logo, watermark"
+    },
+    {
+      "jobId": "albina-maestro", "variant": "maestro", "outputId": "albina-maestro-staged-hf-v1", "seed": 2026101206,
+      "source": "staging/research/canon-visual/wiki-game-assets/albina-unarmored-standing.png",
+      "prompt": "Strict canonical geometry-preserving two-pass Krea2 material refinement of the supplied authored adult Albina design. Preserve the exact source silhouette, mature narrow face, image-left white luminous eye, image-right dark eye, segmented silver-gray hair, image-right conduit bundle, white breastplate and black internal structure, open abdominal frame, crossed mechanical forearms, black-and-white lower-body partition, complete feet, pose, composition and colour blocking. State variant only: maestro. Change only restrained expression, controlled atelier lighting and material state; do not redesign the character. The canonical image is the sole content and latent origin. No AU, identity edit, second reference, pose/depth control, crop, text, logo or watermark. Add only crisp dense 2D linework, coherent hard-surface materials and clean value separation.",
+      "negative": "child, loli, chibi, generic anime face, redesigned costume, mirrored eyes, organic replacement limbs, fused limbs, cropped feet, blurry, soft focus, smeared linework, melted mechanical detail, text, logo, watermark"
+    },
+    {
+      "jobId": "albina-rain", "variant": "rain", "outputId": "albina-rain-staged-hf-v1", "seed": 2026101207,
+      "source": "staging/research/canon-visual/wiki-game-assets/albina-unarmored-standing.png",
+      "prompt": "Strict canonical geometry-preserving two-pass Krea2 material refinement of the supplied authored adult Albina design. Preserve the exact source silhouette, mature narrow face, image-left white luminous eye, image-right dark eye, segmented silver-gray hair, image-right conduit bundle, white breastplate and black internal structure, open abdominal frame, crossed mechanical forearms, black-and-white lower-body partition, complete feet, pose, composition and colour blocking. State variant only: rain. Add only coherent wet-surface highlights and cool rain lighting; do not add umbrellas, change pose or redesign the character. The canonical image is the sole content and latent origin. No AU, identity edit, second reference, pose/depth control, crop, text, logo or watermark. Add only crisp dense 2D linework, coherent hard-surface materials and clean value separation.",
+      "negative": "child, loli, chibi, generic anime face, redesigned costume, mirrored eyes, organic replacement limbs, fused limbs, cropped feet, blurry, soft focus, smeared linework, melted mechanical detail, text, logo, watermark"
+    },
+    {
+      "jobId": "albina-ring-conspiracy", "variant": "ring-conspiracy", "outputId": "albina-ring-conspiracy-staged-hf-v1", "seed": 2026101208,
+      "source": "staging/research/canon-visual/wiki-game-assets/albina-unarmored-standing.png",
+      "prompt": "Strict canonical geometry-preserving two-pass Krea2 material refinement of the supplied authored adult Albina design. Preserve the exact source silhouette, mature narrow face, image-left white luminous eye, image-right dark eye, segmented silver-gray hair, image-right conduit bundle, white breastplate and black internal structure, open abdominal frame, crossed mechanical forearms, black-and-white lower-body partition, complete feet, pose, composition and colour blocking. State variant only: ring-conspiracy. Change only restrained atelier-shadow lighting, expression and surface condition; do not redesign the character. The canonical image is the sole content and latent origin. No AU, identity edit, second reference, pose/depth control, crop, text, logo or watermark. Add only crisp dense 2D linework, coherent hard-surface materials and clean value separation.",
+      "negative": "child, loli, chibi, generic anime face, redesigned costume, mirrored eyes, organic replacement limbs, fused limbs, cropped feet, blurry, soft focus, smeared linework, melted mechanical detail, text, logo, watermark"
+    },
+    {
+      "jobId": "albina-shy", "variant": "shy", "outputId": "albina-shy-staged-hf-v1", "seed": 2026101209,
+      "source": "staging/research/canon-visual/wiki-game-assets/albina-unarmored-standing.png",
+      "prompt": "Strict canonical geometry-preserving two-pass Krea2 material refinement of the supplied authored adult Albina design. Preserve the exact source silhouette, mature narrow face, image-left white luminous eye, image-right dark eye, segmented silver-gray hair, image-right conduit bundle, white breastplate and black internal structure, open abdominal frame, crossed mechanical forearms, black-and-white lower-body partition, complete feet, pose, composition and colour blocking. State variant only: shy. Change only subtle adult expression, eye-light and gentle lighting; do not infantilize, redesign, change pose or alter clothing. The canonical image is the sole content and latent origin. No AU, identity edit, second reference, pose/depth control, crop, text, logo or watermark. Add only crisp dense 2D linework, coherent hard-surface materials and clean value separation.",
+      "negative": "child, loli, chibi, generic anime face, redesigned costume, mirrored eyes, organic replacement limbs, fused limbs, cropped feet, blurry, soft focus, smeared linework, melted mechanical detail, text, logo, watermark"
+    },
+    {
+      "jobId": "albina-surgical", "variant": "surgical", "outputId": "albina-surgical-staged-hf-v1", "seed": 2026101210,
+      "source": "staging/research/canon-visual/wiki-game-assets/albina-unarmored-standing.png",
+      "prompt": "Strict canonical geometry-preserving two-pass Krea2 material refinement of the supplied authored adult Albina design. Preserve the exact source silhouette, mature narrow face, image-left white luminous eye, image-right dark eye, segmented silver-gray hair, image-right conduit bundle, white breastplate and black internal structure, open abdominal frame, crossed mechanical forearms, black-and-white lower-body partition, complete feet, pose, composition and colour blocking. State variant only: surgical. Add only clinical cool light, precise hard-surface separation and controlled expression; do not add tools, change pose or redesign the character. The canonical image is the sole content and latent origin. No AU, identity edit, second reference, pose/depth control, crop, text, logo or watermark. Add only crisp dense 2D linework, coherent hard-surface materials and clean value separation.",
+      "negative": "child, loli, chibi, generic anime face, redesigned costume, mirrored eyes, organic replacement limbs, fused limbs, cropped feet, blurry, soft focus, smeared linework, melted mechanical detail, text, logo, watermark"
+    },
+    {
+      "jobId": "albina-white-canvas", "variant": "white-canvas", "outputId": "albina-white-canvas-staged-hf-v1", "seed": 2026101211,
+      "source": "staging/research/canon-visual/wiki-game-assets/albina-unarmored-standing.png",
+      "prompt": "Strict canonical geometry-preserving two-pass Krea2 material refinement of the supplied authored adult Albina design. Preserve the exact source silhouette, mature narrow face, image-left white luminous eye, image-right dark eye, segmented silver-gray hair, image-right conduit bundle, white breastplate and black internal structure, open abdominal frame, crossed mechanical forearms, black-and-white lower-body partition, complete feet, pose, composition and colour blocking. State variant only: white-canvas. Add only restrained diffuse white-field lighting and clear tonal separation; do not erase, simplify or redesign any original component. The canonical image is the sole content and latent origin. No AU, identity edit, second reference, pose/depth control, crop, text, logo or watermark. Add only crisp dense 2D linework, coherent hard-surface materials and clean value separation.",
+      "negative": "child, loli, chibi, generic anime face, redesigned costume, mirrored eyes, organic replacement limbs, fused limbs, cropped feet, blurry, soft focus, smeared linework, melted mechanical detail, text, logo, watermark"
+    }
+  ]
+}

@@ -1,0 +1,83 @@
+{
+  "schemaVersion": 1,
+  "id": "albina-krea2-full-production-batching-v1",
+  "status": "planned-static-no-generation",
+  "createdAt": "2026-08-20",
+  "purpose": "Complete the formal 61-surface Krea2 backlog as review-gated single-output jobs while preserving the canonical design lock, fixed six-LoRA chain, human review, and local compute discipline.",
+  "execution": {
+    "gpuInferenceStarted": false,
+    "queueSubmissionAllowed": false,
+    "batchGenerationAllowed": false,
+    "batchMeaning": "review-and-scheduling wave only; every surface remains one independent invocation",
+    "maxOutputsPerInvocation": 1,
+    "maxConcurrentJobs": 1,
+    "stopOnAnyGateFailure": true,
+    "fallback": "existing verified six-LoRA baseline",
+    "promotionAllowed": false
+  },
+  "baseline": {
+    "workflow": "D:\\创作\\albina-v2-complete\\staging\\media\\embedded-baseline\\embedded-production-baseline.api.json",
+    "workflowSha256": "5cb911318da9ce1fff4c5550e86c0338b9d937a1460c3222b0a7541d5aa755a9",
+    "topologySha256": "76851b2eec0bdd0b733dfc6fb73b0c5f886f92b672a869ad818f70f59f3bad81",
+    "model": "redcraft23FP8_30Krea2.safetensors",
+    "textEncoder": "qwen3vl_4b_fp8_scaled.safetensors",
+    "vae": "qwen_image_vae.safetensors",
+    "identityEdit": { "name": "krea2_identity_edit_v1_2.safetensors", "strength": 1, "placement": "after all six style LoRAs" }
+  },
+  "fixedSixLoraChain": [
+    ["z3zz4-k2-4_c1-st5000.safetensors", 0.55],
+    ["Krea2Rella_c1-st8000.safetensors", 0.65],
+    ["onineko_k2_v1.safetensors", 0.45],
+    ["meion_krea2_style_v7.0_c1-st4000.safetensors", 0.45],
+    ["masterpieces-v51.safetensors", 0.45],
+    ["ichika-k2_c1-st5000.safetensors", 0.35]
+  ],
+  "canonicalDesignLock": {
+    "sourceAuthority": "canonical-rgba or explicitly approved character-bible/AU source",
+    "materialAuthority": "krea2-rgb",
+    "coordinateSystem": "unmirrored-source-pixel-coordinates",
+    "albinaCanonicalSource": "staging/research/canon-visual/wiki-game-assets/albina-unarmored-standing.png",
+    "albinaCanonicalSha256": "e68f9d04dda42e9ab86dcb686663057619c8dfbeff5f7d70078a083b0228aa55",
+    "requiredAlbinaAnchors": ["adult-proportion", "face-silhouette", "asymmetric-eyes", "segmented-hair-and-cables", "thoracic-shell", "open-abdominal-frame", "crossed-mechanical-arms", "lower-body-partition", "graphic-value-map"],
+    "forbidden": ["horizontal-flip", "inset-generation", "center-paste", "uncertified-crop", "uncertified-resize", "pose-reorientation", "identity-reference-substitution", "style-reference-as-content-reference", "release-before-review"]
+  },
+  "perSurfaceContract": {
+    "batchSize": 1,
+    "fixedSeedRequired": true,
+    "independentReceiptRequired": true,
+    "receiptMustBind": ["canonicalSha256", "uploadedCanonicalSha256", "workflowSha256", "topologySha256", "fixedSixLoraChain", "seed", "outputSha256", "directReviewPath"],
+    "directOriginalResolutionReview": "required and veto-capable",
+    "automatedVision": "advisory only; never acceptance",
+    "rejectedLatentCopyPath": {
+      "status": "blocked",
+      "definition": "A low-denoise img2img or latent-copy pass whose observable result is materially indistinguishable from the canonical input is not production work.",
+      "forbidden": ["low-denoise latent-copy presented as a finished render", "acceptance based only on hash/receipt/chain presence", "promotion of a near-copy because geometry was preserved"],
+      "response": "Reject the candidate, record it as no-visible-delta, and do not spend another invocation on the same topology until a reviewer approves a changed material objective."
+    },
+    "visibleDeltaAcceptance": {
+      "required": true,
+      "comparison": "Direct reviewer compares canonical input and candidate at the same full-canvas scale and at 100 percent in declared detail regions.",
+      "mustShow": ["a visible, reviewer-locatable improvement in at least two declared material/detail regions", "preserved identity, silhouette, side assignments, framing, and protected regions", "a written review note naming the changed regions and why the change improves the production target"],
+      "acceptableDetailRegions": ["line separation", "mechanical segmentation", "material edge definition", "controlled shading transition", "surface texture without text/logo artifacts"],
+      "rejectWhen": ["the reviewer cannot identify two meaningful visual improvements without zooming beyond 100 percent", "the candidate is functionally a latent copy or imperceptible restyle", "visible change is purchased through identity, anatomy, geometry, crop, composition, or protected-region drift"],
+      "notAReplacementFor": "canonical-design-lock or direct-review requirements"
+    },
+    "rightsReview": "required before promotion",
+    "releaseDecision": "independent per surface; never inferred from a sibling or anchor"
+  },
+  "reviewWaves": [
+    { "id": "W00-baseline-reconciliation", "generation": false, "surfaceIds": ["bg.lce_lab", "portrait.albina.normal", "portrait.albina.armored", "portrait.callisto.normal", "portrait.dante.normal", "portrait.faust.normal", "portrait.ren.normal", "portrait.vergilius.normal"], "gate": "current output hash must match direct-review hash; then perform rights and staging-only decision" },
+    { "id": "W01-character-anchors", "generation": "future-authorized-single-output-only", "surfaceIds": ["portrait.golden_apparition.normal", "portrait.lce_doctor.normal", "portrait.protagonist.battle", "portrait.protagonist.resolve", "portrait.protagonist.serious", "portrait.protagonist.shadow", "portrait.protagonist.tender", "portrait.protagonist.wet-hair", "portrait.ring_agent.normal"], "gate": "each independent anchor passes direct identity review before dependent variants" },
+    { "id": "W02-albina-portrait-variants", "generation": "future-authorized-single-output-only", "surfaceIds": ["portrait.albina.combat", "portrait.albina.endgame", "portrait.albina.fascia-open", "portrait.albina.furious", "portrait.albina.golden-bough", "portrait.albina.maestro", "portrait.albina.rain", "portrait.albina.ring-conspiracy", "portrait.albina.shy", "portrait.albina.surgical", "portrait.albina.white-canvas"], "gate": "all nine Albina anchors remain intact; each variant receives its own direct review" },
+    { "id": "W03-backgrounds", "generation": "future-authorized-single-output-only", "surfaceIds": ["bg.mirror_corridor", "bg.ring_atelier", "bg.spider_gallery", "bg.golden_bough", "bg.white_canvas", "bg.backstreets_rain", "bg.rain_room", "bg.city_rooftop", "bg.lce_lab", "bg.limbus_bus", "bg.nest_station", "bg.outskirts_dawn"], "gate": "scene readability, no people/silhouettes/text/logos/watermarks, direct and rights review per background" },
+    { "id": "W04-opening-conflict-cgs", "generation": "future-authorized-single-output-only", "surfaceIds": ["cg.opening_rain", "cg.hollow_torso_reveal", "cg.combat_transition_01", "cg.ren_interruption", "cg.lce_raid", "cg.maestro_shadow", "cg.fascia_heartbeat", "cg.backstreet_pursuit", "cg.limbus_bus_night"], "gate": "required character anchors accepted; direct review checks identity, mechanics, hands, composition, and text-free output" },
+    { "id": "W05-route-cgs", "generation": "future-authorized-single-output-only", "surfaceIds": ["cg.white_canvas_choice", "cg.white_canvas_ending", "cg.golden_bough_rebuild", "cg.golden_bough_ending", "cg.ring_invitation", "cg.ring_conspiracy_ending", "cg.rebuild_awakening", "cg.conspiracy_contract", "cg.rain_confession", "cg.surgery_of_memory", "cg.trust_threshold", "cg.araya_rooftop", "cg.art_resonance"], "gate": "route identity and ending semantics reviewed independently; no route CG substitutes for another" }
+  ],
+  "surfaceLedger": {
+    "backgrounds": ["bg.backstreets_rain", "bg.city_rooftop", "bg.golden_bough", "bg.lce_lab", "bg.limbus_bus", "bg.mirror_corridor", "bg.nest_station", "bg.outskirts_dawn", "bg.rain_room", "bg.ring_atelier", "bg.spider_gallery", "bg.white_canvas"],
+    "cgs": ["cg.araya_rooftop", "cg.art_resonance", "cg.backstreet_pursuit", "cg.combat_transition_01", "cg.conspiracy_contract", "cg.fascia_heartbeat", "cg.golden_bough_ending", "cg.golden_bough_rebuild", "cg.hollow_torso_reveal", "cg.lce_raid", "cg.limbus_bus_night", "cg.maestro_shadow", "cg.opening_rain", "cg.rain_confession", "cg.rebuild_awakening", "cg.ren_interruption", "cg.ring_conspiracy_ending", "cg.ring_invitation", "cg.surgery_of_memory", "cg.trust_threshold", "cg.white_canvas_choice", "cg.white_canvas_ending"],
+    "portraits": ["portrait.albina.armored", "portrait.albina.combat", "portrait.albina.endgame", "portrait.albina.fascia-open", "portrait.albina.furious", "portrait.albina.golden-bough", "portrait.albina.maestro", "portrait.albina.normal", "portrait.albina.rain", "portrait.albina.ring-conspiracy", "portrait.albina.shy", "portrait.albina.surgical", "portrait.albina.white-canvas", "portrait.callisto.normal", "portrait.dante.normal", "portrait.faust.normal", "portrait.golden_apparition.normal", "portrait.lce_doctor.normal", "portrait.protagonist.battle", "portrait.protagonist.resolve", "portrait.protagonist.serious", "portrait.protagonist.shadow", "portrait.protagonist.tender", "portrait.protagonist.wet-hair", "portrait.ren.normal", "portrait.ring_agent.normal", "portrait.vergilius.normal"]
+  },
+  "coverage": { "formalSurfaceCount": 61, "formalSurfaceBreakdown": { "backgrounds": 12, "cgs": 22, "portraits": 27 }, "currentlyDirectReviewedTraceable": 8, "currentlyNotTraceable": 53, "traceabilityIsNotReleaseApproval": true },
+  "stopConditions": ["six-LoRA order/strength, model, topology, or canonical hash mismatch", "batchSize greater than one or concurrent GPU invocation", "missing receipt, invocation binding, output hash, or direct-review record", "rejected low-denoise latent-copy or no-visible-delta outcome", "identity, adult-proportion, side-assignment, geometry, crop, inset, seam, text, logo, or watermark failure", "rights not explicitly reviewed", "failed dependency anchor"]
+}

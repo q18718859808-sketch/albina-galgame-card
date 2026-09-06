@@ -1,0 +1,52 @@
+{
+  "schemaVersion": 1,
+  "id": "albina-krea2-advanced-adapter-v1",
+  "status": "blocked-pending-dependency-and-weight-gates",
+  "purpose": "Describe and gate EricRollei/Krea2_ComfyUI_Advanced as a non-generative candidate while preserving the existing production chain.",
+  "upstream": {
+    "repository": "https://github.com/EricRollei/Krea2_ComfyUI_Advanced",
+    "commit": "1dbb085d655c071ef9609ce68f67a3adec0aa571"
+  },
+  "currentEnvironment": {
+    "diffusers": { "version": "0.34.0", "hasKrea2Pipeline": false },
+    "transformers": { "version": "4.53.0", "hasQwen3VLModel": false },
+    "candidateNodePackPresent": false,
+    "weights": { "rawDiffusersLayout": "unverified", "turboDiffusersLayout": "unverified" }
+  },
+  "installGates": {
+    "requiredApis": ["diffusers.Krea2Pipeline", "transformers.Qwen3VLModel"],
+    "requiredNodePack": "Eric_Krea2",
+    "requiredWeights": ["Krea-2-Raw (diffusers layout)", "Krea-2-Turbo (diffusers layout)"],
+    "mustPassBeforeAnyGeneration": true,
+    "generationStartedByThisChange": false
+  },
+  "workflowDescription": {
+    "stages": ["load", "six-lora-style", "optional-img2img", "optional-vision-grounding", "optional-progressive-refinement", "optional-quality-pass-decode"],
+    "styleLoraPolicy": "The six existing production LoRAs are immutable: exact order and weights below; per-stage candidate controls may not alter them.",
+    "semanticVisionIsIdentityLock": false,
+    "canonicalGeometryAuthority": "canonical-rgba",
+    "materialAuthority": "krea2-rgb"
+  },
+  "fixedStyleLoras": [
+    { "order": 1, "name": "z3zz4-k2-4_c1-st5000.safetensors", "strength": 0.55 },
+    { "order": 2, "name": "Krea2Rella_c1-st8000.safetensors", "strength": 0.65 },
+    { "order": 3, "name": "onineko_k2_v1.safetensors", "strength": 0.45 },
+    { "order": 4, "name": "meion_krea2_style_v7.0_c1-st4000.safetensors", "strength": 0.45 },
+    { "order": 5, "name": "masterpieces-v51.safetensors", "strength": 0.45 },
+    { "order": 6, "name": "ichika-k2_c1-st5000.safetensors", "strength": 0.35 }
+  ],
+  "fallback": {
+    "kind": "current-production-chain",
+    "adapter": "scripts/lib/krea2-comfyui.mjs",
+    "workflow": "staging/media/embedded-baseline/embedded-production-baseline.api.json",
+    "mode": "use-existing-verified-six-lora-baseline",
+    "reason": "Any failed dependency, API, node-pack, or weight gate returns to the current production chain; this adapter never starts generation."
+  },
+  "acceptance": {
+    "nextAction": "Install and verify dependencies and weights in the existing ComfyUI environment, then run one fixed-seed staging anchor with a full receipt and direct original-resolution review.",
+    "batchGenerationAllowed": false,
+    "promotionAllowed": false,
+    "directImageReviewRequired": true,
+    "unverifiedItems": ["diffusers upgrade/API presence", "transformers Qwen3VLModel presence", "Eric_Krea2 node pack installation", "Raw diffusers-layout weights", "Turbo diffusers-layout weights", "candidate output fidelity", "license/weight redistribution terms"]
+  }
+}

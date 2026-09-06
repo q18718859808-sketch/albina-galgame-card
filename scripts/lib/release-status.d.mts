@@ -26,6 +26,7 @@ export function deriveReleaseStatus(input: {
   mediaReadiness: MediaReadinessReport;
   providerProbes?: unknown;
   pendingMediaJobs?: number | { total: number; image: number; video: number; speech: number };
+  krea2EvidenceAudit?: { total?: number; bound?: number; unbound?: number; failed?: number };
 }): {
   version: string;
   releaseCandidate: boolean;
@@ -38,7 +39,17 @@ export function deriveReleaseStatus(input: {
     available: boolean;
     reason: string;
     testedAt: string | null;
-  }>;
+    fallbackProvider?: string;
+    fallbackModel?: string;
+  }> & {
+    imageFallbacks?: Array<{
+      provider: string;
+      model: string;
+      available: boolean;
+      reason: string;
+      testedAt: string | null;
+    }>;
+  };
   gates: { rc: ReleaseGateResult; final: ReleaseGateResult };
   [key: string]: unknown;
 };

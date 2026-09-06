@@ -1,0 +1,51 @@
+{
+  "schemaVersion": 1,
+  "id": "krea2-adapter-routing-v1",
+  "status": "selection-foundation-only",
+  "solutionIndex": "content/media-production/krea2-community-solution-index-v3.json",
+  "adapter": "scripts/lib/krea2-routing.mjs",
+  "purpose": "Select among indexed Krea2 production candidates without treating the historical six-LoRA chain as a global restriction.",
+  "selection": {
+    "sourceOfTruth": "community solution index candidate id",
+    "unknownCandidate": "reject",
+    "researchOnly": "planning-only unless allowResearch=true",
+    "runtimeChecks": "optional selection filters only; no runtime probing is performed by the adapter",
+    "gpuExecution": "not performed by this adapter"
+  },
+  "profiles": {
+    "baseline-six-lora": {
+      "role": "one candidate route",
+      "routeMode": "native-chain",
+      "sixLoraCompatibility": "native"
+    },
+    "community": {
+      "role": "one profile per indexed candidate",
+      "routeModes": ["native-chain", "composed-chain", "alternate-chain", "unresolved-chain"],
+      "sixLoraCompatibility": "informational-only"
+    }
+  },
+  "gates": {
+    "receipt": {
+      "required": true,
+      "mustBind": ["profileId", "routeMode", "commit", "outputSha256"],
+      "executionEvidenceIsNotVisualAcceptance": true
+    },
+    "directImageRead": {
+      "requiredBeforePromotion": true,
+      "originalResolution": true,
+      "hashBoundToReceiptOutput": true,
+      "automatedVision": "advisory-only"
+    },
+    "promotion": {
+      "default": false,
+      "requires": ["receipt", "directImageRead", "rightsApproval", "visualStyleEffectGate"],
+      "adapterMayNotAutoPromote": true
+    }
+  },
+  "nonGoals": [
+    "starting ComfyUI or GPU inference",
+    "installing custom nodes or downloading weights",
+    "replacing the existing workflow implementation",
+    "claiming a candidate is locally runnable from repository metadata"
+  ]
+}

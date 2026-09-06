@@ -14,6 +14,17 @@ const releaseRoots = [
   'release/github-cdn-root/dist/albina-galgame-card',
 ];
 const allowedEntries = new Set(['assets', 'data', 'manifest.json', 'release-status.json', 'source', 'worldbooks']);
+const releasedWorldbooks = [
+  'albina-worldbook-au-if-v1.json',
+  'albina-worldbook-l1-albina-core-v1.json',
+  'albina-worldbook-l2-canto-ix-main-cast-v1.json',
+  'albina-worldbook-l3-world-expansion-v1.json',
+  'albina-worldbook-l4-mechanics-v1.json',
+  'albina-worldbook-l5-reviewed-identities-v1.json',
+  'albina-worldbook-plot-full-timeline-v1.json',
+  'albina_canon_worldbook_v1.json',
+  'albina_worldbook_packages_v1.json',
+];
 
 async function json(path: string): Promise<Record<string, unknown>> {
   return JSON.parse(await readFile(join(projectRoot, path), 'utf8')) as Record<string, unknown>;
@@ -42,17 +53,34 @@ describe('offline release boundary', () => {
     expect(normalized.every((path) => !/(?:^|\/)(?:albina-bridge|cinema|console|sfe)(?:\/|$)|(?:^|\/)video-injector\.js$/u.test(path))).toBe(true);
   });
 
-  it.each(releaseRoots)('excludes production progress, retired source art, Albina strips, and unreferenced opening or ED videos in %s', async (root) => {
+  it.each(releaseRoots)('keeps Krea2 local-review evidence out of %s', async (root) => {
     const entries = await readdir(join(projectRoot, root), { recursive: true });
     const normalized = entries.map((path) => path.replaceAll('\\', '/'));
-    const forbidden = /(?:^|\/)assets\/(?:original_albina_sprites|original_bg_story|original_cg|videos)(?:\/|$)|(?:^|\/)assets\/sprite-atlas\/(?:_progress\.json|(?:albina|original_[^/]+)(?:\/|$))|(?:^|\/)assets\/video\/animated\/(?:desktop|runtime)\/(?:ed_[^/]+|op|prologue)\.mp4$/u;
+    expect(normalized.every((path) => !/(?:^|\/)(?:krea2-au-cg|krea2-local-preview|KREA2_LOCAL_PREVIEW\.json|(?:preview|portrait|cg)-review\.html)(?:\/|$)/iu.test(path))).toBe(true);
+  });
+
+  it.each(releaseRoots)('excludes production progress, retired source art, Albina strips, and every retired video in %s', async (root) => {
+    const entries = await readdir(join(projectRoot, root), { recursive: true });
+    const normalized = entries.map((path) => path.replaceAll('\\', '/'));
+    const forbidden = /(?:^|\/)assets\/(?:original_albina_sprites|original_bg_story|original_cg|videos|video\/animated)(?:\/|$)|(?:^|\/)assets\/sprite-atlas\/(?:_progress\.json|(?:albina|original_[^/]+)(?:\/|$))/u;
 
     expect(normalized.filter((path) => forbidden.test(path))).toEqual([]);
   });
 
-  it.each(releaseRoots)('publishes only the source-backed canon worldbook in %s', async (root) => {
+  it.each(releaseRoots)('publishes the layered runtime worldbooks but excludes audit-only indexes in %s', async (root) => {
     const worldbooks = await readdir(join(projectRoot, root, 'worldbooks'), { recursive: true });
-    expect(worldbooks.map((path) => path.replaceAll('\\', '/'))).toEqual(['albina_canon_worldbook_v1.json']);
+    const normalized = worldbooks.map((path) => path.replaceAll('\\', '/')).sort();
+    expect(normalized).toEqual([...releasedWorldbooks].sort());
+    expect(normalized.every((path) => !/quarantine|source-index/iu.test(path))).toBe(true);
+    const manifest = await json(join(root, 'worldbooks/albina_worldbook_packages_v1.json')) as {
+      packages: Array<{ id: string; entryCount: number }>;
+      excluded: { quarantine: { entryCount: number }; sourceIndex: { entryCount: number } };
+    };
+    expect(manifest.packages.reduce((sum, entry) => sum + entry.entryCount, 0)).toBe(341);
+    expect(manifest.excluded).toEqual({
+      quarantine: expect.objectContaining({ entryCount: 258 }),
+      sourceIndex: expect.objectContaining({ entryCount: 1882 }),
+    });
   });
 
   it.each(releaseRoots)('removes bridge, SFE, and cinema keys from %s/manifest.json', async (root) => {

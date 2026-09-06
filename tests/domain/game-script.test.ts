@@ -34,6 +34,7 @@ const emptyGameplay = {
   professions: [],
   achievements: [],
   outfits: [],
+  minigames: [],
   worldbookEntries: [],
 } as const;
 

@@ -21,7 +21,7 @@ const promotionReceiptRoots = [
 ];
 const audioCreditsPath = resolve(assetRoot, 'audio/CREDITS.json');
 const bgmRoot = resolve(assetRoot, 'audio/bgm');
-const releaseVersion = '2.0.0-rc.2';
+const releaseVersion = '2.0.0-rc.3';
 const previewBase = '.';
 const mediaExtensions = new Set(['.jpeg', '.jpg', '.json', '.mp3', '.mp4', '.png', '.svg', '.wav', '.webp']);
 
@@ -214,8 +214,8 @@ async function pendingGalleryCgs() {
     const inputAssetIds = [entry.sourceAssetId];
     assets.push({ id: entry.id, kind: 'image', path: entry.path, mimeType: 'image/png' });
     jobs.push({
-      version: 2, id: `job.${entry.id}`, assetId: entry.id, kind: 'image-edit', provider: 'x666-openai-compatible', model: 'gpt-image-2', upstreamPieVerified: false, promptVersion: entry.promptVersion, status: 'pending',
-      contentHash: hash(JSON.stringify({ assetId: entry.id, inputAssetIds, outputPath: entry.path, width: entry.width, height: entry.height, provider: 'x666-openai-compatible', model: 'gpt-image-2', upstreamPieVerified: false, promptVersion: entry.promptVersion })),
+      version: 2, id: `job.${entry.id}`, assetId: entry.id, kind: 'image-edit', provider: 'wisart-openai-compatible', model: 'gpt-image-2', promptVersion: entry.promptVersion, status: 'pending',
+      contentHash: hash(JSON.stringify({ assetId: entry.id, inputAssetIds, outputPath: entry.path, width: entry.width, height: entry.height, provider: 'wisart-openai-compatible', model: 'gpt-image-2', promptVersion: entry.promptVersion })),
       inputAssetIds, outputPath: entry.path, attempts: 0,
     });
   }
@@ -241,27 +241,11 @@ async function voiceAssets(references) {
   return { assets, jobs };
 }
 
-async function videoAssets() {
-  const assets = [];
-  for (const profile of ['runtime', 'desktop']) {
-    const root = resolve(assetRoot, 'video/animated', profile);
-    for (const path of await walkFiles(root)) {
-      if (extname(path).toLowerCase() !== '.mp4') continue;
-      const name = relative(root, path).replaceAll('\\', '/').replace(/\.mp4$/u, '');
-      const outputPath = `video/animated/${profile}/${name}.mp4`;
-      if (isExcludedReleaseAssetPath(outputPath)) continue;
-      const bytes = await readFile(path);
-      assets.push({ id: `video.animated.${profile}.${name}`, kind: 'video', path: outputPath, mimeType: 'video/mp4', sha256: hash(bytes), bytes: bytes.length });
-    }
-  }
-  return assets;
-}
-
 async function buildManifest(audioLicenseRegistry) {
   const references = collectStoryAssetReferences(await readStory());
   const galleryCgs = await pendingGalleryCgs();
   const voices = await voiceAssets(references);
-  const assets = [...await physicalAssets(), ...await semanticAssets(references), ...await videoAssets(), ...galleryCgs.assets, ...voices.assets];
+  const assets = [...await physicalAssets(), ...await semanticAssets(references), ...galleryCgs.assets, ...voices.assets];
   assets.sort((a, b) => a.id.localeCompare(b.id));
   const licensedAssets = attachAudioLicenses(assets, audioLicenseRegistry);
   const receiptPaths = (await Promise.all(promotionReceiptRoots.map((root) => walkFiles(root))))

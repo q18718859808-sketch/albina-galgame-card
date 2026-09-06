@@ -1,8 +1,14 @@
 import { expect, test, type Page } from '@playwright/test';
 
+// Long-route specs end on a live WebGL scene. The emulated mobile browser
+// renders that atmosphere in software, so context teardown can outlast the
+// 30s default; give every spec the same headroom as the explicitly-tuned ones.
+test.describe.configure({ timeout: 90_000 });
+
 async function installHarness(page: Page): Promise<void> {
   await page.addInitScript(() => {
     const state: Record<string, unknown> = {};
+    Object.defineProperty(window, '__albinaHarnessState', { value: state });
     window.TavernHelper = {
       getChatId: () => 'playwright-chat',
       getVariables: () => state,
@@ -15,6 +21,7 @@ async function chooseAndContinue(page: Page, choiceId: string, nextSceneId: stri
   await page.locator(`[data-choice-id="${choiceId}"]`).click();
   await expect(page.getByTestId('choice-result')).toBeVisible();
   await page.getByTestId('choice-result').getByRole('button').click();
+  await expect(page.getByTestId('choice-result')).toHaveCount(0);
   await expect(page.getByTestId('game-screen')).toHaveAttribute('data-scene-id', nextSceneId);
 }
 
@@ -39,22 +46,55 @@ async function advanceCanonRecapToAuBoundary(page: Page): Promise<void> {
 
 test.beforeEach(async ({ page }) => { await installHarness(page); await page.goto('/'); });
 
+test('collects a sanitized player profile before starting and persists it to chat variables', async ({ page }) => {
+  await page.getByTestId('new-game').click();
+  await expect(page.getByTestId('profile-screen')).toBeVisible();
+  await page.getByTestId('profile-name').fill(' <Morgan> ');
+  await page.getByTestId('profile-address').fill('Witness');
+  await page.getByTestId('profile-route').selectOption('ring_conspiracy');
+  await page.getByTestId('profile-begin').click();
+  await expect(page.getByTestId('game-screen')).toHaveAttribute('data-scene-id', 'canon_recap_9_14');
+  await expect(page.getByTestId('route-map')).toBeVisible();
+  await expect(page.getByTestId('route-status')).toContainText('junction pending');
+  await expect(page.locator('.portrait-slot')).toHaveCount(3);
+  await expect(page.getByTestId('scene-atmosphere-mode')).toBeVisible();
+  await expect.poll(() => page.evaluate(() => {
+    const state = (window as typeof window & { __albinaHarnessState: Record<string, any> }).__albinaHarnessState;
+    return state.albinaPlayerProfileV1?.name;
+  })).toBe('Morgan');
+  await expect.poll(() => page.evaluate(() => {
+    const state = (window as typeof window & { __albinaHarnessState: Record<string, any> }).__albinaHarnessState;
+    return state.albinaSaveV2?.playerProfile?.routePreference;
+  })).toBe('ring_conspiracy');
+});
+
 test('imports into a Tavern Helper harness and follows an authoritative route choice', async ({ page }) => {
+  // The emulated mobile browser renders the live atmosphere in software; the
+  // extra headroom covers both the walked route and the slower context teardown.
+  test.setTimeout(90_000);
   await expect(page.getByTestId('title-screen')).toBeVisible();
   await page.getByTestId('new-game').click();
+  await page.getByTestId('profile-begin').click();
   await advanceCanonRecapToAuBoundary(page);
   await expect(page.getByTestId('scene-video')).toHaveCount(0);
   await chooseAndContinue(page, 'enter_white_canvas', 'white_canvas_001');
   await page.getByRole('button', { name: '快速存档' }).click();
+  await expect(page.getByTestId('save-status')).toHaveAttribute('data-saving', 'false');
   await page.reload();
   await page.getByTestId('continue-game').click();
   await expect(page.getByTestId('game-screen')).toHaveAttribute('data-scene-id', 'white_canvas_001');
+  // Unload the WebGL scene before the context tears down. The emulated mobile
+  // browser renders the live atmosphere in software, so an active rAF loop can
+  // otherwise stall the teardown past its 30s deadline.
+  await page.goto('about:blank');
 });
 
 test('opens gallery and settings with honest media controls', async ({ page }) => {
   await page.getByTestId('new-game').click();
+  await page.getByTestId('profile-begin').click();
   await page.getByRole('button', { name: '图鉴' }).click();
   await expect(page.getByTestId('gallery-screen')).toBeVisible();
+  await expect(page.getByTestId('gallery-empty')).toBeVisible();
   await page.getByRole('button', { name: '返回' }).click();
   await page.reload();
   await page.getByRole('button', { name: '设置' }).click();
@@ -67,6 +107,7 @@ test('opens gallery and settings with honest media controls', async ({ page }) =
 test('exposes the authoritative gameplay state and safe loadout controls', async ({ page }) => {
   test.setTimeout(90_000);
   await page.getByTestId('new-game').click();
+  await page.getByTestId('profile-begin').click();
   await advanceCanonRecapToAuBoundary(page);
   await chooseAndContinue(page, 'enter_white_canvas', 'white_canvas_001');
 
@@ -79,7 +120,7 @@ test('exposes the authoritative gameplay state and safe loadout controls', async
   await openButton.click();
   const panel = page.getByTestId('gameplay-panel');
   await expect(panel).toBeVisible();
-  await expect(panel.getByRole('tab')).toHaveCount(5);
+  await expect(panel.getByRole('tab')).toHaveCount(7);
   await expect(page.getByTestId('gameplay-page-status').getByText('信赖')).toBeVisible();
   const trustStat = page.locator('[data-stat-key="trust"]');
   await expect(trustStat).toHaveText(String(shownTrust));
@@ -134,11 +175,12 @@ test('exposes the authoritative gameplay state and safe loadout controls', async
 
 test('keeps the UI usable offline after first load', async ({ page, context }) => {
   await page.getByTestId('new-game').click();
+  await page.getByTestId('profile-begin').click();
   await advanceCanonRecapToAuBoundary(page);
   await chooseAndContinue(page, 'enter_white_canvas', 'white_canvas_001');
   await chooseAndContinue(page, 'white_touch_boundary', 'white_canvas_002');
   await chooseAndContinue(page, 'white_follow_to_lab', 'white_canvas_003');
-  await expect.poll(async () => page.getByTestId('scene-video').getAttribute('src'), { timeout: 15_000 }).toMatch(/^blob:/u);
+  await expect.poll(async () => page.getByTestId('static-fallback').getAttribute('src'), { timeout: 15_000 }).toMatch(/^blob:/u);
   await context.setOffline(true);
   await chooseAndContinue(page, 'white_sign_witness_protocol', 'white_canvas_004');
   await expect.poll(async () => page.getByTestId('static-fallback').getAttribute('src'), { timeout: 15_000 }).toMatch(/^blob:/u);
@@ -146,6 +188,7 @@ test('keeps the UI usable offline after first load', async ({ page, context }) =
 
 test('creates, restores, and deletes a normal save slot with an image thumbnail', async ({ page }) => {
   await page.getByTestId('new-game').click();
+  await page.getByTestId('profile-begin').click();
   await page.getByTestId('game-saves').click();
   await page.getByTestId('save-slot-1').click();
   const slot = page.locator('[data-save-id="slot-1"]');
@@ -160,10 +203,16 @@ test('creates, restores, and deletes a normal save slot with an image thumbnail'
 
 test('wires gallery unlock, special-CG queue, and cached asset URLs', async ({ page }) => {
   await page.getByTestId('new-game').click();
+  await page.getByTestId('profile-begin').click();
   await advanceCanonRecapToAuBoundary(page);
   await chooseAndContinue(page, 'enter_white_canvas', 'white_canvas_001');
   await page.getByRole('button', { name: '图鉴' }).click();
-  await expect(page.getByTestId('gallery-screen').locator('img').first()).toHaveAttribute('src', /^blob:/u);
+  const galleryImage = page.getByTestId('gallery-screen').locator('img').first();
+  await expect(galleryImage).toHaveAttribute('src', /^blob:/u);
+  await page.getByTestId('gallery-grid').getByRole('button').first().click();
+  await expect(page.getByTestId('gallery-viewer')).toBeVisible();
+  await page.getByTestId('gallery-viewer').getByRole('button', { name: /关闭 CG/u }).click();
+  await expect(page.getByTestId('gallery-viewer')).toHaveCount(0);
   const queued = await page.evaluate(async () => new Promise<number>((resolve, reject) => {
     const request = indexedDB.open('albina-runtime-v2');
     request.onerror = () => reject(request.error);
@@ -186,14 +235,11 @@ test('wires gallery unlock, special-CG queue, and cached asset URLs', async ({ p
   expect(portraitCached).toBe(true);
 });
 
-test('users can disable video for low-performance mode independently of reduced-motion', async ({ page }) => {
+test('uses the static CG fallback and never requests retired video assets', async ({ page }) => {
   const videoRequests: string[] = [];
   page.on('request', (request) => { if (request.url().includes('/assets/video/')) videoRequests.push(request.url()); });
-  await expect(page.getByTestId('title-screen')).toBeVisible();
-  await page.getByTestId('title-settings').click();
-  await page.getByLabel(/启用动画 CG/u).uncheck();
-  await page.getByRole('button', { name: '返回' }).click();
   await page.getByTestId('new-game').click();
+  await page.getByTestId('profile-begin').click();
   await advanceCanonRecapToAuBoundary(page);
   await chooseAndContinue(page, 'enter_white_canvas', 'white_canvas_001');
   await chooseAndContinue(page, 'white_touch_boundary', 'white_canvas_002');
@@ -209,6 +255,7 @@ test('mobile and reduced-motion policy use a static fallback instead of scene vi
   page.on('request', (request) => { if (request.url().includes('/assets/video/')) videoRequests.push(request.url()); });
   await page.emulateMedia({ reducedMotion: 'reduce' });
   await page.getByTestId('new-game').click();
+  await page.getByTestId('profile-begin').click();
   await advanceCanonRecapToAuBoundary(page);
   await chooseAndContinue(page, 'enter_white_canvas', 'white_canvas_001');
   for (const choiceId of ['white_touch_boundary', 'white_follow_to_lab']) {
@@ -220,32 +267,16 @@ test('mobile and reduced-motion policy use a static fallback instead of scene vi
   expect(videoRequests).toEqual([]);
 });
 
-test('enabled video requests only the delivery profile selected for the viewport', async ({ page }, testInfo) => {
+test('uses a static CG fallback on every viewport profile', async ({ page }) => {
   const videoRequests: string[] = [];
   page.on('request', (request) => { if (request.url().includes('/assets/video/')) videoRequests.push(request.url()); });
   await page.getByTestId('new-game').click();
-  await advanceCanonRecapToAuBoundary(page);
-  await chooseAndContinue(page, 'enter_white_canvas', 'white_canvas_001');
-  await chooseAndContinue(page, 'white_touch_boundary', 'white_canvas_002');
-  await chooseAndContinue(page, 'white_follow_to_lab', 'white_canvas_003');
-  const video = page.getByTestId('scene-video');
-  await expect(video).toBeVisible();
-  await expect.poll(() => video.getAttribute('poster')).toMatch(/^blob:/u);
-  await expect(page.getByTestId('static-fallback')).toHaveCount(0);
-  await expect.poll(() => videoRequests.length).toBeGreaterThan(0);
-  const expected = testInfo.project.name === 'desktop' ? '/desktop/white_canvas_scene_3.mp4' : '/runtime/white_canvas_scene_3.mp4';
-  const forbidden = testInfo.project.name === 'desktop' ? '/runtime/' : '/desktop/';
-  expect(videoRequests.every((url) => url.includes(expected))).toBe(true);
-  expect(videoRequests.some((url) => url.includes(forbidden))).toBe(false);
-});
-
-test('falls back to the approved poster when a video asset fails to load', async ({ page }) => {
-  await page.route('**/assets/video/**', async (route) => route.abort('failed'));
-  await page.getByTestId('new-game').click();
+  await page.getByTestId('profile-begin').click();
   await advanceCanonRecapToAuBoundary(page);
   await chooseAndContinue(page, 'enter_white_canvas', 'white_canvas_001');
   await chooseAndContinue(page, 'white_touch_boundary', 'white_canvas_002');
   await chooseAndContinue(page, 'white_follow_to_lab', 'white_canvas_003');
   await expect(page.getByTestId('scene-video')).toHaveCount(0);
   await expect(page.getByTestId('static-fallback')).toBeVisible();
+  expect(videoRequests).toEqual([]);
 });

@@ -1,0 +1,85 @@
+{
+  "schemaVersion": 1,
+  "id": "albina-worldbook-runtime-boundary-v1",
+  "purpose": "Declare the boundary between in-app layered-worldbook selection and external SillyTavern worldbook injection.",
+  "status": "contract-declared-not-runtime-observed",
+  "selection": {
+    "sourceOfTruth": "SaveV2.worldbook",
+    "sourceCode": [
+      "src/domain/save.ts",
+      "src/domain/layered-worldbooks.ts",
+      "src/stores/game.ts"
+    ],
+    "operation": "selectWorldbookPreset",
+    "effects": [
+      "normalize the preset to manifest-listed runtime-installable package IDs",
+      "persist the selected preset and package IDs in SaveV2.worldbook",
+      "write the same normalized selection to the chat-scoped projection used by the EJS reader",
+      "expose the selected package URLs and import instructions in the worldbook package view"
+    ],
+    "projection": {
+      "variableKey": "albinaWorldbookSelectionV1",
+      "scope": "chat",
+      "writtenBy": "src/runtime/default-host.ts",
+      "readBy": "content/worldbook/player-profile-runtime-v1.json",
+      "serialization": "normalized WorldbookPackageSelection",
+      "consistencyRule": "The chat projection must equal the normalized SaveV2.worldbook selection before the runtime reader is used.",
+      "failureMeaning": "A failed projection write may leave the external EJS reader stale or unavailable; it never proves worldbook injection."
+    },
+    "doesNotMean": "The selected packages have been imported, enabled, or injected into a SillyTavern prompt."
+  },
+  "injection": {
+    "mode": "manual-import-only",
+    "owner": "SillyTavern normal worldbook UI",
+    "applicationBoundary": "src/runtime/layered-worldbooks.ts",
+    "requiredUserActions": [
+      "download every package listed for the selected preset",
+      "import the packages through the normal SillyTavern worldbook UI",
+      "enable only the selected package set and keep L0 exclusive with full packages"
+    ],
+    "externalState": "unverified-until-real-host-acceptance",
+    "appMustNot": [
+      "call an undocumented SillyTavern worldbook API",
+      "auto-import or auto-register a package",
+      "write, edit, or delete worldbook entries",
+      "claim that a selected package is active in the external host"
+    ]
+  },
+  "hostBinding": {
+    "selectionPersistence": {
+      "surface": "TavernHelper.setVariables",
+      "variableKey": "albinaWorldbookSelectionV1",
+      "scope": "chat",
+      "status": "contract-declared-not-observed"
+    },
+    "optionalSaveWorldbookSelectionCallback": {
+      "status": "selection-metadata-hook-only",
+      "mustNotBePresentedAs": "worldbook-import-or-prompt-injection",
+      "externalOwner": "user-installed host integration"
+    },
+    "fallback": "embedded-l0-and-local-storage"
+  },
+  "packagePolicy": {
+    "manifest": "content/worldbook/albina-worldbook-packages-v1.manifest.json",
+    "defaultPreset": "canonicalCore",
+    "neverRuntimePreset": "neverRuntime",
+    "l0ExclusiveWithFullPackages": true,
+    "unknownPackageIdsFailClosed": true
+  },
+  "acceptance": {
+    "staticChecksCanProve": [
+      "selection IDs match the checked-in package manifest",
+      "never-runtime packages are excluded",
+      "the EJS reader and chat projection use the declared selection variable",
+      "the selection projection is declared as the normalized SaveV2.worldbook value",
+      "the UI exposes the manual import boundary",
+      "no confirmed external API claim is present"
+    ],
+    "staticChecksCannotProve": [
+      "SillyTavern imported a package",
+      "SillyTavern enabled the selected package set",
+      "a worldbook entry reached a model prompt"
+    ],
+    "realHostVerification": "required-before-claiming-runtime-injection"
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "schemaVersion": 1,
+  "id": "albina-reference-conditioned-pilot-v1",
+  "profile": "krea2-reference-conditioned-fresh-latent-v1",
+  "jobId": "albina-combat-reference-conditioned-v1",
+  "seed": 2026082001,
+  "source": "staging/research/canon-visual/wiki-game-assets/albina-unarmored-standing.png",
+  "targetSize": { "width": 592, "height": 1768 },
+  "identityStrength": 0.9,
+  "prompt": "A single coherent full-body authored adult Albina character portrait in the locked Krea2 production rendering language. The supplied canonical image is the sole identity and structural authority. Preserve her mature narrow adult face, image-left white luminous eye, image-right dark eye, segmented silver-gray hair construction with the image-right conduit bundle, white breastplate over black internal structure, open abdominal frame, crossed mechanical forearms, black-and-white lower-body partition, complete feet, original pose and unmirrored composition. State variant only: combat; express restrained adult combat readiness through controlled gaze, tension, cool industrial light and hard-surface material response, without redesigning any component. Render with dense precise 2D linework, crisp mechanical edges, restrained cel shading, readable metal and fabric separation, cool white and charcoal values, limited old-gold accents and controlled warning-red energy. Keep the full body, preserve negative space around the silhouette, and produce one clean production illustration with no collage.",
+  "negativePrompt": "child, loli, young girl, chibi, cute, doll-like, generic anime face, soft younger features, photorealistic, glossy 3d, redesign, altered costume, natural hair substitution, mirrored eyes, wrong eye sides, missing conduit bundle, closed abdomen, organic replacement limbs, fused limbs, extra limbs, extra fingers, broken hands, cropped head, cropped hands, cropped feet, changed pose, extra character, duplicate figure, collage, split screen, panels, blurry, low detail, muddy linework, washed colors, text, logo, watermark, signature, ui, speech bubble, weapon, decorative background"
+}

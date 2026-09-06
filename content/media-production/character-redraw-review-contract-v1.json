@@ -1,0 +1,84 @@
+{
+  "version": 1,
+  "id": "albina-character-redraw-review-contract-v1",
+  "purpose": "Independent quality gate for the full character redraw batch; does not mutate frozen generation prompts or job hashes.",
+  "baseline": {
+    "sourceId": "reference.user.albina-style-baseline",
+    "styleBoardSourceId": "reference.user.albina-style-board",
+    "styleBoardSha256": "aaf89630110b6fef687b86334404b00cd39fd29c84451971575b26a29ce51142",
+    "mode": "deidentified-image-last",
+    "qualityReferenceRule": "Use the user-provided Albina baseline and its de-identified style board as the visual quality standard. Existing generated deliveries are evidence under review, never quality references."
+  },
+  "decision": {
+    "approveOnlyWhenAll": true,
+    "rejectOnUnknownStructure": true,
+    "rejectOnAnyCriticalFailure": true,
+    "criticalFailures": [
+      "extra or missing limb, hand, finger, foot, toe, joint, or duplicated feature",
+      "impossible pose, unsupported weight, broken contact, impossible occlusion, or disconnected prop",
+      "identity drift, side assignment drift, canon/AU boundary drift, or continuity break",
+      "style-board mismatch in line density, flat-to-painterly balance, material edge treatment, palette, or industrial cold-light direction",
+      "crop, scale-anchor, alpha, watermark, text, logo, or Live2D-splitting failure"
+    ]
+  },
+  "criteria": [
+    {
+      "id": "anatomy",
+      "label": "人体结构",
+      "checks": [
+        "Visible hands have five countable, naturally separated digits with plausible joints and fingertip order.",
+        "Visible feet have coherent volume, toe order, ankle and weight-bearing geometry.",
+        "Shoulders, elbows, wrists, hips, knees, ankles, neck and spine form one continuous articulated body.",
+        "No fused fingers, impossible joints, duplicated limbs, disconnected hands, twisted torso, or floating anatomy."
+      ]
+    },
+    {
+      "id": "physics",
+      "label": "物理与接触",
+      "checks": [
+        "The pose has a plausible center of mass and support polygon.",
+        "Hands visibly connect to tools, weapons, frames, or clothing and the grip/contact is physically coherent.",
+        "Layered clothing, armor, hair cables, straps and props have consistent occlusion and attachment boundaries.",
+        "Long objects have a coherent axis, perspective, thickness, and point of contact; no impossible floating or interpenetration."
+      ]
+    },
+    {
+      "id": "identity",
+      "label": "身份连续性",
+      "checks": [
+        "Required canon or AU anchors are present and readable at 100 percent.",
+        "Image-left/image-right eye and side assignments remain correct where applicable.",
+        "Variants change only the requested emotion, wardrobe, tool, lighting, or pose while retaining the same identity and scale anchors.",
+        "No accidental borrowing of face, body, costume, prop, or pose from another character."
+      ]
+    },
+    {
+      "id": "style",
+      "label": "基准画风",
+      "checks": [
+        "Dense precise 2D linework matches the baseline board rather than a smooth 3D, doll-like, glossy, or generic anime treatment.",
+        "Flat-color transitions and restrained painterly shading match the board's balance.",
+        "Cool white/charcoal structure, restrained gold, warning red, biomechanical edges, and industrial cold light remain coherent.",
+        "No text, logo, watermark, faux UI, or visual-language drift."
+      ]
+    },
+    {
+      "id": "delivery",
+      "label": "交付完整性",
+      "checks": [
+        "1024x1536 transparent PNG; full head-to-shoe figure is present without crop.",
+        "Center, shoe baseline, head clearance, and side margins match the shared portrait anchors.",
+        "Silhouette and boundaries are suitable for later Live2D layer separation.",
+        "Transparent pixels contain no residual chroma-key RGB contamination."
+      ]
+    }
+  ],
+  "evidenceRequired": [
+    "full image at 100 percent",
+    "hand and foot crops where visible",
+    "prop/contact/occlusion crops where applicable",
+    "comparison against the user-provided baseline style board",
+    "pixel and delivery validation record"
+  ],
+  "reviewRecordRule": "Every decision must name each criterion as passed or failed and include evidence; a missing evidence item is not an approval."
+}

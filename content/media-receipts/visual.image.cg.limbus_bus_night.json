@@ -1,0 +1,47 @@
+{
+  "version": 1,
+  "assetId": "cg.limbus_bus_night",
+  "artifactSha256": "49357dc9a7fa859bc5cb1db2dbb2f7b5fb3e6ca19abef0ea04f811841a8c716d",
+  "provenance": {
+    "provider": "wisart-openai-compatible",
+    "model": "gpt-image-2",
+    "promptVersion": "albina-visual-migration-v1",
+    "sourceJobHash": "a72f62648095b8cfca16b0c578b1d5a61030bda8943a577c378b570669ec5393",
+    "review": {
+      "status": "approved",
+      "reviewer": "workbuddy-convergence-agent",
+      "reviewedAt": "2026-09-06T08:36:09.907Z"
+    }
+  },
+  "rights": {
+    "status": "unverified",
+    "sourceType": "model-output",
+    "redistribution": "unverified",
+    "rightsBasis": "Redistribution rights for this model output have not been independently verified."
+  },
+  "lineage": {
+    "kind": "derivative",
+    "processVersion": "albina-visual-promotion-v1",
+    "inputs": [
+      {
+        "assetId": "file.characters.albina.rain.png",
+        "sha256": "e49132402829886bcdc6b847b02810e8849cd0932c882ed4c666565c6a0ddf6e",
+        "role": "approved-generated-reference"
+      },
+      {
+        "assetId": "file.characters.protagonist.tender.png",
+        "sha256": "1654accf7c7cbdd16b6af3c3fa51d06fa0547b411451c1325d46bf02b71bd2d1",
+        "role": "approved-generated-reference"
+      },
+      {
+        "assetId": "file.characters.dante.normal.png",
+        "sha256": "40487edd1ddf95c2448e6dd1b6a74bdc25ed32001aa3bbf7282d436ba48be80d",
+        "role": "approved-generated-reference"
+      },
+      {
+        "sha256": "aaf89630110b6fef687b86334404b00cd39fd29c84451971575b26a29ce51142",
+        "role": "canon-visual-reference"
+      }
+    ]
+  }
+}

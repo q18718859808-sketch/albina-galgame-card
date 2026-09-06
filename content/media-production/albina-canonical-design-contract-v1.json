@@ -1,0 +1,137 @@
+{
+  "schemaVersion": 1,
+  "subject": "Albina",
+  "authority": {
+    "path": "staging/research/canon-visual/wiki-game-assets/albina-unarmored-standing.png",
+    "sha256": "e68f9d04dda42e9ab86dcb686663057619c8dfbeff5f7d70078a083b0228aa55",
+    "canvas": {
+      "width": 588,
+      "height": 1766,
+      "alpha": true,
+      "aspectRatio": 0.3329558324,
+      "nonTransparentBounds": {
+        "x": 0,
+        "y": 1,
+        "width": 588,
+        "height": 1765
+      }
+    }
+  },
+  "coordinateSystem": {
+    "orientation": "unmirrored-source-pixel-coordinates",
+    "sideConvention": "image-left and image-right are primary; anatomical sides must never silently replace image coordinates",
+    "imageLeftEye": "white-light eye structure",
+    "imageRightEye": "black-dark eye structure",
+    "cableDirection": "the rear cable bundle extends toward image-right and folds back",
+    "forbidden": [
+      "horizontal flip",
+      "auto mirror",
+      "face swap",
+      "pose reorientation",
+      "perspective relayout"
+    ]
+  },
+  "designAnchors": [
+    {
+      "id": "adult-proportion",
+      "requirement": "Clearly adult, extremely slender and vertically elongated humanoid proportions; never childlike, chibi, petite-idol or round-faced."
+    },
+    {
+      "id": "face-silhouette",
+      "requirement": "Long narrow mature face, small controlled mouth, restrained expression and sharp jaw relationship; no generic soft anime beauty face."
+    },
+    {
+      "id": "asymmetric-eyes",
+      "requirement": "In the unmirrored canonical view, image-left is the white-light eye structure and image-right is the black-dark eye structure. Preserve this exact assignment; this is not ordinary two-color irises."
+    },
+    {
+      "id": "segmented-hair-and-cables",
+      "requirement": "Pale silver-grey hair is structured into hard graphic segments; the rear high bundle is a thick cable/conduit assembly extending toward image-right and folding back, not a fluffy natural ponytail."
+    },
+    {
+      "id": "thoracic-shell",
+      "requirement": "White hard shell plates, black inner construction, collar interfaces and exposed mechanical divisions define the neck, shoulders and thorax."
+    },
+    {
+      "id": "open-abdominal-frame",
+      "requirement": "The abdomen is an authored open frame/cavity with visible structural members; it must not become cloth, corset fashion, bare skin or a closed bodysuit."
+    },
+    {
+      "id": "crossed-mechanical-arms",
+      "requirement": "Both mechanical arms form the canonical restrained crossing silhouette in front of the waist; preserve elbow, forearm and hand placement."
+    },
+    {
+      "id": "lower-body-partition",
+      "requirement": "Long narrow black lower-body structure with canonical white panel partitions; never a dress, skirt, coat hem or generic trousers."
+    },
+    {
+      "id": "graphic-value-map",
+      "requirement": "Preserve the canonical black, white and cool-grey value blocks and their side-specific placement before applying Krea2 rendering treatment."
+    }
+  ],
+  "productionRule": {
+    "style": "Apply the locked six-LoRA Krea2 production rendering language to the canonical design without replacing its silhouette, anatomy, component topology or side assignments.",
+    "output": "A complete standalone character render on one normalized transparent target canvas. The generated render is the output; it must never be pasted into the canonical source canvas as a differently sized inset.",
+    "controls": [
+      "canonical RGB reference",
+      "canonical alpha silhouette",
+      "canonical edge or depth structure",
+      "side-specific design anchor prompt"
+    ],
+    "styleLoras": [
+      { "name": "z3zz4-k2-4_c1-st5000.safetensors", "weight": 0.55 },
+      { "name": "Krea2Rella_c1-st8000.safetensors", "weight": 0.65 },
+      { "name": "onineko_k2_v1.safetensors", "weight": 0.45 },
+      { "name": "meion_krea2_style_v7.0_c1-st4000.safetensors", "weight": 0.45 },
+      { "name": "masterpieces-v51.safetensors", "weight": 0.45 },
+      { "name": "ichika-k2_c1-st5000.safetensors", "weight": 0.35 }
+    ],
+    "identityEdit": {
+      "name": "krea2_identity_edit_v1_2.safetensors",
+      "weight": 1,
+      "placement": "after all six style LoRAs",
+      "mayReplaceStyleChain": false
+    },
+    "renderMode": {
+      "required": "full-canvas-redraw",
+      "sourceAuthority": "canonical-only",
+      "finalCanvas": { "width": 588, "height": 1766, "alpha": true },
+      "occupancyRule": "The final non-transparent subject bounds must remain full-height and must not become an inset, thumbnail, centered small figure or letterboxed render.",
+      "forbiddenOperations": [
+        "inset-generation",
+        "center-paste",
+        "post-generation-resize-into-canonical-canvas",
+        "uncertified-canvas-composite",
+        "horizontal-flip"
+      ]
+    },
+    "forbidden": [
+      "ImageCompositeMasked between mismatched canvas coordinate spaces",
+      "generic anime girl substitution",
+      "child or loli age drift",
+      "ordinary heterochromia substitution",
+      "natural ponytail substitution",
+      "fashion outfit redesign",
+      "closed abdomen substitution",
+      "arm pose redesign"
+    ]
+  },
+  "gate": {
+    "status": "blocked-pending-full-canvas-krea2-redraw",
+    "requiredReview": [
+      "GCLI Gemini paired review against the canonical source",
+      "direct original-resolution review",
+      "all nine design anchors passed",
+      "no inset, collage, seam, logo, watermark or text"
+    ],
+    "directReviewVeto": true,
+    "gcliMayReplaceDirectReview": false,
+    "geometryChecks": [
+      "source and output dimensions and alpha state are hash-bound",
+      "subject bounding box is measured before promotion",
+      "head, cable far edge, hands and feet are not cropped",
+      "no added skirt, coat hem, cape, wing, tail or extra limb",
+      "all resize, crop, mask and composite operations are recorded in the receipt"
+    ]
+  }
+}

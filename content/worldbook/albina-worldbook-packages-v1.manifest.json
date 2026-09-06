@@ -1,0 +1,160 @@
+{
+  "schemaVersion": 1,
+  "id": "albina-layered-worldbooks-v1",
+  "generatedFrom": [
+    "content/worldbook/limbus-world-audit-v1.json",
+    "research/legacy-worldbooks/inventory-v1.json"
+  ],
+  "invariants": {
+    "auditedUniqueEntries": 2481,
+    "substantiveCandidates": 599,
+    "sourceIndexBridges": 1882,
+    "fullPackagesAreUidDisjoint": true,
+    "sourceIndexInjectsByDefault": false,
+    "quarantineInjectsByDefault": false,
+    "l0IsStandaloneAndExcludedFromFullSetCounts": true
+  },
+  "budgetPolicy": {
+    "unit": "UTF-16 content characters",
+    "defaultEnabledConstantCharacterLimit": 12000,
+    "defaultEnabledInventoryCharacterLimit": 120000,
+    "note": "Keyword-triggered inventory is not simultaneous prompt cost. Disabled packages and entries count as zero runtime budget."
+  },
+  "presets": {
+    "minimal": [
+      "l0-minimal-card-anchors"
+    ],
+    "canonicalCore": [
+      "l1-albina-core",
+      "l2-canto-ix-and-main-cast",
+      "plot-full-timeline"
+    ],
+    "canonicalExpanded": [
+      "l1-albina-core",
+      "l2-canto-ix-and-main-cast",
+      "plot-full-timeline",
+      "l3-world-expansion"
+    ],
+    "mechanicsOptIn": [
+      "l4-mechanics"
+    ],
+    "identityOptIn": [
+      "l5-reviewed-identities"
+    ],
+    "auOptIn": [
+      "au-if"
+    ],
+    "neverRuntime": [
+      "source-index",
+      "quarantine-unverified-rp"
+    ]
+  },
+  "l0": {
+    "id": "l0-minimal-card-anchors",
+    "file": "content/worldbook/albina-worldbook-l0-minimal-anchors-v1.json",
+    "defaultEnabled": true,
+    "entryCount": 16,
+    "enabledEntryCount": 16,
+    "contentCharacters": 2610,
+    "constantCharacters": 1319,
+    "sha256": "0e3cba0ff1fbd57a49671c56a548bdea8810aeec225bcb06794b4178f2abd596"
+  },
+  "packages": [
+    {
+      "id": "l1-albina-core",
+      "file": "content/worldbook/albina-worldbook-l1-albina-core-v1.json",
+      "defaultEnabled": true,
+      "entryCount": 7,
+      "enabledEntryCount": 7,
+      "contentCharacters": 1716,
+      "constantCharacters": 0,
+      "sha256": "48b7452f27c66ee1e5ba8edd85839001a562bdd85ffaa71fdc9beaaf600cf442"
+    },
+    {
+      "id": "l2-canto-ix-and-main-cast",
+      "file": "content/worldbook/albina-worldbook-l2-canto-ix-main-cast-v1.json",
+      "defaultEnabled": true,
+      "entryCount": 33,
+      "enabledEntryCount": 33,
+      "contentCharacters": 5134,
+      "constantCharacters": 0,
+      "sha256": "ed8195155b0a32b55444981b3183a3d9ed1df0e50f13850ba6ebb0f9cbdbfa52"
+    },
+    {
+      "id": "l3-world-expansion",
+      "file": "content/worldbook/albina-worldbook-l3-world-expansion-v1.json",
+      "defaultEnabled": false,
+      "entryCount": 80,
+      "enabledEntryCount": 0,
+      "contentCharacters": 17936,
+      "constantCharacters": 0,
+      "sha256": "f05dd9a95240b27153141c264447c111f37c4546ae92349cd9f1437d63d056d6"
+    },
+    {
+      "id": "plot-full-timeline",
+      "file": "content/worldbook/albina-worldbook-plot-full-timeline-v1.json",
+      "defaultEnabled": true,
+      "entryCount": 22,
+      "enabledEntryCount": 22,
+      "contentCharacters": 6728,
+      "constantCharacters": 0,
+      "sha256": "279b3b3dc84435cda7e16dffa28946f9e1bc51068f8cba09fac91dc877f65342"
+    },
+    {
+      "id": "l4-mechanics",
+      "file": "content/worldbook/albina-worldbook-l4-mechanics-v1.json",
+      "defaultEnabled": false,
+      "entryCount": 37,
+      "enabledEntryCount": 0,
+      "contentCharacters": 7745,
+      "constantCharacters": 0,
+      "sha256": "0adf5c88bbc7b03b850818f54df899cc62ac2b783c19cc6777c36dd8e5f5dab5"
+    },
+    {
+      "id": "l5-reviewed-identities",
+      "file": "content/worldbook/albina-worldbook-l5-reviewed-identities-v1.json",
+      "defaultEnabled": false,
+      "entryCount": 156,
+      "enabledEntryCount": 0,
+      "contentCharacters": 87805,
+      "constantCharacters": 0,
+      "sha256": "f540745fc0f23d8544b926e4ae40fed34d66f376eecfcb74d5b4388c8ac78277"
+    },
+    {
+      "id": "au-if",
+      "file": "content/worldbook/albina-worldbook-au-if-v1.json",
+      "defaultEnabled": false,
+      "entryCount": 6,
+      "enabledEntryCount": 0,
+      "contentCharacters": 3611,
+      "constantCharacters": 0,
+      "sha256": "e154e1c11510eda3e074260867ef9e4a37a2356ade1c92d26a6a1177ef19efaa"
+    },
+    {
+      "id": "quarantine-unverified-rp",
+      "file": "content/worldbook/albina-worldbook-quarantine-unverified-rp-v1.json",
+      "defaultEnabled": false,
+      "entryCount": 258,
+      "enabledEntryCount": 0,
+      "contentCharacters": 117035,
+      "constantCharacters": 0,
+      "sha256": "26e901e791cff2cd84f249ba63c6592c0d580dac7c6c95a6189a31cf4dec5036"
+    },
+    {
+      "id": "source-index",
+      "file": "content/worldbook/albina-worldbook-source-index-disabled-v1.json",
+      "defaultEnabled": false,
+      "entryCount": 1882,
+      "enabledEntryCount": 0,
+      "contentCharacters": 2100253,
+      "constantCharacters": 0,
+      "sha256": "9f4309b9b8e962c5bfc24194dedbb5eccbf2fb5171a4e23290b12e4821ed052f"
+    }
+  ],
+  "totals": {
+    "substantiveCandidates": 599,
+    "sourceIndexBridges": 1882,
+    "defaultEnabledInventoryCharacters": 13578,
+    "defaultEnabledConstantCharacters": 0
+  }
+}

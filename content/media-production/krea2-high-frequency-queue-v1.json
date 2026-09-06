@@ -1,0 +1,50 @@
+{
+  "schemaVersion": 1,
+  "id": "albina-krea2-high-frequency-serial-queue-v1",
+  "profile": "albina-staged-high-frequency-v1",
+  "purpose": "Serial production queue for the accepted direct-reviewed Albina Krea2 high-frequency anchor.",
+  "execution": {
+    "maxConcurrentJobs": 1,
+    "batchGenerationAllowed": false,
+    "directReviewRequiredBeforeAdvance": true,
+    "promotionAllowed": false
+  },
+  "fixedSixLoraChain": [
+    ["z3zz4-k2-4_c1-st5000.safetensors", 0.55],
+    ["Krea2Rella_c1-st8000.safetensors", 0.65],
+    ["onineko_k2_v1.safetensors", 0.45],
+    ["meion_krea2_style_v7.0_c1-st4000.safetensors", 0.45],
+    ["masterpieces-v51.safetensors", 0.45],
+    ["ichika-k2_c1-st5000.safetensors", 0.35]
+  ],
+  "jobs": [
+    {
+      "id": "albina-canonical-krea2-staged-hf-ab1",
+      "source": "staging/research/canon-visual/wiki-game-assets/albina-unarmored-standing.png",
+      "receipt": "staging/media/krea2-canonical-production/characters/albina-canonical-krea2-staged-hf-ab1.receipt.json",
+      "review": "staging/media/krea2-canonical-production/characters/albina-canonical-krea2-staged-hf-ab1.direct-review.json",
+      "subject": "Albina authored adult mechanical fascia design preserving exact canonical geometry",
+      "seed": 2026081921,
+      "stage1": "592x1768",
+      "stage2": "1184x3536",
+      "stage1Denoise": 0.12,
+      "stage2Denoise": 0.07,
+      "stage1Steps": 28,
+      "stage2Steps": 24
+    },
+    {
+      "id": "albina-armored-krea2-staged-hf-v1",
+      "source": "staging/research/canon-visual/wiki-game-assets/albina-armored-standing.png",
+      "receipt": "staging/media/krea2-canonical-production/characters/albina-armored-krea2-staged-hf-v1.receipt.json",
+      "review": "staging/media/krea2-canonical-production/characters/albina-armored-krea2-staged-hf-v1.direct-review.json",
+      "subject": "Albina authored adult armored mechanical fascia design preserving exact canonical geometry",
+      "seed": 2026081922,
+      "stage1": "592x1768",
+      "stage2": "1184x3536",
+      "stage1Denoise": 0.12,
+      "stage2Denoise": 0.07,
+      "stage1Steps": 28,
+      "stage2Steps": 24
+    }
+  ]
+}

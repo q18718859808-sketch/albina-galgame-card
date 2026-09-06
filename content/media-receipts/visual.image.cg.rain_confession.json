@@ -1,0 +1,42 @@
+{
+  "version": 1,
+  "assetId": "cg.rain_confession",
+  "artifactSha256": "4a5f80d17032543993bcb490c1f8f6eff6bec52de4416245f80dc2c008f33c6b",
+  "provenance": {
+    "provider": "wisart-openai-compatible",
+    "model": "gpt-image-2",
+    "promptVersion": "albina-visual-migration-v1",
+    "sourceJobHash": "96edf2ee24d96a19058a542d90ab68659e6f9b7a74a235ef14d00d349533e4de",
+    "review": {
+      "status": "approved",
+      "reviewer": "workbuddy-convergence-agent",
+      "reviewedAt": "2026-09-06T08:36:19.442Z"
+    }
+  },
+  "rights": {
+    "status": "unverified",
+    "sourceType": "model-output",
+    "redistribution": "unverified",
+    "rightsBasis": "Redistribution rights for this model output have not been independently verified."
+  },
+  "lineage": {
+    "kind": "derivative",
+    "processVersion": "albina-visual-promotion-v1",
+    "inputs": [
+      {
+        "assetId": "file.characters.albina.rain.png",
+        "sha256": "e49132402829886bcdc6b847b02810e8849cd0932c882ed4c666565c6a0ddf6e",
+        "role": "approved-generated-reference"
+      },
+      {
+        "assetId": "file.characters.protagonist.wet.hair.png",
+        "sha256": "a3bac76af24bc52b1c1e26867aad87f8d83ba9cf118afcfbbebcc329bf7de163",
+        "role": "approved-generated-reference"
+      },
+      {
+        "sha256": "aaf89630110b6fef687b86334404b00cd39fd29c84451971575b26a29ce51142",
+        "role": "canon-visual-reference"
+      }
+    ]
+  }
+}

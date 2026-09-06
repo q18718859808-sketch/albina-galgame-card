@@ -1,6 +1,14 @@
 import { z } from 'zod';
 
+import {
+  defaultWorldbookPackageSelection,
+  isRuntimeInstallablePackage,
+  LayeredWorldbookPresetIdSchema,
+  normalizeWorldbookSelection,
+} from './layered-worldbooks';
+import { createDefaultPlayerProfile, PlayerProfileSchema } from './player-profile';
 import { DOMAIN_VERSION, RouteIdSchema, type RouteId } from './scene-cue';
+import { MinigameStateSchema } from './minigame';
 
 const NumericVectorSchema = z
   .object({ intimacy: z.number().finite(), reliance: z.number().finite(), obsession: z.number().finite(), suspicion: z.number().finite() })
@@ -24,17 +32,7 @@ export const SaveValuesSchema = z
   })
   .strict();
 
-export const PlayerProfileSchema = z
-  .object({
-    name: z.string(),
-    gender: z.string(),
-    appearance: z.string(),
-    background: z.string(),
-    addressName: z.string(),
-    boundaries: z.string(),
-    routePreference: RouteIdSchema,
-  })
-  .strict();
+export { PlayerProfileSchema } from './player-profile';
 
 export const InventorySchema = z
   .object({
@@ -77,12 +75,25 @@ const AchievementStateSchema = z
   .object({ unlockedIds: z.array(z.string().min(1)) })
   .strict();
 
-const WorldbookStateSchema = z
+const defaultWorldbookSelection = defaultWorldbookPackageSelection();
+
+export const WorldbookStateSchema = z
   .object({
     activeEntryIds: z.array(z.string().min(1)),
     seenEntryIds: z.array(z.string().min(1)),
+    presetId: LayeredWorldbookPresetIdSchema.default(defaultWorldbookSelection.presetId),
+    packageIds: z.array(z.string().min(1).refine(isRuntimeInstallablePackage, 'Worldbook package is not runtime-installable.')).optional(),
   })
-  .strict();
+  .strict()
+  .superRefine((state, context) => {
+    if (state.presetId === 'neverRuntime') {
+      context.addIssue({ code: z.ZodIssueCode.custom, path: ['presetId'], message: 'The neverRuntime preset cannot be persisted as an active selection.' });
+    }
+  })
+  .transform((state) => ({
+    ...state,
+    ...normalizeWorldbookSelection(state.presetId, state.packageIds),
+  }));
 
 export type JsonValue = null | boolean | number | string | JsonValue[] | { [key: string]: JsonValue };
 export type JsonObject = { [key: string]: JsonValue };
@@ -156,9 +167,14 @@ export const SaveV2Schema = z
       })
       .strict(),
     battles: BattleStateSchema.default({ resolvedIds: [], outcomes: {} }),
+    minigames: MinigameStateSchema.default({ records: {} }),
     professions: ProfessionStateSchema.default({ activeId: '', progress: {} }),
     achievements: AchievementStateSchema.default({ unlockedIds: [] }),
-    worldbook: WorldbookStateSchema.default({ activeEntryIds: [], seenEntryIds: [] }),
+    worldbook: WorldbookStateSchema.default({
+      activeEntryIds: [], seenEntryIds: [],
+      presetId: defaultWorldbookSelection.presetId,
+      packageIds: defaultWorldbookSelection.packageIds,
+    }),
     unlockedCg: z.array(z.string().min(1)),
     logs: SaveLogsSchema,
   })
@@ -184,12 +200,7 @@ export function createDefaultSaveV2(): SaveV2 {
     saveId: 'albina-v2-recovered',
     createdAt: DEFAULT_TIMESTAMP,
     updatedAt: DEFAULT_TIMESTAMP,
-    playerProfile: {
-      name: '{{user}}', gender: '成年男性', appearance: '黑发，英俊，穿深色长外套，气质冷静而危险。',
-      background: '暂未确认；可由玩家设定。', addressName: '{{user}}',
-      boundaries: '成人自愿，亲密推进需要明确同意；允许黑暗都市暴力，但不允许强迫或失能式亲密。',
-      routePreference: 'white_canvas',
-    },
+    playerProfile: createDefaultPlayerProfile(),
     route: null, chapter: 0, sceneId: 'canon_recap_9_14', locationId: 'lce_research_hallway',
     values: {
       affectionAlbina: 0, trust: 0, danger: 0, artResonance: 0,
@@ -201,6 +212,7 @@ export function createDefaultSaveV2(): SaveV2 {
     inventory: { ownedIds: [], equipped: {}, outfitIds: [], activeOutfitId: '' },
     quests: { activeNodeIds: [], completedNodeIds: [], currentMapNodeId: '', progressLog: [] },
     battles: { resolvedIds: [], outcomes: {} },
+    minigames: { records: {} },
     professions: {
       activeId: 'narrative_curator',
       progress: {
@@ -211,7 +223,11 @@ export function createDefaultSaveV2(): SaveV2 {
       },
     },
     achievements: { unlockedIds: [] },
-    worldbook: { activeEntryIds: [], seenEntryIds: [] },
+    worldbook: {
+      activeEntryIds: [], seenEntryIds: [],
+      presetId: defaultWorldbookSelection.presetId,
+      packageIds: [...defaultWorldbookSelection.packageIds],
+    },
     unlockedCg: [],
     logs: createDefaultLogs(),
   };

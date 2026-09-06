@@ -43,7 +43,9 @@ function createBindings(): TavernHelperBindings & { emit(event: 'chatChanged' | 
   return {
     getChatId: vi.fn(() => 'chat-1'),
     loadSave: vi.fn(async () => createDefaultSaveV2()),
+    loadPlayerProfile: vi.fn(async () => createDefaultSaveV2().playerProfile),
     saveSave: vi.fn(async () => undefined),
+    savePlayerProfile: vi.fn(async () => undefined),
     subscribe(event, listener) {
       const current = listeners.get(event) ?? new Set();
       current.add(listener);
@@ -63,8 +65,10 @@ describe('TavernHostAdapter and AlbinaRuntime lifecycle', () => {
     expect(host.getChatId()).toBe('chat-1');
     await expect(host.loadSave()).resolves.toEqual(save);
     await host.saveSave(save);
+    await host.savePlayerProfile(save.playerProfile);
 
     expect(bindings.saveSave).toHaveBeenCalledWith(save);
+    expect(bindings.savePlayerProfile).toHaveBeenCalledWith(save.playerProfile);
   });
 
   it('validates injected host data and migrates recognized v1.0.44 saves', async () => {
@@ -132,5 +136,39 @@ describe('TavernHostAdapter and AlbinaRuntime lifecycle', () => {
     expect(clearRect).toHaveBeenCalledWith(0, 0, 10, 20);
     expect(revokeObjectURL).toHaveBeenCalledWith('blob:cg');
     expect(audio.pause).toHaveBeenCalled();
+  });
+
+  it('notifies the store lifecycle hook after releasing transient resources', async () => {
+    const bindings = createBindings();
+    const lifecycle = vi.fn();
+    const runtime = createAlbinaRuntime({
+      manifest,
+      host: bindings,
+      storageBackend: new MemoryBackend(),
+      onLifecycle: lifecycle,
+    });
+
+    runtime.mount();
+    bindings.emit('chatChanged');
+    bindings.emit('load');
+    await Promise.resolve();
+
+    expect(lifecycle).toHaveBeenNthCalledWith(1, 'chatChanged');
+    expect(lifecycle).toHaveBeenNthCalledWith(2, 'load');
+  });
+
+  it('rolls back subscriptions when a later host subscription fails', () => {
+    const unsubscribed: string[] = [];
+    const bindings = createBindings();
+    bindings.subscribe = vi.fn((event) => {
+      if (event === 'unmount') throw new Error('host bridge unavailable');
+      return () => unsubscribed.push(event);
+    });
+    const runtime = createAlbinaRuntime({ manifest, host: bindings, storageBackend: new MemoryBackend() });
+
+    expect(() => runtime.mount()).toThrow('host bridge unavailable');
+    expect(unsubscribed).toEqual(['chatChanged', 'load']);
+    expect(() => runtime.mount()).toThrow('host bridge unavailable');
+    expect(bindings.subscribe).toHaveBeenCalledTimes(6);
   });
 });

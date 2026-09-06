@@ -1,0 +1,166 @@
+﻿{
+  "schemaVersion": 1,
+  "id": "krea2-profile-adapter-contract-v1",
+  "status": "builder-dispatch-contract",
+  "solutionIndex": "content/media-production/krea2-community-solution-index-v3.json",
+  "adapterModule": "scripts/lib/krea2-profile-adapter.mjs",
+  "classification": {
+    "implemented": "A project-local workflow builder is registered and can construct a profile-specific graph.",
+    "nodes-required": "The profile has a known route or community implementation, but required custom nodes or weights are not confirmed locally.",
+    "research-only": "No executable project-local builder is registered; repository evidence is not an execution path.",
+    "silentFallback": "forbidden"
+  },
+  "profiles": {
+    "baseline-six-lora": {
+      "kind": "candidate",
+      "implementationStatus": "implemented",
+      "builderId": "native-baseline",
+      "dispatch": "buildKrea2Workflow",
+      "routeMode": "native-chain"
+    },
+    "krea2-edit-grounded": {
+      "kind": "candidate",
+      "implementationStatus": "implemented",
+      "builderId": "grounded-image-edit",
+      "dispatch": "buildKrea2ImageEditWorkflow",
+      "routeMode": "alternate-chain"
+    },
+    "albina-edit-detail-pass": {
+      "kind": "project-profile",
+      "implementationStatus": "implemented",
+      "builderId": "grounded-edit-detail-pass",
+      "dispatch": "buildKrea2ImageEditWorkflow",
+      "routeMode": "alternate-chain",
+      "revision": "krea2edit-v12-identity-then-detail-lora-v1",
+      "invariants": [
+        "canonical-source-grounded-and-pixel-fit",
+        "identity-edit-v12-strength-one",
+        "post-style-detail-lora-explicit-and-hash-audited",
+        "raw-style-cfg-three-twenty-steps",
+        "single-image-only"
+      ]
+    },
+    "albina-community-style-transfer": {
+      "kind": "project-profile",
+      "implementationStatus": "implemented",
+      "builderId": "community-style-transfer",
+      "dispatch": "buildKrea2CommunityStyleTransferWorkflow",
+      "routeMode": "alternate-chain",
+      "revision": "nkxx188-style-transfer-fixed-commit-v1",
+      "communityCommit": "b30d495ab7e5626a2effc72a071430297643b718",
+      "invariants": [
+        "bare-krea2-model-no-six-lora-chain",
+        "community-style-reference-node-required",
+        "style-reference-is-separate-input",
+        "no-identity-edit-node",
+        "single-image-only"
+      ]
+    },
+    "albina-community-dype-raw": {
+      "kind": "project-profile",
+      "implementationStatus": "implemented",
+      "builderId": "community-dype-raw",
+      "dispatch": "buildKrea2CommunityDypeWorkflow",
+      "routeMode": "alternate-chain",
+      "revision": "wildminder-dype-2.5-krea2-fixed-commit-v1",
+      "communityCommit": "874f59066f4d2c6f7fbbd4149fe5bc6f07099aa3",
+      "invariants": [
+        "bare-krea2-model-no-six-lora-chain",
+        "community-dype-qwen-vision-yarn",
+        "community-krea2-raw-dynamic-sampling",
+        "single-image-only"
+      ]
+    },
+    "albina-community-two-stage": {
+      "kind": "project-profile",
+      "implementationStatus": "implemented",
+      "builderId": "community-two-stage-raw-turbo",
+      "dispatch": "buildKrea2CommunityTwoStageWorkflow",
+      "routeMode": "alternate-chain",
+      "revision": "auryg-two-stage-fixed-commit-v1",
+      "communityCommit": "8194c366a9dea530e57ba7cc8ae77f0dff262baa",
+      "invariants": [
+        "bare-raw-and-turbo-models-no-six-lora-chain",
+        "raw-dynamic-stage-one",
+        "turbo-fixed-stage-two",
+        "community-two-stage-sigma-handoff",
+        "single-image-only"
+      ]
+    },
+    "albina-canonical-control": {
+      "kind": "project-profile",
+      "implementationStatus": "implemented",
+      "builderId": "canonical-control-repair",
+      "dispatch": "buildCanonicalControlRepairWorkflow",
+      "routeMode": "composed-chain",
+      "revision": "repair-v2-canonical-latent-origin",
+      "replaces": "canonical-control-pilot-20260825",
+      "invariants": [
+        "canonical-source-is-reference-input",
+        "canonical-source-is-depth-control-input",
+        "canonical-source-is-vae-latent-origin",
+        "single-image-only",
+        "no-fresh-empty-target-latent"
+      ]
+    },
+    "albina-reference-style": {
+      "kind": "project-profile",
+      "implementationStatus": "implemented",
+      "builderId": "reference-style-role-separated",
+      "dispatch": "buildAlbinaReferenceStyleWorkflow",
+      "routeMode": "composed-chain",
+      "revision": "reference-v10-role-separated-v1",
+      "invariants": [
+        "canonical-source-is-only-subject-authority",
+        "style-reference-is-final-details-only",
+        "style-reference-cannot-guide-shape-or-layout",
+        "single-style-reference-only",
+        "no-edit-or-control-branch"
+      ]
+    },
+    "albina-embedded-image-baseline": {
+      "kind": "project-profile",
+      "implementationStatus": "implemented",
+      "builderId": "embedded-png-baseline",
+      "dispatch": "buildKrea2Workflow",
+      "routeMode": "native-chain",
+      "revision": "user-supplied-png-embedded-workflow-v1",
+      "workflowSnapshot": "staging/media/embedded-baseline/embedded-production-baseline.api.json",
+      "evidence": "staging/media/embedded-baseline/embedded-production-baseline-evidence.json",
+      "invariants": [
+        "embedded-comfyui-api-graph",
+        "six-lora-order-and-strength-preserved",
+        "qwen3vl-krea2-clip",
+        "er-sde-beta57-eight-step-sampler",
+        "example-prompt-replaced-with-albina-controlled-prompt",
+        "direct-visual-review-required"
+      ]
+    },
+    "albina-embedded-canonical-control": {
+      "kind": "project-profile",
+      "implementationStatus": "implemented",
+      "builderId": "embedded-canonical-control",
+      "dispatch": "buildCanonicalControlRepairWorkflow",
+      "routeMode": "composed-chain",
+      "revision": "embedded-png-baseline-canonical-latent-control-v1",
+      "workflowSnapshot": "staging/media/embedded-baseline/embedded-production-baseline.api.json",
+      "evidence": "staging/media/embedded-baseline/embedded-production-baseline-evidence.json",
+      "invariants": [
+        "embedded-baseline-model-and-six-lora-chain",
+        "canonical-source-reference-v10-and-depth-input",
+        "canonical-source-is-vae-latent-origin",
+        "no-fresh-empty-target-latent",
+        "single-image-only",
+        "direct-visual-review-required"
+      ]
+    }
+  },
+  "dispatchPolicy": {
+    "builderMustBeExplicit": true,
+    "alternateProfileMayReuseBaseline": false,
+    "unknownProfile": "reject",
+    "unimplementedProfile": "reject-with-classification",
+    "gpuExecution": "outside-adapter"
+  }
+}
+

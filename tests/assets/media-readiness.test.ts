@@ -7,7 +7,7 @@ const rights = {
   rightsBasis: 'Verified provider terms.', holder: 'Project',
 };
 const provenance = {
-  provider: 'x666-openai-compatible', model: 'gpt-image-2', upstreamPieVerified: false,
+  provider: 'wisart-openai-compatible', model: 'gpt-image-2',
   promptVersion: 'image-v1', sourceJobHash: 'a'.repeat(64),
   review: { status: 'approved', reviewer: 'reviewer', reviewedAt: '2026-07-15T00:00:00.000Z' },
 };
@@ -44,13 +44,40 @@ describe('media release readiness', () => {
     expect(report).toMatchObject({ total: 1, ready: 1, blocked: 0 });
   });
 
-  it('blocks forged provider pairs and missing x666 upstream evidence', () => {
+  it('blocks forged provider pairs', () => {
     const report = analyzeMediaReadiness({ assets: [
-      { id: 'cg.pie-image', kind: 'image', path: 'cg/pie-image.png', rights, lineage, provenance: { ...provenance, provider: 'pie', upstreamPieVerified: undefined } },
-      { id: 'cg.x666-unknown', kind: 'image', path: 'cg/x666-unknown.png', rights, lineage, provenance: { ...provenance, upstreamPieVerified: undefined } },
-      { id: 'video.x666', kind: 'video', path: 'video/x666.mp4', rights, lineage, provenance },
+      { id: 'cg.pie-image', kind: 'image', path: 'cg/pie-image.png', rights, lineage, provenance: { ...provenance, provider: 'pie' } },
+      { id: 'cg.x666', kind: 'image', path: 'cg/x666.png', rights, lineage, provenance: { ...provenance, provider: 'x666-openai-compatible' } },
+      { id: 'video.wisart', kind: 'video', path: 'video/wisart.mp4', rights, lineage, provenance },
     ] });
     expect(report).toMatchObject({ total: 3, ready: 0, blocked: 3 });
     expect(report.blockers.every((asset: { issues: string[] }) => asset.issues.includes('provenance'))).toBe(true);
+  });
+
+  it('accepts the latent-moe async image provenance pair as part of the production whitelist', () => {
+    const report = analyzeMediaReadiness({ assets: [{
+      id: 'cg.latent', kind: 'image', path: 'cg/latent.png', rights, lineage,
+      provenance: { ...provenance, provider: 'latent-moe', model: 'latent-moe-async' },
+    }] });
+    expect(report).toMatchObject({ total: 1, ready: 1, blocked: 0 });
+  });
+
+  it('blocks latent-moe pairs when the model identifier is not on the whitelist', () => {
+    const report = analyzeMediaReadiness({ assets: [{
+      id: 'cg.latent-bad-model', kind: 'image', path: 'cg/latent-bad.png', rights, lineage,
+      provenance: { ...provenance, provider: 'latent-moe', model: 'latent-moe-v2' },
+    }] });
+    expect(report).toMatchObject({ total: 1, ready: 0, blocked: 1 });
+    expect(report.blockers[0]?.issues).toContain('provenance');
+  });
+
+  it('reports a missing or invalid rights source type even when the rights object exists', () => {
+    const { sourceType: _sourceType, ...rightsWithoutSourceType } = rights;
+    const report = analyzeMediaReadiness({ assets: [
+      { id: 'cg.missing-source-type', kind: 'image', path: 'cg/missing-source-type.png', rights: rightsWithoutSourceType, lineage },
+      { id: 'cg.invalid-source-type', kind: 'image', path: 'cg/invalid-source-type.png', rights: { ...rights, sourceType: 'unknown' }, lineage },
+    ] });
+    expect(report).toMatchObject({ total: 2, ready: 0, blocked: 2 });
+    expect(report.blockers.every((asset: { issues: string[] }) => asset.issues.includes('source-type'))).toBe(true);
   });
 });

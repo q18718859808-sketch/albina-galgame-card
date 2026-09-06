@@ -1,0 +1,43 @@
+- main [ref=e3]:
+  - generic [ref=e18]:
+    - generic [ref=e19]:
+      - button "返回" [ref=e20] [cursor=pointer]
+      - generic [ref=e21]:
+        - paragraph [ref=e22]: PLAYER PROFILE
+        - heading "开始新篇" [level=2] [ref=e23]
+      - generic [ref=e24]: Fixed protagonist portrait
+    - generic [ref=e25]:
+      - paragraph [ref=e26]: The adult male protagonist keeps a fixed visual design. These fields guide narrative and the chat-scoped profile record.
+      - generic [ref=e27]:
+        - generic [ref=e28]: 姓名
+        - textbox "姓名" [ref=e29]: "{{user}}"
+      - generic [ref=e30]:
+        - generic [ref=e31]: 称呼
+        - textbox "称呼" [ref=e32]: "{{user}}"
+      - generic [ref=e33]:
+        - generic [ref=e34]: 性别表达
+        - textbox "性别表达" [ref=e35]: 成年男性
+      - generic [ref=e36]:
+        - generic [ref=e37]: 外观描述
+        - textbox "外观描述" [ref=e38]: 修长的实战体态，短黑发，灰褐色眼睛，左耳佩戴简洁金属通讯耳扣。穿深 charcoal 长外套、冷白内层、旧金色窄识别带、黑色长裤和耐磨靴。
+      - generic [ref=e39]:
+        - generic [ref=e40]: 背景
+        - textbox "背景" [ref=e41]: 暂未确认；可由玩家设定。
+      - generic [ref=e42]:
+        - generic [ref=e43]: 职业或能力倾向
+        - textbox "职业或能力倾向" [ref=e44]: 观察、记录与在危险中保持克制。
+      - generic [ref=e45]:
+        - generic [ref=e46]: 与阿尔比娜的初始关系倾向
+        - textbox "与阿尔比娜的初始关系倾向" [ref=e47]: 谨慎观察：不预设亲密、敌意或服从，由故事中的明确行动逐步建立关系。
+      - generic [ref=e48]:
+        - generic [ref=e49]: 内容边界
+        - textbox "内容边界" [ref=e50]: 成人自愿，亲密推进需要明确同意；允许黑暗都市暴力，但不允许强迫或失能式亲密。
+      - generic [ref=e51]:
+        - generic [ref=e52]: 路线偏好
+        - combobox "路线偏好" [ref=e53]:
+          - option "White Canvas" [selected]
+          - option "Golden Bough Rebuild"
+          - option "Ring Conspiracy"
+      - generic [ref=e54]:
+        - button "取消" [ref=e55] [cursor=pointer]
+        - button "确认档案并开始" [ref=e56] [cursor=pointer]

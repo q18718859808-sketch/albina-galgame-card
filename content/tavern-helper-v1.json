@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
-  "releaseVersion": "2.0.0-rc.2",
-  "cdnUrl": "https://cdn.jsdelivr.net/gh/q18718859808-sketch/albina-galgame-card@v2.0.0-rc.2/dist/albina-galgame-card/source/albina-classic-loader.js",
+  "releaseVersion": "2.0.0-rc.3",
+  "cdnUrl": "https://cdn.jsdelivr.net/gh/q18718859808-sketch/albina-galgame-card@v2.0.0-rc.3/dist/albina-galgame-card/source/albina-classic-loader.js",
   "script": {
     "type": "script",
     "enabled": true,
@@ -19,5 +19,54 @@
     },
     "data": {}
   },
+  "optionalIntegrations": [
+    {
+      "id": "lorebook-tool-call",
+      "enabled": false,
+      "name": "Albina Lorebook Workbench",
+      "releaseVersion": "0.0.10",
+      "cdnUrl": "https://cdn.jsdelivr.net/gh/MagicalAstrogy/LorebookToolCall@v0.0.10/dist/wtc/index.js",
+      "role": "research-only optional SillyTavern workbench; not bundled or loaded by the Albina card because the audited AFPL source is not a release runtime dependency",
+      "guardedContract": "content/worldbook/lorebook-tool-call-guarded-contract-v1.json",
+      "activation": "explicit-user-opt-in + separate-user-installation + SillyTavern.isToolCallingSupported() + SillyTavern.canPerformToolCalls('function')",
+      "capabilities": [
+        "Glob",
+        "Grep",
+        "Read",
+        "Write",
+        "Edit",
+        "Delete",
+        "CreateLorebook",
+        "GetAttribute",
+        "SetAttribute"
+      ],
+      "fallback": "The Albina game uses its own TavernHelper chat-variable persistence and continues when function tools are unsupported, unavailable, denied, or not user-installed.",
+      "scope": "A user-installed copy may only operate on dedicated Albina worldbooks and the albina.* entry namespace after explicit permission; do not mutate unrelated user lorebooks from game flow."
+    }
+  ],
   "variables": {}
+  ,"runtimeDiagnostics": {
+    "schemaVersion": 1,
+    "purpose": "真机验收辅助元数据；不改变发布脚本内容，不是酒馆运行时 API",
+    "loaderGlobal": "__albinaV2SourcePromise__",
+    "diagnosticStates": [
+      "card-script-missing",
+      "cdn-loader-unreachable",
+      "cdn-source-unreachable",
+      "import-persisted-runtime-ui-pending",
+      "import-persisted-cdn-chain-ok-runtime-ui-pending"
+    ],
+    "retry": {
+      "maxAttempts": 5,
+      "backoffMilliseconds": [250, 500, 750, 1000],
+      "anonymousOnly": true,
+      "secretsFromEnvironment": false
+    },
+    "verifiedHostApis": [
+      "GET /csrf-token",
+      "POST /api/characters/all",
+      "POST /api/characters/import"
+    ],
+    "runtimeUiConfirmationRequired": true
+  }
 }

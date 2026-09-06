@@ -1,0 +1,41 @@
+﻿{
+    "schema_version":  1,
+    "title":  "recover-pie-video-provenance",
+    "domain":  "frontend-development",
+    "status":  "verified",
+    "workspace":  "D:\\创作\\albina-v2-complete",
+    "created_at":  "2026-07-20T17:26:42.7751283Z",
+    "verification_commands":  [
+                                  "npx vitest run tests/assets/historical-video-recovery.test.ts tests/assets/video-production.test.ts tests/assets/promotion-receipts.test.ts tests/assets/visual-rebuild-plan.test.ts",
+                                  "node scripts/recover-historical-videos.mjs --check",
+                                  "node scripts/audit-assets.mjs --write"
+                              ],
+    "artifacts":  [
+                      "input.md",
+                      "plan.md",
+                      "manifest.json"
+                  ],
+    "verification":  [
+                         {
+                             "command":  "npx vitest run tests/assets/historical-video-recovery.test.ts tests/assets/video-production.test.ts tests/assets/promotion-receipts.test.ts tests/assets/visual-rebuild-plan.test.ts",
+                             "exit_code":  0,
+                             "started_at":  "2026-07-20T17:53:53.6844539Z",
+                             "finished_at":  "2026-07-20T17:53:56.8833220Z",
+                             "output":  "RUN  v3.2.7 D:/创作/albina-v2-complete\r\n\r\n ✓ tests/assets/visual-rebuild-plan.test.ts (2 tests) 15ms\r\n ✓ tests/assets/promotion-receipts.test.ts (4 tests) 53ms\r\n ✓ tests/assets/historical-video-recovery.test.ts (2 tests) 82ms\r\n ✓ tests/assets/video-production.test.ts (8 tests) 309ms\r\n\r\n Test Files  4 passed (4)\r\n      Tests  16 passed (16)\r\n   Start at  01:53:55\r\n   Duration  1.03s (transform 181ms, setup 0ms, collect 554ms, tests 458ms, environment 1ms, prepare 646ms)"
+                         },
+                         {
+                             "command":  "node scripts/recover-historical-videos.mjs --check",
+                             "exit_code":  0,
+                             "started_at":  "2026-07-20T17:53:56.8912682Z",
+                             "finished_at":  "2026-07-20T17:54:00.8031849Z",
+                             "output":  "Checked 24 historical video jobs and 48 delivery receipts; changed=0"
+                         },
+                         {
+                             "command":  "node scripts/audit-assets.mjs --write",
+                             "exit_code":  0,
+                             "started_at":  "2026-07-20T17:54:00.8031849Z",
+                             "finished_at":  "2026-07-20T17:54:07.5217621Z",
+                             "output":  "Asset audit: 0 unresolved; release missing=0, mismatch=0, stale=0"
+                         }
+                     ]
+}

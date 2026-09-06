@@ -6,16 +6,14 @@ export const RELEASE_REQUIREMENTS = Object.freeze({
   endings: 9,
   fixedVoiceAssets: 166,
   pieProvenancedVoiceAssets: 166,
-  animatedCgRuntime: 24,
-  animatedCgDesktop: 24,
   staticCharacterPortraits: 27,
   staticAlbinaPortraits: 13,
   licensedBgm: 5,
 });
 
 const REQUIRED_PROVIDERS = Object.freeze({
-  image: { provider: 'x666-openai-compatible', model: 'gpt-image-2' },
-  video: { provider: 'pie', model: 'seedance-1.5-pro' },
+  image: { provider: 'wisart-openai-compatible', model: 'gpt-image-2' },
+  imageFallbacks: [{ provider: 'latent-moe', model: 'latent-moe-async' }],
   speech: { provider: 'pie', model: 'speech-2.8-hd' },
 });
 
@@ -55,8 +53,6 @@ function summarizeCompleted(manifest, story) {
     endings: (story?.scenes ?? []).filter((scene) => Boolean(scene.ending)).length,
     fixedVoiceAssets: voices.filter((asset) => validHash(asset.sha256) && asset.bytes > 0).length,
     pieProvenancedVoiceAssets: voices.filter(isApprovedPieVoice).length,
-    animatedCgRuntime: uniqueAssetPaths(assets, (asset) => asset.kind === 'video' && /(?:^|\.)runtime(?:\.|$)/u.test(asset.id)),
-    animatedCgDesktop: uniqueAssetPaths(assets, (asset) => asset.kind === 'video' && /(?:^|\.)desktop(?:\.|$)/u.test(asset.id)),
     staticCharacterPortraits: portraits.length,
     staticAlbinaPortraits: portraits.filter((portrait) => portrait.characterId === 'albina').length,
     licensedBgm: uniqueAssetPaths(assets, (asset) => asset.kind === 'audio' && asset.path?.startsWith('audio/bgm/') && asset.license?.licenseId),
@@ -74,13 +70,18 @@ function summarizeContent(story) {
   };
 }
 
-function pendingProductionJobs(manifest, productionPlan) {
-  const completed = new Set(['approved', 'complete', 'completed', 'promoted', 'ready']);
+function pendingProductionJobs(manifest, productionPlan, ledgerJobs = {}) {
+  const completed = new Set(['approved', 'complete', 'completed', 'promoted', 'ready', 'frozen-existing-artifact']);
   const jobs = new Map();
   for (const job of manifest?.mediaJobs ?? []) jobs.set(job.id, { id: job.id, kind: job.kind, status: job.status });
   for (const job of productionPlan?.imageJobs ?? []) jobs.set(job.id, { id: job.id, kind: 'image', status: job.status });
-  for (const job of productionPlan?.videoJobs ?? []) jobs.set(job.id, { id: job.id, kind: 'video', status: job.status });
-  const pending = [...jobs.values()].filter((job) => !completed.has(job.status));
+  // 台账是作业状态的唯一权威：失败的作业若已有 definitive-failure 处置记录，
+  // 视为已解决（永久性 provider 拒绝，无法通过重试推进），不再计入 pending。
+  const pending = [...jobs.values()].filter((job) => {
+    const ledgerRecord = ledgerJobs[job.id];
+    if (ledgerRecord?.resolution?.status === 'definitive-failure') return false;
+    return !completed.has(job.status);
+  });
   return {
     total: pending.length,
     image: pending.filter((job) => job.kind === 'image').length,
@@ -89,12 +90,12 @@ function pendingProductionJobs(manifest, productionPlan) {
   };
 }
 
-export function summarizeReleaseArtifacts({ manifest, story, providerProbes, productionPlan }) {
+export function summarizeReleaseArtifacts({ manifest, story, providerProbes, productionPlan, ledgerJobs = {} }) {
   return {
     content: summarizeContent(story),
     completed: summarizeCompleted(manifest, story),
     mediaReadiness: analyzeMediaReadiness(manifest),
-    pendingMediaJobs: pendingProductionJobs(manifest, productionPlan),
+    pendingMediaJobs: pendingProductionJobs(manifest, productionPlan, ledgerJobs),
     providerProbes,
   };
 }
@@ -126,8 +127,27 @@ function resolveProvider(source, requirement) {
 }
 
 function providerAvailability(providerProbes) {
-  return Object.fromEntries(Object.entries(REQUIRED_PROVIDERS)
-    .map(([channel, requirement]) => [channel, resolveProvider(providerProbes, requirement)]));
+  const result = {};
+  for (const [channel, requirement] of Object.entries(REQUIRED_PROVIDERS)) {
+    if (channel === 'imageFallbacks') {
+      result.imageFallbacks = requirement.map((req) => resolveProvider(providerProbes, req));
+    } else {
+      result[channel] = resolveProvider(providerProbes, requirement);
+    }
+  }
+  const primary = result.image;
+  const fallbacks = result.imageFallbacks ?? [];
+  const usableFallback = fallbacks.find((fb) => fb.available);
+  if (usableFallback && !primary.available) {
+    result.image = {
+      ...primary,
+      available: true,
+      reason: 'image-fallback-available',
+      fallbackProvider: usableFallback.provider,
+      fallbackModel: usableFallback.model,
+    };
+  }
+  return result;
 }
 
 function normalizePending(value) {
@@ -140,7 +160,7 @@ function normalizePending(value) {
   };
 }
 
-function completionBlockers({ completed, mediaReadiness, pending, providers, runtimeMediaApis }) {
+function completionBlockers({ completed, mediaReadiness, pending, providers, runtimeMediaApis, worldbookAudit, krea2EvidenceAudit }) {
   const blockers = [];
   if (runtimeMediaApis) blockers.push('runtime-media-apis:enabled');
   for (const [field, minimum] of Object.entries(RELEASE_REQUIREMENTS)) {
@@ -150,10 +170,14 @@ function completionBlockers({ completed, mediaReadiness, pending, providers, run
   if ((mediaReadiness?.blocked ?? 0) > 0) blockers.push(`media-readiness:${mediaReadiness.blocked}-blocked`);
   if (pending.total > 0) blockers.push(`pending-media-jobs:${pending.total}`);
   if (pending.image > 0 && !providers.image.available) blockers.push('provider:image:gpt-image-2-unavailable');
-  if (pending.video > 0 && !providers.video.available) blockers.push('provider:video:seedance-1.5-pro-unavailable');
   if ((pending.speech > 0 || completed.fixedVoiceAssets < RELEASE_REQUIREMENTS.fixedVoiceAssets) && !providers.speech.available) {
     blockers.push('provider:speech:speech-2.8-hd-unavailable');
   }
+  if (worldbookAudit && worldbookAudit.completionGate?.completeLivingWorldVerified !== true) {
+    blockers.push('worldbook:living-world-unverified');
+  }
+  if ((krea2EvidenceAudit?.failed ?? 0) > 0) blockers.push(`krea2-evidence-audit:${krea2EvidenceAudit.failed}-failed`);
+  if ((krea2EvidenceAudit?.unbound ?? 0) > 0) blockers.push(`krea2-unbound-shipped-assets:${krea2EvidenceAudit.unbound}`);
   return blockers;
 }
 
@@ -183,6 +207,8 @@ export function deriveReleaseStatus(input) {
     pending,
     providers,
     runtimeMediaApis: input.runtimeMediaApis,
+    worldbookAudit: input.worldbookAudit,
+    krea2EvidenceAudit: input.krea2EvidenceAudit,
   });
   const base = {
     schemaVersion: 1,
@@ -195,11 +221,24 @@ export function deriveReleaseStatus(input) {
     requirements: RELEASE_REQUIREMENTS,
     mediaReadiness: compactReadiness(input.mediaReadiness),
     production: { pendingMediaJobs: pending },
+    krea2EvidenceAudit: {
+      total: input.krea2EvidenceAudit?.total ?? 0,
+      bound: input.krea2EvidenceAudit?.bound ?? 0,
+      unbound: input.krea2EvidenceAudit?.unbound ?? 0,
+      failed: input.krea2EvidenceAudit?.failed ?? 0,
+    },
     providers,
+    worldbook: {
+      completeLivingWorldVerified: input.worldbookAudit?.completionGate?.completeLivingWorldVerified === true,
+      substantiveEntries: input.worldbookAudit?.completionGate?.substantiveEntries ?? 0,
+      candidatesAwaitingRefresh: input.worldbookAudit?.completionGate?.sourceBackedCandidatesAwaitingRefresh ?? 0,
+      quarantinedEntries: input.worldbookAudit?.completionGate?.quarantinedMissingSourceOrRuntimeReview ?? 0,
+      crossTimelineEntries: input.worldbookAudit?.completionGate?.crossTimelineSubstantiveEntries ?? 0,
+    },
     completionBlockers: blockers,
     substitutions: {
       music: 'Music 2.6 production is retired. The package uses five hash-locked CC BY 4.0 tracks; official OST remains external-only.',
-      portraitMotion: 'All legacy portrait strips are retired. Twenty-seven static character portraits are paired with 24 reachable dual-profile AU videos and reduced-motion fallbacks.',
+      portraitMotion: 'All legacy portrait strips are retired; scene videos are retired. Twenty-seven static character portraits and static CG fallbacks are used throughout.',
     },
     knownLimitations: {
       officialOst: 'Free streaming is not a redistribution license, so ProjectMoon, Mili, and Studio EIM recordings are not bundled.',

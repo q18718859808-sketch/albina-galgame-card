@@ -1,0 +1,36 @@
+{
+  "version": 1,
+  "assetId": "video.animated.runtime.ring_conspiracy_ending_bad",
+  "artifactSha256": "0cf0ac007c3e1ebd37862e02146d137117838c9530fead20611ec4b179a2d079",
+  "provenance": {
+    "provider": "pie",
+    "model": "seedance-1.5-pro",
+    "promptVersion": "albina-video-v1",
+    "sourceJobHash": "ec34237f99ce0b14b9f553c91b46d1c8f5f3d409095eaecebc422b245c7c56e1",
+    "review": {
+      "status": "approved",
+      "reviewer": "historical-pie-video-qc-recovery",
+      "reviewedAt": "2026-07-12T03:09:57.232Z"
+    }
+  },
+  "rights": {
+    "status": "unverified",
+    "sourceType": "model-output",
+    "redistribution": "unverified",
+    "rightsBasis": "Historical provider output; redistribution terms were not independently verified."
+  },
+  "lineage": {
+    "kind": "transcode",
+    "processVersion": "albina-historical-pie-video-recovery-v1",
+    "inputs": [
+      {
+        "sha256": "ec34237f99ce0b14b9f553c91b46d1c8f5f3d409095eaecebc422b245c7c56e1",
+        "role": "historical-pie-job-contract"
+      },
+      {
+        "sha256": "faefee1b5f2570f16da1a47cab3f298d763ea309191161a7f3abf946a8b3bdaa",
+        "role": "seedance-master"
+      }
+    ]
+  }
+}

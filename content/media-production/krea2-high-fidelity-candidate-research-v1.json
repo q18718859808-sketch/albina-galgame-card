@@ -1,0 +1,57 @@
+{
+  "schemaVersion": 1,
+  "id": "krea2-high-fidelity-candidate-research-v1",
+  "status": "researched-not-installed-not-production",
+  "purpose": "Record a reproducible upstream candidate for improving Krea2 detail and img2img quality without weakening the fixed six-LoRA Albina production contract.",
+  "researchDate": "2026-08-19",
+  "upstream": {
+    "repository": "https://github.com/EricRollei/Krea2_ComfyUI_Advanced",
+    "commit": "1dbb085d655c071ef9609ce68f67a3adec0aa571",
+    "releaseLabel": "v1.5.0",
+    "commitDate": "2026-08-15T18:00:41Z",
+    "license": "Modified CC BY-NC 4.0 dual license; attribution required; no code redistribution without attribution.",
+    "sourceStatus": "upstream source inspected remotely; no local install or vendoring performed"
+  },
+  "candidateCapabilities": [
+    "native Krea2Pipeline img2img through VAE init latent",
+    "three-stage progressive refinement with per-stage sampler and schedule",
+    "Krea2 Qwen3-VL Vision Prompt for semantic image grounding",
+    "reference-latent edit pathway that requires a compatible edit LoRA",
+    "2x upscale VAE decode with native-size Lanczos downsample quality pass",
+    "fixed-seed bounded parameter sweeps with per-cell recipe receipts"
+  ],
+  "verifiedLocalCompatibility": {
+    "comfyuiKrea2Edit": {
+      "commit": "86f886dac23013d88996e3a2e99093ba44d322fb",
+      "status": "installed"
+    },
+    "diffusersVersion": "0.34.0",
+    "transformersVersion": "4.53.0",
+    "hasKrea2Pipeline": false,
+    "hasQwen3VLModel": false,
+    "krea2TurboCheckpointPresent": true,
+    "candidateNodePackPresent": false,
+    "conclusion": "The candidate cannot run in the current ComfyUI Python environment until diffusers and transformers are upgraded and the Krea2 Raw/Turbo diffusers-layout weights are verified."
+  },
+  "productionBoundary": {
+    "fixedStyleLoraChain": "must remain in the existing six-LORA order and strengths",
+    "canonicalGeometryAuthority": "must remain canonical RGBA; this candidate may improve RGB material/detail only",
+    "forbiddenInference": "A candidate render is never proof of character fidelity or promotion readiness.",
+    "acceptance": "Install only into the existing ComfyUI environment after dependency and weight checks. Run one fixed-seed Albina unarmored anchor with a full receipt and direct original-resolution image review before any batch work."
+  },
+  "decision": {
+    "recommended": true,
+    "priority": "next production-chain investigation",
+    "reason": "It is the only located Krea2-specific open implementation that exposes native multi-stage img2img, vision grounding, solver/schedule control, and a downsampled upscale decode quality pass in one reproducible workflow.",
+    "notYetAuthorizedAsBaseline": "No installation, dependency upgrade, model download, or production asset generation has been performed by this research record."
+  },
+  "directReview": {
+    "existingCanonicalLatentAnchor": {
+      "path": "staging/media/krea2-canonical-production/characters/albina-canonical-krea2-production.png",
+      "status": "rejected-as-release-portrait",
+      "reviewMethod": "direct original-resolution image read",
+      "finding": "Canonical silhouette and alpha are retained, but the generated RGB pass remains soft and does not separate the authored mechanical hard-surface detail sufficiently for a release portrait.",
+      "allowedUse": "failure comparison only; not a promoted asset and not a batch-production anchor"
+    }
+  }
+}

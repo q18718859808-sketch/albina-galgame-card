@@ -1,0 +1,38 @@
+{
+  "schemaVersion": 1,
+  "id": "albina-tavernforge-delivery-rules-v1",
+  "scope": "worldbook-delivery-only",
+  "allowedWriteRoots": [
+    "docs",
+    "content/worldbook",
+    "scripts/forge"
+  ],
+  "protectedPaths": [
+    "card/albina.card.json",
+    "card/albina.card.png",
+    "src",
+    "public",
+    "assets",
+    "dist",
+    "release"
+  ],
+  "requiredEvidence": [
+    "player-profile-four-link-contract",
+    "full-plot-timeline-package",
+    "original-sixteen-entry-preservation",
+    "worldbook-runtime-boundary"
+  ],
+  "apiEvidencePolicy": {
+    "unknownApi": "forbidden",
+    "externalRuntimeObservation": "not-confirmed-by-static-delivery",
+    "allowedLanguage": ["contract declares", "local source records", "not executed", "unverified"],
+    "forbiddenLanguage": ["API confirmed", "TavernHelper observed", "SillyTavern accepted"]
+  },
+  "fourLinkOrder": ["schema", "initvar", "updateRules", "readAndDisplay", "persistence"],
+  "originalEntryPolicy": {
+    "cardPath": "card/albina.card.json",
+    "l0Path": "content/worldbook/albina-worldbook-l0-minimal-anchors-v1.json",
+    "expectedEntryCount": 16,
+    "comparison": "UID order and canonical entry content digest must match; card is read-only"
+  }
+}

@@ -1,0 +1,47 @@
+{
+  "schemaVersion": 1,
+  "id": "albina-baseline-style-migration-v1",
+  "status": "authorization-not-required",
+  "createdAt": "2026-09-01",
+  "purpose": "Move every original character portrait onto the visual language established by the user-provided Albina baseline without altering the authorized albina-visual-v2 source index.",
+  "baseline": {
+    "sourceAssetId": "reference.user.albina-style-baseline",
+    "sourceAssetName": "F121759F860F58382CC0D53763FB3A6C.jpg",
+    "sourceSha256": "1f13c373aaf95122686be9ca3d01d481743abd3a058e9e11cd8af6520c0a0fb4"
+  },
+  "candidateStyleBoard": {
+    "localPath": "staging/research/style-reference/albina-style-board-v2-macrocrop.png",
+    "sha256": "aaf89630110b6fef687b86334404b00cd39fd29c84451971575b26a29ce51142",
+    "bytes": 3237596,
+    "width": 1024,
+    "height": 1536,
+    "role": "pending-deidentified-style-reference",
+    "derivation": "Six 384x384 crops from the baseline interior safe area are mirrored or reordered, upscaled to 512x512, and tiled as a 2x3 board. The selected crops exclude the face, complete body silhouette, standing pose, poster composition, typography, L-CORP mark, barcode, and readable text while retaining continuous ink lines, cel-shading transitions, white-black-gold-warning-red material language, industrial cold light, armor panel seams, and Fascia surface detail.",
+    "rebuild": {
+      "tool": "ffmpeg",
+      "command": "ffmpeg -y -i staging/research/style-reference/albina-style-baseline.jpg -filter_complex \"[0:v]crop=384:384:150:320,scale=512:512:flags=lanczos[a];[0:v]crop=384:384:430:300,hflip,scale=512:512:flags=lanczos[b];[0:v]crop=384:384:140:700,scale=512:512:flags=lanczos[c];[0:v]crop=384:384:460:760,hflip,scale=512:512:flags=lanczos[d];[0:v]crop=384:384:290:1050,scale=512:512:flags=lanczos[e];[0:v]crop=384:384:520:420,hflip,scale=512:512:flags=lanczos[f];[c][b]hstack[r1];[d][a]hstack[r2];[f][e]hstack[r3];[r1][r2][r3]vstack=inputs=3[out]\" -map \"[out]\" staging/research/style-reference/albina-style-board-v2-macrocrop.png"
+    }
+  },
+  "scope": {
+    "totalCharacterPortraits": 27,
+    "blankCharacterPortraits": 23,
+    "existingProvenanceCharacterPortraits": 4,
+    "provider": "wisart-openai-compatible",
+    "model": "gpt-image-2",
+    "inputMode": "reference-edit",
+    "styleBoardPosition": "last"
+  },
+  "migrationContract": [
+    "All 27 character portraits must stay on the WisArt reference-edit pipe; Latent has no image input and therefore cannot perform image-level style migration.",
+    "The candidate board may be used only as the final style input. It must not be used as an identity, pose, anatomy, costume, object, or composition source.",
+    "The source board remains production-reference-only and redistribution-forbidden.",
+    "This document does not authorize promotion, release, or distribution; those remain separate release and rights workflows.",
+    "The existing albina-visual-v2 source index and its authorization are intentionally unchanged.",
+    "Local generation does not require a human authorization artifact; current source, prompt, plan, and style-board hashes remain runtime validation inputs."
+  ],
+  "automatedProductionRequirements": [
+    "Build a versioned canon source index and matching prompt/plan freeze rather than mutating albina-visual-v2 in place.",
+    "Validate the current source index, candidate board hash, prompt freeze, plan job set, canon claims, provider contract, and output review state before production.",
+    "Keep promotion, release, distribution, and rights checks outside this local-production policy."
+  ]
+}

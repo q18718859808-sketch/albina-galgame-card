@@ -1,0 +1,2011 @@
+{
+  "schemaVersion": 2,
+  "id": "albina-visual-production-queue-v2",
+  "generatedAt": "2026-09-01T14:27:41.401Z",
+  "method": "manifest-provenance-rights-dual-pipeline-allocation",
+  "policy": {
+    "krea2LocalProductionCancelled": true,
+    "dualPipeline": true,
+    "pipelines": {
+      "wisart": {
+        "provider": "wisart-openai-compatible",
+        "model": "gpt-image-2",
+        "role": "reference-edit",
+        "baseUrl": "https://wisart.kuaileshifu.com/v1"
+      },
+      "latent": {
+        "provider": "latent-moe",
+        "model": "latent-moe-async",
+        "role": "text-to-image",
+        "baseUrl": "https://latent.moe",
+        "serialGeneration": true,
+        "noReferenceInput": true,
+        "resolutions": {
+          "square": "1024x1024",
+          "portrait": "920x1536",
+          "landscape": "1536x920"
+        }
+      }
+    },
+    "frozenPlan": "content/media-production/visual-rebuild-v2.json",
+    "frozenPrompts": "content/media-production/visual-prompts-v2.json",
+    "noAutomaticProduction": true,
+    "noAutomaticPromotion": true,
+    "humanIdentityApprovalRequired": false,
+    "note": "人工身份授权已由项目所有者明确取消。Latent carries the 22 blank CG jobs only and runs from a text-generation prompt freeze (references stripped, identity anchored in text). Every character portrait stays on WisArt reference-edit so it can consume reference.user.albina-style-board and be migrated to the baseline art style. The frozen albina-visual-v2 file is not modified by this queue."
+  },
+  "counts": {
+    "total": 67,
+    "wisart": 45,
+    "latent": 22,
+    "blankCg": 22,
+    "blankCharacters": 23,
+    "canonRecap": 6
+  },
+  "blankAssets": {
+    "cg": [
+      "cg.araya_rooftop",
+      "cg.art_resonance",
+      "cg.backstreet_pursuit",
+      "cg.combat_transition_01",
+      "cg.conspiracy_contract",
+      "cg.fascia_heartbeat",
+      "cg.golden_bough_ending",
+      "cg.golden_bough_rebuild",
+      "cg.hollow_torso_reveal",
+      "cg.lce_raid",
+      "cg.limbus_bus_night",
+      "cg.maestro_shadow",
+      "cg.opening_rain",
+      "cg.rain_confession",
+      "cg.rebuild_awakening",
+      "cg.ren_interruption",
+      "cg.ring_conspiracy_ending",
+      "cg.ring_invitation",
+      "cg.surgery_of_memory",
+      "cg.trust_threshold",
+      "cg.white_canvas_choice",
+      "cg.white_canvas_ending"
+    ],
+    "characters": [
+      "file.characters.albina.combat.png",
+      "file.characters.albina.endgame.png",
+      "file.characters.albina.fascia.open.png",
+      "file.characters.albina.furious.png",
+      "file.characters.albina.golden.bough.png",
+      "file.characters.albina.maestro.png",
+      "file.characters.albina.rain.png",
+      "file.characters.albina.ring.conspiracy.png",
+      "file.characters.albina.shy.png",
+      "file.characters.albina.surgical.png",
+      "file.characters.albina.white.canvas.png",
+      "file.characters.callisto.normal.png",
+      "file.characters.dante.normal.png",
+      "file.characters.faust.normal.png",
+      "file.characters.golden.apparition.normal.png",
+      "file.characters.lce.doctor.normal.png",
+      "file.characters.protagonist.battle.png",
+      "file.characters.protagonist.resolve.png",
+      "file.characters.protagonist.serious.png",
+      "file.characters.protagonist.shadow.png",
+      "file.characters.protagonist.tender.png",
+      "file.characters.protagonist.wet.hair.png",
+      "file.characters.ring.agent.normal.png"
+    ]
+  },
+  "assignments": [
+    {
+      "jobId": "visual.image.bg.backstreets_rain",
+      "assetId": "bg.backstreets_rain",
+      "receiptAssetId": "bg.backstreets_rain",
+      "path": "bg/backstreets_rain.jpg",
+      "category": "bg",
+      "provider": "wisart-openai-compatible",
+      "model": "gpt-image-2",
+      "inputMode": "reference-edit",
+      "generationSize": "1920x1080",
+      "delivery": {
+        "format": "jpg",
+        "width": 1280,
+        "height": 720,
+        "alpha": false
+      },
+      "blankAsset": false,
+      "canonRecap": false,
+      "manifestAssetId": "bg.backstreets_rain",
+      "referenceDependencies": {
+        "referenceJobIds": [],
+        "referenceSourceIds": [
+          "reference.user.albina-style-board"
+        ]
+      },
+      "promptVersion": "albina-visual-v2",
+      "status": "authorized-prompt-frozen"
+    },
+    {
+      "jobId": "visual.image.bg.city_rooftop",
+      "assetId": "bg.city_rooftop",
+      "receiptAssetId": "bg.city_rooftop",
+      "path": "bg/city_rooftop.jpg",
+      "category": "bg",
+      "provider": "wisart-openai-compatible",
+      "model": "gpt-image-2",
+      "inputMode": "reference-edit",
+      "generationSize": "1920x1080",
+      "delivery": {
+        "format": "jpg",
+        "width": 1280,
+        "height": 720,
+        "alpha": false
+      },
+      "blankAsset": false,
+      "canonRecap": false,
+      "manifestAssetId": "bg.city_rooftop",
+      "referenceDependencies": {
+        "referenceJobIds": [],
+        "referenceSourceIds": [
+          "reference.user.albina-style-board"
+        ]
+      },
+      "promptVersion": "albina-visual-v2",
+      "status": "authorized-prompt-frozen"
+    },
+    {
+      "jobId": "visual.image.bg.golden_bough",
+      "assetId": "bg.golden_bough",
+      "receiptAssetId": "bg.golden_bough",
+      "path": "bg/golden_bough.jpg",
+      "category": "bg",
+      "provider": "wisart-openai-compatible",
+      "model": "gpt-image-2",
+      "inputMode": "reference-edit",
+      "generationSize": "1920x1080",
+      "delivery": {
+        "format": "jpg",
+        "width": 1280,
+        "height": 720,
+        "alpha": false
+      },
+      "blankAsset": false,
+      "canonRecap": false,
+      "manifestAssetId": "bg.golden_bough",
+      "referenceDependencies": {
+        "referenceJobIds": [],
+        "referenceSourceIds": [
+          "reference.user.albina-style-board"
+        ]
+      },
+      "promptVersion": "albina-visual-v2",
+      "status": "authorized-prompt-frozen"
+    },
+    {
+      "jobId": "visual.image.bg.lce_lab",
+      "assetId": "bg.lce_lab",
+      "receiptAssetId": "bg.lce_lab",
+      "path": "bg/lce_lab.jpg",
+      "category": "bg",
+      "provider": "wisart-openai-compatible",
+      "model": "gpt-image-2",
+      "inputMode": "reference-edit",
+      "generationSize": "1920x1080",
+      "delivery": {
+        "format": "jpg",
+        "width": 1280,
+        "height": 720,
+        "alpha": false
+      },
+      "blankAsset": false,
+      "canonRecap": false,
+      "manifestAssetId": "bg.lce_lab",
+      "referenceDependencies": {
+        "referenceJobIds": [],
+        "referenceSourceIds": [
+          "reference.user.albina-style-board"
+        ]
+      },
+      "promptVersion": "albina-visual-v2",
+      "status": "authorized-prompt-frozen"
+    },
+    {
+      "jobId": "visual.image.bg.limbus_bus",
+      "assetId": "bg.limbus_bus",
+      "receiptAssetId": "bg.limbus_bus",
+      "path": "bg/limbus_bus.jpg",
+      "category": "bg",
+      "provider": "wisart-openai-compatible",
+      "model": "gpt-image-2",
+      "inputMode": "reference-edit",
+      "generationSize": "1920x1080",
+      "delivery": {
+        "format": "jpg",
+        "width": 1280,
+        "height": 720,
+        "alpha": false
+      },
+      "blankAsset": false,
+      "canonRecap": false,
+      "manifestAssetId": "bg.limbus_bus",
+      "referenceDependencies": {
+        "referenceJobIds": [],
+        "referenceSourceIds": [
+          "reference.user.albina-style-board"
+        ]
+      },
+      "promptVersion": "albina-visual-v2",
+      "status": "authorized-prompt-frozen"
+    },
+    {
+      "jobId": "visual.image.bg.mirror_corridor",
+      "assetId": "bg.mirror_corridor",
+      "receiptAssetId": "bg.mirror_corridor",
+      "path": "bg/mirror_corridor.jpg",
+      "category": "bg",
+      "provider": "wisart-openai-compatible",
+      "model": "gpt-image-2",
+      "inputMode": "reference-edit",
+      "generationSize": "1920x1080",
+      "delivery": {
+        "format": "jpg",
+        "width": 1280,
+        "height": 720,
+        "alpha": false
+      },
+      "blankAsset": false,
+      "canonRecap": false,
+      "manifestAssetId": "bg.mirror_corridor",
+      "referenceDependencies": {
+        "referenceJobIds": [],
+        "referenceSourceIds": [
+          "reference.user.albina-style-board"
+        ]
+      },
+      "promptVersion": "albina-visual-v2",
+      "status": "authorized-prompt-frozen"
+    },
+    {
+      "jobId": "visual.image.bg.nest_station",
+      "assetId": "bg.nest_station",
+      "receiptAssetId": "bg.nest_station",
+      "path": "bg/nest_station.jpg",
+      "category": "bg",
+      "provider": "wisart-openai-compatible",
+      "model": "gpt-image-2",
+      "inputMode": "reference-edit",
+      "generationSize": "1920x1080",
+      "delivery": {
+        "format": "jpg",
+        "width": 1280,
+        "height": 720,
+        "alpha": false
+      },
+      "blankAsset": false,
+      "canonRecap": false,
+      "manifestAssetId": "bg.nest_station",
+      "referenceDependencies": {
+        "referenceJobIds": [],
+        "referenceSourceIds": [
+          "reference.user.albina-style-board"
+        ]
+      },
+      "promptVersion": "albina-visual-v2",
+      "status": "authorized-prompt-frozen"
+    },
+    {
+      "jobId": "visual.image.bg.outskirts_dawn",
+      "assetId": "bg.outskirts_dawn",
+      "receiptAssetId": "bg.outskirts_dawn",
+      "path": "bg/outskirts_dawn.jpg",
+      "category": "bg",
+      "provider": "wisart-openai-compatible",
+      "model": "gpt-image-2",
+      "inputMode": "reference-edit",
+      "generationSize": "1920x1080",
+      "delivery": {
+        "format": "jpg",
+        "width": 1280,
+        "height": 720,
+        "alpha": false
+      },
+      "blankAsset": false,
+      "canonRecap": false,
+      "manifestAssetId": "bg.outskirts_dawn",
+      "referenceDependencies": {
+        "referenceJobIds": [],
+        "referenceSourceIds": [
+          "reference.user.albina-style-board"
+        ]
+      },
+      "promptVersion": "albina-visual-v2",
+      "status": "authorized-prompt-frozen"
+    },
+    {
+      "jobId": "visual.image.bg.rain_room",
+      "assetId": "bg.rain_room",
+      "receiptAssetId": "bg.rain_room",
+      "path": "bg/rain_room.jpg",
+      "category": "bg",
+      "provider": "wisart-openai-compatible",
+      "model": "gpt-image-2",
+      "inputMode": "reference-edit",
+      "generationSize": "1920x1080",
+      "delivery": {
+        "format": "jpg",
+        "width": 1280,
+        "height": 720,
+        "alpha": false
+      },
+      "blankAsset": false,
+      "canonRecap": false,
+      "manifestAssetId": "bg.rain_room",
+      "referenceDependencies": {
+        "referenceJobIds": [],
+        "referenceSourceIds": [
+          "reference.user.albina-style-board"
+        ]
+      },
+      "promptVersion": "albina-visual-v2",
+      "status": "authorized-prompt-frozen"
+    },
+    {
+      "jobId": "visual.image.bg.ring_atelier",
+      "assetId": "bg.ring_atelier",
+      "receiptAssetId": "bg.ring_atelier",
+      "path": "bg/ring_atelier.jpg",
+      "category": "bg",
+      "provider": "wisart-openai-compatible",
+      "model": "gpt-image-2",
+      "inputMode": "reference-edit",
+      "generationSize": "1920x1080",
+      "delivery": {
+        "format": "jpg",
+        "width": 1280,
+        "height": 720,
+        "alpha": false
+      },
+      "blankAsset": false,
+      "canonRecap": false,
+      "manifestAssetId": "bg.ring_atelier",
+      "referenceDependencies": {
+        "referenceJobIds": [],
+        "referenceSourceIds": [
+          "reference.user.albina-style-board"
+        ]
+      },
+      "promptVersion": "albina-visual-v2",
+      "status": "authorized-prompt-frozen"
+    },
+    {
+      "jobId": "visual.image.bg.spider_gallery",
+      "assetId": "bg.spider_gallery",
+      "receiptAssetId": "bg.spider_gallery",
+      "path": "bg/spider_gallery.jpg",
+      "category": "bg",
+      "provider": "wisart-openai-compatible",
+      "model": "gpt-image-2",
+      "inputMode": "reference-edit",
+      "generationSize": "1920x1080",
+      "delivery": {
+        "format": "jpg",
+        "width": 1280,
+        "height": 720,
+        "alpha": false
+      },
+      "blankAsset": false,
+      "canonRecap": false,
+      "manifestAssetId": "bg.spider_gallery",
+      "referenceDependencies": {
+        "referenceJobIds": [],
+        "referenceSourceIds": [
+          "reference.user.albina-style-board"
+        ]
+      },
+      "promptVersion": "albina-visual-v2",
+      "status": "authorized-prompt-frozen"
+    },
+    {
+      "jobId": "visual.image.bg.white_canvas",
+      "assetId": "bg.white_canvas",
+      "receiptAssetId": "bg.white_canvas",
+      "path": "bg/white_canvas.jpg",
+      "category": "bg",
+      "provider": "wisart-openai-compatible",
+      "model": "gpt-image-2",
+      "inputMode": "reference-edit",
+      "generationSize": "1920x1080",
+      "delivery": {
+        "format": "jpg",
+        "width": 1280,
+        "height": 720,
+        "alpha": false
+      },
+      "blankAsset": false,
+      "canonRecap": false,
+      "manifestAssetId": "bg.white_canvas",
+      "referenceDependencies": {
+        "referenceJobIds": [],
+        "referenceSourceIds": [
+          "reference.user.albina-style-board"
+        ]
+      },
+      "promptVersion": "albina-visual-v2",
+      "status": "authorized-prompt-frozen"
+    },
+    {
+      "jobId": "visual.image.cg.araya_rooftop",
+      "assetId": "cg.araya_rooftop",
+      "receiptAssetId": "cg.araya_rooftop",
+      "path": "cg/araya_rooftop.jpg",
+      "category": "cg",
+      "provider": "latent-moe",
+      "model": "latent-moe-async",
+      "inputMode": "text-generation",
+      "generationSize": "landscape",
+      "delivery": {
+        "format": "jpg",
+        "width": 1280,
+        "height": 720,
+        "alpha": false
+      },
+      "blankAsset": true,
+      "canonRecap": false,
+      "manifestAssetId": "cg.araya_rooftop",
+      "referenceDependencies": {
+        "referenceJobIds": [],
+        "referenceSourceIds": [],
+        "strippedForLatent": 4
+      },
+      "promptVersion": "albina-visual-v2",
+      "status": "authorized-prompt-frozen"
+    },
+    {
+      "jobId": "visual.image.cg.art_resonance",
+      "assetId": "cg.art_resonance",
+      "receiptAssetId": "cg.art_resonance",
+      "path": "cg/art_resonance.jpg",
+      "category": "cg",
+      "provider": "latent-moe",
+      "model": "latent-moe-async",
+      "inputMode": "text-generation",
+      "generationSize": "landscape",
+      "delivery": {
+        "format": "jpg",
+        "width": 1280,
+        "height": 720,
+        "alpha": false
+      },
+      "blankAsset": true,
+      "canonRecap": false,
+      "manifestAssetId": "cg.art_resonance",
+      "referenceDependencies": {
+        "referenceJobIds": [],
+        "referenceSourceIds": [],
+        "strippedForLatent": 3
+      },
+      "promptVersion": "albina-visual-v2",
+      "status": "authorized-prompt-frozen"
+    },
+    {
+      "jobId": "visual.image.cg.backstreet_pursuit",
+      "assetId": "cg.backstreet_pursuit",
+      "receiptAssetId": "cg.backstreet_pursuit",
+      "path": "cg/backstreet_pursuit.jpg",
+      "category": "cg",
+      "provider": "latent-moe",
+      "model": "latent-moe-async",
+      "inputMode": "text-generation",
+      "generationSize": "landscape",
+      "delivery": {
+        "format": "jpg",
+        "width": 1280,
+        "height": 720,
+        "alpha": false
+      },
+      "blankAsset": true,
+      "canonRecap": false,
+      "manifestAssetId": "cg.backstreet_pursuit",
+      "referenceDependencies": {
+        "referenceJobIds": [],
+        "referenceSourceIds": [],
+        "strippedForLatent": 4
+      },
+      "promptVersion": "albina-visual-v2",
+      "status": "authorized-prompt-frozen"
+    },
+    {
+      "jobId": "visual.image.cg.canon_recap_9_14",
+      "assetId": "cg.canon_recap_9_14",
+      "receiptAssetId": "cg.canon_recap_9_14",
+      "path": "cg/canon_recap_9_14.jpg",
+      "category": "cg",
+      "provider": "wisart-openai-compatible",
+      "model": "gpt-image-2",
+      "inputMode": "reference-edit",
+      "generationSize": "1920x1080",
+      "delivery": {
+        "format": "jpg",
+        "width": 1280,
+        "height": 720,
+        "alpha": false
+      },
+      "blankAsset": false,
+      "canonRecap": true,
+      "manifestAssetId": null,
+      "referenceDependencies": {
+        "referenceJobIds": [],
+        "referenceSourceIds": [
+          "canon.visual.canto-ix.9-14.s908",
+          "reference.user.albina-style-board"
+        ]
+      },
+      "promptVersion": "albina-visual-v2",
+      "status": "authorized-prompt-frozen"
+    },
+    {
+      "jobId": "visual.image.cg.canon_recap_9_18",
+      "assetId": "cg.canon_recap_9_18",
+      "receiptAssetId": "cg.canon_recap_9_18",
+      "path": "cg/canon_recap_9_18.jpg",
+      "category": "cg",
+      "provider": "wisart-openai-compatible",
+      "model": "gpt-image-2",
+      "inputMode": "reference-edit",
+      "generationSize": "1920x1080",
+      "delivery": {
+        "format": "jpg",
+        "width": 1280,
+        "height": 720,
+        "alpha": false
+      },
+      "blankAsset": false,
+      "canonRecap": true,
+      "manifestAssetId": null,
+      "referenceDependencies": {
+        "referenceJobIds": [],
+        "referenceSourceIds": [
+          "canon.visual.canto-ix.9-18.lce-lab-bg",
+          "canon.visual.albina.armored-standing",
+          "canon.visual.ren.standing",
+          "canon.visual.dante.standing",
+          "reference.user.albina-style-board"
+        ]
+      },
+      "promptVersion": "albina-visual-v2",
+      "status": "authorized-prompt-frozen"
+    },
+    {
+      "jobId": "visual.image.cg.canon_recap_9_37",
+      "assetId": "cg.canon_recap_9_37",
+      "receiptAssetId": "cg.canon_recap_9_37",
+      "path": "cg/canon_recap_9_37.jpg",
+      "category": "cg",
+      "provider": "wisart-openai-compatible",
+      "model": "gpt-image-2",
+      "inputMode": "reference-edit",
+      "generationSize": "1920x1080",
+      "delivery": {
+        "format": "jpg",
+        "width": 1280,
+        "height": 720,
+        "alpha": false
+      },
+      "blankAsset": false,
+      "canonRecap": true,
+      "manifestAssetId": null,
+      "referenceDependencies": {
+        "referenceJobIds": [],
+        "referenceSourceIds": [
+          "canon.visual.canto-ix.9-43.ring-corridor-bg",
+          "canon.visual.albina.armored-standing",
+          "canon.visual.faust.standing",
+          "reference.user.albina-style-board"
+        ]
+      },
+      "promptVersion": "albina-visual-v2",
+      "status": "authorized-prompt-frozen"
+    },
+    {
+      "jobId": "visual.image.cg.canon_recap_9_37_battle",
+      "assetId": "cg.canon_recap_9_37_battle",
+      "receiptAssetId": "cg.canon_recap_9_37_battle",
+      "path": "cg/canon_recap_9_37_battle.jpg",
+      "category": "cg",
+      "provider": "wisart-openai-compatible",
+      "model": "gpt-image-2",
+      "inputMode": "reference-edit",
+      "generationSize": "1920x1080",
+      "delivery": {
+        "format": "jpg",
+        "width": 1280,
+        "height": 720,
+        "alpha": false
+      },
+      "blankAsset": false,
+      "canonRecap": true,
+      "manifestAssetId": null,
+      "referenceDependencies": {
+        "referenceJobIds": [],
+        "referenceSourceIds": [
+          "canon.visual.canto-ix.9-43.ring-corridor-bg",
+          "canon.visual.albina.unarmored-standing",
+          "canon.visual.callisto.standing",
+          "canon.visual.alyssa.story-icon",
+          "reference.user.albina-style-board"
+        ]
+      },
+      "promptVersion": "albina-visual-v2",
+      "status": "authorized-prompt-frozen"
+    },
+    {
+      "jobId": "visual.image.cg.canon_recap_9_43_outcome",
+      "assetId": "cg.canon_recap_9_43_outcome",
+      "receiptAssetId": "cg.canon_recap_9_43_outcome",
+      "path": "cg/canon_recap_9_43_outcome.jpg",
+      "category": "cg",
+      "provider": "wisart-openai-compatible",
+      "model": "gpt-image-2",
+      "inputMode": "reference-edit",
+      "generationSize": "1920x1080",
+      "delivery": {
+        "format": "jpg",
+        "width": 1280,
+        "height": 720,
+        "alpha": false
+      },
+      "blankAsset": false,
+      "canonRecap": true,
+      "manifestAssetId": null,
+      "referenceDependencies": {
+        "referenceJobIds": [],
+        "referenceSourceIds": [
+          "canon.visual.canto-ix.9-43.ring-corridor-bg",
+          "canon.visual.albina.unarmored-standing",
+          "canon.visual.callisto.standing",
+          "canon.visual.sinclair.smoke-war-story-icon",
+          "reference.user.albina-style-board"
+        ]
+      },
+      "promptVersion": "albina-visual-v2",
+      "status": "authorized-prompt-frozen"
+    },
+    {
+      "jobId": "visual.image.cg.canon_recap_albina_fascia",
+      "assetId": "cg.canon_recap_albina_fascia",
+      "receiptAssetId": "cg.canon_recap_albina_fascia",
+      "path": "cg/canon_recap_albina_fascia.jpg",
+      "category": "cg",
+      "provider": "wisart-openai-compatible",
+      "model": "gpt-image-2",
+      "inputMode": "reference-edit",
+      "generationSize": "1920x1080",
+      "delivery": {
+        "format": "jpg",
+        "width": 1280,
+        "height": 720,
+        "alpha": false
+      },
+      "blankAsset": false,
+      "canonRecap": true,
+      "manifestAssetId": null,
+      "referenceDependencies": {
+        "referenceJobIds": [],
+        "referenceSourceIds": [
+          "canon.visual.albina.unarmored-standing",
+          "canon.visual.albina.armored-standing",
+          "reference.user.albina-style-board"
+        ]
+      },
+      "promptVersion": "albina-visual-v2",
+      "status": "authorized-prompt-frozen"
+    },
+    {
+      "jobId": "visual.image.cg.combat_transition_01",
+      "assetId": "cg.combat_transition_01",
+      "receiptAssetId": "cg.combat_transition_01",
+      "path": "cg/combat_transition_01.jpg",
+      "category": "cg",
+      "provider": "latent-moe",
+      "model": "latent-moe-async",
+      "inputMode": "text-generation",
+      "generationSize": "landscape",
+      "delivery": {
+        "format": "jpg",
+        "width": 1280,
+        "height": 720,
+        "alpha": false
+      },
+      "blankAsset": true,
+      "canonRecap": false,
+      "manifestAssetId": "cg.combat_transition_01",
+      "referenceDependencies": {
+        "referenceJobIds": [],
+        "referenceSourceIds": [],
+        "strippedForLatent": 4
+      },
+      "promptVersion": "albina-visual-v2",
+      "status": "authorized-prompt-frozen"
+    },
+    {
+      "jobId": "visual.image.cg.conspiracy_contract",
+      "assetId": "cg.conspiracy_contract",
+      "receiptAssetId": "cg.conspiracy_contract",
+      "path": "cg/conspiracy_contract.jpg",
+      "category": "cg",
+      "provider": "latent-moe",
+      "model": "latent-moe-async",
+      "inputMode": "text-generation",
+      "generationSize": "landscape",
+      "delivery": {
+        "format": "jpg",
+        "width": 1280,
+        "height": 720,
+        "alpha": false
+      },
+      "blankAsset": true,
+      "canonRecap": false,
+      "manifestAssetId": "cg.conspiracy_contract",
+      "referenceDependencies": {
+        "referenceJobIds": [],
+        "referenceSourceIds": [],
+        "strippedForLatent": 5
+      },
+      "promptVersion": "albina-visual-v2",
+      "status": "authorized-prompt-frozen"
+    },
+    {
+      "jobId": "visual.image.cg.fascia_heartbeat",
+      "assetId": "cg.fascia_heartbeat",
+      "receiptAssetId": "cg.fascia_heartbeat",
+      "path": "cg/fascia_heartbeat.jpg",
+      "category": "cg",
+      "provider": "latent-moe",
+      "model": "latent-moe-async",
+      "inputMode": "text-generation",
+      "generationSize": "landscape",
+      "delivery": {
+        "format": "jpg",
+        "width": 1280,
+        "height": 720,
+        "alpha": false
+      },
+      "blankAsset": true,
+      "canonRecap": false,
+      "manifestAssetId": "cg.fascia_heartbeat",
+      "referenceDependencies": {
+        "referenceJobIds": [],
+        "referenceSourceIds": [],
+        "strippedForLatent": 3
+      },
+      "promptVersion": "albina-visual-v2",
+      "status": "authorized-prompt-frozen"
+    },
+    {
+      "jobId": "visual.image.cg.golden_bough_ending",
+      "assetId": "cg.golden_bough_ending",
+      "receiptAssetId": "cg.golden_bough_ending",
+      "path": "cg/golden_bough_ending.jpg",
+      "category": "cg",
+      "provider": "latent-moe",
+      "model": "latent-moe-async",
+      "inputMode": "text-generation",
+      "generationSize": "landscape",
+      "delivery": {
+        "format": "jpg",
+        "width": 1280,
+        "height": 720,
+        "alpha": false
+      },
+      "blankAsset": true,
+      "canonRecap": false,
+      "manifestAssetId": "cg.golden_bough_ending",
+      "referenceDependencies": {
+        "referenceJobIds": [],
+        "referenceSourceIds": [],
+        "strippedForLatent": 3
+      },
+      "promptVersion": "albina-visual-v2",
+      "status": "authorized-prompt-frozen"
+    },
+    {
+      "jobId": "visual.image.cg.golden_bough_rebuild",
+      "assetId": "cg.golden_bough_rebuild",
+      "receiptAssetId": "cg.golden_bough_rebuild",
+      "path": "cg/golden_bough_rebuild.jpg",
+      "category": "cg",
+      "provider": "latent-moe",
+      "model": "latent-moe-async",
+      "inputMode": "text-generation",
+      "generationSize": "landscape",
+      "delivery": {
+        "format": "jpg",
+        "width": 1280,
+        "height": 720,
+        "alpha": false
+      },
+      "blankAsset": true,
+      "canonRecap": false,
+      "manifestAssetId": "cg.golden_bough_rebuild",
+      "referenceDependencies": {
+        "referenceJobIds": [],
+        "referenceSourceIds": [],
+        "strippedForLatent": 2
+      },
+      "promptVersion": "albina-visual-v2",
+      "status": "authorized-prompt-frozen"
+    },
+    {
+      "jobId": "visual.image.cg.hollow_torso_reveal",
+      "assetId": "cg.hollow_torso_reveal",
+      "receiptAssetId": "cg.hollow_torso_reveal",
+      "path": "cg/hollow_torso_reveal.jpg",
+      "category": "cg",
+      "provider": "latent-moe",
+      "model": "latent-moe-async",
+      "inputMode": "text-generation",
+      "generationSize": "landscape",
+      "delivery": {
+        "format": "jpg",
+        "width": 1280,
+        "height": 720,
+        "alpha": false
+      },
+      "blankAsset": true,
+      "canonRecap": false,
+      "manifestAssetId": "cg.hollow_torso_reveal",
+      "referenceDependencies": {
+        "referenceJobIds": [],
+        "referenceSourceIds": [],
+        "strippedForLatent": 4
+      },
+      "promptVersion": "albina-visual-v2",
+      "status": "authorized-prompt-frozen"
+    },
+    {
+      "jobId": "visual.image.cg.lce_raid",
+      "assetId": "cg.lce_raid",
+      "receiptAssetId": "cg.lce_raid",
+      "path": "cg/lce_raid.jpg",
+      "category": "cg",
+      "provider": "latent-moe",
+      "model": "latent-moe-async",
+      "inputMode": "text-generation",
+      "generationSize": "landscape",
+      "delivery": {
+        "format": "jpg",
+        "width": 1280,
+        "height": 720,
+        "alpha": false
+      },
+      "blankAsset": true,
+      "canonRecap": false,
+      "manifestAssetId": "cg.lce_raid",
+      "referenceDependencies": {
+        "referenceJobIds": [],
+        "referenceSourceIds": [],
+        "strippedForLatent": 4
+      },
+      "promptVersion": "albina-visual-v2",
+      "status": "authorized-prompt-frozen"
+    },
+    {
+      "jobId": "visual.image.cg.limbus_bus_night",
+      "assetId": "cg.limbus_bus_night",
+      "receiptAssetId": "cg.limbus_bus_night",
+      "path": "cg/limbus_bus_night.jpg",
+      "category": "cg",
+      "provider": "latent-moe",
+      "model": "latent-moe-async",
+      "inputMode": "text-generation",
+      "generationSize": "landscape",
+      "delivery": {
+        "format": "jpg",
+        "width": 1280,
+        "height": 720,
+        "alpha": false
+      },
+      "blankAsset": true,
+      "canonRecap": false,
+      "manifestAssetId": "cg.limbus_bus_night",
+      "referenceDependencies": {
+        "referenceJobIds": [],
+        "referenceSourceIds": [],
+        "strippedForLatent": 4
+      },
+      "promptVersion": "albina-visual-v2",
+      "status": "authorized-prompt-frozen"
+    },
+    {
+      "jobId": "visual.image.cg.maestro_shadow",
+      "assetId": "cg.maestro_shadow",
+      "receiptAssetId": "cg.maestro_shadow",
+      "path": "cg/maestro_shadow.jpg",
+      "category": "cg",
+      "provider": "latent-moe",
+      "model": "latent-moe-async",
+      "inputMode": "text-generation",
+      "generationSize": "landscape",
+      "delivery": {
+        "format": "jpg",
+        "width": 1280,
+        "height": 720,
+        "alpha": false
+      },
+      "blankAsset": true,
+      "canonRecap": false,
+      "manifestAssetId": "cg.maestro_shadow",
+      "referenceDependencies": {
+        "referenceJobIds": [],
+        "referenceSourceIds": [],
+        "strippedForLatent": 5
+      },
+      "promptVersion": "albina-visual-v2",
+      "status": "authorized-prompt-frozen"
+    },
+    {
+      "jobId": "visual.image.cg.opening_rain",
+      "assetId": "cg.opening_rain",
+      "receiptAssetId": "cg.opening_rain",
+      "path": "cg/opening_rain.jpg",
+      "category": "cg",
+      "provider": "latent-moe",
+      "model": "latent-moe-async",
+      "inputMode": "text-generation",
+      "generationSize": "landscape",
+      "delivery": {
+        "format": "jpg",
+        "width": 1280,
+        "height": 720,
+        "alpha": false
+      },
+      "blankAsset": true,
+      "canonRecap": false,
+      "manifestAssetId": "cg.opening_rain",
+      "referenceDependencies": {
+        "referenceJobIds": [],
+        "referenceSourceIds": [],
+        "strippedForLatent": 3
+      },
+      "promptVersion": "albina-visual-v2",
+      "status": "authorized-prompt-frozen"
+    },
+    {
+      "jobId": "visual.image.cg.rain_confession",
+      "assetId": "cg.rain_confession",
+      "receiptAssetId": "cg.rain_confession",
+      "path": "cg/rain_confession.jpg",
+      "category": "cg",
+      "provider": "latent-moe",
+      "model": "latent-moe-async",
+      "inputMode": "text-generation",
+      "generationSize": "landscape",
+      "delivery": {
+        "format": "jpg",
+        "width": 1280,
+        "height": 720,
+        "alpha": false
+      },
+      "blankAsset": true,
+      "canonRecap": false,
+      "manifestAssetId": "cg.rain_confession",
+      "referenceDependencies": {
+        "referenceJobIds": [],
+        "referenceSourceIds": [],
+        "strippedForLatent": 3
+      },
+      "promptVersion": "albina-visual-v2",
+      "status": "authorized-prompt-frozen"
+    },
+    {
+      "jobId": "visual.image.cg.rebuild_awakening",
+      "assetId": "cg.rebuild_awakening",
+      "receiptAssetId": "cg.rebuild_awakening",
+      "path": "cg/rebuild_awakening.jpg",
+      "category": "cg",
+      "provider": "latent-moe",
+      "model": "latent-moe-async",
+      "inputMode": "text-generation",
+      "generationSize": "landscape",
+      "delivery": {
+        "format": "jpg",
+        "width": 1280,
+        "height": 720,
+        "alpha": false
+      },
+      "blankAsset": true,
+      "canonRecap": false,
+      "manifestAssetId": "cg.rebuild_awakening",
+      "referenceDependencies": {
+        "referenceJobIds": [],
+        "referenceSourceIds": [],
+        "strippedForLatent": 3
+      },
+      "promptVersion": "albina-visual-v2",
+      "status": "authorized-prompt-frozen"
+    },
+    {
+      "jobId": "visual.image.cg.ren_interruption",
+      "assetId": "cg.ren_interruption",
+      "receiptAssetId": "cg.ren_interruption",
+      "path": "cg/ren_interruption.jpg",
+      "category": "cg",
+      "provider": "latent-moe",
+      "model": "latent-moe-async",
+      "inputMode": "text-generation",
+      "generationSize": "landscape",
+      "delivery": {
+        "format": "jpg",
+        "width": 1280,
+        "height": 720,
+        "alpha": false
+      },
+      "blankAsset": true,
+      "canonRecap": false,
+      "manifestAssetId": "cg.ren_interruption",
+      "referenceDependencies": {
+        "referenceJobIds": [],
+        "referenceSourceIds": [],
+        "strippedForLatent": 4
+      },
+      "promptVersion": "albina-visual-v2",
+      "status": "authorized-prompt-frozen"
+    },
+    {
+      "jobId": "visual.image.cg.ring_conspiracy_ending",
+      "assetId": "cg.ring_conspiracy_ending",
+      "receiptAssetId": "cg.ring_conspiracy_ending",
+      "path": "cg/ring_conspiracy_ending.jpg",
+      "category": "cg",
+      "provider": "latent-moe",
+      "model": "latent-moe-async",
+      "inputMode": "text-generation",
+      "generationSize": "landscape",
+      "delivery": {
+        "format": "jpg",
+        "width": 1280,
+        "height": 720,
+        "alpha": false
+      },
+      "blankAsset": true,
+      "canonRecap": false,
+      "manifestAssetId": "cg.ring_conspiracy_ending",
+      "referenceDependencies": {
+        "referenceJobIds": [],
+        "referenceSourceIds": [],
+        "strippedForLatent": 3
+      },
+      "promptVersion": "albina-visual-v2",
+      "status": "authorized-prompt-frozen"
+    },
+    {
+      "jobId": "visual.image.cg.ring_invitation",
+      "assetId": "cg.ring_invitation",
+      "receiptAssetId": "cg.ring_invitation",
+      "path": "cg/ring_invitation.jpg",
+      "category": "cg",
+      "provider": "latent-moe",
+      "model": "latent-moe-async",
+      "inputMode": "text-generation",
+      "generationSize": "landscape",
+      "delivery": {
+        "format": "jpg",
+        "width": 1280,
+        "height": 720,
+        "alpha": false
+      },
+      "blankAsset": true,
+      "canonRecap": false,
+      "manifestAssetId": "cg.ring_invitation",
+      "referenceDependencies": {
+        "referenceJobIds": [],
+        "referenceSourceIds": [],
+        "strippedForLatent": 4
+      },
+      "promptVersion": "albina-visual-v2",
+      "status": "authorized-prompt-frozen"
+    },
+    {
+      "jobId": "visual.image.cg.surgery_of_memory",
+      "assetId": "cg.surgery_of_memory",
+      "receiptAssetId": "cg.surgery_of_memory",
+      "path": "cg/surgery_of_memory.jpg",
+      "category": "cg",
+      "provider": "latent-moe",
+      "model": "latent-moe-async",
+      "inputMode": "text-generation",
+      "generationSize": "landscape",
+      "delivery": {
+        "format": "jpg",
+        "width": 1280,
+        "height": 720,
+        "alpha": false
+      },
+      "blankAsset": true,
+      "canonRecap": false,
+      "manifestAssetId": "cg.surgery_of_memory",
+      "referenceDependencies": {
+        "referenceJobIds": [],
+        "referenceSourceIds": [],
+        "strippedForLatent": 4
+      },
+      "promptVersion": "albina-visual-v2",
+      "status": "authorized-prompt-frozen"
+    },
+    {
+      "jobId": "visual.image.cg.trust_threshold",
+      "assetId": "cg.trust_threshold",
+      "receiptAssetId": "cg.trust_threshold",
+      "path": "cg/trust_threshold.jpg",
+      "category": "cg",
+      "provider": "latent-moe",
+      "model": "latent-moe-async",
+      "inputMode": "text-generation",
+      "generationSize": "landscape",
+      "delivery": {
+        "format": "jpg",
+        "width": 1280,
+        "height": 720,
+        "alpha": false
+      },
+      "blankAsset": true,
+      "canonRecap": false,
+      "manifestAssetId": "cg.trust_threshold",
+      "referenceDependencies": {
+        "referenceJobIds": [],
+        "referenceSourceIds": [],
+        "strippedForLatent": 3
+      },
+      "promptVersion": "albina-visual-v2",
+      "status": "authorized-prompt-frozen"
+    },
+    {
+      "jobId": "visual.image.cg.white_canvas_choice",
+      "assetId": "cg.white_canvas_choice",
+      "receiptAssetId": "cg.white_canvas_choice",
+      "path": "cg/white_canvas_choice.jpg",
+      "category": "cg",
+      "provider": "latent-moe",
+      "model": "latent-moe-async",
+      "inputMode": "text-generation",
+      "generationSize": "landscape",
+      "delivery": {
+        "format": "jpg",
+        "width": 1280,
+        "height": 720,
+        "alpha": false
+      },
+      "blankAsset": true,
+      "canonRecap": false,
+      "manifestAssetId": "cg.white_canvas_choice",
+      "referenceDependencies": {
+        "referenceJobIds": [],
+        "referenceSourceIds": [],
+        "strippedForLatent": 3
+      },
+      "promptVersion": "albina-visual-v2",
+      "status": "authorized-prompt-frozen"
+    },
+    {
+      "jobId": "visual.image.cg.white_canvas_ending",
+      "assetId": "cg.white_canvas_ending",
+      "receiptAssetId": "cg.white_canvas_ending",
+      "path": "cg/white_canvas_ending.jpg",
+      "category": "cg",
+      "provider": "latent-moe",
+      "model": "latent-moe-async",
+      "inputMode": "text-generation",
+      "generationSize": "landscape",
+      "delivery": {
+        "format": "jpg",
+        "width": 1280,
+        "height": 720,
+        "alpha": false
+      },
+      "blankAsset": true,
+      "canonRecap": false,
+      "manifestAssetId": "cg.white_canvas_ending",
+      "referenceDependencies": {
+        "referenceJobIds": [],
+        "referenceSourceIds": [],
+        "strippedForLatent": 3
+      },
+      "promptVersion": "albina-visual-v2",
+      "status": "authorized-prompt-frozen"
+    },
+    {
+      "jobId": "visual.image.portrait.albina.armored",
+      "assetId": "portrait.albina.armored",
+      "receiptAssetId": "file.characters.albina.armored.png",
+      "path": "characters/albina/armored.png",
+      "category": "characters",
+      "provider": "wisart-openai-compatible",
+      "model": "gpt-image-2",
+      "inputMode": "reference-edit",
+      "generationSize": "1024x1536",
+      "delivery": {
+        "format": "png",
+        "width": 1024,
+        "height": 1536,
+        "alpha": true
+      },
+      "blankAsset": false,
+      "canonRecap": false,
+      "manifestAssetId": "file.characters.albina.armored.png",
+      "referenceDependencies": {
+        "referenceJobIds": [
+          "visual.image.portrait.albina.normal"
+        ],
+        "referenceSourceIds": [
+          "canon.visual.albina.armored-standing",
+          "reference.user.albina-style-board"
+        ]
+      },
+      "promptVersion": "albina-visual-v2",
+      "status": "authorized-prompt-frozen"
+    },
+    {
+      "jobId": "visual.image.portrait.albina.combat",
+      "assetId": "portrait.albina.combat",
+      "receiptAssetId": "file.characters.albina.combat.png",
+      "path": "characters/albina/combat.png",
+      "category": "characters",
+      "provider": "wisart-openai-compatible",
+      "model": "gpt-image-2",
+      "inputMode": "reference-edit",
+      "generationSize": "1024x1536",
+      "delivery": {
+        "format": "png",
+        "width": 1024,
+        "height": 1536,
+        "alpha": true
+      },
+      "blankAsset": true,
+      "canonRecap": false,
+      "manifestAssetId": "file.characters.albina.combat.png",
+      "referenceDependencies": {
+        "referenceJobIds": [
+          "visual.image.portrait.albina.normal"
+        ],
+        "referenceSourceIds": [
+          "reference.user.albina-style-board"
+        ]
+      },
+      "promptVersion": "albina-visual-v2",
+      "status": "authorized-prompt-frozen"
+    },
+    {
+      "jobId": "visual.image.portrait.albina.endgame",
+      "assetId": "portrait.albina.endgame",
+      "receiptAssetId": "file.characters.albina.endgame.png",
+      "path": "characters/albina/endgame.png",
+      "category": "characters",
+      "provider": "wisart-openai-compatible",
+      "model": "gpt-image-2",
+      "inputMode": "reference-edit",
+      "generationSize": "1024x1536",
+      "delivery": {
+        "format": "png",
+        "width": 1024,
+        "height": 1536,
+        "alpha": true
+      },
+      "blankAsset": true,
+      "canonRecap": false,
+      "manifestAssetId": "file.characters.albina.endgame.png",
+      "referenceDependencies": {
+        "referenceJobIds": [
+          "visual.image.portrait.albina.normal"
+        ],
+        "referenceSourceIds": [
+          "reference.user.albina-style-board"
+        ]
+      },
+      "promptVersion": "albina-visual-v2",
+      "status": "authorized-prompt-frozen"
+    },
+    {
+      "jobId": "visual.image.portrait.albina.fascia-open",
+      "assetId": "portrait.albina.fascia-open",
+      "receiptAssetId": "file.characters.albina.fascia.open.png",
+      "path": "characters/albina/fascia-open.png",
+      "category": "characters",
+      "provider": "wisart-openai-compatible",
+      "model": "gpt-image-2",
+      "inputMode": "reference-edit",
+      "generationSize": "1024x1536",
+      "delivery": {
+        "format": "png",
+        "width": 1024,
+        "height": 1536,
+        "alpha": true
+      },
+      "blankAsset": true,
+      "canonRecap": false,
+      "manifestAssetId": "file.characters.albina.fascia.open.png",
+      "referenceDependencies": {
+        "referenceJobIds": [
+          "visual.image.portrait.albina.normal"
+        ],
+        "referenceSourceIds": [
+          "reference.user.albina-style-board"
+        ]
+      },
+      "promptVersion": "albina-visual-v2",
+      "status": "authorized-prompt-frozen"
+    },
+    {
+      "jobId": "visual.image.portrait.albina.furious",
+      "assetId": "portrait.albina.furious",
+      "receiptAssetId": "file.characters.albina.furious.png",
+      "path": "characters/albina/furious.png",
+      "category": "characters",
+      "provider": "wisart-openai-compatible",
+      "model": "gpt-image-2",
+      "inputMode": "reference-edit",
+      "generationSize": "1024x1536",
+      "delivery": {
+        "format": "png",
+        "width": 1024,
+        "height": 1536,
+        "alpha": true
+      },
+      "blankAsset": true,
+      "canonRecap": false,
+      "manifestAssetId": "file.characters.albina.furious.png",
+      "referenceDependencies": {
+        "referenceJobIds": [
+          "visual.image.portrait.albina.normal"
+        ],
+        "referenceSourceIds": [
+          "reference.user.albina-style-board"
+        ]
+      },
+      "promptVersion": "albina-visual-v2",
+      "status": "authorized-prompt-frozen"
+    },
+    {
+      "jobId": "visual.image.portrait.albina.golden-bough",
+      "assetId": "portrait.albina.golden-bough",
+      "receiptAssetId": "file.characters.albina.golden.bough.png",
+      "path": "characters/albina/golden-bough.png",
+      "category": "characters",
+      "provider": "wisart-openai-compatible",
+      "model": "gpt-image-2",
+      "inputMode": "reference-edit",
+      "generationSize": "1024x1536",
+      "delivery": {
+        "format": "png",
+        "width": 1024,
+        "height": 1536,
+        "alpha": true
+      },
+      "blankAsset": true,
+      "canonRecap": false,
+      "manifestAssetId": "file.characters.albina.golden.bough.png",
+      "referenceDependencies": {
+        "referenceJobIds": [
+          "visual.image.portrait.albina.normal"
+        ],
+        "referenceSourceIds": [
+          "reference.user.albina-style-board"
+        ]
+      },
+      "promptVersion": "albina-visual-v2",
+      "status": "authorized-prompt-frozen"
+    },
+    {
+      "jobId": "visual.image.portrait.albina.maestro",
+      "assetId": "portrait.albina.maestro",
+      "receiptAssetId": "file.characters.albina.maestro.png",
+      "path": "characters/albina/maestro.png",
+      "category": "characters",
+      "provider": "wisart-openai-compatible",
+      "model": "gpt-image-2",
+      "inputMode": "reference-edit",
+      "generationSize": "1024x1536",
+      "delivery": {
+        "format": "png",
+        "width": 1024,
+        "height": 1536,
+        "alpha": true
+      },
+      "blankAsset": true,
+      "canonRecap": false,
+      "manifestAssetId": "file.characters.albina.maestro.png",
+      "referenceDependencies": {
+        "referenceJobIds": [
+          "visual.image.portrait.albina.normal"
+        ],
+        "referenceSourceIds": [
+          "reference.user.albina-style-board"
+        ]
+      },
+      "promptVersion": "albina-visual-v2",
+      "status": "authorized-prompt-frozen"
+    },
+    {
+      "jobId": "visual.image.portrait.albina.normal",
+      "assetId": "portrait.albina.normal",
+      "receiptAssetId": "file.characters.albina.normal.png",
+      "path": "characters/albina/normal.png",
+      "category": "characters",
+      "provider": "wisart-openai-compatible",
+      "model": "gpt-image-2",
+      "inputMode": "reference-edit",
+      "generationSize": "1024x1536",
+      "delivery": {
+        "format": "png",
+        "width": 1024,
+        "height": 1536,
+        "alpha": true
+      },
+      "blankAsset": false,
+      "canonRecap": false,
+      "manifestAssetId": "file.characters.albina.normal.png",
+      "referenceDependencies": {
+        "referenceJobIds": [],
+        "referenceSourceIds": [
+          "canon.visual.albina.unarmored-standing",
+          "reference.user.albina-style-board"
+        ]
+      },
+      "promptVersion": "albina-visual-v2",
+      "status": "authorized-prompt-frozen"
+    },
+    {
+      "jobId": "visual.image.portrait.albina.rain",
+      "assetId": "portrait.albina.rain",
+      "receiptAssetId": "file.characters.albina.rain.png",
+      "path": "characters/albina/rain.png",
+      "category": "characters",
+      "provider": "wisart-openai-compatible",
+      "model": "gpt-image-2",
+      "inputMode": "reference-edit",
+      "generationSize": "1024x1536",
+      "delivery": {
+        "format": "png",
+        "width": 1024,
+        "height": 1536,
+        "alpha": true
+      },
+      "blankAsset": true,
+      "canonRecap": false,
+      "manifestAssetId": "file.characters.albina.rain.png",
+      "referenceDependencies": {
+        "referenceJobIds": [
+          "visual.image.portrait.albina.normal"
+        ],
+        "referenceSourceIds": [
+          "reference.user.albina-style-board"
+        ]
+      },
+      "promptVersion": "albina-visual-v2",
+      "status": "authorized-prompt-frozen"
+    },
+    {
+      "jobId": "visual.image.portrait.albina.ring-conspiracy",
+      "assetId": "portrait.albina.ring-conspiracy",
+      "receiptAssetId": "file.characters.albina.ring.conspiracy.png",
+      "path": "characters/albina/ring-conspiracy.png",
+      "category": "characters",
+      "provider": "wisart-openai-compatible",
+      "model": "gpt-image-2",
+      "inputMode": "reference-edit",
+      "generationSize": "1024x1536",
+      "delivery": {
+        "format": "png",
+        "width": 1024,
+        "height": 1536,
+        "alpha": true
+      },
+      "blankAsset": true,
+      "canonRecap": false,
+      "manifestAssetId": "file.characters.albina.ring.conspiracy.png",
+      "referenceDependencies": {
+        "referenceJobIds": [
+          "visual.image.portrait.albina.normal"
+        ],
+        "referenceSourceIds": [
+          "reference.user.albina-style-board"
+        ]
+      },
+      "promptVersion": "albina-visual-v2",
+      "status": "authorized-prompt-frozen"
+    },
+    {
+      "jobId": "visual.image.portrait.albina.shy",
+      "assetId": "portrait.albina.shy",
+      "receiptAssetId": "file.characters.albina.shy.png",
+      "path": "characters/albina/shy.png",
+      "category": "characters",
+      "provider": "wisart-openai-compatible",
+      "model": "gpt-image-2",
+      "inputMode": "reference-edit",
+      "generationSize": "1024x1536",
+      "delivery": {
+        "format": "png",
+        "width": 1024,
+        "height": 1536,
+        "alpha": true
+      },
+      "blankAsset": true,
+      "canonRecap": false,
+      "manifestAssetId": "file.characters.albina.shy.png",
+      "referenceDependencies": {
+        "referenceJobIds": [
+          "visual.image.portrait.albina.normal"
+        ],
+        "referenceSourceIds": [
+          "reference.user.albina-style-board"
+        ]
+      },
+      "promptVersion": "albina-visual-v2",
+      "status": "authorized-prompt-frozen"
+    },
+    {
+      "jobId": "visual.image.portrait.albina.surgical",
+      "assetId": "portrait.albina.surgical",
+      "receiptAssetId": "file.characters.albina.surgical.png",
+      "path": "characters/albina/surgical.png",
+      "category": "characters",
+      "provider": "wisart-openai-compatible",
+      "model": "gpt-image-2",
+      "inputMode": "reference-edit",
+      "generationSize": "1024x1536",
+      "delivery": {
+        "format": "png",
+        "width": 1024,
+        "height": 1536,
+        "alpha": true
+      },
+      "blankAsset": true,
+      "canonRecap": false,
+      "manifestAssetId": "file.characters.albina.surgical.png",
+      "referenceDependencies": {
+        "referenceJobIds": [
+          "visual.image.portrait.albina.normal"
+        ],
+        "referenceSourceIds": [
+          "reference.user.albina-style-board"
+        ]
+      },
+      "promptVersion": "albina-visual-v2",
+      "status": "authorized-prompt-frozen"
+    },
+    {
+      "jobId": "visual.image.portrait.albina.white-canvas",
+      "assetId": "portrait.albina.white-canvas",
+      "receiptAssetId": "file.characters.albina.white.canvas.png",
+      "path": "characters/albina/white-canvas.png",
+      "category": "characters",
+      "provider": "wisart-openai-compatible",
+      "model": "gpt-image-2",
+      "inputMode": "reference-edit",
+      "generationSize": "1024x1536",
+      "delivery": {
+        "format": "png",
+        "width": 1024,
+        "height": 1536,
+        "alpha": true
+      },
+      "blankAsset": true,
+      "canonRecap": false,
+      "manifestAssetId": "file.characters.albina.white.canvas.png",
+      "referenceDependencies": {
+        "referenceJobIds": [
+          "visual.image.portrait.albina.normal"
+        ],
+        "referenceSourceIds": [
+          "reference.user.albina-style-board"
+        ]
+      },
+      "promptVersion": "albina-visual-v2",
+      "status": "authorized-prompt-frozen"
+    },
+    {
+      "jobId": "visual.image.portrait.callisto.normal",
+      "assetId": "portrait.callisto.normal",
+      "receiptAssetId": "file.characters.callisto.normal.png",
+      "path": "characters/callisto/normal.png",
+      "category": "characters",
+      "provider": "wisart-openai-compatible",
+      "model": "gpt-image-2",
+      "inputMode": "reference-edit",
+      "generationSize": "1024x1536",
+      "delivery": {
+        "format": "png",
+        "width": 1024,
+        "height": 1536,
+        "alpha": true
+      },
+      "blankAsset": true,
+      "canonRecap": false,
+      "manifestAssetId": "file.characters.callisto.normal.png",
+      "referenceDependencies": {
+        "referenceJobIds": [],
+        "referenceSourceIds": [
+          "canon.visual.callisto.standing",
+          "reference.user.albina-style-board"
+        ]
+      },
+      "promptVersion": "albina-visual-v2",
+      "status": "authorized-prompt-frozen"
+    },
+    {
+      "jobId": "visual.image.portrait.dante.normal",
+      "assetId": "portrait.dante.normal",
+      "receiptAssetId": "file.characters.dante.normal.png",
+      "path": "characters/dante/normal.png",
+      "category": "characters",
+      "provider": "wisart-openai-compatible",
+      "model": "gpt-image-2",
+      "inputMode": "reference-edit",
+      "generationSize": "1024x1536",
+      "delivery": {
+        "format": "png",
+        "width": 1024,
+        "height": 1536,
+        "alpha": true
+      },
+      "blankAsset": true,
+      "canonRecap": false,
+      "manifestAssetId": "file.characters.dante.normal.png",
+      "referenceDependencies": {
+        "referenceJobIds": [],
+        "referenceSourceIds": [
+          "canon.visual.dante.standing",
+          "reference.user.albina-style-board"
+        ]
+      },
+      "promptVersion": "albina-visual-v2",
+      "status": "authorized-prompt-frozen"
+    },
+    {
+      "jobId": "visual.image.portrait.faust.normal",
+      "assetId": "portrait.faust.normal",
+      "receiptAssetId": "file.characters.faust.normal.png",
+      "path": "characters/faust/normal.png",
+      "category": "characters",
+      "provider": "wisart-openai-compatible",
+      "model": "gpt-image-2",
+      "inputMode": "reference-edit",
+      "generationSize": "1024x1536",
+      "delivery": {
+        "format": "png",
+        "width": 1024,
+        "height": 1536,
+        "alpha": true
+      },
+      "blankAsset": true,
+      "canonRecap": false,
+      "manifestAssetId": "file.characters.faust.normal.png",
+      "referenceDependencies": {
+        "referenceJobIds": [],
+        "referenceSourceIds": [
+          "canon.visual.faust.standing",
+          "reference.user.albina-style-board"
+        ]
+      },
+      "promptVersion": "albina-visual-v2",
+      "status": "authorized-prompt-frozen"
+    },
+    {
+      "jobId": "visual.image.portrait.golden_apparition.normal",
+      "assetId": "portrait.golden_apparition.normal",
+      "receiptAssetId": "file.characters.golden.apparition.normal.png",
+      "path": "characters/golden_apparition/normal.png",
+      "category": "characters",
+      "provider": "wisart-openai-compatible",
+      "model": "gpt-image-2",
+      "inputMode": "reference-edit",
+      "generationSize": "1024x1536",
+      "delivery": {
+        "format": "png",
+        "width": 1024,
+        "height": 1536,
+        "alpha": true
+      },
+      "blankAsset": true,
+      "canonRecap": false,
+      "manifestAssetId": "file.characters.golden.apparition.normal.png",
+      "referenceDependencies": {
+        "referenceJobIds": [],
+        "referenceSourceIds": [
+          "reference.user.albina-style-board"
+        ]
+      },
+      "promptVersion": "albina-visual-v2",
+      "status": "authorized-prompt-frozen"
+    },
+    {
+      "jobId": "visual.image.portrait.lce_doctor.normal",
+      "assetId": "portrait.lce_doctor.normal",
+      "receiptAssetId": "file.characters.lce.doctor.normal.png",
+      "path": "characters/lce_doctor/normal.png",
+      "category": "characters",
+      "provider": "wisart-openai-compatible",
+      "model": "gpt-image-2",
+      "inputMode": "reference-edit",
+      "generationSize": "1024x1536",
+      "delivery": {
+        "format": "png",
+        "width": 1024,
+        "height": 1536,
+        "alpha": true
+      },
+      "blankAsset": true,
+      "canonRecap": false,
+      "manifestAssetId": "file.characters.lce.doctor.normal.png",
+      "referenceDependencies": {
+        "referenceJobIds": [],
+        "referenceSourceIds": [
+          "reference.user.albina-style-board"
+        ]
+      },
+      "promptVersion": "albina-visual-v2",
+      "status": "authorized-prompt-frozen"
+    },
+    {
+      "jobId": "visual.image.portrait.protagonist.battle",
+      "assetId": "portrait.protagonist.battle",
+      "receiptAssetId": "file.characters.protagonist.battle.png",
+      "path": "characters/protagonist/battle.png",
+      "category": "characters",
+      "provider": "wisart-openai-compatible",
+      "model": "gpt-image-2",
+      "inputMode": "reference-edit",
+      "generationSize": "1024x1536",
+      "delivery": {
+        "format": "png",
+        "width": 1024,
+        "height": 1536,
+        "alpha": true
+      },
+      "blankAsset": true,
+      "canonRecap": false,
+      "manifestAssetId": "file.characters.protagonist.battle.png",
+      "referenceDependencies": {
+        "referenceJobIds": [
+          "visual.image.portrait.protagonist.serious"
+        ],
+        "referenceSourceIds": [
+          "reference.user.albina-style-board"
+        ]
+      },
+      "promptVersion": "albina-visual-v2",
+      "status": "authorized-prompt-frozen"
+    },
+    {
+      "jobId": "visual.image.portrait.protagonist.resolve",
+      "assetId": "portrait.protagonist.resolve",
+      "receiptAssetId": "file.characters.protagonist.resolve.png",
+      "path": "characters/protagonist/resolve.png",
+      "category": "characters",
+      "provider": "wisart-openai-compatible",
+      "model": "gpt-image-2",
+      "inputMode": "reference-edit",
+      "generationSize": "1024x1536",
+      "delivery": {
+        "format": "png",
+        "width": 1024,
+        "height": 1536,
+        "alpha": true
+      },
+      "blankAsset": true,
+      "canonRecap": false,
+      "manifestAssetId": "file.characters.protagonist.resolve.png",
+      "referenceDependencies": {
+        "referenceJobIds": [
+          "visual.image.portrait.protagonist.serious"
+        ],
+        "referenceSourceIds": [
+          "reference.user.albina-style-board"
+        ]
+      },
+      "promptVersion": "albina-visual-v2",
+      "status": "authorized-prompt-frozen"
+    },
+    {
+      "jobId": "visual.image.portrait.protagonist.serious",
+      "assetId": "portrait.protagonist.serious",
+      "receiptAssetId": "file.characters.protagonist.serious.png",
+      "path": "characters/protagonist/serious.png",
+      "category": "characters",
+      "provider": "wisart-openai-compatible",
+      "model": "gpt-image-2",
+      "inputMode": "reference-edit",
+      "generationSize": "1024x1536",
+      "delivery": {
+        "format": "png",
+        "width": 1024,
+        "height": 1536,
+        "alpha": true
+      },
+      "blankAsset": true,
+      "canonRecap": false,
+      "manifestAssetId": "file.characters.protagonist.serious.png",
+      "referenceDependencies": {
+        "referenceJobIds": [],
+        "referenceSourceIds": [
+          "reference.user.albina-style-board"
+        ]
+      },
+      "promptVersion": "albina-visual-v2",
+      "status": "authorized-prompt-frozen"
+    },
+    {
+      "jobId": "visual.image.portrait.protagonist.shadow",
+      "assetId": "portrait.protagonist.shadow",
+      "receiptAssetId": "file.characters.protagonist.shadow.png",
+      "path": "characters/protagonist/shadow.png",
+      "category": "characters",
+      "provider": "wisart-openai-compatible",
+      "model": "gpt-image-2",
+      "inputMode": "reference-edit",
+      "generationSize": "1024x1536",
+      "delivery": {
+        "format": "png",
+        "width": 1024,
+        "height": 1536,
+        "alpha": true
+      },
+      "blankAsset": true,
+      "canonRecap": false,
+      "manifestAssetId": "file.characters.protagonist.shadow.png",
+      "referenceDependencies": {
+        "referenceJobIds": [
+          "visual.image.portrait.protagonist.serious"
+        ],
+        "referenceSourceIds": [
+          "reference.user.albina-style-board"
+        ]
+      },
+      "promptVersion": "albina-visual-v2",
+      "status": "authorized-prompt-frozen"
+    },
+    {
+      "jobId": "visual.image.portrait.protagonist.tender",
+      "assetId": "portrait.protagonist.tender",
+      "receiptAssetId": "file.characters.protagonist.tender.png",
+      "path": "characters/protagonist/tender.png",
+      "category": "characters",
+      "provider": "wisart-openai-compatible",
+      "model": "gpt-image-2",
+      "inputMode": "reference-edit",
+      "generationSize": "1024x1536",
+      "delivery": {
+        "format": "png",
+        "width": 1024,
+        "height": 1536,
+        "alpha": true
+      },
+      "blankAsset": true,
+      "canonRecap": false,
+      "manifestAssetId": "file.characters.protagonist.tender.png",
+      "referenceDependencies": {
+        "referenceJobIds": [
+          "visual.image.portrait.protagonist.serious"
+        ],
+        "referenceSourceIds": [
+          "reference.user.albina-style-board"
+        ]
+      },
+      "promptVersion": "albina-visual-v2",
+      "status": "authorized-prompt-frozen"
+    },
+    {
+      "jobId": "visual.image.portrait.protagonist.wet-hair",
+      "assetId": "portrait.protagonist.wet-hair",
+      "receiptAssetId": "file.characters.protagonist.wet.hair.png",
+      "path": "characters/protagonist/wet-hair.png",
+      "category": "characters",
+      "provider": "wisart-openai-compatible",
+      "model": "gpt-image-2",
+      "inputMode": "reference-edit",
+      "generationSize": "1024x1536",
+      "delivery": {
+        "format": "png",
+        "width": 1024,
+        "height": 1536,
+        "alpha": true
+      },
+      "blankAsset": true,
+      "canonRecap": false,
+      "manifestAssetId": "file.characters.protagonist.wet.hair.png",
+      "referenceDependencies": {
+        "referenceJobIds": [
+          "visual.image.portrait.protagonist.serious"
+        ],
+        "referenceSourceIds": [
+          "reference.user.albina-style-board"
+        ]
+      },
+      "promptVersion": "albina-visual-v2",
+      "status": "authorized-prompt-frozen"
+    },
+    {
+      "jobId": "visual.image.portrait.ren.normal",
+      "assetId": "portrait.ren.normal",
+      "receiptAssetId": "file.characters.ren.normal.png",
+      "path": "characters/ren/normal.png",
+      "category": "characters",
+      "provider": "wisart-openai-compatible",
+      "model": "gpt-image-2",
+      "inputMode": "reference-edit",
+      "generationSize": "1024x1536",
+      "delivery": {
+        "format": "png",
+        "width": 1024,
+        "height": 1536,
+        "alpha": true
+      },
+      "blankAsset": false,
+      "canonRecap": false,
+      "manifestAssetId": "file.characters.ren.normal.png",
+      "referenceDependencies": {
+        "referenceJobIds": [],
+        "referenceSourceIds": [
+          "canon.visual.ren.standing",
+          "reference.user.albina-style-board"
+        ]
+      },
+      "promptVersion": "albina-visual-v2",
+      "status": "authorized-prompt-frozen"
+    },
+    {
+      "jobId": "visual.image.portrait.ring_agent.normal",
+      "assetId": "portrait.ring_agent.normal",
+      "receiptAssetId": "file.characters.ring.agent.normal.png",
+      "path": "characters/ring_agent/normal.png",
+      "category": "characters",
+      "provider": "wisart-openai-compatible",
+      "model": "gpt-image-2",
+      "inputMode": "reference-edit",
+      "generationSize": "1024x1536",
+      "delivery": {
+        "format": "png",
+        "width": 1024,
+        "height": 1536,
+        "alpha": true
+      },
+      "blankAsset": true,
+      "canonRecap": false,
+      "manifestAssetId": "file.characters.ring.agent.normal.png",
+      "referenceDependencies": {
+        "referenceJobIds": [],
+        "referenceSourceIds": [
+          "reference.user.albina-style-board"
+        ]
+      },
+      "promptVersion": "albina-visual-v2",
+      "status": "authorized-prompt-frozen"
+    },
+    {
+      "jobId": "visual.image.portrait.vergilius.normal",
+      "assetId": "portrait.vergilius.normal",
+      "receiptAssetId": "file.characters.vergilius.normal.png",
+      "path": "characters/vergilius/normal.png",
+      "category": "characters",
+      "provider": "wisart-openai-compatible",
+      "model": "gpt-image-2",
+      "inputMode": "reference-edit",
+      "generationSize": "1024x1536",
+      "delivery": {
+        "format": "png",
+        "width": 1024,
+        "height": 1536,
+        "alpha": true
+      },
+      "blankAsset": false,
+      "canonRecap": false,
+      "manifestAssetId": "file.characters.vergilius.normal.png",
+      "referenceDependencies": {
+        "referenceJobIds": [],
+        "referenceSourceIds": [
+          "canon.visual.vergilius.standing",
+          "reference.user.albina-style-board"
+        ]
+      },
+      "promptVersion": "albina-visual-v2",
+      "status": "authorized-prompt-frozen"
+    }
+  ]
+}

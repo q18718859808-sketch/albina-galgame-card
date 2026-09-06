@@ -2,9 +2,12 @@ import { readFile } from 'node:fs/promises';
 
 const hashPattern = /^[a-f0-9]{64}$/iu;
 const promptVersionPattern = /^[a-z0-9][a-z0-9._-]*$/iu;
+const krea2BaselineHashPattern = /^[a-f0-9]{64}$/iu;
 const models = {
   pie: new Set(['seedance-1.5-pro', 'speech-2.8-hd']),
-  'x666-openai-compatible': new Set(['gpt-image-2']),
+  'wisart-openai-compatible': new Set(['gpt-image-2']),
+  'comfyui-local-krea2': new Set(['redcraft23FP8_30Krea2.safetensors']),
+  'latent-moe': new Set(['latent-moe-async']),
 };
 
 export async function loadPromotionReceipts(paths) {
@@ -51,20 +54,41 @@ export function parsePromotionReceipt(value) {
 
 function provenance(value) {
   const record = object(value, 'promotion provenance');
-  exactKeys(record, ['model', 'promptVersion', 'provider', 'review', 'sourceJobHash', 'upstreamPieVerified'], 'promotion provenance', ['upstreamPieVerified']);
+  exactKeys(record, ['baseline', 'model', 'promptVersion', 'provider', 'review', 'sourceJobHash'], 'promotion provenance', ['baseline']);
   if (typeof record.provider !== 'string' || typeof record.model !== 'string' || !models[record.provider]?.has(record.model)) throw new Error('Invalid promotion provider/model');
   if (!promptVersionPattern.test(String(record.promptVersion)) || !hashPattern.test(String(record.sourceJobHash))) throw new Error('Invalid promotion job provenance');
-  const validUpstreamEvidence = record.provider === 'x666-openai-compatible'
-    ? record.upstreamPieVerified === false
-    : record.upstreamPieVerified === undefined;
-  if (!validUpstreamEvidence) throw new Error('Invalid promotion upstream Pie evidence');
+  if (record.provider === 'comfyui-local-krea2' && record.baseline !== undefined) validateKrea2BaselineBinding(record.baseline);
+  if (record.provider !== 'comfyui-local-krea2' && record.baseline !== undefined) throw new Error('Krea2 baseline binding is only valid for local Krea2 provenance');
   return {
     provider: record.provider,
     model: record.model,
-    ...(record.upstreamPieVerified === false ? { upstreamPieVerified: false } : {}),
     promptVersion: record.promptVersion,
     sourceJobHash: record.sourceJobHash,
     review: review(record.review),
+    ...(record.baseline ? { baseline: krea2Baseline(record.baseline) } : {}),
+  };
+}
+
+function validateKrea2BaselineBinding(value) {
+  const record = object(value, 'Krea2 baseline binding');
+  exactKeys(record, ['evidencePath', 'evidenceSha256', 'topologySha256', 'workflowPath', 'workflowSha256'], 'Krea2 baseline binding');
+  if (typeof record.workflowPath !== 'string' || typeof record.evidencePath !== 'string'
+    || record.workflowPath !== 'staging/media/embedded-baseline/embedded-production-baseline.api.json'
+    || record.evidencePath !== 'staging/media/embedded-baseline/embedded-production-baseline-evidence.json'
+    || !krea2BaselineHashPattern.test(String(record.workflowSha256))
+    || !krea2BaselineHashPattern.test(String(record.evidenceSha256))
+    || !krea2BaselineHashPattern.test(String(record.topologySha256))) {
+    throw new Error('Invalid Krea2 baseline binding');
+  }
+}
+
+function krea2Baseline(value) {
+  return {
+    workflowPath: value.workflowPath,
+    workflowSha256: value.workflowSha256,
+    evidencePath: value.evidencePath,
+    evidenceSha256: value.evidenceSha256,
+    topologySha256: value.topologySha256,
   };
 }
 

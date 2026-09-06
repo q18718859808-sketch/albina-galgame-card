@@ -552,6 +552,13 @@
     "speaker": "LCE 医师",
     "text": "LCE 把你们暂扣在手术间。医师递来一份中立证词表，说只要她肯指认环指，就帮她换掉被环指标注过的接口。她没有看表，先看你。",
     "voiceAssetId": "voice.scene.ring_conspiracy_008",
+    "minigame": {
+      "minigameId": "minigame.ring.boundary_resonance",
+      "seed": "ring-counter-contract-v1",
+      "prompt": "只点亮能把这份委托改写为反制契约的条款节点。",
+      "assistLabel": "标记不可接受的占有条款",
+      "allowSkip": true
+    },
     "choices": [
       {
         "id": "conspiracy_008_refuse_testimony",

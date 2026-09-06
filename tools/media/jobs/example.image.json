@@ -1,5 +1,8 @@
 {
   "kind": "image",
+  "provider": "pie",
+  "model": "gpt-image-2",
+  "promptVersion": "example-image-v1",
   "prompt": "Offline production placeholder; replace before generation.",
   "width": 1024,
   "height": 1024,

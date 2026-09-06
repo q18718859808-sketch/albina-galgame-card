@@ -1,11 +1,3 @@
-export function videoNameForScene(scene) {
-  if (scene.ending) return scene.id.replaceAll('-', '_');
-  const match = /^(white_canvas|golden_bough|ring_conspiracy)_(003|005|008|011|015)$/u.exec(scene.id);
-  if (!match) return undefined;
-  const route = match[1] === 'golden_bough' ? 'golden_bough_rebuild' : match[1];
-  return `${route}_scene_${Number(match[2])}`;
-}
-
 function bgmAssetIdForScene(scene) {
   if (scene.route === 'ring_conspiracy') return 'file.audio.bgm.boss.kromer.mp3';
   if (scene.route === 'golden_bough_rebuild') return 'file.audio.bgm.title.theme.mp3';
@@ -21,17 +13,11 @@ function sfxAssetIdsForScene(scene) {
 
 export function materializeStoryMedia(scenes) {
   return scenes.map((scene) => {
-    const name = videoNameForScene(scene);
+    const { videoAssetId: _videoAssetId, desktopVideoAssetId: _desktopVideoAssetId, ...staticScene } = scene;
     const bgmAssetId = bgmAssetIdForScene(scene);
     const sfxAssetIds = sfxAssetIdsForScene(scene);
-    const media = {
-      ...scene, bgmAssetId, ...(sfxAssetIds ? { sfxAssetIds } : {}),
-    };
-    if (!name) return media;
     return {
-      ...media,
-      videoAssetId: `video.animated.runtime.${name}`,
-      desktopVideoAssetId: `video.animated.desktop.${name}`,
+      ...staticScene, bgmAssetId, ...(sfxAssetIds ? { sfxAssetIds } : {}),
     };
   });
 }
@@ -39,7 +25,7 @@ export function materializeStoryMedia(scenes) {
 export function collectStoryAssetReferences(scenes) {
   const references = new Set();
   for (const scene of scenes) {
-    for (const key of ['backgroundAssetId', 'cgAssetId', 'videoAssetId', 'desktopVideoAssetId', 'voiceAssetId', 'bgmAssetId']) {
+    for (const key of ['backgroundAssetId', 'cgAssetId', 'voiceAssetId', 'bgmAssetId']) {
       if (scene[key]) references.add(scene[key]);
     }
     for (const portrait of scene.portraits) references.add(portrait.portraitAssetId);

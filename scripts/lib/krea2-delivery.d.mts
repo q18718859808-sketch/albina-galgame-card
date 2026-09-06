@@ -1,0 +1,17 @@
+export function krea2ReceiptPath(jobId: string, root?: string): string;
+export function krea2ReviewPath(jobId: string, root?: string): string;
+export function krea2DeliveryPath(jobId: string, extension: string, root?: string): string;
+export function validateKrea2ProductionBaseline(evidence: any, expected: any): any;
+export function validateKrea2CharacterGateCertificate(certificate: any): any;
+export function assertKrea2CharacterProductionGate(gate: any, job: any): void;
+export function validateKrea2Candidate(receipt: any, job: any, productionBaseline?: any): any;
+export function validateKrea2CandidateBindings(receipt: any, job: any, productionBaseline: any, options?: any): Promise<any>;
+export function validateKrea2Review(review: any, receipt: any, criteria: string[]): any;
+export function validateKrea2ReviewBindings(review: any, receipt: any, criteria: string[], options: any): Promise<any>;
+export function buildKrea2Review(receipt: any, reviewer: string, criteriaEvidence: Array<{ criterion: string; note: string; evidence: string }>, decision: 'approved' | 'rejected' | undefined, options?: { rejectReasons?: string[]; reviewedAt?: string }): any;
+export function krea2ReceiptSha256(receipt: any): string;
+export function prepareKrea2Landscape(receipt: any, job: any, options?: any): Promise<any>;
+export function writeKrea2Review(jobId: string, review: any, options?: any): Promise<string>;
+export function loadKrea2Receipt(jobId: string, options?: any): Promise<any>;
+export function loadKrea2Review(jobId: string, options?: any): Promise<any>;
+export function validatePairedImageBinding(image: any, role: string): void;

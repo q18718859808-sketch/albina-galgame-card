@@ -1,0 +1,47 @@
+{
+  "version": 1,
+  "assetId": "cg.lce_raid",
+  "artifactSha256": "91fbaf6b6b67db5902bd23af21cc2af3db5ef62460748121307234b2592754a7",
+  "provenance": {
+    "provider": "wisart-openai-compatible",
+    "model": "gpt-image-2",
+    "promptVersion": "albina-visual-migration-v1",
+    "sourceJobHash": "b0244042e15c2408d8fe2e90e13f39c4e0f222a112b45c09cdb2e7ab62cf51c7",
+    "review": {
+      "status": "approved",
+      "reviewer": "workbuddy-convergence-agent",
+      "reviewedAt": "2026-09-06T08:36:09.775Z"
+    }
+  },
+  "rights": {
+    "status": "unverified",
+    "sourceType": "model-output",
+    "redistribution": "unverified",
+    "rightsBasis": "Redistribution rights for this model output have not been independently verified."
+  },
+  "lineage": {
+    "kind": "derivative",
+    "processVersion": "albina-visual-promotion-v1",
+    "inputs": [
+      {
+        "assetId": "file.characters.albina.combat.png",
+        "sha256": "3447b8cb8df4edec6325ab5262892a35bff6854cd7f0fa44aaab268a97182f62",
+        "role": "approved-generated-reference"
+      },
+      {
+        "assetId": "file.characters.protagonist.battle.png",
+        "sha256": "5b40787a69bd7dc73c2b36570bf7c58c73e52a612ca6fbbc401f52ead494a400",
+        "role": "approved-generated-reference"
+      },
+      {
+        "assetId": "file.characters.lce.doctor.normal.png",
+        "sha256": "228c79b933fc9d28574fc044c56cce21de9037d4e3a0abd0e8c12d80463f8577",
+        "role": "approved-generated-reference"
+      },
+      {
+        "sha256": "aaf89630110b6fef687b86334404b00cd39fd29c84451971575b26a29ce51142",
+        "role": "canon-visual-reference"
+      }
+    ]
+  }
+}

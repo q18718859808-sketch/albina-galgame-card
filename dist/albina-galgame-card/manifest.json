@@ -1,6 +1,6 @@
 {
   "base": ".",
-  "version": "2.0.0-rc.2",
+  "version": "2.0.0-rc.3",
   "bg": {
     "backstreets_rain": "assets/bg/backstreets_rain.jpg",
     "city_rooftop": "assets/bg/city_rooftop.jpg",
@@ -68,6 +68,11 @@
     "araya_rooftop": "assets/cg/araya_rooftop.jpg",
     "art_resonance": "assets/cg/art_resonance.jpg",
     "backstreet_pursuit": "assets/cg/backstreet_pursuit.jpg",
+    "canon_recap_9_18": "assets/cg/canon_recap_9_18.jpg",
+    "canon_recap_9_37": "assets/cg/canon_recap_9_37.jpg",
+    "canon_recap_9_37_battle": "assets/cg/canon_recap_9_37_battle.jpg",
+    "canon_recap_9_43_outcome": "assets/cg/canon_recap_9_43_outcome.jpg",
+    "canon_recap_albina_fascia": "assets/cg/canon_recap_albina_fascia.jpg",
     "combat_transition_01": "assets/cg/combat_transition_01.jpg",
     "conspiracy_contract": "assets/cg/conspiracy_contract.jpg",
     "fascia_heartbeat": "assets/cg/fascia_heartbeat.jpg",

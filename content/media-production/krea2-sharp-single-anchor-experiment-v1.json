@@ -1,0 +1,61 @@
+{
+  "schemaVersion": 1,
+  "kind": "krea2-single-anchor-sharpness-experiment",
+  "profile": "albina-sharp-single-anchor-v1",
+  "status": "planned-static-no-inference",
+  "purpose": "One bounded sharper Krea2 staging candidate; no queue submission or production promotion.",
+  "execution": {
+    "fixedSeed": 2026082001,
+    "maxOutputs": 1,
+    "batchGeneration": false,
+    "gpuInferenceStarted": false,
+    "enqueueAllowed": false
+  },
+  "canonical": {
+    "geometryAuthority": "canonical-rgba",
+    "materialAuthority": "krea2-rgb",
+    "sourceCount": 1,
+    "sourcePath": "staging/research/canon-visual/wiki-game-assets/albina-unarmored-standing.png",
+    "sourceCanvas": { "width": 588, "height": 1766, "alpha": true },
+    "stage1Canvas": { "width": 592, "height": 1768, "reason": "8-aligned ComfyUI latent canvas" },
+    "stage2Canvas": { "width": 1184, "height": 3536 },
+    "alphaRestore": "canonical-alpha-restored-after-krea2-rgb-render",
+    "coordinateSystem": "unmirrored-source-pixel-coordinates"
+  },
+  "styleLoras": [
+    { "order": 1, "name": "z3zz4-k2-4_c1-st5000.safetensors", "strength": 0.55 },
+    { "order": 2, "name": "Krea2Rella_c1-st8000.safetensors", "strength": 0.65 },
+    { "order": 3, "name": "onineko_k2_v1.safetensors", "strength": 0.45 },
+    { "order": 4, "name": "meion_krea2_style_v7.0_c1-st4000.safetensors", "strength": 0.45 },
+    { "order": 5, "name": "masterpieces-v51.safetensors", "strength": 0.45 },
+    { "order": 6, "name": "ichika-k2_c1-st5000.safetensors", "strength": 0.35 }
+  ],
+  "styleLoraMutationAllowed": false,
+  "stages": [
+    {
+      "id": "stage1-canonical-material",
+      "input": "canonical-rgba-flattened-over-neutral-field",
+      "canvas": { "width": 592, "height": 1768, "reason": "8-aligned ComfyUI latent canvas" },
+      "steps": 28,
+      "denoise": 0.12,
+      "batchSize": 1,
+      "seed": 2026082001
+    },
+    {
+      "id": "stage2-sharpness-refinement",
+      "input": "stage1-decoded-rgb-only",
+      "canvas": { "width": 1184, "height": 3536 },
+      "steps": 30,
+      "denoise": 0.06,
+      "batchSize": 1,
+      "seed": 2026082001
+    }
+  ],
+  "reviewGate": {
+    "directOriginalResolutionReviewRequired": true,
+    "automatedVisionAdvisoryOnly": true,
+    "promotionAllowed": false,
+    "requiredEvidence": ["canonicalSha256", "workflowSha256", "topologySha256", "styleLoras", "fixedSeed", "outputSha256", "direct-review-record"]
+  },
+  "forbidden": ["gpu-inference-from-planner", "queue-submission-from-planner", "batch-generation", "lora-reorder-or-reweight", "alternate-reference-image", "horizontal-flip", "inset-generation", "unrecorded-crop", "unrecorded-resize", "promotion-without-direct-review"]
+}

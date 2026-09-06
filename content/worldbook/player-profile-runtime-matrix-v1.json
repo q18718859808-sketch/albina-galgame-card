@@ -1,0 +1,17 @@
+{
+  "schemaVersion": 1,
+  "id": "albina_player_profile_runtime_matrix_v1",
+  "profileVariableKey": "albinaPlayerProfileV1",
+  "worldbookSelectionVariableKey": "albinaWorldbookSelectionV1",
+  "embeddedWorldbook": { "file": "card/albina.card.json", "entryCount": 16, "l0FileSha256": "536c1f44954cae6c41a54c2af26b5da4cd8a0a433ec39925d3216f7fb7a70fcb", "requiredEntryId": "albina_player_profile_runtime" },
+  "chains": {
+    "schema": { "source": "src/domain/save.ts:PlayerProfileSchema", "status": "required" },
+    "initvar": { "source": "content/worldbook/player-profile-initvar-v1.json", "status": "required" },
+    "updateRules": { "source": "content/worldbook/player-profile-update-rules-v1.json", "status": "required" },
+    "readAndDisplay": { "source": ["content/worldbook/player-profile-runtime-v1.json", "src/App.vue", "src/stores/game.ts"], "status": "required" },
+    "persistence": { "source": "src/runtime/default-host.ts", "contract": "setVariables(values, { type: 'chat' })", "fallback": "localStorage", "status": "required" }
+  },
+  "worldbookSelection": { "source": "src/runtime/default-host.ts + src/stores/game.ts", "contract": "albinaWorldbookSelectionV1 via chat variables", "fallback": "localStorage", "status": "required" },
+  "runtimeStates": ["tavern_helper_chat", "local_storage_fallback", "missing_tool_call_extension", "reload", "malformed_profile"],
+  "acceptance": { "unknownApi": "forbidden", "toolCallRequiredForStartup": false, "profileAffectsFixedPortrait": false }
+}

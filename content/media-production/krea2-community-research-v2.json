@@ -1,0 +1,90 @@
+{
+  "schemaVersion": 1,
+  "id": "krea2-community-research-v2",
+  "status": "researched-not-installed",
+  "researchDate": "2026-08-20",
+  "method": {
+    "primary": "GitHub REST metadata and raw README inspection",
+    "anysearch": "unavailable-in-local-skill-runtime",
+    "credentialsStored": false,
+    "scope": "Krea2 and ComfyUI community implementations relevant to canonical Albina restyling"
+  },
+  "candidates": [
+    {
+      "repository": "https://github.com/lbouaraba/comfyui-krea2edit",
+      "commit": "86f886dac23013d88996e3a2e99093ba44d322fb",
+      "license": "Apache-2.0",
+      "capabilities": ["Krea2EditGroundedEncode", "Krea2EditModelPatch", "target_latent", "fit_mode", "ref_boost"],
+      "finding": "The target_latent pixel path prevents mid-sampling VAE encoding and can avoid severe VRAM offload slowdowns. v1.2 also documents a high-fidelity 1024-to-1.5MP operating range.",
+      "decision": "do-not-use-for-canonical-albina-mainline",
+      "reason": "Requires a separate Identity Edit LoRA and edit-model semantics; it is an editor path, not proof-preserving six-LoRA material restyling. It may be investigated later for non-canonical AU or local edits."
+    },
+    {
+      "repository": "https://github.com/nkxx188/ComfyUI-Krea2-StyleTransfer",
+      "commit": "b30d495ab7e5626a2effc72a071430297643b718",
+      "license": "MIT",
+      "capabilities": ["single-reference style transfer", "low-leakage recommended preset", "ref_k_strength", "low_scale_end"],
+      "finding": "The recommended single-reference route separates style strength from reference-content leakage and is explicitly intended to preserve Krea2 native quality.",
+      "decision": "staging-only-style-reference",
+      "reason": "A reference image must be style-only and must not become a second Albina content source. It cannot replace canonical latent origin or the fixed six-LoRA chain."
+    },
+    {
+      "repository": "https://github.com/kgilper/krea-reference",
+      "commit": "4494390239592908d55928f1fdd3e39f58bbde17",
+      "license": "MIT",
+      "capabilities": ["role-based reference guide cards", "style/lighting/material/layout guidance", "concept sliders", "prepared reference preview"],
+      "finding": "Role-separated references and a prepared-reference preview are useful for scene and CG experiments, but the project warns that multiple references compete and that identity preservation needs a dedicated subject card.",
+      "decision": "staging-only-scene-guidance",
+      "reason": "Do not introduce a reference stack into the canonical character production path until a fixed-seed direct image review proves no geometry, side-assignment, or composition drift."
+    },
+    {
+      "repository": "https://github.com/ostris/ComfyUI-Krea2-Ostris-Edit",
+      "commit": "7756566160c4a1b24bb1bd9f0ff3ced1a83d7547",
+      "license": "MIT",
+      "capabilities": ["Qwen3-VL reference conditioning", "reference latent patch", "optional KV cache"],
+      "finding": "Reference latents are ignored by stock Krea2 unless the edit model patch is present; KV cache is only correct for LoRAs trained with the matching model option.",
+      "decision": "do-not-enable",
+      "reason": "The current six-LoRA production chain is not an edit-LoRA chain and no matching KV-cache training contract is verified."
+    },
+    {
+      "repository": "https://github.com/SurrealByDesign/comfyui-krea2-sageattention-guard",
+      "commit": "a232dc26d7ecb49b19d074f9e747a66591f979f8",
+      "license": "GPL-3.0",
+      "capabilities": ["SageAttention compatibility patch"],
+      "finding": "This is a compatibility patch for an existing KJNodes install, not a standalone node pack. Its README reports validation against newer ComfyUI and SageAttention versions.",
+      "decision": "do-not-install",
+      "reason": "The local ComfyUI is 0.28.3 and the project is running with low VRAM; changing attention/runtime components without a bounded anchor A/B would risk another expensive failure."
+    }
+  ],
+    "localCompatibility": {
+    "comfyui": "0.28.3",
+    "endpoint": "http://127.0.0.1:8199",
+    "krea2EditNodesPresent": ["Krea2EditModelPatch", "Krea2EditGroundedEncode"],
+    "styleReferenceNodePresent": "Krea2StyleReferenceNode",
+    "wanWeights": "not-verified-present",
+    "fixedSixLoraChain": "required-and-unchanged",
+    "styleReferenceNodeCompatibility": {
+      "available": true,
+      "outputType": "KREA_STYLE_REF",
+      "onlyConfirmedConsumer": "Krea2ImageNode",
+      "consumerKind": "remote-api-node",
+      "compatibleWithLocalSixLoraSamplerGraph": false,
+      "reason": "The local node produces a remote Krea API style-reference handle; it cannot connect to the local MODEL/CONDITIONING/LATENT sockets of UNETLoader -> six LoraLoaderModelOnly -> SamplerCustomAdvanced.",
+      "decision": "blocked-from-local-canonical-production-until-a-local-compatible-consumer-is-installed-and-proven"
+    }
+  },
+  "productionDecision": {
+    "selectedProfile": "albina-staged-high-frequency-v1",
+    "why": "It is the only locally verified route that keeps canonical latent origin, restores canonical alpha, preserves the fixed six-LoRA order, and adds a bounded high-frequency refinement pass without introducing an unverified identity/reference model.",
+    "qualityCaveat": "A receipt proving the six LoRAs ran is not visual acceptance. Soft output or weak mechanical separation remains rejected after direct image reading.",
+    "nextPermittedExperiment": "One fixed-seed Albina anchor A/B only: compare the current two-pass profile against a bounded native Krea2 img2img schedule or a style-reference staging branch; no batch generation until direct review passes.",
+    "promotionRule": "No candidate is promoted without direct original-resolution image review, canonical hash binding, workflow/topology receipt, and rights review."
+  },
+  "sources": [
+    {"url": "https://github.com/lbouaraba/comfyui-krea2edit", "commit": "86f886dac23013d88996e3a2e99093ba44d322fb"},
+    {"url": "https://github.com/nkxx188/ComfyUI-Krea2-StyleTransfer", "commit": "b30d495ab7e5626a2effc72a071430297643b718"},
+    {"url": "https://github.com/kgilper/krea-reference", "commit": "4494390239592908d55928f1fdd3e39f58bbde17"},
+    {"url": "https://github.com/ostris/ComfyUI-Krea2-Ostris-Edit", "commit": "7756566160c4a1b24bb1bd9f0ff3ced1a83d7547"},
+    {"url": "https://github.com/SurrealByDesign/comfyui-krea2-sageattention-guard", "commit": "a232dc26d7ecb49b19d074f9e747a66591f979f8"}
+  ]
+}

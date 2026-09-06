@@ -29,33 +29,6 @@ async function readStoryScenes(): Promise<Array<Record<string, unknown>>> {
   return chunks.flat();
 }
 
-const synthesizedVideoNames = [
-  'golden_bough_rebuild_scene_3',
-  'golden_bough_rebuild_scene_5',
-  'golden_bough_rebuild_scene_8',
-  'golden_bough_rebuild_scene_11',
-  'golden_bough_rebuild_scene_15',
-  'ring_conspiracy_scene_3',
-  'ring_conspiracy_scene_5',
-  'ring_conspiracy_scene_8',
-  'ring_conspiracy_scene_11',
-  'ring_conspiracy_scene_15',
-  'white_canvas_scene_3',
-  'white_canvas_scene_5',
-  'white_canvas_scene_8',
-  'white_canvas_scene_11',
-  'white_canvas_scene_15',
-  'golden_bough_rebuild_ending_bad',
-  'golden_bough_rebuild_ending_normal',
-  'golden_bough_rebuild_ending_true',
-  'ring_conspiracy_ending_bad',
-  'ring_conspiracy_ending_normal',
-  'ring_conspiracy_ending_true',
-  'white_canvas_ending_bad',
-  'white_canvas_ending_normal',
-  'white_canvas_ending_true',
-];
-
 describe('canonical asset release', () => {
   it('retires all strips, unused portraits, and the false Fascia portrait in favor of reachable static portraits', async () => {
     const manifest = parseAssetManifestV2(await readJson('content/asset-manifest-v2.json'));
@@ -107,23 +80,20 @@ describe('canonical asset release', () => {
     expect(pending.assets).toEqual([]);
   });
 
-  it('collects and validates every synthesized runtime and desktop video reference', async () => {
+  it('materializes only static story media and resolves every reference', async () => {
     const lookup = await readJson('dist/albina-galgame-card/assets/runtime-lookup.json') as RuntimeLookup;
     const scenes = materializeStoryMedia(await readStoryScenes());
     const references = collectStoryAssetReferences(scenes);
     const videoReferences = references.filter((id) => id.startsWith('video.animated.'));
-    const expected = ['desktop', 'runtime']
-      .flatMap((profile) => synthesizedVideoNames.map((name) => `video.animated.${profile}.${name}`))
-      .sort();
-
-    expect(videoReferences).toEqual(expected);
+    expect(videoReferences).toEqual([]);
+    expect(scenes.every((scene) => !scene.videoAssetId && !scene.desktopVideoAssetId)).toBe(true);
     expect(findUnresolvedStoryReferences(scenes, lookup)).toEqual([]);
   });
 
-  it('reports a missing referenced AU animation as an unresolved story reference', async () => {
+  it('reports a missing static CG as an unresolved story reference', async () => {
     const lookup = structuredClone(await readJson('dist/albina-galgame-card/assets/runtime-lookup.json') as RuntimeLookup);
     const scenes = materializeStoryMedia(await readStoryScenes());
-    const missingAssetId = 'video.animated.runtime.white_canvas_scene_3';
+    const missingAssetId = scenes.find((scene) => typeof scene.cgAssetId === 'string')?.cgAssetId as string;
     delete lookup.assetsById[missingAssetId];
 
     expect(findUnresolvedStoryReferences(scenes, lookup)).toEqual([missingAssetId]);

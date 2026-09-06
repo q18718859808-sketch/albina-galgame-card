@@ -1,0 +1,36 @@
+{
+  "version": 1,
+  "assetId": "video.animated.desktop.white_canvas_scene_5",
+  "artifactSha256": "61555b7011baa029652d9304d86b7b712bab75d6f0b26b2860db578587f0a343",
+  "provenance": {
+    "provider": "pie",
+    "model": "seedance-1.5-pro",
+    "promptVersion": "albina-video-v1",
+    "sourceJobHash": "1a43516d2c36639512920a62d2d0cdf1e3d0cd574e4ba4a42b7c9b5f75730170",
+    "review": {
+      "status": "approved",
+      "reviewer": "historical-pie-video-qc-recovery",
+      "reviewedAt": "2026-07-12T03:37:06.553Z"
+    }
+  },
+  "rights": {
+    "status": "unverified",
+    "sourceType": "model-output",
+    "redistribution": "unverified",
+    "rightsBasis": "Historical provider output; redistribution terms were not independently verified."
+  },
+  "lineage": {
+    "kind": "transcode",
+    "processVersion": "albina-historical-pie-video-recovery-v1",
+    "inputs": [
+      {
+        "sha256": "1a43516d2c36639512920a62d2d0cdf1e3d0cd574e4ba4a42b7c9b5f75730170",
+        "role": "historical-pie-job-contract"
+      },
+      {
+        "sha256": "39aa9a0e0d6177c20ca15ab420e7537ea9848ad7cb64b2ac5a6634c7b8ccb39a",
+        "role": "seedance-master"
+      }
+    ]
+  }
+}

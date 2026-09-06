@@ -2,7 +2,7 @@ import { mkdir, readFile, rm } from 'node:fs/promises';
 import { relative, resolve } from 'node:path';
 
 import { parsePromotionReceipt } from './promotion-receipts.mjs';
-import { atomicWrite, hash, withVisualPromotionCandidates } from './visual-production.mjs';
+import { atomicWrite, currentVisualContractReview, hash, withVisualPromotionCandidates } from './visual-production.mjs';
 
 const projectRoot = resolve(import.meta.dirname, '../..');
 const defaultAssetRoot = resolve(projectRoot, 'dist/albina-galgame-card/assets');
@@ -22,6 +22,8 @@ export async function promoteVisualArtifacts(options, dependencies = {}) {
     ids: options.ids,
     all: options.all === true,
     recoverStaleLock: options.recoverStaleLock === true,
+    ...(options.planVariant === undefined ? {} : { planVariant: options.planVariant }),
+    allowUnreviewedReferences: options.allowUnreviewedReferences === true,
   }, async (candidates) => {
     if (!Array.isArray(candidates)) throw new Error('Visual promotion loader returned invalid candidates');
     const results = [];
@@ -53,7 +55,6 @@ export function buildVisualPromotionReceipt(candidate, rights) {
     provenance: {
       provider: candidate.provider,
       model: candidate.model,
-      upstreamPieVerified: false,
       promptVersion: candidate.promptVersion,
       sourceJobHash: candidate.sourceJobHash,
       review: {
@@ -151,12 +152,21 @@ function normalizeRights(rights = {}) {
 }
 
 function validateCandidate(candidate) {
+  // 契约修订（reviewContractRevision）路径下 candidate.review 来自修订记录，
+  // 与 generation-time review 一样必须携带可验证的 reviewer 与时间戳。
+  const review = candidate.review ?? candidate.reviewContractRevision;
   if (!candidate || typeof candidate !== 'object' || candidate.status !== 'completed'
-    || candidate.review?.status !== 'approved' || typeof candidate.review.reviewer !== 'string'
-    || candidate.review.reviewer.trim().length === 0 || Number.isNaN(Date.parse(candidate.review.reviewedAt))) {
+    || review?.status !== 'approved' || typeof review.reviewer !== 'string'
+    || review.reviewer.trim().length === 0 || Number.isNaN(Date.parse(review.reviewedAt))) {
     throw new Error(`Visual artifact is not eligible for promotion: ${candidate?.jobId ?? 'unknown'}`);
   }
-  if (typeof candidate.sourceJobHash !== 'string' || candidate.sourceJobHash !== candidate.currentSourceJobHash) {
+  const currentReview = currentVisualContractReview({
+    sourceJobHash: candidate.sourceJobHash,
+    artifactSha256: candidate.artifactSha256,
+    review: candidate.review,
+    reviewContractRevision: candidate.reviewContractRevision,
+  }, candidate.currentSourceJobHash, candidate.currentReviewCriteria);
+  if (!currentReview) {
     throw new Error(`Visual artifact does not match the current contract: ${candidate.jobId}`);
   }
   if (!hashPattern.test(candidate.artifactSha256 ?? '') || typeof candidate.deliveryPath !== 'string') {
@@ -164,8 +174,7 @@ function validateCandidate(candidate) {
   }
   if (typeof candidate.jobId !== 'string' || typeof candidate.receiptAssetId !== 'string'
     || typeof candidate.outputPath !== 'string' || !promptVersionPattern.test(candidate.promptVersion ?? '')
-    || candidate.provider !== 'x666-openai-compatible' || candidate.model !== 'gpt-image-2'
-    || candidate.upstreamPieVerified !== false) {
+    || candidate.provider !== 'wisart-openai-compatible' || candidate.model !== 'gpt-image-2') {
     throw new Error(`Visual promotion provenance is invalid: ${candidate?.jobId ?? 'unknown'}`);
   }
 }

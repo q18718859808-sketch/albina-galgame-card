@@ -1,0 +1,33 @@
+{
+  "schemaVersion": 1,
+  "id": "albina_player_profile_update_rules_v1",
+  "variableKey": "albinaPlayerProfileV1",
+  "scope": "chat",
+  "syntax": "application-contract-metadata; not an MVU parser payload",
+  "rules": [
+    {
+      "id": "profile_submit",
+      "trigger": "validated profile form submission before the first narrative turn",
+      "operation": "replace",
+      "target": "albinaPlayerProfileV1",
+      "source": "sanitized PlayerProfileSchema value",
+      "constraints": ["strip control characters", "remove angle brackets", "trim", "apply field maxLength", "apply documented defaults", "reject unknown fields"]
+    },
+    {
+      "id": "save_restore",
+      "trigger": "SaveV2 load or reload",
+      "operation": "replace",
+      "target": "albinaPlayerProfileV1",
+      "source": "validated SaveV2.playerProfile",
+      "constraints": ["parse with PlayerProfileSchema", "do not merge unknown fields", "preserve chat scope"]
+    },
+    {
+      "id": "narrative_turn",
+      "trigger": "ordinary narrative turn",
+      "operation": "read_only",
+      "target": "albinaPlayerProfileV1",
+      "source": "worldbook EJS entry albina_player_profile_runtime",
+      "constraints": ["never infer unprovided player thoughts, actions, or dialogue"]
+    }
+  ]
+}

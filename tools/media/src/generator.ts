@@ -5,25 +5,19 @@ import { promisify } from 'node:util';
 import { dirname } from 'node:path';
 
 import { downloadResumable } from './download.js';
-import { contentHashJobId } from './hash.js';
+import { contentHashJobId, legacyContentHashJobId } from './hash.js';
 import type { MediaJob } from './job.js';
 import { JobBusyError, Ledger, LostJobClaimError } from './ledger.js';
-import { PieClient } from './pie-client.js';
+import { assertArtifactMatches, type MediaClient, type ProviderClientResolver } from './media-client.js';
+import { assertHandleMatches, ProviderContractError } from './provider.js';
+import { createProviderClientResolver } from './provider-clients.js';
 import { retry } from './retry.js';
 import type { AmbiguousArtifact, NormalizedArtifact } from './types.js';
 import { validateAudio, validateImage, validateVideo, validateVideoFlexible } from './validate.js';
 
-export interface MediaClient {
-  generateImage?(input: { prompt: string; width: number; height: number }): Promise<NormalizedArtifact>;
-  editImage?(input: { prompt: string; image: Uint8Array; width: number; height: number }): Promise<NormalizedArtifact>;
-  submitVideo?(input: { prompt: string; durationSeconds: number; image: Uint8Array }): Promise<{ providerJobId: string; status: string }>;
-  pollVideo?(id: string): Promise<NormalizedArtifact | { providerJobId: string; status: string }>;
-  generateSpeech?(input: { input: string; voice: string }): Promise<NormalizedArtifact>;
-  generateMusic?(input: { prompt: string; durationSeconds: number }): Promise<NormalizedArtifact | AmbiguousArtifact>;
-}
-
 interface GeneratorOptions {
   client?: MediaClient;
+  resolveClient?: ProviderClientResolver;
   ledger: Ledger;
   downloader?: typeof downloadResumable;
   sleep?: (milliseconds: number) => Promise<void>;
@@ -33,13 +27,13 @@ interface GeneratorOptions {
 }
 
 export class MediaGenerator {
-  private readonly client: MediaClient;
+  private readonly resolveClient: ProviderClientResolver;
   private readonly downloader: typeof downloadResumable;
   private readonly sleep: (milliseconds: number) => Promise<void>;
   private readonly owner = `${process.pid}-${randomUUID()}`;
 
   constructor(private readonly options: GeneratorOptions) {
-    this.client = options.client ?? new PieClient();
+    this.resolveClient = options.resolveClient ?? (options.client ? injectedPieResolver(options.client) : createProviderClientResolver());
     this.downloader = options.downloader ?? downloadResumable;
     this.sleep = options.sleep ?? ((milliseconds) => new Promise((resolve) => setTimeout(resolve, milliseconds)));
   }
@@ -50,6 +44,7 @@ export class MediaGenerator {
 
   private async generateOne(job: MediaJob): Promise<void> {
     const id = contentHashJobId(job);
+    if (job.provider === 'pie') await this.options.ledger.adoptLegacyJob(legacyContentHashJobId(job), id);
     let token: number;
     for (;;) {
       const existing = (await this.options.ledger.read()).jobs[id];
@@ -81,6 +76,7 @@ export class MediaGenerator {
         await this.options.ledger.markClaimedMusicAmbiguous(id, this.owner, token, artifact.reason);
         throw new Error('Music request outcome is ambiguous after HTTP 504');
       }
+      assertArtifactMatches(job, artifact);
       temporaryOutput = await this.storeArtifact(artifact, job.output);
       if (job.kind === 'video') {
         masterTemporary = temporaryOutput;
@@ -114,43 +110,50 @@ export class MediaGenerator {
   }
 
   private async requestArtifact(job: MediaJob): Promise<NormalizedArtifact | AmbiguousArtifact> {
+    const client = this.resolveClient(job.provider);
     if (job.kind === 'image' && job.sourceImage) {
-      if (!this.client.editImage) throw new Error('Media client does not implement editImage');
-      return this.client.editImage({ prompt: job.prompt, image: await readFile(job.sourceImage), width: job.width, height: job.height });
+      if (!client.editImage) throw new Error(`${job.provider} does not implement editImage`);
+      return client.editImage({ model: job.model, prompt: job.prompt, image: await readFile(job.sourceImage), width: job.width, height: job.height });
     }
     if (job.kind === 'image') {
-      if (!this.client.generateImage) throw new Error('Media client does not implement generateImage');
-      return this.client.generateImage(job);
+      if (!client.generateImage) throw new Error(`${job.provider} does not implement generateImage`);
+      return client.generateImage(job);
     }
     if (job.kind === 'speech') {
-      if (!this.client.generateSpeech) throw new Error('Media client does not implement generateSpeech');
-      return this.client.generateSpeech(job);
+      if (!client.generateSpeech) throw new Error(`${job.provider} does not implement generateSpeech`);
+      return client.generateSpeech(job);
     }
     if (job.kind === 'music') {
-      if (!this.client.generateMusic) throw new Error('Media client does not implement generateMusic');
-      return this.client.generateMusic(job);
+      if (!client.generateMusic) throw new Error(`${job.provider} does not implement generateMusic`);
+      return client.generateMusic(job);
     }
     throw new Error(`Unsupported media job kind: ${String(job.kind)}`);
   }
 
   private async generateVideo(job: Extract<MediaJob, { kind: 'video' }>, jobId: string, token: number): Promise<NormalizedArtifact> {
-    if (!this.client.submitVideo || !this.client.pollVideo) throw new Error('Media client does not implement video submit/poll');
-    const persisted = (await this.options.ledger.read()).jobs[jobId]?.providerJobId;
-    let providerJobId = typeof persisted === 'string' ? persisted : undefined;
-    if (!providerJobId) {
+    const client = this.resolveClient(job.provider);
+    if (!client.submitVideo || !client.pollVideo) throw new Error(`${job.provider} does not implement video submit/poll`);
+    const ledgerJob = (await this.options.ledger.read()).jobs[jobId];
+    if (ledgerJob && Object.hasOwn(ledgerJob, 'legacyProviderJobId')) throw new ProviderContractError('Legacy unqualified providerJobId is quarantined; migrate it before resuming');
+    const persistedHandle = ledgerJob && Object.hasOwn(ledgerJob, 'providerJob') ? ledgerJob.providerJob : undefined;
+    if (ledgerJob && Object.hasOwn(ledgerJob, 'providerJob')) assertHandleMatches(job, persistedHandle);
+    let handle = persistedHandle;
+    if (handle === undefined) {
       const image = await readFile(job.sourceImage);
-      const submitted = await retry(() => this.client.submitVideo!({ ...job, image }), { sleep: this.sleep });
-      providerJobId = submitted.providerJobId;
-      await this.options.ledger.updateClaimedJob(jobId, this.owner, token, { status: 'running', providerJobId });
+      const submitted = await retry(() => client.submitVideo!({ model: job.model, prompt: job.prompt, durationSeconds: job.durationSeconds, image }), { sleep: this.sleep });
+      assertHandleMatches(job, submitted.handle);
+      handle = submitted.handle;
+      await this.options.ledger.updateClaimedJob(jobId, this.owner, token, { status: 'running', providerJob: handle });
     }
     for (let attempt = 0; attempt < 120; attempt += 1) {
       await this.options.ledger.renewClaim(jobId, this.owner, token);
-      const result = await retry(() => this.client.pollVideo!(providerJobId), { sleep: this.sleep });
+      const result = await retry(() => client.pollVideo!(handle), { sleep: this.sleep });
       if ('kind' in result) return result;
-      if (result.status === 'failed') throw new Error(`Pie video job failed: ${providerJobId}`);
+      assertHandleMatches(job, result.handle);
+      if (result.status === 'failed') throw new Error(`${job.provider} video job failed: ${handle.id}`);
       await this.sleep(5_000);
     }
-    throw new Error(`Pie video job timed out: ${providerJobId}`);
+    throw new Error(`${job.provider} video job timed out: ${handle.id}`);
   }
 
   private async storeArtifact(artifact: NormalizedArtifact, output: string): Promise<string> {
@@ -158,9 +161,16 @@ export class MediaGenerator {
     const temporary = `${output}.${this.owner}.part`;
     if (artifact.bytes) await writeFile(temporary, artifact.bytes);
     else if (artifact.sourceUrl) await this.downloader(artifact.sourceUrl, temporary);
-    else throw new Error('Pie artifact contains neither bytes nor a download URL');
+    else throw new Error('Provider artifact contains neither bytes nor a download URL');
     return temporary;
   }
+}
+
+function injectedPieResolver(client: MediaClient): ProviderClientResolver {
+  return (provider) => {
+    if (provider !== 'pie') throw new ProviderContractError(`Injected Pie test client cannot service ${provider}`);
+    return client;
+  };
 }
 
 const execFileAsync = promisify(execFile);

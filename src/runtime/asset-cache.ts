@@ -76,10 +76,8 @@ export class RuntimeAssetCache {
 
   async prefetch(assetIds: Iterable<string>): Promise<Map<string, string>> {
     const result = new Map<string, string>();
-    for (const id of new Set(assetIds)) {
-      const url = await this.cache(id);
-      if (url) result.set(id, url);
-    }
+    const entries = await Promise.all([...new Set(assetIds)].map(async (id) => [id, await this.cache(id)] as const));
+    for (const [id, url] of entries) if (url) result.set(id, url);
     return result;
   }
 }

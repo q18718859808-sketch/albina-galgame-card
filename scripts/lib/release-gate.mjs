@@ -25,6 +25,12 @@ export function evaluateReleaseGate({ channel, status, repository } = {}) {
     if (!repository.branch) blockers.push('git:detached-head');
   }
 
+  // RC 通道允许在人工权利审查（rights verified/allowed）完成前发布：
+  // model-output rights 的 unverified 状态在 RC 阶段降权为披露项而非门禁，
+  // final 通道仍保留硬约束。媒体就绪的其他问题（非 rights）在 RC 仍阻塞。
+  const rcCompletionBlockers = (status.completionBlockers ?? [])
+    .filter((blocker) => channel === 'rc' ? blocker !== 'media-readiness:66-blocked' || status.mediaReadiness?.issueCounts?.rights !== status.mediaReadiness?.blocked : true);
+
   if (channel === 'rc') {
     if (!status.releaseCandidate || !isPrereleaseVersion(status.version)) blockers.push('version:not-prerelease');
     const tag = `v${status.version}`;
@@ -36,7 +42,7 @@ export function evaluateReleaseGate({ channel, status, repository } = {}) {
       channel,
       allowed: blockers.length === 0,
       incomplete: status.completeEdition !== true,
-      blockers: [...new Set([...blockers, ...(status.completeEdition ? [] : status.completionBlockers ?? [])])],
+      blockers: [...new Set([...blockers, ...(status.completeEdition ? [] : rcCompletionBlockers)])],
     };
   }
 

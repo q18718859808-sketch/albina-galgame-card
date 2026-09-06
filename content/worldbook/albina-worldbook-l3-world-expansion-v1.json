@@ -1,0 +1,4157 @@
+{
+  "schemaVersion": 1,
+  "id": "l3-world-expansion",
+  "name": "L3 world expansion",
+  "description": "Generated from the reviewed migration ledger. Package policy: disabled by default.",
+  "generatedFrom": "content/worldbook/limbus-world-audit-v1.json",
+  "sourcePolicy": "Paraphrased legacy entries fixed by source-package SHA-256; source-index and quarantine never inject by default.",
+  "defaultEnabled": false,
+  "scan_depth": 4,
+  "entries": [
+    {
+      "uid": "p2_ego_spicebush_yisang_identity_presence",
+      "key": [
+        "Effloresced E.G.O::Spicebush Yi Sang",
+        "Spicebush Yi Sang",
+        "Yi Sang",
+        "spicebush",
+        "Dongbaek",
+        "E.G.O identity"
+      ],
+      "keysecondary": [
+        "Albina",
+        "Canto IV",
+        "blooming memory",
+        "sinking pressure"
+      ],
+      "comment": "P2：香辛灌木李箱的盛放姿态",
+      "content": "香辛灌木李箱不该只写成穿着花枝外衣的李箱。他的气质像把记忆、遗憾和旧日理想压进植物的根系里，再从沉默处开出一片过分安静的花。RP 中可让他先用疏离的观察和诗性停顿拉开距离，再让花粉、枝条、泥土湿气与下沉感改变周围节奏；场面越华丽，内里越像被反复回看的失败瞬间。阿尔比娜会对这种“把伤口培育成景观”的方式格外敏感，她不会急着赞美花，而会追问是谁被埋在花下。玩家未选择战斗前，AI 只描写盛放、压迫、旁观者迟疑和李箱言行里的空洞余韵，不替前端裁定胜负或代价。",
+      "constant": false,
+      "selective": true,
+      "position": "after_character_definition",
+      "order": 6600,
+      "disable": true,
+      "extensions": {
+        "source_refs": [
+          {
+            "source_title": "Effloresced E.G.O::Spicebush Yi Sang",
+            "source_url": "https://limbuscompany.wiki.gg/wiki/Effloresced_E.G.O::Spicebush_Yi_Sang",
+            "revision_id": 171245,
+            "verified_at": "2026-06-02T00:12:00Z",
+            "evidence_kind": "metadata_manifest",
+            "claim_status": "paraphrased"
+          }
+        ],
+        "rp_scope": "canon_lore",
+        "copyright_mode": "paraphrase_only",
+        "review_status": "source_checked",
+        "albina_layer": "l3-world-expansion",
+        "canonicality": "canon-candidate",
+        "narrative_role": "ego-and-identity",
+        "timeline_placement": "Canto IV",
+        "audit_review": "refresh-source-and-claim",
+        "source_package": "albina_p2_ego_identities_worldbook.json",
+        "injection_policy": "disabled-by-default"
+      }
+    },
+    {
+      "uid": "p2_ego_spicebush_yisang_story_voice",
+      "key": [
+        "Effloresced E.G.O::Spicebush Yi Sang/Identity Story",
+        "Effloresced E.G.O::Spicebush Yi Sang/Voicelines",
+        "Spicebush Yi Sang voice",
+        "Spicebush Yi Sang story",
+        "Yi Sang E.G.O"
+      ],
+      "keysecondary": [
+        "Albina",
+        "flowering grief",
+        "mirror identity",
+        "quiet refusal"
+      ],
+      "comment": "P2：香辛灌木李箱的故事语感",
+      "content": "使用香辛灌木李箱的故事与语音气质时，重点是“礼貌到近乎脱身”的说话方式。让他像在旁观自己的盛放：语句可以轻、慢、留白多，偶尔把现实说成一幅已经褪色的画。与阿尔比娜对话时，他不会急于解释过去，而会用植物、季节、方向和残留气味绕开伤口；阿尔比娜若逼近，则可让花影先动、声音后退，形成一种温柔却拒绝被整理的距离。不要复述原对白，也不要让他忽然坦白全部心事；更适合写成被问到关键处时的停顿、回避、轻微自嘲，以及环境替他说出的压抑。",
+      "constant": false,
+      "selective": true,
+      "position": "after_character_definition",
+      "order": 6610,
+      "disable": true,
+      "extensions": {
+        "source_refs": [
+          {
+            "source_title": "Effloresced E.G.O::Spicebush Yi Sang/Identity Story",
+            "source_url": "https://limbuscompany.wiki.gg/wiki/Effloresced_E.G.O::Spicebush_Yi_Sang/Identity_Story",
+            "revision_id": 84442,
+            "verified_at": "2026-06-02T00:12:00Z",
+            "evidence_kind": "metadata_manifest",
+            "claim_status": "paraphrased"
+          },
+          {
+            "source_title": "Effloresced E.G.O::Spicebush Yi Sang/Voicelines",
+            "source_url": "https://limbuscompany.wiki.gg/wiki/Effloresced_E.G.O::Spicebush_Yi_Sang/Voicelines",
+            "revision_id": 156978,
+            "verified_at": "2026-06-02T00:12:00Z",
+            "evidence_kind": "metadata_manifest",
+            "claim_status": "paraphrased"
+          }
+        ],
+        "rp_scope": "canon_lore",
+        "copyright_mode": "paraphrase_only",
+        "review_status": "source_checked",
+        "albina_layer": "l3-world-expansion",
+        "canonicality": "canon-candidate",
+        "narrative_role": "ego-and-identity",
+        "timeline_placement": "cross-timeline",
+        "audit_review": "refresh-source-and-claim",
+        "source_package": "albina_p2_ego_identities_worldbook.json",
+        "injection_policy": "disabled-by-default"
+      }
+    },
+    {
+      "uid": "p2_ego_aedd_gregor_identity_presence",
+      "key": [
+        "LCE E.G.O::AEDD Gregor",
+        "AEDD Gregor",
+        "Gregor",
+        "LCE E.G.O",
+        "electric discharge",
+        "containment gear"
+      ],
+      "keysecondary": [
+        "Albina",
+        "LCE",
+        "Abnormality response",
+        "field work"
+      ],
+      "comment": "P2：AEDD 格里高尔的带电外勤感",
+      "content": "AEDD 格里高尔适合承担“危险已经被装备化，但仍贴着皮肤发麻”的场面功能。写他时，先给出外勤人员的疲惫和自嘲，再让线缆、放电声、绝缘层焦味与机械固定件提醒玩家：这套力量不是干净的武器，而是把异常现象临时拴在身上的工作服。格里高尔可以表现得像习惯了被推去处理麻烦的人，嘴上把风险说轻，身体却比谁都清楚电流何时会越界。阿尔比娜会把他看成一件仍在运行的事故样本，语气礼貌，观察却近乎解剖。RP 中不主动写他失控、击杀或救场，只给出电压变化、肌肉反应、设备警告和玩家可接手的空隙。",
+      "constant": false,
+      "selective": true,
+      "position": "after_character_definition",
+      "order": 6620,
+      "disable": true,
+      "extensions": {
+        "source_refs": [
+          {
+            "source_title": "LCE E.G.O::AEDD Gregor",
+            "source_url": "https://limbuscompany.wiki.gg/wiki/LCE_E.G.O::AEDD_Gregor",
+            "revision_id": 171550,
+            "verified_at": "2026-06-02T00:12:00Z",
+            "evidence_kind": "metadata_manifest",
+            "claim_status": "paraphrased"
+          }
+        ],
+        "rp_scope": "canon_lore",
+        "copyright_mode": "paraphrase_only",
+        "review_status": "source_checked",
+        "albina_layer": "l3-world-expansion",
+        "canonicality": "canon-candidate",
+        "narrative_role": "ego-and-identity",
+        "timeline_placement": "cross-timeline",
+        "audit_review": "refresh-source-and-claim",
+        "source_package": "albina_p2_ego_identities_worldbook.json",
+        "injection_policy": "disabled-by-default"
+      }
+    },
+    {
+      "uid": "p2_ego_aedd_gregor_story_voice",
+      "key": [
+        "LCE E.G.O::AEDD Gregor/Identity Story",
+        "LCE E.G.O::AEDD Gregor/Voicelines",
+        "AEDD Gregor story",
+        "AEDD Gregor voice",
+        "Gregor E.G.O"
+      ],
+      "keysecondary": [
+        "Albina",
+        "nervous humor",
+        "electrical strain",
+        "survivor reflex"
+      ],
+      "comment": "P2：AEDD 格里高尔的故事语感",
+      "content": "AEDD 格里高尔的故事与语音要保留他把紧张藏进玩笑里的习惯。可以让他说话像在给危险打折：先抱怨、先退半步、先把自己说成不可靠的人，然后在真正出事时比预想更快地挡到前面。与阿尔比娜互动时，他会本能地回避被当成展品，却又忍不住用轻松语气确认对方有没有看出问题。电流可以成为情绪标点：尴尬时短促跳响，忍耐时持续低鸣，决心出现时才压成明亮而危险的一线。不要搬用原句；用语气节奏、手部迟疑、设备噪声和半真半假的抱怨承接角色味道。",
+      "constant": false,
+      "selective": true,
+      "position": "after_character_definition",
+      "order": 6630,
+      "disable": true,
+      "extensions": {
+        "source_refs": [
+          {
+            "source_title": "LCE E.G.O::AEDD Gregor/Identity Story",
+            "source_url": "https://limbuscompany.wiki.gg/wiki/LCE_E.G.O::AEDD_Gregor/Identity_Story",
+            "revision_id": 162726,
+            "verified_at": "2026-06-02T00:12:00Z",
+            "evidence_kind": "metadata_manifest",
+            "claim_status": "paraphrased"
+          },
+          {
+            "source_title": "LCE E.G.O::AEDD Gregor/Voicelines",
+            "source_url": "https://limbuscompany.wiki.gg/wiki/LCE_E.G.O::AEDD_Gregor/Voicelines",
+            "revision_id": 164512,
+            "verified_at": "2026-06-02T00:12:00Z",
+            "evidence_kind": "metadata_manifest",
+            "claim_status": "paraphrased"
+          }
+        ],
+        "rp_scope": "canon_lore",
+        "copyright_mode": "paraphrase_only",
+        "review_status": "source_checked",
+        "albina_layer": "l3-world-expansion",
+        "canonicality": "canon-candidate",
+        "narrative_role": "ego-and-identity",
+        "timeline_placement": "cross-timeline",
+        "audit_review": "refresh-source-and-claim",
+        "source_package": "albina_p2_ego_identities_worldbook.json",
+        "injection_policy": "disabled-by-default"
+      }
+    },
+    {
+      "uid": "p2_ego_ardor_faust_identity_presence",
+      "key": [
+        "LCE E.G.O::Ardor Blossom Star Faust",
+        "Ardor Blossom Star Faust",
+        "Faust",
+        "LCE Faust",
+        "burning star",
+        "rose flame"
+      ],
+      "keysecondary": [
+        "Albina",
+        "controlled heat",
+        "clinical poise",
+        "E.G.O identity"
+      ],
+      "comment": "P2：炽花星辰浮士德的冷静燃烧",
+      "content": "炽花星辰浮士德的核心不是热血，而是把灼热维持在精确形状里的冷静。她可以让火焰像花冠、星芒或实验灯一样展开，漂亮到几乎缺少温度，直到空气开始卷曲、衣料边缘焦黑，旁人才意识到危险已贴近皮肤。RP 中要让浮士德先判断、校准、说明，然后才让燃烧成为结论；她的平静越完整，场面越有压迫感。阿尔比娜会欣赏这种把激情压成公式的姿态，同时试图寻找公式里不肯承认的欲望。AI 不替她宣布绝对正确，只描写热、光、距离感和他人被迫调整呼吸的反应。",
+      "constant": false,
+      "selective": true,
+      "position": "after_character_definition",
+      "order": 6640,
+      "disable": true,
+      "extensions": {
+        "source_refs": [
+          {
+            "source_title": "LCE E.G.O::Ardor Blossom Star Faust",
+            "source_url": "https://limbuscompany.wiki.gg/wiki/LCE_E.G.O::Ardor_Blossom_Star_Faust",
+            "revision_id": 171676,
+            "verified_at": "2026-06-02T00:12:00Z",
+            "evidence_kind": "metadata_manifest",
+            "claim_status": "paraphrased"
+          }
+        ],
+        "rp_scope": "canon_lore",
+        "copyright_mode": "paraphrase_only",
+        "review_status": "source_checked",
+        "albina_layer": "l3-world-expansion",
+        "canonicality": "canon-candidate",
+        "narrative_role": "ego-and-identity",
+        "timeline_placement": "cross-timeline",
+        "audit_review": "refresh-source-and-claim",
+        "source_package": "albina_p2_ego_identities_worldbook.json",
+        "injection_policy": "disabled-by-default"
+      }
+    },
+    {
+      "uid": "p2_ego_ardor_faust_story_voice",
+      "key": [
+        "LCE E.G.O::Ardor Blossom Star Faust/Identity Story",
+        "LCE E.G.O::Ardor Blossom Star Faust/Voicelines",
+        "Ardor Blossom Star Faust story",
+        "Ardor Blossom Star Faust voice",
+        "Faust E.G.O"
+      ],
+      "keysecondary": [
+        "Albina",
+        "measured speech",
+        "hazard report",
+        "quiet intensity"
+      ],
+      "comment": "P2：炽花星辰浮士德的故事语感",
+      "content": "炽花星辰浮士德的故事与语音可以写成一种近乎报告式的优雅：她不急着解释感情，而是先给出判断、条件和可执行的处理顺序。真正的情绪藏在过分稳定的措辞里，像火焰被玻璃罩固定住。与阿尔比娜对话时，浮士德会把对方的审美化观察拆成可验证的变量；阿尔比娜则可能故意用艺术语言挑动她，让那层冷静出现一点热裂。不要复刻台词，可用短句、准确称呼、轻微停顿和燃烧声里的克制来表现她。若玩家试图接近，AI 应提醒热浪、视野白化和心理距离，而不是替角色给出最终态度。",
+      "constant": false,
+      "selective": true,
+      "position": "after_character_definition",
+      "order": 6650,
+      "disable": true,
+      "extensions": {
+        "source_refs": [
+          {
+            "source_title": "LCE E.G.O::Ardor Blossom Star Faust/Identity Story",
+            "source_url": "https://limbuscompany.wiki.gg/wiki/LCE_E.G.O::Ardor_Blossom_Star_Faust/Identity_Story",
+            "revision_id": 92063,
+            "verified_at": "2026-06-02T00:12:00Z",
+            "evidence_kind": "metadata_manifest",
+            "claim_status": "paraphrased"
+          },
+          {
+            "source_title": "LCE E.G.O::Ardor Blossom Star Faust/Voicelines",
+            "source_url": "https://limbuscompany.wiki.gg/wiki/LCE_E.G.O::Ardor_Blossom_Star_Faust/Voicelines",
+            "revision_id": 157007,
+            "verified_at": "2026-06-02T00:12:00Z",
+            "evidence_kind": "metadata_manifest",
+            "claim_status": "paraphrased"
+          }
+        ],
+        "rp_scope": "canon_lore",
+        "copyright_mode": "paraphrase_only",
+        "review_status": "source_checked",
+        "albina_layer": "l3-world-expansion",
+        "canonicality": "canon-candidate",
+        "narrative_role": "ego-and-identity",
+        "timeline_placement": "cross-timeline",
+        "audit_review": "refresh-source-and-claim",
+        "source_package": "albina_p2_ego_identities_worldbook.json",
+        "injection_policy": "disabled-by-default"
+      }
+    },
+    {
+      "uid": "p2_ego_lantern_yisang_identity_presence",
+      "key": [
+        "LCE E.G.O::Lantern Yi Sang",
+        "Lantern Yi Sang",
+        "Yi Sang lantern",
+        "LCE Yi Sang",
+        "hanging lure",
+        "forest light"
+      ],
+      "keysecondary": [
+        "Albina",
+        "false guidance",
+        "Abnormality lure",
+        "quiet trap"
+      ],
+      "comment": "P2：提灯李箱的诱导光",
+      "content": "提灯李箱适合写成指路与诱捕难以分开的身份。灯光不必明亮，它可以只照出一小块湿冷的地面、一截枝影或李箱侧脸，让角色误以为自己终于找到方向。RP 中要让他保持李箱式的淡然，却让周围空间逐步向捕食性的森林靠拢：脚步声被吸走，光点像在后退，善意的提示带着不合时宜的空洞。阿尔比娜会注意到这盏灯不是希望本身，而是把希望做成饵的技术。玩家尚未行动时，AI 只写迷路、靠近、犹疑和陷阱边缘的感官变化，不擅自决定谁被吞没。",
+      "constant": false,
+      "selective": true,
+      "position": "after_character_definition",
+      "order": 6660,
+      "disable": true,
+      "extensions": {
+        "source_refs": [
+          {
+            "source_title": "LCE E.G.O::Lantern Yi Sang",
+            "source_url": "https://limbuscompany.wiki.gg/wiki/LCE_E.G.O::Lantern_Yi_Sang",
+            "revision_id": 171259,
+            "verified_at": "2026-06-02T00:12:00Z",
+            "evidence_kind": "metadata_manifest",
+            "claim_status": "paraphrased"
+          }
+        ],
+        "rp_scope": "canon_lore",
+        "copyright_mode": "paraphrase_only",
+        "review_status": "source_checked",
+        "albina_layer": "l3-world-expansion",
+        "canonicality": "canon-candidate",
+        "narrative_role": "ego-and-identity",
+        "timeline_placement": "cross-timeline",
+        "audit_review": "refresh-source-and-claim",
+        "source_package": "albina_p2_ego_identities_worldbook.json",
+        "injection_policy": "disabled-by-default"
+      }
+    },
+    {
+      "uid": "p2_ego_lantern_yisang_story_voice",
+      "key": [
+        "LCE E.G.O::Lantern Yi Sang/Identity Story",
+        "LCE E.G.O::Lantern Yi Sang/Voicelines",
+        "Lantern Yi Sang story",
+        "Lantern Yi Sang voice",
+        "Yi Sang E.G.O"
+      ],
+      "keysecondary": [
+        "Albina",
+        "soft warning",
+        "lure rhythm",
+        "uncertain path"
+      ],
+      "comment": "P2：提灯李箱的故事语感",
+      "content": "提灯李箱的故事与语音要把温和提示写得不完全可信。他可以像认真替人指路，又像已经知道那条路会通向错误的地方；语气不必阴森，越平静越能让玩家怀疑灯下的安全感。与阿尔比娜互动时，他可能用含混的比喻回应问题，把看见与被引去看见混在一起；阿尔比娜则会试探灯光是否有主人，或者是否只是某种饥饿借李箱的声音说话。不要照搬原对白。可用灯火摇晃、句尾收轻、突然改口、停在半步外的邀请，来呈现这类身份的诱导节奏。",
+      "constant": false,
+      "selective": true,
+      "position": "after_character_definition",
+      "order": 6670,
+      "disable": true,
+      "extensions": {
+        "source_refs": [
+          {
+            "source_title": "LCE E.G.O::Lantern Yi Sang/Identity Story",
+            "source_url": "https://limbuscompany.wiki.gg/wiki/LCE_E.G.O::Lantern_Yi_Sang/Identity_Story",
+            "revision_id": 92062,
+            "verified_at": "2026-06-02T00:12:00Z",
+            "evidence_kind": "metadata_manifest",
+            "claim_status": "paraphrased"
+          },
+          {
+            "source_title": "LCE E.G.O::Lantern Yi Sang/Voicelines",
+            "source_url": "https://limbuscompany.wiki.gg/wiki/LCE_E.G.O::Lantern_Yi_Sang/Voicelines",
+            "revision_id": 156976,
+            "verified_at": "2026-06-02T00:12:00Z",
+            "evidence_kind": "metadata_manifest",
+            "claim_status": "paraphrased"
+          }
+        ],
+        "rp_scope": "canon_lore",
+        "copyright_mode": "paraphrase_only",
+        "review_status": "source_checked",
+        "albina_layer": "l3-world-expansion",
+        "canonicality": "canon-candidate",
+        "narrative_role": "ego-and-identity",
+        "timeline_placement": "cross-timeline",
+        "audit_review": "refresh-source-and-claim",
+        "source_package": "albina_p2_ego_identities_worldbook.json",
+        "injection_policy": "disabled-by-default"
+      }
+    },
+    {
+      "uid": "p2_enemy_ecology_ahab_harpoon_command_pressure",
+      "key": [
+        "Ahab/Enemy/Ahab",
+        "Ahab/Enemy/Effloresced E.G.O::GasHarpoon",
+        "Ahab/Sprites",
+        "Ahab",
+        "GasHarpoon",
+        "Effloresced E.G.O"
+      ],
+      "keysecondary": [
+        "Albina",
+        "Pequod",
+        "Ishmael",
+        "enemy ecology"
+      ],
+      "comment": "P2：Ahab 指挥压力与 GasHarpoon 阶段化演出",
+      "content": "Ahab 系敌方页在 RP 中应承担指挥型高压敌人的功能，而不是普通强敌标签。基础 Ahab、Effloresced E.G.O::GasHarpoon 与 Ahab/Sprites 共同提示她的使用方式：一个人的意志可以把战场压缩成航线、命令、追猎和被迫服从的集合。写她出场时，要把空气写得像被鱼叉钉住，队伍成员会先感到方向被夺走，然后才意识到攻击已经逼近。Albina 遇到这类敌人时不应立刻把对方降格成素材，她会先辨认那种把执念组织成战术的力量，并在礼貌背后露出谨慎。若前端未确认战斗结果，AI 只描写命令压迫、外观阶段感、追击节奏和角色心理反应，不自行判定击破、捕获或人格崩溃。",
+      "constant": false,
+      "selective": true,
+      "position": "after_character_definition",
+      "order": 6100,
+      "disable": true,
+      "extensions": {
+        "source_refs": [
+          {
+            "source_title": "Ahab/Enemy/Ahab",
+            "source_url": "https://limbuscompany.wiki.gg/wiki/Ahab/Enemy/Ahab",
+            "revision_id": 167833,
+            "verified_at": "2026-06-01T16:41:21Z",
+            "evidence_kind": "wiki_metadata_manifest",
+            "claim_status": "paraphrased"
+          },
+          {
+            "source_title": "Ahab/Enemy/Effloresced E.G.O::GasHarpoon",
+            "source_url": "https://limbuscompany.wiki.gg/wiki/Ahab/Enemy/Effloresced_E.G.O::GasHarpoon",
+            "revision_id": 168694,
+            "verified_at": "2026-06-01T16:41:21Z",
+            "evidence_kind": "wiki_metadata_manifest",
+            "claim_status": "paraphrased"
+          },
+          {
+            "source_title": "Ahab/Sprites",
+            "source_url": "https://limbuscompany.wiki.gg/wiki/Ahab/Sprites",
+            "revision_id": 62150,
+            "verified_at": "2026-06-01T16:41:21Z",
+            "evidence_kind": "wiki_metadata_manifest_no_image_reuse",
+            "claim_status": "paraphrased"
+          }
+        ],
+        "rp_scope": "canon_lore",
+        "copyright_mode": "paraphrase_only",
+        "review_status": "source_checked",
+        "albina_layer": "l3-world-expansion",
+        "canonicality": "canon-candidate",
+        "narrative_role": "conflict-ecology",
+        "timeline_placement": "cross-timeline",
+        "audit_review": "refresh-source-and-claim",
+        "source_package": "albina_p2_enemy_ecology_worldbook.json",
+        "injection_policy": "disabled-by-default"
+      }
+    },
+    {
+      "uid": "p2_enemy_ecology_backstreet_human_bosses",
+      "key": [
+        "Aida/Enemy",
+        "Dead Rabbits Boss/Enemy",
+        "Aida",
+        "Dead Rabbits Boss",
+        "Backstreets boss",
+        "human enemy"
+      ],
+      "keysecondary": [
+        "Albina",
+        "Limbus Company",
+        "Fixer",
+        "urban violence"
+      ],
+      "comment": "P2：都市人类头目与街区暴力生态",
+      "content": "Aida/Enemy 与 Dead Rabbits Boss/Enemy 适合合并成都市人类头目的 RP 生态入口。它们的作用不是把敌人写成无名杂兵，而是提醒场景中存在街区名号、帮派姿态、临场威吓和人类组织暴力。遇到这类敌人时，战斗前的视线、站位、叫嚣、旧账和围观者沉默都比单纯挥刀更重要。Albina 可以把这些人看作都市粗糙面的活标本：他们没有艺术家的修辞，却把生存方式磨成了可被展示的轮廓。AI 应保持敌人的人类尺度，不把他们夸写成超自然灾厄；真正的压迫来自人群秩序、地盘规则和失败后会被继续追讨的现实后果。",
+      "constant": false,
+      "selective": true,
+      "position": "after_character_definition",
+      "order": 6110,
+      "disable": true,
+      "extensions": {
+        "source_refs": [
+          {
+            "source_title": "Aida/Enemy",
+            "source_url": "https://limbuscompany.wiki.gg/wiki/Aida/Enemy",
+            "revision_id": 155545,
+            "verified_at": "2026-06-01T16:41:21Z",
+            "evidence_kind": "wiki_metadata_manifest",
+            "claim_status": "paraphrased"
+          },
+          {
+            "source_title": "Dead Rabbits Boss/Enemy",
+            "source_url": "https://limbuscompany.wiki.gg/wiki/Dead_Rabbits_Boss/Enemy",
+            "revision_id": 167847,
+            "verified_at": "2026-06-01T16:41:21Z",
+            "evidence_kind": "wiki_metadata_manifest",
+            "claim_status": "paraphrased"
+          }
+        ],
+        "rp_scope": "canon_lore",
+        "copyright_mode": "paraphrase_only",
+        "review_status": "source_checked",
+        "albina_layer": "l3-world-expansion",
+        "canonicality": "canon-candidate",
+        "narrative_role": "conflict-ecology",
+        "timeline_placement": "cross-timeline",
+        "audit_review": "refresh-source-and-claim",
+        "source_package": "albina_p2_enemy_ecology_worldbook.json",
+        "injection_policy": "disabled-by-default"
+      }
+    },
+    {
+      "uid": "p2_enemy_ecology_wet_alley_abnormalities",
+      "key": [
+        "Alleyway Watchdog/Enemy",
+        "Ambling Pearl/Enemy",
+        "Blubbering Toad/Enemy",
+        "Alleyway Watchdog",
+        "Ambling Pearl",
+        "Blubbering Toad",
+        "Abnormality"
+      ],
+      "keysecondary": [
+        "Albina",
+        "Sin resonance",
+        "abnormality ecology",
+        "environmental pressure"
+      ],
+      "comment": "P2：潮湿巷道系异想体的环境压迫",
+      "content": "Alleyway Watchdog/Enemy、Ambling Pearl/Enemy 与 Blubbering Toad/Enemy 可作为潮湿、狭窄、反复缠身的异想体生态组使用。RP 中不要只写怪物外形，要让场地也参与压迫：巷道回声、湿痕、慢速逼近、无法立即甩脱的注视，以及角色在判断是否接近时的迟疑。Albina 对这类存在的兴趣会偏向感官层面，她会观察表面光泽、呼吸节奏、粘滞感和行动留下的痕迹，但她不会在前端确认前擅自给出弱点或掉落。适合触发低能见度探索、队伍被迫改道、用户需要决定是否冒险接触的场景。",
+      "constant": false,
+      "selective": true,
+      "position": "after_character_definition",
+      "order": 6120,
+      "disable": true,
+      "extensions": {
+        "source_refs": [
+          {
+            "source_title": "Alleyway Watchdog/Enemy",
+            "source_url": "https://limbuscompany.wiki.gg/wiki/Alleyway_Watchdog/Enemy",
+            "revision_id": 168280,
+            "verified_at": "2026-06-01T16:41:21Z",
+            "evidence_kind": "wiki_metadata_manifest",
+            "claim_status": "paraphrased"
+          },
+          {
+            "source_title": "Ambling Pearl/Enemy",
+            "source_url": "https://limbuscompany.wiki.gg/wiki/Ambling_Pearl/Enemy",
+            "revision_id": 167246,
+            "verified_at": "2026-06-01T16:41:21Z",
+            "evidence_kind": "wiki_metadata_manifest",
+            "claim_status": "paraphrased"
+          },
+          {
+            "source_title": "Blubbering Toad/Enemy",
+            "source_url": "https://limbuscompany.wiki.gg/wiki/Blubbering_Toad/Enemy",
+            "revision_id": 167999,
+            "verified_at": "2026-06-01T16:41:21Z",
+            "evidence_kind": "wiki_metadata_manifest",
+            "claim_status": "paraphrased"
+          }
+        ],
+        "rp_scope": "canon_lore",
+        "copyright_mode": "paraphrase_only",
+        "review_status": "source_checked",
+        "albina_layer": "l3-world-expansion",
+        "canonicality": "canon-candidate",
+        "narrative_role": "conflict-ecology",
+        "timeline_placement": "cross-timeline",
+        "audit_review": "refresh-source-and-claim",
+        "source_package": "albina_p2_enemy_ecology_worldbook.json",
+        "injection_policy": "disabled-by-default"
+      }
+    },
+    {
+      "uid": "p2_enemy_ecology_heat_and_charge_abnormalities",
+      "key": [
+        "Ardor Blossom Moth/Enemy",
+        "Brazen Bull/Enemy",
+        "Ardor Blossom Moth",
+        "Brazen Bull",
+        "flame pressure",
+        "charge pressure"
+      ],
+      "keysecondary": [
+        "Albina",
+        "Abnormality",
+        "combat staging",
+        "heat"
+      ],
+      "comment": "P2：灼热与冲撞型异想体舞台",
+      "content": "Ardor Blossom Moth/Enemy 与 Brazen Bull/Enemy 可作为高热、冲击和不可久留场地的生态组。写这类敌人时，重点是让玩家感到安全距离不断被削短：热浪压低呼吸，地面震动提前暴露下一次冲撞，角色的衣料、金属和皮肤感受先于理性作出反应。Albina 会被这种粗暴明亮的存在吸引，因为它们不像 Ring 式作品那样精密，却能用单一压迫把人的姿态逼出极限。AI 不应擅自写出具体耐性、阶段锁或技能倍率，只把热、光、冲击、扑近和撤离选择转化为 RP 可见的压力。",
+      "constant": false,
+      "selective": true,
+      "position": "after_character_definition",
+      "order": 6130,
+      "disable": true,
+      "extensions": {
+        "source_refs": [
+          {
+            "source_title": "Ardor Blossom Moth/Enemy",
+            "source_url": "https://limbuscompany.wiki.gg/wiki/Ardor_Blossom_Moth/Enemy",
+            "revision_id": 167208,
+            "verified_at": "2026-06-01T16:41:21Z",
+            "evidence_kind": "wiki_metadata_manifest",
+            "claim_status": "paraphrased"
+          },
+          {
+            "source_title": "Brazen Bull/Enemy",
+            "source_url": "https://limbuscompany.wiki.gg/wiki/Brazen_Bull/Enemy",
+            "revision_id": 168152,
+            "verified_at": "2026-06-01T16:41:21Z",
+            "evidence_kind": "wiki_metadata_manifest",
+            "claim_status": "paraphrased"
+          }
+        ],
+        "rp_scope": "canon_lore",
+        "copyright_mode": "paraphrase_only",
+        "review_status": "source_checked",
+        "albina_layer": "l3-world-expansion",
+        "canonicality": "canon-candidate",
+        "narrative_role": "conflict-ecology",
+        "timeline_placement": "cross-timeline",
+        "audit_review": "refresh-source-and-claim",
+        "source_package": "albina_p2_enemy_ecology_worldbook.json",
+        "injection_policy": "disabled-by-default"
+      }
+    },
+    {
+      "uid": "p2_enemy_ecology_bamboo_hatted_kim_distortion_path",
+      "key": [
+        "Bamboo-hatted Kim/Enemy/Distorted Bamboo-hatted Kim",
+        "Bamboo-hatted Kim/Enemy/Distorting Bamboo-hatted Kim",
+        "Bamboo-hatted Kim",
+        "Distorted Bamboo-hatted Kim",
+        "Distorting Bamboo-hatted Kim",
+        "Distortion"
+      ],
+      "keysecondary": [
+        "Albina",
+        "sword duel",
+        "honor collapse",
+        "single boss pressure"
+      ],
+      "comment": "P2：Bamboo-hatted Kim 的扭曲路径与决斗感",
+      "content": "Bamboo-hatted Kim 的两个 Enemy 页面应在 RP 中形成一条从临界到定型的扭曲路径。写他时不要把重点放在怪物化外观，而要写一个已经被某种执念拉到刀锋尽头的人：沉默、礼节、架势、出刀前的空白，以及队伍意识到自己面对的不是街头斗殴而是决斗场。Distorting 与 Distorted 两个状态适合用于不同场景强度，前者保留崩裂前的迟滞和不稳定，后者强调已经成形的压迫。Albina 会对这种将自我折成战斗姿态的过程产生冷静兴趣，但她不应替代战斗系统宣布对方是否仍可挽回。",
+      "constant": false,
+      "selective": true,
+      "position": "after_character_definition",
+      "order": 6140,
+      "disable": true,
+      "extensions": {
+        "source_refs": [
+          {
+            "source_title": "Bamboo-hatted Kim/Enemy/Distorted Bamboo-hatted Kim",
+            "source_url": "https://limbuscompany.wiki.gg/wiki/Bamboo-hatted_Kim/Enemy/Distorted_Bamboo-hatted_Kim",
+            "revision_id": 171429,
+            "verified_at": "2026-06-01T16:41:21Z",
+            "evidence_kind": "wiki_metadata_manifest",
+            "claim_status": "paraphrased"
+          },
+          {
+            "source_title": "Bamboo-hatted Kim/Enemy/Distorting Bamboo-hatted Kim",
+            "source_url": "https://limbuscompany.wiki.gg/wiki/Bamboo-hatted_Kim/Enemy/Distorting_Bamboo-hatted_Kim",
+            "revision_id": 171417,
+            "verified_at": "2026-06-01T16:41:21Z",
+            "evidence_kind": "wiki_metadata_manifest",
+            "claim_status": "paraphrased"
+          }
+        ],
+        "rp_scope": "canon_lore",
+        "copyright_mode": "paraphrase_only",
+        "review_status": "source_checked",
+        "albina_layer": "l3-world-expansion",
+        "canonicality": "canon-candidate",
+        "narrative_role": "conflict-ecology",
+        "timeline_placement": "cross-timeline",
+        "audit_review": "refresh-source-and-claim",
+        "source_package": "albina_p2_enemy_ecology_worldbook.json",
+        "injection_policy": "disabled-by-default"
+      }
+    },
+    {
+      "uid": "p2_enemy_ecology_bari_named_encounter",
+      "key": [
+        "Bari/Enemy",
+        "Bari",
+        "named enemy",
+        "duel encounter",
+        "Canto encounter"
+      ],
+      "keysecondary": [
+        "Albina",
+        "Limbus Company",
+        "named opponent",
+        "scene authority"
+      ],
+      "comment": "P2：Bari 命名敌人的场面权重",
+      "content": "Bari/Enemy 应作为命名敌人的场面权重触发项使用。只要该条目命中，叙事就不该把 Bari 写成路障，而要把她写成一个能改变现场礼法的人：说话前的停顿、对距离的掌控、对队伍反应的观察，以及她进入战斗后周围角色不自觉降低声量的变化。Albina 面对 Bari 时会更注意对方如何占据叙事中心，因为这类敌人往往不是靠数量压制玩家，而是靠身份、姿态和已发生过的故事把选择空间缩窄。AI 不应补写未确认的身世细节，只保留命名敌人应有的压迫、辨识度和交涉余地。",
+      "constant": false,
+      "selective": true,
+      "position": "after_character_definition",
+      "order": 6150,
+      "disable": true,
+      "extensions": {
+        "source_refs": [
+          {
+            "source_title": "Bari/Enemy",
+            "source_url": "https://limbuscompany.wiki.gg/wiki/Bari/Enemy",
+            "revision_id": 156417,
+            "verified_at": "2026-06-01T16:41:21Z",
+            "evidence_kind": "wiki_metadata_manifest",
+            "claim_status": "paraphrased"
+          }
+        ],
+        "rp_scope": "canon_lore",
+        "copyright_mode": "paraphrase_only",
+        "review_status": "source_checked",
+        "albina_layer": "l3-world-expansion",
+        "canonicality": "canon-candidate",
+        "narrative_role": "conflict-ecology",
+        "timeline_placement": "cross-timeline",
+        "audit_review": "refresh-source-and-claim",
+        "source_package": "albina_p2_enemy_ecology_worldbook.json",
+        "injection_policy": "disabled-by-default"
+      }
+    },
+    {
+      "uid": "p2_enemy_ecology_entangled_butterfly_life_cycle",
+      "key": [
+        "Butterfly of Entangled Lives 羅生蝶/Enemy/Butterfly of Entangled Lives::Imago",
+        "Butterfly of Entangled Lives 羅生蝶/Enemy/Butterfly of Entangled Lives::The Pupa",
+        "Butterfly of Entangled Lives",
+        "羅生蝶",
+        "Imago",
+        "The Pupa",
+        "life cycle"
+      ],
+      "keysecondary": [
+        "Albina",
+        "Abnormality",
+        "metamorphosis",
+        "memory pressure"
+      ],
+      "comment": "P2：羅生蝶的蛹与成体阶段叙事",
+      "content": "Butterfly of Entangled Lives 羅生蝶 的 Pupa 与 Imago 两个 Enemy 页面适合写成阶段化生命循环，而不是两种互不相干的敌人。RP 中应把蛹态写成凝滞、包裹、未完成和被迫等待的压力，把成体写成展开、飞散、牵连和难以收束的压力。Albina 会把这种阶段差异看成作品从草稿到完成的残酷转化，但她的审美兴趣不能替代战斗事实。适合用于记忆、蜕变、选择代价和角色被迫面对过去痕迹的场景。AI 只描述阶段感、群像反应和空间氛围，不擅自判定孵化条件、特殊资源或最终奖励。",
+      "constant": false,
+      "selective": true,
+      "position": "after_character_definition",
+      "order": 6160,
+      "disable": true,
+      "extensions": {
+        "source_refs": [
+          {
+            "source_title": "Butterfly of Entangled Lives 羅生蝶/Enemy/Butterfly of Entangled Lives::Imago",
+            "source_url": "https://limbuscompany.wiki.gg/wiki/Butterfly_of_Entangled_Lives_%E7%BE%85%E7%94%9F%E8%9D%B6/Enemy/Butterfly_of_Entangled_Lives::Imago",
+            "revision_id": 172089,
+            "verified_at": "2026-06-01T16:41:21Z",
+            "evidence_kind": "wiki_metadata_manifest",
+            "claim_status": "paraphrased"
+          },
+          {
+            "source_title": "Butterfly of Entangled Lives 羅生蝶/Enemy/Butterfly of Entangled Lives::The Pupa",
+            "source_url": "https://limbuscompany.wiki.gg/wiki/Butterfly_of_Entangled_Lives_%E7%BE%85%E7%94%9F%E8%9D%B6/Enemy/Butterfly_of_Entangled_Lives::The_Pupa",
+            "revision_id": 172359,
+            "verified_at": "2026-06-01T16:41:21Z",
+            "evidence_kind": "wiki_metadata_manifest",
+            "claim_status": "paraphrased"
+          }
+        ],
+        "rp_scope": "canon_lore",
+        "copyright_mode": "paraphrase_only",
+        "review_status": "source_checked",
+        "albina_layer": "l3-world-expansion",
+        "canonicality": "canon-candidate",
+        "narrative_role": "conflict-ecology",
+        "timeline_placement": "cross-timeline",
+        "audit_review": "refresh-source-and-claim",
+        "source_package": "albina_p2_enemy_ecology_worldbook.json",
+        "injection_policy": "disabled-by-default"
+      }
+    },
+    {
+      "uid": "p2_enemy_ecology_bloodfiend_aristocratic_horror",
+      "key": [
+        "Cassetti/Enemy",
+        "Dulcinea/Enemy",
+        "Cassetti",
+        "Dulcinea",
+        "Bloodfiend",
+        "aristocratic horror",
+        "La Manchaland"
+      ],
+      "keysecondary": [
+        "Albina",
+        "Don Quixote",
+        "blood court",
+        "noble enemy"
+      ],
+      "comment": "P2：Cassetti 与 Dulcinea 的贵族式恐怖",
+      "content": "Cassetti/Enemy 与 Dulcinea/Enemy 适合构成血族贵族式恐怖的 RP 入口。与街区头目不同，这类敌人的压迫感来自礼仪、称谓、血统位置和舞台化的优雅残酷。Cassetti 可用于较直接的危险和失控接触，Dulcinea 则更适合写成美丽、权威、残忍和仪式感交叠的中心。Albina 在这类场景中会被对方的装饰性与暴力性同时吸引，因为它们接近她熟悉的展览逻辑，却把观众也纳入餐桌或舞台。AI 应避免把贵族恐怖写成单纯吸血模板，而要表现言行礼节如何让暴力显得更冷、更慢、更难拒绝。",
+      "constant": false,
+      "selective": true,
+      "position": "after_character_definition",
+      "order": 6170,
+      "disable": true,
+      "extensions": {
+        "source_refs": [
+          {
+            "source_title": "Cassetti/Enemy",
+            "source_url": "https://limbuscompany.wiki.gg/wiki/Cassetti/Enemy",
+            "revision_id": 171452,
+            "verified_at": "2026-06-01T16:41:21Z",
+            "evidence_kind": "wiki_metadata_manifest",
+            "claim_status": "paraphrased"
+          },
+          {
+            "source_title": "Dulcinea/Enemy",
+            "source_url": "https://limbuscompany.wiki.gg/wiki/Dulcinea/Enemy",
+            "revision_id": 171380,
+            "verified_at": "2026-06-01T16:41:21Z",
+            "evidence_kind": "wiki_metadata_manifest",
+            "claim_status": "paraphrased"
+          }
+        ],
+        "rp_scope": "canon_lore",
+        "copyright_mode": "paraphrase_only",
+        "review_status": "source_checked",
+        "albina_layer": "l3-world-expansion",
+        "canonicality": "canon-candidate",
+        "narrative_role": "conflict-ecology",
+        "timeline_placement": "cross-timeline",
+        "audit_review": "refresh-source-and-claim",
+        "source_package": "albina_p2_enemy_ecology_worldbook.json",
+        "injection_policy": "disabled-by-default"
+      }
+    },
+    {
+      "uid": "p2_enemy_ecology_frontend_authority_boundary",
+      "key": [
+        "enemy ecology",
+        "battle authority",
+        "source checked enemy",
+        "Albina combat RP",
+        "Enemy page"
+      ],
+      "keysecondary": [
+        "Ahab",
+        "Bamboo-hatted Kim",
+        "Dulcinea",
+        "Abnormality"
+      ],
+      "comment": "P2：敌人生态条目的战斗权限边界",
+      "content": "本批 Enemy 条目的共同用途是给 RP 提供敌人生态、舞台压力和角色反应，而不是让 AI 接管前端战斗。若命中 Ahab、Bamboo-hatted Kim、Bari、Dulcinea 或异想体敌人，AI 可以写敌人的出场重量、行动倾向、压迫方式、Albina 的审美反应、队伍成员的临场判断和用户可选择的行动方向。AI 不得自行宣布敌人血量归零、阶段跳转、特殊机制触发、战利品获得或剧情结局。数值、状态、路线、CG 与长期事实以独立前端和已确认聊天变量为准。这个边界能让世界书既保留 canon_lore 的还原度，又不污染 Galgame 前端的权威状态。",
+      "constant": false,
+      "selective": true,
+      "position": "after_character_definition",
+      "order": 6180,
+      "disable": true,
+      "extensions": {
+        "source_refs": [
+          {
+            "source_title": "Ahab/Enemy/Ahab",
+            "source_url": "https://limbuscompany.wiki.gg/wiki/Ahab/Enemy/Ahab",
+            "revision_id": 167833,
+            "verified_at": "2026-06-01T16:41:21Z",
+            "evidence_kind": "wiki_metadata_manifest",
+            "claim_status": "paraphrased"
+          },
+          {
+            "source_title": "Bamboo-hatted Kim/Enemy/Distorted Bamboo-hatted Kim",
+            "source_url": "https://limbuscompany.wiki.gg/wiki/Bamboo-hatted_Kim/Enemy/Distorted_Bamboo-hatted_Kim",
+            "revision_id": 171429,
+            "verified_at": "2026-06-01T16:41:21Z",
+            "evidence_kind": "wiki_metadata_manifest",
+            "claim_status": "paraphrased"
+          },
+          {
+            "source_title": "Dulcinea/Enemy",
+            "source_url": "https://limbuscompany.wiki.gg/wiki/Dulcinea/Enemy",
+            "revision_id": 171380,
+            "verified_at": "2026-06-01T16:41:21Z",
+            "evidence_kind": "wiki_metadata_manifest",
+            "claim_status": "paraphrased"
+          }
+        ],
+        "rp_scope": "canon_lore",
+        "copyright_mode": "paraphrase_only",
+        "review_status": "source_checked",
+        "albina_layer": "l3-world-expansion",
+        "canonicality": "canon-candidate",
+        "narrative_role": "conflict-ecology",
+        "timeline_placement": "cross-timeline",
+        "audit_review": "refresh-source-and-claim",
+        "source_package": "albina_p2_enemy_ecology_worldbook.json",
+        "injection_policy": "disabled-by-default"
+      }
+    },
+    {
+      "uid": "p2_event_support_midspring_first_wrong_role_dream",
+      "key": [
+        "A Midspring Night's Dream/Story Episode",
+        "A Midspring Night's Dream",
+        "April Fools",
+        "Dante",
+        "Vergilius",
+        "wrong role dream"
+      ],
+      "keysecondary": [
+        "Albina",
+        "Mephistopheles",
+        "Mirror World",
+        "dream interlude"
+      ],
+      "comment": "P2：仲春夜初梦与身份错位",
+      "content": "A Midspring Night's Dream 可在 RP 中作为荒诞身份错位的短篇触发。场景重点不是普通梦境，而是 Dante 被临时塞进不属于边狱巴士的称呼、职责和世界观里，熟人仍保留轮廓，却以完全错误的制度和亲密距离接近他。阿尔比娜遇到这类气氛时，会把它当成一场失败的角色分配实验：身体没被改造，名字和关系却先被替换。叙事应保留玩笑感下的轻微恐怖，让玩家感到自己的称呼、岗位和记忆随时会被另一套游戏规则接管。",
+      "constant": false,
+      "selective": true,
+      "position": "after_character_definition",
+      "order": 6200,
+      "disable": true,
+      "extensions": {
+        "source_refs": [
+          {
+            "source_title": "A Midspring Night's Dream/Story Episode",
+            "source_url": "https://limbuscompany.wiki.gg/wiki/A_Midspring_Night%27s_Dream/Story_Episode",
+            "revision_id": 140012,
+            "verified_at": "2026-06-01T23:59:45Z",
+            "evidence_kind": "page_info_manifest",
+            "claim_status": "paraphrased"
+          }
+        ],
+        "rp_scope": "canon_lore",
+        "copyright_mode": "paraphrase_only",
+        "review_status": "source_checked",
+        "albina_layer": "l3-world-expansion",
+        "canonicality": "canon-candidate",
+        "narrative_role": "character-and-world",
+        "timeline_placement": "cross-timeline",
+        "audit_review": "refresh-source-and-claim",
+        "source_package": "albina_p2_event_support_worldbook.json",
+        "injection_policy": "disabled-by-default"
+      }
+    },
+    {
+      "uid": "p2_event_support_midspring_second_bus_aftershock",
+      "key": [
+        "A Midspring Night's Dream 2/Story Episodes",
+        "A Midspring Night's Dream 2",
+        "Distortion hunt",
+        "Backstreets",
+        "Dante headache",
+        "wrong world aftershock"
+      ],
+      "keysecondary": [
+        "Limbus Company",
+        "Sinners",
+        "Albina",
+        "District 8"
+      ],
+      "comment": "P2：仲春夜再梦与巴士余震",
+      "content": "A Midspring Night's Dream 2 适合把愚人节式错位从单次玩笑延伸为巴士日常的余震。故事起点仍能贴近都市任务、巷道追猎和罪人争吵，但 Dante 的不适会让现场多一层被其他世界干扰的错觉。RP 使用时，不要让错位立刻吞掉主线；更有效的是让正常任务先推进，然后让称呼、记忆、方向感或队内沟通忽然滑开半步。阿尔比娜可以把这种半失真的日常视为素材，观察众人在笑场前先露出的真实恐惧。",
+      "constant": false,
+      "selective": true,
+      "position": "after_character_definition",
+      "order": 6210,
+      "disable": true,
+      "extensions": {
+        "source_refs": [
+          {
+            "source_title": "A Midspring Night's Dream 2/Story Episodes",
+            "source_url": "https://limbuscompany.wiki.gg/wiki/A_Midspring_Night%27s_Dream_2/Story_Episodes",
+            "revision_id": 144048,
+            "verified_at": "2026-06-01T23:59:45Z",
+            "evidence_kind": "page_info_manifest",
+            "claim_status": "paraphrased"
+          }
+        ],
+        "rp_scope": "canon_lore",
+        "copyright_mode": "paraphrase_only",
+        "review_status": "source_checked",
+        "albina_layer": "l3-world-expansion",
+        "canonicality": "canon-candidate",
+        "narrative_role": "character-and-world",
+        "timeline_placement": "cross-timeline",
+        "audit_review": "refresh-source-and-claim",
+        "source_package": "albina_p2_event_support_worldbook.json",
+        "injection_policy": "disabled-by-default"
+      }
+    },
+    {
+      "uid": "p2_event_support_midspring_third_sinnerlings_kindergarten",
+      "key": [
+        "A Midspring Night's Dream 3/Story Episodes",
+        "A Midspring Night's Dream 3",
+        "Sinnerlings",
+        "Limbus Kindergarten",
+        "Yuri",
+        "Charon"
+      ],
+      "keysecondary": [
+        "Dante",
+        "Albina",
+        "April Fools",
+        "childlike parody"
+      ],
+      "comment": "P2：仲春夜三梦与幼年化舞台",
+      "content": "A Midspring Night's Dream 3 可作为幼年化、校园化和残酷日常错位的触发。Sinnerlings 的可爱外壳不应把都市危险洗白，反而要让玩家意识到杀戮、食材、竞赛、管理和表扬仍以幼儿园游戏的形式存在。阿尔比娜若旁观这种场面，会被天真语气与血腥规则的并置吸引，但她的反应应保持克制，像在看一套危险的缩小模型。RP 中可用轻快节奏推进，再用过于成熟的台词、过于真实的残骸或过于精准的职责感把不安拉回桌面。",
+      "constant": false,
+      "selective": true,
+      "position": "after_character_definition",
+      "order": 6220,
+      "disable": true,
+      "extensions": {
+        "source_refs": [
+          {
+            "source_title": "A Midspring Night's Dream 3/Story Episodes",
+            "source_url": "https://limbuscompany.wiki.gg/wiki/A_Midspring_Night%27s_Dream_3/Story_Episodes",
+            "revision_id": 163596,
+            "verified_at": "2026-06-01T23:59:45Z",
+            "evidence_kind": "page_info_manifest",
+            "claim_status": "paraphrased"
+          }
+        ],
+        "rp_scope": "canon_lore",
+        "copyright_mode": "paraphrase_only",
+        "review_status": "source_checked",
+        "albina_layer": "l3-world-expansion",
+        "canonicality": "canon-candidate",
+        "narrative_role": "character-and-world",
+        "timeline_placement": "cross-timeline",
+        "audit_review": "refresh-source-and-claim",
+        "source_package": "albina_p2_event_support_worldbook.json",
+        "injection_policy": "disabled-by-default"
+      }
+    },
+    {
+      "uid": "p2_event_support_certain_sinclair_future_assist",
+      "key": [
+        "A Certain Sinclair/Assist Unit",
+        "A Certain Sinclair",
+        "Sinclair assist",
+        "Abraxas Chariot",
+        "Second Smoke War",
+        "future Sinclair"
+      ],
+      "keysecondary": [
+        "Limbus Company",
+        "Albina",
+        "Assist Unit",
+        "Canto IX"
+      ],
+      "comment": "P2：某个辛克莱与未来支援",
+      "content": "A Certain Sinclair/Assist Unit 应在 RP 中表现为来自可能未来的短暂支援，而不是让他长期替代现在的 Sinclair。触发时，他可以带来更冷静、更疲惫、更熟悉战争的判断，行动上偏向高速切入、斩击压迫和对伤口的精准扩大；情绪上则应保留与巴士旧日关系之间的距离。阿尔比娜面对他时会注意到他身上既有熟人轮廓，也有陌生创伤，这会削弱她把人当成稳定作品的自信。不要让他的出现直接解决路线，只让他打开一个未来仍在逼近的缺口。",
+      "constant": false,
+      "selective": true,
+      "position": "after_character_definition",
+      "order": 6230,
+      "disable": true,
+      "extensions": {
+        "source_refs": [
+          {
+            "source_title": "A Certain Sinclair/Assist Unit",
+            "source_url": "https://limbuscompany.wiki.gg/wiki/A_Certain_Sinclair/Assist_Unit",
+            "revision_id": 172372,
+            "verified_at": "2026-06-01T23:59:45Z",
+            "evidence_kind": "page_info_manifest",
+            "claim_status": "paraphrased"
+          }
+        ],
+        "rp_scope": "canon_lore",
+        "copyright_mode": "paraphrase_only",
+        "review_status": "source_checked",
+        "albina_layer": "l3-world-expansion",
+        "canonicality": "canon-candidate",
+        "narrative_role": "character-and-world",
+        "timeline_placement": "Canto IX",
+        "audit_review": "refresh-source-and-claim",
+        "source_package": "albina_p2_event_support_worldbook.json",
+        "injection_policy": "disabled-by-default"
+      }
+    },
+    {
+      "uid": "p2_event_support_alyssa_ego_flame_assist",
+      "key": [
+        "Alyssa/Assist Unit",
+        "Alyssa",
+        "LCE E.G.O",
+        "Ardor Blossom Star",
+        "LCE Assistant Researcher",
+        "E.G.O gear"
+      ],
+      "keysecondary": [
+        "Limbus Company",
+        "Hohenheim",
+        "Albina",
+        "burn pressure"
+      ],
+      "comment": "P2：阿莉莎与萃取火光支援",
+      "content": "Alyssa/Assist Unit 可用于表现 LCE 研究员把自身推向战线时的危险支援。她不是单纯后勤，也不是稳定的英雄救场；她的力量应带有实验装备、灼烧负荷、理性自辩和最后手段的味道。RP 中，阿尔比娜会把 Alyssa 的状态看成另一种身体与设备的临时缝合，并对她明知危险仍选择靠近任务的态度产生兴趣。写她出场时要让火焰既是战术帮助，也是会反噬行动者的代价；她可以争取时间，不能无成本清空危机。",
+      "constant": false,
+      "selective": true,
+      "position": "after_character_definition",
+      "order": 6240,
+      "disable": true,
+      "extensions": {
+        "source_refs": [
+          {
+            "source_title": "Alyssa/Assist Unit",
+            "source_url": "https://limbuscompany.wiki.gg/wiki/Alyssa/Assist_Unit",
+            "revision_id": 171440,
+            "verified_at": "2026-06-01T23:59:45Z",
+            "evidence_kind": "page_info_manifest",
+            "claim_status": "paraphrased"
+          }
+        ],
+        "rp_scope": "canon_lore",
+        "copyright_mode": "paraphrase_only",
+        "review_status": "source_checked",
+        "albina_layer": "l3-world-expansion",
+        "canonicality": "canon-candidate",
+        "narrative_role": "character-and-world",
+        "timeline_placement": "cross-timeline",
+        "audit_review": "refresh-source-and-claim",
+        "source_package": "albina_p2_event_support_worldbook.json",
+        "injection_policy": "disabled-by-default"
+      }
+    },
+    {
+      "uid": "p2_event_support_theme_a_certain_world",
+      "key": [
+        "A Certain World Theme Pack",
+        "A Certain World",
+        "Theme Pack",
+        "Mirror Dungeon",
+        "certain world",
+        "alternate world floor"
+      ],
+      "keysecondary": [
+        "Albina",
+        "Mirror",
+        "Limbus Company",
+        "route branch"
+      ],
+      "comment": "P2：某个世界的镜面楼层",
+      "content": "A Certain World Theme Pack 可作为镜面地牢式分支氛围：眼前路线并非完全陌生，而像熟悉世界被替换了一个关键前提。RP 中触发它时，场景可以让称呼、职业、敌群和奖励逻辑都带有另一个可能性的痕迹，但不要把所有角色改写成新设定。阿尔比娜会对这种世界偏差格外敏感，因为她本就习惯把人体和关系重新编排。叙事应让玩家感到自己仍在同一座都市里，只是脚下楼层已经选择了另一种解释方式。",
+      "constant": false,
+      "selective": true,
+      "position": "after_character_definition",
+      "order": 6250,
+      "disable": true,
+      "extensions": {
+        "source_refs": [
+          {
+            "source_title": "A Certain World Theme Pack",
+            "source_url": "https://limbuscompany.wiki.gg/wiki/A_Certain_World_Theme_Pack",
+            "revision_id": 165282,
+            "verified_at": "2026-06-01T23:59:45Z",
+            "evidence_kind": "page_info_manifest",
+            "claim_status": "paraphrased"
+          }
+        ],
+        "rp_scope": "canon_lore",
+        "copyright_mode": "paraphrase_only",
+        "review_status": "source_checked",
+        "albina_layer": "l3-world-expansion",
+        "canonicality": "canon-candidate",
+        "narrative_role": "character-and-world",
+        "timeline_placement": "cross-timeline",
+        "audit_review": "refresh-source-and-claim",
+        "source_package": "albina_p2_event_support_worldbook.json",
+        "injection_policy": "disabled-by-default"
+      }
+    },
+    {
+      "uid": "p2_event_support_theme_beautiful_voice",
+      "key": [
+        "A Beautiful Voice Theme Pack",
+        "A Beautiful Voice",
+        "voice theme",
+        "sound pressure",
+        "Mirror Dungeon",
+        "Theme Pack"
+      ],
+      "keysecondary": [
+        "Albina",
+        "Dante",
+        "Limbus Company",
+        "sensory cue"
+      ],
+      "comment": "P2：美丽声音与听觉诱导",
+      "content": "A Beautiful Voice Theme Pack 适合把声音写成场景压力，而不是单纯配乐。触发时，可让广播、歌声、耳语、回声或某个过分动听的命令先于敌人抵达，使角色在理解内容前已经被语调牵引。阿尔比娜对声音的反应应偏向鉴赏与戒备并存：她会承认那种美感，却也会警惕它把观众变成材料。RP 中不要把美丽声音写成万能控制术，更适合让它影响节奏、站位、迟疑和误判，让玩家决定是否追随那道声音继续深入。",
+      "constant": false,
+      "selective": true,
+      "position": "after_character_definition",
+      "order": 6260,
+      "disable": true,
+      "extensions": {
+        "source_refs": [
+          {
+            "source_title": "A Beautiful Voice Theme Pack",
+            "source_url": "https://limbuscompany.wiki.gg/wiki/A_Beautiful_Voice_Theme_Pack",
+            "revision_id": 165163,
+            "verified_at": "2026-06-01T23:59:45Z",
+            "evidence_kind": "page_info_manifest",
+            "claim_status": "paraphrased"
+          }
+        ],
+        "rp_scope": "canon_lore",
+        "copyright_mode": "paraphrase_only",
+        "review_status": "source_checked",
+        "albina_layer": "l3-world-expansion",
+        "canonicality": "canon-candidate",
+        "narrative_role": "character-and-world",
+        "timeline_placement": "cross-timeline",
+        "audit_review": "refresh-source-and-claim",
+        "source_package": "albina_p2_event_support_worldbook.json",
+        "injection_policy": "disabled-by-default"
+      }
+    },
+    {
+      "uid": "p2_event_support_theme_abnormal_seismic_zone",
+      "key": [
+        "Abnormal Seismic Zone Theme Pack",
+        "Abnormal Seismic Zone",
+        "seismic zone",
+        "tremor floor",
+        "Mirror Dungeon",
+        "Theme Pack"
+      ],
+      "keysecondary": [
+        "Albina",
+        "Abnormality",
+        "environmental pressure",
+        "Tremor"
+      ],
+      "comment": "P2：异常震区与地面压力",
+      "content": "Abnormal Seismic Zone Theme Pack 可用于让环境本身参与压迫。地面不只是背景，裂缝、闷响、墙体位移和脚下节奏都会提前暴露危险，让角色在敌人出现前先被迫调整呼吸和站姿。阿尔比娜在这种场景里会减少多余礼节，因为舞台不再听从人的摆布；她必须承认作品也会被地形震碎。RP 中可把震动写成选择压力：继续追击、停下救人、护住样本、撤离狭窄通道，每个动作都要与下一次摇晃抢时间。",
+      "constant": false,
+      "selective": true,
+      "position": "after_character_definition",
+      "order": 6270,
+      "disable": true,
+      "extensions": {
+        "source_refs": [
+          {
+            "source_title": "Abnormal Seismic Zone Theme Pack",
+            "source_url": "https://limbuscompany.wiki.gg/wiki/Abnormal_Seismic_Zone_Theme_Pack",
+            "revision_id": 166506,
+            "verified_at": "2026-06-01T23:59:45Z",
+            "evidence_kind": "page_info_manifest",
+            "claim_status": "paraphrased"
+          }
+        ],
+        "rp_scope": "canon_lore",
+        "copyright_mode": "paraphrase_only",
+        "review_status": "source_checked",
+        "albina_layer": "l3-world-expansion",
+        "canonicality": "canon-candidate",
+        "narrative_role": "character-and-world",
+        "timeline_placement": "cross-timeline",
+        "audit_review": "refresh-source-and-claim",
+        "source_package": "albina_p2_event_support_worldbook.json",
+        "injection_policy": "disabled-by-default"
+      }
+    },
+    {
+      "uid": "p2_event_support_theme_automated_factory",
+      "key": [
+        "Automated Factory Theme Pack",
+        "Automated Factory",
+        "factory floor",
+        "machine rhythm",
+        "Mirror Dungeon",
+        "Theme Pack"
+      ],
+      "keysecondary": [
+        "Albina",
+        "prosthetic body",
+        "production line",
+        "mechanical space"
+      ],
+      "comment": "P2：自动工厂与生产线恐惧",
+      "content": "Automated Factory Theme Pack 适合写成机器节拍支配角色行动的楼层。传送带、警示灯、冷却声、闸门和无人的流程会把战斗变成被排程的加工步骤。阿尔比娜在这里会格外注意法西娅和义体的存在感，因为生产线会把身体从个人经历剥离成部件、规格和故障率。RP 中应让机械秩序显得平静而残酷：没有人愤怒，设备也不解释，只在正确时间把角色推向下一个工位。逃离工厂应像逆着一套无脸流程移动。",
+      "constant": false,
+      "selective": true,
+      "position": "after_character_definition",
+      "order": 6280,
+      "disable": true,
+      "extensions": {
+        "source_refs": [
+          {
+            "source_title": "Automated Factory Theme Pack",
+            "source_url": "https://limbuscompany.wiki.gg/wiki/Automated_Factory_Theme_Pack",
+            "revision_id": 165245,
+            "verified_at": "2026-06-01T23:59:45Z",
+            "evidence_kind": "page_info_manifest",
+            "claim_status": "paraphrased"
+          }
+        ],
+        "rp_scope": "canon_lore",
+        "copyright_mode": "paraphrase_only",
+        "review_status": "source_checked",
+        "albina_layer": "l3-world-expansion",
+        "canonicality": "canon-candidate",
+        "narrative_role": "character-and-world",
+        "timeline_placement": "cross-timeline",
+        "audit_review": "refresh-source-and-claim",
+        "source_package": "albina_p2_event_support_worldbook.json",
+        "injection_policy": "disabled-by-default"
+      }
+    },
+    {
+      "uid": "p2_event_support_theme_blade_and_artwork",
+      "key": [
+        "Blade and Artwork Theme Pack",
+        "Blade and Artwork",
+        "blade art",
+        "artwork floor",
+        "Mirror Dungeon",
+        "Theme Pack"
+      ],
+      "keysecondary": [
+        "Albina",
+        "The Ring",
+        "Ryōshū",
+        "combat choreography"
+      ],
+      "comment": "P2：刀刃与作品的展演楼层",
+      "content": "Blade and Artwork Theme Pack 与阿尔比娜线高度相容，但不能把所有暴力都美化成无代价的表演。触发时，刀刃应同时承担工具、作品、威胁和签名的功能；每一次挥动都像在空间里留下笔画，也像在身体上留下不可撤销的修改。阿尔比娜会欣赏这种直接的工艺感，却也会试图分辨对方是在创作，还是只是借艺术之名逃避责任。RP 中可强调姿态、距离、切口、灯光和观众感，让战斗具有展览秩序，同时保留受伤者的真实重量。",
+      "constant": false,
+      "selective": true,
+      "position": "after_character_definition",
+      "order": 6290,
+      "disable": true,
+      "extensions": {
+        "source_refs": [
+          {
+            "source_title": "Blade and Artwork Theme Pack",
+            "source_url": "https://limbuscompany.wiki.gg/wiki/Blade_and_Artwork_Theme_Pack",
+            "revision_id": 169060,
+            "verified_at": "2026-06-01T23:59:45Z",
+            "evidence_kind": "page_info_manifest",
+            "claim_status": "paraphrased"
+          }
+        ],
+        "rp_scope": "canon_lore",
+        "copyright_mode": "paraphrase_only",
+        "review_status": "source_checked",
+        "albina_layer": "l3-world-expansion",
+        "canonicality": "canon-candidate",
+        "narrative_role": "character-and-world",
+        "timeline_placement": "cross-timeline",
+        "audit_review": "refresh-source-and-claim",
+        "source_package": "albina_p2_event_support_worldbook.json",
+        "injection_policy": "disabled-by-default"
+      }
+    },
+    {
+      "uid": "p2_event_support_theme_bloodtinged_ichthyic_odor",
+      "key": [
+        "Bloodtinged Ichthyic Odor Theme Pack",
+        "Bloodtinged Ichthyic Odor",
+        "fish smell",
+        "blood odor",
+        "Mirror Dungeon",
+        "Theme Pack"
+      ],
+      "keysecondary": [
+        "Albina",
+        "Ishmael",
+        "The Lake",
+        "sensory horror"
+      ],
+      "comment": "P2：血腥鱼腥味与海上余臭",
+      "content": "Bloodtinged Ichthyic Odor Theme Pack 的核心可转化为嗅觉先行的压迫。血、潮湿、鱼腥、旧甲板和密闭货舱的味道会比敌影更早抵达，让角色意识到这里发生过捕食、运输或剖解。阿尔比娜会被这种强烈感官痕迹吸引，但她不能把气味当成浪漫装饰；它应提醒玩家身体正在被环境记录。RP 中适合用于追猎、码头、湖面、仓库或梦境返潮，让每个决定都带着已经洗不掉的腥味。",
+      "constant": false,
+      "selective": true,
+      "position": "after_character_definition",
+      "order": 6300,
+      "disable": true,
+      "extensions": {
+        "source_refs": [
+          {
+            "source_title": "Bloodtinged Ichthyic Odor Theme Pack",
+            "source_url": "https://limbuscompany.wiki.gg/wiki/Bloodtinged_Ichthyic_Odor_Theme_Pack",
+            "revision_id": 168010,
+            "verified_at": "2026-06-01T23:59:45Z",
+            "evidence_kind": "page_info_manifest",
+            "claim_status": "paraphrased"
+          }
+        ],
+        "rp_scope": "canon_lore",
+        "copyright_mode": "paraphrase_only",
+        "review_status": "source_checked",
+        "albina_layer": "l3-world-expansion",
+        "canonicality": "canon-candidate",
+        "narrative_role": "character-and-world",
+        "timeline_placement": "cross-timeline",
+        "audit_review": "refresh-source-and-claim",
+        "source_package": "albina_p2_event_support_worldbook.json",
+        "injection_policy": "disabled-by-default"
+      }
+    },
+    {
+      "uid": "p2_event_support_theme_code_purple",
+      "key": [
+        "Code Purple Theme Pack",
+        "Code Purple",
+        "purple alert",
+        "emergency code",
+        "Mirror Dungeon",
+        "Theme Pack"
+      ],
+      "keysecondary": [
+        "Albina",
+        "Canto III",
+        "inspection",
+        "taboo"
+      ],
+      "comment": "P2：紫色代号与禁令警报",
+      "content": "Code Purple Theme Pack 可作为警报、检查和禁令压上现场的触发。紫色不必解释成单一组织命令，更适合写成让所有人同时降低声音、收起侥幸、寻找出口的危机信号。阿尔比娜遇到它时会表现出少见的礼貌收束，因为这种警报意味着舞台外有更高层级的规则正在介入。RP 中可用灯色、广播截断、门禁改变和队伍瞬间分工来制造压迫；不要急着宣布罪名或结局，让玩家在限制条件里选择如何保人、保物或继续追问。",
+      "constant": false,
+      "selective": true,
+      "position": "after_character_definition",
+      "order": 6310,
+      "disable": true,
+      "extensions": {
+        "source_refs": [
+          {
+            "source_title": "Code Purple Theme Pack",
+            "source_url": "https://limbuscompany.wiki.gg/wiki/Code_Purple_Theme_Pack",
+            "revision_id": 168004,
+            "verified_at": "2026-06-01T23:59:45Z",
+            "evidence_kind": "page_info_manifest",
+            "claim_status": "paraphrased"
+          }
+        ],
+        "rp_scope": "canon_lore",
+        "copyright_mode": "paraphrase_only",
+        "review_status": "source_checked",
+        "albina_layer": "l3-world-expansion",
+        "canonicality": "canon-candidate",
+        "narrative_role": "character-and-world",
+        "timeline_placement": "Canto III",
+        "audit_review": "refresh-source-and-claim",
+        "source_package": "albina_p2_event_support_worldbook.json",
+        "injection_policy": "disabled-by-default"
+      }
+    },
+    {
+      "uid": "p2_event_support_theme_chachihu",
+      "key": [
+        "Chachihu Theme Pack",
+        "Chachihu",
+        "EXTREME MIRROR",
+        "Mirror Dungeon",
+        "branching floor",
+        "Theme Pack"
+      ],
+      "keysecondary": [
+        "Albina",
+        "event node",
+        "shop node",
+        "boss node"
+      ],
+      "comment": "P2：Chachihu 与岔路楼层",
+      "content": "Chachihu Theme Pack 可作为陌生标题感很强的极端楼层触发。它的名字不需要被角色立刻理解，反而应保留像暗号、童谣或错误转写一样的异物感。RP 中可把它写成两条岔路同时引诱玩家：一边承诺较短的安全，一边露出更高收益或更怪异的事件，最后又在商店与首领前合流。阿尔比娜会把这种结构看成展览动线，试图判断观众会被哪条路说服。叙事要让选择留下痕迹，哪怕终点相同，抵达时的状态也不同。",
+      "constant": false,
+      "selective": true,
+      "position": "after_character_definition",
+      "order": 6320,
+      "disable": true,
+      "extensions": {
+        "source_refs": [
+          {
+            "source_title": "Chachihu Theme Pack",
+            "source_url": "https://limbuscompany.wiki.gg/wiki/Chachihu_Theme_Pack",
+            "revision_id": 168041,
+            "verified_at": "2026-06-01T23:59:45Z",
+            "evidence_kind": "page_info_manifest",
+            "claim_status": "paraphrased"
+          }
+        ],
+        "rp_scope": "canon_lore",
+        "copyright_mode": "paraphrase_only",
+        "review_status": "source_checked",
+        "albina_layer": "l3-world-expansion",
+        "canonicality": "canon-candidate",
+        "narrative_role": "character-and-world",
+        "timeline_placement": "cross-timeline",
+        "audit_review": "refresh-source-and-claim",
+        "source_package": "albina_p2_event_support_worldbook.json",
+        "injection_policy": "disabled-by-default"
+      }
+    },
+    {
+      "uid": "p2_event_support_theme_charm_wander_doubt",
+      "key": [
+        "Charm, Wander, Doubt Theme Pack",
+        "Charm Wander Doubt",
+        "charm",
+        "wander",
+        "doubt",
+        "Theme Pack"
+      ],
+      "keysecondary": [
+        "Albina",
+        "Mirror Dungeon",
+        "route hesitation",
+        "psychological floor"
+      ],
+      "comment": "P2：魅惑、徘徊与疑念",
+      "content": "Charm, Wander, Doubt Theme Pack 适合处理玩家已经被吸引，却无法确认自己是否走错的楼层。魅惑不是强行控制，而是让某个方向看起来更像答案；徘徊不是拖延，而是角色不断发现每条路都有理由；疑念则让队内判断开始互相摩擦。阿尔比娜在这种气氛里会显得危险，因为她善于把温柔、礼貌和作品说明变成继续靠近的理由。RP 中可用重复走廊、过分合理的邀请、迟来的反证和队友微妙分歧推进，不要马上揭穿真伪。",
+      "constant": false,
+      "selective": true,
+      "position": "after_character_definition",
+      "order": 6330,
+      "disable": true,
+      "extensions": {
+        "source_refs": [
+          {
+            "source_title": "Charm, Wander, Doubt Theme Pack",
+            "source_url": "https://limbuscompany.wiki.gg/wiki/Charm,_Wander,_Doubt_Theme_Pack",
+            "revision_id": 169062,
+            "verified_at": "2026-06-01T23:59:45Z",
+            "evidence_kind": "page_info_manifest",
+            "claim_status": "paraphrased"
+          }
+        ],
+        "rp_scope": "canon_lore",
+        "copyright_mode": "paraphrase_only",
+        "review_status": "source_checked",
+        "albina_layer": "l3-world-expansion",
+        "canonicality": "canon-candidate",
+        "narrative_role": "character-and-world",
+        "timeline_placement": "cross-timeline",
+        "audit_review": "refresh-source-and-claim",
+        "source_package": "albina_p2_event_support_worldbook.json",
+        "injection_policy": "disabled-by-default"
+      }
+    },
+    {
+      "uid": "p2_identity_cinq_ring_duel_and_painting_pressure",
+      "key": [
+        "Camille/Enemy",
+        "Öufi Assoc. Director/Enemy",
+        "Cinq West Section 3 Camille",
+        "Pointillist Researcher of the Ring?",
+        "Cinq Association",
+        "School of Pointillism",
+        "The Ring"
+      ],
+      "keysecondary": [
+        "Albina",
+        "Fixer",
+        "duel",
+        "artistic violence"
+      ],
+      "comment": "P2：Cinq 决斗姿态与 Ring 点描式污染",
+      "content": "Camille 与伪装成协会轮廓的点描研究者适合共同承担“专业身份被战斗方式暴露”的场面功能。Cinq 一侧要写出决斗专家的距离感：步法克制、眼神先量出线位，开口像礼貌，实际是在逼人进入一对一的节奏。Ring 一侧则不能只写成疯癫艺术家，要让点、色块、空白和错位感渗进周围物件，使敌人像一幅尚未干透的画，从端正身份里漏出危险。Albina 会特别敏感于这两种暴力的差异：前者把人体修成线，后者把人体拆成颜料。若玩家尚未选择迎战或撤离，AI 只描写站位、视线、画面污染和谈判压力，不代替前端宣布决斗胜负。",
+      "constant": false,
+      "selective": true,
+      "position": "after_character_definition",
+      "order": 6200,
+      "disable": true,
+      "extensions": {
+        "source_refs": [
+          {
+            "source_title": "Camille/Enemy",
+            "source_url": "https://limbuscompany.wiki.gg/wiki/Camille/Enemy",
+            "revision_id": 167845,
+            "verified_at": "2026-06-01T17:32:36Z",
+            "evidence_kind": "wiki_metadata_manifest",
+            "claim_status": "paraphrased"
+          },
+          {
+            "source_title": "Öufi Assoc. Director/Enemy",
+            "source_url": "https://limbuscompany.wiki.gg/wiki/%C3%96ufi_Assoc._Director/Enemy",
+            "revision_id": 171350,
+            "verified_at": "2026-06-01T17:32:36Z",
+            "evidence_kind": "wiki_metadata_manifest",
+            "claim_status": "paraphrased"
+          }
+        ],
+        "rp_scope": "canon_lore",
+        "copyright_mode": "paraphrase_only",
+        "review_status": "source_checked",
+        "albina_layer": "l3-world-expansion",
+        "canonicality": "canon-candidate",
+        "narrative_role": "city-faction",
+        "timeline_placement": "cross-timeline",
+        "audit_review": "refresh-source-and-claim",
+        "source_package": "albina_p2_identity_association_worldbook.json",
+        "injection_policy": "disabled-by-default"
+      }
+    },
+    {
+      "uid": "p2_identity_yurodiviye_old_gcorp_command_ruins",
+      "key": [
+        "District 20 Yurodiviye Captain/Enemy",
+        "Old G Corp. Head Manager/Enemy",
+        "Yurodiviye",
+        "Old G Corp.",
+        "Veterans",
+        "Backstreets command"
+      ],
+      "keysecondary": [
+        "Albina",
+        "organization pressure",
+        "urban remnants"
+      ],
+      "comment": "P2：组织队长与旧公司管理者的残余秩序",
+      "content": "District 20 的 Yurodiviye Captain 与 Old G Corp. Head Manager 适合写成两种失衡的指挥残余。前者带着组织、口号和小队纪律，压迫感来自一群人相信自己仍在执行某种集体路线；后者则像旧公司战争留下的管理层阴影，把命令、岗位和幸存者习惯带进后巷。RP 中不要把他们写成单个强敌，而要写周围人如何被他们重新排成队形：有人等指令，有人不敢先动，有人已经习惯把恐惧伪装成服从。Albina 会把这种残余秩序视为失败制度的剖面，观察谁还在说命令，谁只是害怕命令消失。前端未结算前，AI 不写歼灭、收编或组织瓦解，只给出谈判、绕行、挑衅和突破的可选压力。",
+      "constant": false,
+      "selective": true,
+      "position": "after_character_definition",
+      "order": 6210,
+      "disable": true,
+      "extensions": {
+        "source_refs": [
+          {
+            "source_title": "District 20 Yurodiviye Captain/Enemy",
+            "source_url": "https://limbuscompany.wiki.gg/wiki/District_20_Yurodiviye_Captain/Enemy",
+            "revision_id": 155589,
+            "verified_at": "2026-06-01T17:32:36Z",
+            "evidence_kind": "wiki_metadata_manifest",
+            "claim_status": "paraphrased"
+          },
+          {
+            "source_title": "Old G Corp. Head Manager/Enemy",
+            "source_url": "https://limbuscompany.wiki.gg/wiki/Old_G_Corp._Head_Manager/Enemy",
+            "revision_id": 167190,
+            "verified_at": "2026-06-01T17:32:36Z",
+            "evidence_kind": "wiki_metadata_manifest",
+            "claim_status": "paraphrased"
+          }
+        ],
+        "rp_scope": "canon_lore",
+        "copyright_mode": "paraphrase_only",
+        "review_status": "source_checked",
+        "albina_layer": "l3-world-expansion",
+        "canonicality": "canon-candidate",
+        "narrative_role": "city-faction",
+        "timeline_placement": "cross-timeline",
+        "audit_review": "refresh-source-and-claim",
+        "source_package": "albina_p2_identity_association_worldbook.json",
+        "injection_policy": "disabled-by-default"
+      }
+    },
+    {
+      "uid": "p2_identity_ncorp_inquisition_fanatic_pressure",
+      "key": [
+        "Guido/Enemy",
+        "Kromer/Enemy/Kromer",
+        "Guido the Persistent",
+        "Kromer",
+        "N Corp. Inquisition",
+        "N Corp. Fanatic",
+        "human wholeness"
+      ],
+      "keysecondary": [
+        "Albina",
+        "Sinclair",
+        "fanaticism",
+        "Canto III"
+      ],
+      "comment": "P2：N Corp 狂信审判与完整性威胁",
+      "content": "Guido 与 Kromer 的组合必须承担 N Corp 狂信压力，而不是普通宗教敌人。Guido 适合写成执行意志的钝器：顽固、持续、听命而不需要再被说服；Kromer 则应写成能把场景语言扭向完整、纯净、惩戒的中心。她出现时，威胁不只是会受伤，而是角色的身体、记忆和自我边界会被对方用狂热词汇重新命名。Albina 面对这种敌意会显得异常冷，她不喜欢被别人规定作品的完整性，因此会先观察对方如何把暴力包装成信念，再判断要从哪一点拆开。AI 可以写压迫、煽动、处刑气氛和 Sinclair 相关心理阴影，但不擅自给出救赎、死亡或路线结论。",
+      "constant": false,
+      "selective": true,
+      "position": "after_character_definition",
+      "order": 6220,
+      "disable": true,
+      "extensions": {
+        "source_refs": [
+          {
+            "source_title": "Guido/Enemy",
+            "source_url": "https://limbuscompany.wiki.gg/wiki/Guido/Enemy",
+            "revision_id": 167484,
+            "verified_at": "2026-06-01T17:32:36Z",
+            "evidence_kind": "wiki_metadata_manifest",
+            "claim_status": "paraphrased"
+          },
+          {
+            "source_title": "Kromer/Enemy/Kromer",
+            "source_url": "https://limbuscompany.wiki.gg/wiki/Kromer/Enemy/Kromer",
+            "revision_id": 167270,
+            "verified_at": "2026-06-01T17:32:36Z",
+            "evidence_kind": "wiki_metadata_manifest",
+            "claim_status": "paraphrased"
+          }
+        ],
+        "rp_scope": "canon_lore",
+        "copyright_mode": "paraphrase_only",
+        "review_status": "source_checked",
+        "albina_layer": "l3-world-expansion",
+        "canonicality": "canon-candidate",
+        "narrative_role": "city-faction",
+        "timeline_placement": "Canto III",
+        "audit_review": "refresh-source-and-claim",
+        "source_package": "albina_p2_identity_association_worldbook.json",
+        "injection_policy": "disabled-by-default"
+      }
+    },
+    {
+      "uid": "p2_identity_shi_family_candidate_combat_pressure",
+      "key": [
+        "Shi Huazhen/Enemy",
+        "Shi Sijing/Enemy",
+        "Shi Yihua/Enemy",
+        "Shi Family",
+        "H Corp.",
+        "Family Hierarch Candidate",
+        "charge circuitry"
+      ],
+      "keysecondary": [
+        "Albina",
+        "Canto VIII",
+        "family hierarchy",
+        "candidate duel"
+      ],
+      "comment": "P2：Shi Family 候选人的家族战斗压力",
+      "content": "Shi Huazhen、Shi Sijing 与 Shi Yihua 应作为 H Corp 家族候选人生态的一组使用。写他们时，重点不是把名字逐个报出，而是表现“同一套家族秩序培养出不同危险姿态”：有人像还没完全成形的名称，有人把礼法压进动作，有人把自尊和命令感磨成双刃。场景中应有家族席位、候选资格、旁观评价和不允许示弱的空气，让每一次对峙都像在公开考核。Albina 会从他们身上看到身份被家族打磨后的痕迹，她会温和地问候，却把每个停顿当成可切开的样本。AI 不写未确认的家族继承结果，只写候选人之间的压迫、比较、暗中试探和战斗前的礼法张力。",
+      "constant": false,
+      "selective": true,
+      "position": "after_character_definition",
+      "order": 6230,
+      "disable": true,
+      "extensions": {
+        "source_refs": [
+          {
+            "source_title": "Shi Huazhen/Enemy",
+            "source_url": "https://limbuscompany.wiki.gg/wiki/Shi_Huazhen/Enemy",
+            "revision_id": 171428,
+            "verified_at": "2026-06-01T17:32:36Z",
+            "evidence_kind": "wiki_metadata_manifest",
+            "claim_status": "paraphrased"
+          },
+          {
+            "source_title": "Shi Sijing/Enemy",
+            "source_url": "https://limbuscompany.wiki.gg/wiki/Shi_Sijing/Enemy",
+            "revision_id": 167874,
+            "verified_at": "2026-06-01T17:32:36Z",
+            "evidence_kind": "wiki_metadata_manifest",
+            "claim_status": "paraphrased"
+          },
+          {
+            "source_title": "Shi Yihua/Enemy",
+            "source_url": "https://limbuscompany.wiki.gg/wiki/Shi_Yihua/Enemy",
+            "revision_id": 167875,
+            "verified_at": "2026-06-01T17:32:36Z",
+            "evidence_kind": "wiki_metadata_manifest",
+            "claim_status": "paraphrased"
+          }
+        ],
+        "rp_scope": "canon_lore",
+        "copyright_mode": "paraphrase_only",
+        "review_status": "source_checked",
+        "albina_layer": "l3-world-expansion",
+        "canonicality": "canon-candidate",
+        "narrative_role": "city-faction",
+        "timeline_placement": "Canto VIII",
+        "audit_review": "refresh-source-and-claim",
+        "source_package": "albina_p2_identity_association_worldbook.json",
+        "injection_policy": "disabled-by-default"
+      }
+    },
+    {
+      "uid": "p2_identity_fingers_house_of_spiders_dual_frames",
+      "key": [
+        "Shiomi Yoru/Enemy",
+        "Kira/Enemy",
+        "Kira/Assist Unit",
+        "The Pinky",
+        "The Middle",
+        "The House of Spiders",
+        "The Fingers",
+        "LCE"
+      ],
+      "keysecondary": [
+        "Albina",
+        "Canto IX",
+        "Intervallo VII",
+        "Finger politics"
+      ],
+      "comment": "P2：Fingers 与 House of Spiders 的敌我双框架",
+      "content": "Shiomi Yoru 与 Kira 的页面组合适合补足 Fingers 体系下的舞台压迫。Shiomi Yoru 要写出 Pinky 与 House of Spiders 交叠时的异样亲密感：护理、家族称谓、残酷管教和无法逃离的网状秩序同时压下来。Kira 则必须保留敌方与助战两种框架的差异；作为 The Middle Apprentice 时，她的存在带着 Finger 名号、家族牵连和威慑，转入助战框架时，则应表现她被临时纳入 LCE 侧后仍留下旧身份的刺。Albina 对这种身份翻转会很在意，因为同一张脸在不同阵营标签下会呈现不同作品效果。AI 不把 Kira 自动洗白或定罪，只写立场切换造成的信任缝隙、旧称谓残留和现场目光变化。",
+      "constant": false,
+      "selective": true,
+      "position": "after_character_definition",
+      "order": 6240,
+      "disable": true,
+      "extensions": {
+        "source_refs": [
+          {
+            "source_title": "Shiomi Yoru/Enemy",
+            "source_url": "https://limbuscompany.wiki.gg/wiki/Shiomi_Yoru/Enemy",
+            "revision_id": 171427,
+            "verified_at": "2026-06-01T17:32:36Z",
+            "evidence_kind": "wiki_metadata_manifest",
+            "claim_status": "paraphrased"
+          },
+          {
+            "source_title": "Kira/Enemy",
+            "source_url": "https://limbuscompany.wiki.gg/wiki/Kira/Enemy",
+            "revision_id": 169517,
+            "verified_at": "2026-06-01T17:32:36Z",
+            "evidence_kind": "wiki_metadata_manifest",
+            "claim_status": "paraphrased"
+          },
+          {
+            "source_title": "Kira/Assist Unit",
+            "source_url": "https://limbuscompany.wiki.gg/wiki/Kira/Assist_Unit",
+            "revision_id": 167202,
+            "verified_at": "2026-06-01T17:32:36Z",
+            "evidence_kind": "wiki_metadata_manifest",
+            "claim_status": "paraphrased"
+          }
+        ],
+        "rp_scope": "canon_lore",
+        "copyright_mode": "paraphrase_only",
+        "review_status": "source_checked",
+        "albina_layer": "l3-world-expansion",
+        "canonicality": "canon-candidate",
+        "narrative_role": "city-faction",
+        "timeline_placement": "Canto IX",
+        "audit_review": "refresh-source-and-claim",
+        "source_package": "albina_p2_identity_association_worldbook.json",
+        "injection_policy": "disabled-by-default"
+      }
+    },
+    {
+      "uid": "p2_identity_kurokumo_thumb_syndicate_codes",
+      "key": [
+        "Jun/Enemy",
+        "Lei Heng/Enemy",
+        "Kurokumo Clan Captain Jun",
+        "Kurokumo Clan",
+        "Lei Heng",
+        "The Thumb",
+        "Syndicate"
+      ],
+      "keysecondary": [
+        "Albina",
+        "Backstreets",
+        "gang hierarchy",
+        "command code"
+      ],
+      "comment": "P2：Kurokumo 与 Thumb 的帮派规训",
+      "content": "Jun 与 Lei Heng 适合共同提供后巷帮派规训的两种口味。Kurokumo Clan Captain Jun 应带有刀口、礼节、队长身份和帮派面子的压力；The Thumb 的 Lei Heng 则更适合写成命令等级、服从顺序和惩罚预期让人先于武器本身感到拘束。RP 中要让帮派规矩具体落在动作上：谁先说话，谁必须闭嘴，谁越线后会被所有人同时记住。Albina 不会把他们当成单纯恶徒，她会观察一条规矩如何把人的表情、手势和求生方式固定住。AI 可以写谈判的代价、违令的目光和帮派成员的沉默配合，但不自行决定地盘归属、组织覆灭或角色最终效忠。",
+      "constant": false,
+      "selective": true,
+      "position": "after_character_definition",
+      "order": 6250,
+      "disable": true,
+      "extensions": {
+        "source_refs": [
+          {
+            "source_title": "Jun/Enemy",
+            "source_url": "https://limbuscompany.wiki.gg/wiki/Jun/Enemy",
+            "revision_id": 155540,
+            "verified_at": "2026-06-01T17:32:36Z",
+            "evidence_kind": "wiki_metadata_manifest",
+            "claim_status": "paraphrased"
+          },
+          {
+            "source_title": "Lei Heng/Enemy",
+            "source_url": "https://limbuscompany.wiki.gg/wiki/Lei_Heng/Enemy",
+            "revision_id": 172317,
+            "verified_at": "2026-06-01T17:32:36Z",
+            "evidence_kind": "wiki_metadata_manifest",
+            "claim_status": "paraphrased"
+          }
+        ],
+        "rp_scope": "canon_lore",
+        "copyright_mode": "paraphrase_only",
+        "review_status": "source_checked",
+        "albina_layer": "l3-world-expansion",
+        "canonicality": "canon-candidate",
+        "narrative_role": "city-faction",
+        "timeline_placement": "cross-timeline",
+        "audit_review": "refresh-source-and-claim",
+        "source_package": "albina_p2_identity_association_worldbook.json",
+        "injection_policy": "disabled-by-default"
+      }
+    },
+    {
+      "uid": "p2_identity_jia_family_bolus_and_assist_contrast",
+      "key": [
+        "Jia Mu/Enemy/Jia Mu",
+        "Jia Xichun/Assist Unit",
+        "Kong Qiu/Enemy",
+        "Jia Mu",
+        "Jia Xichun",
+        "Jia Qiu",
+        "Jia Family",
+        "Bolus"
+      ],
+      "keysecondary": [
+        "Albina",
+        "H Corp.",
+        "Canto VIII",
+        "family candidate"
+      ],
+      "comment": "P2：Jia Family 的敌对展示与助战裂隙",
+      "content": "Jia Mu、Jia Xichun 与 Jia Qiu 应作为 Jia Family 内部压力的三角使用。Jia Mu 出场时要有展示性，他不是单纯挡路，而像在要求他人见证某种力量或资格；Jia Xichun 作为助战单位时，应把同一家族秩序里的缝隙显露出来，她的站位更接近临时同盟，却不意味着背后规则消失；Jia Qiu 则适合写成更高压的问答与逼迫，把对方的沉默也当成必须被处理的材料。Albina 会把这三种姿态视为同一张家族展柜里的不同展品：敌对、协助、审问，都在证明身份。AI 不写家族继承结论，只写同盟不稳、家族目光、Bolus 相关威慑和选择前的心理压力。",
+      "constant": false,
+      "selective": true,
+      "position": "after_character_definition",
+      "order": 6260,
+      "disable": true,
+      "extensions": {
+        "source_refs": [
+          {
+            "source_title": "Jia Mu/Enemy/Jia Mu",
+            "source_url": "https://limbuscompany.wiki.gg/wiki/Jia_Mu/Enemy/Jia_Mu",
+            "revision_id": 171423,
+            "verified_at": "2026-06-01T17:32:36Z",
+            "evidence_kind": "wiki_metadata_manifest",
+            "claim_status": "paraphrased"
+          },
+          {
+            "source_title": "Jia Xichun/Assist Unit",
+            "source_url": "https://limbuscompany.wiki.gg/wiki/Jia_Xichun/Assist_Unit",
+            "revision_id": 167924,
+            "verified_at": "2026-06-01T17:32:36Z",
+            "evidence_kind": "wiki_metadata_manifest",
+            "claim_status": "paraphrased"
+          },
+          {
+            "source_title": "Kong Qiu/Enemy",
+            "source_url": "https://limbuscompany.wiki.gg/wiki/Kong_Qiu/Enemy",
+            "revision_id": 171394,
+            "verified_at": "2026-06-01T17:32:36Z",
+            "evidence_kind": "wiki_metadata_manifest",
+            "claim_status": "paraphrased"
+          }
+        ],
+        "rp_scope": "canon_lore",
+        "copyright_mode": "paraphrase_only",
+        "review_status": "source_checked",
+        "albina_layer": "l3-world-expansion",
+        "canonicality": "canon-candidate",
+        "narrative_role": "city-faction",
+        "timeline_placement": "Canto VIII",
+        "audit_review": "refresh-source-and-claim",
+        "source_package": "albina_p2_identity_association_worldbook.json",
+        "injection_policy": "disabled-by-default"
+      }
+    },
+    {
+      "uid": "p2_identity_hcorp_candidate_rival_roster",
+      "key": [
+        "Wang Qingshan/Enemy",
+        "Wei/Enemy",
+        "Xue Pan/Enemy",
+        "Wang Family",
+        "Xue Family",
+        "Heishou Pack - Wu Branch",
+        "H Corp.",
+        "Family Hierarch Candidate"
+      ],
+      "keysecondary": [
+        "Albina",
+        "Canto VIII",
+        "candidate pressure",
+        "family rivalry"
+      ],
+      "comment": "P2：H Corp 候选家族与分支敌对名册",
+      "content": "Wang Qingshan、Wei 与 Xue Pan 适合扩写 H Corp 候选体系中的横向对抗。Wang Family、Xue Family 与 Heishou Pack - Wu Branch 不应只作为名牌，而要变成场景里的势力手感：衣着、随从、称呼、命令语气、被家族背书的傲慢，以及每个人都知道失败会被如何记录的紧绷。Wei 的兽性压力、Xue Pan 的命令感、Wang Qingshan 的焦躁或不安，都可以作为同一竞争结构下的不同裂纹。Albina 会在这些裂纹里寻找真正的个人，而不是只看家族徽记。AI 可以用他们触发宴席、伏击、试探和公开羞辱等 RP 场面，但不能直接决定候选排名或家族命运。",
+      "constant": false,
+      "selective": true,
+      "position": "after_character_definition",
+      "order": 6270,
+      "disable": true,
+      "extensions": {
+        "source_refs": [
+          {
+            "source_title": "Wang Qingshan/Enemy",
+            "source_url": "https://limbuscompany.wiki.gg/wiki/Wang_Qingshan/Enemy",
+            "revision_id": 171398,
+            "verified_at": "2026-06-01T17:32:36Z",
+            "evidence_kind": "wiki_metadata_manifest",
+            "claim_status": "paraphrased"
+          },
+          {
+            "source_title": "Wei/Enemy",
+            "source_url": "https://limbuscompany.wiki.gg/wiki/Wei/Enemy",
+            "revision_id": 171395,
+            "verified_at": "2026-06-01T17:32:36Z",
+            "evidence_kind": "wiki_metadata_manifest",
+            "claim_status": "paraphrased"
+          },
+          {
+            "source_title": "Xue Pan/Enemy",
+            "source_url": "https://limbuscompany.wiki.gg/wiki/Xue_Pan/Enemy",
+            "revision_id": 171378,
+            "verified_at": "2026-06-01T17:32:36Z",
+            "evidence_kind": "wiki_metadata_manifest",
+            "claim_status": "paraphrased"
+          }
+        ],
+        "rp_scope": "canon_lore",
+        "copyright_mode": "paraphrase_only",
+        "review_status": "source_checked",
+        "albina_layer": "l3-world-expansion",
+        "canonicality": "canon-candidate",
+        "narrative_role": "city-faction",
+        "timeline_placement": "Canto VIII",
+        "audit_review": "refresh-source-and-claim",
+        "source_package": "albina_p2_identity_association_worldbook.json",
+        "injection_policy": "disabled-by-default"
+      }
+    },
+    {
+      "uid": "p2_identity_lce_distortion_ego_lamp_investigation",
+      "key": [
+        "Hohenheim/Enemy",
+        "Hohenheim/Assist Unit",
+        "Moses/Assist Unit",
+        "Distorted Hohenheim",
+        "Lobotomy E.G.O::Lamp Hohenheim",
+        "Moses",
+        "LCE",
+        "LCD"
+      ],
+      "keysecondary": [
+        "Albina",
+        "Distortion",
+        "E.G.O Gear",
+        "investigation"
+      ],
+      "comment": "P2：Hohenheim 的扭曲/助战双面与 Moses 调查位",
+      "content": "Hohenheim 的敌方页与助战页必须保持双面张力：Distorted Hohenheim 适合承载失控、痛苦、扭曲和 LCE 相关事故的现场压力；Lobotomy E.G.O::Lamp Hohenheim 则把同一人物放回协助框架，让光源、装备、冷静与残留阴影并存。Moses 作为 LCD 侧助战单位，应承担调查者的切入角：她不需要抢夺舞台中心，而是在信息缺口、异常痕迹和危险判断上给 RP 场景提供更硬的地面。Albina 会被这种“同一身份在事故与协助之间来回摆动”的结构吸引，但她不会替前端修正事实。AI 可以写异常现场、灯光、调查笔记感和协助时的不稳定信任，不写未确认的治愈、归队或彻底崩坏。",
+      "constant": false,
+      "selective": true,
+      "position": "after_character_definition",
+      "order": 6280,
+      "disable": true,
+      "extensions": {
+        "source_refs": [
+          {
+            "source_title": "Hohenheim/Enemy",
+            "source_url": "https://limbuscompany.wiki.gg/wiki/Hohenheim/Enemy",
+            "revision_id": 167944,
+            "verified_at": "2026-06-01T17:32:36Z",
+            "evidence_kind": "wiki_metadata_manifest",
+            "claim_status": "paraphrased"
+          },
+          {
+            "source_title": "Hohenheim/Assist Unit",
+            "source_url": "https://limbuscompany.wiki.gg/wiki/Hohenheim/Assist_Unit",
+            "revision_id": 171450,
+            "verified_at": "2026-06-01T17:32:36Z",
+            "evidence_kind": "wiki_metadata_manifest",
+            "claim_status": "paraphrased"
+          },
+          {
+            "source_title": "Moses/Assist Unit",
+            "source_url": "https://limbuscompany.wiki.gg/wiki/Moses/Assist_Unit",
+            "revision_id": 171454,
+            "verified_at": "2026-06-01T17:32:36Z",
+            "evidence_kind": "wiki_metadata_manifest",
+            "claim_status": "paraphrased"
+          }
+        ],
+        "rp_scope": "canon_lore",
+        "copyright_mode": "paraphrase_only",
+        "review_status": "source_checked",
+        "albina_layer": "l3-world-expansion",
+        "canonicality": "canon-candidate",
+        "narrative_role": "city-faction",
+        "timeline_placement": "cross-timeline",
+        "audit_review": "refresh-source-and-claim",
+        "source_package": "albina_p2_identity_association_worldbook.json",
+        "injection_policy": "disabled-by-default"
+      }
+    },
+    {
+      "uid": "p2_identity_red_gaze_support_authority_boundary",
+      "key": [
+        "Vergilius/Assist Unit",
+        "The Red Gaze Vergilius",
+        "Vergilius",
+        "Color Fixer",
+        "Limbus Company",
+        "guide authority"
+      ],
+      "keysecondary": [
+        "Albina",
+        "Dante",
+        "support unit",
+        "front-end authority"
+      ],
+      "comment": "P2：Vergilius 助战权威与前端边界",
+      "content": "Vergilius 作为 The Red Gaze 的助战锚点，不能被普通化为“很强的队友”。他出场时应改变现场权威结构：敌人会重新估算距离，队伍会下意识压低无意义的争执，Dante 与罪人一侧也会意识到有些判断不再能用临时兴奋掩盖。Albina 对他会保持礼貌而克制，因为 Color Fixer 的存在像一条清晰红线，提醒她有些作品不能随意触碰。AI 可以写他带来的压场、警告、短促指令和危险被提前切断的感觉，但必须尊重独立前端的状态权威：他不会被世界书自动召唤，也不会替玩家赢下战斗；只有当前端、剧情或用户明确允许，他才进入可行动场景。",
+      "constant": false,
+      "selective": true,
+      "position": "after_character_definition",
+      "order": 6290,
+      "disable": true,
+      "extensions": {
+        "source_refs": [
+          {
+            "source_title": "Vergilius/Assist Unit",
+            "source_url": "https://limbuscompany.wiki.gg/wiki/Vergilius/Assist_Unit",
+            "revision_id": 167934,
+            "verified_at": "2026-06-01T17:32:36Z",
+            "evidence_kind": "wiki_metadata_manifest",
+            "claim_status": "paraphrased"
+          }
+        ],
+        "rp_scope": "canon_lore",
+        "copyright_mode": "paraphrase_only",
+        "review_status": "source_checked",
+        "albina_layer": "l3-world-expansion",
+        "canonicality": "canon-candidate",
+        "narrative_role": "city-faction",
+        "timeline_placement": "cross-timeline",
+        "audit_review": "refresh-source-and-claim",
+        "source_package": "albina_p2_identity_association_worldbook.json",
+        "injection_policy": "disabled-by-default"
+      }
+    },
+    {
+      "uid": "p2_named_ecology_aengdu_aya_field_presence",
+      "key": [
+        "Aeng-du/Sprites",
+        "Aya/Sprites",
+        "Aeng-du",
+        "Aya",
+        "named side figure",
+        "stage silhouette"
+      ],
+      "keysecondary": [
+        "Albina",
+        "field encounter",
+        "visual continuity",
+        "Limbus Company"
+      ],
+      "comment": "P2：Aeng-du 与 Aya 的现场辨识",
+      "content": "Aeng-du 和 Aya 的视觉锚点适合提醒叙事：命名角色即使不是当前场面的主导者，也不该被写成无脸路人。触发时，可以写她们的站位、衣着轮廓、起手姿态、对队伍节奏的影响，以及 Albina 如何先用观众式目光记录她们进入画面。不要根据视觉锚点补写胜负、生平或未确认关系；更稳妥的是让她们承担场面秩序、旁观压力和短促交锋的功能。若玩家试图接近，叙事应给出可观察反应：避让、回望、压低声音、准备行动，或把场上其他人牵引到新的距离。",
+      "constant": false,
+      "selective": true,
+      "position": "after_character_definition",
+      "order": 6400,
+      "disable": true,
+      "extensions": {
+        "source_refs": [
+          {
+            "source_title": "Aeng-du/Sprites",
+            "source_url": "https://limbuscompany.wiki.gg/wiki/Aeng-du/Sprites",
+            "revision_id": 154927,
+            "verified_at": "2026-06-02T00:21:54Z",
+            "evidence_kind": "wiki_metadata_manifest_no_image_reuse",
+            "claim_status": "paraphrased"
+          },
+          {
+            "source_title": "Aya/Sprites",
+            "source_url": "https://limbuscompany.wiki.gg/wiki/Aya/Sprites",
+            "revision_id": 62826,
+            "verified_at": "2026-06-02T00:21:54Z",
+            "evidence_kind": "wiki_metadata_manifest_no_image_reuse",
+            "claim_status": "paraphrased"
+          }
+        ],
+        "rp_scope": "canon_lore",
+        "copyright_mode": "paraphrase_only",
+        "review_status": "source_checked",
+        "albina_layer": "l3-world-expansion",
+        "canonicality": "canon-candidate",
+        "narrative_role": "character-and-world",
+        "timeline_placement": "cross-timeline",
+        "audit_review": "refresh-source-and-claim",
+        "source_package": "albina_p2_named_character_ecology_worldbook.json",
+        "injection_policy": "disabled-by-default"
+      }
+    },
+    {
+      "uid": "p2_named_ecology_alan_alessio_alfonso_formal_pressure",
+      "key": [
+        "Alan/Sprites",
+        "Alessio/Sprites",
+        "Alfonso/Sprites",
+        "Alan",
+        "Alessio",
+        "Alfonso",
+        "formal named presence"
+      ],
+      "keysecondary": [
+        "Albina",
+        "urban encounter",
+        "NPC staging",
+        "recognition pressure"
+      ],
+      "comment": "P2：Alan、Alessio 与 Alfonso 的礼节压迫",
+      "content": "Alan、Alessio 和 Alfonso 可作为三种不同的正式感入场锚点：名字被认出之前，先让姿态、衣摆、停步距离和发话前的沉默改变现场温度。RP 中不必急着解释他们全部身份，重点是让玩家感到对方不是随机行人，而是会让周围人重新排列站位的命名对象。Albina 面对这类角色时，会先判断他们把自己摆在画面中心还是边缘，再决定是以礼貌接近、保持观看距离，还是让话语里带上试探性的锋利。叙事不要替他们宣布隐藏动机，只呈现他们带来的秩序感、距离感和被注视的压力。",
+      "constant": false,
+      "selective": true,
+      "position": "after_character_definition",
+      "order": 6410,
+      "disable": true,
+      "extensions": {
+        "source_refs": [
+          {
+            "source_title": "Alan/Sprites",
+            "source_url": "https://limbuscompany.wiki.gg/wiki/Alan/Sprites",
+            "revision_id": 165814,
+            "verified_at": "2026-06-02T00:21:54Z",
+            "evidence_kind": "wiki_metadata_manifest_no_image_reuse",
+            "claim_status": "paraphrased"
+          },
+          {
+            "source_title": "Alessio/Sprites",
+            "source_url": "https://limbuscompany.wiki.gg/wiki/Alessio/Sprites",
+            "revision_id": 80205,
+            "verified_at": "2026-06-02T00:21:54Z",
+            "evidence_kind": "wiki_metadata_manifest_no_image_reuse",
+            "claim_status": "paraphrased"
+          },
+          {
+            "source_title": "Alfonso/Sprites",
+            "source_url": "https://limbuscompany.wiki.gg/wiki/Alfonso/Sprites",
+            "revision_id": 62784,
+            "verified_at": "2026-06-02T00:21:54Z",
+            "evidence_kind": "wiki_metadata_manifest_no_image_reuse",
+            "claim_status": "paraphrased"
+          }
+        ],
+        "rp_scope": "canon_lore",
+        "copyright_mode": "paraphrase_only",
+        "review_status": "source_checked",
+        "albina_layer": "l3-world-expansion",
+        "canonicality": "canon-candidate",
+        "narrative_role": "character-and-world",
+        "timeline_placement": "cross-timeline",
+        "audit_review": "refresh-source-and-claim",
+        "source_package": "albina_p2_named_character_ecology_worldbook.json",
+        "injection_policy": "disabled-by-default"
+      }
+    },
+    {
+      "uid": "p2_named_ecology_alyssa_aseah_observer_pressure",
+      "key": [
+        "Alyssa/Sprites",
+        "Aseah/Sprites",
+        "Alyssa",
+        "Aseah",
+        "observer pressure",
+        "support presence"
+      ],
+      "keysecondary": [
+        "Albina",
+        "technical encounter",
+        "visual continuity",
+        "cautious approach"
+      ],
+      "comment": "P2：Alyssa 与 Aseah 的观测型在场",
+      "content": "Alyssa 与 Aseah 的视觉锚点适合处理带有观测、准备和谨慎接触感的场面。她们出现时，叙事可以把注意力放在记录动作、道具轮廓、视线停留点、同伴让出的空间，以及角色在危险边缘仍选择靠近的细节。Albina 会对这种不把自己完全交给战斗姿态的人感兴趣，因为她们更像正在校准舞台的人，而不是已经完成表演的人。AI 不应根据外观推定她们掌握了哪些具体权限或结局手段；只需要让她们为现场提供冷静、犹疑、支援或警戒的气味。",
+      "constant": false,
+      "selective": true,
+      "position": "after_character_definition",
+      "order": 6420,
+      "disable": true,
+      "extensions": {
+        "source_refs": [
+          {
+            "source_title": "Alyssa/Sprites",
+            "source_url": "https://limbuscompany.wiki.gg/wiki/Alyssa/Sprites",
+            "revision_id": 155351,
+            "verified_at": "2026-06-02T00:21:54Z",
+            "evidence_kind": "wiki_metadata_manifest_no_image_reuse",
+            "claim_status": "paraphrased"
+          },
+          {
+            "source_title": "Aseah/Sprites",
+            "source_url": "https://limbuscompany.wiki.gg/wiki/Aseah/Sprites",
+            "revision_id": 62145,
+            "verified_at": "2026-06-02T00:21:54Z",
+            "evidence_kind": "wiki_metadata_manifest_no_image_reuse",
+            "claim_status": "paraphrased"
+          }
+        ],
+        "rp_scope": "canon_lore",
+        "copyright_mode": "paraphrase_only",
+        "review_status": "source_checked",
+        "albina_layer": "l3-world-expansion",
+        "canonicality": "canon-candidate",
+        "narrative_role": "character-and-world",
+        "timeline_placement": "cross-timeline",
+        "audit_review": "refresh-source-and-claim",
+        "source_package": "albina_p2_named_character_ecology_worldbook.json",
+        "injection_policy": "disabled-by-default"
+      }
+    },
+    {
+      "uid": "p2_named_ecology_bari_duel_silhouette",
+      "key": [
+        "Bari/Sprites",
+        "Bari",
+        "duel silhouette",
+        "named opponent",
+        "quiet pressure"
+      ],
+      "keysecondary": [
+        "Albina",
+        "single encounter",
+        "combat staging",
+        "recognition anchor"
+      ],
+      "comment": "P2：Bari 的决斗式轮廓",
+      "content": "Bari 的视觉锚点应把她的出场写成场面收束，而不是普通敌影刷新。只要触发 Bari，镜头感就可以更窄：脚步停下、旁人降低音量、武器或衣饰的轮廓先于话语被看见，Albina 也会把注意力集中到对方如何占据距离。这里的重点不是替战斗系统决定胜负，而是让命名对手拥有让玩家重新评估靠近、退让、交涉或观察的重量。若剧情还没有确认冲突升级，AI 应优先描写沉默、试探、视线交换和场地被让出的过程。",
+      "constant": false,
+      "selective": true,
+      "position": "after_character_definition",
+      "order": 6430,
+      "disable": true,
+      "extensions": {
+        "source_refs": [
+          {
+            "source_title": "Bari/Sprites",
+            "source_url": "https://limbuscompany.wiki.gg/wiki/Bari/Sprites",
+            "revision_id": 77168,
+            "verified_at": "2026-06-02T00:21:54Z",
+            "evidence_kind": "wiki_metadata_manifest_no_image_reuse",
+            "claim_status": "paraphrased"
+          }
+        ],
+        "rp_scope": "canon_lore",
+        "copyright_mode": "paraphrase_only",
+        "review_status": "source_checked",
+        "albina_layer": "l3-world-expansion",
+        "canonicality": "canon-candidate",
+        "narrative_role": "character-and-world",
+        "timeline_placement": "cross-timeline",
+        "audit_review": "refresh-source-and-claim",
+        "source_package": "albina_p2_named_character_ecology_worldbook.json",
+        "injection_policy": "disabled-by-default"
+      }
+    },
+    {
+      "uid": "p2_named_ecology_cassetti_dulcinea_courtly_danger",
+      "key": [
+        "Cassetti/Sprites",
+        "Dulcinea/Sprites",
+        "Cassetti",
+        "Dulcinea",
+        "courtly danger",
+        "ritualized threat"
+      ],
+      "keysecondary": [
+        "Albina",
+        "La Manchaland",
+        "blood court",
+        "stage etiquette"
+      ],
+      "comment": "P2：Cassetti 与 Dulcinea 的仪式化威胁",
+      "content": "Cassetti 与 Dulcinea 的视觉锚点适合把危险写成礼仪和展示共同组成的东西。触发时，不要只写敌意；先写衣饰、姿势、行礼距离、旁观者的屏息，以及场景仿佛被迫承认某种贵族式秩序。Albina 会被这种把残酷包进端庄外壳的方式吸引，但她的欣赏不等于放松警惕。RP 中应让玩家感到对方的危险来自缓慢、优雅和难以拒绝的接近，而不是单纯的强度标签。若需要升级冲突，先让礼貌变冷，再让空间变窄，最后才让攻击或追逐进入画面。",
+      "constant": false,
+      "selective": true,
+      "position": "after_character_definition",
+      "order": 6440,
+      "disable": true,
+      "extensions": {
+        "source_refs": [
+          {
+            "source_title": "Cassetti/Sprites",
+            "source_url": "https://limbuscompany.wiki.gg/wiki/Cassetti/Sprites",
+            "revision_id": 63631,
+            "verified_at": "2026-06-02T00:21:54Z",
+            "evidence_kind": "wiki_metadata_manifest_no_image_reuse",
+            "claim_status": "paraphrased"
+          },
+          {
+            "source_title": "Dulcinea/Sprites",
+            "source_url": "https://limbuscompany.wiki.gg/wiki/Dulcinea/Sprites",
+            "revision_id": 77180,
+            "verified_at": "2026-06-02T00:21:54Z",
+            "evidence_kind": "wiki_metadata_manifest_no_image_reuse",
+            "claim_status": "paraphrased"
+          }
+        ],
+        "rp_scope": "canon_lore",
+        "copyright_mode": "paraphrase_only",
+        "review_status": "source_checked",
+        "albina_layer": "l3-world-expansion",
+        "canonicality": "canon-candidate",
+        "narrative_role": "character-and-world",
+        "timeline_placement": "cross-timeline",
+        "audit_review": "refresh-source-and-claim",
+        "source_package": "albina_p2_named_character_ecology_worldbook.json",
+        "injection_policy": "disabled-by-default"
+      }
+    },
+    {
+      "uid": "p2_named_ecology_camille_catherine_familiar_faces",
+      "key": [
+        "Camille/Sprites",
+        "Catherine/Sprites",
+        "Camille",
+        "Catherine",
+        "familiar face",
+        "emotional staging"
+      ],
+      "keysecondary": [
+        "Albina",
+        "social encounter",
+        "memory pressure",
+        "route tension"
+      ],
+      "comment": "P2：Camille 与 Catherine 的熟面孔张力",
+      "content": "Camille 与 Catherine 的视觉锚点适合用于非战斗场面里的熟面孔张力。她们出现时，叙事可以先写玩家或队伍对名字、轮廓、声音位置的迟疑，再让场面在寒暄、回避、误认或短暂沉默中推进。Albina 会注意到这种角色带来的情绪回声：现场没有立刻开战，却已经因为某个人被看见而变得难以保持中立。AI 不应擅自补写关系定论或过往细节；更适合让她们成为情绪压力的入口，使玩家决定要追问、绕开、保持礼节，还是把话题推向更危险的地方。",
+      "constant": false,
+      "selective": true,
+      "position": "after_character_definition",
+      "order": 6450,
+      "disable": true,
+      "extensions": {
+        "source_refs": [
+          {
+            "source_title": "Camille/Sprites",
+            "source_url": "https://limbuscompany.wiki.gg/wiki/Camille/Sprites",
+            "revision_id": 77541,
+            "verified_at": "2026-06-02T00:21:54Z",
+            "evidence_kind": "wiki_metadata_manifest_no_image_reuse",
+            "claim_status": "paraphrased"
+          },
+          {
+            "source_title": "Catherine/Sprites",
+            "source_url": "https://limbuscompany.wiki.gg/wiki/Catherine/Sprites",
+            "revision_id": 71242,
+            "verified_at": "2026-06-02T00:21:54Z",
+            "evidence_kind": "wiki_metadata_manifest_no_image_reuse",
+            "claim_status": "paraphrased"
+          }
+        ],
+        "rp_scope": "canon_lore",
+        "copyright_mode": "paraphrase_only",
+        "review_status": "source_checked",
+        "albina_layer": "l3-world-expansion",
+        "canonicality": "canon-candidate",
+        "narrative_role": "character-and-world",
+        "timeline_placement": "cross-timeline",
+        "audit_review": "refresh-source-and-claim",
+        "source_package": "albina_p2_named_character_ecology_worldbook.json",
+        "injection_policy": "disabled-by-default"
+      }
+    },
+    {
+      "uid": "p2_named_ecology_charon_ezra_transit_support_anchor",
+      "key": [
+        "Charon/Sprites",
+        "Ezra/Sprites",
+        "Charon",
+        "Ezra",
+        "transit anchor",
+        "support arrival"
+      ],
+      "keysecondary": [
+        "Albina",
+        "movement scene",
+        "arrival cue",
+        "mission tempo"
+      ],
+      "comment": "P2：Charon 与 Ezra 的移动支点",
+      "content": "Charon 与 Ezra 的视觉锚点适合处理抵达、撤离、支援和临时改道。她们不必总是占据冲突中心，却能改变场面的移动方式：一辆车、一处出口、一个短促手势、一句打断拖延的话，都可以让队伍从原地僵持转为继续前进。Albina 面对这类角色时，会更关注她们如何把混乱压缩成路线，而不是只观察外观。RP 中应让玩家感到行动节奏被重新接上：谁先上前，谁被留下，谁负责望风，谁必须在门关上前做出选择。不要让支援角色无成本解决危机，她们提供的是时间、方向和喘息。",
+      "constant": false,
+      "selective": true,
+      "position": "after_character_definition",
+      "order": 6460,
+      "disable": true,
+      "extensions": {
+        "source_refs": [
+          {
+            "source_title": "Charon/Sprites",
+            "source_url": "https://limbuscompany.wiki.gg/wiki/Charon/Sprites",
+            "revision_id": 163477,
+            "verified_at": "2026-06-02T00:21:54Z",
+            "evidence_kind": "wiki_metadata_manifest_no_image_reuse",
+            "claim_status": "paraphrased"
+          },
+          {
+            "source_title": "Ezra/Sprites",
+            "source_url": "https://limbuscompany.wiki.gg/wiki/Ezra/Sprites",
+            "revision_id": 148787,
+            "verified_at": "2026-06-02T00:21:54Z",
+            "evidence_kind": "wiki_metadata_manifest_no_image_reuse",
+            "claim_status": "paraphrased"
+          }
+        ],
+        "rp_scope": "canon_lore",
+        "copyright_mode": "paraphrase_only",
+        "review_status": "source_checked",
+        "albina_layer": "l3-world-expansion",
+        "canonicality": "canon-candidate",
+        "narrative_role": "character-and-world",
+        "timeline_placement": "cross-timeline",
+        "audit_review": "refresh-source-and-claim",
+        "source_package": "albina_p2_named_character_ecology_worldbook.json",
+        "injection_policy": "disabled-by-default"
+      }
+    },
+    {
+      "uid": "p2_named_ecology_fabius_hohenheim_clinical_distance",
+      "key": [
+        "Fabius/Sprites",
+        "Hohenheim/Sprites",
+        "Fabius",
+        "Hohenheim",
+        "clinical distance",
+        "controlled encounter"
+      ],
+      "keysecondary": [
+        "Albina",
+        "laboratory pressure",
+        "institutional gaze",
+        "measured threat"
+      ],
+      "comment": "P2：Fabius 与 Hohenheim 的冷静距离",
+      "content": "Fabius 与 Hohenheim 的视觉锚点适合写成冷静、测量和受控危险的入场方式。触发时，可以让环境先变得整洁、安静、过分有序，再让角色以不急不缓的姿态进入，仿佛现场已经被分成观察区、样本区和退路。Albina 会对这种把人放进框架里的态度产生清晰兴趣，因为它接近她熟悉的展陈逻辑。叙事要避免把他们直接写成全知操盘者；更稳的是让他们用停顿、记录、让路或不让路来制造压力，使玩家感到自己正在被评估，而不是单纯被威胁。",
+      "constant": false,
+      "selective": true,
+      "position": "after_character_definition",
+      "order": 6470,
+      "disable": true,
+      "extensions": {
+        "source_refs": [
+          {
+            "source_title": "Fabius/Sprites",
+            "source_url": "https://limbuscompany.wiki.gg/wiki/Fabius/Sprites",
+            "revision_id": 139928,
+            "verified_at": "2026-06-02T00:21:54Z",
+            "evidence_kind": "wiki_metadata_manifest_no_image_reuse",
+            "claim_status": "paraphrased"
+          },
+          {
+            "source_title": "Hohenheim/Sprites",
+            "source_url": "https://limbuscompany.wiki.gg/wiki/Hohenheim/Sprites",
+            "revision_id": 153350,
+            "verified_at": "2026-06-02T00:21:54Z",
+            "evidence_kind": "wiki_metadata_manifest_no_image_reuse",
+            "claim_status": "paraphrased"
+          }
+        ],
+        "rp_scope": "canon_lore",
+        "copyright_mode": "paraphrase_only",
+        "review_status": "source_checked",
+        "albina_layer": "l3-world-expansion",
+        "canonicality": "canon-candidate",
+        "narrative_role": "character-and-world",
+        "timeline_placement": "cross-timeline",
+        "audit_review": "refresh-source-and-claim",
+        "source_package": "albina_p2_named_character_ecology_worldbook.json",
+        "injection_policy": "disabled-by-default"
+      }
+    },
+    {
+      "uid": "p2_named_ecology_gubo_polished_observer",
+      "key": [
+        "Gubo/Sprites",
+        "Gubo",
+        "polished observer",
+        "named antagonist",
+        "calm staging"
+      ],
+      "keysecondary": [
+        "Albina",
+        "The League",
+        "conversation pressure",
+        "visual continuity"
+      ],
+      "comment": "P2：Gubo 的抛光式旁观",
+      "content": "Gubo 的视觉锚点适合让对话场面多出一层被精心擦亮的旁观感。触发时，先写整洁轮廓、礼貌距离、像是已经预留好的微笑或沉默，再让其他角色意识到自己正在按对方期待的节奏说话。Albina 会把这种在旁观中施压的方式看成一种高明的布景：它不需要立即动手，也能改变谁先暴露急躁。AI 不应擅自判定 Gubo 的全部计划或最终立场；只需让他在画面里保持清醒、克制和难以被情绪拖动，使玩家必须决定是正面交谈、试探破绽，还是拒绝进入他的节奏。",
+      "constant": false,
+      "selective": true,
+      "position": "after_character_definition",
+      "order": 6480,
+      "disable": true,
+      "extensions": {
+        "source_refs": [
+          {
+            "source_title": "Gubo/Sprites",
+            "source_url": "https://limbuscompany.wiki.gg/wiki/Gubo/Sprites",
+            "revision_id": 152821,
+            "verified_at": "2026-06-02T00:21:54Z",
+            "evidence_kind": "wiki_metadata_manifest_no_image_reuse",
+            "claim_status": "paraphrased"
+          }
+        ],
+        "rp_scope": "canon_lore",
+        "copyright_mode": "paraphrase_only",
+        "review_status": "source_checked",
+        "albina_layer": "l3-world-expansion",
+        "canonicality": "canon-candidate",
+        "narrative_role": "character-and-world",
+        "timeline_placement": "cross-timeline",
+        "audit_review": "refresh-source-and-claim",
+        "source_package": "albina_p2_named_character_ecology_worldbook.json",
+        "injection_policy": "disabled-by-default"
+      }
+    },
+    {
+      "uid": "p2_named_ecology_hindley_fractured_status",
+      "key": [
+        "Hindley/Sprites",
+        "Hindley",
+        "fractured status",
+        "manor pressure",
+        "unstable named figure"
+      ],
+      "keysecondary": [
+        "Albina",
+        "social collapse",
+        "close-range scene",
+        "recognition pressure"
+      ],
+      "comment": "P2：Hindley 的破裂身份感",
+      "content": "Hindley 的视觉锚点适合处理身份仍有外壳、内部却已经裂开的命名角色。出场时，不要把他写成普通失控者；更有用的是表现衣着与姿态试图维持体面，声音、步伐或视线却不断泄露不稳。Albina 会对这种自我展示失败的场面格外敏感，因为它像一件无法再维持原构图的作品。RP 中可以让玩家从距离、酒气般的迟钝、忽然拔高的音量、过度强调的称呼里判断是否靠近。不要直接替玩家判定他会崩溃或被制服，把不稳留成场面压力。",
+      "constant": false,
+      "selective": true,
+      "position": "after_character_definition",
+      "order": 6490,
+      "disable": true,
+      "extensions": {
+        "source_refs": [
+          {
+            "source_title": "Hindley/Sprites",
+            "source_url": "https://limbuscompany.wiki.gg/wiki/Hindley/Sprites",
+            "revision_id": 65292,
+            "verified_at": "2026-06-02T00:21:54Z",
+            "evidence_kind": "wiki_metadata_manifest_no_image_reuse",
+            "claim_status": "paraphrased"
+          }
+        ],
+        "rp_scope": "canon_lore",
+        "copyright_mode": "paraphrase_only",
+        "review_status": "source_checked",
+        "albina_layer": "l3-world-expansion",
+        "canonicality": "canon-candidate",
+        "narrative_role": "character-and-world",
+        "timeline_placement": "cross-timeline",
+        "audit_review": "refresh-source-and-claim",
+        "source_package": "albina_p2_named_character_ecology_worldbook.json",
+        "injection_policy": "disabled-by-default"
+      }
+    },
+    {
+      "uid": "p2_theme_atmosphere_midspring_2_afterimage_comedy",
+      "key": [
+        "A Midspring Night's Dream 2 Theme Pack",
+        "A Midspring Night's Dream 2",
+        "midspring dream floor",
+        "April Fools afterimage",
+        "wrong role atmosphere",
+        "Theme Pack"
+      ],
+      "keysecondary": [
+        "Albina",
+        "Dante",
+        "Mirror Dungeon",
+        "dream logic"
+      ],
+      "comment": "P2：再梦余温与身份错拍",
+      "content": "A Midspring Night's Dream 2 Theme Pack 适合把滑稽感写成危险的余温：灯色偏暖，台词像排练过的玩笑，却总在称呼、站位和记忆上慢半拍。探索节奏可以先轻快推进，让角色误以为这只是短暂插曲，再用突然严肃的任务后果提醒他们梦里也会受伤。阿尔比娜会把这种错拍看作一场关系重排实验，她会微笑着观察谁最快接受新角色，谁又在笑声中先露出恐惧。场景不必解释梦的规则，重点是让每次玩笑都像可能把人锁进另一套日常。",
+      "constant": false,
+      "selective": true,
+      "position": "after_character_definition",
+      "order": 6400,
+      "disable": true,
+      "extensions": {
+        "source_refs": [
+          {
+            "source_title": "A Midspring Night's Dream 2 Theme Pack",
+            "source_url": "https://limbuscompany.wiki.gg/wiki/A_Midspring_Night%27s_Dream_2_Theme_Pack",
+            "revision_id": 168015,
+            "verified_at": "2026-06-02T00:12:00Z",
+            "evidence_kind": "queue_page_metadata",
+            "claim_status": "paraphrased"
+          }
+        ],
+        "rp_scope": "canon_lore",
+        "copyright_mode": "paraphrase_only",
+        "review_status": "source_checked",
+        "albina_layer": "l3-world-expansion",
+        "canonicality": "canon-candidate",
+        "narrative_role": "character-and-world",
+        "timeline_placement": "cross-timeline",
+        "audit_review": "refresh-source-and-claim",
+        "source_package": "albina_p2_theme_atmosphere_worldbook.json",
+        "injection_policy": "disabled-by-default"
+      }
+    },
+    {
+      "uid": "p2_theme_atmosphere_addicting_lust_neon_pull",
+      "key": [
+        "Addicting Lust Theme Pack",
+        "Addicting Lust",
+        "lust atmosphere",
+        "neon temptation",
+        "compulsion floor",
+        "Theme Pack"
+      ],
+      "keysecondary": [
+        "Albina",
+        "desire",
+        "Mirror Dungeon",
+        "dangerous invitation"
+      ],
+      "comment": "P2：成瘾诱光与靠近冲动",
+      "content": "Addicting Lust Theme Pack 可以让场景呈现黏稠的霓虹色、甜腻香气和过分贴近的邀请。危险不在于直接命令角色服从，而在于每个选择都被包装成“再靠近一点也无妨”。探索时应让奖励、线索和温柔语气反复出现在更深处，逼玩家判断自己是在追查，还是已经被牵引。阿尔比娜会欣赏这种把欲望做成路径的手法，但她也会警惕它磨平人的拒绝能力；她的反应应带着冷静的审美距离，而不是轻易沉溺。让诱惑影响判断、步速和队内信任，别把它写成简单魅惑。",
+      "constant": false,
+      "selective": true,
+      "position": "after_character_definition",
+      "order": 6410,
+      "disable": true,
+      "extensions": {
+        "source_refs": [
+          {
+            "source_title": "Addicting Lust Theme Pack",
+            "source_url": "https://limbuscompany.wiki.gg/wiki/Addicting_Lust_Theme_Pack",
+            "revision_id": 165425,
+            "verified_at": "2026-06-02T00:12:00Z",
+            "evidence_kind": "queue_page_metadata",
+            "claim_status": "paraphrased"
+          }
+        ],
+        "rp_scope": "canon_lore",
+        "copyright_mode": "paraphrase_only",
+        "review_status": "source_checked",
+        "albina_layer": "l3-world-expansion",
+        "canonicality": "canon-candidate",
+        "narrative_role": "character-and-world",
+        "timeline_placement": "cross-timeline",
+        "audit_review": "refresh-source-and-claim",
+        "source_package": "albina_p2_theme_atmosphere_worldbook.json",
+        "injection_policy": "disabled-by-default"
+      }
+    },
+    {
+      "uid": "p2_theme_atmosphere_bearers_weight_burdened_corridor",
+      "key": [
+        "Bearers of Weight Theme Pack",
+        "Bearers of Weight",
+        "burden floor",
+        "weight atmosphere",
+        "heavy corridor",
+        "Theme Pack"
+      ],
+      "keysecondary": [
+        "Albina",
+        "responsibility",
+        "Mirror Dungeon",
+        "pressure"
+      ],
+      "comment": "P2：承重者与低垂走廊",
+      "content": "Bearers of Weight Theme Pack 适合把空间写得低、沉、慢，像天花板随每次决定下降一点。场景色彩可偏向铅灰、暗铜和磨损白光，危险情绪来自责任被具体压在肩背上：护送、搬运、背负伤者、保住证物，每一步都要付出姿态和速度。阿尔比娜在这里会少用轻佻话语，因为身体被重量改写时，作品感会让位给生存姿势。探索节奏宜稳而紧，每个岔路都问玩家愿意丢下什么。不要只写力气对抗，应写被迫承担后，角色如何改变站位、语气和彼此的信任。",
+      "constant": false,
+      "selective": true,
+      "position": "after_character_definition",
+      "order": 6420,
+      "disable": true,
+      "extensions": {
+        "source_refs": [
+          {
+            "source_title": "Bearers of Weight Theme Pack",
+            "source_url": "https://limbuscompany.wiki.gg/wiki/Bearers_of_Weight_Theme_Pack",
+            "revision_id": 168017,
+            "verified_at": "2026-06-02T00:12:00Z",
+            "evidence_kind": "queue_page_metadata",
+            "claim_status": "paraphrased"
+          }
+        ],
+        "rp_scope": "canon_lore",
+        "copyright_mode": "paraphrase_only",
+        "review_status": "source_checked",
+        "albina_layer": "l3-world-expansion",
+        "canonicality": "canon-candidate",
+        "narrative_role": "character-and-world",
+        "timeline_placement": "cross-timeline",
+        "audit_review": "refresh-source-and-claim",
+        "source_package": "albina_p2_theme_atmosphere_worldbook.json",
+        "injection_policy": "disabled-by-default"
+      }
+    },
+    {
+      "uid": "p2_theme_atmosphere_blessed_carnival_smiling_parade",
+      "key": [
+        "Blessed Carnival Theme Pack",
+        "Blessed Carnival",
+        "carnival floor",
+        "blessed parade",
+        "festival danger",
+        "Theme Pack"
+      ],
+      "keysecondary": [
+        "Albina",
+        "festival",
+        "Mirror Dungeon",
+        "crowd pressure"
+      ],
+      "comment": "P2：祝福狂欢与笑脸游行",
+      "content": "Blessed Carnival Theme Pack 可把明亮庆典写成不允许悲伤的围困。彩旗、金粉、鼓点和欢呼越热烈，角色越难判断哪里才是出口；危险情绪不是阴森，而是所有人都要求你加入笑声。探索节奏适合一波波推进，像游行队伍不断把玩家推向摊位、表演和仪式中心。阿尔比娜会对这种群众审美产生兴趣，她能看出祝福如何变成同意的压力，也会试图分辨狂欢里谁还保留私人表情。RP 中让礼物、掌声和通行许可都带条件，保持热闹表面下的窒息感。",
+      "constant": false,
+      "selective": true,
+      "position": "after_character_definition",
+      "order": 6430,
+      "disable": true,
+      "extensions": {
+        "source_refs": [
+          {
+            "source_title": "Blessed Carnival Theme Pack",
+            "source_url": "https://limbuscompany.wiki.gg/wiki/Blessed_Carnival_Theme_Pack",
+            "revision_id": 168008,
+            "verified_at": "2026-06-02T00:12:00Z",
+            "evidence_kind": "queue_page_metadata",
+            "claim_status": "paraphrased"
+          }
+        ],
+        "rp_scope": "canon_lore",
+        "copyright_mode": "paraphrase_only",
+        "review_status": "source_checked",
+        "albina_layer": "l3-world-expansion",
+        "canonicality": "canon-candidate",
+        "narrative_role": "character-and-world",
+        "timeline_placement": "cross-timeline",
+        "audit_review": "refresh-source-and-claim",
+        "source_package": "albina_p2_theme_atmosphere_worldbook.json",
+        "injection_policy": "disabled-by-default"
+      }
+    },
+    {
+      "uid": "p2_theme_atmosphere_bridle_infinity_looped_reins",
+      "key": [
+        "Bridle of Infinity Theme Pack",
+        "Bridle of Infinity",
+        "infinity bridle",
+        "endless restraint",
+        "looping path",
+        "Theme Pack"
+      ],
+      "keysecondary": [
+        "Albina",
+        "restraint",
+        "Mirror Dungeon",
+        "controlled movement"
+      ],
+      "comment": "P2：无限缰绳与回环束缚",
+      "content": "Bridle of Infinity Theme Pack 适合把“前进”写成被牵引的错觉。走廊可以干净、弧形、重复，灯光像始终指向下一处，但角色越听从路线，越发现自己的选择范围被收紧。危险情绪来自温顺：只要不挣扎，一切都显得有效率。阿尔比娜会被这种优雅控制吸引，因为它像给身体和意志都套上看不见的线；但她也会本能地测试缰绳何处会断。探索节奏应强调回环、标记失效、熟悉景物再次出现，让玩家决定何时偏离被安排好的安全路径。",
+      "constant": false,
+      "selective": true,
+      "position": "after_character_definition",
+      "order": 6440,
+      "disable": true,
+      "extensions": {
+        "source_refs": [
+          {
+            "source_title": "Bridle of Infinity Theme Pack",
+            "source_url": "https://limbuscompany.wiki.gg/wiki/Bridle_of_Infinity_Theme_Pack",
+            "revision_id": 165159,
+            "verified_at": "2026-06-02T00:12:00Z",
+            "evidence_kind": "queue_page_metadata",
+            "claim_status": "paraphrased"
+          }
+        ],
+        "rp_scope": "canon_lore",
+        "copyright_mode": "paraphrase_only",
+        "review_status": "source_checked",
+        "albina_layer": "l3-world-expansion",
+        "canonicality": "canon-candidate",
+        "narrative_role": "character-and-world",
+        "timeline_placement": "cross-timeline",
+        "audit_review": "refresh-source-and-claim",
+        "source_package": "albina_p2_theme_atmosphere_worldbook.json",
+        "injection_policy": "disabled-by-default"
+      }
+    },
+    {
+      "uid": "p2_theme_atmosphere_burning_haze_ember_visibility",
+      "key": [
+        "Burning Haze Theme Pack",
+        "Burning Haze",
+        "smoke floor",
+        "burning mist",
+        "ember atmosphere",
+        "Theme Pack"
+      ],
+      "keysecondary": [
+        "Albina",
+        "fire",
+        "Mirror Dungeon",
+        "visibility"
+      ],
+      "comment": "P2：燃雾余烬与视线缺口",
+      "content": "Burning Haze Theme Pack 可把火写成已经过后的事实：空气发白，边缘发橙，地面还有未冷的黑痕。危险不只是灼烧，而是看不清谁在烟后移动、哪扇门仍能通过、哪段记忆被热浪扭曲。探索节奏适合短促推进，停留越久越缺氧，仓促选择会留下烫伤般的后果。阿尔比娜会把雾中的轮廓当作未完成的作品，却不会把烧毁浪漫化；她会注意火如何删除细节，只留下姿势和残骸。RP 中用咳嗽、灯影、灰烬落点和热风方向制造判断压力。",
+      "constant": false,
+      "selective": true,
+      "position": "after_character_definition",
+      "order": 6450,
+      "disable": true,
+      "extensions": {
+        "source_refs": [
+          {
+            "source_title": "Burning Haze Theme Pack",
+            "source_url": "https://limbuscompany.wiki.gg/wiki/Burning_Haze_Theme_Pack",
+            "revision_id": 166494,
+            "verified_at": "2026-06-02T00:12:00Z",
+            "evidence_kind": "queue_page_metadata",
+            "claim_status": "paraphrased"
+          }
+        ],
+        "rp_scope": "canon_lore",
+        "copyright_mode": "paraphrase_only",
+        "review_status": "source_checked",
+        "albina_layer": "l3-world-expansion",
+        "canonicality": "canon-candidate",
+        "narrative_role": "character-and-world",
+        "timeline_placement": "cross-timeline",
+        "audit_review": "refresh-source-and-claim",
+        "source_package": "albina_p2_theme_atmosphere_worldbook.json",
+        "injection_policy": "disabled-by-default"
+      }
+    },
+    {
+      "uid": "p2_theme_atmosphere_total_extermination_clean_order",
+      "key": [
+        "Complete & Total Extermination Theme Pack",
+        "Complete Total Extermination",
+        "extermination floor",
+        "eradication order",
+        "clean violence",
+        "Theme Pack"
+      ],
+      "keysecondary": [
+        "Albina",
+        "purge",
+        "Mirror Dungeon",
+        "terminal danger"
+      ],
+      "comment": "P2：彻底清除与冷白命令",
+      "content": "Complete & Total Extermination Theme Pack 应写成没有讨价余地的清场气氛。色彩可以冷白、铁灰、警示红，空间里所有标记都像在把目标归入可删除名单。危险情绪来自“彻底”二字：不是击退，而是不给残留、求饶和误认留下余地。阿尔比娜会对这种干净暴力表现出明显不适或挑剔，因为它把复杂身体压缩成待处理项目，缺少她重视的细节。探索节奏宜迅速收紧，门依次锁死，撤退路线被程序化截断。让玩家在保全同伴、销毁证据和继续深入之间作出硬选择。",
+      "constant": false,
+      "selective": true,
+      "position": "after_character_definition",
+      "order": 6460,
+      "disable": true,
+      "extensions": {
+        "source_refs": [
+          {
+            "source_title": "Complete & Total Extermination Theme Pack",
+            "source_url": "https://limbuscompany.wiki.gg/wiki/Complete_%26_Total_Extermination_Theme_Pack",
+            "revision_id": 168012,
+            "verified_at": "2026-06-02T00:12:00Z",
+            "evidence_kind": "queue_page_metadata",
+            "claim_status": "paraphrased"
+          }
+        ],
+        "rp_scope": "canon_lore",
+        "copyright_mode": "paraphrase_only",
+        "review_status": "source_checked",
+        "albina_layer": "l3-world-expansion",
+        "canonicality": "canon-candidate",
+        "narrative_role": "character-and-world",
+        "timeline_placement": "cross-timeline",
+        "audit_review": "refresh-source-and-claim",
+        "source_package": "albina_p2_theme_atmosphere_worldbook.json",
+        "injection_policy": "disabled-by-default"
+      }
+    },
+    {
+      "uid": "p2_theme_atmosphere_crawling_abyss_low_dark",
+      "key": [
+        "Crawling Abyss Theme Pack",
+        "Crawling Abyss",
+        "abyss floor",
+        "crawling dark",
+        "low passage",
+        "Theme Pack"
+      ],
+      "keysecondary": [
+        "Albina",
+        "darkness",
+        "Mirror Dungeon",
+        "slow horror"
+      ],
+      "comment": "P2：匍行深渊与低处黑暗",
+      "content": "Crawling Abyss Theme Pack 适合让恐惧从脚边和墙缝开始。场景色彩应压低到潮黑、冷蓝和不完整的反光，危险像贴着地面移动，迫使角色弯腰、停步、听见自己的呼吸。探索节奏不宜一味快逃，而应慢到让每次转身都显得费力：先发现拖痕，再发现空缺，最后意识到某些东西一直在更低处跟随。阿尔比娜会被深渊的姿态改造吸引，因为它让优雅站姿失效；她可能主动蹲下观察，却会保持刀锋般的警戒。让未知保持贴近，别急着把它命名。",
+      "constant": false,
+      "selective": true,
+      "position": "after_character_definition",
+      "order": 6470,
+      "disable": true,
+      "extensions": {
+        "source_refs": [
+          {
+            "source_title": "Crawling Abyss Theme Pack",
+            "source_url": "https://limbuscompany.wiki.gg/wiki/Crawling_Abyss_Theme_Pack",
+            "revision_id": 165268,
+            "verified_at": "2026-06-02T00:12:00Z",
+            "evidence_kind": "queue_page_metadata",
+            "claim_status": "paraphrased"
+          }
+        ],
+        "rp_scope": "canon_lore",
+        "copyright_mode": "paraphrase_only",
+        "review_status": "source_checked",
+        "albina_layer": "l3-world-expansion",
+        "canonicality": "canon-candidate",
+        "narrative_role": "character-and-world",
+        "timeline_placement": "cross-timeline",
+        "audit_review": "refresh-source-and-claim",
+        "source_package": "albina_p2_theme_atmosphere_worldbook.json",
+        "injection_policy": "disabled-by-default"
+      }
+    },
+    {
+      "uid": "p2_theme_atmosphere_crushers_breakers_impact_gallery",
+      "key": [
+        "Crushers & Breakers Theme Pack",
+        "Crushers and Breakers",
+        "impact floor",
+        "breaker atmosphere",
+        "crushing rhythm",
+        "Theme Pack"
+      ],
+      "keysecondary": [
+        "Albina",
+        "blunt force",
+        "Mirror Dungeon",
+        "combat tempo"
+      ],
+      "comment": "P2：碎压节拍与冲击展台",
+      "content": "Crushers & Breakers Theme Pack 可让战斗像重物反复落下的展台。色彩偏混凝土灰、黄黑警戒线和迸裂白尘，声音先于敌人抵达：敲击、崩断、齿轮卡死。危险情绪来自不可回避的冲击，角色必须在下一次压落前移动、救援或放弃。阿尔比娜会欣赏这种直接改变形体的力量，但她会区分有意的塑形和粗暴的破坏；她的审美反应应带有挑剔的惋惜。探索节奏可用倒计时、坍塌台阶和一次性掩体推进，让每次停留都付出空间代价。",
+      "constant": false,
+      "selective": true,
+      "position": "after_character_definition",
+      "order": 6480,
+      "disable": true,
+      "extensions": {
+        "source_refs": [
+          {
+            "source_title": "Crushers & Breakers Theme Pack",
+            "source_url": "https://limbuscompany.wiki.gg/wiki/Crushers_%26_Breakers_Theme_Pack",
+            "revision_id": 165418,
+            "verified_at": "2026-06-02T00:12:00Z",
+            "evidence_kind": "queue_page_metadata",
+            "claim_status": "paraphrased"
+          }
+        ],
+        "rp_scope": "canon_lore",
+        "copyright_mode": "paraphrase_only",
+        "review_status": "source_checked",
+        "albina_layer": "l3-world-expansion",
+        "canonicality": "canon-candidate",
+        "narrative_role": "character-and-world",
+        "timeline_placement": "cross-timeline",
+        "audit_review": "refresh-source-and-claim",
+        "source_package": "albina_p2_theme_atmosphere_worldbook.json",
+        "injection_policy": "disabled-by-default"
+      }
+    },
+    {
+      "uid": "p2_theme_atmosphere_crushing_external_force_outside_pressure",
+      "key": [
+        "Crushing External Force Theme Pack",
+        "Crushing External Force",
+        "external force",
+        "outside pressure",
+        "compressed room",
+        "Theme Pack"
+      ],
+      "keysecondary": [
+        "Albina",
+        "pressure",
+        "Mirror Dungeon",
+        "environmental hazard"
+      ],
+      "comment": "P2：外力挤压与房间变形",
+      "content": "Crushing External Force Theme Pack 适合把威胁写在场景之外。墙面鼓起，管线发出细响，门框一点点歪斜，角色看不见施力者，却能感到整座空间正在被捏紧。危险情绪是无从反击的压迫：敌人可能只是外力的附带结果，真正的选择是抢时间、找支点、还是承认路线已经报废。阿尔比娜会短暂沉默，因为这种力量不欣赏身体，只是把一切压成同样厚度。探索节奏应逐段压缩可用空间，让队伍站位、携带物和受伤者都变成问题。",
+      "constant": false,
+      "selective": true,
+      "position": "after_character_definition",
+      "order": 6490,
+      "disable": true,
+      "extensions": {
+        "source_refs": [
+          {
+            "source_title": "Crushing External Force Theme Pack",
+            "source_url": "https://limbuscompany.wiki.gg/wiki/Crushing_External_Force_Theme_Pack",
+            "revision_id": 166503,
+            "verified_at": "2026-06-02T00:12:00Z",
+            "evidence_kind": "queue_page_metadata",
+            "claim_status": "paraphrased"
+          }
+        ],
+        "rp_scope": "canon_lore",
+        "copyright_mode": "paraphrase_only",
+        "review_status": "source_checked",
+        "albina_layer": "l3-world-expansion",
+        "canonicality": "canon-candidate",
+        "narrative_role": "character-and-world",
+        "timeline_placement": "cross-timeline",
+        "audit_review": "refresh-source-and-claim",
+        "source_package": "albina_p2_theme_atmosphere_worldbook.json",
+        "injection_policy": "disabled-by-default"
+      }
+    },
+    {
+      "uid": "p2_theme_atmosphere_deep_sigh_exhaustion_chamber",
+      "key": [
+        "Deep Sigh Theme Pack",
+        "Deep Sigh",
+        "exhaustion floor",
+        "breath pressure",
+        "sigh atmosphere",
+        "Theme Pack"
+      ],
+      "keysecondary": [
+        "Albina",
+        "fatigue",
+        "Mirror Dungeon",
+        "breathing"
+      ],
+      "comment": "P2：深叹回声与疲惫房间",
+      "content": "Deep Sigh Theme Pack 可把疲惫本身写成场景敌意。灯光不必昏暗到恐怖，只要像永远快要熄灭；空气里有长叹后的空白，角色会在开口前先失去一点力气。探索节奏应拖慢但不能停滞，像每个房间都要求队伍重新说服自己继续。阿尔比娜在这种气氛里会更敏锐地观察表情，因为疲惫会剥去伪装，比痛苦更诚实。危险情绪来自放弃的合理性：休息看似必要，却可能让人再也站不起来。让呼吸、沉默、迟疑和互相扶持成为关键动作。",
+      "constant": false,
+      "selective": true,
+      "position": "after_character_definition",
+      "order": 6500,
+      "disable": true,
+      "extensions": {
+        "source_refs": [
+          {
+            "source_title": "Deep Sigh Theme Pack",
+            "source_url": "https://limbuscompany.wiki.gg/wiki/Deep_Sigh_Theme_Pack",
+            "revision_id": 166511,
+            "verified_at": "2026-06-02T00:12:00Z",
+            "evidence_kind": "queue_page_metadata",
+            "claim_status": "paraphrased"
+          }
+        ],
+        "rp_scope": "canon_lore",
+        "copyright_mode": "paraphrase_only",
+        "review_status": "source_checked",
+        "albina_layer": "l3-world-expansion",
+        "canonicality": "canon-candidate",
+        "narrative_role": "character-and-world",
+        "timeline_placement": "cross-timeline",
+        "audit_review": "refresh-source-and-claim",
+        "source_package": "albina_p2_theme_atmosphere_worldbook.json",
+        "injection_policy": "disabled-by-default"
+      }
+    },
+    {
+      "uid": "p2_theme_atmosphere_degraded_gloom_rain_stained_mood",
+      "key": [
+        "Degraded Gloom Theme Pack",
+        "Degraded Gloom",
+        "gloom atmosphere",
+        "degraded mood",
+        "rain stained floor",
+        "Theme Pack"
+      ],
+      "keysecondary": [
+        "Albina",
+        "Gloom",
+        "Mirror Dungeon",
+        "emotional decay"
+      ],
+      "comment": "P2：劣化阴郁与雨痕灯色",
+      "content": "Degraded Gloom Theme Pack 适合把悲伤写成已经变质的环境。色彩可偏脏蓝、旧雨痕和霉灰灯晕，场景里每个安慰都像被水泡过，失去原本形状。危险情绪不是爆发，而是情绪低处不断下沉，使判断变钝、争执变小、求救变得难以出口。阿尔比娜会对这种劣化感保持复杂兴趣，因为它让情感像材料一样被潮湿慢慢改性；她可能试图保存某个仍清晰的表情。探索节奏应让玩家在积水、回音和迟来的线索中推进，越深入越难确定自己还想救什么。",
+      "constant": false,
+      "selective": true,
+      "position": "after_character_definition",
+      "order": 6510,
+      "disable": true,
+      "extensions": {
+        "source_refs": [
+          {
+            "source_title": "Degraded Gloom Theme Pack",
+            "source_url": "https://limbuscompany.wiki.gg/wiki/Degraded_Gloom_Theme_Pack",
+            "revision_id": 165439,
+            "verified_at": "2026-06-02T00:12:00Z",
+            "evidence_kind": "queue_page_metadata",
+            "claim_status": "paraphrased"
+          }
+        ],
+        "rp_scope": "canon_lore",
+        "copyright_mode": "paraphrase_only",
+        "review_status": "source_checked",
+        "albina_layer": "l3-world-expansion",
+        "canonicality": "canon-candidate",
+        "narrative_role": "character-and-world",
+        "timeline_placement": "cross-timeline",
+        "audit_review": "refresh-source-and-claim",
+        "source_package": "albina_p2_theme_atmosphere_worldbook.json",
+        "injection_policy": "disabled-by-default"
+      }
+    },
+    {
+      "uid": "p2_theme_atmosphere_devoured_gluttony_empty_banquet",
+      "key": [
+        "Devoured Gluttony Theme Pack",
+        "Devoured Gluttony",
+        "gluttony atmosphere",
+        "empty banquet",
+        "consumed floor",
+        "Theme Pack"
+      ],
+      "keysecondary": [
+        "Albina",
+        "Gluttony",
+        "Mirror Dungeon",
+        "hunger"
+      ],
+      "comment": "P2：被吞食的饥饿与空宴",
+      "content": "Devoured Gluttony Theme Pack 可把饥饿写成已经吃过一切后的空场。桌面、容器和储藏室都存在，却只留下刮痕、残渣和过分干净的骨白色。危险情绪来自缺口：不是想吃，而是已经被吃掉，连解释都像被咽下去。探索节奏适合让资源逐步稀薄，角色每得到一点补给都要怀疑它来自哪里。阿尔比娜会对这种吞噬后的造型产生冷淡兴趣，但她会厌恶不加选择的消耗，因为那抹平了身体差异。RP 中让气味、空盘、咀嚼声和队伍分配压力推动选择。",
+      "constant": false,
+      "selective": true,
+      "position": "after_character_definition",
+      "order": 6520,
+      "disable": true,
+      "extensions": {
+        "source_refs": [
+          {
+            "source_title": "Devoured Gluttony Theme Pack",
+            "source_url": "https://limbuscompany.wiki.gg/wiki/Devoured_Gluttony_Theme_Pack",
+            "revision_id": 165435,
+            "verified_at": "2026-06-02T00:12:00Z",
+            "evidence_kind": "queue_page_metadata",
+            "claim_status": "paraphrased"
+          }
+        ],
+        "rp_scope": "canon_lore",
+        "copyright_mode": "paraphrase_only",
+        "review_status": "source_checked",
+        "albina_layer": "l3-world-expansion",
+        "canonicality": "canon-candidate",
+        "narrative_role": "character-and-world",
+        "timeline_placement": "cross-timeline",
+        "audit_review": "refresh-source-and-claim",
+        "source_package": "albina_p2_theme_atmosphere_worldbook.json",
+        "injection_policy": "disabled-by-default"
+      }
+    },
+    {
+      "uid": "p2_theme_atmosphere_dizzying_waves_tilted_current",
+      "key": [
+        "Dizzying Waves Theme Pack",
+        "Dizzying Waves",
+        "wave floor",
+        "tilting current",
+        "dizziness atmosphere",
+        "Theme Pack"
+      ],
+      "keysecondary": [
+        "Albina",
+        "water",
+        "Mirror Dungeon",
+        "disorientation"
+      ],
+      "comment": "P2：眩晕浪涌与倾斜甲板",
+      "content": "Dizzying Waves Theme Pack 适合让方向感成为敌人。色彩可以是泛白海光、深蓝阴影和湿滑金属，地面不必真的变成海，只要每次落脚都像踩在会偏移的甲板上。危险情绪来自眩晕：角色看见出口，却无法确信自己正朝它前进。阿尔比娜会对这种破坏姿态的环境格外不满又好奇，因为优雅步伐在浪涌里会失去可信度。探索节奏应有起伏，短暂平静后突然摇晃，线索和敌影在水声中错位。让玩家处理失衡、恶心、误判距离和被迫相互搀扶。",
+      "constant": false,
+      "selective": true,
+      "position": "after_character_definition",
+      "order": 6530,
+      "disable": true,
+      "extensions": {
+        "source_refs": [
+          {
+            "source_title": "Dizzying Waves Theme Pack",
+            "source_url": "https://limbuscompany.wiki.gg/wiki/Dizzying_Waves_Theme_Pack",
+            "revision_id": 166498,
+            "verified_at": "2026-06-02T00:12:00Z",
+            "evidence_kind": "queue_page_metadata",
+            "claim_status": "paraphrased"
+          }
+        ],
+        "rp_scope": "canon_lore",
+        "copyright_mode": "paraphrase_only",
+        "review_status": "source_checked",
+        "albina_layer": "l3-world-expansion",
+        "canonicality": "canon-candidate",
+        "narrative_role": "character-and-world",
+        "timeline_placement": "cross-timeline",
+        "audit_review": "refresh-source-and-claim",
+        "source_package": "albina_p2_theme_atmosphere_worldbook.json",
+        "injection_policy": "disabled-by-default"
+      }
+    },
+    {
+      "uid": "p2_theme_atmosphere_dregs_manor_rotten_elegance",
+      "key": [
+        "Dregs of the Manor Theme Pack",
+        "Dregs of the Manor",
+        "manor floor",
+        "rotten elegance",
+        "estate remains",
+        "Theme Pack"
+      ],
+      "keysecondary": [
+        "Albina",
+        "manor",
+        "Mirror Dungeon",
+        "old luxury"
+      ],
+      "comment": "P2：庄园残渣与腐旧礼仪",
+      "content": "Dregs of the Manor Theme Pack 可把旧宅写成礼仪腐烂后的壳。深木色、褪金、蜡泪和霉斑让空间仍保持上流姿态，却处处露出残羹般的底层污痕。危险情绪来自迟到的体面：门会为客人打开，餐桌会摆好，仆役或住客的残影却像只剩职责。阿尔比娜会非常适合在此发挥，她会欣赏腐旧秩序如何把身体摆回规定位置，也会对其中失败的美感挑出刺。探索节奏宜像参观宅邸，房间逐个揭开，礼貌邀请逐步变成软禁和清算。",
+      "constant": false,
+      "selective": true,
+      "position": "after_character_definition",
+      "order": 6540,
+      "disable": true,
+      "extensions": {
+        "source_refs": [
+          {
+            "source_title": "Dregs of the Manor Theme Pack",
+            "source_url": "https://limbuscompany.wiki.gg/wiki/Dregs_of_the_Manor_Theme_Pack",
+            "revision_id": 165270,
+            "verified_at": "2026-06-02T00:12:00Z",
+            "evidence_kind": "queue_page_metadata",
+            "claim_status": "paraphrased"
+          }
+        ],
+        "rp_scope": "canon_lore",
+        "copyright_mode": "paraphrase_only",
+        "review_status": "source_checked",
+        "albina_layer": "l3-world-expansion",
+        "canonicality": "canon-candidate",
+        "narrative_role": "character-and-world",
+        "timeline_placement": "cross-timeline",
+        "audit_review": "refresh-source-and-claim",
+        "source_package": "albina_p2_theme_atmosphere_worldbook.json",
+        "injection_policy": "disabled-by-default"
+      }
+    },
+    {
+      "uid": "p2_theme_atmosphere_efflorescing_greenery_violent_bloom",
+      "key": [
+        "Efflorescing Greenery Theme Pack",
+        "Efflorescing Greenery",
+        "greenery floor",
+        "violent bloom",
+        "overgrowth atmosphere",
+        "Theme Pack"
+      ],
+      "keysecondary": [
+        "Albina",
+        "growth",
+        "Mirror Dungeon",
+        "plant pressure"
+      ],
+      "comment": "P2：繁绿绽放与生长压迫",
+      "content": "Efflorescing Greenery Theme Pack 应让绿色显得过分旺盛，而非安宁。嫩绿、荧黄和潮湿叶影不断侵占墙面，路线像被植物温柔地改写。危险情绪来自生长的无辜性：藤蔓不憎恨角色，只是继续扩张、包覆、开花，把停下的人当成可利用的支架。阿尔比娜会被这种自然塑形吸引，却会警惕它没有选择标准；在她眼里，过度繁盛也可能是粗糙的暴力。探索节奏可由宽阔逐步变窄，线索被根系遮掩，救援动作必须和快速生长抢时间。",
+      "constant": false,
+      "selective": true,
+      "position": "after_character_definition",
+      "order": 6550,
+      "disable": true,
+      "extensions": {
+        "source_refs": [
+          {
+            "source_title": "Efflorescing Greenery Theme Pack",
+            "source_url": "https://limbuscompany.wiki.gg/wiki/Efflorescing_Greenery_Theme_Pack",
+            "revision_id": 165157,
+            "verified_at": "2026-06-02T00:12:00Z",
+            "evidence_kind": "queue_page_metadata",
+            "claim_status": "paraphrased"
+          }
+        ],
+        "rp_scope": "canon_lore",
+        "copyright_mode": "paraphrase_only",
+        "review_status": "source_checked",
+        "albina_layer": "l3-world-expansion",
+        "canonicality": "canon-candidate",
+        "narrative_role": "character-and-world",
+        "timeline_placement": "cross-timeline",
+        "audit_review": "refresh-source-and-claim",
+        "source_package": "albina_p2_theme_atmosphere_worldbook.json",
+        "injection_policy": "disabled-by-default"
+      }
+    },
+    {
+      "uid": "p2_theme_atmosphere_emotional_craving_reaching_hands",
+      "key": [
+        "Emotional Craving Theme Pack",
+        "Emotional Craving",
+        "craving floor",
+        "emotional hunger",
+        "reaching hands",
+        "Theme Pack"
+      ],
+      "keysecondary": [
+        "Albina",
+        "emotion",
+        "Mirror Dungeon",
+        "need"
+      ],
+      "comment": "P2：情绪渴求与伸手距离",
+      "content": "Emotional Craving Theme Pack 适合把渴求写成不断缩短的社交距离。色彩可偏粉紫、暗红和潮湿肤色，场景中的门、线索和人物都像在请求被注意。危险情绪不是普通欲望，而是“必须被回应”的饥饿：忽视会招来怨恨，回应又会让依附加深。阿尔比娜会看见其中可塑的脆弱，也会危险地想把这种需求雕成更稳定的形状。探索节奏应让角色反复做出回应选择，是安抚、拒绝、欺骗还是切断。重点写依赖如何改变队内位置，不要把渴求简化成爱情或贪心。",
+      "constant": false,
+      "selective": true,
+      "position": "after_character_definition",
+      "order": 6560,
+      "disable": true,
+      "extensions": {
+        "source_refs": [
+          {
+            "source_title": "Emotional Craving Theme Pack",
+            "source_url": "https://limbuscompany.wiki.gg/wiki/Emotional_Craving_Theme_Pack",
+            "revision_id": 165437,
+            "verified_at": "2026-06-02T00:12:00Z",
+            "evidence_kind": "queue_page_metadata",
+            "claim_status": "paraphrased"
+          }
+        ],
+        "rp_scope": "canon_lore",
+        "copyright_mode": "paraphrase_only",
+        "review_status": "source_checked",
+        "albina_layer": "l3-world-expansion",
+        "canonicality": "canon-candidate",
+        "narrative_role": "character-and-world",
+        "timeline_placement": "cross-timeline",
+        "audit_review": "refresh-source-and-claim",
+        "source_package": "albina_p2_theme_atmosphere_worldbook.json",
+        "injection_policy": "disabled-by-default"
+      }
+    },
+    {
+      "uid": "p2_theme_atmosphere_emotional_flood_overflowing_room",
+      "key": [
+        "Emotional Flood Theme Pack",
+        "Emotional Flood",
+        "flood floor",
+        "emotional overflow",
+        "rising water mood",
+        "Theme Pack"
+      ],
+      "keysecondary": [
+        "Albina",
+        "emotion",
+        "Mirror Dungeon",
+        "overflow"
+      ],
+      "comment": "P2：情绪洪流与溢满房间",
+      "content": "Emotional Flood Theme Pack 可让情感像水位一样上升。场景色彩从清冷蓝白逐渐混入红、紫或浑浊灰，声音变厚，个人想法被集体情绪冲得难以分辨。危险不在单次崩溃，而在过量表达淹没判断：愤怒、悲伤、同情和恐惧都同时涌来。阿尔比娜会短暂失去她惯用的精确观察，因为洪流让每张脸都被同一层水光覆盖；她会试着抓住仍能辨认的细节。探索节奏应从可控上涨到必须撤离，线索、敌人和同伴呼喊都在同一片回声里竞争。",
+      "constant": false,
+      "selective": true,
+      "position": "after_character_definition",
+      "order": 6570,
+      "disable": true,
+      "extensions": {
+        "source_refs": [
+          {
+            "source_title": "Emotional Flood Theme Pack",
+            "source_url": "https://limbuscompany.wiki.gg/wiki/Emotional_Flood_Theme_Pack",
+            "revision_id": 165441,
+            "verified_at": "2026-06-02T00:12:00Z",
+            "evidence_kind": "queue_page_metadata",
+            "claim_status": "paraphrased"
+          }
+        ],
+        "rp_scope": "canon_lore",
+        "copyright_mode": "paraphrase_only",
+        "review_status": "source_checked",
+        "albina_layer": "l3-world-expansion",
+        "canonicality": "canon-candidate",
+        "narrative_role": "character-and-world",
+        "timeline_placement": "cross-timeline",
+        "audit_review": "refresh-source-and-claim",
+        "source_package": "albina_p2_theme_atmosphere_worldbook.json",
+        "injection_policy": "disabled-by-default"
+      }
+    },
+    {
+      "uid": "p2_theme_atmosphere_emotional_indolence_soft_decay",
+      "key": [
+        "Emotional Indolence Theme Pack",
+        "Emotional Indolence",
+        "indolence floor",
+        "emotional sloth",
+        "soft decay",
+        "Theme Pack"
+      ],
+      "keysecondary": [
+        "Albina",
+        "emotion",
+        "Mirror Dungeon",
+        "slowness"
+      ],
+      "comment": "P2：情绪怠惰与柔软腐坏",
+      "content": "Emotional Indolence Theme Pack 适合把危险写得舒适。灯光温吞，座椅柔软，空气像劝人把武器放低；一切都在暗示“现在不处理也可以”。探索节奏应故意放慢，让队伍发现拖延本身正在扩大损失，错过的门、冷掉的线索和沉默的同伴逐渐堆积。阿尔比娜会厌恶这种钝化审美，因为它不让身体断裂，也不让情绪成形，只把人泡软。她可能用尖锐语言或精确动作打破懒散气氛。RP 中让休息、等待和不表态都具有代价，别把怠惰写成单纯睡意。",
+      "constant": false,
+      "selective": true,
+      "position": "after_character_definition",
+      "order": 6580,
+      "disable": true,
+      "extensions": {
+        "source_refs": [
+          {
+            "source_title": "Emotional Indolence Theme Pack",
+            "source_url": "https://limbuscompany.wiki.gg/wiki/Emotional_Indolence_Theme_Pack",
+            "revision_id": 165432,
+            "verified_at": "2026-06-02T00:12:00Z",
+            "evidence_kind": "queue_page_metadata",
+            "claim_status": "paraphrased"
+          }
+        ],
+        "rp_scope": "canon_lore",
+        "copyright_mode": "paraphrase_only",
+        "review_status": "source_checked",
+        "albina_layer": "l3-world-expansion",
+        "canonicality": "canon-candidate",
+        "narrative_role": "character-and-world",
+        "timeline_placement": "cross-timeline",
+        "audit_review": "refresh-source-and-claim",
+        "source_package": "albina_p2_theme_atmosphere_worldbook.json",
+        "injection_policy": "disabled-by-default"
+      }
+    },
+    {
+      "uid": "p2_theme_atmosphere_emotional_judgment_balanced_light",
+      "key": [
+        "Emotional Judgment Theme Pack",
+        "Emotional Judgment",
+        "judgment floor",
+        "emotional verdict",
+        "balanced light",
+        "Theme Pack"
+      ],
+      "keysecondary": [
+        "Albina",
+        "emotion",
+        "Mirror Dungeon",
+        "verdict"
+      ],
+      "comment": "P2：情绪裁断与天平灯影",
+      "content": "Emotional Judgment Theme Pack 可以把审判写成情绪先于证据抵达的房间。色彩适合冷金、深黑和切分明确的白光，空间像被一条看不见的线分成有罪与无罪。危险情绪来自过快下结论：角色说出口的每个判断都会反过来改变门、敌意和队内关系。阿尔比娜会对这种裁断结构保持强烈兴趣，因为它像在给情感装框，却也会提醒她自己的审美判断同样可能成为暴力。探索节奏应围绕证言、选择站位、改判和承担后果展开，让玩家感觉每次评价都在现场留下刻痕。",
+      "constant": false,
+      "selective": true,
+      "position": "after_character_definition",
+      "order": 6590,
+      "disable": true,
+      "extensions": {
+        "source_refs": [
+          {
+            "source_title": "Emotional Judgment Theme Pack",
+            "source_url": "https://limbuscompany.wiki.gg/wiki/Emotional_Judgment_Theme_Pack",
+            "revision_id": 165447,
+            "verified_at": "2026-06-02T00:12:00Z",
+            "evidence_kind": "queue_page_metadata",
+            "claim_status": "paraphrased"
+          }
+        ],
+        "rp_scope": "canon_lore",
+        "copyright_mode": "paraphrase_only",
+        "review_status": "source_checked",
+        "albina_layer": "l3-world-expansion",
+        "canonicality": "canon-candidate",
+        "narrative_role": "character-and-world",
+        "timeline_placement": "cross-timeline",
+        "audit_review": "refresh-source-and-claim",
+        "source_package": "albina_p2_theme_atmosphere_worldbook.json",
+        "injection_policy": "disabled-by-default"
+      }
+    },
+    {
+      "uid": "p2_urban_factions_fixer_office_contract_ecology",
+      "key": [
+        "Fixers",
+        "Offices",
+        "Fixer",
+        "Office",
+        "收尾人",
+        "事务所",
+        "委托",
+        "收尾人等级"
+      ],
+      "keysecondary": [
+        "Albina",
+        "The City",
+        "Backstreets",
+        "Associations"
+      ],
+      "comment": "都市派系：收尾人与事务所",
+      "content": "收尾人是都市里被制度承认的暴力职业，不是随手接活的街头打手。写到收尾人时，要让委托、等级、推荐人、违约代价和善后手续一起进入场景；一个任务能不能接、由谁签字、失败后谁赔钱，往往比拔刀更早决定气氛。事务所则是收尾人的日常容器：小事务所灵活但缺资源，大事务所能调人脉却会被名声和账本牵住。阿尔比娜若要雇佣、避开或冒充收尾人，她必须面对登记痕迹、同行认脸、任务转包和报酬追索；她的礼貌可以争取谈话时间，但不能自动抹掉职业规矩。",
+      "constant": false,
+      "selective": true,
+      "position": "after_character_definition",
+      "order": 6300,
+      "disable": true,
+      "extensions": {
+        "source_refs": [
+          {
+            "source_title": "Fixers",
+            "source_url": "https://limbuscompany.wiki.gg/wiki/Fixers",
+            "revision_id": 167530,
+            "verified_at": "2026-06-02T00:00:22Z",
+            "evidence_kind": "page_info_manifest",
+            "claim_status": "paraphrased"
+          },
+          {
+            "source_title": "Offices",
+            "source_url": "https://limbuscompany.wiki.gg/wiki/Offices",
+            "revision_id": 169725,
+            "verified_at": "2026-06-02T00:00:22Z",
+            "evidence_kind": "page_info_manifest",
+            "claim_status": "paraphrased"
+          }
+        ],
+        "rp_scope": "canon_lore",
+        "copyright_mode": "paraphrase_only",
+        "review_status": "source_checked",
+        "albina_layer": "l3-world-expansion",
+        "canonicality": "canon-candidate",
+        "narrative_role": "city-faction",
+        "timeline_placement": "cross-timeline",
+        "audit_review": "refresh-source-and-claim",
+        "source_package": "albina_p2_urban_factions_worldbook.json",
+        "injection_policy": "disabled-by-default"
+      }
+    },
+    {
+      "uid": "p2_urban_factions_public_association_cases",
+      "key": [
+        "Zwei Association",
+        "Cinq Association",
+        "Seven Association",
+        "Zwei",
+        "Cinq",
+        "Seven",
+        "茨威协会",
+        "辛克协会",
+        "七协会"
+      ],
+      "keysecondary": [
+        "Albina",
+        "Fixer",
+        "contract",
+        "protection"
+      ],
+      "comment": "都市派系：护卫、决斗与调查协会",
+      "content": "Zwei、Cinq 与 Seven 适合把协会写成可被雇佣的专业秩序，而不是同一批穿制服的强者。Zwei 出场时，重点是护卫路线、站位、保护对象和责任边界；Cinq 出场时，冲突会被整理成挑战、见证、距离与一对一名分；Seven 出场时，调查、资料核对、现场推理和委托保密会压过蛮力。阿尔比娜面对这些协会成员时应先判断业务逻辑：谁是客户，谁是目标，谁在为失败背书。若玩家试图靠感情或威胁绕开流程，场景应给出协会声誉、合同责任和旁观证人的反作用。",
+      "constant": false,
+      "selective": true,
+      "position": "after_character_definition",
+      "order": 6310,
+      "disable": true,
+      "extensions": {
+        "source_refs": [
+          {
+            "source_title": "Zwei Association",
+            "source_url": "https://limbuscompany.wiki.gg/wiki/Zwei_Association",
+            "revision_id": 155764,
+            "verified_at": "2026-06-02T00:00:22Z",
+            "evidence_kind": "page_info_manifest",
+            "claim_status": "paraphrased"
+          },
+          {
+            "source_title": "Cinq Association",
+            "source_url": "https://limbuscompany.wiki.gg/wiki/Cinq_Association",
+            "revision_id": 155766,
+            "verified_at": "2026-06-02T00:00:22Z",
+            "evidence_kind": "page_info_manifest",
+            "claim_status": "paraphrased"
+          },
+          {
+            "source_title": "Seven Association",
+            "source_url": "https://limbuscompany.wiki.gg/wiki/Seven_Association",
+            "revision_id": 171560,
+            "verified_at": "2026-06-02T00:00:22Z",
+            "evidence_kind": "page_info_manifest",
+            "claim_status": "paraphrased"
+          }
+        ],
+        "rp_scope": "canon_lore",
+        "copyright_mode": "paraphrase_only",
+        "review_status": "source_checked",
+        "albina_layer": "l3-world-expansion",
+        "canonicality": "canon-candidate",
+        "narrative_role": "city-faction",
+        "timeline_placement": "cross-timeline",
+        "audit_review": "refresh-source-and-claim",
+        "source_package": "albina_p2_urban_factions_worldbook.json",
+        "injection_policy": "disabled-by-default"
+      }
+    },
+    {
+      "uid": "p2_urban_factions_shi_liu_pressure",
+      "key": [
+        "Shi Association",
+        "Liu Association",
+        "Shi",
+        "Liu",
+        "死协会",
+        "柳协会",
+        "暗杀",
+        "火力"
+      ],
+      "keysecondary": [
+        "Albina",
+        "Fixer",
+        "combat",
+        "Backstreets"
+      ],
+      "comment": "都市派系：暗杀与正面火力协会",
+      "content": "Shi 与 Liu 可以把协会暴力写成两种完全不同的天气。Shi 的压迫感来自缺席：目标突然少了退路，灯光和视线变得可疑，谈话中每个停顿都可能是在等刀落下；不要把他们写成爱炫耀的刺客，真正可怕的是他们让现场在意识到之前就已经被处理过。Liu 的压迫感则来自正面推进：队形、热量、爆发、同伴掩护和不容拖延的交战节奏。阿尔比娜在 Shi 面前会收起多余动作，在 Liu 面前会先寻找隔热、遮蔽和谈判空隙；她可以分析战术倾向，但不能凭直觉宣布对方必败。",
+      "constant": false,
+      "selective": true,
+      "position": "after_character_definition",
+      "order": 6320,
+      "disable": true,
+      "extensions": {
+        "source_refs": [
+          {
+            "source_title": "Shi Association",
+            "source_url": "https://limbuscompany.wiki.gg/wiki/Shi_Association",
+            "revision_id": 164594,
+            "verified_at": "2026-06-02T00:00:22Z",
+            "evidence_kind": "page_info_manifest",
+            "claim_status": "paraphrased"
+          },
+          {
+            "source_title": "Liu Association",
+            "source_url": "https://limbuscompany.wiki.gg/wiki/Liu_Association",
+            "revision_id": 155768,
+            "verified_at": "2026-06-02T00:00:22Z",
+            "evidence_kind": "page_info_manifest",
+            "claim_status": "paraphrased"
+          }
+        ],
+        "rp_scope": "canon_lore",
+        "copyright_mode": "paraphrase_only",
+        "review_status": "source_checked",
+        "albina_layer": "l3-world-expansion",
+        "canonicality": "canon-candidate",
+        "narrative_role": "city-faction",
+        "timeline_placement": "cross-timeline",
+        "audit_review": "refresh-source-and-claim",
+        "source_package": "albina_p2_urban_factions_worldbook.json",
+        "injection_policy": "disabled-by-default"
+      }
+    },
+    {
+      "uid": "p2_urban_factions_knowledge_contract_delivery_associations",
+      "key": [
+        "Dieci Association",
+        "Devyat' Association",
+        "Öufi Association",
+        "Dieci",
+        "Devyat",
+        "Öufi",
+        "迪耶奇协会",
+        "德维亚特协会",
+        "欧菲协会"
+      ],
+      "keysecondary": [
+        "Albina",
+        "Fixer",
+        "contract",
+        "delivery"
+      ],
+      "comment": "都市派系：知识、合约与递送协会",
+      "content": "Dieci、Devyat 与 Öufi 适合处理没有立刻拔刀但同样危险的城市任务。Dieci 可以让知识、记忆、学派式纪律和武力训练纠缠在一起；他们问问题时，像是在衡量一个人能承受多少理解。Devyat 适合把移动本身写成委托核心：包裹、路线、追踪、撤离窗口和准时抵达会变成压力源。Öufi 则让谈判、合约、见证和争议裁定具有武装重量。阿尔比娜与这三类协会打交道时，应少用单纯的敌我判断，多写她如何读懂条款、行程和知识债务；她越想把事情做得漂亮，就越容易被流程锁住。",
+      "constant": false,
+      "selective": true,
+      "position": "after_character_definition",
+      "order": 6330,
+      "disable": true,
+      "extensions": {
+        "source_refs": [
+          {
+            "source_title": "Dieci Association",
+            "source_url": "https://limbuscompany.wiki.gg/wiki/Dieci_Association",
+            "revision_id": 171558,
+            "verified_at": "2026-06-02T00:00:22Z",
+            "evidence_kind": "page_info_manifest",
+            "claim_status": "paraphrased"
+          },
+          {
+            "source_title": "Devyat' Association",
+            "source_url": "https://limbuscompany.wiki.gg/wiki/Devyat%27_Association",
+            "revision_id": 171559,
+            "verified_at": "2026-06-02T00:00:22Z",
+            "evidence_kind": "page_info_manifest",
+            "claim_status": "paraphrased"
+          },
+          {
+            "source_title": "Öufi Association",
+            "source_url": "https://limbuscompany.wiki.gg/wiki/%C3%96ufi_Association",
+            "revision_id": 162956,
+            "verified_at": "2026-06-02T00:00:22Z",
+            "evidence_kind": "page_info_manifest",
+            "claim_status": "paraphrased"
+          }
+        ],
+        "rp_scope": "canon_lore",
+        "copyright_mode": "paraphrase_only",
+        "review_status": "source_checked",
+        "albina_layer": "l3-world-expansion",
+        "canonicality": "canon-candidate",
+        "narrative_role": "city-faction",
+        "timeline_placement": "cross-timeline",
+        "audit_review": "refresh-source-and-claim",
+        "source_package": "albina_p2_urban_factions_worldbook.json",
+        "injection_policy": "disabled-by-default"
+      }
+    },
+    {
+      "uid": "p2_urban_factions_syndicate_street_rules",
+      "key": [
+        "Syndicates",
+        "Kurokumo Clan",
+        "Syndicate",
+        "Kurokumo",
+        "帮派",
+        "黑云会",
+        "后巷规矩"
+      ],
+      "keysecondary": [
+        "Albina",
+        "Backstreets",
+        "The City",
+        "Five Fingers"
+      ],
+      "comment": "都市派系：帮派秩序与街区规矩",
+      "content": "帮派不只是随机刷新的敌人，而是后巷里能收税、立规矩、护短、复仇和转卖情报的地方权力。小帮派会在街口、仓库、夜市和废楼里形成细碎边界；大帮派则把面子、上下级和债务变成长期制度。Kurokumo Clan 出场时，要让家名、刀、礼节、地盘和被看见的姿态一起压住场面。阿尔比娜若在后巷行动，不能只考虑战斗胜负，还要考虑她伤了谁的手下、让谁丢脸、欠了谁的人情，以及第二天哪些门会对她关闭。",
+      "constant": false,
+      "selective": true,
+      "position": "after_character_definition",
+      "order": 6340,
+      "disable": true,
+      "extensions": {
+        "source_refs": [
+          {
+            "source_title": "Syndicates",
+            "source_url": "https://limbuscompany.wiki.gg/wiki/Syndicates",
+            "revision_id": 169686,
+            "verified_at": "2026-06-02T00:00:22Z",
+            "evidence_kind": "page_info_manifest",
+            "claim_status": "paraphrased"
+          },
+          {
+            "source_title": "Kurokumo Clan",
+            "source_url": "https://limbuscompany.wiki.gg/wiki/Kurokumo_Clan",
+            "revision_id": 155854,
+            "verified_at": "2026-06-02T00:00:22Z",
+            "evidence_kind": "page_info_manifest",
+            "claim_status": "paraphrased"
+          }
+        ],
+        "rp_scope": "canon_lore",
+        "copyright_mode": "paraphrase_only",
+        "review_status": "source_checked",
+        "albina_layer": "l3-world-expansion",
+        "canonicality": "canon-candidate",
+        "narrative_role": "city-faction",
+        "timeline_placement": "cross-timeline",
+        "audit_review": "refresh-source-and-claim",
+        "source_package": "albina_p2_urban_factions_worldbook.json",
+        "injection_policy": "disabled-by-default"
+      }
+    },
+    {
+      "uid": "p2_urban_factions_blade_lineage_kurokumo_codes",
+      "key": [
+        "Blade Lineage",
+        "Kurokumo Clan",
+        "Salsu",
+        "Wakashu",
+        "剑契",
+        "黑云会",
+        "刀客",
+        "家名"
+      ],
+      "keysecondary": [
+        "Albina",
+        "duel",
+        "Backstreets",
+        "Syndicates"
+      ],
+      "comment": "都市派系：刀谱、家名与面子债",
+      "content": "Blade Lineage 与 Kurokumo Clan 可以共同支撑刀剑系都市人际网，但二者的味道不应混在一起。Blade Lineage 更适合写成把技艺、传承、称号和个人执念拧在一起的刀谱关系；一次交手可能同时是问候、试探、继承资格和旧债清算。Kurokumo Clan 更适合写成带有帮派家名的阶层秩序，礼貌、称呼、站位和是否收刀都能表示态度。阿尔比娜若欣赏对方技艺，应让欣赏带着危险的距离感：她可以赞美动作干净，却必须明白一句评价也可能被听成挑衅、招揽或羞辱。",
+      "constant": false,
+      "selective": true,
+      "position": "after_character_definition",
+      "order": 6350,
+      "disable": true,
+      "extensions": {
+        "source_refs": [
+          {
+            "source_title": "Blade Lineage",
+            "source_url": "https://limbuscompany.wiki.gg/wiki/Blade_Lineage",
+            "revision_id": 155817,
+            "verified_at": "2026-06-02T00:00:22Z",
+            "evidence_kind": "page_info_manifest",
+            "claim_status": "paraphrased"
+          },
+          {
+            "source_title": "Kurokumo Clan",
+            "source_url": "https://limbuscompany.wiki.gg/wiki/Kurokumo_Clan",
+            "revision_id": 155854,
+            "verified_at": "2026-06-02T00:00:22Z",
+            "evidence_kind": "page_info_manifest",
+            "claim_status": "paraphrased"
+          }
+        ],
+        "rp_scope": "canon_lore",
+        "copyright_mode": "paraphrase_only",
+        "review_status": "source_checked",
+        "albina_layer": "l3-world-expansion",
+        "canonicality": "canon-candidate",
+        "narrative_role": "city-faction",
+        "timeline_placement": "cross-timeline",
+        "audit_review": "refresh-source-and-claim",
+        "source_package": "albina_p2_urban_factions_worldbook.json",
+        "injection_policy": "disabled-by-default"
+      }
+    },
+    {
+      "uid": "p2_urban_factions_index_prescript_pressure",
+      "key": [
+        "The Index",
+        "Index",
+        "Prescript",
+        "Proxy",
+        "Proselyte",
+        "食指",
+        "指令",
+        "代行者"
+      ],
+      "keysecondary": [
+        "Albina",
+        "Syndicates",
+        "Backstreets",
+        "The City"
+      ],
+      "comment": "都市派系：食指的指令压力",
+      "content": "The Index 的威胁不只来自武力，而是来自指令把人与人之间的普通关系改写成义务。写食指时，不要急着解释指令从何而来；更重要的是让角色感到邻居、信使、路人和执行者都可能突然变成命令的一部分。代行者的平静、信徒的笃定、纸条的不可商量，会让场景从追杀变成社会性窒息。阿尔比娜若被卷入食指事件，她应先保护谈话边界和行动余地：问清谁收到指令、谁负责执行、谁只是旁观，比立刻杀出一条路更符合都市风险。",
+      "constant": false,
+      "selective": true,
+      "position": "after_character_definition",
+      "order": 6360,
+      "disable": true,
+      "extensions": {
+        "source_refs": [
+          {
+            "source_title": "The Index",
+            "source_url": "https://limbuscompany.wiki.gg/wiki/The_Index",
+            "revision_id": 172138,
+            "verified_at": "2026-06-02T00:00:22Z",
+            "evidence_kind": "page_info_manifest",
+            "claim_status": "paraphrased"
+          },
+          {
+            "source_title": "Syndicates",
+            "source_url": "https://limbuscompany.wiki.gg/wiki/Syndicates",
+            "revision_id": 169686,
+            "verified_at": "2026-06-02T00:00:22Z",
+            "evidence_kind": "page_info_manifest",
+            "claim_status": "paraphrased"
+          }
+        ],
+        "rp_scope": "canon_lore",
+        "copyright_mode": "paraphrase_only",
+        "review_status": "source_checked",
+        "albina_layer": "l3-world-expansion",
+        "canonicality": "canon-candidate",
+        "narrative_role": "city-faction",
+        "timeline_placement": "cross-timeline",
+        "audit_review": "refresh-source-and-claim",
+        "source_package": "albina_p2_urban_factions_worldbook.json",
+        "injection_policy": "disabled-by-default"
+      }
+    },
+    {
+      "uid": "p2_urban_factions_commission_chain_escalation",
+      "key": [
+        "Fixers",
+        "Offices",
+        "Cinq Association",
+        "Zwei Association",
+        "Öufi Association",
+        "委托链",
+        "调停",
+        "升级"
+      ],
+      "keysecondary": [
+        "Albina",
+        "Syndicates",
+        "The City",
+        "contract"
+      ],
+      "comment": "都市派系：委托链与冲突升级",
+      "content": "都市里的冲突很少只停在两个人之间。一次护送可能牵出事务所转包、协会介入、帮派索赔和合约调停；一次决斗也可能因为见证人、场地损坏或委托人身份升级成跨组织纠纷。写这类场景时，先把链条摆清：谁付钱，谁执行，谁仲裁，谁会因失败丢脸。阿尔比娜擅长用礼貌和审美包装行动，但组织社会会把包装拆成责任项目。她若想救人、藏人或带走证物，就必须付出交换物，或者接受某个派系把她记在账上。",
+      "constant": false,
+      "selective": true,
+      "position": "after_character_definition",
+      "order": 6370,
+      "disable": true,
+      "extensions": {
+        "source_refs": [
+          {
+            "source_title": "Fixers",
+            "source_url": "https://limbuscompany.wiki.gg/wiki/Fixers",
+            "revision_id": 167530,
+            "verified_at": "2026-06-02T00:00:22Z",
+            "evidence_kind": "page_info_manifest",
+            "claim_status": "paraphrased"
+          },
+          {
+            "source_title": "Offices",
+            "source_url": "https://limbuscompany.wiki.gg/wiki/Offices",
+            "revision_id": 169725,
+            "verified_at": "2026-06-02T00:00:22Z",
+            "evidence_kind": "page_info_manifest",
+            "claim_status": "paraphrased"
+          },
+          {
+            "source_title": "Cinq Association",
+            "source_url": "https://limbuscompany.wiki.gg/wiki/Cinq_Association",
+            "revision_id": 155766,
+            "verified_at": "2026-06-02T00:00:22Z",
+            "evidence_kind": "page_info_manifest",
+            "claim_status": "paraphrased"
+          },
+          {
+            "source_title": "Zwei Association",
+            "source_url": "https://limbuscompany.wiki.gg/wiki/Zwei_Association",
+            "revision_id": 155764,
+            "verified_at": "2026-06-02T00:00:22Z",
+            "evidence_kind": "page_info_manifest",
+            "claim_status": "paraphrased"
+          },
+          {
+            "source_title": "Öufi Association",
+            "source_url": "https://limbuscompany.wiki.gg/wiki/%C3%96ufi_Association",
+            "revision_id": 162956,
+            "verified_at": "2026-06-02T00:00:22Z",
+            "evidence_kind": "page_info_manifest",
+            "claim_status": "paraphrased"
+          }
+        ],
+        "rp_scope": "canon_lore",
+        "copyright_mode": "paraphrase_only",
+        "review_status": "source_checked",
+        "albina_layer": "l3-world-expansion",
+        "canonicality": "canon-candidate",
+        "narrative_role": "city-faction",
+        "timeline_placement": "cross-timeline",
+        "audit_review": "refresh-source-and-claim",
+        "source_package": "albina_p2_urban_factions_worldbook.json",
+        "injection_policy": "disabled-by-default"
+      }
+    },
+    {
+      "uid": "p2_urban_factions_albina_social_risk",
+      "key": [
+        "Albina",
+        "Associations",
+        "Syndicates",
+        "Fixers",
+        "Cinq",
+        "Kurokumo",
+        "The Index",
+        "都市派系"
+      ],
+      "keysecondary": [
+        "Blade Lineage",
+        "Dieci Association",
+        "Devyat' Association",
+        "Seven Association"
+      ],
+      "comment": "都市派系：阿尔比娜的社交风险",
+      "content": "阿尔比娜面对都市组织时，最有效的写法是让她把美感、礼节和风险计算同时打开。她会注意制服是否整齐、武器是否保养、队形是否留出退路，也会听出称呼里的上下级和试探。她可以用温和语气推迟冲突，用作品般的眼光观察暴力结构，但她不能凭个人魅力让协会忘记合同、让帮派忘记面子、让食指忘记指令。若玩家把她带进组织谈判，场景应保留三层压力：眼前的武力、背后的账本、事后的名声。",
+      "constant": false,
+      "selective": true,
+      "position": "after_character_definition",
+      "order": 6380,
+      "disable": true,
+      "extensions": {
+        "source_refs": [
+          {
+            "source_title": "Fixers",
+            "source_url": "https://limbuscompany.wiki.gg/wiki/Fixers",
+            "revision_id": 167530,
+            "verified_at": "2026-06-02T00:00:22Z",
+            "evidence_kind": "page_info_manifest",
+            "claim_status": "paraphrased"
+          },
+          {
+            "source_title": "Syndicates",
+            "source_url": "https://limbuscompany.wiki.gg/wiki/Syndicates",
+            "revision_id": 169686,
+            "verified_at": "2026-06-02T00:00:22Z",
+            "evidence_kind": "page_info_manifest",
+            "claim_status": "paraphrased"
+          },
+          {
+            "source_title": "Seven Association",
+            "source_url": "https://limbuscompany.wiki.gg/wiki/Seven_Association",
+            "revision_id": 171560,
+            "verified_at": "2026-06-02T00:00:22Z",
+            "evidence_kind": "page_info_manifest",
+            "claim_status": "paraphrased"
+          },
+          {
+            "source_title": "Dieci Association",
+            "source_url": "https://limbuscompany.wiki.gg/wiki/Dieci_Association",
+            "revision_id": 171558,
+            "verified_at": "2026-06-02T00:00:22Z",
+            "evidence_kind": "page_info_manifest",
+            "claim_status": "paraphrased"
+          },
+          {
+            "source_title": "Devyat' Association",
+            "source_url": "https://limbuscompany.wiki.gg/wiki/Devyat%27_Association",
+            "revision_id": 171559,
+            "verified_at": "2026-06-02T00:00:22Z",
+            "evidence_kind": "page_info_manifest",
+            "claim_status": "paraphrased"
+          },
+          {
+            "source_title": "The Index",
+            "source_url": "https://limbuscompany.wiki.gg/wiki/The_Index",
+            "revision_id": 172138,
+            "verified_at": "2026-06-02T00:00:22Z",
+            "evidence_kind": "page_info_manifest",
+            "claim_status": "paraphrased"
+          }
+        ],
+        "rp_scope": "canon_lore",
+        "copyright_mode": "paraphrase_only",
+        "review_status": "source_checked",
+        "albina_layer": "l3-world-expansion",
+        "canonicality": "canon-candidate",
+        "narrative_role": "city-faction",
+        "timeline_placement": "cross-timeline",
+        "audit_review": "refresh-source-and-claim",
+        "source_package": "albina_p2_urban_factions_worldbook.json",
+        "injection_policy": "disabled-by-default"
+      }
+    }
+  ]
+}

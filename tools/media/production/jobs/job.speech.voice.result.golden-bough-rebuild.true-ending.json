@@ -1,0 +1,15 @@
+{
+  "kind": "speech",
+  "provider": "pie",
+  "model": "speech-2.8-hd",
+  "promptVersion": "albina-speech-v1",
+  "input": "结局判定完成：金枝重构·TRUE。资格规则与选择记录已固定写入。",
+  "voice": "onyx",
+  "output": "D:\\创作\\albina-v2-complete\\staging\\media\\audio\\voice\\result\\golden_bough_rebuild\\true_ending.mp3",
+  "validation": {
+    "minDurationSeconds": 0.2,
+    "maxDurationSeconds": 60,
+    "minLoudnessDbfs": -30,
+    "maxLoudnessDbfs": -6
+  }
+}

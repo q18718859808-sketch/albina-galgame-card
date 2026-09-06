@@ -41,15 +41,15 @@ describe('v2 release-candidate completeness with explicit limitations', () => {
     expect(manifest.mediaJobs.filter((job) => job.kind === 'speech')).toEqual([]);
   });
 
-  it('registers both web encodes for all 24 reachable animations and cues every applicable scene', async () => {
+  it('uses static CG fallbacks without publishing or cueing retired videos', async () => {
     const manifest = parseAssetManifestV2(await json('content/asset-manifest-v2.json'));
     const story = parseGameScriptV2(await json('dist/albina-galgame-card/data/game-script-v2.json'));
     const runtime = manifest.assets.filter((asset) => asset.id.startsWith('video.animated.runtime.'));
     const desktop = manifest.assets.filter((asset) => asset.id.startsWith('video.animated.desktop.'));
-    expect(runtime).toHaveLength(24);
-    expect(desktop).toHaveLength(24);
-    expect(story.scenes.filter((scene) => scene.videoAssetId && scene.desktopVideoAssetId)).toHaveLength(24);
-    expect(story.scenes.find((scene) => scene.id === 'opening_001')).not.toHaveProperty('videoAssetId');
+    expect(runtime).toHaveLength(0);
+    expect(desktop).toHaveLength(0);
+    expect(story.scenes.every((scene) => !scene.videoAssetId && !scene.desktopVideoAssetId)).toBe(true);
+    expect(story.scenes.filter((scene) => scene.cgAssetId)).not.toHaveLength(0);
     expect(story.scenes.every((scene) => Boolean(scene.bgmAssetId))).toBe(true);
     expect(story.scenes.filter((scene) => scene.tone === 'threat').every((scene) => (scene.sfxAssetIds?.length ?? 0) > 0)).toBe(true);
   });

@@ -9,18 +9,38 @@ async function json(path: string): Promise<any> {
 describe('visual rebuild production plan', () => {
   it('enumerates the complete clean-rebuild surface without silently changing providers', async () => {
     const plan = await json('content/media-production/visual-rebuild-v2.json');
-    expect(plan.counts).toEqual({ imageJobs: 67, videoContentJobs: 24, videoDeliveryEncodes: 48 });
+    expect(plan.counts).toEqual({ imageJobs: 67 });
     expect(plan.imageJobs).toHaveLength(67);
-    expect(plan.videoJobs).toHaveLength(24);
+    expect(plan).not.toHaveProperty('videoJobs');
     expect(plan.imageJobs.every((job: any) => ['text-generation', 'reference-edit'].includes(job.inputMode)
       && job.status === 'authorized-prompt-frozen'
-      && job.provider === 'x666-openai-compatible'
+      && job.provider === 'wisart-openai-compatible'
       && job.model === 'gpt-image-2'
-      && job.upstreamPieVerified === false)).toBe(true);
-    expect(plan.imageJobs.filter((job: any) => job.inputMode === 'text-generation')).toHaveLength(15);
-    expect(plan.imageJobs.filter((job: any) => job.inputMode === 'reference-edit')).toHaveLength(52);
-    const canonRoots = plan.imageJobs.filter((job: any) => job.category === 'characters' && job.referenceSourceIds.length > 0);
-    expect(canonRoots.map((job: any) => job.id).sort()).toEqual([
+      && !Object.hasOwn(job, 'upstreamPieVerified'))).toBe(true);
+    expect(plan.imageJobs.filter((job: any) => job.inputMode === 'text-generation')).toHaveLength(0);
+    expect(plan.imageJobs.filter((job: any) => job.inputMode === 'reference-edit')).toHaveLength(67);
+    expect(plan.imageJobs.every((job: any) => job.styleReferenceMode === 'deidentified-image-last'
+      && job.referenceSourceIds.filter((sourceId: string) => sourceId === 'reference.user.albina-style-board').length === 1
+      && job.referenceSourceIds.at(-1) === 'reference.user.albina-style-board'
+      && job.referenceSourceIds.every((sourceId: string) => !sourceId.startsWith('reference.user.')
+        || sourceId === 'reference.user.albina-style-board'))).toBe(true);
+    expect(plan.imageJobs.every((job: any) => job.inputMode === 'reference-edit'
+      && job.referenceSourceIds.length + job.referenceJobIds.length > 0)).toBe(true);
+    expect(plan.imageJobs.filter((job: any) => job.category === 'bg')
+      .every((job: any) => job.inputMode === 'reference-edit'
+        && job.referenceSourceIds.length === 1
+        && job.referenceSourceIds[0] === 'reference.user.albina-style-board'
+        && job.referenceJobIds.length === 0)).toBe(true);
+    expect(plan.imageJobs.filter((job: any) => job.category === 'characters')
+      .every((job: any) => job.generationSize === '1024x1536'
+        && job.delivery.width === 1024 && job.delivery.height === 1536 && job.delivery.alpha === true)).toBe(true);
+    expect(plan.imageJobs.filter((job: any) => job.category !== 'characters')
+      .every((job: any) => job.generationSize === '1920x1080'
+        && job.delivery.width === 1280 && job.delivery.height === 720 && job.delivery.alpha === false)).toBe(true);
+    const canonReferenced = plan.imageJobs.filter((job: any) => job.category === 'characters'
+      && job.referenceSourceIds.some((sourceId: string) => sourceId.startsWith('canon.visual.')));
+    expect(canonReferenced.map((job: any) => job.id).sort()).toEqual([
+      'visual.image.portrait.albina.armored',
       'visual.image.portrait.albina.normal',
       'visual.image.portrait.callisto.normal',
       'visual.image.portrait.dante.normal',
@@ -28,18 +48,19 @@ describe('visual rebuild production plan', () => {
       'visual.image.portrait.ren.normal',
       'visual.image.portrait.vergilius.normal',
     ]);
+    const canonRoots = canonReferenced.filter((job: any) => job.referenceJobIds.length === 0);
     expect(canonRoots.every((job: any) => job.inputMode === 'reference-edit' && job.referenceJobIds.length === 0)).toBe(true);
+    expect(canonRoots).toHaveLength(6);
     const recapJobs = plan.imageJobs.filter((job: any) => job.id.startsWith('visual.image.cg.canon_recap_'));
     expect(recapJobs).toHaveLength(6);
-    expect(recapJobs.every((job: any) => job.referenceSourceIds.length > 0 && job.sceneIds.length === 1 && job.canonClaimIds.length > 0)).toBe(true);
+    expect(recapJobs.every((job: any) => job.referenceSourceIds.some(
+      (sourceId: string) => sourceId.startsWith('canon.visual.'),
+    ) && job.sceneIds.length === 1 && job.canonClaimIds.length > 0)).toBe(true);
     expect(plan.policy.canonClaimsSha256).toMatch(/^[a-f0-9]{64}$/u);
-    expect(plan.videoJobs.every((job: any) => job.provider === 'pie' && job.model === 'seedance-1.5-pro' && job.status === 'blocked-source-keyframe')).toBe(true);
     expect(plan.policy.verifiedCandidate).toMatchObject({
-      provider: 'x666-openai-compatible',
+      provider: 'wisart-openai-compatible',
       generationVerified: true,
-      currentlyAvailable: false,
-      availabilityErrorCode: 'model_not_found',
-      upstreamPieVerified: false,
+      currentlyAvailable: true,
       authorizedForProduction: true,
     });
     expect(plan.policy.verifiedCandidate.availabilityCheckedAt).toBeTruthy();
@@ -55,15 +76,9 @@ describe('visual rebuild production plan', () => {
     const text = JSON.stringify(probes);
     expect(text).not.toMatch(/sk-[a-z0-9_-]{20,}/iu);
     expect(probes.probes.find((probe: any) => probe.provider === 'pie').models['gpt-image-2']).toBe(false);
-    expect(probes.probes.find((probe: any) => probe.provider === 'x666-openai-compatible')).toMatchObject({
-      upstreamPieVerified: false,
-      gatewayEvidence: { homepageGenerator: 'new-api', publicPieAttribution: false },
-      generation: { width: 1024, height: 1024, visuallyNonBlank: true },
-      currentAvailability: {
-        available: false,
-        modelList: { http: 200, modelCount: 0 },
-        generationAttempt: { http: 503, errorCode: 'model_not_found', group: 'huatu' },
-      },
+    expect(probes.probes.find((probe: any) => probe.provider === 'wisart-openai-compatible')).toMatchObject({
+      generation: { model: 'gpt-image-2', width: 1200, height: 675, visuallyNonBlank: true, artifactVerified: true },
+      currentAvailability: { available: true },
       productionAuthorization: { authorized: true, scope: 'albina-v2-image-batch' },
     });
     expect(probes.compatibilityProbes).toEqual(expect.arrayContaining([

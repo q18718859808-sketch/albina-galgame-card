@@ -1,0 +1,110 @@
+{
+  "schemaVersion": 1,
+  "id": "albina-release-worldbook-packages-v1",
+  "sourceManifestSha256": "1c922202d6d2819661b613ee1f4ccf5ec67e190c29eb4b5ceddcd0e56358a1dd",
+  "l0": {
+    "id": "l0-minimal-card-anchors",
+    "embeddedFile": "albina_canon_worldbook_v1.json",
+    "entryCount": 16,
+    "policy": "standalone fallback; do not combine with the layered full preset"
+  },
+  "presets": {
+    "canonicalCore": [
+      "l1-albina-core",
+      "l2-canto-ix-and-main-cast",
+      "plot-full-timeline"
+    ],
+    "canonicalExpanded": [
+      "l1-albina-core",
+      "l2-canto-ix-and-main-cast",
+      "plot-full-timeline",
+      "l3-world-expansion"
+    ],
+    "mechanicsOptIn": [
+      "l4-mechanics"
+    ],
+    "identityOptIn": [
+      "l5-reviewed-identities"
+    ],
+    "auOptIn": [
+      "au-if"
+    ]
+  },
+  "packages": [
+    {
+      "id": "l1-albina-core",
+      "file": "albina-worldbook-l1-albina-core-v1.json",
+      "defaultEnabled": true,
+      "entryCount": 7,
+      "enabledEntryCount": 7,
+      "contentCharacters": 1716,
+      "sha256": "48b7452f27c66ee1e5ba8edd85839001a562bdd85ffaa71fdc9beaaf600cf442"
+    },
+    {
+      "id": "l2-canto-ix-and-main-cast",
+      "file": "albina-worldbook-l2-canto-ix-main-cast-v1.json",
+      "defaultEnabled": true,
+      "entryCount": 33,
+      "enabledEntryCount": 33,
+      "contentCharacters": 5134,
+      "sha256": "ed8195155b0a32b55444981b3183a3d9ed1df0e50f13850ba6ebb0f9cbdbfa52"
+    },
+    {
+      "id": "l3-world-expansion",
+      "file": "albina-worldbook-l3-world-expansion-v1.json",
+      "defaultEnabled": false,
+      "entryCount": 80,
+      "enabledEntryCount": 0,
+      "contentCharacters": 17936,
+      "sha256": "f05dd9a95240b27153141c264447c111f37c4546ae92349cd9f1437d63d056d6"
+    },
+    {
+      "id": "plot-full-timeline",
+      "file": "albina-worldbook-plot-full-timeline-v1.json",
+      "defaultEnabled": true,
+      "entryCount": 22,
+      "enabledEntryCount": 22,
+      "contentCharacters": 6728,
+      "sha256": "279b3b3dc84435cda7e16dffa28946f9e1bc51068f8cba09fac91dc877f65342"
+    },
+    {
+      "id": "l4-mechanics",
+      "file": "albina-worldbook-l4-mechanics-v1.json",
+      "defaultEnabled": false,
+      "entryCount": 37,
+      "enabledEntryCount": 0,
+      "contentCharacters": 7745,
+      "sha256": "0adf5c88bbc7b03b850818f54df899cc62ac2b783c19cc6777c36dd8e5f5dab5"
+    },
+    {
+      "id": "l5-reviewed-identities",
+      "file": "albina-worldbook-l5-reviewed-identities-v1.json",
+      "defaultEnabled": false,
+      "entryCount": 156,
+      "enabledEntryCount": 0,
+      "contentCharacters": 87805,
+      "sha256": "f540745fc0f23d8544b926e4ae40fed34d66f376eecfcb74d5b4388c8ac78277"
+    },
+    {
+      "id": "au-if",
+      "file": "albina-worldbook-au-if-v1.json",
+      "defaultEnabled": false,
+      "entryCount": 6,
+      "enabledEntryCount": 0,
+      "contentCharacters": 3611,
+      "sha256": "e154e1c11510eda3e074260867ef9e4a37a2356ade1c92d26a6a1177ef19efaa"
+    }
+  ],
+  "excluded": {
+    "quarantine": {
+      "id": "quarantine-unverified-rp",
+      "entryCount": 258,
+      "reason": "unverified RP evidence; local audit only"
+    },
+    "sourceIndex": {
+      "id": "source-index",
+      "entryCount": 1882,
+      "reason": "bridge/index records; never runtime injection"
+    }
+  }
+}

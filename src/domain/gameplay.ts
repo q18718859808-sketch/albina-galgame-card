@@ -1,5 +1,6 @@
 import { z } from 'zod';
 
+import { MinigameDefinitionSchema } from './minigame';
 import { RouteIdSchema } from './scene-cue-route';
 
 const GameplayIdSchema = z.string().min(1);
@@ -67,6 +68,26 @@ const NumericPredicateFields = {
   operator: z.enum(['gte', 'lte', 'eq']),
   value: z.number().finite(),
 } as const;
+
+export const ProgressionEffectsSchema = z
+  .object({
+    values: GameplayStatEffectsSchema.optional(),
+    relationshipVectors: RelationshipVectorEffectsSchema.optional(),
+    conflictMastery: ConflictMasteryEffectsSchema.optional(),
+    setFlags: z.array(GameplayIdSchema).optional(),
+    clearFlags: z.array(GameplayIdSchema).optional(),
+    unlockCg: z.array(GameplayIdSchema).optional(),
+    grantItems: z.array(GameplayIdSchema).optional(),
+    equipItems: z.array(GameplayIdSchema).optional(),
+    unlockOutfits: z.array(GameplayIdSchema).optional(),
+    activateOutfit: GameplayIdSchema.optional(),
+    startQuests: z.array(GameplayIdSchema).optional(),
+    completeQuests: z.array(GameplayIdSchema).optional(),
+    resolveBattles: z.array(BattleResolutionEffectSchema).optional(),
+    professionXp: z.record(GameplayIdSchema, z.number().int().positive()).optional(),
+    activateProfession: GameplayIdSchema.optional(),
+  })
+  .strict();
 
 export const StatePredicateSchema = z.discriminatedUnion('kind', [
   z.object({ kind: z.literal('value'), key: StoryValueKeySchema, ...NumericPredicateFields }).strict(),
@@ -196,6 +217,7 @@ const GameplaySystemsBaseSchema = z
     relationshipTracks: z.array(RelationshipTrackDefinitionSchema),
     quests: z.array(QuestDefinitionSchema),
     battles: z.array(BattleDefinitionSchema),
+    minigames: z.array(MinigameDefinitionSchema).default([]),
     items: z.array(ItemDefinitionSchema),
     equipment: z.array(EquipmentDefinitionSchema),
     professions: z.array(ProfessionDefinitionSchema),
@@ -223,7 +245,7 @@ function validateDefinitionReferences(gameplay: z.infer<typeof GameplaySystemsBa
 }
 
 export const GameplaySystemsSchema = GameplaySystemsBaseSchema.superRefine((gameplay, context) => {
-  for (const group of ['relationshipTracks', 'quests', 'battles', 'items', 'equipment', 'professions', 'achievements', 'outfits', 'worldbookEntries'] as const) {
+  for (const group of ['relationshipTracks', 'quests', 'battles', 'minigames', 'items', 'equipment', 'professions', 'achievements', 'outfits', 'worldbookEntries'] as const) {
     addDuplicateIssues(gameplay[group], group, context);
   }
   validateDefinitionReferences(gameplay, context);

@@ -1,0 +1,36 @@
+{
+  "version": 1,
+  "assetId": "file.characters.ren.normal.png",
+  "artifactSha256": "5cfd6e712b8790c8a4bcb5d015b086ec2e7827d573cffcf2914446a24c6e9607",
+  "provenance": {
+    "provider": "wisart-openai-compatible",
+    "model": "gpt-image-2",
+    "promptVersion": "albina-visual-migration-v1",
+    "sourceJobHash": "d6b5e000c8b9bd04c1d9cb92d7c86bc6db5c48ac0052fef13fa920318242fc70",
+    "review": {
+      "status": "approved",
+      "reviewer": "workbuddy-agent",
+      "reviewedAt": "2026-09-06T07:16:43.087Z"
+    }
+  },
+  "rights": {
+    "status": "unverified",
+    "sourceType": "model-output",
+    "redistribution": "unverified",
+    "rightsBasis": "Redistribution rights for this model output have not been independently verified."
+  },
+  "lineage": {
+    "kind": "derivative",
+    "processVersion": "albina-visual-promotion-v1",
+    "inputs": [
+      {
+        "sha256": "efe8cde8732d1a5a25062155b4d111dbf6185c3ba85e5612d5b67ccd465ec5bb",
+        "role": "canon-visual-reference"
+      },
+      {
+        "sha256": "aaf89630110b6fef687b86334404b00cd39fd29c84451971575b26a29ce51142",
+        "role": "canon-visual-reference"
+      }
+    ]
+  }
+}

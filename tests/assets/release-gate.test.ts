@@ -7,7 +7,7 @@ import { deriveReleaseStatus, summarizeReleaseArtifacts } from '../../scripts/li
 import { buildReleaseCommands, evaluateReleaseGate, hasPublishableWorktreeChanges } from '../../scripts/lib/release-gate.mjs';
 
 const imageProbe = (available: boolean) => ({
-  provider: 'x666-openai-compatible',
+  provider: 'wisart-openai-compatible',
   models: { 'gpt-image-2': available },
   currentAvailability: { available },
 });
@@ -22,8 +22,6 @@ const completeCounts = {
   endings: 9,
   fixedVoiceAssets: 166,
   pieProvenancedVoiceAssets: 166,
-  animatedCgRuntime: 24,
-  animatedCgDesktop: 24,
   staticCharacterPortraits: 27,
   staticAlbinaPortraits: 13,
   licensedBgm: 5,
@@ -32,6 +30,65 @@ const completeCounts = {
 const completeReadiness = { total: 109, ready: 109, blocked: 0, byRoot: {}, blockers: [] };
 
 describe('release status and publication gate', () => {
+  it('allows the image channel when the latent-moe fallback is the only usable image provider', () => {
+    const status = deriveReleaseStatus({
+      version: '2.0.0-rc.2',
+      runtimeMediaApis: false,
+      completed: completeCounts,
+      mediaReadiness: completeReadiness,
+      providerProbes: {
+        probes: [
+          imageProbe(false),
+          pieProbe,
+          {
+            provider: 'latent-moe',
+            models: { 'latent-moe-async': true },
+            currentAvailability: { available: true },
+            productionAuthorization: { authorized: true },
+          },
+        ],
+        compatibilityProbes: [],
+      },
+      pendingMediaJobs: 0,
+    });
+
+    expect(status.providers.image).toMatchObject({
+      available: true,
+      reason: 'image-fallback-available',
+      fallbackProvider: 'latent-moe',
+      fallbackModel: 'latent-moe-async',
+    });
+    expect(status.providers.imageFallbacks).toMatchObject([
+      { provider: 'latent-moe', model: 'latent-moe-async', available: true },
+    ]);
+    expect(status.completionBlockers).not.toEqual(expect.arrayContaining([
+      'provider:image:gpt-image-2-unavailable',
+    ]));
+  });
+
+  it('keeps the image channel unavailable when no primary or fallback image provider passes', () => {
+    const status = deriveReleaseStatus({
+      version: '2.0.0-rc.2',
+      runtimeMediaApis: false,
+      completed: completeCounts,
+      mediaReadiness: completeReadiness,
+      providerProbes: {
+        probes: [
+          imageProbe(false),
+          pieProbe,
+          { provider: 'latent-moe', models: { 'latent-moe-async': true }, currentAvailability: { available: false } },
+        ],
+        compatibilityProbes: [],
+      },
+      pendingMediaJobs: 0,
+    });
+
+    expect(status.providers.image).toMatchObject({ available: false, model: 'gpt-image-2' });
+    expect(status.providers.imageFallbacks).toMatchObject([
+      { provider: 'latent-moe', model: 'latent-moe-async', available: false },
+    ]);
+  });
+
   it('ignores only protected local production state when checking publishable changes', () => {
     const localOnly = [
       ' M tools/media/production/.ledger.json',
@@ -72,7 +129,7 @@ describe('release status and publication gate', () => {
     const status = deriveReleaseStatus({
       version: '2.0.0-rc.2',
       runtimeMediaApis: false,
-      completed: { ...completeCounts, animatedCgRuntime: 0, animatedCgDesktop: 0 },
+      completed: completeCounts,
       mediaReadiness: { total: 109, ready: 61, blocked: 48, byRoot: {}, blockers: [] },
       providerProbes: { probes: [imageProbe(false), pieProbe], compatibilityProbes: [] },
       pendingMediaJobs: 0,
@@ -107,7 +164,7 @@ describe('release status and publication gate', () => {
   it('builds an immutable RC tag and branch push only after the clean-worktree gate', () => {
     const status = deriveReleaseStatus({
       version: '2.0.0-rc.2', runtimeMediaApis: false,
-      completed: { ...completeCounts, animatedCgRuntime: 0 },
+      completed: completeCounts,
       mediaReadiness: { total: 109, ready: 85, blocked: 24, byRoot: {}, blockers: [] },
       providerProbes: { probes: [imageProbe(true), pieProbe], compatibilityProbes: [] },
       pendingMediaJobs: 0,
@@ -155,8 +212,8 @@ describe('release status and publication gate', () => {
     expect(summary.completed.deterministicScenes).toBe(64);
     expect(summary.completed.endings).toBe(9);
     expect(summary.completed.fixedVoiceAssets).toBe(166);
-    expect(summary.completed.animatedCgRuntime).toBe(24);
-    expect(summary.completed.animatedCgDesktop).toBe(24);
+    expect(summary.completed).not.toHaveProperty('animatedCgRuntime');
+    expect(summary.completed).not.toHaveProperty('animatedCgDesktop');
     expect(summary.completed.staticCharacterPortraits).toBe(27);
     expect(summary.completed.staticAlbinaPortraits).toBe(13);
     expect(summary.completed.licensedBgm).toBe(5);

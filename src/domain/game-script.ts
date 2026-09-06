@@ -2,6 +2,7 @@ import { z } from 'zod';
 
 import { AssetManifestV2Schema, type AssetRecord } from './assets';
 import { GameplaySystemsSchema, type GameplaySystems, type StatePredicate } from './gameplay';
+import type { SceneMinigameChallenge } from './minigame';
 import {
   DOMAIN_VERSION,
   RouteIdSchema,
@@ -42,6 +43,7 @@ interface GameplayReferenceSets {
   equipment: Set<string>;
   professions: Set<string>;
   outfits: Set<string>;
+  minigames: Set<string>;
   worldbook: Set<string>;
 }
 
@@ -53,6 +55,7 @@ function gameplayReferenceSets(gameplay: GameplaySystems): GameplayReferenceSets
     equipment: new Set(gameplay.equipment.map(({ id }) => id)),
     professions: new Set(gameplay.professions.map(({ id }) => id)),
     outfits: new Set(gameplay.outfits.map(({ id }) => id)),
+    minigames: new Set(gameplay.minigames.map(({ id }) => id)),
     worldbook: new Set(gameplay.worldbookEntries.map(({ id }) => id)),
   };
 }
@@ -124,6 +127,17 @@ function validateAchievementReferences(
   });
 }
 
+function validateSceneMinigameReference(
+  challenge: SceneMinigameChallenge | undefined,
+  refs: GameplayReferenceSets,
+  context: z.RefinementCtx,
+  path: PropertyKey[],
+): void {
+  if (challenge && !refs.minigames.has(challenge.minigameId)) {
+    addGameplayReferenceIssue(context, [...path, 'minigameId'], 'minigame', challenge.minigameId);
+  }
+}
+
 function validateGameplayReferences(script: z.infer<typeof GameScriptV2BaseSchema>, context: z.RefinementCtx): void {
   const refs = gameplayReferenceSets(script.gameplay);
   script.scenes.forEach((scene, sceneIndex) => scene.choices.forEach((choice, choiceIndex) => {
@@ -133,6 +147,7 @@ function validateGameplayReferences(script: z.infer<typeof GameScriptV2BaseSchem
     choice.availability?.anyOf?.forEach((item, index) => validatePredicateReference(item, refs, context, [...root, 'availability', 'anyOf', index]));
   }));
   script.scenes.forEach((scene, sceneIndex) => {
+    validateSceneMinigameReference(scene.minigame, refs, context, ['scenes', sceneIndex, 'minigame']);
     scene.ending?.eligibility.allOf?.forEach((item, index) => validatePredicateReference(item, refs, context, ['scenes', sceneIndex, 'ending', 'eligibility', 'allOf', index]));
     scene.ending?.eligibility.anyOf?.forEach((item, index) => validatePredicateReference(item, refs, context, ['scenes', sceneIndex, 'ending', 'eligibility', 'anyOf', index]));
   });

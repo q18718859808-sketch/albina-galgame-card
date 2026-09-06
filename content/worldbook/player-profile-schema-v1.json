@@ -1,0 +1,17 @@
+{
+  "schemaVersion": 1,
+  "id": "albina-player-profile-v1",
+  "variableKey": "albinaPlayerProfileV1",
+  "scope": "chat",
+  "fields": [
+    { "path": "name", "type": "string", "maxLength": 80, "default": "{{user}}", "updatedBy": ["profile_submit"], "readBy": ["save_v2", "chat_variable", "worldbook_ejs", "profile_ui"] },
+    { "path": "addressName", "type": "string", "maxLength": 80, "default": "{{user}}", "updatedBy": ["profile_submit"], "readBy": ["save_v2", "chat_variable", "worldbook_ejs", "profile_ui"] },
+    { "path": "gender", "type": "string", "maxLength": 80, "default": "成年男性", "updatedBy": ["profile_submit"], "readBy": ["save_v2", "chat_variable", "worldbook_ejs", "profile_ui"] },
+    { "path": "appearance", "type": "string", "maxLength": 800, "default": "修长的实战体态，短黑发，灰褐色眼睛，左耳佩戴简洁金属通讯耳扣。穿深 charcoal 长外套、冷白内层、旧金色窄识别带、黑色长裤和耐磨靴。", "updatedBy": ["profile_submit"], "readBy": ["save_v2", "chat_variable", "worldbook_ejs", "profile_ui"] },
+    { "path": "background", "type": "string", "maxLength": 800, "default": "暂未确认；可由玩家设定。", "updatedBy": ["profile_submit"], "readBy": ["save_v2", "chat_variable", "worldbook_ejs", "profile_ui"] },
+    { "path": "ability", "type": "string", "maxLength": 400, "default": "观察、记录与在危险中保持克制。", "updatedBy": ["profile_submit"], "readBy": ["save_v2", "chat_variable", "worldbook_ejs", "profile_ui"] },
+    { "path": "initialRelationship", "type": "string", "maxLength": 400, "default": "谨慎观察：不预设亲密、敌意或服从，由故事中的明确行动逐步建立关系。", "updatedBy": ["profile_submit"], "readBy": ["save_v2", "chat_variable", "worldbook_ejs", "profile_ui"] },
+    { "path": "boundaries", "type": "string", "maxLength": 800, "default": "成人自愿，亲密推进需要明确同意；允许黑暗都市暴力，但不允许强迫或失能式亲密。", "updatedBy": ["profile_submit"], "readBy": ["save_v2", "chat_variable", "worldbook_ejs", "profile_ui"] },
+    { "path": "routePreference", "type": "enum", "values": ["white_canvas", "golden_bough_rebuild", "ring_conspiracy"], "default": "white_canvas", "updatedBy": ["profile_submit"], "readBy": ["save_v2", "chat_variable", "worldbook_ejs", "profile_ui"] }
+  ]
+}

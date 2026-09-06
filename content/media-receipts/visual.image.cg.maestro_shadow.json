@@ -1,0 +1,52 @@
+{
+  "version": 1,
+  "assetId": "cg.maestro_shadow",
+  "artifactSha256": "72e8e55923e1717f52b8a30049746dc258df7f01f7ea91af3493bc974766b762",
+  "provenance": {
+    "provider": "wisart-openai-compatible",
+    "model": "gpt-image-2",
+    "promptVersion": "albina-visual-migration-v1",
+    "sourceJobHash": "f4866738a1ee211da3df79a327317564753e1d60569e68378909a5346c53b0b9",
+    "review": {
+      "status": "approved",
+      "reviewer": "workbuddy-convergence-agent",
+      "reviewedAt": "2026-09-06T08:36:19.225Z"
+    }
+  },
+  "rights": {
+    "status": "unverified",
+    "sourceType": "model-output",
+    "redistribution": "unverified",
+    "rightsBasis": "Redistribution rights for this model output have not been independently verified."
+  },
+  "lineage": {
+    "kind": "derivative",
+    "processVersion": "albina-visual-promotion-v1",
+    "inputs": [
+      {
+        "assetId": "file.characters.albina.maestro.png",
+        "sha256": "2f3d893f3d46d6539cdb100b8fc160feeec7e115d4dc114cb62e0872a41ce666",
+        "role": "approved-generated-reference"
+      },
+      {
+        "assetId": "file.characters.protagonist.shadow.png",
+        "sha256": "e041ba0b65c736c8b1c7c88d9e168160762f4f00075a54e8516af2d5d8094676",
+        "role": "approved-generated-reference"
+      },
+      {
+        "assetId": "file.characters.callisto.normal.png",
+        "sha256": "e6158578e0fb0316c60224b86336bfe582a6515539f7ff22e2a7f2be4683c663",
+        "role": "approved-generated-reference"
+      },
+      {
+        "assetId": "file.characters.ren.normal.png",
+        "sha256": "5cfd6e712b8790c8a4bcb5d015b086ec2e7827d573cffcf2914446a24c6e9607",
+        "role": "approved-generated-reference"
+      },
+      {
+        "sha256": "aaf89630110b6fef687b86334404b00cd39fd29c84451971575b26a29ce51142",
+        "role": "canon-visual-reference"
+      }
+    ]
+  }
+}

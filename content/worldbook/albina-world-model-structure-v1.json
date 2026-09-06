@@ -1,0 +1,127 @@
+{
+  "schemaVersion": 1,
+  "id": "albina-world-model-structure-v1",
+  "name": "Albina world model: relationship graph and Canto I-VIII event scaffolds",
+  "purpose": "Research-layer structure for completing the living-world model without changing the card L0 entries or the canonical 22-entry plot timeline.",
+  "modelStatus": "awaiting-current-source-review",
+  "runtime": {
+    "defaultEnabled": false,
+    "runtimeEligible": false,
+    "injectionPolicy": "research-only-until-each-record-has-current-source-review",
+    "sourceIndexAndQuarantineRemainNonRuntime": true
+  },
+  "preservation": {
+    "cardL0EntryCount": 16,
+    "plotTimelineEntryCount": 22,
+    "originalCardEntriesUntouched": true,
+    "artifactAddsStructureOnly": true
+  },
+  "sourcePolicy": {
+    "copyrightMode": "paraphrase_only",
+    "claimClass": "canon-candidate",
+    "reviewStatus": "unreviewed",
+    "requiredBeforePromotion": [
+      "refresh-current-source-and-revision",
+      "event-level-locator-review",
+      "relationship-endpoint-and-direction-review",
+      "boundary-review-against-AU-IF"
+    ],
+    "unreviewedRecordsMustNot": [
+      "alter existing timeline entries",
+      "enter default runtime context",
+      "override player choices",
+      "assert an outcome not present in the cited source"
+    ]
+  },
+  "sources": [
+    {"sourceId":"source.wiki.canto-i.172128","chapter":"Canto I","revisionId":172128,"checkedAt":"2026-08-19T00:00:00Z","reviewStatus":"awaiting-current-source-review"},
+    {"sourceId":"source.wiki.canto-ii.156832","chapter":"Canto II","revisionId":156832,"checkedAt":"2026-08-19T00:00:00Z","reviewStatus":"awaiting-current-source-review"},
+    {"sourceId":"source.wiki.canto-iii.141561","chapter":"Canto III","revisionId":141561,"checkedAt":"2026-08-19T00:00:00Z","reviewStatus":"awaiting-current-source-review"},
+    {"sourceId":"source.wiki.canto-iv.172264","chapter":"Canto IV","revisionId":172264,"checkedAt":"2026-08-19T00:00:00Z","reviewStatus":"awaiting-current-source-review"},
+    {"sourceId":"source.wiki.canto-v.172266","chapter":"Canto V","revisionId":172266,"checkedAt":"2026-08-19T00:00:00Z","reviewStatus":"awaiting-current-source-review"},
+    {"sourceId":"source.wiki.canto-vi.172270","chapter":"Canto VI","revisionId":172270,"checkedAt":"2026-08-19T00:00:00Z","reviewStatus":"awaiting-current-source-review"},
+    {"sourceId":"source.wiki.canto-vii.172272","chapter":"Canto VII","revisionId":172272,"checkedAt":"2026-08-19T00:00:00Z","reviewStatus":"awaiting-current-source-review"},
+    {"sourceId":"source.wiki.canto-viii.172274","chapter":"Canto VIII","revisionId":172274,"checkedAt":"2026-08-19T00:00:00Z","reviewStatus":"awaiting-current-source-review"}
+  ],
+  "entities": [
+    {"id":"entity.albina","label":"Albina","kind":"character","status":"candidate","sourceRefs":[]},
+    {"id":"entity.player","label":"Player","kind":"role","status":"authored-au-interface","sourceRefs":[]},
+    {"id":"entity.callisto","label":"Callisto","kind":"character","status":"candidate","sourceRefs":[]},
+    {"id":"entity.ren","label":"Ren","kind":"character","status":"candidate","sourceRefs":[]},
+    {"id":"entity.fascia","label":"Fascia","kind":"body-system-or-attachment","status":"candidate","sourceRefs":[]},
+    {"id":"entity.lcb","label":"Limbus Company","kind":"organization","status":"canon-candidate","sourceRefs":[]},
+    {"id":"entity.sinners","label":"Sinners and bus crew","kind":"group","status":"canon-candidate","sourceRefs":[]},
+    {"id":"entity.ring","label":"The Ring","kind":"faction","status":"canon-candidate","sourceRefs":[]},
+    {"id":"entity.house-of-spiders","label":"House of Spiders","kind":"faction","status":"canon-candidate","sourceRefs":[]},
+    {"id":"entity.golden-bough","label":"Golden Bough","kind":"object-or-resource","status":"canon-candidate","sourceRefs":[]},
+    {"id":"entity.canto-i-pressure","label":"Canto I opening pressures","kind":"chapter-frame","status":"canon-candidate","sourceRefs":["source.wiki.canto-i.172128"]},
+    {"id":"entity.canto-ii-pressure","label":"Canto II urban task pressures","kind":"chapter-frame","status":"canon-candidate","sourceRefs":["source.wiki.canto-ii.156832"]},
+    {"id":"entity.canto-iii-pressure","label":"Canto III institutional and religious pressure","kind":"chapter-frame","status":"canon-candidate","sourceRefs":["source.wiki.canto-iii.141561"]},
+    {"id":"entity.canto-iv-pressure","label":"Canto IV memory and technology pressure","kind":"chapter-frame","status":"canon-candidate","sourceRefs":["source.wiki.canto-iv.172264"]},
+    {"id":"entity.canto-v-pressure","label":"Canto V voyage and pursuit pressure","kind":"chapter-frame","status":"canon-candidate","sourceRefs":["source.wiki.canto-v.172266"]},
+    {"id":"entity.canto-vi-pressure","label":"Canto VI fixation and multiple-world pressure","kind":"chapter-frame","status":"canon-candidate","sourceRefs":["source.wiki.canto-vi.172270"]},
+    {"id":"entity.canto-vii-pressure","label":"Canto VII dream and Bloodfiend pressure","kind":"chapter-frame","status":"canon-candidate","sourceRefs":["source.wiki.canto-vii.172272"]},
+    {"id":"entity.canto-viii-pressure","label":"Canto VIII family and power-vacuum pressure","kind":"chapter-frame","status":"canon-candidate","sourceRefs":["source.wiki.canto-viii.172274"]}
+  ],
+  "relationships": [
+    {"id":"rel.albina-callisto","from":"entity.albina","to":"entity.callisto","type":"mentor-pressure","direction":"bidirectional","interval":"Albina AU opening","status":"candidate","sourceRefs":[],"reviewStatus":"unreviewed","runtimeUse":"relationship-tension-only"},
+    {"id":"rel.albina-ren","from":"entity.albina","to":"entity.ren","type":"cooperation-and-plan-conflict","direction":"bidirectional","interval":"Albina AU opening","status":"candidate","sourceRefs":[],"reviewStatus":"unreviewed","runtimeUse":"branch-pressure-only"},
+    {"id":"rel.albina-fascia","from":"entity.albina","to":"entity.fascia","type":"body-attachment-and-survival","direction":"bidirectional","interval":"Albina AU opening","status":"candidate","sourceRefs":[],"reviewStatus":"unreviewed","runtimeUse":"do-not-resolve-without-player-choice"},
+    {"id":"rel.albina-lcb","from":"entity.albina","to":"entity.lcb","type":"enemy-to-conditional-cooperation","direction":"bidirectional","interval":"Canto I-VIII scaffold","status":"candidate","sourceRefs":[],"reviewStatus":"unreviewed","runtimeUse":"faction-boundary-only"},
+    {"id":"rel.albina-player","from":"entity.albina","to":"entity.player","type":"authored-romance-and-trust-axis","direction":"bidirectional","interval":"AU/IF only","status":"authored-au-interface","sourceRefs":[],"reviewStatus":"not-canon-claim","runtimeUse":"player-choice-driven"},
+    {"id":"rel.lcb-sinners","from":"entity.lcb","to":"entity.sinners","type":"command-and-resource-dependency","direction":"bidirectional","interval":"Canto I-VIII scaffold","status":"canon-candidate","sourceRefs":["source.wiki.canto-i.172128"],"reviewStatus":"awaiting-current-source-review","runtimeUse":"context-only"},
+    {"id":"rel.ring-spiders","from":"entity.ring","to":"entity.house-of-spiders","type":"faction-distinction","direction":"bidirectional","interval":"Canto VIII and cross-timeline","status":"canon-candidate","sourceRefs":["source.wiki.canto-viii.172274"],"reviewStatus":"awaiting-current-source-review","runtimeUse":"do-not-collapse-factions"},
+    {"id":"rel.lcb-bough","from":"entity.lcb","to":"entity.golden-bough","type":"mission-resource-dependency","direction":"directed","interval":"Canto I-VIII scaffold","status":"canon-candidate","sourceRefs":["source.wiki.canto-iv.172264"],"reviewStatus":"awaiting-current-source-review","runtimeUse":"objective-pressure-only"}
+  ],
+  "eventChains": [
+    {"chapter":"Canto I","sourceRefs":["source.wiki.canto-i.172128"],"reviewStatus":"awaiting-current-source-review","events":[
+      {"id":"event.canto-i.01","phase":"opening","frame":"mobile-base-and-mission-setup","preconditions":[],"trigger":"crew receives or prepares a task","causes":["mission context becomes active","bus functions as both base and transport"],"consequences":["crew enters a local threat space"],"branchBoundary":"Albina and player encounter remain AU/IF","status":"canon-candidate"},
+      {"id":"event.canto-i.02","phase":"escalation","frame":"ordinary-people-and-local-fixer-order-enter-task","preconditions":["event.canto-i.01"],"trigger":"task intersects local civilians or low-level fixer order","causes":["resource and safety pressure rise"],"consequences":["crew must choose between speed, protection and investigation"],"branchBoundary":"choice outcomes are not asserted","status":"canon-candidate"},
+      {"id":"event.canto-i.03","phase":"handoff","frame":"opening-frame-closes-into-next-canto-pressure","preconditions":["event.canto-i.02"],"trigger":"local task reaches a transition point","causes":["next chapter pressure can be introduced"],"consequences":["retain unresolved costs and witness memory"],"branchBoundary":"no invented ending","status":"canon-candidate"}
+    ]},
+    {"chapter":"Canto II","sourceRefs":["source.wiki.canto-ii.156832"],"reviewStatus":"awaiting-current-source-review","events":[
+      {"id":"event.canto-ii.01","phase":"setup","frame":"urban-task-and-entertainment-space","preconditions":[],"trigger":"crew enters a commercial or entertainment-linked task space","causes":["plan is shaped by money, access or spectacle"],"consequences":["social rules become operational hazards"],"branchBoundary":"do not assert a specific plan result","status":"canon-candidate"},
+      {"id":"event.canto-ii.02","phase":"complication","frame":"crime-comedy-rhythm-meets-violence","preconditions":["event.canto-ii.01"],"trigger":"a plan collides with local power or abnormal threat","causes":["comic surface and bodily risk coexist"],"consequences":["party must reassess cost and escape route"],"branchBoundary":"no automatic victory","status":"canon-candidate"},
+      {"id":"event.canto-ii.03","phase":"handoff","frame":"urban-route-leaves-a-resource-or-reputation-cost","preconditions":["event.canto-ii.02"],"trigger":"task route closes or changes","causes":["crew carries forward debt, evidence or tension"],"consequences":["later pressure can reference the cost"],"branchBoundary":"AU insertion must remain labeled","status":"canon-candidate"}
+    ]},
+    {"chapter":"Canto III","sourceRefs":["source.wiki.canto-iii.141561"],"reviewStatus":"awaiting-current-source-review","events":[
+      {"id":"event.canto-iii.01","phase":"inspection","frame":"institutional-and-religious-check","preconditions":[],"trigger":"inspection, warning or Code Purple-like constraint becomes active","causes":["movement and information become restricted"],"consequences":["crew must protect people, objects or testimony"],"branchBoundary":"restriction is not a verdict","status":"canon-candidate"},
+      {"id":"event.canto-iii.02","phase":"pressure","frame":"body-memory-and-identity-are-targeted","preconditions":["event.canto-iii.01"],"trigger":"authority or fanatic pressure escalates","causes":["survival and self-definition conflict"],"consequences":["characters choose compliance, concealment or confrontation"],"branchBoundary":"do not predetermine rescue or death","status":"canon-candidate"},
+      {"id":"event.canto-iii.03","phase":"handoff","frame":"judgment-pressure-remains-after-the-scene","preconditions":["event.canto-iii.02"],"trigger":"immediate inspection ends","causes":["institutional memory persists"],"consequences":["later choices inherit scrutiny"],"branchBoundary":"institutional pressure remains unresolved","status":"canon-candidate"}
+    ]},
+    {"chapter":"Canto IV","sourceRefs":["source.wiki.canto-iv.172264"],"reviewStatus":"awaiting-current-source-review","events":[
+      {"id":"event.canto-iv.01","phase":"contact","frame":"technology-and-client-demand","preconditions":[],"trigger":"a technical objective or client demand is introduced","causes":["innovation is tied to obligation"],"consequences":["crew enters a memory-bearing environment"],"branchBoundary":"Albina cannot replace the chapter protagonist","status":"canon-candidate"},
+      {"id":"event.canto-iv.02","phase":"revelation","frame":"memory-old-friend-and-betrayal-pressure","preconditions":["event.canto-iv.01"],"trigger":"technology exposes or distorts personal memory","causes":["private history becomes mission material"],"consequences":["characters weigh recovery against loss"],"branchBoundary":"no invented memory resolution","status":"canon-candidate"},
+      {"id":"event.canto-iv.03","phase":"handoff","frame":"material-success-carries-personal-cost","preconditions":["event.canto-iv.02"],"trigger":"technical sequence reaches a boundary","causes":["memory remains an active pressure"],"consequences":["future scenes may echo unresolved grief"],"branchBoundary":"AU echoes must be tagged","status":"canon-candidate"}
+    ]},
+    {"chapter":"Canto V","sourceRefs":["source.wiki.canto-v.172266"],"reviewStatus":"awaiting-current-source-review","events":[
+      {"id":"event.canto-v.01","phase":"departure","frame":"voyage-laws-and-shipboard-order","preconditions":[],"trigger":"crew enters a sea-bound mission route","causes":["law and navigation define available action"],"consequences":["the group depends on vessel and crew conditions"],"branchBoundary":"player and Albina voyage is AU only","status":"canon-candidate"},
+      {"id":"event.canto-v.02","phase":"pursuit","frame":"club-kidnapping-rebellion-and-whale-pressure","preconditions":["event.canto-v.01"],"trigger":"pursuit or large-scale threat interrupts voyage","causes":["legal, social and survival pressures converge"],"consequences":["crew must choose rescue, pursuit or retreat"],"branchBoundary":"do not assert a choice outcome","status":"canon-candidate"},
+      {"id":"event.canto-v.03","phase":"handoff","frame":"voyage-leaves-group-and-survival-debt","preconditions":["event.canto-v.02"],"trigger":"sea route changes or closes","causes":["crew carries witness and resource consequences"],"consequences":["later missions inherit damaged trust or supplies"],"branchBoundary":"Fascia hunger remains AU material","status":"canon-candidate"}
+    ]},
+    {"chapter":"Canto VI","sourceRefs":["source.wiki.canto-vi.172270"],"reviewStatus":"awaiting-current-source-review","events":[
+      {"id":"event.canto-vi.01","phase":"arrival","frame":"manor-and-letter-memory-space","preconditions":[],"trigger":"crew enters a place organized around past attachment","causes":["private obsession structures the environment"],"consequences":["evidence and emotion become difficult to separate"],"branchBoundary":"Albina route is not the chapter worldline","status":"canon-candidate"},
+      {"id":"event.canto-vi.02","phase":"fracture","frame":"imitation-underground-space-and-multiple-worlds","preconditions":["event.canto-vi.01"],"trigger":"memory or identity is multiplied, imitated or displaced","causes":["one personal loss produces wider-world consequences"],"consequences":["characters must reject or pursue a fixation"],"branchBoundary":"do not resolve Every World as a player reward","status":"canon-candidate"},
+      {"id":"event.canto-vi.03","phase":"handoff","frame":"golden-bough-pressure-outlives-the-manor","preconditions":["event.canto-vi.02"],"trigger":"manor sequence reaches a boundary","causes":["fixation leaves an inter-world trace"],"consequences":["future branches may inherit grief or pursuit"],"branchBoundary":"AU/IF divergence must be explicit","status":"canon-candidate"}
+    ]},
+    {"chapter":"Canto VII","sourceRefs":["source.wiki.canto-vii.172272"],"reviewStatus":"awaiting-current-source-review","events":[
+      {"id":"event.canto-vii.01","phase":"entrance","frame":"stage-dream-and-fixer-contract","preconditions":[],"trigger":"a theatrical dream or contract frames the mission","causes":["courtesy and performance become survival rules"],"consequences":["appearance and role affect access"],"branchBoundary":"Albina is not converted into a Bloodfiend","status":"canon-candidate"},
+      {"id":"event.canto-vii.02","phase":"reversal","frame":"bloodfiend-reality-breaks-the-fairytale-surface","preconditions":["event.canto-vii.01"],"trigger":"blood, memory or contract cost becomes visible","causes":["dream language collides with material harm"],"consequences":["characters must choose belief, rescue or escape"],"branchBoundary":"no automatic rescue or victory","status":"canon-candidate"},
+      {"id":"event.canto-vii.03","phase":"handoff","frame":"contract-cost-remains-after-the-performance","preconditions":["event.canto-vii.02"],"trigger":"the staged route closes","causes":["memory and obligation remain active"],"consequences":["future relationships carry a witnessed cost"],"branchBoundary":"player intervention is AU/IF only","status":"canon-candidate"}
+    ]},
+    {"chapter":"Canto VIII","sourceRefs":["source.wiki.canto-viii.172274"],"reviewStatus":"awaiting-current-source-review","events":[
+      {"id":"event.canto-viii.01","phase":"return","frame":"homecoming-and-family-order","preconditions":[],"trigger":"a return or family-centered mission begins","causes":["old hierarchy defines the scene before combat"],"consequences":["speech, etiquette and allegiance become tactical"],"branchBoundary":"player and Ring/Spiders relations remain AU unless sourced","status":"canon-candidate"},
+      {"id":"event.canto-viii.02","phase":"vacuum","frame":"temporary-power-vacuum-and-rival-families","preconditions":["event.canto-viii.01"],"trigger":"an authority gap or temporary truce appears","causes":["rivals test whether old order still holds"],"consequences":["cooperation is conditional and reversible"],"branchBoundary":"do not assert succession or final ranking","status":"canon-candidate"},
+      {"id":"event.canto-viii.03","phase":"handoff","frame":"witnessing-preserves-the-family-conflict","preconditions":["event.canto-viii.02"],"trigger":"the temporary arrangement breaks or changes","causes":["witnesses carry the unresolved power map"],"consequences":["later choices must account for faction memory"],"branchBoundary":"AU/IF additions require explicit divergence","status":"canon-candidate"}
+    ]}
+  ],
+  "integrity": {
+    "relationshipEndpointsMustExist": true,
+    "eventPreconditionsMustReferenceEarlierEventInSameChapter": true,
+    "everyRecordHasReviewStatus": true,
+    "everyCantoIThroughVIIIPresent": true,
+    "doesNotModifyCanonicalTimeline": true,
+    "completeLivingWorldVerified": false,
+    "doNotClaimComplete": true
+  }
+}

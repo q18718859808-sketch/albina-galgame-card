@@ -97,8 +97,9 @@ it('regenerates real stale inputs before bundling and promoting a release', asyn
   try {
     await mkdir(dirname(releaseSyncPath), { recursive: true });
     await copyFile(fileURLToPath(new URL('../../scripts/release-sync.mjs', import.meta.url)), releaseSyncPath);
-    await writeFile(statePath, JSON.stringify({ manifest: 'stale', story: 'stale', bundle: 'stale', status: 'stale', promoted: 'stale', audited: 'stale' }));
+    await writeFile(statePath, JSON.stringify({ worldbooks: 'stale', manifest: 'stale', story: 'stale', bundle: 'stale', status: 'stale', promoted: 'stale', audited: 'stale' }));
     await writeModule(root, 'scripts/sync-canon-card.mjs', "// fixture no-op\n");
+    await writeModule(root, 'scripts/sync-layered-worldbooks.mjs', `${stateModule}state.worldbooks = 'fresh';\nawait writeFile(statePath, JSON.stringify(state));\n`);
     await writeModule(root, 'scripts/sync-character-card-png.mjs', "// fixture no-op\n");
     await writeModule(root, 'scripts/audit-assets.mjs', `${stateModule}if (process.argv.includes('--write')) state.manifest = 'fresh'; else { if (state.promoted !== 'fresh') throw new Error('promoted output is stale'); state.audited = 'fresh'; }\nawait writeFile(statePath, JSON.stringify(state));\n`);
     await writeModule(root, 'scripts/compile-story.mjs', `${stateModule}if (state.manifest !== 'fresh') throw new Error('manifest is stale');\nstate.story = 'fresh';\nawait writeFile(statePath, JSON.stringify(state));\n`);
@@ -109,9 +110,10 @@ it('regenerates real stale inputs before bundling and promoting a release', asyn
 
     await run(process.execPath, [releaseSyncPath], { cwd: root });
 
-    expect(JSON.parse(await readFile(statePath, 'utf8'))).toEqual({ manifest: 'fresh', story: 'fresh', bundle: 'fresh', status: 'fresh', promoted: 'fresh', audited: 'fresh' });
+    expect(JSON.parse(await readFile(statePath, 'utf8'))).toEqual({ worldbooks: 'fresh', manifest: 'fresh', story: 'fresh', bundle: 'fresh', status: 'fresh', promoted: 'fresh', audited: 'fresh' });
     expect(RELEASE_STEPS.map((step) => step.id)).toEqual([
       'canon:sync',
+      'worldbooks:sync',
       'card:sync',
       'assets:generate',
       'story:compile',

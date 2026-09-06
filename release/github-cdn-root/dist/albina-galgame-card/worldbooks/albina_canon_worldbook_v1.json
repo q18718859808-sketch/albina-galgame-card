@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "id": "albina-canon-worldbook-v1",
-  "generatedFrom": "content/albina-card-canon-v1.json + content/canon-claims-v1.json",
+  "generatedFrom": "content/albina-card-canon-v1.json + content/canon-claims-v1.json + content/worldbook/player-profile-runtime-v1.json",
   "copyrightPolicy": "只保存原子事实释义与来源定位，不复制原作长篇台词、录播画面、音频或字幕全文。",
   "name": "阿尔比娜原子正史锚点与 AU/IF 边界 v2",
   "description": "条目只引用统一 claim ledger；来源与分类由同步器自动推导，不能在角色卡内另行改写。",
@@ -561,6 +561,29 @@
         ],
         "copyright_mode": "paraphrase_only",
         "review_status": "source_checked"
+      }
+    },
+    {
+      "uid": "albina_player_profile_runtime",
+      "key": [],
+      "keysecondary": [],
+      "comment": "Player profile runtime",
+      "content": "<%_ const player = getvar('albinaPlayerProfileV1', { defaults: {} }); const worldbook = getvar('albinaWorldbookSelectionV1', { presetId: 'canonicalCore', packageIds: [] }); _%>\n<player_profile>\nname: <%= player.name || '{{user}}' %>\naddress: <%= player.addressName || player.name || '{{user}}' %>\ngender_expression: <%= player.gender || 'adult male' %>\nappearance: <%= player.appearance || 'fixed adult male protagonist design' %>\nbackground: <%= player.background || 'not yet specified' %>\nability_tendency: <%= player.ability || 'observation and restraint' %>\ninitial_relationship_tendency: <%= player.initialRelationship || 'cautious observation; establish trust only through explicit actions' %>\ncontent_boundaries: <%= player.boundaries || 'respect explicit consent and withdrawal' %>\nroute_preference: <%= player.routePreference || 'white_canvas' %>\nworldbook_preset: <%= worldbook.presetId || 'canonicalCore' %>\nworldbook_packages: <%= (worldbook.packageIds || []).join(', ') %>\n</player_profile>\nTreat this profile and selected worldbook package set as AU/IF player-authored context. Preserve player agency; do not invent unprovided actions, thoughts, or dialogue, and do not present it as Limbus Company canon.",
+      "constant": true,
+      "selective": false,
+      "position": "after_character_definition",
+      "order": 155,
+      "disable": false,
+      "extensions": {
+        "depth": 4,
+        "role": "system",
+        "entry_id": "albina_player_profile_runtime",
+        "content_classification": "AU_extension",
+        "claim_ids": [],
+        "source_refs": [],
+        "copyright_mode": "original_runtime_template",
+        "review_status": "ejs-source-checked",
+        "variable_source": "TavernHelper.setVariables(chat)"
       }
     }
   ]

@@ -1,0 +1,305 @@
+{
+  "schemaVersion": 1,
+  "id": "au-if",
+  "name": "AU and IF continuity",
+  "description": "Generated from the reviewed migration ledger. Package policy: disabled by default.",
+  "generatedFrom": "content/worldbook/limbus-world-audit-v1.json",
+  "sourcePolicy": "Paraphrased legacy entries fixed by source-package SHA-256; source-index and quarantine never inject by default.",
+  "defaultEnabled": false,
+  "scan_depth": 4,
+  "entries": [
+    {
+      "uid": "p0_albina_identity_affiliation_status",
+      "key": [
+        "Albina",
+        "阿尔比娜",
+        "The Ring Apprentice",
+        "House of Spiders",
+        "Canto IX"
+      ],
+      "keysecondary": [
+        "Callisto",
+        "Fascia",
+        "The Ring"
+      ],
+      "comment": "P0：阿尔比娜身份、从属与正史边界",
+      "content": "阿尔比娜在正史锚点中应首先被视为环指学徒，而不是脱离组织的原创女主。她的公开身份与环指、蜘蛛巢和第九章事件绑定；她与卡利斯托的师徒关系是理解她价值观的第一层锁，不能在 RP 中随意删去。写她时要保留作品、师承、组织、身体材料四个压力源：她对亲近的渴望不是普通恋爱型孤独，而是在环指审美和人体派逻辑中长出的错位社交。由于页面元数据标示她在正史状态上已经死亡，本卡若让她作为单女主持续行动，必须写成镜像分支、残响重构、前端路线存档、金枝异常或同人假设；叙事不得把同人存活线伪装成官方后续。",
+      "constant": false,
+      "selective": true,
+      "position": "after_character_definition",
+      "order": 1000,
+      "disable": true,
+      "extensions": {
+        "source_refs": [
+          {
+            "source_title": "Albina",
+            "source_url": "https://limbuscompany.wiki.gg/wiki/Albina",
+            "revision_id": 167288,
+            "verified_at": "2026-06-01T14:57:34Z",
+            "evidence_kind": "wiki_infobox_sections_links_metadata",
+            "claim_status": "paraphrased"
+          },
+          {
+            "source_title": "Callisto",
+            "source_url": "https://limbuscompany.wiki.gg/wiki/Callisto",
+            "revision_id": 166738,
+            "verified_at": "2026-06-01T14:57:34Z",
+            "evidence_kind": "wiki_infobox_sections_links_metadata",
+            "claim_status": "paraphrased"
+          }
+        ],
+        "rp_scope": "canon_lore",
+        "copyright_mode": "paraphrase_only",
+        "review_status": "source_checked",
+        "albina_layer": "au-if",
+        "canonicality": "AU_extension",
+        "narrative_role": "character-and-world",
+        "timeline_placement": "Canto IX",
+        "audit_review": "au-package-review",
+        "source_package": "albina_p0_core_worldbook.json",
+        "injection_policy": "disabled-by-default"
+      }
+    },
+    {
+      "uid": "p4_article_identity_middle_nursefather_outis",
+      "key": [
+        "The House of Spiders: The Middle Nursefather Outis/Identity Story",
+        "Middle Nursefather Outis",
+        "The Middle",
+        "The House of Spiders",
+        "Nursefather",
+        "Outis",
+        "coercive protection",
+        "article reviewed identity story",
+        "deep route support",
+        "Albina route pressure"
+      ],
+      "keysecondary": [
+        "Albina",
+        "Limbus Company",
+        "The City"
+      ],
+      "comment": "v17: Middle nursefather Outis and coercive protection",
+      "content": "Middle Nursefather Outis should enter play as protection that already contains a threat. Treat the nursefather role as a public office inside a family-shaped pressure system: care is counted, loyalty is tested, and every gentle instruction can become a command if the room refuses it. Outis should not be written as randomly cruel. Her danger is discipline, chain of command, and the ability to make frightened people grateful for being managed. Albina can read this as a hostile version of guardianship: someone preserves the patient by first deciding what the patient is allowed to be. White Canvas scenes should ask whether care without consent is still care; Golden Bough scenes can use it to test memory custody; Ring Conspiracy scenes can turn Outis's orderliness into a rival authorship system that threatens Albina's aesthetic control.",
+      "constant": false,
+      "selective": true,
+      "position": "after_character_definition",
+      "order": 8213,
+      "disable": true,
+      "extensions": {
+        "source_refs": [
+          {
+            "source_title": "The House of Spiders: The Middle Nursefather Outis/Identity Story",
+            "source_url": "https://limbuscompany.wiki.gg/wiki/The_House_of_Spiders:_The_Middle_Nursefather_Outis/Identity_Story",
+            "revision_id": 171780,
+            "verified_at": "2026-06-04T08:22:00Z",
+            "evidence_kind": "wiki_raw_wikitext_article_review_no_quote_storage",
+            "claim_status": "article_reviewed_paraphrase_seed"
+          }
+        ],
+        "rp_scope": "canon_lore",
+        "copyright_mode": "paraphrase_only",
+        "review_status": "article_reviewed_paraphrase_seed",
+        "albina_layer": "au-if",
+        "canonicality": "AU_extension",
+        "narrative_role": "character-and-world",
+        "timeline_placement": "cross-timeline",
+        "audit_review": "au-package-review",
+        "source_package": "albina_p4_article_reviewed_identity_worldbook.json",
+        "injection_policy": "disabled-by-default"
+      }
+    },
+    {
+      "uid": "p4_article_identity_wcorp_l3_captain_outis",
+      "key": [
+        "W Corp. L3 Cleanup Captain Outis/Identity Story",
+        "W Corp L3 Cleanup Captain Outis",
+        "W Corp",
+        "cleanup captain",
+        "Outis",
+        "controlled erasure",
+        "article reviewed identity story",
+        "deep route support",
+        "Albina route pressure"
+      ],
+      "keysecondary": [
+        "Albina",
+        "Limbus Company",
+        "The City"
+      ],
+      "comment": "v17: W Corp captain Outis and controlled erasure",
+      "content": "W Corp Cleanup Captain Outis should be written as command discipline applied to aftermath. She does not need to enjoy the work; the danger is that she can make impossible cleanup feel orderly, assignable, and complete. Use her when a scene needs an authority figure who can tell everyone where to stand after something unforgivable has happened. Albina should respect the efficiency and fear the moral compression: if the mess is gone, the crime becomes easier to rename. White Canvas can demand that the injured person is not processed as a task. Golden Bough can make Outis a threat to fragile memory evidence. Ring Conspiracy can mirror her method by staging beautiful erasures, then let the player decide whether a clean scene is proof or concealment.",
+      "constant": false,
+      "selective": true,
+      "position": "after_character_definition",
+      "order": 8224,
+      "disable": true,
+      "extensions": {
+        "source_refs": [
+          {
+            "source_title": "W Corp. L3 Cleanup Captain Outis/Identity Story",
+            "source_url": "https://limbuscompany.wiki.gg/wiki/W_Corp._L3_Cleanup_Captain_Outis/Identity_Story",
+            "revision_id": 147841,
+            "verified_at": "2026-06-04T08:22:00Z",
+            "evidence_kind": "wiki_raw_wikitext_article_review_no_quote_storage",
+            "claim_status": "article_reviewed_paraphrase_seed"
+          }
+        ],
+        "rp_scope": "canon_lore",
+        "copyright_mode": "paraphrase_only",
+        "review_status": "article_reviewed_paraphrase_seed",
+        "albina_layer": "au-if",
+        "canonicality": "AU_extension",
+        "narrative_role": "character-and-world",
+        "timeline_placement": "cross-timeline",
+        "audit_review": "au-package-review",
+        "source_package": "albina_p4_article_reviewed_identity_worldbook.json",
+        "injection_policy": "disabled-by-default"
+      }
+    },
+    {
+      "uid": "p4_article_identity_blade_salsu_don",
+      "key": [
+        "Blade Lineage Salsu Don Quixote/Identity Story",
+        "Blade Lineage Salsu Don Quixote",
+        "Blade Lineage",
+        "Don Quixote",
+        "salsu",
+        "ritualized courage",
+        "article reviewed identity story",
+        "deep route support",
+        "Albina route pressure"
+      ],
+      "keysecondary": [
+        "Albina",
+        "Limbus Company",
+        "The City"
+      ],
+      "comment": "v18: Blade Salsu Don Quixote and ritualized courage",
+      "content": "Blade Lineage Salsu Don Quixote should turn courage into ritual rather than noise. The blade form gives her idealism a stricter body: stance, salute, breath, and a refusal to dishonor the role even when the role is heavy. Use this entry when the route needs disciplined heroism that can still become dangerous if it mistakes form for truth. Albina can respect the beautiful line of the stance while asking whether a clean posture hides fear. White Canvas can separate bravery from self-erasure. Golden Bough can use the blade ritual as continuity for Don Quixote's repaired self. Ring Conspiracy can challenge her with false ceremonies that look noble while directing harm.",
+      "constant": false,
+      "selective": true,
+      "position": "after_character_definition",
+      "order": 8241,
+      "disable": true,
+      "extensions": {
+        "source_refs": [
+          {
+            "source_title": "Blade Lineage Salsu Don Quixote/Identity Story",
+            "source_url": "https://limbuscompany.wiki.gg/wiki/Blade_Lineage_Salsu_Don_Quixote/Identity_Story",
+            "revision_id": 82175,
+            "verified_at": "2026-06-04T08:22:00Z",
+            "evidence_kind": "wiki_raw_wikitext_article_review_no_quote_storage",
+            "claim_status": "article_reviewed_paraphrase_seed"
+          }
+        ],
+        "rp_scope": "canon_lore",
+        "copyright_mode": "paraphrase_only",
+        "review_status": "article_reviewed_paraphrase_seed",
+        "albina_layer": "au-if",
+        "canonicality": "AU_extension",
+        "narrative_role": "character-and-world",
+        "timeline_placement": "cross-timeline",
+        "audit_review": "au-package-review",
+        "source_package": "albina_p4_article_reviewed_identity_worldbook.json",
+        "injection_policy": "disabled-by-default"
+      }
+    },
+    {
+      "uid": "p4_article_identity_cinq_director_sinclair",
+      "key": [
+        "Cinq Assoc. South Section 4 Director Sinclair/Identity Story",
+        "Cinq Director Sinclair",
+        "Sinclair",
+        "Cinq Association",
+        "duel",
+        "ceremony",
+        "article reviewed identity story",
+        "deep route support",
+        "Albina route pressure"
+      ],
+      "keysecondary": [
+        "Albina",
+        "Limbus Company",
+        "The City"
+      ],
+      "comment": "v20: Cinq Director Sinclair and fragile ceremony",
+      "content": "Cinq Director Sinclair should turn ceremony into a brace around uncertainty. He is not fully safe just because the duel has rules; the rules are partly what let him stand upright. Use him when a scene needs formal courage that may crack if treated too harshly. Albina can be gentle with the fragility while still testing whether ceremony has become evasion. White Canvas can let the player honor etiquette without surrendering choice. Golden Bough can connect duel form to memories of becoming capable. Ring Conspiracy can stage the duel as performance and tempt Sinclair with applause.",
+      "constant": false,
+      "selective": true,
+      "position": "after_character_definition",
+      "order": 8269,
+      "disable": true,
+      "extensions": {
+        "source_refs": [
+          {
+            "source_title": "Cinq Assoc. South Section 4 Director Sinclair/Identity Story",
+            "source_url": "https://limbuscompany.wiki.gg/wiki/Cinq_Assoc._South_Section_4_Director_Sinclair/Identity_Story",
+            "revision_id": 82170,
+            "verified_at": "2026-06-04T08:22:00Z",
+            "evidence_kind": "wiki_raw_wikitext_article_review_no_quote_storage",
+            "claim_status": "article_reviewed_paraphrase_seed"
+          }
+        ],
+        "rp_scope": "canon_lore",
+        "copyright_mode": "paraphrase_only",
+        "review_status": "article_reviewed_paraphrase_seed",
+        "albina_layer": "au-if",
+        "canonicality": "AU_extension",
+        "narrative_role": "character-and-world",
+        "timeline_placement": "cross-timeline",
+        "audit_review": "au-package-review",
+        "source_package": "albina_p4_article_reviewed_identity_worldbook.json",
+        "injection_policy": "disabled-by-default"
+      }
+    },
+    {
+      "uid": "p4_article_identity_shi_director_don",
+      "key": [
+        "Shi Assoc. South Section 5 Director Don Quixote/Identity Story",
+        "Shi Director Don Quixote",
+        "Don Quixote",
+        "Shi Association",
+        "director",
+        "depleted heroism",
+        "article reviewed identity story",
+        "deep route support",
+        "Albina route pressure"
+      ],
+      "keysecondary": [
+        "Albina",
+        "Limbus Company",
+        "The City"
+      ],
+      "comment": "v22: Shi Director Don Quixote and depleted heroism",
+      "content": "Shi Director Don Quixote should make heroism look exhausted but still trying to stand straight. Her title gives her responsibility, yet the Shi frame asks depleted people to keep acting as if duty excuses the cost. Albina can protect the sincere heroic core while questioning the system that spends it. White Canvas can make rest a valid moral choice. Golden Bough can recover the original vow beneath exhaustion. Ring Conspiracy can stage the worn hero as tragedy and then be forced to offer more than applause.",
+      "constant": false,
+      "selective": true,
+      "position": "after_character_definition",
+      "order": 8361,
+      "disable": true,
+      "extensions": {
+        "source_refs": [
+          {
+            "source_title": "Shi Assoc. South Section 5 Director Don Quixote/Identity Story",
+            "source_url": "https://limbuscompany.wiki.gg/wiki/Shi_Assoc._South_Section_5_Director_Don_Quixote/Identity_Story",
+            "revision_id": 157571,
+            "verified_at": "2026-06-04T08:22:00Z",
+            "evidence_kind": "wiki_raw_wikitext_article_review_no_quote_storage",
+            "claim_status": "article_reviewed_paraphrase_seed"
+          }
+        ],
+        "rp_scope": "canon_lore",
+        "copyright_mode": "paraphrase_only",
+        "review_status": "article_reviewed_paraphrase_seed",
+        "albina_layer": "au-if",
+        "canonicality": "AU_extension",
+        "narrative_role": "character-and-world",
+        "timeline_placement": "cross-timeline",
+        "audit_review": "au-package-review",
+        "source_package": "albina_p4_article_reviewed_identity_worldbook.json",
+        "injection_policy": "disabled-by-default"
+      }
+    }
+  ]
+}

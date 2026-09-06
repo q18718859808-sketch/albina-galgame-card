@@ -14,6 +14,40 @@
       }
     },
     {
+      "provider": "wisart-openai-compatible",
+      "baseUrl": "https://wisart.kuaileshifu.com/v1",
+      "testedAt": "2026-07-21T00:47:00+08:00",
+      "modelListHttp": 200,
+      "models": {
+        "gpt-image-2": true
+      },
+      "generation": {
+        "model": "gpt-image-2",
+        "http": 200,
+        "width": 1200,
+        "height": 675,
+        "bytes": 1183739,
+        "sha256": "bf8624ba3fd4ee709db0640b2c6627b547bbb6ad7a8d8ce53154c28dc874adcd",
+        "artifactVerified": true,
+        "visuallyNonBlank": true,
+        "sourceReceipt": "staging/media/wisart-pilot/visual.image.bg.backstreets_rain/receipt-01.json"
+      },
+      "currentAvailability": {
+        "available": true,
+        "checkedAt": "2026-07-21T00:47:00+08:00"
+      },
+      "productionAuthorization": {
+        "authorized": true,
+        "scope": "albina-v2-image-batch",
+        "source": "direct-user-instruction",
+        "recordedOn": "2026-07-21"
+      },
+      "rights": {
+        "status": "pending",
+        "redistribution": "unverified"
+      }
+    },
+    {
       "provider": "x666-openai-compatible",
       "baseUrl": "https://x666.me/v1",
       "testedAt": "2026-07-15T23:36:49+08:00",

@@ -3,34 +3,18 @@ import type { SceneCue } from '../domain/scene-cue';
 
 import { resolveAssetUrl } from './asset-resolver';
 
-export interface VideoPlaybackPolicy {
-  baseUrl?: string;
-  desktop: boolean;
-  reducedMotion: boolean;
-  videoEnabled: boolean;
-}
-
 export interface SceneMediaSelection {
   backgroundUrl?: string;
   fallbackUrl?: string;
-  videoUrl?: string;
-}
-
-export function chosenSceneVideoId(scene: SceneCue, policy: VideoPlaybackPolicy): string | undefined {
-  if (!policy.videoEnabled || policy.reducedMotion) return undefined;
-  return policy.desktop && scene.desktopVideoAssetId ? scene.desktopVideoAssetId : scene.videoAssetId;
 }
 
 export function selectSceneMedia(
   scene: SceneCue,
   manifest: AssetManifestV2,
-  policy: VideoPlaybackPolicy,
-  resolve = (assetId: string | undefined) => resolveAssetUrl(manifest, assetId, policy.baseUrl),
+  resolve = (assetId: string | undefined) => resolveAssetUrl(manifest, assetId),
 ): SceneMediaSelection {
   const fallbackId = scene.cgAssetId ?? scene.backgroundAssetId;
   const fallbackUrl = resolve(fallbackId);
   const backgroundUrl = resolve(scene.backgroundAssetId);
-  const videoId = chosenSceneVideoId(scene, policy);
-  const videoUrl = videoId ? resolve(videoId) : undefined;
-  return { ...(backgroundUrl ? { backgroundUrl } : {}), ...(fallbackUrl ? { fallbackUrl } : {}), ...(videoUrl ? { videoUrl } : {}) };
+  return { ...(backgroundUrl ? { backgroundUrl } : {}), ...(fallbackUrl ? { fallbackUrl } : {}) };
 }

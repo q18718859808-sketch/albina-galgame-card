@@ -1,0 +1,136 @@
+{
+  "schemaVersion": 1,
+  "id": "wisart-migration-authorization-template-v1",
+  "status": "not-required",
+  "reviewer": null,
+  "reviewedAt": null,
+  "requiresHumanWisartAuthorization": false,
+  "requiresHumanBoardReview": false,
+  "planVariantVersion": "2.3.0-migration-v2",
+  "promptFreezeVersion": "albina-visual-migration-v1",
+  "sourceIndexVersion": "albina-canon-visual-sources-migration-v1",
+  "migrationContentSha256": "d8b9bbd5f19cf9a3b5ecab2873da13e12b70328ff9a908250edd32d99a7c538f",
+  "styleBoardSha256": "aaf89630110b6fef687b86334404b00cd39fd29c84451971575b26a29ce51142",
+  "instructions": [
+    "本文件是自动校验上下文，不是生产授权文件；运行时不读取任何人工授权文件。",
+    "候选 macro-crop 风格板仅提供线条、上色、材质边缘和冷光语言；角色身份、姿态、解剖、服装、道具和构图仍由各作业既有输入约束。",
+    "migrationContentSha256 与 styleBoardSha256 绑定当前冻结输入；任一输入重建或替换时自动校验会检测不匹配。",
+    "本迁移仅生成本地私人二创资产；发布、分发和 rights 状态仍由独立发布链路控制。"
+  ],
+  "reviews": [
+    {
+      "scope": "board",
+      "decision": "not-required",
+      "notes": "人工审查不作为生产前置条件；保留候选板与哈希绑定上下文。",
+      "jobIds": [],
+      "context": {
+        "sourceId": "reference.user.albina-style-board",
+        "localPath": "staging/research/style-reference/albina-style-board-v2-macrocrop.png",
+        "sha256": "aaf89630110b6fef687b86334404b00cd39fd29c84451971575b26a29ce51142",
+        "bytes": 3237596,
+        "width": 1024,
+        "height": 1536
+      }
+    },
+    {
+      "scope": "characterJobs",
+      "decision": "not-required",
+      "notes": "人工审查不作为生产前置条件；保留 27 项角色作业范围与输入约束。",
+      "jobIds": [
+        "visual.image.portrait.albina.armored",
+        "visual.image.portrait.albina.combat",
+        "visual.image.portrait.albina.endgame",
+        "visual.image.portrait.albina.fascia-open",
+        "visual.image.portrait.albina.furious",
+        "visual.image.portrait.albina.golden-bough",
+        "visual.image.portrait.albina.maestro",
+        "visual.image.portrait.albina.normal",
+        "visual.image.portrait.albina.rain",
+        "visual.image.portrait.albina.ring-conspiracy",
+        "visual.image.portrait.albina.shy",
+        "visual.image.portrait.albina.surgical",
+        "visual.image.portrait.albina.white-canvas",
+        "visual.image.portrait.callisto.normal",
+        "visual.image.portrait.dante.normal",
+        "visual.image.portrait.faust.normal",
+        "visual.image.portrait.golden_apparition.normal",
+        "visual.image.portrait.lce_doctor.normal",
+        "visual.image.portrait.protagonist.battle",
+        "visual.image.portrait.protagonist.resolve",
+        "visual.image.portrait.protagonist.serious",
+        "visual.image.portrait.protagonist.shadow",
+        "visual.image.portrait.protagonist.tender",
+        "visual.image.portrait.protagonist.wet-hair",
+        "visual.image.portrait.ren.normal",
+        "visual.image.portrait.ring_agent.normal",
+        "visual.image.portrait.vergilius.normal"
+      ],
+      "context": {
+        "count": 27,
+        "rule": "确认全量角色身份不被风格板替换，且风格板只影响线条、上色、材质边缘与冷光。"
+      }
+    },
+    {
+      "scope": "backgroundJobs",
+      "decision": "not-required",
+      "notes": "人工审查不作为生产前置条件；保留 12 项背景作业范围与输入约束。",
+      "jobIds": [
+        "visual.image.bg.backstreets_rain",
+        "visual.image.bg.city_rooftop",
+        "visual.image.bg.golden_bough",
+        "visual.image.bg.lce_lab",
+        "visual.image.bg.limbus_bus",
+        "visual.image.bg.mirror_corridor",
+        "visual.image.bg.nest_station",
+        "visual.image.bg.outskirts_dawn",
+        "visual.image.bg.rain_room",
+        "visual.image.bg.ring_atelier",
+        "visual.image.bg.spider_gallery",
+        "visual.image.bg.white_canvas"
+      ],
+      "context": {
+        "count": 12,
+        "rule": "确认场景构图与叙事来源不被风格板中的局部构图复制。"
+      }
+    },
+    {
+      "scope": "cgJobs",
+      "decision": "not-required",
+      "notes": "人工审查不作为生产前置条件；v2 起把 28 项 CG（含自 Latent 迁回的 22 项）纳入同一自动校验范围。",
+      "jobIds": [
+        "visual.image.cg.araya_rooftop",
+        "visual.image.cg.art_resonance",
+        "visual.image.cg.backstreet_pursuit",
+        "visual.image.cg.canon_recap_9_14",
+        "visual.image.cg.canon_recap_9_18",
+        "visual.image.cg.canon_recap_9_37",
+        "visual.image.cg.canon_recap_9_37_battle",
+        "visual.image.cg.canon_recap_9_43_outcome",
+        "visual.image.cg.canon_recap_albina_fascia",
+        "visual.image.cg.combat_transition_01",
+        "visual.image.cg.conspiracy_contract",
+        "visual.image.cg.fascia_heartbeat",
+        "visual.image.cg.golden_bough_ending",
+        "visual.image.cg.golden_bough_rebuild",
+        "visual.image.cg.hollow_torso_reveal",
+        "visual.image.cg.lce_raid",
+        "visual.image.cg.limbus_bus_night",
+        "visual.image.cg.maestro_shadow",
+        "visual.image.cg.opening_rain",
+        "visual.image.cg.rain_confession",
+        "visual.image.cg.rebuild_awakening",
+        "visual.image.cg.ren_interruption",
+        "visual.image.cg.ring_conspiracy_ending",
+        "visual.image.cg.ring_invitation",
+        "visual.image.cg.surgery_of_memory",
+        "visual.image.cg.trust_threshold",
+        "visual.image.cg.white_canvas_choice",
+        "visual.image.cg.white_canvas_ending"
+      ],
+      "context": {
+        "count": 28,
+        "rule": "确认 CG 场景中的义体身份锚点（白色全身义体、黑白异色瞳、线缆束马尾）不被风格板或泛型化渲染替换。"
+      }
+    }
+  ]
+}

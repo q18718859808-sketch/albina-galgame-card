@@ -1,0 +1,47 @@
+{
+  "version": 1,
+  "assetId": "cg.hollow_torso_reveal",
+  "artifactSha256": "a5c942e39e9967ec713349e5646ab781d7a8294aa876f8894c5ee076093e2197",
+  "provenance": {
+    "provider": "wisart-openai-compatible",
+    "model": "gpt-image-2",
+    "promptVersion": "albina-visual-migration-v1",
+    "sourceJobHash": "9a02cecac76e0855424a25f9cadece1f117d7b7de2e70e691d1e47fa02229c17",
+    "review": {
+      "status": "approved",
+      "reviewer": "workbuddy-convergence-agent",
+      "reviewedAt": "2026-09-06T08:39:09.687Z"
+    }
+  },
+  "rights": {
+    "status": "unverified",
+    "sourceType": "model-output",
+    "redistribution": "unverified",
+    "rightsBasis": "Redistribution rights for this model output have not been independently verified."
+  },
+  "lineage": {
+    "kind": "derivative",
+    "processVersion": "albina-visual-promotion-v1",
+    "inputs": [
+      {
+        "assetId": "file.characters.albina.surgical.png",
+        "sha256": "d6ef29a4e507767be8df6f69701d9b5cf03614172c554540ab6634bfce7a736a",
+        "role": "approved-generated-reference"
+      },
+      {
+        "assetId": "file.characters.protagonist.serious.png",
+        "sha256": "461927edeaab75615f232e57131fb9294fca75ef00b794d7a4a2955c66aeb18a",
+        "role": "approved-generated-reference"
+      },
+      {
+        "assetId": "file.characters.lce.doctor.normal.png",
+        "sha256": "228c79b933fc9d28574fc044c56cce21de9037d4e3a0abd0e8c12d80463f8577",
+        "role": "approved-generated-reference"
+      },
+      {
+        "sha256": "aaf89630110b6fef687b86334404b00cd39fd29c84451971575b26a29ce51142",
+        "role": "canon-visual-reference"
+      }
+    ]
+  }
+}

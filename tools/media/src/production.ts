@@ -1,4 +1,4 @@
-import { mkdir, readFile, writeFile } from 'node:fs/promises';
+import { mkdir, readFile, readdir, rm, writeFile } from 'node:fs/promises';
 import { join, resolve } from 'node:path';
 
 type RecordValue = Record<string, any>;
@@ -8,8 +8,10 @@ const voices: Record<string, string> = {
   '维吉利乌斯': 'echo', '但丁': 'alloy', '卡利斯托': 'fable', 'LCE 医师': 'echo', '环指代理人': 'fable', '金色幻影': 'shimmer',
 };
 const palette = ['#11131a', '#6f7587', '#b9c2d0', '#d8bb72', '#7c2638', '#dbe4ea'];
-const routeNames = ['white_canvas', 'golden_bough_rebuild', 'ring_conspiracy'];
-const musicCues = ['main_menu','title_theme','backstreets_rain','between_two_worlds','boss_kromer','opening_rain','white_canvas','golden_bough','ring_conspiracy','lce_lab','limbus_bus','mirror_corridor','nest_station','outskirts_dawn','rain_room','ring_atelier','spider_gallery','city_rooftop','trust_threshold','art_resonance','surgery_of_memory','rebuild_awakening','ending_gate','op','ed_white_canvas','ed_golden_bough','ed_ring_conspiracy'];
+const contracts = {
+  image: { provider: 'wisart-openai-compatible', model: 'gpt-image-2', promptVersion: 'albina-image-v1' },
+  speech: { provider: 'pie', model: 'speech-2.8-hd', promptVersion: 'albina-speech-v1' },
+} as const;
 
 export async function prepareProduction(root: string, outputDirectory: string) {
   const manifest = await json(resolve(root, 'content/asset-manifest-v2.json'));
@@ -25,32 +27,35 @@ export async function prepareProduction(root: string, outputDirectory: string) {
     if (typeof source !== 'string') throw new Error(`Missing source asset for ${pending.id}`);
     const gallery = galleryById.get(pending.assetId);
     if (gallery) {
-      jobs.push({ id: pending.id, kind: 'image', prompt: galleryCgPrompt(pending.assetId), width: gallery.width, height: gallery.height, sourceImage: resolve(root, 'dist/albina-galgame-card/assets', source), output: resolve(root, 'staging/media', pending.outputPath), validation: { width: gallery.width, height: gallery.height } });
+      jobs.push({ id: pending.id, kind: 'image', ...contracts.image, prompt: galleryCgPrompt(pending.assetId), width: gallery.width, height: gallery.height, sourceImage: resolve(root, 'dist/albina-galgame-card/assets', source), output: resolve(root, 'staging/media', pending.outputPath), validation: { width: gallery.width, height: gallery.height } });
     } else {
-      jobs.push({ id: pending.id, kind: 'image', prompt: 'Edit the supplied canonical reference into one transparent horizontal strip of exactly eight equal square frames. Preserve identity, outfit, palette, silhouette and line style. Frames: neutral, blink, speak, smile, sad, tense, action, recovery. No text, no borders, no extra subjects.', width: 4096, height: 512, sourceImage: resolve(root, 'dist/albina-galgame-card/assets', source), output: resolve(root, 'staging/media', pending.outputPath), validation: { width: 4096, height: 512, alpha: true, frameCount: 8 } });
+      jobs.push({ id: pending.id, kind: 'image', ...contracts.image, prompt: 'Edit the supplied canonical reference into one transparent horizontal strip of exactly eight equal square frames. Preserve identity, outfit, palette, silhouette and line style. Frames: neutral, blink, speak, smile, sad, tense, action, recovery. No text, no borders, no extra subjects.', width: 4096, height: 512, sourceImage: resolve(root, 'dist/albina-galgame-card/assets', source), output: resolve(root, 'staging/media', pending.outputPath), validation: { width: 4096, height: 512, alpha: true, frameCount: 8 } });
     }
   }
   for (const [assetId, line] of speechLines) {
     const outputPath = assetPaths.get(assetId);
     if (typeof outputPath !== 'string') throw new Error(`Missing approved voice asset for ${assetId}`);
-    jobs.push({ id: `job.speech.${assetId}`, kind: 'speech', input: line.text, voice: voices[line.speaker] ?? 'alloy', output: resolve(root, 'staging/media', outputPath), validation: { minDurationSeconds: 0.2, maxDurationSeconds: 60, minLoudnessDbfs: -30, maxLoudnessDbfs: -6 } });
+    jobs.push({ id: `job.speech.${assetId}`, kind: 'speech', ...contracts.speech, input: line.text, voice: voices[line.speaker] ?? 'alloy', output: resolve(root, 'staging/media', outputPath), validation: { minDurationSeconds: 0.2, maxDurationSeconds: 60, minLoudnessDbfs: -30, maxLoudnessDbfs: -6 } });
   }
-  const videoIds = ['prologue', ...routeNames.flatMap(route => [3,5,8,11,15].map(n => `${route}_scene_${n}`)), ...routeNames.flatMap(route => ['true','normal','bad'].map(end => `${route}_ending_${end}`)), 'op', ...routeNames.map(route => `ed_${route}`)];
-  for (const id of videoIds) {
-    const keyframeId = videoKeyframe(id);
-    const keyframePath = assetPaths.get(keyframeId);
-    if (typeof keyframePath !== 'string') throw new Error(`Missing approved keyframe ${keyframeId} for ${id}`);
-    jobs.push({ id: `job.video.${id}`, kind: 'video', prompt: `Albina visual novel animated CG: ${id.replaceAll('_',' ')}. Use approved keyframe composition, restrained cinematic motion, preserve character identity and frozen palette, no text or logos.`, durationSeconds: 8, sourceImage: resolve(root, 'dist/albina-galgame-card/assets', keyframePath), masterOutput: resolve(root, 'staging/media/video/master', `${id}.mp4`), output: resolve(root, 'staging/media/video/runtime', `${id}.mp4`), desktopOutput: resolve(root, 'staging/media/video/desktop', `${id}.mp4`), validation: { width: 1280, height: 720, fps: 24, durationSeconds: 8, tolerance: 1 }, desktopValidation: { width: 1920, height: 1080, fps: 24, durationSeconds: 8, tolerance: 1 }, masterValidation: { minFps: 12, maxFps: 60, minDurationSeconds: 7, maxDurationSeconds: 9 } });
-  }
-  for (let i=1;i<=3;i++) jobs.push({ id: `job.music.probe.${i}`, kind: 'music', probe: true, prompt: 'Instrumental dark chamber-electronic visual novel underscore, stable form, clean ending, no vocals.', durationSeconds: 15, output: resolve(root, 'staging/media/music/probes', `probe-${i}.mp3`), validation: { minDurationSeconds: 5, maxDurationSeconds: 300, minLoudnessDbfs: -30, maxLoudnessDbfs: -6 } });
-  for (const cue of musicCues) for (const variant of ['master','instrumental','loop']) jobs.push({ id: `job.music.${cue}.${variant}`, kind: 'music', prompt: `Albina visual novel cue ${cue.replaceAll('_',' ')}, ${variant}, instrumental dark chamber-electronic score, coherent motif, production ready, no spoken word.`, durationSeconds: variant === 'loop' ? 60 : 90, output: resolve(root, 'staging/media/music', cue, `${variant}.mp3`), validation: { minDurationSeconds: 5, maxDurationSeconds: 300, minLoudnessDbfs: -30, maxLoudnessDbfs: -6 } });
   jobs.sort((a,b) => a.id.localeCompare(b.id));
-  const freeze = { version: 1, characters: ['阿尔比娜','法西娅','浮士德','维吉利乌斯','但丁','卡利斯托','LCE 医师','环指代理人','金色幻影'], palette, outfits: 'canonical source assets only; no redesign', expressions: ['neutral','blink','speak','smile','sad','tense','action','recovery'], voices, cueSheet: musicCues };
-  const index = { version: 1, provider: 'Pie only', models: { image: 'gpt-image-2', speech: 'speech-2.8-hd', video: 'seedance-1.5-pro', music: 'music-2.6' }, freeze, jobs };
+  const freeze = { version: 1, characters: ['阿尔比娜','法西娅','浮士德','维吉利乌斯','但丁','卡利斯托','LCE 医师','环指代理人','金色幻影'], palette, outfits: 'canonical source assets only; no redesign', expressions: ['neutral','blink','speak','smile','sad','tense','action','recovery'], voices, cueSheet: [] };
+  const index = {
+    version: 2,
+    providerPolicy: { selected: { image: 'wisart-openai-compatible', speech: 'pie' }, candidates: { image: [] }, fallback: false },
+    musicPolicy: { mode: 'official-soundtrack', generation: false, redistributionRequiresVerifiedLicense: true },
+    freeze,
+    jobs,
+  };
   await mkdir(outputDirectory, { recursive: true });
+  const currentJobFiles = new Set(jobs.map((job) => `${safe(job.id)}.json`));
+  for (const file of await readdir(outputDirectory)) {
+    if (file !== 'index.json' && file.endsWith('.json') && !file.startsWith('.') && !currentJobFiles.has(file)) {
+      await rm(join(outputDirectory, file));
+    }
+  }
   await writeFile(join(outputDirectory, 'index.json'), `${JSON.stringify(index, null, 2)}\n`);
   for (const job of jobs) await writeFile(join(outputDirectory, `${safe(job.id)}.json`), `${JSON.stringify(stripId(job), null, 2)}\n`);
-  return { image: jobs.filter((job) => job.kind === 'image').length, speech: 154, video: 29, musicProbe: 3, music: 81, total: jobs.length };
+  return { image: jobs.filter((job) => job.kind === 'image').length, speech: jobs.filter((job) => job.kind === 'speech').length, video: jobs.filter((job) => job.kind === 'video').length, total: jobs.length };
 }
 
 async function json(path: string) { return JSON.parse(await readFile(path, 'utf8')); }
@@ -75,11 +80,4 @@ function galleryCgPrompt(assetId: string): string {
   if (assetId === 'cg.mirror_broken') return 'Albina visual novel static CG: a fractured mirror reflecting Albina and Fascia in the Ring atelier. Preserve the supplied approved art identity, palette, linework, costume, composition language, and mature restrained horror mood. No text, no logo, no additional characters.';
   if (assetId === 'cg.rain_reflection') return 'Albina visual novel static CG: rain-soaked window reflection of Albina and Fascia after a quiet confession. Preserve the supplied approved art identity, palette, linework, costume, composition language, and subdued nocturnal mood. No text, no logo, no additional characters.';
   throw new Error(`Unknown pending gallery CG: ${assetId}`);
-}
-function videoKeyframe(id: string): string {
-  if (id === 'prologue' || id === 'op') return 'cg.opening_rain';
-  if (id.includes('white_canvas')) return id.includes('ending') || id.startsWith('ed_') ? 'cg.white_canvas_ending' : 'cg.white_canvas_choice';
-  if (id.includes('golden_bough')) return id.includes('ending') || id.startsWith('ed_') ? 'cg.golden_bough_ending' : 'cg.rebuild_awakening';
-  if (id.includes('ring_conspiracy')) return id.includes('ending') || id.startsWith('ed_') ? 'cg.ring_conspiracy_ending' : 'cg.conspiracy_contract';
-  throw new Error(`No approved keyframe mapping for ${id}`);
 }

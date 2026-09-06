@@ -62,6 +62,7 @@ describe('migrateSaveV1', () => {
         appearance: '黑发',
         background: '都市幸存者',
         addressName: '先生',
+        initialRelationship: '谨慎结识',
         boundaries: '明确同意',
         routePreference: 'ring_conspiracy',
       },
@@ -120,7 +121,7 @@ describe('migrateSaveV1', () => {
         story: [{ id: 'story-1', title: '进入环指共谋' }],
         storySummaries: [{ id: 'summary-1', summary: '保留条款。' }],
       },
-      playerProfile: { name: 'Yifan', routePreference: 'ring_conspiracy' },
+      playerProfile: { name: 'Yifan', initialRelationship: '谨慎结识', routePreference: 'ring_conspiracy' },
     });
     expect('injectedAuthority' in migrated).toBe(false);
     expect(SaveV2Schema.parse(migrated)).toEqual(migrated);

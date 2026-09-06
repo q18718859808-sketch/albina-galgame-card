@@ -21,6 +21,7 @@ const videoStatuses = new Set([
   'submitting', 'submitted', 'polling', 'provider-completed', 'master-materialized',
   'encoding', 'awaiting-review', 'completed', 'rejected', 'failed', 'ambiguous',
 ]);
+const frozenVideoStatus = 'frozen-existing-artifact';
 const completedProviderStates = new Set(['success', 'completed', 'succeeded', 'complete']);
 const failedProviderStates = new Set(['failed', 'error', 'cancelled', 'canceled']);
 
@@ -79,6 +80,7 @@ export async function runVideoBatch(options, environment = process.env, dependen
   try {
     const inputs = await loadInputs(dependencies, paths);
     const jobs = selectVideoJobs(inputs.plan, options);
+    if (jobs.some((job) => job.status === frozenVideoStatus)) throw new Error('Frozen historical video artifacts cannot be regenerated');
     const apiKey = environment.PIE_API_KEY;
     if (!isUsablePieApiKey(apiKey)) throw new Error('PIE_API_KEY is required before any Pie video request');
     const client = dependencies.client ?? createPieClient(environment, dependencies.fetcher);
@@ -196,6 +198,9 @@ async function loadInputs(dependencies, paths) {
 }
 
 function validateVideoInputs(plan, story) {
+  if (plan?.version === 2 && plan.projectId === 'albina-galgame-card' && !Object.hasOwn(plan, 'videoJobs')) {
+    throw new Error('Video production plan is retired; the product uses static CG fallbacks.');
+  }
   if (plan?.version !== 2 || plan.projectId !== 'albina-galgame-card' || !Array.isArray(plan.videoJobs)
     || !Array.isArray(plan.imageJobs) || plan.videoJobs.length !== plan.counts?.videoContentJobs
     || !Array.isArray(story?.scenes)) throw new Error('Invalid Seedance video production inputs');
@@ -216,7 +221,7 @@ function validateVideoJob(job, imageByAsset, sceneById, seen) {
   const scene = sceneById.get(job.sceneId);
   if (!image || image.category !== 'cg' || image.status !== 'authorized-prompt-frozen' || scene?.cgAssetId !== job.sourceCgAssetId
     || hash(scene.text) !== job.sourceTextHash || job.provider !== 'pie' || job.model !== 'seedance-1.5-pro'
-    || job.promptVersion !== 'albina-video-v2' || job.durationSeconds !== 8 || job.status !== 'blocked-source-keyframe'
+    || job.promptVersion !== 'albina-video-v2' || job.durationSeconds !== 8 || !['blocked-source-keyframe', frozenVideoStatus].includes(job.status)
     || job.masterDelivery?.retainedOffline !== true) throw new Error(`Invalid video source contract: ${job.id}`);
   validateDelivery(job.runtime, 'runtime');
   validateDelivery(job.desktop, 'desktop');
@@ -611,8 +616,8 @@ async function readSourceReceipt(receiptRoot, imageJob, sourceAssetId) {
 }
 
 function validateStaticCgReceipt(receipt, jobId) {
-  if (!receipt.rights || !receipt.lineage || receipt.provenance.provider !== 'x666-openai-compatible'
-    || receipt.provenance.model !== 'gpt-image-2' || receipt.provenance.upstreamPieVerified !== false
+  if (!receipt.rights || !receipt.lineage || receipt.provenance.provider !== 'wisart-openai-compatible'
+    || receipt.provenance.model !== 'gpt-image-2'
     || receipt.provenance.review.status !== 'approved' || receipt.rights.sourceType !== 'model-output') throw new Error(`Static CG receipt is not fully promoted: ${jobId}`);
 }
 

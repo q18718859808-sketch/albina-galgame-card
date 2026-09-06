@@ -77,6 +77,252 @@
         "recommendedMastery": "blade"
       }
     ],
+    "minigames": [
+      {
+        "id": "minigame.white.mirror_thread",
+        "route": "white_canvas",
+        "label": "镜面连线",
+        "description": "辨认见证、撤回与处置之间应被保留的边界连线。",
+        "puzzle": {
+          "kind": "mirror_thread",
+          "anchors": [
+            {
+              "id": "witness",
+              "label": "见证",
+              "description": "在场、记录，但不替任何人作决定。"
+            },
+            {
+              "id": "consent",
+              "label": "撤回权",
+              "description": "任何亲密或处置都可被当事人随时收回。"
+            },
+            {
+              "id": "ownership",
+              "label": "所有权",
+              "description": "LCE 希望写进协议的占有性措辞。"
+            }
+          ],
+          "correctPair": [
+            "witness",
+            "consent"
+          ]
+        },
+        "outcomes": {
+          "perfect": {
+            "values": {
+              "trust": 3,
+              "danger": -2
+            },
+            "relationshipVectors": {
+              "reliance": 2
+            },
+            "conflictMastery": {
+              "boundary": 2
+            },
+            "setFlags": [
+              "minigame_white_boundary_perfect"
+            ],
+            "professionXp": {
+              "boundary_mediator": 3
+            }
+          },
+          "assisted": {
+            "values": {
+              "trust": 1,
+              "danger": -1
+            },
+            "relationshipVectors": {
+              "reliance": 1
+            },
+            "conflictMastery": {
+              "boundary": 1
+            },
+            "setFlags": [
+              "minigame_white_boundary_assisted"
+            ],
+            "professionXp": {
+              "boundary_mediator": 1
+            }
+          },
+          "setback": {
+            "values": {
+              "danger": 1
+            },
+            "setFlags": [
+              "minigame_white_boundary_setback"
+            ]
+          },
+          "skipped": {
+            "setFlags": [
+              "minigame_white_boundary_skipped"
+            ]
+          }
+        }
+      },
+      {
+        "id": "minigame.golden.testimony_cipher",
+        "route": "golden_bough_rebuild",
+        "label": "称谓证词解码",
+        "description": "把记忆碎片按“本人意愿优先”的顺序归还，而非替她拼成完成品。",
+        "puzzle": {
+          "kind": "testimony_cipher",
+          "fragments": [
+            {
+              "id": "name",
+              "text": "先叫出她现在选择的名字。"
+            },
+            {
+              "id": "consent",
+              "text": "确认由她决定哪些记忆可以留下。"
+            },
+            {
+              "id": "copy",
+              "text": "拒绝把旧版本当作唯一正确答案。"
+            }
+          ],
+          "solutionOrder": [
+            "name",
+            "consent",
+            "copy"
+          ]
+        },
+        "outcomes": {
+          "perfect": {
+            "values": {
+              "trust": 3,
+              "danger": -1,
+              "artResonance": 4
+            },
+            "relationshipVectors": {
+              "reliance": 2
+            },
+            "conflictMastery": {
+              "analysis": 2,
+              "resonance": 1
+            },
+            "setFlags": [
+              "minigame_golden_memory_perfect"
+            ],
+            "professionXp": {
+              "memory_surgeon": 3
+            }
+          },
+          "assisted": {
+            "values": {
+              "trust": 1,
+              "artResonance": 2
+            },
+            "conflictMastery": {
+              "analysis": 1
+            },
+            "setFlags": [
+              "minigame_golden_memory_assisted"
+            ],
+            "professionXp": {
+              "memory_surgeon": 1
+            }
+          },
+          "setback": {
+            "values": {
+              "danger": 1
+            },
+            "setFlags": [
+              "minigame_golden_memory_setback"
+            ]
+          },
+          "skipped": {
+            "setFlags": [
+              "minigame_golden_memory_skipped"
+            ]
+          }
+        }
+      },
+      {
+        "id": "minigame.ring.boundary_resonance",
+        "route": "ring_conspiracy",
+        "label": "反制条款共振",
+        "description": "只激活能够保留双方署名、撤回和追踪权的条款节点。",
+        "puzzle": {
+          "kind": "boundary_resonance",
+          "nodes": [
+            {
+              "id": "authorship",
+              "label": "署名权"
+            },
+            {
+              "id": "revocation",
+              "label": "撤回权"
+            },
+            {
+              "id": "trace",
+              "label": "追踪条款"
+            },
+            {
+              "id": "possession",
+              "label": "占有条款"
+            }
+          ],
+          "targetActiveIds": [
+            "authorship",
+            "revocation",
+            "trace"
+          ]
+        },
+        "outcomes": {
+          "perfect": {
+            "values": {
+              "trust": 2,
+              "danger": -2,
+              "artResonance": 2,
+              "leverage": 3
+            },
+            "relationshipVectors": {
+              "reliance": 2
+            },
+            "conflictMastery": {
+              "blade": 1,
+              "analysis": 2
+            },
+            "setFlags": [
+              "minigame_ring_counter_clause_perfect"
+            ],
+            "professionXp": {
+              "ring_counterforger": 3
+            }
+          },
+          "assisted": {
+            "values": {
+              "trust": 1,
+              "danger": -1,
+              "leverage": 1
+            },
+            "conflictMastery": {
+              "analysis": 1
+            },
+            "setFlags": [
+              "minigame_ring_counter_clause_assisted"
+            ],
+            "professionXp": {
+              "ring_counterforger": 1
+            }
+          },
+          "setback": {
+            "values": {
+              "danger": 1,
+              "exposure": 1
+            },
+            "setFlags": [
+              "minigame_ring_counter_clause_setback"
+            ]
+          },
+          "skipped": {
+            "setFlags": [
+              "minigame_ring_counter_clause_skipped"
+            ]
+          }
+        }
+      }
+    ],
     "items": [
       {
         "id": "item.rain_room_badge",
@@ -844,7 +1090,6 @@
           "resultText": "【AU/IF】你进入以关系边界与自我选择为核心的 white_canvas 原创路线。",
           "resultVoiceAssetId": "voice.result.enter_white_canvas",
           "effects": {
-            "route": "white_canvas",
             "values": {
               "affectionAlbina": 2,
               "trust": 2,
@@ -876,7 +1121,8 @@
             "professionXp": {
               "boundary_mediator": 4
             },
-            "activateProfession": "boundary_mediator"
+            "activateProfession": "boundary_mediator",
+            "route": "white_canvas"
           }
         },
         {
@@ -886,7 +1132,6 @@
           "resultText": "【AU/IF】这条路线假设 Albina 在 9-43 死亡后被重构；该前提与全部后续均非正史。",
           "resultVoiceAssetId": "voice.result.enter_rebuild",
           "effects": {
-            "route": "golden_bough_rebuild",
             "values": {
               "trust": 3,
               "danger": 1
@@ -917,7 +1162,8 @@
             "professionXp": {
               "memory_surgeon": 4
             },
-            "activateProfession": "memory_surgeon"
+            "activateProfession": "memory_surgeon",
+            "route": "golden_bough_rebuild"
           }
         },
         {
@@ -927,7 +1173,6 @@
           "resultText": "【AU/IF】这条路线主动改写 9-43 后续因果；其中的委托、关系和结局均为本卡原创。",
           "resultVoiceAssetId": "voice.result.enter_conspiracy",
           "effects": {
-            "route": "ring_conspiracy",
             "values": {
               "danger": 3,
               "artResonance": 2
@@ -958,7 +1203,8 @@
             "professionXp": {
               "ring_counterforger": 4
             },
-            "activateProfession": "ring_counterforger"
+            "activateProfession": "ring_counterforger",
+            "route": "ring_conspiracy"
           }
         }
       ]
@@ -1139,8 +1385,6 @@
       "locationId": "lce_lab",
       "backgroundAssetId": "bg.lce_lab",
       "cgAssetId": "cg.hollow_torso_reveal",
-      "videoAssetId": "video.animated.runtime.white_canvas_scene_3",
-      "desktopVideoAssetId": "video.animated.desktop.white_canvas_scene_3",
       "tone": "quiet",
       "portraits": [
         {
@@ -1256,7 +1500,14 @@
             }
           }
         }
-      ]
+      ],
+      "minigame": {
+        "minigameId": "minigame.white.mirror_thread",
+        "seed": "white-canvas-lce-witness-v1",
+        "prompt": "在签字前，连起能让阿尔比娜保留决定权的两项原则。",
+        "assistLabel": "显示边界提示",
+        "allowSkip": true
+      }
     },
     {
       "version": 2,
@@ -1369,8 +1620,6 @@
       "locationId": "outskirts_dawn",
       "backgroundAssetId": "bg.outskirts_dawn",
       "cgAssetId": "cg.white_canvas_ending",
-      "videoAssetId": "video.animated.runtime.white_canvas_scene_5",
-      "desktopVideoAssetId": "video.animated.desktop.white_canvas_scene_5",
       "tone": "quiet",
       "portraits": [
         {
@@ -1601,8 +1850,6 @@
       "locationId": "lce_lab",
       "backgroundAssetId": "bg.lce_lab",
       "cgAssetId": "cg.hollow_torso_reveal",
-      "videoAssetId": "video.animated.runtime.white_canvas_scene_8",
-      "desktopVideoAssetId": "video.animated.desktop.white_canvas_scene_8",
       "tone": "quiet",
       "portraits": [
         {
@@ -1869,8 +2116,6 @@
       "locationId": "nest_station",
       "backgroundAssetId": "bg.nest_station",
       "cgAssetId": "cg.art_resonance",
-      "videoAssetId": "video.animated.runtime.white_canvas_scene_11",
-      "desktopVideoAssetId": "video.animated.desktop.white_canvas_scene_11",
       "tone": "quiet",
       "portraits": [
         {
@@ -2252,8 +2497,6 @@
       "locationId": "outskirts_dawn",
       "backgroundAssetId": "bg.outskirts_dawn",
       "cgAssetId": "cg.white_canvas_ending",
-      "videoAssetId": "video.animated.runtime.white_canvas_scene_15",
-      "desktopVideoAssetId": "video.animated.desktop.white_canvas_scene_15",
       "tone": "quiet",
       "portraits": [
         {
@@ -2490,8 +2733,6 @@
       "locationId": "outskirts_dawn",
       "backgroundAssetId": "bg.outskirts_dawn",
       "cgAssetId": "cg.white_canvas_ending",
-      "videoAssetId": "video.animated.runtime.white_canvas_ending_true",
-      "desktopVideoAssetId": "video.animated.desktop.white_canvas_ending_true",
       "tone": "quiet",
       "portraits": [
         {
@@ -2566,8 +2807,6 @@
       "locationId": "outskirts_dawn",
       "backgroundAssetId": "bg.outskirts_dawn",
       "cgAssetId": "cg.white_canvas_ending",
-      "videoAssetId": "video.animated.runtime.white_canvas_ending_normal",
-      "desktopVideoAssetId": "video.animated.desktop.white_canvas_ending_normal",
       "tone": "quiet",
       "portraits": [
         {
@@ -2625,8 +2864,6 @@
       "locationId": "outskirts_dawn",
       "backgroundAssetId": "bg.outskirts_dawn",
       "cgAssetId": "cg.white_canvas_ending",
-      "videoAssetId": "video.animated.runtime.white_canvas_ending_bad",
-      "desktopVideoAssetId": "video.animated.desktop.white_canvas_ending_bad",
       "tone": "quiet",
       "portraits": [
         {
@@ -2860,8 +3097,6 @@
       "locationId": "lce_lab",
       "backgroundAssetId": "bg.lce_lab",
       "cgAssetId": "cg.lce_raid",
-      "videoAssetId": "video.animated.runtime.golden_bough_rebuild_scene_3",
-      "desktopVideoAssetId": "video.animated.desktop.golden_bough_rebuild_scene_3",
       "tone": "threat",
       "portraits": [
         {
@@ -3093,8 +3328,6 @@
       "locationId": "mirror_corridor",
       "backgroundAssetId": "bg.mirror_corridor",
       "cgAssetId": "cg.golden_bough_ending",
-      "videoAssetId": "video.animated.runtime.golden_bough_rebuild_scene_5",
-      "desktopVideoAssetId": "video.animated.desktop.golden_bough_rebuild_scene_5",
       "tone": "golden",
       "portraits": [
         {
@@ -3233,7 +3466,14 @@
             ]
           }
         }
-      ]
+      ],
+      "minigame": {
+        "minigameId": "minigame.golden.testimony_cipher",
+        "seed": "golden-bough-name-continuity-v1",
+        "prompt": "把三段证词排成先尊重本人、再修复记忆的顺序。",
+        "assistLabel": "显示证词顺序提示",
+        "allowSkip": true
+      }
     },
     {
       "version": 2,
@@ -3339,8 +3579,6 @@
       "locationId": "city_rooftop",
       "backgroundAssetId": "bg.city_rooftop",
       "cgAssetId": "cg.araya_rooftop",
-      "videoAssetId": "video.animated.runtime.golden_bough_rebuild_scene_8",
-      "desktopVideoAssetId": "video.animated.desktop.golden_bough_rebuild_scene_8",
       "tone": "threat",
       "portraits": [
         {
@@ -3622,8 +3860,6 @@
       "locationId": "limbus_bus",
       "backgroundAssetId": "bg.limbus_bus",
       "cgAssetId": "cg.limbus_bus_night",
-      "videoAssetId": "video.animated.runtime.golden_bough_rebuild_scene_11",
-      "desktopVideoAssetId": "video.animated.desktop.golden_bough_rebuild_scene_11",
       "tone": "quiet",
       "portraits": [
         {
@@ -4008,8 +4244,6 @@
       "locationId": "outskirts_dawn",
       "backgroundAssetId": "bg.outskirts_dawn",
       "cgAssetId": "cg.golden_bough_ending",
-      "videoAssetId": "video.animated.runtime.golden_bough_rebuild_scene_15",
-      "desktopVideoAssetId": "video.animated.desktop.golden_bough_rebuild_scene_15",
       "tone": "golden",
       "portraits": [
         {
@@ -4246,8 +4480,6 @@
       "locationId": "outskirts_dawn",
       "backgroundAssetId": "bg.outskirts_dawn",
       "cgAssetId": "cg.golden_bough_ending",
-      "videoAssetId": "video.animated.runtime.golden_bough_rebuild_ending_true",
-      "desktopVideoAssetId": "video.animated.desktop.golden_bough_rebuild_ending_true",
       "tone": "golden",
       "portraits": [
         {
@@ -4322,8 +4554,6 @@
       "locationId": "outskirts_dawn",
       "backgroundAssetId": "bg.outskirts_dawn",
       "cgAssetId": "cg.golden_bough_ending",
-      "videoAssetId": "video.animated.runtime.golden_bough_rebuild_ending_normal",
-      "desktopVideoAssetId": "video.animated.desktop.golden_bough_rebuild_ending_normal",
       "tone": "golden",
       "portraits": [
         {
@@ -4381,8 +4611,6 @@
       "locationId": "outskirts_dawn",
       "backgroundAssetId": "bg.outskirts_dawn",
       "cgAssetId": "cg.golden_bough_ending",
-      "videoAssetId": "video.animated.runtime.golden_bough_rebuild_ending_bad",
-      "desktopVideoAssetId": "video.animated.desktop.golden_bough_rebuild_ending_bad",
       "tone": "golden",
       "portraits": [
         {
@@ -4630,8 +4858,6 @@
       "locationId": "backstreets_rain",
       "backgroundAssetId": "bg.backstreets_rain",
       "cgAssetId": "cg.backstreet_pursuit",
-      "videoAssetId": "video.animated.runtime.ring_conspiracy_scene_3",
-      "desktopVideoAssetId": "video.animated.desktop.ring_conspiracy_scene_3",
       "tone": "threat",
       "portraits": [
         {
@@ -4847,8 +5073,6 @@
       "locationId": "ring_atelier",
       "backgroundAssetId": "bg.ring_atelier",
       "cgAssetId": "cg.maestro_shadow",
-      "videoAssetId": "video.animated.runtime.ring_conspiracy_scene_5",
-      "desktopVideoAssetId": "video.animated.desktop.ring_conspiracy_scene_5",
       "tone": "gallery",
       "portraits": [
         {
@@ -5133,8 +5357,6 @@
       "locationId": "lce_lab",
       "backgroundAssetId": "bg.lce_lab",
       "cgAssetId": "cg.lce_raid",
-      "videoAssetId": "video.animated.runtime.ring_conspiracy_scene_8",
-      "desktopVideoAssetId": "video.animated.desktop.ring_conspiracy_scene_8",
       "tone": "threat",
       "portraits": [
         {
@@ -5208,7 +5430,14 @@
             ]
           }
         }
-      ]
+      ],
+      "minigame": {
+        "minigameId": "minigame.ring.boundary_resonance",
+        "seed": "ring-counter-contract-v1",
+        "prompt": "只点亮能把这份委托改写为反制契约的条款节点。",
+        "assistLabel": "标记不可接受的占有条款",
+        "allowSkip": true
+      }
     },
     {
       "version": 2,
@@ -5420,8 +5649,6 @@
       "locationId": "spider_gallery",
       "backgroundAssetId": "bg.spider_gallery",
       "cgAssetId": "cg.maestro_shadow",
-      "videoAssetId": "video.animated.runtime.ring_conspiracy_scene_11",
-      "desktopVideoAssetId": "video.animated.desktop.ring_conspiracy_scene_11",
       "tone": "threat",
       "portraits": [
         {
@@ -5828,8 +6055,6 @@
       "locationId": "outskirts_dawn",
       "backgroundAssetId": "bg.outskirts_dawn",
       "cgAssetId": "cg.ring_conspiracy_ending",
-      "videoAssetId": "video.animated.runtime.ring_conspiracy_scene_15",
-      "desktopVideoAssetId": "video.animated.desktop.ring_conspiracy_scene_15",
       "tone": "quiet",
       "portraits": [
         {
@@ -6066,8 +6291,6 @@
       "locationId": "outskirts_dawn",
       "backgroundAssetId": "bg.outskirts_dawn",
       "cgAssetId": "cg.ring_conspiracy_ending",
-      "videoAssetId": "video.animated.runtime.ring_conspiracy_ending_true",
-      "desktopVideoAssetId": "video.animated.desktop.ring_conspiracy_ending_true",
       "tone": "quiet",
       "portraits": [
         {
@@ -6142,8 +6365,6 @@
       "locationId": "outskirts_dawn",
       "backgroundAssetId": "bg.outskirts_dawn",
       "cgAssetId": "cg.ring_conspiracy_ending",
-      "videoAssetId": "video.animated.runtime.ring_conspiracy_ending_normal",
-      "desktopVideoAssetId": "video.animated.desktop.ring_conspiracy_ending_normal",
       "tone": "quiet",
       "portraits": [
         {
@@ -6201,8 +6422,6 @@
       "locationId": "outskirts_dawn",
       "backgroundAssetId": "bg.outskirts_dawn",
       "cgAssetId": "cg.ring_conspiracy_ending",
-      "videoAssetId": "video.animated.runtime.ring_conspiracy_ending_bad",
-      "desktopVideoAssetId": "video.animated.desktop.ring_conspiracy_ending_bad",
       "tone": "quiet",
       "portraits": [
         {

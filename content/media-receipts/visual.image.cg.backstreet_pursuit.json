@@ -1,0 +1,47 @@
+{
+  "version": 1,
+  "assetId": "cg.backstreet_pursuit",
+  "artifactSha256": "b3ed4aa5bcfca9c56b48f47c19305d7073efaf254bdf11edcedf0aa9bb23fa5b",
+  "provenance": {
+    "provider": "wisart-openai-compatible",
+    "model": "gpt-image-2",
+    "promptVersion": "albina-visual-migration-v1",
+    "sourceJobHash": "dfc14508dd9a0391c6866150b0adb141e1bcd30c3d52b7801848a60f5eb97911",
+    "review": {
+      "status": "approved",
+      "reviewer": "workbuddy-convergence-agent",
+      "reviewedAt": "2026-09-06T08:36:09.084Z"
+    }
+  },
+  "rights": {
+    "status": "unverified",
+    "sourceType": "model-output",
+    "redistribution": "unverified",
+    "rightsBasis": "Redistribution rights for this model output have not been independently verified."
+  },
+  "lineage": {
+    "kind": "derivative",
+    "processVersion": "albina-visual-promotion-v1",
+    "inputs": [
+      {
+        "assetId": "file.characters.albina.combat.png",
+        "sha256": "3447b8cb8df4edec6325ab5262892a35bff6854cd7f0fa44aaab268a97182f62",
+        "role": "approved-generated-reference"
+      },
+      {
+        "assetId": "file.characters.protagonist.battle.png",
+        "sha256": "5b40787a69bd7dc73c2b36570bf7c58c73e52a612ca6fbbc401f52ead494a400",
+        "role": "approved-generated-reference"
+      },
+      {
+        "assetId": "file.characters.ring.agent.normal.png",
+        "sha256": "4192a5a189f8e96279a856a89e2bac08997b06d5e3584c645d9c30492e76f97b",
+        "role": "approved-generated-reference"
+      },
+      {
+        "sha256": "aaf89630110b6fef687b86334404b00cd39fd29c84451971575b26a29ce51142",
+        "role": "canon-visual-reference"
+      }
+    ]
+  }
+}

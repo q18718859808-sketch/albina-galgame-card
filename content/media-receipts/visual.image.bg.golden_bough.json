@@ -1,0 +1,32 @@
+{
+  "version": 1,
+  "assetId": "bg.golden_bough",
+  "artifactSha256": "6edf1f90d2b561048fd5d45bae15cbe3d6a2eafec6f3855dd3eeb1b5b060a0cb",
+  "provenance": {
+    "provider": "wisart-openai-compatible",
+    "model": "gpt-image-2",
+    "promptVersion": "albina-visual-migration-v1",
+    "sourceJobHash": "c196bca1ee562a98ecc900b20396f5b507e7cb84485462af1788fdf388f8e4fa",
+    "review": {
+      "status": "approved",
+      "reviewer": "workbuddy-agent",
+      "reviewedAt": "2026-09-03T20:55:21.798Z"
+    }
+  },
+  "rights": {
+    "status": "unverified",
+    "sourceType": "model-output",
+    "redistribution": "unverified",
+    "rightsBasis": "Redistribution rights for this model output have not been independently verified."
+  },
+  "lineage": {
+    "kind": "derivative",
+    "processVersion": "albina-visual-promotion-v1",
+    "inputs": [
+      {
+        "sha256": "aaf89630110b6fef687b86334404b00cd39fd29c84451971575b26a29ce51142",
+        "role": "canon-visual-reference"
+      }
+    ]
+  }
+}

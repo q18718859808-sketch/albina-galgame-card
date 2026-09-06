@@ -1,0 +1,115 @@
+{
+  "schemaVersion": 1,
+  "id": "albina-krea2-text-capability-v1",
+  "purpose": "Optional image-embedded text layer for Krea2 production; interface text remains deterministic HTML/SVG/CSS.",
+  "baseline": {
+    "workflowSha256": "5cb911318da9ce1fff4c5550e86c0338b9d937a1460c3222b0a7541d5aa755a9",
+    "styleLoraOrder": ["z3zz4-k2-4_c1-st5000.safetensors", "Krea2Rella_c1-st8000.safetensors", "onineko_k2_v1.safetensors", "meion_krea2_style_v7.0_c1-st4000.safetensors", "masterpieces-v51.safetensors", "ichika-k2_c1-st5000.safetensors"],
+    "styleLoraWeights": [0.55, 0.65, 0.45, 0.45, 0.45, 0.35]
+  },
+  "policy": {
+    "enabledByDefault": false,
+    "uiTextMode": "html-svg-css",
+    "imageTextMode": "frozen-krea2-output; deterministic-overlay-first; optional-roi-worker-only-after-verification",
+    "topologyRule": "text-workers-must-not-enter-or-replace-the-six-lora-diffusion-chain",
+    "roiRule": "workers-may-edit-only-declared-text-roi; composite-after-review",
+    "outsideRoiInvariant": "outside-roi-pixels-must-remain-byte-equivalent-after-composite",
+    "protectedRegions": ["face", "eyes", "hair", "hands", "identity-anchors", "weapons", "logos", "watermarks"],
+    "unknownCandidates": "blocked",
+    "readImageRequired": true,
+    "directGlyphReview": "required-at-100-percent",
+    "rejectOnAnyGlyphError": true,
+    "rejectOnAnyLogoOrWatermark": true,
+    "rejectOnProtectedRegionChange": true
+  },
+  "candidateIndex": {
+    "local": [
+      {
+        "id": "kjnodes-create-text-mask",
+        "role": "deterministic-mask-and-overlay",
+        "installed": true,
+        "status": "approved-for-release-typography",
+        "source": "local-ComfyUI-KJNodes",
+        "modelLicense": "not-applicable"
+      }
+    ],
+    "remote": [
+      {
+        "id": "anytext2-sd15-roi",
+        "role": "experimental-text-roi-worker",
+        "officialRepository": "https://github.com/tyxsspa/AnyText2",
+        "communityComfyUIRepository": "https://github.com/zmwv823/ComfyUI_Anytext",
+        "snapshot": "framework-research/image-text/comfyui-anytext-259ab7fa-fixed",
+        "fixedCommit": "259ab7fa9b7a4f6f2ceedda2d14f57ac0041ff29",
+        "archiveSha256": "d9ba31881bc44baec2aa532357d32ac1fe7885af805750036fe791cfe370fb68",
+        "auditManifestSha256": "f9c2936a2f8f694630c29982c41f2293eb5a1225ea76335a175176a87145bf0f",
+        "installed": false,
+        "status": "blocked-audit-gates-not-met",
+        "resourcePlan": "8GB-class GPU; fp16; sequential offload/unload; small ROI only",
+        "modelLicense": "must-be-verified-separately-from-code-license",
+        "modelSha256": null,
+        "nodeSignature": null,
+        "auditBlockers": [
+          "upstream-archived-and-anytext2-editing-marked-incomplete",
+          "eight-gb-device-enters-load-all-gpu-path",
+          "dependencies-unlocked-no-lockfile-current-runtime-compatibility-unproven",
+          "control-weight-revision-license-and-sha256-unverified",
+          "network-download-trust-remote-code-dynamic-import-eval-and-torch-load-paths",
+          "default-node-labels-and-font-name-contain-mojibake",
+          "no-outside-roi-identity-bilingual-unload-or-determinism-proof"
+        ],
+        "notes": "Preferred research candidate for bilingual scene-material text, but prohibited from installation or production until every audit blocker is resolved in an isolated ComfyUI copy."
+      },
+      {
+        "id": "textflux",
+        "role": "high-vram-research-only",
+        "snapshot": "framework-research/image-text/textflux-comfyui",
+        "installed": false,
+        "status": "blocked-by-resource-and-model-provenance-gate",
+        "modelLicense": "must-be-verified-separately-from-code-license",
+        "modelSha256": null,
+        "notes": "Not a production path on the current 8GB-class local GPU."
+      },
+      {
+        "id": "joytype",
+        "role": "text-generation-candidate",
+        "installed": false,
+        "status": "blocked-unclear-code-license"
+      },
+      {
+        "id": "glyph-byt5",
+        "role": "text-generation-candidate",
+        "installed": false,
+        "status": "excluded-compatibility-and-authorization-risk"
+      }
+    ],
+    "status": "deterministic-approved-specialized-workers-blocked",
+    "lastSearchAt": "2026-08-13T00:00:00.000Z",
+    "notes": "No specialized text model is installed or enabled. Code licenses and model-weight licenses remain separate review obligations."
+  },
+  "proof": {
+    "deterministicProof": {
+      "status": "blocked-stale-baseline",
+      "blockedReason": "receipt baseline binding does not match the current embedded Krea2 baseline",
+      "artifact": "staging/media/krea2-text-proof/krea2-text-overlay-proof.png",
+      "artifactSha256": "a80c20ac3d7b21c1065ddf9299d241efa53b852c4fe78734eab7edb511a3aa16",
+      "receipt": "staging/media/krea2-text-proof/krea2-text-overlay-proof.json",
+      "review": "staging/media/krea2-text-proof/krea2-text-overlay-proof.review.json",
+      "reviewMethod": "direct-original-resolution-glyph-by-glyph",
+      "visibleText": ["阿尔比娜 / 第九章", "Albina / Canto IX"]
+    },
+    "roiWorkerProof": {
+      "status": "not-installed",
+      "requiredBeforePromotion": ["source-and-commit", "code-license", "model-license", "model-sha256", "node-signature", "resource-plan", "outside-roi-invariance", "direct-image-review"]
+    }
+  },
+  "acceptance": {
+    "languages": ["zh-CN", "en-US"],
+    "requiredSamples": ["\u963f\u5c14\u6bd4\u5a1c / \u7b2c\u4e5d\u7ae0", "Albina / Canto IX"],
+    "inspection": ["100-percent-image-read", "glyph-by-glyph", "no-hallucinated-characters", "no-logo", "no-watermark"],
+    "promotion": "only-after-human-visual-review-and-receipt-hash",
+    "productionPath": "Freeze and hash the complete six-LoRA Krea2 output, declare text ROI and protected regions, use deterministic CreateTextMask plus ImageCompositeMasked by default, and enable AnyText2 only as an optional ROI worker after every installation gate and bilingual direct review passes.",
+    "licenseRule": "code license does not cover model weights",
+    "typographyRule": "interface-title-button-save-route-text-stays-deterministic-html-svg-css; only diegetic scene text may use the optional ROI worker"
+  }
+}

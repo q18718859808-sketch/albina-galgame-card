@@ -1,0 +1,830 @@
+{
+  "version": 1,
+  "id": "albina-canon-visual-sources-migration-v1",
+  "checkedAt": "2026-09-01",
+  "policy": {
+    "publishSourceFiles": false,
+    "usage": "production-reference-only",
+    "redistribution": "forbidden"
+  },
+  "migration": {
+    "kind": "baseline-style-board-swap",
+    "status": "authorization-not-required",
+    "previousBoardSha256": "e6ba8109bf0a32b63ba5360ff030d80deb7fef0f72088b9e82ad63d4de275f46",
+    "candidateBoardSha256": "aaf89630110b6fef687b86334404b00cd39fd29c84451971575b26a29ce51142",
+    "baselineSourceId": "reference.user.albina-style-baseline",
+    "baselineSha256": "1f13c373aaf95122686be9ca3d01d481743abd3a058e9e11cd8af6520c0a0fb4",
+    "note": "Only the de-identified style board record changes; every other source entry is byte-identical to canon-visual-sources-v1.json. The frozen albina-visual-v2 authorization stays untouched and does not cover this index."
+  },
+  "assets": [
+    {
+      "id": "reference.user.albina-style-board",
+      "subject": "albina-global-style-board",
+      "role": "deidentified-style-reference",
+      "localPath": "staging/research/style-reference/albina-style-board-v2-macrocrop.png",
+      "sha256": "aaf89630110b6fef687b86334404b00cd39fd29c84451971575b26a29ce51142",
+      "bytes": 3237596,
+      "width": 1024,
+      "height": 1536,
+      "sourceAssetName": "F121759F860F58382CC0D53763FB3A6C.jpg",
+      "sourcePage": "user-provided-local-file",
+      "sourceUrl": "user-provided-local-file",
+      "sourceIds": [
+        "source.user-provided.style-baseline"
+      ],
+      "derivedFromSourceId": "reference.user.albina-style-baseline",
+      "derivation": "Six 384x384 crops taken from the baseline interior safe area are mirrored or reordered, upscaled to 512x512 with lanczos, and tiled as a 2x3 board. The crops exclude the face, complete body silhouette, standing pose, poster composition, typography, L-CORP mark, barcode, and readable text while retaining continuous ink lines, cel-shading and limited painterly transitions, cool-white/charcoal structure, restrained gold and warning-red accents, armor panel seams, Fascia surface detail, and industrial cold light.",
+      "checkedAt": "2026-09-01",
+      "usage": "production-reference-only",
+      "redistribution": "forbidden",
+      "reviewStatus": "source-identified",
+      "authStatus": "not-required"
+    },
+    {
+      "id": "reference.user.albina-style-baseline",
+      "subject": "albina-reference-heroine",
+      "role": "character-reference-only",
+      "localPath": "staging/research/style-reference/albina-style-baseline.jpg",
+      "sha256": "1f13c373aaf95122686be9ca3d01d481743abd3a058e9e11cd8af6520c0a0fb4",
+      "bytes": 341902,
+      "width": 1024,
+      "height": 1536,
+      "sourceAssetName": "F121759F860F58382CC0D53763FB3A6C.jpg",
+      "sourcePage": "user-provided-local-file",
+      "sourceUrl": "user-provided-local-file",
+      "sourceIds": [
+        "source.user-provided.style-baseline"
+      ],
+      "checkedAt": "2026-07-21",
+      "usage": "production-reference-only",
+      "redistribution": "forbidden",
+      "reviewStatus": "source-identified"
+    },
+    {
+      "id": "canon.visual.canto-ix.9-14.s908",
+      "subject": "canto-ix-9-14",
+      "role": "story-frame",
+      "localPath": "staging/research/canon-visual/wiki-game-assets/9-14-s908.png",
+      "sha256": "7304f4b2947d9ee44f179db318b827ddca8109ab8f0f04e64fc4b34d69b18ff1",
+      "bytes": 665226,
+      "width": 1920,
+      "height": 1080,
+      "sourceAssetName": "S908.png",
+      "sourcePage": "https://limbuscompany.wiki.gg/wiki/File:S908.png",
+      "sourceUrl": "https://limbuscompany.wiki.gg/images/S908.png?3652da",
+      "sourceIds": [
+        "source.official.canto-ix.9-14",
+        "source.wiki.canto-ix-part-i.172275"
+      ],
+      "checkedAt": "2026-07-17",
+      "usage": "production-reference-only",
+      "redistribution": "forbidden",
+      "reviewStatus": "source-identified"
+    },
+    {
+      "id": "canon.visual.canto-ix.9-14.s914",
+      "subject": "canto-ix-9-14",
+      "role": "story-frame",
+      "localPath": "staging/research/canon-visual/wiki-game-assets/9-14-s914.png",
+      "sha256": "db91a2c742cade7a0d760fd7e638cc90c8c1c73092ae31c4884e611b64d95283",
+      "bytes": 936073,
+      "width": 1920,
+      "height": 1080,
+      "sourceAssetName": "S914.png",
+      "sourcePage": "https://limbuscompany.wiki.gg/wiki/File:S914.png",
+      "sourceUrl": "https://limbuscompany.wiki.gg/images/S914.png?a3d292",
+      "sourceIds": [
+        "source.official.canto-ix.9-14",
+        "source.wiki.canto-ix-part-i.172275"
+      ],
+      "checkedAt": "2026-07-17",
+      "usage": "production-reference-only",
+      "redistribution": "forbidden",
+      "reviewStatus": "evidence-only"
+    },
+    {
+      "id": "canon.visual.canto-ix.9-18.lce-lab-bg",
+      "subject": "canto-ix-9-18",
+      "role": "background",
+      "localPath": "staging/research/canon-visual/wiki-game-assets/9-18-lce-lab-bg.png",
+      "sha256": "a68cb560ded868c79da5f6682539f5aeb2eef6ccf6e98d73f4e26b86575a0d3f",
+      "bytes": 2024535,
+      "width": 1920,
+      "height": 1080,
+      "sourceAssetName": "Story_LCE_Research_Team_Laboratory_BG.png",
+      "sourcePage": "https://limbuscompany.wiki.gg/wiki/File:Story_LCE_Research_Team_Laboratory_BG.png",
+      "sourceUrl": "https://limbuscompany.wiki.gg/images/Story_LCE_Research_Team_Laboratory_BG.png?4ef42a",
+      "sourceIds": [
+        "source.official.canto-ix.9-18",
+        "source.wiki.canto-ix-part-i.172275"
+      ],
+      "checkedAt": "2026-07-17",
+      "usage": "production-reference-only",
+      "redistribution": "forbidden",
+      "reviewStatus": "source-identified"
+    },
+    {
+      "id": "canon.visual.canto-ix.9-18.s909-1",
+      "subject": "canto-ix-9-18",
+      "role": "story-frame",
+      "localPath": "staging/research/canon-visual/wiki-game-assets/9-18-s909-1.png",
+      "sha256": "04b6577c752ed1cb733396cf16d84b090aec7f348d594b3af020bb4385d47f78",
+      "bytes": 3368010,
+      "width": 1920,
+      "height": 1080,
+      "sourceAssetName": "S909_1.png",
+      "sourcePage": "https://limbuscompany.wiki.gg/wiki/File:S909_1.png",
+      "sourceUrl": "https://limbuscompany.wiki.gg/images/S909_1.png?81025b",
+      "sourceIds": [
+        "source.official.canto-ix.9-18",
+        "source.wiki.canto-ix-part-i.172275"
+      ],
+      "checkedAt": "2026-07-17",
+      "usage": "production-reference-only",
+      "redistribution": "forbidden",
+      "reviewStatus": "evidence-only"
+    },
+    {
+      "id": "canon.visual.canto-ix.9-18.s909-2",
+      "subject": "canto-ix-9-18",
+      "role": "story-frame",
+      "localPath": "staging/research/canon-visual/wiki-game-assets/9-18-s909-2.png",
+      "sha256": "a6300321468db832bd43edf38f1db9228d24765441c1ad8e027b9cbcee0d0aa3",
+      "bytes": 2585169,
+      "width": 1920,
+      "height": 1080,
+      "sourceAssetName": "S909_2.png",
+      "sourcePage": "https://limbuscompany.wiki.gg/wiki/File:S909_2.png",
+      "sourceUrl": "https://limbuscompany.wiki.gg/images/S909_2.png?681612",
+      "sourceIds": [
+        "source.official.canto-ix.9-18",
+        "source.wiki.canto-ix-part-i.172275"
+      ],
+      "checkedAt": "2026-07-17",
+      "usage": "production-reference-only",
+      "redistribution": "forbidden",
+      "reviewStatus": "evidence-only"
+    },
+    {
+      "id": "canon.visual.canto-ix.9-18.s918",
+      "subject": "canto-ix-9-18",
+      "role": "story-frame",
+      "localPath": "staging/research/canon-visual/wiki-game-assets/9-18-s918.png",
+      "sha256": "0afad242949acd623a428e86e46b0f2949f0b27e7a45f5e02fc121df41dd1fb3",
+      "bytes": 1302344,
+      "width": 1920,
+      "height": 1080,
+      "sourceAssetName": "S918.png",
+      "sourcePage": "https://limbuscompany.wiki.gg/wiki/File:S918.png",
+      "sourceUrl": "https://limbuscompany.wiki.gg/images/S918.png?a818c0",
+      "sourceIds": [
+        "source.official.canto-ix.9-18",
+        "source.wiki.canto-ix-part-i.172275"
+      ],
+      "checkedAt": "2026-07-17",
+      "usage": "production-reference-only",
+      "redistribution": "forbidden",
+      "reviewStatus": "evidence-only"
+    },
+    {
+      "id": "canon.visual.canto-ix.9-37.s937",
+      "subject": "canto-ix-9-37",
+      "role": "story-frame",
+      "localPath": "staging/research/canon-visual/wiki-game-assets/9-37-s937.png",
+      "sha256": "6060e4e43ec50a848a8f605418a92a2b82ff65194b0a379f70badf17529cf3b3",
+      "bytes": 1545790,
+      "width": 1920,
+      "height": 1080,
+      "sourceAssetName": "S937.png",
+      "sourcePage": "https://limbuscompany.wiki.gg/wiki/File:S937.png",
+      "sourceUrl": "https://limbuscompany.wiki.gg/images/S937.png?e2c855",
+      "sourceIds": [
+        "source.official.canto-ix.9-37",
+        "source.wiki.canto-ix-part-iii.177602"
+      ],
+      "checkedAt": "2026-07-17",
+      "usage": "production-reference-only",
+      "redistribution": "forbidden",
+      "reviewStatus": "evidence-only"
+    },
+    {
+      "id": "canon.visual.alyssa.story-icon",
+      "subject": "alyssa",
+      "role": "story-icon",
+      "localPath": "staging/research/canon-visual/wiki-game-assets/alyssa-9-37-story-icon.png",
+      "sha256": "3409d80b72c96e5568a2b9153c533877680f1fb6a69bfc6516789c7336ffb9a7",
+      "bytes": 97832,
+      "width": 296,
+      "height": 296,
+      "sourceAssetName": "Alyssa_Story_Icon.png",
+      "sourcePage": "https://limbuscompany.wiki.gg/wiki/File:Alyssa_Story_Icon.png",
+      "sourceUrl": "https://limbuscompany.wiki.gg/images/Alyssa_Story_Icon.png?e84737",
+      "sourceIds": [
+        "source.official.canto-ix.9-37",
+        "source.official.canto-ix.9-43",
+        "source.wiki.canto-ix-part-iii.177602"
+      ],
+      "checkedAt": "2026-07-17",
+      "usage": "production-reference-only",
+      "redistribution": "forbidden",
+      "reviewStatus": "source-identified"
+    },
+    {
+      "id": "canon.visual.canto-ix.9-43.ring-corridor-bg",
+      "subject": "canto-ix-9-43",
+      "role": "background",
+      "localPath": "staging/research/canon-visual/wiki-game-assets/9-43-ring-corridor-bg.png",
+      "sha256": "a14e568cb94fb6049b2bd0ddc37567d062067f0d6a74cc8cc7f839f30a22ee11",
+      "bytes": 1500185,
+      "width": 1920,
+      "height": 1080,
+      "sourceAssetName": "Story_Corridor_of_the_Ring_2_BG.png",
+      "sourcePage": "https://limbuscompany.wiki.gg/wiki/File:Story_Corridor_of_the_Ring_2_BG.png",
+      "sourceUrl": "https://limbuscompany.wiki.gg/images/Story_Corridor_of_the_Ring_2_BG.png?8c9ac7",
+      "sourceIds": [
+        "source.official.canto-ix.9-37",
+        "source.official.canto-ix.9-43",
+        "source.wiki.canto-ix-part-iii.177602"
+      ],
+      "checkedAt": "2026-07-17",
+      "usage": "production-reference-only",
+      "redistribution": "forbidden",
+      "reviewStatus": "source-identified"
+    },
+    {
+      "id": "canon.visual.canto-ix.9-43.s929-1",
+      "subject": "canto-ix-9-43",
+      "role": "story-frame",
+      "localPath": "staging/research/canon-visual/wiki-game-assets/9-43-s929-1.png",
+      "sha256": "dd6140c2eadaa0abf6ac48291aae4c57b0e6dcbcb4954c2f94d8912688d46ca4",
+      "bytes": 1746012,
+      "width": 1920,
+      "height": 1080,
+      "sourceAssetName": "S929_1.png",
+      "sourcePage": "https://limbuscompany.wiki.gg/wiki/File:S929_1.png",
+      "sourceUrl": "https://limbuscompany.wiki.gg/images/S929_1.png?580107",
+      "sourceIds": [
+        "source.official.canto-ix.9-43",
+        "source.wiki.canto-ix-part-iii.177602"
+      ],
+      "checkedAt": "2026-07-17",
+      "usage": "production-reference-only",
+      "redistribution": "forbidden",
+      "reviewStatus": "evidence-only"
+    },
+    {
+      "id": "canon.visual.canto-ix.9-43.s929-2",
+      "subject": "canto-ix-9-43",
+      "role": "story-frame",
+      "localPath": "staging/research/canon-visual/wiki-game-assets/9-43-s929-2.png",
+      "sha256": "6a3d9884a5dbd7743fdd42d255379929863059064e0fe9672f899b7f30e64852",
+      "bytes": 1416735,
+      "width": 1920,
+      "height": 1080,
+      "sourceAssetName": "S929_2.png",
+      "sourcePage": "https://limbuscompany.wiki.gg/wiki/File:S929_2.png",
+      "sourceUrl": "https://limbuscompany.wiki.gg/images/S929_2.png?3788c1",
+      "sourceIds": [
+        "source.official.canto-ix.9-43",
+        "source.wiki.canto-ix-part-iii.177602"
+      ],
+      "checkedAt": "2026-07-17",
+      "usage": "production-reference-only",
+      "redistribution": "forbidden",
+      "reviewStatus": "evidence-only"
+    },
+    {
+      "id": "canon.visual.canto-ix.9-43.s930-1",
+      "subject": "canto-ix-9-43",
+      "role": "story-frame",
+      "localPath": "staging/research/canon-visual/wiki-game-assets/9-43-s930-1.png",
+      "sha256": "1eff8cbddb176ac73d1dff9bd203b28ff4f7d5b655a9a7f5be2a48caaa9c8b95",
+      "bytes": 2270818,
+      "width": 1920,
+      "height": 1080,
+      "sourceAssetName": "S930_1.png",
+      "sourcePage": "https://limbuscompany.wiki.gg/wiki/File:S930_1.png",
+      "sourceUrl": "https://limbuscompany.wiki.gg/images/S930_1.png?ac201d",
+      "sourceIds": [
+        "source.official.canto-ix.9-43",
+        "source.wiki.canto-ix-part-iii.177602"
+      ],
+      "checkedAt": "2026-07-17",
+      "usage": "production-reference-only",
+      "redistribution": "forbidden",
+      "reviewStatus": "evidence-only"
+    },
+    {
+      "id": "canon.visual.canto-ix.9-43.s930-2",
+      "subject": "canto-ix-9-43",
+      "role": "story-frame",
+      "localPath": "staging/research/canon-visual/wiki-game-assets/9-43-s930-2.png",
+      "sha256": "f40591d8d1777bc462ef13599d850891e0c96ee8d12031ad0a4ceb3fc69ec8e7",
+      "bytes": 2915344,
+      "width": 1920,
+      "height": 1080,
+      "sourceAssetName": "S930_2.png",
+      "sourcePage": "https://limbuscompany.wiki.gg/wiki/File:S930_2.png",
+      "sourceUrl": "https://limbuscompany.wiki.gg/images/S930_2.png?cae026",
+      "sourceIds": [
+        "source.official.canto-ix.9-43",
+        "source.wiki.canto-ix-part-iii.177602"
+      ],
+      "checkedAt": "2026-07-17",
+      "usage": "production-reference-only",
+      "redistribution": "forbidden",
+      "reviewStatus": "evidence-only"
+    },
+    {
+      "id": "canon.visual.canto-ix.9-43.s943-1",
+      "subject": "canto-ix-9-43",
+      "role": "story-frame",
+      "localPath": "staging/research/canon-visual/wiki-game-assets/9-43-s943-1.png",
+      "sha256": "4a3d61d4c728ff1273ec6ef0358b3b0afadb7f3ea7ebdbc371ed4767a2b9e024",
+      "bytes": 1646283,
+      "width": 1920,
+      "height": 1080,
+      "sourceAssetName": "S943_1.png",
+      "sourcePage": "https://limbuscompany.wiki.gg/wiki/File:S943_1.png",
+      "sourceUrl": "https://limbuscompany.wiki.gg/images/S943_1.png?a6fb1d",
+      "sourceIds": [
+        "source.official.canto-ix.9-43",
+        "source.wiki.canto-ix-part-iii.177602"
+      ],
+      "checkedAt": "2026-07-17",
+      "usage": "production-reference-only",
+      "redistribution": "forbidden",
+      "reviewStatus": "evidence-only"
+    },
+    {
+      "id": "canon.visual.canto-ix.9-43.s943-2",
+      "subject": "canto-ix-9-43",
+      "role": "story-frame",
+      "localPath": "staging/research/canon-visual/wiki-game-assets/9-43-s943-2.png",
+      "sha256": "086691acb5e30565eb65604da08d025f621ef5d007518864756b1f3138c45575",
+      "bytes": 1701434,
+      "width": 1920,
+      "height": 1080,
+      "sourceAssetName": "S943_2.png",
+      "sourcePage": "https://limbuscompany.wiki.gg/wiki/File:S943_2.png",
+      "sourceUrl": "https://limbuscompany.wiki.gg/images/S943_2.png?f4016b",
+      "sourceIds": [
+        "source.official.canto-ix.9-43",
+        "source.wiki.canto-ix-part-iii.177602"
+      ],
+      "checkedAt": "2026-07-17",
+      "usage": "production-reference-only",
+      "redistribution": "forbidden",
+      "reviewStatus": "evidence-only"
+    },
+    {
+      "id": "canon.visual.sinclair.smoke-war-story-icon",
+      "subject": "sinclair-smoke-war",
+      "role": "story-icon",
+      "localPath": "staging/research/canon-visual/wiki-game-assets/sinclair-smoke-war-9-43-story-icon.png",
+      "sha256": "47fb0ab9dc1c493323f3f1acd5bbbd389e7de075426d9ef02d9afe732afc8f70",
+      "bytes": 96270,
+      "width": 296,
+      "height": 296,
+      "sourceAssetName": "A_Certain_Sinclair_Story_Icon.png",
+      "sourcePage": "https://limbuscompany.wiki.gg/wiki/File:A_Certain_Sinclair_Story_Icon.png",
+      "sourceUrl": "https://limbuscompany.wiki.gg/images/A_Certain_Sinclair_Story_Icon.png?c06458",
+      "sourceIds": [
+        "source.official.canto-ix.9-43",
+        "source.wiki.canto-ix-part-iii.177602"
+      ],
+      "checkedAt": "2026-07-17",
+      "usage": "production-reference-only",
+      "redistribution": "forbidden",
+      "reviewStatus": "source-identified"
+    },
+    {
+      "id": "canon.visual.albina.armored-standing",
+      "subject": "albina",
+      "role": "standing",
+      "localPath": "staging/research/canon-visual/wiki-game-assets/albina-armored-standing.png",
+      "sha256": "a0192ec0071b3d2af4f3d7e38ab29e7ed4cd140b084ebc10ff47e8a42e2a36e5",
+      "bytes": 1043427,
+      "width": 862,
+      "height": 1917,
+      "sourceAssetName": "Albina_Armored_StandingSprite.png",
+      "sourcePage": "https://limbuscompany.wiki.gg/wiki/File:Albina_Armored_StandingSprite.png",
+      "sourceUrl": "https://limbuscompany.wiki.gg/images/Albina_Armored_StandingSprite.png?30f3e9",
+      "sourceIds": [
+        "source.official.canto-ix.9-18",
+        "source.wiki.albina.173286"
+      ],
+      "checkedAt": "2026-07-17",
+      "usage": "production-reference-only",
+      "redistribution": "forbidden",
+      "reviewStatus": "source-identified"
+    },
+    {
+      "id": "canon.visual.albina.armored-story-icon",
+      "subject": "albina",
+      "role": "story-icon",
+      "localPath": "staging/research/canon-visual/wiki-game-assets/albina-armored-story-icon.png",
+      "sha256": "e33d6d359156999844597f87e46d894f8bb234099e620855b3ec4d363e008728",
+      "bytes": 96219,
+      "width": 296,
+      "height": 296,
+      "sourceAssetName": "Albina_Armored_Story_Icon.png",
+      "sourcePage": "https://limbuscompany.wiki.gg/wiki/File:Albina_Armored_Story_Icon.png",
+      "sourceUrl": "https://limbuscompany.wiki.gg/images/Albina_Armored_Story_Icon.png?130725",
+      "sourceIds": [
+        "source.official.canto-ix.9-18",
+        "source.wiki.albina.173286"
+      ],
+      "checkedAt": "2026-07-17",
+      "usage": "production-reference-only",
+      "redistribution": "forbidden",
+      "reviewStatus": "evidence-only"
+    },
+    {
+      "id": "canon.visual.albina.armored-storylog",
+      "subject": "albina",
+      "role": "storylog",
+      "localPath": "staging/research/canon-visual/wiki-game-assets/albina-armored-storylog.png",
+      "sha256": "d596875be34528a01899185cdb53c2ec017a5bcccdf067285ba4770de61da2f9",
+      "bytes": 91891,
+      "width": 256,
+      "height": 256,
+      "sourceAssetName": "Albina_Armored_StoryLog.png",
+      "sourcePage": "https://limbuscompany.wiki.gg/wiki/File:Albina_Armored_StoryLog.png",
+      "sourceUrl": "https://limbuscompany.wiki.gg/images/Albina_Armored_StoryLog.png?516764",
+      "sourceIds": [
+        "source.official.canto-ix.9-18",
+        "source.wiki.albina.173286"
+      ],
+      "checkedAt": "2026-07-17",
+      "usage": "production-reference-only",
+      "redistribution": "forbidden",
+      "reviewStatus": "evidence-only"
+    },
+    {
+      "id": "canon.visual.albina.story-icon",
+      "subject": "albina",
+      "role": "story-icon",
+      "localPath": "staging/research/canon-visual/wiki-game-assets/albina-story-icon.png",
+      "sha256": "d3e81e0012480abfcacaffa9c0c79389dbec61e192f2fc3c864992bad0dbc430",
+      "bytes": 94955,
+      "width": 296,
+      "height": 296,
+      "sourceAssetName": "Albina_Story_Icon.png",
+      "sourcePage": "https://limbuscompany.wiki.gg/wiki/File:Albina_Story_Icon.png",
+      "sourceUrl": "https://limbuscompany.wiki.gg/images/Albina_Story_Icon.png?a8d005",
+      "sourceIds": [
+        "source.wiki.albina.173286"
+      ],
+      "checkedAt": "2026-07-17",
+      "usage": "production-reference-only",
+      "redistribution": "forbidden",
+      "reviewStatus": "evidence-only"
+    },
+    {
+      "id": "canon.visual.albina.unarmored-standing",
+      "subject": "albina",
+      "role": "standing",
+      "localPath": "staging/research/canon-visual/wiki-game-assets/albina-unarmored-standing.png",
+      "sha256": "e68f9d04dda42e9ab86dcb686663057619c8dfbeff5f7d70078a083b0228aa55",
+      "bytes": 647858,
+      "width": 588,
+      "height": 1766,
+      "sourceAssetName": "Albina_StandingSprite.png",
+      "sourcePage": "https://limbuscompany.wiki.gg/wiki/File:Albina_StandingSprite.png",
+      "sourceUrl": "https://limbuscompany.wiki.gg/images/Albina_StandingSprite.png?e94e59",
+      "sourceIds": [
+        "source.official.canto-ix.9-18",
+        "source.wiki.albina.173286"
+      ],
+      "checkedAt": "2026-07-17",
+      "usage": "production-reference-only",
+      "redistribution": "forbidden",
+      "reviewStatus": "source-identified"
+    },
+    {
+      "id": "canon.visual.albina.unarmored-storylog",
+      "subject": "albina",
+      "role": "storylog",
+      "localPath": "staging/research/canon-visual/wiki-game-assets/albina-unarmored-storylog.png",
+      "sha256": "40aef7f2433401b94b4c53b5fcd5a2c9d9e5320a9cd0269ec9d2701e04e0eaf7",
+      "bytes": 86387,
+      "width": 256,
+      "height": 256,
+      "sourceAssetName": "Albina_StoryLog.png",
+      "sourcePage": "https://limbuscompany.wiki.gg/wiki/File:Albina_StoryLog.png",
+      "sourceUrl": "https://limbuscompany.wiki.gg/images/Albina_StoryLog.png?eed576",
+      "sourceIds": [
+        "source.wiki.albina.173286"
+      ],
+      "checkedAt": "2026-07-17",
+      "usage": "production-reference-only",
+      "redistribution": "forbidden",
+      "reviewStatus": "evidence-only"
+    },
+    {
+      "id": "canon.visual.callisto.standing",
+      "subject": "callisto",
+      "role": "standing",
+      "localPath": "staging/research/canon-visual/wiki-game-assets/callisto-standing.png",
+      "sha256": "ec23a9bd281921be8cd3ece2fc2c81a8815c79c79b553bf1924cac65be174275",
+      "bytes": 892212,
+      "width": 1341,
+      "height": 1714,
+      "sourceAssetName": "Callisto_StandingSprite.png",
+      "sourcePage": "https://limbuscompany.wiki.gg/wiki/File:Callisto_StandingSprite.png",
+      "sourceUrl": "https://limbuscompany.wiki.gg/images/Callisto_StandingSprite.png?e77e0e",
+      "sourceIds": [
+        "source.official.canto-ix.9-43",
+        "source.wiki.callisto.177757"
+      ],
+      "checkedAt": "2026-07-17",
+      "usage": "production-reference-only",
+      "redistribution": "forbidden",
+      "reviewStatus": "source-identified"
+    },
+    {
+      "id": "canon.visual.callisto.story-icon",
+      "subject": "callisto",
+      "role": "story-icon",
+      "localPath": "staging/research/canon-visual/wiki-game-assets/callisto-story-icon.png",
+      "sha256": "b8220970b6a37d174bd9c8fe3073a5188ec08658ed3113eb15b47b14a36a23a6",
+      "bytes": 93303,
+      "width": 296,
+      "height": 296,
+      "sourceAssetName": "Callisto_Story_Icon.png",
+      "sourcePage": "https://limbuscompany.wiki.gg/wiki/File:Callisto_Story_Icon.png",
+      "sourceUrl": "https://limbuscompany.wiki.gg/images/Callisto_Story_Icon.png?4fe4d4",
+      "sourceIds": [
+        "source.wiki.callisto.177757"
+      ],
+      "checkedAt": "2026-07-17",
+      "usage": "production-reference-only",
+      "redistribution": "forbidden",
+      "reviewStatus": "evidence-only"
+    },
+    {
+      "id": "canon.visual.callisto.storylog",
+      "subject": "callisto",
+      "role": "storylog",
+      "localPath": "staging/research/canon-visual/wiki-game-assets/callisto-storylog.png",
+      "sha256": "7be87c3f5f8bb009f03ec16d85143ad905c74a85850c23c95f72c355b165e1ab",
+      "bytes": 86431,
+      "width": 256,
+      "height": 256,
+      "sourceAssetName": "Callisto_StoryLog.png",
+      "sourcePage": "https://limbuscompany.wiki.gg/wiki/File:Callisto_StoryLog.png",
+      "sourceUrl": "https://limbuscompany.wiki.gg/images/Callisto_StoryLog.png?fab487",
+      "sourceIds": [
+        "source.wiki.callisto.177757"
+      ],
+      "checkedAt": "2026-07-17",
+      "usage": "production-reference-only",
+      "redistribution": "forbidden",
+      "reviewStatus": "evidence-only"
+    },
+    {
+      "id": "canon.visual.dante.story-icon",
+      "subject": "dante",
+      "role": "story-icon",
+      "localPath": "staging/research/canon-visual/wiki-game-assets/dante-9-18-story-icon.png",
+      "sha256": "190f25f829a4d1e383c3de532306afb04deb3c3071c9628136428820f26cdfde",
+      "bytes": 102642,
+      "width": 296,
+      "height": 296,
+      "sourceAssetName": "Dante_Story_Icon.png",
+      "sourcePage": "https://limbuscompany.wiki.gg/wiki/File:Dante_Story_Icon.png",
+      "sourceUrl": "https://limbuscompany.wiki.gg/images/Dante_Story_Icon.png?3ac73e",
+      "sourceIds": [
+        "source.official.canto-ix.9-18"
+      ],
+      "checkedAt": "2026-07-17",
+      "usage": "production-reference-only",
+      "redistribution": "forbidden",
+      "reviewStatus": "evidence-only"
+    },
+    {
+      "id": "canon.visual.dante.standing",
+      "subject": "dante",
+      "role": "standing",
+      "localPath": "staging/research/canon-visual/wiki-game-assets/dante-standing.png",
+      "sha256": "9159aa76d13f54965f607398df7f032f66bc921470e4b8c94462e63f56f40263",
+      "bytes": 631687,
+      "width": 499,
+      "height": 1700,
+      "sourceAssetName": "Dante_StandingSprite.png",
+      "sourcePage": "https://limbuscompany.wiki.gg/wiki/File:Dante_StandingSprite.png",
+      "sourceUrl": "https://limbuscompany.wiki.gg/images/Dante_StandingSprite.png?f24be4",
+      "sourceIds": [
+        "source.official.canto-ix.9-18"
+      ],
+      "checkedAt": "2026-07-17",
+      "usage": "production-reference-only",
+      "redistribution": "forbidden",
+      "reviewStatus": "source-identified"
+    },
+    {
+      "id": "canon.visual.dante.storylog",
+      "subject": "dante",
+      "role": "storylog",
+      "localPath": "staging/research/canon-visual/wiki-game-assets/dante-storylog.png",
+      "sha256": "f74dd53e0a98f047c80a546c7f1713154262f8faa7380bc075a419f926b81832",
+      "bytes": 85312,
+      "width": 256,
+      "height": 256,
+      "sourceAssetName": "Dante_StoryLog.png",
+      "sourcePage": "https://limbuscompany.wiki.gg/wiki/File:Dante_StoryLog.png",
+      "sourceUrl": "https://limbuscompany.wiki.gg/images/Dante_StoryLog.png?1d4799",
+      "sourceIds": [
+        "source.official.canto-ix.9-18"
+      ],
+      "checkedAt": "2026-07-17",
+      "usage": "production-reference-only",
+      "redistribution": "forbidden",
+      "reviewStatus": "evidence-only"
+    },
+    {
+      "id": "canon.visual.faust.story-icon",
+      "subject": "faust",
+      "role": "story-icon",
+      "localPath": "staging/research/canon-visual/wiki-game-assets/faust-9-37-9-43-story-icon.png",
+      "sha256": "2b6bdc1026b00a120848ec712be23dad0a35c7a367e6ff4308cabdd6bcf5d7cf",
+      "bytes": 102550,
+      "width": 296,
+      "height": 296,
+      "sourceAssetName": "Faust_Story_Icon.png",
+      "sourcePage": "https://limbuscompany.wiki.gg/wiki/File:Faust_Story_Icon.png",
+      "sourceUrl": "https://limbuscompany.wiki.gg/images/Faust_Story_Icon.png?b19ff2",
+      "sourceIds": [
+        "source.official.canto-ix.9-37",
+        "source.official.canto-ix.9-43"
+      ],
+      "checkedAt": "2026-07-17",
+      "usage": "production-reference-only",
+      "redistribution": "forbidden",
+      "reviewStatus": "evidence-only"
+    },
+    {
+      "id": "canon.visual.faust.promotional",
+      "subject": "faust",
+      "role": "promotional",
+      "localPath": "staging/research/canon-visual/wiki-game-assets/faust-promotional.jpg",
+      "sha256": "d1189947624350e6c057e3c46f163883782390e2972402cc5644f705b2d58ea1",
+      "bytes": 383691,
+      "width": 1750,
+      "height": 2475,
+      "sourceAssetName": "Faustpromo.jpg",
+      "sourcePage": "https://limbuscompany.wiki.gg/wiki/File:Faustpromo.jpg",
+      "sourceUrl": "https://limbuscompany.wiki.gg/images/Faustpromo.jpg?ca4179",
+      "sourceIds": [
+        "source.official.canto-ix.9-37"
+      ],
+      "checkedAt": "2026-07-17",
+      "usage": "production-reference-only",
+      "redistribution": "forbidden",
+      "reviewStatus": "evidence-only"
+    },
+    {
+      "id": "canon.visual.faust.standing",
+      "subject": "faust",
+      "role": "standing",
+      "localPath": "staging/research/canon-visual/wiki-game-assets/faust-standing.png",
+      "sha256": "a0033f3a9da006a862cd26eaf93ff9a86856f18a5a1ef7f2490461b84ef5e0d8",
+      "bytes": 427308,
+      "width": 1127,
+      "height": 1400,
+      "sourceAssetName": "Faust_StandingSprite.png",
+      "sourcePage": "https://limbuscompany.wiki.gg/wiki/File:Faust_StandingSprite.png",
+      "sourceUrl": "https://limbuscompany.wiki.gg/images/Faust_StandingSprite.png?92a087",
+      "sourceIds": [
+        "source.official.canto-ix.9-37",
+        "source.official.canto-ix.9-43"
+      ],
+      "checkedAt": "2026-07-17",
+      "usage": "production-reference-only",
+      "redistribution": "forbidden",
+      "reviewStatus": "source-identified"
+    },
+    {
+      "id": "canon.visual.faust.storylog",
+      "subject": "faust",
+      "role": "storylog",
+      "localPath": "staging/research/canon-visual/wiki-game-assets/faust-storylog.png",
+      "sha256": "9135022c409f5b2f8be1e86ebc471db9ecb8b0061655cb2135d9353190b822ad",
+      "bytes": 83983,
+      "width": 256,
+      "height": 256,
+      "sourceAssetName": "Faust_StoryLog.png",
+      "sourcePage": "https://limbuscompany.wiki.gg/wiki/File:Faust_StoryLog.png",
+      "sourceUrl": "https://limbuscompany.wiki.gg/images/Faust_StoryLog.png?f2b18e",
+      "sourceIds": [
+        "source.official.canto-ix.9-37",
+        "source.official.canto-ix.9-43"
+      ],
+      "checkedAt": "2026-07-17",
+      "usage": "production-reference-only",
+      "redistribution": "forbidden",
+      "reviewStatus": "evidence-only"
+    },
+    {
+      "id": "canon.visual.ren.story-icon",
+      "subject": "ren",
+      "role": "story-icon",
+      "localPath": "staging/research/canon-visual/wiki-game-assets/ren-9-18-story-icon.png",
+      "sha256": "949c81cb2181c22affffe702650c26d1c0138d53e9c4cea3ce995f73dceb3d89",
+      "bytes": 89470,
+      "width": 296,
+      "height": 296,
+      "sourceAssetName": "Ren_Story_Icon.png",
+      "sourcePage": "https://limbuscompany.wiki.gg/wiki/File:Ren_Story_Icon.png",
+      "sourceUrl": "https://limbuscompany.wiki.gg/images/Ren_Story_Icon.png?ef6b39",
+      "sourceIds": [
+        "source.official.canto-ix.9-18"
+      ],
+      "checkedAt": "2026-07-17",
+      "usage": "production-reference-only",
+      "redistribution": "forbidden",
+      "reviewStatus": "evidence-only"
+    },
+    {
+      "id": "canon.visual.ren.standing",
+      "subject": "ren",
+      "role": "standing",
+      "localPath": "staging/research/canon-visual/wiki-game-assets/ren-standing.png",
+      "sha256": "efe8cde8732d1a5a25062155b4d111dbf6185c3ba85e5612d5b67ccd465ec5bb",
+      "bytes": 472209,
+      "width": 695,
+      "height": 1537,
+      "sourceAssetName": "Ren_StandingSprite.png",
+      "sourcePage": "https://limbuscompany.wiki.gg/wiki/File:Ren_StandingSprite.png",
+      "sourceUrl": "https://limbuscompany.wiki.gg/images/Ren_StandingSprite.png?b1a3e4",
+      "sourceIds": [
+        "source.official.canto-ix.9-18"
+      ],
+      "checkedAt": "2026-07-17",
+      "usage": "production-reference-only",
+      "redistribution": "forbidden",
+      "reviewStatus": "source-identified"
+    },
+    {
+      "id": "canon.visual.ren.storylog",
+      "subject": "ren",
+      "role": "storylog",
+      "localPath": "staging/research/canon-visual/wiki-game-assets/ren-storylog.png",
+      "sha256": "b775bd81b41a89f5d5cf625fc584edc02e313dd7a47bc64db0e5bb704947cbef",
+      "bytes": 81311,
+      "width": 256,
+      "height": 256,
+      "sourceAssetName": "Ren_StoryLog.png",
+      "sourcePage": "https://limbuscompany.wiki.gg/wiki/File:Ren_StoryLog.png",
+      "sourceUrl": "https://limbuscompany.wiki.gg/images/Ren_StoryLog.png?37f508",
+      "sourceIds": [
+        "source.official.canto-ix.9-18"
+      ],
+      "checkedAt": "2026-07-17",
+      "usage": "production-reference-only",
+      "redistribution": "forbidden",
+      "reviewStatus": "evidence-only"
+    },
+    {
+      "id": "canon.visual.vergilius.standing",
+      "subject": "vergilius",
+      "role": "standing",
+      "localPath": "staging/research/canon-visual/wiki-game-assets/vergilius-standing.png",
+      "sha256": "fed2e3f31cfe12d58ab4c5674ea777ec18272ea6e0fb66bbdaead603a4f20c80",
+      "bytes": 303909,
+      "width": 590,
+      "height": 1593,
+      "sourceAssetName": "Vergilius_StandingSprite.png",
+      "sourcePage": "https://limbuscompany.wiki.gg/wiki/File:Vergilius_StandingSprite.png",
+      "sourceUrl": "https://limbuscompany.wiki.gg/images/Vergilius_StandingSprite.png?9c8166",
+      "sourceIds": [
+        "source.official.canto-ix.9-37"
+      ],
+      "checkedAt": "2026-07-17",
+      "usage": "production-reference-only",
+      "redistribution": "forbidden",
+      "reviewStatus": "source-identified"
+    },
+    {
+      "id": "canon.visual.vergilius.storylog",
+      "subject": "vergilius",
+      "role": "storylog",
+      "localPath": "staging/research/canon-visual/wiki-game-assets/vergilius-storylog.png",
+      "sha256": "59087db190676e700254b5e7da37cd583104977f2a468662393c7a9fb1cedd4a",
+      "bytes": 81390,
+      "width": 256,
+      "height": 256,
+      "sourceAssetName": "Vergilius_StoryLog.png",
+      "sourcePage": "https://limbuscompany.wiki.gg/wiki/File:Vergilius_StoryLog.png",
+      "sourceUrl": "https://limbuscompany.wiki.gg/images/Vergilius_StoryLog.png?a2fe59",
+      "sourceIds": [
+        "source.official.canto-ix.9-37"
+      ],
+      "checkedAt": "2026-07-17",
+      "usage": "production-reference-only",
+      "redistribution": "forbidden",
+      "reviewStatus": "evidence-only"
+    }
+  ]
+}

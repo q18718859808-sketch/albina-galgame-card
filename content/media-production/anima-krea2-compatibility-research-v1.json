@@ -1,0 +1,110 @@
+{
+  "schemaVersion": 1,
+  "id": "anima-krea2-compatibility-research-v1",
+  "status": "fully-deployed-model-family-ready-for-pilot",
+  "researchDate": "2026-08-30",
+  "upstream": {
+    "repository": "https://huggingface.co/circlestone-labs/Anima/tree/main/split_files",
+    "license": "circlestone-labs-non-commercial-license",
+    "splitFilesReportedSize": "39.1 GB",
+    "verifiedFileUrls": {
+      "base": "https://huggingface.co/circlestone-labs/Anima/resolve/main/split_files/diffusion_models/anima-base-v1.0.safetensors",
+      "textEncoder": "https://huggingface.co/circlestone-labs/Anima/resolve/main/split_files/text_encoders/qwen_3_06b_base.safetensors",
+      "vae": "https://huggingface.co/circlestone-labs/Anima/resolve/main/split_files/vae/qwen_image_vae.safetensors"
+    },
+    "verifiedBaseSha256": "bd43b7cffe1ed1153d9c41e7beb2f18cb1273eafbaa3af3edd6a173dc90a006e",
+    "verifiedBaseSize": "4.18 GB",
+    "verifiedTextEncoderSize": "1.19 GB",
+    "verifiedVaeSize": "254 MB"
+  },
+  "localAssets": {
+    "diffusionModels": {
+      "directory": "D:/ComfyUI-aki/ComfyUI-aki-v2/ComfyUI-aki-v2/ComfyUI/models/diffusion_models",
+      "verifiedFiles": [
+        {"name": "anima-aesthetic-v1.0.safetensors", "sizeBytes": 4182230656, "sha256": "368AAD0A7BDF33ED1571F4664466E0F25768ED8DC7D706697AF46AB8C183BF41"},
+        {"name": "anima-aesthetic-v1.0b.safetensors", "sizeBytes": 4182230656, "sha256": "49D1E23B9A7415AC56F4719017570A5F8D295184FABA578E07FE76F41BEE0FCC"},
+        {"name": "anima-aesthetic-v1.1.safetensors", "sizeBytes": 4182230656, "sha256": "3C1868387A3A1FF504BBB87C33678321965EAD381FCF87AFBD0264DAA600C082"},
+        {"name": "anima-base-v1.0.safetensors", "sizeBytes": 4182218328, "sha256": "BD43B7CFFE1ED1153D9C41E7BEB2F18CB1273EAFBAA3AF3EDD6A173DC90A006E"},
+        {"name": "anima-preview.safetensors", "sizeBytes": 4182218360, "sha256": "41FA7B78613DFE0D888B3647F70C7FB8CDFDA2FF177E78D2E16E06DC810D9DCC"},
+        {"name": "anima-preview2.safetensors", "sizeBytes": 4182218360, "sha256": "A21FF6807E31CBD2E6E7F24DE07921B3190CD832819389F6B6B27E3A04E82F57"},
+        {"name": "anima-preview3-base.safetensors", "sizeBytes": 4182218360, "sha256": "14FFFE8AD5116CD73B9A4696F6A89D7E5F6EFDD24B2E4785603AA891A9B2295B"},
+        {"name": "anima-turbo-v1.0.safetensors", "sizeBytes": 4182230656, "sha256": "C0B905034510750A505D21AA96C81718F4FFCC500777318421F58A88636E2174"},
+        {"name": "anima-turbo-v1.1.safetensors", "sizeBytes": 4182230656, "sha256": "FBA11953276B57EDF59D1DC4F1857AC05AA079C56F982B4D7C20298D57D3F7EB"}
+      ],
+      "safetensorsHeaderCheck": "all 9 valid; 685 tensors each"
+    },
+    "lora": {
+      "source": "C:/Users/张一帆/Downloads/fymrie1500.safetensors",
+      "deployedPath": "D:/ComfyUI-aki/ComfyUI-aki-v2/ComfyUI-aki-v2/ComfyUI/models/loras/anima-research/fymrie1500.safetensors",
+      "sha256": "6F9DC59F54F367BC1CD1B79FCF8140447679588C36302986DABED1DF9B7C13E9",
+      "sizeBytes": 69489952,
+      "metadata": {
+        "baseModel": "anima",
+        "networkModule": "networks.lora_anima",
+        "rank": 16,
+        "trainingSteps": 1500,
+        "trainingResolution": "512x512",
+        "trigger": "fymrie",
+        "images": 36
+      }
+    },
+    "baseModel": "anima-base-v1.0 and all 8 additional variants downloaded and verified",
+    "textEncoder": "qwen_3_06b_base.safetensors downloaded and verified",
+    "vae": "already present as qwen_image_vae.safetensors"
+  },
+  "officialExample": {
+    "workflow": "D:/创作/ComfyUI-H3-native/blueprints/Text to Image (Anima).json",
+    "architecture": ["Anima diffusion model", "Qwen 3 0.6B base text encoder", "Qwen image VAE"],
+    "defaultModel": "anima-base-v1.0.safetensors",
+    "defaultSteps": 30,
+    "defaultCfg": 4,
+    "defaultSampler": "er_sde",
+    "defaultScheduler": "simple"
+  },
+  "compatibility": {
+    "animaLoraOnKrea2": false,
+    "krea2LoraOnAnima": false,
+    "krea2DiffusionModelOnAnima": false,
+    "animaDiffusionModelOnKrea2": false,
+    "sharedPeripheralComponents": [
+      "ComfyUI core nodes",
+      "Qwen image VAE, subject to runtime compatibility",
+      "post-decode Anime upscale and Lanczos downsample",
+      "DyPE code path as a separately configured architecture mode"
+    ],
+    "researchConclusion": "Anima cannot be used as a drop-in Krea2 backend. It is a separate model branch. The fymrie1500 LoRA is valid for Anima only. Krea2 can be compared against Anima using the same prompt, seed, output size, and post-processing, but weights and model-specific LoRAs must remain isolated."
+  },
+  "deployment": {
+    "targetComfyUI": "D:/ComfyUI-aki/ComfyUI-aki-v2/ComfyUI-aki-v2/ComfyUI",
+    "requiredMinimum": [
+      "models/diffusion_models/anima-base-v1.0.safetensors",
+      "models/text_encoders/qwen_3_06b_base.safetensors",
+      "models/vae/qwen_image_vae.safetensors",
+      "models/loras/anima-research/fymrie1500.safetensors"
+    ],
+    "downloadStatus": "complete; all split_files model variants downloaded and verified",
+    "fullRepositoryDownload": "complete for diffusion_models plus required text encoder; repository VAE reused from local verified copy"
+  },
+  "nextExperiment": {
+    "name": "Anima-vs-Krea2-fixed-seed-quality-pilot",
+    "requires": "successful base model and text encoder download",
+    "policy": "one fixed prompt and seed first; direct original-resolution review before any batch",
+    "mustKeepSeparate": ["Anima LoRA", "Krea2 six-LoRA chain", "Anima and Krea2 diffusion models"]
+  },
+  "runtimePilot": {
+    "status": "completed",
+    "workflow": "D:/创作/albina-v2-complete/staging/media/anima-krea2-research-pilot.workflow.json",
+    "promptId": "9d666108-53f0-4800-ac0c-6e6d4af42460",
+    "model": "anima-aesthetic-v1.1.safetensors",
+    "lora": "anima-research/fymrie1500.safetensors",
+    "steps": 20,
+    "output": {
+      "path": "D:/创作/albina-v2-complete/staging/media/anima-krea2-research/pilot-001/9d666108_000.png",
+      "width": 1704,
+      "height": 2304,
+      "sizeBytes": 4748582,
+      "sha256": "A8C010D45354DDF216F88050AA6B5293AC5E70DEDD02645F13AD8E20F9A3FB4B"
+    },
+    "runtimeFinding": "Anima model, qwen_3_06b_base text encoder, Qwen image VAE, DyPE anima mode, and fymrie1500 LoRA loaded and executed successfully on RTX 4070 Laptop GPU. The copied example retains primitive-driven output dimensions, so future fixed-size comparisons must update those primitives explicitly."
+  }
+}

@@ -1,0 +1,81 @@
+{
+  "schemaVersion": 1,
+  "id": "albina-worldbook-coverage-gap-contract-v1",
+  "name": "Albina worldbook coverage and gap contract",
+  "purpose": "最小可用的世界书覆盖与缺口声明；不新增或删除运行时条目，不改变原卡结构。",
+  "generatedFrom": [
+    "content/worldbook/limbus-world-audit-v1.json",
+    "content/worldbook/limbus-world-coverage-index-v1.json",
+    "content/worldbook/worldbook-structure-contract-v1.json"
+  ],
+  "preservation": {
+    "cardL0EntryCount": 16,
+    "plotTimelineEntryCount": 22,
+    "originalCardEntriesUntouched": true,
+    "structureContractRequired": true,
+    "sourceIndexAndQuarantineRemainNonRuntime": true
+  },
+  "coverage": {
+    "canon": {
+      "status": "partially-covered",
+      "covered": [
+        "Albina identity, appearance, Fascia, personality and Canto IX anchors",
+        "Canto I-VIII chapter-level thematic frames",
+        "Intervallo chapter-level thematic frames",
+        "Limbus Company, Ring, House of Spiders and main-cast runtime guidance",
+        "layered L0-L5 worldbook package inventory"
+      ],
+      "evidencePolicy": "Only source-backed paraphrase records with pinned locators may be treated as canon candidates."
+    },
+    "relationships": {
+      "status": "partial",
+      "covered": [
+        "Albina-Callisto mentor pressure",
+        "Albina-Ren cooperation and plan conflict",
+        "Albina-Fascia body and attachment relation",
+        "Albina-Limbus Company enemy-to-AU boundary",
+        "Ring versus House of Spiders faction distinction"
+      ],
+      "runtimeRepresentation": "Existing entries provide narrative guidance; a normalized relationship graph is not yet materialized."
+    },
+    "timeline": {
+      "status": "chapter-frame-complete-event-detail-partial",
+      "covered": [
+        "Canto I through VIII chapter frames",
+        "Canto IX 9-14, 9-18, 9-37 and 9-43 boundary anchors",
+        "Intervallo frames and separation from the main Canto IX sequence",
+        "AU/IF divergence after the canon 9-43 outcome"
+      ],
+      "orderingRule": "Do not merge chapter frames, Intervallo events, and AU/IF branches into one canon event stream."
+    }
+  },
+  "gaps": [
+    {
+      "id": "gap.current-source-refresh",
+      "priority": "P0",
+      "status": "open",
+      "description": "The existing audit still contains source-backed candidates awaiting current-source refresh and needs-review records; these are not release-verified canon."
+    },
+    {
+      "id": "gap.normalized-relationship-graph",
+      "priority": "P1",
+      "status": "open",
+      "description": "A normalized relationship graph with stable endpoints, relation type, chapter interval and evidence references has not yet been materialized."
+    },
+    {
+      "id": "gap.event-level-canto-i-viii",
+      "priority": "P1",
+      "status": "open",
+      "description": "Canto I-VIII currently have chapter frames but not a fully audited event-level causal ledger suitable for release claims."
+    }
+  ],
+  "releaseGate": {
+    "completeLivingWorldVerified": false,
+    "reasons": [
+      "current-source-refresh-open",
+      "relationship-graph-not-materialized",
+      "event-level-canto-i-viii-audit-incomplete"
+    ],
+    "doNotClaimComplete": true
+  }
+}

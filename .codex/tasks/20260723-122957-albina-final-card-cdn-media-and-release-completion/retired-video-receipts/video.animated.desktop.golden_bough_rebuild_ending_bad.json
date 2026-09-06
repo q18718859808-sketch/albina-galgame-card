@@ -1,0 +1,36 @@
+{
+  "version": 1,
+  "assetId": "video.animated.desktop.golden_bough_rebuild_ending_bad",
+  "artifactSha256": "665342bfcf45187bc05fead1ed445b2e7f3e1fb37154aefb507009f7c9423207",
+  "provenance": {
+    "provider": "pie",
+    "model": "seedance-1.5-pro",
+    "promptVersion": "albina-video-v1",
+    "sourceJobHash": "781594d83d1d724f5e7d991d4d0e2fa0e7b1b363ee29d22fa08131d9e647e083",
+    "review": {
+      "status": "approved",
+      "reviewer": "historical-pie-video-qc-recovery",
+      "reviewedAt": "2026-07-12T02:48:34.509Z"
+    }
+  },
+  "rights": {
+    "status": "unverified",
+    "sourceType": "model-output",
+    "redistribution": "unverified",
+    "rightsBasis": "Historical provider output; redistribution terms were not independently verified."
+  },
+  "lineage": {
+    "kind": "transcode",
+    "processVersion": "albina-historical-pie-video-recovery-v1",
+    "inputs": [
+      {
+        "sha256": "781594d83d1d724f5e7d991d4d0e2fa0e7b1b363ee29d22fa08131d9e647e083",
+        "role": "historical-pie-job-contract"
+      },
+      {
+        "sha256": "32d59cb094a797fb4497c92079f9f691f83412fbce433afcf616e62bfce78aeb",
+        "role": "seedance-master"
+      }
+    ]
+  }
+}

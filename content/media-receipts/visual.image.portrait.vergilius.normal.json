@@ -1,0 +1,36 @@
+{
+  "version": 1,
+  "assetId": "file.characters.vergilius.normal.png",
+  "artifactSha256": "9cd72b8261583cd4922fe2203c1f2e0e8354fc3c49642ec12a83edd1475777b6",
+  "provenance": {
+    "provider": "wisart-openai-compatible",
+    "model": "gpt-image-2",
+    "promptVersion": "albina-visual-migration-v1",
+    "sourceJobHash": "1df26e3b29404e50f734791ad7f08d34a3ef8fa9e83490228135fdb0a0605394",
+    "review": {
+      "status": "approved",
+      "reviewer": "workbuddy-agent",
+      "reviewedAt": "2026-09-03T20:36:17.504Z"
+    }
+  },
+  "rights": {
+    "status": "unverified",
+    "sourceType": "model-output",
+    "redistribution": "unverified",
+    "rightsBasis": "Redistribution rights for this model output have not been independently verified."
+  },
+  "lineage": {
+    "kind": "derivative",
+    "processVersion": "albina-visual-promotion-v1",
+    "inputs": [
+      {
+        "sha256": "fed2e3f31cfe12d58ab4c5674ea777ec18272ea6e0fb66bbdaead603a4f20c80",
+        "role": "canon-visual-reference"
+      },
+      {
+        "sha256": "aaf89630110b6fef687b86334404b00cd39fd29c84451971575b26a29ce51142",
+        "role": "canon-visual-reference"
+      }
+    ]
+  }
+}

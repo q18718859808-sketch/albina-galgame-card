@@ -164,6 +164,13 @@
     "speaker": "LCE 医师",
     "text": "灯光没有温度。记录员要求你签下旁观协议，阿尔比娜却先把笔推给自己：这一次，谁也不能替她同意被拆解。",
     "voiceAssetId": "voice.scene.white_canvas_003",
+    "minigame": {
+      "minigameId": "minigame.white.mirror_thread",
+      "seed": "white-canvas-lce-witness-v1",
+      "prompt": "在签字前，连起能让阿尔比娜保留决定权的两项原则。",
+      "assistLabel": "显示边界提示",
+      "allowSkip": true
+    },
     "choices": [
       {
         "id": "white_sign_witness_protocol",

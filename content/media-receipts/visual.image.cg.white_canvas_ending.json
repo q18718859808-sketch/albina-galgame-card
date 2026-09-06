@@ -1,0 +1,42 @@
+{
+  "version": 1,
+  "assetId": "cg.white_canvas_ending",
+  "artifactSha256": "1c6c05ff9b4243e65851045bd4afbfed7d37c032dc95def7bbcbf74baacc1d9f",
+  "provenance": {
+    "provider": "wisart-openai-compatible",
+    "model": "gpt-image-2",
+    "promptVersion": "albina-visual-migration-v1",
+    "sourceJobHash": "e56ce443d674e7d6b43c42d88d56c6b769558a63d3120baf5cdd06899591e42c",
+    "review": {
+      "status": "approved",
+      "reviewer": "workbuddy-convergence-agent",
+      "reviewedAt": "2026-09-06T08:36:20.110Z"
+    }
+  },
+  "rights": {
+    "status": "unverified",
+    "sourceType": "model-output",
+    "redistribution": "unverified",
+    "rightsBasis": "Redistribution rights for this model output have not been independently verified."
+  },
+  "lineage": {
+    "kind": "derivative",
+    "processVersion": "albina-visual-promotion-v1",
+    "inputs": [
+      {
+        "assetId": "file.characters.albina.endgame.png",
+        "sha256": "df6bfc313afb7a707cc580ed806efdbfb79e959f48c80f4a2674bf0318a7e51c",
+        "role": "approved-generated-reference"
+      },
+      {
+        "assetId": "file.characters.protagonist.resolve.png",
+        "sha256": "20380c053a2b118a7cf85d7675501c0ae6837639e5a961f2b67ab48db6fcdce1",
+        "role": "approved-generated-reference"
+      },
+      {
+        "sha256": "aaf89630110b6fef687b86334404b00cd39fd29c84451971575b26a29ce51142",
+        "role": "canon-visual-reference"
+      }
+    ]
+  }
+}

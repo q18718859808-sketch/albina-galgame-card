@@ -1,0 +1,436 @@
+{
+  "version": 1,
+  "purpose": "Full character re-review and redraw queue against the user-provided Albina style baseline.",
+  "createdAt": "2026-09-04T10:53:00.288Z",
+  "policy": {
+    "planVariant": "migration",
+    "provider": "wisart-openai-compatible",
+    "model": "gpt-image-2",
+    "styleBoardSourceId": "reference.user.albina-style-board",
+    "styleBoardSha256": "aaf89630110b6fef687b86334404b00cd39fd29c84451971575b26a29ce51142",
+    "styleReferenceMode": "deidentified-image-last",
+    "redrawAllCharacterPortraits": true,
+    "existingDeliveriesAreNotQualityReferences": true,
+    "qualityGate": [
+      "anatomy and hand/foot structure",
+      "pose, weight-bearing, contact and occlusion logic",
+      "identity and canon/AU continuity",
+      "style fidelity to the baseline board",
+      "transparent PNG and Live2D-safe silhouette"
+    ]
+  },
+  "jobs": [
+    {
+      "id": "visual.image.portrait.albina.armored",
+      "provider": "wisart-openai-compatible",
+      "model": "gpt-image-2",
+      "status": "awaiting-review",
+      "activeAttempt": 4,
+      "referenceSourceIds": [
+        "canon.visual.albina.armored-standing",
+        "reference.user.albina-style-board"
+      ],
+      "styleReferenceMode": "deidentified-image-last",
+      "hasStyleBoard": true,
+      "styleBoardSha256": "aaf89630110b6fef687b86334404b00cd39fd29c84451971575b26a29ce51142",
+      "currentDelivery": "staging/media/visual-v2/visual.image.portrait.albina.armored/delivery-04.png",
+      "reviewStatus": null
+    },
+    {
+      "id": "visual.image.portrait.albina.combat",
+      "provider": "wisart-openai-compatible",
+      "model": "gpt-image-2",
+      "status": "awaiting-review",
+      "activeAttempt": 2,
+      "referenceSourceIds": [
+        "reference.user.albina-style-board"
+      ],
+      "styleReferenceMode": "deidentified-image-last",
+      "hasStyleBoard": true,
+      "styleBoardSha256": "aaf89630110b6fef687b86334404b00cd39fd29c84451971575b26a29ce51142",
+      "currentDelivery": "staging/media/visual-v2/visual.image.portrait.albina.combat/delivery-02.png",
+      "reviewStatus": null
+    },
+    {
+      "id": "visual.image.portrait.albina.endgame",
+      "provider": "wisart-openai-compatible",
+      "model": "gpt-image-2",
+      "status": "awaiting-review",
+      "activeAttempt": 2,
+      "referenceSourceIds": [
+        "reference.user.albina-style-board"
+      ],
+      "styleReferenceMode": "deidentified-image-last",
+      "hasStyleBoard": true,
+      "styleBoardSha256": "aaf89630110b6fef687b86334404b00cd39fd29c84451971575b26a29ce51142",
+      "currentDelivery": "staging/media/visual-v2/visual.image.portrait.albina.endgame/delivery-02.png",
+      "reviewStatus": null
+    },
+    {
+      "id": "visual.image.portrait.albina.fascia-open",
+      "provider": "wisart-openai-compatible",
+      "model": "gpt-image-2",
+      "status": "failed",
+      "activeAttempt": 11,
+      "referenceSourceIds": [
+        "reference.user.albina-style-board"
+      ],
+      "styleReferenceMode": "deidentified-image-last",
+      "hasStyleBoard": true,
+      "styleBoardSha256": "aaf89630110b6fef687b86334404b00cd39fd29c84451971575b26a29ce51142",
+      "currentDelivery": null,
+      "reviewStatus": null
+    },
+    {
+      "id": "visual.image.portrait.albina.furious",
+      "provider": "wisart-openai-compatible",
+      "model": "gpt-image-2",
+      "status": "awaiting-review",
+      "activeAttempt": 1,
+      "referenceSourceIds": [
+        "reference.user.albina-style-board"
+      ],
+      "styleReferenceMode": "deidentified-image-last",
+      "hasStyleBoard": true,
+      "styleBoardSha256": "aaf89630110b6fef687b86334404b00cd39fd29c84451971575b26a29ce51142",
+      "currentDelivery": "staging/media/visual-v2/visual.image.portrait.albina.furious/delivery-01.png",
+      "reviewStatus": null
+    },
+    {
+      "id": "visual.image.portrait.albina.golden-bough",
+      "provider": "wisart-openai-compatible",
+      "model": "gpt-image-2",
+      "status": "awaiting-review",
+      "activeAttempt": 7,
+      "referenceSourceIds": [
+        "reference.user.albina-style-board"
+      ],
+      "styleReferenceMode": "deidentified-image-last",
+      "hasStyleBoard": true,
+      "styleBoardSha256": "aaf89630110b6fef687b86334404b00cd39fd29c84451971575b26a29ce51142",
+      "currentDelivery": "staging/media/visual-v2/visual.image.portrait.albina.golden-bough/delivery-07.png",
+      "reviewStatus": null
+    },
+    {
+      "id": "visual.image.portrait.albina.maestro",
+      "provider": "wisart-openai-compatible",
+      "model": "gpt-image-2",
+      "status": "awaiting-review",
+      "activeAttempt": 3,
+      "referenceSourceIds": [
+        "reference.user.albina-style-board"
+      ],
+      "styleReferenceMode": "deidentified-image-last",
+      "hasStyleBoard": true,
+      "styleBoardSha256": "aaf89630110b6fef687b86334404b00cd39fd29c84451971575b26a29ce51142",
+      "currentDelivery": "staging/media/visual-v2/visual.image.portrait.albina.maestro/delivery-03.png",
+      "reviewStatus": null
+    },
+    {
+      "id": "visual.image.portrait.albina.normal",
+      "provider": "wisart-openai-compatible",
+      "model": "gpt-image-2",
+      "status": "awaiting-review",
+      "activeAttempt": 2,
+      "referenceSourceIds": [
+        "canon.visual.albina.unarmored-standing",
+        "reference.user.albina-style-board"
+      ],
+      "styleReferenceMode": "deidentified-image-last",
+      "hasStyleBoard": true,
+      "styleBoardSha256": "aaf89630110b6fef687b86334404b00cd39fd29c84451971575b26a29ce51142",
+      "currentDelivery": "staging/media/visual-v2/visual.image.portrait.albina.normal/delivery-02.png",
+      "reviewStatus": null
+    },
+    {
+      "id": "visual.image.portrait.albina.rain",
+      "provider": "wisart-openai-compatible",
+      "model": "gpt-image-2",
+      "status": "awaiting-review",
+      "activeAttempt": 3,
+      "referenceSourceIds": [
+        "reference.user.albina-style-board"
+      ],
+      "styleReferenceMode": "deidentified-image-last",
+      "hasStyleBoard": true,
+      "styleBoardSha256": "aaf89630110b6fef687b86334404b00cd39fd29c84451971575b26a29ce51142",
+      "currentDelivery": "staging/media/visual-v2/visual.image.portrait.albina.rain/delivery-03.png",
+      "reviewStatus": null
+    },
+    {
+      "id": "visual.image.portrait.albina.ring-conspiracy",
+      "provider": "wisart-openai-compatible",
+      "model": "gpt-image-2",
+      "status": "awaiting-review",
+      "activeAttempt": 1,
+      "referenceSourceIds": [
+        "reference.user.albina-style-board"
+      ],
+      "styleReferenceMode": "deidentified-image-last",
+      "hasStyleBoard": true,
+      "styleBoardSha256": "aaf89630110b6fef687b86334404b00cd39fd29c84451971575b26a29ce51142",
+      "currentDelivery": "staging/media/visual-v2/visual.image.portrait.albina.ring-conspiracy/delivery-01.png",
+      "reviewStatus": null
+    },
+    {
+      "id": "visual.image.portrait.albina.shy",
+      "provider": "wisart-openai-compatible",
+      "model": "gpt-image-2",
+      "status": "failed",
+      "activeAttempt": 8,
+      "referenceSourceIds": [
+        "reference.user.albina-style-board"
+      ],
+      "styleReferenceMode": "deidentified-image-last",
+      "hasStyleBoard": true,
+      "styleBoardSha256": "aaf89630110b6fef687b86334404b00cd39fd29c84451971575b26a29ce51142",
+      "currentDelivery": null,
+      "reviewStatus": null
+    },
+    {
+      "id": "visual.image.portrait.albina.surgical",
+      "provider": "wisart-openai-compatible",
+      "model": "gpt-image-2",
+      "status": "awaiting-review",
+      "activeAttempt": 10,
+      "referenceSourceIds": [
+        "reference.user.albina-style-board"
+      ],
+      "styleReferenceMode": "deidentified-image-last",
+      "hasStyleBoard": true,
+      "styleBoardSha256": "aaf89630110b6fef687b86334404b00cd39fd29c84451971575b26a29ce51142",
+      "currentDelivery": "staging/media/visual-v2/visual.image.portrait.albina.surgical/delivery-10.png",
+      "reviewStatus": null
+    },
+    {
+      "id": "visual.image.portrait.albina.white-canvas",
+      "provider": "wisart-openai-compatible",
+      "model": "gpt-image-2",
+      "status": "awaiting-review",
+      "activeAttempt": 2,
+      "referenceSourceIds": [
+        "reference.user.albina-style-board"
+      ],
+      "styleReferenceMode": "deidentified-image-last",
+      "hasStyleBoard": true,
+      "styleBoardSha256": "aaf89630110b6fef687b86334404b00cd39fd29c84451971575b26a29ce51142",
+      "currentDelivery": "staging/media/visual-v2/visual.image.portrait.albina.white-canvas/delivery-02.png",
+      "reviewStatus": null
+    },
+    {
+      "id": "visual.image.portrait.callisto.normal",
+      "provider": "wisart-openai-compatible",
+      "model": "gpt-image-2",
+      "status": "awaiting-review",
+      "activeAttempt": 5,
+      "referenceSourceIds": [
+        "canon.visual.callisto.standing",
+        "reference.user.albina-style-board"
+      ],
+      "styleReferenceMode": "deidentified-image-last",
+      "hasStyleBoard": true,
+      "styleBoardSha256": "aaf89630110b6fef687b86334404b00cd39fd29c84451971575b26a29ce51142",
+      "currentDelivery": "staging/media/visual-v2/visual.image.portrait.callisto.normal/delivery-05.png",
+      "reviewStatus": null
+    },
+    {
+      "id": "visual.image.portrait.dante.normal",
+      "provider": "wisart-openai-compatible",
+      "model": "gpt-image-2",
+      "status": "awaiting-review",
+      "activeAttempt": 4,
+      "referenceSourceIds": [
+        "canon.visual.dante.standing",
+        "reference.user.albina-style-board"
+      ],
+      "styleReferenceMode": "deidentified-image-last",
+      "hasStyleBoard": true,
+      "styleBoardSha256": "aaf89630110b6fef687b86334404b00cd39fd29c84451971575b26a29ce51142",
+      "currentDelivery": "staging/media/visual-v2/visual.image.portrait.dante.normal/delivery-04.png",
+      "reviewStatus": null
+    },
+    {
+      "id": "visual.image.portrait.faust.normal",
+      "provider": "wisart-openai-compatible",
+      "model": "gpt-image-2",
+      "status": "awaiting-review",
+      "activeAttempt": 2,
+      "referenceSourceIds": [
+        "canon.visual.faust.standing",
+        "reference.user.albina-style-board"
+      ],
+      "styleReferenceMode": "deidentified-image-last",
+      "hasStyleBoard": true,
+      "styleBoardSha256": "aaf89630110b6fef687b86334404b00cd39fd29c84451971575b26a29ce51142",
+      "currentDelivery": "staging/media/visual-v2/visual.image.portrait.faust.normal/delivery-02.png",
+      "reviewStatus": null
+    },
+    {
+      "id": "visual.image.portrait.golden_apparition.normal",
+      "provider": "wisart-openai-compatible",
+      "model": "gpt-image-2",
+      "status": "awaiting-review",
+      "activeAttempt": 2,
+      "referenceSourceIds": [
+        "reference.user.albina-style-board"
+      ],
+      "styleReferenceMode": "deidentified-image-last",
+      "hasStyleBoard": true,
+      "styleBoardSha256": "aaf89630110b6fef687b86334404b00cd39fd29c84451971575b26a29ce51142",
+      "currentDelivery": "staging/media/visual-v2/visual.image.portrait.golden_apparition.normal/delivery-02.png",
+      "reviewStatus": null
+    },
+    {
+      "id": "visual.image.portrait.lce_doctor.normal",
+      "provider": "wisart-openai-compatible",
+      "model": "gpt-image-2",
+      "status": "awaiting-review",
+      "activeAttempt": 2,
+      "referenceSourceIds": [
+        "reference.user.albina-style-board"
+      ],
+      "styleReferenceMode": "deidentified-image-last",
+      "hasStyleBoard": true,
+      "styleBoardSha256": "aaf89630110b6fef687b86334404b00cd39fd29c84451971575b26a29ce51142",
+      "currentDelivery": "staging/media/visual-v2/visual.image.portrait.lce_doctor.normal/delivery-02.png",
+      "reviewStatus": null
+    },
+    {
+      "id": "visual.image.portrait.protagonist.battle",
+      "provider": "wisart-openai-compatible",
+      "model": "gpt-image-2",
+      "status": "awaiting-review",
+      "activeAttempt": 1,
+      "referenceSourceIds": [
+        "reference.user.albina-style-board"
+      ],
+      "styleReferenceMode": "deidentified-image-last",
+      "hasStyleBoard": true,
+      "styleBoardSha256": "aaf89630110b6fef687b86334404b00cd39fd29c84451971575b26a29ce51142",
+      "currentDelivery": "staging/media/visual-v2/visual.image.portrait.protagonist.battle/delivery-01.png",
+      "reviewStatus": null
+    },
+    {
+      "id": "visual.image.portrait.protagonist.resolve",
+      "provider": "wisart-openai-compatible",
+      "model": "gpt-image-2",
+      "status": "awaiting-review",
+      "activeAttempt": 1,
+      "referenceSourceIds": [
+        "reference.user.albina-style-board"
+      ],
+      "styleReferenceMode": "deidentified-image-last",
+      "hasStyleBoard": true,
+      "styleBoardSha256": "aaf89630110b6fef687b86334404b00cd39fd29c84451971575b26a29ce51142",
+      "currentDelivery": "staging/media/visual-v2/visual.image.portrait.protagonist.resolve/delivery-01.png",
+      "reviewStatus": null
+    },
+    {
+      "id": "visual.image.portrait.protagonist.serious",
+      "provider": "wisart-openai-compatible",
+      "model": "gpt-image-2",
+      "status": "awaiting-review",
+      "activeAttempt": 2,
+      "referenceSourceIds": [
+        "reference.user.albina-style-board"
+      ],
+      "styleReferenceMode": "deidentified-image-last",
+      "hasStyleBoard": true,
+      "styleBoardSha256": "aaf89630110b6fef687b86334404b00cd39fd29c84451971575b26a29ce51142",
+      "currentDelivery": "staging/media/visual-v2/visual.image.portrait.protagonist.serious/delivery-02.png",
+      "reviewStatus": null
+    },
+    {
+      "id": "visual.image.portrait.protagonist.shadow",
+      "provider": "wisart-openai-compatible",
+      "model": "gpt-image-2",
+      "status": "awaiting-review",
+      "activeAttempt": 2,
+      "referenceSourceIds": [
+        "reference.user.albina-style-board"
+      ],
+      "styleReferenceMode": "deidentified-image-last",
+      "hasStyleBoard": true,
+      "styleBoardSha256": "aaf89630110b6fef687b86334404b00cd39fd29c84451971575b26a29ce51142",
+      "currentDelivery": "staging/media/visual-v2/visual.image.portrait.protagonist.shadow/delivery-02.png",
+      "reviewStatus": null
+    },
+    {
+      "id": "visual.image.portrait.protagonist.tender",
+      "provider": "wisart-openai-compatible",
+      "model": "gpt-image-2",
+      "status": "awaiting-review",
+      "activeAttempt": 1,
+      "referenceSourceIds": [
+        "reference.user.albina-style-board"
+      ],
+      "styleReferenceMode": "deidentified-image-last",
+      "hasStyleBoard": true,
+      "styleBoardSha256": "aaf89630110b6fef687b86334404b00cd39fd29c84451971575b26a29ce51142",
+      "currentDelivery": "staging/media/visual-v2/visual.image.portrait.protagonist.tender/delivery-01.png",
+      "reviewStatus": null
+    },
+    {
+      "id": "visual.image.portrait.protagonist.wet-hair",
+      "provider": "wisart-openai-compatible",
+      "model": "gpt-image-2",
+      "status": "awaiting-review",
+      "activeAttempt": 1,
+      "referenceSourceIds": [
+        "reference.user.albina-style-board"
+      ],
+      "styleReferenceMode": "deidentified-image-last",
+      "hasStyleBoard": true,
+      "styleBoardSha256": "aaf89630110b6fef687b86334404b00cd39fd29c84451971575b26a29ce51142",
+      "currentDelivery": "staging/media/visual-v2/visual.image.portrait.protagonist.wet-hair/delivery-01.png",
+      "reviewStatus": null
+    },
+    {
+      "id": "visual.image.portrait.ren.normal",
+      "provider": "wisart-openai-compatible",
+      "model": "gpt-image-2",
+      "status": "awaiting-review",
+      "activeAttempt": 2,
+      "referenceSourceIds": [
+        "canon.visual.ren.standing",
+        "reference.user.albina-style-board"
+      ],
+      "styleReferenceMode": "deidentified-image-last",
+      "hasStyleBoard": true,
+      "styleBoardSha256": "aaf89630110b6fef687b86334404b00cd39fd29c84451971575b26a29ce51142",
+      "currentDelivery": "staging/media/visual-v2/visual.image.portrait.ren.normal/delivery-02.png",
+      "reviewStatus": null
+    },
+    {
+      "id": "visual.image.portrait.ring_agent.normal",
+      "provider": "wisart-openai-compatible",
+      "model": "gpt-image-2",
+      "status": "awaiting-review",
+      "activeAttempt": 2,
+      "referenceSourceIds": [
+        "reference.user.albina-style-board"
+      ],
+      "styleReferenceMode": "deidentified-image-last",
+      "hasStyleBoard": true,
+      "styleBoardSha256": "aaf89630110b6fef687b86334404b00cd39fd29c84451971575b26a29ce51142",
+      "currentDelivery": "staging/media/visual-v2/visual.image.portrait.ring_agent.normal/delivery-02.png",
+      "reviewStatus": null
+    },
+    {
+      "id": "visual.image.portrait.vergilius.normal",
+      "provider": "wisart-openai-compatible",
+      "model": "gpt-image-2",
+      "status": "completed",
+      "activeAttempt": 1,
+      "referenceSourceIds": [
+        "canon.visual.vergilius.standing",
+        "reference.user.albina-style-board"
+      ],
+      "styleReferenceMode": "deidentified-image-last",
+      "hasStyleBoard": true,
+      "styleBoardSha256": "aaf89630110b6fef687b86334404b00cd39fd29c84451971575b26a29ce51142",
+      "currentDelivery": "staging/media/visual-v2/visual.image.portrait.vergilius.normal/delivery-01.png",
+      "reviewStatus": "approved"
+    }
+  ]
+}

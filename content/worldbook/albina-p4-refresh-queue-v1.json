@@ -1,0 +1,3767 @@
+{
+  "schemaVersion": 1,
+  "id": "albina-p4-refresh-queue-v1",
+  "status": "awaiting-current-source-review",
+  "purpose": "Fail-closed work queue for current-source review of P4 Identity Story entries.",
+  "policy": {
+    "legacyReferencesAreContextOnly": true,
+    "legacyReferencesSatisfyReview": false,
+    "overlayPromotionRequires": [
+      "current source URL and revision or immutable locator",
+      "checkedAt timestamp",
+      "at least two atomic facts",
+      "narrative boundary separating canon from AU/IF",
+      "validated claimIds and targetIds",
+      "copyrightMode=paraphrase_only"
+    ],
+    "sourceIndexBridgesExcluded": true
+  },
+  "sourceFile": "albina_p4_article_reviewed_identity_worldbook.json",
+  "targetCount": 156,
+  "targets": [
+    {
+      "id": "p4_article_identity_blade_mentor_meursault",
+      "timelinePlacement": "cross-timeline",
+      "narrativeRole": "character-and-world",
+      "comment": "v17：Blade Mentor Meursault 的师承与沉默威压",
+      "legacySourceRefs": [
+        {
+          "title": "Blade Lineage Mentor Meursault/Identity Story",
+          "url": "https://limbuscompany.wiki.gg/wiki/Blade_Lineage_Mentor_Meursault/Identity_Story",
+          "legacyRevisionId": 82176,
+          "checkedAt": "2026-06-04T08:22:00Z"
+        }
+      ],
+      "review": {
+        "status": "unreviewed",
+        "currentSourceRefs": [],
+        "atomicFacts": [],
+        "narrativeBoundary": "",
+        "claimIds": [],
+        "copyrightMode": "paraphrase_only",
+        "reviewer": null,
+        "checkedAt": null
+      }
+    },
+    {
+      "id": "p4_article_identity_blade_salsu_faust",
+      "timelinePlacement": "cross-timeline",
+      "narrativeRole": "character-and-world",
+      "comment": "v18: Blade Salsu Faust and analytic sword law",
+      "legacySourceRefs": [
+        {
+          "title": "Blade Lineage Salsu Faust/Identity Story",
+          "url": "https://limbuscompany.wiki.gg/wiki/Blade_Lineage_Salsu_Faust/Identity_Story",
+          "legacyRevisionId": 82174,
+          "checkedAt": "2026-06-04T08:22:00Z"
+        }
+      ],
+      "review": {
+        "status": "unreviewed",
+        "currentSourceRefs": [],
+        "atomicFacts": [],
+        "narrativeBoundary": "",
+        "claimIds": [],
+        "copyrightMode": "paraphrase_only",
+        "reviewer": null,
+        "checkedAt": null
+      }
+    },
+    {
+      "id": "p4_article_identity_blade_salsu_outis",
+      "timelinePlacement": "cross-timeline",
+      "narrativeRole": "character-and-world",
+      "comment": "v18: Blade Salsu Outis and command etiquette",
+      "legacySourceRefs": [
+        {
+          "title": "Blade Lineage Salsu Outis/Identity Story",
+          "url": "https://limbuscompany.wiki.gg/wiki/Blade_Lineage_Salsu_Outis/Identity_Story",
+          "legacyRevisionId": 82173,
+          "checkedAt": "2026-06-04T08:22:00Z"
+        }
+      ],
+      "review": {
+        "status": "unreviewed",
+        "currentSourceRefs": [],
+        "atomicFacts": [],
+        "narrativeBoundary": "",
+        "claimIds": [],
+        "copyrightMode": "paraphrase_only",
+        "reviewer": null,
+        "checkedAt": null
+      }
+    },
+    {
+      "id": "p4_article_identity_blade_salsu_sinclair",
+      "timelinePlacement": "cross-timeline",
+      "narrativeRole": "character-and-world",
+      "comment": "v18: Blade Salsu Sinclair and borrowed resolve",
+      "legacySourceRefs": [
+        {
+          "title": "Blade Lineage Salsu Sinclair/Identity Story",
+          "url": "https://limbuscompany.wiki.gg/wiki/Blade_Lineage_Salsu_Sinclair/Identity_Story",
+          "legacyRevisionId": 82172,
+          "checkedAt": "2026-06-04T08:22:00Z"
+        }
+      ],
+      "review": {
+        "status": "unreviewed",
+        "currentSourceRefs": [],
+        "atomicFacts": [],
+        "narrativeBoundary": "",
+        "claimIds": [],
+        "copyrightMode": "paraphrase_only",
+        "reviewer": null,
+        "checkedAt": null
+      }
+    },
+    {
+      "id": "p4_article_identity_blade_salsu_yisang",
+      "timelinePlacement": "cross-timeline",
+      "narrativeRole": "character-and-world",
+      "comment": "v18: Blade Salsu Yi Sang and geometric withdrawal",
+      "legacySourceRefs": [
+        {
+          "title": "Blade Lineage Salsu Yi Sang/Identity Story",
+          "url": "https://limbuscompany.wiki.gg/wiki/Blade_Lineage_Salsu_Yi_Sang/Identity_Story",
+          "legacyRevisionId": 82171,
+          "checkedAt": "2026-06-04T08:22:00Z"
+        }
+      ],
+      "review": {
+        "status": "unreviewed",
+        "currentSourceRefs": [],
+        "atomicFacts": [],
+        "narrativeBoundary": "",
+        "claimIds": [],
+        "copyrightMode": "paraphrase_only",
+        "reviewer": null,
+        "checkedAt": null
+      }
+    },
+    {
+      "id": "p4_article_identity_cinq_director_don",
+      "timelinePlacement": "cross-timeline",
+      "narrativeRole": "character-and-world",
+      "comment": "v20: Cinq Don Quixote and heroic etiquette",
+      "legacySourceRefs": [
+        {
+          "title": "Cinq Assoc. South Section 5 Director Don Quixote/Identity Story",
+          "url": "https://limbuscompany.wiki.gg/wiki/Cinq_Assoc._South_Section_5_Director_Don_Quixote/Identity_Story",
+          "legacyRevisionId": 82168,
+          "checkedAt": "2026-06-04T08:22:00Z"
+        }
+      ],
+      "review": {
+        "status": "unreviewed",
+        "currentSourceRefs": [],
+        "atomicFacts": [],
+        "narrativeBoundary": "",
+        "claimIds": [],
+        "copyrightMode": "paraphrase_only",
+        "reviewer": null,
+        "checkedAt": null
+      }
+    },
+    {
+      "id": "p4_article_identity_cinq_east_don",
+      "timelinePlacement": "cross-timeline",
+      "narrativeRole": "character-and-world",
+      "comment": "v17：Cinq Don Quixote 的决斗礼法",
+      "legacySourceRefs": [
+        {
+          "title": "Cinq Assoc. East Section 3 Don Quixote/Identity Story",
+          "url": "https://limbuscompany.wiki.gg/wiki/Cinq_Assoc._East_Section_3_Don_Quixote/Identity_Story",
+          "legacyRevisionId": 94289,
+          "checkedAt": "2026-06-04T08:22:00Z"
+        }
+      ],
+      "review": {
+        "status": "unreviewed",
+        "currentSourceRefs": [],
+        "atomicFacts": [],
+        "narrativeBoundary": "",
+        "claimIds": [],
+        "copyrightMode": "paraphrase_only",
+        "reviewer": null,
+        "checkedAt": null
+      }
+    },
+    {
+      "id": "p4_article_identity_cinq_south4_outis",
+      "timelinePlacement": "cross-timeline",
+      "narrativeRole": "character-and-world",
+      "comment": "v20: Cinq Outis and controlled challenge",
+      "legacySourceRefs": [
+        {
+          "title": "Cinq Assoc. South Section 4 Outis/Identity Story",
+          "url": "https://limbuscompany.wiki.gg/wiki/Cinq_Assoc._South_Section_4_Outis/Identity_Story",
+          "legacyRevisionId": 130089,
+          "checkedAt": "2026-06-04T08:22:00Z"
+        }
+      ],
+      "review": {
+        "status": "unreviewed",
+        "currentSourceRefs": [],
+        "atomicFacts": [],
+        "narrativeBoundary": "",
+        "claimIds": [],
+        "copyrightMode": "paraphrase_only",
+        "reviewer": null,
+        "checkedAt": null
+      }
+    },
+    {
+      "id": "p4_article_identity_cinq_west_meursault",
+      "timelinePlacement": "cross-timeline",
+      "narrativeRole": "character-and-world",
+      "comment": "v20: Cinq Meursault and formal finality",
+      "legacySourceRefs": [
+        {
+          "title": "Cinq Assoc. West Section 3 Meursault/Identity Story",
+          "url": "https://limbuscompany.wiki.gg/wiki/Cinq_Assoc._West_Section_3_Meursault/Identity_Story",
+          "legacyRevisionId": 82167,
+          "checkedAt": "2026-06-04T08:22:00Z"
+        }
+      ],
+      "review": {
+        "status": "unreviewed",
+        "currentSourceRefs": [],
+        "atomicFacts": [],
+        "narrativeBoundary": "",
+        "claimIds": [],
+        "copyrightMode": "paraphrase_only",
+        "reviewer": null,
+        "checkedAt": null
+      }
+    },
+    {
+      "id": "p4_article_identity_dawn_office_sinclair",
+      "timelinePlacement": "cross-timeline",
+      "narrativeRole": "character-and-world",
+      "comment": "v17：Dawn Office Sinclair 的火光与职责",
+      "legacySourceRefs": [
+        {
+          "title": "Dawn Office Fixer Sinclair/Identity Story",
+          "url": "https://limbuscompany.wiki.gg/wiki/Dawn_Office_Fixer_Sinclair/Identity_Story",
+          "legacyRevisionId": 82166,
+          "checkedAt": "2026-06-04T08:22:00Z"
+        }
+      ],
+      "review": {
+        "status": "unreviewed",
+        "currentSourceRefs": [],
+        "atomicFacts": [],
+        "narrativeBoundary": "",
+        "claimIds": [],
+        "copyrightMode": "paraphrase_only",
+        "reviewer": null,
+        "checkedAt": null
+      }
+    },
+    {
+      "id": "p4_article_identity_dead_rabbits_boss_meursault",
+      "timelinePlacement": "cross-timeline",
+      "narrativeRole": "character-and-world",
+      "comment": "v22: Dead Rabbits Meursault and quiet gang authority",
+      "legacySourceRefs": [
+        {
+          "title": "Dead Rabbits Boss Meursault/Identity Story",
+          "url": "https://limbuscompany.wiki.gg/wiki/Dead_Rabbits_Boss_Meursault/Identity_Story",
+          "legacyRevisionId": 82165,
+          "checkedAt": "2026-06-04T08:22:00Z"
+        }
+      ],
+      "review": {
+        "status": "unreviewed",
+        "currentSourceRefs": [],
+        "atomicFacts": [],
+        "narrativeBoundary": "",
+        "claimIds": [],
+        "copyrightMode": "paraphrase_only",
+        "reviewer": null,
+        "checkedAt": null
+      }
+    },
+    {
+      "id": "p4_article_identity_devyat_rodion",
+      "timelinePlacement": "cross-timeline",
+      "narrativeRole": "character-and-world",
+      "comment": "v21: Devyat Rodion and confident delivery",
+      "legacySourceRefs": [
+        {
+          "title": "Devyat' Assoc. North Section 3 Rodion/Identity Story",
+          "url": "https://limbuscompany.wiki.gg/wiki/Devyat%27_Assoc._North_Section_3_Rodion/Identity_Story",
+          "legacyRevisionId": 82164,
+          "checkedAt": "2026-06-04T08:22:00Z"
+        }
+      ],
+      "review": {
+        "status": "unreviewed",
+        "currentSourceRefs": [],
+        "atomicFacts": [],
+        "narrativeBoundary": "",
+        "claimIds": [],
+        "copyrightMode": "paraphrase_only",
+        "reviewer": null,
+        "checkedAt": null
+      }
+    },
+    {
+      "id": "p4_article_identity_devyat_sinclair",
+      "timelinePlacement": "cross-timeline",
+      "narrativeRole": "character-and-world",
+      "comment": "v21: Devyat Sinclair and courier anxiety",
+      "legacySourceRefs": [
+        {
+          "title": "Devyat' Assoc. North Section 3 Sinclair/Identity Story",
+          "url": "https://limbuscompany.wiki.gg/wiki/Devyat%27_Assoc._North_Section_3_Sinclair/Identity_Story",
+          "legacyRevisionId": 83448,
+          "checkedAt": "2026-06-04T08:22:00Z"
+        }
+      ],
+      "review": {
+        "status": "unreviewed",
+        "currentSourceRefs": [],
+        "atomicFacts": [],
+        "narrativeBoundary": "",
+        "claimIds": [],
+        "copyrightMode": "paraphrase_only",
+        "reviewer": null,
+        "checkedAt": null
+      }
+    },
+    {
+      "id": "p4_article_identity_dieci_director_meursault",
+      "timelinePlacement": "cross-timeline",
+      "narrativeRole": "character-and-world",
+      "comment": "v20: Dieci Director Meursault and rule-shaped instruction",
+      "legacySourceRefs": [
+        {
+          "title": "Dieci Assoc. South Section 4 Director Meursault/Identity Story",
+          "url": "https://limbuscompany.wiki.gg/wiki/Dieci_Assoc._South_Section_4_Director_Meursault/Identity_Story",
+          "legacyRevisionId": 82163,
+          "checkedAt": "2026-06-04T08:22:00Z"
+        }
+      ],
+      "review": {
+        "status": "unreviewed",
+        "currentSourceRefs": [],
+        "atomicFacts": [],
+        "narrativeBoundary": "",
+        "claimIds": [],
+        "copyrightMode": "paraphrase_only",
+        "reviewer": null,
+        "checkedAt": null
+      }
+    },
+    {
+      "id": "p4_article_identity_dieci_honglu",
+      "timelinePlacement": "cross-timeline",
+      "narrativeRole": "character-and-world",
+      "comment": "v20: Dieci Hong Lu and elegant doctrine",
+      "legacySourceRefs": [
+        {
+          "title": "Dieci Assoc. South Section 4 Hong Lu/Identity Story",
+          "url": "https://limbuscompany.wiki.gg/wiki/Dieci_Assoc._South_Section_4_Hong_Lu/Identity_Story",
+          "legacyRevisionId": 82162,
+          "checkedAt": "2026-06-04T08:22:00Z"
+        }
+      ],
+      "review": {
+        "status": "unreviewed",
+        "currentSourceRefs": [],
+        "atomicFacts": [],
+        "narrativeBoundary": "",
+        "claimIds": [],
+        "copyrightMode": "paraphrase_only",
+        "reviewer": null,
+        "checkedAt": null
+      }
+    },
+    {
+      "id": "p4_article_identity_dieci_rodion",
+      "timelinePlacement": "cross-timeline",
+      "narrativeRole": "character-and-world",
+      "comment": "v20: Dieci Rodion and warm doctrinal pressure",
+      "legacySourceRefs": [
+        {
+          "title": "Dieci Assoc. South Section 4 Rodion/Identity Story",
+          "url": "https://limbuscompany.wiki.gg/wiki/Dieci_Assoc._South_Section_4_Rodion/Identity_Story",
+          "legacyRevisionId": 82161,
+          "checkedAt": "2026-06-04T08:22:00Z"
+        }
+      ],
+      "review": {
+        "status": "unreviewed",
+        "currentSourceRefs": [],
+        "atomicFacts": [],
+        "narrativeBoundary": "",
+        "claimIds": [],
+        "copyrightMode": "paraphrase_only",
+        "reviewer": null,
+        "checkedAt": null
+      }
+    },
+    {
+      "id": "p4_article_identity_dieci_yisang",
+      "timelinePlacement": "cross-timeline",
+      "narrativeRole": "character-and-world",
+      "comment": "v20: Dieci Yi Sang and abstract devotion",
+      "legacySourceRefs": [
+        {
+          "title": "Dieci Assoc. South Section 4 Yi Sang/Identity Story",
+          "url": "https://limbuscompany.wiki.gg/wiki/Dieci_Assoc._South_Section_4_Yi_Sang/Identity_Story",
+          "legacyRevisionId": 82160,
+          "checkedAt": "2026-06-04T08:22:00Z"
+        }
+      ],
+      "review": {
+        "status": "unreviewed",
+        "currentSourceRefs": [],
+        "atomicFacts": [],
+        "narrativeBoundary": "",
+        "claimIds": [],
+        "copyrightMode": "paraphrase_only",
+        "reviewer": null,
+        "checkedAt": null
+      }
+    },
+    {
+      "id": "p4_article_identity_drifting_blade_hongyuan_ryoshu",
+      "timelinePlacement": "cross-timeline",
+      "narrativeRole": "character-and-world",
+      "comment": "v21: Hongyuan Ryoshu and drifting execution",
+      "legacySourceRefs": [
+        {
+          "title": "Drifting Blade of Hongyuan Ryōshū/Identity Story",
+          "url": "https://limbuscompany.wiki.gg/wiki/Drifting_Blade_of_Hongyuan_Ry%C5%8Dsh%C5%AB/Identity_Story",
+          "legacyRevisionId": 151417,
+          "checkedAt": "2026-06-04T08:22:00Z"
+        }
+      ],
+      "review": {
+        "status": "unreviewed",
+        "currentSourceRefs": [],
+        "atomicFacts": [],
+        "narrativeBoundary": "",
+        "claimIds": [],
+        "copyrightMode": "paraphrase_only",
+        "reviewer": null,
+        "checkedAt": null
+      }
+    },
+    {
+      "id": "p4_article_identity_edgar_butler_ishmael",
+      "timelinePlacement": "cross-timeline",
+      "narrativeRole": "character-and-world",
+      "comment": "v20: Edgar Butler Ishmael and service against the self",
+      "legacySourceRefs": [
+        {
+          "title": "Edgar Family Butler Ishmael/Identity Story",
+          "url": "https://limbuscompany.wiki.gg/wiki/Edgar_Family_Butler_Ishmael/Identity_Story",
+          "legacyRevisionId": 82157,
+          "checkedAt": "2026-06-04T08:22:00Z"
+        }
+      ],
+      "review": {
+        "status": "unreviewed",
+        "currentSourceRefs": [],
+        "atomicFacts": [],
+        "narrativeBoundary": "",
+        "claimIds": [],
+        "copyrightMode": "paraphrase_only",
+        "reviewer": null,
+        "checkedAt": null
+      }
+    },
+    {
+      "id": "p4_article_identity_edgar_chief_butler_ryoshu",
+      "timelinePlacement": "cross-timeline",
+      "narrativeRole": "character-and-world",
+      "comment": "v20: Edgar Chief Butler Ryoshu and lethal etiquette",
+      "legacySourceRefs": [
+        {
+          "title": "Edgar Family Chief Butler Ryōshū/Identity Story",
+          "url": "https://limbuscompany.wiki.gg/wiki/Edgar_Family_Chief_Butler_Ry%C5%8Dsh%C5%AB/Identity_Story",
+          "legacyRevisionId": 157537,
+          "checkedAt": "2026-06-04T08:22:00Z"
+        }
+      ],
+      "review": {
+        "status": "unreviewed",
+        "currentSourceRefs": [],
+        "atomicFacts": [],
+        "narrativeBoundary": "",
+        "claimIds": [],
+        "copyrightMode": "paraphrase_only",
+        "reviewer": null,
+        "checkedAt": null
+      }
+    },
+    {
+      "id": "p4_article_identity_edgar_heir_gregor",
+      "timelinePlacement": "cross-timeline",
+      "narrativeRole": "character-and-world",
+      "comment": "v22: Edgar Heir Gregor and inherited discomfort",
+      "legacySourceRefs": [
+        {
+          "title": "Edgar Family Heir Gregor/Identity Story",
+          "url": "https://limbuscompany.wiki.gg/wiki/Edgar_Family_Heir_Gregor/Identity_Story",
+          "legacyRevisionId": 82155,
+          "checkedAt": "2026-06-04T08:22:00Z"
+        }
+      ],
+      "review": {
+        "status": "unreviewed",
+        "currentSourceRefs": [],
+        "atomicFacts": [],
+        "narrativeBoundary": "",
+        "claimIds": [],
+        "copyrightMode": "paraphrase_only",
+        "reviewer": null,
+        "checkedAt": null
+      }
+    },
+    {
+      "id": "p4_article_identity_family_hierarch_candidate_ishmael",
+      "timelinePlacement": "cross-timeline",
+      "narrativeRole": "character-and-world",
+      "comment": "v21: Hierarch Candidate Ishmael and inheritance pressure",
+      "legacySourceRefs": [
+        {
+          "title": "Family Hierarch Candidate Ishmael/Identity Story",
+          "url": "https://limbuscompany.wiki.gg/wiki/Family_Hierarch_Candidate_Ishmael/Identity_Story",
+          "legacyRevisionId": 132168,
+          "checkedAt": "2026-06-04T08:22:00Z"
+        }
+      ],
+      "review": {
+        "status": "unreviewed",
+        "currentSourceRefs": [],
+        "atomicFacts": [],
+        "narrativeBoundary": "",
+        "claimIds": [],
+        "copyrightMode": "paraphrase_only",
+        "reviewer": null,
+        "checkedAt": null
+      }
+    },
+    {
+      "id": "p4_article_identity_fanghunt_honglu",
+      "timelinePlacement": "cross-timeline",
+      "narrativeRole": "character-and-world",
+      "comment": "v21: Fanghunt Hong Lu and polished pursuit",
+      "legacySourceRefs": [
+        {
+          "title": "Fanghunt Office Fixer Hong Lu/Identity Story",
+          "url": "https://limbuscompany.wiki.gg/wiki/Fanghunt_Office_Fixer_Hong_Lu/Identity_Story",
+          "legacyRevisionId": 82153,
+          "checkedAt": "2026-06-04T08:22:00Z"
+        }
+      ],
+      "review": {
+        "status": "unreviewed",
+        "currentSourceRefs": [],
+        "atomicFacts": [],
+        "narrativeBoundary": "",
+        "claimIds": [],
+        "copyrightMode": "paraphrase_only",
+        "reviewer": null,
+        "checkedAt": null
+      }
+    },
+    {
+      "id": "p4_article_identity_firefist_survivor_gregor",
+      "timelinePlacement": "cross-timeline",
+      "narrativeRole": "character-and-world",
+      "comment": "v21: Firefist Gregor and survivor heat",
+      "legacySourceRefs": [
+        {
+          "title": "Firefist Office Survivor Gregor/Identity Story",
+          "url": "https://limbuscompany.wiki.gg/wiki/Firefist_Office_Survivor_Gregor/Identity_Story",
+          "legacyRevisionId": 94273,
+          "checkedAt": "2026-06-04T08:22:00Z"
+        }
+      ],
+      "review": {
+        "status": "unreviewed",
+        "currentSourceRefs": [],
+        "atomicFacts": [],
+        "narrativeBoundary": "",
+        "claimIds": [],
+        "copyrightMode": "paraphrase_only",
+        "reviewer": null,
+        "checkedAt": null
+      }
+    },
+    {
+      "id": "p4_article_identity_fullstop_heathcliff",
+      "timelinePlacement": "cross-timeline",
+      "narrativeRole": "character-and-world",
+      "comment": "v21: Full-Stop Heathcliff and blunt distance",
+      "legacySourceRefs": [
+        {
+          "title": "Full-Stop Office Fixer Heathcliff/Identity Story",
+          "url": "https://limbuscompany.wiki.gg/wiki/Full-Stop_Office_Fixer_Heathcliff/Identity_Story",
+          "legacyRevisionId": 143579,
+          "checkedAt": "2026-06-04T08:22:00Z"
+        }
+      ],
+      "review": {
+        "status": "unreviewed",
+        "currentSourceRefs": [],
+        "atomicFacts": [],
+        "narrativeBoundary": "",
+        "claimIds": [],
+        "copyrightMode": "paraphrase_only",
+        "reviewer": null,
+        "checkedAt": null
+      }
+    },
+    {
+      "id": "p4_article_identity_fullstop_rep_honglu",
+      "timelinePlacement": "cross-timeline",
+      "narrativeRole": "character-and-world",
+      "comment": "v21: Full-Stop Hong Lu and ranged detachment",
+      "legacySourceRefs": [
+        {
+          "title": "Full-Stop Office Rep Hong Lu/Identity Story",
+          "url": "https://limbuscompany.wiki.gg/wiki/Full-Stop_Office_Rep_Hong_Lu/Identity_Story",
+          "legacyRevisionId": 143507,
+          "checkedAt": "2026-06-04T08:22:00Z"
+        }
+      ],
+      "review": {
+        "status": "unreviewed",
+        "currentSourceRefs": [],
+        "atomicFacts": [],
+        "narrativeBoundary": "",
+        "claimIds": [],
+        "copyrightMode": "paraphrase_only",
+        "reviewer": null,
+        "checkedAt": null
+      }
+    },
+    {
+      "id": "p4_article_identity_gcorp_head_manager_outis",
+      "timelinePlacement": "cross-timeline",
+      "narrativeRole": "character-and-world",
+      "comment": "v22: G Corp Head Manager Outis and managerial command",
+      "legacySourceRefs": [
+        {
+          "title": "G Corp. Head Manager Outis/Identity Story",
+          "url": "https://limbuscompany.wiki.gg/wiki/G_Corp._Head_Manager_Outis/Identity_Story",
+          "legacyRevisionId": 82152,
+          "checkedAt": "2026-06-04T08:22:00Z"
+        }
+      ],
+      "review": {
+        "status": "unreviewed",
+        "currentSourceRefs": [],
+        "atomicFacts": [],
+        "narrativeBoundary": "",
+        "claimIds": [],
+        "copyrightMode": "paraphrase_only",
+        "reviewer": null,
+        "checkedAt": null
+      }
+    },
+    {
+      "id": "p4_article_identity_gcorp_manager_corporal_gregor",
+      "timelinePlacement": "cross-timeline",
+      "narrativeRole": "character-and-world",
+      "comment": "v22: G Corp Gregor and managed soldierhood",
+      "legacySourceRefs": [
+        {
+          "title": "G Corp. Manager Corporal Gregor/Identity Story",
+          "url": "https://limbuscompany.wiki.gg/wiki/G_Corp._Manager_Corporal_Gregor/Identity_Story",
+          "legacyRevisionId": 82151,
+          "checkedAt": "2026-06-04T08:22:00Z"
+        }
+      ],
+      "review": {
+        "status": "unreviewed",
+        "currentSourceRefs": [],
+        "atomicFacts": [],
+        "narrativeBoundary": "",
+        "claimIds": [],
+        "copyrightMode": "paraphrase_only",
+        "reviewer": null,
+        "checkedAt": null
+      }
+    },
+    {
+      "id": "p4_article_identity_heishou_mao_faust",
+      "timelinePlacement": "cross-timeline",
+      "narrativeRole": "character-and-world",
+      "comment": "v21: Heishou Mao Faust and precise branch doctrine",
+      "legacySourceRefs": [
+        {
+          "title": "Heishou Pack - Mao Branch Adept Faust/Identity Story",
+          "url": "https://limbuscompany.wiki.gg/wiki/Heishou_Pack_-_Mao_Branch_Adept_Faust/Identity_Story",
+          "legacyRevisionId": 132485,
+          "checkedAt": "2026-06-04T08:22:00Z"
+        }
+      ],
+      "review": {
+        "status": "unreviewed",
+        "currentSourceRefs": [],
+        "atomicFacts": [],
+        "narrativeBoundary": "",
+        "claimIds": [],
+        "copyrightMode": "paraphrase_only",
+        "reviewer": null,
+        "checkedAt": null
+      }
+    },
+    {
+      "id": "p4_article_identity_heishou_mao_outis",
+      "timelinePlacement": "cross-timeline",
+      "narrativeRole": "character-and-world",
+      "comment": "v21: Heishou Mao Outis and tactical predation",
+      "legacySourceRefs": [
+        {
+          "title": "Heishou Pack - Mao Branch Outis/Identity Story",
+          "url": "https://limbuscompany.wiki.gg/wiki/Heishou_Pack_-_Mao_Branch_Outis/Identity_Story",
+          "legacyRevisionId": 139493,
+          "checkedAt": "2026-06-04T08:22:00Z"
+        }
+      ],
+      "review": {
+        "status": "unreviewed",
+        "currentSourceRefs": [],
+        "atomicFacts": [],
+        "narrativeBoundary": "",
+        "claimIds": [],
+        "copyrightMode": "paraphrase_only",
+        "reviewer": null,
+        "checkedAt": null
+      }
+    },
+    {
+      "id": "p4_article_identity_heishou_mao_ryoshu",
+      "timelinePlacement": "cross-timeline",
+      "narrativeRole": "character-and-world",
+      "comment": "v21: Heishou Mao Ryoshu and exact predation",
+      "legacySourceRefs": [
+        {
+          "title": "Heishou Pack - Mao Branch Ryōshū/Identity Story",
+          "url": "https://limbuscompany.wiki.gg/wiki/Heishou_Pack_-_Mao_Branch_Ry%C5%8Dsh%C5%AB/Identity_Story",
+          "legacyRevisionId": 132165,
+          "checkedAt": "2026-06-04T08:22:00Z"
+        }
+      ],
+      "review": {
+        "status": "unreviewed",
+        "currentSourceRefs": [],
+        "atomicFacts": [],
+        "narrativeBoundary": "",
+        "claimIds": [],
+        "copyrightMode": "paraphrase_only",
+        "reviewer": null,
+        "checkedAt": null
+      }
+    },
+    {
+      "id": "p4_article_identity_heishou_si_gregor",
+      "timelinePlacement": "cross-timeline",
+      "narrativeRole": "character-and-world",
+      "comment": "v21: Heishou Si Gregor and weary pack discipline",
+      "legacySourceRefs": [
+        {
+          "title": "Heishou Pack - Si Branch Gregor/Identity Story",
+          "url": "https://limbuscompany.wiki.gg/wiki/Heishou_Pack_-_Si_Branch_Gregor/Identity_Story",
+          "legacyRevisionId": 132181,
+          "checkedAt": "2026-06-04T08:22:00Z"
+        }
+      ],
+      "review": {
+        "status": "unreviewed",
+        "currentSourceRefs": [],
+        "atomicFacts": [],
+        "narrativeBoundary": "",
+        "claimIds": [],
+        "copyrightMode": "paraphrase_only",
+        "reviewer": null,
+        "checkedAt": null
+      }
+    },
+    {
+      "id": "p4_article_identity_heishou_si_rodion",
+      "timelinePlacement": "cross-timeline",
+      "narrativeRole": "character-and-world",
+      "comment": "v21: Heishou Si Rodion and social discipline",
+      "legacySourceRefs": [
+        {
+          "title": "Heishou Pack - Si Branch Rodion/Identity Story",
+          "url": "https://limbuscompany.wiki.gg/wiki/Heishou_Pack_-_Si_Branch_Rodion/Identity_Story",
+          "legacyRevisionId": 132182,
+          "checkedAt": "2026-06-04T08:22:00Z"
+        }
+      ],
+      "review": {
+        "status": "unreviewed",
+        "currentSourceRefs": [],
+        "atomicFacts": [],
+        "narrativeBoundary": "",
+        "claimIds": [],
+        "copyrightMode": "paraphrase_only",
+        "reviewer": null,
+        "checkedAt": null
+      }
+    },
+    {
+      "id": "p4_article_identity_heishou_wei_don",
+      "timelinePlacement": "cross-timeline",
+      "narrativeRole": "character-and-world",
+      "comment": "v21: Heishou Wei Don Quixote and disciplined hero code",
+      "legacySourceRefs": [
+        {
+          "title": "Heishou Pack - Wei Branch Don Quixote/Identity Story",
+          "url": "https://limbuscompany.wiki.gg/wiki/Heishou_Pack_-_Wei_Branch_Don_Quixote/Identity_Story",
+          "legacyRevisionId": 145262,
+          "checkedAt": "2026-06-04T08:22:00Z"
+        }
+      ],
+      "review": {
+        "status": "unreviewed",
+        "currentSourceRefs": [],
+        "atomicFacts": [],
+        "narrativeBoundary": "",
+        "claimIds": [],
+        "copyrightMode": "paraphrase_only",
+        "reviewer": null,
+        "checkedAt": null
+      }
+    },
+    {
+      "id": "p4_article_identity_heishou_wu_yisang",
+      "timelinePlacement": "cross-timeline",
+      "narrativeRole": "character-and-world",
+      "comment": "v21: Heishou Wu Yi Sang and branch geometry",
+      "legacySourceRefs": [
+        {
+          "title": "Heishou Pack - Wu Branch Adept Yi Sang/Identity Story",
+          "url": "https://limbuscompany.wiki.gg/wiki/Heishou_Pack_-_Wu_Branch_Adept_Yi_Sang/Identity_Story",
+          "legacyRevisionId": 134514,
+          "checkedAt": "2026-06-04T08:22:00Z"
+        }
+      ],
+      "review": {
+        "status": "unreviewed",
+        "currentSourceRefs": [],
+        "atomicFacts": [],
+        "narrativeBoundary": "",
+        "claimIds": [],
+        "copyrightMode": "paraphrase_only",
+        "reviewer": null,
+        "checkedAt": null
+      }
+    },
+    {
+      "id": "p4_article_identity_heishou_you_heathcliff",
+      "timelinePlacement": "cross-timeline",
+      "narrativeRole": "character-and-world",
+      "comment": "v21: Heishou You Heathcliff and branch-shaped aggression",
+      "legacySourceRefs": [
+        {
+          "title": "Heishou Pack - You Branch Adept Heathcliff/Identity Story",
+          "url": "https://limbuscompany.wiki.gg/wiki/Heishou_Pack_-_You_Branch_Adept_Heathcliff/Identity_Story",
+          "legacyRevisionId": 145376,
+          "checkedAt": "2026-06-04T08:22:00Z"
+        }
+      ],
+      "review": {
+        "status": "unreviewed",
+        "currentSourceRefs": [],
+        "atomicFacts": [],
+        "narrativeBoundary": "",
+        "claimIds": [],
+        "copyrightMode": "paraphrase_only",
+        "reviewer": null,
+        "checkedAt": null
+      }
+    },
+    {
+      "id": "p4_article_identity_heishou_you_sinclair",
+      "timelinePlacement": "cross-timeline",
+      "narrativeRole": "character-and-world",
+      "comment": "v21: Heishou You Sinclair and anxious technique",
+      "legacySourceRefs": [
+        {
+          "title": "Heishou Pack - You Branch Sinclair/Identity Story",
+          "url": "https://limbuscompany.wiki.gg/wiki/Heishou_Pack_-_You_Branch_Sinclair/Identity_Story",
+          "legacyRevisionId": 134513,
+          "checkedAt": "2026-06-04T08:22:00Z"
+        }
+      ],
+      "review": {
+        "status": "unreviewed",
+        "currentSourceRefs": [],
+        "atomicFacts": [],
+        "narrativeBoundary": "",
+        "claimIds": [],
+        "copyrightMode": "paraphrase_only",
+        "reviewer": null,
+        "checkedAt": null
+      }
+    },
+    {
+      "id": "p4_article_identity_hook_office_honglu",
+      "timelinePlacement": "cross-timeline",
+      "narrativeRole": "character-and-world",
+      "comment": "v21: Hook Hong Lu and bright predatory play",
+      "legacySourceRefs": [
+        {
+          "title": "Hook Office Fixer Hong Lu/Identity Story",
+          "url": "https://limbuscompany.wiki.gg/wiki/Hook_Office_Fixer_Hong_Lu/Identity_Story",
+          "legacyRevisionId": 82150,
+          "checkedAt": "2026-06-04T08:22:00Z"
+        }
+      ],
+      "review": {
+        "status": "unreviewed",
+        "currentSourceRefs": [],
+        "atomicFacts": [],
+        "narrativeBoundary": "",
+        "claimIds": [],
+        "copyrightMode": "paraphrase_only",
+        "reviewer": null,
+        "checkedAt": null
+      }
+    },
+    {
+      "id": "p4_article_identity_index_nursefather_yi_sang",
+      "timelinePlacement": "cross-timeline",
+      "narrativeRole": "character-and-world",
+      "comment": "v17：Index 护父 Yi Sang 与指令式照料",
+      "legacySourceRefs": [
+        {
+          "title": "The House of Spiders: The Index Nursefather Yi Sang/Identity Story",
+          "url": "https://limbuscompany.wiki.gg/wiki/The_House_of_Spiders:_The_Index_Nursefather_Yi_Sang/Identity_Story",
+          "legacyRevisionId": 161609,
+          "checkedAt": "2026-06-04T08:22:00Z"
+        }
+      ],
+      "review": {
+        "status": "unreviewed",
+        "currentSourceRefs": [],
+        "atomicFacts": [],
+        "narrativeBoundary": "",
+        "claimIds": [],
+        "copyrightMode": "paraphrase_only",
+        "reviewer": null,
+        "checkedAt": null
+      }
+    },
+    {
+      "id": "p4_article_identity_index_paper_slip_faust",
+      "timelinePlacement": "cross-timeline",
+      "narrativeRole": "character-and-world",
+      "comment": "v17: Index paper-slip Faust and evangelized obedience",
+      "legacySourceRefs": [
+        {
+          "title": "The Index Proselyte:【Paper Slip】Faust/Identity Story",
+          "url": "https://limbuscompany.wiki.gg/wiki/The_Index_Proselyte:%E3%80%90Paper_Slip%E3%80%91Faust/Identity_Story",
+          "legacyRevisionId": 149268,
+          "checkedAt": "2026-06-04T08:22:00Z"
+        }
+      ],
+      "review": {
+        "status": "unreviewed",
+        "currentSourceRefs": [],
+        "atomicFacts": [],
+        "narrativeBoundary": "",
+        "claimIds": [],
+        "copyrightMode": "paraphrase_only",
+        "reviewer": null,
+        "checkedAt": null
+      }
+    },
+    {
+      "id": "p4_article_identity_index_proxy_don_procuration",
+      "timelinePlacement": "cross-timeline",
+      "narrativeRole": "character-and-world",
+      "comment": "v17：Index 代理人与代行指令",
+      "legacySourceRefs": [
+        {
+          "title": "The Index Proxy - Effloresced E.G.O::Procuration Don Quixote/Identity Story",
+          "url": "https://limbuscompany.wiki.gg/wiki/The_Index_Proxy_-_Effloresced_E.G.O::Procuration_Don_Quixote/Identity_Story",
+          "legacyRevisionId": 152005,
+          "checkedAt": "2026-06-04T08:22:00Z"
+        }
+      ],
+      "review": {
+        "status": "unreviewed",
+        "currentSourceRefs": [],
+        "atomicFacts": [],
+        "narrativeBoundary": "",
+        "claimIds": [],
+        "copyrightMode": "paraphrase_only",
+        "reviewer": null,
+        "checkedAt": null
+      }
+    },
+    {
+      "id": "p4_article_identity_jeongs_office_ishmael",
+      "timelinePlacement": "cross-timeline",
+      "narrativeRole": "character-and-world",
+      "comment": "v21: Jeong Office Ishmael and representative burden",
+      "legacySourceRefs": [
+        {
+          "title": "Jeong's Office Rep Ishmael/Identity Story",
+          "url": "https://limbuscompany.wiki.gg/wiki/Jeong%27s_Office_Rep_Ishmael/Identity_Story",
+          "legacyRevisionId": 143660,
+          "checkedAt": "2026-06-04T08:22:00Z"
+        }
+      ],
+      "review": {
+        "status": "unreviewed",
+        "currentSourceRefs": [],
+        "atomicFacts": [],
+        "narrativeBoundary": "",
+        "claimIds": [],
+        "copyrightMode": "paraphrase_only",
+        "reviewer": null,
+        "checkedAt": null
+      }
+    },
+    {
+      "id": "p4_article_identity_kcorp_excision_honglu",
+      "timelinePlacement": "cross-timeline",
+      "narrativeRole": "character-and-world",
+      "comment": "v20: K Corp Hong Lu and clinical privilege",
+      "legacySourceRefs": [
+        {
+          "title": "K Corp. Class 3 Excision Staff Hong Lu/Identity Story",
+          "url": "https://limbuscompany.wiki.gg/wiki/K_Corp._Class_3_Excision_Staff_Hong_Lu/Identity_Story",
+          "legacyRevisionId": 82149,
+          "checkedAt": "2026-06-04T08:22:00Z"
+        }
+      ],
+      "review": {
+        "status": "unreviewed",
+        "currentSourceRefs": [],
+        "atomicFacts": [],
+        "narrativeBoundary": "",
+        "claimIds": [],
+        "copyrightMode": "paraphrase_only",
+        "reviewer": null,
+        "checkedAt": null
+      }
+    },
+    {
+      "id": "p4_article_identity_kurokumo_captain_gregor",
+      "timelinePlacement": "cross-timeline",
+      "narrativeRole": "character-and-world",
+      "comment": "v21: Kurokumo Captain Gregor and reluctant authority",
+      "legacySourceRefs": [
+        {
+          "title": "Kurokumo Clan Captain Gregor/Identity Story",
+          "url": "https://limbuscompany.wiki.gg/wiki/Kurokumo_Clan_Captain_Gregor/Identity_Story",
+          "legacyRevisionId": 82148,
+          "checkedAt": "2026-06-04T08:22:00Z"
+        }
+      ],
+      "review": {
+        "status": "unreviewed",
+        "currentSourceRefs": [],
+        "atomicFacts": [],
+        "narrativeBoundary": "",
+        "claimIds": [],
+        "copyrightMode": "paraphrase_only",
+        "reviewer": null,
+        "checkedAt": null
+      }
+    },
+    {
+      "id": "p4_article_identity_kurokumo_captain_ishmael",
+      "timelinePlacement": "cross-timeline",
+      "narrativeRole": "character-and-world",
+      "comment": "v21: Kurokumo Captain Ishmael and blade-led resolve",
+      "legacySourceRefs": [
+        {
+          "title": "Kurokumo Clan Captain Ishmael/Identity Story",
+          "url": "https://limbuscompany.wiki.gg/wiki/Kurokumo_Clan_Captain_Ishmael/Identity_Story",
+          "legacyRevisionId": 91586,
+          "checkedAt": "2026-06-04T08:22:00Z"
+        }
+      ],
+      "review": {
+        "status": "unreviewed",
+        "currentSourceRefs": [],
+        "atomicFacts": [],
+        "narrativeBoundary": "",
+        "claimIds": [],
+        "copyrightMode": "paraphrase_only",
+        "reviewer": null,
+        "checkedAt": null
+      }
+    },
+    {
+      "id": "p4_article_identity_kurokumo_wakashu_heathcliff",
+      "timelinePlacement": "cross-timeline",
+      "narrativeRole": "character-and-world",
+      "comment": "v21: Kurokumo Heathcliff and clan-tempered resentment",
+      "legacySourceRefs": [
+        {
+          "title": "Kurokumo Clan Wakashu Heathcliff/Identity Story",
+          "url": "https://limbuscompany.wiki.gg/wiki/Kurokumo_Clan_Wakashu_Heathcliff/Identity_Story",
+          "legacyRevisionId": 101333,
+          "checkedAt": "2026-06-04T08:22:00Z"
+        }
+      ],
+      "review": {
+        "status": "unreviewed",
+        "currentSourceRefs": [],
+        "atomicFacts": [],
+        "narrativeBoundary": "",
+        "claimIds": [],
+        "copyrightMode": "paraphrase_only",
+        "reviewer": null,
+        "checkedAt": null
+      }
+    },
+    {
+      "id": "p4_article_identity_kurokumo_wakashu_honglu",
+      "timelinePlacement": "cross-timeline",
+      "narrativeRole": "character-and-world",
+      "comment": "v22: Kurokumo Hong Lu and graceful clan distance",
+      "legacySourceRefs": [
+        {
+          "title": "Kurokumo Clan Wakashu Hong Lu/Identity Story",
+          "url": "https://limbuscompany.wiki.gg/wiki/Kurokumo_Clan_Wakashu_Hong_Lu/Identity_Story",
+          "legacyRevisionId": 82147,
+          "checkedAt": "2026-06-04T08:22:00Z"
+        }
+      ],
+      "review": {
+        "status": "unreviewed",
+        "currentSourceRefs": [],
+        "atomicFacts": [],
+        "narrativeBoundary": "",
+        "claimIds": [],
+        "copyrightMode": "paraphrase_only",
+        "reviewer": null,
+        "checkedAt": null
+      }
+    },
+    {
+      "id": "p4_article_identity_kurokumo_wakashu_rodion",
+      "timelinePlacement": "cross-timeline",
+      "narrativeRole": "character-and-world",
+      "comment": "v22: Kurokumo Rodion and clan charisma",
+      "legacySourceRefs": [
+        {
+          "title": "Kurokumo Clan Wakashu Rodion/Identity Story",
+          "url": "https://limbuscompany.wiki.gg/wiki/Kurokumo_Clan_Wakashu_Rodion/Identity_Story",
+          "legacyRevisionId": 82146,
+          "checkedAt": "2026-06-04T08:22:00Z"
+        }
+      ],
+      "review": {
+        "status": "unreviewed",
+        "currentSourceRefs": [],
+        "atomicFacts": [],
+        "narrativeBoundary": "",
+        "claimIds": [],
+        "copyrightMode": "paraphrase_only",
+        "reviewer": null,
+        "checkedAt": null
+      }
+    },
+    {
+      "id": "p4_article_identity_kurokumo_wakashu_ryoshu",
+      "timelinePlacement": "cross-timeline",
+      "narrativeRole": "character-and-world",
+      "comment": "v22: Kurokumo Ryoshu and blade-style authorship",
+      "legacySourceRefs": [
+        {
+          "title": "Kurokumo Clan Wakashu Ryōshū/Identity Story",
+          "url": "https://limbuscompany.wiki.gg/wiki/Kurokumo_Clan_Wakashu_Ry%C5%8Dsh%C5%AB/Identity_Story",
+          "legacyRevisionId": 82145,
+          "checkedAt": "2026-06-04T08:22:00Z"
+        }
+      ],
+      "review": {
+        "status": "unreviewed",
+        "currentSourceRefs": [],
+        "atomicFacts": [],
+        "narrativeBoundary": "",
+        "claimIds": [],
+        "copyrightMode": "paraphrase_only",
+        "reviewer": null,
+        "checkedAt": null
+      }
+    },
+    {
+      "id": "p4_article_identity_lamanchaland_barber_outis",
+      "timelinePlacement": "cross-timeline",
+      "narrativeRole": "character-and-world",
+      "comment": "v17: La Manchaland barber Outis and surgical ceremony",
+      "legacySourceRefs": [
+        {
+          "title": "The Barber of La Manchaland Outis/Identity Story",
+          "url": "https://limbuscompany.wiki.gg/wiki/The_Barber_of_La_Manchaland_Outis/Identity_Story",
+          "legacyRevisionId": 82097,
+          "checkedAt": "2026-06-04T08:22:00Z"
+        }
+      ],
+      "review": {
+        "status": "unreviewed",
+        "currentSourceRefs": [],
+        "atomicFacts": [],
+        "narrativeBoundary": "",
+        "claimIds": [],
+        "copyrightMode": "paraphrase_only",
+        "reviewer": null,
+        "checkedAt": null
+      }
+    },
+    {
+      "id": "p4_article_identity_lamanchaland_priest_gregor",
+      "timelinePlacement": "cross-timeline",
+      "narrativeRole": "character-and-world",
+      "comment": "v17: La Manchaland priest Gregor and devotional hunger",
+      "legacySourceRefs": [
+        {
+          "title": "The Priest of La Manchaland Gregor/Identity Story",
+          "url": "https://limbuscompany.wiki.gg/wiki/The_Priest_of_La_Manchaland_Gregor/Identity_Story",
+          "legacyRevisionId": 82089,
+          "checkedAt": "2026-06-04T08:22:00Z"
+        }
+      ],
+      "review": {
+        "status": "unreviewed",
+        "currentSourceRefs": [],
+        "atomicFacts": [],
+        "narrativeBoundary": "",
+        "claimIds": [],
+        "copyrightMode": "paraphrase_only",
+        "reviewer": null,
+        "checkedAt": null
+      }
+    },
+    {
+      "id": "p4_article_identity_lamanchaland_prince_meursault",
+      "timelinePlacement": "cross-timeline",
+      "narrativeRole": "character-and-world",
+      "comment": "v17: La Manchaland prince Meursault and inherited stillness",
+      "legacySourceRefs": [
+        {
+          "title": "The Prince of La Manchaland Meursault/Identity Story",
+          "url": "https://limbuscompany.wiki.gg/wiki/The_Prince_of_La_Manchaland_Meursault/Identity_Story",
+          "legacyRevisionId": 142026,
+          "checkedAt": "2026-06-04T08:22:00Z"
+        }
+      ],
+      "review": {
+        "status": "unreviewed",
+        "currentSourceRefs": [],
+        "atomicFacts": [],
+        "narrativeBoundary": "",
+        "claimIds": [],
+        "copyrightMode": "paraphrase_only",
+        "reviewer": null,
+        "checkedAt": null
+      }
+    },
+    {
+      "id": "p4_article_identity_lamanchaland_princess_rodion",
+      "timelinePlacement": "cross-timeline",
+      "narrativeRole": "character-and-world",
+      "comment": "v17: La Manchaland princess Rodion and performed radiance",
+      "legacySourceRefs": [
+        {
+          "title": "The Princess of La Manchaland Rodion/Identity Story",
+          "url": "https://limbuscompany.wiki.gg/wiki/The_Princess_of_La_Manchaland_Rodion/Identity_Story",
+          "legacyRevisionId": 82088,
+          "checkedAt": "2026-06-04T08:22:00Z"
+        }
+      ],
+      "review": {
+        "status": "unreviewed",
+        "currentSourceRefs": [],
+        "atomicFacts": [],
+        "narrativeBoundary": "",
+        "claimIds": [],
+        "copyrightMode": "paraphrase_only",
+        "reviewer": null,
+        "checkedAt": null
+      }
+    },
+    {
+      "id": "p4_article_identity_lca_udjat_outis",
+      "timelinePlacement": "cross-timeline",
+      "narrativeRole": "character-and-world",
+      "comment": "v21: LCA Udjat Outis and mission-first protection",
+      "legacySourceRefs": [
+        {
+          "title": "LCA Udjat Vanguard Team 3 Leader Outis/Identity Story",
+          "url": "https://limbuscompany.wiki.gg/wiki/LCA_Udjat_Vanguard_Team_3_Leader_Outis/Identity_Story",
+          "legacyRevisionId": 156752,
+          "checkedAt": "2026-06-04T08:22:00Z"
+        }
+      ],
+      "review": {
+        "status": "unreviewed",
+        "currentSourceRefs": [],
+        "atomicFacts": [],
+        "narrativeBoundary": "",
+        "claimIds": [],
+        "copyrightMode": "paraphrase_only",
+        "reviewer": null,
+        "checkedAt": null
+      }
+    },
+    {
+      "id": "p4_article_identity_lccb_ishmael",
+      "timelinePlacement": "cross-timeline",
+      "narrativeRole": "character-and-world",
+      "comment": "v22: LCCB Ishmael and operational restraint",
+      "legacySourceRefs": [
+        {
+          "title": "LCCB Assistant Manager Ishmael/Identity Story",
+          "url": "https://limbuscompany.wiki.gg/wiki/LCCB_Assistant_Manager_Ishmael/Identity_Story",
+          "legacyRevisionId": 82144,
+          "checkedAt": "2026-06-04T08:22:00Z"
+        }
+      ],
+      "review": {
+        "status": "unreviewed",
+        "currentSourceRefs": [],
+        "atomicFacts": [],
+        "narrativeBoundary": "",
+        "claimIds": [],
+        "copyrightMode": "paraphrase_only",
+        "reviewer": null,
+        "checkedAt": null
+      }
+    },
+    {
+      "id": "p4_article_identity_lccb_rodion",
+      "timelinePlacement": "cross-timeline",
+      "narrativeRole": "character-and-world",
+      "comment": "v22: LCCB Rodion and field-office warmth",
+      "legacySourceRefs": [
+        {
+          "title": "LCCB Assistant Manager Rodion/Identity Story",
+          "url": "https://limbuscompany.wiki.gg/wiki/LCCB_Assistant_Manager_Rodion/Identity_Story",
+          "legacyRevisionId": 82143,
+          "checkedAt": "2026-06-04T08:22:00Z"
+        }
+      ],
+      "review": {
+        "status": "unreviewed",
+        "currentSourceRefs": [],
+        "atomicFacts": [],
+        "narrativeBoundary": "",
+        "claimIds": [],
+        "copyrightMode": "paraphrase_only",
+        "reviewer": null,
+        "checkedAt": null
+      }
+    },
+    {
+      "id": "p4_article_identity_lccb_ryoshu",
+      "timelinePlacement": "cross-timeline",
+      "narrativeRole": "character-and-world",
+      "comment": "v22: LCCB Ryoshu and tactical paperwork",
+      "legacySourceRefs": [
+        {
+          "title": "LCCB Assistant Manager Ryōshū/Identity Story",
+          "url": "https://limbuscompany.wiki.gg/wiki/LCCB_Assistant_Manager_Ry%C5%8Dsh%C5%AB/Identity_Story",
+          "legacyRevisionId": 82142,
+          "checkedAt": "2026-06-04T08:22:00Z"
+        }
+      ],
+      "review": {
+        "status": "unreviewed",
+        "currentSourceRefs": [],
+        "atomicFacts": [],
+        "narrativeBoundary": "",
+        "claimIds": [],
+        "copyrightMode": "paraphrase_only",
+        "reviewer": null,
+        "checkedAt": null
+      }
+    },
+    {
+      "id": "p4_article_identity_liu_director_rodion",
+      "timelinePlacement": "cross-timeline",
+      "narrativeRole": "character-and-world",
+      "comment": "v20: Liu Director Rodion and communal heat",
+      "legacySourceRefs": [
+        {
+          "title": "Liu Assoc. South Section 4 Director Rodion/Identity Story",
+          "url": "https://limbuscompany.wiki.gg/wiki/Liu_Assoc._South_Section_4_Director_Rodion/Identity_Story",
+          "legacyRevisionId": 93329,
+          "checkedAt": "2026-06-04T08:22:00Z"
+        }
+      ],
+      "review": {
+        "status": "unreviewed",
+        "currentSourceRefs": [],
+        "atomicFacts": [],
+        "narrativeBoundary": "",
+        "claimIds": [],
+        "copyrightMode": "paraphrase_only",
+        "reviewer": null,
+        "checkedAt": null
+      }
+    },
+    {
+      "id": "p4_article_identity_liu_gregor",
+      "timelinePlacement": "cross-timeline",
+      "narrativeRole": "character-and-world",
+      "comment": "v22: Liu Gregor and weary warmth",
+      "legacySourceRefs": [
+        {
+          "title": "Liu Assoc. South Section 6 Gregor/Identity Story",
+          "url": "https://limbuscompany.wiki.gg/wiki/Liu_Assoc._South_Section_6_Gregor/Identity_Story",
+          "legacyRevisionId": 82137,
+          "checkedAt": "2026-06-04T08:22:00Z"
+        }
+      ],
+      "review": {
+        "status": "unreviewed",
+        "currentSourceRefs": [],
+        "atomicFacts": [],
+        "narrativeBoundary": "",
+        "claimIds": [],
+        "copyrightMode": "paraphrase_only",
+        "reviewer": null,
+        "checkedAt": null
+      }
+    },
+    {
+      "id": "p4_article_identity_liu_honglu",
+      "timelinePlacement": "cross-timeline",
+      "narrativeRole": "character-and-world",
+      "comment": "v20: Liu Hong Lu and graceful heat",
+      "legacySourceRefs": [
+        {
+          "title": "Liu Assoc. South Section 5 Hong Lu/Identity Story",
+          "url": "https://limbuscompany.wiki.gg/wiki/Liu_Assoc._South_Section_5_Hong_Lu/Identity_Story",
+          "legacyRevisionId": 84185,
+          "checkedAt": "2026-06-04T08:22:00Z"
+        }
+      ],
+      "review": {
+        "status": "unreviewed",
+        "currentSourceRefs": [],
+        "atomicFacts": [],
+        "narrativeBoundary": "",
+        "claimIds": [],
+        "copyrightMode": "paraphrase_only",
+        "reviewer": null,
+        "checkedAt": null
+      }
+    },
+    {
+      "id": "p4_article_identity_liu_ishmael",
+      "timelinePlacement": "cross-timeline",
+      "narrativeRole": "character-and-world",
+      "comment": "v20: Liu Ishmael and disciplined anger",
+      "legacySourceRefs": [
+        {
+          "title": "Liu Assoc. South Section 4 Ishmael/Identity Story",
+          "url": "https://limbuscompany.wiki.gg/wiki/Liu_Assoc._South_Section_4_Ishmael/Identity_Story",
+          "legacyRevisionId": 82140,
+          "checkedAt": "2026-06-04T08:22:00Z"
+        }
+      ],
+      "review": {
+        "status": "unreviewed",
+        "currentSourceRefs": [],
+        "atomicFacts": [],
+        "narrativeBoundary": "",
+        "claimIds": [],
+        "copyrightMode": "paraphrase_only",
+        "reviewer": null,
+        "checkedAt": null
+      }
+    },
+    {
+      "id": "p4_article_identity_liu_meursault",
+      "timelinePlacement": "cross-timeline",
+      "narrativeRole": "character-and-world",
+      "comment": "v22: Liu Meursault and controlled heat",
+      "legacySourceRefs": [
+        {
+          "title": "Liu Assoc. South Section 6 Meursault/Identity Story",
+          "url": "https://limbuscompany.wiki.gg/wiki/Liu_Assoc._South_Section_6_Meursault/Identity_Story",
+          "legacyRevisionId": 91613,
+          "checkedAt": "2026-06-04T08:22:00Z"
+        }
+      ],
+      "review": {
+        "status": "unreviewed",
+        "currentSourceRefs": [],
+        "atomicFacts": [],
+        "narrativeBoundary": "",
+        "claimIds": [],
+        "copyrightMode": "paraphrase_only",
+        "reviewer": null,
+        "checkedAt": null
+      }
+    },
+    {
+      "id": "p4_article_identity_liu_ryoshu",
+      "timelinePlacement": "cross-timeline",
+      "narrativeRole": "character-and-world",
+      "comment": "v22: Liu Ryoshu and flame as composition",
+      "legacySourceRefs": [
+        {
+          "title": "Liu Assoc. South Section 4 Ryōshū/Identity Story",
+          "url": "https://limbuscompany.wiki.gg/wiki/Liu_Assoc._South_Section_4_Ry%C5%8Dsh%C5%AB/Identity_Story",
+          "legacyRevisionId": 82139,
+          "checkedAt": "2026-06-04T08:22:00Z"
+        }
+      ],
+      "review": {
+        "status": "unreviewed",
+        "currentSourceRefs": [],
+        "atomicFacts": [],
+        "narrativeBoundary": "",
+        "claimIds": [],
+        "copyrightMode": "paraphrase_only",
+        "reviewer": null,
+        "checkedAt": null
+      }
+    },
+    {
+      "id": "p4_article_identity_liu_yisang",
+      "timelinePlacement": "cross-timeline",
+      "narrativeRole": "character-and-world",
+      "comment": "v20: Liu Yi Sang and quiet flame",
+      "legacySourceRefs": [
+        {
+          "title": "Liu Assoc. South Section 3 Yi Sang/Identity Story",
+          "url": "https://limbuscompany.wiki.gg/wiki/Liu_Assoc._South_Section_3_Yi_Sang/Identity_Story",
+          "legacyRevisionId": 93375,
+          "checkedAt": "2026-06-04T08:22:00Z"
+        }
+      ],
+      "review": {
+        "status": "unreviewed",
+        "currentSourceRefs": [],
+        "atomicFacts": [],
+        "narrativeBoundary": "",
+        "claimIds": [],
+        "copyrightMode": "paraphrase_only",
+        "reviewer": null,
+        "checkedAt": null
+      }
+    },
+    {
+      "id": "p4_article_identity_lobotomy_faint_aroma_solitude_ryoshu",
+      "timelinePlacement": "cross-timeline",
+      "narrativeRole": "character-and-world",
+      "comment": "v18: Faint Aroma and Solitude Ryoshu as isolated scent memory",
+      "legacySourceRefs": [
+        {
+          "title": "Lobotomy E.G.O::Faint Aroma & Solitude Ryōshū/Identity Story",
+          "url": "https://limbuscompany.wiki.gg/wiki/Lobotomy_E.G.O::Faint_Aroma_%26_Solitude_Ry%C5%8Dsh%C5%AB/Identity_Story",
+          "legacyRevisionId": 161610,
+          "checkedAt": "2026-06-04T08:22:00Z"
+        }
+      ],
+      "review": {
+        "status": "unreviewed",
+        "currentSourceRefs": [],
+        "atomicFacts": [],
+        "narrativeBoundary": "",
+        "claimIds": [],
+        "copyrightMode": "paraphrase_only",
+        "reviewer": null,
+        "checkedAt": null
+      }
+    },
+    {
+      "id": "p4_article_identity_lobotomy_hornet_alteration_meursault",
+      "timelinePlacement": "cross-timeline",
+      "narrativeRole": "character-and-world",
+      "comment": "v18: Hornet alteration Meursault and disciplined sting",
+      "legacySourceRefs": [
+        {
+          "title": "Lobotomy E.G.O::Hornet【Alteration】Meursault/Identity Story",
+          "url": "https://limbuscompany.wiki.gg/wiki/Lobotomy_E.G.O::Hornet%E3%80%90Alteration%E3%80%91Meursault/Identity_Story",
+          "legacyRevisionId": 161612,
+          "checkedAt": "2026-06-04T08:22:00Z"
+        }
+      ],
+      "review": {
+        "status": "unreviewed",
+        "currentSourceRefs": [],
+        "atomicFacts": [],
+        "narrativeBoundary": "",
+        "claimIds": [],
+        "copyrightMode": "paraphrase_only",
+        "reviewer": null,
+        "checkedAt": null
+      }
+    },
+    {
+      "id": "p4_article_identity_lobotomy_lamp_gregor",
+      "timelinePlacement": "cross-timeline",
+      "narrativeRole": "character-and-world",
+      "comment": "v18: Lamp Gregor and exhausted guidance",
+      "legacySourceRefs": [
+        {
+          "title": "Lobotomy E.G.O::Lamp Gregor/Identity Story",
+          "url": "https://limbuscompany.wiki.gg/wiki/Lobotomy_E.G.O::Lamp_Gregor/Identity_Story",
+          "legacyRevisionId": 156846,
+          "checkedAt": "2026-06-04T08:22:00Z"
+        }
+      ],
+      "review": {
+        "status": "unreviewed",
+        "currentSourceRefs": [],
+        "atomicFacts": [],
+        "narrativeBoundary": "",
+        "claimIds": [],
+        "copyrightMode": "paraphrase_only",
+        "reviewer": null,
+        "checkedAt": null
+      }
+    },
+    {
+      "id": "p4_article_identity_lobotomy_lantern_don",
+      "timelinePlacement": "cross-timeline",
+      "narrativeRole": "character-and-world",
+      "comment": "v18: Lantern Don Quixote and lure-shaped hope",
+      "legacySourceRefs": [
+        {
+          "title": "Lobotomy E.G.O::Lantern Don Quixote/Identity Story",
+          "url": "https://limbuscompany.wiki.gg/wiki/Lobotomy_E.G.O::Lantern_Don_Quixote/Identity_Story",
+          "legacyRevisionId": 82134,
+          "checkedAt": "2026-06-04T08:22:00Z"
+        }
+      ],
+      "review": {
+        "status": "unreviewed",
+        "currentSourceRefs": [],
+        "atomicFacts": [],
+        "narrativeBoundary": "",
+        "claimIds": [],
+        "copyrightMode": "paraphrase_only",
+        "reviewer": null,
+        "checkedAt": null
+      }
+    },
+    {
+      "id": "p4_article_identity_lobotomy_love_hate_don",
+      "timelinePlacement": "cross-timeline",
+      "narrativeRole": "character-and-world",
+      "comment": "v18: Love and Hate Don Quixote and moral color split",
+      "legacySourceRefs": [
+        {
+          "title": "Lobotomy E.G.O::In the Name of Love and Hate Don Quixote/Identity Story",
+          "url": "https://limbuscompany.wiki.gg/wiki/Lobotomy_E.G.O::In_the_Name_of_Love_and_Hate_Don_Quixote/Identity_Story",
+          "legacyRevisionId": 130083,
+          "checkedAt": "2026-06-04T08:22:00Z"
+        }
+      ],
+      "review": {
+        "status": "unreviewed",
+        "currentSourceRefs": [],
+        "atomicFacts": [],
+        "narrativeBoundary": "",
+        "claimIds": [],
+        "copyrightMode": "paraphrase_only",
+        "reviewer": null,
+        "checkedAt": null
+      }
+    },
+    {
+      "id": "p4_article_identity_lobotomy_magic_bullet_outis",
+      "timelinePlacement": "cross-timeline",
+      "narrativeRole": "character-and-world",
+      "comment": "v18: Magic Bullet Outis and command trajectory",
+      "legacySourceRefs": [
+        {
+          "title": "Lobotomy E.G.O::Magic Bullet Outis/Identity Story",
+          "url": "https://limbuscompany.wiki.gg/wiki/Lobotomy_E.G.O::Magic_Bullet_Outis/Identity_Story",
+          "legacyRevisionId": 82133,
+          "checkedAt": "2026-06-04T08:22:00Z"
+        }
+      ],
+      "review": {
+        "status": "unreviewed",
+        "currentSourceRefs": [],
+        "atomicFacts": [],
+        "narrativeBoundary": "",
+        "claimIds": [],
+        "copyrightMode": "paraphrase_only",
+        "reviewer": null,
+        "checkedAt": null
+      }
+    },
+    {
+      "id": "p4_article_identity_lobotomy_red_eyes_penitence_ryoshu",
+      "timelinePlacement": "cross-timeline",
+      "narrativeRole": "character-and-world",
+      "comment": "v17: Red Eyes and Penitence Ryoshu as punitive art",
+      "legacySourceRefs": [
+        {
+          "title": "Lobotomy E.G.O::Red Eyes & Penitence Ryōshū/Identity Story",
+          "url": "https://limbuscompany.wiki.gg/wiki/Lobotomy_E.G.O::Red_Eyes_%26_Penitence_Ry%C5%8Dsh%C5%AB/Identity_Story",
+          "legacyRevisionId": 82132,
+          "checkedAt": "2026-06-04T08:22:00Z"
+        }
+      ],
+      "review": {
+        "status": "unreviewed",
+        "currentSourceRefs": [],
+        "atomicFacts": [],
+        "narrativeBoundary": "",
+        "claimIds": [],
+        "copyrightMode": "paraphrase_only",
+        "reviewer": null,
+        "checkedAt": null
+      }
+    },
+    {
+      "id": "p4_article_identity_lobotomy_red_sheet_sinclair",
+      "timelinePlacement": "cross-timeline",
+      "narrativeRole": "character-and-world",
+      "comment": "v18: Red Sheet Sinclair and fragile record pressure",
+      "legacySourceRefs": [
+        {
+          "title": "Lobotomy E.G.O::Red Sheet Sinclair/Identity Story",
+          "url": "https://limbuscompany.wiki.gg/wiki/Lobotomy_E.G.O::Red_Sheet_Sinclair/Identity_Story",
+          "legacyRevisionId": 82131,
+          "checkedAt": "2026-06-04T08:22:00Z"
+        }
+      ],
+      "review": {
+        "status": "unreviewed",
+        "currentSourceRefs": [],
+        "atomicFacts": [],
+        "narrativeBoundary": "",
+        "claimIds": [],
+        "copyrightMode": "paraphrase_only",
+        "reviewer": null,
+        "checkedAt": null
+      }
+    },
+    {
+      "id": "p4_article_identity_lobotomy_regret_faust",
+      "timelinePlacement": "cross-timeline",
+      "narrativeRole": "character-and-world",
+      "comment": "v18: Regret Faust and intellectual aftershock",
+      "legacySourceRefs": [
+        {
+          "title": "Lobotomy E.G.O::Regret Faust/Identity Story",
+          "url": "https://limbuscompany.wiki.gg/wiki/Lobotomy_E.G.O::Regret_Faust/Identity_Story",
+          "legacyRevisionId": 82130,
+          "checkedAt": "2026-06-04T08:22:00Z"
+        }
+      ],
+      "review": {
+        "status": "unreviewed",
+        "currentSourceRefs": [],
+        "atomicFacts": [],
+        "narrativeBoundary": "",
+        "claimIds": [],
+        "copyrightMode": "paraphrase_only",
+        "reviewer": null,
+        "checkedAt": null
+      }
+    },
+    {
+      "id": "p4_article_identity_lobotomy_remnant_faust",
+      "timelinePlacement": "cross-timeline",
+      "narrativeRole": "character-and-world",
+      "comment": "v22: Lobotomy remnant Faust and institutional afterimage",
+      "legacySourceRefs": [
+        {
+          "title": "Lobotomy Corp. Remnant Faust/Identity Story",
+          "url": "https://limbuscompany.wiki.gg/wiki/Lobotomy_Corp._Remnant_Faust/Identity_Story",
+          "legacyRevisionId": 82135,
+          "checkedAt": "2026-06-04T08:22:00Z"
+        }
+      ],
+      "review": {
+        "status": "unreviewed",
+        "currentSourceRefs": [],
+        "atomicFacts": [],
+        "narrativeBoundary": "",
+        "claimIds": [],
+        "copyrightMode": "paraphrase_only",
+        "reviewer": null,
+        "checkedAt": null
+      }
+    },
+    {
+      "id": "p4_article_identity_lobotomy_sloshing_ishmael",
+      "timelinePlacement": "cross-timeline",
+      "narrativeRole": "character-and-world",
+      "comment": "v18: Sloshing Ishmael and contained turbulence",
+      "legacySourceRefs": [
+        {
+          "title": "Lobotomy E.G.O::Sloshing Ishmael/Identity Story",
+          "url": "https://limbuscompany.wiki.gg/wiki/Lobotomy_E.G.O::Sloshing_Ishmael/Identity_Story",
+          "legacyRevisionId": 82129,
+          "checkedAt": "2026-06-04T08:22:00Z"
+        }
+      ],
+      "review": {
+        "status": "unreviewed",
+        "currentSourceRefs": [],
+        "atomicFacts": [],
+        "narrativeBoundary": "",
+        "claimIds": [],
+        "copyrightMode": "paraphrase_only",
+        "reviewer": null,
+        "checkedAt": null
+      }
+    },
+    {
+      "id": "p4_article_identity_lobotomy_solemn_lament_yisang",
+      "timelinePlacement": "cross-timeline",
+      "narrativeRole": "character-and-world",
+      "comment": "v18: Solemn Lament Yi Sang and formal grief",
+      "legacySourceRefs": [
+        {
+          "title": "Lobotomy E.G.O::Solemn Lament Yi Sang/Identity Story",
+          "url": "https://limbuscompany.wiki.gg/wiki/Lobotomy_E.G.O::Solemn_Lament_Yi_Sang/Identity_Story",
+          "legacyRevisionId": 82128,
+          "checkedAt": "2026-06-04T08:22:00Z"
+        }
+      ],
+      "review": {
+        "status": "unreviewed",
+        "currentSourceRefs": [],
+        "atomicFacts": [],
+        "narrativeBoundary": "",
+        "claimIds": [],
+        "copyrightMode": "paraphrase_only",
+        "reviewer": null,
+        "checkedAt": null
+      }
+    },
+    {
+      "id": "p4_article_identity_lobotomy_sunshower_heathcliff",
+      "timelinePlacement": "cross-timeline",
+      "narrativeRole": "character-and-world",
+      "comment": "v18: Sunshower Heathcliff and weathered contradiction",
+      "legacySourceRefs": [
+        {
+          "title": "Lobotomy E.G.O::Sunshower Heathcliff/Identity Story",
+          "url": "https://limbuscompany.wiki.gg/wiki/Lobotomy_E.G.O::Sunshower_Heathcliff/Identity_Story",
+          "legacyRevisionId": 82127,
+          "checkedAt": "2026-06-04T08:22:00Z"
+        }
+      ],
+      "review": {
+        "status": "unreviewed",
+        "currentSourceRefs": [],
+        "atomicFacts": [],
+        "narrativeBoundary": "",
+        "claimIds": [],
+        "copyrightMode": "paraphrase_only",
+        "reviewer": null,
+        "checkedAt": null
+      }
+    },
+    {
+      "id": "p4_article_identity_lobotomy_sword_tears_rodion",
+      "timelinePlacement": "cross-timeline",
+      "narrativeRole": "character-and-world",
+      "comment": "v18: Sword Sharpened with Tears Rodion and charming grief",
+      "legacySourceRefs": [
+        {
+          "title": "Lobotomy E.G.O::The Sword Sharpened with Tears Rodion/Identity Story",
+          "url": "https://limbuscompany.wiki.gg/wiki/Lobotomy_E.G.O::The_Sword_Sharpened_with_Tears_Rodion/Identity_Story",
+          "legacyRevisionId": 130495,
+          "checkedAt": "2026-06-04T08:22:00Z"
+        }
+      ],
+      "review": {
+        "status": "unreviewed",
+        "currentSourceRefs": [],
+        "atomicFacts": [],
+        "narrativeBoundary": "",
+        "claimIds": [],
+        "copyrightMode": "paraphrase_only",
+        "reviewer": null,
+        "checkedAt": null
+      }
+    },
+    {
+      "id": "p4_article_identity_lord_hongyuan_honglu",
+      "timelinePlacement": "cross-timeline",
+      "narrativeRole": "character-and-world",
+      "comment": "v21: Hongyuan lord Hong Lu and inherited luxury",
+      "legacySourceRefs": [
+        {
+          "title": "The Lord of Hongyuan Hong Lu/Identity Story",
+          "url": "https://limbuscompany.wiki.gg/wiki/The_Lord_of_Hongyuan_Hong_Lu/Identity_Story",
+          "legacyRevisionId": 143509,
+          "checkedAt": "2026-06-04T08:22:00Z"
+        }
+      ],
+      "review": {
+        "status": "unreviewed",
+        "currentSourceRefs": [],
+        "atomicFacts": [],
+        "narrativeBoundary": "",
+        "claimIds": [],
+        "copyrightMode": "paraphrase_only",
+        "reviewer": null,
+        "checkedAt": null
+      }
+    },
+    {
+      "id": "p4_article_identity_los_mariachis_sinclair",
+      "timelinePlacement": "cross-timeline",
+      "narrativeRole": "character-and-world",
+      "comment": "v22: Los Mariachis Sinclair and performed confidence",
+      "legacySourceRefs": [
+        {
+          "title": "Los Mariachis Jefe Sinclair/Identity Story",
+          "url": "https://limbuscompany.wiki.gg/wiki/Los_Mariachis_Jefe_Sinclair/Identity_Story",
+          "legacyRevisionId": 82126,
+          "checkedAt": "2026-06-04T08:22:00Z"
+        }
+      ],
+      "review": {
+        "status": "unreviewed",
+        "currentSourceRefs": [],
+        "atomicFacts": [],
+        "narrativeBoundary": "",
+        "claimIds": [],
+        "copyrightMode": "paraphrase_only",
+        "reviewer": null,
+        "checkedAt": null
+      }
+    },
+    {
+      "id": "p4_article_identity_manager_lamanchaland_don",
+      "timelinePlacement": "cross-timeline",
+      "narrativeRole": "character-and-world",
+      "comment": "v17：La Manchaland 管理者与被遗弃家族",
+      "legacySourceRefs": [
+        {
+          "title": "The Manager of La Manchaland Don Quixote/Identity Story",
+          "url": "https://limbuscompany.wiki.gg/wiki/The_Manager_of_La_Manchaland_Don_Quixote/Identity_Story",
+          "legacyRevisionId": 141044,
+          "checkedAt": "2026-06-04T08:22:00Z"
+        }
+      ],
+      "review": {
+        "status": "unreviewed",
+        "currentSourceRefs": [],
+        "atomicFacts": [],
+        "narrativeBoundary": "",
+        "claimIds": [],
+        "copyrightMode": "paraphrase_only",
+        "reviewer": null,
+        "checkedAt": null
+      }
+    },
+    {
+      "id": "p4_article_identity_middle_apprentice_ishmael",
+      "timelinePlacement": "cross-timeline",
+      "narrativeRole": "character-and-world",
+      "comment": "v17: Middle apprentice Ishmael and inherited retaliation",
+      "legacySourceRefs": [
+        {
+          "title": "The House of Spiders: The Middle Apprentice Ishmael/Identity Story",
+          "url": "https://limbuscompany.wiki.gg/wiki/The_House_of_Spiders:_The_Middle_Apprentice_Ishmael/Identity_Story",
+          "legacyRevisionId": 154785,
+          "checkedAt": "2026-06-04T08:22:00Z"
+        }
+      ],
+      "review": {
+        "status": "unreviewed",
+        "currentSourceRefs": [],
+        "atomicFacts": [],
+        "narrativeBoundary": "",
+        "claimIds": [],
+        "copyrightMode": "paraphrase_only",
+        "reviewer": null,
+        "checkedAt": null
+      }
+    },
+    {
+      "id": "p4_article_identity_middle_big_brother_heathcliff",
+      "timelinePlacement": "cross-timeline",
+      "narrativeRole": "character-and-world",
+      "comment": "v21: Middle Big Brother Heathcliff and family retaliation",
+      "legacySourceRefs": [
+        {
+          "title": "The Middle Big Brother Heathcliff/Identity Story",
+          "url": "https://limbuscompany.wiki.gg/wiki/The_Middle_Big_Brother_Heathcliff/Identity_Story",
+          "legacyRevisionId": 167602,
+          "checkedAt": "2026-06-04T08:22:00Z"
+        }
+      ],
+      "review": {
+        "status": "unreviewed",
+        "currentSourceRefs": [],
+        "atomicFacts": [],
+        "narrativeBoundary": "",
+        "claimIds": [],
+        "copyrightMode": "paraphrase_only",
+        "reviewer": null,
+        "checkedAt": null
+      }
+    },
+    {
+      "id": "p4_article_identity_middle_little_brother_meursault",
+      "timelinePlacement": "cross-timeline",
+      "narrativeRole": "character-and-world",
+      "comment": "v22: Middle Meursault and rule-bound sibling violence",
+      "legacySourceRefs": [
+        {
+          "title": "The Middle Little Brother Meursault/Identity Story",
+          "url": "https://limbuscompany.wiki.gg/wiki/The_Middle_Little_Brother_Meursault/Identity_Story",
+          "legacyRevisionId": 161611,
+          "checkedAt": "2026-06-04T08:22:00Z"
+        }
+      ],
+      "review": {
+        "status": "unreviewed",
+        "currentSourceRefs": [],
+        "atomicFacts": [],
+        "narrativeBoundary": "",
+        "claimIds": [],
+        "copyrightMode": "paraphrase_only",
+        "reviewer": null,
+        "checkedAt": null
+      }
+    },
+    {
+      "id": "p4_article_identity_middle_little_brother_sinclair",
+      "timelinePlacement": "cross-timeline",
+      "narrativeRole": "character-and-world",
+      "comment": "v21: Middle Sinclair and belonging before violence",
+      "legacySourceRefs": [
+        {
+          "title": "The Middle Little Brother Sinclair/Identity Story",
+          "url": "https://limbuscompany.wiki.gg/wiki/The_Middle_Little_Brother_Sinclair/Identity_Story",
+          "legacyRevisionId": 161613,
+          "checkedAt": "2026-06-04T08:22:00Z"
+        }
+      ],
+      "review": {
+        "status": "unreviewed",
+        "currentSourceRefs": [],
+        "atomicFacts": [],
+        "narrativeBoundary": "",
+        "claimIds": [],
+        "copyrightMode": "paraphrase_only",
+        "reviewer": null,
+        "checkedAt": null
+      }
+    },
+    {
+      "id": "p4_article_identity_middle_little_sister_don",
+      "timelinePlacement": "cross-timeline",
+      "narrativeRole": "character-and-world",
+      "comment": "v21: Middle Don Quixote and sibling-coded justice",
+      "legacySourceRefs": [
+        {
+          "title": "The Middle Little Sister Don Quixote/Identity Story",
+          "url": "https://limbuscompany.wiki.gg/wiki/The_Middle_Little_Sister_Don_Quixote/Identity_Story",
+          "legacyRevisionId": 104836,
+          "checkedAt": "2026-06-04T08:22:00Z"
+        }
+      ],
+      "review": {
+        "status": "unreviewed",
+        "currentSourceRefs": [],
+        "atomicFacts": [],
+        "narrativeBoundary": "",
+        "claimIds": [],
+        "copyrightMode": "paraphrase_only",
+        "reviewer": null,
+        "checkedAt": null
+      }
+    },
+    {
+      "id": "p4_article_identity_molar_boatworks_ishmael",
+      "timelinePlacement": "cross-timeline",
+      "narrativeRole": "character-and-world",
+      "comment": "v22: Molar Boatworks Ishmael and hard afloat",
+      "legacySourceRefs": [
+        {
+          "title": "Molar Boatworks Fixer Ishmael/Identity Story",
+          "url": "https://limbuscompany.wiki.gg/wiki/Molar_Boatworks_Fixer_Ishmael/Identity_Story",
+          "legacyRevisionId": 82125,
+          "checkedAt": "2026-06-04T08:22:00Z"
+        }
+      ],
+      "review": {
+        "status": "unreviewed",
+        "currentSourceRefs": [],
+        "atomicFacts": [],
+        "narrativeBoundary": "",
+        "claimIds": [],
+        "copyrightMode": "paraphrase_only",
+        "reviewer": null,
+        "checkedAt": null
+      }
+    },
+    {
+      "id": "p4_article_identity_molar_boatworks_sinclair",
+      "timelinePlacement": "cross-timeline",
+      "narrativeRole": "character-and-world",
+      "comment": "v22: Molar Boatworks Sinclair and anxious repair",
+      "legacySourceRefs": [
+        {
+          "title": "Molar Boatworks Fixer Sinclair/Identity Story",
+          "url": "https://limbuscompany.wiki.gg/wiki/Molar_Boatworks_Fixer_Sinclair/Identity_Story",
+          "legacyRevisionId": 82124,
+          "checkedAt": "2026-06-04T08:22:00Z"
+        }
+      ],
+      "review": {
+        "status": "unreviewed",
+        "currentSourceRefs": [],
+        "atomicFacts": [],
+        "narrativeBoundary": "",
+        "claimIds": [],
+        "copyrightMode": "paraphrase_only",
+        "reviewer": null,
+        "checkedAt": null
+      }
+    },
+    {
+      "id": "p4_article_identity_molar_outis",
+      "timelinePlacement": "cross-timeline",
+      "narrativeRole": "character-and-world",
+      "comment": "v22: Molar Outis and pragmatic office command",
+      "legacySourceRefs": [
+        {
+          "title": "Molar Office Fixer Outis/Identity Story",
+          "url": "https://limbuscompany.wiki.gg/wiki/Molar_Office_Fixer_Outis/Identity_Story",
+          "legacyRevisionId": 82123,
+          "checkedAt": "2026-06-04T08:22:00Z"
+        }
+      ],
+      "review": {
+        "status": "unreviewed",
+        "currentSourceRefs": [],
+        "atomicFacts": [],
+        "narrativeBoundary": "",
+        "claimIds": [],
+        "copyrightMode": "paraphrase_only",
+        "reviewer": null,
+        "checkedAt": null
+      }
+    },
+    {
+      "id": "p4_article_identity_molar_yisang",
+      "timelinePlacement": "cross-timeline",
+      "narrativeRole": "character-and-world",
+      "comment": "v22: Molar Yi Sang and shabby precision",
+      "legacySourceRefs": [
+        {
+          "title": "Molar Office Fixer Yi Sang/Identity Story",
+          "url": "https://limbuscompany.wiki.gg/wiki/Molar_Office_Fixer_Yi_Sang/Identity_Story",
+          "legacyRevisionId": 82122,
+          "checkedAt": "2026-06-04T08:22:00Z"
+        }
+      ],
+      "review": {
+        "status": "unreviewed",
+        "currentSourceRefs": [],
+        "atomicFacts": [],
+        "narrativeBoundary": "",
+        "claimIds": [],
+        "copyrightMode": "paraphrase_only",
+        "reviewer": null,
+        "checkedAt": null
+      }
+    },
+    {
+      "id": "p4_article_identity_multicrack_faust",
+      "timelinePlacement": "cross-timeline",
+      "narrativeRole": "character-and-world",
+      "comment": "v21: MultiCrack Faust and technical triage",
+      "legacySourceRefs": [
+        {
+          "title": "MultiCrack Office Rep Faust/Identity Story",
+          "url": "https://limbuscompany.wiki.gg/wiki/MultiCrack_Office_Rep_Faust/Identity_Story",
+          "legacyRevisionId": 82120,
+          "checkedAt": "2026-06-04T08:22:00Z"
+        }
+      ],
+      "review": {
+        "status": "unreviewed",
+        "currentSourceRefs": [],
+        "atomicFacts": [],
+        "narrativeBoundary": "",
+        "claimIds": [],
+        "copyrightMode": "paraphrase_only",
+        "reviewer": null,
+        "checkedAt": null
+      }
+    },
+    {
+      "id": "p4_article_identity_multicrack_heathcliff",
+      "timelinePlacement": "cross-timeline",
+      "narrativeRole": "character-and-world",
+      "comment": "v21: MultiCrack Heathcliff and volatile repair work",
+      "legacySourceRefs": [
+        {
+          "title": "MultiCrack Office Fixer Heathcliff/Identity Story",
+          "url": "https://limbuscompany.wiki.gg/wiki/MultiCrack_Office_Fixer_Heathcliff/Identity_Story",
+          "legacyRevisionId": 82121,
+          "checkedAt": "2026-06-04T08:22:00Z"
+        }
+      ],
+      "review": {
+        "status": "unreviewed",
+        "currentSourceRefs": [],
+        "atomicFacts": [],
+        "narrativeBoundary": "",
+        "claimIds": [],
+        "copyrightMode": "paraphrase_only",
+        "reviewer": null,
+        "checkedAt": null
+      }
+    },
+    {
+      "id": "p4_article_identity_ncorp_contempt_awe_ryoshu",
+      "timelinePlacement": "cross-timeline",
+      "narrativeRole": "character-and-world",
+      "comment": "v17: Contempt and Awe Ryoshu as judgment theatre",
+      "legacySourceRefs": [
+        {
+          "title": "N Corp. E.G.O::Contempt, Awe Ryōshū/Identity Story",
+          "url": "https://limbuscompany.wiki.gg/wiki/N_Corp._E.G.O::Contempt,_Awe_Ry%C5%8Dsh%C5%AB/Identity_Story",
+          "legacyRevisionId": 146580,
+          "checkedAt": "2026-06-04T08:22:00Z"
+        }
+      ],
+      "review": {
+        "status": "unreviewed",
+        "currentSourceRefs": [],
+        "atomicFacts": [],
+        "narrativeBoundary": "",
+        "claimIds": [],
+        "copyrightMode": "paraphrase_only",
+        "reviewer": null,
+        "checkedAt": null
+      }
+    },
+    {
+      "id": "p4_article_identity_ncorp_fell_bullet_yisang",
+      "timelinePlacement": "cross-timeline",
+      "narrativeRole": "character-and-world",
+      "comment": "v17：Fell Bullet Yi Sang 的准星与自我裁决",
+      "legacySourceRefs": [
+        {
+          "title": "N Corp. E.G.O::Fell Bullet Yi Sang/Identity Story",
+          "url": "https://limbuscompany.wiki.gg/wiki/N_Corp._E.G.O::Fell_Bullet_Yi_Sang/Identity_Story",
+          "legacyRevisionId": 138140,
+          "checkedAt": "2026-06-04T08:22:00Z"
+        }
+      ],
+      "review": {
+        "status": "unreviewed",
+        "currentSourceRefs": [],
+        "atomicFacts": [],
+        "narrativeBoundary": "",
+        "claimIds": [],
+        "copyrightMode": "paraphrase_only",
+        "reviewer": null,
+        "checkedAt": null
+      }
+    },
+    {
+      "id": "p4_article_identity_ncorp_grosshammer_meursault",
+      "timelinePlacement": "cross-timeline",
+      "narrativeRole": "character-and-world",
+      "comment": "v20: N Corp Grosshammer Meursault and impersonal verdict",
+      "legacySourceRefs": [
+        {
+          "title": "N Corp. Großhammer Meursault/Identity Story",
+          "url": "https://limbuscompany.wiki.gg/wiki/N_Corp._Gro%C3%9Fhammer_Meursault/Identity_Story",
+          "legacyRevisionId": 129333,
+          "checkedAt": "2026-06-04T08:22:00Z"
+        }
+      ],
+      "review": {
+        "status": "unreviewed",
+        "currentSourceRefs": [],
+        "atomicFacts": [],
+        "narrativeBoundary": "",
+        "claimIds": [],
+        "copyrightMode": "paraphrase_only",
+        "reviewer": null,
+        "checkedAt": null
+      }
+    },
+    {
+      "id": "p4_article_identity_ncorp_kleinhammer_heathcliff",
+      "timelinePlacement": "cross-timeline",
+      "narrativeRole": "character-and-world",
+      "comment": "v20: N Corp Kleinhammer Heathcliff and recruited rage",
+      "legacySourceRefs": [
+        {
+          "title": "N Corp. Kleinhammer Heathcliff/Identity Story",
+          "url": "https://limbuscompany.wiki.gg/wiki/N_Corp._Kleinhammer_Heathcliff/Identity_Story",
+          "legacyRevisionId": 129335,
+          "checkedAt": "2026-06-04T08:22:00Z"
+        }
+      ],
+      "review": {
+        "status": "unreviewed",
+        "currentSourceRefs": [],
+        "atomicFacts": [],
+        "narrativeBoundary": "",
+        "claimIds": [],
+        "copyrightMode": "paraphrase_only",
+        "reviewer": null,
+        "checkedAt": null
+      }
+    },
+    {
+      "id": "p4_article_identity_ncorp_mittelhammer_don",
+      "timelinePlacement": "cross-timeline",
+      "narrativeRole": "character-and-world",
+      "comment": "v20: N Corp Mittelhammer Don Quixote and inverted heroism",
+      "legacySourceRefs": [
+        {
+          "title": "N Corp. Mittelhammer Don Quixote/Identity Story",
+          "url": "https://limbuscompany.wiki.gg/wiki/N_Corp._Mittelhammer_Don_Quixote/Identity_Story",
+          "legacyRevisionId": 129336,
+          "checkedAt": "2026-06-04T08:22:00Z"
+        }
+      ],
+      "review": {
+        "status": "unreviewed",
+        "currentSourceRefs": [],
+        "atomicFacts": [],
+        "narrativeBoundary": "",
+        "claimIds": [],
+        "copyrightMode": "paraphrase_only",
+        "reviewer": null,
+        "checkedAt": null
+      }
+    },
+    {
+      "id": "p4_article_identity_ncorp_mittelhammer_rodion",
+      "timelinePlacement": "cross-timeline",
+      "narrativeRole": "character-and-world",
+      "comment": "v20: N Corp Mittelhammer Rodion and social condemnation",
+      "legacySourceRefs": [
+        {
+          "title": "N Corp. Mittelhammer Rodion/Identity Story",
+          "url": "https://limbuscompany.wiki.gg/wiki/N_Corp._Mittelhammer_Rodion/Identity_Story",
+          "legacyRevisionId": 129334,
+          "checkedAt": "2026-06-04T08:22:00Z"
+        }
+      ],
+      "review": {
+        "status": "unreviewed",
+        "currentSourceRefs": [],
+        "atomicFacts": [],
+        "narrativeBoundary": "",
+        "claimIds": [],
+        "copyrightMode": "paraphrase_only",
+        "reviewer": null,
+        "checkedAt": null
+      }
+    },
+    {
+      "id": "p4_article_identity_night_awls_capitano_gregor",
+      "timelinePlacement": "cross-timeline",
+      "narrativeRole": "character-and-world",
+      "comment": "v21: Night Awls Gregor and veteran command",
+      "legacySourceRefs": [
+        {
+          "title": "Night Awls Capitano Gregor/Identity Story",
+          "url": "https://limbuscompany.wiki.gg/wiki/Night_Awls_Capitano_Gregor/Identity_Story",
+          "legacyRevisionId": 143723,
+          "checkedAt": "2026-06-04T08:22:00Z"
+        }
+      ],
+      "review": {
+        "status": "unreviewed",
+        "currentSourceRefs": [],
+        "atomicFacts": [],
+        "narrativeBoundary": "",
+        "claimIds": [],
+        "copyrightMode": "paraphrase_only",
+        "reviewer": null,
+        "checkedAt": null
+      }
+    },
+    {
+      "id": "p4_article_identity_one_who_grips_faust",
+      "timelinePlacement": "cross-timeline",
+      "narrativeRole": "character-and-world",
+      "comment": "v20: N Corp Faust and sacred coercion",
+      "legacySourceRefs": [
+        {
+          "title": "The One Who Grips Faust/Identity Story",
+          "url": "https://limbuscompany.wiki.gg/wiki/The_One_Who_Grips_Faust/Identity_Story",
+          "legacyRevisionId": 129331,
+          "checkedAt": "2026-06-04T08:22:00Z"
+        }
+      ],
+      "review": {
+        "status": "unreviewed",
+        "currentSourceRefs": [],
+        "atomicFacts": [],
+        "narrativeBoundary": "",
+        "claimIds": [],
+        "copyrightMode": "paraphrase_only",
+        "reviewer": null,
+        "checkedAt": null
+      }
+    },
+    {
+      "id": "p4_article_identity_one_who_shall_grip_sinclair",
+      "timelinePlacement": "cross-timeline",
+      "narrativeRole": "character-and-world",
+      "comment": "v20: N Corp Sinclair and chosen violence",
+      "legacySourceRefs": [
+        {
+          "title": "The One Who Shall Grip Sinclair/Identity Story",
+          "url": "https://limbuscompany.wiki.gg/wiki/The_One_Who_Shall_Grip_Sinclair/Identity_Story",
+          "legacyRevisionId": 129332,
+          "checkedAt": "2026-06-04T08:22:00Z"
+        }
+      ],
+      "review": {
+        "status": "unreviewed",
+        "currentSourceRefs": [],
+        "atomicFacts": [],
+        "narrativeBoundary": "",
+        "claimIds": [],
+        "copyrightMode": "paraphrase_only",
+        "reviewer": null,
+        "checkedAt": null
+      }
+    },
+    {
+      "id": "p4_article_identity_oufi_heathcliff",
+      "timelinePlacement": "cross-timeline",
+      "narrativeRole": "character-and-world",
+      "comment": "v21: Oufi Heathcliff and contract-bound anger",
+      "legacySourceRefs": [
+        {
+          "title": "Öufi Assoc. South Section 3 Heathcliff/Identity Story",
+          "url": "https://limbuscompany.wiki.gg/wiki/%C3%96ufi_Assoc._South_Section_3_Heathcliff/Identity_Story",
+          "legacyRevisionId": 82067,
+          "checkedAt": "2026-06-04T08:22:00Z"
+        }
+      ],
+      "review": {
+        "status": "unreviewed",
+        "currentSourceRefs": [],
+        "atomicFacts": [],
+        "narrativeBoundary": "",
+        "claimIds": [],
+        "copyrightMode": "paraphrase_only",
+        "reviewer": null,
+        "checkedAt": null
+      }
+    },
+    {
+      "id": "p4_article_identity_pequod_captain_ishmael",
+      "timelinePlacement": "cross-timeline",
+      "narrativeRole": "character-and-world",
+      "comment": "v20: Pequod Captain Ishmael and obsession as command",
+      "legacySourceRefs": [
+        {
+          "title": "The Pequod Captain Ishmael/Identity Story",
+          "url": "https://limbuscompany.wiki.gg/wiki/The_Pequod_Captain_Ishmael/Identity_Story",
+          "legacyRevisionId": 82092,
+          "checkedAt": "2026-06-04T08:22:00Z"
+        }
+      ],
+      "review": {
+        "status": "unreviewed",
+        "currentSourceRefs": [],
+        "atomicFacts": [],
+        "narrativeBoundary": "",
+        "claimIds": [],
+        "copyrightMode": "paraphrase_only",
+        "reviewer": null,
+        "checkedAt": null
+      }
+    },
+    {
+      "id": "p4_article_identity_pequod_first_mate_yisang",
+      "timelinePlacement": "cross-timeline",
+      "narrativeRole": "character-and-world",
+      "comment": "v20: Pequod Yi Sang and obedient navigation",
+      "legacySourceRefs": [
+        {
+          "title": "The Pequod First Mate Yi Sang/Identity Story",
+          "url": "https://limbuscompany.wiki.gg/wiki/The_Pequod_First_Mate_Yi_Sang/Identity_Story",
+          "legacyRevisionId": 82091,
+          "checkedAt": "2026-06-04T08:22:00Z"
+        }
+      ],
+      "review": {
+        "status": "unreviewed",
+        "currentSourceRefs": [],
+        "atomicFacts": [],
+        "narrativeBoundary": "",
+        "claimIds": [],
+        "copyrightMode": "paraphrase_only",
+        "reviewer": null,
+        "checkedAt": null
+      }
+    },
+    {
+      "id": "p4_article_identity_pequod_harpooneer_heathcliff",
+      "timelinePlacement": "cross-timeline",
+      "narrativeRole": "character-and-world",
+      "comment": "v20: Pequod Heathcliff and thrown resentment",
+      "legacySourceRefs": [
+        {
+          "title": "The Pequod Harpooneer Heathcliff/Identity Story",
+          "url": "https://limbuscompany.wiki.gg/wiki/The_Pequod_Harpooneer_Heathcliff/Identity_Story",
+          "legacyRevisionId": 82090,
+          "checkedAt": "2026-06-04T08:22:00Z"
+        }
+      ],
+      "review": {
+        "status": "unreviewed",
+        "currentSourceRefs": [],
+        "atomicFacts": [],
+        "narrativeBoundary": "",
+        "claimIds": [],
+        "copyrightMode": "paraphrase_only",
+        "reviewer": null,
+        "checkedAt": null
+      }
+    },
+    {
+      "id": "p4_article_identity_pinky_apprentice_sinclair",
+      "timelinePlacement": "cross-timeline",
+      "narrativeRole": "character-and-world",
+      "comment": "v17: Pinky apprentice Sinclair and fragile initiation",
+      "legacySourceRefs": [
+        {
+          "title": "The House of Spiders: The Pinky Apprentice Sinclair/Identity Story",
+          "url": "https://limbuscompany.wiki.gg/wiki/The_House_of_Spiders:_The_Pinky_Apprentice_Sinclair/Identity_Story",
+          "legacyRevisionId": 156703,
+          "checkedAt": "2026-06-04T08:22:00Z"
+        }
+      ],
+      "review": {
+        "status": "unreviewed",
+        "currentSourceRefs": [],
+        "atomicFacts": [],
+        "narrativeBoundary": "",
+        "claimIds": [],
+        "copyrightMode": "paraphrase_only",
+        "reviewer": null,
+        "checkedAt": null
+      }
+    },
+    {
+      "id": "p4_article_identity_rb_chef_ryoshu",
+      "timelinePlacement": "cross-timeline",
+      "narrativeRole": "character-and-world",
+      "comment": "v22: R.B. Ryoshu and cuisine as violence",
+      "legacySourceRefs": [
+        {
+          "title": "R.B. Chef de Cuisine Ryōshū/Identity Story",
+          "url": "https://limbuscompany.wiki.gg/wiki/R.B._Chef_de_Cuisine_Ry%C5%8Dsh%C5%AB/Identity_Story",
+          "legacyRevisionId": 82112,
+          "checkedAt": "2026-06-04T08:22:00Z"
+        }
+      ],
+      "review": {
+        "status": "unreviewed",
+        "currentSourceRefs": [],
+        "atomicFacts": [],
+        "narrativeBoundary": "",
+        "claimIds": [],
+        "copyrightMode": "paraphrase_only",
+        "reviewer": null,
+        "checkedAt": null
+      }
+    },
+    {
+      "id": "p4_article_identity_rb_sous_chef_gregor",
+      "timelinePlacement": "cross-timeline",
+      "narrativeRole": "character-and-world",
+      "comment": "v22: R.B. Gregor and kitchen survival",
+      "legacySourceRefs": [
+        {
+          "title": "R.B. Sous-chef Gregor/Identity Story",
+          "url": "https://limbuscompany.wiki.gg/wiki/R.B._Sous-chef_Gregor/Identity_Story",
+          "legacyRevisionId": 82111,
+          "checkedAt": "2026-06-04T08:22:00Z"
+        }
+      ],
+      "review": {
+        "status": "unreviewed",
+        "currentSourceRefs": [],
+        "atomicFacts": [],
+        "narrativeBoundary": "",
+        "claimIds": [],
+        "copyrightMode": "paraphrase_only",
+        "reviewer": null,
+        "checkedAt": null
+      }
+    },
+    {
+      "id": "p4_article_identity_rcorp_rabbit_heathcliff",
+      "timelinePlacement": "cross-timeline",
+      "narrativeRole": "character-and-world",
+      "comment": "v18: R Corp Rabbit Heathcliff and sanctioned volatility",
+      "legacySourceRefs": [
+        {
+          "title": "R Corp. 4th Pack Rabbit Heathcliff/Identity Story",
+          "url": "https://limbuscompany.wiki.gg/wiki/R_Corp._4th_Pack_Rabbit_Heathcliff/Identity_Story",
+          "legacyRevisionId": 143780,
+          "checkedAt": "2026-06-04T08:22:00Z"
+        }
+      ],
+      "review": {
+        "status": "unreviewed",
+        "currentSourceRefs": [],
+        "atomicFacts": [],
+        "narrativeBoundary": "",
+        "claimIds": [],
+        "copyrightMode": "paraphrase_only",
+        "reviewer": null,
+        "checkedAt": null
+      }
+    },
+    {
+      "id": "p4_article_identity_rcorp_reindeer_honglu",
+      "timelinePlacement": "cross-timeline",
+      "narrativeRole": "character-and-world",
+      "comment": "v17: R Corp reindeer Hong Lu and elegant overcharge",
+      "legacySourceRefs": [
+        {
+          "title": "R Corp. 4th Pack Reindeer Hong Lu/Identity Story",
+          "url": "https://limbuscompany.wiki.gg/wiki/R_Corp._4th_Pack_Reindeer_Hong_Lu/Identity_Story",
+          "legacyRevisionId": 103928,
+          "checkedAt": "2026-06-04T08:22:00Z"
+        }
+      ],
+      "review": {
+        "status": "unreviewed",
+        "currentSourceRefs": [],
+        "atomicFacts": [],
+        "narrativeBoundary": "",
+        "claimIds": [],
+        "copyrightMode": "paraphrase_only",
+        "reviewer": null,
+        "checkedAt": null
+      }
+    },
+    {
+      "id": "p4_article_identity_rcorp_reindeer_ishmael",
+      "timelinePlacement": "cross-timeline",
+      "narrativeRole": "character-and-world",
+      "comment": "v18: R Corp Reindeer Ishmael and storm-trained nerves",
+      "legacySourceRefs": [
+        {
+          "title": "R Corp. 4th Pack Reindeer Ishmael/Identity Story",
+          "url": "https://limbuscompany.wiki.gg/wiki/R_Corp._4th_Pack_Reindeer_Ishmael/Identity_Story",
+          "legacyRevisionId": 82114,
+          "checkedAt": "2026-06-04T08:22:00Z"
+        }
+      ],
+      "review": {
+        "status": "unreviewed",
+        "currentSourceRefs": [],
+        "atomicFacts": [],
+        "narrativeBoundary": "",
+        "claimIds": [],
+        "copyrightMode": "paraphrase_only",
+        "reviewer": null,
+        "checkedAt": null
+      }
+    },
+    {
+      "id": "p4_article_identity_rcorp_reindeer_rodion",
+      "timelinePlacement": "cross-timeline",
+      "narrativeRole": "character-and-world",
+      "comment": "v17: R Corp reindeer Rodion and weaponized nerves",
+      "legacySourceRefs": [
+        {
+          "title": "R Corp. 4th Pack Reindeer Rodion/Identity Story",
+          "url": "https://limbuscompany.wiki.gg/wiki/R_Corp._4th_Pack_Reindeer_Rodion/Identity_Story",
+          "legacyRevisionId": 147371,
+          "checkedAt": "2026-06-04T08:22:00Z"
+        }
+      ],
+      "review": {
+        "status": "unreviewed",
+        "currentSourceRefs": [],
+        "atomicFacts": [],
+        "narrativeBoundary": "",
+        "claimIds": [],
+        "copyrightMode": "paraphrase_only",
+        "reviewer": null,
+        "checkedAt": null
+      }
+    },
+    {
+      "id": "p4_article_identity_rcorp_rhino_meursault",
+      "timelinePlacement": "cross-timeline",
+      "narrativeRole": "character-and-world",
+      "comment": "v18: R Corp Rhino Meursault and impact discipline",
+      "legacySourceRefs": [
+        {
+          "title": "R Corp. 4th Pack Rhino Meursault/Identity Story",
+          "url": "https://limbuscompany.wiki.gg/wiki/R_Corp._4th_Pack_Rhino_Meursault/Identity_Story",
+          "legacyRevisionId": 82113,
+          "checkedAt": "2026-06-04T08:22:00Z"
+        }
+      ],
+      "review": {
+        "status": "unreviewed",
+        "currentSourceRefs": [],
+        "atomicFacts": [],
+        "narrativeBoundary": "",
+        "claimIds": [],
+        "copyrightMode": "paraphrase_only",
+        "reviewer": null,
+        "checkedAt": null
+      }
+    },
+    {
+      "id": "p4_article_identity_ring_apprentice_faust",
+      "timelinePlacement": "cross-timeline",
+      "narrativeRole": "character-and-world",
+      "comment": "v17: Ring apprentice Faust and measured aesthetic obedience",
+      "legacySourceRefs": [
+        {
+          "title": "The House of Spiders: The Ring Apprentice Faust/Identity Story",
+          "url": "https://limbuscompany.wiki.gg/wiki/The_House_of_Spiders:_The_Ring_Apprentice_Faust/Identity_Story",
+          "legacyRevisionId": 163767,
+          "checkedAt": "2026-06-04T08:22:00Z"
+        }
+      ],
+      "review": {
+        "status": "unreviewed",
+        "currentSourceRefs": [],
+        "atomicFacts": [],
+        "narrativeBoundary": "",
+        "claimIds": [],
+        "copyrightMode": "paraphrase_only",
+        "reviewer": null,
+        "checkedAt": null
+      }
+    },
+    {
+      "id": "p4_article_identity_ring_fauvist_docent_rodion",
+      "timelinePlacement": "cross-timeline",
+      "narrativeRole": "character-and-world",
+      "comment": "v17：Ring 野兽派讲师与课堂压迫",
+      "legacySourceRefs": [
+        {
+          "title": "The Ring Fauvist Docent Rodion/Identity Story",
+          "url": "https://limbuscompany.wiki.gg/wiki/The_Ring_Fauvist_Docent_Rodion/Identity_Story",
+          "legacyRevisionId": 165632,
+          "checkedAt": "2026-06-04T08:22:00Z"
+        }
+      ],
+      "review": {
+        "status": "unreviewed",
+        "currentSourceRefs": [],
+        "atomicFacts": [],
+        "narrativeBoundary": "",
+        "claimIds": [],
+        "copyrightMode": "paraphrase_only",
+        "reviewer": null,
+        "checkedAt": null
+      }
+    },
+    {
+      "id": "p4_article_identity_ring_fauvist_student_meursault",
+      "timelinePlacement": "cross-timeline",
+      "narrativeRole": "character-and-world",
+      "comment": "v17：Meursault 的野兽派服从",
+      "legacySourceRefs": [
+        {
+          "title": "The Ring Fauvist Student Meursault/Identity Story",
+          "url": "https://limbuscompany.wiki.gg/wiki/The_Ring_Fauvist_Student_Meursault/Identity_Story",
+          "legacyRevisionId": 165631,
+          "checkedAt": "2026-06-04T08:22:00Z"
+        }
+      ],
+      "review": {
+        "status": "unreviewed",
+        "currentSourceRefs": [],
+        "atomicFacts": [],
+        "narrativeBoundary": "",
+        "claimIds": [],
+        "copyrightMode": "paraphrase_only",
+        "reviewer": null,
+        "checkedAt": null
+      }
+    },
+    {
+      "id": "p4_article_identity_ring_nursefather_hong_lu",
+      "timelinePlacement": "cross-timeline",
+      "narrativeRole": "character-and-world",
+      "comment": "v17：Ring 护父 Hong Lu 与照料暴力",
+      "legacySourceRefs": [
+        {
+          "title": "The House of Spiders: The Ring Nursefather Hong Lu/Identity Story",
+          "url": "https://limbuscompany.wiki.gg/wiki/The_House_of_Spiders:_The_Ring_Nursefather_Hong_Lu/Identity_Story",
+          "legacyRevisionId": 163783,
+          "checkedAt": "2026-06-04T08:22:00Z"
+        }
+      ],
+      "review": {
+        "status": "unreviewed",
+        "currentSourceRefs": [],
+        "atomicFacts": [],
+        "narrativeBoundary": "",
+        "claimIds": [],
+        "copyrightMode": "paraphrase_only",
+        "reviewer": null,
+        "checkedAt": null
+      }
+    },
+    {
+      "id": "p4_article_identity_ring_pointillist_student_outis",
+      "timelinePlacement": "cross-timeline",
+      "narrativeRole": "character-and-world",
+      "comment": "v17：Outis 的点描秩序与民众恐惧",
+      "legacySourceRefs": [
+        {
+          "title": "The Ring Pointillist Student Outis/Identity Story",
+          "url": "https://limbuscompany.wiki.gg/wiki/The_Ring_Pointillist_Student_Outis/Identity_Story",
+          "legacyRevisionId": 165623,
+          "checkedAt": "2026-06-04T08:22:00Z"
+        }
+      ],
+      "review": {
+        "status": "unreviewed",
+        "currentSourceRefs": [],
+        "atomicFacts": [],
+        "narrativeBoundary": "",
+        "claimIds": [],
+        "copyrightMode": "paraphrase_only",
+        "reviewer": null,
+        "checkedAt": null
+      }
+    },
+    {
+      "id": "p4_article_identity_ring_pointillist_student_yisang",
+      "timelinePlacement": "cross-timeline",
+      "narrativeRole": "character-and-world",
+      "comment": "v17：Yi Sang 的点描式自我分解",
+      "legacySourceRefs": [
+        {
+          "title": "The Ring Pointillist Student Yi Sang/Identity Story",
+          "url": "https://limbuscompany.wiki.gg/wiki/The_Ring_Pointillist_Student_Yi_Sang/Identity_Story",
+          "legacyRevisionId": 165621,
+          "checkedAt": "2026-06-04T08:22:00Z"
+        }
+      ],
+      "review": {
+        "status": "unreviewed",
+        "currentSourceRefs": [],
+        "atomicFacts": [],
+        "narrativeBoundary": "",
+        "claimIds": [],
+        "copyrightMode": "paraphrase_only",
+        "reviewer": null,
+        "checkedAt": null
+      }
+    },
+    {
+      "id": "p4_article_identity_rosespanner_gregor",
+      "timelinePlacement": "cross-timeline",
+      "narrativeRole": "character-and-world",
+      "comment": "v22: Rosespanner Gregor and worn tool-hand",
+      "legacySourceRefs": [
+        {
+          "title": "Rosespanner Workshop Fixer Gregor/Identity Story",
+          "url": "https://limbuscompany.wiki.gg/wiki/Rosespanner_Workshop_Fixer_Gregor/Identity_Story",
+          "legacyRevisionId": 82110,
+          "checkedAt": "2026-06-04T08:22:00Z"
+        }
+      ],
+      "review": {
+        "status": "unreviewed",
+        "currentSourceRefs": [],
+        "atomicFacts": [],
+        "narrativeBoundary": "",
+        "claimIds": [],
+        "copyrightMode": "paraphrase_only",
+        "reviewer": null,
+        "checkedAt": null
+      }
+    },
+    {
+      "id": "p4_article_identity_rosespanner_meursault",
+      "timelinePlacement": "cross-timeline",
+      "narrativeRole": "character-and-world",
+      "comment": "v22: Rosespanner Meursault and mechanical force",
+      "legacySourceRefs": [
+        {
+          "title": "Rosespanner Workshop Fixer Meursault/Identity Story",
+          "url": "https://limbuscompany.wiki.gg/wiki/Rosespanner_Workshop_Fixer_Meursault/Identity_Story",
+          "legacyRevisionId": 100256,
+          "checkedAt": "2026-06-04T08:22:00Z"
+        }
+      ],
+      "review": {
+        "status": "unreviewed",
+        "currentSourceRefs": [],
+        "atomicFacts": [],
+        "narrativeBoundary": "",
+        "claimIds": [],
+        "copyrightMode": "paraphrase_only",
+        "reviewer": null,
+        "checkedAt": null
+      }
+    },
+    {
+      "id": "p4_article_identity_rosespanner_rep_rodion",
+      "timelinePlacement": "cross-timeline",
+      "narrativeRole": "character-and-world",
+      "comment": "v22: Rosespanner Rodion and labor charm",
+      "legacySourceRefs": [
+        {
+          "title": "Rosespanner Workshop Rep Rodion/Identity Story",
+          "url": "https://limbuscompany.wiki.gg/wiki/Rosespanner_Workshop_Rep_Rodion/Identity_Story",
+          "legacyRevisionId": 129407,
+          "checkedAt": "2026-06-04T08:22:00Z"
+        }
+      ],
+      "review": {
+        "status": "unreviewed",
+        "currentSourceRefs": [],
+        "atomicFacts": [],
+        "narrativeBoundary": "",
+        "claimIds": [],
+        "copyrightMode": "paraphrase_only",
+        "reviewer": null,
+        "checkedAt": null
+      }
+    },
+    {
+      "id": "p4_article_identity_seven_director_outis",
+      "timelinePlacement": "cross-timeline",
+      "narrativeRole": "character-and-world",
+      "comment": "v20: Seven Director Outis and disciplined inquiry",
+      "legacySourceRefs": [
+        {
+          "title": "Seven Assoc. South Section 6 Director Outis/Identity Story",
+          "url": "https://limbuscompany.wiki.gg/wiki/Seven_Assoc._South_Section_6_Director_Outis/Identity_Story",
+          "legacyRevisionId": 82105,
+          "checkedAt": "2026-06-04T08:22:00Z"
+        }
+      ],
+      "review": {
+        "status": "unreviewed",
+        "currentSourceRefs": [],
+        "atomicFacts": [],
+        "narrativeBoundary": "",
+        "claimIds": [],
+        "copyrightMode": "paraphrase_only",
+        "reviewer": null,
+        "checkedAt": null
+      }
+    },
+    {
+      "id": "p4_article_identity_seven_faust",
+      "timelinePlacement": "cross-timeline",
+      "narrativeRole": "character-and-world",
+      "comment": "v20: Seven Faust and investigative certainty",
+      "legacySourceRefs": [
+        {
+          "title": "Seven Assoc. South Section 4 Faust/Identity Story",
+          "url": "https://limbuscompany.wiki.gg/wiki/Seven_Assoc._South_Section_4_Faust/Identity_Story",
+          "legacyRevisionId": 82107,
+          "checkedAt": "2026-06-04T08:22:00Z"
+        }
+      ],
+      "review": {
+        "status": "unreviewed",
+        "currentSourceRefs": [],
+        "atomicFacts": [],
+        "narrativeBoundary": "",
+        "claimIds": [],
+        "copyrightMode": "paraphrase_only",
+        "reviewer": null,
+        "checkedAt": null
+      }
+    },
+    {
+      "id": "p4_article_identity_seven_heathcliff",
+      "timelinePlacement": "cross-timeline",
+      "narrativeRole": "character-and-world",
+      "comment": "v20: Seven Heathcliff and impatient detection",
+      "legacySourceRefs": [
+        {
+          "title": "Seven Assoc. South Section 4 Heathcliff/Identity Story",
+          "url": "https://limbuscompany.wiki.gg/wiki/Seven_Assoc._South_Section_4_Heathcliff/Identity_Story",
+          "legacyRevisionId": 82106,
+          "checkedAt": "2026-06-04T08:22:00Z"
+        }
+      ],
+      "review": {
+        "status": "unreviewed",
+        "currentSourceRefs": [],
+        "atomicFacts": [],
+        "narrativeBoundary": "",
+        "claimIds": [],
+        "copyrightMode": "paraphrase_only",
+        "reviewer": null,
+        "checkedAt": null
+      }
+    },
+    {
+      "id": "p4_article_identity_seven_ryoshu",
+      "timelinePlacement": "cross-timeline",
+      "narrativeRole": "character-and-world",
+      "comment": "v22: Seven Ryoshu and forensic composition",
+      "legacySourceRefs": [
+        {
+          "title": "Seven Assoc. South Section 6 Ryōshū/Identity Story",
+          "url": "https://limbuscompany.wiki.gg/wiki/Seven_Assoc._South_Section_6_Ry%C5%8Dsh%C5%AB/Identity_Story",
+          "legacyRevisionId": 82104,
+          "checkedAt": "2026-06-04T08:22:00Z"
+        }
+      ],
+      "review": {
+        "status": "unreviewed",
+        "currentSourceRefs": [],
+        "atomicFacts": [],
+        "narrativeBoundary": "",
+        "claimIds": [],
+        "copyrightMode": "paraphrase_only",
+        "reviewer": null,
+        "checkedAt": null
+      }
+    },
+    {
+      "id": "p4_article_identity_seven_yisang",
+      "timelinePlacement": "cross-timeline",
+      "narrativeRole": "character-and-world",
+      "comment": "v20: Seven Yi Sang and distant inference",
+      "legacySourceRefs": [
+        {
+          "title": "Seven Assoc. South Section 6 Yi Sang/Identity Story",
+          "url": "https://limbuscompany.wiki.gg/wiki/Seven_Assoc._South_Section_6_Yi_Sang/Identity_Story",
+          "legacyRevisionId": 82103,
+          "checkedAt": "2026-06-04T08:22:00Z"
+        }
+      ],
+      "review": {
+        "status": "unreviewed",
+        "currentSourceRefs": [],
+        "atomicFacts": [],
+        "narrativeBoundary": "",
+        "claimIds": [],
+        "copyrightMode": "paraphrase_only",
+        "reviewer": null,
+        "checkedAt": null
+      }
+    },
+    {
+      "id": "p4_article_identity_shi_east_faust",
+      "timelinePlacement": "cross-timeline",
+      "narrativeRole": "character-and-world",
+      "comment": "v21: Shi Faust and exhausted calculation",
+      "legacySourceRefs": [
+        {
+          "title": "Shi Assoc. East Section 3 Faust/Identity Story",
+          "url": "https://limbuscompany.wiki.gg/wiki/Shi_Assoc._East_Section_3_Faust/Identity_Story",
+          "legacyRevisionId": 147271,
+          "checkedAt": "2026-06-04T08:22:00Z"
+        }
+      ],
+      "review": {
+        "status": "unreviewed",
+        "currentSourceRefs": [],
+        "atomicFacts": [],
+        "narrativeBoundary": "",
+        "claimIds": [],
+        "copyrightMode": "paraphrase_only",
+        "reviewer": null,
+        "checkedAt": null
+      }
+    },
+    {
+      "id": "p4_article_identity_shi_heathcliff",
+      "timelinePlacement": "cross-timeline",
+      "narrativeRole": "character-and-world",
+      "comment": "v22: Shi Heathcliff and exhausted rage",
+      "legacySourceRefs": [
+        {
+          "title": "Shi Assoc. South Section 5 Heathcliff/Identity Story",
+          "url": "https://limbuscompany.wiki.gg/wiki/Shi_Assoc._South_Section_5_Heathcliff/Identity_Story",
+          "legacyRevisionId": 157570,
+          "checkedAt": "2026-06-04T08:22:00Z"
+        }
+      ],
+      "review": {
+        "status": "unreviewed",
+        "currentSourceRefs": [],
+        "atomicFacts": [],
+        "narrativeBoundary": "",
+        "claimIds": [],
+        "copyrightMode": "paraphrase_only",
+        "reviewer": null,
+        "checkedAt": null
+      }
+    },
+    {
+      "id": "p4_article_identity_shi_ishmael",
+      "timelinePlacement": "cross-timeline",
+      "narrativeRole": "character-and-world",
+      "comment": "v22: Shi Ishmael and depleted strike",
+      "legacySourceRefs": [
+        {
+          "title": "Shi Assoc. South Section 5 Ishmael/Identity Story",
+          "url": "https://limbuscompany.wiki.gg/wiki/Shi_Assoc._South_Section_5_Ishmael/Identity_Story",
+          "legacyRevisionId": 157569,
+          "checkedAt": "2026-06-04T08:22:00Z"
+        }
+      ],
+      "review": {
+        "status": "unreviewed",
+        "currentSourceRefs": [],
+        "atomicFacts": [],
+        "narrativeBoundary": "",
+        "claimIds": [],
+        "copyrightMode": "paraphrase_only",
+        "reviewer": null,
+        "checkedAt": null
+      }
+    },
+    {
+      "id": "p4_article_identity_spider_blade_ryoshu",
+      "timelinePlacement": "cross-timeline",
+      "narrativeRole": "character-and-world",
+      "comment": "v17: spider-house blade Ryoshu and aesthetic execution",
+      "legacySourceRefs": [
+        {
+          "title": "Blade of the House of Spiders Ryōshū/Identity Story",
+          "url": "https://limbuscompany.wiki.gg/wiki/Blade_of_the_House_of_Spiders_Ry%C5%8Dsh%C5%AB/Identity_Story",
+          "legacyRevisionId": 169134,
+          "checkedAt": "2026-06-04T08:22:00Z"
+        }
+      ],
+      "review": {
+        "status": "unreviewed",
+        "currentSourceRefs": [],
+        "atomicFacts": [],
+        "narrativeBoundary": "",
+        "claimIds": [],
+        "copyrightMode": "paraphrase_only",
+        "reviewer": null,
+        "checkedAt": null
+      }
+    },
+    {
+      "id": "p4_article_identity_tcorp_collection_don",
+      "timelinePlacement": "cross-timeline",
+      "narrativeRole": "character-and-world",
+      "comment": "v21: T Corp Don Quixote and regulated zeal",
+      "legacySourceRefs": [
+        {
+          "title": "T Corp. Class 3 Collection Staff Don Quixote/Identity Story",
+          "url": "https://limbuscompany.wiki.gg/wiki/T_Corp._Class_3_Collection_Staff_Don_Quixote/Identity_Story",
+          "legacyRevisionId": 82098,
+          "checkedAt": "2026-06-04T08:22:00Z"
+        }
+      ],
+      "review": {
+        "status": "unreviewed",
+        "currentSourceRefs": [],
+        "atomicFacts": [],
+        "narrativeBoundary": "",
+        "claimIds": [],
+        "copyrightMode": "paraphrase_only",
+        "reviewer": null,
+        "checkedAt": null
+      }
+    },
+    {
+      "id": "p4_article_identity_tcorp_collection_rodion",
+      "timelinePlacement": "cross-timeline",
+      "narrativeRole": "character-and-world",
+      "comment": "v21: T Corp Rodion and friendly accounting",
+      "legacySourceRefs": [
+        {
+          "title": "T Corp. Class 2 Collection Staff Rodion/Identity Story",
+          "url": "https://limbuscompany.wiki.gg/wiki/T_Corp._Class_2_Collection_Staff_Rodion/Identity_Story",
+          "legacyRevisionId": 82099,
+          "checkedAt": "2026-06-04T08:22:00Z"
+        }
+      ],
+      "review": {
+        "status": "unreviewed",
+        "currentSourceRefs": [],
+        "atomicFacts": [],
+        "narrativeBoundary": "",
+        "claimIds": [],
+        "copyrightMode": "paraphrase_only",
+        "reviewer": null,
+        "checkedAt": null
+      }
+    },
+    {
+      "id": "p4_article_identity_tcorp_vdcu_outis",
+      "timelinePlacement": "cross-timeline",
+      "narrativeRole": "character-and-world",
+      "comment": "v21: T Corp VDCU Outis and time-regulated command",
+      "legacySourceRefs": [
+        {
+          "title": "T Corp. Class 3 VDCU Staff Outis/Identity Story",
+          "url": "https://limbuscompany.wiki.gg/wiki/T_Corp._Class_3_VDCU_Staff_Outis/Identity_Story",
+          "legacyRevisionId": 130902,
+          "checkedAt": "2026-06-04T08:22:00Z"
+        }
+      ],
+      "review": {
+        "status": "unreviewed",
+        "currentSourceRefs": [],
+        "atomicFacts": [],
+        "narrativeBoundary": "",
+        "claimIds": [],
+        "copyrightMode": "paraphrase_only",
+        "reviewer": null,
+        "checkedAt": null
+      }
+    },
+    {
+      "id": "p4_article_identity_thumb_capo_meursault",
+      "timelinePlacement": "cross-timeline",
+      "narrativeRole": "character-and-world",
+      "comment": "v21: Thumb Capo Meursault and ranked silence",
+      "legacySourceRefs": [
+        {
+          "title": "The Thumb East Capo IIII Meursault/Identity Story",
+          "url": "https://limbuscompany.wiki.gg/wiki/The_Thumb_East_Capo_IIII_Meursault/Identity_Story",
+          "legacyRevisionId": 110236,
+          "checkedAt": "2026-06-04T08:22:00Z"
+        }
+      ],
+      "review": {
+        "status": "unreviewed",
+        "currentSourceRefs": [],
+        "atomicFacts": [],
+        "narrativeBoundary": "",
+        "claimIds": [],
+        "copyrightMode": "paraphrase_only",
+        "reviewer": null,
+        "checkedAt": null
+      }
+    },
+    {
+      "id": "p4_article_identity_thumb_soldato_sinclair",
+      "timelinePlacement": "cross-timeline",
+      "narrativeRole": "character-and-world",
+      "comment": "v22: Thumb Sinclair and low-rank obedience",
+      "legacySourceRefs": [
+        {
+          "title": "The Thumb East Soldato II Sinclair/Identity Story",
+          "url": "https://limbuscompany.wiki.gg/wiki/The_Thumb_East_Soldato_II_Sinclair/Identity_Story",
+          "legacyRevisionId": 110239,
+          "checkedAt": "2026-06-04T08:22:00Z"
+        }
+      ],
+      "review": {
+        "status": "unreviewed",
+        "currentSourceRefs": [],
+        "atomicFacts": [],
+        "narrativeBoundary": "",
+        "claimIds": [],
+        "copyrightMode": "paraphrase_only",
+        "reviewer": null,
+        "checkedAt": null
+      }
+    },
+    {
+      "id": "p4_article_identity_tingtang_gangleader_honglu",
+      "timelinePlacement": "cross-timeline",
+      "narrativeRole": "character-and-world",
+      "comment": "v20: Tingtang Hong Lu and playful criminal command",
+      "legacySourceRefs": [
+        {
+          "title": "Tingtang Gang Gangleader Hong Lu/Identity Story",
+          "url": "https://limbuscompany.wiki.gg/wiki/Tingtang_Gang_Gangleader_Hong_Lu/Identity_Story",
+          "legacyRevisionId": 82085,
+          "checkedAt": "2026-06-04T08:22:00Z"
+        }
+      ],
+      "review": {
+        "status": "unreviewed",
+        "currentSourceRefs": [],
+        "atomicFacts": [],
+        "narrativeBoundary": "",
+        "claimIds": [],
+        "copyrightMode": "paraphrase_only",
+        "reviewer": null,
+        "checkedAt": null
+      }
+    },
+    {
+      "id": "p4_article_identity_twinhook_first_mate_gregor",
+      "timelinePlacement": "cross-timeline",
+      "narrativeRole": "character-and-world",
+      "comment": "v21: Twinhook Gregor and survival at sea",
+      "legacySourceRefs": [
+        {
+          "title": "Twinhook Pirates First Mate Gregor/Identity Story",
+          "url": "https://limbuscompany.wiki.gg/wiki/Twinhook_Pirates_First_Mate_Gregor/Identity_Story",
+          "legacyRevisionId": 82084,
+          "checkedAt": "2026-06-04T08:22:00Z"
+        }
+      ],
+      "review": {
+        "status": "unreviewed",
+        "currentSourceRefs": [],
+        "atomicFacts": [],
+        "narrativeBoundary": "",
+        "claimIds": [],
+        "copyrightMode": "paraphrase_only",
+        "reviewer": null,
+        "checkedAt": null
+      }
+    },
+    {
+      "id": "p4_article_identity_wcorp_l2_faust",
+      "timelinePlacement": "cross-timeline",
+      "narrativeRole": "character-and-world",
+      "comment": "v18: W Corp L2 Faust and procedural competence",
+      "legacySourceRefs": [
+        {
+          "title": "W Corp. L2 Cleanup Agent Faust/Identity Story",
+          "url": "https://limbuscompany.wiki.gg/wiki/W_Corp._L2_Cleanup_Agent_Faust/Identity_Story",
+          "legacyRevisionId": 82083,
+          "checkedAt": "2026-06-04T08:22:00Z"
+        }
+      ],
+      "review": {
+        "status": "unreviewed",
+        "currentSourceRefs": [],
+        "atomicFacts": [],
+        "narrativeBoundary": "",
+        "claimIds": [],
+        "copyrightMode": "paraphrase_only",
+        "reviewer": null,
+        "checkedAt": null
+      }
+    },
+    {
+      "id": "p4_article_identity_wcorp_l2_honglu",
+      "timelinePlacement": "cross-timeline",
+      "narrativeRole": "character-and-world",
+      "comment": "v18: W Corp L2 Hong Lu and polished detachment",
+      "legacySourceRefs": [
+        {
+          "title": "W Corp. L2 Cleanup Agent Hong Lu/Identity Story",
+          "url": "https://limbuscompany.wiki.gg/wiki/W_Corp._L2_Cleanup_Agent_Hong_Lu/Identity_Story",
+          "legacyRevisionId": 82082,
+          "checkedAt": "2026-06-04T08:22:00Z"
+        }
+      ],
+      "review": {
+        "status": "unreviewed",
+        "currentSourceRefs": [],
+        "atomicFacts": [],
+        "narrativeBoundary": "",
+        "claimIds": [],
+        "copyrightMode": "paraphrase_only",
+        "reviewer": null,
+        "checkedAt": null
+      }
+    },
+    {
+      "id": "p4_article_identity_wcorp_l2_meursault",
+      "timelinePlacement": "cross-timeline",
+      "narrativeRole": "character-and-world",
+      "comment": "v18: W Corp L2 Meursault and task obedience",
+      "legacySourceRefs": [
+        {
+          "title": "W Corp. L2 Cleanup Agent Meursault/Identity Story",
+          "url": "https://limbuscompany.wiki.gg/wiki/W_Corp._L2_Cleanup_Agent_Meursault/Identity_Story",
+          "legacyRevisionId": 82081,
+          "checkedAt": "2026-06-04T08:22:00Z"
+        }
+      ],
+      "review": {
+        "status": "unreviewed",
+        "currentSourceRefs": [],
+        "atomicFacts": [],
+        "narrativeBoundary": "",
+        "claimIds": [],
+        "copyrightMode": "paraphrase_only",
+        "reviewer": null,
+        "checkedAt": null
+      }
+    },
+    {
+      "id": "p4_article_identity_wcorp_l3_don",
+      "timelinePlacement": "cross-timeline",
+      "narrativeRole": "character-and-world",
+      "comment": "v18: W Corp L3 Don Quixote and duty under shock",
+      "legacySourceRefs": [
+        {
+          "title": "W Corp. L3 Cleanup Agent Don Quixote/Identity Story",
+          "url": "https://limbuscompany.wiki.gg/wiki/W_Corp._L3_Cleanup_Agent_Don_Quixote/Identity_Story",
+          "legacyRevisionId": 82080,
+          "checkedAt": "2026-06-04T08:22:00Z"
+        }
+      ],
+      "review": {
+        "status": "unreviewed",
+        "currentSourceRefs": [],
+        "atomicFacts": [],
+        "narrativeBoundary": "",
+        "claimIds": [],
+        "copyrightMode": "paraphrase_only",
+        "reviewer": null,
+        "checkedAt": null
+      }
+    },
+    {
+      "id": "p4_article_identity_wcorp_l3_ryoshu",
+      "timelinePlacement": "cross-timeline",
+      "narrativeRole": "character-and-world",
+      "comment": "v18: W Corp L3 Ryoshu and aesthetic disposal",
+      "legacySourceRefs": [
+        {
+          "title": "W Corp. L3 Cleanup Agent Ryōshū/Identity Story",
+          "url": "https://limbuscompany.wiki.gg/wiki/W_Corp._L3_Cleanup_Agent_Ry%C5%8Dsh%C5%AB/Identity_Story",
+          "legacyRevisionId": 82079,
+          "checkedAt": "2026-06-04T08:22:00Z"
+        }
+      ],
+      "review": {
+        "status": "unreviewed",
+        "currentSourceRefs": [],
+        "atomicFacts": [],
+        "narrativeBoundary": "",
+        "claimIds": [],
+        "copyrightMode": "paraphrase_only",
+        "reviewer": null,
+        "checkedAt": null
+      }
+    },
+    {
+      "id": "p4_article_identity_wcorp_l3_yisang",
+      "timelinePlacement": "cross-timeline",
+      "narrativeRole": "character-and-world",
+      "comment": "v18: W Corp L3 Yi Sang and dimensional distance",
+      "legacySourceRefs": [
+        {
+          "title": "W Corp. L3 Cleanup Agent Yi Sang/Identity Story",
+          "url": "https://limbuscompany.wiki.gg/wiki/W_Corp._L3_Cleanup_Agent_Yi_Sang/Identity_Story",
+          "legacyRevisionId": 82078,
+          "checkedAt": "2026-06-04T08:22:00Z"
+        }
+      ],
+      "review": {
+        "status": "unreviewed",
+        "currentSourceRefs": [],
+        "atomicFacts": [],
+        "narrativeBoundary": "",
+        "claimIds": [],
+        "copyrightMode": "paraphrase_only",
+        "reviewer": null,
+        "checkedAt": null
+      }
+    },
+    {
+      "id": "p4_article_identity_wcorp_l4_cca_heathcliff",
+      "timelinePlacement": "cross-timeline",
+      "narrativeRole": "character-and-world",
+      "comment": "v17: W Corp CCA Heathcliff and cleanup authority",
+      "legacySourceRefs": [
+        {
+          "title": "W Corp. L4 Cleanup Agent - CCA Heathcliff/Identity Story",
+          "url": "https://limbuscompany.wiki.gg/wiki/W_Corp._L4_Cleanup_Agent_-_CCA_Heathcliff/Identity_Story",
+          "legacyRevisionId": 142448,
+          "checkedAt": "2026-06-04T08:22:00Z"
+        }
+      ],
+      "review": {
+        "status": "unreviewed",
+        "currentSourceRefs": [],
+        "atomicFacts": [],
+        "narrativeBoundary": "",
+        "claimIds": [],
+        "copyrightMode": "paraphrase_only",
+        "reviewer": null,
+        "checkedAt": null
+      }
+    },
+    {
+      "id": "p4_article_identity_wild_hunt_heathcliff",
+      "timelinePlacement": "cross-timeline",
+      "narrativeRole": "character-and-world",
+      "comment": "v20: Wild Hunt Heathcliff and grief-led command",
+      "legacySourceRefs": [
+        {
+          "title": "Wild Hunt Heathcliff/Identity Story",
+          "url": "https://limbuscompany.wiki.gg/wiki/Wild_Hunt_Heathcliff/Identity_Story",
+          "legacyRevisionId": 82076,
+          "checkedAt": "2026-06-04T08:22:00Z"
+        }
+      ],
+      "review": {
+        "status": "unreviewed",
+        "currentSourceRefs": [],
+        "atomicFacts": [],
+        "narrativeBoundary": "",
+        "claimIds": [],
+        "copyrightMode": "paraphrase_only",
+        "reviewer": null,
+        "checkedAt": null
+      }
+    },
+    {
+      "id": "p4_article_identity_wuthering_butler_faust",
+      "timelinePlacement": "cross-timeline",
+      "narrativeRole": "character-and-world",
+      "comment": "v20: Wuthering Heights Faust and analytic service",
+      "legacySourceRefs": [
+        {
+          "title": "Wuthering Heights Butler Faust/Identity Story",
+          "url": "https://limbuscompany.wiki.gg/wiki/Wuthering_Heights_Butler_Faust/Identity_Story",
+          "legacyRevisionId": 82075,
+          "checkedAt": "2026-06-04T08:22:00Z"
+        }
+      ],
+      "review": {
+        "status": "unreviewed",
+        "currentSourceRefs": [],
+        "atomicFacts": [],
+        "narrativeBoundary": "",
+        "claimIds": [],
+        "copyrightMode": "paraphrase_only",
+        "reviewer": null,
+        "checkedAt": null
+      }
+    },
+    {
+      "id": "p4_article_identity_wuthering_chief_butler_outis",
+      "timelinePlacement": "cross-timeline",
+      "narrativeRole": "character-and-world",
+      "comment": "v20: Wuthering Heights Outis and household command",
+      "legacySourceRefs": [
+        {
+          "title": "Wuthering Heights Chief Butler Outis/Identity Story",
+          "url": "https://limbuscompany.wiki.gg/wiki/Wuthering_Heights_Chief_Butler_Outis/Identity_Story",
+          "legacyRevisionId": 82074,
+          "checkedAt": "2026-06-04T08:22:00Z"
+        }
+      ],
+      "review": {
+        "status": "unreviewed",
+        "currentSourceRefs": [],
+        "atomicFacts": [],
+        "narrativeBoundary": "",
+        "claimIds": [],
+        "copyrightMode": "paraphrase_only",
+        "reviewer": null,
+        "checkedAt": null
+      }
+    },
+    {
+      "id": "p4_article_identity_yurodivy_honglu",
+      "timelinePlacement": "cross-timeline",
+      "narrativeRole": "character-and-world",
+      "comment": "v21: District 20 Yurodivy Hong Lu and elegant dissent",
+      "legacySourceRefs": [
+        {
+          "title": "District 20 Yurodivy Hong Lu/Identity Story",
+          "url": "https://limbuscompany.wiki.gg/wiki/District_20_Yurodivy_Hong_Lu/Identity_Story",
+          "legacyRevisionId": 82159,
+          "checkedAt": "2026-06-04T08:22:00Z"
+        }
+      ],
+      "review": {
+        "status": "unreviewed",
+        "currentSourceRefs": [],
+        "atomicFacts": [],
+        "narrativeBoundary": "",
+        "claimIds": [],
+        "copyrightMode": "paraphrase_only",
+        "reviewer": null,
+        "checkedAt": null
+      }
+    },
+    {
+      "id": "p4_article_identity_yurodivy_ryoshu",
+      "timelinePlacement": "cross-timeline",
+      "narrativeRole": "character-and-world",
+      "comment": "v21: District 20 Yurodivy Ryoshu and radical composition",
+      "legacySourceRefs": [
+        {
+          "title": "District 20 Yurodivy Ryōshū/Identity Story",
+          "url": "https://limbuscompany.wiki.gg/wiki/District_20_Yurodivy_Ry%C5%8Dsh%C5%AB/Identity_Story",
+          "legacyRevisionId": 82158,
+          "checkedAt": "2026-06-04T08:22:00Z"
+        }
+      ],
+      "review": {
+        "status": "unreviewed",
+        "currentSourceRefs": [],
+        "atomicFacts": [],
+        "narrativeBoundary": "",
+        "claimIds": [],
+        "copyrightMode": "paraphrase_only",
+        "reviewer": null,
+        "checkedAt": null
+      }
+    },
+    {
+      "id": "p4_article_identity_zwei_faust",
+      "timelinePlacement": "cross-timeline",
+      "narrativeRole": "character-and-world",
+      "comment": "v20: Zwei Faust and protective calculation",
+      "legacySourceRefs": [
+        {
+          "title": "Zwei Assoc. South Section 4 Faust/Identity Story",
+          "url": "https://limbuscompany.wiki.gg/wiki/Zwei_Assoc._South_Section_4_Faust/Identity_Story",
+          "legacyRevisionId": 82073,
+          "checkedAt": "2026-06-04T08:22:00Z"
+        }
+      ],
+      "review": {
+        "status": "unreviewed",
+        "currentSourceRefs": [],
+        "atomicFacts": [],
+        "narrativeBoundary": "",
+        "claimIds": [],
+        "copyrightMode": "paraphrase_only",
+        "reviewer": null,
+        "checkedAt": null
+      }
+    },
+    {
+      "id": "p4_article_identity_zwei_gregor",
+      "timelinePlacement": "cross-timeline",
+      "narrativeRole": "character-and-world",
+      "comment": "v20: Zwei Gregor and worn-down guardianship",
+      "legacySourceRefs": [
+        {
+          "title": "Zwei Assoc. South Section 4 Gregor/Identity Story",
+          "url": "https://limbuscompany.wiki.gg/wiki/Zwei_Assoc._South_Section_4_Gregor/Identity_Story",
+          "legacyRevisionId": 143145,
+          "checkedAt": "2026-06-04T08:22:00Z"
+        }
+      ],
+      "review": {
+        "status": "unreviewed",
+        "currentSourceRefs": [],
+        "atomicFacts": [],
+        "narrativeBoundary": "",
+        "claimIds": [],
+        "copyrightMode": "paraphrase_only",
+        "reviewer": null,
+        "checkedAt": null
+      }
+    },
+    {
+      "id": "p4_article_identity_zwei_rodion",
+      "timelinePlacement": "cross-timeline",
+      "narrativeRole": "character-and-world",
+      "comment": "v20: Zwei Rodion and friendly defense",
+      "legacySourceRefs": [
+        {
+          "title": "Zwei Assoc. South Section 5 Rodion/Identity Story",
+          "url": "https://limbuscompany.wiki.gg/wiki/Zwei_Assoc._South_Section_5_Rodion/Identity_Story",
+          "legacyRevisionId": 82071,
+          "checkedAt": "2026-06-04T08:22:00Z"
+        }
+      ],
+      "review": {
+        "status": "unreviewed",
+        "currentSourceRefs": [],
+        "atomicFacts": [],
+        "narrativeBoundary": "",
+        "claimIds": [],
+        "copyrightMode": "paraphrase_only",
+        "reviewer": null,
+        "checkedAt": null
+      }
+    },
+    {
+      "id": "p4_article_identity_zwei_sinclair",
+      "timelinePlacement": "cross-timeline",
+      "narrativeRole": "character-and-world",
+      "comment": "v20: Zwei Sinclair and novice protection",
+      "legacySourceRefs": [
+        {
+          "title": "Zwei Assoc. South Section 6 Sinclair/Identity Story",
+          "url": "https://limbuscompany.wiki.gg/wiki/Zwei_Assoc._South_Section_6_Sinclair/Identity_Story",
+          "legacyRevisionId": 104837,
+          "checkedAt": "2026-06-04T08:22:00Z"
+        }
+      ],
+      "review": {
+        "status": "unreviewed",
+        "currentSourceRefs": [],
+        "atomicFacts": [],
+        "narrativeBoundary": "",
+        "claimIds": [],
+        "copyrightMode": "paraphrase_only",
+        "reviewer": null,
+        "checkedAt": null
+      }
+    },
+    {
+      "id": "p4_article_identity_zwei_west_ishmael",
+      "timelinePlacement": "cross-timeline",
+      "narrativeRole": "character-and-world",
+      "comment": "v21: Zwei West Ishmael and hard-guarded care",
+      "legacySourceRefs": [
+        {
+          "title": "Zwei Assoc. West Section 3 Ishmael/Identity Story",
+          "url": "https://limbuscompany.wiki.gg/wiki/Zwei_Assoc._West_Section_3_Ishmael/Identity_Story",
+          "legacyRevisionId": 82069,
+          "checkedAt": "2026-06-04T08:22:00Z"
+        }
+      ],
+      "review": {
+        "status": "unreviewed",
+        "currentSourceRefs": [],
+        "atomicFacts": [],
+        "narrativeBoundary": "",
+        "claimIds": [],
+        "copyrightMode": "paraphrase_only",
+        "reviewer": null,
+        "checkedAt": null
+      }
+    },
+    {
+      "id": "p4_article_identity_zwei_west_sinclair",
+      "timelinePlacement": "cross-timeline",
+      "narrativeRole": "character-and-world",
+      "comment": "v22: Zwei West Sinclair and learned protection",
+      "legacySourceRefs": [
+        {
+          "title": "Zwei Assoc. West Section 3 Sinclair/Identity Story",
+          "url": "https://limbuscompany.wiki.gg/wiki/Zwei_Assoc._West_Section_3_Sinclair/Identity_Story",
+          "legacyRevisionId": 82068,
+          "checkedAt": "2026-06-04T08:22:00Z"
+        }
+      ],
+      "review": {
+        "status": "unreviewed",
+        "currentSourceRefs": [],
+        "atomicFacts": [],
+        "narrativeBoundary": "",
+        "claimIds": [],
+        "copyrightMode": "paraphrase_only",
+        "reviewer": null,
+        "checkedAt": null
+      }
+    }
+  ]
+}

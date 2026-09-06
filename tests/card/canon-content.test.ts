@@ -16,6 +16,7 @@ const worldbookPath = join(
   projectRoot,
   'dist/albina-galgame-card/worldbooks/albina_canon_worldbook_v1.json',
 );
+const playerProfileRuntimePath = join(projectRoot, 'content/worldbook/player-profile-runtime-v1.json');
 
 async function json<T>(path: string): Promise<T> {
   return JSON.parse(await readFile(path, 'utf8')) as T;
@@ -81,6 +82,11 @@ interface Worldbook {
   entries: Array<{ uid: string; content: string; extensions: CardEntry['extensions'] }>;
 }
 
+interface PlayerProfileRuntime {
+  id: string;
+  content: string;
+}
+
 const legacyFields = ['description', 'personality', 'scenario', 'first_mes', 'mes_example'] as const;
 const dataFields = [
   ...legacyFields,
@@ -124,32 +130,41 @@ describe('source-backed Albina card canon', () => {
   });
 
   it('projects the same canon fields and provenance into both cards and the standalone worldbook', async () => {
-    const [source, card, template, worldbook] = await Promise.all([
+    const [source, card, template, worldbook, playerProfileRuntime] = await Promise.all([
       json<CanonProfile>(sourcePath),
       json<Card>(cardPath),
       json<Card>(templatePath),
       json<Worldbook>(worldbookPath),
+      json<PlayerProfileRuntime>(playerProfileRuntimePath),
     ]);
     for (const target of [card, template]) {
       for (const field of legacyFields) expect(target[field]).toBe(source.card[field]);
       for (const field of dataFields) expect(target.data[field]).toEqual(source.card[field]);
-      expect(target.data.character_book.entries).toHaveLength(source.card.character_book.entries.length);
+      expect(target.data.character_book.entries).toHaveLength(source.card.character_book.entries.length + 1);
     }
     expect(template.data.character_book).toEqual(card.data.character_book);
-    expect(worldbook.generatedFrom).toBe('content/albina-card-canon-v1.json + content/canon-claims-v1.json');
+    expect(worldbook.generatedFrom).toBe('content/albina-card-canon-v1.json + content/canon-claims-v1.json + content/worldbook/player-profile-runtime-v1.json');
     expect(worldbook.entries.map((entry) => entry.uid)).toEqual(
-      source.card.character_book.entries.map((entry) => entry.id),
+      [...source.card.character_book.entries.map((entry) => entry.id), playerProfileRuntime.id],
     );
     for (const entry of card.data.character_book.entries) {
       expect(entry.extensions.content_classification).toMatch(
         /^(?:canon_exact|canon_paraphrase|supported_inference|AU_extension)$/u,
       );
-      expect(entry.extensions.claim_ids.length).toBeGreaterThan(0);
-      expect(entry.extensions.source_refs.length).toBeGreaterThan(0);
+      const isRuntimeEntry = entry.extensions.entry_id === playerProfileRuntime.id;
+      expect(entry.extensions.claim_ids.length).toBeGreaterThanOrEqual(isRuntimeEntry ? 0 : 1);
+      expect(entry.extensions.source_refs.length).toBeGreaterThanOrEqual(isRuntimeEntry ? 0 : 1);
       expect(worldbook.entries.find((item) => item.uid === entry.extensions.entry_id)?.extensions).toEqual(
         entry.extensions,
       );
     }
+    const runtimeEntry = card.data.character_book.entries.find((entry) => entry.extensions.entry_id === playerProfileRuntime.id);
+    expect(runtimeEntry?.content).toBe(playerProfileRuntime.content);
+    expect(runtimeEntry?.extensions).toMatchObject({
+      content_classification: 'AU_extension',
+      review_status: 'ejs-source-checked',
+      variable_source: 'TavernHelper.setVariables(chat)',
+    });
   });
 
   it('preserves the approved Tavern Helper loader and card extensions', async () => {
@@ -158,7 +173,6 @@ describe('source-backed Albina card canon', () => {
     const templateHelper = template.data.extensions.tavern_helper;
     expect(cardHelper).toEqual(templateHelper);
     expect(cardHelper.variables).toEqual({});
-    expect(cardHelper.scripts).toHaveLength(1);
     expect(cardHelper.scripts[0]).toEqual({
       type: 'script',
       enabled: true,
@@ -172,6 +186,8 @@ describe('source-backed Albina card canon', () => {
       },
       data: {},
     });
+    expect(cardHelper.scripts).toHaveLength(1);
+    expect(cardHelper.scripts.some((script) => script.data.integration_id === 'lorebook-tool-call')).toBe(false);
   });
 
   it('covers the 9-18, 9-37, and 9-43 canon chain and marks all routes and endings as AU/IF', async () => {

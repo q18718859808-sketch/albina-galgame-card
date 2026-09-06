@@ -7,6 +7,8 @@ import type {
 import type { SaveV2 } from '../domain/save';
 import type { ChoiceEffects, SceneCue } from '../domain/scene-cue';
 
+type ProgressionEffects = Omit<ChoiceEffects, 'route'>;
+
 const STORY_VALUE_KEYS = ['affectionAlbina', 'trust', 'danger', 'artResonance'] as const;
 const ECONOMY_KEYS = ['composure', 'materials', 'leverage', 'exposure'] as const;
 
@@ -32,7 +34,7 @@ function applyStatEffects(save: SaveV2, effects: GameplayStatEffects | undefined
   });
 }
 
-function applyRelationshipEffects(script: GameScriptV2, save: SaveV2, effects: ChoiceEffects['relationshipVectors']): void {
+function applyRelationshipEffects(script: GameScriptV2, save: SaveV2, effects: ProgressionEffects['relationshipVectors']): void {
   if (!effects) return;
   script.gameplay.relationshipTracks.forEach((track) => {
     const delta = effects[track.id];
@@ -42,7 +44,7 @@ function applyRelationshipEffects(script: GameScriptV2, save: SaveV2, effects: C
   });
 }
 
-function applyMasteryEffects(save: SaveV2, effects: ChoiceEffects['conflictMastery']): void {
+function applyMasteryEffects(save: SaveV2, effects: ProgressionEffects['conflictMastery']): void {
   if (!effects) return;
   for (const key of ['blade', 'boundary', 'analysis', 'resonance'] as const) {
     const delta = effects[key];
@@ -50,7 +52,7 @@ function applyMasteryEffects(save: SaveV2, effects: ChoiceEffects['conflictMaste
   }
 }
 
-function applyFlags(save: SaveV2, effects: ChoiceEffects): void {
+function applyFlags(save: SaveV2, effects: ProgressionEffects): void {
   effects.setFlags?.forEach((flag) => { save.flags[flag] = true; });
   effects.clearFlags?.forEach((flag) => { save.flags[flag] = false; });
 }
@@ -121,14 +123,14 @@ export function activateProfession(script: GameScriptV2, save: SaveV2, professio
   save.logs.progressionUnlocks.push({ kind: 'profession-active', id: profession.id, at });
 }
 
-function applyInventory(script: GameScriptV2, save: SaveV2, effects: ChoiceEffects, at: string): void {
+function applyInventory(script: GameScriptV2, save: SaveV2, effects: ProgressionEffects, at: string): void {
   addUnique(save.inventory.ownedIds, effects.grantItems ?? []);
   addUnique(save.inventory.outfitIds, effects.unlockOutfits ?? []);
   effects.equipItems?.forEach((id) => equipItem(script, save, id, at));
   if (effects.activateOutfit) activateOutfit(script, save, effects.activateOutfit, at);
 }
 
-function resolveBattles(save: SaveV2, effects: ChoiceEffects, at: string): void {
+function resolveBattles(save: SaveV2, effects: ProgressionEffects, at: string): void {
   effects.resolveBattles?.forEach(({ battleId, outcome }) => {
     addUnique(save.battles.resolvedIds, [battleId]);
     save.battles.outcomes[battleId] = outcome;
@@ -136,13 +138,12 @@ function resolveBattles(save: SaveV2, effects: ChoiceEffects, at: string): void 
   });
 }
 
-function applyBaseCollections(save: SaveV2, effects: ChoiceEffects): void {
+function applyBaseCollections(save: SaveV2, effects: ProgressionEffects): void {
   addUnique(save.unlockedCg, effects.unlockCg ?? []);
   addUnique(save.inventory.ownedIds, effects.grantItems ?? []);
 }
 
-export function applyChoiceEffects(script: GameScriptV2, save: SaveV2, effects: ChoiceEffects, at: string): void {
-  if (effects.route) save.route = effects.route;
+export function applyProgressionEffects(script: GameScriptV2, save: SaveV2, effects: ProgressionEffects, at: string): void {
   applyStatEffects(save, effects.values);
   applyRelationshipEffects(script, save, effects.relationshipVectors);
   applyMasteryEffects(save, effects.conflictMastery);
@@ -154,6 +155,11 @@ export function applyChoiceEffects(script: GameScriptV2, save: SaveV2, effects: 
   if (effects.activateProfession) activateProfession(script, save, effects.activateProfession, at);
   applyInventory(script, save, effects, at);
   resolveBattles(save, effects, at);
+}
+
+export function applyChoiceEffects(script: GameScriptV2, save: SaveV2, effects: ChoiceEffects, at: string): void {
+  if (effects.route) save.route = effects.route;
+  applyProgressionEffects(script, save, effects, at);
 }
 
 function equipmentModifier(script: GameScriptV2, save: SaveV2, key: StoryValueKey): number {

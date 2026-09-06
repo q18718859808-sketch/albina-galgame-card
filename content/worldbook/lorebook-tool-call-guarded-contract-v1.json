@@ -1,0 +1,71 @@
+{
+  "schemaVersion": 1,
+  "id": "albina-lorebook-tool-call-guarded-contract-v1",
+  "integrationId": "lorebook-tool-call",
+  "defaultEnabled": false,
+  "activation": {
+    "requiresExplicitUserOptIn": true,
+    "requiresSeparateUserInstallation": true,
+    "requiresVisibleUpstreamAuthorization": true,
+    "hostCapabilityChecks": [
+      {
+        "global": "SillyTavern",
+        "method": "isToolCallingSupported",
+        "requiredResult": true
+      },
+      {
+        "global": "SillyTavern",
+        "method": "canPerformToolCalls",
+        "arguments": ["function"],
+        "requiredResult": true
+      }
+    ]
+  },
+  "runtimeBoundary": {
+    "noExtensionDiscoveryApi": true,
+    "noCardImport": true,
+    "noToolRegistration": true,
+    "noAutomaticInvocation": true,
+    "noAutomaticWorldbookMutation": true,
+    "startupDependency": false,
+    "fallback": "Continue with TavernHelper chat-variable persistence and localStorage fallback."
+  },
+  "maintenanceScope": {
+    "dedicatedWorldbookNamePrefix": "Albina - ",
+    "recommendedEntryPrefix": "albina.",
+    "permissionBoundary": "The entry prefix is a naming convention, not an authorization boundary. Upstream authorization remains user-controlled at the whole-worldbook scope.",
+    "inputBoundary": {
+      "normalization": "Unicode NFC followed by trim",
+      "maxSuffixLength": 80,
+      "rejects": ["empty suffix", "dot segments", "control characters", "path separators", "Windows-reserved filename characters", "URL fragment and percent characters"],
+      "reason": "LorebookToolCall exposes virtual filesystem roots; Albina only describes a dedicated safe root and never invokes a mutation API."
+    }
+  },
+  "reportedTools": [
+    "Glob",
+    "Grep",
+    "Read",
+    "Write",
+    "Edit",
+    "Delete",
+    "CreateLorebook",
+    "GetAttribute",
+    "SetAttribute"
+  ],
+  "evidencePolicy": {
+    "allowedClaims": [
+      "contract-declared",
+      "user-installed",
+      "user-authorized",
+      "not-probed",
+      "unavailable",
+      "unsupported"
+    ],
+    "forbiddenClaims": [
+      "extension-installed",
+      "permission-granted",
+      "tool-call-executed",
+      "worldbook-mutated"
+    ]
+  }
+}

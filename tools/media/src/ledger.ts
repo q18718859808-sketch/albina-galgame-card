@@ -1,21 +1,25 @@
 import { mkdir, open, readFile, rename, unlink, writeFile, type FileHandle } from 'node:fs/promises';
 import { dirname } from 'node:path';
 
+import { assertProviderJobHandle, type ProviderJobHandle } from './provider.js';
+
 export interface LedgerJob {
   status: string;
   attempt?: number;
   output?: string;
   error?: string;
-  providerJobId?: string;
+  providerJob?: ProviderJobHandle;
+  legacyProviderJobId?: string;
   updatedAt?: string;
   leaseOwner?: string;
   leaseUntil?: number;
   claimToken?: number;
+  migratedToJobId?: string;
   [key: string]: unknown;
 }
 
 export interface LedgerState {
-  version: 1;
+  version: 2;
   jobs: Record<string, LedgerJob>;
   music: {
     consecutiveValidProbes: number;
@@ -51,7 +55,7 @@ export class Ledger {
 
   async read(): Promise<LedgerState> {
     try {
-      return JSON.parse(await readFile(this.path, 'utf8')) as LedgerState;
+      return migrateLedger(JSON.parse(await readFile(this.path, 'utf8')));
     } catch (error) {
       if ((error as NodeJS.ErrnoException).code === 'ENOENT') return emptyLedger();
       throw error;
@@ -61,6 +65,18 @@ export class Ledger {
   async upsertJob(id: string, entry: LedgerJob): Promise<void> {
     await this.update((state) => {
       state.jobs[id] = { ...state.jobs[id], ...entry, updatedAt: new Date(this.now()).toISOString() };
+    });
+  }
+
+  async adoptLegacyJob(legacyId: string, currentId: string): Promise<void> {
+    if (legacyId === currentId) return;
+    await this.update((state) => {
+      const legacy = state.jobs[legacyId];
+      if (!legacy || legacy.migratedToJobId) return;
+      const current = state.jobs[currentId];
+      state.jobs[currentId] = current ? mergeLegacySafety(current, legacy) : { ...legacy };
+      legacy.migratedToJobId = currentId;
+      legacy.updatedAt = new Date(this.now()).toISOString();
     });
   }
 
@@ -155,7 +171,64 @@ function requireClaim(state: LedgerState, id: string, owner: string, token: numb
 function updateProbe(state: LedgerState, valid?: boolean): void { if (valid !== undefined) state.music.consecutiveValidProbes = valid ? state.music.consecutiveValidProbes + 1 : 0; }
 
 function emptyLedger(): LedgerState {
-  return { version: 1, jobs: {}, music: { consecutiveValidProbes: 0, cooldownUntil: 0 } };
+  return { version: 2, jobs: {}, music: { consecutiveValidProbes: 0, cooldownUntil: 0 } };
+}
+
+function migrateLedger(value: unknown): LedgerState {
+  const source = requireRecord(value, 'media ledger');
+  if (source.version === 2) return parseLedgerState(source);
+  if (source.version !== 1) throw new Error('Unsupported media ledger version');
+  const jobs = requireRecord(source.jobs, 'media ledger jobs');
+  const migrated = Object.fromEntries(Object.entries(jobs).map(([id, job]) => [id, migrateV1Job(job, id)]));
+  return parseLedgerState({ version: 2, jobs: migrated, music: source.music });
+}
+
+function parseLedgerState(source: Record<string, unknown>): LedgerState {
+  const jobs = requireRecord(source.jobs, 'media ledger jobs');
+  const music = requireRecord(source.music, 'media ledger music state');
+  if (!isFiniteNonNegative(music.consecutiveValidProbes) || !isFiniteNonNegative(music.cooldownUntil)) throw new Error('Invalid media ledger music state');
+  return {
+    version: 2,
+    jobs: Object.fromEntries(Object.entries(jobs).map(([id, job]) => [id, parseLedgerJob(job, id)])),
+    music: { consecutiveValidProbes: music.consecutiveValidProbes, cooldownUntil: music.cooldownUntil },
+  };
+}
+
+function parseLedgerJob(value: unknown, id: string): LedgerJob {
+  const job = requireRecord(value, `media ledger job ${id}`);
+  if (typeof job.status !== 'string' || job.status.length === 0) throw new Error(`Invalid media ledger job ${id}`);
+  if (Object.hasOwn(job, 'providerJob')) assertProviderJobHandle(job.providerJob);
+  if (Object.hasOwn(job, 'legacyProviderJobId') && typeof job.legacyProviderJobId !== 'string') throw new Error(`Invalid legacy provider handle in ${id}`);
+  if (job.migratedToJobId !== undefined && typeof job.migratedToJobId !== 'string') throw new Error(`Invalid legacy migration target in ${id}`);
+  return job as LedgerJob;
+}
+
+function migrateV1Job(value: unknown, id: string): LedgerJob {
+  const source = requireRecord(value, `v1 media ledger job ${id}`);
+  const migrated = { ...source };
+  if (Object.hasOwn(source, 'providerJob')) throw new Error(`Unexpected typed provider handle in v1 media ledger job ${id}`);
+  if (Object.hasOwn(source, 'providerJobId')) {
+    migrated.legacyProviderJobId = typeof source.providerJobId === 'string' ? source.providerJobId : '';
+    delete migrated.providerJobId;
+  }
+  return parseLedgerJob(migrated, id);
+}
+
+function mergeLegacySafety(current: LedgerJob, legacy: LedgerJob): LedgerJob {
+  const legacyProviderJobId = legacy.legacyProviderJobId;
+  if (typeof legacyProviderJobId === 'string' && !Object.hasOwn(current, 'legacyProviderJobId')) {
+    return { ...current, legacyProviderJobId };
+  }
+  return current;
+}
+
+function requireRecord(value: unknown, label: string): Record<string, unknown> {
+  if (!value || typeof value !== 'object' || Array.isArray(value)) throw new Error(`Invalid ${label}`);
+  return value as Record<string, unknown>;
+}
+
+function isFiniteNonNegative(value: unknown): value is number {
+  return typeof value === 'number' && Number.isFinite(value) && value >= 0;
 }
 
 async function acquireLock(path: string): Promise<FileHandle> {

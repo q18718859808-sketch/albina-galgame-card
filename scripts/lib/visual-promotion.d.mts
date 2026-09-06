@@ -12,16 +12,29 @@ export interface VisualPromotionCandidate {
   jobId: string;
   receiptAssetId: string;
   outputPath: string;
-  provider: 'x666-openai-compatible';
+  provider: 'wisart-openai-compatible';
   model: 'gpt-image-2';
-  upstreamPieVerified: false;
   promptVersion: string;
   status: 'completed';
   sourceJobHash: string;
   currentSourceJobHash: string;
+  currentReviewCriteria: string[];
   artifactSha256: string;
   deliveryPath: string;
-  review: { status: 'approved'; reviewer: string; reviewedAt: string };
+  review: { status: 'approved'; reviewer: string; reviewedAt: string; criteria: Array<{ criterion: string; status: 'passed' }> };
+  reviewContractRevision?: {
+    version: 1;
+    status: 'approved';
+    generationJobHash: string;
+    currentJobHash: string;
+    artifactSha256: string;
+    reviewer: string;
+    reviewedAt: string;
+    reason: string;
+    notes: string;
+    generationHistoryPreserved: true;
+    criteria: Array<{ criterion: string; status: 'passed' }>;
+  };
   inputs?: Array<{ jobId?: string; receiptAssetId?: string; sourceId?: string; sha256: string }>;
 }
 

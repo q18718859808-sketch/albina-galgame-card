@@ -1,0 +1,44 @@
+{
+  "version": 1,
+  "assetId": "file.cg.canon.recap.9.37.jpg",
+  "artifactSha256": "4245c3f9646ceac452f45a5cd1072a31efc715c289b24833071ff28ce0201c75",
+  "provenance": {
+    "provider": "wisart-openai-compatible",
+    "model": "gpt-image-2",
+    "promptVersion": "albina-visual-migration-v1",
+    "sourceJobHash": "733f8917cd994057193db18890b011cff29cbeb30596f93b2c5d03879561938d",
+    "review": {
+      "status": "approved",
+      "reviewer": "workbuddy-agent",
+      "reviewedAt": "2026-09-06T07:16:40.997Z"
+    }
+  },
+  "rights": {
+    "status": "unverified",
+    "sourceType": "model-output",
+    "redistribution": "unverified",
+    "rightsBasis": "Redistribution rights for this model output have not been independently verified."
+  },
+  "lineage": {
+    "kind": "derivative",
+    "processVersion": "albina-visual-promotion-v1",
+    "inputs": [
+      {
+        "sha256": "a14e568cb94fb6049b2bd0ddc37567d062067f0d6a74cc8cc7f839f30a22ee11",
+        "role": "canon-visual-reference"
+      },
+      {
+        "sha256": "a0192ec0071b3d2af4f3d7e38ab29e7ed4cd140b084ebc10ff47e8a42e2a36e5",
+        "role": "canon-visual-reference"
+      },
+      {
+        "sha256": "a0033f3a9da006a862cd26eaf93ff9a86856f18a5a1ef7f2490461b84ef5e0d8",
+        "role": "canon-visual-reference"
+      },
+      {
+        "sha256": "aaf89630110b6fef687b86334404b00cd39fd29c84451971575b26a29ce51142",
+        "role": "canon-visual-reference"
+      }
+    ]
+  }
+}

@@ -1,0 +1,105 @@
+{
+  "schemaVersion": 1,
+  "id": "albina-tavernforge-delivery-v1",
+  "purpose": "Auditable TavernForge/worldbook delivery boundary; no card mutation",
+  "generatedFromLocalMaterials": [
+    "content/worldbook/player-profile-schema-v1.json",
+    "content/worldbook/player-profile-initvar-v1.json",
+    "content/worldbook/player-profile-update-rules-v1.json",
+    "content/worldbook/player-profile-runtime-v1.json",
+    "content/worldbook/player-profile-runtime-matrix-v1.json",
+    "content/worldbook/lorebook-tool-call-guarded-contract-v1.json",
+    "content/worldbook/albina-worldbook-plot-full-timeline-v1.json",
+    "content/worldbook/albina-worldbook-packages-v1.manifest.json",
+    "content/worldbook/albina-worldbook-l0-minimal-anchors-v1.json",
+    "content/worldbook/worldbook-runtime-boundary-v1.json",
+    "docs/PLAYER_PROFILE_ACCEPTANCE.md",
+    "docs/WORLDBOOK_MIGRATION.md"
+  ],
+  "deliveryRules": "scripts/forge/tavernforge-delivery-rules-v1.json",
+  "playerProfile": {
+    "variableKey": "albinaPlayerProfileV1",
+    "scope": "chat",
+    "fieldCount": 9,
+    "fourLinks": ["schema", "initvar", "updateRules", "readAndDisplay", "persistence"],
+    "runtimeStates": ["tavern_helper_chat", "local_storage_fallback", "missing_tool_call_extension", "reload", "malformed_profile"]
+  },
+  "timeline": {
+    "packageId": "plot-full-timeline",
+    "path": "content/worldbook/albina-worldbook-plot-full-timeline-v1.json",
+    "entryCount": 22,
+    "defaultEnabled": true,
+    "sourcePolicy": "local reviewed migration ledger and source-package hashes; paraphrase-only; unresolved claims stay marked"
+  },
+  "layering": {
+    "sourceAudit": "content/worldbook/limbus-world-audit-v1.json",
+    "coverageIndex": "content/worldbook/limbus-world-coverage-index-v1.json",
+    "packageManifest": "content/worldbook/albina-worldbook-packages-v1.manifest.json",
+    "auditedEntryCount": 2481,
+    "substantiveCandidateCount": 599,
+    "sourceIndexBridgeCount": 1882,
+    "defaultEnabledPackageIds": ["l1-albina-core", "l2-canto-ix-and-main-cast", "plot-full-timeline"],
+    "neverRuntimePackageIds": ["source-index", "quarantine-unverified-rp"],
+    "optInPackageIds": ["l3-world-expansion", "l4-mechanics", "l5-reviewed-identities", "au-if"],
+    "fullPackageUidDisjoint": true,
+    "l0Standalone": true,
+    "l0ExclusiveWithFullPackages": true,
+    "timelineEntryCount": 22,
+    "verifiedRefreshRecordCount": 37,
+    "refreshOverlayFiles": [
+      "content/worldbook/albina-canto-ix-refresh-v1.json",
+      "content/worldbook/albina-canto-i-viii-x-intervallo-refresh-v1.json"
+    ],
+    "canonBoundary": {
+      "requiredOrder": ["9-14", "9-18", "9-37", "9-43", "AU/IF"],
+      "auOnlyAfter": "9-43"
+    }
+  },
+  "runtimeBoundary": {
+    "contract": "content/worldbook/worldbook-runtime-boundary-v1.json",
+    "selection": "SaveV2.worldbook-with-chat-variable-projection",
+    "selectionProjectionVariable": "albinaWorldbookSelectionV1",
+    "selectionProjectionConsistency": "projection-must-equal-normalized-SaveV2-worldbook-before-runtime-reader-use",
+    "runtimeReader": "content/worldbook/player-profile-runtime-v1.json",
+    "injection": "manual-import-only-through-normal-sillytavern-ui",
+    "externalRuntimeStatus": "unverified-until-real-host-acceptance",
+    "automaticImport": false,
+    "automaticRegistration": false,
+    "automaticEntryMutation": false,
+    "selectedPackageDoesNotImplyActiveInjection": true
+  },
+  "originalEntries": {
+    "source": "card/albina.card.json",
+    "mirror": "content/worldbook/albina-worldbook-l0-minimal-anchors-v1.json",
+    "entryCount": 16,
+    "uidOrder": [
+      "albina_canon_term_corporism",
+      "albina_identity_status",
+      "albina_prosthetic_appearance",
+      "albina_armor_fascia_visual",
+      "fascia_body_origin",
+      "albina_fascia_attachment",
+      "albina_social_ambition",
+      "canto_ix_9_14_context",
+      "canto_ix_9_18_first_appearance",
+      "canto_ix_9_37_encounter",
+      "canto_ix_9_37_escalation",
+      "canto_ix_9_43_turn_and_outcome",
+      "albina_combat_profile",
+      "albina_visual_reference_lock",
+      "albina_routes_endings_au_if",
+      "albina_player_profile_runtime"
+    ],
+    "comparison": "UID order and canonical entry digest must match; this manifest does not authorize editing the card"
+  },
+  "protectedCard": {
+    "path": "card/albina.card.json",
+    "sha256": "b7af44a57554a52cac601751971775de7ce8eb878094ab67e24648a05b77bff0",
+    "mutation": "forbidden"
+  },
+  "apiClaims": [
+    { "surface": "TavernHelper.setVariables", "status": "contract-declared-not-observed", "source": "content/worldbook/player-profile-initvar-v1.json" },
+    { "surface": "SillyTavern import/API", "status": "not-executed-in-this-delivery", "source": "docs/PLAYER_PROFILE_ACCEPTANCE.md" },
+    { "surface": "LorebookToolCall", "status": "optional-guarded-contract-not-probed", "source": "content/worldbook/lorebook-tool-call-guarded-contract-v1.json" }
+  ]
+}

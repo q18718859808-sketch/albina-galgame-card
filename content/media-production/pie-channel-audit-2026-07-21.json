@@ -1,0 +1,85 @@
+{
+  "schemaVersion": 1,
+  "checkedAt": "2026-07-21T01:07:06.2043963+08:00",
+  "provider": "pie",
+  "baseUrl": "https://api.pie-xian.com",
+  "credentialStored": false,
+  "scope": {
+    "bulkGeneration": false,
+    "models": [
+      "speech-2.8-hd",
+      "seedance-1.5-pro"
+    ],
+    "musicGenerationRetired": true
+  },
+  "results": {
+    "modelList": {
+      "method": "GET",
+      "path": "/v1/models",
+      "attempts": 1,
+      "statuses": [
+        403
+      ],
+      "available": false,
+      "reason": "account-group-not-configured"
+    },
+    "speech": {
+      "method": "POST",
+      "path": "/v1/audio/speech",
+      "model": "speech-2.8-hd",
+      "attempts": 3,
+      "statuses": [
+        403,
+        403,
+        403
+      ],
+      "requestIds": [
+        "202607201706058847193358268d9d6BZSqynKA",
+        "202607201706067242842548268d9d6I5xDYu2n",
+        "202607201706069559914608268d9d6QhyoUf5C"
+      ],
+      "available": false,
+      "reason": "account-group-not-configured"
+    },
+    "video": {
+      "method": "POST",
+      "path": "/v1/videos",
+      "model": "seedance-1.5-pro",
+      "attempts": 3,
+      "statuses": [
+        403,
+        403,
+        403
+      ],
+      "requestIds": [
+        "202607201706077579867838268d9d6uodu7JvU",
+        "202607201706082132693608268d9d6imzxbNLz",
+        "202607201706084493716498268d9d6NyWQI7Y6"
+      ],
+      "available": false,
+      "reason": "account-group-not-configured",
+      "note": "The probe intentionally omitted keyframes to avoid creating a billable task; the uniform group-level 403 occurred before payload validation."
+    }
+  },
+  "inventoryAtCheck": {
+    "activeApprovedPieVoiceAssets": 166,
+    "voiceFilesPresent": 332,
+    "videoManifestRecords": 96,
+    "uniqueReleaseVideoFilesPresent": 48,
+    "completedHistoricalPieVideoTasks": 29,
+    "historicalVideoMasterFilesPresent": 29,
+    "historicalVideoRuntimeFilesPresent": 29,
+    "historicalVideoDesktopFilesPresent": 29,
+    "historicalVideoJobSpecificationCommit": "bfd4ffc",
+    "historicalVideoLedgerSource": "tools/media/production/.ledger.json",
+    "licensedBgmFilesPresent": 5
+  },
+  "decision": {
+    "newPieGeneration": "disabled",
+    "speech": "freeze-existing-approved-assets",
+    "video": "freeze-existing-24-release-pairs-recover-local-provenance-and-retire-regeneration-requirement",
+    "videoFallback": "keep-static-cg-fallback",
+    "music": "keep-existing-licensed-tracks",
+    "rationale": "The supplied credential failed the model list and all six direct model probes at the account-group authorization layer. Continuing retries cannot establish model availability and would delay completion."
+  }
+}

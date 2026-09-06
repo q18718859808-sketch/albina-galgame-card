@@ -1,0 +1,15 @@
+{
+  "schemaVersion": 1,
+  "id": "albina-depth-controlled-pilot-v1",
+  "profile": "krea2-reference-plus-depth-fresh-latent-v1",
+  "jobId": "albina-combat-reference-depth-v1",
+  "seed": 2026082002,
+  "source": "staging/research/canon-visual/wiki-game-assets/albina-unarmored-standing.png",
+  "width": 1024,
+  "height": 3072,
+  "identityStrength": 0.95,
+  "promptStrength": 0.7,
+  "depthStrength": 0.55,
+  "prompt": "A single coherent full-body authored adult Albina character portrait rendered through the locked Krea2 six-LoRA production style chain. The supplied canonical image is the sole identity and structure authority. Preserve exactly the mature narrow adult face, image-left white luminous eye and image-right dark eye, segmented silver-gray hair plates and image-right conduit bundle, white breastplate over black internal structure, open abdominal frame, crossed mechanical forearms, black-and-white lower-body partition, complete feet, original pose, unmirrored side assignment and full-body composition. State variant only: combat; show restrained adult combat readiness through controlled gaze, tension and cool industrial light, without redesigning any component. Render with dense precise 2D linework, crisp mechanical edges, restrained cel shading, readable metal/fabric separation, cool white and charcoal values, limited old-gold accents and controlled warning-red energy.",
+  "negativePrompt": "child, loli, young girl, chibi, cute, doll-like, generic anime face, soft younger features, photorealistic, glossy 3d, redesign, altered costume, natural hair, mirrored eyes, wrong eye sides, missing conduit bundle, closed abdomen, organic replacement limbs, fused limbs, extra limbs, broken hands, cropped head, cropped hands, cropped feet, changed pose, extra character, duplicate figure, collage, split screen, blurry, low detail, muddy linework, text, logo, watermark, ui, speech bubble, weapon, decorative background"
+}

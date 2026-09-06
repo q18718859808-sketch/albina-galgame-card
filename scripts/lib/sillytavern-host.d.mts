@@ -1,0 +1,11 @@
+export const DEFAULT_SILLYTAVERN_BASE: string;
+export const DEFAULT_SILLYTAVERN_PORT: number;
+export function buildSillyTavernChildEnv(env?: NodeJS.ProcessEnv): NodeJS.ProcessEnv;
+export function isLocalSillyTavernBase(base: unknown): boolean;
+export function parseSillyTavernBase(value?: string): { base: string; host: string; port: number };
+export function discoverSillyTavernRoot(options?: Record<string, unknown>): string | undefined;
+export function discoverTavernForgeRoot(options?: Record<string, unknown>): string | undefined;
+export function buildSillyTavernInstallPlan(options?: Record<string, unknown>): Record<string, unknown>;
+export function probeSillyTavern(base?: string, options?: Record<string, unknown>): Promise<Record<string, unknown>>;
+export function defaultRootCandidates(): string[];
+export function sameResolvedPath(left: string, right: string): boolean;

@@ -1,0 +1,105 @@
+﻿{
+    "schema_version":  1,
+    "title":  "Albina Tavern Helper CDN Completion",
+    "domain":  "frontend",
+    "status":  "verified",
+    "workspace":  "D:\\创作\\albina-v2-complete",
+    "created_at":  "2026-07-20T04:34:39.7385927Z",
+    "verification_commands":  [
+                                  "npm run release:sync",
+                                  "npm run card:check",
+                                  "npm run typecheck",
+                                  "npm test",
+                                  "npm run build",
+                                  "npm run security:scan",
+                                  "Remove-Item Env:NO_COLOR -ErrorAction SilentlyContinue; npm run test:e2e",
+                                  "node scripts/verify-release.mjs",
+                                  "powershell -ExecutionPolicy Bypass -File .codex/tasks/20260720-123439-albina-tavern-helper-cdn-completion/verify-public.ps1",
+                                  "node .codex/tasks/20260720-123439-albina-tavern-helper-cdn-completion/verify-public-import.mjs"
+                              ],
+    "artifacts":  [
+                      "input.md",
+                      "plan.md",
+                      "manifest.json",
+                      "content/tavern-helper-v1.json",
+                      "card/albina.card.json",
+                      "card/albina.card.png",
+                      "release/github-cdn-root/card/albina.card.json",
+                      "release/github-cdn-root/card/albina.card.png",
+                      "public-verification.md",
+                      "verify-public.ps1",
+                      "verify-public-import.mjs"
+                  ],
+    "verification":  [
+                         {
+                             "command":  "npm run release:sync",
+                             "exit_code":  0,
+                             "started_at":  "2026-07-20T06:26:42.3847144Z",
+                             "finished_at":  "2026-07-20T06:26:56.0466961Z",
+                             "output":  "\u003e albina-galgame-card-source@2.0.0-rc.2 release:sync\r\n\u003e node scripts/release-sync.mjs\r\n\r\nCanon card, template, and worldbook are synchronized.\r\nCharacter card PNG metadata is synchronized.\r\nAsset audit: 0 unresolved; release missing=0, mismatch=0, stale=0\r\nvite v7.3.6 building client environment for production...\r\ntransforming...\r\n✓ 125 modules transformed.\r\nrendering chunks...\r\ncomputing gzip size...\r\nbuild/source/albina-source.css   12.84 kB │ gzip:   3.52 kB\r\nbuild/source/albina-source.js   707.41 kB │ gzip: 162.32 kB\r\n✓ built in 1.35s\r\nRelease status verified: D:\\创作\\albina-v2-complete\\dist\\albina-galgame-card\\release-status.json\r\nPromoted source build to D:\\创作\\albina-v2-complete\\dist\\albina-galgame-card\\source\r\nMirrored canonical dist tree to D:\\创作\\albina-v2-complete\\release\\github-cdn-root\\dist\\albina-galgame-card\r\nCopied importable character card to D:\\创作\\albina-v2-complete\\release\\github-cdn-root\\card\r\nAsset audit: 0 unresolved; release missing=0, mismatch=0, stale=0"
+                         },
+                         {
+                             "command":  "npm run card:check",
+                             "exit_code":  0,
+                             "started_at":  "2026-07-20T06:26:56.0525564Z",
+                             "finished_at":  "2026-07-20T06:26:56.8369533Z",
+                             "output":  "\u003e albina-galgame-card-source@2.0.0-rc.2 card:check\r\n\u003e node scripts/sync-character-card-png.mjs\r\n\r\nCharacter card PNG metadata is synchronized."
+                         },
+                         {
+                             "command":  "npm run typecheck",
+                             "exit_code":  0,
+                             "started_at":  "2026-07-20T06:26:56.8369533Z",
+                             "finished_at":  "2026-07-20T06:27:00.9830755Z",
+                             "output":  "\u003e albina-galgame-card-source@2.0.0-rc.2 typecheck\r\n\u003e vue-tsc --noEmit"
+                         },
+                         {
+                             "command":  "npm test",
+                             "exit_code":  0,
+                             "started_at":  "2026-07-20T06:27:00.9840813Z",
+                             "finished_at":  "2026-07-20T06:27:10.0371639Z",
+                             "output":  "\u003e albina-galgame-card-source@2.0.0-rc.2 test\r\n\u003e vitest run\r\n\r\n\r\n RUN  v3.2.7 D:/创作/albina-v2-complete\r\n\r\n ✓ tests/assets/promotion-receipts.test.ts (4 tests) 135ms\r\n ✓ tests/assets/integrity.test.ts (11 tests) 126ms\r\n ✓ tests/card/canon-content.test.ts (6 tests) 234ms\r\n ✓ tests/assets/visual-promotion.test.ts (8 tests) 154ms\r\n ✓ tests/assets/canon-visual-sources.test.ts (3 tests) 353ms\r\n   ✓ canon visual production references \u003e binds every research-only source copy to a hash without allowing redistribution  328ms\r\n ✓ tests/assets/security-release.test.ts (1 test) 303ms\r\n   ✓ ships no forbidden paths, secrets, provider calls, or remote executables in either generated tree  301ms\r\n ✓ tests/card/character-card-png.test.ts (13 tests) 429ms\r\n ✓ tests/assets/visual-production.test.ts (8 tests) 451ms\r\n   ✓ x666 visual production \u003e removes an opaque magenta portrait background even when the RGBA source has a stray transparent pixel  376ms\r\n ✓ tests/assets/video-production.test.ts (8 tests) 525ms\r\n ✓ tests/assets/release-boundary.test.ts (17 tests) 817ms\r\n   ✓ offline release boundary \u003e ignores environment files at every depth while retaining examples  522ms\r\n ✓ tests/assets/audio-license.test.ts (2 tests) 244ms\r\n ✓ tests/assets/visual-rebuild-plan.test.ts (2 tests) 65ms\r\n ✓ tests/runtime/asset-cache.test.ts (3 tests) 155ms\r\n ✓ tests/assets/release-gate.test.ts (7 tests) 94ms\r\n ✓ tests/assets/complete-release.test.ts (5 tests) 207ms\r\n ✓ tests/runtime/game-session.test.ts (2 tests) 124ms\r\n ✓ tests/domain/game-script.test.ts (8 tests) 54ms\r\n ✓ tests/domain/save.test.ts (14 tests) 57ms\r\n ✓ tests/domain/gameplay.test.ts (7 tests) 62ms\r\n ✓ tests/runtime/video.test.ts (2 tests) 69ms\r\n ✓ tests/runtime/default-host.test.ts (6 tests) 47ms\r\n ✓ tests/runtime/storage-gallery-special.test.ts (12 tests) 50ms\r\n ✓ tests/baseline/legacy-bundle.test.ts (2 tests) 1931ms\r\n   ✓ reproducible source baseline \u003e exposes the Albina application mount  1928ms\r\n ✓ tests/runtime/host-adapter.test.ts (6 tests) 38ms\r\n ✓ tests/stores/game-save-loading.test.ts (6 tests) 86ms\r\n ✓ tests/story/choices.test.ts (5 tests) 36ms\r\n ✓ tests/stores/gameplay-ui.test.ts (2 tests) 55ms\r\n ✓ tests/assets/media-readiness.test.ts (4 tests) 21ms\r\n ✓ tests/domain/canon.test.ts (6 tests) 33ms\r\n ✓ tests/domain/assets.test.ts (9 tests) 42ms\r\n ✓ tests/runtime/portraits.test.ts (6 tests) 14ms\r\n ✓ tests/runtime/audio.test.ts (13 tests) 29ms\r\n ✓ tests/baseline/release-sync.test.ts (2 tests) 2339ms\r\n   ✓ promotes only the approved v2 release surface before mirroring it  376ms\r\n   ✓ regenerates real stale inputs before bundling and promoting a release  1960ms\r\n ✓ tests/assets/provider-compatibility.test.ts (3 tests) 49ms\r\n ✓ tests/assets/security-scanner.test.ts (40 tests) 25ms\r\n ✓ tests/runtime/typewriter.test.ts (3 tests) 18ms\r\n ✓ tests/assets/asset-audit-release.test.ts (20 tests) 9ms\r\n ✓ tests/story/reachability.test.ts (7 tests) 2850ms\r\n   ✓ deterministic story compilation \u003e compiles byte-identical output on repeated runs  2756ms\r\n ✓ tests/assets/asset-release.test.ts (7 tests) 5488ms\r\n   ✓ canonical asset release \u003e audits the canonical manifest with zero unresolved references  5381ms\r\n\r\n Test Files  39 passed (39)\r\n      Tests  290 passed (290)\r\n   Start at  14:27:02\r\n   Duration  7.54s (transform 4.81s, setup 0ms, collect 19.25s, tests 17.82s, environment 12ms, prepare 8.53s)"
+                         },
+                         {
+                             "command":  "npm run build",
+                             "exit_code":  0,
+                             "started_at":  "2026-07-20T06:27:10.0371639Z",
+                             "finished_at":  "2026-07-20T06:27:12.8308631Z",
+                             "output":  "\u003e albina-galgame-card-source@2.0.0-rc.2 build\r\n\u003e vite build\r\n\r\nvite v7.3.6 building client environment for production...\r\ntransforming...\r\n✓ 125 modules transformed.\r\nrendering chunks...\r\ncomputing gzip size...\r\nbuild/source/albina-source.css   12.84 kB │ gzip:   3.52 kB\r\nbuild/source/albina-source.js   707.41 kB │ gzip: 162.32 kB\r\n✓ built in 1.46s"
+                         },
+                         {
+                             "command":  "npm run security:scan",
+                             "exit_code":  0,
+                             "started_at":  "2026-07-20T06:27:12.8308631Z",
+                             "finished_at":  "2026-07-20T06:27:14.0736484Z",
+                             "output":  "\u003e albina-galgame-card-source@2.0.0-rc.2 security:scan\r\n\u003e node scripts/security-scan.mjs\r\n\r\nSecurity scan passed across 862 repository text files."
+                         },
+                         {
+                             "command":  "Remove-Item Env:NO_COLOR -ErrorAction SilentlyContinue; npm run test:e2e",
+                             "exit_code":  0,
+                             "started_at":  "2026-07-20T06:27:14.0736484Z",
+                             "finished_at":  "2026-07-20T06:28:04.6281627Z",
+                             "output":  "\u003e albina-galgame-card-source@2.0.0-rc.2 test:e2e\r\n\u003e playwright test\r\n\r\n\r\nRunning 26 tests using 2 workers\r\n\r\n  ok  1 [desktop] › tests\\e2e\\storage-fallback.spec.ts:3:1 › keeps playing and saving with an in-memory fallback when IndexedDB is unavailable (1.5s)\r\n  ok  2 [desktop] › tests\\e2e\\built-import.spec.ts:3:1 › executes the published Tavern Helper module, injects CSS, mounts, recovers audio, and unmounts (1.9s)\r\n  ok  3 [desktop] › tests\\e2e\\tavern-card-import.spec.ts:14:1 › imports the final card script inside a Tavern Helper frame and mounts in the host page (822ms)\r\n  ok  5 [mobile] › tests\\e2e\\built-import.spec.ts:3:1 › executes the published Tavern Helper module, injects CSS, mounts, recovers audio, and unmounts (1.9s)\r\n  ok  4 [desktop] › tests\\e2e\\tavern-helper.spec.ts:42:1 › imports into a Tavern Helper harness and follows an authoritative route choice (4.4s)\r\n  ok  6 [mobile] › tests\\e2e\\storage-fallback.spec.ts:3:1 › keeps playing and saving with an in-memory fallback when IndexedDB is unavailable (1.2s)\r\n  ok  8 [mobile] › tests\\e2e\\tavern-card-import.spec.ts:14:1 › imports the final card script inside a Tavern Helper frame and mounts in the host page (805ms)\r\n  ok  7 [desktop] › tests\\e2e\\tavern-helper.spec.ts:54:1 › opens gallery and settings with honest media controls (1.2s)\r\n  ok 10 [mobile] › tests\\e2e\\tavern-helper.spec.ts:42:1 › imports into a Tavern Helper harness and follows an authoritative route choice (4.5s)\r\n  ok 11 [mobile] › tests\\e2e\\tavern-helper.spec.ts:54:1 › opens gallery and settings with honest media controls (1.4s)\r\n  ok  9 [desktop] › tests\\e2e\\tavern-helper.spec.ts:67:1 › exposes the authoritative gameplay state and safe loadout controls (6.1s)\r\n  ok 13 [desktop] › tests\\e2e\\tavern-helper.spec.ts:135:1 › keeps the UI usable offline after first load (4.8s)\r\n  ok 12 [mobile] › tests\\e2e\\tavern-helper.spec.ts:67:1 › exposes the authoritative gameplay state and safe loadout controls (6.0s)\r\n  ok 14 [desktop] › tests\\e2e\\tavern-helper.spec.ts:147:1 › creates, restores, and deletes a normal save slot with an image thumbnail (1.3s)\r\n  ok 16 [desktop] › tests\\e2e\\tavern-helper.spec.ts:161:1 › wires gallery unlock, special-CG queue, and cached asset URLs (3.9s)\r\n  ok 15 [mobile] › tests\\e2e\\tavern-helper.spec.ts:135:1 › keeps the UI usable offline after first load (4.5s)\r\n  ok 18 [mobile] › tests\\e2e\\tavern-helper.spec.ts:147:1 › creates, restores, and deletes a normal save slot with an image thumbnail (1.2s)\r\n  ok 17 [desktop] › tests\\e2e\\tavern-helper.spec.ts:189:1 › users can disable video for low-performance mode independently of reduced-motion (4.7s)\r\n  ok 19 [mobile] › tests\\e2e\\tavern-helper.spec.ts:161:1 › wires gallery unlock, special-CG queue, and cached asset URLs (3.7s)\r\n  ok 20 [desktop] › tests\\e2e\\tavern-helper.spec.ts:207:1 › mobile and reduced-motion policy use a static fallback instead of scene video (3.5s)\r\n  ok 21 [mobile] › tests\\e2e\\tavern-helper.spec.ts:189:1 › users can disable video for low-performance mode independently of reduced-motion (4.7s)\r\n  ok 22 [desktop] › tests\\e2e\\tavern-helper.spec.ts:223:1 › enabled video requests only the delivery profile selected for the viewport (4.7s)\r\n  ok 23 [mobile] › tests\\e2e\\tavern-helper.spec.ts:207:1 › mobile and reduced-motion policy use a static fallback instead of scene video (3.6s)\r\n  ok 24 [desktop] › tests\\e2e\\tavern-helper.spec.ts:242:1 › falls back to the approved poster when a video asset fails to load (4.0s)\r\n  ok 25 [mobile] › tests\\e2e\\tavern-helper.spec.ts:223:1 › enabled video requests only the delivery profile selected for the viewport (4.4s)\r\n  ok 26 [mobile] › tests\\e2e\\tavern-helper.spec.ts:242:1 › falls back to the approved poster when a video asset fails to load (3.5s)\r\n\r\n  26 passed (49.3s)"
+                         },
+                         {
+                             "command":  "node scripts/verify-release.mjs",
+                             "exit_code":  0,
+                             "started_at":  "2026-07-20T06:28:04.6281627Z",
+                             "finished_at":  "2026-07-20T06:28:06.7561348Z",
+                             "output":  "Release mirror verified: 305 files."
+                         },
+                         {
+                             "command":  "powershell -ExecutionPolicy Bypass -File .codex/tasks/20260720-123439-albina-tavern-helper-cdn-completion/verify-public.ps1",
+                             "exit_code":  0,
+                             "started_at":  "2026-07-20T06:28:06.7561348Z",
+                             "finished_at":  "2026-07-20T06:28:25.3716128Z",
+                             "output":  "albina.card.png HTTP=200 MIME=image/png SHA256=6B2375DE2CEFF6DE5C7205AF39C2E7B514B1B2A03CF84441C5FFA4ADF1FA99FC\r\nalbina.card.json HTTP=200 MIME=application/json; charset=utf-8 SHA256=046526C73949CA14D5D862594B74E0457E3620CACBE791CC506E89F0692FE0C3\r\nalbina-classic-loader.js HTTP=200 MIME=application/javascript; charset=utf-8 SHA256=70EDAE63CE162A4555A15889C32C242D4490FCA99E6011744C45F824075B0455\r\nalbina-source.js HTTP=200 MIME=application/javascript; charset=utf-8 SHA256=1DA310E8B61E63ED03712DC22C6D4BA8726ED5080897587B8D8869D3DE0925B1\r\nalbina-source.css HTTP=200 MIME=text/css; charset=utf-8 SHA256=3BC9A2F1D3BEDCD40AA149BFBB1E834C6151059D23375C218C03F0E70D5CCED7"
+                         },
+                         {
+                             "command":  "node .codex/tasks/20260720-123439-albina-tavern-helper-cdn-completion/verify-public-import.mjs",
+                             "exit_code":  0,
+                             "started_at":  "2026-07-20T06:28:25.3716128Z",
+                             "finished_at":  "2026-07-20T06:28:30.4348838Z",
+                             "output":  "[\r\n  {\r\n    \"profile\": \"desktop\",\r\n    \"mount\": {\r\n      \"parentLauncher\": 1,\r\n      \"frameLauncher\": 0,\r\n      \"parentStyle\": 1\r\n    },\r\n    \"responses\": [\r\n      {\r\n        \"url\": \"https://cdn.jsdelivr.net/gh/q18718859808-sketch/albina-galgame-card@v2.0.0-rc.2/dist/albina-galgame-card/source/albina-classic-loader.js\",\r\n        \"status\": 200,\r\n        \"type\": \"application/javascript; charset=utf-8\"\r\n      },\r\n      {\r\n        \"url\": \"https://cdn.jsdelivr.net/gh/q18718859808-sketch/albina-galgame-card@v2.0.0-rc.2/dist/albina-galgame-card/source/albina-source.js\",\r\n        \"status\": 200,\r\n        \"type\": \"application/javascript; charset=utf-8\"\r\n      },\r\n      {\r\n        \"url\": \"https://cdn.jsdelivr.net/gh/q18718859808-sketch/albina-galgame-card@v2.0.0-rc.2/dist/albina-galgame-card/source/albina-source.css\",\r\n        \"status\": 200,\r\n        \"type\": \"text/css; charset=utf-8\"\r\n      }\r\n    ]\r\n  },\r\n  {\r\n    \"profile\": \"mobile\",\r\n    \"mount\": {\r\n      \"parentLauncher\": 1,\r\n      \"frameLauncher\": 0,\r\n      \"parentStyle\": 1\r\n    },\r\n    \"responses\": [\r\n      {\r\n        \"url\": \"https://cdn.jsdelivr.net/gh/q18718859808-sketch/albina-galgame-card@v2.0.0-rc.2/dist/albina-galgame-card/source/albina-classic-loader.js\",\r\n        \"status\": 200,\r\n        \"type\": \"application/javascript; charset=utf-8\"\r\n      },\r\n      {\r\n        \"url\": \"https://cdn.jsdelivr.net/gh/q18718859808-sketch/albina-galgame-card@v2.0.0-rc.2/dist/albina-galgame-card/source/albina-source.js\",\r\n        \"status\": 200,\r\n        \"type\": \"application/javascript; charset=utf-8\"\r\n      },\r\n      {\r\n        \"url\": \"https://cdn.jsdelivr.net/gh/q18718859808-sketch/albina-galgame-card@v2.0.0-rc.2/dist/albina-galgame-card/source/albina-source.css\",\r\n        \"status\": 200,\r\n        \"type\": \"text/css; charset=utf-8\"\r\n      }\r\n    ]\r\n  }\r\n]"
+                         }
+                     ]
+}

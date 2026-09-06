@@ -71,18 +71,25 @@ describe('PieClient', () => {
     const client = new PieClient({ env: { PIE_API_KEY: 'test-only' }, fetcher });
 
     const submitted = await client.submitVideo({ prompt: 'slow rain', durationSeconds: 5, image: new Uint8Array([137, 80, 78, 71, 13, 10, 26, 10]) });
-    const completed = await client.pollVideo(submitted.providerJobId);
+    const completed = await client.pollVideo(submitted.handle);
 
-    expect(submitted).toEqual({ providerJobId: 'job_[REDACTED]', status: 'pending' });
-    expect(completed).toMatchObject({ kind: 'video', model: 'seedance-1.5-pro', sourceUrl: expect.stringContaining('video.mp4') });
+    expect(submitted).toEqual({ handle: { provider: 'pie', model: 'seedance-1.5-pro', id: 'job_[REDACTED]', pollProtocol: 'pie-videos-v1', contractVersion: 1 }, status: 'pending' });
+    expect(completed).toMatchObject({ kind: 'video', provider: 'pie', model: 'seedance-1.5-pro', sourceUrl: expect.stringContaining('video.mp4') });
   });
 
-  test('keeps an explicitly injected base URL for isolated tests', async () => {
+  test('normalizes an injected /v1 base URL without duplicating the version path', async () => {
     const fetcher = vi.fn<FetchLike>().mockImplementation(async (url) => {
       expect(String(url)).toBe('https://example.invalid/v1/images/generations');
       return jsonResponse(await fixture('image-generation.json'));
     });
-    await new PieClient({ env: { PIE_API_KEY: 'test-only' }, fetcher, baseUrl: 'https://example.invalid/' }).generateImage({ prompt: 'x', width: 1, height: 1 });
+    await new PieClient({ env: { PIE_API_KEY: 'test-only' }, fetcher, baseUrl: 'https://example.invalid/v1/' }).generateImage({ prompt: 'x', width: 1, height: 1 });
+  });
+
+  test('rejects HTTP API bases and artifact URLs before downstream use', async () => {
+    const fetcher = vi.fn<FetchLike>();
+    expect(() => new PieClient({ env: { PIE_API_KEY: 'test-only' }, fetcher, baseUrl: 'http://api.example.invalid/v1' })).toThrow(/HTTPS/iu);
+    const unsafeArtifact = vi.fn<FetchLike>().mockResolvedValue(jsonResponse({ data: [{ url: 'http://cdn.example.invalid/image.png' }] }));
+    await expect(new PieClient({ env: { PIE_API_KEY: 'test-only' }, fetcher: unsafeArtifact }).generateImage({ prompt: 'x', width: 1, height: 1 })).rejects.toThrow(/HTTPS/iu);
   });
 
   test('labels JPEG Seedance keyframes from their byte signature and rejects unsupported bytes', async () => {
@@ -129,6 +136,6 @@ describe('PieClient', () => {
     const ambiguous = await client.generateMusic({ prompt: 'somber strings', durationSeconds: 12.5 });
 
     expect(music).toMatchObject({ kind: 'audio', model: 'music-2.6', sourceUrl: expect.stringContaining('music.mp3') });
-    expect(ambiguous).toEqual({ kind: 'ambiguous', model: 'music-2.6', reason: 'gateway-timeout' });
+    expect(ambiguous).toEqual({ kind: 'ambiguous', provider: 'pie', model: 'music-2.6', reason: 'gateway-timeout' });
   });
 });

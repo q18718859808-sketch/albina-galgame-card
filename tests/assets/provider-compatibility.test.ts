@@ -19,7 +19,7 @@ describe('image provider compatibility probes', () => {
     expect(candidates.every((probe: any) => probe.productionAuthorized === false)).toBe(true);
     expect(candidates.every((probe: any) => probe.generation.artifactVerified === false)).toBe(true);
     expect(plan.imageJobs.every((job: any) => !candidateIds.has(job.provider))).toBe(true);
-    expect(plan.policy.requiredImageProvider).toBe('x666-openai-compatible');
+    expect(plan.policy.requiredImageProvider).toBe('wisart-openai-compatible');
   });
 
   it('fails closed for an image request whose timeout has an unknown outcome', async () => {

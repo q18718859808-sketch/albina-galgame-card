@@ -1,13 +1,15 @@
 #!/usr/bin/env node
-import { copyFile, mkdir, readdir, rename } from 'node:fs/promises';
-import { dirname, resolve } from 'node:path';
+import { readdir } from 'node:fs/promises';
+import { resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
 
-import { MediaGenerator, type MediaClient, validateJobArtifact } from './generator.js';
+import { MediaGenerator, validateJobArtifact } from './generator.js';
 import { contentHashJobId } from './hash.js';
 import { loadJob } from './job.js';
 import { Ledger } from './ledger.js';
-import { PieClient } from './pie-client.js';
+import type { MediaClient, ProviderClientResolver } from './media-client.js';
+import { createProviderClientResolver } from './provider-clients.js';
+import { promoteApprovedArtifact } from './promotion.js';
 import { prepareProduction } from './production.js';
 
 interface CliDependencies {
@@ -15,6 +17,7 @@ interface CliDependencies {
   stderr?: (line: string) => void;
   env?: NodeJS.ProcessEnv | Record<string, string | undefined>;
   client?: MediaClient;
+  resolveClient?: ProviderClientResolver;
   cwd?: string;
 }
 
@@ -26,7 +29,7 @@ export async function runCli(args: string[], dependencies: CliDependencies = {})
   if (command === 'inventory') return inventory(args, ledgerPath, cwd, stdout);
   if (command === 'generate') return generate(args, ledgerPath, dependencies, stdout);
   if (command === 'validate') return validate(args, stdout);
-  if (command === 'promote') return promote(args, stdout);
+  if (command === 'promote') return promote(args, cwd, stdout);
   if (command === 'prepare-production') {
     const destination = option(args, '--to') ?? resolve(cwd, 'tools/media/production/jobs');
     stdout(JSON.stringify(await prepareProduction(cwd, destination)));
@@ -48,7 +51,7 @@ async function inventory(args: string[], ledgerPath: string, cwd: string, stdout
     }
     const job = await loadJob(path);
     const id = contentHashJobId(job);
-    rows.push({ id, file: path, kind: job.kind, status: state.jobs[id]?.status ?? 'new', output: job.output });
+    rows.push({ id, file: path, kind: job.kind, provider: job.provider, model: job.model, promptVersion: job.promptVersion, status: state.jobs[id]?.status ?? 'new', output: job.output });
   }
   stdout(JSON.stringify(rows, null, 2));
   return 0;
@@ -63,8 +66,12 @@ async function generate(
   const paths = positionals(args.slice(1), new Set(['--ledger']));
   if (paths.length === 0) throw new Error('media generate requires at least one job file');
   const jobs = await Promise.all(paths.map(loadJob));
-  const client = dependencies.client ?? createDefaultClient(dependencies.env);
-  await new MediaGenerator({ client, ledger: new Ledger(ledgerPath) }).generate(jobs);
+  const resolver = dependencies.resolveClient ?? (dependencies.client ? undefined : createProviderClientResolver(dependencies.env ?? process.env));
+  await new MediaGenerator({
+    ...(dependencies.client ? { client: dependencies.client } : {}),
+    ...(resolver ? { resolveClient: resolver } : {}),
+    ledger: new Ledger(ledgerPath),
+  }).generate(jobs);
   stdout(JSON.stringify(jobs.map((job) => ({ id: contentHashJobId(job), output: job.output }))));
   return 0;
 }
@@ -77,18 +84,22 @@ async function validate(args: string[], stdout: (line: string) => void): Promise
   return 0;
 }
 
-async function promote(args: string[], stdout: (line: string) => void): Promise<number> {
+async function promote(args: string[], cwd: string, stdout: (line: string) => void): Promise<number> {
   const path = args[1];
   const destination = option(args, '--to');
-  if (!path || !destination) throw new Error('media promote requires a job file and --to destination');
+  const assetId = option(args, '--asset-id');
+  const reviewer = option(args, '--reviewed-by');
+  if (!path || !destination || !assetId || !reviewer) throw new Error('media promote requires a job file, --to, --asset-id, and --reviewed-by');
   const job = await loadJob(path);
   await validateJobArtifact(job);
-  await mkdir(dirname(destination), { recursive: true });
-  const temporary = `${destination}.${process.pid}.tmp`;
-  await copyFile(job.output, temporary);
-  await rename(temporary, destination);
-  stdout(JSON.stringify({ promoted: destination, id: contentHashJobId(job) }));
+  const receiptPath = option(args, '--receipt') ?? resolve(cwd, 'tools/media/production/receipts', `${safeFileName(assetId)}.json`);
+  const receipt = await promoteApprovedArtifact(job, destination, receiptPath, assetId, reviewer);
+  stdout(JSON.stringify({ promoted: destination, id: contentHashJobId(job), receipt: receiptPath, artifactSha256: receipt.artifactSha256 }));
   return 0;
+}
+
+function safeFileName(value: string): string {
+  return value.replaceAll(/[^a-z0-9._-]/giu, '-');
 }
 
 function option(args: string[], name: string): string | undefined {
@@ -103,10 +114,6 @@ function positionals(args: string[], valuedOptions: Set<string>): string[] {
     else if (!args[index]?.startsWith('--')) result.push(args[index] as string);
   }
   return result;
-}
-
-function createDefaultClient(env?: NodeJS.ProcessEnv | Record<string, string | undefined>): MediaClient {
-  return env === undefined ? new PieClient() : new PieClient({ env });
 }
 
 const isEntrypoint = process.argv[1] !== undefined && resolve(process.argv[1]) === fileURLToPath(import.meta.url);

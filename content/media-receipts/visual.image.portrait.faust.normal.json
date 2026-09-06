@@ -1,0 +1,36 @@
+{
+  "version": 1,
+  "assetId": "file.characters.faust.normal.png",
+  "artifactSha256": "181d1804a348d2acb99e1c5023eac471b732651b50b5aaeacbcfd329127d8eae",
+  "provenance": {
+    "provider": "wisart-openai-compatible",
+    "model": "gpt-image-2",
+    "promptVersion": "albina-visual-migration-v1",
+    "sourceJobHash": "ff67e1d2166f56511280152f749a52fae2a120c7f2fd75277e0a5e197cd2097b",
+    "review": {
+      "status": "approved",
+      "reviewer": "workbuddy-agent",
+      "reviewedAt": "2026-09-06T07:16:41.443Z"
+    }
+  },
+  "rights": {
+    "status": "unverified",
+    "sourceType": "model-output",
+    "redistribution": "unverified",
+    "rightsBasis": "Redistribution rights for this model output have not been independently verified."
+  },
+  "lineage": {
+    "kind": "derivative",
+    "processVersion": "albina-visual-promotion-v1",
+    "inputs": [
+      {
+        "sha256": "a0033f3a9da006a862cd26eaf93ff9a86856f18a5a1ef7f2490461b84ef5e0d8",
+        "role": "canon-visual-reference"
+      },
+      {
+        "sha256": "aaf89630110b6fef687b86334404b00cd39fd29c84451971575b26a29ce51142",
+        "role": "canon-visual-reference"
+      }
+    ]
+  }
+}

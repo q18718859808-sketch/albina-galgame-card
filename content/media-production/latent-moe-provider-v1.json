@@ -1,0 +1,15 @@
+{
+  "provider": "latent-moe",
+  "status": "research-verified-not-live-tested",
+  "apiBase": "https://latent.moe",
+  "openapi": {
+    "url": "https://latent.moe/openapi.json",
+    "version": "1.0.0",
+    "sha256": "1135e6ca665d0a89ae0c017f21f68727fb99fd47e4e3774f86806ed555c3b35e",
+    "serverLicense": "AGPL-3.0-only"
+  },
+  "credential": { "envVar": "LATENT_MOE_API_KEY", "stored": false, "logged": false },
+  "endpoints": ["GET /api/generate/status", "POST /api/generate", "GET /api/generate/{id}", "POST /api/generate/{id}/cancel", "GET /api/media/{artworkId}", "GET /api/v1/images/resolve"],
+  "constraints": { "workersRequired": true, "serialGeneration": true, "steps": [8, 16], "resolutions": ["square", "portrait", "landscape"], "defaultPromotionAllowed": false },
+  "releaseBoundary": "parallel provider for research, backgrounds, AU exploration, and benchmark candidates; not a Krea2 six-LoRA claim"
+}

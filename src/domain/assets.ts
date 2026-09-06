@@ -14,8 +14,8 @@ export const RelativeAssetPathSchema = z
     message: 'Asset paths must be relative to the canonical asset root',
   });
 
-const ProviderIdSchema = z.enum(['pie', 'x666-openai-compatible']);
-const MediaModelSchema = z.enum(['gpt-image-2', 'seedance-1.5-pro', 'speech-2.8-hd']);
+const ProviderIdSchema = z.enum(['pie', 'wisart-openai-compatible', 'comfyui-local-krea2']);
+const MediaModelSchema = z.enum(['gpt-image-2', 'redcraft23FP8_30Krea2.safetensors', 'seedance-1.5-pro', 'speech-2.8-hd']);
 const PromptVersionSchema = z.string().regex(/^[a-z0-9][a-z0-9._-]*$/iu);
 
 export const AssetLicenseSchema = z
@@ -71,13 +71,23 @@ export const AudioLicenseRegistrySchema = z
     });
   });
 
+const AssetProvenanceBaselineSchema = z
+  .object({
+    workflowPath: RelativeAssetPathSchema,
+    workflowSha256: z.string().regex(/^[a-f0-9]{64}$/iu),
+    evidencePath: RelativeAssetPathSchema,
+    evidenceSha256: z.string().regex(/^[a-f0-9]{64}$/iu),
+    topologySha256: z.string().regex(/^[a-f0-9]{64}$/iu),
+  })
+  .strict();
+
 const AssetProvenanceSchema = z
   .object({
     provider: ProviderIdSchema,
     model: MediaModelSchema,
-    upstreamPieVerified: z.literal(false).optional(),
     promptVersion: PromptVersionSchema,
     sourceJobHash: z.string().regex(/^[a-f0-9]{64}$/iu),
+    baseline: AssetProvenanceBaselineSchema.optional(),
     review: z.object({
       status: z.literal('approved'),
       reviewer: z.string().min(1),
@@ -87,7 +97,6 @@ const AssetProvenanceSchema = z
   .strict()
   .superRefine((value, context) => {
     addProviderModelIssue(context, ['model'], value.provider, value.model);
-    addUpstreamEvidenceIssue(context, ['upstreamPieVerified'], value.provider, value.upstreamPieVerified);
   });
 
 export const AssetRightsSchema = z
@@ -188,7 +197,6 @@ export const MediaJobSchema = z
     kind: z.enum(['image', 'image-edit', 'video', 'speech']),
     provider: ProviderIdSchema,
     model: MediaModelSchema,
-    upstreamPieVerified: z.literal(false).optional(),
     promptVersion: PromptVersionSchema,
     status: z.enum(['pending', 'running', 'completed', 'failed']),
     contentHash: z.string().regex(/^[a-f0-9]{64}$/i),
@@ -201,7 +209,6 @@ export const MediaJobSchema = z
   .superRefine((value, context) => {
     const kind = value.kind === 'image-edit' ? 'image' : value.kind;
     addProviderModelIssue(context, ['model'], value.provider, value.model, kind);
-    addUpstreamEvidenceIssue(context, ['upstreamPieVerified'], value.provider, value.upstreamPieVerified);
   });
 
 function addProviderModelIssue(
@@ -211,26 +218,14 @@ function addProviderModelIssue(
   model: string,
   kind?: 'image' | 'video' | 'speech',
 ): void {
-  const allowed = provider === 'x666-openai-compatible'
+  const allowed = provider === 'wisart-openai-compatible'
     ? ['gpt-image-2']
-    : provider === 'pie' ? ['seedance-1.5-pro', 'speech-2.8-hd'] : [];
-  const kindMatches = kind === undefined || ({ image: ['gpt-image-2'], video: ['seedance-1.5-pro'], speech: ['speech-2.8-hd'] })[kind].includes(model);
+    : provider === 'comfyui-local-krea2'
+      ? ['redcraft23FP8_30Krea2.safetensors']
+      : provider === 'pie' ? ['seedance-1.5-pro', 'speech-2.8-hd'] : [];
+  const kindMatches = kind === undefined || ({ image: ['gpt-image-2', 'redcraft23FP8_30Krea2.safetensors'], video: ['seedance-1.5-pro'], speech: ['speech-2.8-hd'] })[kind].includes(model);
   if (!allowed.includes(model) || !kindMatches) {
     context.addIssue({ code: 'custom', path, message: `Unsupported provider/model pair: ${provider}/${model}` });
-  }
-}
-
-function addUpstreamEvidenceIssue(
-  context: z.RefinementCtx,
-  path: PropertyKey[],
-  provider: string,
-  upstreamPieVerified: false | undefined,
-): void {
-  const valid = provider === 'x666-openai-compatible'
-    ? upstreamPieVerified === false
-    : upstreamPieVerified === undefined;
-  if (!valid) {
-    context.addIssue({ code: 'custom', path, message: `Invalid upstream Pie evidence for provider: ${provider}` });
   }
 }
 

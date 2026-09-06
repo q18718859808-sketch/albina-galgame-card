@@ -7,10 +7,19 @@ import { describe, expect, test, vi } from 'vitest';
 import { downloadResumable } from '../src/download.js';
 import { MediaGenerator, normalizeVideo } from '../src/generator.js';
 import type { MediaJob } from '../src/job.js';
-import { contentHashJobId } from '../src/hash.js';
+import { contentHashJobId, legacyContentHashJobId } from '../src/hash.js';
 import { JobBusyError, Ledger, MusicBulkNotReadyError, MusicCooldownError } from '../src/ledger.js';
 import { PieClient } from '../src/pie-client.js';
+import type { ProviderId } from '../src/provider.js';
 import { retry } from '../src/retry.js';
+
+const PIE_IMAGE_JOB = { provider: 'pie', model: 'gpt-image-2', promptVersion: 'test-image-v1' } as const;
+const PIE_VIDEO_JOB = { provider: 'pie', model: 'seedance-1.5-pro', promptVersion: 'test-video-v1' } as const;
+const PIE_MUSIC_JOB = { provider: 'pie', model: 'music-2.6', promptVersion: 'test-music-v1' } as const;
+
+function pieVideoHandle(id: string) {
+  return { provider: 'pie', model: 'seedance-1.5-pro', id, pollProtocol: 'pie-videos-v1', contractVersion: 1 } as const;
+}
 
 describe('content hash jobs', () => {
   test('uses canonical content rather than property insertion order', () => {
@@ -20,6 +29,14 @@ describe('content hash jobs', () => {
     expect(first).toMatch(/^job_[a-f0-9]{32}$/);
     expect(reordered).toBe(first);
     expect(contentHashJobId({ kind: 'image', prompt: 'sun' })).not.toBe(first);
+  });
+
+  test('changes identity for provider, model, or prompt revision changes', () => {
+    const base = { kind: 'image', provider: 'pie', model: 'gpt-image-2', promptVersion: 'v1', prompt: 'rain' };
+    expect(contentHashJobId({ ...base, provider: 'hhhl' })).not.toBe(contentHashJobId(base));
+    expect(contentHashJobId({ ...base, model: 'gpt-image-2-candidate' })).not.toBe(contentHashJobId(base));
+    expect(contentHashJobId({ ...base, promptVersion: 'v2' })).not.toBe(contentHashJobId(base));
+    expect(legacyContentHashJobId(base)).toBe(contentHashJobId({ kind: 'image', prompt: 'rain' }));
   });
 });
 
@@ -138,6 +155,14 @@ describe('network resilience', () => {
 
     expect(await readFile(destination, 'utf8')).toBe('hello world');
   });
+
+  test('validates every redirect target before issuing the next request', async () => {
+    const directory = await mkdtemp(join(tmpdir(), 'albina-media-download-redirect-'));
+    const fetcher = vi.fn(async (_input: string | URL | Request, _init?: RequestInit) => new Response(null, { status: 302, headers: { location: 'https://127.0.0.1/private.bin' } }));
+    await expect(downloadResumable('https://example.invalid/artifact.bin', join(directory, 'artifact.bin'), { fetcher })).rejects.toThrow(/local or private/iu);
+    expect(fetcher).toHaveBeenCalledOnce();
+    expect(fetcher.mock.calls[0]?.[1]).toMatchObject({ redirect: 'manual' });
+  });
 });
 
 describe('artifact generation', () => {
@@ -154,11 +179,11 @@ describe('artifact generation', () => {
   test('allows only one provider call across concurrent generators', async () => {
     const directory = await mkdtemp(join(tmpdir(), 'albina-media-concurrent-'));
     const output = join(directory, 'image.png');
-    const job = { kind: 'image' as const, prompt: 'rain', width: 100, height: 100, output, validation: { width: 100, height: 100, alpha: true } };
+    const job = { kind: 'image' as const, ...PIE_IMAGE_JOB, prompt: 'rain', width: 100, height: 100, output, validation: { width: 100, height: 100, alpha: true } };
     const ledger = new Ledger(join(directory, 'ledger.json'));
     let release!: () => void;
     const held = new Promise<void>((resolve) => { release = resolve; });
-    const generateImage = vi.fn(async () => { await held; return { kind: 'image' as const, model: 'gpt-image-2', bytes: pngHeader(100, 100, 6) }; });
+    const generateImage = vi.fn(async () => { await held; return { kind: 'image' as const, ...PIE_IMAGE_JOB, bytes: pngHeader(100, 100, 6) }; });
     const first = new MediaGenerator({ client: { generateImage }, ledger }).generate([job]);
     await vi.waitFor(() => expect(generateImage).toHaveBeenCalledOnce());
     const second = new MediaGenerator({ client: { generateImage }, ledger }).generate([job]);
@@ -171,18 +196,18 @@ describe('artifact generation', () => {
   test('fences an expired worker from overwriting a reclaimed worker output or ledger state', async () => {
     const directory = await mkdtemp(join(tmpdir(), 'albina-media-fencing-'));
     const output = join(directory, 'image.png');
-    const job = { kind: 'image' as const, prompt: 'rain', width: 100, height: 100, output, validation: { width: 100, height: 100, alpha: true } };
+    const job = { kind: 'image' as const, ...PIE_IMAGE_JOB, prompt: 'rain', width: 100, height: 100, output, validation: { width: 100, height: 100, alpha: true } };
     let now = 1_000;
     const ledger = new Ledger(join(directory, 'ledger.json'), { now: () => now });
     let releaseA!: () => void;
     const heldA = new Promise<void>((resolve) => { releaseA = resolve; });
     const oldBytes = pngHeader(100, 100, 6); oldBytes[30] = 1;
     const newBytes = pngHeader(100, 100, 6); newBytes[30] = 2;
-    const firstProvider = vi.fn(async () => { await heldA; return { kind: 'image' as const, model: 'gpt-image-2', bytes: oldBytes }; });
+    const firstProvider = vi.fn(async () => { await heldA; return { kind: 'image' as const, ...PIE_IMAGE_JOB, bytes: oldBytes }; });
     const first = new MediaGenerator({ client: { generateImage: firstProvider }, ledger }).generate([job]);
     await vi.waitFor(() => expect(firstProvider).toHaveBeenCalledOnce());
     now += 10 * 60 * 1000 + 1;
-    const secondProvider = vi.fn(async () => ({ kind: 'image' as const, model: 'gpt-image-2', bytes: newBytes }));
+    const secondProvider = vi.fn(async () => ({ kind: 'image' as const, ...PIE_IMAGE_JOB, bytes: newBytes }));
     await new MediaGenerator({ client: { generateImage: secondProvider }, ledger }).generate([job]);
     releaseA();
     await expect(first).rejects.toThrow(/claim was lost/i);
@@ -192,7 +217,7 @@ describe('artifact generation', () => {
 
   test('does not restart a job with a fresh running lease', async () => {
     const directory = await mkdtemp(join(tmpdir(), 'albina-media-running-resume-'));
-    const job = { kind: 'image' as const, prompt: 'rain', width: 100, height: 100, output: join(directory, 'image.png'), validation: { width: 100, height: 100, alpha: true } };
+    const job = { kind: 'image' as const, ...PIE_IMAGE_JOB, prompt: 'rain', width: 100, height: 100, output: join(directory, 'image.png'), validation: { width: 100, height: 100, alpha: true } };
     const ledger = new Ledger(join(directory, 'ledger.json'));
     await ledger.claimJob(contentHashJobId(job), 'other-process');
     const generateImage = vi.fn();
@@ -202,7 +227,7 @@ describe('artifact generation', () => {
   test('skips a completed job with a still-valid output without provider billing', async () => {
     const directory = await mkdtemp(join(tmpdir(), 'albina-media-completed-valid-'));
     const output = join(directory, 'image.png');
-    const job = { kind: 'image' as const, prompt: 'rain', width: 100, height: 100, output, validation: { width: 100, height: 100, alpha: true } };
+    const job = { kind: 'image' as const, ...PIE_IMAGE_JOB, prompt: 'rain', width: 100, height: 100, output, validation: { width: 100, height: 100, alpha: true } };
     await writeFile(output, pngHeader(100, 100, 6));
     const ledger = new Ledger(join(directory, 'ledger.json'));
     await ledger.upsertJob(contentHashJobId(job), { status: 'completed', output });
@@ -214,7 +239,7 @@ describe('artifact generation', () => {
   test('CAS-protects completed-invalid stale marking from a newer completion', async () => {
     const directory = await mkdtemp(join(tmpdir(), 'albina-media-stale-cas-'));
     const output = join(directory, 'image.png');
-    const job = { kind: 'image' as const, prompt: 'rain', width: 100, height: 100, output, validation: { width: 100, height: 100, alpha: true } };
+    const job = { kind: 'image' as const, ...PIE_IMAGE_JOB, prompt: 'rain', width: 100, height: 100, output, validation: { width: 100, height: 100, alpha: true } };
     await writeFile(output, Buffer.from('invalid'));
     const ledger = new Ledger(join(directory, 'ledger.json'));
     await ledger.upsertJob(contentHashJobId(job), { status: 'completed', claimToken: 1, output });
@@ -225,7 +250,7 @@ describe('artifact generation', () => {
     const providerA = vi.fn();
     const workerA = new MediaGenerator({ client: { generateImage: providerA }, ledger, afterCompletedValidationFailure: async () => { reachedA(); await held; } }).generate([job]);
     await reached;
-    const providerB = vi.fn(async () => ({ kind: 'image' as const, model: 'gpt-image-2', bytes: pngHeader(100, 100, 6) }));
+    const providerB = vi.fn(async () => ({ kind: 'image' as const, ...PIE_IMAGE_JOB, bytes: pngHeader(100, 100, 6) }));
     await new MediaGenerator({ client: { generateImage: providerB }, ledger }).generate([job]);
     releaseA();
     await workerA;
@@ -237,11 +262,11 @@ describe('artifact generation', () => {
   test.each(['missing', 'invalid'])('regenerates a completed job when its output is %s', async (state) => {
     const directory = await mkdtemp(join(tmpdir(), 'albina-media-completed-stale-'));
     const output = join(directory, 'image.png');
-    const job = { kind: 'image' as const, prompt: 'rain', width: 100, height: 100, output, validation: { width: 100, height: 100, alpha: true } };
+    const job = { kind: 'image' as const, ...PIE_IMAGE_JOB, prompt: 'rain', width: 100, height: 100, output, validation: { width: 100, height: 100, alpha: true } };
     if (state === 'invalid') await writeFile(output, Buffer.from('bad'));
     const ledger = new Ledger(join(directory, 'ledger.json'));
     await ledger.upsertJob(contentHashJobId(job), { status: 'completed', output });
-    const generateImage = vi.fn().mockResolvedValue({ kind: 'image', model: 'gpt-image-2', bytes: pngHeader(100, 100, 6) });
+    const generateImage = vi.fn().mockResolvedValue({ kind: 'image', provider: 'pie', model: 'gpt-image-2', bytes: pngHeader(100, 100, 6) });
     await new MediaGenerator({ client: { generateImage }, ledger }).generate([job]);
     expect(generateImage).toHaveBeenCalledOnce();
     expect((await ledger.read()).jobs[contentHashJobId(job)]?.status).toBe('completed');
@@ -250,10 +275,10 @@ describe('artifact generation', () => {
   test('retries a previously failed job through the normal transient retry path', async () => {
     const directory = await mkdtemp(join(tmpdir(), 'albina-media-failed-retry-'));
     const output = join(directory, 'image.png');
-    const job = { kind: 'image' as const, prompt: 'rain', width: 100, height: 100, output, validation: { width: 100, height: 100, alpha: true } };
+    const job = { kind: 'image' as const, ...PIE_IMAGE_JOB, prompt: 'rain', width: 100, height: 100, output, validation: { width: 100, height: 100, alpha: true } };
     const ledger = new Ledger(join(directory, 'ledger.json'));
     await ledger.upsertJob(contentHashJobId(job), { status: 'failed', error: '503' });
-    const generateImage = vi.fn().mockRejectedValueOnce(Object.assign(new Error('busy'), { status: 503 })).mockResolvedValueOnce({ kind: 'image', model: 'gpt-image-2', bytes: pngHeader(100, 100, 6) });
+    const generateImage = vi.fn().mockRejectedValueOnce(Object.assign(new Error('busy'), { status: 503 })).mockResolvedValueOnce({ kind: 'image', provider: 'pie', model: 'gpt-image-2', bytes: pngHeader(100, 100, 6) });
     await new MediaGenerator({ client: { generateImage }, ledger, sleep: async () => undefined }).generate([job]);
     expect(generateImage).toHaveBeenCalledTimes(2);
   });
@@ -263,6 +288,7 @@ describe('artifact generation', () => {
     const output = join(directory, 'image.png');
     const job = {
       kind: 'image' as const,
+      ...PIE_IMAGE_JOB,
       prompt: 'rain',
       width: 100,
       height: 100,
@@ -287,17 +313,18 @@ describe('artifact generation', () => {
     const output = join(directory, 'video.mp4');
     const keyframe = join(directory, 'keyframe.png');
     await writeFile(keyframe, pngHeader(100, 100, 6));
-    const job = { kind: 'video' as const, prompt: 'rain', durationSeconds: 5, sourceImage: keyframe, masterOutput: join(directory, 'master.mp4'), desktopOutput: join(directory, 'desktop.mp4'), output, desktopValidation: { width: 1920, height: 1080, fps: 24, durationSeconds: 5 }, masterValidation: { minFps: 12, maxFps: 60, minDurationSeconds: 4, maxDurationSeconds: 6 } };
+    const job = { kind: 'video' as const, ...PIE_VIDEO_JOB, prompt: 'rain', durationSeconds: 5, sourceImage: keyframe, masterOutput: join(directory, 'master.mp4'), desktopOutput: join(directory, 'desktop.mp4'), output, desktopValidation: { width: 1920, height: 1080, fps: 24, durationSeconds: 5 }, masterValidation: { minFps: 12, maxFps: 60, minDurationSeconds: 4, maxDurationSeconds: 6 } };
     const ledger = new Ledger(join(directory, 'ledger.json'));
-    const submitVideo = vi.fn().mockResolvedValue({ providerJobId: 'provider_once', status: 'pending' });
+    const submitVideo = vi.fn().mockResolvedValue({ handle: pieVideoHandle('provider_once'), status: 'pending' });
     const pollVideo = vi
       .fn()
       .mockImplementationOnce(async () => {
-        expect((await ledger.read()).jobs[contentHashJobId(job)]?.providerJobId).toBe('provider_once');
+        expect((await ledger.read()).jobs[contentHashJobId(job)]?.providerJob?.id).toBe('provider_once');
         throw Object.assign(new Error('gateway'), { status: 500 });
       })
       .mockResolvedValueOnce({
         kind: 'video',
+        provider: 'pie',
         model: 'seedance-1.5-pro',
         mimeType: 'video/mp4',
         bytes: new Uint8Array([1, 2, 3]),
@@ -310,15 +337,15 @@ describe('artifact generation', () => {
     expect(submitVideo).toHaveBeenCalledOnce();
     expect(submitVideo).toHaveBeenCalledWith(expect.objectContaining({ image: expect.any(Uint8Array) }));
     expect(pollVideo).toHaveBeenCalledTimes(2);
-    expect((await ledger.read()).jobs[contentHashJobId(job)]?.providerJobId).toBe('provider_once');
+    expect((await ledger.read()).jobs[contentHashJobId(job)]?.providerJob?.id).toBe('provider_once');
   });
 
   test('commits a validated raw/runtime/desktop video bundle together', async () => {
     const directory = await mkdtemp(join(tmpdir(), 'albina-media-video-bundle-'));
     const keyframe = join(directory, 'key.png'); await writeFile(keyframe, pngHeader(10, 10, 6));
     const job = videoJob(directory, keyframe);
-    const submitVideo = vi.fn().mockResolvedValue({ providerJobId: 'video_bundle', status: 'pending' });
-    const pollVideo = vi.fn().mockResolvedValue({ kind: 'video', model: 'seedance-1.5-pro', bytes: new Uint8Array([9]) });
+    const submitVideo = vi.fn().mockResolvedValue({ handle: pieVideoHandle('video_bundle'), status: 'pending' });
+    const pollVideo = vi.fn().mockResolvedValue({ kind: 'video', provider: 'pie', model: 'seedance-1.5-pro', bytes: new Uint8Array([9]) });
     const videoPostprocess = async (_master: string, runtime: string, desktop: string) => { await writeFile(runtime, new Uint8Array([8])); await writeFile(desktop, new Uint8Array([7])); };
     const validateArtifact = async (candidate: MediaJob) => { if (candidate.kind !== 'video') throw new Error('expected video'); return Promise.all([access(candidate.masterOutput), access(candidate.output), access(candidate.desktopOutput)]); };
     await new MediaGenerator({ client: { submitVideo, pollVideo }, ledger: new Ledger(join(directory, 'ledger.json')), sleep: async () => undefined, videoPostprocess, validateArtifact }).generate([job]);
@@ -334,36 +361,101 @@ describe('artifact generation', () => {
     await writeFile(job.output, Buffer.from('valid')); await writeFile(job.desktopOutput, Buffer.from(condition === 'corrupt-desktop' ? 'bad' : 'valid'));
     if (condition !== 'missing-master') await writeFile(job.masterOutput, Buffer.from('valid'));
     const ledger = new Ledger(join(directory, 'ledger.json'));
-    await ledger.upsertJob(contentHashJobId(job), { status: 'completed', providerJobId: 'existing_video', claimToken: 1 });
+    await ledger.upsertJob(contentHashJobId(job), { status: 'completed', providerJob: pieVideoHandle('existing_video'), claimToken: 1 });
     const validateArtifact = async (candidate: MediaJob) => { if (candidate.kind !== 'video') throw new Error('expected video'); const values = await Promise.all([readFile(candidate.masterOutput), readFile(candidate.output), readFile(candidate.desktopOutput)]); if (values.some((value) => value.toString() === 'bad')) throw new Error('corrupt video bundle'); };
     const submitVideo = vi.fn();
-    const pollVideo = vi.fn().mockResolvedValue({ kind: 'video', model: 'seedance-1.5-pro', bytes: Buffer.from('new-master') });
+    const pollVideo = vi.fn().mockResolvedValue({ kind: 'video', provider: 'pie', model: 'seedance-1.5-pro', bytes: Buffer.from('new-master') });
     const videoPostprocess = async (_master: string, runtime: string, desktop: string) => { await writeFile(runtime, Buffer.from('new-runtime')); await writeFile(desktop, Buffer.from('new-desktop')); };
     await new MediaGenerator({ client: { submitVideo, pollVideo }, ledger, sleep: async () => undefined, videoPostprocess, validateArtifact }).generate([job]);
     expect(submitVideo).not.toHaveBeenCalled();
-    expect(pollVideo).toHaveBeenCalledWith('existing_video');
+    expect(pollVideo).toHaveBeenCalledWith(pieVideoHandle('existing_video'));
   });
 
   test('resumes polling a persisted provider job without submitting again', async () => {
     const directory = await mkdtemp(join(tmpdir(), 'albina-media-video-resume-'));
-    const job = { kind: 'video' as const, prompt: 'rain', durationSeconds: 5, sourceImage: join(directory, 'keyframe.png'), masterOutput: join(directory, 'master.mp4'), desktopOutput: join(directory, 'desktop.mp4'), output: join(directory, 'video.mp4'), desktopValidation: { width: 1920, height: 1080, fps: 24, durationSeconds: 5 }, masterValidation: { minFps: 12, maxFps: 60, minDurationSeconds: 4, maxDurationSeconds: 6 } };
+    const job = { kind: 'video' as const, ...PIE_VIDEO_JOB, prompt: 'rain', durationSeconds: 5, sourceImage: join(directory, 'keyframe.png'), masterOutput: join(directory, 'master.mp4'), desktopOutput: join(directory, 'desktop.mp4'), output: join(directory, 'video.mp4'), desktopValidation: { width: 1920, height: 1080, fps: 24, durationSeconds: 5 }, masterValidation: { minFps: 12, maxFps: 60, minDurationSeconds: 4, maxDurationSeconds: 6 } };
     const ledger = new Ledger(join(directory, 'ledger.json'));
-    await ledger.upsertJob(contentHashJobId(job), { status: 'failed', providerJobId: 'provider_existing' });
+    await ledger.upsertJob(contentHashJobId(job), { status: 'failed', providerJob: pieVideoHandle('provider_existing') });
     const submitVideo = vi.fn();
-    const pollVideo = vi.fn().mockResolvedValue({ providerJobId: 'provider_existing', status: 'failed' });
+    const pollVideo = vi.fn().mockResolvedValue({ handle: pieVideoHandle('provider_existing'), status: 'failed' });
 
     await expect(
       new MediaGenerator({ client: { submitVideo, pollVideo }, ledger, sleep: async () => undefined }).generate([job]),
     ).rejects.toThrow(/provider_existing/);
 
     expect(submitVideo).not.toHaveBeenCalled();
-    expect(pollVideo).toHaveBeenCalledWith('provider_existing');
+    expect(pollVideo).toHaveBeenCalledWith(pieVideoHandle('provider_existing'));
+  });
+
+  test('rejects a mismatched typed handle before submit or poll', async () => {
+    const directory = await mkdtemp(join(tmpdir(), 'albina-media-video-handle-mismatch-'));
+    const job = videoJob(directory, join(directory, 'keyframe.png'));
+    const ledger = new Ledger(join(directory, 'ledger.json'));
+    const grokHandle = { provider: 'grok-responses', model: 'grok-image-video-1.5-preview', id: 'wrong-provider', pollProtocol: 'openai-responses-v1', contractVersion: 1 } as const;
+    await ledger.upsertJob(contentHashJobId(job), { status: 'failed', providerJob: grokHandle });
+    const submitVideo = vi.fn();
+    const pollVideo = vi.fn();
+
+    await expect(new MediaGenerator({ resolveClient: () => ({ submitVideo, pollVideo }), ledger }).generate([job])).rejects.toThrow(/does not match/iu);
+    expect(submitVideo).not.toHaveBeenCalled();
+    expect(pollVideo).not.toHaveBeenCalled();
+  });
+
+  test.each(['legacy-id', ''])('adopts the real v1 hash and quarantines legacy raw video ID %j before any provider call', async (legacyProviderJobId) => {
+    const directory = await mkdtemp(join(tmpdir(), 'albina-media-video-legacy-handle-'));
+    const job = videoJob(directory, join(directory, 'keyframe.png'));
+    const ledgerPath = join(directory, 'ledger.json');
+    await writeFile(ledgerPath, JSON.stringify({ version: 1, jobs: { [legacyContentHashJobId(job)]: { status: 'failed', providerJobId: legacyProviderJobId } }, music: { consecutiveValidProbes: 0, cooldownUntil: 0 } }));
+    const submitVideo = vi.fn();
+    const pollVideo = vi.fn();
+
+    await expect(new MediaGenerator({ resolveClient: () => ({ submitVideo, pollVideo }), ledger: new Ledger(ledgerPath) }).generate([job])).rejects.toThrow(/quarantined/iu);
+    expect(submitVideo).not.toHaveBeenCalled();
+    expect(pollVideo).not.toHaveBeenCalled();
+  });
+
+  test('adopts and validates a completed v1 Pie job without another provider call', async () => {
+    const directory = await mkdtemp(join(tmpdir(), 'albina-media-v1-completed-'));
+    const output = join(directory, 'image.png');
+    const job = { kind: 'image' as const, ...PIE_IMAGE_JOB, prompt: 'rain', width: 100, height: 100, output, validation: { width: 100, height: 100, alpha: true } };
+    await writeFile(output, pngHeader(100, 100, 6));
+    const ledgerPath = join(directory, 'ledger.json');
+    const legacyId = legacyContentHashJobId(job);
+    await writeFile(ledgerPath, JSON.stringify({ version: 1, jobs: { [legacyId]: { status: 'completed', output } }, music: { consecutiveValidProbes: 0, cooldownUntil: 0 } }));
+    const generateImage = vi.fn();
+    const ledger = new Ledger(ledgerPath);
+    await new MediaGenerator({ client: { generateImage }, ledger }).generate([job]);
+    expect(generateImage).not.toHaveBeenCalled();
+    const state = await ledger.read();
+    expect(state.jobs[contentHashJobId(job)]?.status).toBe('completed');
+    expect(state.jobs[legacyId]?.migratedToJobId).toBe(contentHashJobId(job));
+  });
+
+  test('never falls back to Pie when an HHHL job fails', async () => {
+    const directory = await mkdtemp(join(tmpdir(), 'albina-media-no-fallback-'));
+    const job = { kind: 'image' as const, provider: 'hhhl' as const, model: 'gpt-image-2' as const, promptVersion: 'test-hhhl-v1', prompt: 'rain', width: 100, height: 100, output: join(directory, 'image.png'), validation: { width: 100, height: 100, alpha: true } };
+    const hhhl = vi.fn().mockRejectedValue(Object.assign(new Error('unauthorized'), { status: 401 }));
+    const pie = vi.fn();
+    const resolveClient = (provider: ProviderId) => provider === 'hhhl' ? { generateImage: hhhl } : { generateImage: pie };
+
+    await expect(new MediaGenerator({ resolveClient, ledger: new Ledger(join(directory, 'ledger.json')) }).generate([job])).rejects.toThrow(/unauthorized/iu);
+    expect(hhhl).toHaveBeenCalledOnce();
+    expect(pie).not.toHaveBeenCalled();
+  });
+
+  test('rejects an artifact returned under another provider identity', async () => {
+    const directory = await mkdtemp(join(tmpdir(), 'albina-media-artifact-mismatch-'));
+    const job = { kind: 'image' as const, provider: 'hhhl' as const, model: 'gpt-image-2' as const, promptVersion: 'test-hhhl-v1', prompt: 'rain', width: 100, height: 100, output: join(directory, 'image.png'), validation: { width: 100, height: 100, alpha: true } };
+    const generateImage = vi.fn().mockResolvedValue({ kind: 'image', provider: 'pie', model: 'gpt-image-2', bytes: pngHeader(100, 100, 6) });
+
+    await expect(new MediaGenerator({ resolveClient: () => ({ generateImage }), ledger: new Ledger(join(directory, 'ledger.json')) }).generate([job])).rejects.toThrow(/does not match job/iu);
+    await expect(access(job.output)).rejects.toThrow();
   });
 
   test('blocks even one non-probe music job until three probes pass', async () => {
     const directory = await mkdtemp(join(tmpdir(), 'albina-media-single-music-'));
     const generateMusic = vi.fn();
-    const job = { kind: 'music' as const, prompt: 'cue', durationSeconds: 30, output: join(directory, 'cue.mp3'), validation: { minDurationSeconds: 20, maxDurationSeconds: 40 } };
+    const job = { kind: 'music' as const, ...PIE_MUSIC_JOB, prompt: 'cue', durationSeconds: 30, output: join(directory, 'cue.mp3'), validation: { minDurationSeconds: 20, maxDurationSeconds: 40 } };
     await expect(new MediaGenerator({ client: { generateMusic }, ledger: new Ledger(join(directory, 'ledger.json')) }).generate([job])).rejects.toBeInstanceOf(MusicBulkNotReadyError);
     expect(generateMusic).not.toHaveBeenCalled();
   });
@@ -371,9 +463,9 @@ describe('artifact generation', () => {
   test('accepts valid probe audio independent of the requested duration and opens the gate', async () => {
     const directory = await mkdtemp(join(tmpdir(), 'albina-media-realistic-probes-'));
     const ledger = new Ledger(join(directory, 'ledger.json'));
-    const generateMusic = vi.fn(async () => ({ kind: 'audio' as const, model: 'music-2.6', bytes: wavPcm16(8_000, 48_000, 7_000) }));
+    const generateMusic = vi.fn(async () => ({ kind: 'audio' as const, provider: 'pie' as const, model: 'music-2.6' as const, bytes: wavPcm16(8_000, 48_000, 7_000) }));
     for (let index = 1; index <= 3; index += 1) {
-      await new MediaGenerator({ client: { generateMusic }, ledger }).generate([{ kind: 'music', probe: true, prompt: `probe ${index}`, durationSeconds: 15, output: join(directory, `probe-${index}.wav`), validation: { minDurationSeconds: 5, maxDurationSeconds: 300, minLoudnessDbfs: -30, maxLoudnessDbfs: -6 } }]);
+      await new MediaGenerator({ client: { generateMusic }, ledger }).generate([{ kind: 'music' as const, ...PIE_MUSIC_JOB, probe: true, prompt: `probe ${index}`, durationSeconds: 15, output: join(directory, `probe-${index}.wav`), validation: { minDurationSeconds: 5, maxDurationSeconds: 300, minLoudnessDbfs: -30, maxLoudnessDbfs: -6 } }]);
     }
     await expect(ledger.assertMusicBulkReady()).resolves.toBeUndefined();
     expect(generateMusic).toHaveBeenCalledTimes(3);
@@ -392,5 +484,5 @@ function pngHeader(width: number, height: number, colorType: number): Buffer {
   return buffer;
 }
 async function mockVideoProcess(master: string, runtime: string, desktop: string): Promise<void> { const bytes = await readFile(master); await writeFile(runtime, bytes); await writeFile(desktop, bytes); }
-function videoJob(directory: string, sourceImage: string) { return { kind: 'video' as const, prompt: 'rain', durationSeconds: 8, sourceImage, masterOutput: join(directory, 'master.mp4'), output: join(directory, 'runtime.mp4'), desktopOutput: join(directory, 'desktop.mp4'), validation: { width: 1280, height: 720, fps: 24, durationSeconds: 8 }, desktopValidation: { width: 1920, height: 1080, fps: 24, durationSeconds: 8 }, masterValidation: { minFps: 12, maxFps: 60, minDurationSeconds: 7, maxDurationSeconds: 9 } }; }
+function videoJob(directory: string, sourceImage: string) { return { kind: 'video' as const, ...PIE_VIDEO_JOB, prompt: 'rain', durationSeconds: 8, sourceImage, masterOutput: join(directory, 'master.mp4'), output: join(directory, 'runtime.mp4'), desktopOutput: join(directory, 'desktop.mp4'), validation: { width: 1280, height: 720, fps: 24, durationSeconds: 8 }, desktopValidation: { width: 1920, height: 1080, fps: 24, durationSeconds: 8 }, masterValidation: { minFps: 12, maxFps: 60, minDurationSeconds: 7, maxDurationSeconds: 9 } }; }
 function wavPcm16(sampleRate: number, samples: number, amplitude: number): Buffer { const dataLength=samples*2; const b=Buffer.alloc(44+dataLength); b.write('RIFF',0); b.writeUInt32LE(36+dataLength,4); b.write('WAVEfmt ',8); b.writeUInt32LE(16,16); b.writeUInt16LE(1,20); b.writeUInt16LE(1,22); b.writeUInt32LE(sampleRate,24); b.writeUInt32LE(sampleRate*2,28); b.writeUInt16LE(2,32); b.writeUInt16LE(16,34); b.write('data',36); b.writeUInt32LE(dataLength,40); for(let i=0;i<samples;i++) b.writeInt16LE(i%2===0?amplitude:-amplitude,44+i*2); return b; }

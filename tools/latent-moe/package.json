@@ -1,0 +1,10 @@
+{
+  "name": "albina-latent-moe-tools",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "npm --prefix ../media run build",
+    "mcp": "node mcp-server.mjs",
+    "smoke": "node mcp-smoke.mjs"
+  }
+}

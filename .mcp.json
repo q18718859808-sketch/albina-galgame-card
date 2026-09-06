@@ -1,0 +1,22 @@
+{
+  "mcpServers": {
+    "albina-production": {
+      "command": "node",
+      "args": ["tools/albina-production/mcp-server.mjs"],
+      "cwd": "D:/创作/albina-v2-complete",
+      "env": {
+        "ALBINA_COMFY_URL": "http://127.0.0.1:8199"
+      }
+    },
+    "albina-latent-moe": {
+      "command": "node",
+      "args": ["tools/latent-moe/mcp-server.mjs"],
+      "cwd": "D:/\u521b\u4f5c/albina-v2-complete"
+    },
+    "albina-wisart": {
+      "command": "node",
+      "args": ["tools/wisart/mcp-server.mjs"],
+      "cwd": "D:/\u521b\u4f5c/albina-v2-complete"
+    }
+  }
+}

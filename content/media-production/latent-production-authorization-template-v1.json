@@ -1,0 +1,621 @@
+{
+  "schemaVersion": 1,
+  "id": "latent-production-authorization-template-v1",
+  "status": "not-required",
+  "reviewer": null,
+  "reviewedAt": null,
+  "requiresHumanIdentityApproval": false,
+  "promptFreezeId": "albina-latent-text-prompts-v1",
+  "promptVersion": "latent-text-v1",
+  "planVariantVersion": "2.1.0-latent-v1",
+  "promptFreezeSha256": "37949b370c3903e7dc668712888aa0a95280113f699a2b76ec35db8bc7d511ac",
+  "latentJobSetSha256": "4142998c4939998c152544a13ea4323126e214db61a9ef942a11eae5faafac75",
+  "instructions": [
+    "本文件是历史审计参考，不是生产授权文件；生产运行时不读取任何人工授权文件。",
+    "promptFreezeSha256 / latentJobSetSha256 与 promptSha256 绑定当前 freeze 内容，用于定位输入变化。",
+    "身份覆盖、未覆盖角色声明、negative prompt 与 provider 合约仍由生成器和运行时自动校验。"
+  ],
+  "approvals": [
+    {
+      "jobId": "visual.image.cg.araya_rooftop",
+      "promptSha256": "acf15edee49067275b7f23450c6053b4763ef244967fd9c131e98f19a19d4915",
+      "decision": "not-required",
+      "notes": "人工授权已由项目所有者明确取消；此条目仅保留自动校验上下文。",
+      "reviewContext": {
+        "assetId": "cg.araya_rooftop",
+        "category": "cg",
+        "identityAnchor": null,
+        "identitySubjects": [
+          "albina",
+          "protagonist",
+          "vergilius"
+        ],
+        "cgIdentityCoverage": {
+          "injected": 2,
+          "uncovered": [
+            "vergilius"
+          ]
+        },
+        "delivery": {
+          "format": "jpg",
+          "width": 1280,
+          "height": 720,
+          "alpha": false
+        },
+        "promptChars": 1157
+      }
+    },
+    {
+      "jobId": "visual.image.cg.art_resonance",
+      "promptSha256": "34bc0493de686c953783a8cc785c9b3bc686e376dbad0626c415f3a5d11abaa9",
+      "decision": "not-required",
+      "notes": "人工授权已由项目所有者明确取消；此条目仅保留自动校验上下文。",
+      "reviewContext": {
+        "assetId": "cg.art_resonance",
+        "category": "cg",
+        "identityAnchor": null,
+        "identitySubjects": [
+          "albina",
+          "protagonist"
+        ],
+        "cgIdentityCoverage": {
+          "injected": 2,
+          "uncovered": []
+        },
+        "delivery": {
+          "format": "jpg",
+          "width": 1280,
+          "height": 720,
+          "alpha": false
+        },
+        "promptChars": 1082
+      }
+    },
+    {
+      "jobId": "visual.image.cg.backstreet_pursuit",
+      "promptSha256": "bdf2ea56ccc857cee908e02e12424f13b1903a8b0351697c5648c5a36041c3c5",
+      "decision": "not-required",
+      "notes": "人工授权已由项目所有者明确取消；此条目仅保留自动校验上下文。",
+      "reviewContext": {
+        "assetId": "cg.backstreet_pursuit",
+        "category": "cg",
+        "identityAnchor": null,
+        "identitySubjects": [
+          "albina",
+          "protagonist",
+          "ring_agent"
+        ],
+        "cgIdentityCoverage": {
+          "injected": 3,
+          "uncovered": []
+        },
+        "delivery": {
+          "format": "jpg",
+          "width": 1280,
+          "height": 720,
+          "alpha": false
+        },
+        "promptChars": 1130
+      }
+    },
+    {
+      "jobId": "visual.image.cg.combat_transition_01",
+      "promptSha256": "38f85889e8b501845511102e4fefb11a5e652f7b67c111957b0743893fe6cd09",
+      "decision": "not-required",
+      "notes": "人工授权已由项目所有者明确取消；此条目仅保留自动校验上下文。",
+      "reviewContext": {
+        "assetId": "cg.combat_transition_01",
+        "category": "cg",
+        "identityAnchor": null,
+        "identitySubjects": [
+          "albina",
+          "protagonist",
+          "ring_agent"
+        ],
+        "cgIdentityCoverage": {
+          "injected": 3,
+          "uncovered": []
+        },
+        "delivery": {
+          "format": "jpg",
+          "width": 1280,
+          "height": 720,
+          "alpha": false
+        },
+        "promptChars": 1138
+      }
+    },
+    {
+      "jobId": "visual.image.cg.conspiracy_contract",
+      "promptSha256": "f8de94d8d3ebb5be4e8307e83d8bd1cf84ed9706e26f04ac3795e0e24d572ba6",
+      "decision": "not-required",
+      "notes": "人工授权已由项目所有者明确取消；此条目仅保留自动校验上下文。",
+      "reviewContext": {
+        "assetId": "cg.conspiracy_contract",
+        "category": "cg",
+        "identityAnchor": null,
+        "identitySubjects": [
+          "albina",
+          "callisto",
+          "protagonist",
+          "ren"
+        ],
+        "cgIdentityCoverage": {
+          "injected": 2,
+          "uncovered": [
+            "callisto",
+            "ren"
+          ]
+        },
+        "delivery": {
+          "format": "jpg",
+          "width": 1280,
+          "height": 720,
+          "alpha": false
+        },
+        "promptChars": 1166
+      }
+    },
+    {
+      "jobId": "visual.image.cg.fascia_heartbeat",
+      "promptSha256": "befd5d80112ef3751c73455b70990656fa1964c6cb5ab0feec3a5c42097a51c4",
+      "decision": "not-required",
+      "notes": "人工授权已由项目所有者明确取消；此条目仅保留自动校验上下文。",
+      "reviewContext": {
+        "assetId": "cg.fascia_heartbeat",
+        "category": "cg",
+        "identityAnchor": null,
+        "identitySubjects": [
+          "albina",
+          "protagonist"
+        ],
+        "cgIdentityCoverage": {
+          "injected": 2,
+          "uncovered": []
+        },
+        "delivery": {
+          "format": "jpg",
+          "width": 1280,
+          "height": 720,
+          "alpha": false
+        },
+        "promptChars": 1081
+      }
+    },
+    {
+      "jobId": "visual.image.cg.golden_bough_ending",
+      "promptSha256": "b2292771c74fb87eb82045733329fe8e76ee70c5a5a440bd81630727810ee35c",
+      "decision": "not-required",
+      "notes": "人工授权已由项目所有者明确取消；此条目仅保留自动校验上下文。",
+      "reviewContext": {
+        "assetId": "cg.golden_bough_ending",
+        "category": "cg",
+        "identityAnchor": null,
+        "identitySubjects": [
+          "albina",
+          "protagonist"
+        ],
+        "cgIdentityCoverage": {
+          "injected": 2,
+          "uncovered": []
+        },
+        "delivery": {
+          "format": "jpg",
+          "width": 1280,
+          "height": 720,
+          "alpha": false
+        },
+        "promptChars": 1078
+      }
+    },
+    {
+      "jobId": "visual.image.cg.golden_bough_rebuild",
+      "promptSha256": "af68caf28dd50b6147f6fe43696621fab69be62e4903a6e6e3ea69e9e2443cbc",
+      "decision": "not-required",
+      "notes": "人工授权已由项目所有者明确取消；此条目仅保留自动校验上下文。",
+      "reviewContext": {
+        "assetId": "cg.golden_bough_rebuild",
+        "category": "cg",
+        "identityAnchor": null,
+        "identitySubjects": [
+          "albina"
+        ],
+        "cgIdentityCoverage": {
+          "injected": 1,
+          "uncovered": []
+        },
+        "delivery": {
+          "format": "jpg",
+          "width": 1280,
+          "height": 720,
+          "alpha": false
+        },
+        "promptChars": 962
+      }
+    },
+    {
+      "jobId": "visual.image.cg.hollow_torso_reveal",
+      "promptSha256": "2ad63db15e4377e135d46dcfb4214cd4ec4e0ea33bc54a362ef8b84308941966",
+      "decision": "not-required",
+      "notes": "人工授权已由项目所有者明确取消；此条目仅保留自动校验上下文。",
+      "reviewContext": {
+        "assetId": "cg.hollow_torso_reveal",
+        "category": "cg",
+        "identityAnchor": null,
+        "identitySubjects": [
+          "albina",
+          "lce_doctor",
+          "protagonist"
+        ],
+        "cgIdentityCoverage": {
+          "injected": 3,
+          "uncovered": []
+        },
+        "delivery": {
+          "format": "jpg",
+          "width": 1280,
+          "height": 720,
+          "alpha": false
+        },
+        "promptChars": 1150
+      }
+    },
+    {
+      "jobId": "visual.image.cg.lce_raid",
+      "promptSha256": "820cb8d2f7b733cbc963c04dc723e1e0298be3f3509288a76f608f9636dc5301",
+      "decision": "not-required",
+      "notes": "人工授权已由项目所有者明确取消；此条目仅保留自动校验上下文。",
+      "reviewContext": {
+        "assetId": "cg.lce_raid",
+        "category": "cg",
+        "identityAnchor": null,
+        "identitySubjects": [
+          "albina",
+          "lce_doctor",
+          "protagonist"
+        ],
+        "cgIdentityCoverage": {
+          "injected": 3,
+          "uncovered": []
+        },
+        "delivery": {
+          "format": "jpg",
+          "width": 1280,
+          "height": 720,
+          "alpha": false
+        },
+        "promptChars": 1141
+      }
+    },
+    {
+      "jobId": "visual.image.cg.limbus_bus_night",
+      "promptSha256": "a5102b676efa210c8565c3b7d08cb74aaead95f7e3b72b35cbac7b6c5c4cfe24",
+      "decision": "not-required",
+      "notes": "人工授权已由项目所有者明确取消；此条目仅保留自动校验上下文。",
+      "reviewContext": {
+        "assetId": "cg.limbus_bus_night",
+        "category": "cg",
+        "identityAnchor": null,
+        "identitySubjects": [
+          "albina",
+          "dante",
+          "protagonist"
+        ],
+        "cgIdentityCoverage": {
+          "injected": 2,
+          "uncovered": [
+            "dante"
+          ]
+        },
+        "delivery": {
+          "format": "jpg",
+          "width": 1280,
+          "height": 720,
+          "alpha": false
+        },
+        "promptChars": 1139
+      }
+    },
+    {
+      "jobId": "visual.image.cg.maestro_shadow",
+      "promptSha256": "e09d14c50bd4e2e006eede0b0047a4d7687b20369e8a63ffda00d0fea762137a",
+      "decision": "not-required",
+      "notes": "人工授权已由项目所有者明确取消；此条目仅保留自动校验上下文。",
+      "reviewContext": {
+        "assetId": "cg.maestro_shadow",
+        "category": "cg",
+        "identityAnchor": null,
+        "identitySubjects": [
+          "albina",
+          "callisto",
+          "protagonist",
+          "ren"
+        ],
+        "cgIdentityCoverage": {
+          "injected": 2,
+          "uncovered": [
+            "callisto",
+            "ren"
+          ]
+        },
+        "delivery": {
+          "format": "jpg",
+          "width": 1280,
+          "height": 720,
+          "alpha": false
+        },
+        "promptChars": 1178
+      }
+    },
+    {
+      "jobId": "visual.image.cg.opening_rain",
+      "promptSha256": "ee6a8820c5d27d0c1bbff7d82f9520c47fcec48cde15913ea5422975b870b18f",
+      "decision": "not-required",
+      "notes": "人工授权已由项目所有者明确取消；此条目仅保留自动校验上下文。",
+      "reviewContext": {
+        "assetId": "cg.opening_rain",
+        "category": "cg",
+        "identityAnchor": null,
+        "identitySubjects": [
+          "albina",
+          "protagonist"
+        ],
+        "cgIdentityCoverage": {
+          "injected": 2,
+          "uncovered": []
+        },
+        "delivery": {
+          "format": "jpg",
+          "width": 1280,
+          "height": 720,
+          "alpha": false
+        },
+        "promptChars": 1134
+      }
+    },
+    {
+      "jobId": "visual.image.cg.rain_confession",
+      "promptSha256": "69e19d2461d4ee089fb7cd958b827da92a2425b483ef2844cadc370fd37da155",
+      "decision": "not-required",
+      "notes": "人工授权已由项目所有者明确取消；此条目仅保留自动校验上下文。",
+      "reviewContext": {
+        "assetId": "cg.rain_confession",
+        "category": "cg",
+        "identityAnchor": null,
+        "identitySubjects": [
+          "albina",
+          "protagonist"
+        ],
+        "cgIdentityCoverage": {
+          "injected": 2,
+          "uncovered": []
+        },
+        "delivery": {
+          "format": "jpg",
+          "width": 1280,
+          "height": 720,
+          "alpha": false
+        },
+        "promptChars": 1075
+      }
+    },
+    {
+      "jobId": "visual.image.cg.rebuild_awakening",
+      "promptSha256": "14671aeb3666188f206b359d998546d828742b87e709614469d07bf0e576997c",
+      "decision": "not-required",
+      "notes": "人工授权已由项目所有者明确取消；此条目仅保留自动校验上下文。",
+      "reviewContext": {
+        "assetId": "cg.rebuild_awakening",
+        "category": "cg",
+        "identityAnchor": null,
+        "identitySubjects": [
+          "albina",
+          "protagonist"
+        ],
+        "cgIdentityCoverage": {
+          "injected": 2,
+          "uncovered": []
+        },
+        "delivery": {
+          "format": "jpg",
+          "width": 1280,
+          "height": 720,
+          "alpha": false
+        },
+        "promptChars": 1072
+      }
+    },
+    {
+      "jobId": "visual.image.cg.ren_interruption",
+      "promptSha256": "194053396807a7f452266a515e2118478c197ce2a33bbc3daefb6e1aa882049e",
+      "decision": "not-required",
+      "notes": "人工授权已由项目所有者明确取消；此条目仅保留自动校验上下文。",
+      "reviewContext": {
+        "assetId": "cg.ren_interruption",
+        "category": "cg",
+        "identityAnchor": null,
+        "identitySubjects": [
+          "albina",
+          "protagonist",
+          "ren"
+        ],
+        "cgIdentityCoverage": {
+          "injected": 2,
+          "uncovered": [
+            "ren"
+          ]
+        },
+        "delivery": {
+          "format": "jpg",
+          "width": 1280,
+          "height": 720,
+          "alpha": false
+        },
+        "promptChars": 1154
+      }
+    },
+    {
+      "jobId": "visual.image.cg.ring_conspiracy_ending",
+      "promptSha256": "9155f248b4a7ba3e219e25d8e3a35f5cd159f8321530557aa7d553efb3d92142",
+      "decision": "not-required",
+      "notes": "人工授权已由项目所有者明确取消；此条目仅保留自动校验上下文。",
+      "reviewContext": {
+        "assetId": "cg.ring_conspiracy_ending",
+        "category": "cg",
+        "identityAnchor": null,
+        "identitySubjects": [
+          "albina",
+          "protagonist"
+        ],
+        "cgIdentityCoverage": {
+          "injected": 2,
+          "uncovered": []
+        },
+        "delivery": {
+          "format": "jpg",
+          "width": 1280,
+          "height": 720,
+          "alpha": false
+        },
+        "promptChars": 1078
+      }
+    },
+    {
+      "jobId": "visual.image.cg.ring_invitation",
+      "promptSha256": "dd95c13a9c08a317edb3623423a03fd19aafbcbc7c1f38d4e68095fb10f314be",
+      "decision": "not-required",
+      "notes": "人工授权已由项目所有者明确取消；此条目仅保留自动校验上下文。",
+      "reviewContext": {
+        "assetId": "cg.ring_invitation",
+        "category": "cg",
+        "identityAnchor": null,
+        "identitySubjects": [
+          "albina",
+          "callisto",
+          "ren"
+        ],
+        "cgIdentityCoverage": {
+          "injected": 1,
+          "uncovered": [
+            "callisto",
+            "ren"
+          ]
+        },
+        "delivery": {
+          "format": "jpg",
+          "width": 1280,
+          "height": 720,
+          "alpha": false
+        },
+        "promptChars": 1050
+      }
+    },
+    {
+      "jobId": "visual.image.cg.surgery_of_memory",
+      "promptSha256": "bd257e763b853f10f43af0cddb03411980655b2a359aa61c2357b5b89d6effd2",
+      "decision": "not-required",
+      "notes": "人工授权已由项目所有者明确取消；此条目仅保留自动校验上下文。",
+      "reviewContext": {
+        "assetId": "cg.surgery_of_memory",
+        "category": "cg",
+        "identityAnchor": null,
+        "identitySubjects": [
+          "albina",
+          "faust",
+          "protagonist"
+        ],
+        "cgIdentityCoverage": {
+          "injected": 2,
+          "uncovered": [
+            "faust"
+          ]
+        },
+        "delivery": {
+          "format": "jpg",
+          "width": 1280,
+          "height": 720,
+          "alpha": false
+        },
+        "promptChars": 1153
+      }
+    },
+    {
+      "jobId": "visual.image.cg.trust_threshold",
+      "promptSha256": "f81dd9ffc6332e43bacbc2b96b428c3cf42a0e53b2018525232f76c70ad290bf",
+      "decision": "not-required",
+      "notes": "人工授权已由项目所有者明确取消；此条目仅保留自动校验上下文。",
+      "reviewContext": {
+        "assetId": "cg.trust_threshold",
+        "category": "cg",
+        "identityAnchor": null,
+        "identitySubjects": [
+          "albina",
+          "protagonist"
+        ],
+        "cgIdentityCoverage": {
+          "injected": 2,
+          "uncovered": []
+        },
+        "delivery": {
+          "format": "jpg",
+          "width": 1280,
+          "height": 720,
+          "alpha": false
+        },
+        "promptChars": 1072
+      }
+    },
+    {
+      "jobId": "visual.image.cg.white_canvas_choice",
+      "promptSha256": "f30b67c0a9f00cc83a84edf628a878c07770a421de3e7f7990f1f04d28ea180f",
+      "decision": "not-required",
+      "notes": "人工授权已由项目所有者明确取消；此条目仅保留自动校验上下文。",
+      "reviewContext": {
+        "assetId": "cg.white_canvas_choice",
+        "category": "cg",
+        "identityAnchor": null,
+        "identitySubjects": [
+          "albina",
+          "protagonist"
+        ],
+        "cgIdentityCoverage": {
+          "injected": 2,
+          "uncovered": []
+        },
+        "delivery": {
+          "format": "jpg",
+          "width": 1280,
+          "height": 720,
+          "alpha": false
+        },
+        "promptChars": 1080
+      }
+    },
+    {
+      "jobId": "visual.image.cg.white_canvas_ending",
+      "promptSha256": "4269669148940deb3a233a439bb7fc7b0e8892e5c5e29ed58434da6453debb82",
+      "decision": "not-required",
+      "notes": "人工授权已由项目所有者明确取消；此条目仅保留自动校验上下文。",
+      "reviewContext": {
+        "assetId": "cg.white_canvas_ending",
+        "category": "cg",
+        "identityAnchor": null,
+        "identitySubjects": [
+          "albina",
+          "protagonist"
+        ],
+        "cgIdentityCoverage": {
+          "injected": 2,
+          "uncovered": []
+        },
+        "delivery": {
+          "format": "jpg",
+          "width": 1280,
+          "height": 720,
+          "alpha": false
+        },
+        "promptChars": 1086
+      }
+    }
+  ]
+}

@@ -18,6 +18,7 @@ test('keeps playing and saving with an in-memory fallback when IndexedDB is unav
 
   await page.goto('/');
   await page.getByTestId('new-game').click();
+  await page.getByTestId('profile-begin').click();
   await expect(page.getByTestId('game-screen')).toHaveAttribute('data-scene-id', 'canon_recap_9_14');
   await page.getByTestId('game-saves').click();
   await page.getByTestId('save-slot-1').click();

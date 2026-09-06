@@ -1,6 +1,6 @@
 import { access, mkdtemp, readFile, writeFile } from 'node:fs/promises';
 import { tmpdir } from 'node:os';
-import { join } from 'node:path';
+import { join, resolve } from 'node:path';
 
 import { describe, expect, test, vi } from 'vitest';
 
@@ -8,13 +8,25 @@ import { runCli } from '../src/cli.js';
 import { contentHashJobId } from '../src/hash.js';
 import { Ledger } from '../src/ledger.js';
 
+const IMAGE_CONTRACT = { provider: 'pie', model: 'gpt-image-2', promptVersion: 'test-image-v1' } as const;
+const MUSIC_CONTRACT = { provider: 'pie', model: 'music-2.6', promptVersion: 'test-music-v1' } as const;
+
 describe('media CLI', () => {
+  test('the tracked default inventory remains loadable under the explicit provider contract', async () => {
+    const projectRoot = resolve(import.meta.dirname, '../../..');
+    const output: string[] = [];
+    await expect(runCli(['inventory'], { cwd: projectRoot, stdout: (line) => output.push(line), env: {} })).resolves.toBe(0);
+    expect(JSON.parse(output.join('\n'))).toEqual(expect.arrayContaining([
+      expect.objectContaining({ kind: 'image', provider: 'pie', model: 'gpt-image-2', promptVersion: 'example-image-v1' }),
+    ]));
+  });
+
   test('inventory reports canonical IDs and ledger status without credentials', async () => {
     const directory = await mkdtemp(join(tmpdir(), 'albina-media-cli-inventory-'));
     const jobsDirectory = join(directory, 'jobs');
     const jobPath = join(jobsDirectory, 'image.json');
     await writeJson(join(jobsDirectory, 'index.json'), { version: 1, jobs: [] });
-    await writeJson(jobPath, { kind: 'image', prompt: 'rain', width: 800, height: 100, output: 'artifacts/rain.png' });
+    await writeJson(jobPath, { kind: 'image', ...IMAGE_CONTRACT, prompt: 'rain', width: 800, height: 100, output: 'artifacts/rain.png' });
     const job = JSON.parse(await readFile(jobPath, 'utf8')) as unknown;
     const id = contentHashJobId(job);
     const ledgerPath = join(jobsDirectory, '.ledger.json');
@@ -28,7 +40,7 @@ describe('media CLI', () => {
 
     expect(code).toBe(0);
     expect(JSON.parse(output.join('\n'))).toEqual(expect.arrayContaining([
-      expect.objectContaining({ id, file: jobPath, kind: 'image', status: 'completed' }),
+      expect.objectContaining({ id, file: jobPath, kind: 'image', provider: 'pie', model: 'gpt-image-2', promptVersion: 'test-image-v1', status: 'completed' }),
       expect.objectContaining({ file: join(jobsDirectory, 'index.json'), status: 'skipped' }),
     ]));
   });
@@ -44,7 +56,7 @@ describe('media CLI', () => {
   test('generate surfaces an active lease as a non-success busy error', async () => {
     const directory = await mkdtemp(join(tmpdir(), 'albina-media-cli-busy-'));
     const jobPath = join(directory, 'image.json');
-    const job = { kind: 'image', prompt: 'rain', width: 10, height: 10, output: join(directory, 'image.png'), validation: { width: 10, height: 10, alpha: true } };
+    const job = { kind: 'image', ...IMAGE_CONTRACT, prompt: 'rain', width: 10, height: 10, output: join(directory, 'image.png'), validation: { width: 10, height: 10, alpha: true } };
     await writeJson(jobPath, job);
     const ledgerPath = join(directory, 'ledger.json');
     await new Ledger(ledgerPath).claimJob(contentHashJobId(job), 'other-worker');
@@ -61,6 +73,7 @@ describe('media CLI', () => {
     await writeFile(source, pngHeader(800, 100, 6));
     await writeJson(jobPath, {
       kind: 'image',
+      ...IMAGE_CONTRACT,
       prompt: 'portrait',
       width: 800,
       height: 100,
@@ -69,16 +82,41 @@ describe('media CLI', () => {
     });
 
     await expect(runCli(['validate', jobPath], { stdout: () => undefined })).resolves.toBe(0);
-    await expect(runCli(['promote', jobPath, '--to', destination], { stdout: () => undefined })).resolves.toBe(0);
+    const output: string[] = [];
+    await expect(runCli(['promote', jobPath, '--to', destination, '--asset-id', 'strip.test', '--reviewed-by', 'visual-reviewer'], {
+      cwd: directory,
+      stdout: (line) => output.push(line),
+    })).resolves.toBe(0);
     expect(await readFile(destination)).toEqual(await readFile(source));
+    const result = JSON.parse(output.join('\n')) as { receipt: string; artifactSha256: string };
+    const receipt = JSON.parse(await readFile(result.receipt, 'utf8')) as Record<string, unknown>;
+    expect(result.artifactSha256).toMatch(/^[a-f0-9]{64}$/u);
+    expect(receipt).toMatchObject({
+      version: 1,
+      assetId: 'strip.test',
+      provenance: {
+        provider: 'pie', model: 'gpt-image-2', promptVersion: 'test-image-v1',
+        sourceJobHash: expect.stringMatching(/^[a-f0-9]{64}$/u),
+        review: { status: 'approved', reviewer: 'visual-reviewer', reviewedAt: expect.any(String) },
+      },
+    });
+    expect(JSON.stringify(receipt)).not.toContain('portrait');
+  });
+
+  test('refuses provenance-free promotion', async () => {
+    const directory = await mkdtemp(join(tmpdir(), 'albina-media-cli-unreviewed-'));
+    const jobPath = join(directory, 'image.json');
+    await writeFile(join(directory, 'image.png'), pngHeader(8, 8, 6));
+    await writeJson(jobPath, { kind: 'image', ...IMAGE_CONTRACT, prompt: 'private prompt', width: 8, height: 8, output: join(directory, 'image.png'), validation: { width: 8, height: 8, alpha: true } });
+    await expect(runCli(['promote', jobPath, '--to', join(directory, 'canonical.png')], { cwd: directory, stdout: () => undefined })).rejects.toThrow(/asset-id.*reviewed-by/iu);
   });
 
   test('bulk music generation is blocked before any provider call until three probes pass', async () => {
     const directory = await mkdtemp(join(tmpdir(), 'albina-media-cli-music-'));
     const first = join(directory, 'first.json');
     const second = join(directory, 'second.json');
-    await writeJson(first, { kind: 'music', prompt: 'one', durationSeconds: 5, output: join(directory, 'one.mp3') });
-    await writeJson(second, { kind: 'music', prompt: 'two', durationSeconds: 5, output: join(directory, 'two.mp3') });
+    await writeJson(first, { kind: 'music', ...MUSIC_CONTRACT, prompt: 'one', durationSeconds: 5, output: join(directory, 'one.mp3') });
+    await writeJson(second, { kind: 'music', ...MUSIC_CONTRACT, prompt: 'two', durationSeconds: 5, output: join(directory, 'two.mp3') });
     const client = { generateMusic: vi.fn() };
 
     await expect(
@@ -91,9 +129,9 @@ describe('media CLI', () => {
     const directory = await mkdtemp(join(tmpdir(), 'albina-media-cli-ambiguous-'));
     const jobPath = join(directory, 'music.json');
     const ledgerPath = join(directory, 'ledger.json');
-    await writeJson(jobPath, { kind: 'music', probe: true, prompt: 'one', durationSeconds: 5, output: join(directory, 'one.mp3') });
+    await writeJson(jobPath, { kind: 'music', ...MUSIC_CONTRACT, probe: true, prompt: 'one', durationSeconds: 5, output: join(directory, 'one.mp3') });
     const client = {
-      generateMusic: vi.fn().mockResolvedValue({ kind: 'ambiguous', model: 'music-2.6', reason: 'gateway-timeout' }),
+      generateMusic: vi.fn().mockResolvedValue({ kind: 'ambiguous', provider: 'pie', model: 'music-2.6', reason: 'gateway-timeout' }),
     };
 
     await expect(runCli(['generate', jobPath, '--ledger', ledgerPath], { client, stdout: () => undefined })).rejects.toThrow(

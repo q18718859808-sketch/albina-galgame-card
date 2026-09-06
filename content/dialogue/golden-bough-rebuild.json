@@ -383,6 +383,13 @@
     "speaker": "浮士德",
     "text": "记忆手术台上，金色光尘在义体接缝里像旧伤口一样反复渗出。浮士德递过一把刻度尺：她说她想重构的不是身体，是你替她记下却没敢念出来的那段。",
     "voiceAssetId": "voice.scene.golden_bough_006",
+    "minigame": {
+      "minigameId": "minigame.golden.testimony_cipher",
+      "seed": "golden-bough-name-continuity-v1",
+      "prompt": "把三段证词排成先尊重本人、再修复记忆的顺序。",
+      "assistLabel": "显示证词顺序提示",
+      "allowSkip": true
+    },
     "choices": [
       {
         "id": "rebuild_006_read_aloud",

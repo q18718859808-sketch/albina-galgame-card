@@ -1,0 +1,47 @@
+{
+  "version": 1,
+  "assetId": "cg.surgery_of_memory",
+  "artifactSha256": "6b711204cbf9f6d56d67b9e8a81a36b915cb54ad08ce168410f6b5f73efe8ebc",
+  "provenance": {
+    "provider": "wisart-openai-compatible",
+    "model": "gpt-image-2",
+    "promptVersion": "albina-visual-migration-v1",
+    "sourceJobHash": "031326ca8937efa6d79c3f653fa65e9b7ccaf1ee6ff43b509096bd0179f951f8",
+    "review": {
+      "status": "approved",
+      "reviewer": "workbuddy-convergence-agent",
+      "reviewedAt": "2026-09-06T08:39:09.894Z"
+    }
+  },
+  "rights": {
+    "status": "unverified",
+    "sourceType": "model-output",
+    "redistribution": "unverified",
+    "rightsBasis": "Redistribution rights for this model output have not been independently verified."
+  },
+  "lineage": {
+    "kind": "derivative",
+    "processVersion": "albina-visual-promotion-v1",
+    "inputs": [
+      {
+        "assetId": "file.characters.albina.surgical.png",
+        "sha256": "d6ef29a4e507767be8df6f69701d9b5cf03614172c554540ab6634bfce7a736a",
+        "role": "approved-generated-reference"
+      },
+      {
+        "assetId": "file.characters.protagonist.serious.png",
+        "sha256": "461927edeaab75615f232e57131fb9294fca75ef00b794d7a4a2955c66aeb18a",
+        "role": "approved-generated-reference"
+      },
+      {
+        "assetId": "file.characters.faust.normal.png",
+        "sha256": "181d1804a348d2acb99e1c5023eac471b732651b50b5aaeacbcfd329127d8eae",
+        "role": "approved-generated-reference"
+      },
+      {
+        "sha256": "aaf89630110b6fef687b86334404b00cd39fd29c84451971575b26a29ce51142",
+        "role": "canon-visual-reference"
+      }
+    ]
+  }
+}

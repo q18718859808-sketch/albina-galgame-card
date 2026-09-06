@@ -1,0 +1,93 @@
+{
+  "schemaVersion": 1,
+  "kind": "krea2-canonical-production-contract",
+  "subject": "Albina",
+  "status": "production-ready-staging-anchor-approved",
+  "productionMode": "single-image-staging",
+  "batchGeneration": false,
+  "maxOutputsPerInvocation": 1,
+  "canonicalRunner": {
+    "path": "scripts/run-krea2-albina-canonical-production.mjs",
+    "delegatesTo": "scripts/run-krea2-albina-staged-high-frequency.mjs",
+    "route": "albina-staged-high-frequency-v1",
+    "legacySingleStageParameters": "rejected",
+    "freshJobTargetRequired": true,
+    "planMode": "--plan"
+  },
+  "authority": {
+    "geometry": "canonical-rgba",
+    "material": "krea2-rgb",
+    "canonicalPath": "staging/research/canon-visual/wiki-game-assets/albina-unarmored-standing.png",
+    "canonicalCanvas": { "width": 588, "height": 1766, "alpha": true },
+    "coordinateSystem": "unmirrored-source-pixel-coordinates",
+    "sideAssignments": {
+      "imageLeftEye": "white-light eye structure",
+      "imageRightEye": "black-dark eye structure",
+      "cableDirection": "rear cable bundle extends toward image-right and folds back"
+    }
+  },
+  "render": {
+    "method": "canonical-latent-origin-six-lora-restyle",
+    "modelCanvas": { "width": 592, "height": 1768, "reason": "8-aligned ComfyUI latent canvas" },
+    "fullCanvasRedraw": true,
+    "alphaPolicy": "canonical-alpha-restored-after-krea2-rgb-render",
+    "forbidden": ["horizontal-flip", "inset-generation", "center-paste", "unrecorded-crop", "unrecorded-resize"]
+  },
+  "styleLoras": [
+    { "order": 1, "name": "z3zz4-k2-4_c1-st5000.safetensors", "strength": 0.55 },
+    { "order": 2, "name": "Krea2Rella_c1-st8000.safetensors", "strength": 0.65 },
+    { "order": 3, "name": "onineko_k2_v1.safetensors", "strength": 0.45 },
+    { "order": 4, "name": "meion_krea2_style_v7.0_c1-st4000.safetensors", "strength": 0.45 },
+    { "order": 5, "name": "masterpieces-v51.safetensors", "strength": 0.45 },
+    { "order": 6, "name": "ichika-k2_c1-st5000.safetensors", "strength": 0.35 }
+  ],
+  "receipt": {
+    "required": true,
+    "mustBind": ["canonicalSha256", "uploadedCanonicalSha256", "workflowSha256", "topologySha256", "styleLoras", "modelCanvas", "alphaPolicy", "outputSha256"],
+    "directImageReviewRequired": true,
+    "automatedVisionAdvisoryOnly": true,
+    "promotionAllowed": false,
+    "singleImageStagingRequired": true,
+    "batchReceiptForbidden": true
+  },
+  "visualStyleEffectGate": {
+    "required": true,
+    "purpose": "A connected six-LoRA graph is execution evidence only; it is not visual acceptance evidence.",
+    "acceptedReviewMinimum": 2,
+    "criteria": [
+      "linework",
+      "line-density",
+      "mechanical-edge",
+      "material-separation",
+      "cel-shading",
+      "industrial-lighting",
+      "palette-treatment",
+      "surface-detail"
+    ],
+    "directOriginalResolutionOnly": true,
+    "automatedVisionCannotSatisfy": true,
+    "noVisibleStyleDeltaDecision": "reject-and-stop-topology"
+  },
+  "highFrequencyStaging": {
+    "anchorAsset": "staging/media/krea2-canonical-production/characters/albina-canonical-krea2-staged-hf-ab1.png",
+    "anchorReview": "staging/media/krea2-canonical-production/characters/albina-canonical-krea2-staged-hf-ab1.direct-review.json",
+    "anchorStatus": "accepted-as-staging-anchor",
+    "profile": "albina-staged-high-frequency-v1",
+    "availableLocalNodes": ["ImageScale", "VAEEncode", "VAEDecode", "SamplerCustomAdvanced", "BasicScheduler", "RandomNoise"],
+    "stageCount": 2,
+    "stage1": {
+      "role": "canonical-latent-origin-material-pass",
+      "size": { "width": 592, "height": 1768 },
+      "denoise": 0.12,
+      "steps": 28
+    },
+    "stage2": {
+      "role": "high-frequency-refinement-from-stage1-decode",
+      "size": { "width": 1184, "height": 3536 },
+      "denoise": 0.07,
+      "steps": 24,
+      "input": "stage1-decoded-image-only"
+    },
+    "forbidden": ["second-reference-image", "alternate-lora-chain", "batch-size-greater-than-one", "unverified-advanced-node-pack", "promotion-without-direct-review"]
+  }
+}

@@ -2,7 +2,7 @@ import { describe, expect, it, vi } from 'vitest';
 
 import { createDefaultSaveV2 } from '../../src/domain/save';
 import { GalleryService } from '../../src/runtime/gallery';
-import { SpecialCgService } from '../../src/runtime/special-cg';
+import { SpecialCgService, type SpecialCgEvent } from '../../src/runtime/special-cg';
 import { AlbinaStorage, MemoryStorageBackend, ResilientStorageBackend, type StorageBackend } from '../../src/runtime/storage';
 
 class MemoryBackend implements StorageBackend {
@@ -204,5 +204,79 @@ describe('runtime persistence services', () => {
       { id: 'second', assetId: 'cg.second' },
     ]);
     await expect(service.peek()).resolves.toBeUndefined();
+  });
+
+  it('notifies subscribers of queue mutations with accurate lengths', async () => {
+    const service = new SpecialCgService(new AlbinaStorage(new MemoryBackend()));
+    const events: SpecialCgEvent[] = [];
+    service.subscribe((event) => events.push(event));
+
+    await service.enqueue({ id: 'a', assetId: 'cg.a' });
+    await service.enqueue({ id: 'b', assetId: 'cg.b' });
+    await expect(service.dequeue()).resolves.toEqual({ id: 'a', assetId: 'cg.a' });
+    await service.clear();
+
+    expect(events).toEqual([
+      { type: 'enqueued', request: { id: 'a', assetId: 'cg.a' }, queueLength: 1 },
+      { type: 'enqueued', request: { id: 'b', assetId: 'cg.b' }, queueLength: 2 },
+      { type: 'dequeued', request: { id: 'a', assetId: 'cg.a' }, queueLength: 1 },
+      { type: 'cleared', queueLength: 0 },
+    ]);
+  });
+
+  it('unsubscribes listeners and stays silent on an empty dequeue', async () => {
+    const service = new SpecialCgService(new AlbinaStorage(new MemoryBackend()));
+    const events: SpecialCgEvent[] = [];
+    const unsubscribe = service.subscribe((event) => events.push(event));
+
+    await service.dequeue(); // Empty queue: no mutation, therefore no event.
+    unsubscribe();
+    await service.enqueue({ id: 'late', assetId: 'cg.late' });
+
+    expect(events).toEqual([]);
+  });
+
+  it('reports queue length and an immutable FIFO snapshot', async () => {
+    const service = new SpecialCgService(new AlbinaStorage(new MemoryBackend()));
+    await service.enqueue({ id: 'a', assetId: 'cg.a' });
+    await service.enqueue({ id: 'b', assetId: 'cg.b' });
+
+    await expect(service.length()).resolves.toBe(2);
+    const snapshot = await service.snapshot();
+    expect(snapshot).toEqual([
+      { id: 'a', assetId: 'cg.a' },
+      { id: 'b', assetId: 'cg.b' },
+    ]);
+    expect(Object.isFrozen(snapshot)).toBe(true);
+
+    await service.clear();
+    await expect(service.length()).resolves.toBe(0);
+    await expect(service.snapshot()).resolves.toEqual([]);
+  });
+
+  it('keeps FIFO order and event ordering across concurrent mutations', async () => {
+    const service = new SpecialCgService(new AlbinaStorage(new MemoryBackend()));
+    const events: SpecialCgEvent[] = [];
+    service.subscribe((event) => events.push(event));
+
+    await Promise.all([
+      service.enqueue({ id: 'first', assetId: 'cg.first' }),
+      service.enqueue({ id: 'second', assetId: 'cg.second' }),
+    ]);
+
+    expect(events.map((event) => event.type)).toEqual(['enqueued', 'enqueued']);
+    expect(events.map((event) => event.queueLength)).toEqual([1, 2]);
+  });
+
+  it('does not let an observer error fail an already-persisted mutation', async () => {
+    const service = new SpecialCgService(new AlbinaStorage(new MemoryBackend()));
+    const healthy: SpecialCgEvent[] = [];
+    service.subscribe(() => { throw new Error('observer exploded'); });
+    service.subscribe((event) => healthy.push(event));
+
+    await service.enqueue({ id: 'a', assetId: 'cg.a' });
+
+    expect(healthy).toEqual([{ type: 'enqueued', request: { id: 'a', assetId: 'cg.a' }, queueLength: 1 }]);
+    await expect(service.peek()).resolves.toEqual({ id: 'a', assetId: 'cg.a' });
   });
 });

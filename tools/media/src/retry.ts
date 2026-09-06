@@ -28,6 +28,7 @@ export async function retry<T>(operation: () => Promise<T>, options: RetryOption
 }
 
 function isTransient(error: unknown): boolean {
+  if (error instanceof ProviderContractError) return false;
   const status = (error as RetryableError | undefined)?.status;
   return (
     status === 408 ||
@@ -46,3 +47,4 @@ function isNetworkError(error: unknown): boolean {
 function delay(milliseconds: number): Promise<void> {
   return new Promise((resolve) => setTimeout(resolve, milliseconds));
 }
+import { ProviderContractError } from './provider.js';

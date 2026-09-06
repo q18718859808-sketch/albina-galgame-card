@@ -1,0 +1,143 @@
+{
+  "schemaVersion": 1,
+  "capturedAt": "2026-08-25",
+  "scope": "GitHub repository discovery for mature Krea2/ComfyUI production routes",
+  "queries": [
+    "Krea2 ComfyUI",
+    "Krea 2 image generation",
+    "ComfyUI image consistency reference"
+  ],
+  "source": "GitHub Search API and repository metadata",
+  "note": "Discovery evidence only. Repository presence, stars, or freshness do not establish installability, output quality, model rights, or release eligibility.",
+  "repositories": [
+    {
+      "fullName": "huwhitememes/comfyui-krea2-conditioning",
+      "defaultBranch": "main",
+      "headCommit": "729cda4fade982988a375b01928f515458407a5c",
+      "updatedAt": "2026-06-26T20:50:10Z",
+      "stars": 143,
+      "license": "NOASSERTION",
+      "status": "research-only",
+      "reason": "The repository metadata reports Other; source license review is required."
+    },
+    {
+      "fullName": "blue-pen5805/ComfyUI-krea2-negpip",
+      "defaultBranch": "main",
+      "headCommit": "3740add9dbdc9f254a2befda30e95ba95e3b115d",
+      "updatedAt": "2026-07-28T09:09:14Z",
+      "stars": 104,
+      "license": "AGPL-3.0",
+      "status": "staging-only",
+      "reason": "Useful conditioning experiment, but AGPL requires a separate component boundary."
+    },
+    {
+      "fullName": "Shrey-1o1/ComfyUI-Krea2-FilmStudio-Vionex",
+      "defaultBranch": "main",
+      "headCommit": "bf2422088ae1e39708d41a2ac939ba45d0cfbfac",
+      "updatedAt": "2026-08-23T15:16:16Z",
+      "stars": 16,
+      "license": "NOASSERTION",
+      "status": "research-only",
+      "reason": "All-in-one node set with no declared SPDX license; graph and weight provenance remain unreviewed."
+    },
+    {
+      "fullName": "Patvessel/ComfyUI-krea2_projector_delta",
+      "defaultBranch": "main",
+      "headCommit": "9bed42c5a038b59c2f5a300415644b22859e0676",
+      "updatedAt": "2026-07-04T02:50:27Z",
+      "stars": 10,
+      "license": "Apache-2.0",
+      "status": "staging-only",
+      "reason": "A conditioning/projector route; requires local node install and weight compatibility audit."
+    },
+    {
+      "fullName": "RealRebelAI/ComfyUI-Rebels-Krea2-Outpaint",
+      "defaultBranch": "main",
+      "headCommit": "9d7890ed30708d75cc0d527e2b649d1cc7b370bc",
+      "updatedAt": "2026-07-19T01:23:09Z",
+      "stars": 26,
+      "license": "MIT",
+      "status": "staging-only",
+      "reason": "Relevant to CG/background extension, not a canonical Albina identity route."
+    },
+    {
+      "fullName": "KonokoAz/ComfyUI-Krea2-Reference",
+      "defaultBranch": "master",
+      "headCommit": "bae20b3e0316e5b13fea94aa8a502c33fd2063ca",
+      "updatedAt": "2026-07-15T02:19:38Z",
+      "stars": 19,
+      "license": "MIT",
+      "status": "staging-only",
+      "reason": "Reference conditioning candidate; role separation and content leakage need a pilot."
+    },
+    {
+      "fullName": "Gothdir/ComfyUI-Krea2-PromptStyler",
+      "defaultBranch": "main",
+      "headCommit": "c9529cb5bc3d3643ff2508883f4ef121833a5f59",
+      "updatedAt": "2026-08-03T16:10:52Z",
+      "stars": 23,
+      "license": "NOASSERTION",
+      "status": "staging-only",
+      "reason": "Prompt-only utility; license and style-data provenance require review."
+    },
+    {
+      "fullName": "iljung1106/ComfyUI-Krea2-NAG",
+      "defaultBranch": "main",
+      "headCommit": "0afb38dfc4ae4040d621ac5a46e1761b83fa2a43",
+      "updatedAt": "2026-08-11T18:33:26Z",
+      "stars": 10,
+      "license": "MIT",
+      "status": "staging-only",
+      "reason": "Attention-guidance candidate; requires one fixed-seed A/B pilot."
+    },
+    {
+      "fullName": "januspluto/ComfyUI-Krea2-Regional",
+      "defaultBranch": "main",
+      "headCommit": "307081f2b954d9f5e683dadafdb53ca971ebdbfd",
+      "updatedAt": "2026-08-06T22:27:25Z",
+      "stars": 7,
+      "license": "MIT",
+      "status": "staging-only",
+      "reason": "Regional prompt and LoRA route; seams and identity drift are unresolved."
+    },
+    {
+      "fullName": "luori668/ComfyUI-luori-Krea2",
+      "defaultBranch": "main",
+      "headCommit": "3a5e6fe005fddd65c21ba34e172d1fc5845ff6b6",
+      "updatedAt": "2026-07-20T06:48:45Z",
+      "stars": 19,
+      "license": "Apache-2.0",
+      "status": "staging-only",
+      "reason": "Prompt assistant; not itself a quality or identity-preserving generation pipeline."
+    },
+    {
+      "fullName": "Andro-Meta/ComfyUI-Krea-Moodboards",
+      "defaultBranch": "main",
+      "headCommit": "ce9b2fd7f0a5a296fb02492ad8e0e6c8b44923ba",
+      "updatedAt": "2026-08-07T14:32:50Z",
+      "stars": 11,
+      "license": "MIT",
+      "status": "staging-only",
+      "reason": "Prompt/style moodboard helper; useful for scene direction, not canonical subject preservation."
+    }
+  ],
+  "localRuntime": {
+    "endpoint": "http://127.0.0.1:8199",
+    "version": "0.28.3",
+    "gpu": "NVIDIA GeForce RTX 4070 Laptop GPU",
+    "freeVramBytesAtCapture": 6122053182,
+    "installedKreaNodes": [
+      "comfyui-krea-reference-v10",
+      "comfyui-krea2-controlnet",
+      "comfyui-krea2edit"
+    ],
+    "installedModelEvidence": [
+      "redcraft23FP8_30Krea2.safetensors",
+      "krea2_turbo_fp8_scaled.safetensors",
+      "qwen3vl_4b_fp8_scaled.safetensors",
+      "qwen_image_vae.safetensors",
+      "krea2_identity_edit_v1_2.safetensors"
+    ]
+  },
+  "nextAction": "Download and source-audit the highest-value candidates, then run one fixed-seed pilot per materially different route."
+}

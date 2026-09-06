@@ -47,13 +47,14 @@ test('executes the published Tavern Helper module, injects CSS, mounts, recovers
   await expect(page.locator('[data-albina-shell]')).toBeVisible();
   await expect(page.getByTestId('title-screen')).toBeVisible();
   await page.getByTestId('new-game').click();
+  await page.getByTestId('profile-begin').click();
   await page.getByRole('button', { name: '设置' }).click();
   await expect.poll(() => page.evaluate(() => (window as unknown as { __mediaCounts: { plays: number } }).__mediaCounts.plays)).toBeGreaterThanOrEqual(1);
   await page.getByTestId('autoplay-recovery').click();
   await expect.poll(() => page.evaluate(() => (window as unknown as { __mediaCounts: { plays: number } }).__mediaCounts.plays)).toBeGreaterThanOrEqual(2);
-  await page.getByRole('button', { name: '关闭' }).click();
+  await page.locator('[data-albina-close="v2"]').click();
   await expect(page.locator('[data-albina-shell]')).toHaveCount(0);
   await expect.poll(() => page.evaluate(() => (window as unknown as { __mediaCounts: { pauses: number } }).__mediaCounts.pauses)).toBeGreaterThan(0);
-  await expect.poll(() => page.evaluate(() => (window as unknown as { __listenerCounts: { adds: number; removes: number } }).__listenerCounts)).toEqual({ adds: 2, removes: 2 });
+  await expect.poll(() => page.evaluate(() => (window as unknown as { __listenerCounts: { adds: number; removes: number } }).__listenerCounts)).toEqual({ adds: 0, removes: 0 });
   await expect.poll(() => page.evaluate(() => (window as unknown as { __motionCounts: { adds: number; removes: number } }).__motionCounts)).toEqual({ adds: 1, removes: 1 });
 });

@@ -1,0 +1,11 @@
+{
+  "schemaVersion": 1,
+  "id": "albina_player_profile_runtime",
+  "name": "Player profile runtime",
+  "constant": true,
+  "selective": false,
+  "insertion_order": 155,
+  "position": "after_character_definition",
+  "enabled": true,
+  "content": "<%_ const player = getvar('albinaPlayerProfileV1', { defaults: {} }); const worldbook = getvar('albinaWorldbookSelectionV1', { presetId: 'canonicalCore', packageIds: [] }); _%>\n<player_profile>\nname: <%= player.name || '{{user}}' %>\naddress: <%= player.addressName || player.name || '{{user}}' %>\ngender_expression: <%= player.gender || 'adult male' %>\nappearance: <%= player.appearance || 'fixed adult male protagonist design' %>\nbackground: <%= player.background || 'not yet specified' %>\nability_tendency: <%= player.ability || 'observation and restraint' %>\ninitial_relationship_tendency: <%= player.initialRelationship || 'cautious observation; establish trust only through explicit actions' %>\ncontent_boundaries: <%= player.boundaries || 'respect explicit consent and withdrawal' %>\nroute_preference: <%= player.routePreference || 'white_canvas' %>\nworldbook_preset: <%= worldbook.presetId || 'canonicalCore' %>\nworldbook_packages: <%= (worldbook.packageIds || []).join(', ') %>\n</player_profile>\nTreat this profile and selected worldbook package set as AU/IF player-authored context. Preserve player agency; do not invent unprovided actions, thoughts, or dialogue, and do not present it as Limbus Company canon."
+}

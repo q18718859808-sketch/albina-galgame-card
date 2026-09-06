@@ -8,6 +8,7 @@ const execute = promisify(execFile);
 
 export const RELEASE_STEPS = Object.freeze([
   { id: 'canon:sync', path: 'scripts/sync-canon-card.mjs', args: ['--write'] },
+  { id: 'worldbooks:sync', path: 'scripts/sync-layered-worldbooks.mjs', args: ['--write'] },
   { id: 'card:sync', path: 'scripts/sync-character-card-png.mjs', args: ['--write'] },
   { id: 'assets:generate', path: 'scripts/audit-assets.mjs', args: ['--write'] },
   { id: 'story:compile', path: 'node_modules/vite-node/vite-node.mjs', args: ['scripts/compile-story.mjs'] },

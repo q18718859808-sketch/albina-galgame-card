@@ -1,0 +1,22 @@
+﻿{
+    "schema_version":  1,
+    "title":  "Albina v2 visual batch production and release completion",
+    "domain":  "frontend-development",
+    "status":  "planned",
+    "workspace":  "D:\\创作\\albina-v2-complete",
+    "created_at":  "2026-07-16T17:18:03.4694190Z",
+    "verification_commands":  [
+                                  "node --check scripts/lib/visual-production.mjs",
+                                  "npm run typecheck",
+                                  "npx vitest run tests/assets/visual-production.test.ts tests/assets/visual-rebuild-plan.test.ts tests/assets/media-readiness.test.ts tests/assets/security-scanner.test.ts",
+                                  "npm run verify"
+                              ],
+    "verification":  [
+
+                     ],
+    "artifacts":  [
+                      "input.md",
+                      "plan.md",
+                      "manifest.json"
+                  ]
+}

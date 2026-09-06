@@ -1,0 +1,29 @@
+- main [ref=e3]:
+  - generic [ref=e57]:
+    - img "剧情 CG" [ref=e58]
+    - complementary "Route atmosphere and progress":
+      - img "Route map The selected player route is White Canvas.":
+        - generic: Canon
+        - generic: AU/IF
+        - generic: Rebuild
+        - generic: Canvas
+        - generic: Ring
+      - generic: Static composition
+    - region "角色立绘" [ref=e59]
+    - generic [ref=e60]:
+      - generic [ref=e61]: saved
+      - generic [ref=e62]: CH.0 · lce_research_hallway
+      - generic [ref=e63]: 好感 0 / 信任 0 / 危险 0 / 共鸣 1
+      - navigation [ref=e64]:
+        - button "状态" [ref=e65] [cursor=pointer]
+        - button "快速存档" [ref=e66] [cursor=pointer]
+        - button "存档" [ref=e67] [cursor=pointer]
+        - button "图鉴" [ref=e68] [cursor=pointer]
+        - button "设置" [ref=e69] [cursor=pointer]
+        - button "静音" [ref=e70] [cursor=pointer]
+    - article [ref=e71]:
+      - heading "正史复盘" [level=2] [ref=e72]
+      - paragraph [ref=e73]: 【正史中文意译·9-14 背景】在 LCE 研究区走廊，众人遭遇环指加工的人体作品。Faust 根据
+      - button "继续复盘 Albina 的首次登场" [ref=e75] [cursor=pointer]
+    - group [ref=e76]:
+      - generic "存档导入 / 导出" [ref=e77]
